@@ -24,7 +24,7 @@ export const _performanceConfig = {
     ttfb: {
       good: 800,
       needsImprovement: 1800
-    }
+    };
   },
   // Cache strategies
   cache: {
@@ -39,7 +39,7 @@ export const _performanceConfig = {
     api: {
 // maxAge: 300, // 5 minutes
 // staleWhileRevalidate: 30, // 30 seconds
-    }
+    };
   },
   // Resource hints
   preload: [
@@ -70,9 +70,9 @@ export const _performanceConfig = {
           minChunks: 2,
           priority: -20,
           reuseExistingChunk: true
-        }
-      }
-    }
+        };
+      };
+    };
   },
   // Performance monitoring
   monitoring: {
@@ -81,8 +81,8 @@ export const _performanceConfig = {
 // reportInterval: 30000, // 30 seconds
 // sendToAnalytics: true,
 // logThreshold:   ,
-$4}
-}
+$4};
+};
 export type PerformanceConfig = typeof performanceConfig
 export default performanceConfig
 /**
@@ -92,13 +92,13 @@ export default performanceConfig
 
 export const _performanceConfig = {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
   // Core Web Vitals thresholds,
   metric,
-  s: {/* TODO: Fix JSX expression */}
-  p: {}
+  s: {/* TODO: Fix JSX expression */};
+  p: {};
 // goo,
   d: 2500,
 // needsImprovemen,
@@ -107,38 +107,38 @@ export const _performanceConfig = {
 
     fid: {
     // TODO: Add content
-  }
-}
+  };
+};
   good: 100,
       needsImprovement: 300,
     },
     cls: {
     // TODO: Add content
-  }
-}
+  };
+};
   good: 0.1,
       needsImprovement: 0.25,
     },
     fcp: {
     // TODO: Add content
-  }
-}
+  };
+};
   good: 1800,
       needsImprovement: 3000,
     },
     ttfb: {
     // TODO: Add content
-  }
-}
+  };
+};
   good: 800,
       needsImprovement: 1800,
 
-    }
+    };
   },
   // Cache strategies,
   cach,
-  e: {/* TODO: Fix JSX expression */}
-  c: {}
+  e: {/* TODO: Fix JSX expression */};
+  c: {};
 // maxAg,
   e: 31536000, // 1 year
 // staleWhileRevalidat,
@@ -147,37 +147,37 @@ export const _performanceConfig = {
 
     dynamic: {
     // TODO: Add content
-  }
-}
+  };
+};
   maxAge: 3600, // 1 hour,
   staleWhileRevalidate: 60, // 1 minute
     },
     ap,
-  i: {/* TODO: Fix JSX expression */}
-  e: 300, // 5 minutes;}
+  i: {/* TODO: Fix JSX expression */};
+  e: 300, // 5 minutes;};
 // staleWhileRevalidat,
   e: 30, // 30 seconds
-    }
+    };
   },
   // Resource hints,
   preloa,
   d: [
   // TOD,
-  O: Add items]
-    {/* TODO: Fix JSX expression */}
+  O: Add items];
+    {/* TODO: Fix JSX expression */};
   n: 'anonymous' },
 //   ],
   prefetc,
   h: [
   // TOD,
-  O: Add items]
+  O: Add items];
 //     '/api/health',
 //     '/api/config',
 //   ],
   // Image optimization,
   image,
-  s: {/* TODO: Fix JSX expression */}
-  s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]}
+  s: {/* TODO: Fix JSX expression */};
+  s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]};
 // imageSize,
   s: [16, 32, 48, 64, 96, 128, 256, 384],
 // format,
@@ -189,16 +189,16 @@ export const _performanceConfig = {
   },
   // Bundle optimization,
   bundl,
-  e: {/* TODO: Fix JSX expression */}
-  e: 20000}
+  e: {/* TODO: Fix JSX expression */};
+  e: 20000};
 // maxChunkSiz,
   e: 244000,
 // splitChunk,
-  s: {/* TODO: Fix JSX expression */}
-  s: {}
+  s: {/* TODO: Fix JSX expression */};
+  s: {};
 // vendo,
-  r: {/* TODO: Fix JSX expression */}
-  t: /[\/]node_modules[\/]/}
+  r: {/* TODO: Fix JSX expression */};
+  t: /[\/]node_modules[\/]/};
 // priorit,
   y: -10,
 // reuseExistingChun,
@@ -207,20 +207,20 @@ export const _performanceConfig = {
 
         default: {
     // TODO: Add content
-  }
-}
+  };
+};
   minChunks: 2,
           priority: -20,
           reuseExistingChunk: true,
 
-        }
-      }
-    }
+        };
+      };
+    };
   },
   // Performance monitoring,
   monitorin,
-  g: {/* TODO: Fix JSX expression */}
-  d: true}
+  g: {/* TODO: Fix JSX expression */};
+  d: true};
 // sampleRat,
   e: 1.0, // 100% in production
 // reportInterva,
@@ -229,7 +229,7 @@ export const _performanceConfig = {
   s: true,
 // logThreshol,
   d: 'needsImprovement'
-  }
-}
+  };
+};
 export type PerformanceConfig = typeof performanceConfig
 export default performanceConfig

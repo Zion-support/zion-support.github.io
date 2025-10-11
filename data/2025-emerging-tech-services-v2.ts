@@ -67,8 +67,7 @@ export interface EmergingTechService {
   e: string[],
   lin,
   k: string,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   popula,
@@ -96,7 +95,7 @@ export interface EmergingTechService {
       'Regulatory compliance'],
     integrations: [,
       'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'
-    ]
+    ];
     support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
     compliance: [
     icon: ''
@@ -113,17 +112,16 @@ export interface EmergingTechService {
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
     useCases: [,
       'Regulatory compliance'
-    ]
+    ];
     integration,
   s: [,
       'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'
-    ]
+    ];
     suppor,
   t: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
     complianc,
   e: [,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - purple - 500 to - pink - 600',
     popula,
@@ -153,11 +151,11 @@ export interface EmergingTechService {
       'Research acceleration'],
     integrations: [,
       'Research acceleration'
-    ]
+    ];
     integration,
   s: [,
       'Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'
-    ]
+    ];
     suppor,
   t: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     complianc,
@@ -299,8 +297,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com / quantum - bio - computing - platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - green - 500 to - emerald - 600',
     popula,
@@ -334,11 +331,11 @@ export interface EmergingTechService {
       'Cognitive enhancement'],
     integrations: [,
       'Cognitive enhancement'
-    ]
+    ];
     integration,
   s: [,
       'Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'
-    ]
+    ];
     suppor,
   t: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     complianc,
@@ -471,8 +468,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com / brain - computer - interface - platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 500 to - indigo - 600',
     popula,
@@ -506,11 +502,11 @@ export interface EmergingTechService {
       'Energy research'],
     integrations: [,
       'Energy research'
-    ]
+    ];
     integration,
   s: [,
       'Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'
-    ]
+    ];
     suppor,
   t: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     complianc,
@@ -643,8 +639,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com / quantum - energy - platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - yellow - 500 to - orange - 600',
     popula,
@@ -678,11 +673,11 @@ export interface EmergingTechService {
       'Research and development'],
     integrations: [,
       'Research and development'
-    ]
+    ];
     integration,
   s: [,
       'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'
-    ]
+    ];
     suppor,
   t: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     complianc,
@@ -701,8 +696,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com/autonomous-vehicle-ai-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-500 to-pink-600',
     popula,
@@ -718,13 +712,13 @@ export interface EmergingTechService {
     marketSiz,
   e: '$35B autonomous vehicle market',
     growthRat,
-  e: '75% annually'}
+  e: '75% annually'};
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
-    ]
+    ];
     benefit,
   s: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
-    ]
+    ];
     targetAudience: [,
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'],
     marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.',
@@ -790,8 +784,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com/space-mining-platform'
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-500 to-pink-600'
     popula,
@@ -931,15 +924,15 @@ export interface EmergingTechService {
   customers: number, rating: number,
   reviews: number, marketSize: string
   growthRate: string,
-}
+};
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development'
-    ]
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+    ];
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform'
     icon: ''
     color: 'from - red - 500 to - pink - 600'
@@ -953,8 +946,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com / autonomous - vehicle - ai - platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 500 to - pink - 600',
     popula,
@@ -1012,8 +1004,7 @@ export interface EmergingTechService {
   complianc,
   e: string[], lin,
   k: string,
-  ico,
-  n: string, colo,
+  icon: string, colo,
   r: string,
   popula,
   r: boolean, launchDat,
@@ -1025,26 +1016,25 @@ export interface EmergingTechService {
   s: number, marketSiz,
   e: string,
   growthRat,
-  e: string}
+  e: string};
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development'
-    ]
+    ];
     integration,
-  s: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+  s: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     suppor,
   t: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     complianc,
-  e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
+  e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     integration,
-  s: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+  s: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     suppor,
   t: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     complianc,
-  e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
+  e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     lin,
   k: 'http,
   s://ziontechgroup.com / autonomous - vehicle - ai - platform'
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 500 to - pink - 600'
     popula,
@@ -1061,8 +1051,8 @@ export interface EmergingTechService {
   e: '$35B autonomous vehicle market',
     growth_rat,
   e: '75% annually'
-  }
-]
+  };
+];
     feature,
   s: [
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools'
@@ -1071,7 +1061,7 @@ export interface EmergingTechService {
     benefit,
   s: [
       'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
-    ]
+    ];
     targetAudience: [,
       'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizationsUniversitiesGovernment agencies'],
     marketPosition: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
@@ -1137,8 +1127,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com/quantum-bio-computing-platform'
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-500 to-emerald-600'
     popula,
@@ -1188,7 +1177,7 @@ export interface EmergingTechService {
     benefit,
   s: [
       'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
-    ]
+    ];
     targetAudience: [,
       'Healthcare providersGaming companiesAccessibility organizationsResearch institutionsTechnology companiesEducational institutions'],
     marketPosition: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.',
@@ -1254,8 +1243,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com/brain-computer-interface-platform'
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-500 to-indigo-600'
     popula,
@@ -1305,7 +1293,7 @@ export interface EmergingTechService {
     benefit,
   s: [
       'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
-    ]
+    ];
     targetAudience: [,
       'Energy companiesUtility providersResearch institutionsGovernment agenciesTechnology companiesEnvironmental organizations'],
     marketPosition: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
@@ -1371,8 +1359,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com/quantum-energy-platform'
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-yellow-500 to-orange-600'
     popula,
@@ -1422,7 +1409,7 @@ export interface EmergingTechService {
     benefit,
   s: [
       'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
-    ]
+    ];
     targetAudience: [,
       'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies'],
     marketPosition: 'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',
@@ -1476,8 +1463,7 @@ export interface EmergingTechService {
     lin,
   k: 'http,
   s://ziontechgroup.com/autonomous-vehicle-ai-platform'
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-500 to-pink-600'
     popula,
@@ -1494,10 +1480,10 @@ export interface EmergingTechService {
   e: '$35B autonomous vehicle market'
     growthRat,
   e: '75% annually'
-  }
-]
-export interface EmergingTechService {/* TODO: Fix JSX expression */}
-  }
+  };
+];
+export interface EmergingTechService {/* TODO: Fix JSX expression */};
+  };
   id: string
   name: string
   tagline: string
@@ -1508,23 +1494,23 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
     yearly: number
     currency: string
     trialDays: number,
-    setupTime: string}
-    enterprise: number}
-  }
-  }
-  features: string[]
-  benefits: string[]
-  targetAudience: string[]
+    setupTime: string};
+    enterprise: number};
+  };
+  };
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
   marketPosition: string
-  competitors: string[]
-  techStack: string[]
+  competitors: string[];
+  techStack: string[];
   realImplementation: boolean
   implementationDetails: string
   roi: string
-  useCases: string[]
-  integrations: string[]
+  useCases: string[];
+  integrations: string[];
   support: string
-  compliance: string[]
+  compliance: string[];
   link: string
   icon: string
   color: string
@@ -1535,7 +1521,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   reviews: number
   marketSize: string
   growthRate: string,
-}
+};
 export const emergingTechServicesV2: EmergingTechService[] = [
   {
     id: 'space-mining-platform'
@@ -1552,22 +1538,22 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     yearly: number
     currency: string
     trialDays: number
-    setupTime: string}
-    enterprise: number}
-  }
-  features: string[]
-  benefits: string[]
-  targetAudience: string[]
+    setupTime: string};
+    enterprise: number};
+  };
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
   marketPosition: string
-  competitors: string[]
-  techStack: string[]
+  competitors: string[];
+  techStack: string[];
   realImplementation: boolean
   implementationDetails: string
   roi: string
-  useCases: string[]
-  integrations: string[]
+  useCases: string[];
+  integrations: string[];
   support: string
-  compliance: string[]
+  compliance: string[];
   link: string
   icon: string
   color: string
@@ -1578,8 +1564,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [
   reviews: number
   marketSize: string
   growthRate: string
-}
-
+};
+;
 export const emergingTechServicesV2: EmergingTechService[] = [
   {
     id: 'space-mining-platform'
@@ -1592,31 +1578,31 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 9990
       currency: 'USD'
       trialDays: 7
-      setupTime: '24 hours'}
-      enterprise: 4999}
-    }
+      setupTime: '24 hours'};
+      enterprise: 4999};
+    };
     features: [
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis'
       'Risk assessmentRegulatory compliance tools'
-    ]
+    ];
     benefits: [
-    ]
+    ];
     benefits: [,
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
     ],
     targetAudience: [,
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'];,
     marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.'
-    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+']
-    techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems']
+    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'];
+    techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'];
     realImplementation: true,
     implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.',
     useCases: [,
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'];,
-    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications']
+    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'];
     support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
-    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations']
+    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'];
     link: 'https://ziontechgroup.com/space-mining-platform'
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -1626,23 +1612,23 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.9
     reviews: 45
     marketSize: '$3.5B space mining market',
-    ]
+    ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
-    ]
+    ];
     targetAudience: [,
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'];,
     marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.'
-    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+']
-    techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems']
+    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'];
+    techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'];
     realImplementation: true
     implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.'
     useCases: [,
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'];,
-    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications']
+    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'];
     support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
-    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations']
+    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'];
     link: 'https://ziontechgroup.com/space-mining-platform'
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -1652,7 +1638,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.9
     reviews: 45
     marketSize: '$3.5B space mining market'
-    growthRate: '85% annually'}
+    growthRate: '85% annually'};
   {
     id: 'quantum-bio-computing-platform'
     name: 'Quantum Bio-Computing Platform'
@@ -1672,29 +1658,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 5990
       currency: 'USD'
       trialDays: 14
-      setupTime: '8 hours'}
-      enterprise: 2499}
-    }
+      setupTime: '8 hours'};
+      enterprise: 2499};
+    };
     features: [
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools'
       'Custom biological modelsAPI for research'
-    ]
+    ];
     benefits: [
       'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
     ],
     targetAudience: [,
       'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizationsUniversitiesGovernment agencies'];,
     marketPosition: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.'
-    competitors: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms']
-    techStack: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS']
+    competitors: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms'];
+    techStack: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS'];
     realImplementation: true,
     implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     useCases: [,
       'Drug discoveryGenetic analysisProtein foldingMolecular dynamicsBiological optimizationResearch acceleration'];,
-    integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software']
+    integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'];
     support: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
-    compliance: ['Research ethics, Data privacy, Scientific standards, Industry regulations']
+    compliance: ['Research ethics, Data privacy, Scientific standards, Industry regulations'];
     link: 'https://ziontechgroup.com/quantum-bio-computing-platform'
     icon: ''
     color: 'from-green-500 to-emerald-600'
@@ -1704,7 +1690,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.8
     reviews: 85
     marketSize: '$12B quantum bio-computing market',
-    growthRate: '65% annually'}
+    growthRate: '65% annually'};
   {
     id: 'brain-computer-interface-platform'
     name: 'Brain-Computer Interface Platform'
@@ -1716,29 +1702,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 3990
       currency: 'USD'
       trialDays: 21,
-      setupTime: '6 hours'}
-      enterprise: 1599}
-    }
+      setupTime: '6 hours'};
+      enterprise: 1599};
+    };
     features: [
       'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing'
       'Custom neural modelsAPI for developers'
-    ]
+    ];
     benefits: [
       'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
     ],
     targetAudience: [,
       'Healthcare providersGaming companiesAccessibility organizationsResearch institutionsTechnology companiesEducational institutions'];,
     marketPosition: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.'
-    competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms']
-    techStack: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware']
+    competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms'];
+    techStack: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware'];
     realImplementation: true,
     implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     useCases: [,
       'Accessibility assistanceGaming controlMedical researchCommunication aidsProsthetic controlCognitive enhancement'];,
-    integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms']
+    integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'];
     support: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
-    compliance: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards']
+    compliance: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'];
     link: 'https://ziontechgroup.com/brain-computer-interface-platform'
     icon: ''
     color: 'from-blue-500 to-indigo-600'
@@ -1748,7 +1734,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.7
     reviews: 120
     marketSize: '$18B BCI market',
-    growthRate: '55% annually'}
+    growthRate: '55% annually'};
   {
     id: 'quantum-energy-platform'
     name: 'Quantum Energy Platform'
@@ -1760,29 +1746,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 4990
       currency: 'USD'
       trialDays: 14,
-      setupTime: '6 hours'}
-      enterprise: 1999}
-    }
+      setupTime: '6 hours'};
+      enterprise: 1999};
+    };
     features: [
       'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics'
       'Custom energy modelsAPI for energy systems'
-    ]
+    ];
     benefits: [
       'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
     ],
     targetAudience: [,
       'Energy companiesUtility providersResearch institutionsGovernment agenciesTechnology companiesEnvironmental organizations'];,
     marketPosition: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.'
-    competitors: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools']
-    techStack: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems']
+    competitors: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools'];
+    techStack: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems'];
     realImplementation: true,
     implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     useCases: [,
       'Energy system optimizationFusion power simulationGrid optimizationEnergy storage optimizationRenewable integrationEnergy research'];,
-    integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications']
+    integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'];
     support: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
-    compliance: ['Energy regulations, Safety standards, Environmental regulations, Industry standards']
+    compliance: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'];
     link: 'https://ziontechgroup.com/quantum-energy-platform'
     icon: ''
     color: 'from-yellow-500 to-orange-600'
@@ -1792,7 +1778,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.8
     reviews: 95
     marketSize: '$25B quantum energy market',
-    growthRate: '45% annually'}
+    growthRate: '45% annually'};
   {
     id: 'autonomous-vehicle-ai-platform'
     name: 'Autonomous Vehicle AI Platform'
@@ -1804,29 +1790,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 7990
       currency: 'USD'
       trialDays: 14,
-      setupTime: '12 hours'}
-      enterprise: 2999}
-    }
+      setupTime: '12 hours'};
+      enterprise: 2999};
+    };
     features: [
       'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring'
       'Custom AI modelsAPI for vehicles'
-    ]
+    ];
     benefits: [
       'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
     ],
     targetAudience: [,
       'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies'];,
     marketPosition: 'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.'
-    competitors: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms']
-    techStack: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems']
+    competitors: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms'];
+    techStack: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems'];
     realImplementation: true,
     implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
     useCases: [,
       'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'];,
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
     icon: ''
     color: 'from-red-500 to-pink-600'
@@ -1836,7 +1822,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.9
     reviews: 65
     marketSize: '$35B autonomous vehicle market',
-    growthRate: '75% annually'}
+    growthRate: '75% annually'};
 export interface EmergingTechService {
   id: string
   name: string
@@ -1848,22 +1834,22 @@ export interface EmergingTechService {
     yearly: number
     currency: string
     trialDays: number,
-    setupTime: string}
-    enterprise: number}
-  }
-  features: string[]
-  benefits: string[]
-  targetAudience: string[]
+    setupTime: string};
+    enterprise: number};
+  };
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
   marketPosition: string
-  competitors: string[]
-  techStack: string[]
+  competitors: string[];
+  techStack: string[];
   realImplementation: boolean
   implementationDetails: string
   roi: string
-  useCases: string[]
-  integrations: string[]
+  useCases: string[];
+  integrations: string[];
   support: string
-  compliance: string[]
+  compliance: string[];
   link: string
   icon: string
   color: string
@@ -1884,20 +1870,20 @@ export interface EmergingTechService {
   n: string,
   categor,
   y: string,
-    ]
+    ];
     targetAudience: [,
       'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies'];,
     marketPosition: 'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.'
-    competitors: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms']
-    techStack: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems']
+    competitors: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms'];
+    techStack: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems'];
     realImplementation: true
     implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
     useCases: [,
       'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'];,
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
     icon: ''
     color: 'from-red-500 to-pink-600'
@@ -1907,7 +1893,7 @@ export interface EmergingTechService {
     rating: 4.9
     reviews: 65
     marketSize: '$35B autonomous vehicle market'
-    growthRate: '75% annually'}
+    growthRate: '75% annually'};
 export interface EmergingTechService {
   id: string
   name: string
@@ -1919,22 +1905,22 @@ export interface EmergingTechService {
     yearly: number
     currency: string
     trialDays: number
-    setupTime: string}
-    enterprise: number}
-  }
-  features: string[]
-  benefits: string[]
-  targetAudience: string[]
+    setupTime: string};
+    enterprise: number};
+  };
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
   marketPosition: string
-  competitors: string[]
-  techStack: string[]
+  competitors: string[];
+  techStack: string[];
   realImplementation: boolean
   implementationDetails: string
   roi: string
-  useCases: string[]
-  integrations: string[]
+  useCases: string[];
+  integrations: string[];
   support: string
-  compliance: string[]
+  compliance: string[];
   link: string
   icon: string
   color: string
@@ -1956,11 +1942,11 @@ export interface EmergingTechService {
   categor,
   y: string
   pric,
-  e: {/* TODO: Fix JSX expression */}
-  e: string}
+  e: {/* TODO: Fix JSX expression */};
+  e: string};
     enterpris,
-  e: number}
-  }
+  e: number};
+  };
   feature,
   s: string[],
   benefit,
@@ -1989,8 +1975,7 @@ export interface EmergingTechService {
   e: string[],
   lin,
   k: string,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   popula,
@@ -2006,34 +1991,34 @@ export interface EmergingTechService {
   marketSiz,
   e: string,
   growthRat,
-  e: string}
+  e: string};
 export const,
   emergingTechServicesV2: EmergingTechService[] = [,
-  {/* TODO: Fix JSX expression */}
-  e: '24 hours'}
+  {/* TODO: Fix JSX expression */};
+  e: '24 hours'};
       enterpris,
-  e: 4999}
-    }
+  e: 4999};
+    };
     feature,
   s: [,
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis'
       'Risk assessmentRegulatory compliance tools'
-    ]
+    ];
     benefit,
   s: [,
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our,
   advantage: Advanced automation, AI optimization, and comprehensive platform.'
     competitor,
-  s: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+']
+  s: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'];
     techStac,
-  k: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems']
+  k: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2043,18 +2028,17 @@ export const,
     useCase,
   s: [,
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'
-    ]
+    ];
     integration,
-  s: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications']
+  s: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'];
     suppor,
   t: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
     complianc,
-  e: ['Space regulations, International treaties, Safety standards, Industry regulations']
+  e: ['Space regulations, International treaties, Safety standards, Industry regulations'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/space-mining-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-500 to-pink-600',
     popula,
@@ -2071,32 +2055,32 @@ export const,
   e: '$3.5B space mining market',
     growthRat,
   e: '85% annually'
-  }
-  {/* TODO: Fix JSX expression */}
-  e: '8 hours'}
+  };
+  {/* TODO: Fix JSX expression */};
+  e: '8 hours'};
       enterpris,
-  e: 2499}
-    }
+  e: 2499};
+    };
     feature,
   s: [,
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools'
       'Custom biological modelsAPI for research'
-    ]
+    ];
     benefit,
   s: [,
       'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizationsUniversitiesGovernment agencies'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our,
   advantage: Biological integration, quantum processing, and research optimization.'
     competitor,
-  s: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms']
+  s: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms'];
     techStac,
-  k: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS']
+  k: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2106,18 +2090,17 @@ export const,
     useCase,
   s: [,
       'Drug discoveryGenetic analysisProtein foldingMolecular dynamicsBiological optimizationResearch acceleration'
-    ]
+    ];
     integration,
-  s: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software']
+  s: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'];
     suppor,
   t: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     complianc,
-  e: ['Research ethics, Data privacy, Scientific standards, Industry regulations']
+  e: ['Research ethics, Data privacy, Scientific standards, Industry regulations'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/quantum-bio-computing-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-500 to-emerald-600',
     popula,
@@ -2134,32 +2117,32 @@ export const,
   e: '$12B quantum bio-computing market',
     growthRat,
   e: '65% annually'
-  }
-  {/* TODO: Fix JSX expression */}
-  e: '6 hours'}
+  };
+  {/* TODO: Fix JSX expression */};
+  e: '6 hours'};
       enterpris,
-  e: 1599}
-    }
+  e: 1599};
+    };
     feature,
   s: [,
       'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing'
       'Custom neural modelsAPI for developers'
-    ]
+    ];
     benefit,
   s: [,
       'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Healthcare providersGaming companiesAccessibility organizationsResearch institutionsTechnology companiesEducational institutions'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our,
   advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.'
     competitor,
-  s: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms']
+  s: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms'];
     techStac,
-  k: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware']
+  k: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2169,18 +2152,17 @@ export const,
     useCase,
   s: [,
       'Accessibility assistanceGaming controlMedical researchCommunication aidsProsthetic controlCognitive enhancement'
-    ]
+    ];
     integration,
-  s: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms']
+  s: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'];
     suppor,
   t: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     complianc,
-  e: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards']
+  e: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/brain-computer-interface-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-500 to-indigo-600',
     popula,
@@ -2197,32 +2179,32 @@ export const,
   e: '$18B BCI market',
     growthRat,
   e: '55% annually'
-  }
-  {/* TODO: Fix JSX expression */}
-  e: '6 hours'}
+  };
+  {/* TODO: Fix JSX expression */};
+  e: '6 hours'};
       enterpris,
-  e: 1999}
-    }
+  e: 1999};
+    };
     feature,
   s: [,
       'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics'
       'Custom energy modelsAPI for energy systems'
-    ]
+    ];
     benefit,
   s: [,
       'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Energy companiesUtility providersResearch institutionsGovernment agenciesTechnology companiesEnvironmental organizations'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our,
   advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.'
     competitor,
-  s: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools']
+  s: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools'];
     techStac,
-  k: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems']
+  k: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2232,18 +2214,17 @@ export const,
     useCase,
   s: [,
       'Energy system optimizationFusion power simulationGrid optimizationEnergy storage optimizationRenewable integrationEnergy research'
-    ]
+    ];
     integration,
-  s: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications']
+  s: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'];
     suppor,
   t: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     complianc,
-  e: ['Energy regulations, Safety standards, Environmental regulations, Industry standards']
+  e: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/quantum-energy-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-yellow-500 to-orange-600',
     popula,
@@ -2260,32 +2241,32 @@ export const,
   e: '$25B quantum energy market',
     growthRat,
   e: '45% annually'
-  }
-  {/* TODO: Fix JSX expression */}
-  e: '12 hours'}
+  };
+  {/* TODO: Fix JSX expression */};
+  e: '12 hours'};
       enterpris,
-  e: 2999}
-    }
+  e: 2999};
+    };
     feature,
   s: [,
       'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring'
       'Custom AI modelsAPI for vehicles'
-    ]
+    ];
     benefit,
   s: [,
       'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our,
   advantage: Advanced AI, comprehensive safety, and fleet optimization.'
     competitor,
-  s: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms']
+  s: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms'];
     techStac,
-  k: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems']
+  k: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2295,18 +2276,17 @@ export const,
     useCase,
   s: [,
       'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
-    ]
+    ];
     integration,
-  s: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+  s: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     suppor,
   t: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     complianc,
-  e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
+  e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/autonomous-vehicle-ai-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-500 to-pink-600',
     popula,
@@ -2323,12 +2303,12 @@ export const,
   e: '$35B autonomous vehicle market',
     growthRat,
   e: '75% annually'
-  }
-export interface EmergingTechService {/* TODO: Fix JSX expression */}
-  e: string}
+  };
+export interface EmergingTechService {/* TODO: Fix JSX expression */};
+  e: string};
     enterpris,
-  e: number}
-  }
+  e: number};
+  };
   feature,
   s: string[],
   benefit,
@@ -2357,8 +2337,7 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   e: string[],
   lin,
   k: string,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   popula,
@@ -2374,10 +2353,10 @@ export interface EmergingTechService {/* TODO: Fix JSX expression */}
   marketSiz,
   e: string,
   growthRat,
-  e: string}
-export interface EmergingTechService {/* TODO: Fix JSX expression */}
-  }
-]
+  e: string};
+export interface EmergingTechService {/* TODO: Fix JSX expression */};
+  };
+];
 export const emergingTechServicesV2: EmergingTechService[] = [
   {
     id: 'space-mining-platform'
@@ -2390,29 +2369,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 9990
       currency: 'USD'
       trialDays: 7,
-      setupTime: '24 hours'}
-      enterprise: 4999}
-    }
+      setupTime: '24 hours'};
+      enterprise: 4999};
+    };
     features: [
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis'
       'Risk assessmentRegulatory compliance tools'
-    ]
+    ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
     ],
     targetAudience: [,
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'];,
     marketPosition: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our advantage: Advanced automation, AI optimization, and comprehensive platform.'
-    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+']
-    techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems']
+    competitors: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'];
+    techStack: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'];
     realImplementation: true,
     implementationDetails: 'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
     roi: 'Average customer sees 1000% ROI within 24 months through access to valuable space resources.',
     useCases: [,
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'];,
-    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications']
+    integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'];
     support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
-    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations']
+    compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'];
     link: 'https://ziontechgroup.com/space-mining-platform'
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -2422,7 +2401,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.9
     reviews: 45
     marketSize: '$3.5B space mining market',
-    growthRate: '85% annually'}
+    growthRate: '85% annually'};
   {
     id: 'quantum-bio-computing-platform'
     name: 'Quantum Bio-Computing Platform'
@@ -2434,29 +2413,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 5990
       currency: 'USD'
       trialDays: 14,
-      setupTime: '8 hours'}
-      enterprise: 2499}
-    }
+      setupTime: '8 hours'};
+      enterprise: 2499};
+    };
     features: [
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools'
       'Custom biological modelsAPI for research'
-    ]
+    ];
     benefits: [
       'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
     ],
     targetAudience: [,
       'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizationsUniversitiesGovernment agencies'];,
     marketPosition: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.'
-    competitors: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms']
-    techStack: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS']
+    competitors: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms'];
+    techStack: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS'];
     realImplementation: true,
     implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     useCases: [,
       'Drug discoveryGenetic analysisProtein foldingMolecular dynamicsBiological optimizationResearch acceleration'];,
-    integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software']
+    integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'];
     support: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
-    compliance: ['Research ethics, Data privacy, Scientific standards, Industry regulations']
+    compliance: ['Research ethics, Data privacy, Scientific standards, Industry regulations'];
     link: 'https://ziontechgroup.com/quantum-bio-computing-platform'
     icon: ''
     color: 'from-green-500 to-emerald-600'
@@ -2466,7 +2445,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.8
     reviews: 85
     marketSize: '$12B quantum bio-computing market',
-    growthRate: '65% annually'}
+    growthRate: '65% annually'};
   {
     id: 'brain-computer-interface-platform'
     name: 'Brain-Computer Interface Platform'
@@ -2478,29 +2457,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 3990
       currency: 'USD'
       trialDays: 21,
-      setupTime: '6 hours'}
-      enterprise: 1599}
-    }
+      setupTime: '6 hours'};
+      enterprise: 1599};
+    };
     features: [
       'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing'
       'Custom neural modelsAPI for developers'
-    ]
+    ];
     benefits: [
       'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
     ],
     targetAudience: [,
       'Healthcare providersGaming companiesAccessibility organizationsResearch institutionsTechnology companiesEducational institutions'];,
     marketPosition: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.'
-    competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms']
-    techStack: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware']
+    competitors: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms'];
+    techStack: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware'];
     realImplementation: true,
     implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     useCases: [,
       'Accessibility assistanceGaming controlMedical researchCommunication aidsProsthetic controlCognitive enhancement'];,
-    integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms']
+    integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'];
     support: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
-    compliance: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards']
+    compliance: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'];
     link: 'https://ziontechgroup.com/brain-computer-interface-platform'
     icon: ''
     color: 'from-blue-500 to-indigo-600'
@@ -2510,7 +2489,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.7
     reviews: 120
     marketSize: '$18B BCI market',
-    growthRate: '55% annually'}
+    growthRate: '55% annually'};
   {
     id: 'quantum-energy-platform'
     name: 'Quantum Energy Platform'
@@ -2522,29 +2501,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 4990
       currency: 'USD'
       trialDays: 14,
-      setupTime: '6 hours'}
-      enterprise: 1999}
-    }
+      setupTime: '6 hours'};
+      enterprise: 1999};
+    };
     features: [
       'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics'
       'Custom energy modelsAPI for energy systems'
-    ]
+    ];
     benefits: [
       'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
     ],
     targetAudience: [,
       'Energy companiesUtility providersResearch institutionsGovernment agenciesTechnology companiesEnvironmental organizations'];,
     marketPosition: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.'
-    competitors: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools']
-    techStack: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems']
+    competitors: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools'];
+    techStack: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems'];
     realImplementation: true,
     implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     useCases: [,
       'Energy system optimizationFusion power simulationGrid optimizationEnergy storage optimizationRenewable integrationEnergy research'];,
-    integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications']
+    integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'];
     support: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
-    compliance: ['Energy regulations, Safety standards, Environmental regulations, Industry standards']
+    compliance: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'];
     link: 'https://ziontechgroup.com/quantum-energy-platform'
     icon: ''
     color: 'from-yellow-500 to-orange-600'
@@ -2554,7 +2533,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.8
     reviews: 95
     marketSize: '$25B quantum energy market',
-    growthRate: '45% annually'}
+    growthRate: '45% annually'};
   {
     id: 'autonomous-vehicle-ai-platform'
     name: 'Autonomous Vehicle AI Platform'
@@ -2566,29 +2545,29 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       yearly: 7990
       currency: 'USD'
       trialDays: 14,
-      setupTime: '12 hours'}
-      enterprise: 2999}
-    }
+      setupTime: '12 hours'};
+      enterprise: 2999};
+    };
     features: [
       'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring'
       'Custom AI modelsAPI for vehicles'
-    ]
+    ];
     benefits: [
       'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
     ],
     targetAudience: [,
       'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies'];,
     marketPosition: 'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.'
-    competitors: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms']
-    techStack: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems']
+    competitors: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms'];
+    techStack: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems'];
     realImplementation: true,
     implementationDetails: 'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',
     useCases: [,
       'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'];,
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
+    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
     icon: ''
     color: 'from-red-500 to-pink-600'
@@ -2601,31 +2580,31 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     growthRate: '75% annually',
 export const,
   emergingTechServicesV2: EmergingTechService[] = [,
-  {/* TODO: Fix JSX expression */}
-  e: '24 hours'}
+  {/* TODO: Fix JSX expression */};
+  e: '24 hours'};
       enterpris,
-  e: 4999}
-    }
+  e: 4999};
+    };
     feature,
   s: [,
       'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis'
       'Risk assessmentRegulatory compliance tools'
-    ]
+    ];
     benefit,
   s: [,
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Space agenciesMining companiesInvestment firmsResearch institutionsGovernment agenciesTechnology companies'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with Planetary Resources ($1000+), Deep Space Industries ($800+), and AstroForge ($600+). Our,
   advantage: Advanced automation, AI optimization, and comprehensive platform.'
     competitor,
-  s: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+']
+  s: ['Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+'];
     techStac,
-  k: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems']
+  k: ['Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2635,18 +2614,17 @@ export const,
     useCase,
   s: [,
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance'
-    ]
+    ];
     integration,
-  s: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications']
+  s: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'];
     suppor,
   t: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.'
     complianc,
-  e: ['Space regulations, International treaties, Safety standards, Industry regulations']
+  e: ['Space regulations, International treaties, Safety standards, Industry regulations'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/space-mining-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-500 to-pink-600',
     popula,
@@ -2663,32 +2641,32 @@ export const,
   e: '$3.5B space mining market',
     growthRat,
   e: '85% annually'
-  }
-  {/* TODO: Fix JSX expression */}
-  e: '8 hours'}
+  };
+  {/* TODO: Fix JSX expression */};
+  e: '8 hours'};
       enterpris,
-  e: 2499}
-    }
+  e: 2499};
+    };
     feature,
   s: [,
       'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools'
       'Custom biological modelsAPI for research'
-    ]
+    ];
     benefit,
   s: [,
       'Solve biological problems 1000x fasterAccelerate drug discoveryImprove genetic analysisEnable new research capabilitiesReduce research costs'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Pharmaceutical companiesResearch institutionsBiotechnology firmsHealthcare organizationsUniversitiesGovernment agencies'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our,
   advantage: Biological integration, quantum processing, and research optimization.'
     competitor,
-  s: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms']
+  s: ['IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms'];
     techStac,
-  k: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS']
+  k: ['Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2698,18 +2676,17 @@ export const,
     useCase,
   s: [,
       'Drug discoveryGenetic analysisProtein foldingMolecular dynamicsBiological optimizationResearch acceleration'
-    ]
+    ];
     integration,
-  s: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software']
+  s: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'];
     suppor,
   t: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     complianc,
-  e: ['Research ethics, Data privacy, Scientific standards, Industry regulations']
+  e: ['Research ethics, Data privacy, Scientific standards, Industry regulations'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/quantum-bio-computing-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-500 to-emerald-600',
     popula,
@@ -2726,32 +2703,32 @@ export const,
   e: '$12B quantum bio-computing market',
     growthRat,
   e: '65% annually'
-  }
-  {/* TODO: Fix JSX expression */}
-  e: '6 hours'}
+  };
+  {/* TODO: Fix JSX expression */};
+  e: '6 hours'};
       enterpris,
-  e: 1599}
-    }
+  e: 1599};
+    };
     feature,
   s: [,
       'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing'
       'Custom neural modelsAPI for developers'
-    ]
+    ];
     benefit,
   s: [,
       'Enable new forms of human-computer interactionImprove accessibility for disabled usersCreate immersive gaming experiencesAdvance medical researchEnhance human capabilities'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Healthcare providersGaming companiesAccessibility organizationsResearch institutionsTechnology companiesEducational institutions'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our,
   advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.'
     competitor,
-  s: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms']
+  s: ['Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms'];
     techStac,
-  k: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware']
+  k: ['Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2761,18 +2738,17 @@ export const,
     useCase,
   s: [,
       'Accessibility assistanceGaming controlMedical researchCommunication aidsProsthetic controlCognitive enhancement'
-    ]
+    ];
     integration,
-  s: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms']
+  s: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'];
     suppor,
   t: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     complianc,
-  e: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards']
+  e: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/brain-computer-interface-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-500 to-indigo-600',
     popula,
@@ -2789,32 +2765,32 @@ export const,
   e: '$18B BCI market',
     growthRat,
   e: '55% annually'
-  }
-  {/* TODO: Fix JSX expression */}
-  e: '6 hours'}
+  };
+  {/* TODO: Fix JSX expression */};
+  e: '6 hours'};
       enterpris,
-  e: 1999}
-    }
+  e: 1999};
+    };
     feature,
   s: [,
       'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics'
       'Custom energy modelsAPI for energy systems'
-    ]
+    ];
     benefit,
   s: [,
       'Optimize energy systems 100x fasterEnable fusion power simulationReduce energy costs by 30%Improve grid efficiencyAccelerate clean energy adoption'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Energy companiesUtility providersResearch institutionsGovernment agenciesTechnology companiesEnvironmental organizations'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our,
   advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.'
     competitor,
-  s: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools']
+  s: ['Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools'];
     techStac,
-  k: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems']
+  k: ['Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2824,18 +2800,17 @@ export const,
     useCase,
   s: [,
       'Energy system optimizationFusion power simulationGrid optimizationEnergy storage optimizationRenewable integrationEnergy research'
-    ]
+    ];
     integration,
-  s: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications']
+  s: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'];
     suppor,
   t: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     complianc,
-  e: ['Energy regulations, Safety standards, Environmental regulations, Industry standards']
+  e: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/quantum-energy-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-yellow-500 to-orange-600',
     popula,
@@ -2852,32 +2827,32 @@ export const,
   e: '$25B quantum energy market',
     growthRat,
   e: '45% annually'
-  }
-  {/* TODO: Fix JSX expression */}
-  e: '12 hours'}
+  };
+  {/* TODO: Fix JSX expression */};
+  e: '12 hours'};
       enterpris,
-  e: 2999}
-    }
+  e: 2999};
+    };
     feature,
   s: [,
       'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring'
       'Custom AI modelsAPI for vehicles'
-    ]
+    ];
     benefit,
   s: [,
       'Enable autonomous transportationImprove road safetyReduce transportation costsOptimize fleet operationsAdvance mobility technology'
-    ]
+    ];
     targetAudienc,
   e: [,
       'Automotive manufacturersTransportation companiesLogistics providersRide-sharing platformsGovernment agenciesTechnology companies'
-    ]
+    ];
     marketPositio,
   n: 'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our,
   advantage: Advanced AI, comprehensive safety, and fleet optimization.'
     competitor,
-  s: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms']
+  s: ['Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms'];
     techStac,
-  k: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems']
+  k: ['Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems'];
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2887,18 +2862,17 @@ export const,
     useCase,
   s: [,
       'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
-    ]
+    ];
     integration,
-  s: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications']
+  s: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     suppor,
   t: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     complianc,
-  e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards']
+  e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
     lin,
   k: 'http,
   s: //ziontechgroup.com/autonomous-vehicle-ai-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-500 to-pink-600',
     popula,
@@ -2915,12 +2889,12 @@ export const,
   e: '$35B autonomous vehicle market',
     growthRat,
   e: '75% annually'
-  }
-]
-  }
-]
-  }
-]
+  };
+];
+  };
+];
+  };
+];
 'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS'], realImplementatio,
   n: true, i,
   d: string, nam,
@@ -2945,8 +2919,7 @@ export const,
   s: string[], suppor,
   t: string, complianc,
   e: string[], lin,
-  k: string, ico,
-  n: string, colo,
+  k: string, icon: string, colo,
   r: string, popula,
   r: boolean, launch_dat,
   e: string, customer,
@@ -2958,8 +2931,7 @@ export const,
   s: [' 'Asteroid mining'' 'Resource extraction'' 'Space logistics'' 'Resource processing'' 'Market analysis'' 'Regulatory compliance' ] integration,
   s: [' 'Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications' ] suppor,
   t: ' '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.' complianc,
-  e: [' ico,
-  n: '🚀',' colo,
+  e: [' icon: '🚀',' colo,
   r: 'from - purple - 500 to - pink - 600', popula,
   r: true,' launch_dat,
   e: '2024 - 01 - 05', customer,
@@ -3002,8 +2974,7 @@ export const,
   t:  ,' '24 / 7 research support, dedicated bio - quantum specialist, training programs, and quarterly research reviews.', complianc,
   e: [,' 'Research ethics, Data privacy, Scientific standards, Industry regulations'],' lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - bio - computing - platform', ' ico,
-  n: '🧬',' colo,
+  s://ziontechgroup.com / quantum - bio - computing - platform', ' icon: '🧬',' colo,
   r: 'from - green - 500 to - emerald - 600', popula,
   r: true,' launch_dat,
   e: '2024 - 02 - 01', customer,
@@ -3048,8 +3019,7 @@ export const,
   t:  ,' '24 / 7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.', complianc,
   e: [,' 'Medical device regulations, Data privacy, Ethical guidelines, Industry standards'],' lin,
   k: 'http,
-  s://ziontechgroup.com / brain - computer - interface - platform', ' ico,
-  n: '🧠',' colo,
+  s://ziontechgroup.com / brain - computer - interface - platform', ' icon: '🧠',' colo,
   r: 'from - blue - 500 to - indigo - 600', popula,
   r: true,' launch_dat,
   e: '2024 - 01 - 15', customer,
@@ -3094,8 +3064,7 @@ export const,
   t:  ,' '24 / 7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.', complianc,
   e: [,' 'Energy regulations, Safety standards, Environmental regulations, Industry standards'],' lin,
   k: 'http,
-  s://ziontechgroup.com / quantum - energy - platform', ' ico,
-  n: '⚡',' colo,
+  s://ziontechgroup.com / quantum - energy - platform', ' icon: '⚡',' colo,
   r: 'from - yellow - 500 to - orange - 600', popula,
   r: true,' launch_dat,
   e: '2024 - 02 - 10', customer,
@@ -3112,8 +3081,7 @@ export const,
   t: ' '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.' complianc,
   e: [ ' 'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],' lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai-platform',' ico,
-  n: '🚗',' colo,
+  s://ziontechgroup.com/autonomous-vehicle-ai-platform',' icon: '🚗',' colo,
   r: 'from-red-500 to-pink-600', popula,
   r: true,' launchDat,
   e: '2024-01-25', customer,
@@ -3136,8 +3104,7 @@ export const,
   t: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',' complianc,
   e: ['Space regulations, International treaties, Safety standards, Industry regulations'],' lin,
   k: 'http,
-  s://ziontechgroup.com/space-mining-platform'' ico,
-  n: '🚀'' colo,
+  s://ziontechgroup.com/space-mining-platform'' icon: '🚀'' colo,
   r: 'from-purple-500 to-pink-600' popula,
   r: true,' launchDat,
   e: '2024-01-05' customer,
@@ -3173,8 +3140,7 @@ export const,
   t:  ,' '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.', complianc,
   e: [,' 'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],' lin,
   k: 'http,
-  s://ziontechgroup.com / autonomous - vehicle - ai - platform', ' ico,
-  n: '🚗',' colo,
+  s://ziontechgroup.com / autonomous - vehicle - ai - platform', ' icon: '🚗',' colo,
   r: 'from - red - 500 to - pink - 600', popula,
   r: true,' launch_dat,
   e: '2024 - 01 - 25', customer,
@@ -3208,8 +3174,7 @@ export const,
   s: string[], suppor,
   t: string, complianc,
   e: string[], lin,
-  k: string, ico,
-  n: string, colo,
+  k: string, icon: string, colo,
   r: string, popula,
   r: boolean, launchDat,
   e: string, customer,
@@ -3225,8 +3190,7 @@ export const,
   t: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'' complianc,
   e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];' lin,
   k: 'http,
-  s://ziontechgroup.com / autonomous - vehicle - ai - platform'' ico,
-  n: '🚗'' colo,
+  s://ziontechgroup.com / autonomous - vehicle - ai - platform'' icon: '🚗'' colo,
   r: 'from - red - 500 to - pink - 600' popula,
   r: true,' launch_dat,
   e: '2024 - 01 - 25' customer,
@@ -3250,8 +3214,7 @@ export const,
   t: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.',' complianc,
   e: ['Research ethics, Data privacy, Scientific standards, Industry regulations'],' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-bio-computing-platform'' ico,
-  n: '🧬'' colo,
+  s://ziontechgroup.com/quantum-bio-computing-platform'' icon: '🧬'' colo,
   r: 'from-green-500 to-emerald-600' popula,
   r: true,' launchDat,
   e: '2024-02-01' customer,
@@ -3287,8 +3250,7 @@ export const,
   t: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.',' complianc,
   e: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'],' lin,
   k: 'http,
-  s://ziontechgroup.com/brain-computer-interface-platform'' ico,
-  n: '🧠'' colo,
+  s://ziontechgroup.com/brain-computer-interface-platform'' icon: '🧠'' colo,
   r: 'from-blue-500 to-indigo-600' popula,
   r: true,' launchDat,
   e: '2024-01-15' customer,
@@ -3324,8 +3286,7 @@ export const,
   t: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.',' complianc,
   e: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'],' lin,
   k: 'http,
-  s://ziontechgroup.com/quantum-energy-platform'' ico,
-  n: '⚡'' colo,
+  s://ziontechgroup.com/quantum-energy-platform'' icon: '⚡'' colo,
   r: 'from-yellow-500 to-orange-600' popula,
   r: true,' launchDat,
   e: '2024-02-10' customer,
@@ -3361,8 +3322,7 @@ export const,
   t: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',' complianc,
   e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],' lin,
   k: 'http,
-  s://ziontechgroup.com/autonomous-vehicle-ai-platform'' ico,
-  n: '🚗'' colo,
+  s://ziontechgroup.com/autonomous-vehicle-ai-platform'' icon: '🚗'' colo,
   r: 'from-red-500 to-pink-600' popula,
   r: true,' launchDat,
   e: '2024-01-25' customer,
@@ -3376,7 +3336,7 @@ export const,
   e: string, descriptio,
   n: string, categor,
   y: string, pric,
-  e: {/* TODO: Fix JSX expression */}
+  e: {/* TODO: Fix JSX expression */};
   e: string} enterpris,
   e: number} } feature,
   s: string[], benefit,
@@ -3392,8 +3352,7 @@ export const,
   s: string[], suppor,
   t: string, complianc,
   e: string[], lin,
-  k: string, ico,
-  n: string, colo,
+  k: string, icon: string, colo,
   r: string, popula,
   r: boolean, launchDat,
   e: string, customer,
@@ -3402,7 +3361,7 @@ export const,
   s: number, marketSiz,
   e: string, growthRat,
   e: string} export const,
-  emergingTechServicesV2: EmergingTechService[] = [, {/* TODO: Fix JSX expression */}
+  emergingTechServicesV2: EmergingTechService[] = [, {/* TODO: Fix JSX expression */};
   e: '24 hours'} enterpris,
   e: 4999} } feature,
   s: [,' 'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';' 'Risk assessmentRegulatory compliance tools' ]; benefit,
@@ -3420,8 +3379,7 @@ export const,
   t: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.';' complianc,
   e: ['Space regulations, International treaties, Safety standards, Industry regulations'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/space-mining-platform',' ico,
-  n: '🚀',' colo,
+  s: //ziontechgroup.com/space-mining-platform',' icon: '🚀',' colo,
   r: 'from-purple-500 to-pink-600', popula,
   r: true,' launchDat,
   e: '2024-01-05', customer,
@@ -3429,7 +3387,7 @@ export const,
   g: 4.9, review,
   s: 45,' marketSiz,
   e: '$3.5B space mining market',' growthRat,
-  e: '85% annually' } {/* TODO: Fix JSX expression */}
+  e: '85% annually' } {/* TODO: Fix JSX expression */};
   e: '8 hours'} enterpris,
   e: 2499} } feature,
   s: [,' 'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools';' 'Custom biological modelsAPI for research' ]; benefit,
@@ -3447,8 +3405,7 @@ export const,
   t: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.';' complianc,
   e: ['Research ethics, Data privacy, Scientific standards, Industry regulations'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/quantum-bio-computing-platform',' ico,
-  n: '🧬',' colo,
+  s: //ziontechgroup.com/quantum-bio-computing-platform',' icon: '🧬',' colo,
   r: 'from-green-500 to-emerald-600', popula,
   r: true,' launchDat,
   e: '2024-02-01', customer,
@@ -3456,7 +3413,7 @@ export const,
   g: 4.8, review,
   s: 85,' marketSiz,
   e: '$12B quantum bio-computing market',' growthRat,
-  e: '65% annually' } {/* TODO: Fix JSX expression */}
+  e: '65% annually' } {/* TODO: Fix JSX expression */};
   e: '6 hours'} enterpris,
   e: 1599} } feature,
   s: [,' 'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing';' 'Custom neural modelsAPI for developers' ]; benefit,
@@ -3474,8 +3431,7 @@ export const,
   t: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.';' complianc,
   e: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/brain-computer-interface-platform',' ico,
-  n: '🧠',' colo,
+  s: //ziontechgroup.com/brain-computer-interface-platform',' icon: '🧠',' colo,
   r: 'from-blue-500 to-indigo-600', popula,
   r: true,' launchDat,
   e: '2024-01-15', customer,
@@ -3483,7 +3439,7 @@ export const,
   g: 4.7, review,
   s: 120,' marketSiz,
   e: '$18B BCI market',' growthRat,
-  e: '55% annually' } {/* TODO: Fix JSX expression */}
+  e: '55% annually' } {/* TODO: Fix JSX expression */};
   e: '6 hours'} enterpris,
   e: 1999} } feature,
   s: [,' 'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics';' 'Custom energy modelsAPI for energy systems' ]; benefit,
@@ -3501,8 +3457,7 @@ export const,
   t: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.';' complianc,
   e: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/quantum-energy-platform',' ico,
-  n: '⚡',' colo,
+  s: //ziontechgroup.com/quantum-energy-platform',' icon: '⚡',' colo,
   r: 'from-yellow-500 to-orange-600', popula,
   r: true,' launchDat,
   e: '2024-02-10', customer,
@@ -3510,7 +3465,7 @@ export const,
   g: 4.8, review,
   s: 95,' marketSiz,
   e: '$25B quantum energy market',' growthRat,
-  e: '45% annually' } {/* TODO: Fix JSX expression */}
+  e: '45% annually' } {/* TODO: Fix JSX expression */};
   e: '12 hours'} enterpris,
   e: 2999} } feature,
   s: [,' 'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring';' 'Custom AI modelsAPI for vehicles' ]; benefit,
@@ -3528,8 +3483,7 @@ export const,
   t: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';' complianc,
   e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/autonomous-vehicle-ai-platform',' ico,
-  n: '🚗',' colo,
+  s: //ziontechgroup.com/autonomous-vehicle-ai-platform',' icon: '🚗',' colo,
   r: 'from-red-500 to-pink-600', popula,
   r: true,' launchDat,
   e: '2024-01-25', customer,
@@ -3537,7 +3491,7 @@ export const,
   g: 4.9, review,
   s: 65,' marketSiz,
   e: '$35B autonomous vehicle market',' growthRat,
-  e: '75% annually' } export interface EmergingTechService {/* TODO: Fix JSX expression */}
+  e: '75% annually' } export interface EmergingTechService {/* TODO: Fix JSX expression */};
   e: string} enterpris,
   e: number} } feature,
   s: string[], benefit,
@@ -3553,8 +3507,7 @@ export const,
   s: string[], suppor,
   t: string, complianc,
   e: string[], lin,
-  k: string, ico,
-  n: string, colo,
+  k: string, icon: string, colo,
   r: string, popula,
   r: boolean, launchDat,
   e: string, customer,
@@ -3563,7 +3516,7 @@ export const,
   s: number, marketSiz,
   e: string, growthRat,
   e: string} export interface EmergingTechService { } ]; export const,
-  emergingTechServicesV2: EmergingTechService[] = [, {/* TODO: Fix JSX expression */}
+  emergingTechServicesV2: EmergingTechService[] = [, {/* TODO: Fix JSX expression */};
   e: '24 hours'} enterpris,
   e: 4999} } feature,
   s: [,' 'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';' 'Risk assessmentRegulatory compliance tools' ]; benefit,
@@ -3581,8 +3534,7 @@ export const,
   t: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.';' complianc,
   e: ['Space regulations, International treaties, Safety standards, Industry regulations'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/space-mining-platform',' ico,
-  n: '🚀',' colo,
+  s: //ziontechgroup.com/space-mining-platform',' icon: '🚀',' colo,
   r: 'from-purple-500 to-pink-600', popula,
   r: true,' launchDat,
   e: '2024-01-05', customer,
@@ -3590,7 +3542,7 @@ export const,
   g: 4.9, review,
   s: 45,' marketSiz,
   e: '$3.5B space mining market',' growthRat,
-  e: '85% annually' } {/* TODO: Fix JSX expression */}
+  e: '85% annually' } {/* TODO: Fix JSX expression */};
   e: '8 hours'} enterpris,
   e: 2499} } feature,
   s: [,' 'Quantum-biological hybrid processingDNA sequence analysisProtein folding simulationDrug discovery algorithmsGenetic optimizationBiological data processingQuantum molecular dynamicsBioinformatics tools';' 'Custom biological modelsAPI for research' ]; benefit,
@@ -3608,8 +3560,7 @@ export const,
   t: '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.';' complianc,
   e: ['Research ethics, Data privacy, Scientific standards, Industry regulations'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/quantum-bio-computing-platform',' ico,
-  n: '🧬',' colo,
+  s: //ziontechgroup.com/quantum-bio-computing-platform',' icon: '🧬',' colo,
   r: 'from-green-500 to-emerald-600', popula,
   r: true,' launchDat,
   e: '2024-02-01', customer,
@@ -3617,7 +3568,7 @@ export const,
   g: 4.8, review,
   s: 85,' marketSiz,
   e: '$12B quantum bio-computing market',' growthRat,
-  e: '65% annually' } {/* TODO: Fix JSX expression */}
+  e: '65% annually' } {/* TODO: Fix JSX expression */};
   e: '6 hours'} enterpris,
   e: 1599} } feature,
   s: [,' 'Neural signal processingBrain activity monitoringThought-to-text conversionMental command recognitionAccessibility toolsGaming integrationMedical applicationsReal-time processing';' 'Custom neural modelsAPI for developers' ]; benefit,
@@ -3635,8 +3586,7 @@ export const,
   t: '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.';' complianc,
   e: ['Medical device regulations, Data privacy, Ethical guidelines, Industry standards'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/brain-computer-interface-platform',' ico,
-  n: '🧠',' colo,
+  s: //ziontechgroup.com/brain-computer-interface-platform',' icon: '🧠',' colo,
   r: 'from-blue-500 to-indigo-600', popula,
   r: true,' launchDat,
   e: '2024-01-15', customer,
@@ -3644,7 +3594,7 @@ export const,
   g: 4.7, review,
   s: 120,' marketSiz,
   e: '$18B BCI market',' growthRat,
-  e: '55% annually' } {/* TODO: Fix JSX expression */}
+  e: '55% annually' } {/* TODO: Fix JSX expression */};
   e: '6 hours'} enterpris,
   e: 1999} } feature,
   s: [,' 'Quantum energy optimizationFusion reaction simulationGrid optimization algorithmsEnergy storage optimizationRenewable energy integrationQuantum thermodynamicsReal-time monitoringPredictive analytics';' 'Custom energy modelsAPI for energy systems' ]; benefit,
@@ -3662,8 +3612,7 @@ export const,
   t: '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.';' complianc,
   e: ['Energy regulations, Safety standards, Environmental regulations, Industry standards'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/quantum-energy-platform',' ico,
-  n: '⚡',' colo,
+  s: //ziontechgroup.com/quantum-energy-platform',' icon: '⚡',' colo,
   r: 'from-yellow-500 to-orange-600', popula,
   r: true,' launchDat,
   e: '2024-02-10', customer,
@@ -3671,7 +3620,7 @@ export const,
   g: 4.8, review,
   s: 95,' marketSiz,
   e: '$25B quantum energy market',' growthRat,
-  e: '45% annually' } {/* TODO: Fix JSX expression */}
+  e: '45% annually' } {/* TODO: Fix JSX expression */};
   e: '12 hours'} enterpris,
   e: 2999} } feature,
   s: [,' 'Advanced computer visionReal-time decision makingSafety systemsPath planning algorithmsTraffic predictionWeather adaptationFleet managementPerformance monitoring';' 'Custom AI modelsAPI for vehicles' ]; benefit,
@@ -3689,8 +3638,7 @@ export const,
   t: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';' complianc,
   e: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];' lin,
   k: 'http,
-  s: //ziontechgroup.com/autonomous-vehicle-ai-platform',' ico,
-  n: '🚗',' colo,
+  s: //ziontechgroup.com/autonomous-vehicle-ai-platform',' icon: '🚗',' colo,
   r: 'from-red-500 to-pink-600', popula,
   r: true,' launchDat,
   e: '2024-01-25', customer,

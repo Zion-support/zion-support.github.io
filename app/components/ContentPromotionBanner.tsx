@@ -8,8 +8,8 @@
     </>
   )
 }
-
-
+;
+;
   )
 
 export default ContentPromotionBanner

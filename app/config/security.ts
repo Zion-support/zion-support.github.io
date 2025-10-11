@@ -15,7 +15,7 @@ export const securityConfig = {
       connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
-    }
+    };
   },
   headers: {
     'X-DNS-Prefetch-Control': 'on',
@@ -23,7 +23,7 @@ export const securityConfig = {
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-  }
+  };
 };
 
 export const rateLimitConfig = {

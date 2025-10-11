@@ -35,8 +35,8 @@ export function useReviews(projectId?: string) {
           .single()
         if (!userReviewError && userReviewData) {
           setUserReview(userReviewData)
-        }
-      }
+        };
+      };
     } catch (err: any) {
       console.error("Error fetching reviews:", err)
       toast({
@@ -47,8 +47,8 @@ export function useReviews(projectId?: string) {
       })
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
   // Fetch reviews for a user (to display on profile)
   const fetchUserReviews = async (userId: string) => {
     if (!userId) return
@@ -76,8 +76,8 @@ export function useReviews(projectId?: string) {
       })
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
   // Submit a review
   const submitReview = async (review: {
     project_id: string
@@ -98,7 +98,7 @@ export function useReviews(projectId?: string) {
         variant: "destructive",
       })
       return false
-    }
+    };
     setIsSubmitting(true)
     try {
       const { data, error } = await supabase
@@ -135,12 +135,13 @@ export function useReviews(projectId?: string) {
           variant: "destructive"})
           variant: "destructive",
         })
-      }
-      return false
+      };
+      ;
+  return false
     } finally {
       setIsSubmitting(false)
-    }
-  }
+    };
+  };
   // Update a review
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false
@@ -160,8 +161,9 @@ export function useReviews(projectId?: string) {
       })
       if (userReview) {
         setUserReview({ ...userReview, ...updates })
-      }
-      return true
+      };
+      ;
+  return true
     } catch (err: any) {
       console.error("Error updating review:", err)
       toast({
@@ -173,8 +175,8 @@ export function useReviews(projectId?: string) {
       return false
     } finally {
       setIsSubmitting(false)
-    }
-  }
+    };
+  };
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
     if (!user) return false
@@ -198,7 +200,7 @@ export function useReviews(projectId?: string) {
           })
         } else {
           throw error
-        }
+        };
       } else {
         toast({
           title: "Report Submitted",
@@ -206,7 +208,7 @@ export function useReviews(projectId?: string) {
           description: "Thank you. Our team will review your report",
         })
         return true
-      }
+      };
     } catch (err: any) {
       console.error("Error reporting review:", err)
       toast({
@@ -215,13 +217,15 @@ export function useReviews(projectId?: string) {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
-    return false
-  }
+    };
+    ;
+  return false
+  };
   // Initialize by fetching reviews if projectId is provided
   if (projectId && reviews.length === 0 && !isLoading) {
     fetchProjectReviews(projectId)
-  }
+  };
+  ;
   return {
     reviews,
     userReview,
@@ -231,7 +235,8 @@ export function useReviews(projectId?: string) {
     fetchUserReviews,
     submitReview,
     updateReview,
-    reportReview}
+    reportReview};
     reportReview,
-  }
-}
+  };
+};
+;

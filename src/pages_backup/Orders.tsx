@@ -47,10 +47,10 @@ export default function OrdersPage() {
         return status
     }
 
-
-
-  }
-
+;
+;
+  };
+;
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
@@ -84,8 +84,8 @@ import {
         )
       default:
         return status
-    }
-  }
+    };
+  };
   },
 
 
@@ -116,13 +116,14 @@ import {
                   <Skeleton className='h-4 w-20' /></$1>
                 <TableCell>
                   <Skeleton className='h-4 w-24' /></$1></$1>
-            ))}
-          </TableBody></$1>
+            ))};
+          ;
+  </TableBody></$1>
       ) : orders && orders.length === 0 ? (
         <EmptyState
-          icon={<FileText className='h-10 w-10' />}
+          icon={><FileText className='h-10 w-10' />};
           title='No Orders'          description="You haven't purchased anything yet."
-          icon={<FileText className="h-10 w-10" />}
+          icon={<FileText className="h-10 w-10" />};
           title="No Orders"
           description="You haven't purchased anything yet."
 
@@ -143,19 +144,24 @@ import {
           <TableBody>
 
             {orders.map(order => (              <TableRow key={order.orderId}>
-                <TableCell className='font-medium'>{order.orderId}</TableCell>
+                <TableCell className='font-medium'>{order.orderId};
+  </TableCell>
             {orders.map((order) => (
               <TableRow key={order.orderId}>
-                <TableCell className="font-medium">{order.orderId}</TableCell>
+                <TableCell className="font-medium">{order.orderId};
+  </TableCell>
 
 
 
-                <TableCell>{formatDate(order.date)}</TableCell>
-                <TableCell>{order.total}</TableCell>
-                <TableCell>{getStatusBadge(order.status)}</TableCell>
+                <TableCell>{formatDate(order.date)};
+  </TableCell>
+                <TableCell>{order.total};
+  </TableCell>
+                <TableCell>{getStatusBadge(order.status)};
+  </TableCell>
                 <TableCell>
                   <$2 />
-                    href={`/orders/${order.orderId}`}
+                    href={`/orders/${order.orderId}`};
                     className='text-zion-purple underline'
                   >
                     View
@@ -175,10 +181,14 @@ import {
               <TableHead>View</TableHead></$1></$1>
           <TableBody>
             {orders && orders.map(order => (              <TableRow key={order && order.orderId}>
-                <TableCell className='font-medium'>{order && order.orderId}</TableCell>
-                <TableCell>{formatDate(order && order.date)}</TableCell>
-                <TableCell>{order && order.total}</TableCell>
-                <TableCell>{getStatusBadge(order && order.status)}</TableCell>
+                <TableCell className='font-medium'>{order && order.orderId};
+  </TableCell>
+                <TableCell>{formatDate(order && order.date)};
+  </TableCell>
+                <TableCell>{order && order.total};
+  </TableCell>
+                <TableCell>{getStatusBadge(order && order.status)};
+  </TableCell>
                 <TableCell>
                   <$2 />
                     href={`/orders/${order && order.orderId}`} // Changed to href
@@ -187,21 +197,25 @@ import {
             ))}
 
 
-
-          </TableBody>
+;
+          ;
+  </TableBody>
         </Table>
-      )}
-    </div>
+      )};
+    ;
+  </div>
   )
 }
 
-
-</$1></$1>
-      )}
-    </div>
+;
+;
+  </$1></$1>
+      )};
+    ;
+  </div>
   )
-}
-
+};
+;
   TableRow,
 
 } from '@/components / ui / table'
@@ -232,9 +246,10 @@ function OrdersPage() {
             <ShieldAlert className='h - 3 w - 3' /> Disputed</$1>),
       default:
         return status
-    }
+    };
   }
-
+;
+  ;
   return (
     <div className='container max - w-4xl py - 10'>
       <h1 className='text - 3xl font - bold mb - 6'>Order History</h1>
@@ -259,10 +274,11 @@ function OrdersPage() {
                 <TableCell>
                   <Skeleton className='h - 4 w - 20' /></$1>
                 <TableCell>
-                  <Skeleton className='h - 4 w - 24' /></$1></$1>))}
-          </TableBody></$1>) : orders.length === 0 ? (
+                  <Skeleton className='h - 4 w - 24' /></$1></$1>))};
+          ;
+  </TableBody></$1>) : orders.length === 0 ? (
         <EmptyState
-          icon={<FileText className='h - 10 w - 10' />}
+          icon={><FileText className='h - 10 w - 10' />};
           title='No Orders'          description="You haven't purchased anything yet."
         />) : (
         <Table>
@@ -275,16 +291,23 @@ function OrdersPage() {
               <TableHead > View</TableHead></$1></$1>
           <TableBody>
             {orders.map (order => (              <TableRow key={order.order_id}>
-                <TableCell className='font - medium'>{order.order_id}</TableCell>
-                <TableCell>{format_date (order.date)}</TableCell>
-                <TableCell>{order.total}</TableCell>
-                <TableCell>{getStatusBadge (order.status)}</TableCell>
+                <TableCell className='font - medium'>{order.order_id};
+  </TableCell>
+                <TableCell>{format_date (order.date)};
+  </TableCell>
+                <TableCell>{order.total};
+  </TableCell>
+                <TableCell>{getStatusBadge (order.status)};
+  </TableCell>
                 <TableCell>
                   <;$2 />
                     href={`/orders/${order.order_id}`} // Changed to href
                     className='text - zion - purple underline'
                   >
-                    View</$1></$1></$1>))}
-          </TableBody></$1>)}
-    </div>)
-}
+                    View</$1></$1></$1>))};
+          ;
+  </TableBody></$1>)};
+    ;
+  </div>)
+};
+;

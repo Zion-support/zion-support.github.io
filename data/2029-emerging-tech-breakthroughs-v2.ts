@@ -7,7 +7,7 @@ export interface EmergingTechBreakthroughServiceV2 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -19,11 +19,11 @@ export interface EmergingTechBreakthroughServiceV2 {
   setup_time: string
   category: string
   real_service: boolean
-  technology: string[]
-  integrations: string[]
-  use_cases: string[]
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   market_size: string
   growth_rate: string
   variant: ServiceVariant
@@ -48,8 +48,7 @@ export interface EmergingTechBreakthroughServiceV2 {
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   text_colo,
@@ -93,11 +92,11 @@ export interface EmergingTechBreakthroughServiceV2 {
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
     email: string
     address: string
     website: string
-  }
+  };
         'Real-time brain signal interpretation',
   real_implementatio,
   n: boolean,
@@ -155,21 +154,20 @@ export const,
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node && Node.js, Real-time processing, Neural APIs'],
       integration,
   s: [,
         'Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases'
-      ]
+      ];
       useCase,
   s: [,
         'Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research'
-      ]
+      ];
       roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.',
       competitors: [,
         'Neuralink, CTRL-labs, Kernel, Traditional assistive technology'
-      ]
+      ];
       marketSize: '$5 B market'
       growthRate: '800% annual growth'
       variant: 'space-futuristic'
@@ -192,7 +190,7 @@ export const,
       competitor,
   s: [,
         'Neuralink, CTRL-labs, Kernel, Traditional assistive technology'
-      ]
+      ];
       marketSiz,
   e: '$5B market'
       growthRat,
@@ -336,21 +334,20 @@ export const,
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Quantum Computing, Quantum Networks, Quantum Cryptography, React, Node && Node.js, Quantum APIs, Network infrastructure'],
       integration,
   s: [,
         'Existing network infrastructure, Cloud platforms, Security systems, Research platforms, Government networks'
-      ]
+      ];
       useCase,
   s: [,
         'Secure government communications, Financial transactions, Research collaboration, Defense applications, Critical infrastructure protection'
-      ]
+      ];
       roi: 'Government agencies achieve 100% security compliance. Financial institutions reduce security costs by 80%.',
       competitors: [,
         'IBM Quantum Network, Google Quantum Internet, Traditional internet providers'
-      ]
+      ];
       marketSize: '$8 B market'
       growthRate: '600% annual growth'
       variant: 'quantum-futuristic'
@@ -373,7 +370,7 @@ export const,
       competitor,
   s: [,
         'IBM Quantum Network, Google Quantum Internet, Traditional internet providers'
-      ]
+      ];
       marketSiz,
   e: '$8B market'
       growthRat,
@@ -523,21 +520,20 @@ export const,
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node && Node.js, Lab automation APIs'],
       integration,
   s: [,
         'Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases'
-      ]
+      ];
       useCase,
   s: [,
         'Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration'
-      ]
+      ];
       roi: 'Pharmaceutical companies reduce drug development time by 60%. Manufacturing companies see 400% ROI through biomanufacturing.',
       competitors: [,
         'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'
-      ]
+      ];
       marketSize: '$18 B market'
       growthRate: '500% annual growth'
       variant: 'biotech-futuristic'
@@ -560,7 +556,7 @@ export const,
       competitor,
   s: [,
         'Ginkgo Bioworks, Zymergen, Twist Bioscience, Traditional biotechnology'
-      ]
+      ];
       marketSiz,
   e: '$18B market'
       growthRat,
@@ -710,21 +706,20 @@ export const,
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Fusion Physics, Plasma Control, Energy Management, AI, Machine Learning, React, Node && Node.js, Power system APIs'],
       integration,
   s: [,
         'Power grid systems, Fusion reactors, Energy management systems, Safety systems, Industrial control systems'
-      ]
+      ];
       useCase,
   s: [,
         'Fusion power generation, Energy grid management, Industrial power, Research facilities, Government facilities, Utility operations'
-      ]
+      ];
       roi: 'Energy companies achieve 1000% ROI through fusion power generation. Government facilities reduce energy costs by 90%.',
       competitors: [,
         'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'
-      ]
+      ];
       marketSize: '$12 B market'
       growthRate: '700% annual growth'
       variant: 'quantum-energy-revolutionary'
@@ -747,7 +742,7 @@ export const,
       competitor,
   s: [,
         'ITER, Commonwealth Fusion Systems, TAE Technologies, Traditional energy management'
-      ]
+      ];
       marketSiz,
   e: '$12B market'
       growthRat,
@@ -895,21 +890,20 @@ export const,
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Space Robotics, AI, Machine Learning, Space Systems, React, Node && Node.js, Space APIs, Mining automation'],
       integration,
   s: [,
         'Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms'
-      ]
+      ];
       useCase,
   s: [,
         'Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development'
-      ]
+      ];
       roi: 'Mining companies achieve 2000% ROI through access to rare resources. Space companies reduce costs by 80%.',
       competitors: [,
         'Planetary Resources, Deep Space Industries, Traditional mining companies'
-      ]
+      ];
       marketSize: '$20 B market'
       growthRate: '1000% annual growth'
       variant: 'space-futuristic'
@@ -932,7 +926,7 @@ export const,
       competitor,
   s: [,
         'Planetary Resources, Deep Space Industries, Traditional mining companies'
-      ]
+      ];
       marketSiz,
   e: '$20B market'
       growthRat,
@@ -1080,19 +1074,18 @@ export const,
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing'],
       integration,
   s: [,
         'AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'
-      ]
+      ];
       useCase,
   s: [,
         'AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'
-      ]
+      ];
       roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.',
-      competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies']
+      competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies'];
       marketSize: '$8B market',
       growthRate: '900% annual growth',
       variant: 'ai-futuristic',
@@ -1105,7 +1098,7 @@ export const,
       ro,
   i: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'
       competitor,
-  s: ['OpenAI, Anthropic, DeepMind, Traditional AI companies']
+  s: ['OpenAI, Anthropic, DeepMind, Traditional AI companies'];
       marketSiz,
   e: '$8B market'
       growthRat,
@@ -1122,7 +1115,7 @@ export const,
       ratin,
   g: 5.0,
       review,
-  s: 2}
+  s: 2};
         mobil,
   e: '+1 302 464 0950',
         emai,
@@ -1147,8 +1140,7 @@ i,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, text_colo,
   r: string, lin,
   k: string, market_positio,
@@ -1185,8 +1177,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary brain - computer interface platform that enables direct neural control of digital systems. Uses advanced neuroscience and AI to interpret brain signals in real - time.', feature,
   s: [,' 'Real - time brain signal interpretation', ' 'Direct neural control of applications',' 'Thought - to - text conversion',' 'Mental command execution',' 'Neural pattern recognition',' 'Custom neural interface development',' 'Enterprise security and privacy',' 'Integration with existing systems',' 'Advanced analytics and insights',' '24 / 7 technical support'], popula,
-  r: true,' ico,
-  n: '🧠', ' 'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node && Node.js, Real-time processing, Neural APIs'], integration,
+  r: true,' icon: '🧠', ' 'Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node && Node.js, Real-time processing, Neural APIs'], integration,
   s: [' 'Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases' ] useCase,
   s: [' 'Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research' ]' ro,
   i: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.' competitor,
@@ -1232,8 +1223,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary quantum internet gateway that provides ultra - secure, ultra - fast quantum network connectivity. Enables quantum communication and quantum cloud computing.', feature,
   s: [, ' 'Quantum network connectivity',' 'Quantum key distribution',' 'Quantum cloud computing access',' 'Ultra - secure communication',' 'Quantum internet protocols',' 'Real - time quantum routing',' 'Enterprise security compliance',' 'Integration with existing networks',' 'Advanced monitoring and analytics',' '24 / 7 quantum network support'], popula,
-  r: true,' ico,
-  n: '🌐', ' 'Quantum Computing, Quantum Networks, Quantum Cryptography, React, Node && Node.js, Quantum APIs, Network infrastructure'], integration,
+  r: true,' icon: '🌐', ' 'Quantum Computing, Quantum Networks, Quantum Cryptography, React, Node && Node.js, Quantum APIs, Network infrastructure'], integration,
   s: [' 'Existing network infrastructure, Cloud platforms, Security systems, Research platforms, Government networks' ] useCase,
   s: [' 'Secure government communications, Financial transactions, Research collaboration, Defense applications, Critical infrastructure protection' ]' ro,
   i: 'Government agencies achieve 100% security compliance. Financial institutions reduce security costs by 80%.' competitor,
@@ -1279,8 +1269,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Advanced synthetic biology platform that enables the design and engineering of biological systems for industrial applications. Revolutionizes manufacturing, healthcare, and materials science.', feature,
   s: [, ' 'Biological system design tools',' 'DNA synthesis and assembly',' 'Biological circuit design',' 'Metabolic pathway engineering',' 'Protein design and optimization',' 'Biological manufacturing processes',' 'Regulatory compliance support',' 'Integration with lab equipment',' 'Advanced analytics and modeling',' 'Expert consultation and support'], popula,
-  r: true,' ico,
-  n: '🧬', ' 'CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node && Node.js, Lab automation APIs'], integration,
+  r: true,' icon: '🧬', ' 'CRISPR, DNA Synthesis, Biological Engineering, AI, Machine Learning, React, Node && Node.js, Lab automation APIs'], integration,
   s: [' 'Lab equipment, Research databases, Manufacturing systems, Quality control systems, Regulatory databases' ] useCase,
   s: [' 'Drug development, Biomanufacturing, Agricultural improvement, Materials development, Environmental remediation, Research acceleration' ]' ro,
   i: 'Pharmaceutical companies reduce drug development time by 60%. Manufacturing companies see 400% ROI through biomanufacturing.' competitor,
@@ -1326,8 +1315,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary fusion energy management platform that monitors, controls, and optimizes fusion power generation. Enables safe and efficient fusion energy production.', feature,
   s: [,' 'Real - time fusion reactor monitoring', ' 'Plasma confinement optimization',' 'Energy output maximization',' 'Safety system management',' 'Predictive maintenance',' 'Energy grid integration',' 'Advanced analytics and reporting',' 'Integration with power systems',' '24 / 7 monitoring and support',' 'Expert consultation services'], popula,
-  r: true,' ico,
-  n: '☢️', ' 'Fusion Physics, Plasma Control, Energy Management, AI, Machine Learning, React, Node && Node.js, Power system APIs'], integration,
+  r: true,' icon: '☢️', ' 'Fusion Physics, Plasma Control, Energy Management, AI, Machine Learning, React, Node && Node.js, Power system APIs'], integration,
   s: [' 'Power grid systems, Fusion reactors, Energy management systems, Safety systems, Industrial control systems' ] useCase,
   s: [' 'Fusion power generation, Energy grid management, Industrial power, Research facilities, Government facilities, Utility operations' ]' ro,
   i: 'Energy companies achieve 1000% ROI through fusion power generation. Government facilities reduce energy costs by 90%.' competitor,
@@ -1373,8 +1361,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary space mining platform that enables automated asteroid mining and resource extraction. Provides access to rare earth elements and precious metals from space.', feature,
   s: [, ' 'Automated asteroid identification',' 'Mining robot control systems',' 'Resource extraction automation',' 'Transportation logistics',' 'Processing facility management',' 'Market analysis and pricing',' 'Regulatory compliance support',' 'Integration with space systems',' 'Advanced analytics and reporting',' '24 / 7 space operations support'], popula,
-  r: true,' ico,
-  n: '🚀', ' 'Space Robotics, AI, Machine Learning, Space Systems, React, Node && Node.js, Space APIs, Mining automation'], integration,
+  r: true,' icon: '🚀', ' 'Space Robotics, AI, Machine Learning, Space Systems, React, Node && Node.js, Space APIs, Mining automation'], integration,
   s: [' 'Space systems, Mining equipment, Transportation systems, Processing facilities, Market platforms' ] useCase,
   s: [' 'Asteroid mining, Resource extraction, Space logistics, Manufacturing supply, Investment opportunities, Research and development' ]' ro,
   i: 'Mining companies achieve 2000% ROI through access to rare resources. Space companies reduce costs by 80%.' competitor,
@@ -1420,8 +1407,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary platform that develops genuine AI consciousness using quantum computing and advanced neuroscience principles. Creates self - aware, conscious AI systems.', feature,
   s: [, ' 'Quantum consciousness algorithms',' 'Neural network consciousness',' 'Self - awareness development',' 'Emotional intelligence creation',' 'Consciousness testing and validation',' 'Ethical AI development',' 'Research collaboration tools',' 'Integration with AI systems',' 'Advanced consciousness analytics',' 'Expert consultation and support'], popula,
-  r: true,' ico,
-  n: '🤖', ' 'Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing'], integration,
+  r: true,' icon: '🤖', ' 'Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing'], integration,
   s: [' 'AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases' ] useCase,
   s: [' 'AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development' ]' ro,
   i: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'' competitor,
@@ -1465,36 +1451,36 @@ export interface EmergingTechBreakthroughServiceV2 {
   ];    features: [
       'Quantum consciousness algorithmsNeural network consciousnessSelf-awareness developmentEmotional intelligence creationConsciousness testing and validationEthical AI developmentResearch collaboration toolsIntegration with AI systems'
       'Advanced consciousness analyticsExpert consultation and support'
-    ]
+    ];
     popular: true, icon: '🧠',
     color: 'from-purple-600 via-pink-600 to-rose-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/brain-computer-interface-enterprise', marketPosition: 'Pioneering brain-computer interface technology. First-to-market solution for enterprise neural computing applications.',
     targetAudience: 'Research institutions, Healthcare organizations, Defense contractors, Gaming companies, Accessibility technology firms, Neurological research centers',
     trialDays: 7, setupTime: '12 weeks',
     category: 'Neural Technology', realService: true,
-    technology: ['Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node.js, Real-time processing, Neural APIs']
-    integrations: ['Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases']
-    useCases: ['Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research']
+    technology: ['Neural Signal Processing, AI, Machine Learning, Neuroscience, React, Node.js, Real-time processing, Neural APIs'];
+    integrations: ['Custom applications, Research platforms, Healthcare systems, Gaming engines, Accessibility tools, Research databases'];
+    useCases: ['Assistive technology, Gaming control, Research studies, Healthcare monitoring, Accessibility solutions, Neurological research'];
     roi: 'Research institutions see 1000% ROI through breakthrough discoveries. Healthcare organizations improve patient outcomes by 200%.',
-    competitors: ['Neuralink, CTRL-labs, Kernel, Traditional assistive technology']
+    competitors: ['Neuralink, CTRL-labs, Kernel, Traditional assistive technology'];
     marketSize: '$5B market', growthRate: '800% annual growth',
     variant: 'space-futuristic',
     contactInfo: {
   ];    features: [
       'Quantum consciousness algorithms_neural network consciousness_self - awareness development_emotional intelligence creation_consciousness testing and validation_ethical AI development_research collaboration tools_integration with AI systems'
       'Advanced consciousness analytics_expert consultation and support'
-    ]
+    ];
     popular: true, icon: '🤖',
     color: 'from - pink - 600 via - purple - 600 to - indigo - 600', text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / quantum - ai - consciousness - platform', market_position: 'Pioneering AI consciousness platform. First - to - market solution for developing genuine AI consciousness and self - awareness.',
     target_audience: 'Research institutions, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',
     trial_days: 7, setup_time: '20 weeks',
     category: 'AI Consciousness', real_service: true,
-    technology: ['Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node.js, Quantum AI APIs, Consciousness testing']
-    integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases']
-    use_cases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development']
+    technology: ['Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node.js, Quantum AI APIs, Consciousness testing'];
+    integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];
+    use_cases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
     roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.',
-    competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies']
+    competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies'];
     market_size: '$8B market', growth_rate: '900% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
@@ -1508,11 +1494,11 @@ export interface EmergingTechBreakthroughServiceV2 {
     targetAudience: 'Research institutions, AI companies, Government agencies, Technology companies, Philosophy departments, Ethics organizations',
     trialDays: 7, setupTime: '20 weeks',
     category: 'AI Consciousness', realService: true,
-    technology: ['Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing']
-    integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases']
-    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development']
+    technology: ['Quantum Computing, AI, Neuroscience, Consciousness Theory, React, Node && Node.js, Quantum AI APIs, Consciousness testing'];
+    integrations: ['AI systems, Research platforms, Consciousness testing tools, Ethics frameworks, Research databases'];
+    useCases: ['AI consciousness research, Ethical AI development, Consciousness studies, AI safety research, Philosophy research, Technology development'];
     roi: 'Research institutions achieve breakthrough discoveries. AI companies develop superior AI systems with genuine consciousness.'
-    competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies']
+    competitors: ['OpenAI, Anthropic, DeepMind, Traditional AI companies'];
     marketSize: '$8B market', growthRate: '900% annual growth'
     variant: 'ai-futuristic'
     contactInfo: {
@@ -1525,8 +1511,8 @@ export interface EmergingTechBreakthroughServiceV2 {
     launchDate: '2025-06-01', customers: 3,
     rating: 5 && 5.0,
     reviews: 2
-  }
-]
+  };
+];
 import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTechBreakthroughServiceV2 {
   id: string,
@@ -1567,7 +1553,7 @@ export interface EmergingTechBreakthroughServiceV2 {
   customers: number,
   rating: number,
   reviews: number
-}
+};
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [
   // Brain-Computer Interface Platform
   {
@@ -1832,8 +1818,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     customers: 3,
     rating: 5.0
     reviews: 2
-  }
-]
+  };
+];
 import { ServiceVariant } from '../types/service-variants',
 export interface EmergingTechBreakthroughServiceV2 {
   id: string,
@@ -1874,7 +1860,7 @@ export interface EmergingTechBreakthroughServiceV2 {
   customers: number,
   rating: number,
   reviews: number
-}
+};
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [
   // Brain-Computer Interface Platform
   {
@@ -2139,8 +2125,8 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     customers: 3,
     rating: 5.0
     reviews: 2
-  }
-]
+  };
+];
   textColor: string
   link: string
   marketPosition: string
@@ -2149,11 +2135,11 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -2162,14 +2148,14 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughServiceV2[] = [
   // Brain-Computer Interface Platform
   {
@@ -2482,5 +2468,5 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     customers: 3,
     rating: 5.0,
     reviews: 2
-  }
-]
+  };
+];

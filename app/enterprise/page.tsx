@@ -16,8 +16,9 @@ import Footer from '../components/Footer';
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>

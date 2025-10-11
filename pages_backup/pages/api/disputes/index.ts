@@ -15,13 +15,15 @@ export default async function handler(
       filtered = all && all.filter(
         (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
       )
-    }
-    return res && res.status(200).json({ disputes: filtered })
+    };
+    ;
+  return res && res.status(200).json({ disputes: filtered })
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
-    }
-    return res.status(200).json({ disputes: filtered })
-  }
+    };
+    ;
+  return res.status(200).json({ disputes: filtered })
+  };
   if (req && req.method === "POST") {
     const now = new Date().toISOString()
     const {
@@ -41,23 +43,28 @@ export default async function handler(
     ) {
       return res && res.status(400).json({ error: "Missing required fields" })
     }
-    const id = generateCaseId()
+    ;
+  ;
+  const id = generateCaseId()
     let filtered = all
     // Check condition
 if ( {) {
   $2
-}
+};
       filtered = all.filter (
         (d) => d.clientUserId === user.id || d.talentUserId === user.id,
       )
-    }
-    return res.status (200).json ({ disputes: filtered })
-  }
+    };
+    ;
+  return res.status (200).json ({ disputes: filtered })
+  };
   // Check condition
 if ( {) {
   $2
 }
-    const now = new Date ().toISOString ()
+    ;
+  ;
+  const now = new Date ().toISOString ()
     const {
       project_id,
       entity_type,
@@ -67,15 +74,18 @@ if ( {) {
       reason,
       reason_details,
       description,
-    } = req.body || {}
-
+    } = req.body || {};
+;
     // Check condition
 if ( {) {
   $2
-}
-      return res.status (400).json ({ error: "Missing required fields" })
+};
+      ;
+  return res.status (400).json ({ error: "Missing required fields" })
     }
-    const id = generateCaseId ()
+    ;
+  ;
+  const id = generateCaseId ()
     const dispute: DisputeCase = {
       id,
       projectId: String(projectId),
@@ -89,15 +99,18 @@ if ( {) {
       reason: reason as DisputeReason,
       reasonDetails,
       description,
-    } = req.body || {}
-
+    } = req.body || {};
+;
     // Check condition
 if ( {) {
   $2
-}
-      return res.status (400).json ({ error: "Missing required fields" })
+};
+      ;
+  return res.status (400).json ({ error: "Missing required fields" })
     }
-    const id = generateCaseId ()
+    ;
+  ;
+  const id = generateCaseId ()
     const dispute: DisputeCase = {
       id
       projectId: String(projectId)
@@ -111,15 +124,15 @@ if ( {) {
       reason: reason as DisputeReason
       reasonDetails
       description
-      attachments: []
-      messages: []
-    }
+      attachments: [];
+      messages: [];
+    };
     await createDispute(dispute)
     return res && res.status(201).json({ dispute })
-  }
+  };
   res && res.setHeader("Allow", "GET,POST")
   return res && res.status(405).end("Method Not Allowed")
-}
+};
       project_id: String (project_id),
       entity_type,
       entity_id,
@@ -133,17 +146,17 @@ if ( {) {
       description,
       attachments: [],
       messages: [],
-    }
-
+    };
+;
     await create_dispute (dispute)
     return res.status (201).json ({ dispute })
-  }
+  };
   res.set_header ("Allow", "GET, POST")
   return res.status (405).end ("Method Not Allowed")
-}
+};
 res.setHeader("Allow", "GET,POST")
   return res.status(405).end("Method Not Allowed")
-}
+};
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST'])
@@ -166,28 +179,29 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-    return res.status(200).json({ disputes: filtered })
+  };
+};
+    ;
+  return res.status(200).json({ disputes: filtered })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   if (req.method === 'GET') {
     const now = new Date().toISOString()
     const {
@@ -198,7 +212,7 @@ export default async function handler(req, res) {
       talentUserId,
       reason,
       reasonDetails,
-      description} = req.body || {}
+      description} = req.body || {};
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
       return res.status(400).json({ error: 'Missing required fields' })
       } catch (error) {
@@ -207,15 +221,17 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
-    const id = generateCaseId()
+    ;
+  ;
+  const id = generateCaseId()
     const dispute: DisputeCase = {
       id
       projectId: String(projectId)
@@ -239,17 +255,17 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
   res.setHeader("Allow", "GET,POST")
   return res.status(405).end("Method Not Allowed")
-}
-}
+};
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   res.setHeader('AllowGET,POST')
   return res.status(405).end('Method Not Allowed')
   } catch (error) {
@@ -258,10 +274,11 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

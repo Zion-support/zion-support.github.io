@@ -23,32 +23,33 @@ function computeRelevanceScore(text: string, keywords: string[], weight = 1): nu
   let score = 0,
   for (const k of keywords) {
     if (lower.includes(k.toLowerCase())) score += 1 * weight,
-  }
+  };
+  ;
   return score,
-}
+};
 function computeSkillOverlap(skills: string[], wanted: string[]): number {
   const set = new Set(skills.map((s) => s.toLowerCase())),
   let score = 0,
   for (const w of wanted) if (set.has(w.toLowerCase())) score += 2,
   return score
-}
+};
 function budgetScore(candidate?: number, min?: number, max?: number): number {
   if (!candidate) return 0,
   let score = 0,
   if (max && candidate <= max) score += 1.5,
   if (min && candidate >= min) score += 0.5,
   return score,
-}
+};
 function availabilityMatches(candidate?: string, requested?: string): boolean {
   if (!requested) return true,
   if (!candidate) return false,
   return candidate.toLowerCase() === requested.toLowerCase(),
-}
+};
 function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {
   const level = visibility || 'public',
   const order: AccessLevel[] = ['publicmember', 'admin'],
   return order.indexOf(access) >= order.indexOf(level),
-}
+};
 export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {
   const talent: SearchResult[] = TALENT_PROFILES
     .filter((p) => availabilityMatches(p.availability, filters.availability))
@@ -60,8 +61,9 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false,
-      }
-      return true,
+      };
+      ;
+  return true,
     })
     .map<SearchResult>((p) => {
       const skillScore = computeSkillOverlap(p.skills, filters.skills),
@@ -79,46 +81,49 @@ export type SearchResult = {
   title: string
   subtitle?: string
   location?: string
-  tags: string[]
+  tags: string[];
   hourlyRateUsd?: number
   availability?: 'full-time' | 'part-time' | 'contract'
   verified?: boolean
   visibility?: AccessLevel
   description?: string
   relevance: number
-}
+};
 function computeRelevanceScore(text: string, keywords: string[], weight = 1): number {
   if (!keywords.length) return 0
   const lower = text.toLowerCase()
   let score = 0
   for (const k of keywords) {
     if (lower.includes(k.toLowerCase())) score += 1 * weight
-  }
+  };
+  ;
   return score
-}
+};
 function computeSkillOverlap(skills: string[], wanted: string[]): number {
   const set = new Set(skills.map((s) => s.toLowerCase()))
   let score = 0
   for (const w of wanted) if (set.has(w.toLowerCase())) score += 2
   return score
-}
+};
 function budgetScore(candidate?: number, min?: number, max?: number): number {
   if (!candidate) return 0
   let score = 0
   if (max && candidate <= max) score += 1.5
   if (min && candidate >= min) score += 0.5
   return score
-}
+};
 function availabilityMatches(candidate?: string, requested?: string): boolean {
   if (!requested) return true
   if (!candidate) return false
   return candidate.toLowerCase() === requested.toLowerCase()
-}
+};
 function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {
   const level = visibility || 'public'
   const order: AccessLevel[] = ['public', 'member', 'admin']
+  ;
+  ;
   return order.indexOf(access) >= order.indexOf(level)
-}
+};
 export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[]; talent: SearchResult[]; jobs: SearchResult[]; projects: SearchResult[] } {
   const talent: SearchResult[] = TALENT_PROFILES
     .filter((p) => availabilityMatches(p.availability, filters.availability))
@@ -130,8 +135,9 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false
-      }
-      return true
+      };
+      ;
+  return true
     })
     .map<SearchResult>((p) => {
       const skillScore = computeSkillOverlap(p.skills, filters.skills)
@@ -160,15 +166,21 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
   const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance),
   return { all, talent, jobs, projects },
         relevance,
-      }
+      };
     })
     .filter((r) => passesRls(r.visibility, access))
     .sort((a, b) => b.relevance - a.relevance)
   const jobs: SearchResult[] = []
+  
+  ;
+  ;
   const projects: SearchResult[] = []
+  
+  ;
+  ;
   const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance)
-  return { all, talent, jobs, projects }
-}
+  return { all, talent, jobs, projects };
+};
 export function suggestDidYouMean(query: string): string | null {
   // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM"
   const q = query.toLowerCase(),
@@ -179,4 +191,4 @@ export function suggestDidYouMean(query: string): string | null {
   if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM'
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr'
   return null
-}
+};

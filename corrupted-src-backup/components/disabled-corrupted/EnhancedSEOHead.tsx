@@ -10,7 +10,9 @@ u, r, l?: string;
 ty, p, e?: string;
 author ?  : string
   }
-const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',;
+;
+  ;
+  const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',;
 description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",;
 keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n',;
 canonic, a, l,;
@@ -32,7 +34,7 @@ contactPoi, n, t: {,
       '@ty, p, e': 'ContactPo, i, n, t',;
 telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',;
 contactTy, p, e: 'customer, servi, c, e',;
-}
+};
 ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},;
 addre, s, s: {,
       '@ty, p, e': 'PostalAddr, e, s, s',;
@@ -45,12 +47,14 @@ foundingDa, t, e: '2, 0, 2, 0',;
 numberOfEmploye, e, s: '50, 0+',;,
 industry: 'Artificial, Intelligen, c, e',;
 servic, e, s: [,;
-interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
+interface SEOHeadProp, s {/* TODO: Fix JSX expression */};
  }
-const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+;
+  ;
+  const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */};
      },;
-addre, s, s: {/* TODO: Fix JSX expression */}
+addre, s, s: {/* TODO: Fix JSX expression */};
     },;
 foundingDa, t, e: '2, 0, 2, 0',;
 numberOfEmploye, e, s: '50, 0+',;
@@ -63,53 +67,64 @@ servic, e, s: [
       'Cybersecurity, A, I',
       'Quantum, Computin, g',
       'AI, Consultin, g']} return(<Helm, e, t>
-      <title>{title}</title>
+      <title>{title};
+  </title>
       <meta, nam, e = 'description' conte, n, t={description} />
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} />
       <meta, nam, e='author' conte, n, t={author} />
       <meta, nam, e='robo, t, s' conte, n, t='in, d, e, x, foll, o, w' />
       <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0' />
-      {/* Open, Graph, Meta Ta, g, s */}
-      <meta, propert, y='og: title' conte, n, t={t, i, t, l, e} />
+      {/* Open, Graph, Meta Ta, g, s */};
+      ;
+  <meta, propert, y='og: title' conte, n, t={t, i, t, l, e} />
       <meta, propert, y = 'og: description' conte, n, t={descrip, t, i, o, n} />
       <meta, propert, y = 'og: image' conte, n, t={i, m, a, g, e} />
       <meta, propert, y = 'og: u, r, l' conte, n, t={canonica, l, U, r, l} />
       <meta, propert, y = 'og: ty, p, e' conte, n, t={ty, p, e} />
       <meta, propert, y = 'og: site_na, m, e' conte, n, t='Zion, Tech, Group' />
       <meta, propert, y='og:loca, l, e' conte, n, t='en_, U, S' />
-      {/* Twitter, Card, Meta Ta, g, s */}
-      <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
+      {/* Twitter, Card, Meta Ta, g, s */};
+      ;
+  <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
       <meta, nam, e='twitt, e, r:title' conte, n, t={t, i, t, l, e} />
       <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />
       <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />
-      {/* Additional, Metas */}
-      <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />
+      {/* Additional, Metas */};
+      ;
+  <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />
       <meta, nam, e='msapplicati, o, n-TileCol, o, r' conte, n, t='#3B82, F, 6' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-capab, l, e' conte, n, t='y, e, s' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e' conte, n, t='defau, l, t' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-title' conte, n, t='Zion, Tech, Group' />
-      {/* Canonical, UR, L */}
-      <link, re, l='canonic, a, l' hr, e, f={u, r, l} />
+      {/* Canonical, UR, L */};
+      ;
+  <link, re, l='canonic, a, l' hr, e, f={u, r, l} />
   </link>
-      {/* Favic, o, n */}
-      <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' />
+      {/* Favic, o, n */};
+      ;
+  <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' />
   </link>
-      {/* DNS, Prefetc, h */}
-      <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' />
+      {/* DNS, Prefetc, h */};
+      ;
+  <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' />
   </link>
-      {/* Performance, Hint, s */}
-      <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
+      {/* Performance, Hint, s */};
+      ;
+  <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
       {/* Structured, Dat, a */})
       <script, typ, e='applicati, o, n/ld+js, o, n'>)
-  } return (<Helm;, e, t></Helm>
-      <title>{title}</title>
+  } ;
+  return (<Helm;, e, t></Helm>
+      <title>{title};
+  </title>
       <meta, nam, e = 'description' conte, n, t={description} /></meta>
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} /></meta>
       <meta, nam, e='author' conte, n, t={author} /></meta>
       <meta, nam, e='robo, t, s' conte, n, t='in, d, e, x, foll, o, w' /></meta>
       <meta, nam, e = 'viewpo, r, t' conte, n, t='wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e = 1.0' /></meta>
-      {/* Open, Graph, Meta Ta, g, s */}
-      <meta, propert, y='o,;,
+      {/* Open, Graph, Meta Ta, g, s */};
+      ;
+  <meta, propert, y='o,;,
 g: title' conte, n, t={t, i, t, l, e} />
       <meta, propert, y = 'o,;,
 g: description' conte, n, t={descrip, t, i, o, n} />
@@ -123,30 +138,38 @@ g: ty, p, e' conte, n, t={ty, p, e} />
 g: site_na, m, e' conte, n, t='Zion, Tech, Group' />
       <meta, propert, y='o,;,
 g:loca, l, e' conte, n, t='en_, U, S' />
-      {/* Twitter, Card, Meta Ta, g, s */}
-      <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
+      {/* Twitter, Card, Meta Ta, g, s */};
+      ;
+  <meta, nam, e = 'twitt, e, r: ca, r, d' conte, n, t='summary_large_image' />
       <meta, nam, e='twitt, e, r:title' conte, n, t={t, i, t, l, e} />
       <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />
       <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />
-      {/* Additional, Metas */}
-      <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />
+      {/* Additional, Metas */};
+      ;
+  <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />
       <meta, nam, e='msapplicati, o, n-TileCol, o, r' conte, n, t='#3B82, F, 6' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-capab, l, e' conte, n, t='y, e, s' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e' conte, n, t='defau, l, t' />
       <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-title' conte, n, t='Zion, Tech, Group' />
-      {/* Canonical, UR, L */}
-      <link, re, l='canonic, a, l' hr, e, f={u, r, l} />
-      {/* Favic, o, n */}
-      <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' />
-      {/* DNS, Prefetc, h */}
-      <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' />
-      {/* Performance, Hint, s */}
-      <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />
-      {/* Structured, Dat, a */}
-      <script, typ, e='applicati, o, n/ld+js, o, n'></script>)
-        {JS, O, N.stringi, f, y(structuredD, a, t, a)}
-      </scri, p, t>
+      {/* Canonical, UR, L */};
+      ;
+  <link, re, l='canonic, a, l' hr, e, f={u, r, l} />
+      {/* Favic, o, n */};
+      ;
+  <link, re, l='ic, o, n' ty, p, e='image/x-ic, o, n' hr, e, f='/favic, o, n.i, c, o' />
+      {/* DNS, Prefetc, h */};
+      ;
+  <link, re, l='d, n, s-prefet, c, h' hr, e, f='//a p i.ziontechgro u p.c o m' />
+      {/* Performance, Hint, s */};
+      ;
+  <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />
+      {/* Structured, Dat, a */};
+      ;
+  <script, typ, e='applicati, o, n/ld+js, o, n'></script>)
+        {JS, O, N.stringi, f, y(structuredD, a, t, a)};
+      ;
+  </scri, p, t>
     </Helm, e, t>
   )
-}
+};
 export default EnhancedSEOHead</$1></li></li></li></li></li>

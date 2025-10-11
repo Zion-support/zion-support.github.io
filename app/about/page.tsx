@@ -5,9 +5,10 @@ import {Target, Users, Award, ArrowRight, CheckCircle, Zap, Shield, Brain, Light
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const AboutPage: React.FC = () => {const features = [
+const AboutPage: React.FC = () => {
+const features = [
     {
-      ico, n: Target,
+      icon: Target,
       title: 'Mission-Driven',
       description: 'We are committed to delivering AI and IT solutions that transform businesses and drive meaningful impact.'} ,
     {icon: Users,
@@ -17,6 +18,9 @@ const AboutPage: React.FC = () => {const features = [
       title: 'Excellence',
       description: 'We maintain the highest standards of quality and innovation in everything we do.'} ]
 
+  
+  ;
+  ;
   const values = [
     {icon: Lightbulb,
       title: 'Innovation',
@@ -28,6 +32,9 @@ const AboutPage: React.FC = () => {const features = [
       title: 'Impact',
       description: 'We focus on creating solutions that make a meaningful difference in the world and drive positive change.'} ]
 
+  
+  ;
+  ;
   const team = [
     {name: 'Dr. Sarah Chen',
       role: 'Chief Technology Officer',
@@ -39,8 +46,10 @@ const AboutPage: React.FC = () => {const features = [
       role: 'Head of AI Research',
       description: 'Leading expert in natural language processing and computer vision technologies.'} ]
 
+  ;
+  ;
   return (
-    <div className="min-h-screen bg-gray-50"
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -56,9 +65,9 @@ const AboutPage: React.FC = () => {const features = [
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"{/* Hero Section */}>
+        
+  <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               About <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Zion Tech Group</span>
@@ -72,8 +81,9 @@ const AboutPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
+        {/* Features Section */};
+        ;
+  <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Drives Us</h2>
@@ -95,15 +105,18 @@ const AboutPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                    <p className="text-gray-300">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title};
+  </h3>
+                    <p className="text-gray-300">{feature.description};
+  </p>
                   </div>
       
       <Footer />
     </>
                 );
-              })}
-            </div>
+              })};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -113,8 +126,9 @@ const AboutPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Values Section */}
-        <section className="py-20 px-4 bg-slate-800/50">
+        {/* Values Section */};
+        ;
+  <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Values</h2>
@@ -136,15 +150,18 @@ const AboutPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-                    <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                    <p className="text-gray-300">{value.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{value.title};
+  </h3>
+                    <p className="text-gray-300">{value.description};
+  </p>
                   </div>
       
       <Footer />
     </>
                 );
-              })}
-            </div>
+              })};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -154,8 +171,9 @@ const AboutPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Mission Section */}
-        <section className="py-20 px-4">
+        {/* Mission Section */};
+        ;
+  <section className="py-20 px-4">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Mission</h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -167,8 +185,9 @@ const AboutPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Team Section */}
-        <section className="py-20 px-4 bg-slate-800/50">
+        {/* Team Section */};
+        ;
+  <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Meet Our Team</h2>
@@ -182,15 +201,19 @@ const AboutPage: React.FC = () => {const features = [
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
-                  <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                  <p className="text-purple-400 mb-4">{member.role}</p>
-                  <p className="text-gray-300">{member.bio}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{member.name};
+  </h3>
+                  <p className="text-purple-400 mb-4">{member.role};
+  </p>
+                  <p className="text-gray-300">{member.bio};
+  </p>
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -204,7 +227,7 @@ const AboutPage: React.FC = () => {const features = [
       <Footer />
     </>
   )
-}
-
+};
+;
 export default AboutPage
       </div>

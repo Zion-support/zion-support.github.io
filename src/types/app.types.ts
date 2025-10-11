@@ -9,7 +9,7 @@
  */
 export interface PerformanceMetrics {
     fcp?: number; // First Contentful Paint
-  }
+  };
   lcp?: number; // Largest Contentful Paint
   fid?: number; // First Input Delay
   cls?: number; // Cumulative Layout Shift
@@ -17,7 +17,7 @@ export interface PerformanceMetrics {
   fmp?: number; // First Meaningful Paint
   customMetrics?: Record
           <string>
-}
+};
 /**
  * Performance Report Interface
  * Complete performance report structure
@@ -25,8 +25,8 @@ export interface PerformanceMetrics {
 
 export interface PerformanceReport {
     // TODO: Add content
-  }
-}
+  };
+};
   webVitals: Partial,
 
           <PerformanceMetrics>,
@@ -36,7 +36,7 @@ export interface PerformanceReport {
   y: MemoryStats | null,,
     timestam,
   p: number,
-}
+};
 /**
  * Resource Statistics Interface
  * Tracks resource loading statistics
@@ -44,15 +44,15 @@ export interface PerformanceReport {
 
 export interface ResourceStats {
     // TODO: Add content
-  }
-}
+  };
+};
   total: number,,
     scripts: number,,
     styles: number,,
     images: number,,
     fonts: number
 
-}
+};
 /**
  * Memory Statistics Interface
  * Browser memory usage statistics
@@ -60,13 +60,13 @@ export interface ResourceStats {
 
 export interface MemoryStats {
     // TODO: Add content
-  }
-}
+  };
+};
   usedJSHeapSize: number,,
     totalJSHeapSize: number,,
     jsHeapSizeLimit: number
 
-}
+};
 /**
  * Performance Alert Interface
  * Structure for performance alerts and warnings
@@ -74,8 +74,8 @@ export interface MemoryStats {
 
 export interface PerformanceAlert {
     // TODO: Add content
-  }
-}
+  };
+};
   type: 'warning' | 'error' | 'info',,
     message: string,,
     metric: keyof PerformanceMetrics,,
@@ -83,7 +83,7 @@ export interface PerformanceAlert {
     threshold: number,,
     timestamp: number
 
-}
+};
 /**
  * Layout Shift Interface
  * Extends PerformanceEntry for layout shift tracking
@@ -91,12 +91,12 @@ export interface PerformanceAlert {
 
 export interface LayoutShift extends PerformanceEntry {
     // TODO: Add content
-  }
-}
+  };
+};
   value: number,,
     hadRecentInput: boolean
 
-}
+};
 /**
  * Performance with Memory Interface
  * Extends Performance API with memory information
@@ -104,18 +104,19 @@ export interface LayoutShift extends PerformanceEntry {
 
 export interface PerformanceWithMemory extends Performance {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
   memor,
-  y: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
+  y: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+;
   usedJSHeapSize: number,,
     totalJSHeapSize: number,,
     jsHeapSizeLimit: number
 
-  }
+  };
 }
-
+;
+;

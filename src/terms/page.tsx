@@ -8,7 +8,7 @@ const sections = [;
 title: 'Acceptance of Terms',;,
 icon: CheckCircle,;,
 content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
-}
+};
     },
     {;,
 title: 'Use License',;,
@@ -34,7 +34,7 @@ content: 'All content, trademarks, and intellectual property on our website are 
 title: 'Limitation of Liability',;,
 icon: Shield,;,
 content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
-    }
+    };
   ];
 const prohibitedUses = [;
     'Violating any applicable laws or regulations',
@@ -70,12 +70,13 @@ service: 'Support Services',;,
 uptime: 'N/A',;,
 support: 'Business Hours',;,
 response: '4 hours'
-    }
+    };
   ];
 return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -94,17 +95,20 @@ Please read these terms carefully before using our services. By using our servic
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent
-      {/* Last Updated */}
-      <section className="py-8">
+      {/* Last Updated */};
+      ;
+  <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
               <p className="text-gray-300">
-                <strong>Last Updated:</strong> {lastUpdated}
-              <p className="text-sm text-gray-400 mt-2">;
+                <strong>Last Updated:</strong> {lastUpdated};
+              ;
+  <p className="text-sm text-gray-400 mt-2">;
 These terms may be updated from time to time. Continued use of our services constitutes acceptance of any changes.
-      {/* Key Terms */}
-      <section className="py-20">
+      {/* Key Terms */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Terms
@@ -113,11 +117,13 @@ These terms may be updated from time to time. Continued use of our services cons
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <section.icon className="w-8 h-8 text-cyan-400" />
-                    <h3 className="text-xl font-bold text-white">{section.title}
-                  <p className="text-gray-300 text-sm">{section.content}
-              ))}
-      {/* Prohibited Uses */}
-      <section className="py-20 bg-slate-800/50">
+                    <h3 className="text-xl font-bold text-white">{section.title};
+                  ;
+  <p className="text-gray-300 text-sm">{section.content};
+              ))};
+      {/* Prohibited Uses */};
+      ;
+  <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Prohibited Uses
@@ -127,10 +133,11 @@ You may not use our services for any unlawful purpose or to solicit others to pe
               {prohibitedUses.map((use), index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{use}
-              ))}
-      {/* Service Level Agreements */}
-      <section className="py-20">
+                  <span className="text-gray-300">{use};
+              ))};
+      {/* Service Level Agreements */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Level Agreements
@@ -152,16 +159,20 @@ You may not use our services for any unlawful purpose or to solicit others to pe
                     <tr key={index} className="border-t border-gray-700">
   </tr>
                       <td className="px-6 py-4 text-white font-medium">
-  </td>{level.service}
-                      <td className="px-6 py-4 text-cyan-400">
-  </td>{level.uptime}
-                      <td className="px-6 py-4 text-purple-400">
-  </td>{level.support}
-                      <td className="px-6 py-4 text-green-400">
-  </td>{level.response}
-                  ))}
-      {/* Payment Terms */}
-      <section className="py-20 bg-slate-800/50">
+  </td>{level.service};
+                      ;
+  <td className="px-6 py-4 text-cyan-400">
+  </td>{level.uptime};
+                      ;
+  <td className="px-6 py-4 text-purple-400">
+  </td>{level.support};
+                      ;
+  <td className="px-6 py-4 text-green-400">
+  </td>{level.response};
+                  ))};
+      {/* Payment Terms */};
+      ;
+  <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Payment Terms
@@ -180,8 +191,9 @@ No refunds for services already delivered.
                 <h3 className="text-xl font-bold text-white mb-3">Late Payments
                 <p className="text-gray-300">;
 Late payments may result in service suspension. A late fee of 1.5% per month may be applied to overdue accounts.
-      {/* Termination */}
-      <section className="py-20">
+      {/* Termination */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Termination
@@ -201,8 +213,9 @@ We will provide reasonable notice when possible.
                 <p className="text-gray-300">;
 Upon termination, your right to use our services ceases immediately.;
 We will retain your data for 90 days after termination for recovery purposes.
-      {/* Governing Law */}
-      <section className="py-20 bg-slate-800/50">
+      {/* Governing Law */};
+      ;
+  <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Governing Law
@@ -219,8 +232,9 @@ Any disputes will be resolved in the courts of Delaware.
               <div className="flex items-center justify-center space-x-3">
                 <FileText className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">English Language
-      {/* Contact Information */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+      {/* Contact Information */};
+      ;
+  <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Questions About These Terms?
@@ -247,7 +261,8 @@ Contact Us
       </section>
     </div>
   ),
-}
+};
+  ;
   </a>
   </h1>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section>

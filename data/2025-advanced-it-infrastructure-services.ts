@@ -4,39 +4,39 @@
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
   textColor: string
   link: string
   marketPosition: string
-  targetAudience: string[]
+  targetAudience: string[];
   trialDays: number
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
   contactInfo: {,
     mobile: string
     email: string
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number,
-}
+};
 export const advancedITInfrastructure2025: AdvancedITInfrastructureService[] = [
   // Multi-Cloud Orchestration Platform
   {
@@ -1371,7 +1371,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32,
     rating: 4.7,
     reviews: 24
-  }
-]
+  };
+];
 export default advancedITInfrastructure2025
-]
+];

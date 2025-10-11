@@ -18,8 +18,8 @@ export interface AppConfig {
     theme: 'light' | 'dark' | 'auto';
     language: string;
   };
-}
-
+};
+;
 export const config: AppConfig = {
   app: {
     name: 'Zion Tech Group',

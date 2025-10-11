@@ -4,8 +4,8 @@ export interface HelpArticle {
   title: string
   content: string
   last_updated: string
-  tags: string[]
-}
+  tags: string[];
+};
 export interface HelpCategory {
 import {ReactNode} from "react"
 export interface HelpArticle {
@@ -13,19 +13,19 @@ export interface HelpArticle {
   title: string
   content: string
   lastUpdated: string,
-  tags: string[]
-}
+  tags: string[];
+};
 export interface HelpCategory {
   lastUpdated: string
-  tags: string[]
-}
+  tags: string[];
+};
 export interface HelpCategory {
   id: string
   name: string
   description: string
   icon: ReactNode
-  articles: HelpArticle[]
-}
+  articles: HelpArticle[];
+};
 export interface SupportTicket {
 export interface SupportTicket {
   id: string
@@ -36,30 +36,30 @@ export interface SupportTicket {
   priority: "low" | "medium" | "high"
   created_at: string
   updated_at: string
-}
+};
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
   title: string,
   content: string,
   lastUpdated: string,
-  tags: string[]
+  tags: string[];
 import { ReactNode } from "react",
 export interface HelpArticle {
   id: string,
   title: string,
   content: string,
   lastUpdated: string,
-  tags: string[]
-}
-
+  tags: string[];
+};
+;
 export interface HelpCategory {
   id: string,
   name: string,
   description: string,
   icon: ReactNode,
-  articles: HelpArticle[]
-}
+  articles: HelpArticle[];
+};
 export interface SupportTicket {
   id: string,
   userId: string,
@@ -85,4 +85,5 @@ export interface SupportTicket {
   createdAt: string
   updatedAt: string
 }
-
+;
+;

@@ -63,19 +63,19 @@ import {
   Zap, 
   Globe,
       description: "Machine learning algorithms that automatically optimize marketing campaigns for maximum ROI",
-      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]
+      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"];
     },
     {
       icon: Target,
       title: "Intelligent Audience Segmentation",
       description: "Advanced customer segmentation using behavioral analysis and predictive modeling",
-      benefits: ["Behavioral targeting", "Predictive segmentation", "Dynamic personas", "Cross-channel insights"]
+      benefits: ["Behavioral targeting", "Predictive segmentation", "Dynamic personas", "Cross-channel insights"];
     },
     {
       icon: BarChart3,
       title: "Predictive Analytics",
       description: "Forecast customer behavior and campaign performance using historical data analysis",
-      benefits: ["Churn prediction", "Lifetime value forecasting", "Campaign success prediction", "Market trend analysis"]
+      benefits: ["Churn prediction", "Lifetime value forecasting", "Campaign success prediction", "Market trend analysis"];
       description: "Machine learning algorithms that continuously optimize campaigns for maximum ROI and engagement."
     },
     {
@@ -116,15 +116,15 @@ export default function AIMarketingAutomation() {
       icon: Brain,
       title: "Precision Audience Targeting",
       description: "Advanced AI algorithms that identify and target the most valuable customer segments with laser precision.",
-      benefits: ["Behavioral analysis", "Predictive segmentation", "Dynamic audience optimization"]
+      benefits: ["Behavioral analysis", "Predictive segmentation", "Dynamic audience optimization"];
     },
     {
       icon: BarChart3,
       title: "Predictive Analytics",
       description: "Machine learning models that forecast customer behavior and campaign performance to drive strategic decisions.",
-      benefits: ["Customer lifetime value prediction", "Churn prevention", "Revenue forecasting"]
+      benefits: ["Customer lifetime value prediction", "Churn prevention", "Revenue forecasting"];
       description: "AI-generated personalized content that resonates with individual customer preferences",
-      benefits: ["Dynamic content", "Personalized messaging", "Multi-language support", "Brand voice consistency"]
+      benefits: ["Dynamic content", "Personalized messaging", "Multi-language support", "Brand voice consistency"];
     },
     {
       icon: Zap,
@@ -155,7 +155,7 @@ export default function AIMarketingAutomation() {
       title: "Automated Workflows",
       description: "Streamlined marketing processes with intelligent automation"
       description: "Intelligent automation of repetitive marketing tasks and customer journey management",
-      benefits: ["Lead nurturing", "Email automation", "Social media management", "Customer onboarding"]
+      benefits: ["Lead nurturing", "Email automation", "Social media management", "Customer onboarding"];
     },
     {
       icon: Shield,
@@ -245,32 +245,35 @@ export default function AIMarketingAutomation() {
         'Custom reporting dashboards'
       ],
       price: 'Starting at $1,799/month'
-    }
+    };
   ]
+  
+  ;
+  ;
   const channels = [
     {
       title: 'Email Marketing',
       description: 'AI-powered email campaigns with personalization and automation',
       icon: Mail,
-      features: ['Smart segmentation', 'Behavioral triggers', 'A/B testing', 'Performance optimization']
+      features: ['Smart segmentation', 'Behavioral triggers', 'A/B testing', 'Performance optimization'];
     },
     {
       title: 'Social Media',
       description: 'Automated social media management with intelligent content scheduling',
       icon: MessageSquare,
-      features: ['Content scheduling', 'Engagement tracking', 'Trend analysis', 'Community management']
+      features: ['Content scheduling', 'Engagement tracking', 'Trend analysis', 'Community management'];
     },
     {
       title: 'Digital Advertising',
       description: 'Programmatic advertising with AI-driven optimization',
       icon: Monitor,
-      features: ['Bid optimization', 'Audience targeting', 'Creative testing', 'Performance tracking']
+      features: ['Bid optimization', 'Audience targeting', 'Creative testing', 'Performance tracking'];
     },
     {
       title: 'Mobile Marketing',
       description: 'Mobile-first marketing automation and push notification optimization',
       icon: Smartphone,
-      features: ['Push notifications', 'In-app messaging', 'Location targeting', 'Mobile analytics']
+      features: ['Push notifications', 'In-app messaging', 'Location targeting', 'Mobile analytics'];
       title: 'AI-Powered Targeting',
       description: 'Advanced algorithms that identify and target your ideal customers with precision.'
     },
@@ -346,8 +349,11 @@ const AIMarketingAutomation = () => {
       icon: Zap,
       title: "Cross-Channel Automation",
       description: "Seamlessly coordinate marketing efforts across email, social media, and web channels."
-    }
+    };
   ]
+  
+  ;
+  ;
   const useCases = [
     {
       title: "Lead Generation & Nurturing",
@@ -368,13 +374,16 @@ const AIMarketingAutomation = () => {
       title: "Social Media Marketing",
       description: "Automated social media posting, engagement, and audience growth strategies.",
       icon: Globe
-    }
+    };
   ]
+  
+  ;
+  ;
   const benefits = [
       title: "Lead Generation",
       description: "Automated lead scoring and nurturing processes that convert prospects into customers.",
       icon: Users,
-      features: ["Lead scoring", "Nurturing campaigns", "Conversion tracking"]
+      features: ["Lead scoring", "Nurturing campaigns", "Conversion tracking"];
     "Increase conversion rates by 30-50% with personalized campaigns",
     "Reduce marketing costs by 25-40% through automation",
     "Improve customer engagement by 40-60% with targeted content",
@@ -382,28 +391,34 @@ const AIMarketingAutomation = () => {
     "Boost ROI by 35-55% with predictive optimization",
     "Achieve 24/7 marketing presence across all channels"
   ]
+  
+  ;
+  ;
   const useCases = [
     {
       industry: "E-commerce",
       description: "Personalized product recommendations, abandoned cart recovery, and customer lifecycle marketing",
-      metrics: ["Conversion Rate", "Customer Lifetime Value", "Cart Abandonment Rate"]
+      metrics: ["Conversion Rate", "Customer Lifetime Value", "Cart Abandonment Rate"];
     },
     {
       industry: "B2B Services",
       description: "Lead nurturing, account-based marketing, and sales funnel optimization",
-      metrics: ["Lead Quality Score", "Sales Cycle Length", "Pipeline Velocity"]
+      metrics: ["Lead Quality Score", "Sales Cycle Length", "Pipeline Velocity"];
     },
     {
       industry: "Healthcare",
       description: "Patient engagement, appointment reminders, and health education campaigns",
-      metrics: ["Patient Retention", "Appointment Show Rate", "Health Outcomes"]
+      metrics: ["Patient Retention", "Appointment Show Rate", "Health Outcomes"];
     },
     {
       industry: "Education",
       description: "Student recruitment, course recommendations, and alumni engagement",
-      metrics: ["Enrollment Rate", "Course Completion", "Alumni Engagement"]
-    }
+      metrics: ["Enrollment Rate", "Course Completion", "Alumni Engagement"];
+    };
   ]
+  
+  ;
+  ;
   const pricing = [
     "Increase conversion rates by up to 300%",
     "Reduce marketing costs by 40-60%",
@@ -418,6 +433,9 @@ const AIMarketingAutomation = () => {
     "Real-time campaign optimization",
     "Advanced ROI tracking and attribution"
   ]
+  
+  ;
+  ;
   const pricingPlans = [
     {
       name: "Starter",
@@ -447,65 +465,71 @@ export default function AIMarketingAutomation() {
       title: "AI-Powered Audience Targeting",
       description: "Intelligent customer segmentation and targeting using machine learning algorithms",
       icon: Target,
-      benefits: ["95% targeting accuracy", "Real-time audience insights", "Predictive customer behavior"]
+      benefits: ["95% targeting accuracy", "Real-time audience insights", "Predictive customer behavior"];
     },
     {
       title: "Automated Content Generation",
       description: "AI-generated marketing content that adapts to your brand voice and audience preferences",
       icon: Palette,
-      benefits: ["Personalized content", "Multi-language support", "Brand consistency"]
+      benefits: ["Personalized content", "Multi-language support", "Brand consistency"];
     },
     {
       title: "Smart Campaign Optimization",
       description: "Continuous campaign performance optimization using real-time data and AI insights",
       icon: TrendingUp,
-      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction"]
+      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction"];
     },
     {
       title: "Multi-Channel Orchestration",
       description: "Seamless coordination across email, social media, SMS, and advertising platforms",
       icon: Globe,
-      benefits: ["Unified dashboard", "Cross-channel analytics", "Consistent messaging"]
+      benefits: ["Unified dashboard", "Cross-channel analytics", "Consistent messaging"];
     },
     {
       title: "Predictive Analytics",
       description: "Forecast campaign performance and customer lifetime value with AI-powered insights",
       icon: BarChart3,
-      benefits: ["ROI prediction", "Customer churn prevention", "Optimal timing analysis"]
+      benefits: ["ROI prediction", "Customer churn prevention", "Optimal timing analysis"];
     },
     {
       title: "Personalization Engine",
       description: "Dynamic content personalization based on real-time user behavior and preferences",
       icon: Users,
-      benefits: ["Real-time personalization", "Behavioral triggers", "Contextual messaging"]
-    }
+      benefits: ["Real-time personalization", "Behavioral triggers", "Contextual messaging"];
+    };
   ]
+  
+  ;
+  ;
   const marketingChannels = [
     {
       name: "Email Marketing",
       description: "AI-powered email campaigns with personalized content and optimal send times",
       icon: Mail,
-      features: ["Smart subject lines", "Dynamic content", "Send time optimization", "A/B testing"]
+      features: ["Smart subject lines", "Dynamic content", "Send time optimization", "A/B testing"];
     },
     {
       name: "Social Media",
       description: "Automated social media management with content scheduling and engagement tracking",
       icon: MessageSquare,
-      features: ["Content scheduling", "Engagement monitoring", "Trend analysis", "Community management"]
+      features: ["Content scheduling", "Engagement monitoring", "Trend analysis", "Community management"];
     },
     {
       name: "SMS Marketing",
       description: "Intelligent SMS campaigns with personalized messaging and delivery optimization",
       icon: Smartphone,
-      features: ["Personalized content", "Delivery timing", "Response tracking", "Compliance management"]
+      features: ["Personalized content", "Delivery timing", "Response tracking", "Compliance management"];
     },
     {
       name: "Video Marketing",
       description: "AI-generated video content and automated video marketing campaigns",
       icon: Video,
-      features: ["Auto-generated videos", "Thumbnail optimization", "Performance tracking", "Platform optimization"]
-    }
+      features: ["Auto-generated videos", "Thumbnail optimization", "Performance tracking", "Platform optimization"];
+    };
   ]
+  
+  ;
+  ;
   const pricingPlans = [
     {
       name: "Starter",
@@ -537,6 +561,9 @@ export default function AIMarketingAutomation() {
     'Achieve 3x better ROI on marketing spend',
     'Reduce time-to-market for campaigns by 70%'
   ]
+  
+  ;
+  ;
   const useCases = [
     {
       description: "Automated product recommendations, abandoned cart recovery, and personalized shopping experiences.",
@@ -589,35 +616,41 @@ export default function AIMarketingAutomation() {
       description: 'Make informed marketing decisions based on real-time analytics',
       icon: Brain
       description: "Built-in compliance features for GDPR, CAN-SPAM, and other marketing regulations",
-      benefits: ["GDPR compliance", "Data privacy", "Audit trails", "Secure data handling"]
-    }
+      benefits: ["GDPR compliance", "Data privacy", "Audit trails", "Secure data handling"];
+    };
   ]
+  
+  ;
+  ;
   const useCases = [
     {
       industry: "E-commerce",
       title: "Personalized Product Recommendations",
       description: "AI-driven product suggestions based on browsing behavior and purchase history",
-      metrics: ["35% conversion increase", "45% higher AOV", "60% customer retention"]
+      metrics: ["35% conversion increase", "45% higher AOV", "60% customer retention"];
     },
     {
       industry: "SaaS",
       title: "Lead Scoring & Nurturing",
       description: "Automated lead qualification and personalized nurturing campaigns",
-      metrics: ["50% faster lead conversion", "40% higher quality leads", "25% cost reduction"]
+      metrics: ["50% faster lead conversion", "40% higher quality leads", "25% cost reduction"];
     },
     {
       industry: "Healthcare",
       title: "Patient Engagement",
       description: "Personalized health communication and appointment reminders",
-      metrics: ["30% appointment adherence", "45% patient satisfaction", "20% operational efficiency"]
+      metrics: ["30% appointment adherence", "45% patient satisfaction", "20% operational efficiency"];
     },
     {
       industry: "Financial Services",
       title: "Customer Lifecycle Marketing",
       description: "Intelligent cross-selling and retention campaigns based on financial behavior",
-      metrics: ["40% cross-sell success", "35% retention improvement", "50% customer lifetime value"]
-    }
+      metrics: ["40% cross-sell success", "35% retention improvement", "50% customer lifetime value"];
+    };
   ]
+  
+  ;
+  ;
   const technologies = [
     {
       name: "Machine Learning",
@@ -648,8 +681,11 @@ export default function AIMarketingAutomation() {
       name: "Real-Time Optimization",
       description: "Instant campaign adjustments based on live performance data",
       icon: Cpu
-    }
+    };
   ]
+  
+  ;
+  ;
   const pricingTiers = [
     {
       name: "Starter",
@@ -733,7 +769,7 @@ export default function AIMarketingAutomation() {
         "Dedicated support",
         "Advanced security",
         "API access"
-      ]
+      ];
       price: "$1,299/month",
       description: "For large organizations requiring enterprise-grade marketing automation",
       features: [
@@ -750,8 +786,11 @@ export default function AIMarketingAutomation() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+    };
   ]
+  
+  ;
+  ;
   const successMetrics = [
     {
       metric: "3.5x",
@@ -772,20 +811,24 @@ export default function AIMarketingAutomation() {
       metric: "5.2x",
       description: "ROI improvement",
       detail: "Automated optimization and personalization"
-    }
+    };
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }};
+            animate={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
           >
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -799,8 +842,9 @@ export default function AIMarketingAutomation() {
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6">
@@ -820,8 +864,9 @@ export default function AIMarketingAutomation() {
               Leverage the power of artificial intelligence to automate, optimize, and scale your marketing campaigns. 
               Our AI-driven platform delivers personalized experiences that convert prospects into loyal customers.
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
           <div className="text-center max-w-4xl mx-auto">
@@ -876,12 +921,13 @@ export default function AIMarketingAutomation() {
         </div>
       </section>
 
-      {/* Features Section */}
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Features Section */};
+      {/* Features Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }};
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
@@ -896,8 +942,9 @@ export default function AIMarketingAutomation() {
             </div>
           </div>
           
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
+          {/* Key Metrics */};
+          ;
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
               <div className="text-gray-400">Average ROI Increase</div>
@@ -918,8 +965,9 @@ export default function AIMarketingAutomation() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Features Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -938,9 +986,11 @@ export default function AIMarketingAutomation() {
                   <div className="p-3 rounded-lg bg-purple-500/20 mr-4">
                     <feature.icon className="w-8 h-8 text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">{feature.title};
+  </h3>
                 </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-gray-400">
@@ -957,8 +1007,9 @@ export default function AIMarketingAutomation() {
         </div>
       </div>
 
-      {/* Key Benefits */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Key Benefits */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Why Choose AI Marketing Automation?
@@ -977,8 +1028,10 @@ export default function AIMarketingAutomation() {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-4 text-white">{feature.title};
+  </h3>
+                <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -991,8 +1044,9 @@ export default function AIMarketingAutomation() {
         canonical="https://ziontechgroup.com/services/ai-marketing-automation"
       />
 
-      {/* Hero Section with Futuristic Background */}
-      <section className="relative overflow-hidden">
+      {/* Hero Section with Futuristic Background */};
+      ;
+  <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-600/20 to-cyan-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
@@ -1031,8 +1085,9 @@ export default function AIMarketingAutomation() {
             </button>
           </div>
 
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          {/* Key Metrics */};
+          ;
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">3.5x</div>
               <div className="text-gray-400 text-sm">Email Open Rates</div>
@@ -1053,8 +1108,9 @@ export default function AIMarketingAutomation() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-black/50">
+      {/* Features Section */};
+      ;
+  <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1073,22 +1129,26 @@ export default function AIMarketingAutomation() {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
+                  {feature.title};
+                ;
+  </h3>
                 <p className="text-gray-300 mb-4">
-                  {feature.description}
-                </p>
+                  {feature.description};
+                ;
+  </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+                      {benefit};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1103,20 +1163,23 @@ export default function AIMarketingAutomation() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                key={feature.title};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                viewport={{ once: true }};
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+                <h3 className="text-xl font-semibold mb-3">{feature.title};
+  </h3>
+                <p className="text-gray-300">{feature.description};
+  </p>
+      {/* Features Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1131,39 +1194,44 @@ export default function AIMarketingAutomation() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <$2 />
-                key={index}
+                key={index};
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                <p className="text-gray-300">{feature.description};
+  </p>
               </div>
               </div>
               </div>
               </motion.div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Marketing Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1186,17 +1254,22 @@ export default function AIMarketingAutomation() {
                 <div className="p-4 rounded-lg bg-purple-500/20 inline-block mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{useCase.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{useCase.title};
+  </h3>
+                <p className="text-gray-300 mb-4 text-sm">{useCase.description};
+  </p>
                 <ul className="space-y-1 text-sm">
                   {useCase.features.map((feature, idx) => (
                     <li key={idx} className="text-gray-400">
-                      • {feature}
-                    </li>
-                  ))}
-                </ul>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+                      • {feature};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1212,20 +1285,25 @@ export default function AIMarketingAutomation() {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <span className="text-gray-300 text-lg">{benefit};
+  </span>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <span className="text-gray-300 text-lg">{benefit};
+  </span>
                 </div>
-              ))}
-            </div>
-      {/* Marketing Channels Section */}
-      <section className="py-20 bg-purple-900/30">
+              ))};
+            ;
+  </div>
+      {/* Marketing Channels Section */};
+      ;
+  <section className="py-20 bg-purple-900/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1244,25 +1322,31 @@ export default function AIMarketingAutomation() {
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
                     <channel.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{channel.name}</h3>
+                  <h3 className="text-xl font-semibold text-white">{channel.name};
+  </h3>
                 </div>
-                <p className="text-gray-300 mb-4">{channel.description}</p>
+                <p className="text-gray-300 mb-4">{channel.description};
+  </p>
                 <ul className="space-y-2">
                   {channel.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-purple-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                      {feature};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Success Metrics Section */}
-      <section className="py-20 bg-black/50">
+      {/* Success Metrics Section */};
+      ;
+  <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1276,17 +1360,22 @@ export default function AIMarketingAutomation() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
               <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
-                <div className="text-4xl font-bold text-purple-400 mb-2">{metric.metric}</div>
-                <div className="text-white font-semibold mb-2">{metric.description}</div>
-                <div className="text-gray-400 text-sm">{metric.detail}</div>
+                <div className="text-4xl font-bold text-purple-400 mb-2">{metric.metric};
+  </div>
+                <div className="text-white font-semibold mb-2">{metric.description};
+  </div>
+                <div className="text-gray-400 text-sm">{metric.detail};
+  </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Pricing Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1332,72 +1421,87 @@ export default function AIMarketingAutomation() {
                     </span>
                   </div>
                 )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-400">{plan.description}</p>
+                ;
+                ;
+  <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+  </h3>
+                  <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price};
+  </div>
+                  <p className="text-gray-400">{plan.description};
+  </p>
                 </div>
                 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                      {feature};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
                 
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -20 }};
+              whileInView={{ opacity: 1, x: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
+                    <span className="text-gray-300">{benefit};
+  </span>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 20 }};
+              whileInView={{ opacity: 1, x: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
               <h3 className="text-2xl font-semibold mb-6">Use Cases</h3>
               <div className="space-y-4">
                 {useCases.map((useCase, index) => (
                   <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
-                    <h4 className="font-semibold text-cyan-400 mb-2">{useCase.title}</h4>
-                    <p className="text-gray-300 text-sm">{useCase.description}</p>
+                    <h4 className="font-semibold text-cyan-400 mb-2">{useCase.title};
+  </h4>
+                    <p className="text-gray-300 text-sm">{useCase.description};
+  </p>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </motion.div>
                 < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
                 }`}>
-                  {plan.cta}
-                </button>
+                  {plan.cta};
+                ;
+  </button>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      {/* CTA Section */};
+    ;
+  <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           <div className="text-center">
@@ -1419,10 +1523,10 @@ export default function AIMarketingAutomation() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Marketing?
@@ -1438,8 +1542,9 @@ export default function AIMarketingAutomation() {
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Schedule Demo
               </button>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Marketing?
@@ -1464,8 +1569,9 @@ export default function AIMarketingAutomation() {
         </div>
       </div>
 
-      {/* Services Section */}
-      <div className="py-20 bg-black/20">
+      {/* Services Section */};
+      ;
+  <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">AI Marketing Automation Services</h2>
@@ -1478,10 +1584,13 @@ export default function AIMarketingAutomation() {
     "Personalized customer experiences at scale",
     "Data-driven marketing decisions"
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
@@ -1506,16 +1615,18 @@ export default function AIMarketingAutomation() {
           </div>
         </div>
         
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Background Elements */};
+        ;
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Features Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1534,17 +1645,21 @@ export default function AIMarketingAutomation() {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title};
+  </h3>
+                  <p className="text-gray-300">{feature.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1565,23 +1680,28 @@ export default function AIMarketingAutomation() {
                       <Icon className="w-6 h-6 text-purple-400" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                      <p className="text-gray-300">{useCase.description}</p>
+                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title};
+  </h3>
+                      <p className="text-gray-300">{useCase.description};
+  </p>
                     </div>
                   </div>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
               </div>
             )
-          })}
-        </div>
+          })};
+        ;
+  </div>
       </div>
 
-      {/* Use Cases */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Use Cases */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Industry Applications
@@ -1596,26 +1716,33 @@ export default function AIMarketingAutomation() {
             <div key={index} className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50">
               <div className="flex items-center mb-4">
                 <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                  {useCase.industry}
-                </span>
+                  {useCase.industry};
+                ;
+  </span>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
-              <p className="text-gray-300 mb-4">{useCase.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title};
+  </h3>
+              <p className="text-gray-300 mb-4">{useCase.description};
+  </p>
               <div className="space-y-2">
                 {useCase.metrics.map((metric, idx) => (
                   <div key={idx} className="flex items-center text-sm">
                     <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                    <span className="text-cyan-400 font-medium">{metric}</span>
+                    <span className="text-cyan-400 font-medium">{metric};
+  </span>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </div>
 
-      {/* Technologies */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Technologies */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Powered by Cutting-Edge Technology
@@ -1633,16 +1760,20 @@ export default function AIMarketingAutomation() {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{tech.name}</h3>
-                <p className="text-gray-300">{tech.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-white">{tech.name};
+  </h3>
+                <p className="text-gray-300">{tech.description};
+  </p>
               </div>
             )
-          })}
-        </div>
+          })};
+        ;
+  </div>
       </div>
 
-      {/* Pricing */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Pricing */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Choose Your Plan
@@ -1666,24 +1797,31 @@ export default function AIMarketingAutomation() {
                   </span>
                 </div>
               )}
-              
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2 text-white">{tier.name}</h3>
+              ;
+              ;
+  <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2 text-white">{tier.name};
+  </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
-                  <span className="text-gray-400">{tier.period}</span>
+                  <span className="text-4xl font-bold text-white">{tier.price};
+  </span>
+                  <span className="text-gray-400">{tier.period};
+  </span>
                 </div>
-                <p className="text-gray-300">{tier.description}</p>
+                <p className="text-gray-300">{tier.description};
+  </p>
               </div>
               
               <ul className="space-y-3 mb-8">
                 {tier.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+                    {feature};
+                  ;
+  </li>
+                ))};
+              ;
+  </ul>
               
               <$2 />
                 to="/contact"
@@ -1691,17 +1829,19 @@ export default function AIMarketingAutomation() {
                   tier.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                     : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
-                }`}
+                }`};
               >
                 Get Started
               </Link>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* CTA Section */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Marketing?
@@ -1710,8 +1850,9 @@ export default function AIMarketingAutomation() {
             Join leading organizations that are already leveraging AI-powered marketing 
             automation to drive growth and customer engagement.
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center">
@@ -1726,8 +1867,9 @@ export default function AIMarketingAutomation() {
             optimizes campaigns in real-time, and drives unprecedented growth for your business.
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
+        {/* Hero Section */};
+        ;
+  <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Target className="w-10 h-10 text-white" />
@@ -1785,8 +1927,8 @@ export default function AIMarketingAutomation() {
       </section>
     </div>
   )
-}
-}
+};
+};
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Schedule a Demo
@@ -1821,8 +1963,9 @@ export default function AIMarketingAutomation() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1837,14 +1980,17 @@ export default function AIMarketingAutomation() {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-purple-400 flex-shrink-0" />
-                <span className="text-gray-300 text-lg">{benefit}</span>
+                <span className="text-gray-300 text-lg">{benefit};
+  </span>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="mb-20">
+        {/* Features Grid */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Powerful Marketing Automation Features
           </h2>
@@ -1856,16 +2002,20 @@ export default function AIMarketingAutomation() {
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title};
+  </h3>
+                  <p className="text-zion-slate-light">{feature.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="mb-20">
+        {/* Benefits Section */};
+        ;
+  <div className="mb-20">
           <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white text-center mb-8">
               Proven Marketing Results
@@ -1874,39 +2024,48 @@ export default function AIMarketingAutomation() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light">{benefit}</span>
+                  <span className="text-zion-slate-light">{benefit};
+  </span>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </div>
 
-        {/* Use Cases */}
-        <div className="mb-20">
+        {/* Use Cases */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Industry Applications
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
-                <p className="text-zion-slate-light mb-4">{useCase.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry};
+  </h3>
+                <p className="text-zion-slate-light mb-4">{useCase.description};
+  </p>
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
                   {useCase.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zion-slate-light text-sm">{metric}</span>
+                      <span className="text-zion-slate-light text-sm">{metric};
+  </span>
                     </div>
-                  ))}
-                </div>
+                  ))};
+                ;
+  </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
 
-        {/* Pricing */}
-        <div className="mb-20">
+        {/* Pricing */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing
           </h2>
@@ -1921,40 +2080,49 @@ export default function AIMarketingAutomation() {
                       Most Popular
                     </span>
                   </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                )};
+                ;
+  <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+  </h3>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
+                    <span className="text-4xl font-bold text-zion-cyan">{plan.price};
+  </span>
+                    <span className="text-zion-slate-light ml-1">{plan.period};
+  </span>
                   </div>
-                  <p className="text-zion-slate-light mt-2">{plan.description}</p>
+                  <p className="text-zion-slate-light mt-2">{plan.description};
+  </p>
                 </div>
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                      <span className="text-zion-slate-light">{feature};
+  </span>
                     </li>
-                  ))}
-                </ul>
+                  ))};
+                ;
+  </ul>
                 <$2 />
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
                       : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
-                  }`}
+                  }`};
                 >
                   Get Started
                 </Link>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
+        {/* CTA Section */};
+        ;
+  <div className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Automate Your Marketing?
@@ -1982,15 +2150,17 @@ export default function AIMarketingAutomation() {
       </div>
     </div>
   )
-}
+};
 export default AIMarketingAutomation
-}
-}
-}
-      </section>
+};
+};
+};
+      ;
+  </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Automate Your Marketing?
@@ -2009,8 +2179,9 @@ export default AIMarketingAutomation
         </div>
       </section>
 
-      {/* Navigation Links */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Navigation Links */};
+      ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
@@ -2058,7 +2229,8 @@ export default AIMarketingAutomation
       </section>
     </div>
   )
-}
+};
 export default AIMarketingAutomation
-}
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section></section></section></section></section>
+};
+;
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section></section></section></section></section>

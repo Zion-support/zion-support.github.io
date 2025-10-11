@@ -28,7 +28,8 @@ export default function ITInfrastructurePage() {
       </div>
     </div>
   )
-  }
+  };
+  ;
   </a>
   </h1>
 </p></p></h2>

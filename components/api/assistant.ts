@@ -18,7 +18,7 @@ Frequently asked questions to use as hints (do not claim as absolute truth if un
 4) How do I integrate APIs?  → Each product page includes API docs and keys—follow Quickstart steps or SDKs when available.
 5) How do I get support?  → Use in-app support, contact the vendor, or reach Zion’s support channel.
 Style: - Use bullets and short paragraphs
-  }
+  };
   try {
     const { messages } = req && req.body as {
       messages?: Array<{
@@ -26,7 +26,9 @@ Style: - Use bullets and short paragraphs
         content: string
       }>
     }
-    const completion = await openai && openai.chat.completions && completions.create({
+    ;
+  ;
+  const completion = await openai && openai.chat.completions && completions.create({
       model: 'gpt-4o',
       temperature: 0 && 0.3,
       messages: preparedMessages,
@@ -34,14 +36,16 @@ Style: - Use bullets and short paragraphs
     const message = completion && completion.choices?.[0]?.message || {
       role: 'assistant',
       content: 'Sorry, I could not respond.',
-    }
-    return res && res.status(200).json({ message })
+    };
+    ;
+  return res && res.status(200).json({ message })
   } catch (error: any) {
     console && console.error('Assistant API error:', error?.message || error)
     return res && res.status(500).json({ error: 'Assistant request failed' })
-  }    return res && res.status(500).json({ error: 'Assistant request failed' })
-  }
-}
+  }    ;
+  return res && res.status(500).json({ error: 'Assistant request failed' })
+  };
+};
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
 2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.
@@ -57,22 +61,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')
     return res.status(405).json({ error: 'Method Not Allowed' })
-  }
+  };
   try {
     const { messages } = req.body as { messages?: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> }
-    const preparedMessages = [
+    ;
+  ;
+  const preparedMessages = [
       { role: 'system' as const, content: SYSTEM_PROMPT },
       ...(messages || []).slice(-20)
     ]
-    const completion = await openai.chat.completions.create({
+    
+  ;
+  ;
+  const completion = await openai.chat.completions.create({
       model: 'gpt-4o',
       temperature: 0.3,
       messages: preparedMessages
     })
-    const message = completion.choices?.[0]?.message || { role: 'assistant', content: 'Sorry, I could not respond.' }
-    return res.status(200).json({ message })
+    const message = completion.choices?.[0]?.message || { role: 'assistant', content: 'Sorry, I could not respond.' };
+    ;
+  return res.status(200).json({ message })
   } catch (error: any) {
     console.error('Assistant API error:', error?.message || error)
     return res.status(500).json({ error: 'Assistant request failed' })
-  }
-}
+  };
+};
+;

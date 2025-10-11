@@ -5,7 +5,7 @@ export interface Q4Service {id: string
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular?: boolean
   icon?: string
   color?: string
@@ -22,23 +22,23 @@ export interface Q4Service {id: string
   growthRate?: string
   variant?: string
   contactInfo?:
-  real_service: boolean;  technology?: string[];  integrations?: string[]
-  use_cases?: string[]
+  real_service: boolean;  technology?: string[];  integrations?: string[];
+  use_cases?: string[];
   roi?: string
-  competitors?: string[]
+  competitors?: string[];
   market_size?: string
   growth_rate?: string
   variant?: string,
   contact_info?:,
     mobile: string
     email: string,
-    address: string}
-    website: string}
-export interface Q4Service {/* TODO: Fix JSX expression */}
-  s: string}
+    address: string};
+    website: string};
+export interface Q4Service {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   real_implementatio,
   n: boolean
   implementation_details?: string
@@ -73,7 +73,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
       'Affiliate programs',
       'Influencer tracking',
       'Partnership analytics'],
@@ -246,8 +246,7 @@ const contact =
     reviews: 22,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - cyan - 600 to - blue - 700',
     text_colo,
@@ -434,8 +433,7 @@ const contact =
     reviews: 77,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700',
     textColo,
@@ -627,8 +625,7 @@ const contact =
     reviews: 35,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-amber-600 to-orange-700',
     textColo,
@@ -788,7 +785,7 @@ const contact =
     customers: 70
     rating: 4 && 4.5
     reviews: 28,
-  }]
+  }];
 export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -806,7 +803,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     popular: true,
     icon: '',
     color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 300'}
+    text_color: 'text - cyan - 300'};
     link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
     market_position: unknown,
       'Safer alternative to DIY RAG, comparable to Guardrails / Evals + vector DB stacks.',
@@ -840,8 +837,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700',
     textColo,
@@ -912,9 +908,9 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     ratin,
   g: 4 && 4.5,
     review,
-  s: 28}]
-export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
-  r: 'text - cyan - 300'}
+  s: 28}];
+export const real2025Q4Additions = [{/* TODO: Fix JSX expression */};
+  r: 'text - cyan - 300'};
     lin,
   k: `http,`
   s://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
@@ -999,15 +995,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 70
     rating: 4.5
     reviews: 28,
-  }]
-}
+  }];
+};
     customers: 120
     rating: 4.7
     reviews: 48,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     technolog,
   y: ['Next.js', 'Node.js', 'PostgreSQL'],
     integration,
@@ -1037,8 +1032,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 28}]
-}
+  s: 28}];
+};
     customer,
   s: 120,
     ratin,
@@ -1150,8 +1145,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     reviews: 77,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     integration,
   s: ['Gmail', 'Outlook', 'Stripe'],
     use_case,
@@ -1286,10 +1280,10 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.5,
     review,
-  s: 28}]
+  s: 28}];
 export const real2025 Q4 Additions = [
   },
-]
+];
 export const real2025Q4Additions = [
       'Document sync and chunking pipelines',
       'Metadata and policy guardrails',
@@ -1334,7 +1328,7 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     popular: true,
     icon: '',
     color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300'}
+    textColor: 'text-cyan-300'};
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
@@ -1358,8 +1352,8 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     reviews: 11,
     popula,
   r: true,
-export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
-  r: 'text-cyan-300'}
+export const real2025Q4Additions = [{/* TODO: Fix JSX expression */};
+  r: 'text-cyan-300'};
     lin,`
   k: `http,`
   s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
@@ -1468,8 +1462,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700',
     textColo,
@@ -1561,8 +1554,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Smoke tests and screenshots',
       'Secrets and policies as code',
       'Cost and TTL controls'],
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 600 to - indigo - 700',
     text_colo,
@@ -1660,8 +1652,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'LLM summaries and hints',
       'Slack / Email alerts and tickets',
       'Dashboards and exports'],
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - rose - 600 to - red - 700',
     text_colo,
@@ -1775,8 +1766,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 42
     rating: 4.6
     reviews: 23,
-    ico,
-  n: '',
+    icon: '',
     technolog,
   y: ['Edge runtime, KV/Redis, Next.js'],
     integration,
@@ -1850,8 +1840,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 27
     rating: 4.7
     reviews: 16,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700',
     textColo,
@@ -1944,8 +1933,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 33
     rating: 4.5
     reviews: 19,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-rose-600 to-red-700',
     textColo,
@@ -2052,8 +2040,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$79',
     period: '/month',
     description: unknown,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-amber-600 to-orange-700',
     textColo,
@@ -2170,8 +2157,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$299',
     period: '/month',
     description: unknown,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - fuchsia - 600 to - pink - 700',
     text_colo,
@@ -2259,8 +2245,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 21
     rating: 4.6
     reviews: 12,
-    ico,
-  n: '',
+    icon: '',
     categor,
   y: 'Developer Tools',
     realServic,
@@ -2338,8 +2323,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 38
     rating: 4.5
     reviews: 20,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-fuchsia-600 to-pink-700',
     textColo,
@@ -2448,8 +2432,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$4, 500',
     period: '/fixed',
     description: unknown,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-sky-600 to-indigo-700',
     textColo,
@@ -2553,8 +2536,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 12
     rating: 4.6
     reviews: 9,
-    ico,
-  n: '',
+    icon: '',
     categor,
   y: 'Data & Analytics',
     realServic,
@@ -2645,8 +2627,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$149',
     period: '/month',
     description: unknown,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-slate-600 to-gray-700',
     textColo,
@@ -2748,8 +2729,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 9
     rating: 4.7
     reviews: 7,
-    ico,
-  n: '',
+    icon: '',
     categor,
   y: 'Enterprise IT',
     realServic,
@@ -2852,8 +2832,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 14
     rating: 4.5
     reviews: 10,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-amber-600 to-orange-700',
     textColo,
@@ -2980,8 +2959,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     targetAudience: 'Developers and platform teams',
     trialDays: 14,
     setupTime: 'Same day',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-cyan-600 to-blue-700',
     textColo,
@@ -3046,8 +3024,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 31
     rating: 4.6
     reviews: 18,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - cyan - 600 to - blue - 700',
     text_colo,
@@ -3159,8 +3136,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     targetAudience: 'SMBs and startups',
     trialDays: 7,
     setupTime: '35 days',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700',
     textColo,
@@ -3209,8 +3185,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     mobile: string, email: string
     address: string
     website: string,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - emerald - 600 to - teal - 700',
     text_colo,
@@ -3266,7 +3241,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   realImplementatio,
   n: boolean, implementationDetails?: string,
   launchDate?: string
@@ -3274,7 +3249,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   rating?: number
   reviews?: number
 }
-const contact =
+;
+  ;
+  const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
@@ -3286,7 +3263,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
 export const,
   realQ4Services2025: RealQ4Service[] = [,
 		i,
@@ -3302,7 +3279,7 @@ export const,
     feature,
   s: [,
 			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics'
-		]
+		];
 		popular: true, icon: '',
 		color: 'from-violet-600 to-fuchsia-700', textColor: 'text-fuchsia-400',
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
@@ -3319,8 +3296,7 @@ export const,
 		customers: 120, rating: 4.7
 		reviews: 48,
 		popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
 		colo,
   r: 'from-violet-600 to-fuchsia-700', textColo,
   r: 'text-fuchsia-400',
@@ -3359,7 +3335,7 @@ export const,
   s: 120, ratin,
   g: 4.7,
 		review,
-  s: 48}
+  s: 48};
 		i,
   d: 'podcast-transcription-studio', nam,
   e: 'Podcast Transcription Studio',
@@ -3373,7 +3349,7 @@ export const,
     feature,
   s: [,
 			'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic searchExport to SRT, VTT, DOCXPodcast platform integrations'
-		]
+		];
 		popular: false, icon: '',
 		color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
 		link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
@@ -3390,7 +3366,7 @@ export const,
     launchDate: '2025-09-15', customers: 60
 		rating: 4.6
 		reviews: 22,
-	}
+	};
 		id: 'micro-crm-local-business', name: 'Micro CRM for Local Business',
 		tagline: 'Simple contacts, pipelines, and reminders that just work',
     price: '$19', period: '/month',
@@ -3413,7 +3389,7 @@ export const,
     launchDate: '2025-10-20', customers: 210
 		rating: 4.5
 		reviews: 77,
-	}
+	};
 		id: 'returns-automation-saas', name: 'Ecommerce Returns Automation',
 		tagline: 'Self-serve returns portal and automated labels', price: '$49',
 		period: '/month',
@@ -3437,8 +3413,7 @@ export const,
 		rating: 4.6
 		reviews: 35,
 		popula,
-  r: false, ico,
-  n: '',
+  r: false, icon: '',
 		colo,
   r: 'from-cyan-600 to-blue-700', textColo,
   r: 'text-cyan-400',
@@ -3478,7 +3453,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 22}
+  s: 22};
 		i,
   d: 'micro-crm-local-business', nam,
   e: 'Micro CRM for Local Business',
@@ -3494,8 +3469,7 @@ export const,
 			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple APIMobile-friendly PWABasic reporting'
 		],
 		popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
 		colo,
   r: 'from-emerald-600 to-teal-700', textColo,
   r: 'text-emerald-400',
@@ -3535,7 +3509,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 77}
+  s: 77};
 		i,
   d: 'returns-automation-saas', nam,
   e: 'Ecommerce Returns Automation',
@@ -3551,8 +3525,7 @@ export const,
 			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund syncEmail/SMS notificationsAnalytics on reasons and cost'
 		],
 		popula,
-  r: false, ico,
-  n: '',
+  r: false, icon: '',
 		colo,
   r: 'from-amber-600 to-orange-700', textColo,
   r: 'text-amber-400',
@@ -3592,7 +3565,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 35}
+  s: 35};
 		i,
   d: 'it-helpdesk-for-msps', nam,
   e: 'IT Helpdesk for MSPs',
@@ -3606,7 +3579,7 @@ export const,
     feature,
   s: [,
 			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking'
-		]
+		];
 		popular: true, icon: '',
 		color: 'from-blue-600 to-indigo-700', textColor: 'text-indigo-400',
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
@@ -3624,19 +3597,19 @@ export const,
     launchDate: '2025-09-28', customers: 70
 		rating: 4.5
 		reviews: 28,
-	}
-]
+	};
+];
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699', period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
     features: [,
-      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python']}
+      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python']};
     icon: '',
     color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-300'}
+    textColor: 'text-emerald-300'};
     link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`
-    ]
+    ];
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
@@ -3648,11 +3621,11 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     setupTime: '35 days',
     category: 'Enterprise IT',
     realService: true,
-    technology: ['Postgres, Patroni/Cloud-native HA']
-    integrations: ['Grafana, Prometheus']
-    useCases: ['Reliability, Backups, Performance']
+    technology: ['Postgres, Patroni/Cloud-native HA'];
+    integrations: ['Grafana, Prometheus'];
+    useCases: ['Reliability, Backups, Performance'];
     roi: 'Reduce incidents and toil for DB ops.',
-    competitors: ['Aiven, Crunchy Bridge (managed services)']
+    competitors: ['Aiven, Crunchy Bridge (managed services)'];
     marketSize: '$3B DB ops services',
     growthRate: '11% YoY',
     variant: 'enterprise-futuristic',
@@ -3679,13 +3652,12 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     customers: 17
     rating: 4.6
     reviews: 9,
-  }
-]
+  };
+];
     rating: 4 && 4.6
     reviews: 9,
 		popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
 		colo,
   r: 'from-blue-600 to-indigo-700', textColo,
   r: 'text-indigo-400',
@@ -3726,22 +3698,20 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
 		ratin,
   g: 4.5,
 		review,
-  s: 28}
-]
-export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
-    ]}
-    ico,
-  n: '',
+  s: 28};
+];
+export const real2025Q4Additions = [{/* TODO: Fix JSX expression */};
+    ]};
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700'
     textColo,
-  r: 'text-emerald-300'}
+  r: 'text-emerald-300'};
     lin,`
   k: `http,`
   s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`
-    ]
-    ico,
-  n: '',
+    ];
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700'
     textColo,
@@ -3764,15 +3734,15 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     realServic,
   e: true,
     technolog,
-  y: ['Postgres, Patroni/Cloud-native HA']
+  y: ['Postgres, Patroni/Cloud-native HA'];
     integration,
-  s: ['Grafana, Prometheus']
+  s: ['Grafana, Prometheus'];
     useCase,
-  s: ['Reliability, Backups, Performance']
+  s: ['Reliability, Backups, Performance'];
     ro,
   i: 'Reduce incidents and toil for DB ops.'
     competitor,
-  s: ['Aiven, Crunchy Bridge (managed services)']
+  s: ['Aiven, Crunchy Bridge (managed services)'];
     marketSiz,
   e: '$3B DB ops services'
     growthRat,
@@ -3824,14 +3794,17 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 9}
-]
+  s: 9};
+];
     ratin,
   g: 4 && 4.6,
     review,
-  s: 9}
+  s: 9};
 ]
-const contact =
+
+  ;
+  ;
+  const contact =
   mobil,
   e: '+1 302 464 0950',
   emai,
@@ -3840,7 +3813,7 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709',
   websit,
   e: 'http,
-  s://ziontechgroup.com'}
+  s://ziontechgroup.com'};
 export const,
   realQ4Services2025: RealQ4Service[] = [,
     i,
@@ -3880,8 +3853,7 @@ export const,
     useCases: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-violet-600 to-fuchsia-700',
     textColo,
@@ -3995,8 +3967,7 @@ export const,
     reviews: 22,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-cyan-600 to-blue-700',
     textColo,
@@ -4095,8 +4066,7 @@ export const,
     reviews: 77,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700',
     textColo,
@@ -4195,8 +4165,7 @@ export const,
     reviews: 35,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-amber-600 to-orange-700',
     textColo,
@@ -4293,8 +4262,8 @@ export const,
     customers: 70
     rating: 4.5
     reviews: 28,
-  }]
-}
+  }];
+};
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
@@ -4309,7 +4278,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     popular: true,
     icon: '',
     color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-300'}
+    textColor: 'text-cyan-300'};
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
     marketPosition: unknown,
       'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',    targetAudience: 'Platform, data, and compliance teams',
@@ -4334,8 +4303,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     reviews: 11,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700',
     textColo,
@@ -4385,10 +4353,10 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     ratin,
   g: 4.5,
     review,
-  s: 28}]
-}
-export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
-  r: 'text-cyan-300'}
+  s: 28}];
+};
+export const real2025Q4Additions = [{/* TODO: Fix JSX expression */};
+  r: 'text-cyan-300'};
     lin,`
   k: `http,`
   s://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
@@ -4480,8 +4448,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     reviews: 23,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700',
     textColo,
@@ -4574,8 +4541,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 27
     rating: 4.7
     reviews: 16,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700',
     textColo,
@@ -4668,8 +4634,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 33
     rating: 4.5
     reviews: 19,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-rose-600 to-red-700',
     textColo,
@@ -4762,8 +4727,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 21
     rating: 4.6
     reviews: 12,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-amber-600 to-orange-700',
     textColo,
@@ -4856,8 +4820,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 38
     rating: 4.5
     reviews: 20,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-fuchsia-600 to-pink-700',
     textColo,
@@ -4950,8 +4913,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 12
     rating: 4.6
     reviews: 9,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-sky-600 to-indigo-700',
     textColo,
@@ -5043,8 +5005,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 9
     rating: 4.7
     reviews: 7,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-slate-600 to-gray-700',
     textColo,
@@ -5136,8 +5097,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 14
     rating: 4.5
     reviews: 10,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-amber-600 to-orange-700',
     textColo,
@@ -5230,8 +5190,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 31
     rating: 4.6
     reviews: 18,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-cyan-600 to-blue-700',
     textColo,
@@ -5324,11 +5283,10 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 17
     rating: 4.6
     reviews: 9,
-  }
-]
+  };
+];
     reviews: 9,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700',
     textColo,
@@ -5377,11 +5335,11 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 9}
-]
+  s: 9};
+];
     review,
-  s: 9}
-]
+  s: 9};
+];
 export interface Q4Service,
   id: string, nam,
   e: string, taglin,
@@ -5442,8 +5400,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.', feature,
   s: [' 'Multi-speaker diarization',' 'Timestamps and filler removal',' 'Chapter detection and show notes',' 'Embeddings and semantic search',' 'Export to SRT, VTT, DOCX',' 'Podcast platform integrations'], popula,
-  r: false,' ico,
-  n: '🎧', ' colo,
+  r: false,' icon: '🎧', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 400',' lin,
   k: 'http,
@@ -5502,8 +5459,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.', feature,
   s: [' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA', ' 'Basic reporting'], popula,
-  r: true,' ico,
-  n: '📇', ' colo,
+  r: true,' icon: '📇', ' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-400',' lin,
   k: 'http,
@@ -5568,8 +5524,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.', feature,
   s: [' 'Customer returns portal',' 'Prepaid label generation',' 'RMA approval rules',' 'Inventory and refund sync', ' 'Email/SMS notifications', ' 'Analytics on reasons and cost'], popula,
-  r: false,' ico,
-  n: '📦', ' colo,
+  r: false,' icon: '📦', ' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-400',' lin,
   k: 'http,
@@ -5628,8 +5583,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.', feature,
   s: [' 'Inbox and portal ticket intake',' 'Auto-routing, SLAs, and escalations',' 'Public/private knowledge base', ' 'Client portal with reports',' 'RMM and network tool integrations',' 'Billing export and time tracking'], popula,
-  r: true,' ico,
-  n: '🛠️', ' colo,
+  r: true,' icon: '🛠️', ' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-indigo-400',' lin,
   k: 'http,
@@ -5672,8 +5626,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n:  ,' 'Production - ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high - stakes workflows.', feature,
   s: [, ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python'], popula,
-  r: true,' ico,
-  n: '🧠', ' colo,
+  r: true,' icon: '🧠', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 300',' lin,`
   k: `http,`
@@ -5706,8 +5659,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n:  ,' 'Low - latency personalization rules and ML scoring at the edge with audience definitions, A / B tests, and analytics.', feature,
   s: [, ' 'Audience builder and traits',' 'Edge functions and KV cache',' 'A / B and holdout tests',' 'Privacy - first scoring',' 'Dashboards and exports'], popula,
-  r: true,' ico,
-  n: '⚡', ' technolog,
+  r: true,' icon: '⚡', ' technolog,
   y: ['Next.js', 'Node.js', 'PostgreSQL'],' integration,
   s: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],' useCase,
   s: ['IT support', 'SLA management', 'Client reporting'],' ro,
@@ -5752,8 +5704,7 @@ export interface Q4Service,
   s: 60, ratin,
   g: 4 && 4.6, review,
   s: 22}, ' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA', ' 'Basic reporting'], popula,
-  r: true,' ico,
-  n: '📇',' integration,
+  r: true,' icon: '📇',' integration,
   s: ['Gmail', 'Outlook', 'Stripe'],' use_case,
   s: ['Leads', 'Follow - ups', 'Deal tracking'],' ro,
   i: 'Increase follow - through and close rates 10–20% via reminders.',' competitor,
@@ -5811,8 +5762,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.', feature,
   s: [' 'Document sync and chunking pipelinesMetadata and policy guardrails',' 'Evals and drift trackingHuman-in-the-loop approvals',' 'Observability and cost capsSDKs for Node/Python' ], popula,
-  r: true,' ico,
-  n: '🧠',' colo,
+  r: true,' icon: '🧠',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,`
   k: `http,`
@@ -5844,8 +5794,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.', feature,
   s: [' 'Audience builder and traitsEdge functions and KV cache',' 'A/B and holdout testsPrivacy-first scoring',' 'Dashboards and exports' ], popula,
-  r: true,' ico,
-  n: '⚡',' colo,
+  r: true,' icon: '⚡',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-300',' lin,`
   k: `http,`
@@ -5887,8 +5836,7 @@ export interface Q4Service,
   e: '$199',' perio,
   d: '/month', descriptio,
   n:  ,' 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.', feature,
-  s: [,' 'One - PR one - env automation', ' 'Seed data and fixtures',' 'Smoke tests and screenshots',' 'Secrets and policies as code',' 'Cost and TTL controls'],' ico,
-  n: '🚀', ' colo,
+  s: [,' 'One - PR one - env automation', ' 'Seed data and fixtures',' 'Smoke tests and screenshots',' 'Secrets and policies as code',' 'Cost and TTL controls'],' icon: '🚀', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 300',' lin,`
   k: `http,`
@@ -5920,8 +5868,7 @@ export interface Q4Service,
   e: '$129',' perio,
   d: '/month', descriptio,
   n:  ,' 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.', feature,
-  s: [, ' 'Streaming ingestion and rules',' 'Anomaly detection and drift',' 'LLM summaries and hints',' 'Slack / Email alerts and tickets',' 'Dashboards and exports'],' ico,
-  n: '📈', ' colo,
+  s: [, ' 'Streaming ingestion and rules',' 'Anomaly detection and drift',' 'LLM summaries and hints',' 'Slack / Email alerts and tickets',' 'Dashboards and exports'],' icon: '📈', ' colo,
   r: 'from - rose - 600 to - red - 700',' text_colo,
   r: 'text - rose - 300',' lin,`
   k: `http,`
@@ -5953,8 +5900,7 @@ export interface Q4Service,
   e: '$99',' perio,
   d: '/month', descriptio,
   n:  ,' 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.', feature,
-  s: [, ' 'Policies and approvals',' 'Change logs and RBAC',' 'SLO - based rollbacks',' 'SDKs and edge eval',' 'Experiments and cohorts'],' ico,
-  n: '🏳️', ' technolog,
+  s: [, ' 'Policies and approvals',' 'Change logs and RBAC',' 'SLO - based rollbacks',' 'SDKs and edge eval',' 'Experiments and cohorts'],' icon: '🏳️', ' technolog,
   y: ['Edge runtime, KV/Redis, Next.js'],' integration,
   s: ['Shopify, Stripe, Segment'],' useCase,
   s: ['Homepage variants, Pricing tests, Onsite promos'],' ro,
@@ -5976,8 +5922,7 @@ export interface Q4Service,
   e: '$199',' perio,
   d: '/month',' descriptio,
   n: 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.', feature,
-  s: [' 'One-PR one-env automationSeed data and fixtures',' 'Smoke tests and screenshotsSecrets and policies as code',' 'Cost and TTL controls' ],' ico,
-  n: '🚀',' colo,
+  s: [' 'One-PR one-env automationSeed data and fixtures',' 'Smoke tests and screenshotsSecrets and policies as code',' 'Cost and TTL controls' ],' icon: '🚀',' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-blue-300',' lin,`
   k: `http,`
@@ -6009,8 +5954,7 @@ export interface Q4Service,
   e: '$129',' perio,
   d: '/month',' descriptio,
   n: 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.', feature,
-  s: [' 'Streaming ingestion and rulesAnomaly detection and drift',' 'LLM summaries and hintsSlack/Email alerts and tickets',' 'Dashboards and exports' ],' ico,
-  n: '📈',' colo,
+  s: [' 'Streaming ingestion and rulesAnomaly detection and drift',' 'LLM summaries and hintsSlack/Email alerts and tickets',' 'Dashboards and exports' ],' icon: '📈',' colo,
   r: 'from-rose-600 to-red-700',' textColo,
   r: 'text-rose-300',' lin,`
   k: `http,`
@@ -6042,8 +5986,7 @@ export interface Q4Service,
   e: '$99',' perio,
   d: '/month',' descriptio,
   n: 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.', feature,
-  s: [' 'Policies and approvalsChange logs and RBAC',' 'SLO-based rollbacksSDKs and edge eval',' 'Experiments and cohorts' ],' ico,
-  n: '🏳️',' colo,
+  s: [' 'Policies and approvalsChange logs and RBAC',' 'SLO-based rollbacksSDKs and edge eval',' 'Experiments and cohorts' ],' icon: '🏳️',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-300',' lin,`
   k: `http,`
@@ -6083,8 +6026,7 @@ export interface Q4Service,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Compose, schedule, and monitor outbound sequences with domain warm - up, safety guardrails, and reply intent scoring.', feature,
-  s: [, ' 'Sequence composer and AI draft',' 'Warm - up and safety checks',' 'Reply intent and routing',' 'Blacklist monitoring',' 'CRM sync'],' ico,
-  n: '✉️', ' colo,
+  s: [, ' 'Sequence composer and AI draft',' 'Warm - up and safety checks',' 'Reply intent and routing',' 'Blacklist monitoring',' 'CRM sync'],' icon: '✉️', ' colo,
   r: 'from - fuchsia - 600 to - pink - 700',' text_colo,
   r: 'text - fuchsia - 300',' lin,`
   k: `http,`
@@ -6116,8 +6058,7 @@ export interface Q4Service,
   e: '$299',' perio,
   d: '/month', descriptio,
   n:  ,' 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI / CD.', feature,
-  s: [, ' 'Schema registry and versioning',' 'Back / forward compatibility checks',' 'Lineage and ownership',' 'Alerts and SLOs',' 'CI / CD integrations'],' ico,
-  n: '🧮', ' categor,
+  s: [, ' 'Schema registry and versioning',' 'Back / forward compatibility checks',' 'Lineage and ownership',' 'Alerts and SLOs',' 'CI / CD integrations'],' icon: '🧮', ' categor,
   y: 'Developer Tools', realServic,
   e: true,' technolog,
   y: ['Edge, SDKs, Audit logs'],' integration,
@@ -6141,8 +6082,7 @@ export interface Q4Service,
   e: '$79',' perio,
   d: '/month',' descriptio,
   n: 'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.', feature,
-  s: [' 'Sequence composer and AI draftWarm-up and safety checks',' 'Reply intent and routingBlacklist monitoring',' 'CRM sync' ],' ico,
-  n: '✉️',' colo,
+  s: [' 'Sequence composer and AI draftWarm-up and safety checks',' 'Reply intent and routingBlacklist monitoring',' 'CRM sync' ],' icon: '✉️',' colo,
   r: 'from-fuchsia-600 to-pink-700',' textColo,
   r: 'text-fuchsia-300',' lin,`
   k: `http,`
@@ -6174,8 +6114,7 @@ export interface Q4Service,
   e: '$299',' perio,
   d: '/month',' descriptio,
   n: 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.', feature,
-  s: [' 'Schema registry and versioningBack/forward compatibility checks',' 'Lineage and ownershipAlerts and SLOs',' 'CI/CD integrations' ],' ico,
-  n: '🧮',' colo,
+  s: [' 'Schema registry and versioningBack/forward compatibility checks',' 'Lineage and ownershipAlerts and SLOs',' 'CI/CD integrations' ],' icon: '🧮',' colo,
   r: 'from-sky-600 to-indigo-700',' textColo,
   r: 'text-sky-300',' lin,`
   k: `http,`
@@ -6215,8 +6154,7 @@ export interface Q4Service,
   e: '$4, 500',' perio,
   d: '/fixed', descriptio,
   n:  ,' 'Done - with - you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise - ready documentation.', feature,
-  s: [,' 'Okta / Entra app configs',' 'SAML / OIDC + SCIM', ' 'Security test plans',' 'Customer enablement kit'],' ico,
-  n: '🔐', ' categor,
+  s: [,' 'Okta / Entra app configs',' 'SAML / OIDC + SCIM', ' 'Security test plans',' 'Customer enablement kit'],' icon: '🔐', ' categor,
   y: 'Data & Analytics', realServic,
   e: true,' technolog,
   y: ['dbt, Kafka, OpenLineage'],' integration,
@@ -6240,8 +6178,7 @@ export interface Q4Service,
   e: '$4,500',' perio,
   d: '/fixed',' descriptio,
   n: 'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.', feature,
-  s: [' 'Okta/Entra app configsSAML/OIDC + SCIM',' 'Security test plansCustomer enablement kit' ],' ico,
-  n: '🔐',' colo,
+  s: [' 'Okta/Entra app configsSAML/OIDC + SCIM',' 'Security test plansCustomer enablement kit' ],' icon: '🔐',' colo,
   r: 'from-slate-600 to-gray-700',' textColo,
   r: 'text-slate-300',' lin,`
   k: `http,`
@@ -6281,8 +6218,7 @@ export interface Q4Service,
   e: '$149',' perio,
   d: '/month', descriptio,
   n:  ,' 'Connect CRM to compute forecast hygiene, risk scores, and next - best actions with weekly reports and alerts.', feature,
-  s: [, ' 'Risk scoring and hygiene checks',' 'Stage SLAs and alerts',' 'Next - best action copilot',' 'Reporting and dashboards'],' ico,
-  n: '📊', ' categor,
+  s: [, ' 'Risk scoring and hygiene checks',' 'Stage SLAs and alerts',' 'Next - best action copilot',' 'Reporting and dashboards'],' icon: '📊', ' categor,
   y: 'Enterprise IT', realServic,
   e: true,' technolog,
   y: ['Okta, Entra, Auth0, SCIM'],' integration,
@@ -6306,8 +6242,7 @@ export interface Q4Service,
   e: '$149',' perio,
   d: '/month',' descriptio,
   n: 'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.', feature,
-  s: [' 'Risk scoring and hygiene checksStage SLAs and alerts',' 'Next-best action copilotReporting and dashboards' ],' ico,
-  n: '📊',' colo,
+  s: [' 'Risk scoring and hygiene checksStage SLAs and alerts',' 'Next-best action copilotReporting and dashboards' ],' icon: '📊',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-300',' lin,`
   k: `http,`
@@ -6365,8 +6300,7 @@ export interface Q4Service,
   e: '$59',' perio,
   d: '/month', ' descriptio,
   n: 'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.', feature,
-  s: [' 'Signature verification and secretsReplay and DLQs',' 'Retries and backoffFan-out and transformations',' 'Audit logs and RBAC' ],' ico,
-  n: '🔁',' colo,
+  s: [' 'Signature verification and secretsReplay and DLQs',' 'Retries and backoffFan-out and transformations',' 'Audit logs and RBAC' ],' icon: '🔁',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,`
   k: `http,`
@@ -6374,8 +6308,7 @@ export interface Q4Service,
   n: 'Production-ready relay alternative to building in-house.',' targetAudienc,
   e: 'Developers and platform teams', trialDay,
   s: 14,' setupTim,
-  e: 'Same day', ' 'Signature verification and secrets',' 'Replay and DLQs',' 'Retries and backoff',' 'Fan - out and transformations',' 'Audit logs and RBAC'],' ico,
-  n: '🔁',' colo,
+  e: 'Same day', ' 'Signature verification and secrets',' 'Replay and DLQs',' 'Retries and backoff',' 'Fan - out and transformations',' 'Audit logs and RBAC'],' icon: '🔁',' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 300',' lin,`
   k: `http,`
@@ -6426,8 +6359,7 @@ export interface Q4Service,
   d: '/month', ' descriptio,
   n: 'Hands-off Postgres,
   ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.', feature,
-  s: [' 'Automated backups and PITRFailover drills and runbooks',' 'Index and bloat maintenancePerformance dashboards' ],' ico,
-  n: '🗄️',' colo,
+  s: [' 'Automated backups and PITRFailover drills and runbooks',' 'Index and bloat maintenancePerformance dashboards' ],' icon: '🗄️',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-300',' lin,`
   k: `http,`
@@ -6435,8 +6367,7 @@ export interface Q4Service,
   n: 'Practical alternative to DBAs for small teams.',' targetAudienc,
   e: 'SMBs and startups', trialDay,
   s: 7,' setupTim,
-  e: '3–5 days', ' 'Automated backups and PITR',' 'Failover drills and runbooks',' 'Index and bloat maintenance',' 'Performance dashboards'],' ico,
-  n: '🗄️',' colo,
+  e: '3–5 days', ' 'Automated backups and PITR',' 'Failover drills and runbooks',' 'Index and bloat maintenance',' 'Performance dashboards'],' icon: '🗄️',' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,`
   k: `http,`
@@ -6466,7 +6397,9 @@ export interface Q4Service,
   l: string, addres,
   s: string, websit,
   e: string } realImplementatio,
-  n: boolean, implementationDetails?: string, launchDate?: string; customers?: number; rating?: number; reviews?: number } const contact = ' mobil,
+  n: boolean, implementationDetails?: string, launchDate?: string; customers?: number; rating?: number; reviews?: number } ;
+  ;
+  const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -6480,8 +6413,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.', feature,
   s: [' 'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics' ];' popula,
-  r: true, ico,
-  n: '🔗',' colo,
+  r: true, icon: '🔗',' colo,
   r: 'from-violet-600 to-fuchsia-700', textColo,
   r: 'text-fuchsia-400',' lin,
   k: 'http,
@@ -6514,8 +6446,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.', feature,
   s: [' 'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic searchExport to SRT, VTT, DOCXPodcast platform integrations' ];' popula,
-  r: false, ico,
-  n: '🎧',' colo,
+  r: false, icon: '🎧',' colo,
   r: 'from-cyan-600 to-blue-700', textColo,
   r: 'text-cyan-400',' lin,
   k: 'http,
@@ -6548,8 +6479,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.', feature,
   s: [' 'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple APIMobile-friendly PWABasic reporting' ],' popula,
-  r: true, ico,
-  n: '📇',' colo,
+  r: true, icon: '📇',' colo,
   r: 'from-emerald-600 to-teal-700', textColo,
   r: 'text-emerald-400',' lin,
   k: 'http,
@@ -6582,8 +6512,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.', feature,
   s: [' 'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund syncEmail/SMS notificationsAnalytics on reasons and cost' ],' popula,
-  r: false, ico,
-  n: '📦',' colo,
+  r: false, icon: '📦',' colo,
   r: 'from-amber-600 to-orange-700', textColo,
   r: 'text-amber-400',' lin,
   k: 'http,
@@ -6616,8 +6545,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.', feature,
   s: [' 'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking' ];' popula,
-  r: true, ico,
-  n: '🛠️',' colo,
+  r: true, icon: '🛠️',' colo,
   r: 'from-blue-600 to-indigo-700', textColo,
   r: 'text-indigo-400',' lin,
   k: 'http,
@@ -6649,13 +6577,11 @@ export interface Q4Service,
   e: '$699', perio,
   d: '/month',' descriptio,
   n: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.', feature,
-  s: [' 'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python' ],' ico,
-  n: '🗄️'' colo,
+  s: [' 'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python' ],' icon: '🗄️'' colo,
   r: 'from-emerald-600 to-teal-700' ' textColo,
   r: 'text-emerald-300',' lin,`
   k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`; ];' ico,
-  n: '🗄️'' colo,
+  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`; ];' icon: '🗄️'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300',' lin,`
   k: `http,`
@@ -6713,8 +6639,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.', feature,
   s: [' 'Multi-channel attribution and cookie-less tracking',' 'Fraud rules, device fingerprinting, IP reputation checks',' 'Customizable commission structures and tiers',' 'Automated payouts and tax form collection',' 'Shareable links, coupons, and influencer codes',' 'Partner portal and real-time analytics'], popula,
-  r: true,' ico,
-  n: '🔗',' colo,
+  r: true,' icon: '🔗',' colo,
   r: 'from-violet-600 to-fuchsia-700',' textColo,
   r: 'text-fuchsia-400',' lin,
   k: 'http,
@@ -6747,8 +6672,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.', feature,
   s: [' 'Multi-speaker diarization',' 'Timestamps and filler removal',' 'Chapter detection and show notes',' 'Embeddings and semantic search',' 'Export to SRT, VTT, DOCX',' 'Podcast platform integrations'], popula,
-  r: false,' ico,
-  n: '🎧',' colo,
+  r: false,' icon: '🎧',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-400',' lin,
   k: 'http,
@@ -6781,8 +6705,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.', feature,
   s: [' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA',' 'Basic reporting'], popula,
-  r: true,' ico,
-  n: '📇',' colo,
+  r: true,' icon: '📇',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-400',' lin,
   k: 'http,
@@ -6815,8 +6738,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.', feature,
   s: [' 'Customer returns portal',' 'Prepaid label generation',' 'RMA approval rules',' 'Inventory and refund sync',' 'Email/SMS notifications',' 'Analytics on reasons and cost'], popula,
-  r: false,' ico,
-  n: '📦',' colo,
+  r: false,' icon: '📦',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-400',' lin,
   k: 'http,
@@ -6849,8 +6771,7 @@ export interface Q4Service,
   d: '/month', descriptio,
   n: ' 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.', feature,
   s: [' 'Inbox and portal ticket intake',' 'Auto-routing, SLAs, and escalations',' 'Public/private knowledge base',' 'Client portal with reports',' 'RMM and network tool integrations',' 'Billing export and time tracking'], popula,
-  r: true,' ico,
-  n: '🛠️',' colo,
+  r: true,' icon: '🛠️',' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-indigo-400',' lin,
   k: 'http,
@@ -6883,8 +6804,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.', feature,
   s: [' 'Document sync and chunking pipelinesMetadata and policy guardrails',' 'Evals and drift trackingHuman-in-the-loop approvals',' 'Observability and cost capsSDKs for Node/Python' ], popula,
-  r: true,' ico,
-  n: '🧠',' colo,
+  r: true,' icon: '🧠',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,`
   k: `http,`
@@ -6917,8 +6837,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Low-latency personalization rules and ML scoring at the edge with audience definitions, A/B tests, and analytics.', feature,
   s: [' 'Audience builder and traitsEdge functions and KV cache',' 'A/B and holdout testsPrivacy-first scoring',' 'Dashboards and exports' ], popula,
-  r: true,' ico,
-  n: '⚡',' colo,
+  r: true,' icon: '⚡',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-300',' lin,`
   k: `http,`
@@ -6950,8 +6869,7 @@ export interface Q4Service,
   e: '$199',' perio,
   d: '/month',' descriptio,
   n: 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.', feature,
-  s: [' 'One-PR one-env automationSeed data and fixtures',' 'Smoke tests and screenshotsSecrets and policies as code',' 'Cost and TTL controls' ],' ico,
-  n: '🚀',' colo,
+  s: [' 'One-PR one-env automationSeed data and fixtures',' 'Smoke tests and screenshotsSecrets and policies as code',' 'Cost and TTL controls' ],' icon: '🚀',' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-blue-300',' lin,`
   k: `http,`
@@ -6983,8 +6901,7 @@ export interface Q4Service,
   e: '$129',' perio,
   d: '/month',' descriptio,
   n: 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.', feature,
-  s: [' 'Streaming ingestion and rulesAnomaly detection and drift',' 'LLM summaries and hintsSlack/Email alerts and tickets',' 'Dashboards and exports' ],' ico,
-  n: '📈',' colo,
+  s: [' 'Streaming ingestion and rulesAnomaly detection and drift',' 'LLM summaries and hintsSlack/Email alerts and tickets',' 'Dashboards and exports' ],' icon: '📈',' colo,
   r: 'from-rose-600 to-red-700',' textColo,
   r: 'text-rose-300',' lin,`
   k: `http,`
@@ -7016,8 +6933,7 @@ export interface Q4Service,
   e: '$99',' perio,
   d: '/month',' descriptio,
   n: 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.', feature,
-  s: [' 'Policies and approvalsChange logs and RBAC',' 'SLO-based rollbacksSDKs and edge eval',' 'Experiments and cohorts' ],' ico,
-  n: '🏳️',' colo,
+  s: [' 'Policies and approvalsChange logs and RBAC',' 'SLO-based rollbacksSDKs and edge eval',' 'Experiments and cohorts' ],' icon: '🏳️',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-300',' lin,`
   k: `http,`
@@ -7049,8 +6965,7 @@ export interface Q4Service,
   e: '$79',' perio,
   d: '/month',' descriptio,
   n: 'Compose, schedule, and monitor outbound sequences with domain warm-up, safety guardrails, and reply intent scoring.', feature,
-  s: [' 'Sequence composer and AI draftWarm-up and safety checks',' 'Reply intent and routingBlacklist monitoring',' 'CRM sync' ],' ico,
-  n: '✉️',' colo,
+  s: [' 'Sequence composer and AI draftWarm-up and safety checks',' 'Reply intent and routingBlacklist monitoring',' 'CRM sync' ],' icon: '✉️',' colo,
   r: 'from-fuchsia-600 to-pink-700',' textColo,
   r: 'text-fuchsia-300',' lin,`
   k: `http,`
@@ -7082,8 +6997,7 @@ export interface Q4Service,
   e: '$299',' perio,
   d: '/month',' descriptio,
   n: 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI/CD.', feature,
-  s: [' 'Schema registry and versioningBack/forward compatibility checks',' 'Lineage and ownershipAlerts and SLOs',' 'CI/CD integrations' ],' ico,
-  n: '🧮',' colo,
+  s: [' 'Schema registry and versioningBack/forward compatibility checks',' 'Lineage and ownershipAlerts and SLOs',' 'CI/CD integrations' ],' icon: '🧮',' colo,
   r: 'from-sky-600 to-indigo-700',' textColo,
   r: 'text-sky-300',' lin,`
   k: `http,`
@@ -7115,8 +7029,7 @@ export interface Q4Service,
   e: '$4,500',' perio,
   d: '/fixed',' descriptio,
   n: 'Done-with-you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise-ready documentation.', feature,
-  s: [' 'Okta/Entra app configsSAML/OIDC + SCIM',' 'Security test plansCustomer enablement kit' ],' ico,
-  n: '🔐',' colo,
+  s: [' 'Okta/Entra app configsSAML/OIDC + SCIM',' 'Security test plansCustomer enablement kit' ],' icon: '🔐',' colo,
   r: 'from-slate-600 to-gray-700',' textColo,
   r: 'text-slate-300',' lin,`
   k: `http,`
@@ -7148,8 +7061,7 @@ export interface Q4Service,
   e: '$149',' perio,
   d: '/month',' descriptio,
   n: 'Connect CRM to compute forecast hygiene, risk scores, and next-best actions with weekly reports and alerts.', feature,
-  s: [' 'Risk scoring and hygiene checksStage SLAs and alerts',' 'Next-best action copilotReporting and dashboards' ],' ico,
-  n: '📊',' colo,
+  s: [' 'Risk scoring and hygiene checksStage SLAs and alerts',' 'Next-best action copilotReporting and dashboards' ],' icon: '📊',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
   r: 'text-amber-300',' lin,`
   k: `http,`
@@ -7181,8 +7093,7 @@ export interface Q4Service,
   e: '$59',' perio,
   d: '/month',' descriptio,
   n: 'Reliably receive, verify, replay, and audit webhooks with DLQs, retries, and fan-out to multiple services.', feature,
-  s: [' 'Signature verification and secretsReplay and DLQs',' 'Retries and backoffFan-out and transformations',' 'Audit logs and RBAC' ],' ico,
-  n: '🔁',' colo,
+  s: [' 'Signature verification and secretsReplay and DLQs',' 'Retries and backoffFan-out and transformations',' 'Audit logs and RBAC' ],' icon: '🔁',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,`
   k: `http,`
@@ -7215,8 +7126,7 @@ export interface Q4Service,
   d: '/month',' descriptio,
   n: 'Hands-off Postgres,
   ops: backups, PITR, failover drills, index maintenance, and baseline dashboards.', feature,
-  s: [' 'Automated backups and PITRFailover drills and runbooks',' 'Index and bloat maintenancePerformance dashboards' ],' ico,
-  n: '🗄️',' colo,
+  s: [' 'Automated backups and PITRFailover drills and runbooks',' 'Index and bloat maintenancePerformance dashboards' ],' icon: '🗄️',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-300',' lin,`
   k: `http,`

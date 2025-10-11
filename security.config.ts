@@ -77,33 +77,33 @@ export const securityConfig = {
     encodeSpecialChars: true
     trimWhitespace: true
     removeNullBytes: true,
-export const securityConfig = {/* TODO: Fix JSX expression */}
+export const securityConfig = {/* TODO: Fix JSX expression */};
     },
     reportOnl,
   y: false},
 
   // Security Headers,
-  headers: {/* TODO: Fix JSX expression */}
+  headers: {/* TODO: Fix JSX expression */};
   },
 
   // Input validation,
-  validation: {/* TODO: Fix JSX expression */}
+  validation: {/* TODO: Fix JSX expression */};
   },
 
   // Rate limiting,
-  rateLimit: {/* TODO: Fix JSX expression */}
+  rateLimit: {/* TODO: Fix JSX expression */};
   },
 
   // CORS configuration,
-  cors: {/* TODO: Fix JSX expression */}
+  cors: {/* TODO: Fix JSX expression */};
   },
 
   // Authentication,
-  auth: {/* TODO: Fix JSX expression */}
+  auth: {/* TODO: Fix JSX expression */};
   },
 
   // Data sanitization,
-  sanitization: {/* TODO: Fix JSX expression */}
-  }}
-
+  sanitization: {/* TODO: Fix JSX expression */};
+  }};
+;
 export default securityConfig

@@ -1,28 +1,30 @@
   trackAnalytics?: boolean
-  }
-}
+  };
+};
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
     const {
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true,
-  }
+  };
   } = _options;const _renderCountRef = useRef<number>(0)
 useEffect(() => {
     renderCountRef.current = 0;
 // Track component mount;
     if (trackAnalytics) {
-      analytics.trackCustomEvent('Component', 'Mounted', component)}}
-return () => {// Track component unmount duration;
+      analytics.trackCustomEvent('Component', 'Mounted', component)}};
+;
+  return () => {// Track component unmount duration;
     mountTimeRef.current = performance.now()
     renderCountRef.current = 0
 // Track component mount
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component)
-  }
-    }
-return (
+  };
+    };
+;
+  return (
     <>
       ) => {
     // Track component unmount duration
@@ -30,24 +32,24 @@ return (
         const _duration = performance.now() - mountTimeRef.current
         if (duration > 5000) {
             Math.round(duration);
-          )}}
-      }
+          )}};
+      };
 // Track component unmount;
-      if (trackAnalytics) {analytics.trackCustomEvent('Component', 'Unmounted', component)}}
-    }
+      if (trackAnalytics) {analytics.trackCustomEvent('Component', 'Unmounted', component)}};
+    };
   }, [component, trackAnalytics, trackPerformance]);
 // Track render performance;
   useEffect(() => {renderCountRef.current++;
 if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected;
         renderCountRef.current;
-      )}}
+      )}};
   })
     if (trackErrors) {
         errorTracker.trackError()
         })
       },
-    [component, trackErrors]
+    [component, trackErrors];
               duration > 1000 ? 'slow' : 'fast';
             );
   )
@@ -55,13 +57,15 @@ const trackUserAction = useCallback(
     (action: string, metadata?: Record</string><string, unknown>) => {
     if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
-  }
+  };
       },
-    [component, trackAnalytics]
+    [component, trackAnalytics];
   )
 const measureOperation = useCallback()
     (operationName: string) => {}
-      const _markName = `${component}-${operationName}`
+      ;
+  ;
+  const _markName = `${component}-${operationName}`
       const _startTime = performance.now()
 return {
     end: () => {
@@ -69,18 +73,21 @@ return {
 if (trackPerformance) {
             analytics.trackPerformance()
             )
-          }
-return duration
+          };
+;
+  return duration
         },
       },
     [component, trackPerformance]
-return {
+;
+  ;
+  return {
     trackError,
     trackUserAction,
     measureOperation,
-  }
-  }
-}
+  };
+  };
+};
 export default useEnhancedPerformance</string>
 /**
  * Enhanced Performance Hook
@@ -92,25 +99,26 @@ export interface UseEnhancedPerformanceOptions {
   component?: string
   trackErrors?: boolean
   trackPerformance?: boolean
-  trackAnalytics?: boolean;}
-}
-
+  trackAnalytics?: boolean;};
+};
+;
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
-    trackAnalytics = true,;}
+    trackAnalytics = true,;};
   } = _options;const _renderCountRef = useRef<number>(0)
   useEffect(() => {
     mountTimeRef.current = performance.now()
     renderCountRef.current = 0
     // Track component mount
     if (trackAnalytics) {
-      analytics.trackCustomEvent('Component', 'Mounted', component);}
+      analytics.trackCustomEvent('Component', 'Mounted', component);};
     }
-
-    return () => {
+;
+    ;
+  return () => {
       // Track component unmount duration
       if (trackPerformance) {
         const _duration = performance.now() - mountTimeRef.current
@@ -121,15 +129,15 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             'Long Component Lifetime',
             component,
             Math.round(duration)
-          );}
-        }
-      }
-
+          );};
+        };
+      };
+;
       // Track component unmount
       if (trackAnalytics) {
-        analytics.trackCustomEvent('Component', 'Unmounted', component);}
-      }
-    }
+        analytics.trackCustomEvent('Component', 'Unmounted', component);};
+      };
+    };
   }, [component, trackAnalytics, trackPerformance])
   // Track render performance
   useEffect(() => {
@@ -141,54 +149,57 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         'High Render Count',
         component,
         renderCountRef.current
-      );}
-    }
+      );};
+    };
   })
   const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
-          ...context,;}
+          ...context,;};
         })
-      }
+      };
     },
-    [component, trackErrors]
+    [component, trackErrors];
   )
   const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
-      }
+        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);};
+      };
     },
-    [component, trackAnalytics]
+    [component, trackAnalytics];
   )
   const measureOperation = useCallback(
     (operationName: string) => {;}
-      const _markName = `${component}-${operationName}`
+      ;
+  ;
+  const _markName = `${component}-${operationName}`
       const _startTime = performance.now()
       return {
         end: () => {
           const _duration = performance.now() - startTime
           if (trackPerformance) {
-            analytics.trackPerformance(;}
+            analytics.trackPerformance(;};
               `${component}-${operationName}`,
               duration,
               duration > 1000 ? 'slow' : 'fast'
             )
           }
-
-          return duration
+;
+          ;
+  return duration
         },
-      }
+      };
     },
-    [component, trackPerformance]
+    [component, trackPerformance];
   )
   return {
     trackError,
     trackUserAction,
-    measureOperation,;}
-  }
-}
-
+    measureOperation,;};
+  };
+};
+;
 export default useEnhancedPerformance

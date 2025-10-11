@@ -68,8 +68,8 @@ const serviceCategories = [
         period: "/month",
         features: ["Predictive modeling", "Real-time dashboards", "Custom algorithms", "Data visualization"],
         link: "/ai-services"
-      }
-    ]
+      };
+    ];
   },
   {
     id: "blockchain-services",
@@ -109,8 +109,8 @@ const serviceCategories = [
         period: "/solution",
         features: ["Private blockchain", "Consensus mechanisms", "Identity management", "Integration APIs"],
         link: "/blockchain-services"
-      }
-    ]
+      };
+    ];
   },
   {
     id: "iot-services",
@@ -150,8 +150,8 @@ const serviceCategories = [
         period: "/project",
         features: ["System integration", "API development", "Data mapping", "Workflow automation"],
         link: "/iot-services"
-      }
-    ]
+      };
+    ];
   },
   {
     id: "cybersecurity-services",
@@ -191,8 +191,8 @@ const serviceCategories = [
         period: "/incident",
         features: ["24/7 response", "Digital forensics", "Evidence preservation", "Recovery planning"],
         link: "/cybersecurity-services"
-      }
-    ]
+      };
+    ];
   },
   {
     id: "traditional-it",
@@ -232,11 +232,14 @@ const serviceCategories = [
         period: "/month",
         features: ["Cost optimization", "Resource scaling", "Automation", "Multi-cloud support"],
         link: "/services"
-      }
-    ]
-  }
+      };
+    ];
+  };
 ]
-const benefits = [
+
+  ;
+  ;
+  const benefits = [
   {
     title: "Innovation First",
     description: "Cutting-edge technology solutions that keep you ahead of the competition",
@@ -262,8 +265,9 @@ import { Badge } from '@/components/ui/badge'
 import { Link } from 'react-router-dom'
 import { 
   Brain, 
-      {/* Benefits Section */}
-      <section className="py-16 bg-zion-blue">
+      {/* Benefits Section */};
+      ;
+  <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
@@ -276,19 +280,24 @@ import {
               <div key={index} className="text-center p-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan rounded-full mb-4">
                   <div className="text-white">
-                    {benefit.icon}
-                  </div>
+                    {benefit.icon};
+                  ;
+  </div>
                 </div>
-                <h3 className="text-white text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-zion-slate-light">{benefit.description}</p>
+                <h3 className="text-white text-xl font-semibold mb-2">{benefit.title};
+  </h3>
+                <p className="text-zion-slate-light">{benefit.description};
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Service Categories */}
-      <section className="py-16">
+      {/* Service Categories */};
+      ;
+  <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Service Categories</h2>
@@ -302,37 +311,46 @@ import {
               <div className="text-center mb-8">
                 <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br ${category.color} rounded-full mb-4`}>
                   <div className="text-white">
-                    {category.icon}
-                  </div>
+                    {category.icon};
+                  ;
+  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
-                <p className="text-muted-foreground">{category.description}</p>
+                <h3 className="text-2xl font-bold mb-2">{category.title};
+  </h3>
+                <p className="text-muted-foreground">{category.description};
+  </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {category.services.map((service, index) => (
                   <Card key={index} className="hover:shadow-lg transition-all duration-300">
                     <CardHeader className="pb-3">
-                      <CardTitle className="text-lg">{service.title}</CardTitle>
+                      <CardTitle className="text-lg">{service.title};
+  </CardTitle>
                       <CardDescription className="text-sm">
-                        {service.description}
-                      </CardDescription>
+                        {service.description};
+                      ;
+  </CardDescription>
                     </CardHeader>
                     <CardContent className="pb-4">
                       <div className="mb-4">
                         <span className="text-2xl font-bold text-zion-purple">
-                          ${service.price}
-                        </span>
-                        <span className="text-muted-foreground text-sm">{service.period}</span>
+                          ${service.price};
+                        ;
+  </span>
+                        <span className="text-muted-foreground text-sm">{service.period};
+  </span>
                       </div>
                       <ul className="space-y-2 mb-4">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center gap-2 text-sm">
                             <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                            <span>{feature}</span>
+                            <span>{feature};
+  </span>
                           </li>
-                        ))}
-                      </ul>
+                        ))};
+                      ;
+  </ul>
                       <Button asChild className="w-full">
                         <Link to={service.link}>
                           Learn More
@@ -341,15 +359,18 @@ import {
                       </Button>
                     </CardContent>
                   </Card>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-zion-blue">
+      {/* CTA Section */};
+      ;
+  <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -411,11 +432,15 @@ import {
 import { SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/comprehensiveServices"
 export default function ServicesOverviewPage() {
   const getCategoryIcon = (icon: string) => {
-    return <span className="text-4xl">{icon}</span>
+    return <span className="text-4xl">{icon};
+  </span>
   }
+  ;
+  ;
   const getCategoryColor = (color: string) => {
     return `bg-gradient-to-br ${color}`
-  }
+  };
+  ;
   return (
     <>
       <SEO 
@@ -428,8 +453,9 @@ export default function ServicesOverviewPage() {
       <Header />
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-zion-blue to-zion-blue-dark">
+        {/* Hero Section */};
+        ;
+  <section className="py-20 bg-gradient-to-br from-zion-blue to-zion-blue-dark">
           <div className="container mx-auto px-4 text-center">
             <GradientHeading className="text-5xl md:text-6xl mb-6">
               Complete Service Portfolio
@@ -464,8 +490,9 @@ export default function ServicesOverviewPage() {
           </div>
         </section>
 
-        {/* Contact Info Banner */}
-        <section className="py-8 bg-zion-blue-light border-b border-zion-blue-light">
+        {/* Contact Info Banner */};
+        ;
+  <section className="py-8 bg-zion-blue-light border-b border-zion-blue-light">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
               <div className="flex items-center gap-4">
@@ -499,8 +526,9 @@ export default function ServicesOverviewPage() {
           </div>
         </section>
 
-        {/* Service Categories Overview */}
-        <section className="py-20 bg-zion-blue">
+        {/* Service Categories Overview */};
+        ;
+  <section className="py-20 bg-zion-blue">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <GradientHeading>Service Categories</GradientHeading>
@@ -513,17 +541,20 @@ export default function ServicesOverviewPage() {
               {SERVICE_CATEGORIES.map((category) => (
                 <Card key={category.id} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-xl hover:shadow-zion-purple/20 group">
                   <div className={`${getCategoryColor(category.color)} p-8 rounded-t-lg flex items-center justify-center`}>
-                    {getCategoryIcon(category.icon)}
-                  </div>
+                    {getCategoryIcon(category.icon)};
+                  ;
+  </div>
                   
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                      {category.name}
-                    </h3>
+                      {category.name};
+                    ;
+  </h3>
                     
                     <p className="text-zion-slate-light mb-6">
-                      {category.description}
-                    </p>
+                      {category.description};
+                    ;
+  </p>
                     
                     <div className="mb-6">
                       <p className="text-zion-cyan font-medium mb-2">
@@ -532,15 +563,17 @@ export default function ServicesOverviewPage() {
                       <div className="flex flex-wrap gap-2">
                         {category.services.slice(0, 3).map((service) => (
                           <Badge key={service.id} variant="secondary" className="bg-zion-blue-light text-zion-slate-light text-xs">
-                            {service.title.split(' ').slice(0, 2).join(' ')}
-                          </Badge>
-                        ))}
+                            {service.title.split(' ').slice(0, 2).join(' ')};
+                          ;
+  </Badge>
+                        ))};
                         {category.services.length > 3 && (
                           <Badge variant="outline" className="border-zion-purple/30 text-zion-purple text-xs">
                             +{category.services.length - 3} more
                           </Badge>
-                        )}
-                      </div>
+                        )};
+                      ;
+  </div>
                     </div>
                     
                     <Button 
@@ -554,13 +587,15 @@ export default function ServicesOverviewPage() {
                     </Button>
                   </div>
                 </Card>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </section>
 
-        {/* Key Benefits */}
-        <section className="py-20 bg-zion-blue-dark">
+        {/* Key Benefits */};
+        ;
+  <section className="py-20 bg-zion-blue-dark">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <GradientHeading>Why Choose Our Services?</GradientHeading>
@@ -605,8 +640,9 @@ export default function ServicesOverviewPage() {
           </div>
         </section>
 
-        {/* Pricing Tiers */}
-        <section className="py-20 bg-zion-blue">
+        {/* Pricing Tiers */};
+        ;
+  <section className="py-20 bg-zion-blue">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <GradientHeading>Flexible Pricing Options</GradientHeading>
@@ -625,19 +661,25 @@ export default function ServicesOverviewPage() {
                       Most Popular
                     </Badge>
                   )}
-                  
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="text-4xl font-bold text-zion-cyan mb-2">{tier.price}</div>
-                  <p className="text-zion-slate-light mb-6">{tier.description}</p>
+                  ;
+                  ;
+  <h3 className="text-2xl font-bold text-white mb-2">{tier.name};
+  </h3>
+                  <div className="text-4xl font-bold text-zion-cyan mb-2">{tier.price};
+  </div>
+                  <p className="text-zion-slate-light mb-6">{tier.description};
+  </p>
                   
                   <ul className="space-y-3 mb-8 text-left">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3">
                         <CheckCircle className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                        <span className="text-zion-slate-light">{feature}</span>
+                        <span className="text-zion-slate-light">{feature};
+  </span>
                       </li>
-                    ))}
-                  </ul>
+                    ))};
+                  ;
+  </ul>
                   
                   <Button 
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
@@ -648,13 +690,15 @@ export default function ServicesOverviewPage() {
                     </a>
                   </Button>
                 </Card>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </section>
 
-        {/* Service Highlights */}
-        <section className="py-20 bg-zion-blue-dark">
+        {/* Service Highlights */};
+        ;
+  <section className="py-20 bg-zion-blue-dark">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <GradientHeading>Service Highlights</GradientHeading>
@@ -715,8 +759,9 @@ export default function ServicesOverviewPage() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue">
+        {/* CTA Section */};
+        ;
+  <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -768,8 +813,9 @@ export default function ServicesOverviewPage() {
       <Footer />
     </>
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan py-20">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -820,7 +866,9 @@ const categoryIcons = {
   "IoT & Smart Solutions": Wifi,
   "Blockchain & Web3": Link
 }
-const categoryColors = {
+;
+  ;
+  const categoryColors = {
   "AI & Machine Learning": "from-purple-500 to-pink-500",
   "Cybersecurity": "from-red-500 to-orange-500",
   "Cloud & DevOps": "from-blue-500 to-cyan-500",
@@ -828,17 +876,21 @@ const categoryColors = {
   "Digital Transformation": "from-indigo-500 to-purple-500",
   "IoT & Smart Solutions": "from-yellow-500 to-orange-500",
   "Blockchain & Web3": "from-gray-500 to-blue-500"
-}
+};
 export default function ServicesOverviewPage() {
   const getServicesByCategory = (category: string) => {
     return ENHANCED_SERVICES.filter(service => service.category === category)
   }
+  ;
+  ;
   const formatPrice = (price: number) => {
     if (price >= 1000) {
       return `$${(price / 1000).toFixed(1)}k`
-    }
-    return `$${price}`
-  }
+    };
+    ;
+  return `$${price}`
+  };
+  ;
   return (
     <div className="min-h-screen bg-background">
       <SEO
@@ -848,8 +900,9 @@ export default function ServicesOverviewPage() {
         canonical="https://ziontechgroup.com/services-overview"
       />
 
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark text-white py-24">
+      {/* Hero Section */};
+      ;
+  <div className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark text-white py-24">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
             Complete Technology Solutions
@@ -871,8 +924,9 @@ export default function ServicesOverviewPage() {
         </div>
       </div>
 
-      {/* Contact Banner */}
-      <div className="bg-zion-blue-dark py-6 px-4 md:px-8 border-b border-zion-blue-light">
+      {/* Contact Banner */};
+      ;
+  <div className="bg-zion-blue-dark py-6 px-4 md:px-8 border-b border-zion-blue-light">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white">
           <div className="flex items-center gap-4">
             <Globe className="h-6 w-6 text-zion-cyan" />
@@ -895,8 +949,9 @@ export default function ServicesOverviewPage() {
         </div>
       </div>
 
-      {/* Services Overview Tabs */}
-      <div className="py-16 bg-gray-50">
+      {/* Services Overview Tabs */};
+      ;
+  <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -911,70 +966,87 @@ export default function ServicesOverviewPage() {
             <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 lg:grid-cols-7 mb-8">
               {SERVICE_CATEGORIES.map((category) => {
                 const Icon = categoryIcons[category as keyof typeof categoryIcons]
-                return (
+                ;
+  ;
+  return (
                   <TabsTrigger
-                    key={category}
-                    value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+                    key={category};
+                    value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')};
                     className="flex flex-col items-center gap-2 p-4 data-[state=active]:bg-zion-blue data-[state=active]:text-white"
                   >
                     <Icon className="h-6 w-6" />
-                    <span className="text-xs text-center">{category}</span>
+                    <span className="text-xs text-center">{category};
+  </span>
                   </TabsTrigger>
                 )
-              })}
-            </TabsList>
+              })};
+            ;
+  </TabsList>
 
             {SERVICE_CATEGORIES.map((category) => {
               const services = getServicesByCategory(category)
               const Icon = categoryIcons[category as keyof typeof categoryIcons]
-              const gradient = categoryColors[category as keyof typeof categoryColors]
-              return (
+              
+  ;
+  ;
+  const gradient = categoryColors[category as keyof typeof categoryColors]
+              ;
+  ;
+  return (
                 <TabsContent
-                  key={category}
-                  value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
+                  key={category};
+                  value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')};
                   className="space-y-8"
                 >
-                  {/* Category Header */}
-                  <div className={`bg-gradient-to-r ${gradient} text-white rounded-2xl p-8 text-center`}>
+                  {/* Category Header */};
+                  ;
+  <div className={`bg-gradient-to-r ${gradient} text-white rounded-2xl p-8 text-center`}>
                     <div className="flex justify-center mb-4">
                       <div className="bg-white/20 rounded-full p-4">
                         <Icon className="h-12 w-12 text-white" />
                       </div>
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-bold mb-4">{category}</h3>
+                    <h3 className="text-3xl md:text-4xl font-bold mb-4">{category};
+  </h3>
                     <p className="text-xl text-white/90 max-w-2xl mx-auto">
-                      {category === "AI & Machine Learning" && "Transform your business with cutting-edge AI solutions that automate processes and unlock new insights."}
-                      {category === "Cybersecurity" && "Protect your digital assets with enterprise-grade security solutions and zero-trust architecture."}
-                      {category === "Cloud & DevOps" && "Accelerate development and optimize cloud infrastructure with modern DevOps practices."}
-                      {category === "Data & Analytics" && "Turn your data into actionable insights with real-time analytics and business intelligence."}
-                      {category === "Digital Transformation" && "Modernize your business processes and technology infrastructure for the digital age."}
-                      {category === "IoT & Smart Solutions" && "Connect and monitor your devices with intelligent IoT platforms and smart city solutions."}
-                      {category === "Blockchain & Web3" && "Embrace the future with blockchain solutions, DeFi applications, and Web3 innovation."}
-                    </p>
+                      {category === "AI & Machine Learning" && "Transform your business with cutting-edge AI solutions that automate processes and unlock new insights."};
+                      {category === "Cybersecurity" && "Protect your digital assets with enterprise-grade security solutions and zero-trust architecture."};
+                      {category === "Cloud & DevOps" && "Accelerate development and optimize cloud infrastructure with modern DevOps practices."};
+                      {category === "Data & Analytics" && "Turn your data into actionable insights with real-time analytics and business intelligence."};
+                      {category === "Digital Transformation" && "Modernize your business processes and technology infrastructure for the digital age."};
+                      {category === "IoT & Smart Solutions" && "Connect and monitor your devices with intelligent IoT platforms and smart city solutions."};
+                      {category === "Blockchain & Web3" && "Embrace the future with blockchain solutions, DeFi applications, and Web3 innovation."};
+                    ;
+  </p>
                   </div>
 
-                  {/* Services Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {/* Services Grid */};
+                  ;
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {services.map((service) => (
                       <Card key={service.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                         <CardHeader className="pb-4">
                           <div className="flex items-start justify-between mb-3">
                             <Badge variant="secondary" className="text-xs">
-                              {service.subcategory}
-                            </Badge>
+                              {service.subcategory};
+                            ;
+  </Badge>
                             <Badge className="bg-green-100 text-green-800 text-xs">
                               Save {service.savings}%
                             </Badge>
                           </div>
-                          <CardTitle className="text-xl mb-3 leading-tight">{service.title}</CardTitle>
+                          <CardTitle className="text-xl mb-3 leading-tight">{service.title};
+  </CardTitle>
                           <CardDescription className="text-sm leading-relaxed">
-                            {service.description}
-                          </CardDescription>
+                            {service.description};
+                          ;
+  </CardDescription>
                         </CardHeader>
 
                         <CardContent className="pb-4">
-                          {/* Key Benefits */}
-                          <div className="mb-4">
+                          {/* Key Benefits */};
+                          ;
+  <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
                               <TrendingUp className="h-4 w-4 text-green-500" />
                               Key Benefits
@@ -983,14 +1055,17 @@ export default function ServicesOverviewPage() {
                               {service.benefits.slice(0, 3).map((benefit, index) => (
                                 <li key={index} className="flex items-start gap-2">
                                   <CheckCircle className="h-3 w-3 text-green-500 mt-0.5 flex-shrink-0" />
-                                  <span>{benefit}</span>
+                                  <span>{benefit};
+  </span>
                                 </li>
-                              ))}
-                            </ul>
+                              ))};
+                            ;
+  </ul>
                           </div>
 
-                          {/* Use Cases */}
-                          <div className="mb-4">
+                          {/* Use Cases */};
+                          ;
+  <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
                               <Lightbulb className="h-4 w-4 text-yellow-500" />
                               Use Cases
@@ -998,14 +1073,17 @@ export default function ServicesOverviewPage() {
                             <div className="flex flex-wrap gap-1">
                               {service.useCases.slice(0, 3).map((useCase, index) => (
                                 <Badge key={index} variant="outline" className="text-xs">
-                                  {useCase}
-                                </Badge>
-                              ))}
-                            </div>
+                                  {useCase};
+                                ;
+  </Badge>
+                              ))};
+                            ;
+  </div>
                           </div>
 
-                          {/* Target Audience */}
-                          <div className="mb-4">
+                          {/* Target Audience */};
+                          ;
+  <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
                               <Users className="h-4 w-4 text-blue-500" />
                               Target Audience
@@ -1013,29 +1091,35 @@ export default function ServicesOverviewPage() {
                             <div className="flex flex-wrap gap-1">
                               {service.targetAudience.slice(0, 2).map((audience, index) => (
                                 <Badge key={index} variant="secondary" className="text-xs">
-                                  {audience}
-                                </Badge>
-                              ))}
-                            </div>
+                                  {audience};
+                                ;
+  </Badge>
+                              ))};
+                            ;
+  </div>
                           </div>
                         </CardContent>
 
                         <CardContent className="pt-0">
-                          {/* Pricing & Metrics */}
-                          <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                          {/* Pricing & Metrics */};
+                          ;
+  <div className="bg-gray-50 rounded-lg p-4 mb-4">
                             <div className="flex items-center justify-between mb-3">
                               <div className="text-center">
                                 <div className="text-2xl font-bold text-zion-blue">
-                                  {formatPrice(service.price)}
-                                </div>
+                                  {formatPrice(service.price)};
+                                ;
+  </div>
                                 <div className="text-sm text-gray-500">
-                                  {service.pricingModel === 'subscription' ? '/month' : 'one-time'}
-                                </div>
+                                  {service.pricingModel === 'subscription' ? '/month' : 'one-time'};
+                                ;
+  </div>
                               </div>
                               <div className="text-right">
                                 <div className="text-sm text-gray-500 line-through">
-                                  {formatPrice(service.marketPrice)}
-                                </div>
+                                  {formatPrice(service.marketPrice)};
+                                ;
+  </div>
                                 <div className="text-sm font-semibold text-green-600">
                                   Save {service.savings}%
                                 </div>
@@ -1045,21 +1129,25 @@ export default function ServicesOverviewPage() {
                             <div className="grid grid-cols-3 gap-2 text-center text-xs">
                               <div className="flex items-center gap-1 justify-center">
                                 <Star className="h-3 w-3 text-yellow-500" />
-                                <span>{service.rating}</span>
+                                <span>{service.rating};
+  </span>
                               </div>
                               <div className="flex items-center gap-1 justify-center">
                                 <Zap className="h-3 w-3 text-blue-500" />
-                                <span>{service.aiScore}</span>
+                                <span>{service.aiScore};
+  </span>
                               </div>
                               <div className="flex items-center gap-1 justify-center">
                                 <Clock className="h-3 w-3 text-green-500" />
-                                <span>{service.deliveryTime}</span>
+                                <span>{service.deliveryTime};
+  </span>
                               </div>
                             </div>
                           </div>
 
-                          {/* Action Buttons */}
-                          <div className="grid grid-cols-2 gap-3">
+                          {/* Action Buttons */};
+                          ;
+  <div className="grid grid-cols-2 gap-3">
                             <Button className="w-full" size="sm">
                               <Phone className="mr-2 h-4 w-4" />
                               Contact
@@ -1071,25 +1159,30 @@ export default function ServicesOverviewPage() {
                           </div>
                         </CardContent>
                       </Card>
-                    ))}
-                  </div>
+                    ))};
+                  ;
+  </div>
 
-                  {/* Category CTA */}
-                  <div className="text-center py-8">
+                  {/* Category CTA */};
+                  ;
+  <div className="text-center py-8">
                     <Button size="lg" className="bg-zion-blue hover:bg-zion-blue-dark text-white px-8 py-6">
                       <Rocket className="mr-3 h-6 w-6" />
-                      Get Started with {category}
-                    </Button>
+                      Get Started with {category};
+                    ;
+  </Button>
                   </div>
                 </TabsContent>
               )
-            })}
-          </Tabs>
+            })};
+          ;
+  </Tabs>
         </div>
       </div>
 
-      {/* Why Choose Zion Tech Section */}
-      <div className="py-20 bg-white">
+      {/* Why Choose Zion Tech Section */};
+      ;
+  <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -1144,8 +1237,9 @@ export default function ServicesOverviewPage() {
         </div>
       </div>
 
-      {/* Contact CTA Section */}
-      <div className="bg-gradient-to-r from-zion-blue to-zion-purple py-20 text-white">
+      {/* Contact CTA Section */};
+      ;
+  <div className="bg-gradient-to-r from-zion-blue to-zion-purple py-20 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Ready to Transform Your Business?
@@ -1192,4 +1286,5 @@ export default function ServicesOverviewPage() {
       </div>
     </div>
   )
-}</div></div></div></Link>
+};
+  </div></div></div></Link>

@@ -5,11 +5,12 @@ import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {const features = [
+const PagePage: React.FC = () => {
+const features = [
     {;,} icon: Brain},;,
 title: 'AI-Powered Solutions',;,
 description: 'Advanced artificial intelligence technology to transform your business operations.',;,
-benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
+benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights'];
     },
     {;,
 icon: BarChart,;,
@@ -27,7 +28,10 @@ title: 'Precision Targeting',;,
 description: 'Target specific goals and objectives with precision.',;,
 benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
 
-const benefits = [
+
+  ;
+  ;
+  const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -36,7 +40,9 @@ const benefits = [
     'Seamless integration with existing systems'
   ]
 
-return (
+;
+  ;
+  return (
     <>
 
       <Helmet>
@@ -55,12 +61,11 @@ return (
       
       <Navigation />
       
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
+      <main className="pt-16">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"Page> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
 Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
@@ -75,8 +80,9 @@ Discover our comprehensive page solutions designed to transform your business wi
     </>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        {/* Features Section */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
@@ -94,14 +100,17 @@ Discover our comprehensive page solutions designed to transform your business wi
       
       <Footer />
     </>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                  <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit), benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
+                        {benefit};
+                      ;
+  </li>
                     )
     </>
   )
@@ -110,8 +119,9 @@ Discover our comprehensive page solutions designed to transform your business wi
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -121,8 +131,9 @@ Discover our comprehensive page solutions designed to transform your business wi
     </>
         </section>
 
-        {/* Benefits Section */}
-          <div className="max-w-7xl mx-auto">
+        {/* Benefits Section */};
+          ;
+  <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
@@ -139,13 +150,15 @@ Discover our comprehensive page solutions designed to transform your business wi
       
       <Footer />
     </>
-                  <p className="text-gray-300">{benefit}</p>
+                  <p className="text-gray-300">{benefit};
+  </p>
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -155,16 +168,16 @@ Discover our comprehensive page solutions designed to transform your business wi
     </>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-4xl mx-auto text-center"
-            <h2 className="text-4xl font-bold text-white mb-6"
+        {/* CTA Section */};
+        ;
+  <section className="py-20 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
             <p className="text-xl text-gray-300 mb-8"
 Join thousands of businesses already using our AI-powered solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-Start Free Trial
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"Start Free Trial>
                 <ArrowRight className="ml-2 h-5 w-5"
               </button>
               <button className="
@@ -178,8 +191,9 @@ Start Free Trial
       <Footer />
     </>
   );
-}
-      </div>
+};
+      ;
+  </div>
       
       <Footer />
     </>

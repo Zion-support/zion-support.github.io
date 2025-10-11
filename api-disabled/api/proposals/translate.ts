@@ -4,17 +4,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' })
 export default async function handler(re,
   q: NextApiRequest, re)
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
+  s: NextApiResponse) {/* TODO: Fix JSX expression */};
   r: 'Method not allowed' })
-  }
-
+  };
+;
   try {/* TODO: Fix JSX expression */}
-    const { markdown, targetLanguage = 'en' } = req.body || {}
-    if (!markdown) {/* TODO: Fix JSX expression */}
+    ;
+  ;
+  const { markdown, targetLanguage = 'en' } = req.body || {};
+    if (!markdown) {/* TODO: Fix JSX expression */};
   r: 'Markdown content required' })
     }
 
-    const _openai = new OpenAI({/* TODO: Fix JSX expression */})
+    ;
+  ;
+  const _openai = new OpenAI({/* TODO: Fix JSX expression */})
   y: process.env.OPENAI_API_KEY })
     const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
@@ -28,9 +32,9 @@ export default async function handler(re,
         })
       ])
       temperature: 0.2),
-    const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
+    const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */};
         },
-        {/* TODO: Fix JSX expression */}
+        {/* TODO: Fix JSX expression */};
   t: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`}],
       temperatur,
   e: 0.2)
@@ -40,8 +44,8 @@ export default async function handler(re,
   } catch (error: unknown) {,
     //     return res.status(500).json({ error: 'Translation failed' })
   } catch (erro)
-  r: unknown) {/* TODO: Fix JSX expression */}
+  r: unknown) {/* TODO: Fix JSX expression */};
   r: 'Translation failed' })
-  }
-}
+  };
+};
 `

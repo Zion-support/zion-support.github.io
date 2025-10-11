@@ -1,25 +1,28 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
-  }
-  
+    this.state = { hasError: false };
+  };
+  ;
   static getDerivedStateFromError(error) {
-    return { hasError: true }
-  }
-  
+    return { hasError: true };
+  };
+  ;
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
-  }
-  
+  };
+  ;
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
+    if (this.state.hasError) {}
+      
+  ;
+  return <div>Something went wrong.</div>
     }
-    
-    return this.props.children
-  }
-}
+    ;
+    ;
+  return this.props.children
+  };
+};
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -53,7 +56,8 @@ export default function TalentMarketplace() {
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
 
-  }
+  };
+  ;
   return (
     <>
                 Create a free account and send a message or job invite directly
@@ -72,12 +76,13 @@ export default function TalentMarketplace() {
 
 
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
 
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -115,10 +120,11 @@ export default function TalentMarketplace() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/talent'>Browse Talent</Link>            </Button>      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -162,8 +168,8 @@ export default function TalentMarketplace() {
     </>
   )
 
-}
-
+};
+;
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -177,7 +183,8 @@ export default function TalentMarketplace() {
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion."
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  }
+  };
+  ;
   return (
     <>
       <SEO
@@ -186,10 +193,11 @@ export default function TalentMarketplace() {
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -201,7 +209,7 @@ export default function TalentMarketplace() {
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
-              className="object-cover"
+              className="object-cover">
 
 
               <Link href="/talent">Browse Talent</Link></$1></$1></$1></$1></$1>

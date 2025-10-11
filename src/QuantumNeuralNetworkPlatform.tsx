@@ -50,7 +50,7 @@ description: "Processing massive datasets with quantum speed for real-time busin
 icon: Network,;,
 title: "Network Optimization",;,
 description: "Traffic routing, load balancing, and network security optimization using quantum algorithms."
-    }
+    };
     "10x faster processing for complex AI tasks",
     "Enhanced accuracy in pattern recognition",
     "Scalable architecture for enterprise needs",
@@ -74,6 +74,7 @@ import { Helmet; } from 'react-helmet-async';
 import { Brain;, Cpu, Zap, Shield, Database, Network, ArrowRight, Star, Rocket, Globe } from 'lucide-react';
 import { Link; } from 'react-router-dom';
 const QuantumNeuralNetworkPlatform: React.FC = () => {;
+
 return (;
     <>
       <Helmet>
@@ -85,9 +86,10 @@ return (;
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-}
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
+};
+        {/* Hero Section */};
+        ;
+  <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -147,8 +149,9 @@ Schedule Demo
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20">
+        {/* Features Section */};
+        ;
+  <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">;
@@ -224,8 +227,9 @@ Ultra-secure quantum communication networks for distributed neural network opera
           </div>
         </section>
 
-        {/* Applications Section */}
-        <section className="py-20 bg-gray-900/50">
+        {/* Applications Section */};
+        ;
+  <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">;
@@ -323,8 +327,9 @@ resource allocation with quantum neural network efficiency.
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20">
+        {/* CTA Section */};
+        ;
+  <section className="py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white mb-6">;
 Ready to Experience the Future of AI?
@@ -336,9 +341,10 @@ import { Brain;, Cpu, Zap, Shield, ArrowRight, Star, Users, Target } from 'lucid
 export default function QuantumNeuralNetworkPlatform() {;
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-}
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+};
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -360,9 +366,10 @@ import { Brain;, Zap, Shield, TrendingUp, Users, Globe, ArrowRight } from 'lucid
 export default function QuantumNeuralNetworkPlatform() {;
 return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
-}
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+};
+      {/* Hero Section */};
+      ;
+  <section className="relative py-20 px-4 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
@@ -392,9 +399,9 @@ View All Services
       <section className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
@@ -413,17 +420,19 @@ Schedule Demo;
 import { motion; } from 'framer-motion';
 import { Brain;, Zap, Cpu, Network, Shield, TrendingUp } from 'lucide-react';
 const QuantumNeuralNetworkPlatform: React.FC = () => {;
+
 return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-}
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20">
+};
+      {/* Hero Section */};
+      ;
+  <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
         <div className="relative z-10 container mx-auto px-4">
           <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
@@ -459,8 +468,9 @@ description="Revolutionary quantum neural network platform combining quantum com
 keywords="quantum neural networks, quantum computing, AI platform, quantum AI, neural networks, quantum processing"
       />
       
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-8">
             <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
@@ -491,7 +501,7 @@ Learn More
           </div>;,
 description: "Seamless integration of classical and quantum computing for optimal performance";,
 description: "Distributed quantum neural networks across multiple locations"
-    }
+    };
   ];
 const useCases = [;
     {;,
@@ -513,7 +523,7 @@ icon: Globe
 title: 'AI Training',;,
 description: 'Faster and more efficient training of large language models and neural networks.',;,
 icon: Brain
-    }
+    };
   ];
 const benefits = [;
     'Exponential speedup in complex computations',
@@ -525,8 +535,9 @@ const benefits = [;
   ];
 return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
@@ -562,13 +573,14 @@ Learn More
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20">
+      {/* Features Section */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center mb-16"
           >
       <section className="py-20">
@@ -594,11 +606,14 @@ className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 h
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title};
+  </h3>
+                <p className="text-gray-300">{feature.description};
+  </p>
               </motion.div>
-            ))}
-            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+            ))};
+            ;
+  <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6">
                 <Brain className="w-6 h-6 text-white" />
               </div>
@@ -667,30 +682,35 @@ Our platform combines cutting-edge quantum computing with advanced neural networ
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg w-fit mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title};
+  </h3>
+                <p className="text-gray-300">{feature.description};
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Technology Stack */}
-      <section className="py-20 bg-black/20">
+      {/* Technology Stack */};
+      ;
+  <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
           <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center mb-16"
           >;
 import { Brain;, Zap, Shield, TrendingUp, Users, Globe } from 'lucide-react';
 export default function QuantumNeuralNetworkPlatform() {;
 return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
-}
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+};
+      {/* Hero Section */};
+      ;
+  <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
@@ -713,8 +733,9 @@ className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:tex
 Request Demo
             </Link>
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
+        {/* Background Elements */};
+        ;
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.05),transparent_50%)]"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto text-center">
@@ -746,8 +767,9 @@ className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-4
             >;
 Learn More
             </Link>
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 cyber-grid opacity-20"></div>
         <div className="absolute inset-0 quantum-particles">
           <div className="quantum-particle"></div>
@@ -781,8 +803,9 @@ Watch Demo
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Features Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -799,8 +822,9 @@ unprecedented performance and capabilities.
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-      {/* Features Section */}
-      <section className="py-20 relative">
+      {/* Features Section */};
+      ;
+  <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
@@ -808,8 +832,9 @@ Revolutionary Quantum Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
 Our platform combines cutting-edge quantum computing with advanced neural networks 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">;
@@ -822,8 +847,10 @@ Discover how quantum neural networks are revolutionizing industries across the g
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase), index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 text-lg">{useCase.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title};
+  </h3>
+                <p className="text-gray-300 text-lg">{useCase.description};
+  </p>
     "10x faster processing compared to classical neural networks",
     "Quantum advantage in optimization problems",
     "Enhanced accuracy and reduced error rates",
@@ -841,8 +868,9 @@ return (;
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Hero Section */};
+        ;
+  <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
           
@@ -865,8 +893,10 @@ Discover the advanced capabilities that make our quantum neural network platform
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-3">{feature.title};
+  </h3>
+                <p className="text-gray-400">{feature.description};
+  </p>
               </div>
             </div>
             
@@ -894,8 +924,9 @@ Schedule Demo
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 relative">
+        {/* Features Section */};
+        ;
+  <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -911,24 +942,29 @@ what's possible with artificial intelligence.
               {features.map((feature), index) => {;
 const Icon = feature.icon;;
 return (;
-}
-                  <div key={index} className="group">
+};
+                  ;
+  <div key={index} className="group">
                     <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <Icon className="w-8 h-8 text-cyan-400" />
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                      <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                      <h3 className="text-2xl font-bold text-white mb-4">{feature.title};
+  </h3>
+                      <p className="text-gray-300 leading-relaxed">{feature.description};
+  </p>
                     </div>
                   </div>
                 )
-              })}
-            </div>
+              })};
+            ;
+  </div>
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20 relative bg-gray-900/30">
+        {/* Use Cases Section */};
+        ;
+  <section className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -944,24 +980,29 @@ and creating new possibilities for innovation.
               {useCases.map((useCase), index) => {;
 const Icon = useCase.icon;;
 return (;
-}
-                  <div key={index} className="group">
+};
+                  ;
+  <div key={index} className="group">
                     <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-2xl p-8 h-full hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
                       <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                         <Icon className="w-8 h-8 text-blue-400" />
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
-                      <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
+                      <h3 className="text-2xl font-bold text-white mb-4">{useCase.title};
+  </h3>
+                      <p className="text-gray-300 leading-relaxed">{useCase.description};
+  </p>
                     </div>
                   </div>
                 )
-              })}
-            </div>
+              })};
+            ;
+  </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 relative">
+        {/* Benefits Section */};
+        ;
+  <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -980,10 +1021,12 @@ for your business operations and decision-making processes.
                   {benefits.map((benefit), index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-                      <span className="text-gray-300 text-lg">{benefit}</span>
+                      <span className="text-gray-300 text-lg">{benefit};
+  </span>
                     </div>
-                  ))}
-                </div>
+                  ))};
+                ;
+  </div>
               </div>
               
               <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8">
@@ -1080,27 +1123,33 @@ to deliver unprecedented AI processing capabilities.
                     <feature.icon className="w-8 h-8 text-blue-400" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-3">{feature.title};
+  </h3>
+                    <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit), idx) => (
                         <li key={idx} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
+                          {benefit};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
+        {/* Hero Section */};
+        ;
+  <div className="text-center mb-16">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">;
 Quantum Neural Network Platform
           </h1>
@@ -1118,22 +1167,27 @@ Schedule Demo
           </div>
         </div>
 
-        {/* Platform Features */}
-        <div className="mb-16">
+        {/* Platform Features */};
+        ;
+  <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-white mb-12">Platform Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {platformFeatures.map((feature), index) => (
               <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <h3 className="text-2xl font-bold text-cyan-400 mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <div className="text-4xl mb-4">{feature.icon};
+  </div>
+                <h3 className="text-2xl font-bold text-cyan-400 mb-4">{feature.title};
+  </h3>
+                <p className="text-gray-300 mb-6">{feature.description};
+  </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit), benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                      {benefit}
-      {/* Capabilities Section */}
-      <section className="py-20 relative bg-gradient-to-br from-gray-900/50 to-black/50">
+                      {benefit};
+      {/* Capabilities Section */};
+      ;
+  <section className="py-20 relative bg-gradient-to-br from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
@@ -1147,15 +1201,18 @@ From quantum computing to neural networks, our platform handles every aspect of 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability), index) => (
               <div key={index} className="p-6 rounded-xl bg-gradient-to-br from-gray-800/30 to-gray-900/30 border border-gray-700/50 hover:border-blue-500/30 transition-all duration-300">
-                <h3 className="text-xl font-bold text-blue-400 mb-4">{capability.category}</h3>
+                <h3 className="text-xl font-bold text-blue-400 mb-4">{capability.category};
+  </h3>
                 <ul className="space-y-3">
                   {capability.items.map((item), idx) => (
                     <li key={idx} className="flex items-start text-gray-300">
                       <Target className="w-4 h-4 text-blue-400 mr-2 mt-1 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                      {item};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
               </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Cutting-Edge Technology
@@ -1171,21 +1228,24 @@ Built with the latest quantum computing frameworks and neural network architectu
               "PyTorch", "JAX", "NumPy", "SciPy"
             ].map((tech), index) => (
               <motion.div;
-key={index}
-                initial={{ opacity: 0}}, scale: 0.8 }}
-                whileInView={{ opacity: 1}}, scale: 1 }}
-                transition={{ duration: 0.6}}, delay: index * 0.1 }}
+key={index};
+                initial={{ opacity: 0}}, scale: 0.8 }};
+                whileInView={{ opacity: 1}}, scale: 1 }};
+                transition={{ duration: 0.6}}, delay: index * 0.1 }};
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:border-purple-400/50 transition-all duration-300"
               >
-                <span className="text-white font-semibold text-lg">{tech}</span>
+                <span className="text-white font-semibold text-lg">{tech};
+  </span>
               </motion.div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-gray-900/50">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">;
@@ -1287,8 +1347,9 @@ View All Services
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -1301,8 +1362,9 @@ of technology and research.
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {/* Features Section */}
-      <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
+      {/* Features Section */};
+      ;
+  <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">;
@@ -1377,8 +1439,9 @@ Access quantum computing resources worldwide through our distributed quantum net
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">;
@@ -1485,8 +1548,9 @@ Predictive maintenance
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
+      {/* Pricing Section */};
+      ;
+  <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">;
@@ -1494,8 +1558,9 @@ Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
 Choose the plan that best fits your quantum computing needs
-      {/* Pricing Section */}
-      <section className="py-20 relative">
+      {/* Pricing Section */};
+      ;
+  <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
@@ -1519,36 +1584,46 @@ Most Popular
                     </div>
                   </div>
                 )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                ;
+                ;
+  <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+  </h3>
                   <div className="mb-4">
-                    <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
+                    <span className="text-4xl font-bold text-blue-400">{plan.price};
+  </span>
+                    <span className="text-gray-400">{plan.period};
+  </span>
                   </div>
-                  <p className="text-gray-300">{plan.description}</p>
+                  <p className="text-gray-300">{plan.description};
+  </p>
                 </div>
                 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature), idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                      {feature};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
                 
             {useCases.map((useCase), index) => (
               <$2 />;
-key={index}
+key={index};
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title};
+  </h3>
+                <p className="text-gray-300">{useCase.description};
+  </p>
               </div>
-            ))}
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
+            ))};
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">;
 Revolutionary Use Cases
@@ -1617,10 +1692,12 @@ Experience the competitive advantages of quantum-enhanced neural networks.
                   <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
                     <div className="w-2 h-2 bg-white rounded-full"></div>
                   </div>
-                  <p className="text-gray-300">{benefit}</p>
+                  <p className="text-gray-300">{benefit};
+  </p>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
             
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-600/10 rounded-xl p-8 border border-cyan-500/20">
               <h3 className="text-2xl font-semibold mb-4">Performance Metrics</h3>
@@ -1649,22 +1726,27 @@ Experience the competitive advantages of quantum-enhanced neural networks.
             {features.map((feature), index) => {;
 const IconComponent = feature.icon;;
 return (;
-}
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+};
+                ;
+  <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/30 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                  <p className="text-gray-300">{feature.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -1680,22 +1762,27 @@ creating new opportunities for innovation.
             {useCases.map((useCase), index) => {;
 const IconComponent = useCase.icon;;
 return (;
-}
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
+};
+                ;
+  <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                  <p className="text-gray-300 text-lg">{useCase.description}</p>
+                  <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title};
+  </h3>
+                  <p className="text-gray-300 text-lg">{useCase.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -1710,10 +1797,12 @@ Get ahead of the competition with cutting-edge technology that delivers real res
                 {benefits.map((benefit), index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
+                    <span className="text-gray-300">{benefit};
+  </span>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
             
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-white/10">
@@ -1752,8 +1841,9 @@ Get ahead of the competition with cutting-edge technology that delivers real res
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Ready to Experience the Future?
@@ -1780,8 +1870,9 @@ View Pricing
         </div>
       </section>
 
-      {/* Resources Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Resources Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -1797,13 +1888,15 @@ Explore our resources to understand how quantum neural networks can transform yo
               <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                 <BookOpen className="w-6 h-6 text-white" />
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
+      {/* CTA Section */};
+      ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Ready for the Quantum Future?
@@ -1917,15 +2010,16 @@ Get Started Now
 Contact Sales
             </button>
           </div>
-      {/* CTA Section */}
-      <section className="py-20 px-4">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Ready to Experience the Future?
@@ -1959,10 +2053,10 @@ View Pricing
             </div>
           </div>
         </section>
-      </div>
-    </>
-        {/* CTA Section */}
-        <section className="py-20 relative">
+      </div></>
+        {/* CTA Section */};
+        ;
+  <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-3xl p-12">
               <Lightbulb className="w-20 h-20 text-cyan-400 mx-auto mb-6" />
@@ -2001,10 +2095,9 @@ Contact Support →
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </div></>
   )
-}
+};
               className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >;
 Schedule a Demo
@@ -2064,8 +2157,9 @@ No credit card required • 14-day free trial • Cancel anytime
         </div>
       </section>
 
-      {/* Footer Navigation */}
-      <section className="py-12 border-t border-gray-700/50">
+      {/* Footer Navigation */};
+      ;
+  <section className="py-12 border-t border-gray-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -2112,5 +2206,5 @@ No credit card required • 14-day free trial • Cancel anytime
       </section>
     </div>
   )
-}
+};
 export default QuantumNeuralNetworkPlatform</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></p></p></p></p></p></p></p></h2></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

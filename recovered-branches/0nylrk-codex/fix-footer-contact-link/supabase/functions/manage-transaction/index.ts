@@ -3,13 +3,15 @@ import Stripe from "https://esm.sh/stripe@14.21.0"
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-}
+};
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+  ;
+  ;
   const supabaseClient = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
@@ -18,7 +20,7 @@ serve(async (req) => {
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false } }
+    { auth: { persistSession: false } };
   )
   try {
     // Authenticate the user
@@ -33,7 +35,7 @@ serve(async (req) => {
     } = await req.json()
     if (!transactionId) {
       throw new Error("Transaction ID is required")
-    }
+    };
     // Get transaction details
     const { data: transaction, error: fetchError } = await supabaseAdmin
       .from("transactions")
@@ -42,7 +44,7 @@ serve(async (req) => {
       .single()
     if (fetchError || !transaction) {
       throw new Error("Transaction not found")
-    }
+    };
     // Verify user is authorized to manage this transaction
     const isClient = transaction.user_id === user.id
     const isProvider = transaction.provider_id === user.id
@@ -50,7 +52,9 @@ serve(async (req) => {
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+    ;
+  ;
+  const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"})
       apiVersion: "2023-10-16",
     })
@@ -60,7 +64,7 @@ serve(async (req) => {
         // Only providers or admins can release escrow funds
         if (!isProvider) {
           throw new Error("Only service providers can release funds from escrow")
-        }
+        };
         // Update transaction status
         await supabaseAdmin
           .from("transactions")
@@ -70,13 +74,13 @@ serve(async (req) => {
             completed_at: new Date().toISOString() 
           })
           .eq("id", transactionId)
-        result = { message: "Funds released from escrow" }
+        result = { message: "Funds released from escrow" };
         break
       case 'refund':
         // Check if transaction can be refunded
         if (transaction.status !== "completed" && transaction.status !== "pending") {
           throw new Error("This transaction cannot be refunded")
-        }
+        };
         // Process refund via Stripe
         if (transaction.stripe_session_id) {
           // Retrieve payment intent from session
@@ -95,15 +99,15 @@ serve(async (req) => {
                 refund_id: refund.id
               })
               .eq("id", transactionId)
-          }
-        }
-        result = { message: "Refund processed successfully" }
+          };
+        };
+        result = { message: "Refund processed successfully" };
         break
       case 'cancel':
         // Only allow cancellation for pending transactions
         if (transaction.status !== "pending") {
           throw new Error("Only pending transactions can be cancelled")
-        }
+        };
         // Update transaction status
         await supabaseAdmin
           .from("transactions")
@@ -112,12 +116,13 @@ serve(async (req) => {
             cancelled_at: new Date().toISOString() 
           })
           .eq("id", transactionId)
-        result = { message: "Transaction cancelled successfully" }
+        result = { message: "Transaction cancelled successfully" };
         break
       default:
         throw new Error("Invalid action")
-    }
-    return new Response(JSON.stringify(result), {
+    };
+    ;
+  return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
       status: 200,
@@ -129,5 +134,5 @@ serve(async (req) => {
       status: 500})
       status: 500,
     })
-  }
+  };
 })

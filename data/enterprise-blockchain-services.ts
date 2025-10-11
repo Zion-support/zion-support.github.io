@@ -6,7 +6,7 @@ export interface EnterpriseBlockchainService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface EnterpriseBlockchainService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -31,14 +31,14 @@ export interface EnterpriseBlockchainService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
   // Enterprise Blockchain Platform
   {
@@ -299,5 +299,5 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     customers: 112,
     rating: 4.8,
     reviews: 89
-  }
-]
+  };
+];

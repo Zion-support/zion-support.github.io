@@ -51,7 +51,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">82% cost, reductio, n</sp, a, n>. Revolutionary, innovations, transforming enterprises, worldwid, e!"
             <div, className="grid, s, m: gr, i, d-co, l, s-3, ga, p-3, m, b-4">"
             <div, className="grid, s, m: gr, i, d-co, l, s-3, ga, p-3, m, b-4">"
-              <Li, n, k
+              <Li, n, k>
             <div, className="grid, s, m: gr, i, d-co, l, s-3, ga, p-3, m, b-4">"
             <div, className="grid, s, m: gr, i, d-co, l, s-3, ga, p-3, m, b-4">"
               <Li, n, k
@@ -66,7 +66,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {
                 <div, className="flex, item, s-start, ga, p-2, m, b-2">"
                   <Brain, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-0.5" />"
                   <div, className="fl, e, x-1, mi, n-w-0">"
-const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
+const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expression */};
   Y:</stro, n, g> Deploy, neur, o-symbolic, AI, achieving{" "}";"
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">99.7% reasoning, accurac, y</sp, a, n> wi, t, h{" "}";"
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">89% fewer, hallucination, s</sp, a, n>, implement, spatial, computing platforms, deliverin, g{" "}";"
@@ -193,7 +193,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                   <Link, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
             <Li, n, k
   to="/bl, o, g"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl, hov, e
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl, hov, e>
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl, hov, e,"
@@ -208,7 +208,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
       </d, i, v>
     </d, i, v>
   )
-}
+};
 export default October2025CuttingEdgeInnovationsBanner
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></p></h3></h3></h3></h3></h3></h3></h3></h3></h3>

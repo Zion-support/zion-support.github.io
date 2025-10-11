@@ -17,22 +17,26 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
           {latestArticl, e, s.m, a, p(artic, l, e = > (
             <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
                 <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
-                  {artic, l, e.t, i, t, l, e}
-                  <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
+                  {artic, l, e.t, i, t, l, e};
+                  ;
+  <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
                     Read, Mor, e
                     <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             View, All, Articles;)
             <Link, classNam, e='w-6 h-6' />)
 }})
-const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
+const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
+            ;
+  <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
                 <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
-                  {artic, l, e.t, i, t, l, e}
-                  <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
+                  {artic, l, e.t, i, t, l, e};
+                  ;
+  <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
                     <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             View, All, Articles
             <Link, classNam, e='w-6 h-6' />
-}}
-</div></div></div></div></div></div></div></Link></Link></Link></Link></h2></h2></h3></h3></section></section>
+}};
+;
+  </div></div></div></div></div></div></div></Link></Link></Link></Link></h2></h2></h3></h3></section></section>

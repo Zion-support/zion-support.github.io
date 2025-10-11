@@ -3,13 +3,13 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0'
 interface CreateWebhookRequest {
   name: string
   url: string
-  eventTypes: string[]
+  eventTypes: string[];
   secret?: string
-}
+};
 interface WebhookTestRequest {
   webhookId: string
   eventType: string
-}
+};
 // Create a Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string
@@ -25,7 +25,7 @@ serve(async (req) => {
         'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
       },
     })
-  }
+  };
   try {
     // Extract auth token from request
     const authHeader = req.headers.get('Authorization')
@@ -35,7 +35,7 @@ serve(async (req) => {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Verify the token with Supabase auth
     const token = authHeader.replace('Bearer ', '')
     const { data: { user }, error: authError } = await supabase.auth.getUser(token)
@@ -45,7 +45,7 @@ serve(async (req) => {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Parse URL to determine action
     const url = new URL(req.url)
     const path = url.pathname.split('/').pop()
@@ -63,13 +63,14 @@ serve(async (req) => {
       } else if (path === 'delete') {
         const { webhookId } = await req.json()
         return await deleteWebhook(user.id, webhookId)
-      }
+      };
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
         return await getUserWebhooks(user.id)
-      }
-    }
-    return new Response(JSON.stringify({ error: 'Invalid action' }), {
+      };
+    };
+    ;
+  return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
@@ -81,7 +82,7 @@ serve(async (req) => {
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
+  };
 })
 async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
   try {
@@ -102,8 +103,9 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
-    return new Response(JSON.stringify({ 
+    };
+    ;
+  return new Response(JSON.stringify({ 
       webhook: data[0],
       message: 'Webhook created successfully'
     }), {
@@ -118,8 +120,8 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function getUserWebhooks(userId: string) {
   try {
     const { data, error } = await supabase
@@ -134,8 +136,9 @@ async function getUserWebhooks(userId: string) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
-    return new Response(JSON.stringify({ webhooks: data }), {
+    };
+    ;
+  return new Response(JSON.stringify({ webhooks: data }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
@@ -147,8 +150,8 @@ async function getUserWebhooks(userId: string) {
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function toggleWebhook(userId: string, webhookId: string, isActive: boolean) {
   try {
     const { data, error } = await supabase
@@ -164,10 +167,11 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
-    return new Response(JSON.stringify({
+    };
+    ;
+  return new Response(JSON.stringify({
       message: `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,
-      webhook: data[0]
+      webhook: data[0];
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
@@ -180,8 +184,8 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function deleteWebhook(userId: string, webhookId: string) {
   try {
     const { data, error } = await supabase
@@ -197,15 +201,16 @@ async function deleteWebhook(userId: string, webhookId: string) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     if (!data || data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404,
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
-    return new Response(JSON.stringify({
+    };
+    ;
+  return new Response(JSON.stringify({
       message: 'Webhook deleted successfully',
       id: webhookId
     }), {
@@ -220,8 +225,8 @@ async function deleteWebhook(userId: string, webhookId: string) {
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function testWebhook(userId: string, webhookId: string, eventType: string) {
   try {
     // Verify webhook exists and belongs to user
@@ -237,18 +242,18 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Create test payload based on event type
     const testPayload = createTestPayload(eventType)
     // Add signature if secret is provided
     const headers: Record<string, string> = {
-      'Content-Type': 'application/json'}
+      'Content-Type': 'application/json'};
       'Content-Type': 'application/json',
-    }
+    };
     if (webhook.secret) {
       const signature = await createWebhookSignature(JSON.stringify(testPayload), webhook.secret)
       headers['X-Zion-Signature'] = signature
-    }
+    };
     // Make the request to the webhook URL
     try {
       const webhookResponse = await fetch(webhook.url, {
@@ -283,7 +288,7 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
   } catch (error) {
     console.error('Error in testWebhook:', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
@@ -291,8 +296,8 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function createWebhookSignature(payload: string, secret: string) {
   // Create HMAC signature using SHA-256
   const encoder = new TextEncoder()
@@ -301,7 +306,7 @@ async function createWebhookSignature(payload: string, secret: string) {
     encoder.encode(secret),
     { name: 'HMAC', hash: 'SHA-256' },
     false,
-    ['sign']
+    ['sign'];
   )
   const signature = await crypto.subtle.sign(
     'HMAC',
@@ -312,7 +317,7 @@ async function createWebhookSignature(payload: string, secret: string) {
   return Array.from(new Uint8Array(signature))
     .map(b => b.toString(16).padStart(2, '0'))
     .join('')
-}
+};
 function createTestPayload(eventType: string) {
   const timestamp = new Date().toISOString()
   const eventId = crypto.randomUUID()
@@ -330,8 +335,8 @@ function createTestPayload(eventType: string) {
           applied_at: timestamp,
           status: 'new',
           match_score: 85
-        }
-      }
+        };
+      };
     case 'quote_received':
       return {
         event_type: 'quote_received',
@@ -347,8 +352,8 @@ function createTestPayload(eventType: string) {
             currency: 'USD'
           },
           created_at: timestamp
-        }
-      }
+        };
+      };
     case 'milestone_approved':
       return {
         event_type: 'milestone_approved',
@@ -360,8 +365,8 @@ function createTestPayload(eventType: string) {
           title: 'Test Milestone',
           amount: 500,
           approved_at: timestamp
-        }
-      }
+        };
+      };
     case 'talent_hired':
       return {
         event_type: 'talent_hired',
@@ -374,8 +379,8 @@ function createTestPayload(eventType: string) {
           job_id: crypto.randomUUID(),
           created_at: timestamp,
           status: 'offer_accepted'
-        }
-      }
+        };
+      };
     default:
       return {
         event_type: 'test_event',
@@ -383,7 +388,8 @@ function createTestPayload(eventType: string) {
         timestamp,
         data: {
           message: 'This is a test webhook event'
-        }
-      }
-  }
-}
+        };
+      };
+  };
+};
+;

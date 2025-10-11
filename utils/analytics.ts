@@ -31,7 +31,7 @@ function track_event() {
   userType?: UserType,
   properties?: Record<string, any>,
   at?: string
-}
+};
 export async function trackEvent(payload: TrackEventPayload) {
   try {
     await fetch('/api/analytics/events/track', {
@@ -46,14 +46,14 @@ export async function trackEvent(payload: TrackEventPayload) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
+  };
+};
+};
 export async function trackEvent(payload: TrackEventPayload) {
   try {
     await fetch('/api/analytics/events/track', {
@@ -64,5 +64,6 @@ export async function trackEvent(payload: TrackEventPayload) {
     })
   } catch (e) {
     // swallow
-  }
-}
+  };
+};
+;

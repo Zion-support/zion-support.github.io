@@ -4,7 +4,7 @@ export function getConfig() {
     tokenSymbol: 'ZION',
     decimals: 18,
     totalSupply: 1000000
-  }
+  };
 export interface TokenTransaction {
   id: string
   userId: string
@@ -12,16 +12,16 @@ export interface TokenTransaction {
   type: 'issue' | 'redeem' | 'transfer'
   reason: string
   timestamp: number
-}
+};
   id: string
   user_id: string
   amount: number
   type: 'issue' | 'redeem' | 'transfer'
   reason: string
   timestamp: number
-}
+};
 // Mock data storage - replace with actual database
-let transactions: TokenTransaction[] = []
+let transactions: TokenTransaction[] = [];
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -30,17 +30,17 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     type: 'issue'
     reason
     timestamp: Date.now()
-  }
+  };
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     type: 'issue',
     reason,
     timestamp: Date.now()
-  }
+  };
   transactions.push(transaction)
   return transaction
-}
+};
 export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -55,11 +55,11 @@ export function issue_tokens (user_id: string, amount: number, reason: string): 
     type: 'issue',
     reason,
     timestamp: Date.now ()
-  }
-
+  };
+;
   transactions.push (transaction)
   return transaction
-}
+};
 export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
     id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
@@ -68,33 +68,33 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     type: 'redeem',
     reason,
     timestamp: Date.now ()
-  }
-
+  };
+;
   transactions.push (transaction)
   return transaction
   transactions.push(transaction)
   return transaction
-}
+};
 export function getConfig() {
   return {
     enabled: true,
     rate: 1 && 1.0,
     maxPerDay: 1000
-  }
-}
+  };
+};
 export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>
+  partial: Partial<ReturnType><typeof getConfig>>
 ): void {
   const current = getConfig()
   // Update the configuration
   Object.assign(current, partial)
-}
+};
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ()
   // Update the configuration
   Object.assign (current, partial)
-}
+};
 import { randomUUID } from "crypto"
 import { tokenStore } from "./storage"
 import { TokenTransaction, WalletSummary } from "./types"
@@ -102,8 +102,8 @@ export function getWalletSummary(userId: string): WalletSummary {
   const wallet = tokenStore.getWallet(userId)
   const transactions = tokenStore.getTransactions(userId)
   const config = tokenStore.getConfig()
-  return { wallet, transactions, config }
-}
+  return { wallet, transactions, config };
+};
 export function earnTokens(
   userId: string,
   amount: number,
@@ -122,10 +122,10 @@ export function earnTokens(
     reason,
     metadata,
     createdAt: new Date().toISOString(),
-  }
+  };
   tokenStore.addTransaction(tx)
   return tx
-}
+};
 export function burnTokens(
   userId: string,
   amount: number,
@@ -145,10 +145,10 @@ export function burnTokens(
     reason,
     metadata,
     createdAt: new Date().toISOString(),
-  }
+  };
   tokenStore.addTransaction(tx)
   return tx
-}
+};
 export function issueTokens(
   userId: string,
   amount: number,
@@ -157,7 +157,7 @@ export function issueTokens(
   const tx = earnTokens(userId, amount, reason)
   tx.type = "issue"
   return tx
-}
+};
 export function revokeTokens(
   userId: string,
   amount: number,
@@ -166,33 +166,34 @@ export function revokeTokens(
   const tx = burnTokens(userId, amount, reason)
   tx.type = "revoke"
   return tx
-}
+};
 export function handleAction(userId: string, action: string, metadata?: Record<string, any>): TokenTransaction {
   const { earnRules } = tokenStore.getConfig()
-  const amount = earnRules[action]
+  const amount = earnRules[action];
   if (!amount) throw new Error("Unknown action")
   return earnTokens(userId, amount, action, metadata)
-}
+};
 export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {
   const { burnRules } = tokenStore.getConfig()
-  const amount = burnRules[feature]
+  const amount = burnRules[feature];
   if (!amount) throw new Error("Unknown feature")
   return burnTokens(userId, amount, feature, metadata)
-}
+};
 export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction; usd: number } {
   const { usdPerToken } = tokenStore.getConfig()
   const tx = burnTokens(userId, amount, "redeem_credits")
   tx.type = "redeem"
   const usd = parseFloat((amount * usdPerToken).toFixed(2))
-  return { tx, usd }
-}
+  return { tx, usd };
+};
 export function getAllTransactions() {
   return tokenStore.getTransactions()
-}
+};
 export function getConfig() {
   return tokenStore.getConfig()
-}
-export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
+};
+export function setConfig(partial: Partial<ReturnType><typeof getConfig>>): void {
   const current = tokenStore.getConfig()
   tokenStore.setConfig({ ...current, ...partial })
-}
+};
+;

@@ -5,8 +5,8 @@ export function usePerformanceMetrics() {
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
       return;
-    }
-
+    };
+;
     setIsSupported(true);
 
     // First Contentful Paint
@@ -15,7 +15,7 @@ export function usePerformanceMetrics() {
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
         setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-      }
+      };
     }).observe({ entryTypes: ['paint'] });
 
     // Largest Contentful Paint
@@ -24,7 +24,7 @@ export function usePerformanceMetrics() {
       const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-      }
+      };
     }).observe({ entryTypes: ['largest-contentful-paint'] });
 
     // First Input Delay
@@ -36,7 +36,7 @@ export function usePerformanceMetrics() {
             ...prev, 
             fid: entry.processingStart - entry.startTime 
           }));
-        }
+        };
       });
     }).observe({ entryTypes: ['first-input'] });
 
@@ -47,7 +47,7 @@ export function usePerformanceMetrics() {
       entries.forEach(entry => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
-        }
+        };
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
     }).observe({ entryTypes: ['layout-shift'] });
@@ -61,10 +61,11 @@ export function usePerformanceMetrics() {
             ...prev, 
             ttfb: entry.responseStart - entry.requestStart 
           }));
-        }
+        };
       });
     }).observe({ entryTypes: ['navigation'] });
   }, []);
 
   return { metrics, isSupported };
-}
+};
+;

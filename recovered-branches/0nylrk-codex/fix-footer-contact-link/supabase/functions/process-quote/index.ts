@@ -7,14 +7,14 @@ const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
 const supabase = createClient(supabaseUrl, supabaseServiceKey)
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-}
+};
 interface Service {
   id: string
   title: string
   category: string
-}
+};
 interface QuoteDetails {
   description: string
   email: string
@@ -22,16 +22,16 @@ interface QuoteDetails {
   timeframe: string
   startDate?: string
   endDate?: string
-}
+};
 interface RequestBody {
   service: Service | null
   quoteDetails: QuoteDetails
-}
+};
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
-  }
+  };
   try {
     const { service, quoteDetails } = await req.json() as RequestBody
     // Extract user identity if authenticated
@@ -45,12 +45,12 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase.auth.getUser(token)
         if (!error && user) {
           userId = user.id
-        }
-      }
+        };
+      };
     } catch (authError) {
       console.log("Auth error:", authError)
       // Continue without user identity
-    }
+    };
     // Generate a summary and tags using OpenAI
     let aiAnalysis = null
     try {
@@ -75,14 +75,14 @@ serve(async (req) => {
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
-                Service: ${service?.title || 'Custom Service'}
-                Category: ${service?.category || 'N/A'}
-                Description: ${quoteDetails.description}
-                Budget Range: ${quoteDetails.budget}
-                Timeframe: ${quoteDetails.timeframe}
-                Start Date: ${quoteDetails.startDate || 'Not specified'}
+                Service: ${service?.title || 'Custom Service'};
+                Category: ${service?.category || 'N/A'};
+                Description: ${quoteDetails.description};
+                Budget Range: ${quoteDetails.budget};
+                Timeframe: ${quoteDetails.timeframe};
+                Start Date: ${quoteDetails.startDate || 'Not specified'};
                 End Date: ${quoteDetails.endDate || 'Not specified'}`
-              }
+              };
             ],
             temperature: 0.5
           })
@@ -90,12 +90,12 @@ serve(async (req) => {
         const aiResult = await openAIResponse.json()
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {
           aiAnalysis = aiResult.choices[0].message.content
-        }
-      }
+        };
+      };
     } catch (openAIError) {
       console.error("OpenAI error:", openAIError)
       // Continue without AI analysis
-    }
+    };
     // Store the quote request in the database
     const { data, error } = await supabase
       .from('service_quotes')
@@ -113,7 +113,7 @@ serve(async (req) => {
           end_date: quoteDetails.endDate,
           ai_analysis: aiAnalysis,
           status: 'pending'
-        }
+        };
       ])
       .select()
     if (error) throw error
@@ -128,5 +128,5 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })
-  }
+  };
 })

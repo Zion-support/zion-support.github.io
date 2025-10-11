@@ -4,21 +4,19 @@ import { describe, it, expect, vi } from '@jest/globals'
 
 // Mock the API handler since it doesn't exist
 const handler = jest.fn((req, res) => {
-  const { token, newPassword } = req.body || {}
-  
+  const { token, newPassword } = req.body || {};
   if (!token || !newPassword) {
-    return res.status(400).json({ message: 'Token and new password are required.' })
+    return res.status(400).json({ message: 'Token and new password are required.' });
   }
-  
   if (token !== 'valid-token') {
-    return res.status(400).json({ message: 'Invalid or expired password reset token.' })
+    return res.status(400).json({ message: 'Invalid or expired password reset token.' });
   }
   
-  return res.status(200).json({ message: 'Password reset successfully' })
+  return res.status(200).json({ message: 'Password reset successfully' });
 })
 
 interface ErrorResponse {
-  message: string
+  message: string;
 }
 
 describe('/api/auth/reset token validation', () => {
@@ -26,7 +24,7 @@ describe('/api/auth/reset token validation', () => {
     const { req, res } = createMocks({
       method: 'POST' as RequestMethod,
       body: { newPassword: 'pass12345' }
-    })
+    });
     
     await handler(
       req as unknown as NextApiRequest,
@@ -41,7 +39,7 @@ describe('/api/auth/reset token validation', () => {
     const { req, res } = createMocks({
       method: 'POST' as RequestMethod,
       body: { token: 'invalid', newPassword: 'pass12345' }
-    })
+    });
     
     await handler(
       req as unknown as NextApiRequest,

@@ -16,8 +16,8 @@ serve(async (req) => {
           headers: { "Content-Type": "application/json" }})
           headers: { "Content-Type": "application/json" },
         })
-      }
-    }
+      };
+    };
     // Call the process-retention-emails function
     const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {
       method: "POST",
@@ -51,5 +51,5 @@ serve(async (req) => {
       status: 500,
       headers: { "Content-Type": "application/json" },
     })
-  }
+  };
 })

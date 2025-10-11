@@ -16,12 +16,13 @@ export default async function handler(
     const dispute = await getDisputeById(id)
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" })
     try {
-    }
-    return res && res.status(200).json({ dispute })
-  }
+    };
+    ;
+  return res && res.status(200).json({ dispute })
+  };
   res && res.setHeader("Allow", "GET")
   return res && res.status(405).end("Method Not Allowed")
-}
+};
 import type { NextApiRequest, NextApiResponse } from './next'
 import { getDisputeById  } from '../../../utils / fsdb'
 import {
@@ -37,8 +38,11 @@ function handler() {
     return res.status (400).json ({ error: "Invalid id" })) {
   $2
 }
+  ;
+  ;
   const user = parseUserFromRequest (req)
   // Check condition
 if ( {) {
   $2
-}
+};
+;

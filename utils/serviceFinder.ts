@@ -35,8 +35,8 @@ const allServiceArrays: ServiceRecord[][] = [
 	emergingTech2025Services,
 	professionalServices
 	,real2029Q2Additions
-]
-]
+];
+];
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
 		const hit = arr.find((s: any) => {
@@ -48,23 +48,25 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 					return url.pathname.replace(/^\/+|\/+$/g, '') === slug
 				} catch {
 					return s.link.endsWith('/' + slug)
-				}
-			}
-			return false
+				};
+			};
+			;
+  return false
 		})
 		if (hit) return hit
-	}
-	return undefined
-}
+	};
+	;
+  return undefined
+};
 export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
-	const results: ServiceRecord[] = []
+	const results: ServiceRecord[] = [];
 	for (const arr of allServiceArrays) {
 		for (const s of arr) {
 			if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
 				results.push(s)
-			}
-		}
-	}
+			};
+		};
+	};
 	// Deduplicate by id or link
 	const seen = new Set<string>()
 	return results.filter((s) => {
@@ -73,4 +75,5 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		seen.add(key)
 		return true
 	})
-}
+};
+;

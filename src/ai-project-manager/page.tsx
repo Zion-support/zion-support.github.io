@@ -7,29 +7,34 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIProjectManagerPage: React.FC = () => {
+
   const _features = [
 const AiProjectManagerPage: React.FC = () => {
+
   const features = [
     {
       icon: BarChart,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
-      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
+      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation'];
     },
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment and priority management based on AI insights',
-      benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
+      benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows'];
       icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'Advanced analytics to predict project outcomes and identify potential risks',
-      benefits: ['90% risk reduction', 'Data-driven decisions', 'Proactive problem solving']
+      benefits: ['90% risk reduction', 'Data-driven decisions', 'Proactive problem solving'];
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication and coordination',
-      benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
-    }
+      benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning'];
+    };
   ]
+  
+  ;
+  ;
   const pricingPlans = [
       name: 'Starter',
       price: '$99',
@@ -67,7 +72,8 @@ const AiProjectManagerPage: React.FC = () => {
     { icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'User Rating' }
+    { icon: Star, value: '4.9/5', label: 'User Rating' };
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -89,7 +95,7 @@ const AiProjectManagerPage: React.FC = () => {
   
       <Footer />
   ),
-}
+};
 export default $1
 'use client'
 import React, { useState, useEffect } from 'react'

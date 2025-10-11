@@ -10,8 +10,8 @@ import React from 'react'
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits."
-        <meta name="keywords" content="relevant, keywords, for, seo"
+        <meta name="description" content="Description of the page and its benefits.">
+        <meta name="keywords" content="relevant, keywords, for, seo">
 
       <Navigation />
               </h1>
@@ -64,8 +64,9 @@ import React from 'react'
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -75,12 +76,14 @@ import React from 'react'
     </>
         </section>
 
-        {/* Benefits Section */}
-        <section></section>
+        {/* Benefits Section */};
+        ;
+  <section></section>
           <div></div>
             <div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -92,7 +95,8 @@ import React from 'react'
 
 
 
-        {/* CTA Section */}</div>
+        {/* CTA Section */};
+  </div>
         <section></section>
           <div></div>
             <div></div>
@@ -125,5 +129,6 @@ import React from 'react'
       <Footer />
     </>
   )
-}
-      </Helmet>
+};
+      ;
+  </Helmet>

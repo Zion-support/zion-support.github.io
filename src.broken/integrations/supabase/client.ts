@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js'
 import { captureException } from '@/lib/sentry'
 // Export the createClient function directly for any part of the app that might need to call it.
 // However, direct usage of `supabase` instance is preferred.
-export { createClient }
+export { createClient };
 // Export the actual supabase client instance (which could be SupabaseClient | null)
 // This is what AuthProvider and other parts of the app will use.
 export const supabase = actualSupabaseClientFromUtils
@@ -44,15 +44,15 @@ if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === '
     envKeyActuallyProvided: !!envSupabaseAnonKey,
     actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined'
   }})
-}
+};
 // Enhanced helper function to check online status
 async function checkOnline(): Promise<boolean> {
   if (typeof navigator !== 'undefined' && 'onLine' in navigator) {
     return navigator.onLine
-  }
+  };
   // Assume online if navigator.onLine is not available (e.g., in Node.js environment for tests)
   return true
-}
+};
 // Optimized safeFetch for development mode with better error handling
 export async function safeFetch(url: string, options: RequestInit = {}) {
   try {
@@ -66,7 +66,7 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
         text: async () => '[]'} as Response
         text: async () => '[]',
       } as Response
-    }
+    };
     // Use real fetch for other cases
     return fetch(url, options)
   } catch (error) {
@@ -78,8 +78,9 @@ export async function safeFetch(url: string, options: RequestInit = {}) {
       text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' })} as Response
       text: async () => JSON.stringify({ error: 'Fetch failed due to network or other issue' }),
     } as Response
-  }
-}
+  };
+};
   captureException(lastError)
   throw new Error('Failed to connect to Supabase')
-}
+};
+;

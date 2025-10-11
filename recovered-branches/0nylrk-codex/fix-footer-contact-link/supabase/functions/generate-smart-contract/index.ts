@@ -2,20 +2,20 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-}
+};
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
-  }
+  };
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno.env.get('OPENAI_API_KEY')
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
-    }
+    };
     // Parse request body
     const {
       talentName,
@@ -32,12 +32,12 @@ serve(async (req) => {
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
-    Project Name: ${projectName}
-    Project Scope: ${scopeSummary}
-    Start Date: ${new Date(startDate).toLocaleDateString()}
-    ${endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'}
-    Payment Terms: ${paymentTerms}
-    Payment Amount: ${paymentAmount}
+    Project Name: ${projectName};
+    Project Scope: ${scopeSummary};
+    Start Date: ${new Date(startDate).toLocaleDateString()};
+    ${endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'};
+    Payment Terms: ${paymentTerms};
+    Payment Amount: ${paymentAmount};
     The contract should implement a standard escrow pattern where:
     1. The client deposits funds into the contract
     2. Funds are released to the talent when deliverables are accepted
@@ -49,12 +49,12 @@ serve(async (req) => {
     if (additionalClauses && additionalClauses.length > 0) {
       prompt += `
       Please also include the following additional clauses as on-chain functionality where possible:
-      ${additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
-      ${additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
-      ${additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
-      ${additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
+      ${additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''};
+      ${additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''};
+      ${additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''};
+      ${additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''};
       `
-    }
+    };
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `
@@ -90,7 +90,9 @@ serve(async (req) => {
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate smart contract')
     }
-    const solidityCode = data.choices[0].message.content.trim()
+    ;
+  ;
+  const solidityCode = data.choices[0].message.content.trim()
     return new Response(JSON.stringify({ 
       success: true, 
       solidityCode 
@@ -107,9 +109,9 @@ serve(async (req) => {
       }),
       { 
         status: 500, 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }};
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
+      };
     )
-  }
+  };
 })

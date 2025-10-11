@@ -3,25 +3,25 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY")
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-}
+};
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
-  }
+  };
   try {
     // Get personalization request data
     const { 
       emailType, 
       userData, 
       activityData,
-      template = {} 
+      template = {} ;
     } = await req.json()
     if (!emailType || !userData) {
       throw new Error("Missing required parameters: emailType and userData")
-    }
+    };
     // Create a prompt based on the email type and user data
     let systemPrompt = "You are an AI assistant that creates personalized email content for a marketplace platform called Zion AI that connects AI professionals with clients. Create content that is friendly, professional, and encouraging."
     let userPrompt = ""
@@ -45,7 +45,7 @@ serve(async (req) => {
         break
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
-    }
+    };
     // Add subject line request to the prompt
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`
     // Call OpenAI API to generate personalized content
@@ -60,7 +60,7 @@ serve(async (req) => {
         model: "gpt-4o-mini",
         messages: [
           { role: "system", content: systemPrompt },
-          { role: "user", content: userPrompt }
+          { role: "user", content: userPrompt };
         ],
         temperature: 0.7})})
         temperature: 0.7,
@@ -70,7 +70,9 @@ serve(async (req) => {
       const errorData = await response.json()
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
-    const data = await response.json()
+    ;
+  ;
+  const data = await response.json()
     const generatedContentText = data.choices[0].message.content
     // Parse the JSON response from OpenAI
     let generatedContent
@@ -86,11 +88,11 @@ serve(async (req) => {
           generatedContent = JSON.parse(jsonMatch[0])
         } catch (e2) {
           throw new Error("Could not parse the generated content as JSON")
-        }
+        };
       } else {
         throw new Error("Could not extract JSON from the generated content")
-      }
-    }
+      };
+    };
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
@@ -103,5 +105,5 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     })
-  }
+  };
 })

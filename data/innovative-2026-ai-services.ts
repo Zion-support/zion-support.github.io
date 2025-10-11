@@ -4,7 +4,7 @@
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -16,27 +16,27 @@
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
   contactInfo: {,
     mobile: string
     email: string
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number,
-}
+};
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
@@ -286,7 +286,7 @@ export interface Innovative2026AIService {
   price: string
   period: string,,
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -298,27 +298,27 @@ export interface Innovative2026AIService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
   contactInfo: {,
     mobile: string
     email: string
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number,
-}
+};
 export const innovative2026AIServices: Innovative2026AIService[] = [
   // AI-Powered Business Intelligence
   {,
@@ -331,7 +331,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     features: [,
       'AI-powered data analysis and visualizationPredictive analytics and forecastingNatural language query interfaceAutomated report generationReal-time dashboard updatesCustom KPI tracking and alertsData integration from 100+ sourcesAdvanced machine learning models'
       'Collaborative workspace for teamsMobile app for on-the-go insights'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-blue-600 to-purple-700'
@@ -343,27 +343,27 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '2 hours'
     category: 'AI & Business Intelligence'
     realService: true
-    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker']
-    integrations: ['SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams']
-    useCases: ['Sales performance analysisCustomer behavior insightsMarket trend predictionOperational efficiency optimizationFinancial forecastingRisk assessment']
+    technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'];
+    integrations: ['SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'];
+    useCases: ['Sales performance analysisCustomer behavior insightsMarket trend predictionOperational efficiency optimizationFinancial forecastingRisk assessment'];
     roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.'
-    competitors: ['TableauPower BILookerQlikSisense']
+    competitors: ['TableauPower BILookerQlikSisense'];
     marketSize: '$29.9B market'
     growthRate: '220% annual growth'
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
-    }
+    };
     realImplementation: true
     implementationDetails: 'Full-stack BI platform with real-time data processing, advanced ML models, interactive dashboards, and enterprise-grade security. Includes API access and custom integrations.'
     launchDate: '2025-03-15'
     customers: 1800
     rating: 4.9
     reviews: 950,
-  }
+  };
   // AI-Powered Customer Experience Platform
   {
     id: 'ai-customer-experience-platform'
@@ -375,7 +375,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     features: [,
       'AI-powered personalization engineReal-time customer behavior analysisDynamic content optimizationPredictive customer journey mappingAutomated A/B testingMulti-channel experience orchestrationCustomer sentiment analysisPersonalized recommendations'
       'Automated customer supportCustomer lifetime value optimization'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-green-500 to-teal-600'
@@ -387,27 +387,27 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '1 day'
     category: 'AI & Customer Experience'
     realService: true
-    technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSKubernetes']
-    integrations: ['ShopifyWooCommerceMagentoSalesforceHubSpotZendeskIntercom']
-    useCases: ['Website personalizationEmail marketing optimizationProduct recommendationsCustomer support automationLoyalty program optimizationCross-selling and upselling']
+    technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSKubernetes'];
+    integrations: ['ShopifyWooCommerceMagentoSalesforceHubSpotZendeskIntercom'];
+    useCases: ['Website personalizationEmail marketing optimizationProduct recommendationsCustomer support automationLoyalty program optimizationCross-selling and upselling'];
     roi: 'Average customer sees 320% ROI within 4 months through increased conversion rates and customer lifetime value.'
-    competitors: ['OptimizelyAdobe TargetDynamic YieldEvergageMaxymiser']
+    competitors: ['OptimizelyAdobe TargetDynamic YieldEvergageMaxymiser'];
     marketSize: '$15.8B market'
     growthRate: '180% annual growth'
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
-    }
+    };
     realImplementation: true
     implementationDetails: 'Enterprise-grade CX platform with real-time personalization, advanced ML algorithms, comprehensive analytics, and seamless integrations. Includes mobile SDK and API access.'
     launchDate: '2025-04-20'
     customers: 2200
     rating: 4.8
     reviews: 1100,
-  }
+  };
   // AI-Powered Cybersecurity Suite
   {
     id: 'ai-cybersecurity-suite'
@@ -419,7 +419,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     features: [,
       'AI-powered threat detectionReal-time security monitoringAutomated incident responseBehavioral analysisVulnerability assessmentCompliance reportingSecurity awareness trainingThreat intelligence feeds'
       'Incident management dashboard24/7 security operations center'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-red-600 to-orange-600'
@@ -431,27 +431,27 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '1 week'
     category: 'AI & Cybersecurity'
     realService: true
-    technology: ['PythonTensorFlowReactNode.jsElasticsearchKafkaAWSDocker']
-    integrations: ['Active DirectoryOffice 365SlackJiraServiceNowSplunkQRadar']
-    useCases: ['Endpoint protectionNetwork security monitoringCloud securityData loss preventionCompliance managementSecurity awareness training']
+    technology: ['PythonTensorFlowReactNode.jsElasticsearchKafkaAWSDocker'];
+    integrations: ['Active DirectoryOffice 365SlackJiraServiceNowSplunkQRadar'];
+    useCases: ['Endpoint protectionNetwork security monitoringCloud securityData loss preventionCompliance managementSecurity awareness training'];
     roi: 'Average customer saves $2.4M annually through prevented security incidents and reduced response times.'
-    competitors: ['CrowdStrikeSentinelOneDarktraceCylanceCarbon Black']
+    competitors: ['CrowdStrikeSentinelOneDarktraceCylanceCarbon Black'];
     marketSize: '$173.5B market'
     growthRate: '250% annual growth'
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
-    }
+    };
     realImplementation: true
     implementationDetails: 'Enterprise-grade cybersecurity platform with advanced AI algorithms, real-time monitoring, automated response capabilities, and comprehensive reporting. Includes SOC services and 24/7 support.'
     launchDate: '2025-02-10'
     customers: 1500
     rating: 4.9
     reviews: 800,
-  }
+  };
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation-suite'
@@ -463,7 +463,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     features: [,
       'AI-powered campaign optimizationMulti-channel automationPersonalized content generationPredictive analyticsA/B testing automationLead scoring and nurturingEmail marketing automationSocial media management'
       'Marketing attributionROI tracking and optimization'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -475,27 +475,27 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '3 days'
     category: 'AI & Marketing'
     realService: true
-    technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSKubernetes']
-    integrations: ['SalesforceHubSpotMailchimpFacebook AdsGoogle AdsLinkedIn AdsShopify']
-    useCases: ['Lead generation and nurturingEmail marketing campaignsSocial media marketingContent marketingAccount-based marketingMarketing analytics']
+    technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSKubernetes'];
+    integrations: ['SalesforceHubSpotMailchimpFacebook AdsGoogle AdsLinkedIn AdsShopify'];
+    useCases: ['Lead generation and nurturingEmail marketing campaignsSocial media marketingContent marketingAccount-based marketingMarketing analytics'];
     roi: 'Average customer sees 280% ROI within 5 months through increased lead quality and conversion rates.'
-    competitors: ['HubSpotMarketoPardotActiveCampaignConvertKit']
+    competitors: ['HubSpotMarketoPardotActiveCampaignConvertKit'];
     marketSize: '$25.1B market'
     growthRate: '200% annual growth'
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
-    }
+    };
     realImplementation: true
     implementationDetails: 'Comprehensive marketing automation platform with AI-powered optimization, multi-channel capabilities, advanced analytics, and seamless integrations. Includes mobile app and API access.'
     launchDate: '2025-05-15'
     customers: 2800
     rating: 4.7
     reviews: 1400,
-  }
+  };
   // AI-Powered Sales Intelligence
   {
     id: 'ai-sales-intelligence-platform'
@@ -507,7 +507,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     features: [,
       'AI-powered prospect identificationSales forecasting and predictionLead scoring and prioritizationCompetitive intelligenceSales performance analyticsPipeline optimizationCustomer behavior analysisSales coaching recommendations'
       'Revenue optimizationIntegration with CRM systems'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-yellow-500 to-orange-600'
@@ -519,41 +519,41 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     setupTime: '2 days'
     category: 'AI & Sales'
     realService: true
-    technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSElasticsearch']
-    integrations: ['SalesforceHubSpotPipedriveZoho CRMMicrosoft DynamicsSlackMicrosoft Teams']
-    useCases: ['Lead generationProspect researchSales forecastingPipeline managementCompetitive analysisSales coaching']
+    technology: ['ReactNode.jsPythonTensorFlowPostgreSQLRedisAWSElasticsearch'];
+    integrations: ['SalesforceHubSpotPipedriveZoho CRMMicrosoft DynamicsSlackMicrosoft Teams'];
+    useCases: ['Lead generationProspect researchSales forecastingPipeline managementCompetitive analysisSales coaching'];
     roi: 'Average customer sees 350% ROI within 4 months through increased sales productivity and conversion rates.'
-    competitors: ['ZoomInfoLinkedIn Sales NavigatorDiscoverOrgClearbitRocketReach']
+    competitors: ['ZoomInfoLinkedIn Sales NavigatorDiscoverOrgClearbitRocketReach'];
     marketSize: '$18.2B market'
     growthRate: '190% annual growth'
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
-    }
+    };
     realImplementation: true
     implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
     launchDate: '2025-06-20'
     customers: 1900
     rating: 4.8
-    reviews: 950,  }
-]
-  }
-]
+    reviews: 950,  };
+];
+  };
+];
 export const getPopularAIServices = () => {
   return innovative2026AIServices.filter(service => service.popular)
-}
+};
 export const getAIServicesByCategory = (category: string) => {
   return innovative2026AIServices.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
   )
-}
+};
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovative2026AIServices.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''))
     return price >= minPrice && price <= maxPrice
   })
-}
-]
+};
+];

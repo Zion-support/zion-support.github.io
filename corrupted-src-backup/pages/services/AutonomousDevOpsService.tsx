@@ -1,4 +1,4 @@
-impo, r, t {/* TODO: Fix JSX expression */}
+impo, r, t {/* TODO: Fix JSX expression */};
 } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const AutonomousDevOpsServic, e = () => { 
@@ -16,8 +16,9 @@ const AutonomousDevOpsServic, e = () => {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s')
         />),
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e'>
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
-        <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'>
+        <Head, e, r / > {/* Hero, Sect, i, o, n */ };
+        ;
+  <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l' />
           <div, className='relative, ma, x-w-7xl, m, x-au, t, o'>
             <div, className='te, x, t-center, m, b-12'>
@@ -40,13 +41,16 @@ const AutonomousDevOpsServic, e = () => {
                   Eliminate, manual, configuration and, intervention, completely
                   Getted, Today
                   <Link, className='w-5 h-5' />
-        {/* Key, Benef, i, t, s */}
-        <section, classNam, e = 'py-20, p, x-4'>
+        {/* Key, Benef, i, t, s */};
+        ;
+  <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
-const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
-        <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'>
+const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */};
+        ;
+  <Head, e, r / > {/* Hero, Sect, i, o, n */ };
+        ;
+  <section, classNam, e = 'relative, p, t-32, p, b-20, p, x-4'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l' />
           <div, className='relative, ma, x-w-7xl, m, x-au, t, o'>
             <div, className='te, x, t-center, m, b-12'>
@@ -66,8 +70,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                   Eliminate, manual, configuration and, intervention, completely
                   Getted, Today
                   <Link, className='w-5 h-5' />
-        {/* Key, Benef, i, t, s */}
-        <section, classNam, e = 'py-20, p, x-4'>
+        {/* Key, Benef, i, t, s */};
+        ;
+  <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
               Transform, Your, DevOps Operatio, n, s
@@ -104,8 +109,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-3'>Zero, Manual, Work
                 <p, className='te, x, t-gr, a, y-3, 0, 0'>
                   Eliminate, manual, configuration and, intervention, completely
-        {/* Core, Featu, r, e, s */}
-        <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'>
+        {/* Core, Featu, r, e, s */};
+        ;
+  <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
         <section, classNam, e = 'py-20, p, x-4, b, g-bla, c, k/30'>
@@ -159,8 +165,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                     <span, className='te, x, t-oran, g, e-400, m, t-1'>•
                     <sp, a, n>
                       Re, a, l-time, cost, optimization reducing, cloud, spend by, 4, 0-60%
-        {/* Implementation, Timel, i, n, e */}
-        <section, classNam, e = 'py-20, p, x-4'>
+        {/* Implementation, Timel, i, n, e */};
+        ;
+  <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-7xl, m, x-au, t, o'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16'>
         <section, classNam, e = 'py-20, p, x-4'>
@@ -219,8 +226,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                         <Zap, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
                     Schedule, Consultatio, n
                     <Link, classNam, e='w-5 h-5' />
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, p, x-4'>
+        {/* CTA, Sect, i, o, n */};
+        ;
+  <section, classNam, e = 'py-20, p, x-4'>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
@@ -232,8 +240,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                         <Zap, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
                     Schedule, Consultatio, n
                     <Link, className='w-5 h-5' />
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, p, x-4'>
+        {/* CTA, Sect, i, o, n */};
+        ;
+  <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
@@ -251,8 +260,9 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                         <Zap, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
                     Schedule, Consultatio, n
                     <Link, classNam, e='w-5 h-5' />
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, p, x-4'>
+        {/* CTA, Sect, i, o, n */};
+        ;
+  <section, classNam, e = 'py-20, p, x-4'>
           <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
@@ -263,10 +273,12 @@ const AutonomousDevOpsServic, e = () => {/* TODO: Fix JSX expression */}
                         <Zap, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
                     Schedule, Consultatio, n
                     <Link, className='w-5 h-5' />
-        {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, p, x-4'>
+        {/* CTA, Sect, i, o, n */};
+        ;
+  <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
                 <Link, className='w-5 h-5' />
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>
+};
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>

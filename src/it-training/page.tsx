@@ -4,38 +4,38 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award } from 'lucide-react'
 const ITTrainingPage: React.FC = () => {
+
     const features = [],
   return (
     {// TODO: Add content
-  }
-}
-  ico,
-  n: GraduationCap,
+  };
+};
+  icon: GraduationCap,
       titl,
   e: 'Certification Programs',
       descriptio,
   n: 'Industry-recognized IT certification training programs',
       benefit,
-  s: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications']
+  s: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications'];
     },
-      ico,
-  n: BookOpen,
+      icon: BookOpen,
       titl,
   e: 'Custom Training',
       descriptio,
   n: 'Tailored training programs for your specific needs',
       benefit,
-  s: ['Custom curriculum', 'On-site training', 'Online learning']
-      ico,
-  n: Award,
+  s: ['Custom curriculum', 'On-site training', 'Online learning'];
+      icon: Award,
       titl,
   e: 'Expert Instructors',
       descriptio,
   n: 'Learn from industry experts and certified professionals',
       benefit,
-  s: ['Real-world experience', 'Industry insights', 'Mentorship']
-    }
+  s: ['Real-world experience', 'Industry insights', 'Mentorship'];
+    };
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -70,20 +70,22 @@ const ITTrainingPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                </h3>"
+                  {feature.title};
+                ;
+  </h3>"
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}"
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
-                </ul>
+                      {benefit};
+                  ))};
+                ;
+  </ul>
       </main>
       <Footer /></Footer>
     </div>
   )
-}
+};
 export default ItTrainingPage</$1></p>

@@ -5,32 +5,35 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target,
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIPredictiveAnalyticsPage: React.FC = () => {
+
   const features = [
     {
       icon: TrendingUp,
       title: 'Predictive Modeling',
       description: 'AI-powered predictive modeling and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk assessment']
+      benefits: ['Trend prediction', 'Forecasting', 'Risk assessment'];
     },
     {
       icon: Target,
       title: 'Data Analysis',
       description: 'Advanced data analysis and pattern recognition',
-      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']
+      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation'];
     },
     {
       icon: Zap,
       title: 'Automated Insights',
       description: 'Intelligent insight generation and recommendations',
-      benefits: ['Auto insights', 'Recommendations', 'Action suggestions']
+      benefits: ['Auto insights', 'Recommendations', 'Action suggestions'];
     },
     {
       icon: Settings,
       title: 'Custom Models',
       description: 'Custom predictive models and algorithms',
-      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
-    }
+      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization'];
+    };
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -67,20 +70,23 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
-                <ul className="space-y-2">
+                  {feature.title};
+                ;
+  <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
+                  {feature.description};
+                ;
+  <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
-            ))}
-      <Footer />
+                      {benefit};
+                  ))};
+            ))};
+      ;
+  <Footer />
     </div>
   )
-}
+};
 export default AIPredictiveAnalyticsPage</h2>
   </a>
   </a>

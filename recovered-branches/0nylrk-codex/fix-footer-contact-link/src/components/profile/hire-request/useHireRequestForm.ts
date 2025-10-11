@@ -12,8 +12,8 @@ interface UseHireRequestFormProps {
     name?: string
     email?: string
     id?: string
-  }
-}
+  };
+};
 export interface FormValues {
   requesterName: string
   requesterEmail: string
@@ -21,7 +21,7 @@ export interface FormValues {
   timeline: string
   budgetMin: number
   budgetMax: number
-}
+};
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { submitHireRequest } = useHireRequest()
@@ -35,7 +35,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     budgetMax: z.number().min(1, "Budget maximum is required")
   }).refine(data => data.budgetMax >= data.budgetMin, {
     message: "Maximum budget must be greater than or equal to minimum budget",
-    path: ["budgetMax"]
+    path: ["budgetMax"];
   })
   // Initialize the form
   const form = useForm<FormValues>({
@@ -47,7 +47,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       timeline: "",
       budgetMin: talent.hourly_rate || 25,
       budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
-    }
+    };
   })
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
@@ -70,21 +70,25 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
-        }
+        };
       }
-      const result = await submitHireRequest(requestData)
+      ;
+  ;
+  const result = await submitHireRequest(requestData)
       if (result.success) {
         onClose()
-      }
+      };
     } catch (error) {
       console.error("Error submitting hire request:", error)
     } finally {
       setIsSubmitting(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     form,
     isSubmitting,
     onSubmit
-  }
-}
+  };
+};
+;

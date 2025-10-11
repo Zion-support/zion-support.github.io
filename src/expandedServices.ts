@@ -7,16 +7,16 @@ export interface ExpandedService {
   price: number
   currency: string
   pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based'
-  features: string[]
-  benefits: string[]
-  useCases: string[]
-  targetAudience: string[]
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
   pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based'
-  features: string[]
-  benefits: string[]
+  features: string[];
+  benefits: string[];
   marketPrice: string
   deliveryTime: string
-  tags: string[]
+  tags: string[];
   author: {
     name: string
     id: string
@@ -104,8 +104,8 @@ export const AI_SERVICES: ProductListing[] = [
   isNew?: boolean
   isFeatured?: boolean
     email?: string
-  }
-  images: string[]
+  };
+  images: string[];
   createdAt: string
   rating: number
   reviewCount: number
@@ -113,12 +113,12 @@ export const AI_SERVICES: ProductListing[] = [
   website?: string
   documentation?: string
   support?: string
-  integration?: string[]
-  compliance?: string[]
+  integration?: string[];
+  compliance?: string[];
   sla?: string
     verified: boolean
-  }
-  images: string[]
+  };
+  images: string[];
   createdAt: string
   aiScore: number
   rating: number
@@ -127,8 +127,8 @@ export const AI_SERVICES: ProductListing[] = [
     phone: string
     email: string
     website: string
-  }
-}
+  };
+};
 export const EXPANDED_SERVICES: ExpandedService[] = [
   // AI & Machine Learning Services
   {
@@ -274,7 +274,7 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-ml-002",
@@ -317,7 +317,7 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-ml-003",
@@ -360,7 +360,7 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Cloud & DevOps Services
   {
@@ -716,8 +716,8 @@ export const EXPANDED_SERVICES: ExpandedService[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 95
-  }
-]
+  };
+];
 // Cybersecurity Services
 export const CYBERSECURITY_SERVICES: ProductListing[] = [
   {
@@ -996,8 +996,8 @@ export const CYBERSECURITY_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 91
-  }
-]
+  };
+];
 // Cloud & DevOps Services
 export const CLOUD_DEVOPS_SERVICES: ProductListing[] = [
   {
@@ -1066,8 +1066,8 @@ export const CLOUD_DEVOPS_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 89
-  }
-]
+  };
+];
 // Data & Analytics Services
 export const DATA_ANALYTICS_SERVICES: ProductListing[] = [
   {
@@ -1114,8 +1114,8 @@ export const DATA_ANALYTICS_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 90
-  }
-]
+  };
+];
 // Digital Transformation Services
 export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [
   {
@@ -1163,8 +1163,8 @@ export const DIGITAL_TRANSFORMATION_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "8-12 Weeks",
     aiScore: 94
-  }
-]
+  };
+];
 // IoT & Edge Computing Services
 export const IOT_EDGE_SERVICES: ProductListing[] = [
   {
@@ -1210,8 +1210,8 @@ export const IOT_EDGE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 88
-  }
-]
+  };
+];
 // Blockchain & Web3 Services
 export const BLOCKCHAIN_WEB3_SERVICES: ProductListing[] = [
   {
@@ -1258,8 +1258,8 @@ export const BLOCKCHAIN_WEB3_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks",
     aiScore: 90
-  }
-]
+  };
+];
 // All services combined
 export const ALL_EXPANDED_SERVICES: ProductListing[] = [
   ...AI_SERVICES,
@@ -1269,7 +1269,7 @@ export const ALL_EXPANDED_SERVICES: ProductListing[] = [
   ...DIGITAL_TRANSFORMATION_SERVICES,
   ...IOT_EDGE_SERVICES,
   ...BLOCKCHAIN_WEB3_SERVICES
-]
+];
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
   { label: 'AI & Machine Learning', value: 'ai-ml' },
@@ -1289,7 +1289,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
     aiScore: 88,
     availability: "Available",
     author: { name: "Web Developer" },
-    tags: ["React", "Node.js", "TypeScript"]
+    tags: ["React", "Node.js", "TypeScript"];
   },
   {
     id: 3,
@@ -1305,9 +1305,9 @@ export const EXPANDED_SERVICE_CATEGORIES = [
     aiScore: 92,
     availability: "Available",
     author: { name: "Mobile Developer" },
-    tags: ["iOS", "Android", "React Native"]
-  }
-]
+    tags: ["iOS", "Android", "React Native"];
+  };
+];
 export const SERVICE_CATEGORIES: Category[] = [
   {
     id: "ai",
@@ -1329,35 +1329,35 @@ export const SERVICE_CATEGORIES: Category[] = [
     icon: "📱",
     description: "iOS and Android apps",
     services: EXPANDED_SERVICES.filter(s => s.category === "Mobile")
-  }
-]
+  };
+];
 export const CONTACT_INFO = {
   email: "contact@ziontechgroup.com",
   phone: "+1 (555) 123-4567",
   address: "123 Tech Street, Innovation City, IC 12345",
   mobile: "+1 (555) 123-4567",
   website: "https://ziontechgroup.com"
-}
+};
 export const PRICING_TIERS = [
   {
     name: "Starter",
     price: "$99/month",
     description: "Perfect for small teams",
-    features: ["Basic support", "Standard features", "5 projects"]
+    features: ["Basic support", "Standard features", "5 projects"];
   },
   {
     name: "Professional",
     price: "$299/month",
     description: "Ideal for growing businesses",
-    features: ["Priority support", "Advanced features", "Unlimited projects"]
+    features: ["Priority support", "Advanced features", "Unlimited projects"];
   },
   {
     name: "Enterprise",
     price: "Custom",
     description: "Tailored for large organizations",
-    features: ["Dedicated support", "Custom features", "White-label options"]
-  }
-]
+    features: ["Dedicated support", "Custom features", "White-label options"];
+  };
+];
     id: "digital-workplace",
     title: "Digital Workplace Transformation",
     description: "Complete digital workplace solution that modernizes employee experience, improves collaboration, and increases productivity through intelligent digital tools.",
@@ -1403,7 +1403,7 @@ export const PRICING_TIERS = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "data-analytics-002",
@@ -1446,7 +1446,7 @@ export const PRICING_TIERS = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "data-analytics-003",
@@ -1588,7 +1588,7 @@ export const PRICING_TIERS = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Web & Mobile Development
   {
@@ -1794,8 +1794,8 @@ export const PRICING_TIERS = [
     location: "Global",
     availability: "12-16 Weeks",
     aiScore: 94
-  }
-]
+  };
+];
 // Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
   { label: 'AI Development', value: 'ai-development' },
@@ -1809,59 +1809,59 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   { label: 'IoT', value: 'iot' },
   { label: 'Hardware', value: 'hardware' },
   { label: 'Business Automation', value: 'business-automation' },
-  { label: 'Business Solutions', value: 'business-solutions' }
-]
+  { label: 'Business Solutions', value: 'business-solutions' };
+];
 export const FEATURED_SERVICES = EXPANDED_SERVICES.filter(s => s.isFeatured)
 export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew)
     id: "ai-services",
     name: "AI Services",
     description: "Artificial Intelligence and Machine Learning solutions",
     icon: "🤖",
-    subcategories: ["Chatbots & Conversational AI", "Content Generation", "Data Analytics", "Computer Vision", "Natural Language Processing"]
+    subcategories: ["Chatbots & Conversational AI", "Content Generation", "Data Analytics", "Computer Vision", "Natural Language Processing"];
   },
   {
     id: "cloud-services",
     name: "Cloud Services",
     description: "Cloud infrastructure, migration, and management",
     icon: "☁️",
-    subcategories: ["Migration & Consulting", "DevOps & Automation", "Infrastructure Management", "Cost Optimization", "Multi-cloud Strategy"]
+    subcategories: ["Migration & Consulting", "DevOps & Automation", "Infrastructure Management", "Cost Optimization", "Multi-cloud Strategy"];
   },
   {
     id: "security-services",
     name: "Security Services",
     description: "Cybersecurity, compliance, and risk management",
     icon: "🔒",
-    subcategories: ["Cybersecurity", "Compliance", "Penetration Testing", "Security Audits", "Incident Response"]
+    subcategories: ["Cybersecurity", "Compliance", "Penetration Testing", "Security Audits", "Incident Response"];
   },
   {
     id: "consulting-services",
     name: "Consulting Services",
     description: "Strategic technology consulting and digital transformation",
     icon: "💼",
-    subcategories: ["Digital Transformation", "Technology Strategy", "Process Optimization", "Change Management", "ROI Analysis"]
+    subcategories: ["Digital Transformation", "Technology Strategy", "Process Optimization", "Change Management", "ROI Analysis"];
   },
   {
     id: "iot-services",
     name: "IoT Services",
     description: "Internet of Things platforms and solutions",
     icon: "🌐",
-    subcategories: ["Platform & Management", "Device Integration", "Data Analytics", "Edge Computing", "Smart Solutions"]
+    subcategories: ["Platform & Management", "Device Integration", "Data Analytics", "Edge Computing", "Smart Solutions"];
   },
   {
     id: "blockchain-services",
     name: "Blockchain Services",
     description: "Blockchain development and Web3 solutions",
     icon: "⛓️",
-    subcategories: ["Development & Consulting", "Smart Contracts", "DeFi Applications", "Supply Chain", "Security Auditing"]
+    subcategories: ["Development & Consulting", "Smart Contracts", "DeFi Applications", "Supply Chain", "Security Auditing"];
   },
   {
     id: "data-services",
     name: "Data Services",
     description: "Data science, analytics, and business intelligence",
     icon: "📊",
-    subcategories: ["Data Science & ML", "Business Intelligence", "Data Engineering", "Data Governance", "Predictive Analytics"]
-  }
-]
+    subcategories: ["Data Science & ML", "Business Intelligence", "Data Engineering", "Data Governance", "Predictive Analytics"];
+  };
+];
     name: "AI & Machine Learning",
     description: "Advanced artificial intelligence and machine learning solutions",
     icon: "🤖",
@@ -1908,29 +1908,29 @@ export const NEW_SERVICES = EXPANDED_SERVICES.filter(s => s.isNew)
     description: "Workflow automation and business process optimization",
     icon: "⚙️",
     count: 2
-  }
-]
+  };
+];
 export const PRICING_TIERS = [
   {
     name: "Starter",
     price: "$1,000 - $3,000",
     description: "Basic services for small businesses",
-    features: ["Basic functionality", "Standard support", "Documentation"]
+    features: ["Basic functionality", "Standard support", "Documentation"];
   },
   {
     name: "Professional",
     price: "$3,000 - $8,000",
     description: "Advanced features for growing businesses",
-    features: ["Advanced functionality", "Priority support", "Custom integrations", "Training"]
+    features: ["Advanced functionality", "Priority support", "Custom integrations", "Training"];
   },
   {
     name: "Enterprise",
     price: "$8,000 - $25,000+",
     description: "Full-featured solutions for large organizations",
-    features: ["Full functionality", "24/7 support", "Custom development", "Dedicated team", "SLA guarantees"]
-  }
-]
+    features: ["Full functionality", "24/7 support", "Custom development", "Dedicated team", "SLA guarantees"];
+  };
+];
   { label: 'Digital Transformation', value: 'digital-transformation' },
   { label: 'IoT & Edge Computing', value: 'iot-edge' },
-  { label: 'Blockchain & Web3', value: 'blockchain-web3' }
-]
+  { label: 'Blockchain & Web3', value: 'blockchain-web3' };
+];

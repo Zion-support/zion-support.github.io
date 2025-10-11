@@ -3,17 +3,19 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
 import { Resend } from "npm:resend@2.0.0"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 }
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
+;
+  ;
+  const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || ""
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || ""
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
-  }
+  };
   try {
     // Use service role key for admin privileges
     const supabase = createClient(supabaseUrl, supabaseServiceKey)
@@ -33,7 +35,7 @@ serve(async (req) => {
       .is('reminder_sent', null)
     if (error) throw error
     console.log(`Found ${interviews?.length || 0} interviews to send reminders for`)
-    const results = []
+    const results = [];
     if (interviews && interviews.length > 0) {
       for (const interview of interviews) {
         // Send email to client
@@ -49,18 +51,21 @@ serve(async (req) => {
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()};
+  </p>
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
-                <p>Please be ready on time!</p>
+                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link};
+  </a></p>` : ''};
+                ;
+  <p>Please be ready on time!</p>
               `})
               `,
             })
             results.push(`Reminder sent to client: ${clientEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to client ${clientEmail}:`, emailError)
-          }
-        }
+          };
+        };
         // Send email to talent
         const talentEmail = interview.talents?.email
         const clientName = interview.clients?.display_name || "Client"
@@ -73,26 +78,30 @@ serve(async (req) => {
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()};
+  </p>
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
-                <p>Please be ready on time!</p>
+                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link};
+  </a></p>` : ''};
+                ;
+  <p>Please be ready on time!</p>
               `})
               `,
             })
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
-          }
-        }
+          };
+        };
         // Mark the interview as reminder sent
         await supabase
           .from('interviews')
           .update({ reminder_sent: new Date().toISOString() })
           .eq('id', interview.id)
-      }
-    }
-    return new Response(JSON.stringify({ success: true, results }), {
+      };
+    };
+    ;
+  return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
       status: 200,
@@ -104,5 +113,5 @@ serve(async (req) => {
       status: 500})
       status: 500,
     })
-  }
+  };
 })

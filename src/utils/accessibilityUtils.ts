@@ -13,73 +13,73 @@ export interface AccessibilityConfig {
   enableARIALabels: boolean
   enableReducedMotion: boolean
   enableVoiceNavigation: boolean
-}
-
+};
+;
 export class AccessibilityUtils {
   private config: AccessibilityConfig
-  private observers: MutationObserver[] = []
-  private eventListeners: Array<{element: Element, event: string, handler: EventListener}> = []
+  private observers: MutationObserver[] = [];
+  private eventListeners: Array<{element: Element, event: string, handler: EventListener}> = [];
   constructor(config: AccessibilityConfig) {
     this.config = config
     this.initialize()
-  }
-
+  };
+;
   private initialize() {
     if (typeof window === 'undefined') return
     if (this.config.enableKeyboardNavigation) {
       this.setupKeyboardNavigation()
-    }
-
+    };
+;
     if (this.config.enableScreenReaderSupport) {
       this.setupScreenReaderSupport()
-    }
-
+    };
+;
     if (this.config.enableHighContrast) {
       this.setupHighContrastSupport()
-    }
-
+    };
+;
     if (this.config.enableFocusManagement) {
       this.setupFocusManagement()
-    }
-
+    };
+;
     if (this.config.enableSkipLinks) {
       this.setupSkipLinks()
-    }
-
+    };
+;
     if (this.config.enableARIALabels) {
       this.setupARIALabels()
-    }
-
+    };
+;
     if (this.config.enableReducedMotion) {
       this.setupReducedMotionSupport()
-    }
-
+    };
+;
     if (this.config.enableVoiceNavigation) {
       this.setupVoiceNavigation()
-    }
-  }
-
+    };
+  };
+;
   private setupKeyboardNavigation() {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Handle escape key
       if (event.key === 'Escape') {
         this.handleEscapeKey()
-      }
-
+      };
+;
       // Handle arrow keys for navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         this.handleArrowKeyNavigation(event)
-      }
-
+      };
+;
       // Handle tab navigation
       if (event.key === 'Tab') {
         this.handleTabNavigation()
-      }
-    }
+      };
+    };
     document.addEventListener('keydown', handleKeyDown)
     this.eventListeners.push({ element: document, event: 'keydown', handler: handleKeyDown })
-  }
-
+  };
+;
   private setupScreenReaderSupport() {
     // Add live region for announcements
     const liveRegion = document.createElement('div')
@@ -90,8 +90,8 @@ export class AccessibilityUtils {
     document.body.appendChild(liveRegion)
     // Add screen reader only content
     this.addScreenReaderOnlyContent()
-  }
-
+  };
+;
   private setupHighContrastSupport() {
     const mediaQuery = window.matchMedia('(prefers-contrast: high)')
     const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -101,15 +101,15 @@ export class AccessibilityUtils {
       } else {
         document.body.classList.remove('high-contrast')
         this.announceToScreenReader('High contrast mode disabled')
-      }
-    }
+      };
+    };
     if (mediaQuery.matches) {
       document.body.classList.add('high-contrast')
-    }
-
+    };
+;
     mediaQuery.addEventListener('change', handleContrastChange)
-  }
-
+  };
+;
   private setupFocusManagement() {
     // Add focus indicators
     const style = document.createElement('style')
@@ -117,15 +117,15 @@ export class AccessibilityUtils {
       .keyboard-navigation *:focus {
         outline: 2px solid #3b82f6
         outline-offset: 2px
-      }
-      
+      };
+      ;
       .keyboard-navigation button:focus,
       .keyboard-navigation a:focus {
         outline: 2px solid #00ffff
         outline-offset: 2px
         box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.2)
-      }
-      
+      };
+      ;
       .sr-only {
         position: absolute
         width: 1px
@@ -136,8 +136,8 @@ export class AccessibilityUtils {
         clip: rect(0, 0, 0, 0)
         white-space: nowrap
         border: 0
-      }
-      
+      };
+      ;
       .sr-only:focus {
         position: static
         width: auto
@@ -147,17 +147,17 @@ export class AccessibilityUtils {
         overflow: visible
         clip: auto
         white-space: normal
-      }
-
+      };
+;
       .high-contrast {
         filter: contrast(150%) brightness(120%)
-      }
-
+      };
+;
       .reduced-motion * {
         animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
         transition-duration: 0.01ms !important
-      }
+      };
     `
     document.head.appendChild(style)
     // Track focus changes
@@ -167,14 +167,14 @@ export class AccessibilityUtils {
     document.addEventListener('focusout', (event) => {
       this.handleFocusOut(event)
     })
-  }
-
+  };
+;
   private setupSkipLinks() {
     const skipLinks = [
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
-      { href: '#footer', text: 'Skip to footer' }
-    ]
+      { href: '#footer', text: 'Skip to footer' };
+    ];
     skipLinks.forEach(link => {
       const skipLink = document.createElement('a')
       skipLink.href = link.href
@@ -183,8 +183,8 @@ export class AccessibilityUtils {
       skipLink.setAttribute('tabindex', '1')
       document.body.insertBefore(skipLink, document.body.firstChild)
     })
-  }
-
+  };
+;
   private setupARIALabels() {
     // Add ARIA landmarks
     this.addARIALandmarks()
@@ -192,8 +192,8 @@ export class AccessibilityUtils {
     this.addARIALabelsToElements()
     // Monitor for new elements
     this.observeNewElements()
-  }
-
+  };
+;
   private setupReducedMotionSupport() {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const handleMotionChange = (e: MediaQueryListEvent) => {
@@ -203,34 +203,34 @@ export class AccessibilityUtils {
       } else {
         document.body.classList.remove('reduced-motion')
         this.announceToScreenReader('Reduced motion mode disabled')
-      }
-    }
+      };
+    };
     if (mediaQuery.matches) {
       document.body.classList.add('reduced-motion')
-    }
-
+    };
+;
     mediaQuery.addEventListener('change', handleMotionChange)
-  }
-
+  };
+;
   private setupVoiceNavigation() {
     if ('speechSynthesis' in window) {
       // Add voice navigation controls
       this.addVoiceNavigationControls()
-    }
-  }
-
+    };
+  };
+;
   private handleEscapeKey() {
     // Close any open modals, dropdowns, or menus
     const activeElement = document.activeElement as HTMLElement
     if (activeElement && activeElement.blur) {
       activeElement.blur()
-    }
-
+    };
+;
     // Trigger escape handlers on custom elements
     const escapeEvent = new CustomEvent('accessibility-escape')
     document.dispatchEvent(escapeEvent)
-  }
-
+  };
+;
   private handleArrowKeyNavigation(event: KeyboardEvent) {
     const focusableElements = document.querySelectorAll(
       'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, [tabindex]:not([tabindex="-1"])'
@@ -242,52 +242,52 @@ export class AccessibilityUtils {
         : Math.max(currentIndex - 1, 0)
       (focusableElements[nextIndex] as HTMLElement)?.focus()
       event.preventDefault()
-    }
-  }
-
+    };
+  };
+;
   private handleTabNavigation() {
     document.body.classList.add('keyboard-navigation')
-  }
-
+  };
+;
   private handleFocusIn(event: FocusEvent) {
     const target = event.target as HTMLElement
     if (target) {
       this.announceToScreenReader(`Focused on ${this.getElementDescription(target)}`)
-    }
-  }
-
+    };
+  };
+;
   private handleFocusOut(event: FocusEvent) {
     // Handle focus out if needed
-  }
-
+  };
+;
   private addScreenReaderOnlyContent() {
     // Add screen reader only content for better context
     const main = document.querySelector('main')
     if (main && !main.getAttribute('aria-label')) {
       main.setAttribute('aria-label', 'Main content area')
-    }
-
+    };
+;
     // Add landmark roles
     this.addARIALandmarks()
-  }
-
+  };
+;
   private addARIALandmarks() {
     const landmarks = [
       { selector: 'nav', role: 'navigation', label: 'Main navigation' },
       { selector: 'main', role: 'main', label: 'Main content' },
       { selector: 'footer', role: 'contentinfo', label: 'Footer' },
       { selector: 'aside', role: 'complementary', label: 'Sidebar' },
-      { selector: 'header', role: 'banner', label: 'Page header' }
-    ]
+      { selector: 'header', role: 'banner', label: 'Page header' };
+    ];
     landmarks.forEach(landmark => {
       const element = document.querySelector(landmark.selector)
       if (element && !element.getAttribute('role')) {
         element.setAttribute('role', landmark.role)
         element.setAttribute('aria-label', landmark.label)
-      }
+      };
     })
-  }
-
+  };
+;
   private addARIALabelsToElements() {
     // Add ARIA labels to buttons without text
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
@@ -295,7 +295,7 @@ export class AccessibilityUtils {
       const icon = button.querySelector('svg')
       if (icon && !button.textContent?.trim()) {
         button.setAttribute('aria-label', `Button ${index + 1}`)
-      }
+      };
     })
     // Add ARIA labels to images without alt text
     const images = document.querySelectorAll('img:not([alt])')
@@ -308,17 +308,17 @@ export class AccessibilityUtils {
       const label = document.querySelector(`label[for="${input.id}"]`)
       if (label) {
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`)
-      }
+      };
     })
-  }
-
+  };
+;
   private observeNewElements() {
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
           if (node.nodeType === Node.ELEMENT_NODE) {
             this.addARIALabelsToElement(node as Element)
-          }
+          };
         })
       })
     })
@@ -327,22 +327,22 @@ export class AccessibilityUtils {
       subtree: true
     })
     this.observers.push(observer)
-  }
-
+  };
+;
   private addARIALabelsToElement(element: Element) {
     // Add ARIA labels to new elements
     if (element.tagName === 'BUTTON' && !element.getAttribute('aria-label')) {
       const icon = element.querySelector('svg')
       if (icon && !element.textContent?.trim()) {
         element.setAttribute('aria-label', 'Button')
-      }
-    }
-
+      };
+    };
+;
     if (element.tagName === 'IMG' && !element.getAttribute('alt')) {
       element.setAttribute('alt', 'Image')
-    }
-  }
-
+    };
+  };
+;
   private addVoiceNavigationControls() {
     const voiceControls = document.createElement('div')
     voiceControls.className = 'voice-controls sr-only'
@@ -356,36 +356,37 @@ export class AccessibilityUtils {
     const stopButton = document.getElementById('voice-stop')
     if (readButton) {
       readButton.addEventListener('click', () => this.readPageContent())
-    }
-
+    };
+;
     if (stopButton) {
       stopButton.addEventListener('click', () => this.stopReading())
-    }
-  }
-
+    };
+  };
+;
   private readPageContent() {
-    if ('speechSynthesis' in window) {
-      const content = document.querySelector('main')?.textContent || ''
+    if ('speechSynthesis' in window) {}
+      ;
+  const content = document.querySelector('main')?.textContent || ''
       const utterance = new SpeechSynthesisUtterance(content)
       utterance.rate = 0.8
       utterance.pitch = 1
       speechSynthesis.speak(utterance)
-    }
-  }
-
+    };
+  };
+;
   private stopReading() {
     if ('speechSynthesis' in window) {
       speechSynthesis.cancel()
-    }
-  }
-
+    };
+  };
+;
   private announceToScreenReader(message: string) {
     const liveRegion = document.getElementById('accessibility-announcements')
     if (liveRegion) {
       liveRegion.textContent = message
-    }
-  }
-
+    };
+  };
+;
   private getElementDescription(element: HTMLElement): string {
     const tagName = element.tagName.toLowerCase()
     const text = element.textContent?.trim() || ''
@@ -395,16 +396,16 @@ export class AccessibilityUtils {
     if (title) return title
     if (text) return `${tagName}: ${text}`
     return tagName
-  }
-
+  };
+;
   public announce(message: string) {
     this.announceToScreenReader(message)
-  }
-
+  };
+;
   public setFocus(element: HTMLElement) {
     element.focus()
-  }
-
+  };
+;
   public trapFocus(container: HTMLElement) {
     const focusableElements = container.querySelectorAll(
       'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, [tabindex]:not([tabindex="-1"])'
@@ -417,21 +418,21 @@ export class AccessibilityUtils {
           if (document.activeElement === firstElement) {
             lastElement.focus()
             e.preventDefault()
-          }
+          };
         } else {
           if (document.activeElement === lastElement) {
             firstElement.focus()
             e.preventDefault()
-          }
-        }
-      }
-    }
+          };
+        };
+      };
+    };
     container.addEventListener('keydown', handleTabKey)
     return () => {
       container.removeEventListener('keydown', handleTabKey)
-    }
-  }
-
+    };
+  };
+;
   public cleanup() {
     // Remove event listeners
     this.eventListeners.forEach(({ element, event, handler }) => {
@@ -440,9 +441,9 @@ export class AccessibilityUtils {
     // Disconnect observers
     this.observers.forEach(observer => observer.disconnect())
     // Clear arrays
-    this.eventListeners = []
-    this.observers = []
-  }
-}
-
+    this.eventListeners = [];
+    this.observers = [];
+  };
+};
+;
 export default AccessibilityUtils

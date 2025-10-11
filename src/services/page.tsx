@@ -7,6 +7,7 @@ import SEOOptimizer from '../components/SEOOptimizer';
 import { microSaasServices, aiServices, itServices, specializedServices } from '../data/2025-comprehensive-real-services-enhanced';
 
 const ServicesPage: React.FC = () => {
+
   const aiServicesData = aiServices.map(service => ({
     icon: Brain,
     title: service.name,
@@ -71,8 +72,9 @@ const ServicesPage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
@@ -90,8 +92,9 @@ const ServicesPage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
@@ -107,8 +110,9 @@ const ServicesPage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 

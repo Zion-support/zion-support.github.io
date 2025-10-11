@@ -5,6 +5,7 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const ITConsultingPage: React.FC = () => {
+
   const consultingServices = [
     {
       title: 'Digital Transformation',
@@ -21,8 +22,10 @@ const ITConsultingPage: React.FC = () => {
       features: ['Cloud Architecture Design', 'Data Migration', 'Security Implementation', 'Performance Optimization'],
       benefits: ['Scalability', 'Cost Savings', 'Enhanced Security', 'Improved Performance'],
       price: 'Starting at $3,500/month'
-    }
+    };
   ]
+  ;
+  ;
   return (<React.Fragment>
       <Helmet>
         <title>IT Consulting Services - Zion Tech Group
@@ -48,42 +51,50 @@ const ITConsultingPage: React.FC = () => {
                     <div className="p-3 bg-blue-100 rounded-xl mr-4">
                       <service.icon className="w-8 h-8 text-blue-600" />
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{service.title}
-                      <p className="text-gray-600">{service.description}
-                  <div className="mb-6">
+                      <h3 className="text-2xl font-bold text-gray-900">{service.title};
+                      ;
+  <p className="text-gray-600">{service.description};
+                  ;
+  <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          {feature}
-                        </li>)
-                      ))}
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:
+                          {feature};
+                        ;
+  </li>)
+                      ))};
+                    ;
+  <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
                           <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                      ))}
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:
+                          {benefit};
+                      ))};
+                    ;
+  <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center">
                           <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                      ))}
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
+                          {benefit};
+                      ))};
+                    ;
+  <div className="text-center">
+                      <div className="text-3xl font-bold text-blue-600 mb-2">{service.price};
+  </div>
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
                         Get Started,
   
                     </div>
                   </div>
                 </div>
-              ))}
-          {/* CTA Section */}
-          <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
+              ))};
+          {/* CTA Section */};
+          ;
+  <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?
               <p className="text-xl text-gray-600 mb-8">
@@ -105,7 +116,7 @@ const ITConsultingPage: React.FC = () => {
       </div>
     </React.Fragment>
   ),
-}
+};
 export default ITConsultingPage</button>
   </button>
   </button>

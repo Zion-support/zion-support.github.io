@@ -20,8 +20,8 @@ async function fetchJson(url: string) {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"))
 function readJson(p: string) {
@@ -31,15 +31,15 @@ function readJson(p: string) {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2))
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -54,13 +54,18 @@ export default async function handler(req, res) {
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true })
-    }
+    };
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`
     const transfersJson = await fetchJson(transfersUrl)
     const txs = transfersJson?.result || []
-    const holderToDelta: Record<string, bigint> = {}
-    const entries = Object && Object.entries(holderToDelta)
+    
+  ;
+  ;
+  const holderToDelta: Record<string, bigint> = {}
+    ;
+  ;
+  const entries = Object && Object.entries(holderToDelta)
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10)
@@ -79,7 +84,7 @@ export default async function handler(req, res) {
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0,
     }))
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
-    const activeProposals: any[] = []
+    const activeProposals: any[] = [];
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
         .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
         .filter(Boolean),
@@ -98,7 +103,7 @@ export default async function handler(req, res) {
       topHolders
       activeProposals
       governanceParticipationRate: participationRate
-    }
+    };
     writeJson(cachePath, result)
   } catch (e: any) {
     return res
@@ -109,10 +114,12 @@ export default async function handler(req, res) {
       } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
-const config_path = path.join (process.cwd (), "data", "dao", "config.json")
+;
+  ;
+  const config_path = path.join (process.cwd (), "data", "dao", "config.json")
 const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json")
 async /**
  * fetch_json - Function description
@@ -121,46 +128,56 @@ function fetch_json() {
   const resp = await fetch (url)
   if (throw new Error (`HTTP ${resp.status}`)) {
   $2
-}
+};
+  ;
   return resp.json ()
-}
+};
 /**
  * read_json - Function description
  */
 function read_json() {
   return JSON.parse (fs.readFileSync (p, "utf - 8"))
-}
+};
 /**
  * write_json - Function description
  */
 function write_json() {
   fs.writeFileSync (p, JSON.stringify (v, null, 2))
-}
+};
 export default async /**
  * handler - Function description
  */
 function handler() {
-  try {
-    const cfg = read_json (config_path)
+  try {}
+    ;
+  const cfg = read_json (config_path)
     const cache = read_json (cache_path)
     const now = Date.now ()
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000
     // Check condition
 if ( {) {
   $2
-}
-      return res.status (200).json ({ ...cache, cached: true })
+};
+      ;
+  return res.status (200).json ({ ...cache, cached: true })
     }
-    const api_key = process.env.ETHERSCAN_API_KEY || ""
+    ;
+  ;
+  const api_key = process.env.ETHERSCAN_API_KEY || ""
     const token_addr = cfg.token.address
     // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfers_url = `${cfg.etherscanBaseUrl}?module = account & action = tokentx & contractaddress=${token_addr}&page = 1&offset = 200 & sort = desc${api_key ? `&apikey=${api_key}` : ""}`
     const transfers_json = await fetch_json (transfers_url)
     const txs = transfers_json?.result || []
-    const holderToDelta: Record < string, bigint> = {}
+    
+  ;
+  ;
+  const holderToDelta: Record < string, bigint> = {}
 
-    const entries = Object.entries (holderToDelta)
+    ;
+  ;
+  const entries = Object.entries (holderToDelta)
       .map (([address, delta]) => ({ address, net_delta: delta }))
       .sort ((a, b) => (b.net_delta > a.net_delta ? 1 : -1))
       .slice (0, 10)
@@ -179,7 +196,7 @@ if ( {) {
         total > 0n ? Number ((BigInt (e.amount) * 10000n) / total) / 100 : 0,
     }))
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
-    const active_proposals: any[] = []
+    const active_proposals: any[] = [];
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
     const unique_addresses = new Set (
       txs
@@ -200,15 +217,16 @@ if ( {) {
       top_holders,
       active_proposals,
       governanceParticipationRate: participation_rate,
-    }
+    };
     write_json (cache_path, result)
     return res.status (200).json (result)
   } catch (e: any) {
     return res
       .status (500)
       .json ({ error: e?.message ?? "Failed to load DAO metrics" })
-  }
-  }
-}
-  }
-}
+  };
+  };
+};
+  };
+};
+;

@@ -5,23 +5,23 @@ export interface FuturisticInnovation2031 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
   textColor: string
   link: string
   marketPosition: string
-  targetAudience: string[]
+  targetAudience: string[];
   trialDays: number
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   contactInfo: {
@@ -29,7 +29,7 @@ export interface FuturisticInnovation2031 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -38,9 +38,9 @@ export interface FuturisticInnovation2031 {
   reviews: number
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging'
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source'
-  aiCapabilities: string[]
+  aiCapabilities: string[];
   marketDisruption: string
-}
+};
 export const futuristicInnovations2031: FuturisticInnovation2031[] = [
   // AI CONSCIOUSNESS EVOLUTION PLATFORM
   {
@@ -359,5 +359,5 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [
     patentStatus: 'Patent Pending',
     aiCapabilities: ['Quantum Creativity', 'AI Content Generation', 'Creative Algorithms', 'Design Optimization', 'Innovation AI'],
     marketDisruption: 'Advances creative AI by integrating quantum computing principles, enabling breakthrough creative content and innovative design solutions.'
-  }
-]
+  };
+];

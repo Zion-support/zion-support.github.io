@@ -5,15 +5,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed')
   }
+  ;
+  ;
   const { name, title, bio, experience, skills } = req.body as {
     name: string
     title?: string
     bio?: string
     experience?: string
-  }
+  };
   if (!name) return res && res.status(400).json({ error: 'Name is required' })
     skills?: string
-  }
+  };
   if (!name) return res.status(400).json({ error: 'Name is required' })
   try {
     const prompt = `You are assisting with creating a professional marketplace talent profile. Return strict JSON with fields: summary (100-150 words), skills (array of standardized skill tags), title (optimized), category (one of: AI/ML, Engineering, DevOps/Cloud, Security, Data, Product). Use concise, compelling language.
@@ -28,8 +30,8 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
         { role: 'user', content: prompt },
       ],
       response_format: { type: 'json_object' },
-        { role: 'system', content: 'You produce only valid JSON. No commentary.' }
-        { role: 'user', content: prompt }]
+        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
+        { role: 'user', content: prompt }];
       response_format: {
        type: 'json_object' 
     },
@@ -48,10 +50,12 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       summary: parsed.summary || '',
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })
+};
+  };
 }
-  }
-}
-    const completion = await openai.chat.completions.create({
+    ;
+  ;
+  const completion = await openai.chat.completions.create({
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You produce only valid JSON. No commentary.' },
@@ -71,5 +75,6 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     })
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'OpenAI error' })
-  }
-}
+  };
+};
+;

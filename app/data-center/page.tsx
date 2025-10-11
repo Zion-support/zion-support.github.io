@@ -18,5 +18,6 @@ import React from 'react'
       <Footer />
     </>
   )
-}
+};
+  ;
   </Helmet>

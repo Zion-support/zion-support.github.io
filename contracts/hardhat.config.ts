@@ -9,8 +9,14 @@ const AMOY_RPC_URL = process.env.AMOY_RPC_URL || 'https://rpc-amoy.polygon.techn
 const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || 'https://rpc.ankr.com/polygon_mumbai'
 const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || ''
 const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : []
-const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : []
-const config: HardhatUserConfig = {
+
+  ;
+  ;
+  const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : []
+
+  ;
+  ;
+  const config: HardhatUserConfig = {
   solidity: {
     version: '0.8.24',
     settings: {
@@ -43,5 +49,5 @@ const config: HardhatUserConfig = {
     cache: './cache',
     artifacts: './artifacts',
   },
-}
+};
 export default config

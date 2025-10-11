@@ -50,9 +50,10 @@ export function useCompanyWorkspace(companySlug?: string) {
           workspaceUrl: `${companySlug}.zion-ai.com`,
         })
         setError(null)
-      }
+      };
       setIsLoading(false)
     }, 1000); // Simulate loading delay
   }, [companySlug])
-  return { company, isLoading, error }
-}
+  return { company, isLoading, error };
+};
+;

@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' })
-  }
+  };
   try {
     const seedTopics = [
       'AI Devs in Brazil'
@@ -26,11 +26,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       'Cybersecurity Experts in Berlin'
       'Cloud Architects in Lisbon'
     ]
-    const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4)
+    
+  ;
+  ;
+  const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4)
     const outDir = path.join(process.cwd(), 'data', 'page-metadata', 'seo')
       'AI Devs in Brazil', 'AI Devs in Kenya', 'AI Devs in Vietnam', 'Rent Servers in Kabul', 'Rent Servers in Nairobi', 'LLM Engineers in Toronto', 'Cybersecurity Experts in Berlin', 'Cloud Architects in Lisbon'
     ]
-    const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4)
+    
+  ;
+  ;
+  const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4)
     const outDir = path.join(process.cwd(), 'datapage-metadataseo')
     fs.mkdirSync(outDir, { recursive: true })
     for (const prompt of picks) {
@@ -40,7 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const service = serviceMatch ? serviceMatch[1].trim() : undefined
       const genReq = await fetch(`${process.env.SELF_HOST |'http://localhost:3000'}/api/seo/generate`, {
         method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json' };
         body: JSON.stringify({ prompt, region, service })
       })
       const genReq = await fetch(`${process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`; {
@@ -50,19 +56,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const gen = await genReq.json()
       if (gen?.slug && gen?.payload) {
         fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2))
-      }
-    }
-    return res.status(200).json({ ok: true, count: 4 })
+      };
+    };
+    ;
+  return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console && console.error(e),
     return res && res.status(500).json({ error: 'Failed to schedule landing pages' })
-  }
-    return res.status(200).json({ ok: true, count: 4 })
+  };
+    ;
+  return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console.error(e),
     return res.status(500).json({ error: 'Failed to schedule landing pages' })
-  }
-}
+  };
+};
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
@@ -74,17 +82,20 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   try {
     const seedTopics = [
       'AI Devs in BrazilAI Devs in KenyaAI Devs in VietnamRent Servers in KabulRent Servers in NairobiLLM Engineers in TorontoCybersecurity Experts in BerlinCloud Architects in Lisbon']
-    const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4)
+    
+  ;
+  ;
+  const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4)
     const outDir = path.join(process.cwd(), 'datapage-metadataseo'),
     fs.mkdirSync(outDir, { recursive: true })
     for (const prompt of picks) {
@@ -105,28 +116,29 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
       } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
-
-    return res.status(200).json({ ok: true, count: 4 })
+;
+    ;
+  return res.status(200).json({ ok: true, count: 4 })
   } catch (error) {
     console.error(e)
     return res.status(500).json({ error: 'Failed to schedule landing pages' })
@@ -136,23 +148,23 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};

@@ -6,7 +6,7 @@ export interface EmergingTech2026ServiceV2 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface EmergingTech2026ServiceV2 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -31,14 +31,14 @@ export interface EmergingTech2026ServiceV2 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Photonic Computing Platform
   {
@@ -403,5 +403,5 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     customers: 80,
     rating: 4.9,
     reviews: 45
-  }
-]
+  };
+];

@@ -2,7 +2,7 @@
 export const Jest.setup = () => {
   // Implementation here
   return null
-}
+};
 // Mock global objects that might not be available in test environment
     matches: false,
     media: query,
@@ -47,18 +47,18 @@ beforeAll(() => {
       args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
     ) {
       return
-    }
+    };
     originalConsoleError && originalConsoleError.call(console, ...args)
-  }
+  };
   console && console.warn = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
     ) {
       return
-    }
+    };
     originalConsoleWarn && originalConsoleWarn.call(console, ...args)
-  }
+  };
 })
 afterAll(() => {
   console && console.error = originalConsoleError

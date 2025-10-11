@@ -9,8 +9,7 @@ realImplementatio,
   e:,' Develo,
   p: emotionally intelligent AI with consciousness capabilities''; pric,
   e: $,1,299], popula,
-  r: tru,e, ico,
-  n:,' 🧠'';' colo,
+  r: tru,e, icon: ,' 🧠'';' colo,
   r: 'from-purple-60,
   0: to-pink-60,0'; textColo,
   r:, marketPositio,
@@ -35,7 +34,7 @@ realImplementatio,
   B: emotional AI marke,t'; growthRat,
   e:,' 45% annua,
   l: growth''; contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -46,7 +45,7 @@ realImplementatio,
   s: 1,2, ratin,
   g: 4.,9, review,
   s: 2,0}, // A,
-  I: Quantum Neural Network{/* TODO: Fix JSX expression */}
+  I: Quantum Neural Network{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -57,7 +56,7 @@ realImplementatio,
   s:  ,8, ratin,
   g: 4.,9, review,
   s:  ,5}, // A,
-  I: Autonomous Research Assistant{/* TODO: Fix JSX expression */}
+  I: Autonomous Research Assistant{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -68,7 +67,7 @@ realImplementatio,
   s: 1,8, ratin,
   g: 4.,8, review,
   s: 1,2}, // A,
-  I: Emotional Intelligence Training{/* TODO: Fix JSX expression */}
+  I: Emotional Intelligence Training{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -79,7 +78,7 @@ realImplementatio,
   s: 2,5, ratin,
   g: 4.,7, review,
   s: 1,6}, // A,
-  I: Predictive Maintenance Platform{/* TODO: Fix JSX expression */}
+  I: Predictive Maintenance Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -90,7 +89,7 @@ realImplementatio,
   s: 4,2, ratin,
   g: 4.,8, review,
   s: 2,8}, // A,
-  I: Content Personalization Engine{/* TODO: Fix JSX expression */}
+  I: Content Personalization Engine{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -101,7 +100,7 @@ realImplementatio,
   s: 6,7, ratin,
   g: 4.,7, review,
   s: 4,1}, // A,
-  I: Autonomous Ecosystem Manager{/* TODO: Fix JSX expression */}
+  I: Autonomous Ecosystem Manager{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -112,7 +111,7 @@ realImplementatio,
   s: 1,5, ratin,
   g: 4.,9, review,
   s:  ,9}, // A,
-  I: Ethics & Governance Framework{/* TODO: Fix JSX expression */}
+  I: Ethics & Governance Framework{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -123,7 +122,7 @@ realImplementatio,
   s: 2,8, ratin,
   g: 4.,8, review,
   s: 1,8}, // A,
-  I: Creativity Studio{/* TODO: Fix JSX expression */}
+  I: Creativity Studio{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -134,7 +133,7 @@ realImplementatio,
   s: 8,9, ratin,
   g: 4.,7, review,
   s: 5,2}, // A,
-  I: Education Platform{/* TODO: Fix JSX expression */}
+  I: Education Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -145,7 +144,7 @@ realImplementatio,
   s: 23,4, ratin,
   g: 4.,7, review,
   s: 16,7}, // A,
-  I: Healthcare Diagnostics Platform{/* TODO: Fix JSX expression */}
+  I: Healthcare Diagnostics Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -156,7 +155,7 @@ realImplementatio,
   s: 6,7, ratin,
   g: 4.,9, review,
   s: 4,5}, // A,
-  I: Financial Intelligence Platform{/* TODO: Fix JSX expression */}
+  I: Financial Intelligence Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -167,7 +166,7 @@ realImplementatio,
   s: 8,9, ratin,
   g: 4.,8, review,
   s: 6,7}, // A,
-  I: Sustainability Platform{/* TODO: Fix JSX expression */}
+  I: Sustainability Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -178,7 +177,7 @@ realImplementatio,
   s: 7,8, ratin,
   g: 4.,7, review,
   s: 5,2}, // A,
-  I: Emotional Intelligence Platform{/* TODO: Fix JSX expression */}
+  I: Emotional Intelligence Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -189,7 +188,7 @@ realImplementatio,
   s: 5,6, ratin,
   g: 4.,8, review,
   s: 3,8}, // AI-Powere,
-  d: Predictive Analytics Engine{/* TODO: Fix JSX expression */}
+  d: Predictive Analytics Engine{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -200,7 +199,7 @@ realImplementatio,
   s: 3,1, ratin,
   g: 4.,8, review,
   s: 2,6}, // AI-Powere,
-  d: Computer Vision Platform{/* TODO: Fix JSX expression */}
+  d: Computer Vision Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -211,7 +210,7 @@ realImplementatio,
   s: 4,2, ratin,
   g: 4.,7, review,
   s: 3,3}, // AI-Powere,
-  d: Natural Language Processing Suite{/* TODO: Fix JSX expression */}
+  d: Natural Language Processing Suite{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -222,7 +221,7 @@ realImplementatio,
   s: 3,8, ratin,
   g: 4.,6, review,
   s: 2,9}, // AI-Powere,
-  d: Recommendation Engine{/* TODO: Fix JSX expression */}
+  d: Recommendation Engine{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -233,7 +232,7 @@ realImplementatio,
   s: 4,5, ratin,
   g: 4.,8, review,
   s: 3,7}, // AI-Powere,
-  d: Fraud Detection System{/* TODO: Fix JSX expression */}
+  d: Fraud Detection System{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -244,7 +243,7 @@ realImplementatio,
   s: 2,8, ratin,
   g: 4.,9, review,
   s: 2,4}, // AI-Powere,
-  d: Supply Chain Optimization{/* TODO: Fix JSX expression */}
+  d: Supply Chain Optimization{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -255,7 +254,7 @@ realImplementatio,
   s: 3,5, ratin,
   g: 4.,7, review,
   s: 2,8}, // AI-Powere,
-  d: Energy Management System{/* TODO: Fix JSX expression */}
+  d: Energy Management System{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -266,7 +265,7 @@ realImplementatio,
   s: 2,2, ratin,
   g: 4.,8, review,
   s: 1,9}, // AI-Powere,
-  d: Quality Control System{/* TODO: Fix JSX expression */}
+  d: Quality Control System{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -277,7 +276,7 @@ realImplementatio,
   s: 3,8, ratin,
   g: 4.,7, review,
   s: 3,1}, // AI-Powere,
-  d: Customer Segmentation Platform{/* TODO: Fix JSX expression */}
+  d: Customer Segmentation Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -288,7 +287,7 @@ realImplementatio,
   s: 5,2, ratin,
   g: 4.,6, review,
   s: 4,1}, // A,
-  I: Quantum Neural Network Platform{/* TODO: Fix JSX expression */}
+  I: Quantum Neural Network Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -299,7 +298,7 @@ realImplementatio,
   s: 1,2, ratin,
   g: 4.,9, review,
   s:  ,8}, // A,
-  I: Autonomous Research Assistant{/* TODO: Fix JSX expression */}
+  I: Autonomous Research Assistant{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -310,7 +309,7 @@ realImplementatio,
   s: 1,2, ratin,
   g: 5.,0, review,
   s:  ,8}, // A,
-  I: Emotional Intelligence Training Platform{/* TODO: Fix JSX expression */}
+  I: Emotional Intelligence Training Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -321,7 +320,7 @@ realImplementatio,
   s: 3,4, ratin,
   g: 4.,8, review,
   s: 2,2}, // A,
-  I: Predictive Maintenance Platform{/* TODO: Fix JSX expression */}
+  I: Predictive Maintenance Platform{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -332,7 +331,7 @@ realImplementatio,
   s: 5,6, ratin,
   g: 4.,9, review,
   s: 3,8}, // A,
-  I: Content Personalization Engine{/* TODO: Fix JSX expression */}
+  I: Content Personalization Engine{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -343,7 +342,7 @@ realImplementatio,
   s: 7,8, ratin,
   g: 4.,7, review,
   s: 4,5}, // A,
-  I: Autonomous Ecosystem Manager{/* TODO: Fix JSX expression */}
+  I: Autonomous Ecosystem Manager{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -354,7 +353,7 @@ realImplementatio,
   s: 1,8, ratin,
   g: 5.,0, review,
   s: 1,2}, // A,
-  I: Ethics & Governance Framework{/* TODO: Fix JSX expression */}
+  I: Ethics & Governance Framework{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,
@@ -365,7 +364,7 @@ realImplementatio,
   s: 4,2, ratin,
   g: 4.,8, review,
   s: 2,9}, // A,
-  I: Creativity Studio{/* TODO: Fix JSX expression */}
+  I: Creativity Studio{/* TODO: Fix JSX expression */};
   4: E Main St STE 1008 Middletown DE 1970,9'} websit,
   e:, http,
   s: //ziontechgroup.co}m}, realImplementatio,

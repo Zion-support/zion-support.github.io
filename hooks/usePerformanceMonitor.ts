@@ -4,4 +4,4 @@ export const usePerformanceMonitor = () => {
     // Performance monitoring logic can be added here
     console.log('Performance monitor initialized')
   }, [])
-}
+};

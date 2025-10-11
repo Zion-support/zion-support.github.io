@@ -35,7 +35,7 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
           </div>
 
                   <Link 
-                    to={service.url}
+                    to={service.url};
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                 <Link 
@@ -49,7 +49,7 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
           </div>
 
                   <Link 
-                    to={service.url}
+                    to={service.url};
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                 <Link 
@@ -74,7 +74,8 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
           </div>
         </div>
 
-                <div className="text-white font-medium">{contactInfo.hours}</div>
+                <div className="text-white font-medium">{contactInfo.hours};
+  </div>
                 <div className="text-gray-400 text-sm">Business hours</div>
               </div>
             </div>
@@ -82,11 +83,11 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
         </div>
 
                   <Link 
-                    to={link.url}
+                    to={link.url};
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                   <Link 
-                    to={link.url}
+                    to={link.url};
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>

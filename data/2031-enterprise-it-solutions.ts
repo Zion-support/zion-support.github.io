@@ -5,23 +5,23 @@ export interface EnterpriseITSolution2031 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
   textColor: string
   link: string
   marketPosition: string
-  targetAudience: string[]
+  targetAudience: string[];
   trialDays: number
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   contactInfo: {
@@ -29,7 +29,7 @@ export interface EnterpriseITSolution2031 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -38,9 +38,9 @@ export interface EnterpriseITSolution2031 {
   reviews: number
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging'
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source'
-  aiCapabilities: string[]
+  aiCapabilities: string[];
   marketDisruption: string
-}
+};
 export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
   // ZERO TRUST NETWORK ARCHITECTURE
   {
@@ -306,5 +306,5 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     patentStatus: 'Patent Pending',
     aiCapabilities: ['Autonomous Systems', 'Self-Healing', 'Intelligent Optimization', 'Predictive Maintenance', 'Resource Management'],
     marketDisruption: 'Revolutionizes infrastructure management by enabling truly autonomous systems, eliminating manual operations and optimizing performance automatically.'
-  }
-]
+  };
+];

@@ -29,8 +29,8 @@ import { define_config } from 'cypress'; export default define_config ({ e2e: { 
     },
     setupNodeEvents(on, config) {,
       // implement node event listeners here
-    }
-  }
+    };
+  };
 }),
     specPattern: 'src/**/*.cy.{js,jsx,ts,tsx}',
   },
@@ -60,14 +60,14 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     retries: {
       runMode: 2
       openMode: 0
-    }
+    };
     setupNodeEvents(on, config) {
       // implement node event listeners here
-    }
-  }
+    };
+  };
 })
     setupNodeEvents (on, config) {,
       // implement node event listeners here
-    }
-  }
+    };
+  };
 }),

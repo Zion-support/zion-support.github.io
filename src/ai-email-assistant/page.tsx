@@ -142,5 +142,5 @@ import Footer from '../components/Footer'
       <Footer /></Footer>
     </div>
   ),
-}
+};
 export default PagePage</$1></a></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

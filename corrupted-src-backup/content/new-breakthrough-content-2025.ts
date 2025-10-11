@@ -1,7 +1,7 @@
-export interface BreakthroughContent {/* TODO: Fix JSX expression */}
-  }
-}
-
+export interface BreakthroughContent {/* TODO: Fix JSX expression */};
+  };
+};
+;
 export const newBreakthroughContent2025: BreakthroughContent[] = [
   {
     id: 'ai-platform-optimization-2025'
@@ -59,7 +59,7 @@ Protect your AI systems with next-generation quantum security frameworks.
       roi: '500%',
 export const,
   newBreakthroughContent2025: BreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
     }},
-  {/* TODO: Fix JSX expression */}
-    }}]
+  {/* TODO: Fix JSX expression */};
+    }}];

@@ -6,14 +6,14 @@ export interface MilestoneInput {
   startDate: string
   endDate: string | null
   projectType: string
-}
+};
 export interface GeneratedMilestone {
   title: string
   description: string
   dueDate: string
   estimatedHours: number
   isAiGenerated: boolean
-}
+};
 export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false)
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([])
@@ -35,19 +35,23 @@ export function useMilestoneGenerator() {
     } catch (error) {
       console.error('Error generating milestones:', error)
       toast.error('Failed to generate milestones')
-      return []
+      return [];
     } finally {
       setIsGenerating(false)
-    }
+    };
   }
+  ;
+  ;
   const clearGeneratedMilestones = () => {
     setGeneratedMilestones([])
-  }
+  };
+  ;
   return {
     generateMilestones,
     generatedMilestones,
     isGenerating,
-    clearGeneratedMilestones}
+    clearGeneratedMilestones};
     clearGeneratedMilestones,
-  }
-}
+  };
+};
+;

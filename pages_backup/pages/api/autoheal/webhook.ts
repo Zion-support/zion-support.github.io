@@ -10,8 +10,9 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { Octokit } from '@octokit/rest'
     } catch (e) {
       // ignore if missing
-    }
-return res.status(200).json({ ok: true, issue: issue.data.number })
+    };
+;
+  return res.status(200).json({ ok: true, issue: issue.data.number })
   } catch (e) {
     console.error(e)
     return res.status(500).json({ error: 'Failed to process webhook' })
@@ -25,13 +26,13 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   try {
     const { app, severity, message, stack, metadata } = req.body || {},
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
-Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
+Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'};
 `,
     const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] }),
     // trigger workflow dispatch
@@ -44,45 +45,50 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
 inputs: { issue_number: String(issue.data.number) }} as any)
     } catch (e) {
       // ignore if missing
-    }
-return res.status(200).json({ ok: true, issue: issue.data.number })
+    };
+;
+  return res.status(200).json({ ok: true, issue: issue.data.number })
   } catch (e) {
     console.error(e),
     return res.status(500).json({ error: 'Failed to process webhook' })
-  }
+  };
 }
-    const { app, severity, message, stack, metadata } = req.body || {}
-    const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
+    ;
+  ;
+  const { app, severity, message, stack, metadata } = req.body || {}
+    ;
+  ;
+  const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,
     const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined })
     const [owner, repo] = REPO.split('/')
     const body = `Auto-healing alert
 App: ${app  } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 Severity: ${severity  } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 Message: ${message  } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 Stack:\n\n${stack || 'n/a'  } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 `,
     const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] })
     // trigger workflow dispatch
@@ -97,23 +103,25 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
     } catch (e) {
     } catch (e) {
       // ignore if missing
-    }
-  }
+    };
+  };
 }
-
-    return res.status(200).json({ ok: true, issue: issue.data.number })
+;
+    ;
+  return res.status(200).json({ ok: true, issue: issue.data.number })
   } catch (error) {
     console.error(e)
     return res.status(500).json({ error: 'Failed to process webhook' })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  }
-}
+  };
+};
+  };
+};
+;

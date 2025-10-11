@@ -14,8 +14,9 @@ import React from 'react';
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -25,8 +26,9 @@ import React from 'react';
     </>
         </section>
 
-        {/* Benefits Section */}
-        <section></section>
+        {/* Benefits Section */};
+        ;
+  <section></section>
           <div></div>
             <div></div>
               <h2>
@@ -48,13 +50,15 @@ import React from 'react';
       
       <Footer />
     </>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
+                  <p className="text-lg text-white font-medium">{benefit};
+  </p>
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -64,8 +68,9 @@ import React from 'react';
     </>
         </section>
 
-        {/* CTA Section */}
-        <section></section>
+        {/* CTA Section */};
+        ;
+  <section></section>
           <div></div>
             <div></div>
               <h2>
@@ -97,5 +102,6 @@ import React from 'react';
       <Footer />
     </>
   )
-}
-    </h2>
+};
+    ;
+  </h2>

@@ -13,14 +13,17 @@ const AdaptiveLearningPlatform, s = () => {
         />
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
-        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
-          <, t, o='/bl, o, g'$2 />
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ };
+          ;
+  <, t, o='/bl, o, g'$2 />
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
-const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
-        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
-          <, t, o='/bl, o, g'$2 />
+const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */};
+        ;
+  <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ };
+          ;
+  <, t, o='/bl, o, g'$2 />
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
@@ -121,7 +124,7 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                     <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
                     3. AI-Powered, Content, Generation
                   <div, classNam, e = 'bg-purp, l, e-9, 0, 0/20, rounde, d-l, g, p-4, border, border-purp, l, e-5, 0, 0/30'>
-                    <strong, className='te, x, t-purp, l, e-4, 0, 0'>Innovati, o, n: </st, r, o, n, g>{' '}
+                    <strong, className='te, x, t-purp, l, e-4, 0, 0'>Innovati, o, n: </st, r, o, n, g>{' '};
                     G, P, T-4, generates, role-specific, case, studies, DA, L, L-E, 3, creates
                     custom, visual, s, and, voice, AI provides, personalized, tutoring.
                 <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'>
@@ -252,5 +255,6 @@ const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
                 >
                   <Target, classNam, e='w-5 h-5' />
                   Request, Dem, o
-}
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></a></a></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></article></article>
+};
+;
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></a></a></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></article></article>

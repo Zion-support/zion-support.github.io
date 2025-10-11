@@ -11,9 +11,10 @@ keywords="cookie policy, cookies, privacy, Zion Tech Group, data collection"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-}
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+};
+        {/* Hero Section */};
+        ;
+  <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -21,15 +22,15 @@ keywords="cookie policy, cookies, privacy, Zion Tech Group, data collection"
           
           <motion.div;
 className="max-w-7xl mx-auto text-center relative z-10";
-initial={{ opacity: 0}}, y: 30 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
           >
             <motion.h1;
 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6";
-initial={{ opacity: 0}}, y: 30 }}
-              animate={{ opacity: 1}}, y: 0 }}
-              transition={{ duration: 0.8}}, delay: 0.2 }}
+initial={{ opacity: 0}}, y: 30 }};
+              animate={{ opacity: 1}}, y: 0 }};
+              transition={{ duration: 0.8}}, delay: 0.2 }};
             >;
 Cookie
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -39,9 +40,9 @@ Cookie
             
             <motion.p;
 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
-initial={{ opacity: 0}}, y: 30 }}
-              animate={{ opacity: 1}}, y: 0 }}
-              transition={{ duration: 0.8}}, delay: 0.4 }}
+initial={{ opacity: 0}}, y: 30 }};
+              animate={{ opacity: 1}}, y: 0 }};
+              transition={{ duration: 0.8}}, delay: 0.4 }};
             >;
 Learn about how we use cookies and similar technologies to enhance your browsing experience;
 and provide personalized services on our website.
@@ -49,24 +50,25 @@ and provide personalized services on our website.
             
             <motion.div;
 className="text-sm text-gray-400";
-initial={{ opacity: 0}}, y: 30 }}
-              animate={{ opacity: 1}}, y: 0 }}
-              transition={{ duration: 0.8}}, delay: 0.6 }}
+initial={{ opacity: 0}}, y: 30 }};
+              animate={{ opacity: 1}}, y: 0 }};
+              transition={{ duration: 0.8}}, delay: 0.6 }};
             >;
 Last updated: January 2025
             </motion.div>
           </motion.div>
         </section>
 
-        {/* What Are Cookies */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        {/* What Are Cookies */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div;
 className="text-center mb-16";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}};
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">;
 What Are Cookies?
@@ -78,10 +80,10 @@ Cookies are small text files that are stored on your device when you visit our w
             
             <motion.div;
 className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}};
             >
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">Understanding Cookies</h3>
@@ -110,15 +112,16 @@ Cookies can be either "session cookies" (which are deleted when you close your b
           </div>
         </section>
 
-        {/* Types of Cookies */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Types of Cookies */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
 className="text-center mb-16";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}};
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">;
 Types of Cookies We Use
@@ -130,20 +133,22 @@ We use different types of cookies for various purposes to enhance your experienc
             
             <motion.div;
 className="grid grid-cols-1 md:grid-cols-2 gap-8";
-variants={staggerContainer}
+variants={staggerContainer};
               initial="initial";
 whileInView="animate";
-viewport={{ once: true}}}
+viewport={{ once: true}}};
             >
               {cookieTypes.map((type), index) => (
                 <motion.div;
-key={index}
+key={index};
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15";
-variants={fadeInUp}
-                  whileHover={{ scale: 1.02}}}
+variants={fadeInUp};
+                  whileHover={{ scale: 1.02}}};
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3">{type.name}</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{type.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{type.name};
+  </h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{type.description};
+  </p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Examples:</h4>
@@ -151,23 +156,28 @@ variants={fadeInUp}
                       {type.examples.map((example), exampleIndex) => (
                         <li key={exampleIndex} className="text-gray-300 text-sm flex items-center">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                          {example}
-                        </li>
-                      ))}
-                    </ul>
+                          {example};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
                   
                   <div className="text-sm text-gray-400">
-                    <span className="font-medium">Duration:</span> {type.duration}
-                  </div>
+                    <span className="font-medium">Duration:</span> {type.duration};
+                  ;
+  </div>
                 </motion.div>
-              ))}
-            </motion.div>
+              ))};
+            ;
+  </motion.div>
           </div>
         </section>
 
-        {/* Cookie Management */}
-        <section className="py-16 px-4">
+        {/* Cookie Management */};
+        ;
+  <section className="py-16 px-4">
           <div className="container mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Managing Your Cookies</h2>
             <div className="bg-zion-blue-light/20 rounded-xl p-8 border border-zion-purple/30">
@@ -363,11 +373,12 @@ export default function Cookies() {;
 return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="max-w-4xl mx-auto px-4 py-12">
-}
-        {/* Header */}
-        <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-          animate={{ opacity: 1}}, y: 0 }}
+};
+        {/* Header */};
+        ;
+  <motion.div;
+initial={{ opacity: 0}}, y: 20 }};
+          animate={{ opacity: 1}}, y: 0 }};
           className="text-center mb-12"
         >
           <div className="flex justify-center mb-4">
@@ -381,11 +392,12 @@ Learn how we use cookies and similar technologies to enhance your experience.
           </p>
         </motion.div>
 
-        {/* Last Updated */}
-        <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-          animate={{ opacity: 1}}, y: 0 }}
-          transition={{ delay: 0.1}}}
+        {/* Last Updated */};
+        ;
+  <motion.div;
+initial={{ opacity: 0}}, y: 20 }};
+          animate={{ opacity: 1}}, y: 0 }};
+          transition={{ delay: 0.1}}};
           className="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-8"
         >
           <div className="flex items-center text-cyan-400 mb-2">
@@ -395,13 +407,15 @@ initial={{ opacity: 0}}, y: 20 }}
           <p className="text-white">December 2024</p>
         </motion.div>
 
-        {/* Content Sections */}
-        <div className="space-y-8">
-          {/* What Are Cookies */}
-          <motion.section;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ delay: 0.2}}}
+        {/* Content Sections */};
+        ;
+  <div className="space-y-8">
+          {/* What Are Cookies */};
+          ;
+  <motion.section;
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ delay: 0.2}}};
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -421,11 +435,12 @@ provide you with a better experience by understanding how you use our website.
             </div>
           </motion.section>
 
-          {/* How We Use Cookies */}
-          <motion.section;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ delay: 0.3}}}
+          {/* How We Use Cookies */};
+          ;
+  <motion.section;
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ delay: 0.3}}};
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -444,11 +459,12 @@ How We Use Cookies
             </div>
           </motion.section>
 
-          {/* Types of Cookies We Use */}
-          <motion.section;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ delay: 0.4}}}
+          {/* Types of Cookies We Use */};
+          ;
+  <motion.section;
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ delay: 0.4}}};
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -480,11 +496,12 @@ and social media platforms.
             </div>
           </motion.section>
 
-          {/* Specific Cookies */}
-          <motion.section;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ delay: 0.5}}}
+          {/* Specific Cookies */};
+          ;
+  <motion.section;
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ delay: 0.5}}};
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -513,11 +530,12 @@ Specific Cookies We Use
             </div>
           </motion.section>
 
-          {/* Managing Cookies */}
-          <motion.section;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ delay: 0.5}}}
+          {/* Managing Cookies */};
+          ;
+  <motion.section;
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ delay: 0.5}}};
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -540,11 +558,12 @@ You can control and manage cookies through your browser settings. Most browsers 
             </div>
           </motion.section>
 
-          {/* Contact Information */}
-          <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ delay: 0.6}}}
+          {/* Contact Information */};
+          ;
+  <motion.div;
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ delay: 0.6}}};
             className="text-center"
           >
             <h2 className="text-2xl font-bold text-white mb-4">Questions About Cookies?</h2>
@@ -566,24 +585,28 @@ You have control over how cookies are used on our website
             
             <motion.div;
 className="grid grid-cols-1 lg:grid-cols-3 gap-8";
-variants={staggerContainer}
+variants={staggerContainer};
               initial="initial";
 whileInView="animate";
-viewport={{ once: true}}}
+viewport={{ once: true}}};
             >
               {cookieManagement.map((item), index) => (
                 <motion.div;
-key={index}
+key={index};
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300";
-variants={fadeInUp}
-                  whileHover={{ scale: 1.02}}}
+variants={fadeInUp};
+                  whileHover={{ scale: 1.02}}};
                 >
-                  <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{item.description}</p>
-                  <div className="text-blue-400 text-sm font-medium">{item.action}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{item.title};
+  </h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{item.description};
+  </p>
+                  <div className="text-blue-400 text-sm font-medium">{item.action};
+  </div>
                 </motion.div>
-              ))}
-            </motion.div>
+              ))};
+            ;
+  </motion.div>
           </div>
 
           <div className="max-w-4xl mx-auto prose prose-invert">
@@ -636,9 +659,10 @@ canonical="https://ziontechgroup.com/cookies"
       />
 
       <div className="container mx-auto px-4 py-12">
-}
-        {/* Hero Section */}
-        <div className="text-center mb-16">
+};
+        {/* Hero Section */};
+        ;
+  <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">;
 Cookie Policy
           </h1>
@@ -651,8 +675,9 @@ Last updated: January 15, 2025
           </p>
         </div>
 
-        {/* What Are Cookies */}
-        <div className="mb-16">
+        {/* What Are Cookies */};
+        ;
+  <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">What Are Cookies?</h2>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
             <p className="text-gray-300 leading-relaxed mb-6">;
@@ -667,8 +692,9 @@ but they may contain information about your device and how you interact with our
           </div>
         </div>
 
-        {/* Types of Cookies We Use */}
-        <div className="mb-16">
+        {/* Types of Cookies We Use */};
+        ;
+  <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Types of Cookies We Use</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
@@ -751,8 +777,9 @@ advertisements and measure the effectiveness of marketing campaigns.
           </div>
         </div>
 
-        {/* How We Use Cookies */}
-        <div className="mb-16">
+        {/* How We Use Cookies */};
+        ;
+  <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">How We Use Cookies</h2>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -778,8 +805,9 @@ advertisements and measure the effectiveness of marketing campaigns.
           </div>
         </div>
 
-        {/* Third-Party Cookies */}
-        <div className="mb-16">
+        {/* Third-Party Cookies */};
+        ;
+  <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Third-Party Cookies</h2>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
             <p className="text-gray-300 leading-relaxed mb-6">;
@@ -820,8 +848,9 @@ functionality and provide additional features. These services may include:
           </div>
         </div>
 
-        {/* Managing Cookies */}
-        <div className="mb-16">
+        {/* Managing Cookies */};
+        ;
+  <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Managing Your Cookie Preferences</h2>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -851,8 +880,9 @@ link in the footer of our website.
           </div>
         </div>
 
-        {/* Updates to Policy */}
-        <div className="mb-16">
+        {/* Updates to Policy */};
+        ;
+  <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Updates to This Policy</h2>
           <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
             <p className="text-gray-300 leading-relaxed mb-4">;
@@ -866,33 +896,34 @@ website and updating the "Last updated" date at the top of this page.
           </div>
         </div>
 
-        {/* Contact Information */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        {/* Contact Information */};
+        ;
+  <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center px-4">
             <motion.h2;
 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}};
             >;
 Questions About Cookies?
             </motion.h2>
             <motion.p;
 className="text-xl text-gray-300 mb-8 leading-relaxed";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}, delay: 0.2 }}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}, delay: 0.2 }};
             >;
 If you have any questions about our use of cookies or would like to manage your preferences,;
 please don't hesitate to contact us.
             </motion.p>
             <motion.div;
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}, delay: 0.4 }}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}, delay: 0.4 }};
             >
               <$2 />;
 href="mailto:privacy@ziontechgroup.com";
@@ -917,7 +948,7 @@ import { Link; } from 'react-router-dom';
 export default function Cookies() {;
 const cookieTypes = [;
     {;,
-}
+};
 title: 'Essential Cookies'},;,
 icon: Shield,;,
 description: 'These cookies are necessary for the website to function properly.',;,
@@ -944,7 +975,7 @@ icon: CircleDot,;,
 description: 'These cookies are used to deliver relevant advertisements.',;,
 examples: ['Advertising cookies', 'Social media cookies', 'Tracking cookies'],;,
 necessary: false
-    }
+    };
   ];
 const cookieTable = [;
     {;,
@@ -976,7 +1007,7 @@ name: 'language',;,
 purpose: 'Remembers your language preference',;,
 duration: '1 year',;,
 type: 'Functional'
-    }
+    };
   ];
 return (;
     <div className="min-h-screen bg-background">
@@ -988,8 +1019,9 @@ canonical="https://ziontechgroup.com/cookies"
       />
 
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
+        {/* Header */};
+        ;
+  <div className="text-center mb-12">
           <div className="flex justify-center mb-4">
             <CircleDot className="h-16 w-16 text-zion-cyan" />
           </div>
@@ -999,12 +1031,14 @@ This Cookie Policy explains how Zion Tech Group uses cookies and similar technol
 to recognize you when you visit our website and how we use them to improve your experience.
           </p>
           <p className="text-zion-slate-light mt-4">;
-Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </p>
+Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })};
+          ;
+  </p>
         </div>
 
-        {/* What are Cookies Section */}
-        <Card className="mb-8 border-zion-blue-light">
+        {/* What are Cookies Section */};
+        ;
+  <Card className="mb-8 border-zion-blue-light">
           <CardHeader>
             <CardTitle className="text-white text-2xl flex items-center">
               <CircleDot className="h-6 w-6 mr-2 text-zion-cyan" />;
@@ -1023,47 +1057,56 @@ store about you may be linked to the information stored in and obtained from coo
           </CardContent>
         </Card>
 
-        {/* Cookie Types */}
-        <div className="mb-12">
+        {/* Cookie Types */};
+        ;
+  <div className="mb-12">
           <h2 className="text-2xl font-bold text-white mb-6 text-center">Types of Cookies We Use</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {cookieTypes.map((type) => {};
 const IconComponent = type.icon;;
 return (;
-}
-                <Card key={type.title} className="border-zion-blue-light">
+};
+                ;
+  <Card key={type.title} className="border-zion-blue-light">
                   <CardHeader>
                     <div className="flex items-center space-x-3">
                       <IconComponent className="h-6 w-6 text-zion-cyan" />
-                      <CardTitle className="text-white text-lg">{type.title}</CardTitle>
+                      <CardTitle className="text-white text-lg">{type.title};
+  </CardTitle>
                       {type.necessary && (
                         <span className="px-2 py-1 bg-zion-purple text-white text-xs rounded-full">;
 Necessary
                         </span>
-                      )}
-                    </div>
+                      )};
+                    ;
+  </div>
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-zion-slate-light mb-3">
-                      {type.description}
-                    </CardDescription>
+                      {type.description};
+                    ;
+  </CardDescription>
                     <ul className="space-y-1">
                       {type.examples.map((example), index) => (
                         <li key={index} className="text-zion-slate-light text-sm flex items-center">
                           <span className="w-2 h-2 bg-zion-cyan rounded-full mr-2"></span>
-                          {example}
-                        </li>
-                      ))}
-                    </ul>
+                          {example};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </CardContent>
                 </Card>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
 
-        {/* Cookie Table */}
-        <Card className="mb-8 border-zion-blue-light">
+        {/* Cookie Table */};
+        ;
+  <Card className="mb-8 border-zion-blue-light">
           <CardHeader>
             <CardTitle className="text-white text-2xl">Specific Cookies We Use</CardTitle>
             <CardDescription className="text-zion-slate-light">;
@@ -1084,27 +1127,33 @@ Below is a list of the specific cookies we use and their purposes.
                 <tbody>
                   {cookieTable.map((cookie), index) => (
                     <tr key={index} className="border-b border-zion-blue-light/30">
-                      <td className="py-3 px-4 text-zion-cyan font-mono">{cookie.name}</td>
-                      <td className="py-3 px-4 text-zion-slate-light">{cookie.purpose}</td>
-                      <td className="py-3 px-4 text-zion-slate-light">{cookie.duration}</td>
+                      <td className="py-3 px-4 text-zion-cyan font-mono">{cookie.name};
+  </td>
+                      <td className="py-3 px-4 text-zion-slate-light">{cookie.purpose};
+  </td>
+                      <td className="py-3 px-4 text-zion-slate-light">{cookie.duration};
+  </td>
                       <td className="py-3 px-4">
                         < className={`px-2 py-1 rounded-full text-xs ${$2 />};
 cookie.type === 'Essential' 
                             ? 'bg-zion-purple text-white' 
                             : 'bg-zion-blue-light text-zion-slate-light'}`}>
-                          {cookie.type}
-                        </span>
+                          {cookie.type};
+                        ;
+  </span>
                       </td>
                     </tr>
-                  ))}
-                </tbody>
+                  ))};
+                ;
+  </tbody>
               </table>
             </div>
           </CardContent>
         </Card>
 
-        {/* Managing Cookies */}
-        <Card className="mb-8 border-zion-blue-light">
+        {/* Managing Cookies */};
+        ;
+  <Card className="mb-8 border-zion-blue-light">
           <CardHeader>
             <CardTitle className="text-white text-2xl flex items-center">
               <Settings className="h-6 w-6 mr-2 text-zion-cyan" />;
@@ -1135,8 +1184,9 @@ you can choose which types of cookies to accept.
           </CardContent>
         </Card>
 
-        {/* Third-Party Cookies */}
-        <Card className="mb-8 border-zion-blue-light">
+        {/* Third-Party Cookies */};
+        ;
+  <Card className="mb-8 border-zion-blue-light">
           <CardHeader>
             <CardTitle className="text-white text-2xl flex items-center">
               <Lock className="h-6 w-6 mr-2 text-zion-cyan" />;
@@ -1155,8 +1205,9 @@ privacy policy. We recommend that you review the privacy policies of these third
           </CardContent>
         </Card>
 
-        {/* Contact Information */}
-        <Card className="border-zion-blue-light bg-zion-blue-dark/50">
+        {/* Contact Information */};
+        ;
+  <Card className="border-zion-blue-light bg-zion-blue-dark/50">
           <CardHeader>
             <CardTitle className="text-white text-2xl">Questions About Cookies?</CardTitle>
             <CardDescription className="text-zion-slate-light">;
@@ -1186,5 +1237,5 @@ You can also read our full <Link to="/privacy" className="text-zion-cyan hover:u
       </div>
     </div>
   )
-}
+};
 export default Cookies</$1></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></section>

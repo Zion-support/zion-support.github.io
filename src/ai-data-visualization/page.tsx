@@ -3,8 +3,9 @@ import { Helmet } from 'react-helmet-async'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
-}
+export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */};
+};
+  ;
   return (<div><Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"

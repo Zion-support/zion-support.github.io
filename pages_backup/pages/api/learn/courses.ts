@@ -17,14 +17,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const freeVal = isFree === 'true' |isFree === true
         const freeVal = isFree === 'true' || isFree === true
         if (c.isFree !== freeVal) return false
-      }
-      return true
+      };
+      ;
+  return true
     })
     res.status(200).json({ courses: filtered })
     res.status(200).json({ courses: filtered })
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load courses' })
-  }
+  };
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' })
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -40,22 +41,25 @@ export default function handler(req, res) {
       // Check condition
 if (return false) {
   $2
-}
+};
       // Check condition
 if (return false) {
   $2
-}
+};
       // Check condition
 if ( {) {
   $2
 }
-        const free_val = is_free === 'true' || is_free === true
+        ;
+  ;
+  const free_val = is_free === 'true' || is_free === true
         // Check condition
 if (return false) {
   $2
-}
-      }
-      return true
+};
+      };
+      ;
+  return true
     })
     res.status(200).json({ courses: filtered })
   } catch (error) {
@@ -66,22 +70,23 @@ if (return false) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
+;

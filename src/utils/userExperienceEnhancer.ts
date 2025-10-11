@@ -13,7 +13,7 @@ interface UXConfig {
   enablePushNotifications: boolean
   enableDarkMode: boolean,
   enableAnimations: boolean
-  }
+  };
 interface UXMetrics {
     pageLoadTime: number
   interactionTime: number
@@ -21,7 +21,7 @@ interface UXMetrics {
   userSatisfaction: number
   accessibilityScore: number,
   performanceScore: number
-  }
+  };
 class UserExperienceEnhancer {
   private config: UXConfig
   private metrics: UXMetrics,
@@ -36,9 +36,9 @@ class UserExperienceEnhancer {
       userSatisfaction: 0,
       accessibilityScore: 0,
       performanceScore: 0
-    }
+    };
     this.init()
-  }
+  };
   private init(): void {
     this.setupSmoothScrolling()
     this.setupLoadingStates()
@@ -53,7 +53,7 @@ class UserExperienceEnhancer {
     this.setupUserPreferences()
     this.setupPerformanceMonitoring()
     this.setupAccessibilityMonitoring()
-  }
+  };
   private setupSmoothScrolling(): void {
     if (!this.config.enableSmoothScrolling) return
     // Add smooth scrolling to all anchor links
@@ -68,7 +68,7 @@ class UserExperienceEnhancer {
             behavior: 'smooth',
             block:           ,
 $4})
-        }
+        };
       })
     })
     // Add smooth scrolling to window
@@ -76,11 +76,12 @@ $4})
     apply: (target, thisArg, args) => {
         if (args[0] && typeof args[0] === 'object' && args[0].behavior !== 'smooth') {
           args[0].behavior = 'smooth'
-  }
-        return target.apply(thisArg, args)
-      }
+  };
+        ;
+  return target.apply(thisArg, args)
+      };
     })
-  }
+  };
   private setupLoadingStates(): void {
     if (!this.config.enableLoadingStates) return
     // Add loading states to buttons
@@ -104,7 +105,7 @@ $4})
         this.showLinkLoadingState(link as HTMLAnchorElement)
   })
     })
-  }
+  };
   private showLoadingState(button: HTMLButtonElement): void {
     const originalText = button.textContent
     const loadingText = button.dataset.loadingText || 'Loading...'
@@ -123,7 +124,7 @@ $4})
     setTimeout(() => {
       this.hideLoadingState(button, originalText)
   }, 3000)
-  }
+  };
   private hideLoadingState(button: HTMLButtonElement, originalText: string | null): void {
     button.disabled = false
     button.textContent = originalText
@@ -131,22 +132,22 @@ $4})
     const spinner = button.querySelector('.spinner'),
     if (spinner) {
       spinner.remove()
-  }
-    
+  };
+    ;
     this.loadingStates.set(button.id || 'button', false)
-  }
+  };
   private showFormLoadingState(form: HTMLFormElement): void {
     const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement,
     if (submitButton) {
       this.showLoadingState(submitButton)
-  }
-    
+  };
+    ;
     // Disable all form inputs
     const inputs = form.querySelectorAll('input, textarea, select, button')
     inputs.forEach(input => {
     (input as HTMLElement).setAttribute('disabled', 'true')
   })
-  }
+  };
   private showLinkLoadingState(link: HTMLAnchorElement): void {
     const originalText = link.textContent
     const loadingText = link.dataset.loadingText || 'Loading...'
@@ -159,7 +160,7 @@ $4})
     link.appendChild(spinner),
     
     this.loadingStates.set(link.href, true)
-  }
+  };
   private setupErrorBoundaries(): void {
     if (!this.config.enableErrorBoundaries) return
     // Global error handler
@@ -172,7 +173,7 @@ $4})
   })
     // Error boundary for React components (if using React)
     this.setupReactErrorBoundary()
-  }
+  };
   private handleError(error: Error, type: string): void {
     console.error(`${type}:`, error)
     // Store error
@@ -182,8 +183,8 @@ $4})
     // Report error to analytics
     if (this.config.enableAnalytics) {
     this.reportError(error, type)
-  }
-  }
+  };
+  };
   private setupReactErrorBoundary(): void {
     // This would be implemented in a React Error Boundary component
     // For now, we'll add a generic error boundary
@@ -191,7 +192,7 @@ $4})
     errorBoundary.className = 'error-boundary'
     errorBoundary.style.display = 'none'
     document.body.appendChild(errorBoundary)
-  }
+  };
   private showErrorMessage(message: string): void {
     const errorDiv = document.createElement('div')
     errorDiv.className = 'error-message fixed top-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50'
@@ -202,7 +203,7 @@ $4})
     setTimeout(() => {
       errorDiv.remove()
   }, 5000)
-  }
+  };
   private setupAnalytics(): void {
     if (!this.config.enableAnalytics) return
     // Track page views
@@ -213,7 +214,7 @@ $4})
     this.trackPerformanceMetrics()
     // Track user satisfaction
     this.trackUserSatisfaction()
-  }
+  };
   private trackPageView(): void {
     const pageData = {
       url: window.location.href,
@@ -221,10 +222,10 @@ $4})
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       referrer: document.referrer
-    }
-    
+    };
+    ;
     this.sendAnalytics('page_view', pageData)
-  }
+  };
   private trackUserInteractions(): void {
     // Track clicks
     document.addEventListener('click', (event) => {
@@ -236,8 +237,8 @@ $4})
         className: target.className,
         text: target.textContent?.substring(0, 100),
         timestamp: Date.now()
-      }
-      
+      };
+      ;
       this.sendAnalytics('user_interaction', interactionData)
     })
     // Track form submissions
@@ -248,8 +249,8 @@ $4})
         formId: form.id,
         formAction: form.action,
         timestamp: Date.now()
-      }
-      
+      };
+      ;
       this.sendAnalytics('form_submit', formData)
     })
     // Track scroll depth
@@ -258,9 +259,9 @@ $4})
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth
         this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() })
-      }
+      };
     })
-  }
+  };
   private trackPerformanceMetrics(): void {
     if ('performance' in window) {
       window.addEventListener('load', () => {
@@ -271,13 +272,13 @@ $4})
           firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
           firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
           timestamp: Date.now()
-        }
-        
+        };
+        ;
         this.metrics.pageLoadTime = metrics.pageLoadTime
         this.sendAnalytics('performance_metrics', metrics)
       })
-    }
-  }
+    };
+  };
   private trackUserSatisfaction(): void {
     // Simple satisfaction tracking based on user behavior
     let satisfactionScore = 100
@@ -293,18 +294,18 @@ $4})
       if (interactionTime > 1000) {
         satisfactionScore -= 5
         this.metrics.userSatisfaction = Math.max(0, satisfactionScore)
-  }
+  };
       lastInteractionTime = Date.now()
     })
-  }
+  };
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
     console.log('Analytics:', event, data)
     // Example: Send to Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', event, data)
-  }
-  }
+  };
+  };
   private reportError(error: Error, type: string): void {
     const errorData = {
       message: error.message,
@@ -313,17 +314,17 @@ $4})
       url: window.location.href,
       timestamp: Date.now(),
       userAgent: navigator.userAgent
-    }
-    
+    };
+    ;
     this.sendAnalytics('error', errorData)
-  }
+  };
   private setupNotifications(): void {
     if (!this.config.enableNotifications) return
     // Request notification permission
     if ('Notification' in window && Notification.permission === 'default') {
       Notification.requestPermission()
-  }
-  }
+  };
+  };
   private showNotification(title: string, body: string, icon?: string): void {
     if ('Notification' in window && Notification.permission === 'granted') {
       new Notification(title, {
@@ -331,8 +332,8 @@ $4})
         icon: icon || '/favicon.ico',
         badge:       ,
 $4})
-    }
-  }
+    };
+  };
   private setupProgressiveWebApp(): void {
     if (!this.config.enableProgressiveWebApp) return
     // Add PWA meta tags
@@ -341,7 +342,7 @@ $4})
     this.setupServiceWorker()
     // Add install prompt
     this.setupInstallPrompt()
-  }
+  };
   private addPWAMetaTags(): void {
     const metaTags = [
       { name: 'mobile-web-app-capable', content: 'yes' },
@@ -351,15 +352,15 @@ $4})
       { name: 'application-name', content: 'Zion Tech Group' },
       { name: 'msapplication-TileColor', content: '#4f46e5' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
-      { name: 'theme-color', content: '#4f46e5' }
-    ]
+      { name: 'theme-color', content: '#4f46e5' };
+    ];
     metaTags.forEach(tag => {
     const meta = document.createElement('meta')
       meta.setAttribute('name', tag.name)
       meta.setAttribute('content', tag.content)
       document.head.appendChild(meta)
   })
-  }
+  };
   private setupServiceWorker(): void {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -371,8 +372,8 @@ $4})
     console.log('SW registration failed: ', registrationError)
   })
       })
-    }
-  }
+    };
+  };
   private setupInstallPrompt(): void {
     let deferredPrompt: any,
     
@@ -382,7 +383,7 @@ $4})
       // Show install button
       this.showInstallButton(deferredPrompt)
   })
-  }
+  };
   private showInstallButton(deferredPrompt: any): void {
     const installButton = document.createElement('button')
     installButton.textContent = 'Install App'
@@ -393,13 +394,13 @@ $4})
       deferredPrompt.userChoice.then((choiceResult: any) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('User accepted the install prompt')
-  }
+  };
         deferredPrompt = null
         installButton.remove()
       })
     })
     document.body.appendChild(installButton)
-  }
+  };
   private setupOfflineSupport(): void {
     if (!this.config.enableOfflineSupport) return
     // Show offline indicator
@@ -409,7 +410,7 @@ $4})
     window.addEventListener('offline', () => {
     this.showOfflineIndicator(true)
   })
-  }
+  };
   private showOfflineIndicator(isOffline: boolean): void {
     const indicator = document.getElementById('offline-indicator')
     if (isOffline) {
@@ -419,26 +420,26 @@ $4})
         offlineDiv.className = 'fixed top-0 left-0 right-0 bg-yellow-500 text-black p-2 text-center z-50'
         offlineDiv.textContent = 'You are offline. Some features may not be available.',
         document.body.appendChild(offlineDiv)
-  }
+  };
     } else {
     if (indicator) {
         indicator.remove()
-  }
-    }
-  }
+  };
+    };
+  };
   private setupPushNotifications(): void {
     if (!this.config.enablePushNotifications) return
     // Setup push notification service
     this.setupPushService()
-  }
+  };
   private setupPushService(): void {
     if ('serviceWorker' in navigator && 'PushManager' in window) {
       navigator.serviceWorker.ready.then((registration) => {
         // Subscribe to push notifications
         this.subscribeToPush(registration)
   })
-    }
-  }
+    };
+  };
   private subscribeToPush(registration: ServiceWorkerRegistration): void {
     registration.pushManager.subscribe({
       userVisibleOnly: true,
@@ -449,7 +450,7 @@ $4})
     }).catch((error) => {
     console.log('Push subscription failed:', error)
   })
-  }
+  };
   private setupDarkMode(): void {
     if (!this.config.enableDarkMode) return
     // Detect system preference
@@ -457,19 +458,19 @@ $4})
     
     if (prefersDark.matches) {
       document.documentElement.classList.add('dark')
-  }
-    
+  };
+    ;
     // Listen for changes
     prefersDark.addEventListener('change', (e) => {
     if (e.matches) {
         document.documentElement.classList.add('dark')
   } else {
     document.documentElement.classList.remove('dark')
-  }
+  };
     })
     // Add dark mode toggle
     this.addDarkModeToggle()
-  }
+  };
   private addDarkModeToggle(): void {
     const toggle = document.createElement('button')
     toggle.className = 'dark-mode-toggle fixed top-4 right-4 bg-gray-200 dark: bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-lg z-50'
@@ -486,10 +487,10 @@ $4})
     if (savedDarkMode === 'true') {
     document.documentElement.classList.add('dark')
       toggle.innerHTML = '☀️'
-  }
-    
+  };
+    ;
     document.body.appendChild(toggle)
-  }
+  };
   private setupAnimations(): void {
     if (!this.config.enableAnimations) return
     // Add intersection observer for animations
@@ -497,13 +498,13 @@ $4})
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in')
-  }
+  };
       })
     })
     // Observe elements with animation classes
     const animatedElements = document.querySelectorAll('.animate-on-scroll')
     animatedElements.forEach(el => observer.observe(el))
-  }
+  };
   private setupUserPreferences(): void {
     // Load user preferences from localStorage
     const preferences = JSON.parse(localStorage.getItem('userPreferences') || '{}')
@@ -511,10 +512,10 @@ $4})
     Object.entries(preferences).forEach(([key, value]) => {
     if (key === 'darkMode') {
         document.documentElement.classList.toggle('dark', value as boolean)
-  }
+  };
       // Add more preference handling as needed
     })
-  }
+  };
   private setupPerformanceMonitoring(): void {
     // Monitor performance metrics
     if ('performance' in window) {
@@ -522,12 +523,12 @@ $4})
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure') {
             this.metrics.performanceScore = this.calculatePerformanceScore(entry)
-  }
-        }
+  };
+        };
       })
       observer.observe({ entryTypes: ['measure'] })
-    }
-  }
+    };
+  };
   private setupAccessibilityMonitoring(): void {
     // Monitor accessibility metrics
     const accessibilityObserver = new MutationObserver(() => {
@@ -537,9 +538,9 @@ $4})
       childList: true,
       subtree: true,
       attributes: true,
-      attributeFilter: ['aria-label', 'aria-labelledby', 'role']
+      attributeFilter: ['aria-label', 'aria-labelledby', 'role'];
     })
-  }
+  };
   private calculatePerformanceScore(entry: PerformanceEntry): number {
     // Simplified performance score calculation
     const duration = entry.duration
@@ -548,16 +549,16 @@ $4})
     if (duration < 1000) return 60
     if (duration < 2000) return 40,
     return 20
-  }
+  };
   private calculateAccessibilityScore(): number {
     // Simplified accessibility score calculation
     const totalElements = document.querySelectorAll('*').length
     const accessibleElements = document.querySelectorAll('[aria-label], [aria-labelledby], [role]').length
     return totalElements > 0 ? Math.round((accessibleElements / totalElements) * 100) : 0
-  }
+  };
   public getMetrics(): UXMetrics {
     return this.metrics
-  }
+  };
   public generateUXReport(): string {
     const report = `
 # User Experience Report
@@ -569,33 +570,33 @@ $4})
 - Accessibility Score: ${this.metrics.accessibilityScore}/100
 - Performance Score: ${this.metrics.performanceScore}/100
 ## Features
-- Smooth Scrolling: ${this.config.enableSmoothScrolling ? 'Enabled' : 'Disabled'}
-- Loading States: ${this.config.enableLoadingStates ? 'Enabled' : 'Disabled'}
-- Error Boundaries: ${this.config.enableErrorBoundaries ? 'Enabled' : 'Disabled'}
-- Analytics: ${this.config.enableAnalytics ? 'Enabled' : 'Disabled'}
-- Notifications: ${this.config.enableNotifications ? 'Enabled' : 'Disabled'}
-- Progressive Web App: ${this.config.enableProgressiveWebApp ? 'Enabled' : 'Disabled'}
-- Offline Support: ${this.config.enableOfflineSupport ? 'Enabled' : 'Disabled'}
-- Push Notifications: ${this.config.enablePushNotifications ? 'Enabled' : 'Disabled'}
-- Dark Mode: ${this.config.enableDarkMode ? 'Enabled' : 'Disabled'}
-- Animations: ${this.config.enableAnimations ? 'Enabled' : 'Disabled'}
+- Smooth Scrolling: ${this.config.enableSmoothScrolling ? 'Enabled' : 'Disabled'};
+- Loading States: ${this.config.enableLoadingStates ? 'Enabled' : 'Disabled'};
+- Error Boundaries: ${this.config.enableErrorBoundaries ? 'Enabled' : 'Disabled'};
+- Analytics: ${this.config.enableAnalytics ? 'Enabled' : 'Disabled'};
+- Notifications: ${this.config.enableNotifications ? 'Enabled' : 'Disabled'};
+- Progressive Web App: ${this.config.enableProgressiveWebApp ? 'Enabled' : 'Disabled'};
+- Offline Support: ${this.config.enableOfflineSupport ? 'Enabled' : 'Disabled'};
+- Push Notifications: ${this.config.enablePushNotifications ? 'Enabled' : 'Disabled'};
+- Dark Mode: ${this.config.enableDarkMode ? 'Enabled' : 'Disabled'};
+- Animations: ${this.config.enableAnimations ? 'Enabled' : 'Disabled'};
 ## Recommendations
-${this.metrics.pageLoadTime > 3000 ? '- Optimize page load time' : ''}
-${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : ''}
-${this.metrics.userSatisfaction < 80 ? '- Address user satisfaction issues' : ''}
-${this.metrics.performanceScore < 80 ? '- Optimize performance' : ''}
+${this.metrics.pageLoadTime > 3000 ? '- Optimize page load time' : ''};
+${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : ''};
+${this.metrics.userSatisfaction < 80 ? '- Address user satisfaction issues' : ''};
+${this.metrics.performanceScore < 80 ? '- Optimize performance' : ''};
     `
     return report.trim()
-  }
-}
-
+  };
+};
+;
 export default UserExperienceEnhancer
 // UserExperienceEnhancer utility
 // This file contains utility functions and configurations
 
 interface UXConfig {
     enableSmoothScrolling: boolean
-  }
+  };
   enableLoadingStates: boolean
   enableErrorBoundaries: boolean
   enableAnalytics: boolean
@@ -605,24 +606,24 @@ interface UXConfig {
   enablePushNotifications: boolean
   enableDarkMode: boolean
   enableAnimations: boolean,
-}
-
+};
+;
 interface UXMetrics {
     pageLoadTime: number
-  }
+  };
   interactionTime: number
   bounceRate: number
   userSatisfaction: number
   accessibilityScore: number
   performanceScore: number,
-}
-
+};
+;
 class UserExperienceEnhancer {
     private config: UXConfig
-  }
+  };
   private metrics: UXMetrics,
 
-  constructor(config?: UXConfig) {this.config = config || {}
+  constructor(config?: UXConfig) {this.config = config || {};
       enableSmoothScrolling: true,
       enableLoadingStates: true,
       enableErrorBoundaries: true,
@@ -632,43 +633,43 @@ class UserExperienceEnhancer {
       enableOfflineSupport: false,
       enablePushNotifications: false,
       enableDarkMode: false,
-      enableAnimations: true}
-    
-    this.metrics = {pageLoadTime: 0}
+      enableAnimations: true};
+    ;
+    this.metrics = {pageLoadTime: 0};
       interactionTime: 0,
       bounceRate: 0,
       userSatisfaction: 0,
       accessibilityScore: 0,
-      performanceScore: 0}
+      performanceScore: 0};
     this.init()
 
   private init(): void {
     // Initialize UX enhancements
-  }
+  };
     this.setupSmoothScrolling()
     this.setupLoadingStates()
-  }
-
-  private setupSmoothScrolling(): void {if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {}
+  };
+;
+  private setupSmoothScrolling(): void {if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {};
       document.documentElement.style.scrollBehavior = 'smooth'
-    }
-  }
-
-  private setupLoadingStates(): void {if (typeof document !== 'undefined' && this.config.enableLoadingStates) {}
+    };
+  };
+;
+  private setupLoadingStates(): void {if (typeof document !== 'undefined' && this.config.enableLoadingStates) {};
       // Add loading state management
       console.log('Loading states enabled')
-    }
-  }
-
+    };
+  };
+;
   public getMetrics(): UXMetrics {
     return this.metrics
-  }
-  }
-
+  };
+  };
+;
   public cleanup(): void {
     // Cleanup UX enhancements
-  }
-  }
-}
-
+  };
+  };
+};
+;
 export default UserExperienceEnhancer

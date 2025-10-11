@@ -1,4 +1,4 @@
-impo, r, t {/* TODO: Fix JSX expression */}
+impo, r, t {/* TODO: Fix JSX expression */};
 } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 export default function NextGenSecurityOperations20, 2, 5() {  
@@ -71,10 +71,11 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all shadow-lg">
                 Schedule Your Security Assessment
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />),
-export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX expression */}
+export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX expression */};
 }
-
-            <section, className='mb-12'>
+;
+            ;
+  <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Enterprise, Success, Stories
               <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>

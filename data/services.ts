@@ -4,19 +4,19 @@ export interface Service {
   description: string
   icon: string
   category: string
-  features: string[]
-  benefits: string[]
+  features: string[];
+  benefits: string[];
   pricing: {
     starting: string
     popular?: string
     enterprise?: string
-  }
+  };
   marketPrice: string
   link: string
   popular: boolean
-  tags: string[]
-}
-
+  tags: string[];
+};
+;
 export const aiServices: Service[] = [
   {
     id: 'ai-chatbot-builder',
@@ -46,7 +46,7 @@ export const aiServices: Service[] = [
     marketPrice: '$500-2000/month',
     link: '/ai-chatbot-builder',
     popular: true,
-    tags: ['NLP', 'Customer Service', 'Automation']
+    tags: ['NLP', 'Customer Service', 'Automation'];
   },
   {
     id: 'ai-content-generator',
@@ -76,7 +76,7 @@ export const aiServices: Service[] = [
     marketPrice: '$300-1500/month',
     link: '/ai-content-generator',
     popular: true,
-    tags: ['Content Marketing', 'SEO', 'Automation']
+    tags: ['Content Marketing', 'SEO', 'Automation'];
   },
   {
     id: 'ai-data-analytics',
@@ -106,7 +106,7 @@ export const aiServices: Service[] = [
     marketPrice: '$800-3000/month',
     link: '/ai-data-analytics',
     popular: true,
-    tags: ['Analytics', 'Machine Learning', 'Business Intelligence']
+    tags: ['Analytics', 'Machine Learning', 'Business Intelligence'];
   },
   {
     id: 'ai-customer-support',
@@ -136,7 +136,7 @@ export const aiServices: Service[] = [
     marketPrice: '$600-2500/month',
     link: '/ai-customer-support',
     popular: false,
-    tags: ['Customer Service', 'Automation', 'AI']
+    tags: ['Customer Service', 'Automation', 'AI'];
   },
   {
     id: 'ai-cybersecurity',
@@ -166,7 +166,7 @@ export const aiServices: Service[] = [
     marketPrice: '$1000-4000/month',
     link: '/ai-cybersecurity',
     popular: false,
-    tags: ['Cybersecurity', 'AI', 'Monitoring']
+    tags: ['Cybersecurity', 'AI', 'Monitoring'];
   },
   {
     id: 'ai-ecommerce-optimizer',
@@ -196,9 +196,9 @@ export const aiServices: Service[] = [
     marketPrice: '$500-2000/month',
     link: '/ai-ecommerce-optimizer',
     popular: true,
-    tags: ['E-commerce', 'Optimization', 'AI']
-  }
-]
+    tags: ['E-commerce', 'Optimization', 'AI'];
+  };
+];
 export const itServices: Service[] = [
   {
     id: 'cloud-migration',
@@ -228,7 +228,7 @@ export const itServices: Service[] = [
     marketPrice: '$3000-15000/project',
     link: '/cloud-migration',
     popular: true,
-    tags: ['Cloud', 'Migration', 'Infrastructure']
+    tags: ['Cloud', 'Migration', 'Infrastructure'];
   },
   {
     id: 'devops-ci-cd',
@@ -258,7 +258,7 @@ export const itServices: Service[] = [
     marketPrice: '$2000-8000/month',
     link: '/devops-ci-cd',
     popular: true,
-    tags: ['DevOps', 'CI/CD', 'Automation']
+    tags: ['DevOps', 'CI/CD', 'Automation'];
   },
   {
     id: 'cybersecurity-audit',
@@ -288,7 +288,7 @@ export const itServices: Service[] = [
     marketPrice: '$3000-12000/audit',
     link: '/cybersecurity-audit',
     popular: false,
-    tags: ['Cybersecurity', 'Audit', 'Compliance']
+    tags: ['Cybersecurity', 'Audit', 'Compliance'];
   },
   {
     id: 'managed-it-services',
@@ -318,7 +318,7 @@ export const itServices: Service[] = [
     marketPrice: '$800-3000/month',
     link: '/managed-it-services',
     popular: true,
-    tags: ['IT Support', 'Managed Services', 'Monitoring']
+    tags: ['IT Support', 'Managed Services', 'Monitoring'];
   },
   {
     id: 'database-optimization',
@@ -348,7 +348,7 @@ export const itServices: Service[] = [
     marketPrice: '$1500-5000/month',
     link: '/database-optimization',
     popular: false,
-    tags: ['Database', 'Optimization', 'Performance']
+    tags: ['Database', 'Optimization', 'Performance'];
   },
   {
     id: 'network-security',
@@ -378,9 +378,9 @@ export const itServices: Service[] = [
     marketPrice: '$1200-4000/month',
     link: '/network-security',
     popular: true,
-    tags: ['Network', 'Security', 'Firewall']
-  }
-]
+    tags: ['Network', 'Security', 'Firewall'];
+  };
+];
 export const microSaasServices: Service[] = [
   {
     id: 'analytics-dashboard',
@@ -410,7 +410,7 @@ export const microSaasServices: Service[] = [
     marketPrice: '$50-200/month',
     link: '/analytics-dashboard',
     popular: true,
-    tags: ['Analytics', 'Dashboard', 'Reporting']
+    tags: ['Analytics', 'Dashboard', 'Reporting'];
   },
   {
     id: 'email-marketing-automation',
@@ -440,7 +440,7 @@ export const microSaasServices: Service[] = [
     marketPrice: '$60-300/month',
     link: '/email-marketing-automation',
     popular: true,
-    tags: ['Email Marketing', 'Automation', 'AI']
+    tags: ['Email Marketing', 'Automation', 'AI'];
   },
   {
     id: 'social-media-scheduler',
@@ -470,7 +470,7 @@ export const microSaasServices: Service[] = [
     marketPrice: '$30-150/month',
     link: '/social-media-scheduler',
     popular: true,
-    tags: ['Social Media', 'Scheduling', 'Analytics']
+    tags: ['Social Media', 'Scheduling', 'Analytics'];
   },
   {
     id: 'expense-tracker',
@@ -500,7 +500,7 @@ export const microSaasServices: Service[] = [
     marketPrice: '$25-100/month',
     link: '/expense-tracker',
     popular: false,
-    tags: ['Finance', 'Expense Tracking', 'AI']
+    tags: ['Finance', 'Expense Tracking', 'AI'];
   },
   {
     id: 'project-management',
@@ -530,7 +530,7 @@ export const microSaasServices: Service[] = [
     marketPrice: '$40-200/month',
     link: '/project-management',
     popular: true,
-    tags: ['Project Management', 'Collaboration', 'Productivity']
+    tags: ['Project Management', 'Collaboration', 'Productivity'];
   },
   {
     id: 'inventory-manager',
@@ -560,7 +560,7 @@ export const microSaasServices: Service[] = [
     marketPrice: '$50-250/month',
     link: '/inventory-manager',
     popular: false,
-    tags: ['Inventory', 'Management', 'Automation']
-  }
-]
-export const allServices = [...aiServices, ...itServices, ...microSaasServices]
+    tags: ['Inventory', 'Management', 'Automation'];
+  };
+];
+export const allServices = [...aiServices, ...itServices, ...microSaasServices];

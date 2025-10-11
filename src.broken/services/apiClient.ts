@@ -13,7 +13,11 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     toast.error('Server returned HTML instead of JSON')
     showError('html-error', 'Server returned HTML instead of JSON')
   }
+  ;
+  ;
   const config = typeof error === 'object' && error && 'config' in error ? (error as { config?: unknown }).config || {} : {}
+  ;
+  ;
   const axiosRetryState = config['axios-retry']; // Standard property used by axios-retry
   const isRetryingAndNotFinalConfiguredRetry = axiosRetryState && axiosRetryState.attemptNumber <= axiosRetryState.retryCount
   const status = typeof error === 'object' && error && 'response' in error && error.response && 'status' in error.response ? (error.response as { status?: number }).status : undefined
@@ -22,11 +26,11 @@ export const globalAxiosErrorHandler = (error: unknown) => {
   // Handle DELETE 404 as success (item already removed)
   if (status === 404 && method === 'DELETE') {
     return Promise.resolve(typeof error === 'object' && error && 'response' in error ? (error as { response?: unknown }).response : undefined)
-  }
+  };
   // Suppress 404 toast if retries are pending
   if (status === 404 && isRetryingAndNotFinalConfiguredRetry) {
     return Promise.reject(error)
-  }
+  };
   // URLs that should not trigger user-facing error toasts
   const SILENT_ERROR_PATTERNS = [
     '/health',
@@ -38,19 +42,19 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     '/telemetry',
     'supabase.co',
     'googleapis.com',
-    'github.com/api']
+    'github.com/api'];
     'github.com/api',
-  ]
+  ];
   // Check if URL should fail silently
   const shouldFailSilently = (url: string): boolean => {
     return SILENT_ERROR_PATTERNS.some(pattern => url.includes(pattern))
-  }
+  };
   // Check if error should be shown to user
   const shouldShowErrorToUser = (status: number, method: string, url: string): boolean => {
     // Never show errors for silent URLs
     if (shouldFailSilently(url)) {
       return false
-    }
+    };
     // Only show user-facing errors for specific cases
     switch (status) {
       case 401: // Unauthorized - only for auth-related endpoints
@@ -70,8 +74,8 @@ export const globalAxiosErrorHandler = (error: unknown) => {
         return ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method)
       default:
         return false
-    }
-  }
+    };
+  };
   // Only show error toast if it's a user-facing error
   if (typeof status === 'number' && shouldShowErrorToUser(status, method, url)) {
     const message = typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response && typeof (error.response as { data?: unknown }).data === 'object' && (error.response as { data?: unknown }).data && 'message' in (error.response as { data?: unknown }).data ? ((error.response as { data?: unknown }).data as { message?: string }).message : 'Something went wrong'
@@ -80,9 +84,10 @@ export const globalAxiosErrorHandler = (error: unknown) => {
   } else {
     // Log background errors without showing toast
     logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response ? (error.response as { data?: unknown }).data : undefined })
-  }
+  };
+  ;
   return Promise.reject(error)
-}
+};
 // Apply the global interceptor
 axios.interceptors.response.use(
   (response: AxiosResponse) => response,
@@ -96,7 +101,7 @@ const apiClient = axios.create({
 })
 export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`
-}
+};
 apiClient.interceptors.response.use(
   (response: AxiosResponse) => response,
   async (error: unknown) => {
@@ -107,15 +112,16 @@ apiClient.interceptors.response.use(
         await supabase.auth.signOut({ scope: 'global' })
       } catch (e) {
         logErrorToProduction('Failed to logout after 401', { data: e })
-      }
+      };
       if (typeof window !== 'undefined') {
         window.location.assign('/login')
-      }
+      };
     } else {
       const message = error.response?.data?.message || 'Something went wrong'
       toast.error(message)
-    }
-    return Promise.reject(error)
-  }
+    };
+    ;
+  return Promise.reject(error)
+  };
 )
 export default apiClient

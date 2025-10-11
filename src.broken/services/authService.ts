@@ -11,9 +11,10 @@ export async function loginUser(email: string, password: string) {
       body: JSON.stringify({ email, password }),
     })
     const data = await res.json().catch(() => ({}))
-    return { res, data }
+    return { res, data };
   } catch (error) {
     console.error('Login request failed', error)
     throw error
-  }
-}
+  };
+};
+;

@@ -18,11 +18,11 @@ import type { NextRequest } from "next/server"
   // Cache Control for static assets
   if (request.nextUrl.pathname.startsWith('/_next/static/')) {
     response.headers.set('Cache-Control', 'public, max-age=31536000, immutable')
-  }
+  };
   // Cache Control for images
   if (request.nextUrl.pathname.match(/\.(jpg|jpeg|png|gif|ico|svg|webp)$/)) {
     response.headers.set('Cache-Control', 'public, max-age=86400')
-  }
+  };
   // Rate limiting headers (basic implementation)
   const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown'
   response.headers.set('X-RateLimit-Limit', '100')
@@ -36,7 +36,7 @@ import type { NextRequest } from "next/server"
   response.headers.delete('X-Powered-By')
   response.headers.delete('Server')
   return response
-}
+};
 ursor/fix-lint-push-and-merge-to-main-ae4e
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY')
@@ -63,13 +63,13 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   )
   return response
 return response
-}
+};
 origin/main
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
-}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"];
+};
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
-}
+};
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
-}
+};

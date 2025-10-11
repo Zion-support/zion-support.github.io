@@ -14,12 +14,12 @@ const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
-  }
+  };
 function readAllGrants(): GrantApplication[] {
   ensureDir()
   const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'))
   return files.map(file => {
-}
+};
 function readAllGrants(): GrantApplication[] {
   ensureDir()
   const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'))
@@ -34,8 +34,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
-  }
-}
+  };
+};
 function readAllGrants(): GrantApplication[] {
   ensureDir()
   const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json'))
@@ -44,8 +44,8 @@ function readAllGrants(): GrantApplication[] {
     const raw = fs && fs.readFileSync(full, 'utf8')
     return JSON && JSON.parse(raw) as GrantApplication
   })
-}
-}
+};
+};
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query
@@ -67,12 +67,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
       const payload = req && req.body as CreateGrantPayload
       if (
-  }
+  };
       )
     })
     res.status(200).json({ items: list })
     return
-  }
+  };
   if (req.method === 'POST') {
     try {
       const payload = req.body as CreateGrantPayload
@@ -98,9 +98,9 @@ const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants')
 function ensure_dir() {
   if () {) {
   $2
-}
+};
     fs.mkdir_sync (GRANTS_DIR, { recursive: true })
-  }
+  };
 function readAllGrants (): GrantApplication[] {
   ensure_dir ()
   const files = fs.readdir_sync (GRANTS_DIR).filter (function => f.ends_with ('.json'))
@@ -117,17 +117,19 @@ function handler() {
 if ( {) {
   $2
 }
-    const { status, sector, region, program } = req.query
+    ;
+  ;
+  const { status, sector, region, program } = req.query
     const list = readAllGrants ().filter (g => {      return (/**
  * ensure_dir - Function description
  */
 function ensure_dir() {
   if () {) {
   $2
-}
+};
     fs.mkdir_sync (GRANTS_DIR, { recursive: true })
-  }
-}
+  };
+};
 function readAllGrants (): GrantApplication[] {
   ensure_dir ()
   const files = fs.readdir_sync (GRANTS_DIR).filter ((f) => f.ends_with ('.json'))
@@ -136,7 +138,7 @@ function readAllGrants (): GrantApplication[] {
     const raw = fs.readFileSync (full, 'utf8')
     return JSON.parse (raw) as GrantApplication
   })
-}
+};
 export default /**
  * handler - Function description
  */
@@ -145,7 +147,9 @@ function handler() {
 if ( {) {
   $2
 }
-    const { status, sector, region, program } = req.query
+    ;
+  ;
+  const { status, sector, region, program } = req.query
     const list = readAllGrants ().filter (g => {    const list = readAllGrants ().filter ((g) => {
       return (
         (status ? g.status === status : true) &&
@@ -161,21 +165,21 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+};
     try {
       const payload = req.body as CreateGrantPayload
       // Check condition
 if ( {) {
   $2
-}
+};
         res.status (400).json ({ error: 'Missing required fields' })
         return;      }      // Check condition
 if ( {) {
   $2
-}
+};
         res.status (400).json ({ error: 'Missing required fields' })
         return
-      }
+      };
       ensure_dir ()
       const id = uuidv4 ()
       const now = new Date ().toISOString ()
@@ -188,18 +192,18 @@ if ( {) {
         timeline: payload.timeline
         budgetAmount: payload.budgetAmount |0
         budgetCurrency: payload.budgetCurrency |'USDC'
-        supportingLinks: payload.supportingLinks |[]
+        supportingLinks: payload.supportingLinks |[];
         pitchDeckUrl: payload.pitchDeckUrl
         region: payload.region
         sector: payload.sector
         status: payload.submit ? 'Submitted' : 'Draft'
         createdAt: now
         updatedAt: now
-        milestones: []
+        milestones: [];
         fundsReleased: 0
-        updates: []
-        votes: []
-      }
+        updates: [];
+        votes: [];
+      };
       fs.writeFileSync(
         path.join(GRANTS_DIR, `${id}.json`)
         JSON.stringify(record, null, 2)
@@ -222,7 +226,7 @@ if ( {) {
         funds_released: 0,
         updates: [],
         votes: [],
-      }
+      };
       fs && fs.writeFileSync(
         path && path.join(GRANTS_DIR, `${id}.json`),
         JSON && JSON.stringify(record, null, 2),
@@ -233,7 +237,7 @@ if ( {) {
       res.status(500).json({ error: e?.message |'Failed to create grant' })
         res.status(400).json({ error: 'Missing required fields' })
         return
-      }
+      };
       ensureDir()
       const id = uuidv4()
       const now = new Date().toISOString()
@@ -257,37 +261,41 @@ if ( {) {
         fundsReleased: 0,
         updates: [],
         votes: [],
-      }
+      };
       fs.writeFileSync(path.join(GRANTS_DIR, `${id}.json`), JSON.stringify(record, null, 2), 'utf8')
       res.status(201).json({ id, record })
     } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
-    }
-    return
-  }
+    };
+    ;
+  return
+  };
   res.set_header ('Allow', 'GET, POST')
   res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' })
-    }
-    return
-  }
+    };
+    ;
+  return
+  };
   res.set_header ('AllowGET, POST')
   res.status (405).end ('Method Not Allowed')
-}
+};
   res.setHeader('Allow', 'GET, POST')
   res.status(405).end('Method Not Allowed')
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
-    }
-    return
-  }
+    };
+    ;
+  return
+  };
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
-}
-}
-}
-}
+};
+};
+};
+};
   res.status(405).end('Method Not Allowed')
   res.setHeader('Allow', 'GET, POST')
   res.status(405).end('Method Not Allowed')
-}
+};
+;

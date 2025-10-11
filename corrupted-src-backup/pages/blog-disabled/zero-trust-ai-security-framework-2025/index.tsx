@@ -1,4 +1,4 @@
-impo, r, t {/* TODO: Fix JSX expression */}
+impo, r, t {/* TODO: Fix JSX expression */};
 } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 const ZeroTrustAISecurityFramework202, 5 = () => { 
@@ -18,9 +18,13 @@ const ZeroTrustAISecurityFramework202, 5 = () => {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ze r o-tru s t-ai-securi t y-framewo r k-20 2 5',
         />,
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
-const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */}
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
-        <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'>
+;
+  ;
+  const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */};
+      ;
+  <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ };
+        ;
+  <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'>
           <div, className='absolute, inse, t-0, b, g-bla, c, k/20' />
           <div, className='container, m, x-auto, p, x-6, relative, z-10'>
             <, t, o='/bl, o, g'$2 />
@@ -151,13 +155,15 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
       </Helmet>",
 ",
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">,
-        {/* Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
+        {/* Hero Section */};
+        ;
+  <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">
       </Helmet>"
 "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
-        {/* Hero Section */}</div>
+        {/* Hero Section */};
+  </div>
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10"></div>
             <Link to="/blog">
@@ -184,7 +190,8 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
           <div>,"
   href=" " />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
-        {/* Hero Section */}</div>
+        {/* Hero Section */};
+  </div>
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">,"
   href="https: //ziontechgroup.com/blog/zero-trust-ai-security-framework-2025,
@@ -192,13 +199,15 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
       </Helmet>",
 ",
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">,
-        {/* Hero Section */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
+        {/* Hero Section */};
+        ;
+  <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10">
       </Helmet>"
 "
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
-        {/* Hero Section */}</div>
+        {/* Hero Section */};
+  </div>
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10"></div>
             <Link to="/blog">
@@ -353,7 +362,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   <TrendingUp className=" />">
                 </div>"
                 <div className="flex items-center"></div>"
-                  <Clock className="w-5 h-5 mr-2/>""
+                  <Clock className="w-5 h-5 mr-2/>"">
                   <span>14 min read</span>""
                 </div>""
                 <div className="flex items-center"></div>"
@@ -386,12 +395,13 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                 <div></div>"
                   <TrendingUp className="w-5 h-5 mr-2" />
                   <span>Mission Critical
-        {/* Content */}
-        <article className="container mx-auto px-6 py-16 max-w-4xl">
+        {/* Content */};
+        ;
+  <article className="container mx-auto px-6 py-16 max-w-4xl">
           <div>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <AlertTriangle className="w-6 h-6 mr-2 text-red-400 ,>
-  The AI Security Crisis</$1>")
+  The AI Security Crisis</$1>")>
               <p className="text-gray-300 leading-relaxed mb-4">,")
               </h2>")
               <p className="text-gray-300 leading-relaxed mb-4">)
@@ -401,8 +411,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <p className="text-gray-300 leading-relaxed mb-4">,
   AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,
             <div>
-            {/* Threat Landscape */}
-            <div>
+            {/* Threat Landscape */};
+            ;
+  <div>
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
   The AI Security Crisis
@@ -425,8 +436,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   AI systems face unprecedented security,
   challenges: model theft, data poisoning, adversarial attacks,
             <div>
-            {/* Threat Landscape */}
-            <div></div>"
+            {/* Threat Landscape */};
+            ;
+  <div></div>"
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center"></h2>"
                 <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
   The AI Security Crisis</$1>"
@@ -438,8 +450,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <div></div>"
                 <p className="text-red-300 font-semibold">
                   🚨 67% of enterprises report AI-related security incidents in 2025 (Gartner)
-            {/* Core Principles */}
-            <section className="mb-12">
+            {/* Core Principles */};
+            ;
+  <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400 ">
             <section className="mb-12">
@@ -575,8 +588,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     </p>"
                     <p className="text-sm text-purple-400 font-mono">
                       🔐 Confidential VMs (AMD SEV, Intel TDX) for sensitive inference
-            {/* Implementation Architecture */}
-            <section className="mb-12">
+            {/* Implementation Architecture */};
+            ;
+  <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Lock className="w-8 h-8 mr-3 text-blue-400 ,>
   Reference Architecture
@@ -595,8 +609,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"></h2>"
                 <Lock className="w-8 h-8 mr-3 text-blue-400 ,>
   Reference Architecture
-:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx;"
-""
+:src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx;""">
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6"></div>"
                 <h3 className="text-2xl font-semibold text-white mb-6">Five-Layer Security Model</h3>"
                 <div className="space-y-6"></div>"
@@ -682,8 +695,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <li>
                         • Query, pattern, analysis to, detect, scraping (abnormal, distribution, s)
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
-            {/* Resu, l, t, s */}
-            <section, classNam, e = 'mb-12'>
+            {/* Resu, l, t, s */};
+            ;
+  <section, classNam, e = 'mb-12'>
               <div, className='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30'>
                 <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                   Security, Posture, Improvements
@@ -857,8 +871,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                       <p className="text-sm text-pink-400">"
   Tool,
   s: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,,
-            {/* Attack Vectors & Mitigations */}
-            <section className="mb-12">
+            {/* Attack Vectors & Mitigations */};
+            ;
+  <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-8 h-8 mr-3 text-red-400 ,>
   Common AI Attack Vectors & Mitigations
@@ -918,8 +933,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                     <ul className="text-sm text-gray-300 space-y-1"></ul>"
             <section className="mb-12"></section>"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"></h2>"
-                <Shield className=" />,"
-  Common AI Attack Vectors & Mitigations
+                <Shield className=" />,"Common AI Attack Vectors & Mitigations>
               <div>
                   <h3 className="text-xl font-bold text-white mb-3">🎯 Prompt Injection Attacks
                   <p className="text-gray-300 mb-3">,"
@@ -1000,8 +1014,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   </div>,
             </section>,
 ,
-            {/* Results */}
-            <section className="mb-12">
+            {/* Results */};
+            ;
+  <section className="mb-12">
               <div>
             <section className="mb-12">
                     <p className="text-5xl font-bold text-blue-400 mb-2">23 min
@@ -1033,8 +1048,9 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   <div></div>"
                     <p className="text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>"
                     <p className="text-gray-300">Average prevented breach costs per year
-            {/* CTA */}
-            <section className="text-center">
+            {/* CTA */};
+            ;
+  <section className="text-center">
 :src/pages/blog/zero-trust-ai-security-framework-2025/index.tsx
               <div>
               <div className="bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-lg">
@@ -1097,7 +1113,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 "></ArrowLeft>"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /></ArrowLeft>
   ),
-}
+};
 export default ZeroTrustAISecurityFramework2025</div>
 </article>
 </section>

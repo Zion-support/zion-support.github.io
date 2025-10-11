@@ -11,8 +11,8 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
     ],
     pricing: unknown,
       starter: '$199/month',
-      professional: '$399/month'}
-      enterprise: 'Custom'}
+      professional: '$399/month'};
+      enterprise: 'Custom'};
   },
     name: 'Real SaaS Analytics 2024'
     path: '/services/real-saas-analytics-2024',
@@ -20,11 +20,11 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
     icon: 'BarChart3',
     category: 'Analytics',
     features: [,
-export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */}
-  l: '$399/month'}
+export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */};
+  l: '$399/month'};
       enterpris,
   e: 'Custom'
-    }
+    };
   },
     nam,
   e: 'Real SaaS Analytics 2024',
@@ -32,8 +32,7 @@ export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */}
   h: '/services/real-saas-analytics-2024',
     descriptio,
   n: 'Comprehensive SaaS performance and user analytics',
-    ico,
-  n: 'BarChart3',
+    icon: 'BarChart3',
     categor,
   y: 'Analytics',
     feature,
@@ -55,21 +54,21 @@ export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */}
   l: '$199/month',
       enterpris,
   e: 'Custom'
-    }
-  }
-]
+    };
+  };
+];
 export const realMicroSaasCategories2024 = [
   'Platform Development',
   'Analytics & Insights',
   'User Management',
   'Revenue Optimization'
-]
+];
 export const realMicroSaasStats2024 =
   totalServices: 2
   categories: 4
   averageRating: 4.7
   activeUsers: 1200,
-export const realMicroSaasStats2024 = {}
+export const realMicroSaasStats2024 = {};
   totalService,
   s: 2,
   categorie,
@@ -77,12 +76,11 @@ export const realMicroSaasStats2024 = {}
   averageRatin,
   g: 4.7,
   activeUser,
-  s: 1200}
+  s: 1200};
 export const realMicroSaasServices2024 = [ nam,
   e: 'Real Micro-SaaS Platform 2024',' pat,
   h: '/services/real-micro-saas-platform-2024',' descriptio,
-  n: 'Comprehensive micro-SaaS development and management platform',' ico,
-  n: 'Rocket',' categor,
+  n: 'Comprehensive micro-SaaS development and management platform',' icon: 'Rocket',' categor,
   y: 'Micro-SaaS', feature,
   s: [' 'Complete development framework',' 'Scalable architecture',' 'Multi-tenant support',' 'Advanced analytics' ], pricin,
   g: ' starte,
@@ -91,8 +89,7 @@ export const realMicroSaasServices2024 = [ nam,
   e: 'Custom' } }, ' nam,
   e: 'Real SaaS Analytics 2024',' pat,
   h: '/services/real-saas-analytics-2024',' descriptio,
-  n: 'Comprehensive SaaS performance and user analytics',' ico,
-  n: 'BarChart3',' categor,
+  n: 'Comprehensive SaaS performance and user analytics',' icon: 'BarChart3',' categor,
   y: 'Analytics', feature,
   s: [' 'User behavior tracking',' 'Performance metrics',' 'Revenue analytics',' 'Churn prediction' ], pricin,
   g: ' starte,

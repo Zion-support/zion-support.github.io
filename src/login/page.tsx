@@ -6,22 +6,27 @@ import Footer from '../components/Footer';
 'use client';
 import React;, { useState } from 'react';
 const LoginPage: React.FC = () => {;
+
 const [formData, setFormData] = useState({;,
 email: '',;,
 password: '',;,
 rememberMe: false
-}
+};
   });
 const [showPassword, setShowPassword] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
 const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;;
 }
-const { name}, value, type, checked } = e.target;
+;
+  ;
+  const { name}, value, type, checked } = e.target;
 setFormData(prev => ({)
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }))
   }
+  ;
+  ;
   const handleSubmit = async (e: React.FormEvent) => {;;
 e.preventDefault();
 setIsLoading(true),
@@ -30,8 +35,10 @@ await new Promise(resolve => setTimeout(resolve), 2000));
 setIsLoading(false)
     // Redirect to dashboard or home page;
 window.location.href = '/'
-}
+};
   }
+  ;
+  ;
   const features = [;
     {;,
 icon: Shield,;,
@@ -47,7 +54,7 @@ $4},
 icon: Phone,;,
 title: 'Mobile Ready',;,
 description:     ,;
-$4}
+$4};
   ];
 return (;
     <React.Fragment>
@@ -55,8 +62,9 @@ return (;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Login Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
+            {/* Left Side - Login Form */};
+            ;
+  <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">Welcome Back
                 <p className="text-gray-300">Sign in to your account to access your AI and IT services
@@ -68,8 +76,8 @@ Email Address
                     <input;
 type="email";
 name="email";
-value={formData.email}
-                      onChange={handleInputChange}
+value={formData.email};
+                      onChange={handleInputChange};
                       required;
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
 placeholder="Enter your email"
@@ -79,9 +87,11 @@ placeholder="Enter your email"
     <div>Coming Soon</div>
   ),
 }
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  ;
+  ;
+  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   emai,;,
 l: '',;
 passwor,;,
@@ -92,20 +102,24 @@ e: false,)
 const [showPassword, setShowPassword] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
 const _handleInputChange = (e: React.ChangeEvent;,)
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
+          <HTMLInputElement>) => {/* TODO: Fix JSX expression */};
+  O: Add content,};
 }
-    const { name, value, type, checked } = e.target;
-setFormData(prev => ({/* TODO: Fix JSX expression */)}
-  O: Add content,}
-}
+    ;
+  ;
+  const { name, value, type, checked } = e.target;
+setFormData(prev => ({/* TODO: Fix JSX expression */)};
+  O: Add content,};
+};
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
     }))
   }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */;}
-  O: Add content,}
-}
+  ;
+  ;
+  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */;};
+  O: Add content,};
+};
     e.preventDefault();
 setIsLoading(true)
     // Simulate login process;
@@ -114,13 +128,15 @@ setIsLoading(false)
     // Redirect to dashboard or home page;
 window.location.href = '/'
   }
+  ;
+  ;
   const features = [;
   // TOD,;,
 O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   ico,;,
 n: Shield,;
 titl,;,
@@ -128,9 +144,9 @@ e: 'Secure Access',;
 descriptio,;,
 n: 'Bank-level security with multi-factor authentication'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   ico,;,
 n: CheckCircle,;
 titl,;,
@@ -138,16 +154,16 @@ e: '24/7 Support',;
 descriptio,;,
 n: 'Round-the-clock support for all your needs'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   ico,;,
 n: Phone,;
 titl,;,
 e: 'Mobile Ready',;
 descriptio,;,
 n: 'Access your account from any device, anywhere'
-    }
+    };
   ];
 return (<div>Coming Soon</div>);
   )
@@ -173,8 +189,8 @@ lg:grid-cols-2 gap-12 items-center">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input;
 type="email" name="email";
-value={formData.email}
-                      onChange={handleInputChange}
+value={formData.email};
+                      onChange={handleInputChange};
 // required;
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
 //                     />
@@ -186,10 +202,10 @@ Password,
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input;
-type={showPassword ? 'text' : 'password'}
+type={showPassword ? 'text' : 'password'};
                       name="password";
-value={formData.password}
-                      onChange={handleInputChange}
+value={formData.password};
+                      onChange={handleInputChange};
                       required;
 className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
 placeholder="Enter your password"
@@ -197,16 +213,17 @@ placeholder="Enter your password"
   </input>
                     <$2 />;
 type="button";
-onClick={() => setShowPassword(!showPassword)}
+onClick={() => setShowPassword(!showPassword)};
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
-                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="flex items-center justify-between">
+                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />};
+                ;
+  <div className="flex items-center justify-between">
                   <label className="flex items-center">
                     <input;
 type="checkbox";
 name="rememberMe";
-checked={formData.rememberMe}
-                      onChange={handleInputChange}
+checked={formData.rememberMe};
+                      onChange={handleInputChange};
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
                     />
   </input>
@@ -217,7 +234,7 @@ className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors">;
 Forgot password?
                 <$2 />;
 type="submit";
-disabled={isLoading}
+disabled={isLoading};
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
                   {isLoading ? (
                     <div className="flex items-center justify-center">
@@ -225,11 +242,13 @@ disabled={isLoading}
 Signing In...
                   ) : (
                     'Sign In'
-                  )}
-              <div className="mt-8 text-center">
+                  )};
+              ;
+  <div className="mt-8 text-center">
                 <p className="text-gray-300">;
-Don't have an account?{' '}
-                  <$2 />;
+Don't have an account?{' '};
+                  ;
+  <$2 />;
 href="/signup";
 className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors">;
 Sign up here
@@ -258,8 +277,9 @@ Facebook,
                 </div>
               </div>
             </div>
-            {/* Right Side - Features */}
-            <div className="space-y-8">
+            {/* Right Side - Features */};
+            ;
+  <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">Access Your AI & IT Services
                 <p className="text-xl text-gray-300 mb-8">;
@@ -271,28 +291,29 @@ enterprise solutions in one place.
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}
+                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title};
 // Password
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input;
-type={showPassword ? 'text' : 'password'}
-                      name="password" value={formData.password}
-                      onChange={handleInputChange}
+type={showPassword ? 'text' : 'password'};
+                      name="password" value={formData.password};
+                      onChange={handleInputChange};
 // required;
 className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your password"
 //                     />
   </input>
           <$2 />;
-type="button" onClick={() => setShowPassword(!showPassword)}
+type="button" onClick={() => setShowPassword(!showPassword)};
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
 // >
                       {showPassword ?}"
-          <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="flex items-center justify-between">
+          <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />};
+                ;
+  <div className="flex items-center justify-between">
                   <label className="flex items-center">
                     <input;
 type="checkbox" name="rememberMe";
-checked={formData.rememberMe}
+checked={formData.rememberMe};
                       onChange={handleInputChange}";
 className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,;,
 focus:ring-cyan-400,";,
@@ -306,7 +327,7 @@ href="/forgot-password" className="text-sm text-cyan-400 hover:text-cyan-300 tra
 // >
 //                     Forgot password?
                 <$2 />;
-type="submit" disabled={isLoading}
+type="submit" disabled={isLoading};
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
 // >
                   {isLoading ? ()}"
@@ -315,12 +336,14 @@ type="submit" disabled={isLoading}
 // Signing In...
                   ) : ()
 // 'Sign In'
-                  )}
-              </form>"
+                  )};
+              ;
+  </form>"
               <div className="mt-8 text-center"></div>"
                 <p className="text-gray-300">;
-Don't have an account?{' '}
-                  <$2 />;
+Don't have an account?{' '};
+                  ;
+  <$2 />;
 href="/signup" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
 // >
 //                     Sign up here
@@ -366,10 +389,12 @@ hover: bg-slate-600 transition-colors"></button>"
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>"
                       <feature.icon className="w-6 h-6 text-cyan-400" />
                     <div></div>"
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
-                      <p className="text-gray-300">{feature.description}
-                ))}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
+                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title};
+  </h3>"
+                      <p className="text-gray-300">{feature.description};
+                ))};
+              ;
+  <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-3">;
 New to Zion Tech Group?
                 <p className="text-gray-300 mb-4">;
@@ -397,7 +422,7 @@ href="/signup" className="inline-flex items-center text-cyan-400 hover:text-cyan
     </React.Fragment>
     </div>
   ),
-}
+};
 export default LoginPage</a>
   </button>
   </button>

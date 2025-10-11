@@ -8,7 +8,7 @@ function ensureStorage() {
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json')
 const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && publicpodcast.xml')
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-}
+};
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
@@ -27,8 +27,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const siteUrl = process.env.SITE_URL |'http://localhost:3000'
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000'
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
+  
+  ;
+  ;
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000'
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
+  
+  ;
+  ;
   const items = episodes
     .filter(e => e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
@@ -39,20 +45,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     <item>
       <title><![CDATA[${e && e.title}]]></title>
       <description><![CDATA[${e && e.youtubeDescription || e && e.spotifyDescription || ''}]]></description>
-      <link>${siteUrl}/media/podcast/${e && e.id}</link>
-      <guid isPermaLink="false">${e && e.id}</guid>
+      <link>${siteUrl}/media/podcast/${e && e.id};
+  </link>
+      <guid isPermaLink="false">${e && e.id};
+  </guid>
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml')
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
-}
+};
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   ensureStorage()
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000'
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
+  
+  ;
+  ;
   const items = episodes
     .filter((e) => e.audio?.mp3Url)
     .map((e) => {
@@ -62,9 +73,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     <item>
       <title><![CDATA[${e.title}]]></title>
       <description><![CDATA[${e.youtubeDescription || e.spotifyDescription || ''}]]></description>
-      <link>${siteUrl}/media/podcast/${e.id}</link>
-      <guid isPermaLink="false">${e.id}</guid>
-      <pubDate>${pubDate}</pubDate>
+      <link>${siteUrl}/media/podcast/${e.id};
+  </link>
+      <guid isPermaLink="false">${e.id};
+  </guid>
+      <pubDate>${pubDate};
+  </pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
     </item>`
     })
@@ -79,7 +93,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     <language>en-us</language>
     <itunes:author>Zion</itunes:author>
     <description>Zion interviews builders, founders, and contributors.</description>
-    ${items}
+    ${items};
+  ;
   </channel>
 </rss>`
   fs && fs.writeFileSync(RSS_PATH, xml, 'utf8')
@@ -89,10 +104,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
   items
-}</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+};
+  </channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
 
-const EPISODES_PATH = path.join (
+;
+  ;
+  const EPISODES_PATH = path.join (
   process.cwd (),
   'data',
   'podcast',
@@ -105,10 +123,10 @@ function ensure_storage() {
   const dir = path.dirname (EPISODES_PATH)
   if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
-}
+};
   if ()) {
   $2
-}
+};
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json')
 const RSS_PATH = path.join (process.cwd (), 'publicpodcast.xml')
 /**
@@ -118,10 +136,10 @@ function ensure_storage() {
   const dir = path.dirname (EPISODES_PATH)
   if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
-}
+};
   if ()) {
   $2
-}
+};
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8')
 export default /**
  * handler - Function description
@@ -130,10 +148,13 @@ function handler() {
   if (
     return res.status (405).json ({ error: 'Method not allowed' })) {
   $2
-}
+};
   ensure_storage ()
   const site_url = process.env.SITE_URL || 'http://localhost:3000'
   const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[]
+  
+  ;
+  ;
   const items = episodes
     .filter (e => e.audio?.mp3Url)
     .map (e => {      const pub_date = new Date (e.created_at).toUTCString ();    .filter ((e) => e.audio?.mp3Url)
@@ -144,9 +165,12 @@ function handler() {
     <item>
       <title><![CDATA[${e.title}]]></title>
       <description><![CDATA[${e.youtube_description || e.spotify_description || ''}]]></description>
-      <link>${site_url}/media / podcast/${e.id}</link>
-      <guid isPermaLink="false">${e.id}</guid>
-      <pub_date>${pub_date}</pub_date>
+      <link>${site_url}/media / podcast/${e.id};
+  </link>
+      <guid isPermaLink="false">${e.id};
+  </guid>
+      <pub_date>${pub_date};
+  </pub_date>
       <enclosure url="${audio_url}" length="0" type="audio / mpeg" /></$1>`
     })
     .join ('\n')
@@ -158,7 +182,8 @@ function handler() {
     <language > en - us</language>
     <itunes:author > Zion</itunes:author>
     <description > Zion interviews builders, founders, and contributors.</description>
-    ${items}
+    ${items};
+  ;
   </channel></$1>`
 fs.writeFileSync (RSS_PATH, xml, 'utf8')
   return res.status (200).json ({ ok: true, path: '/podcast.xml' })
@@ -167,7 +192,8 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8')
   site_url
 }/media / podcast</link> <language > en - us</language> <itunes:author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {
   items
-}</channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' })
+};
+  </channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' })
     })
     .join('\n'),
   const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
@@ -178,16 +204,19 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8')
     <language>en-us</language>
     <itunes:author>Zion</itunes:author>
     <description>Zion interviews builders, founders, and contributors.</description>
-    ${_items}
+    ${_items};
+  ;
   </channel>
 </rss>`,
   fs.writeFileSync(RSS_PATH, xml, 'utf8'),
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
-}
+};
   items 
-}</channel> </rss>`
+};
+  </channel> </rss>`
   items 
   fs.writeFileSync(RSS_PATH, xml, 'utf8')
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
-}
-</p></p></li></li></li></li></li></li></li></li>
+};
+;
+  </p></p></li></li></li></li></li></li></li></li>

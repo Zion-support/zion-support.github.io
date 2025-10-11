@@ -12,14 +12,14 @@ export interface WhitelabelTenant {
     headline: string
     subtitle: string
     cta: string
-  }
+  };
   is_active: boolean
   created_at: string
   updated_at: string
   account_manager_id: string | null
   dns_verified: boolean
   email_template_override: Record<string, any> | null
-}
+};
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -34,7 +34,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
         setTenant(null)
         setIsLoading(false)
         return
-      }
+      };
       try {
         // Get the current hostname, fallback to localhost if not available
         const hostname = window.location.hostname || 'localhost'
@@ -47,27 +47,27 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           `${functionName}${params}`,
           {
             headers: {
-              'Content-Type': 'application/json'}}
+              'Content-Type': 'application/json'}};
               'Content-Type': 'application/json',
             },
-          }
+          };
         )
         if (functionError) {
           console.error('Edge Function error:', functionError)
           setError('Failed to load tenant configuration. Please try again later.')
           setTenant(null)
           return
-        }
+        };
         if (!data) {
           console.warn('No tenant data received')
           setTenant(null)
           return
-        }
+        };
         if (data.tenant) {
           setTenant(data.tenant)
         } else {
           setTenant(null)
-        }
+        };
       } catch (err: any) {
         console.error('Error loading tenant:', err)
         let message = err.message || 'An unexpected error occurred while loading tenant configuration'
@@ -77,17 +77,17 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           message.includes('No internet connection')
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
-        }
+        };
         setError(message)
         setTenant(null)
       } finally {
         setIsLoading(false)
-      }
-    }
+      };
+    };
     loadTenant()
   }, [externalSubdomain])
-  return { tenant, isLoading, error }
-}
+  return { tenant, isLoading, error };
+};
 // Hook to check if current user is a tenant admin
 export function useTenantAdminStatus(tenantId?: string) {
   const [isAdmin, setIsAdmin] = useState(false)
@@ -98,14 +98,16 @@ export function useTenantAdminStatus(tenantId?: string) {
         setIsAdmin(false)
         setIsLoading(false)
         return
-      }
+      };
       try {
         const { data: sessionData, error: sessionError } = await supabase.auth.getSession()
         if (sessionError || !sessionData.session) {
           setIsAdmin(false)
           return
         }
-        const userId = sessionData.session.user.id
+        ;
+  ;
+  const userId = sessionData.session.user.id
         const { data, error } = await supabase
           .from('tenant_administrators')
           .select('*')
@@ -118,9 +120,9 @@ export function useTenantAdminStatus(tenantId?: string) {
         setIsAdmin(false)
       } finally {
         setIsLoading(false)
-      }
-    }
+      };
+    };
     checkAdminStatus()
   }, [tenantId])
-  return { isAdmin, isLoading }
-}
+  return { isAdmin, isLoading };
+};

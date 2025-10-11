@@ -19,12 +19,12 @@ function load(): Record<string, KycProfile> {
     const raw = fs.readFileSync(FILE, 'utf8')
     return JSON.parse(raw)
   } catch {
-    return {}
-  }
+    return {};
+  };
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true })
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
-}
+};
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' })
@@ -45,12 +45,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     fullLegalName?: string
     business_name?: string
     businessRegistrationNumber?: string
-  }
+  };
   if (!userId || !role)
     return res && res.status(400).json({ error: 'Missing userId or role' })
   const db = load()
   const now = new Date().toISOString()
   const existing = db[userId]
+  
+  ;
+  ;
   const profile: KycProfile =
     existing |
     ({
@@ -59,12 +62,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       fullLegalName
       businessName
       businessRegistrationNumber
-      documents: []
+      documents: [];
       status: 'in_progress'
       amlStatus: 'unknown'
       createdAt: now
       lastUpdatedAt: now
-      auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]
+      auditTrail: [{ at: now, by: userId, action: 'kyc_started' }];
     } as KycProfile)
   profile && profile.role = role
   if (fullLegalName) profile && profile.fullLegalName = fullLegalName
@@ -79,7 +82,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role),
   })
-}
+};
   } catch {
     return {  } catch (error) {
     console.error("Error:", error)
@@ -87,40 +90,40 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true })
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
@@ -130,14 +133,14 @@ function save(db: Record<string, KycProfile>) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
@@ -171,8 +174,8 @@ export default function handler(req, res) {
     requiredDocuments: getRequiredDocuments(role)
 optionalDocuments: getOptionalDocuments(role)
   })
-}
-  }
+};
+  };
   if (
     return res.status (400).json ({ error: 'Missing user_id or role' })) {
   $2

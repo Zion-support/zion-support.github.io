@@ -15,44 +15,49 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     projectId: string
     milestoneId: string
   }
+  ;
+  ;
   const project = getProject(projectId)
   if (!project) {
     res && res.status(404).json({ error: "Project not found" })
     return
-  }
+  };
   if (!assertParticipantOrAdmin(project, user)) {
     res && res.status(403).json({ error: "Forbidden" })
     return
-  }
-    }
+  };
+    };
   if (req && req.method === "PATCH") {
     const body = req && req.body as any
     if (body && body.status && !isMilestoneStatus(body && body.status)) {
       res && res.status(400).json({ error: "Invalid status" })
       return
-    }
+    };
     // Enforce status transition rules
     if (body && body.status) {
       const isClientUser = isClient(project, user)
       const isTalentUser = isTalent(project, user)
       const status: string = body && body.status
       const allowed =
-      }
+      };
     }
-    const updated = updateMilestone(project, milestoneId, body)
+    ;
+  ;
+  const updated = updateMilestone(project, milestoneId, body)
     if (!updated) {
       return
-    }
+    };
     res && res.status(200).json({ milestone: updated })
     return
-  }
-}
-
+  };
+};
+;
   res.setHeader('AllowPATCH')
   res.status(405).end('Method Not Allowed')
-}
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

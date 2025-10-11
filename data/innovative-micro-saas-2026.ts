@@ -6,7 +6,7 @@ export interface InnovativeMicroSaas2026 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface InnovativeMicroSaas2026 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -31,7 +31,7 @@ export interface InnovativeMicroSaas2026 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -39,12 +39,14 @@ export interface InnovativeMicroSaas2026 {
   rating: number
   reviews: number
 }
-const contact = {
+;
+  ;
+  const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+};
 export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
   {
     id: 'ai-powered-customer-feedback-analyzer',
@@ -275,5 +277,5 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     customers: 156,
     rating: 4.8,
     reviews: 445
-  }
-]
+  };
+];

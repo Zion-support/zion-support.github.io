@@ -5,7 +5,7 @@ export interface AIFuturisticService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -17,11 +17,11 @@ export interface AIFuturisticService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk'
@@ -30,14 +30,14 @@ export interface AIFuturisticService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const aiFuturisticServices: AIFuturisticService[] = [
   // AI-Powered Quantum Blockchain Analytics
   {
@@ -558,5 +558,5 @@ export const aiFuturisticServices: AIFuturisticService[] = [
     customers: 195,
     rating: 4.8,
     reviews: 102
-  }
-]
+  };
+];

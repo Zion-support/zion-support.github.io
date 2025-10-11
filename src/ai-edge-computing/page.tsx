@@ -4,38 +4,38 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 'lucide-react'
 const AIEdgeComputingPage: React.FC = () => {
+
     const features = [],
   return (
     {// TODO: Add content
-  }
-}
-  ico,
-  n: Cpu,
+  };
+};
+  icon: Cpu,
       titl,
   e: 'Edge AI Processing',
       descriptio,
   n: 'AI processing at the edge for real-time decision making',
       benefit,
-  s: ['Low latency', 'Real-time processing', 'Offline capability']
+  s: ['Low latency', 'Real-time processing', 'Offline capability'];
     },
-      ico,
-  n: Zap,
+      icon: Zap,
       titl,
   e: 'Optimized Models',
       descriptio,
   n: 'Lightweight AI models optimized for edge deployment',
       benefit,
-  s: ['Small footprint', 'Fast inference', 'Resource efficient']
-      ico,
-  n: Shield,
+  s: ['Small footprint', 'Fast inference', 'Resource efficient'];
+      icon: Shield,
       titl,
   e: 'Secure Edge Computing',
       descriptio,
   n: 'Enterprise-grade security for edge AI deployments',
       benefit,
-  s: ['Data privacy', 'Secure communication', 'Access control']
-    }
+  s: ['Data privacy', 'Secure communication', 'Access control'];
+    };
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -70,20 +70,22 @@ const AIEdgeComputingPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                </h3>"
+                  {feature.title};
+                ;
+  </h3>"
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}"
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
-                </ul>
+                      {benefit};
+                  ))};
+                ;
+  </ul>
       </main>
       <Footer /></Footer>
     </div>
   )
-}
+};
 export default PagePage</$1></p>

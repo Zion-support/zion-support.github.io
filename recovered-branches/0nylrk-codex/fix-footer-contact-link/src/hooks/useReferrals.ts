@@ -22,7 +22,7 @@ export function useReferrals() {
       fetchReferralStats()
       fetchReferrals()
       fetchRewards()
-    }
+    };
   }, [user])
   const fetchReferralCode = async () => {
     try {
@@ -35,14 +35,16 @@ export function useReferrals() {
       if (error) {
         console.error("Error fetching referral code:", error)
         return
-      }
+      };
       setReferralCode(data)
     } catch (error) {
       console.error("Error in fetchReferralCode:", error)
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const fetchReferrals = async () => {
     try {
       if (!user) return
@@ -55,8 +57,10 @@ export function useReferrals() {
       setReferrals(data || [])
     } catch (error) {
       console.error("Error fetching referrals:", error)
-    }
+    };
   }
+  ;
+  ;
   const fetchRewards = async () => {
     try {
       if (!user) return
@@ -69,8 +73,10 @@ export function useReferrals() {
       setRewards(data || [])
     } catch (error) {
       console.error("Error fetching rewards:", error)
-    }
+    };
   }
+  ;
+  ;
   const fetchReferralStats = async () => {
     try {
       if (!user) return
@@ -101,8 +107,10 @@ export function useReferrals() {
       })
     } catch (error) {
       console.error("Error fetching referral stats:", error)
-    }
+    };
   }
+  ;
+  ;
   const generateReferralCode = async () => {
     try {
       if (!user) {
@@ -114,7 +122,9 @@ export function useReferrals() {
         })
         return
       }
-      const { data, error } = await supabase.rpc('generate_referral_code', {
+      ;
+  ;
+  const { data, error } = await supabase.rpc('generate_referral_code', {
         user_id: user.id
       })
       if (error) throw error
@@ -135,14 +145,14 @@ export function useReferrals() {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
-  }
+    };
+  };
   // Get the referral link for the current user
   const getReferralLink = () => {
     if (!referralCode) return ""
     const baseUrl = window.location.origin
     return `${baseUrl}/?ref=${referralCode.code}`
-  }
+  };
   // Copy the referral link to clipboard
   const copyReferralLink = () => {
     const link = getReferralLink()
@@ -161,8 +171,8 @@ export function useReferrals() {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
-  }
+    };
+  };
   // Share on social media platforms
   const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
     const link = getReferralLink()
@@ -175,7 +185,7 @@ export function useReferrals() {
         variant: "destructive",
       })
       return
-    }
+    };
     let shareUrl = ''
     switch (platform) {
       case 'twitter':
@@ -187,11 +197,12 @@ export function useReferrals() {
       case 'linkedin':
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`
         break
-    }
+    };
     if (shareUrl) {
       window.open(shareUrl, '_blank')
-    }
-  }
+    };
+  };
+  ;
   return {
     referralCode,
     isLoading,
@@ -205,5 +216,6 @@ export function useReferrals() {
     fetchReferralStats,
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
-  }
-}
+  };
+};
+;

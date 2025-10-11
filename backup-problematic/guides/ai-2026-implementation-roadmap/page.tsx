@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react'
-export const metadata = {/* TODO: Fix JSX expression */}
-}
+export const metadata = {/* TODO: Fix JSX expression */};
+};
 export default function AI2026ImplementationRoadmap() {
   return(<div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      {/* Header */};
+      ;
+  <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <$2 />
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white border-b border-gray-200">
+      {/* Header */};
+      ;
+  <header className="bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <$2 />
             href="/"
@@ -21,10 +23,12 @@ export default function AI2026ImplementationRoadmap() {
         </div>,
       </header>,
 ,
-      {/* Article Content */}
-      <article className="max-w-4 xl mx-auto px-4 py-8">
-        {/* Article Header */}
-        <div className="mb-8">
+      {/* Article Content */};
+      ;
+  <article className="max-w-4 xl mx-auto px-4 py-8">
+        {/* Article Header */};
+        ;
+  <div className="mb-8">
           <div className="flex items-center space-x-6 text-sm text-gray-600 mb-4">
             <div className="flex items-center">
               <Calendar className="w-4 h-4 mr-2" />
@@ -45,8 +49,9 @@ export default function AI2026ImplementationRoadmap() {
             {['AI Implementation', 'Enterprise AI', 'Digital Transformation', 'AI Strategy', '2026 Roadmap'].map((tag) => (
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800">
                 <Tag className="w-3 h-3 mr-1" />
-export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */}
-}
+export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expression */};
+};
+  ;
   return (<div className="min-h-screen bg-white">
       {/* Header */}"
       <header className="bg-white border-b border-gray-200"></header>"
@@ -86,11 +91,13 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             {/* TODO: Fix JSX expression */}"
               <span key={tag} className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-blue-100 text-blue-800"></span>"
                 <Tag className="w-3 h-3 mr-1" />
-                {tag}
-              </span>)
-            ))}
-        {/* Executive Summary */}
-        <div className="mb-12">
+                {tag};
+              ;
+  </span>)
+            ))};
+        {/* Executive Summary */};
+        ;
+  <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Executive Summary
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-8">
             <div className="text-center p-4 bg-blue-50 rounded-lg">
@@ -111,7 +118,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
           </div>,
         </div>,
 ,
-        {/* Article Content */}
+        {/* Article Content */};
         {/* Executive Summary */}"
         <div className="mb-12"></div>"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">🎯 Executive Summary</h2>"
@@ -478,8 +485,9 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             The AI 2026 Implementation Roadmap provides a comprehensive framework for successful enterprise AI transformation. By following this structured approach, organizations can navigate the complexities of AI implementation while maximizing business value and minimizing risks.
           <p>
             The future belongs to organizations that can successfully harness the power of AI to transform their operations, enhance customer experiences, and drive innovation. This roadmap provides the foundation for that transformation.
-          {/* CTA Section */}
-          <div className="bg-blue-50 p-8 rounded-lg mt-12">
+          {/* CTA Section */};
+          ;
+  <div className="bg-blue-50 p-8 rounded-lg mt-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Begin Your AI Transformation Journey?
             <p className="text-gray-600 mb-6">
               Contact Zion Tech Group to learn how our proven methodology and expertise can accelerate your path to AI success.
@@ -519,6 +527,6 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
                 <Link className="w-4 h-4 ml-2" />
       </article>,
     </div>)
-}
+};
 export default AI2026ImplementationRoadmap
 "</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></Link></Link></a></a></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h4></h5></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></article></header>

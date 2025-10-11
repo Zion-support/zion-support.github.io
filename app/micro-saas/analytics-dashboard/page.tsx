@@ -18,13 +18,15 @@ import React from 'react';
       
       <Footer />
     </>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
+                  <p className="text-lg text-white font-medium">{benefit};
+  </p>
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -36,5 +38,6 @@ import React from 'react';
       <Footer />
     </>
   )
-}
+};
+  ;
   </Footer>

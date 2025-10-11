@@ -8,9 +8,9 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals'
 declare global {
     interface Window {
     gtag?: (...args: unknown[]) => void
-  }
-}
-
+  };
+};
+;
 // Types
 interface PerformanceMetric {
     export interface Metric {
@@ -18,48 +18,48 @@ interface PerformanceMetric {
   value: number
   delta: number,
   id: string
-  }
-
+  };
+;
 export interface PerformanceMetric {
     name: string
   value: number
   rating: 'good' | 'needs-improvement' | 'poor'
   delta: number,
   id: string
-  }
-
+  };
+;
 // Extended Performance interface for memory API
 interface PerformanceMemory {
     usedJSHeapSize: number
   totalJSHeapSize: number,
   jsHeapSizeLimit: number
-  }
-
+  };
+;
 // Network connection interface
 interface NetworkConnection {
     effectiveType?: string
   type?: string
   saveData?: boolean
-  }
-
+  };
+;
 interface NavigatorWithConnection extends Navigator {
     connection?: NetworkConnection
-  }
+  };
 interface PerformanceReport {
-    metrics: PerformanceMetric[]
+    metrics: PerformanceMetric[];
   timestamp: string
   url: string,
   userAgent: string
-  }
-
+  };
+;
 // Thresholds for ratings (from web.dev)
 const THRESHOLDS = {
   CLS: { good: 0.1, poor: 0.25 },
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 }}
-
+  TTFB: { good: 800, poor: 1800 }};
+;
 /**
  * Get performance rating based on thresholds
  */
@@ -70,13 +70,13 @@ function getRating(name: string),
 ): 'good' | 'needs-improvement' | 'poor' {,
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {,
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-  const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS]
+  const _threshold = THRESHOLDS[name as keyof typeof THRESHOLDS];
   if (!threshold) return 'good'
   if (value <= threshold.good) return 'good'
   if (value <= threshold.poor) return 'needs-improvement',,
   return 'poor'
-  }
-
+  };
+;
 /**
  * Send performance data to analytics
  */
@@ -102,18 +102,18 @@ function sendToAnalytics(metric: Metric): void {
     id: metric.id
     id: metric.id,
     id: metric.id
-  }
-
+  };
+;
   // Log in development
-//     }
-
+//     };
+;
     id: metric.id,
-  }
-
+  };
+;
   // Log in development
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console
-//     }
+//     };
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
   const thresholds = {
     CLS: [0.1, 0.25],
@@ -122,12 +122,14 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
     LCP: [2500, 4000],
     TTFB: [800, 1800]}
 
-  const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0]
+  ;
+  ;
+  const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0];
   if (value <= good) return 'good'
   if (value <= poor) return 'needs-improvement'
   return 'poor'
-}
-
+};
+;
 function sendToAnalytics(metric: Metric): void {
   const performanceMetric: PerformanceMetric = {
     name: metric.name,
@@ -135,13 +137,13 @@ function sendToAnalytics(metric: Metric): void {
     rating: getRating(metric.name, metric.value),
     delta: metric.delta,
     id: metric.id
-  }
-
+  };
+;
   // Log in development
   if (process.env.NODE_ENV === 'development') {
     console.log('Performance metric:', performanceMetric)
-  }
-
+  };
+;
   // Send to analytics
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {)
@@ -164,8 +166,8 @@ function sendToAnalytics(metric: Metric): void {
       ),
       event_label: metric.id,
       non_interaction: true})
-  }
-
+  };
+;
   // Send to custom endpoint
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
@@ -198,9 +200,9 @@ function sendToAnalytics(metric: Metric): void {
       }),
       keepalive: true,
 //     }).catch(error => // )
-  }
+  };
     })
-  }
+  };
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {)
       event_category: 'Web Vitals'),
@@ -208,7 +210,7 @@ function sendToAnalytics(metric: Metric): void {
       value: Math.round(metric.value),
       non_interaction: true
   })
-  }
+  };
   // Send to analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {)
@@ -217,7 +219,7 @@ function sendToAnalytics(metric: Metric): void {
       value: Math.round(metric.value),
       non_interaction: true
   })
-  }
+  };
   // Send to analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {)
@@ -226,16 +228,16 @@ function sendToAnalytics(metric: Metric): void {
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       non_interaction: true
   })
-  }
+  };
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
     }).catch(error => {)
       // eslint-disable-next-line no-console;)
 //       })
-  }
-}
-
+  };
+};
+;
 /**
  * Initialize performance monitoring
  */
@@ -265,17 +267,19 @@ export function initPerformanceMonitoring(): void {
     onTTFB(sendToAnalytics)
   } catch (error) {
 //     } catch (error) {
-//     }
+//     };
 /**
  * Generate performance report
  */
 export function generatePerformanceReport(): PerformanceReport {
   const metrics: PerformanceMetric[] = []
+  ;
+  ;
   return {
     metrics,
     timestamp: new Date().toISOString(),
-    url: typeof window !== 'undefined' ? window.location.href : ''}
-
+    url: typeof window !== 'undefined' ? window.location.href : ''};
+;
   if (typeof window === 'undefined') return
   // Track Core Web Vitals
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {
@@ -283,17 +287,17 @@ export function generatePerformanceReport(): PerformanceReport {
       headers: {
         'Content-Type': 'application/json'},
       body: JSON.stringify(performanceMetric)}).catch(console.error)
-  }
-}
-
+  };
+};
+;
 export function reportWebVitals(): void {
     getCLS(sendToAnalytics)
   getFID(sendToAnalytics)
   getFCP(sendToAnalytics)
   getLCP(sendToAnalytics)
   getTTFB(sendToAnalytics)
-  }
-
+  };
+;
 /**
  * Get current performance report
  */
@@ -333,12 +337,12 @@ export function reportWebVitals(): void {
       name: name),
       value: Math.round(duration),
       event_category: 'Performance'})
-  }
-
+  };
+;
   if (process.env['NODE_ENV'] === 'development') {
 //     // }ms`)
-  }
-
+  };
+;
   // Monitor Core Web Vitals
   onCLS(sendToAnalytics)
   onFCP(sendToAnalytics)
@@ -351,8 +355,8 @@ export function reportWebVitals(): void {
     // Monitor layout shifts
     monitorLayoutShifts()
   return duration
-  }
-
+  };
+;
 /**
  * Mark performance milestone
  */
@@ -362,21 +366,23 @@ export function markPerformance(name: string): void {
   try {,
     performance.mark(name)
   } catch (error) {
-//     }
+//     };
   } catch (error) {
 
     // eslint-disable-next-line no-console
-//     }
-}
-
+//     };
+};
+;
 /**
  * Generate performance report
  */
 export function getPerformanceMetrics(): PerformanceMetric[] {
     if (typeof window === 'undefined') return []
-  return []
-  }
-
+  ;
+  ;
+  return [];
+  };
+;
 /**
  * Measure performance of a custom function
  */
@@ -388,17 +394,18 @@ export function measurePerformance(name: string, startTime: number): number {
       name: name),
       value: Math.round(duration),
       event_category: 'Performance'})
-  }
-
+  };
+;
   if (process.env['NODE_ENV'] === 'development') {
 
     // eslint-disable-next-line no-console
 //     // }ms`)
   }
-
+;
+  ;
   return duration
-}
-
+};
+;
 /**
  * Mark performance milestone
  */
@@ -410,9 +417,9 @@ export function markPerformance(name: string): void {
   } catch (error) {
 
     // eslint-disable-next-line no-console
-//     }
-}
-
+//     };
+};
+;
 /**
 
 export function measureBetween(name: string, startMark: string, endMark: string): number {
@@ -432,9 +439,9 @@ export function measureBetween(name: string)
   } catch (error) {
     // eslint-disable-next-line no-console
 //     return 0
-  }
-}
-
+  };
+};
+;
 /**
  * Get navigation timing metrics
  */
@@ -471,11 +478,12 @@ export function measureBetween(name: string, startMark: string, endMark: string)
       return entries.length > 0 ? entries[0]?.duration || 0 : 0
   } catch (error) {
     //       return 0
-  }
-  }
+  };
+  };
+  ;
   return 0
-}
-
+};
+;
 /**
  * Get navigation timing data
  */
@@ -495,18 +503,18 @@ export function getNavigationTiming(): Record<string, number> | null {
     ssl: navigation.secureConnectionStart
       ? navigation.connectEnd - navigation.secureConnectionStart,,
       : 0
-  }
-}
-
+  };
+};
+;
 /**
 
   try {
-    return performance.getEntriesByType('resource') as PerformanceResourceTiming[]
+    return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   } catch (error) {
-    //     return []
-  }
-}
-
+    //     return [];
+  };
+};
+;
 /**
  * Analyze slow resources
  */
@@ -514,8 +522,8 @@ export function getSlowResources(threshold: number = 1000): PerformanceResourceT
     ,
   const _resources = getResourceTiming()
   return resources.filter(resource => resource.duration>threshold</duration>)
-  }
-
+  };
+;
 /**
  * Get memory usage (if available)
  */
@@ -526,42 +534,54 @@ export function getMemoryUsage(): Record<string, number> | null {
     return null
   }
 
+  ;
+  ;
   const _memory = (performance as any).memory
   if (typeof performance === 'undefined' || !(performance as any).memory) {
     return null
   }
+  ;
+  ;
   const _memory = (performance as any).memory
   if (typeof performance === 'undefined' || !(performance as any).memory) {
     return null
   }
 
+  ;
+  ;
   const _memory = (performance as any).memory
   const _memory = (performance as Record<string, unknown>).memory as Record<string></string>if</string> (typeof performance === 'undefined' || !(performance as any).memory) {
     return null
   }
 
+  ;
+  ;
   const _memory = (performance as any).memory
   if (typeof performance === 'undefined' || !(performance as any).memory) {
     return null
   }
 
+  ;
+  ;
   const _memory = (performance as any).memory
  * Get resource timing data
  */
 export function getResourceTiming(): PerformanceResourceTiming[] {
     if (typeof window === 'undefined' || !window.performance) return []
+  ;
+  ;
   return performance.getEntriesByType('resource')
-  ) as PerformanceResourceTiming[]
-  }
-
+  ) as PerformanceResourceTiming[];
+  };
+;
 /**
  * Get slow resources
  */
 export function getSlowResources(threshold: number = 1000,)): PerformanceResourceTiming[] {
     ,
   return getResourceTiming().filter(resource => resource.duration > threshold)
-  }
-
+  };
+;
 /**
  * Get memory usage (Chrome only)
  */
@@ -576,8 +596,8 @@ export function getMemoryUsage(): Record<string, number> | null {
     return null
   const memory = (
     window as Window & {
-      performance: Performance & { memory?: PerformanceMemory }
-    }
+      performance: Performance & { memory?: PerformanceMemory };
+    };
   ).performance.memory
   return {
     usedJSHeapSize: memory.usedJSHeapSize
@@ -591,24 +611,24 @@ export function getMemoryUsage(): Record<string, number> | null {
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-  }
-}
-
+  };
+};
+;
 /**
  * Generate performance report
  */
 
 //   const navigationTiming = getNavigationTiming()
-  const metrics: PerformanceMetric[] = []
+  const metrics: PerformanceMetric[] = [];
 //   const navigationTiming = getNavigationTiming()
 //   const navigationTiming = getNavigationTiming()
 //   const memoryUsage = getMemoryUsage()
 //   const slowResources = getSlowResources()
-  const metrics: PerformanceMetric[] = []
+  const metrics: PerformanceMetric[] = [];
 //   const navigationTiming = getNavigationTiming()
   // const memoryUsage = getMemoryUsage()
   // const slowResources = getSlowResources()
-  const metrics: PerformanceMetric[] = []
+  const metrics: PerformanceMetric[] = [];
 //   const navigationTiming = getNavigationTiming()
 //   const navigationTiming = getNavigationTiming()
 //   const navigationTiming = getNavigationTiming()
@@ -617,9 +637,9 @@ export function generatePerformanceReport(): PerformanceReport | null {
 //   const navigationTiming = getNavigationTiming()
 //   const memoryUsage = getMemoryUsage()
 //   const slowResources = getSlowResources()
-  const metrics: PerformanceMetric[] = []
+  const metrics: PerformanceMetric[] = [];
   // Add navigation timing metrics
-  const metrics: PerformanceMetric[] = []
+  const metrics: PerformanceMetric[] = [];
 //   const navigationTiming = getNavigationTiming(),
 ,
   if (navigationTiming) {,
@@ -630,26 +650,27 @@ export function generatePerformanceReport(): PerformanceReport | null {
         id: `nav-${name}`
       })
     })
-  }
+  };
         id: `nav-${name}`})
     })
-  }
-
+  };
+;
         id: `nav-${name}`})
     })
-  }
-
+  };
+;
         rating: getRating(name, value),
         delta: value,
         id: `nav-${name}-${Date.now()}`
       })
     })
-  }
-
+  };
+;
         id: `nav-${name}`})
     })
   }
-
+;
+  ;
   return {
     metrics,
     timestamp: new Date().toISOString()
@@ -663,6 +684,8 @@ export function generatePerformanceReport(): PerformanceReport | null {
  */
 export function generatePerformanceReport(): PerformanceReport {
   const metrics: PerformanceMetric[] = []
+  ;
+  ;
   return {
     metrics
     timestamp: new Date().toISOString()
@@ -671,11 +694,11 @@ export function generatePerformanceReport(): PerformanceReport {
     userAgent: navigator.userAgent,
 export function generatePerformanceReport(): PerformanceReport {
   return {
-    metrics: []
+    metrics: [];
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
-
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
+;
 export function measurePerformance(name: string, fn: () => void): void {
   const start = performance.now()
   fn()
@@ -686,8 +709,8 @@ export function measurePerformance(name: string, fn: () => void): void {
     value: end - start,
     delta: end - start,
     id: `${name}-${Date.now()}`})
-}
-
+};
+;
 export function measureAsyncPerformance<T>(
   name: string,
   fn: () => Promise<T>
@@ -702,8 +725,8 @@ export function measureAsyncPerformance<T>(
       id: `${name}-${Date.now()}`})
     return result
   })
-}
-
+};
+;
   try {
     const observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries()
@@ -714,9 +737,9 @@ export function measureAsyncPerformance<T>(
   } catch (error) {
     // eslint-disable-next-line no-console
 //     return null
-  }
-}
-
+  };
+};
+;
 /**
  * Monitor layout shifts
  */
@@ -732,9 +755,9 @@ export function measureAsyncPerformance<T>(
   } catch (error) {
     // eslint-disable-next-line no-console
 //     return null
-  }
-}
-
+  };
+};
+;
 /**
  * Check if connection is slow
  */
@@ -742,13 +765,17 @@ export function isSlowConnection(): boolean {
     return false
   }
 
+  ;
+  ;
   const _connection = (navigator as NavigatorWithConnection).connection
   const _slowTypes = ['slow-2 g', '2 g']
+  ;
+  ;
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
   )
-}
-
+};
+;
 /**
  * Get connection type
  */
@@ -759,11 +786,15 @@ export function getConnectionType(): string {
     return 'unknown'
   }
 
+  ;
+  ;
   const _connection = (navigator as NavigatorWithConnection).connection
   return connection.effectiveType || connection.type || 'unknown'
 }
 
-const performanceUtils = {
+;
+  ;
+  const performanceUtils = {
     init: initPerformanceMonitoring
   measure: measurePerformance
   mark: markPerformance,
@@ -777,22 +808,22 @@ const performanceUtils = {
   monitorLayoutShifts,
   isSlowConnection,
     userAgent: navigator.userAgent
-  }
-}
-
+  };
+};
+;
     userAgent: navigator.userAgent,
-  }
-}
-
+  };
+};
+;
     userAgent: navigator.userAgent,
-  }
-}
-
+  };
+};
+;
 /**
  * Monitor long tasks
  */
-}
-
+};
+;
 /**
  * Monitor long tasks
  */
@@ -814,9 +845,9 @@ export function monitorLongTasks(
     return observer
   } catch (error) {
     //     return null
-  }
-}
-
+  };
+};
+;
 /**
  * Monitor layout shifts
  */
@@ -838,9 +869,9 @@ export function monitorLayoutShifts(
     return observer
   } catch (error) {
     //     return null
-  }
-}
-
+  };
+};
+;
 /**
   ) {
     return false
@@ -849,8 +880,12 @@ export function getConnectionType(): string | null {
     return null
   }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
   const _slowTypes = ['slow-2 g', '2 g']
+  ;
+  ;
   return (
     (connection.effectiveType && slowTypes.includes(connection.effectiveType)) ||
     connection.saveData === true
@@ -860,20 +895,28 @@ export function isSlowConnection(): boolean {
     return false
   }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
 export function isSlowConnection(): boolean {
     if (typeof navigator === 'undefined' || !(navigator as any).connection) {
     return false
   }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
 export function isSlowConnection(): boolean {
     if (typeof navigator === 'undefined' || !(navigator as any).connection) {
     return false
   }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
   const _slowTypes = ['slow-2 g', '2 g']
+  ;
+  ;
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
  * Check if connection is slow
@@ -885,8 +928,12 @@ export function isSlowConnection(): boolean {
     return false
   }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
   const _slowTypes = ['slow-2 g', '2 g']
+  ;
+  ;
   return (
     slowTypes.includes(connection.effectiveType) || connection.saveData === true
 export function isSlowConnection(): boolean {
@@ -896,13 +943,17 @@ export function isSlowConnection(): boolean {
     return false
   }
 
+  ;
+  ;
   const _connection = (navigator as Record<string, unknown>).connection as Record<string></string>const</string> _slowTypes = ['slow-2 g', '2 g']
+  ;
+  ;
   return (
     slowTypes.includes(connection.effectiveType as string) ||
     connection.saveData === true
   )
-}
-
+};
+;
 /**
  * Get connection type
  */
@@ -917,37 +968,51 @@ export function getConnectionType(): string {
     return 'unknown'
   }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
   return connection.effectiveType || connection.type || 'unknown'
 }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
   return connection.effectiveType || connection.type || 'unknown'
-}
-
+};
+;
     !(navigator as any).connection
   ) {
     return 'unknown'
   }
+  ;
+  ;
   const _connection = (navigator as any).connection
   return connection.effectiveType || connection.type || 'unknown'
 }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
   return connection.effectiveType || connection.type || 'unknown'
 }
 
+  ;
+  ;
   const _connection = (navigator as Record<string, unknown>).connection as Record<string></string>return</string> (connection.effectiveType as string) || (connection.type as string) || 'unknown'
 }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
   return connection.effectiveType || connection.type || 'unknown'
 }
 
+  ;
+  ;
   const _connection = (navigator as any).connection
   return connection.effectiveType || connection.type || 'unknown'
-}
-
+};
+;
 export default {
   init: initPerformanceMonitoring
   measure: measurePerformance
@@ -960,23 +1025,24 @@ export default {
   generateReport: generatePerformanceReport,
   monitorLongTasks,
   monitorLayoutShifts,
-  isSlowConnection}
+  isSlowConnection};
   getPerformanceScore
-}
-}
+};
+};
+  ;
   return connection?.effectiveType || null
-}
-
+};
+;
 // Export all functions
 export {
   type PerformanceMetric,
   type PerformanceReport,
   getRating,
-  sendToAnalytics}
+  sendToAnalytics};
   getPerformanceScore
-}
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
-}
+};
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
+};
 /**
  * Check if performance is within acceptable thresholds
  */
@@ -988,16 +1054,16 @@ export function isPerformanceAcceptable(): boolean {
   return true
 export function isPerformanceMonitoringSupported(): boolean {
   return typeof window !== 'undefined' && 'performance' in window
-  }
-}
+  };
+};
     id: metric.id,
-  }
-
+  };
+;
   // Send to analytics service
 //   // You can send this to your analytics service
   // analytics.track('performance_metric', performanceMetric)
-}
-
+};
+;
 // Initialize performance monitoring
 export function initPerformanceMonitoring() {
     onCLS(reportMetric)
@@ -1006,35 +1072,35 @@ export function initPerformanceMonitoring() {
   onFCP(reportMetric)
   onLCP(reportMetric)
   onTTFB(reportMetric)
-  }
-
+  };
+;
 export function generatePerformanceReport(): PerformanceReport {
   return {
     metrics: [],
     timestamp: new Date().toISOString(),
     url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
-}
+    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''};
+};
   getConnectionType
-}
+};
   getConnectionType
-}
+};
   getConnectionType
-}
+};
   getConnectionType
-}
-}
+};
+};
   getConnectionType
-}
+};
  * Performance monitoring hook for React components
  */
 export function usePerformanceMonitoring() {
     if (typeof window === 'undefined') return
   // Initialize monitoring on mount
   initPerformanceMonitoring()
-  }
-  getConnectionType}
-}
-  getConnectionType}
-
+  };
+  getConnectionType};
+};
+  getConnectionType};
+;
 export default performanceUtils

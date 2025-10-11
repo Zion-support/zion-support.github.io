@@ -6,7 +6,9 @@ interface AnimatedCounterProps {
   suffix?: string,
   className?: string
   }
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
+;
+  ;
+  const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
   prefix = '',
   suffix = '',
@@ -20,14 +22,15 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true)
           observer.disconnect()
-  }
+  };
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 };
     )
     if (counterRef.current) {
     observer.observe(counterRef.current)
-  }
-    return () => observer.disconnect()
+  };
+    ;
+  return () => observer.disconnect()
   }, [isVisible])
   useEffect(() => {
     if (!isVisible) return
@@ -42,19 +45,20 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
       setCount(currentCount)
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
-  }
-    }
+  };
+    };
     animationFrame = requestAnimationFrame(animate)
     return () => {
     if (animationFrame) {
         cancelAnimationFrame(animationFrame)
-  }
-    }
+  };
+    };
   }, [isVisible, end, duration])
   return (
     <div ref={counterRef} className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
-    </div>
+      {prefix}{count.toLocaleString()}{suffix};
+    ;
+  </div>
   )
-}
+};
 export default AnimatedCounter

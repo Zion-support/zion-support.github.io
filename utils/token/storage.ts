@@ -8,13 +8,15 @@ export interface TokenConfig {
   minIssueAmount: number
   maxIssueAmount: number
 }
-const DATA_DIR = path && path.join(process && process.cwd(), 'data')
+;
+  ;
+  const DATA_DIR = path && path.join(process && process.cwd(), 'data')
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json')
 export interface TokenStoreData {
   wallets: Record < string, Wallet>
-  transactions: TokenTransaction[]
+  transactions: TokenTransaction[];
   config: TokenConfig
-}
+};
 class TokenStore {
   private config: TokenConfig = {
     tokenName: 'ZION$'
@@ -25,9 +27,9 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
-  }
+  };
 export interface TokenStoreData {
-  }
+  };
 export interface TokenStoreData {
 import fs from "fs"
 import path from "path"
@@ -37,9 +39,9 @@ const DATA_DIR = path.join(process.cwd(), "data")
 const STORE_FILE = path.join(DATA_DIR, "token_store.json")
 export interface TokenStoreData {
   wallets: Record<string, Wallet>
-  transactions: TokenTransaction[]
+  transactions: TokenTransaction[];
   config: TokenConfig
-}
+};
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir()
@@ -48,8 +50,8 @@ function readFromDisk(): TokenStoreData | null {
 function ensureDataDir(): void {
   try {
     if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
-  } catch {}
-}
+  } catch {};
+};
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir()
@@ -59,18 +61,18 @@ function readFromDisk(): TokenStoreData | null {
     return parsed
   } catch {
     return null
-  }
+  };
   getData(): TokenStoreData {
     return this && this.data
-  }
-}
-}
+  };
+};
+};
 function writeToDisk(data: TokenStoreData): void {
   try {
     ensureDataDir()
     fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), "utf8")
-  } catch {}
-}
+  } catch {};
+};
 class InMemoryTokenStore {
   private data: TokenStoreData
   constructor() {
@@ -80,16 +82,18 @@ class InMemoryTokenStore {
         wallets: {},
         transactions: [],
         config: DEFAULT_TOKEN_CONFIG,
-      }
-  }
+      };
+  };
   getData(): TokenStoreData {
     return this.data
-  }
+  };
   save(): void {
     writeToDisk(this.data)
-  }
+  };
 }
-const store = new InMemoryTokenStore()
+;
+  ;
+  const store = new InMemoryTokenStore()
 export const tokenStore = {
   getConfig(): TokenConfig {
     return store.getData().config
@@ -101,16 +105,17 @@ export const tokenStore = {
   getWallet(userId: string): Wallet {
     const wallets = store.getData().wallets
     if (!wallets[userId]) {
-      wallets[userId] = { userId, balance: 0 }
+      wallets[userId] = { userId, balance: 0 };
       store.save()
-    }
-    return wallets[userId]
+    };
+    ;
+  return wallets[userId];
   },
   setWalletBalance(userId: string, balance: number): Wallet {
     const wallets = store.getData().wallets
-    wallets[userId] = { userId, balance }
+    wallets[userId] = { userId, balance };
     store.save()
-    return wallets[userId]
+    return wallets[userId];
   },
   addTransaction(tx: TokenTransaction): void {
     store.getData().transactions.unshift(tx)
@@ -121,4 +126,4 @@ export const tokenStore = {
     if (!userId) return txs
     return txs.filter((t) => t.userId === userId)
   },
-}
+};

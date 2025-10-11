@@ -10,12 +10,12 @@ export interface BlogPost {
   category: string
   date: string
   readTime: string
-  tags: string[]
+  tags: string[];
   featured?: boolean,,
   valueProposition: string,
-export interface BlogPost {/* TODO: Fix JSX expression */}
-}
-
+export interface BlogPost {/* TODO: Fix JSX expression */};
+};
+;
 /**
  * October 2025 Breakthrough Content
  */
@@ -116,55 +116,55 @@ export const october2025Breakthroughs: BlogPost[] = [,
     valueProposition: 'Instant reversibility, resilient releases',
 export const,
   october2025Breakthroughs: BlogPost[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
-  }]
+  {/* TODO: Fix JSX expression */};
+  }];
 /**
  * All blog posts combined
  */
 export const,
-  allBlogPosts: BlogPost[] = [...october2025Breakthroughs]
+  allBlogPosts: BlogPost[] = [...october2025Breakthroughs];
 /**
  * Helper functions,
  */,
 export function getFeaturedPosts(): BlogPost[] {,
   return allBlogPosts.filter(post => post.featured)
  */
-export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */}
-}
-
-export function getAllCategories(): string[] {/* TODO: Fix JSX expression */}
-}
-
-export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
-}
-
+export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */};
+};
+;
+export function getAllCategories(): string[] {/* TODO: Fix JSX expression */};
+};
+;
+export function getAllTags(): string[] {/* TODO: Fix JSX expression */};
+};
+;
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
     const _value = post.valueProposition.match(/\$(\d+)M/)
 :corrupted-src-backup/content/blog-index.ts
-export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */}
+export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */};
   }, 0)
   return `$${totalValue}M+ total value proposition`
-}
-
+};
+;
 export const blogStats = {
   totalPosts: allBlogPosts.length
   featuredPosts: getFeaturedPosts().length
   categories: getAllCategories().length
   tags: getAllTags().length,
   totalValue: getTotalValueProposition(),
-export const blogStats = {/* TODO: Fix JSX expression */}
-}
+export const blogStats = {/* TODO: Fix JSX expression */};
+};
 `

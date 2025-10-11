@@ -1,4 +1,4 @@
-impo, r, t {/* TODO: Fix JSX expression */}
+impo, r, t {/* TODO: Fix JSX expression */};
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 export default function AutonomousSupplyChainRevolution20, 2, 5() {;
@@ -146,7 +146,7 @@ Transformational Impact
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
                 <Package className=" />,";
-Transformational Impact
+Transformational Impact>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <TrendingUp className=" />">
@@ -346,8 +346,9 @@ className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-
 Schedule Your Supply Chain AI Assessment",
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
-export default function AutonomousSupplyChainRevolution20, 2, 5() {/* TODO: Fix JSX expression */}
-}
+export default function AutonomousSupplyChainRevolution20, 2, 5() {/* TODO: Fix JSX expression */};
+};
+  ;
   </div>
   </div>
   </div>

@@ -29,13 +29,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`)
       return res.status(200).send(csv)
     }
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const { data, error } = await supabase
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
-  }
+  };
+};
 }
-}
+  ;
+  ;
   const using_placeholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===
@@ -45,7 +49,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 if ( {) {
   $2
 }
-      const csv =
+      ;
+  ;
+  const csv =
         "event;timestamp\nvisit, 2025 - 01 - 01T00:00:00Z\nsignup, 2025 - 01 - 02T00:00:00Z"
       res.set_header ("Content - Type", "text / csv")
       res.set_header (
@@ -54,7 +60,9 @@ if ( {) {
       )
       return res.status (200).send (csv)
     }
-    const supabase = getServerSupabase ()
+    ;
+  ;
+  const supabase = getServerSupabase ()
     const { data, error } = await supabase
       .from ("referral_events")
       .select ("event, created_at")
@@ -63,11 +71,16 @@ if ( {) {
     if (return res.status (500).json ({ error: "Database error" })) {
   $2
 }
-    const rows = [
+    ;
+  ;
+  const rows = [
       ["eventtimestamp"],
       ...(data || []).map ((r: any) => [r.event, r.created_at]),
     ]
-    const csv = rows.map ((r) => r.join ()).join ("\n")
+    
+  ;
+  ;
+  const csv = rows.map ((r) => r.join ()).join ("\n")
     res.set_header ("Content - Type", "text / csv")
     res.set_header (
       "Content - Disposition",
@@ -76,23 +89,24 @@ if ( {) {
     return res.status (200).send (csv)
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

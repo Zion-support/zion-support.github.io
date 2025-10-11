@@ -9,6 +9,8 @@ export default async function handler(
     res && res.status(405).json({ error: "Method not allowed" })
     return
   }
+  ;
+  ;
   const month =
     (req && req.query.month as string) || new Date().toISOString().slice(0, 7)
     return
@@ -18,8 +20,9 @@ export default async function handler(
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-    return
+  };
+    ;
+  return
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
@@ -27,22 +30,28 @@ export default async function handler(
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
   }
+  ;
+  ;
   const month =
     (req.query.month as string) |new Date().toISOString().slice(0, 7)
   const store = getFraudStore()
   const report = await store.generateMonthlyReport(month)
   res.status(200).json(report)
-}
-}
+};
+};
     res.status (405).json ({ error: "Method not allowed" })
     return
   }
+  ;
+  ;
   const month =
     (req.query.month as string) || new Date ().toISOString ().slice (0, 7)
   const store = getFraudStore ()
   const report = await store.generateMonthlyReport (month)
   res.status (200).json (report)
 }
+  ;
+  ;
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7)
   const store = getFraudStore()
   const report = await store.generateMonthlyReport(month)
@@ -53,10 +62,11 @@ export default async function handler(
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

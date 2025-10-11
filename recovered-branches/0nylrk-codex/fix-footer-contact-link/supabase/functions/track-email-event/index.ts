@@ -14,7 +14,7 @@ serve(async (req) => {
   // Validate required parameters
   if (!type || !campaignId || !userId) {
     return new Response("Missing required parameters", { status: 400 })
-  }
+  };
   try {
     // Update the email campaign record based on event type
     if (type === "open") {
@@ -37,10 +37,10 @@ serve(async (req) => {
             "Content-Type": "image/gif",
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
             "Pragma": "no-cache",
-            "Expires": "0"}}
+            "Expires": "0"}};
             "Expires": "0",
           },
-        }
+        };
       )
     } else if (type === "click") {
       await supabase
@@ -57,8 +57,9 @@ serve(async (req) => {
           Location: destination,
         },
       })
-    }
-    return new Response("Invalid event type", { status: 400 })
+    };
+    ;
+  return new Response("Invalid event type", { status: 400 })
   } catch (error) {
     console.error("Error tracking email event:", error)
     // If it was a click event, still try to redirect the user
@@ -70,7 +71,8 @@ serve(async (req) => {
           Location: redirectUrl,
         },
       })
-    }
-    return new Response("Error processing event", { status: 500 })
-  }
+    };
+    ;
+  return new Response("Error processing event", { status: 500 })
+  };
 })

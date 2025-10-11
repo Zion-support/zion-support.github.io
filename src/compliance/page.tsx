@@ -5,6 +5,7 @@ import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileTe
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CompliancePage: React.FC = () => {
+
   const certifications = [],
   return (
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -12,47 +13,49 @@ const CompliancePage: React.FC = () => {
     { name: 'GDPR Compliant', status: 'Certified' },
     { name: 'HIPAA Compliant', status: 'Certified' },
     { name: 'PCI DSS Level 1', status: 'Certified' },
-    { name: 'NIST Framework', status: 'Implemented' }
+    { name: 'NIST Framework', status: 'Implemented' };
   ]
+  
+  ;
+  ;
   const complianceAreas = [
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Shield,
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+  icon: Shield,
       titl,
   e: 'Data Protection',
       descriptio,
   n: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
       feature,
-  s: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
+  s: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability'];
     },
-      ico,
-  n: FileText,
+      icon: FileText,
       titl,
   e: 'Regulatory Compliance',
       descriptio,
   n: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
       feature,
-  s: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
-      ico,
-  n: Users,
+  s: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits'];
+      icon: Users,
       titl,
   e: 'Privacy Rights',
       descriptio,
   n: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
       feature,
-  s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
-    }
+  s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms'];
+    };
+  ;
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
-        {/* Header */}
-        <section className="bg-white shadow-sm border-b">
+        {/* Header */};
+        ;
+  <section className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
             <div className="flex items-center">
               <$2 />
@@ -84,11 +87,12 @@ const CompliancePage: React.FC = () => {
               {certifications.map((cert, index) => ()}"
           <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500"></div>"
                   <div className="flex items-center justify-between"></div>"
-                    <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>"
+                    <h3 className="text-lg font-semibold text-gray-900">{cert.name};
+  </h3>"
                     <div className="flex items-center text-green-600"></div>"
                       <CheckCircle className="w-5 h-5 mr-2" /></CheckCircle>"
-                      <span className="text-sm font-medium">{cert.status}
-              ))}
+                      <span className="text-sm font-medium">{cert.status};
+              ))};
           {/* Compliance Areas */}"
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
 Compliance Areas;"
@@ -99,13 +103,15 @@ Compliance Areas;"
                   <div className="flex items-center mb-4"></div>"
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"></div>"
                       <area.icon className="w-6 h-6 text-blue-600" /></area>"
-                    <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>"
-                  <p className="text-gray-600 mb-4">{area.description}</p>"
+                    <h3 className="text-xl font-semibold text-gray-900">{area.title};
+  </h3>"
+                  <p className="text-gray-600 mb-4">{area.description};
+  </p>"
                   <ul className="space-y-2">
                     {area.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
+                        {feature};
 {/* Contact Section */}"
           <section className="bg-blue-50 rounded-lg p-8 text-center"></section>"
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -122,7 +128,7 @@ Compliance Areas;"
         </main>
         <Footer />
   )
-}
+};
 export default CompliancePage</div>
   </div>
 </span></p></p></h2></h2></h2></ul>

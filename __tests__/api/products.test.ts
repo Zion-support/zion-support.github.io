@@ -16,10 +16,10 @@ jest.mock('@prisma/client', () => {
     productReview: {
       aggregate: jest.fn()
     }
-  }
+  };
   return {
     PrismaClient: jest.fn(() => mPrismaClient)
-  }
+  };
 })
 
 describe('/api/products', () => {
@@ -34,55 +34,55 @@ describe('/api/products', () => {
       productReview: {
         aggregate: jest.fn()
       }
-    }
-    jest.clearAllMocks()
-  })
+    };
+    jest.clearAllMocks();
+  });
 
   afterEach(() => {
-    jest.resetAllMocks()
-  })
+    jest.resetAllMocks();
+  });
 
   it('should return products successfully', async () => {
     const mockProducts = [
       { id: 1, name: 'Product 1', price: 100 },
       { id: 2, name: 'Product 2', price: 200 }
-    ]
+    ];
 
-    mockPrisma.product.findMany.mockResolvedValue(mockProducts)
+    mockPrisma.product.findMany.mockResolvedValue(mockProducts);
     
     productHandler.mockImplementation(async (req, res) => {
-      const products = await mockPrisma.product.findMany()
-      return res.status(200).json(products)
-    })
+      const products = await mockPrisma.product.findMany();
+      return res.status(200).json(products);
+    });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-    })
+    });
 
-    await productHandler(req, res)
+    await productHandler(req, res);
 
-    expect(res._getStatusCode()).toBe(200)
-    expect(res._getJSONData()).toEqual(mockProducts)
-  })
+    expect(res._getStatusCode()).toBe(200);
+    expect(res._getJSONData()).toEqual(mockProducts);
+  });
 
   it('should handle database errors', async () => {
-    mockPrisma.product.findMany.mockRejectedValue(new Error('Database error'))
+    mockPrisma.product.findMany.mockRejectedValue(new Error('Database error'));
     
     productHandler.mockImplementation(async (req, res) => {
       try {
-        await mockPrisma.product.findMany()
+        await mockPrisma.product.findMany();
       } catch (error) {
-        return res.status(500).json({ error: 'Internal server error' })
+        return res.status(500).json({ error: 'Internal server error' });
       }
-    })
+    });
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-    })
+    });
 
-    await productHandler(req, res)
+    await productHandler(req, res);
 
-    expect(res._getStatusCode()).toBe(500)
-    expect(res._getJSONData()).toHaveProperty('error')
-  })
+    expect(res._getStatusCode()).toBe(500);
+    expect(res._getJSONData()).toHaveProperty('error');
+  });
 })

@@ -5,7 +5,7 @@ export interface QuantumAIService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -17,11 +17,11 @@ export interface QuantumAIService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -30,14 +30,14 @@ export interface QuantumAIService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const quantumAIServices: QuantumAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',
@@ -599,5 +599,5 @@ export const quantumAIServices: QuantumAIService[] = [
     customers: 75,
     rating: 5.0,
     reviews: 38
-  }
-]
+  };
+];

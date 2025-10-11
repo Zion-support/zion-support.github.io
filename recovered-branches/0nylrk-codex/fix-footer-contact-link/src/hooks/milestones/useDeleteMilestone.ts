@@ -22,10 +22,11 @@ export const useDeleteMilestone = () => {
       return false
     } finally {
       setIsSubmitting(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     deleteMilestone,
     isSubmitting
-  }
-}
+  };
+};

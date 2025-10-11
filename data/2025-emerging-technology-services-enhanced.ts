@@ -6,7 +6,7 @@ export interface EmergingTechnologyService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface EmergingTechnologyService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -31,14 +31,14 @@ export interface EmergingTechnologyService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[] = [
   // Quantum Computing as a Service
   {
@@ -299,5 +299,5 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     customers: 34,
     rating: 4.9,
     reviews: 23
-  }
-]
+  };
+];

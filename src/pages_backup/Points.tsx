@@ -77,8 +77,8 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
       await fetch('/api/points/redeem', {
 
         method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-
+        headers: { 'Content-Type': 'application/json' };
+;
         body: JSON.stringify({
           userId: user.id
           cost: reward.cost
@@ -123,7 +123,7 @@ function handle_redeem() {
     // Check condition
 if (return) {
   $2
-}
+};
     set_redeeming (true)
     try {
       await fetch ('/api / points / redeem', {
@@ -165,16 +165,18 @@ if (return) {
 
 
 
-    }
+    };
   }
-
-
+;
+;
       set_redeeming (false);    }      })
       await fetch_ledger ()
     } finally {
       set_redeeming (false)
-    }
+    };
   }
+  ;
+  ;
   const earning_opportunities = [
     {
 
@@ -212,14 +214,14 @@ if (return) {
       description: 'Complete your profile and verify your email'
       points: '50 pts'
       action: isAuthenticated ? '✓ Completed' : 'Get Started'
-    }
+    };
       icon: <ShoppingBag className='h-5 w-5' />
       title: 'First Purchase'
       description: 'Make your first purchase on the marketplace'
       points: '100 pts'
       action: 'Browse Marketplace'
-    }
-
+    };
+;
     {
 
       icon: <MessageSquare className='h - 5 w - 5' />,
@@ -258,20 +260,26 @@ if (return) {
       action: "Browse Marketplace"
 
     },  ]
+  
+  ;
+  ;
   const upcoming_rewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
 
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
-    }
-
+    };
+;
       icon: <Users className='h-5 w-5' />
       title: 'Refer Friends'
       description: 'Invite friends to join Zion marketplace'
       points: '200 pts per referral'
       action: 'Share Referral Link'
     },  ]
+  
+  ;
+  ;
   const upcomingRewards = [
 
     {
@@ -279,24 +287,26 @@ if (return) {
       title: 'Premium Features (1 month)'
       cost: 1000
       category: 'Subscription'
-    }
+    };
     {
       id: 'swag'
       title: 'Zion Swag Pack'
       cost: 1500
       category: 'Merchandise'
-    }
+    };
     {
 
       id: 'coupon25'
       title: '$25 Off Coupon'
       cost: 2000
       category: 'Discount'
-    }
+    };
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
 
 
 
+  ;
+  ;
   const earningOpportunities = [
     {
       icon: <Users className='h-5 w-5' />,
@@ -369,6 +379,9 @@ if (return) {
       action: 'Share Referral Link',
 
     },  ]
+  
+  ;
+  ;
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
       icon: <MessageSquare className="h-5 w-5" />,
@@ -383,8 +396,8 @@ if (return) {
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
-    }
-
+    };
+;
   ],
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
@@ -425,6 +438,9 @@ if (return) {
       points: '200 pts per referral',
       action: 'Share Referral Link',
     },  ]
+  
+  ;
+  ;
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
       icon: <MessageSquare className="h-5 w-5" />,
@@ -450,8 +466,8 @@ if (return) {
 
 
 
-
-
+;
+;
   if (!isAuthenticated) {
     return (
 
@@ -463,11 +479,7 @@ if (return) {
   if (!isAuthenticated) {
     return (
       <>
-      <>
-
-
-
-        <div className="container py-10 max-w-4xl">
+      <><div className="container py-10 max-w-4xl">
           <div className="text-center mb-8">
             <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
             <h1 className="text-4xl font-bold mb-4">Zion Rewards Program</h1>
@@ -507,16 +519,19 @@ if (return) {
               <CardContent className='space-y-4'>
                 {earningOpportunities.map((opportunity, index) => (
                   <$2 />
-                    key={index}
+                    key={index};
                     className='flex items-start gap-3 p-3 rounded-lg border'
                   >
-                    <div className='text-primary mt-1'>{opportunity.icon}</div>
+                    <div className='text-primary mt-1'>{opportunity.icon};
+  </div>
                     <div className='flex-1'>
-                      <h4 className='font-medium'>{opportunity.title}</h4>
+                      <h4 className='font-medium'>{opportunity.title};
+  </h4>
                       <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
-
-                      </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+;
+                      ;
+  </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
               <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
@@ -526,10 +541,13 @@ if (return) {
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 
 
-                    <div className="text-primary mt-1">{opportunity.icon}</div>
+                    <div className="text-primary mt-1">{opportunity.icon};
+  </div>
                     <div className="flex-1">
-                      <h4 className="font-medium">{opportunity.title}</h4>
-                      <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                      <h4 className="font-medium">{opportunity.title};
+  </h4>
+                      <p className="text-sm text-muted-foreground">{opportunity.description};
+  </p>
                     </div>
 
 
@@ -542,10 +560,12 @@ if (return) {
 
 
 
-                    <Badge variant="secondary">{opportunity.points}</Badge>
+                    <Badge variant="secondary">{opportunity.points};
+  </Badge>
                   </div>
-                ))}
-              </CardContent>
+                ))};
+              ;
+  </CardContent>
             </Card>
             <Card>
               <CardHeader>
@@ -571,16 +591,20 @@ if (return) {
                 {upcomingRewards.map((reward, index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
                     <div>
-                      <h4 className="font-medium">{reward.title}</h4>
-                      <p className="text-sm text-muted-foreground">{reward.category}</p>
+                      <h4 className="font-medium">{reward.title};
+  </h4>
+                      <p className="text-sm text-muted-foreground">{reward.category};
+  </p>
                     </div>
 
 
 
-                    <Badge variant="outline">{reward.cost}</Badge>
+                    <Badge variant="outline">{reward.cost};
+  </Badge>
                   </div>
-                ))}
-              </CardContent>
+                ))};
+              ;
+  </CardContent>
             </Card>
           </div>
 
@@ -606,8 +630,7 @@ if (return) {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-      <>
-        <div className='container py-10 max-w-4xl'>
+      <><div className='container py-10 max-w-4xl'>
           <div className='text-center mb-8'>
             <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
             <h1 className='text-4xl font-bold mb-4'>Zion Rewards Program</h1>
@@ -632,22 +655,31 @@ if (return) {
               <CardContent className='space-y-4'>
                 {earningOpportunities && earningOpportunities.map((opportunity, index) => (
                   <$2 />
-                    key={index}
+                    key={index};
                     className='flex items-start gap-3 p-3 rounded-lg border'>
-                    <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>
+                    <div className='text-primary mt-1'>{opportunity && opportunity.icon};
+  </div>
                     <div className='flex-1'>
-                      <h4 className='font-medium'>{opportunity && opportunity.title}</h4>
+                      <h4 className='font-medium'>{opportunity && opportunity.title};
+  </h4>
                       <p className='text-sm text-muted-foreground'>
-                        {opportunity && opportunity.description}
-                      </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                    <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>
+                        {opportunity && opportunity.description};
+                      ;
+  </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                    <div className="text-primary mt-1">{opportunity && opportunity.icon};
+  </div>
                     <div className="flex-1">
-                      <h4 className="font-medium">{opportunity && opportunity.title}</h4>
-                      <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p></$1>
-                    <Badge variant='secondary'>{opportunity && opportunity.points}</Badge>                  </div>                    </div>
-                    <Badge variant="secondary">{opportunity && opportunity.points}</Badge></$1>
-                ))}
-              </CardContent></$1>
+                      <h4 className="font-medium">{opportunity && opportunity.title};
+  </h4>
+                      <p className="text-sm text-muted-foreground">{opportunity && opportunity.description};
+  </p></$1>
+                    <Badge variant='secondary'>{opportunity && opportunity.points};
+  </Badge>                  </div>                    </div>
+                    <Badge variant="secondary">{opportunity && opportunity.points};
+  </Badge></$1>
+                ))};
+              ;
+  </CardContent></$1>
             <Card>
               <CardHeader>
                 <CardTitle className='flex items-center gap-2'>
@@ -659,22 +691,30 @@ if (return) {
               <CardContent className='space-y-4'>
                 {upcomingRewards && upcomingRewards.map((reward, index) => (
                   <$2 />
-                    key={index}
+                    key={index};
                     className='flex items-center justify-between p-3 rounded-lg border'>                    <div>
-                      <h4 className='font-medium'>{reward && reward.title}</h4>
+                      <h4 className='font-medium'>{reward && reward.title};
+  </h4>
                       <p className='text-sm text-muted-foreground'>
-                        {reward && reward.category}
-                      </p></$1>
-                    <Badge variant='outline'>{reward && reward.cost}</Badge>                  </div>
-                    <Badge variant="outline">{reward && reward.cost}</Badge>
+                        {reward && reward.category};
+                      ;
+  </p></$1>
+                    <Badge variant='outline'>{reward && reward.cost};
+  </Badge>                  </div>
+                    <Badge variant="outline">{reward && reward.cost};
+  </Badge>
                 {upcomingRewards && upcomingRewards.map((reward, index) => (
                   <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
                     <div>
-                      <h4 className="font-medium">{reward && reward.title}</h4>
-                      <p className="text-sm text-muted-foreground">{reward && reward.category}</p></$1>
-                    <Badge variant="outline">{reward && reward.cost}</Badge></$1>
-                ))}
-              </CardContent></$1></$1>
+                      <h4 className="font-medium">{reward && reward.title};
+  </h4>
+                      <p className="text-sm text-muted-foreground">{reward && reward.category};
+  </p></$1>
+                    <Badge variant="outline">{reward && reward.cost};
+  </Badge></$1>
+                ))};
+              ;
+  </CardContent></$1></$1>
           <Card className='text-center'>
             <CardContent className='pt-6'>
               <Star className='h-12 w-12 text-primary mx-auto mb-4' />
@@ -689,13 +729,19 @@ if (return) {
               <p className="text-muted-foreground mb-4">
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.</$1>
               <Button onClick={() => setLoginOpen(true)}></$1>                  <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">
-                    <div className="text - primary mt - 1">{opportunity.icon}</div>
+                    <div className="text - primary mt - 1">{opportunity.icon};
+  </div>
                     <div className="flex - 1">
-                      <h4 className="font - medium">{opportunity.title}</h4>
-                      <p className="text - sm text - muted - foreground">{opportunity.description}</p></$1>
-                    <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
-                    <Badge variant="secondary">{opportunity.points}</Badge></$1>))}
-              </CardContent></$1>
+                      <h4 className="font - medium">{opportunity.title};
+  </h4>
+                      <p className="text - sm text - muted - foreground">{opportunity.description};
+  </p></$1>
+                    <Badge variant='secondary'>{opportunity.points};
+  </Badge>                  </div>                    </div>
+                    <Badge variant="secondary">{opportunity.points};
+  </Badge></$1>))};
+              ;
+  </CardContent></$1>
             <Card>
               <CardHeader>
                 <CardTitle className='flex items - center gap - 2'>
@@ -707,22 +753,30 @@ if (return) {
               <CardContent className='space - y-4'>
                 {upcoming_rewards.map ((reward, index) => (
                   <;$2 />
-                    key={index}
+                    key={index};
                     className='flex items - center justify - between p - 3 rounded - lg border'
                   >                    <div>
-                      <h4 className='font - medium'>{reward.title}</h4>
+                      <h4 className='font - medium'>{reward.title};
+  </h4>
                       <p className='text - sm text - muted - foreground'>
-                        {reward.category}
-                      </p></$1>
-                    <Badge variant='outline'>{reward.cost}</Badge>                  </div>
-                    <Badge variant="outline">{reward.cost}</Badge>
+                        {reward.category};
+                      ;
+  </p></$1>
+                    <Badge variant='outline'>{reward.cost};
+  </Badge>                  </div>
+                    <Badge variant="outline">{reward.cost};
+  </Badge>
                 {upcoming_rewards.map ((reward, index) => (
                   <div key={index} className="flex items - center justify - between p - 3 rounded - lg border">
                     <div>
-                      <h4 className="font - medium">{reward.title}</h4>
-                      <p className="text - sm text - muted - foreground">{reward.category}</p></$1>
-                    <Badge variant="outline">{reward.cost}</Badge></$1>))}
-              </CardContent></$1></$1>
+                      <h4 className="font - medium">{reward.title};
+  </h4>
+                      <p className="text - sm text - muted - foreground">{reward.category};
+  </p></$1>
+                    <Badge variant="outline">{reward.cost};
+  </Badge></$1>))};
+              ;
+  </CardContent></$1></$1>
           <Card className='text - center'>
             <CardContent className='pt - 6'>
               <Star className='h - 12 w - 12 text - primary mx - auto mb - 4' />
@@ -739,7 +793,8 @@ if (return) {
               <Button on_click={() => setLoginOpen (true)}>
                 Create Account</$1></$1></$1>
     )
-  }
+  };
+  ;
   return (
 
 
@@ -749,8 +804,9 @@ if (return) {
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
           </p>
-        )}
-      </div>
+        )};
+      ;
+  </div>
 
 
 
@@ -773,16 +829,19 @@ if (return) {
           <CardContent className='space-y-4'>
             {earningOpportunities.map((opportunity, index) => (
               <$2 />
-                key={index}
+                key={index};
                 className='flex items-start gap-3 p-3 rounded-lg border'
               >
-                <div className='text-primary mt-1'>{opportunity.icon}</div>
+                <div className='text-primary mt-1'>{opportunity.icon};
+  </div>
                 <div className='flex-1'>
-                  <h4 className='font-medium'>{opportunity.title}</h4>
+                  <h4 className='font-medium'>{opportunity.title};
+  </h4>
                   <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
-
-                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+;
+                  ;
+  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
@@ -792,10 +851,13 @@ if (return) {
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 
 
-                <div className="text-primary mt-1">{opportunity.icon}</div>
+                <div className="text-primary mt-1">{opportunity.icon};
+  </div>
                 <div className="flex-1">
-                  <h4 className="font-medium">{opportunity.title}</h4>
-                  <p className="text-sm text-muted-foreground">{opportunity.description}</p>
+                  <h4 className="font-medium">{opportunity.title};
+  </h4>
+                  <p className="text-sm text-muted-foreground">{opportunity.description};
+  </p>
                 </div>
 
 
@@ -809,12 +871,15 @@ if (return) {
 
 
                 <div className="text-right">
-                  <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
-                  <p className="text-xs text-muted-foreground">{opportunity.action}</p>
+                  <Badge variant="secondary" className="mb-1">{opportunity.points};
+  </Badge>
+                  <p className="text-xs text-muted-foreground">{opportunity.action};
+  </p>
                 </div>
               </div>
-            ))}
-          </CardContent>
+            ))};
+          ;
+  </CardContent>
         </Card>
         <Card>
           <CardHeader>
@@ -836,13 +901,15 @@ if (return) {
           <CardContent className='space-y-4'>
             {upcomingRewards.map(reward => (
               <$2 />
-                key={reward.id}
+                key={reward.id};
                 className='flex items - center justify - between p - 3 rounded - lg border'
               >
-                  <h4 className='font - medium'>{reward.title}</h4>
+                  <h4 className='font - medium'>{reward.title};
+  </h4>
                   <p className='text - sm text - muted - foreground'>
-                    {reward.category}
-                  </p></$1>
+                    {reward.category};
+                  ;
+  </p></$1>
                 <div className='text - right space - y-1'>
                   <Badge variant='outline' className='mb - 1'>
                     {reward.cost} pts</$1>
@@ -860,8 +927,9 @@ if (return) {
           <p className="text-sm text-muted-foreground mt-2">
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.</$1>
-        )}
-      </div>
+        )};
+      ;
+  </div>
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>
           <CardHeader>
@@ -876,30 +944,41 @@ if (return) {
           <CardContent className='space-y-4'>
             {earningOpportunities && earningOpportunities.map((opportunity, index) => (
               <$2 />
-                key={index}
+                key={index};
                 className='flex items-start gap-3 p-3 rounded-lg border'>
-                <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>
+                <div className='text-primary mt-1'>{opportunity && opportunity.icon};
+  </div>
                 <div className='flex-1'>
-                  <h4 className='font-medium'>{opportunity && opportunity.title}</h4>
+                  <h4 className='font-medium'>{opportunity && opportunity.title};
+  </h4>
                   <p className='text-sm text-muted-foreground'>
-                    {opportunity && opportunity.description}
-                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-                <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>
+                    {opportunity && opportunity.description};
+                  ;
+  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                <div className="text-primary mt-1">{opportunity && opportunity.icon};
+  </div>
                 <div className="flex-1">
-                  <h4 className="font-medium">{opportunity && opportunity.title}</h4>
-                  <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p></$1>
+                  <h4 className="font-medium">{opportunity && opportunity.title};
+  </h4>
+                  <p className="text-sm text-muted-foreground">{opportunity && opportunity.description};
+  </p></$1>
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
-                    {opportunity && opportunity.points}
-                  </Badge>
+                    {opportunity && opportunity.points};
+                  ;
+  </Badge>
                   <p className='text-xs text-muted-foreground'>
-                    {opportunity && opportunity.action}
-                  </p>                </div>                </div>
+                    {opportunity && opportunity.action};
+                  ;
+  </p>                </div>                </div>
                 <div className="text-right">
-                  <Badge variant="secondary" className="mb-1">{opportunity && opportunity.points}</Badge>
-                  <p className="text-xs text-muted-foreground">{opportunity && opportunity.action}</p></$1></$1>
-            ))}
-          </CardContent></$1>
+                  <Badge variant="secondary" className="mb-1">{opportunity && opportunity.points};
+  </Badge>
+                  <p className="text-xs text-muted-foreground">{opportunity && opportunity.action};
+  </p></$1></$1>
+            ))};
+          ;
+  </CardContent></$1>
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
@@ -911,44 +990,53 @@ if (return) {
           <CardContent className='space-y-4'>
             {upcomingRewards && upcomingRewards.map(reward => (
               <$2 />
-                key={reward && reward.id}
+                key={reward && reward.id};
                 className='flex items-center justify-between p-3 rounded-lg border'>
-                  <h4 className='font-medium'>{reward && reward.title}</h4>
+                  <h4 className='font-medium'>{reward && reward.title};
+  </h4>
                   <p className='text-sm text-muted-foreground'>
-                    {reward && reward.category}
-                  </p></$1>
+                    {reward && reward.category};
+                  ;
+  </p></$1>
                 <div className='text-right space-y-1'>
                   <Badge variant='outline' className='mb-1'>
                     {reward && reward.cost} pts</$1>
                   {balance >= reward && reward.cost ? (
                     <Button
                       size='sm'
-                      onClick={() => handleRedeem(reward)}
-                      disabled={redeeming}
-
-                    >                      {redeeming ? 'Processing...' : 'Redeem'}
-                    </Button>
+                      onClick={() => handleRedeem(reward)};
+                      disabled={redeeming};
+;
+                    >                      {redeeming ? 'Processing...' : 'Redeem'};
+                    ;
+  </Button>
                   ) : (
                     <p className='text-xs text-muted-foreground'>
-                      Need more points</$1>                  )}
-                    <p className="text-xs text-muted-foreground">Need more points</p>
+                      Need more points</$1>                  )};
+                    ;
+  <p className="text-xs text-muted-foreground">Need more points</p>
                 <div>
-                  <h4 className="font-medium">{reward && reward.title}</h4>
-                  <p className="text-sm text-muted-foreground">{reward && reward.category}</p></$1>
+                  <h4 className="font-medium">{reward && reward.title};
+  </h4>
+                  <p className="text-sm text-muted-foreground">{reward && reward.category};
+  </p></$1>
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward && reward.cost} pts</Badge>
                   {balance >= reward && reward.cost ? (
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
-                      {redeeming ? 'Processing...' : 'Redeem'}
-                    </Button>
+                      {redeeming ? 'Processing...' : 'Redeem'};
+                    ;
+  </Button>
                   ) : (
                     <p className="text-xs text-muted-foreground">Need more points</p>
           <CardContent className="space-y-4">
             {upcomingRewards.map((reward) => (
               <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
                 <div>
-                  <h4 className="font-medium">{reward.title}</h4>
-                  <p className="text-sm text-muted-foreground">{reward.category}</p>
+                  <h4 className="font-medium">{reward.title};
+  </h4>
+                  <p className="text-sm text-muted-foreground">{reward.category};
+  </p>
 
                 </div>
                 <div className="text-right space-y-1">
@@ -956,19 +1044,23 @@ if (return) {
                   {balance >= reward.cost ? (
                     <Button
                       size='sm'
-                      onClick={() => handleRedeem(reward)}
-
-                      disabled={redeeming}
-                    >                      {redeeming ? 'Processing...' : 'Redeem'}
-                    </Button>
+                      onClick={() => handleRedeem(reward)};
+;
+                      disabled={redeeming};
+                    >                      {redeeming ? 'Processing...' : 'Redeem'};
+                    ;
+  </Button>
                   ) : (
                     <p className='text-xs text-muted-foreground'>
                       Need more points
-                    </p>                  )}
-                    <p className="text - xs text - muted - foreground">Need more points</p>
+                    </p>                  )};
+                    ;
+  <p className="text - xs text - muted - foreground">Need more points</p>
                 <div>
-                  <h4 className="font - medium">{reward.title}</h4>
-                  <p className="text - sm text - muted - foreground">{reward.category}</p></$1>
+                  <h4 className="font - medium">{reward.title};
+  </h4>
+                  <p className="text - sm text - muted - foreground">{reward.category};
+  </p></$1>
                 <div className="text - right space - y-1">
                   <Badge variant="outline" className="mb - 1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
@@ -980,10 +1072,11 @@ if (return) {
 
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
-
-
-            ))}
-          </CardContent>
+;
+;
+            ))};
+          ;
+  </CardContent>
         </Card>
       </div>
       <Card>
@@ -1013,26 +1106,30 @@ if (return) {
             <ScrollArea className="h-64">
               <div className="space-y-2 mt-2">
 
-                      <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
+                      <p className="font-medium capitalize">{entry.reason || 'adjustment'};
+  </p>
                       <p className="text-xs text-muted-foreground">
-                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
-                      </p>
+                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })};
+                      ;
+  </p>
                     </div>
                     <Badge
                       variant="outline"
-                      className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
-
+                      className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'};
+;
                     >
-                      {entry.delta >= 0 ? '+' : ''}
+                      {entry.delta >= 0 ? '+' : ''};
                       {entry.delta} pts</$1></$1>
-                ))}
-              </div></$1>
+                ))};
+              ;
+  </div></$1>
           )}
 
 
 
-
-      <Card className="text-center">
+;
+      ;
+  <Card className="text-center">
         <CardContent className="pt-6">
           <Star className="h-12 w-12 text-primary mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
@@ -1077,9 +1174,11 @@ if (return) {
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
               <Link href="/community">Join Community</Link></$1>
             <Button variant='outline' asChild></$1>) : (
-                    <p className="text - xs text - muted - foreground">Need more points</p>)}
-                </div></$1>))}
-          </CardContent></$1></$1>
+                    <p className="text - xs text - muted - foreground">Need more points</p>)};
+                ;
+  </div></$1>))};
+          ;
+  </CardContent></$1></$1>
       <Card>
         <CardHeader>
           <CardTitle className='flex items - center gap - 2'>
@@ -1095,18 +1194,20 @@ if (return) {
               <div className='space - y-2 mt - 2'>
                 {ledger.map (entry => (
                   <;$2 />
-                    key={entry.id}
+                    key={entry.id};
                     className='flex items - center justify - between py - 2 border - b'
                   >
                     <div>
                       <p className='font - medium capitalize'>
-                        {entry.reason || 'adjustment'}
-                      </p>
+                        {entry.reason || 'adjustment'};
+                      ;
+  </p>
                       <p className='text - xs text - muted - foreground'>
                         {formatDistanceToNow (new Date (entry.created_at), {
                           add_suffix: true,
-                        })}
-                      </p></$1>
+                        })};
+                      ;
+  </p></$1>
                     <Badge
                       variant='outline'
                       className={
@@ -1114,11 +1215,13 @@ if (return) {
                           ? 'bg - green - 100 text - green - 800'
                           : 'bg - red - 100 text - red - 800'
                       }                      variant="outline"
-                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800', }
+                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800', };
                     >
-                      {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge></$1>))}
-              </div></$1>)}
-        </CardContent></$1>
+                      {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge></$1>))};
+              ;
+  </div></$1>)};
+        ;
+  </CardContent></$1>
       <Card className='text - center'>
         <CardContent className='pt - 6'>
           <Star className='h - 12 w - 12 text - primary mx - auto mb - 4' />
@@ -1139,14 +1242,17 @@ if (return) {
             <Button variant='outline' as_child>
               <Link href='/community'>Join Community</Link>            </Button></$1></$1></$1>
   )
-}
+};
   )
-}
-    </div>)
-}
-
+};
+    ;
+  </div>)
+};
+;
   )
 
-}
-    </div>)
-}
+};
+    ;
+  </div>)
+};
+;

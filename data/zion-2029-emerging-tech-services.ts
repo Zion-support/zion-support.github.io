@@ -5,25 +5,25 @@ export type ZionEmergingTechService2029 =
   price: string
   period: string
   description: string
-  features: string[]
-  benefits: string[]
+  features: string[];
+  benefits: string[];
   popular: boolean
   icon: string
   color: string
   textColor: string
   link: string
   marketPosition: string
-  targetAudience: string[]
+  targetAudience: string[];
   trialDays: number
   setupTime: string
   category: string
-  aiTechnology: string[]
+  aiTechnology: string[];
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -32,7 +32,7 @@ export type ZionEmergingTechService2029 =
     email: string
     address: string
     website: string,
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -45,8 +45,8 @@ export type ZionEmergingTechService2029 =
     enterprise: number
     currency: string
     period: string,
-  }
-}
+  };
+};
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // 1. Space Technology & Satellite Management Platform,
     id: 'space-technology-satellite-management',
@@ -74,8 +74,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   textColo,
@@ -121,7 +120,7 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -145,8 +144,8 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     currenc,
   y: string,
     perio,
-  d: string}
-}
+  d: string};
+};
 export const,
   zionEmergingTechServices2029: ZionEmergingTechService2029[] = [,
   // 1. Space Technology & Satellite Management Platform,
@@ -217,7 +216,7 @@ export const,
       professional: 14999
       enterprise: 39999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 2. Biotechnology & Synthetic Biology Platform
     id: 'biotechnology-synthetic-biology',
@@ -229,8 +228,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-600 to-indigo-700',
     textColo,
@@ -304,7 +302,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 2. Biotechnology & Synthetic Biology Platform,
   id: 'biotechnology-synthetic-biology',
@@ -374,7 +372,7 @@ export const,
       professional: 9999
       enterprise: 24999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 3. Renewable Energy & Smart Grid Optimization
     id: 'renewable-energy-smart-grid',
@@ -386,8 +384,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-600 to-teal-700',
     textColo,
@@ -461,7 +458,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 3. Renewable Energy & Smart Grid Optimization,
   id: 'renewable-energy-smart-grid',
@@ -531,7 +528,7 @@ export const,
       professional: 7499
       enterprise: 18999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 4. Advanced Robotics & Automation Platform
     id: 'advanced-robotics-automation',
@@ -543,8 +540,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-yellow-500 to-orange-600',
     textColo,
@@ -618,7 +614,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 4. Advanced Robotics & Automation Platform,
   id: 'advanced-robotics-automation',
@@ -688,7 +684,7 @@ export const,
       professional: 12999
       enterprise: 29999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 5. Quantum Internet & Secure Communications
     id: 'quantum-internet-secure-communications',
@@ -700,8 +696,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-gray-600 to-slate-700',
     textColo,
@@ -775,7 +770,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 5. Quantum Internet & Secure Communications,
   id: 'quantum-internet-secure-communications',
@@ -845,7 +840,7 @@ export const,
       professional: 17999
       enterprise: 44999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 6. Advanced Materials & Nanotechnology Platform
     id: 'advanced-materials-nanotechnology',
@@ -857,8 +852,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-cyan-700',
     textColo,
@@ -932,7 +926,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 6. Advanced Materials & Nanotechnology Platform,
   id: 'advanced-materials-nanotechnology',
@@ -1002,7 +996,7 @@ export const,
       professional: 8999
       enterprise: 21999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 7. Autonomous Transportation & Mobility Platform
     id: 'autonomous-transportation-mobility',
@@ -1014,8 +1008,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-600 to-pink-700',
     textColo,
@@ -1089,7 +1082,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 7. Autonomous Transportation & Mobility Platform,
   id: 'autonomous-transportation-mobility',
@@ -1159,7 +1152,7 @@ export const,
       professional: 11999
       enterprise: 28999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 8. Digital Twin & Simulation Platform
     id: 'digital-twin-simulation',
@@ -1171,8 +1164,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-600 to-emerald-700',
     textColo,
@@ -1246,7 +1238,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 8. Digital Twin & Simulation Platform,
   id: 'digital-twin-simulation',
@@ -1316,7 +1308,7 @@ export const,
       professional: 6999
       enterprise: 17999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 9. Edge Computing & IoT Platform
     id: 'edge-computing-iot-platform',
@@ -1328,8 +1320,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-indigo-600 to-purple-700',
     textColo,
@@ -1403,7 +1394,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 9. Edge Computing & IoT Platform,
   id: 'edge-computing-iot-platform',
@@ -1473,7 +1464,7 @@ export const,
       professional: 4999
       enterprise: 12999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 10. Metaverse & Virtual Reality Platform
     id: 'metaverse-virtual-reality',
@@ -1485,8 +1476,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-cyan-700',
     textColo,
@@ -1560,7 +1550,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 10. Metaverse & Virtual Reality Platform,
   id: 'metaverse-virtual-reality',
@@ -1630,15 +1620,14 @@ export const,
       professional: 8299
       enterprise: 20999,
       currency: 'USD',
-      period: 'month'}
-  }
-]
+      period: 'month'};
+  };
+];
 export const getServicesByCategory = (category: string) =>
   return zionEmergingTechServices2029.filter(service => service.category === category),,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-600 to-pink-700',
     textColo,
@@ -1712,20 +1701,20 @@ export const getServicesByCategory = (category: string) =>
   y: 'USD',
       perio,
   d: 'month'
-    }
-  }
-]
+    };
+  };
+];
 export const getServicesByCategory = (categor)
   y: string) =>
   return zionEmergingTechServices2029.filter(service => service.category === category),
-}
+};
 export const getPopularServices = () =>
   return zionEmergingTechServices2029.filter(service => service.popular)
-}
+};
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
   return zionEmergingTechServices2029.filter(service => //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)})
-}
+};
 export const getServicesByTechnology = (technology: string) =>,
   return zionEmergingTechServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
@@ -1736,13 +1725,13 @@ export const getServicesByPriceRange = (minPric)
 //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
   })
-}
+};
 export const getServicesByTechnology = (technolog)
   y: string) =>
   return zionEmergingTechServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
   ),
-}
+};
 export type ZionEmergingTechService2029 = i,
   d: string, nam,
   e: string, taglin,
@@ -1752,8 +1741,7 @@ export type ZionEmergingTechService2029 = i,
   n: string, feature,
   s: string[], benefit,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -1798,8 +1786,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Comprehensive space technology platform that enables businesses and governments to manage satellite operations, space missions, and space-based data collection with AI-powered optimization.', feature,
   s: [' 'AI-powered satellite orbit optimization',' 'Real-time space debris tracking',' 'Satellite constellation management',' 'Space weather monitoring and alerts',' 'Earth observation data processing',' 'Space mission planning and execution',' 'Satellite communication optimization',' 'Space resource utilization',' 'Interplanetary mission support',' 'Space tourism platform integration' ], benefit,
   s: [' 'Reduce satellite operational costs by 50%',' 'Improve mission success rate by 80%',' 'Enable new space-based business models',' 'Contribute to space exploration advancement' ], popula,
-  r: true,' ico,
-  n: '🚀',' colo,
+  r: true,' icon: '🚀',' colo,
   r: 'from-purple-600 to-indigo-700',' textColo,
   r: 'text-purple-200',' lin,
   k: 'http,
@@ -1845,8 +1832,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Revolutionary biotechnology platform that combines AI and synthetic biology to enable rapid design, testing, and production of biological systems for healthcare, agriculture, and industrial applications.', feature,
   s: [' 'AI-powered DNA sequence design',' 'Synthetic biology workflow automation',' 'Biological system simulation',' 'Gene editing optimization',' 'Protein structure prediction',' 'Metabolic pathway engineering',' 'Biological safety assessment',' 'Regulatory compliance automation',' 'Laboratory automation integration',' 'Bioinformatics data analysis' ], benefit,
   s: [' 'Accelerate drug discovery by 10x',' 'Reduce biotech development costs by 70%',' 'Enable new therapeutic approaches',' 'Create sustainable industrial processes' ], popula,
-  r: true,' ico,
-  n: '🧬',' colo,
+  r: true,' icon: '🧬',' colo,
   r: 'from-green-600 to-teal-700',' textColo,
   r: 'text-green-200',' lin,
   k: 'http,
@@ -1892,8 +1878,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Comprehensive renewable energy platform that uses AI to optimize energy production, distribution, and consumption while managing smart grids for maximum efficiency and sustainability.', feature,
   s: [' 'AI-powered energy production optimization',' 'Smart grid load balancing',' 'Renewable energy forecasting',' 'Energy storage optimization',' 'Demand response management',' 'Grid stability monitoring',' 'Energy trading automation',' 'Carbon footprint tracking',' 'Microgrid management',' 'Electric vehicle integration' ], benefit,
   s: [' 'Increase renewable energy efficiency by 40%',' 'Reduce energy costs by 30%',' 'Improve grid stability by 60%',' 'Accelerate clean energy transition' ], popula,
-  r: true,' ico,
-  n: '⚡',' colo,
+  r: true,' icon: '⚡',' colo,
   r: 'from-yellow-500 to-orange-600',' textColo,
   r: 'text-yellow-200',' lin,
   k: 'http,
@@ -1939,8 +1924,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Revolutionary robotics platform that combines AI, computer vision, and advanced automation to enable intelligent robots that can learn, adapt, and perform complex tasks in various industries.', feature,
   s: [' 'AI-powered robot learning and adaptation',' 'Computer vision and object recognition',' 'Autonomous navigation and path planning',' 'Human-robot collaboration',' 'Multi-robot coordination',' 'Predictive maintenance',' 'Safety monitoring and compliance',' 'Custom robot programming',' 'Integration with existing systems',' 'Mobile and web applications' ], benefit,
   s: [' 'Increase production efficiency by 60%',' 'Reduce operational costs by 45%',' 'Improve product quality by 80%',' 'Enable 24/7 autonomous operations' ], popula,
-  r: true,' ico,
-  n: '🤖',' colo,
+  r: true,' icon: '🤖',' colo,
   r: 'from-gray-600 to-slate-700',' textColo,
   r: 'text-gray-200',' lin,
   k: 'http,
@@ -1986,8 +1970,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Revolutionary quantum internet platform that enables unhackable communications, quantum key distribution, and quantum networking for governments, financial institutions, and critical infrastructure.', feature,
   s: [' 'Quantum key distribution (QKD)',' 'Quantum internet protocols',' 'Quantum network management',' 'Post-quantum cryptography',' 'Quantum secure messaging',' 'Quantum random number generation',' 'Quantum network monitoring',' 'Integration with classical networks',' 'Quantum network security',' 'Quantum internet applications' ], benefit,
   s: [' 'Provide unhackable communications',' 'Enable quantum-secure networks',' 'Protect against quantum attacks',' 'Enable quantum internet applications' ], popula,
-  r: true,' ico,
-  n: '🌐',' colo,
+  r: true,' icon: '🌐',' colo,
   r: 'from-blue-600 to-cyan-700',' textColo,
   r: 'text-blue-200',' lin,
   k: 'http,
@@ -2033,8 +2016,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Cutting-edge materials science platform that combines AI, nanotechnology, and advanced simulation to design and develop revolutionary materials for aerospace, electronics, healthcare, and energy applications.', feature,
   s: [' 'AI-powered material design',' 'Nanotechnology simulation and modeling',' 'Material property prediction',' 'Computational chemistry',' '3D printing material optimization',' 'Material testing automation',' 'Supply chain optimization',' 'Regulatory compliance',' 'Intellectual property management',' 'Collaborative research tools' ], benefit,
   s: [' 'Accelerate material development by 20x',' 'Reduce development costs by 80%',' 'Enable breakthrough material properties',' 'Create sustainable material solutions' ], popula,
-  r: true,' ico,
-  n: '🔬',' colo,
+  r: true,' icon: '🔬',' colo,
   r: 'from-purple-600 to-pink-700',' textColo,
   r: 'text-purple-200',' lin,
   k: 'http,
@@ -2080,8 +2062,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Comprehensive autonomous transportation platform that enables businesses and cities to deploy and manage autonomous vehicles, optimize traffic flow, and create intelligent transportation systems.', feature,
   s: [' 'Autonomous vehicle fleet management',' 'AI-powered traffic optimization',' 'Smart city transportation',' 'Autonomous logistics',' 'Public transportation optimization',' 'Parking management',' 'Traffic prediction and modeling',' 'Safety monitoring and compliance',' 'Integration with existing infrastructure',' 'Mobile applications for users' ], benefit,
   s: [' 'Reduce transportation costs by 50%',' 'Improve traffic flow by 60%',' 'Enhance safety by 90%',' 'Enable new mobility services' ], popula,
-  r: true,' ico,
-  n: '🚗',' colo,
+  r: true,' icon: '🚗',' colo,
   r: 'from-green-600 to-emerald-700',' textColo,
   r: 'text-green-200',' lin,
   k: 'http,
@@ -2127,8 +2108,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Advanced digital twin platform that creates virtual replicas of physical systems, enabling real-time monitoring, predictive maintenance, and optimization of complex industrial processes.', feature,
   s: [' 'Real-time digital twin creation',' 'AI-powered simulation and modeling',' 'Predictive maintenance',' 'Performance optimization',' 'Virtual testing and validation',' 'Integration with IoT sensors',' '3D visualization and AR/VR',' 'Collaborative simulation',' 'Historical data analysis',' 'API for custom integrations' ], benefit,
   s: [' 'Reduce maintenance costs by 40%',' 'Improve system performance by 30%',' 'Enable virtual testing and validation',' 'Optimize operational efficiency' ], popula,
-  r: true,' ico,
-  n: '🔄',' colo,
+  r: true,' icon: '🔄',' colo,
   r: 'from-indigo-600 to-purple-700',' textColo,
   r: 'text-indigo-200',' lin,
   k: 'http,
@@ -2174,8 +2154,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Comprehensive edge computing platform that brings AI and analytics to the edge of networks, enabling real-time processing, reduced latency, and improved privacy for IoT applications.', feature,
   s: [' 'AI-powered edge processing',' 'Real-time IoT analytics',' 'Edge device management',' 'Distributed computing',' 'Edge security and privacy',' '5G network integration',' 'Edge-to-cloud synchronization',' 'Custom edge applications',' 'Performance monitoring',' 'Scalable edge infrastructure' ], benefit,
   s: [' 'Reduce latency by 90%',' 'Improve privacy and security',' 'Reduce bandwidth costs by 70%',' 'Enable real-time AI applications' ], popula,
-  r: true,' ico,
-  n: '🌐',' colo,
+  r: true,' icon: '🌐',' colo,
   r: 'from-blue-600 to-cyan-700',' textColo,
   r: 'text-blue-200',' lin,
   k: 'http,
@@ -2221,8 +2200,7 @@ export type ZionEmergingTechService2029 = i,
   n: 'Revolutionary metaverse platform that enables businesses to create immersive virtual experiences, virtual events, and digital twins for training, collaboration, and entertainment.', feature,
   s: [' '3D world creation and management',' 'Virtual reality and augmented reality',' 'Avatar customization and management',' 'Virtual event hosting',' 'Collaborative workspaces',' 'Digital asset marketplace',' 'Virtual commerce integration',' 'Social networking features',' 'Cross-platform compatibility',' 'API for custom applications' ], benefit,
   s: [' 'Create immersive brand experiences',' 'Enable virtual collaboration',' 'Reduce travel and event costs',' 'Generate new revenue streams' ], popula,
-  r: true,' ico,
-  n: '🥽',' colo,
+  r: true,' icon: '🥽',' colo,
   r: 'from-purple-600 to-pink-700',' textColo,
   r: 'text-purple-200',' lin,
   k: 'http,

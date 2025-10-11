@@ -6,7 +6,7 @@ export type InnovativeMicroSaasV2 = {
 	price: string
 	rating: number
 	reviews: number
-}
+};
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 	{
 		id: 'ai-business-intelligence-pro',
@@ -17,7 +17,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 		rating: 4.8,
 		reviews: 42,
 	},
-]
+];
 import { ServiceVariant } from '../types/service-variants'
 export interface InnovativeMicroSaasV2 {
   id: string
@@ -26,7 +26,7 @@ export interface InnovativeMicroSaasV2 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -38,11 +38,11 @@ export interface InnovativeMicroSaasV2 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -51,14 +51,14 @@ export interface InnovativeMicroSaasV2 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {
@@ -315,5 +315,5 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     customers: 789,
     rating: 4.8,
     reviews: 912
-  }
-]
+  };
+];

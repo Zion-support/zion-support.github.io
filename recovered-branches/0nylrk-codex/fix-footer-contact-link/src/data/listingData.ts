@@ -134,8 +134,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     location: "Global",
     availability: "Immediate",
     aiScore: 94
-  }
-]
+  };
+];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
@@ -150,11 +150,13 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Virtual assistant",
     "Enterprise AI solutions"
   ]
+  ;
+  ;
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
   }))
-}
+};
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
@@ -174,8 +176,8 @@ export const generateFilterOptions = () => {
       label: item,
       value: item
     })),
-    ratingOptions: [1, 2, 3, 4, 5]
-  }
-}
+    ratingOptions: [1, 2, 3, 4, 5];
+  };
+};
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0))
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0))

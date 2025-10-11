@@ -2,9 +2,10 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code} from 'lucide-react'
+import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code, Wifi} from 'lucide-react'
 
 const HomePage: React.FC = () => {
+
   const features = [
     {
       icon: Wifi,
@@ -23,17 +24,17 @@ const HomePage: React.FC = () => {
     {icon: Code,
       title: 'Custom Development',
       description: 'Bespoke software solutions designed to meet your unique requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']}
-  ]
+        benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']}
+  ];
+
   const stats = [
     {number: '500+', label: 'Projects Completed'},
     {number: '100+', label: 'Happy Clients'},
     {number: '99.9%', label: 'Uptime Guarantee'},
-    {number: '24/7', label: 'Support Available'}
-  ]
+      {number: '24/7', label: 'Support Available'}
+  ];
   return (
-    <>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       <main className="pt-16">
@@ -58,24 +59,29 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        {/* Stats Section */};
+        ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
-                  </div>
+                    {stat.number};
+                  ;
+  </div>
                   <div className="text-gray-300">
-                    {stat.label}
-                  </div>
+                    {stat.label};
+                  ;
+  </div>
                 </div>
-              ))}
-            </div></div></section>
+              ))};
+            ;
+  </div></div></section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Features Section */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -89,19 +95,24 @@ const HomePage: React.FC = () => {
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  </div><p className="text-gray-300 mb-4">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white">{feature.title};
+  </h3>
+                  </div><p className="text-gray-300 mb-4">{feature.description};
+  </p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                        {benefit};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </section>
 
@@ -121,11 +132,13 @@ const HomePage: React.FC = () => {
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
-                    <span className="text-lg font-medium text-gray-900">{benefit}</span>
+                    <span className="text-lg font-medium text-gray-900">{benefit};
+  </span>
                   </div>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </section>
 
@@ -150,9 +163,8 @@ const HomePage: React.FC = () => {
       </main>
       
       <Footer />
-    </div>
-    </>
+    </div></>
   )
-}
-
+};
+;
 export default HomePage

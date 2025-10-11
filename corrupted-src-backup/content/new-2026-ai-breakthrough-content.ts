@@ -6,13 +6,13 @@ export interface AIBreakthroughContent {
   author: string
   publishedAt: string
   category: string
-  tags: string[]
+  tags: string[];
   featured: boolean
   readTime: string
   image?: string,,
   valueProposition: string
-  }
-
+  };
+;
 export const new2026AIBreakthroughContent: AIBreakthroughContent[] = [,
   {,
     id: 'ai-2026-hyperconscious-computing-revolution',
@@ -59,12 +59,12 @@ The convergence of quantum computing and artificial intelligence opens new front
     readTime: '20 min read',
     image: '/images/quantum-ai-synthesis-2026.jpg',
     valueProposition: 'Exponential computational capabilities',
-export interface AIBreakthroughContent {/* TODO: Fix JSX expression */}
-}
-
+export interface AIBreakthroughContent {/* TODO: Fix JSX expression */};
+};
+;
 export const,
   new2026AIBreakthroughContent: AIBreakthroughContent[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
-  }]
+  {/* TODO: Fix JSX expression */};
+  }];

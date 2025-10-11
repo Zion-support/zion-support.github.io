@@ -9,27 +9,31 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIMLPlatformPage: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
-      benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
+      benefits: ['Rapid model development', 'Automated training', 'Seamless deployment'];
     },
       icon: TrendingUp,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics and monitoring for machine learning models',
-      benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
+      benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization'];
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security and compliance for your machine learning infrastructure',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails']
+      benefits: ['Data encryption', 'Access controls', 'Audit trails'];
       icon: Users,
       title: 'Team Collaboration',
       description: 'Collaborative tools for data scientists and ML engineers',
-      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
-    }
+      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing'];
+    };
   ]
+  
+  ;
+  ;
   const pricingPlans = [
       name: 'Developer',
       price: '$999',
@@ -47,38 +51,40 @@ const AIMLPlatformPage: React.FC = () => {
       price: '$2,499',
       description: 'Ideal for development teams',
   const features = []
+  ;
+  ;
   return (
     {
     // TODO: Add content
-  }
-}
-  ico,
-  n: Brain,
+  };
+};
+  icon: Brain,
       titl,
   e: 'Complete ML Platform',
       descriptio,
   n: 'End-to-end machine learning platform with model development, training, and deployment',
       benefit,
-  s: ['Rapid model development', 'Automated training', 'Seamless deployment']
+  s: ['Rapid model development', 'Automated training', 'Seamless deployment'];
     },
-      ico,
-  n: TrendingUp,
+      icon: TrendingUp,
       titl,
   e: 'Advanced Analytics',
       descriptio,
   n: 'Comprehensive analytics and monitoring for machine learning models',
       benefit,
-  s: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
-      ico,
-  n: Users,
+  s: ['Real-time monitoring', 'Performance tracking', 'Model optimization'];
+      icon: Users,
       titl,
   e: 'Team Collaboration',
       descriptio,
   n: 'Collaborative tools for data scientists and ML engineers',
       benefit,
-  s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
-    }
+  s: ['Shared workspaces', 'Version control', 'Knowledge sharing'];
+    };
   ]
+  
+  ;
+  ;
   const pricingPlans = [
       nam,
   e: 'Team',
@@ -120,7 +126,8 @@ const AIMLPlatformPage: React.FC = () => {
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
-    { icon: Star, value: '4.9/5', label: 'User Rating' }
+    { icon: Star, value: '4.9/5', label: 'User Rating' };
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -159,7 +166,7 @@ Learn More
       <Footer />
     </div>
   ),
-}
+};
 export default $1
 export default AiMlPlatformPage</p>
   </h1>

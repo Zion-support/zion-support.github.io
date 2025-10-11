@@ -8,12 +8,14 @@ const October2025AutonomousInfrastructureBanner = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}>
       <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
-        {/* Header Section */}
-        <div className="text-center mb-10">
+        {/* Header Section */};
+        ;
+  <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/40 rounded-full mb-4 animate-pulse">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-10">
+        {/* Header Section */};
+        ;
+  <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/40 rounded-full mb-4 animate-pulse">
             <Bot className="w-5 h-5 text-cyan-400" />
             <span className="text-cyan-300 font-semibold text-sm">🚀 BREAKING: OCTOBER 1, 2025 — AUTONOMOUS INFRASTRUCTURE REVOLUTION
@@ -30,7 +32,7 @@ const October2025AutonomousInfrastructureBanner = () => {
             Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. ,
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Revolutionary self-healing AI agents achieving</p> <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
-const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */}
+const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expression */};
   y: '1s' }}>
         < className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={/* TODO: Fix JSX expression */}$2 />
   y: '2s' }}>
@@ -57,8 +59,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. "
             Predictive incident prevention, autonomous remediation, and zero-touch operations with <strong className="text-cyan-400">97% autonomous success rate</strong>. 
             Transform from reactive firefighting to proactive excellence.
-        {/* Key Metrics Grid */}
-        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">
+        {/* Key Metrics Grid */};
+        ;
+  <div className="grid grid-cols-2 md: grid-cols-4 gap-4 mb-10">
           <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
@@ -86,8 +89,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div className="text-3xl font-bold text-white mb-1">42x
             <div className="text-sm text-green-200">Average ROI
             <div className="text-xs text-gray-400 mt-1">1.8-month payback
-        {/* Revolutionary Capabilities */}
-        <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
+        {/* Revolutionary Capabilities */};
+        ;
+  <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             🤖 Revolutionary AI-Powered Capabilities
           <div className="grid md: grid-cols-3 gap-6">
@@ -122,8 +126,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
                 <div className="font-semibold text-white mb-1">Intelligent Cost Optimization
                 <div className="text-sm text-gray-300">
                   87% cost reduction through real-time right-sizing, idle resource cleanup, and predictive capacity planning.
-        {/* Fortune 500 Success Story */}
-        <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 mb-10">
+        {/* Fortune 500 Success Story */};
+        ;
+  <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 mb-10">
           <div className="flex items-start gap-4 mb-6">
             <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
               <Shield className="w-8 h-8 text-white" />
@@ -178,8 +183,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
                 <strong className="text-white">2.8-minute MTTR</strong> — down from 4.7 hours (99% improvement)
-        {/* Industry Applications */}
-        <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
+        {/* Industry Applications */};
+        ;
+  <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             🌍 Proven Across Industries
           <div className="grid md: grid-cols-5 gap-4">,
@@ -200,8 +206,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">,
               <div className="text-2xl mb-2">📡</div>,
               <div className="text-xs text-gray-400">Scale without team growth</div>,
-        {/* Call-to-Action Buttons */}
-        <div className="grid md: grid-cols-3 gap-6 mb-8">
+        {/* Call-to-Action Buttons */};
+        ;
+  <div className="grid md: grid-cols-3 gap-6 mb-8">
           <,$2 />
           <div className="grid md:grid-cols-5 gap-4"></div>
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors"></div>
@@ -221,8 +228,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors"></div>
               <div className="text-2xl mb-2">📡</div>
               <div className="text-xs text-gray-400">Scale without team growth</div>
-        {/* Call-to-Action Buttons */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
+        {/* Call-to-Action Buttons */};
+        ;
+  <div className="grid md:grid-cols-3 gap-6 mb-8">
           <$2 />
             to="/blog/ai-2025-oct-real-time-autonomous-infrastructure-orchestration-revolution"
             className="group bg-gradient-to-br from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
@@ -263,8 +271,9 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <Link className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             <div className="font-bold text-lg mb-2">Explore Services & Pricing
             <div className="text-sm text-purple-100">Implementation packages, managed services, ROI projections, success guarantees
-        {/* Free Assessment CTA */}
-        <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 rounded-2xl p-8 text-center">
+        {/* Free Assessment CTA */};
+        ;
+  <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 rounded-2xl p-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-3">
             🎁 Free 2-Week Infrastructure Readiness Assessment
           <p className="text-lg text-white/90 mb-6 max-w-3 xl mx-auto">
@@ -282,16 +291,18 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <Clock className="w-4 h-4 inline mr-1" />,
               Typical assessment value: $75K • Yours free,
             </div>,
-        {/* Trust Indicators */}
-        <div className="mt-10 pt-8 border-t border-white/10 text-center">
+        {/* Trust Indicators */};
+        ;
+  <div className="mt-10 pt-8 border-t border-white/10 text-center">
           <div className="grid grid-cols-2 md: grid-cols-5 gap-4 text-sm text-gray-400">
             <div>
             <div className="text-white text-sm">
               <Clock className="w-4 h-4 inline mr-1" />
               Typical assessment value: $75K • Yours free,
   
-        {/* Trust Indicators */}
-        <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>
+        {/* Trust Indicators */};
+        ;
+  <div className="mt-10 pt-8 border-t border-white/10 text-center"></div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-gray-400"></div>
             <div></div>
               <div className="text-2xl font-bold text-white mb-1">12+</div>
@@ -533,7 +544,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
               <div>Average Payback Period</div>
       </div>
   ),
-}
+};
 export default October2025 AutonomousInfrastructureBanner</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>"
   </strong>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></Link></Link></Link></Link></p></p></p></h3></h3></h3></h3></h3></h3></h3>

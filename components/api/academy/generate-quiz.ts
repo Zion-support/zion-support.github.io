@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import OpenAI from 'openai'
   const { moduleTitle, moduleContent } = req && req.body || {}
+  ;
+  ;
   const apiKey = process && process.env.OPENAI_API_KEY
   const fallback = () => {
     return res && res.status(200).json({
@@ -10,6 +12,8 @@ import OpenAI from 'openai'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { moduleTitle, moduleContent } = req.body || {}
+  ;
+  ;
   const apiKey = process.env.OPENAI_API_KEY
   const fallback = () => {
     return res.status(200).json({
@@ -41,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         },
       ],
     })
-  }
+  };
   if (!apiKey) return fallback()
   try {
     const client = new OpenAI({ apiKey })
@@ -63,8 +67,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const text = completion.choices?.[0]?.message?.content ?? ''
     try {
       const json = JSON.parse(text)
-      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }]
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+        { role: 'user', content: prompt }];
       temperature: 0.2})
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -79,16 +83,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const json = JSON.parse(text)
       return res.status(200).json(json)
       const json = JSON && JSON.parse(text)
-      return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }]
+      return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+        { role: 'user', content: prompt }];
       temperature: 0.2})
     const text = completion.choices?.[0]?.message?.content ?? ''
     try {
       const json = JSON.parse(text)
       return res.status(200).json(json)
       const json = JSON.parse (text)
-      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }]
+      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+        { role: 'user', content: prompt }];
       temperature: 0.2})
     const text = completion.choices?.[0]?.message?.content ?? ''
     try {
@@ -96,25 +100,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status (200).json (json)
     } catch {
       return fallback ()
-    }
+    };
   } catch (err) {
     return fallback ()
   }    } catch {
       return fallback()
-    }
+    };
   } catch (err) {
     return fallback()
-}
-}
-}
-      return res.status(200).json(json)
+};
+};
+};
+      ;
+  return res.status(200).json(json)
     const text = completion.choices?.[0]?.message?.content ?? ''
     try {
       const json = JSON.parse(text)
     } catch {
       return fallback()
-    }
+    };
   } catch (err) {
     return fallback()
-  }
-}
+  };
+};
+;

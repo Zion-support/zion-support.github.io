@@ -5,7 +5,7 @@ export interface InnovativeITService {id: string
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -17,31 +17,31 @@ export interface InnovativeITService {id: string
   setup_time: string
   category: string
   real_service: boolean
-  technology: string[]
-  integrations: string[]
-  use_cases: string[]
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   market_size: string
   growth_rate: string
   variant: string
   contact_info: unknown
     mobile: string
     email: string,
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
     id: 'zero - trust - security - platform'
     name: 'Zero Trust Security Platform',
     tagline: 'Next - generation cybersecurity with zero trust architecture',
     price: '$599',
     period: '/month',
     description: unknown,
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeITService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
     i,
   d: 'zero - trust - security - platform',
     nam,
@@ -83,8 +83,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 500 to - pink - 600',
     text_colo,
@@ -237,8 +236,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 500 to - cyan - 600',
     text_colo,
@@ -392,8 +390,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - purple - 500 to - indigo - 600',
     text_colo,
@@ -548,8 +545,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - green - 500 to - emerald - 600',
     text_colo,
@@ -707,8 +703,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
       'CI/CD',
     colo,
   r: 'from - orange - 500 to - yellow - 600',
@@ -810,7 +805,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
+};
 export const innovativeITServices: InnovativeITService[] = [,
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Next-generation cybersecurity with zero trust architecture', price: '$599',
@@ -833,7 +828,7 @@ export const innovativeITServices: InnovativeITService[] = [,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true,
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.'
     launch_date: '2024 - 01 - 20'
@@ -885,8 +880,7 @@ export const innovativeITServices: InnovativeITService[] = [,
   feature,
   s: string[], popula,
   r: boolean,
-  ico,
-  n: string, colo,
+  icon: string, colo,
   r: string,
   textColo,
   r: string, lin,
@@ -930,7 +924,7 @@ export const innovativeITServices: InnovativeITService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeITServices: InnovativeITService[] = [,
     i,
@@ -949,8 +943,7 @@ export const,
       'Compliance reportingReal-time monitoring'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-red-500 to-pink-600', textColo,
   r: 'text-red-400',
@@ -990,7 +983,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1002,12 +995,12 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 1250}
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
-  }
-]
-}
-]
+  s: 1250};
+export interface InnovativeITService {/* TODO: Fix JSX expression */};
+  };
+];
+};
+];
 realImplementation: true,
     implementationDetails:,
       'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.'
@@ -1015,7 +1008,7 @@ realImplementation: true,
     customers: 800
     rating: 4.9
     reviews: 400,
-  }
+  };
     id: 'edge-computing-platform'
     name: 'Edge Computing Platform',
     tagline: 'Distributed computing at the network edge',
@@ -1034,7 +1027,7 @@ realImplementation: true,
     ratin,
   g: 4.9,
     review,
-  s: 400}
+  s: 400};
     i,
   d: 'edge-computing-platform'
     nam,
@@ -1060,7 +1053,7 @@ realImplementation: true,
       'Edge analytics'
       'IoT integration'
       '5 G optimization'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-blue-500 to-cyan-600'
@@ -1076,8 +1069,7 @@ realImplementation: true,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-500 to-cyan-600'
     textColo,
@@ -1110,7 +1102,7 @@ realImplementation: true,
       'Node.js'
       'Python'
       'AWS'
-    ]
+    ];
     integration,
   s: [,
       'AWS IoT'
@@ -1121,7 +1113,7 @@ realImplementation: true,
       'HTTP/2'
       'WebSocket'
       'REST API'
-    ]
+    ];
     useCase,
   s: [,
       'IoT applications'
@@ -1130,7 +1122,7 @@ realImplementation: true,
       '5 G services'
       'Smart manufacturing'
       'Autonomous vehicles'
-    ]
+    ];
     ro,
   i: 'Average customer sees 300% ROI within 8 months through reduced latency and improved performance.'
     competitor,
@@ -1140,7 +1132,7 @@ realImplementation: true,
       'Google Cloud IoT Edge'
       'FogHorn'
       'ClearBlade'
-    ]
+    ];
     marketSize: '$15B edge computing market'
     growthRate: '180% annual growth',
     variant: 'quantum',
@@ -1175,7 +1167,7 @@ realImplementation: true,
       'API'
       'Webhooks'
       'SDK'
-    ]
+    ];
     useCase,
   s: [,
       'Drug discovery'
@@ -1184,7 +1176,7 @@ realImplementation: true,
       'Machine learning'
       'Cryptography'
       'Material science'
-    ]
+    ];
     ro,
   i: 'Average customer sees 500% ROI within 18 months through breakthrough discoveries and optimizations.'
     competitor,
@@ -1194,7 +1186,7 @@ realImplementation: true,
       'Google Quantum'
       'Rigetti'
       'D-Wave'
-    ]
+    ];
     marketSize: '$8B quantum computing market'
     growthRate: '250% annual growth',
     variant: 'quantum-advanced',
@@ -1241,7 +1233,7 @@ realImplementation: true,
       'AWS'
       'Azure'
       'Google Cloud'
-    ]
+    ];
     useCase,
   s: [,
       'Supply chain tracking'
@@ -1250,7 +1242,7 @@ realImplementation: true,
       'Tokenization'
       'Voting systems'
       'Asset management'
-    ]
+    ];
     ro,
   i: 'Average customer sees 350% ROI within 12 months through improved efficiency and transparency.'
     competitor,
@@ -1260,7 +1252,7 @@ realImplementation: true,
       'Corda'
       'Quorum'
       'Multichain'
-    ]
+    ];
     marketSize: '$19B blockchain market'
     growthRate: '160% annual growth',
     variant: 'quantum-blockchain',
@@ -1307,7 +1299,7 @@ realImplementation: true,
       'Slack'
       'Teams'
       'Jira'
-    ]
+    ];
     useCase,
   s: [,
       'Software development'
@@ -1316,7 +1308,7 @@ realImplementation: true,
       'Testing automation'
       'Monitoring'
       'Security'
-    ]
+    ];
     roi: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.'
     competitors: [
     ro,
@@ -1328,14 +1320,14 @@ realImplementation: true,
       'CircleCI'
       'GitHub Actions'
       'Azure DevOps'
-    ]
+    ];
     marketSize: '$12B DevOps market'
     growthRate: '130% annual growth'
     variant: 'cyberpunk'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails:,
       'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
@@ -1346,7 +1338,7 @@ realImplementation: true,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Complete DevOps automation platform with CI/CD, infrastructure management, and comprehensive monitoring capabilities.'
     launchDate: '2024-01-20'
@@ -1369,7 +1361,7 @@ realImplementation: true,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1391,7 +1383,7 @@ realImplementation: true,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1403,20 +1395,20 @@ realImplementation: true,
     ratin,
   g: 4.7,
     review,
-  s: 1250}
-]
-export interface InnovativeITService {/* TODO: Fix JSX expression */}
-  s: string}
+  s: 1250};
+];
+export interface InnovativeITService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number,
-}
+};
 export const innovativeITServices: InnovativeITService[] = [
   {
     id: 'zero-trust-security-platform'
@@ -1429,8 +1421,8 @@ export const innovativeITServices: InnovativeITService[] = [
   customers: number
   rating: number
   reviews: number
-}
-
+};
+;
 export const innovativeITServices: InnovativeITService[] = [
   {
     id: 'zero-trust-security-platform'
@@ -1442,7 +1434,7 @@ export const innovativeITServices: InnovativeITService[] = [
     features: [
       'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management'
       'Compliance reportingReal-time monitoring'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-red-500 to-pink-600'
@@ -1454,19 +1446,19 @@ export const innovativeITServices: InnovativeITService[] = [
     setupTime: '2 hours'
     category: 'IT & Cybersecurity'
     realService: true
-    technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS']
-    integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk']
-    useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection']
+    technology: ['Zero Trust ArchitectureMachine LearningAIKubernetesDockerReactNode.jsAWS'];
+    integrations: ['Active DirectoryOktaAzure ADSlackTeamsJiraServiceNowSplunk'];
+    useCases: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'];
     roi: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.'
-    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk']
+    competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'];
     marketSize: '$45 B cybersecurity market'
     growthRate: '110% annual growth',
-    variant: 'cyberpunk'}
-    contactInfo: {}
+    variant: 'cyberpunk'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true,
     implementation_details: 'Complete DevOps automation platform with CI / CD, infrastructure management, and comprehensive monitoring capabilities.'
     launch_date: '2024 - 01 - 20'
@@ -1484,13 +1476,13 @@ export const innovativeITServices: InnovativeITService[] = [
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeITServices: InnovativeITService[] = [,
-  {/* TODO: Fix JSX expression */}
-  t: 'cyberpunk'}
+  {/* TODO: Fix JSX expression */};
+  t: 'cyberpunk'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -1500,7 +1492,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1512,13 +1504,13 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 1250}
-  }
-]
-  }
-]
-  }
-
+  s: 1250};
+  };
+];
+  };
+];
+  };
+;
 export interface InnovativeITService,
   id: string, nam,
   e: string, taglin,
@@ -1527,8 +1519,7 @@ export interface InnovativeITService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, text_colo,
   r: string, lin,
   k: string, market_positio,
@@ -1558,8 +1549,7 @@ export interface InnovativeITService,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive zero trust security platform that provides continuous verification, micro - segmentation, and advanced threat detection for modern enterprises.', feature,
   s: [,' 'Continuous identity verification',' 'Micro - segmentation',' 'Advanced threat detection',' 'Behavioral analytics',' 'API security',' 'Cloud workload protection',' 'Network segmentation',' 'Privileged access management',' 'Compliance reporting',' 'Real - time monitoring'], popula,
-  r: true,' ico,
-  n: '🔒',' colo,
+  r: true,' icon: '🔒',' colo,
   r: 'from - red - 500 to - pink - 600',' text_colo,
   r: 'text - red - 400',' lin,
   k: 'http,
@@ -1598,8 +1588,7 @@ export interface InnovativeITService,
   d: '/month', descriptio,
   n:  ,' 'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.', feature,
   s: [, ' 'Distributed edge nodes',' 'Real - time data processing',' 'Low - latency computing',' 'Edge AI capabilities',' 'Automatic scaling',' 'Geographic distribution',' 'Load balancing',' 'Edge analytics',' 'IoT integration',' '5G optimization'], popula,
-  r: true,' ico,
-  n: '🌐', ' colo,
+  r: true,' icon: '🌐', ' colo,
   r: 'from - blue - 500 to - cyan - 600',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
@@ -1638,8 +1627,7 @@ export interface InnovativeITService,
   d: '/month', descriptio,
   n:  ,' 'Cloud - based quantum computing service that provides access to quantum processors for research, optimization, and machine learning applications.', feature,
   s: [, ' 'Quantum processor access',' 'Quantum algorithm library',' 'Hybrid quantum - classical computing',' 'Quantum machine learning',' 'Optimization algorithms',' 'Quantum simulation',' 'API access',' 'Developer tools',' 'Documentation and tutorials',' 'Expert support'], popula,
-  r: true,' ico,
-  n: '⚛️', ' colo,
+  r: true,' icon: '⚛️', ' colo,
   r: 'from - purple - 500 to - indigo - 600',' text_colo,
   r: 'text - purple - 400',' lin,
   k: 'http,
@@ -1678,8 +1666,7 @@ export interface InnovativeITService,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive blockchain platform for enterprises, providing secure, scalable, and compliant blockchain solutions for various business applications.', feature,
   s: [,' 'Multi - consensus algorithms', ' 'Smart contract development',' 'Enterprise security',' 'Scalability solutions',' 'Interoperability',' 'Compliance tools',' 'API management',' 'Analytics dashboard',' 'Integration services',' '24 / 7 support'], popula,
-  r: true,' ico,
-  n: '🔗', ' colo,
+  r: true,' icon: '🔗', ' colo,
   r: 'from - green - 500 to - emerald - 600',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
@@ -1718,8 +1705,7 @@ export interface InnovativeITService,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment.', feature,
   s: [,' 'CI / CD pipelines', ' 'Infrastructure as Code',' 'Container orchestration',' 'Monitoring and alerting',' 'Security scanning',' 'Performance testing',' 'Deployment automation',' 'Environment management',' 'Team collaboration',' 'Analytics and reporting'], popula,
-  r: true,' ico,
-  n: '🚀', ' 'CI/CD',' colo,
+  r: true,' icon: '🚀', ' 'CI/CD',' colo,
   r: 'from - orange - 500 to - yellow - 600',' text_colo,
   r: 'text - orange - 400',' lin,
   k: 'http,
@@ -1760,8 +1746,7 @@ export interface InnovativeITService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -1798,8 +1783,7 @@ export interface InnovativeITService,
   d: '/month',' descriptio,
   n: 'Comprehensive zero trust security platform that provides continuous verification, micro-segmentation, and advanced threat detection for modern enterprises.', feature,
   s: [' 'Continuous identity verificationMicro-segmentationAdvanced threat detectionBehavioral analyticsAPI securityCloud workload protectionNetwork segmentationPrivileged access management'' 'Compliance reportingReal-time monitoring' ],' popula,
-  r: true, ico,
-  n: '🔒',' colo,
+  r: true, icon: '🔒',' colo,
   r: 'from-red-500 to-pink-600', textColo,
   r: 'text-red-400',' lin,
   k: 'http,
@@ -1844,8 +1828,7 @@ export interface InnovativeITService,
   d: '/month' descriptio,
   n:' 'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.' feature,
   s: [' 'Distributed edge nodes'' 'Real-time data processing'' 'Low-latency computing'' 'Edge AI capabilities'' 'Automatic scaling'' 'Geographic distribution'' 'Load balancing'' 'Edge analytics'' 'IoT integration'' '5G optimization' ] popula,
-  r: true' ico,
-  n: '🌐'' colo,
+  r: true' icon: '🌐'' colo,
   r: 'from-blue-500 to-cyan-600'' textColo,
   r: 'text-blue-400'' lin,
   k: 'http,
@@ -1933,7 +1916,7 @@ export interface InnovativeITService,
   e: '2024-01-20' customer,
   s: 2500, ratin,
   g: 4.7,
-  reviews: 1250 } ]; export interface InnovativeITService {/* TODO: Fix JSX expression */}
+  reviews: 1250 } ]; export interface InnovativeITService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -1942,7 +1925,7 @@ export interface InnovativeITService,
   s: number, ratin,
   g: number, review,
   s: number} export const,
-  innovativeITServices: InnovativeITService[] = [, {/* TODO: Fix JSX expression */}
+  innovativeITServices: InnovativeITService[] = [, {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,

@@ -28,15 +28,16 @@ export const useTalentQuotes = () => {
     // Status filter
     if (statusFilter !== 'all' && quote.status !== statusFilter) {
       return false
-    }
+    };
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
       return false
-    }
+    };
     if (archiveFilter === 'archived' && !quote.is_archived) {
       return false
-    }
-    return true
+    };
+    ;
+  return true
   })
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
@@ -48,7 +49,7 @@ export const useTalentQuotes = () => {
         message = "Quote marked as viewed"
       } else if (variables.status === 'responded') {
         message = "Quote marked as responded"
-      }
+      };
       toast({
         title: message,
         description: "The quote request status has been updated"
@@ -61,7 +62,7 @@ export const useTalentQuotes = () => {
         description: "Failed to update status: " + error.message,
         variant: "destructive"
       })
-    }
+    };
   })
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
@@ -82,7 +83,7 @@ export const useTalentQuotes = () => {
         description: "Failed to update quote: " + error.message,
         variant: "destructive"
       })
-    }
+    };
   })
   return {
     quotes: filteredQuotes,
@@ -98,7 +99,7 @@ export const useTalentQuotes = () => {
     markAsResponded: (id: string) => 
       updateStatusMutation.mutate({ id, status: 'responded' }),
     toggleArchive: (id: string, isArchived: boolean) => 
-      toggleArchiveMutation.mutate({ id, isArchived })}
+      toggleArchiveMutation.mutate({ id, isArchived })};
       toggleArchiveMutation.mutate({ id, isArchived }),
-  }
-}
+  };
+};

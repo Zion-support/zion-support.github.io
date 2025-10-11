@@ -11,7 +11,7 @@ import { v4 as uuidv4 } from "uuid",
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
-    peers: []
+    peers: [];
   })
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, writeState } from "../../../utils/sync/storage",
@@ -43,14 +43,14 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   writeState(state)
   return res.status(200).json({ peers: state.config.peers })
   } catch (error) {
@@ -59,11 +59,12 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
+  };
+};
+};
+;

@@ -6,7 +6,7 @@ export interface AdvancedInnovativeService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface AdvancedInnovativeService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -31,7 +31,7 @@ export interface AdvancedInnovativeService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -39,12 +39,14 @@ export interface AdvancedInnovativeService {
   rating: number
   reviews: number
 }
-const contact = {
+;
+  ;
+  const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+};
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   {
     id: 'metaverse-development-platform',
@@ -765,5 +767,5 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     customers: 34,
     rating: 4.8,
     reviews: 26
-  }
-]
+  };
+];

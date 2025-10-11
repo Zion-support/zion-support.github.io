@@ -16,9 +16,9 @@ export const quoteRequestService = {
     // Format the data to include talent_name
     return data.map((item: any) => ({
       ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
+      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
       talent_name: item.talent?.display_name || 'Unknown Talent',
-    })) as QuoteRequest[]
+    })) as QuoteRequest[];
   },
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
@@ -28,7 +28,7 @@ export const quoteRequestService = {
       .eq('talent_id', talentId)
       .order('created_at', { ascending: false })
     if (error) throw error
-    return data as QuoteRequest[]
+    return data as QuoteRequest[];
   },
   // Get a single quote request by id
   getById: async (id: string) => {
@@ -51,11 +51,11 @@ export const quoteRequestService = {
   },
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status }
+    const updates: any = { status };
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
-    }
+    };
     // If marking as in_review and viewed_at is null, set viewed_at
     if (status === 'in_review') {
       const { data } = await supabase
@@ -65,9 +65,11 @@ export const quoteRequestService = {
         .single()
       if (!data.viewed_at) {
         updates.viewed_at = new Date().toISOString()
-      }
+      };
     }
-    const { data, error } = await supabase
+    ;
+  ;
+  const { data, error } = await supabase
       .from('quote_requests')
       .update(updates)
       .eq('id', id)
@@ -93,5 +95,5 @@ export const quoteRequestService = {
       .eq('id', id)
     if (error) throw error
     return true
-  }
-}
+  };
+};

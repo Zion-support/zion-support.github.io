@@ -1,6 +1,6 @@
-export interface EnhancedPromotionalBanner {/* TODO: Fix JSX expression */}
-}
-
+export interface EnhancedPromotionalBanner {/* TODO: Fix JSX expression */};
+};
+;
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
   {,
     id: 'oct-01-autonomous-business-ops-2025',
@@ -30,7 +30,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
 export const,
   enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
-  }]
+  {/* TODO: Fix JSX expression */};
+  }];

@@ -18,12 +18,12 @@ export const badgeVariants = cva(
         info:
           "border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200/80"}},
     defaultVariants: {
-      variant: "default"}}
+      variant: "default"}};
           "border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200/80",
       },
     },
     defaultVariants: {
       variant: "default",
     },
-  }
+  };
 )

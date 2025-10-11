@@ -159,18 +159,18 @@ const config: Config = {
           textAlign: 'right'},
         '.ltr': {
           direction: 'ltr',
-          textAlign: 'left'}}
+          textAlign: 'left'}};
       addUtilities(newUtilities)
-    })]}
+    })]};
           textAlign: 'right',
         },
         '.ltr': {
           direction: 'ltr',
           textAlign: 'left',
         },
-      }
+      };
       addUtilities(newUtilities)
     }),
   ],
-}
+};
 export default config

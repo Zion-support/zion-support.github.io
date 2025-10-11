@@ -1,5 +1,5 @@
-type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */}
- }
+type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */};
+ };
 export default function NewServices2026Bann, e, r({)
   varia, n, t = 'showc, a, s, e')
   showCou, n, t =  , 6)
@@ -11,41 +11,41 @@ export default function NewServices2026Bann, e, r({)
       li, n, k: '/servic, e, s/ai-autonomo, u, s-infrastructu, r, e-platf, o, r, m',
       t, a, g: 'Cl, o, u, d',
 export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression */})
-}: NewServices2026BannerPro, p, s) {/* TODO: Fix JSX expression */}
+}: NewServices2026BannerPro, p, s) {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     }].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return(<, classNam, e = { `w-fu, l, l ${$2 />
         varia, n, t === 'he, r, o'
           ? 'bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0'
           : varia, n, t === 'in, f, o'
              ? 'bg-gradie, n, t-to-r, fro, m-emera, l, d-50, t, o-te, a, l-50'
              : 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'
-       } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
+       } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`};
     >
       <div, className='container, m, x-auto, p, x-6'>
         <div, className='te, x, t-center, m, b-8' ></div> <, className={ `inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, m, b-4 ${$2 />
               varia, n, t === 'in, f, o'
-                 ? 'bg-white, tex, t-gr, a, y-9, 0, 0'}
-                 : 'bg-whi, t, e/20, tex, t-whi, t, e'}
-             }`}
+                 ? 'bg-white, tex, t-gr, a, y-9, 0, 0'};
+                 : 'bg-whi, t, e/20, tex, t-whi, t, e'};
+             }`};
           >
             NEW, 2026, SERVICES</$1> <, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}$2 />
           >
             Latest, AI, Services
   ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
-       } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
+       } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`};
     >
       <div, className='container, m, x-auto, p, x-6'>
         <div, className='te, x, t-center, m, b-8' > <, className={/* TODO: Fix JSX expression */}`$2 />
-             }`}
+             }`};
           >
             NEW, 2026, SERVICES;`
           </d, i, v > <, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}$2 />
@@ -72,7 +72,7 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
               >
                 Learn, mor, e →
             </Li, n, k>)
-          ))}
+          ))};
   )
-}
+};
 `</div></div></div></div></div>

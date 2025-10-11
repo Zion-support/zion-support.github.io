@@ -5,7 +5,7 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   if (req.method !== "POST") return res.status($1).json({ $2 })
-  const { code, event, url, referrer } = req.body |{}
+  const { code, event, url, referrer } = req.body |{};
   if (!code |!event) return res.status($1).json({ $2 })
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
@@ -15,7 +15,9 @@ export default async function handler(
     if (usingPlaceholder) {
       return res && res.status(200).json({ saved: false, mock: true })
     }
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const { error } = await supabase && supabase.from("referral_events").insert({
       partner_code: String(code).toLowerCase(),
       event: String(event),
@@ -35,14 +37,16 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { getServerSupabase } from '../../../utils/supabase/server'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  const { code, event, url, referrer } = req.body || {}
+  const { code, event, url, referrer } = req.body || {};
   if (!code || !event) return res.status(400).json({ error: 'Missing code or event' })
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key'
   try {
     if (usingPlaceholder) {
       return res.status(200).json({ saved: false, mock: true })
     }
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const { error } = await supabase.from('referral_events').insert({
       partner_code: String(code).toLowerCase(), event: String(event),
       url: url || null, referrer: referrer || null,
@@ -52,9 +56,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ saved: true })
   } catch (e: any) {
     return res.status(200).json({ saved: false, error: e?.message })
-  }
-}
-    return res.status(200).json({ saved: false, error: e?.message })
+  };
+};
+    ;
+  return res.status(200).json({ saved: false, error: e?.message })
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' })
@@ -65,10 +70,13 @@ export default async function handler(req, res) {
     // Check condition
 if ( {) {
   $2
-}
-      return res.status (200).json ({ saved: false, mock: true })
+};
+      ;
+  return res.status (200).json ({ saved: false, mock: true })
     }
-    const supabase = getServerSupabase ()
+    ;
+  ;
+  const supabase = getServerSupabase ()
     const { error } = await supabase.from ("referral_events").insert ({
       partner_code: String (code).toLowerCase (),
       event: String (event),
@@ -82,19 +90,22 @@ if ( {) {
     })
     if (return res.status (500).json ({ error: "Database error" })) {
   $2
-}
-    return res.status (200).json ({ saved: true })
+};
+    ;
+  return res.status (200).json ({ saved: true })
   } catch (e: any) {
     return res.status (200).json ({ saved: false, error: e?.message })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const { error } = await supabase.from('referral_events').insert({
       partner_code: String(code).toLowerCase()
       event: String(event)
@@ -110,23 +121,24 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

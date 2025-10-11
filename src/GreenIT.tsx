@@ -15,9 +15,10 @@ canonical="https://ziontechgroup.com/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-}
-          {/* Hero Section */}
-          <div className="text-center mb-16">
+};
+          {/* Hero Section */};
+          ;
+  <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Green IT Solutions
             </h1>
@@ -27,8 +28,9 @@ while improving efficiency and cost-effectiveness.
             </p>
           </div>
 
-          {/* Benefits Grid */}
-          <div className="mb-20">
+          {/* Benefits Grid */};
+          ;
+  <div className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">;
 Why Choose Green IT?
             </h2>
@@ -113,14 +115,16 @@ Invest in technology that aligns with evolving sustainability trends and regulat
             </div>
           </div>
 
-          {/* Services Section */}
-          <div className="mb-20">
+          {/* Services Section */};
+          ;
+  <div className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">;
 Our Green IT Services
             </h2>
             <div className="space-y-8">
-              {/* Service 1 */}
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
+              {/* Service 1 */};
+              ;
+  <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-4">;
@@ -149,8 +153,9 @@ Learn More
                 </div>
               </div>
 
-              {/* Service 2 */}
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
+              {/* Service 2 */};
+              ;
+  <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div className="order-2 lg:order-1 bg-blue-500/10 rounded-lg p-6 text-center">
                     <svg className="w-24 h-24 text-blue-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -179,8 +184,9 @@ Learn More
                 </div>
               </div>
 
-              {/* Service 3 */}
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
+              {/* Service 3 */};
+              ;
+  <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-4">;
@@ -210,8 +216,9 @@ Learn More
             </div>
           </div>
 
-          {/* Case Study */}
-          <div className="mb-20">
+          {/* Case Study */};
+          ;
+  <div className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">;
 Success Story: TechCorp's Green Transformation
             </h2>
@@ -265,7 +272,7 @@ import { SEO; } from '@/components/SEO';
 const GreenIT = () => {;;
 const greenSolutions = [;
     {;,
-}
+};
 title: 'Energy-Efficient Infrastructure'},;,
 description: 'Design and implement IT infrastructure that minimizes energy consumption',;,
 icon: '⚡',;,
@@ -274,7 +281,7 @@ features: [
         'Energy-efficient hardware selection',
         'Smart power management systems',
         'Renewable energy integration'
-      ]
+      ];
     },
     {;,
 title: 'Cloud Optimization',;,
@@ -285,7 +292,7 @@ features: [
         'Resource optimization and scaling',
         'Carbon-aware workload scheduling',
         'Sustainable data center practices'
-      ]
+      ];
     },
     {;,
 title: 'Sustainable Software Development',;,
@@ -296,7 +303,7 @@ features: [
         'Green hosting and deployment',
         'Sustainable development practices',
         'Environmental impact monitoring'
-      ]
+      ];
     },
     {;,
 title: 'Digital Transformation',;,
@@ -307,8 +314,8 @@ features: [
         'Digital workflow automation',
         'Remote work infrastructure',
         'Sustainable business processes'
-      ]
-    }
+      ];
+    };
   ];
 const environmentalBenefits = [;
     {;,
@@ -334,7 +341,7 @@ benefit: 'Compliance & Certification',;,
 description: 'Meet environmental standards and regulations',;,
 icon: '✅',;,
 impact: 'Achieve green IT certifications and compliance'
-    }
+    };
   ];
 const greenPractices = [;
     {;,
@@ -344,7 +351,7 @@ practices: [
         'Hardware lifecycle optimization',
         'Responsible e-waste disposal',
         'Equipment refurbishment and reuse'
-      ]
+      ];
     },
     {;,
 category: 'Data Center Efficiency',;,
@@ -353,7 +360,7 @@ practices: [
         'Efficient power distribution',
         'Heat recovery systems',
         'Renewable energy integration'
-      ]
+      ];
     },
     {;,
 category: 'Software Optimization',;,
@@ -362,7 +369,7 @@ practices: [
         'Resource usage monitoring',
         'Automated power management',
         'Green software development practices'
-      ]
+      ];
     },
     {;,
 category: 'Workplace Sustainability',;,
@@ -371,8 +378,8 @@ practices: [
         'Digital collaboration tools',
         'Paperless office solutions',
         'Sustainable procurement policies'
-      ]
-    }
+      ];
+    };
   ];
 const caseStudies = [;
     {;,
@@ -385,7 +392,7 @@ results: [
         '30% decrease in operational costs',
         'Improved scalability and performance',
         'Achieved carbon-neutral status'
-      ]
+      ];
     },
     {;,
 company: 'Green Manufacturing Co.',;,
@@ -397,7 +404,7 @@ results: [
         '25% improvement in process efficiency',
         'Reduced carbon footprint by 35%',
         'Enhanced employee productivity'
-      ]
+      ];
     },
     {;,
 company: 'EcoRetail Inc.',;,
@@ -409,8 +416,8 @@ results: [
         '45% decrease in IT infrastructure costs',
         'Improved system reliability',
         'Enhanced sustainability credentials'
-      ]
-    }
+      ];
+    };
   ];
 const greenCertifications = [;
     {;,
@@ -453,48 +460,48 @@ Smartphone
 export default function GreenIT() {;
 const greenSolutions = [;
     {;,
-}
+};
 icon: <Cloud className="w-8 h-8 text-zion-cyan" />},;,
 title: "Cloud Optimization",;,
 description: "Reduce energy consumption through intelligent cloud resource management and server consolidation",;,
 benefits: ["Up to 40% energy savings", "Reduced carbon footprint", "Lower operational costs"],;,
-features: ["Auto-scaling", "Resource monitoring", "Green hosting partners"]
+features: ["Auto-scaling", "Resource monitoring", "Green hosting partners"];
     },
     {;,
 icon: <Server className="w-8 h-8 text-zion-cyan" />,;,
 title: "Data Center Efficiency",;,
 description: "Implement energy-efficient data center solutions with advanced cooling and power management",;,
 benefits: ["PUE optimization", "Renewable energy integration", "Waste heat recovery"],;,
-features: ["Liquid cooling", "Smart power distribution", "Energy monitoring"]
+features: ["Liquid cooling", "Smart power distribution", "Energy monitoring"];
     },
     {;,
 icon: <Monitor className="w-8 h-8 text-zion-cyan" />,;,
 title: "Hardware Lifecycle Management",;,
 description: "Extend device lifespan and implement responsible disposal and recycling programs",;,
 benefits: ["Reduced e-waste", "Cost savings", "Compliance with regulations"],;,
-features: ["Asset tracking", "Refurbishment programs", "Certified recycling"]
+features: ["Asset tracking", "Refurbishment programs", "Certified recycling"];
     },
     {;,
 icon: <Smartphone className="w-8 h-8 text-zion-cyan" />,;,
 title: "Mobile Device Management",;,
 description: "Optimize mobile device usage and implement power-saving policies",;,
 benefits: ["Extended battery life", "Reduced charging cycles", "Lower energy consumption"],;,
-features: ["Power management", "App optimization", "Green charging solutions"]
+features: ["Power management", "App optimization", "Green charging solutions"];
     },
     {;,
 icon: <Lightbulb className="w-8 h-8 text-zion-cyan" />,;,
 title: "Smart Office Solutions",;,
 description: "Implement IoT-based lighting, HVAC, and energy management systems",;,
 benefits: ["Automated energy optimization", "Real-time monitoring", "Significant cost savings"],;,
-features: ["Smart sensors", "Automated controls", "Energy analytics"]
+features: ["Smart sensors", "Automated controls", "Energy analytics"];
     },
     {;,
 icon: <Recycle className="w-8 h-8 text-zion-cyan" />,;,
 title: "Circular Economy Practices",;,
 description: "Adopt circular economy principles for IT equipment and materials",;,
 benefits: ["Resource conservation", "Waste reduction", "Sustainable supply chain"],;,
-features: ["Equipment leasing", "Take-back programs", "Material recovery"]
-    }
+features: ["Equipment leasing", "Take-back programs", "Material recovery"];
+    };
   ];
 const renewableEnergy = [;
     {;,
@@ -517,7 +524,7 @@ title: "Green Infrastructure",;,
 description: "Eco-friendly data center and office solutions",;,
 capacity: "1MWh+",;,
 savings: "30% peak demand"
-    }
+    };
   ];
 const certifications = [;
     {;,
@@ -539,7 +546,7 @@ icon: <CheckCircle className="w-6 h-6 text-green-400" />
 name: "Green Seal",;,
 description: "Environmental Standard Certification",;,
 icon: <CheckCircle className="w-6 h-6 text-green-400" />
-    }
+    };
   ];
 const impactMetrics = [;
     {;,
@@ -561,7 +568,7 @@ description: "Carbon emissions reduced through our solutions"
 metric: "$850K",;,
 label: "Cost Savings",;,
 description: "Average annual savings for enterprise clients"
-    }
+    };
   ];
 return (;
     
@@ -610,59 +617,73 @@ className="object-cover w-full h-full"
               </div>
             </div>
 
-            {/* Green Solutions */}
-            <div className="mb-20">
+            {/* Green Solutions */};
+            ;
+  <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">;
 Our Green IT Solutions
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                 {greenSolutions.map((solution), index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 hover:bg-white/20 transition-colors duration-200">
-                    <div className="text-4xl mb-4 text-center">{solution.icon}</div>
+                    <div className="text-4xl mb-4 text-center">{solution.icon};
+  </div>
                     <h3 className="text-xl font-semibold text-white mb-3 text-center">
-                      {solution.title}
-                    </h3>
+                      {solution.title};
+                    ;
+  </h3>
                     <p className="text-blue-100 mb-4 text-sm text-center">
-                      {solution.description}
-                    </p>
+                      {solution.description};
+                    ;
+  </p>
                     <ul className="space-y-2">
                       {solution.features.map((feature), featureIndex) => (
                         <li key={featureIndex} className="text-blue-200 text-sm flex items-center">
                           <span className="text-green-400 mr-2">✓</span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                          {feature};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
 
-            {/* Environmental Benefits */}
-            <div className="mb-20">
+            {/* Environmental Benefits */};
+            ;
+  <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">;
 Environmental Impact
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 {environmentalBenefits.map((benefit), index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 text-center hover:bg-white/20 transition-colors duration-200">
-                    <div className="text-4xl mb-4">{benefit.icon}</div>
+                    <div className="text-4xl mb-4">{benefit.icon};
+  </div>
                     <h3 className="text-lg font-semibold text-white mb-3">
-                      {benefit.benefit}
-                    </h3>
+                      {benefit.benefit};
+                    ;
+  </h3>
                     <p className="text-blue-100 mb-4 text-sm">
-                      {benefit.description}
-                    </p>
+                      {benefit.description};
+                    ;
+  </p>
                     <div className="text-green-400 font-medium text-sm">
-                      {benefit.impact}
-                    </div>
+                      {benefit.impact};
+                    ;
+  </div>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
 
-            {/* Green Practices */}
-            <div className="mb-20">
+            {/* Green Practices */};
+            ;
+  <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">;
 Sustainable IT Practices
               </h2>
@@ -670,23 +691,28 @@ Sustainable IT Practices
                 {greenPractices.map((practice), index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6">
                     <h3 className="text-xl font-semibold text-white mb-4">
-                      {practice.category}
-                    </h3>
+                      {practice.category};
+                    ;
+  </h3>
                     <ul className="space-y-2">
                       {practice.practices.map((item), itemIndex) => (
                         <li key={itemIndex} className="text-blue-200 text-sm flex items-center">
                           <span className="text-green-400 mr-2">✓</span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                          {item};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
 
-            {/* Case Studies */}
-            <div className="mb-20">
+            {/* Case Studies */};
+            ;
+  <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">;
 Success Stories
               </h2>
@@ -696,11 +722,13 @@ Success Stories
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                       <div>
                         <h3 className="text-2xl font-semibold text-white mb-2">
-                          {study.company}
-                        </h3>
+                          {study.company};
+                        ;
+  </h3>
                         <p className="text-blue-200 text-sm">
-                          {study.industry}
-                        </p>
+                          {study.industry};
+                        ;
+  </p>
                       </div>
                       <div className="mt-4 lg:mt-0">
                         <span className="inline-block bg-green-600/30 text-green-200 px-3 py-1 rounded-full text-sm font-medium">;
@@ -713,12 +741,14 @@ Green IT Success
                       <div>
                         <h4 className="text-white font-semibold mb-3">Challenge:</h4>
                         <p className="text-blue-100 text-sm mb-4">
-                          {study.challenge}
-                        </p>
+                          {study.challenge};
+                        ;
+  </p>
                         <h4 className="text-white font-semibold mb-3">Solution:</h4>
                         <p className="text-blue-100 text-sm">
-                          {study.solution}
-                        </p>
+                          {study.solution};
+                        ;
+  </p>
                       </div>
                       <div>
                         <h4 className="text-white font-semibold mb-3">Results:</h4>
@@ -726,39 +756,48 @@ Green IT Success
                           {study.results.map((result), resultIndex) => (
                             <li key={resultIndex} className="text-blue-200 text-sm flex items-start">
                               <span className="text-green-400 mr-2 mt-1">•</span>
-                              {result}
-                            </li>
-                          ))}
-                        </ul>
+                              {result};
+                            ;
+  </li>
+                          ))};
+                        ;
+  </ul>
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
 
-            {/* Green Certifications */}
-            <div className="mb-20">
+            {/* Green Certifications */};
+            ;
+  <div className="mb-20">
               <h2 className="text-3xl font-semibold text-white text-center mb-12">;
 Green IT Certifications
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 {greenCertifications.map((cert), index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 p-6 text-center hover:bg-white/20 transition-colors duration-200">
-                    <div className="text-4xl mb-4">{cert.icon}</div>
+                    <div className="text-4xl mb-4">{cert.icon};
+  </div>
                     <h3 className="text-lg font-semibold text-white mb-3">
-                      {cert.name}
-                    </h3>
+                      {cert.name};
+                    ;
+  </h3>
                     <p className="text-blue-100 text-sm">
-                      {cert.description}
-                    </p>
+                      {cert.description};
+                    ;
+  </p>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="max-w-4xl mx-auto">
+            {/* Call to Action */};
+            ;
+  <div className="max-w-4xl mx-auto">
               <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 backdrop-blur-sm rounded-lg border border-green-500/30 p-8 text-center">
                 <h2 className="text-3xl font-semibold text-white mb-4">;
 Ready to Go Green with Your IT?
@@ -785,8 +824,9 @@ Get Green IT Quote
             </div>
           </div>
 
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-2xl p-8 text-center">
+          {/* CTA Section */};
+          ;
+  <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">;
 Ready to Go Green?
             </h2>
@@ -807,4 +847,5 @@ Download Green IT Guide
       </main>
     
   )
-}</div></div></div></div></div></p></p></p></p></p></p></p></p></p></main>
+};
+  </div></div></div></div></div></p></p></p></p></p></p></p></p></p></main>

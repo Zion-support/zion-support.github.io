@@ -1,7 +1,8 @@
 'use client'
 import { Helmet } from 'react-helmet-async'
-export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
-}
+export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */};
+};
+  ;
   return (<div><Helmet>
         <title>AI Project Management Solutions - Zion Tech Group
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /></meta>"

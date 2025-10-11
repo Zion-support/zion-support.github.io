@@ -4,6 +4,7 @@ import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CareersPage: React.FC = () => {
+
   const openPositions = [
     {
       id: 'senior-ai-engineer',
@@ -20,7 +21,7 @@ const CareersPage: React.FC = () => {
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong problem-solving and communication skills'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget'];
     },
     {
       id: 'full-stack-developer',
@@ -37,7 +38,7 @@ const CareersPage: React.FC = () => {
         'Knowledge of cloud services and DevOps practices',
         'Strong attention to detail and code quality'
       ],
-      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']
+      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget'];
     },
     {
       id: 'data-scientist',
@@ -54,7 +55,7 @@ const CareersPage: React.FC = () => {
         'Experience with big data tools (Spark, Hadoop)',
         'Strong analytical and communication skills'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities'];
     },
     {
       id: 'cybersecurity-specialist',
@@ -71,7 +72,7 @@ const CareersPage: React.FC = () => {
         'Experience with SIEM, EDR, and security frameworks',
         'Knowledge of compliance standards (SOC 2, ISO 27001)'
       ],
-      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']
+      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work'];
     },
     {
       id: 'product-manager',
@@ -88,7 +89,7 @@ const CareersPage: React.FC = () => {
         'Strong analytical and strategic thinking skills',
         'Excellent communication and leadership abilities'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development'];
     },
     {
       id: 'sales-engineer',
@@ -105,9 +106,12 @@ const CareersPage: React.FC = () => {
         'Excellent presentation and communication skills',
         'Ability to travel to client sites (25% travel)'
       ],
-      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
-    }
+      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses'];
+    };
   ]
+  
+  ;
+  ;
   const benefits = [
     {
       icon: Heart,
@@ -128,8 +132,11 @@ const CareersPage: React.FC = () => {
       icon: Star,
       title: 'Recognition',
       description: 'Performance bonuses, stock options, and recognition programs'
-    }
+    };
   ]
+  
+  ;
+  ;
   const culture = [
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
@@ -138,11 +145,14 @@ const CareersPage: React.FC = () => {
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
+      {/* Hero Section */};
+      ;
+  <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Join Our <span className="text-cyan-400">Team</span>
@@ -163,8 +173,9 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Why Work With Us */}
-      <section className="py-20 bg-white">
+      {/* Why Work With Us */};
+      ;
+  <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -179,11 +190,13 @@ const CareersPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}
-                <p className="text-gray-600">{benefit.description}
-            ))}
-      {/* Company Culture */}
-      <section className="py-20 bg-gray-50">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title};
+                ;
+  <p className="text-gray-600">{benefit.description};
+            ))};
+      {/* Company Culture */};
+      ;
+  <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -198,9 +211,10 @@ const CareersPage: React.FC = () => {
                 {culture.map((item, index) => (
                   <li key={index} className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-600">{item}
-                ))}
-            <div className="bg-white rounded-xl shadow-lg p-8">
+                    <span className="text-gray-600">{item};
+                ))};
+            ;
+  <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Stats
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
@@ -215,8 +229,9 @@ const CareersPage: React.FC = () => {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-600 mb-2">99%
                   <div className="text-gray-600">Satisfaction
-      {/* Open Positions */}
-      <section id="open-positions" className="py-20 bg-white">
+      {/* Open Positions */};
+      ;
+  <section id="open-positions" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -232,45 +247,53 @@ const CareersPage: React.FC = () => {
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title};
+                      ;
+  <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
                         <span className="flex items-center">
                           <Briefcase className="w-4 h-4 mr-1" />
-                          {position.department}
-                        <span className="flex items-center">
+                          {position.department};
+                        ;
+  <span className="flex items-center">
                           <MapPin className="w-4 h-4 mr-1" />
-                          {position.location}
-                        <span className="flex items-center">
+                          {position.location};
+                        ;
+  <span className="flex items-center">
                           <Clock className="w-4 h-4 mr-1" />
-                          {position.type}
-                        <span className="flex items-center">
+                          {position.type};
+                        ;
+  <span className="flex items-center">
                           <Users className="w-4 h-4 mr-1" />
-                          {position.experience}
-                    <$2 />
+                          {position.experience};
+                    ;
+  <$2 />
                       to="/contact"
                       className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center">
                       Apply Now <ArrowRight className="w-4 h-4 ml-2" />
-                  <p className="text-gray-600 mb-6">{position.description}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <p className="text-gray-600 mb-6">{position.description};
+                  ;
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements
                       <ul className="space-y-2">
                         {position.requirements.map((req, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {req}
-                        ))}
-                    <div>
+                            {req};
+                        ))};
+                    ;
+  <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Benefits
                       <ul className="space-y-2">
                         {position.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
                             <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
-                            {benefit}
-                        ))}
-            ))}
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+                            {benefit};
+                        ))};
+            ))};
+      {/* CTA Section */};
+      ;
+  <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Don't See Your Perfect Role?
@@ -293,7 +316,7 @@ const CareersPage: React.FC = () => {
       <Footer />
     </div>
   ),
-}
+};
 export default CareersPage</Link>
   </Link>
   </p>

@@ -11,7 +11,7 @@ export function useFetchResume() {
     if (!user) {
       setError('You must be logged in to access resumes')
       return null
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -27,16 +27,18 @@ export function useFetchResume() {
           .order('created_at', { ascending: false })
           .limit(1)
       }
-      const { data: resumeData, error: resumeError } = await resumeQuery.single()
+      ;
+  ;
+  const { data: resumeData, error: resumeError } = await resumeQuery.single()
       if (resumeError) {
         if (resumeError.code === 'PGRST116') {
           // No resume found, this is not a critical error for a new user
           setResume(null)
           setIsLoading(false)
           return null
-        }
+        };
         throw resumeError
-      }
+      };
       // Fetch work experience
       const { data: workData, error: workError } = await supabase
         .from('work_history')
@@ -79,7 +81,7 @@ export function useFetchResume() {
         skills: skillsData || [],
         certifications: certData || [],
         is_active: resumeData.is_active
-      }
+      };
       setResume(fullResume)
       return fullResume
     } catch (e: any) {
@@ -88,13 +90,15 @@ export function useFetchResume() {
       return null
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     isLoading,
     error,
     resume,
-    fetchResume}
+    fetchResume};
     fetchResume,
-  }
-}
+  };
+};
+;

@@ -31,8 +31,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Check condition
 if ( {) {
   $2
-}
-      return res.status (200).json ({
+};
+      ;
+  return res.status (200).json ({
         total_signups: 12,
         total_visits: 180,
         total_profile_completions: 7,
@@ -41,9 +42,11 @@ if ( {) {
         payout_amount: 210,
         currency: 'USD'})
     }
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const events = ["visitsignupprofile_completedjob_createdhire"] as const
-    const counts: Record<string, number> = {}
+    const counts: Record<string, number> = {};
     for (const ev of events) {
       const { count, error } = await supabase
         .from("referral_events")
@@ -53,7 +56,9 @@ if ( {) {
       if (error) return res.status($1).json({ $2 })
       counts[ev] = count |0
     }
-    const total_signups = counts["signup"] |0
+    ;
+  ;
+  const total_signups = counts["signup"] |0
     const total_visits = counts["visit"] |0
     const total_profile_completions = counts["profile_completed"] |0
     const total_job_creations = counts["job_created"] |0
@@ -80,7 +85,7 @@ export default async function handler(req, res) {
   try {
     if (req.method === 'GET') {
       return res.status(200).json({
-        metrics: []
+        metrics: [];
       })
     } else {
       res.status(405).end('Method Not Allowed')
@@ -90,13 +95,13 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' })
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -117,21 +122,25 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const events = ['visitsignupprofile_completedjob_createdhire'] as const
-    const counts: Record<string, number> = {}
+    const counts: Record<string, number> = {};
     }
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const events = ["visitsignupprofile_completedjob_createdhire"] as const
-    const counts: Record<string, number> = {}
+    const counts: Record<string, number> = {};
     for (const ev of events) {
       const { count, error } = await supabase
         .from("referral_events")
@@ -141,7 +150,9 @@ export default async function handler(req, res) {
       if (error) return res && res.status($1).json({ $2 })
       counts[ev] = count || 0
     }
-    const total_signups = counts['signup'] || 0
+    ;
+  ;
+  const total_signups = counts['signup'] || 0
     const total_visits = counts['visit'] || 0
     const total_profile_completions = counts['profile_completed'] || 0
     const total_job_creations = counts['job_created'] || 0
@@ -170,14 +181,16 @@ export default async function handler(req, res) {
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
     return res.status(500).json({ error: e?.message })
-  }
-}
-}
+  };
+};
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-    return res.status (500).json ({ error: e?.message })
-  }
-}
+  };
+};
+    ;
+  return res.status (500).json ({ error: e?.message })
+  };
+};
+;

@@ -38,8 +38,8 @@ id: string;,
 title: string;,
 description: string;,
 icon: React.ReactNode;,
-links: SitemapLink[]
-}
+links: SitemapLink[];
+};
 ;
 interface SitemapLink {;,
 title: string;,
@@ -47,7 +47,7 @@ href: string;
 description?: string;
 isExternal?: boolean;
 badge?: string
-}
+};
 ;
 const sitemapSections: SitemapSection[] = [
   {;,
@@ -70,8 +70,8 @@ description: 'Learn about our company and mission'
 title: 'Contact',;,
 href: '/contact',;,
 description: 'Get in touch with our team'
-      }
-    ]
+      };
+    ];
   },
   {;,
 id: 'services',;,
@@ -105,8 +105,8 @@ description: 'Large-scale business solutions'
 title: 'Services Pricing',;,
 href: '/services-pricing',;,
 description: 'Transparent pricing plans'
-      }
-    ]
+      };
+    ];
   },
   {;,
 id: 'resources',;,
@@ -133,8 +133,8 @@ description: 'Data protection and privacy'
 title: 'Terms of Service',;,
 href: '/terms',;,
 description: 'Service terms and conditions'
-      }
-    ]
+      };
+    ];
   },
   {;,
 id: 'company',;,
@@ -162,14 +162,14 @@ description: 'Strategic partnerships'
 title: 'Sitemap',;,
 href: '/sitemap',;,
 description: 'Site structure overview'
-      }
-    ]
-  }
+      };
+    ];
+  };
 ];
 export default function Sitemap() {;
 const sitemapStructure = [;
     {;,
-}
+};
 title: 'Main Pages'},;,
 links: [
         { name: 'Home', path: '/', description: 'Welcome to Zion Tech Group' },
@@ -191,8 +191,8 @@ links: [
         { name: 'Help Center', path: '/help-center', description: 'Support and documentation' },
         { name: 'Privacy Policy', path: '/privacy', description: 'Privacy policy' },
         { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
-        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
-      ]
+        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' };
+      ];
     },
     {;,
 title: 'AI & Technology Services',;,
@@ -210,8 +210,8 @@ links: [
         { name: 'Research Automation', path: '/advanced-research-automation', description: 'Automated research processes' },
         { name: 'Agentic RAG', path: '/agentic-rag', description: 'Retrieval-augmented generation' },
         { name: 'Agentic RAG Helpdesk', path: '/agentic-rag-helpdesk', description: 'AI-powered helpdesk' },
-        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', description: 'Affiliate marketing tools' }
-      ]
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', description: 'Affiliate marketing tools' };
+      ];
     },
     {;,
 title: 'Cybersecurity & Compliance',;,
@@ -222,8 +222,8 @@ links: [
         { name: 'Security Assessment', path: '/security-assessment', description: 'Security evaluation services' },
         { name: 'Compliance & Audit', path: '/compliance-audit', description: 'Compliance services' },
         { name: 'Data Protection', path: '/data-protection', description: 'Data security solutions' },
-        { name: 'Network Security', path: '/network-security', description: 'Network protection' }
-      ]
+        { name: 'Network Security', path: '/network-security', description: 'Network protection' };
+      ];
     },
     {;,
 title: 'Cloud & Infrastructure',;,
@@ -236,8 +236,8 @@ links: [
         { name: 'Managed IT Services', path: '/managed-it-services', description: 'Managed IT support' },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: '5G enterprise solutions' },
         { name: '5G Network Optimization', path: '/5g-network-optimization', description: '5G network optimization' },
-        { name: '5G Private Network Solutions', path: '/5g-private-network-solutions', description: 'Private 5G networks' }
-      ]
+        { name: '5G Private Network Solutions', path: '/5g-private-network-solutions', description: 'Private 5G networks' };
+      ];
     },
     {;,
 title: 'Quantum Technology',;,
@@ -245,8 +245,8 @@ links: [
         { name: 'Quantum Technology', path: '/services/quantum-technology', description: 'Quantum computing solutions' },
         { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', description: 'Quantum neural networks' },
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Quantum computing services' },
-        { name: 'Quantum-Safe Security', path: '/quantum-safe-security', description: 'Post-quantum cryptography' }
-      ]
+        { name: 'Quantum-Safe Security', path: '/quantum-safe-security', description: 'Post-quantum cryptography' };
+      ];
     },
     {;,
 title: 'Industry Solutions',;,
@@ -259,8 +259,8 @@ links: [
         { name: 'Retail Solutions', path: '/solutions/retail', description: 'Retail technology' },
         { name: 'Government Solutions', path: '/solutions/government', description: 'Government technology' },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Digital transformation services' },
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', description: 'Business automation' }
-      ]
+        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', description: 'Business automation' };
+      ];
     },
     {;,
 title: 'Micro SAAS & Innovation',;,
@@ -272,8 +272,8 @@ links: [
         { name: 'Blockchain Solutions', path: '/blockchain-solutions', description: 'Blockchain technology' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'IoT solutions' },
         { name: 'Space Technology', path: '/space-technology', description: 'Space tech solutions' },
-        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology' }
-      ]
+        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology' };
+      ];
     },
     {;,
 title: 'Talent & Resources',;,
@@ -284,8 +284,8 @@ links: [
         { name: 'Developer Portal', path: '/developer-portal', description: 'Developer resources' },
         { name: 'Community', path: '/community', description: 'Community platform' },
         { name: 'Leadership', path: '/leadership', description: 'Leadership insights' },
-        { name: 'Analytics', path: '/analytics', description: 'Analytics dashboard' }
-      ]
+        { name: 'Analytics', path: '/analytics', description: 'Analytics dashboard' };
+      ];
     },
     {;,
 title: 'Support & Documentation',;,
@@ -296,7 +296,7 @@ links: [
         { name: 'Status Page', path: '/status', description: 'Service status' },
         { name: 'Accessibility', path: '/accessibility', description: 'Accessibility information' },
         { name: 'Accessibility Auditor', path: '/accessibility-auditor', description: 'Accessibility tools' },
-        { name: 'Accessibility Scanner', path: '/accessibility-scanner', description: 'Accessibility scanning' }
+        { name: 'Accessibility Scanner', path: '/accessibility-scanner', description: 'Accessibility scanning' };
   ShoppingCart,;
 Building,;
 FileText,;
@@ -315,7 +315,7 @@ Play
 export default function Sitemap() {;
 const sitemapSections = [;
     {;,
-}
+};
 title: 'Main Pages'},;,
 icon: Home,;,
 links: [
@@ -325,7 +325,7 @@ links: [
         { name: 'Careers', path: '/careers', description: 'Job opportunities' },
         { name: 'Partners', path: '/partners', description: 'Partnership programs' },
         { name: 'Sitemap', path: '/sitemap', description: 'Site navigation guide' },
-      ]
+      ];
     },
     {;,
 title: 'Services',;,
@@ -337,7 +337,7 @@ links: [
         { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' },
         { name: 'On-Site Support', path: '/it-onsite-services', description: 'Local technical support' },
         { name: 'Request Quote', path: '/request-quote', description: 'Get a custom quote' },
-      ]
+      ];
     },
     {;,
 title: 'Talent & Recruitment',;,
@@ -349,7 +349,7 @@ links: [
         { name: 'Hire Now', path: '/hire-now', description: 'Quick hiring process' },
         { name: 'Post a Job', path: '/post-job', description: 'Create job listings' },
         { name: 'Zion Hire AI', path: '/zion-hire-ai', description: 'AI recruitment platform' },
-      ]
+      ];
     },
     {;,
 title: 'Marketplace',;,
@@ -360,7 +360,7 @@ links: [
         { name: 'Categories', path: '/categories', description: 'Browse by category' },
         { name: 'Featured', path: '/featured', description: 'Highlighted products' },
         { name: 'Deals', path: '/deals', description: 'Special offers and discounts' },
-      ]
+      ];
     },
     {;,
 title: 'Company & Business',;,
@@ -371,7 +371,7 @@ links: [
         { name: 'Partners', path: '/partners', description: 'Business partnerships' },
         { name: 'Press & Media', path: '/press', description: 'News and press releases' },
         { name: 'Enterprise Solutions', path: '/enterprise', description: 'Large-scale business solutions' },
-      ]
+      ];
     },
     {;,
 title: 'Resources & Content',;,
@@ -383,7 +383,7 @@ links: [
         { name: 'Tutorials', path: '/tutorials', description: 'Learning resources' },
         { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
         { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
-      ]
+      ];
     },
     {;,
 title: 'Support & Help',;,
@@ -395,7 +395,7 @@ links: [
         { name: 'Live Chat', path: '/chat', description: 'Real-time support chat' },
         { name: 'Status Page', path: '/status', description: 'Service status updates' },
         { name: 'Support Ticket', path: '/support-ticket', description: 'Submit support requests' },
-      ]
+      ];
     },
     {;,
 title: 'Tools & Applications',;,
@@ -405,7 +405,7 @@ links: [
         { name: 'Mobile App', path: '/mobile-launch', description: 'Mobile application' },
         { name: 'Community Platform', path: '/community', description: 'User community and forums' },
         { name: 'Developer Portal', path: '/developers', description: 'Developer resources and tools' },
-      ]
+      ];
     },
     {;,
 title: 'Legal & Compliance',;,
@@ -441,7 +441,7 @@ MapPin
 export default function Sitemap() {;
 const sitemapSections = [;
     {;,
-}
+};
 title: "Main Pages"},;,
 icon: <Home className="w-5 h-5" />,;,
 links: [
@@ -450,8 +450,8 @@ links: [
         { name: "Contact", path: "/contact", description: "Get in touch with us" },
         { name: "Careers", path: "/careers", description: "Job opportunities" },
         { name: "Blog", path: "/blog", description: "Latest news and insights" },
-        { name: "Partners", path: "/partners", description: "Strategic partnerships" }
-      ]
+        { name: "Partners", path: "/partners", description: "Strategic partnerships" };
+      ];
     },
     {;,
 title: "Marketplace",;,
@@ -461,8 +461,8 @@ links: [
         { name: "Categories", path: "/categories", description: "Browse by category" },
         { name: "Services", path: "/services", description: "Professional services" },
         { name: "Equipment", path: "/equipment", description: "Tech equipment and hardware" },
-        { name: "Green IT", path: "/green-it", description: "Sustainable technology solutions" }
-      ]
+        { name: "Green IT", path: "/green-it", description: "Sustainable technology solutions" };
+      ];
     },
     {;,
 title: "Talent & Community",;,
@@ -471,8 +471,8 @@ links: [
         { name: "Talent Directory", path: "/talent", description: "Find skilled professionals" },
         { name: "Community", path: "/community", description: "Join our community" },
         { name: "AI Matcher", path: "/match", description: "AI-powered talent matching" },
-        { name: "Zion Hire AI", path: "/zion-hire-ai", description: "AI recruitment platform" }
-      ]
+        { name: "Zion Hire AI", path: "/zion-hire-ai", description: "AI recruitment platform" };
+      ];
     },
     {;,
 title: "Enterprise Solutions",;,
@@ -480,8 +480,8 @@ icon: <Building className="w-5 h-5" />,;,
 links: [
         { name: "Enterprise Plans", path: "/enterprise", description: "Enterprise solutions" },
         { name: "IT Onsite Services", path: "/it-onsite-services", description: "On-site IT support" },
-        { name: "Request Quote", path: "/request-quote", description: "Get a custom quote" }
-      ]
+        { name: "Request Quote", path: "/request-quote", description: "Get a custom quote" };
+      ];
     },
     {;,
 title: "Developer Resources",;,
@@ -489,8 +489,8 @@ icon: <Code className="w-5 h-5" />,;,
 links: [
         { name: "Developer Portal", path: "/developers", description: "Developer tools and APIs" },
         { name: "API Documentation", path: "/api-docs", description: "API reference and guides" },
-        { name: "Sample Code", path: "/api-samples", description: "Code examples and tutorials" }
-      ]
+        { name: "Sample Code", path: "/api-samples", description: "Code examples and tutorials" };
+      ];
     },
     {;,
 title: "User Dashboard",;,
@@ -500,8 +500,8 @@ links: [
         { name: "Messages", path: "/messages", description: "Communication center" },
         { name: "Notifications", path: "/notifications", description: "System alerts" },
         { name: "Profile", path: "/profile", description: "User profile management" },
-        { name: "Account Settings", path: "/account-settings", description: "Account configuration" }
-      ]
+        { name: "Account Settings", path: "/account-settings", description: "Account configuration" };
+      ];
     },
     {;,
 title: "Authentication",;,
@@ -509,8 +509,8 @@ icon: <Shield className="w-5 h-5" />,;,
 links: [
         { name: "Login", path: "/login", description: "Sign in to your account" },
         { name: "Sign Up", path: "/signup", description: "Create new account" },
-        { name: "Forgot Password", path: "/forgot-password", description: "Reset password" }
-      ]
+        { name: "Forgot Password", path: "/forgot-password", description: "Reset password" };
+      ];
     },
     {;,
 title: "Legal & Support",;,
@@ -518,9 +518,9 @@ icon: <FileText className="w-5 h-5" />,;,
 links: [
         { name: "Privacy Policy", path: "/privacy", description: "Privacy and data protection" },
         { name: "Terms of Service", path: "/terms", description: "Terms and conditions" },
-        { name: "Help Center", path: "/help", description: "Support and documentation" }
-      ]
-    }
+        { name: "Help Center", path: "/help", description: "Support and documentation" };
+      ];
+    };
   ];
 import { motion; } from 'framer-motion';
 import {;;
@@ -549,13 +549,13 @@ ArrowRight
 } from 'lucide-react';
 export default function Sitemap() {;
 const mainPages = [;
-}
+};
     { path: '/'}, title: 'Home', description: 'Welcome to Zion Tech Group', icon: Home },
     { path: '/about', title: 'About Us', description: 'Learn about our company and mission', icon: Users },
     { path: '/team', title: 'Our Team', description: 'Meet our talented team members', icon: Users },
     { path: '/mission', title: 'Our Mission', description: 'Discover our mission and vision', icon: Award },
     { path: '/contact', title: 'Contact Us', description: 'Get in touch with our team', icon: Phone },
-    { path: '/careers', title: 'Careers', description: 'Join our growing team', icon: Users }
+    { path: '/careers', title: 'Careers', description: 'Join our growing team', icon: Users };
   ];
 const servicePages = [;
     { path: '/services', title: 'All Services', description: 'Comprehensive service overview', icon: Briefcase },
@@ -564,21 +564,21 @@ const servicePages = [;
     { path: '/services/cybersecurity', title: 'Cybersecurity Services', description: 'Security and compliance', icon: Shield },
     { path: '/services/quantum-technology', title: 'Quantum Technology', description: 'Next-gen computing', icon: Cpu },
     { path: '/services/it-infrastructure', title: 'IT Infrastructure', description: 'Complete IT solutions', icon: Cloud },
-    { path: '/micro-saas-services', title: 'Micro SAAS Solutions', description: 'Custom software development', icon: Cpu }
+    { path: '/micro-saas-services', title: 'Micro SAAS Solutions', description: 'Custom software development', icon: Cpu };
   ];
 const solutionPages = [;
     { path: '/solutions/enterprise', title: 'Enterprise Solutions', description: 'Large-scale business transformation', icon: Building },
     { path: '/solutions/healthcare', title: 'Healthcare Solutions', description: 'Medical technology innovation', icon: Heart },
     { path: '/solutions/financial', title: 'Financial Solutions', description: 'Fintech and banking solutions', icon: DollarSign },
     { path: '/solutions/manufacturing', title: 'Manufacturing Solutions', description: 'Smart manufacturing', icon: Factory },
-    { path: '/solutions/retail', title: 'Retail Solutions', description: 'Digital retail transformation', icon: ShoppingCart }
+    { path: '/solutions/retail', title: 'Retail Solutions', description: 'Digital retail transformation', icon: ShoppingCart };
   ];
 const technologyPages = [;
     { path: '/quantum-neural-network-platform', title: 'Quantum Neural Networks', description: 'Quantum-powered AI', icon: Brain },
     { path: '/ai-autonomous-business-manager', title: 'AI Business Manager', description: 'Autonomous business operations', icon: Brain },
     { path: '/ai-autonomous-research-assistant', title: 'AI Research Assistant', description: 'Research automation', icon: Brain },
     { path: '/autonomous-business-operations-platform', title: 'Autonomous Business Platform', description: 'Self-operating systems', icon: Rocket },
-    { path: '/ai-powered-it-asset-management', title: 'AI Asset Management', description: 'Intelligent IT management', icon: Cloud }
+    { path: '/ai-powered-it-asset-management', title: 'AI Asset Management', description: 'Intelligent IT management', icon: Cloud };
   ];
 const resourcePages = [;
     { path: '/pricing', title: 'Pricing', description: 'Transparent pricing plans', icon: DollarSign },
@@ -586,26 +586,27 @@ const resourcePages = [;
     { path: '/blog', title: 'Blog', description: 'Latest insights and updates', icon: FileText },
     { path: '/help', title: 'Help Center', description: 'Support and documentation', icon: FileText },
     { path: '/docs', title: 'Documentation', description: 'Technical documentation', icon: FileText },
-    { path: '/support', title: 'Support', description: 'Technical support services', icon: Phone }
+    { path: '/support', title: 'Support', description: 'Technical support services', icon: Phone };
   ];
 const legalPages = [;
     { path: '/privacy', title: 'Privacy Policy', description: 'Data protection and privacy', icon: Shield },
     { path: '/terms', title: 'Terms of Service', description: 'Service terms and conditions', icon: FileText },
     { path: '/cookies', title: 'Cookie Policy', description: 'Cookie usage information', icon: Shield },
-    { path: '/accessibility', title: 'Accessibility', description: 'Accessibility commitment', icon: Users }
+    { path: '/accessibility', title: 'Accessibility', description: 'Accessibility commitment', icon: Users };
   ];
 const renderPageSection = (title: string;, pages: any[], IconComponent: any) => (
     <motion.div;
-key={title}
-      initial={{ opacity: 0}}, y: 20 }}
-      animate={{ opacity: 1}}, y: 0 }}
-      transition={{ duration: 0.5}}}
+key={title};
+      initial={{ opacity: 0}}, y: 20 }};
+      animate={{ opacity: 1}}, y: 0 }};
+      transition={{ duration: 0.5}}};
       className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6"
     >
       <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
         <IconComponent className="w-6 h-6 text-zion-cyan mr-3" />
-        {title}
-      </h2>
+        {title};
+      ;
+  </h2>
       <ul className="space-y-3">
         {pages.map((page) => (
           <li key={page.href}>
@@ -614,12 +615,15 @@ to={page.href} ;
 className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group"
             >
               <span className="w-2 h-2 bg-zion-cyan rounded-full mr-3 group-hover:bg-zion-cyan transition-colors"></span>
-              <span className="font-medium">{page.name}</span>
-              <span className="ml-2 text-sm text-zion-slate-light opacity-75">- {page.description}</span>
+              <span className="font-medium">{page.name};
+  </span>
+              <span className="ml-2 text-sm text-zion-slate-light opacity-75">- {page.description};
+  </span>
             </Link>
           </li>
-        ))}
-      </ul>
+        ))};
+      ;
+  </ul>
     </motion.div>;
 const quickLinks = [;
     { name: 'Get Started', path: '/get-started', icon: Star, color: 'bg-green-100 text-green-700' },
@@ -640,8 +644,9 @@ canonical="https://ziontechgroup.com/sitemap"
       
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-4">
-          {/* Header Section */}
-          <div className="text-center mb-16">
+          {/* Header Section */};
+          ;
+  <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">;
 Site Navigation Guide
             </h1>
@@ -650,23 +655,27 @@ Explore our comprehensive website structure. Find all pages, services, and resou
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+          {/* Quick Links */};
+          ;
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {quickLinks.map((link), index) => (
               <$2 />;
-key={index}
-                to={link.path}
-                className={`${link.color}} p-4 rounded-lg text-center hover:scale-105 transition-transform duration-200`}
+key={index};
+                to={link.path};
+                className={`${link.color}} p-4 rounded-lg text-center hover:scale-105 transition-transform duration-200`};
               >
                 <link.icon className="h-8 w-8 mx-auto mb-2" />
   </link>
-                <div className="font-semibold text-sm">{link.name}</div>
+                <div className="font-semibold text-sm">{link.name};
+  </div>
               </Link>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
 
-          {/* Sitemap Sections */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {/* Sitemap Sections */};
+          ;
+  <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {sitemapSections.map((section), index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
@@ -674,7 +683,8 @@ key={index}
                     <div className="w-10 h-10 bg-zion-blue/10 rounded-lg flex items-center justify-center">
                       <section.icon className="h-5 w-5 text-zion-blue" />
                     </div>
-                    <CardTitle className="text-xl">{section.title}</CardTitle>
+                    <CardTitle className="text-xl">{section.title};
+  </CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
@@ -682,22 +692,27 @@ key={index}
                     {section.links.map((link), linkIndex) => (
                       <div key={linkIndex} className="border-l-2 border-gray-200 pl-4">
                         <$2 />;
-to={link.path}
+to={link.path};
                           className="block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors"
                         >
-                          {link.name}
-                        </Link>
-                        <p className="text-sm text-gray-600">{link.description}</p>
+                          {link.name};
+                        ;
+  </Link>
+                        <p className="text-sm text-gray-600">{link.description};
+  </p>
                       </div>
-                    ))}
-                  </div>
+                    ))};
+                  ;
+  </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
 
-          {/* Additional Information */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Additional Information */};
+          ;
+  <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
@@ -713,7 +728,8 @@ to={link.path}
                   </div>
                   <div className="flex justify-between">
                     <span>Last Updated:</span>
-                    <span className="font-medium">{new Date().toLocaleDateString()}</span>
+                    <span className="font-medium">{new Date().toLocaleDateString()};
+  </span>
                   </div>
                   <div className="flex justify-between">
                     <span>Site Version:</span>
@@ -763,28 +779,33 @@ const renderPageSection = (title: string;, pages: any[], IconComponent: any) => 
     <div key={title} className="mb-8">
       <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
         <IconComponent className="w-5 h-5 mr-2 text-cyan-400" />
-        {title}
-      </h3>
+        {title};
+      ;
+  </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {pages.map((page) => (
           <$2 />;
-key={page.path}
-            to={page.path}
+key={page.path};
+            to={page.path};
             className="block p-4 bg-gray-800/30 border border-gray-700 rounded-lg hover:border-cyan-500/50 transition-all duration-200 group"
           >
             <h4 className="font-medium text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-              {page.title}
-            </h4>
-            <p className="text-sm text-gray-400">{page.description}</p>
+              {page.title};
+            ;
+  </h4>
+            <p className="text-sm text-gray-400">{page.description};
+  </p>
           </Link>
-        ))}
-      </div>
+        ))};
+      ;
+  </div>
     </div>
   );
 return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -797,29 +818,35 @@ what you're looking for.
         </div>
       </section>
 
-      {/* Sitemap Content */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Sitemap Content */};
+      ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Left Column */}
-            <div>
-              {renderPageSection('Main Pages', mainPages, Home)}
-              {renderPageSection('Services', servicePages, Briefcase)}
-              {renderPageSection('Solutions', solutionPages, Building)}
-            </div>
+            {/* Left Column */};
+            ;
+  <div>
+              {renderPageSection('Main Pages', mainPages, Home)};
+              {renderPageSection('Services', servicePages, Briefcase)};
+              {renderPageSection('Solutions', solutionPages, Building)};
+            ;
+  </div>
 
-            {/* Right Column */}
-            <div>
-              {renderPageSection('Technology Platforms', technologyPages, Rocket)}
-              {renderPageSection('Resources', resourcePages, FileText)}
-              {renderPageSection('Legal & Support', legalPages, Shield)}
-            </div>
+            {/* Right Column */};
+            ;
+  <div>
+              {renderPageSection('Technology Platforms', technologyPages, Rocket)};
+              {renderPageSection('Resources', resourcePages, FileText)};
+              {renderPageSection('Legal & Support', legalPages, Shield)};
+            ;
+  </div>
           </div>
         </div>
       </section>
 
-      {/* Quick Navigation */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+      {/* Quick Navigation */};
+      ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">;
@@ -878,8 +905,9 @@ className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:bord
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">;
 Need Help Finding Something?
@@ -909,10 +937,11 @@ className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 t
     </div>
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        {/* Header */}
-        <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-          animate={{ opacity: 1}}, y: 0 }}
+        {/* Header */};
+        ;
+  <motion.div;
+initial={{ opacity: 0}}, y: 20 }};
+          animate={{ opacity: 1}}, y: 0 }};
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">;
@@ -964,7 +993,7 @@ MessageSquare
 const Sitemap = () => {;;
 const siteStructure = [;
     {;,
-}
+};
 title: 'Main Pages'},;,
 icon: Home,;,
 pages: [
@@ -973,8 +1002,8 @@ pages: [
         { name: 'Team', path: '/team', description: 'Meet our team' },
         { name: 'Contact', path: '/contact', description: 'Get in touch with us' },
         { name: 'Careers', path: '/careers', description: 'Join our team' },
-        { name: 'Get Started', path: '/get-started', description: 'Start your journey with us' }
-      ]
+        { name: 'Get Started', path: '/get-started', description: 'Start your journey with us' };
+      ];
     },
     {;,
 title: 'Services',;,
@@ -985,8 +1014,8 @@ pages: [
         { name: 'Cybersecurity', path: '/services/cybersecurity', description: 'Advanced security solutions' },
         { name: 'IT Infrastructure', path: '/services/infrastructure', description: 'Robust IT foundations' },
         { name: 'Digital Transformation', path: '/services/transformation', description: 'Business modernization' },
-        { name: 'Consulting', path: '/services/consulting', description: 'Strategic technology guidance' }
-      ]
+        { name: 'Consulting', path: '/services/consulting', description: 'Strategic technology guidance' };
+      ];
     },
     {;,
 title: 'Solutions',;,
@@ -997,8 +1026,8 @@ pages: [
         { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Healthcare technology' },
         { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector solutions' },
         { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', description: 'Industry 4.0 solutions' },
-        { name: 'Retail Solutions', path: '/solutions/retail', description: 'E-commerce & retail tech' }
-      ]
+        { name: 'Retail Solutions', path: '/solutions/retail', description: 'E-commerce & retail tech' };
+      ];
     },
     {;,
 title: 'Resources',;,
@@ -1009,8 +1038,8 @@ pages: [
         { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
         { name: 'White Papers', path: '/white-papers', description: 'In-depth research papers' },
         { name: 'Tutorials', path: '/tutorials', description: 'Step-by-step guides' },
-        { name: 'Research & Development', path: '/research-development', description: 'Our R&D initiatives' }
-      ]
+        { name: 'Research & Development', path: '/research-development', description: 'Our R&D initiatives' };
+      ];
     },
     {;,
 title: 'Specialized Technologies',;,
@@ -1018,8 +1047,8 @@ icon: Rocket,;,
 pages: [
         { name: 'Quantum Technology', path: '/quantum-technology', description: 'Quantum computing platforms' },
         { name: 'Space Tech', path: '/space-tech', description: 'Space technology solutions' },
-        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' }
-      ]
+        { name: 'Green IT', path: '/green-it', description: 'Sustainable technology solutions' };
+      ];
     },
     {;,
 title: 'Support & Legal',;,
@@ -1029,8 +1058,8 @@ pages: [
         { name: 'Support', path: '/support', description: 'Technical support services' },
         { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
         { name: 'Privacy Policy', path: '/privacy', description: 'Our privacy practices' },
-        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }
-      ]
+        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' };
+      ];
     },
     {;,
 title: 'Business Tools',;,
@@ -1041,14 +1070,15 @@ pages: [
         { name: 'Service Portfolio', path: '/service-portfolio', description: 'View our service portfolio' },
         { name: 'Service Recommendations', path: '/service-recommendations', description: 'Get personalized recommendations' },
         { name: 'Service Innovation Hub', path: '/service-innovation-hub', description: 'Innovation showcase' },
-        { name: 'Services Showcase', path: '/services-showcase', description: 'Featured services' }
-      ]
-    }
+        { name: 'Services Showcase', path: '/services-showcase', description: 'Featured services' };
+      ];
+    };
   ];
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      {/* Header Section */};
+      ;
+  <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">;
 Site Map

@@ -14,42 +14,51 @@ function toSlug(name: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "")
     .slice(0, 64)
-}
+};
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true })
-  }
-}
+  };
+};
 function writeTextFile(filePath: string, content: string) {ensureDir(path.dirname(filePath))
   fs.writeFileSync(filePath, content, "utf8")
-}
+};
 function nowIso(): string {return new Date().toISOString()
-}
+};
 export async function performDeploy(input: DeployInput): Promise<DeployResult> {const version = "Zion OS v1.0"
   const logs: DeployLogEntry[] = []
-  const assets: GeneratedAsset[] = []
+  
+  ;
+  ;
+  const assets: GeneratedAsset[] = [];
 function toSlug(name: string): string {
   return name
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "")
     .slice(0, 64)
-}
+};
 function ensureDir(dirPath: string) {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true })
-  }
-}
+  };
+};
 function writeTextFile(filePath: string, content: string) {
   ensureDir(path.dirname(filePath))
   fs.writeFileSync(filePath, content, "utf8")
-}
+};
 function nowIso(): string {
   return new Date().toISOString()
-}
+};
 export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const version = "Zion OS v1.0"
   const logs: DeployLogEntry[] = []
+  
+  ;
+  ;
   const assets: GeneratedAsset[] = []
+  
+  ;
+  ;
   const instanceSlug = toSlug(input.instanceName)
   const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug)
   const docsDir = path.join(process.cwd(), "docs")
@@ -73,7 +82,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(promptBasePath, promptBase)
     assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" })
     logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" })
-  }
+  };
   // 2. Deploy DAO + Token Logic
   if (input.modules.dao) {ensureDir(daoDir)
     const daoConfigPath = path.join(daoDir, `${instanceSlug}-dao.json`)
@@ -85,14 +94,14 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
           quorum: 0.6
           votingPeriodDays: 7
           constitutionDoc: `/constitution`
-          createdAt: nowIso()}
+          createdAt: nowIso()};
         null
         2
       )
     )
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" })
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" })
-  }
+  };
   if (input.modules.token |input.tokenActivation) {ensureDir(tokenDir)
     const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`)
     writeTextFile(
@@ -103,14 +112,14 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
           enabled: input.tokenActivation
           stakingEnabled: input.modules.token
           escrowEnabled: true
-          createdAt: nowIso()}
+          createdAt: nowIso()};
         null
         2
       )
     )
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" })
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" })
-  }
+  };
   // 3. Publish Assets
   const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`)
   const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`)
@@ -134,42 +143,48 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`
     )
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" })
-  }
+  };
   if (input.modules.bookBuilder) {ensureDir(docsDir)
     writeTextFile(
       bookPath
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`
     )
     assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" })
-  }
+  };
   if (input.modules.launchKit) {ensureDir(docsDir)
     writeTextFile(
       trailerScriptPath
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`
     )
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" })
-  }
-
+  };
+;
   // Schedule launch stream (/summit)
   ensureDir(eventsDir),
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true })
-  }
-}
+  };
+};
 function writeTextFile(filePath: string, content: string) {ensureDir(path.dirname(filePath))
   fs.writeFileSync(filePath, content, "utf8")
-}
+};
 function nowIso(): string {return new Date().toISOString()
-}
+};
 export async function performDeploy(input: DeployInput): Promise<DeployResult> {const version = "Zion OS v1.0"
   const logs: DeployLogEntry[] = []
+  
+  ;
+  ;
   const assets: GeneratedAsset[] = []
+  
+  ;
+  ;
   const instanceSlug = toSlug(input.instanceName)
   const baseDir = path.join(process.cwd(), "data", "deployments", instanceSlug)
   const docsDir = path.join(process.cwd(), "docs")
@@ -189,7 +204,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     writeTextFile(promptBasePath, promptBase)
     assets.push({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" })
     logs.push({ timestamp: nowIso(), level: "info", action: "zion_gpt_initialized" })
-  }
+  };
   // 2. Deploy DAO + Token Logic
   if (input.modules.dao) {ensureDir(daoDir)
     const daoConfigPath = path.join(daoDir, `${instanceSlug}-dao.json`)
@@ -201,14 +216,14 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
           quorum: 0.6
           votingPeriodDays: 7
           constitutionDoc: `/constitution`
-          createdAt: nowIso()}
+          createdAt: nowIso()};
         null
         2
       )
     )
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" })
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" })
-  }
+  };
   if (input.modules.token |input.tokenActivation) {ensureDir(tokenDir)
     const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`)
     writeTextFile(
@@ -219,14 +234,14 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
           enabled: input.tokenActivation
           stakingEnabled: input.modules.token
           escrowEnabled: true
-          createdAt: nowIso()}
+          createdAt: nowIso()};
         null
         2
       )
     )
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" })
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" })
-  }
+  };
   // 3. Publish Assets
   const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`)
   const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`)
@@ -255,27 +270,27 @@ function to_slug (name: string): string {
     .replace (/[^a - z0 - 9]+/g, "-")
     .replace (/(^-|-$)+/g, "")
     .slice (0, 64)
-}
+};
 /**
  * ensure_dir - Function description
  */
 function ensure_dir() {
   if () {) {
   $2
-}
+};
     fs.mkdir_sync (dir_path, { recursive: true })
-  }
-}
+  };
+};
 /**
  * writeTextFile - Function description
  */
 function writeTextFile() {
   ensure_dir (path.dirname (file_path)),
   fs.writeFileSync (file_path, content, "utf8")
-}
+};
 function now_iso (): string {
   return new Date ().toISOString ()
-}
+};
 export async function perform_deploy (input: DeployInput): Promise < DeployResult> {
   const version = "Zion OS v1.0",
   const logs: DeployLogEntry[] = [],
@@ -296,19 +311,19 @@ export async function perform_deploy (input: DeployInput): Promise < DeployResul
   // Check condition
 if ( {) {
   $2
-}
+};
     ensure_dir (gpt_dir),
     const promptBasePath = path.join (gpt_dir, `${instance_slug}-prompt - base.md`),
     const prompt_base = `# ZionGPT Prompt Base\n\n_instance: ${input.instance_name}\n_language: ${input.default_language}\n_governance: ${input.governance_mode}\n\n_behaviors:\n- Assist with proposals, resumes, and marketplace tasks.\n- Route to domain experts per module.\n`,
     writeTextFile (promptBasePath, prompt_base),
     assets.push ({ kind: "file", path: promptBasePath, description: "ZionGPT prompt base" }),
     logs.push ({ timestamp: now_iso (), level: "info", action: "zion_gpt_initialized" })
-  }
+  };
   // 2. Deploy DAO + Token Logic
   // Check condition
 if ( {) {
   $2
-}
+};
     ensure_dir (dao_dir),
     const daoConfigPath = path.join (dao_dir, `${instance_slug}-dao.json`),
     writeTextFile (
@@ -325,11 +340,11 @@ if ( {) {
         2)),
     assets.push ({ kind: "config", path: daoConfigPath, description: "DAO configuration" }),
     logs.push ({ timestamp: now_iso (), level: "info", action: "dao_configured" })
-  }
+  };
   // Check condition
 if ( {) {
   $2
-}
+};
     ensure_dir (token_dir),
     const tokenConfigPath = path.join (token_dir, `${instance_slug}-token.json`),
     writeTextFile (
@@ -346,7 +361,7 @@ if ( {) {
         2)),
     assets.push ({ kind: "config", path: tokenConfigPath, description: "Token configuration" }),
     logs.push ({ timestamp: now_iso (), level: "info", action: "token_configured" })
-  }
+  };
   // 3. Publish Assets
   const wp_path = path.join (docs_dir, `whitepaper-${instance_slug}.md`),
   const roadmap_path = path.join (docs_dir, `roadmap-${instance_slug}.md`),
@@ -356,7 +371,7 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-}
+};
     ensure_dir (docs_dir),
     writeTextFile (
       wp_path,
@@ -371,27 +386,27 @@ if ( {) {
       changelog_path,
       `# Changelog\n\n- ${now_iso ()}: Genesis deployment initialized for ${input.instance_name}.\n`),
     assets.push ({ kind: "file", path: changelog_path, description: "Changelog" })
-  }
+  };
   // Check condition
 if ( {) {
   $2
-}
+};
     ensure_dir (docs_dir),
     writeTextFile (
       book_path,
       `# ${input.instance_name}: Founder Story & System Manifesto\n\n_this book captures the origin and guiding principles of ${input.instance_name}.\n`),
     assets.push ({ kind: "file", path: book_path, description: "Zion Book (markdown source)" })
-  }
+  };
   // Check condition
 if ( {) {
   $2
-}
+};
     ensure_dir (docs_dir),
     writeTextFile (
       trailerScriptPath,
       `# Launch Trailer Script\n\n_voiceover: Welcome to ${input.instance_name}, a sovereign digital nation built on Zion OS.\n`),
     assets.push ({ kind: "file", path: trailerScriptPath, description: "Trailer script" })
-  }
+  };
   // Schedule launch stream (/summit)
   ensure_dir (events_dir),
   const summitEventPath = path.join (events_dir, `summit-${instance_slug}.json`),
@@ -434,7 +449,7 @@ if ( {) {
     )
     assets.push({ kind: "config", path: daoConfigPath, description: "DAO configuration" })
     logs.push({ timestamp: nowIso(), level: "info", action: "dao_configured" })
-  }
+  };
   if (input.modules.token || input.tokenActivation) {
     ensureDir(tokenDir)
     const tokenConfigPath = path.join(tokenDir, `${instanceSlug}-token.json`)
@@ -455,7 +470,7 @@ if ( {) {
     )
     assets.push({ kind: "config", path: tokenConfigPath, description: "Token configuration" })
     logs.push({ timestamp: nowIso(), level: "info", action: "token_configured" })
-  }
+  };
   // 3. Publish Assets
   const wpPath = path.join(docsDir, `whitepaper-${instanceSlug}.md`)
   const roadmapPath = path.join(docsDir, `roadmap-${instanceSlug}.md`)
@@ -480,7 +495,7 @@ if ( {) {
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`
     )
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" })
-  }
+  };
   if (input.modules.bookBuilder) {
     ensureDir(docsDir)
     writeTextFile(
@@ -488,7 +503,7 @@ if ( {) {
       `# ${input.instanceName}: Founder Story & System Manifesto\n\nThis book captures the origin and guiding principles of ${input.instanceName}.\n`
     )
     assets.push({ kind: "file", path: bookPath, description: "Zion Book (markdown source)" })
-  }
+  };
   if (input.modules.launchKit) {
     ensureDir(docsDir)
     writeTextFile(
@@ -496,7 +511,7 @@ if ( {) {
       `# Launch Trailer Script\n\nVoiceover: Welcome to ${input.instanceName}, a sovereign digital nation built on Zion OS.\n`
     )
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" })
-  }
+  };
   // Schedule launch stream (/summit)
   ensureDir(eventsDir)
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`)
@@ -540,10 +555,14 @@ if ( {) {
 if ( {) {
   $2
 }
-    const optional_path = path.join (base_dir, "optional - modules.json"),
+    ;
+  ;
+  const optional_path = path.join (base_dir, "optional - modules.json"),
     writeTextFile (optional_path, JSON.stringify ({ enabled: optional_modules }, null, 2)),
     assets.push ({ kind: "config", path: optional_path, description: "Enabled optional modules" })
   }
+  ;
+  ;
   const summary = `Initialized ${input.instance_name} (${instance_slug}) with modules: ${Object.entries (input.modules)
     .filter (([ v]) => v)
     .map (([k]) => k)
@@ -556,8 +575,8 @@ if ( {) {
     assets,
     logs
     summary
-    version}
-}
+    version};
+};
       changelogPath,
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`
     ),
@@ -565,9 +584,9 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   if (input.modules.bookBuilder) {
     ensureDir(docsDir)
     writeTextFile(
@@ -578,9 +597,9 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   if (input.modules.launchKit) {
     ensureDir(docsDir)
     writeTextFile(
@@ -591,9 +610,9 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   // Schedule launch stream (/summit)
   ensureDir(eventsDir)
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`)
@@ -602,7 +621,7 @@ if ( {) {
     JSON.stringify(
       {name: `${input.instanceName} Summit`
         route: "/summit"
-        scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()}
+        scheduledAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString()};
       null
       2
     )
@@ -622,7 +641,7 @@ if ( {) {
           "/academy"
           "/marketplace"
           "/dao"
-          defaultNationRoute]}
+          defaultNationRoute]};
       null
       2
     )
@@ -687,6 +706,8 @@ if ( {) {
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" })
   }
+  ;
+  ;
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules)
     .filter(([ v]) => v)
     .map(([k]) => k)
@@ -698,7 +719,7 @@ if ( {) {
     assets
     logs
     summary
-    version}
+    version};
     .map(([key]) => key),
   if (optionalModules.length > 0) {
     const optionalPath = path.join(baseDir, "optional-modules.json")
@@ -707,9 +728,11 @@ if ( {) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
+  ;
+  ;
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules)
     .filter(([ v]) => v)
     .map(([k]) => k)
@@ -725,13 +748,13 @@ if ( {) {
     version  } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
           defaultNationRoute,
         ],
       },
@@ -749,6 +772,8 @@ if ( {) {
     writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2))
     assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" })
   }
+  ;
+  ;
   const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules)
     .filter(([, v]) => v)
     .map(([k]) => k)
@@ -762,5 +787,6 @@ if ( {) {
     logs,
     summary,
     version,
-  }
-}
+  };
+};
+;

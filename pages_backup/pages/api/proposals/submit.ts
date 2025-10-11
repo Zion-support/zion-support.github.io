@@ -10,7 +10,7 @@ async function submitByEmail(
   to: string
   subject: string
   text: string
-  attachments: any[] = []
+  attachments: any[] = [];
 ) {
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,14 +32,14 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
     host
     port
     secure: port === 465
-    auth: { user, pass }
+    auth: { user, pass };
   })
   if (!host || !user || !pass) throw new Error('Email not configured')
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } })
   await transporter.sendMail({ from, to, subject, text, attachments })
-}
+};
   await transporter.sendMail({ from, to, subject, text, attachments })
-}
+};
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -47,15 +47,15 @@ export default async function handler(
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
   if (req.method !== "POST") return res.status($1).json({ $2 })
   try {
-    const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
+    const { id, channels = ["email"], emailTo, delegateNote } = req.body |{};
     if (!id) return res.status($1).json({ $2 })
     const meta = getProposal(id)
     if (!meta) return res.status($1).json({ $2 })
@@ -65,7 +65,7 @@ export default async function handler(
       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`
       const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote |"N/A"}`
       await submitByEmail(to, subject, text)
-    }
+    };
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined
     try {
@@ -76,7 +76,9 @@ export default async function handler(
       ensRecordHash = `0x${hash}`
       updateArtifacts(id, { ensRecordHash })
     } catch {}
-    const updated = updateProposalMeta(id, (m) => ({
+    ;
+  ;
+  const updated = updateProposalMeta(id, (m) => ({
       ...m
       status: "Submitted"
     }))
@@ -98,20 +100,22 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
   if (throw new Error ("Email not configured")) {
   $2
 }
+  ;
+  ;
   const transporter = nodemailer.create_transport ({
     host,
     port,
     secure: port === 465,
     auth: { user, pass },
   })
-    const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {}
+    const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2})
       .json({ error: error?.message || "Submission failed" })
 export default async function handler(req, res) {
   try {
-    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {}
+    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
     if (!id) return res.status(400).json({ error: 'id is required' })
     const meta = getProposal(id)
     if (!meta) return res.status(404).json({ error: 'Proposal not found' })
@@ -121,31 +125,38 @@ export default async function handler(req, res) {
       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`
       const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`
       await submitByEmail(to, subject, text)
-    }
+    };
     // ENS record hash (default: compute and store hash only)
     let ensRecordHash: string | undefined
     try {
       ensRecordHash = `0x${hash}`
       update_artifacts (id, { ensRecordHash })
-    } catch {}
-    return res && res.status(200).json({ meta: updated })
+    } catch {};
+    ;
+  return res && res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res
       .status(500)
       .json({ error: error?.message |"Submission failed" })
-  }
+  };
 }
-      const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex')
+      ;
+  ;
+  const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex')
       ensRecordHash = `0x${hash}`
       updateArtifacts(id, { ensRecordHash })
     } catch {}
-    const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }))
+    ;
+  ;
+  const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }))
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
-  }
+  };
 }
-    const updated = updateProposalMeta (id, (m) => ({
+    ;
+  ;
+  const updated = updateProposalMeta (id, (m) => ({
       ...m,
       status: "Submitted",
     }))
@@ -154,32 +165,33 @@ export default async function handler(req, res) {
     return res
       .status (500)
       .json ({ error: error?.message || "Submission failed" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  }
-}
-}
-}
+  };
+};
+  };
+};
+};
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

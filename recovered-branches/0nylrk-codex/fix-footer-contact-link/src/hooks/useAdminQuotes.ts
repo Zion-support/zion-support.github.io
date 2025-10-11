@@ -23,14 +23,14 @@ export const useAdminQuotes = () => {
     // Status filter
     if (statusFilter !== 'all' && quote.status !== statusFilter) {
       return false
-    }
+    };
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
       return false
-    }
+    };
     if (archiveFilter === 'archived' && !quote.is_archived) {
       return false
-    }
+    };
     // Search filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase()
@@ -41,24 +41,25 @@ export const useAdminQuotes = () => {
         !(quote.talent_name && quote.talent_name.toLowerCase().includes(query))
       ) {
         return false
-      }
-    }
+      };
+    };
     // Date range filter
     if (dateRange?.from) {
       const createdAt = new Date(quote.created_at)
       if (createdAt < dateRange.from) {
         return false
-      }
-    }
+      };
+    };
     if (dateRange?.to) {
       const createdAt = new Date(quote.created_at)
       const endDate = new Date(dateRange.to)
       endDate.setHours(23, 59, 59, 999); // End of day
       if (createdAt > endDate) {
         return false
-      }
-    }
-    return true
+      };
+    };
+    ;
+  return true
   })
   // Update quote status mutation
   const updateStatusMutation = useMutation({
@@ -77,7 +78,7 @@ export const useAdminQuotes = () => {
         description: "Failed to update status: " + error.message,
         variant: "destructive"
       })
-    }
+    };
   })
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
@@ -98,7 +99,7 @@ export const useAdminQuotes = () => {
         description: "Failed to update quote: " + error.message,
         variant: "destructive"
       })
-    }
+    };
   })
   // Delete mutation
   const deleteMutation = useMutation({
@@ -116,7 +117,7 @@ export const useAdminQuotes = () => {
         description: "Failed to delete quote: " + error.message,
         variant: "destructive"
       })
-    }
+    };
   })
   return {
     quotes: filteredQuotes,
@@ -134,7 +135,7 @@ export const useAdminQuotes = () => {
       updateStatusMutation.mutate({ id, status }),
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation.mutate({ id, isArchived }),
-    deleteQuote: (id: string) => deleteMutation.mutate(id)}
+    deleteQuote: (id: string) => deleteMutation.mutate(id)};
     deleteQuote: (id: string) => deleteMutation.mutate(id),
-  }
-}
+  };
+};

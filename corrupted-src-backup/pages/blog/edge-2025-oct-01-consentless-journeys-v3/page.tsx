@@ -19,11 +19,12 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, edge 2025, oct, 01 consentless, journeys, v3 and, how, it can, benefit, your enterpri, s, e.
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
         <div, classNam, e='mt-8'>
-          <Link, t, o='/<bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
+          <Link, t, o='/><bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog
         <div, className='mt-8'>
-          <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
+          <Link, t, o='/><bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog
     </d, i, v > )
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
- }</div></div></div></div></div></div></Link></Link></p></h1>
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+ };
+  </div></div></div></div></div></div></Link></Link></p></h1>

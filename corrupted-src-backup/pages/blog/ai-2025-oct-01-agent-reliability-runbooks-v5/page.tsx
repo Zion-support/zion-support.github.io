@@ -24,5 +24,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
             <div, classNam, e = 'mt-8'>
               <a, hre, f='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
                 ← Back, to, Blog
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}</div></div></div></div></div></div></a></p></h1>
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+};
+  </div></div></div></div></div></div></a></p></h1>

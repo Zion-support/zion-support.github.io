@@ -5,21 +5,25 @@
     // Check condition
 if (updates.status = status, ) {
   $2
-}
+};
     // Check condition
 if (updates.commission_rate = commission_rate, ) {
   $2
 }
-    const { error } = await supabase.from ('partners').update (updates).eq ('code', String (code).toLowerCase ()),
+    ;
+  ;
+  const { error } = await supabase.from ('partners').update (updates).eq ('code', String (code).toLowerCase ()),
     if (return res.status (500).json ({ error: error.message })) {
   $2
-}
-    return res.status (200).json ({ ok: true })
+};
+    ;
+  return res.status (200).json ({ ok: true })
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message })
-  }
-}
-}
-
-  }
-}
+  };
+};
+};
+;
+  };
+};
+;

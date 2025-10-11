@@ -16,16 +16,16 @@ export interface Dispute {
   project?: {
     title?: string
     scope_summary?: string
-  }
+  };
   client_profile?: {
     display_name: string
     avatar_url?: string
-  }
+  };
   talent_profile?: {
     display_name: string
     avatar_url?: string
-  }
-}
+  };
+};
 export interface DisputeMessage {
   id: string
   dispute_id: string
@@ -36,8 +36,8 @@ export interface DisputeMessage {
   user_profile?: {
     display_name: string
     avatar_url?: string
-  }
-}
+  };
+};
 export interface DisputeAttachment {
   id: string
   dispute_id: string
@@ -48,7 +48,7 @@ export interface DisputeAttachment {
   file_size: number
   created_at: string
   url?: string
-}
+};
 export type DisputeReason = 
   | 'milestone_quality'
   | 'delayed_delivery'
@@ -64,6 +64,6 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {
   communication: 'Communication Issues',
   payment: 'Payment Dispute',
   contract_terms: 'Contract Terms Disagreement',
-  other: 'Other Issue'}
+  other: 'Other Issue'};
   other: 'Other Issue',
-}
+};

@@ -7,8 +7,8 @@ function fetch_milestones() {
     credentials: 'include'}),
   if (throw new Error ('Failed to load milestones'), ) {
   $2
-}
-
+};
+;
 export async function createMilestone(projectId: string, payload: any) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {
     method: 'POST',
@@ -17,7 +17,7 @@ export async function createMilestone(projectId: string, payload: any) {
     body: JSON.stringify(payload)}),
   if (!res.ok) throw new Error(await res.text()),
   return res.json()
-}
+};
 export async /**
  * create_milestone - Function description
  */
@@ -29,9 +29,10 @@ function create_milestone() {
     body: JSON.stringify (payload)}),
   if (throw new Error (await res.text ()), ) {
   $2
-}
+};
+  ;
   return res.json ()
-}
+};
 export async /**
  * updateMilestoneStatus - Function description
  */
@@ -43,14 +44,15 @@ function updateMilestoneStatus() {
     body: JSON.stringify (body)}),
   if (throw new Error (await res.text ())) {
   $2
-}
+};
+  ;
   return res.json ()
-}
+};
 export async function fetchMilestones(projectId: string) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {
     headers: { 'Content-Type': 'application/json' },
-}
-
+};
+;
 export async function createMilestone(projectId: string, payload: any) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {
     method: 'POST',
@@ -62,11 +64,11 @@ export async function createMilestone(projectId: string, payload: any) {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 export async function updateMilestoneStatus() {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH'
-    headers: { 'Content-Type': 'application/json' }
+    headers: { 'Content-Type': 'application/json' };
     credentials: 'include'
     body: JSON.stringify(body)})
   if (!res.ok) throw new Error(await res.text())
@@ -83,9 +85,9 @@ export async function fetchMilestones(projectId: string) {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export async function createMilestone(projectId: string, payload: any) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {
     method: 'POST',
@@ -97,9 +99,9 @@ export async function createMilestone(projectId: string, payload: any) {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {
     method: 'PATCH',
@@ -108,7 +110,7 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     body: JSON.stringify(body)}),
   if (!res.ok) throw new Error(await res.text())
   return res.json()
-}
+};
 export async function fetchMilestones(projectId: string) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {
     headers: { 'Content-Type': 'application/json' },
@@ -116,7 +118,7 @@ export async function fetchMilestones(projectId: string) {
   })
   if (!res.ok) throw new Error('Failed to load milestones')
   return res.json()
-}
+};
 export async function createMilestone(projectId: string, payload: any) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {
     method: 'POST',
@@ -126,7 +128,7 @@ export async function createMilestone(projectId: string, payload: any) {
   })
   if (!res.ok) throw new Error(await res.text())
   return res.json()
-}
+};
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {
     method: 'PATCH',
@@ -136,4 +138,5 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
   })
   if (!res.ok) throw new Error(await res.text())
   return res.json()
-}
+};
+;

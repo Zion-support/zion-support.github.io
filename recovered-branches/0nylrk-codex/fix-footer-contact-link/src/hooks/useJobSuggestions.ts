@@ -31,8 +31,8 @@ export function useJobSuggestions(talentId?: string) {
         })
       } finally {
         setIsLoading(false)
-      }
-    }
+      };
+    };
     fetchSuggestedJobs()
   }, [talentId])
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
@@ -41,7 +41,9 @@ export function useJobSuggestions(talentId?: string) {
         status,
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
       }
-      const { error } = await supabase
+      ;
+  ;
+  const { error } = await supabase
         .from("job_talent_matches")
         .update(updates)
         .eq("id", matchId)
@@ -50,7 +52,7 @@ export function useJobSuggestions(talentId?: string) {
       setJobMatches(matches => 
         matches.map(match => 
           match.id === matchId 
-            ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
+            ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) };
             : match
         )
       )
@@ -65,7 +67,7 @@ export function useJobSuggestions(talentId?: string) {
           title: "Job Declined",
           description: "This job will be removed from your suggestions"
         })
-      }
+      };
     } catch (error) {
       console.error("Error updating job match status:", error)
       toast({
@@ -74,8 +76,8 @@ export function useJobSuggestions(talentId?: string) {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
-  }
+    };
+  };
   // Filter matches by status
   const newMatches = jobMatches.filter(match => match.status === 'new')
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed')
@@ -90,6 +92,7 @@ export function useJobSuggestions(talentId?: string) {
       viewedMatches,
       appliedMatches,
       declinedMatches
-    }
-  }
-}
+    };
+  };
+};
+;

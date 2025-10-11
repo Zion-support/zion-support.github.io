@@ -4,12 +4,12 @@ export interface AIBreakthroughService2029 {
   tagline: string
   price: string
   description: string
-  features: string[]
+  features: string[];
   link: string
   marketPosition: string
   targetAudience: string
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   realImplementation: boolean
@@ -17,13 +17,13 @@ export interface AIBreakthroughService2029 {
     mobile: string
     email: string
     address: string
-  }
+  };
   category: string
-  technology: string[]
-  benefits: string[]
-  useCases: string[]
-  aiCapabilities: string[]
-}
+  technology: string[];
+  benefits: string[];
+  useCases: string[];
+  aiCapabilities: string[];
+};
 export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
   {
     id: "ai-consciousness-evolution-platform",
@@ -73,7 +73,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       "Emotional intelligence",
       "Self-awareness",
       "Moral reasoning"
-    ]
+    ];
   },
   {
     id: "quantum-ai-fusion-platform",
@@ -123,7 +123,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       "Quantum optimization",
       "Quantum neural networks",
       "Hybrid AI processing"
-    ]
+    ];
   },
   {
     id: "ai-creativity-orchestrator",
@@ -173,7 +173,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       "Creative fusion",
       "Cross-domain creativity",
       "Collaborative innovation"
-    ]
+    ];
   },
   {
     id: "ai-autonomous-business-manager",
@@ -223,7 +223,7 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       "Strategic planning",
       "Operational management",
       "Business intelligence"
-    ]
+    ];
   },
   {
     id: "ai-emotional-intelligence-platform",
@@ -273,6 +273,6 @@ export const aiBreakthroughServices2029: AIBreakthroughService2029[] = [
       "Emotional response",
       "Empathy simulation",
       "Sentiment analysis"
-    ]
-  }
-]
+    ];
+  };
+];

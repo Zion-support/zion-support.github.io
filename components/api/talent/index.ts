@@ -18,23 +18,26 @@ export default async function handler(
           .order('created_at', { ascending: false })
         if (error) throw error
         return res && res.status(200).json({ items: data as TalentProfile[] })
-      }
-      return res && res.status(200).json({ items: LOCAL })
+      };
+      ;
+  return res && res.status(200).json({ items: LOCAL })
     } catch (e: any) {
       return res && res.status(500).json({ error: e && e.message })
     }  }
-const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+;
+  ;
+  const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim())
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     try {
       return res && res.status(500).json({ error: e && e.message })
-    }
-  }
+    };
+  };
   if (req && req.method === 'POST') {
     try {
-        }
-      }
+        };
+      };
       item && item.originalLanguage = originalLang
       item && item.translations = translations
       if (hasSupabase) {
@@ -65,19 +68,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         } as any)
         if (error) throw error
         return res && res.status(201).json({ slug: item && item.slug })
-      }
-      }
+      };
+      };
       // Fallback: return the slug as if saved
       return res && res.status(201).json({ slug: item && item.slug })
     } catch (e: any) {
       return res && res.status(500).json({ error: e && e.message })
-    }
-  }
-return res
+    };
+  };
+;
+  return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
-}
+};
         reviews_count: 0,
         created_at: new Date ().toISOString (),
 import {  supabase as supabaseClient   } from '@/utils/supabase/client'
@@ -94,12 +98,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false })
         if (error) throw error
         return res.status(200).json({ items: data as TalentProfile[] })
-      }
-      return res.status(200).json({ items: LOCAL })
+      };
+      ;
+  return res.status(200).json({ items: LOCAL })
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
-    }
-  }
+    };
+  };
   if (req.method === 'POST') {
     try {
       const payload = req.body as Partial<TalentProfile>
@@ -124,15 +129,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         payload.original_language ||
         detectLanguageSimple (
           [item.title, item.summary, item.bio || ''].join ('\n'))
-      const translations: TalentProfile['translations'] = {}
-
-        translations.summary = translations.summary || {}
-        translations.bio = translations.bio || {}
+      const translations: TalentProfile['translations'] = {};
+;
+        translations.summary = translations.summary || {};
+        translations.bio = translations.bio || {};
         // Check condition
 if (
           translations.title[lang] = await translate_text () {
   $2
-}
+};
             item.title,
             lang,
             original_lang)
@@ -140,7 +145,7 @@ if (
 if (
           translations.summary[lang] = await translate_text () {
   $2
-}
+};
             item.summary,
             lang,
             original_lang)
@@ -148,44 +153,46 @@ if (
 if (
           translations.bio[lang] = await translate_text () {
   $2
-}
+};
             item.bio,
             lang,
             original_lang)
         // Check condition
 if ( {) {
   $2
-}
-          translations.category = translations.category || {}
+};
+          translations.category = translations.category || {};
           translations.category[lang] = await translate_text (
             item.category,
             lang,
             original_lang);        }          translations.category[lang] = await translate_text (item.category, lang, original_lang)
-        }
-      }
+        };
+      };
       item.original_language = original_lang
       item.translations = translations
       // Check condition
 if ( {) {
   $2
 }
-        const { error } = await supabase_client.from ('talent_profiles').insert ({
+        ;
+  ;
+  const { error } = await supabase_client.from ('talent_profiles').insert ({
       // Auto-translate
       const originalLang = payload.originalLanguage || detectLanguageSimple([item.title, item.summary, item.bio || ''].join('\n'))
-      const translations: TalentProfile['translations'] = {}
+      const translations: TalentProfile['translations'] = {};
       for (const lang of SUPPORTED_LANGS) {
         if (!lang || lang === originalLang) continue
-        translations.title = translations.title || {}
-        translations.summary = translations.summary || {}
-        translations.bio = translations.bio || {}
+        translations.title = translations.title || {};
+        translations.summary = translations.summary || {};
+        translations.bio = translations.bio || {};
         if (item.title) translations.title[lang] = await translateText(item.title, lang, originalLang)
         if (item.summary) translations.summary[lang] = await translateText(item.summary, lang, originalLang)
         if (item.bio) translations.bio[lang] = await translateText(item.bio, lang, originalLang)
         if (item.category) {
-          translations.category = translations.category || {}
+          translations.category = translations.category || {};
           translations.category[lang] = await translateText(item.category, lang, originalLang)
-        }
-      }
+        };
+      };
       item.originalLanguage = originalLang
       item.translations = translations
       if (hasSupabase) {
@@ -231,7 +238,7 @@ if ( {) {
         reviewsCount: 0
         createdAt: new Date().toISOString()
         summary: payload.summary |''
-        skills: payload.skills |[]
+        skills: payload.skills |[];
         name: payload.name |'Unnamed'
         title: payload.title |'Professional'
         location: payload.location |'Remote'
@@ -243,9 +250,9 @@ if ( {) {
         detectLanguageSimple(
           [item.title, item.summary, item.bio |''].join('\n')
         )
-      const translations: TalentProfile['translations'] = {}
-        translations.summary = translations.summary |{}
-        translations.bio = translations.bio |{}
+      const translations: TalentProfile['translations'] = {};
+        translations.summary = translations.summary |{};
+        translations.bio = translations.bio |{};
         if (item.title)
           translations.title[lang] = await translateText(
             item.title
@@ -265,14 +272,14 @@ if ( {) {
             originalLang
           )
         if (item.category) {
-          translations.category = translations.category |{}
+          translations.category = translations.category |{};
           translations.category[lang] = await translateText(
             item.category
             lang
             originalLang
           );        }          translations.category[lang] = await translateText(item.category, lang, originalLang)
-        }
-      }
+        };
+      };
       item.originalLanguage = originalLang
       item.translations = translations
       if (hasSupabase) {
@@ -304,23 +311,25 @@ if ( {) {
         // Check condition
 if (throw error) {
   $2
-}
-        return res.status (201).json ({ slug: item.slug })
-      }
+};
+        ;
+  return res.status (201).json ({ slug: item.slug })
+      };
       // Fallback: return the slug as if saved
       return res.status (201).json ({ slug: item.slug })
     } catch (e: any) {
       return res.status (500).json ({ error: e.message })
-    }
-  }
-return res
+    };
+  };
+;
+  return res
     .set_header ('Allow', 'GET, POST')
     .status (405)
     .end ('Method Not Allowed');  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed')
-}
+};
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
-}
-}
+};
+};
           request_quote: item.requestQuote ?? null,
           availability: item.availability,
           profile_image_url: item.profileImageUrl ?? null,
@@ -336,12 +345,14 @@ return res
         } as any)
         if (error) throw error
         return res.status(201).json({ slug: item.slug })
-      }
+      };
       // Fallback: return the slug as if saved
       return res.status(201).json({ slug: item.slug })
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
-    }
-  }
+    };
+  };
+  ;
   return res.setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed')
-}
+};
+;

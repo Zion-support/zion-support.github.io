@@ -17,5 +17,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Ai, 2025, Sept 30, Operational, Trust Scorecards, V, 2
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'></p>Learn</p>, about, ai 2025, sept, 30 operational, trust, scorecards v2, and, how it, can, benefit your, enterpris, e.
     </d, i, v > )
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
- }</div></div></div></h1>
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+ };
+  </div></div></div></h1>

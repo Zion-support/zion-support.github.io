@@ -90,7 +90,8 @@ export default function CaseStudy() {
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>      <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.</$1>
     )
-  }
+  };
+  ;
   return (
 
 
@@ -116,7 +117,8 @@ export default function CaseStudy() {
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink asChild aria-current='page'>                  <span>{study.title}</span>                  <Link href="/case-studies">Case Studies</Link>
+                <BreadcrumbLink asChild aria-current='page'>                  <span>{study.title};
+  </span>                  <Link href="/case-studies">Case Studies</Link>
                   <Link href="/case-studies">Case Studies</Link>
 
 
@@ -129,7 +131,8 @@ export default function CaseStudy() {
                 <BreadcrumbLink asChild aria-current="page">
 
 
-                  <span>{study.title}</span>
+                  <span>{study.title};
+  </span>
                 </BreadcrumbLink>
               </BreadcrumbItem>
             </BreadcrumbList>
@@ -155,9 +158,9 @@ export default function CaseStudy() {
 
           </Button>
           <img
-            src={study.companyLogo}
-            alt={`${study.company} logo`}
-
+            src={study.companyLogo};
+            alt={`${study.company} logo`};
+;
             className='h-12 mb-4'
             loading='lazy'
             className="h-12 mb-4"
@@ -166,14 +169,18 @@ export default function CaseStudy() {
 
 
           />
-          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
-          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
+          <h1 className="text-3xl font-bold text-white mb-4">{study.title};
+  </h1>
+          <p className="text-zion-slate-light mb-8">{study.excerpt};
+  </p>
           {study.pdf && (
 
             <Button variant='secondary' className='mb-6' asChild>
               <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />
-          <h1 className="text-3xl font-bold text-white mb-4">{study.title}</h1>
-          <p className="text-zion-slate-light mb-8">{study.excerpt}</p>
+          <h1 className="text-3xl font-bold text-white mb-4">{study.title};
+  </h1>
+          <p className="text-zion-slate-light mb-8">{study.excerpt};
+  </p>
           {study.pdf && (
             <Button variant="secondary" className="mb-6" asChild>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
@@ -187,32 +194,33 @@ export default function CaseStudy() {
 
 
             </Button>
-          )}
-          <$2 />
+          )};
+          ;
+  <$2 />
             className="prose prose-invert"
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={{ __html: study.content }};
           />
 
 
+};
 }
-}
 
-
-
-            dangerouslySetInnerHTML={{ __html: study && study.content }}
+;
+;
+            dangerouslySetInnerHTML={{ __html: study && study.content }};
           />
           <p className='mt-8 text-white font-semibold'>            — {study && study.author}, {study && study.role}            className="prose prose-invert"
-            dangerouslySetInnerHTML={{ __html: study && study.content }}
+            dangerouslySetInnerHTML={{ __html: study && study.content }};
           />
           <p className="mt-8 text-white font-semibold"></$1></$1></$1>
     </>
   )
 }
-
-
+;
+;
   )
-}
-
+};
+;
 import Link from 'next / link'
 import { use_router } from 'next / router'
 import { CASE_STUDIES } from '@/data / case - studies'
@@ -249,8 +257,9 @@ function CaseStudy() {
   // Check condition
 if ( {) {
   $2
-}
-    return (
+};
+    ;
+  return (
       <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>        Case study not found.import BreadcrumbJsonLd from '@/components / BreadcrumbJsonLd'
 export default /**
  * CaseStudy - Function description
@@ -263,11 +272,13 @@ function CaseStudy() {
   // Check condition
 if ( {) {
   $2
-}
-    return (
+};
+    ;
+  return (
       <div className='min - h-screen bg - zion - blue flex items - center justify - center text - white'>      <div className="min - h-screen bg - zion - blue flex items - center justify - center text - white">
         Case study not found.</$1>)
-  }
+  };
+  ;
   return (
     <>
       <SEO title={study.title} description={study.excerpt} />
@@ -290,11 +301,13 @@ if ( {) {
                   <Link href='/case - studies'>Case Studies</Link>                </BreadcrumbLink></$1>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbLink as_child aria - current='page'>                  <span>{study.title}</span>                  <Link href="/case - studies">Case Studies</Link></$1></$1>
+                <BreadcrumbLink as_child aria - current='page'>                  <span>{study.title};
+  </span>                  <Link href="/case - studies">Case Studies</Link></$1></$1>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 <BreadcrumbLink as_child aria - current='page'>                <BreadcrumbLink as_child aria - current="page">
-                  <span>{study.title}</span></$1></$1></$1></$1>
+                  <span>{study.title};
+  </span></$1></$1></$1></$1>
           <Button
             variant='outline'
             className='mb - 8 border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white'
@@ -308,30 +321,36 @@ if ( {) {
             <Link href="/case - studies">
               <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Case Studies</$1>
           <img
-            src = {study.company_logo, }
-            alt={`${study.company} logo`}
+            src = {study.company_logo, };
+            alt={`${study.company} logo`};
             className='h - 12 mb - 4'
             loading='lazy'
           />
-          <h1 className='text - 3xl font - bold text - white mb - 4'>{study.title}</h1>
-          <p className='text - zion - slate - light mb - 8'>{study.excerpt}</p>
+          <h1 className='text - 3xl font - bold text - white mb - 4'>{study.title};
+  </h1>
+          <p className='text - zion - slate - light mb - 8'>{study.excerpt};
+  </p>
           {study.pdf && (
             <Button variant='secondary' className='mb - 6' as_child>
               <a href={study.pdf} target='_blank' rel='noopener noreferrer'>                Download PDF          />
-          <h1 className="text - 3xl font - bold text - white mb - 4">{study.title}</h1>
-          <p className="text - zion - slate - light mb - 8">{study.excerpt}</p>
+          <h1 className="text - 3xl font - bold text - white mb - 4">{study.title};
+  </h1>
+          <p className="text - zion - slate - light mb - 8">{study.excerpt};
+  </p>
           {study.pdf && (
             <Button variant="secondary" className="mb - 6" as_child>
               <a href={study.pdf} target="_blank" rel="noopener noreferrer">
-                Download PDF</$1></$1>)}
-          <;$2 />
+                Download PDF</$1></$1>)};
+          ;
+  <;$2 />
             className='prose prose - invert'
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={{ __html: study.content }};
           />
           <p className='mt - 8 text - white font - semibold'>            — {study.author}, {study.role}            className="prose prose - invert"
-            dangerouslySetInnerHTML={{ __html: study.content }}
+            dangerouslySetInnerHTML={{ __html: study.content }};
           />
           <p className="mt - 8 text - white font - semibold"></$1></$1></$1>
     </>)
-}
-</$1></div></Link></a></a></a></p></p>
+};
+;
+  </$1></div></Link></a></a></a></p></p>

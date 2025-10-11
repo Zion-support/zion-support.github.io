@@ -6,7 +6,7 @@ export interface InnovativeITInfrastructureService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface InnovativeITInfrastructureService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -31,14 +31,14 @@ export interface InnovativeITInfrastructureService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureService[] = [
   // Quantum-Secure Cloud Infrastructure
   {
@@ -299,22 +299,22 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
     customers: 28,
     rating: 4.9,
     reviews: 18
-  }
-]
+  };
+];
 export default innovativeITInfrastructureServices2025
         period: 'month',
         features: [,
           'Basic security',
           'Standard encryption',
           'Email support',
-          'Basic monitoring']}
+          'Basic monitoring']};
       },
       professional: unknown
         price: 799,
         period: 'month',
         features: [,
-export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX expression */}
-        ]}
+export const innovativeITInfrastructureServices2025 = [{/* TODO: Fix JSX expression */};
+        ]};
       },
       professiona,
   l: unknown,
@@ -438,7 +438,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Advanced CI/CD pipeline optimization'
       'Security vulnerability scanning'
       'Compliance automation and reporting'
-    ]
+    ];
     pricing: starter: unknown
         price: 149,
         period: 'month'
@@ -455,7 +455,7 @@ export const innovativeITInfrastructureServices2025 = [
           'Basic DevOps automation'
           'Standard CI/CD'
           'Email support',
-          'Limited environments']}
+          'Limited environments']};
       professional: price: 449,
         period: 'month'
         features: [
@@ -469,7 +469,7 @@ export const innovativeITInfrastructureServices2025 = [
           'AI-powered automation'
           'Advanced monitoring'
           'Priority support',
-          'Extended environments']}
+          'Extended environments']};
       enterprise: unknown
         price: 1199,
         period: 'month',
@@ -556,7 +556,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Real-time performance analytics'
       'Quantum-resistant encryption'
       'Autonomous infrastructure management'
-    ]
+    ];
     pricing: starter: unknown
         price: 299,
         period: 'month'
@@ -573,7 +573,7 @@ export const innovativeITInfrastructureServices2025 = [
           'Basic quantum cloud'
           'Standard security'
           'Email support',
-          'Limited resources']}
+          'Limited resources']};
       professional: price: 899,
         period: 'month'
         features: [
@@ -587,7 +587,7 @@ export const innovativeITInfrastructureServices2025 = [
           'Advanced quantum processing'
           'Enhanced security'
           'Priority support',
-          'Extended resources']}
+          'Extended resources']};
       enterprise: unknown
         price: 2299,
         period: 'month',
@@ -681,7 +681,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Security automation and threat response'
       'Compliance monitoring and reporting'
       'Cost optimization and resource management'
-    ]
+    ];
     pricing: starter: unknown
         price: 399,
         period: 'month'
@@ -698,7 +698,7 @@ export const innovativeITInfrastructureServices2025 = [
           'Basic automation'
           'Standard monitoring'
           'Email support',
-          'Limited data centers']}
+          'Limited data centers']};
       professional: price: 1199,
         period: 'month'
         features: [
@@ -712,7 +712,7 @@ export const innovativeITInfrastructureServices2025 = [
           'Advanced AI automation'
           'Full monitoring'
           'Priority support',
-          'Extended data centers']}
+          'Extended data centers']};
       enterprise: unknown
         price: 2999,
         period: 'month',
@@ -764,7 +764,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Predictive maintenance'
       'Capacity planning and optimization'
       'Cost reduction and management'
-    ]
+    ];
     integration,
   s: [,
       'Data center infrastructure'
@@ -774,15 +774,15 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools'],
     compliance: [,
       'Compliance tools'
-    ]
+    ];
     complianc,
   e: [,
       'SOC2',
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
-      'Industry-specific regulations']
-  }]
+      'Industry-specific regulations'];
+  }];
     i,
   d: 'quantum-edge-computing-orchestrator', nam,
   e: 'Quantum Edge Computing Orchestrator',
@@ -792,7 +792,7 @@ export const innovativeITInfrastructureServices2025 = [
   s: [
       'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols'
       'Scalable edge infrastructureEnergy-efficient quantum processing'
-    ]
+    ];
     pricing: starter: unknown
         price: 199,
         period: 'month',
@@ -800,13 +800,13 @@ export const innovativeITInfrastructureServices2025 = [
     professional: unknown
         price: 599,
         period: 'month',
-        features: ['Quantum processingAdvanced securityPriority supportExtended nodes']}
+        features: ['Quantum processingAdvanced securityPriority supportExtended nodes']};
       enterprise: unknown
         price: 1499,
         period: 'month',
-        features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']}
-    }
-    category: 'IT Infrastructure', tags: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration']
+        features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']};
+    };
+    category: 'IT Infrastructure', tags: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration'];
     website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator'
     contact: unknown,
       phone: '+1 302 464 0950',
@@ -827,7 +827,7 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Quantum processingAdvanced securityPriority supportExtended nodes']}
+  s: ['Quantum processingAdvanced securityPriority supportExtended nodes']};
       enterpris,
   e: unknown,
         pric,
@@ -835,8 +835,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']}
-    }
+  s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']};
+    };
     categor,
   y: 'IT Infrastructure', tag,
   s: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration'],
@@ -863,7 +863,7 @@ export const innovativeITInfrastructureServices2025 = [
     integration,
   s: ['IoT platformsCloud providers5G networksAI platformsSecurity systems'],
     complianc,
-  e: ['SOC2ISO 27001NISTGDPRIndustry-specific regulations']}
+  e: ['SOC2ISO 27001NISTGDPRIndustry-specific regulations']};
     i,
   d: 'zero-trust-quantum-security-platform', nam,
   e: 'Zero Trust Quantum Security Platform',
@@ -873,7 +873,7 @@ export const innovativeITInfrastructureServices2025 = [
   s: [
       'Quantum-resistant encryption algorithmsAI-powered threat detection with 99.9% accuracyZero-trust network architectureAutonomous security response and remediationReal-time threat intelligenceAdvanced behavioral analyticsMulti-factor quantum authenticationSecure quantum key distribution'
       'Compliance automation and reporting24/7 autonomous security monitoring'
-    ]
+    ];
     pricing: starter: unknown
         price: 299,
         period: 'month',
@@ -881,13 +881,13 @@ export const innovativeITInfrastructureServices2025 = [
     professional: unknown
         price: 799,
         period: 'month',
-        features: ['Quantum securityAdvanced AI detectionPriority supportFull monitoring']}
+        features: ['Quantum securityAdvanced AI detectionPriority supportFull monitoring']};
       enterprise: unknown
         price: 1999,
         period: 'month',
-        features: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']}
-    }
-    category: 'Cybersecurity', tags: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security']
+        features: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']};
+    };
+    category: 'Cybersecurity', tags: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security'];
     website: 'https://ziontechgroup.com/zero-trust-quantum-security-platform'
     contact: unknown,
       phone: '+1 302 464 0950',
@@ -908,7 +908,7 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Quantum securityAdvanced AI detectionPriority supportFull monitoring']}
+  s: ['Quantum securityAdvanced AI detectionPriority supportFull monitoring']};
       enterpris,
   e: unknown,
         pric,
@@ -916,8 +916,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']}
-    }
+  s: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']};
+    };
     categor,
   y: 'Cybersecurity', tag,
   s: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security'],
@@ -944,7 +944,7 @@ export const innovativeITInfrastructureServices2025 = [
     integration,
   s: ['SIEM systemsFirewall platformsIdentity providersCloud securityNetwork monitoring'],
     complianc,
-  e: ['SOC2ISO 27001NISTFedRAMPHIPAAPCI DSS']}
+  e: ['SOC2ISO 27001NISTFedRAMPHIPAAPCI DSS']};
     i,
   d: 'autonomous-devops-intelligence-platform', nam,
   e: 'Autonomous DevOps Intelligence Platform',
@@ -954,7 +954,7 @@ export const innovativeITInfrastructureServices2025 = [
   s: [
       'Autonomous code review and quality assuranceAI-powered testing and bug detectionIntelligent deployment orchestrationReal-time performance monitoring and optimizationAutomated incident response and resolutionPredictive maintenance and scalingMulti-environment managementAdvanced CI/CD pipeline optimization'
       'Security vulnerability scanningCompliance automation and reporting'
-    ]
+    ];
     pricing: starter: unknown
         price: 149,
         period: 'month',
@@ -962,13 +962,13 @@ export const innovativeITInfrastructureServices2025 = [
     professional: unknown
         price: 449,
         period: 'month',
-        features: ['AI-powered automationAdvanced monitoringPriority supportExtended environments']}
+        features: ['AI-powered automationAdvanced monitoringPriority supportExtended environments']};
       enterprise: unknown
         price: 1199,
         period: 'month',
-        features: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']}
-    }
-    category: 'DevOps & Automation', tags: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response']
+        features: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']};
+    };
+    category: 'DevOps & Automation', tags: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response'];
     website: 'https://ziontechgroup.com/autonomous-devops-intelligence-platform'
     contact: unknown,
       phone: '+1 302 464 0950',
@@ -989,7 +989,7 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['AI-powered automationAdvanced monitoringPriority supportExtended environments']}
+  s: ['AI-powered automationAdvanced monitoringPriority supportExtended environments']};
       enterpris,
   e: unknown,
         pric,
@@ -997,8 +997,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']}
-    }
+  s: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']};
+    };
     categor,
   y: 'DevOps & Automation', tag,
   s: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response'],
@@ -1025,13 +1025,13 @@ export const innovativeITInfrastructureServices2025 = [
     integration,
   s: ['Git platformsCloud providersMonitoring toolsSecurity platformsCommunication tools'],
     complianc,
-  e: ['SOC2ISO 27001GDPRIndustry-specific regulations']}
+  e: ['SOC2ISO 27001GDPRIndustry-specific regulations']};
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform'
     description: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.'
     features: [
       'Quantum-enhanced cloud processingHybrid quantum-classical computingIntelligent resource allocationQuantum-secure data transmissionAdvanced load balancing and scalingMulti-cloud quantum orchestrationAI-powered infrastructure optimizationReal-time performance analytics'
       'Quantum-resistant encryptionAutonomous infrastructure management'
-    ]
+    ];
     pricing: starter: unknown
         price: 299,
         period: 'month',
@@ -1039,13 +1039,13 @@ export const innovativeITInfrastructureServices2025 = [
     professional: unknown
         price: 899,
         period: 'month',
-        features: ['Advanced quantum processingEnhanced securityPriority supportExtended resources']}
+        features: ['Advanced quantum processingEnhanced securityPriority supportExtended resources']};
       enterprise: unknown
         price: 2299,
         period: 'month',
-        features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']}
-    }
-    category: 'Cloud Computing', tags: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security']
+        features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']};
+    };
+    category: 'Cloud Computing', tags: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security'];
     website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform'
     contact: unknown,
       phone: '+1 302 464 0950',
@@ -1076,7 +1076,7 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Advanced quantum processingEnhanced securityPriority supportExtended resources']}
+  s: ['Advanced quantum processingEnhanced securityPriority supportExtended resources']};
       enterpris,
   e: unknown,
         pric,
@@ -1084,8 +1084,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']}
-    }
+  s: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']};
+    };
     categor,
   y: 'Cloud Computing', tag,
   s: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security'],
@@ -1112,7 +1112,7 @@ export const innovativeITInfrastructureServices2025 = [
     integration,
   s: ['Major cloud providersQuantum computersAI platformsData analytics toolsSecurity platforms'],
     complianc,
-  e: ['SOC2ISO 27001FedRAMPGDPRIndustry-specific regulations']}
+  e: ['SOC2ISO 27001FedRAMPGDPRIndustry-specific regulations']};
     i,
   d: 'ai-powered-data-center-automation', nam,
   e: 'AI-Powered Data Center Automation',
@@ -1122,7 +1122,7 @@ export const innovativeITInfrastructureServices2025 = [
   s: [
       'Autonomous data center operationsAI-powered energy optimizationPredictive maintenance and failure preventionIntelligent workload distributionReal-time performance monitoringAutomated capacity planningAdvanced cooling and power managementSecurity automation and threat response'
       'Compliance monitoring and reportingCost optimization and resource management'
-    ]
+    ];
     pricing: starter: unknown
         price: 399,
         period: 'month',
@@ -1130,13 +1130,13 @@ export const innovativeITInfrastructureServices2025 = [
     professional: unknown
         price: 1199,
         period: 'month',
-        features: ['Advanced AI automationFull monitoringPriority supportExtended data centers']}
+        features: ['Advanced AI automationFull monitoringPriority supportExtended data centers']};
       enterprise: unknown
         price: 2999,
         period: 'month',
-        features: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']}
-    }
-    category: 'Data Center Management', tags: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management']
+        features: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']};
+    };
+    category: 'Data Center Management', tags: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management'];
     website: 'https://ziontechgroup.com/ai-powered-data-center-automation'
     contact: unknown,
       phone: '+1 302 464 0950',
@@ -1157,7 +1157,7 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Advanced AI automationFull monitoringPriority supportExtended data centers']}
+  s: ['Advanced AI automationFull monitoringPriority supportExtended data centers']};
       enterpris,
   e: unknown,
         pric,
@@ -1165,8 +1165,8 @@ export const innovativeITInfrastructureServices2025 = [
         perio,
   d: 'month',
         feature,
-  s: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']}
-    }
+  s: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']};
+    };
     categor,
   y: 'Data Center Management', tag,
   s: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management'],
@@ -1186,8 +1186,8 @@ export const innovativeITInfrastructureServices2025 = [
       'Uptime Institute'
       'Energy Star'
       'Industry-specific regulations'
-    ]
-  }]
+    ];
+  }];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     market_size: '$31.2B',
     target_audience: unknown,

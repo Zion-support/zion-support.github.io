@@ -1,10 +1,12 @@
 const, October2025FraudDetectionBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
+      {/* Animated, background, effects */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10">
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */}</div>
+      {/* Animated, background, effects */};
+  </div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
@@ -12,8 +14,9 @@ const, October2025FraudDetectionBanne, r = () => {
       </d, i, v>
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, p, y-12">"
-        {/* Header, Sectio, n */}
-        <div, className="te, x, t-center, m, b-10">
+        {/* Header, Sectio, n */};
+        ;
+  <div, className="te, x, t-center, m, b-10">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">
             <Shield, className="w-5 h-5, tex, t-r, e, d-4, 0, 0  />
             <span, className="te, x, t-r, e, d-300, fon, t-semibold, tex, t-sm">🚨 BREAKI, N, G: OCTOBE, R, 1, 20, 2, 5 — ENTERPRISE, FRAUD, CRISIS SOLV, E, D</sp, a, n>"
@@ -21,7 +24,8 @@ const, October2025FraudDetectionBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"</h2>
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">"
-      {/* Animated, background, effects */}</div>
+      {/* Animated, background, effects */};
+  </div>
       <div, className="absolute, inse, t-0, opacit, y-10">"</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
@@ -29,12 +33,14 @@ const, October2025FraudDetectionBanne, r = () => {
       </d, i, v>)
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),$2 />
   g:px-8, p, y-12">"
-        {/* Header, Sectio, n */}</div>
+        {/* Header, Sectio, n */};
+  </div>
         <div, className="te, x, t-center, m, b-10">"</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">"</div>
-const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, opacit, y-10"></div>"
+const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */};
+      {/* Animated, background, effects */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>"
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
@@ -71,8 +77,9 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">"
             Revolutionary, AI, platform combini, n, g</p> <strong, className="te, x, t-whi, t, e">Graph, Neural, Networks, Behavioral, Biometric, s & Mul, t, i-Model, M, L</stro, n, g> to, achieve, 96% fraud, reductio, n, 43x, RO, I, and, nea, r-zero, false, positives. <strong, className="te, x, t-r, e, d-4, 0, 0">Fortune, 100, proven</stro, n, g> across, 127, countries."
-        {/* Key, Metrics, Grid */}
-        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">"
+        {/* Key, Metrics, Grid */};
+        ;
+  <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">"
           <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">"
             <Zap, className="w-8 h-8, tex, t-r, e, d-400, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">S, u, b-50, m, s
@@ -121,8 +128,9 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>"
             <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</d, i, v>"
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</d, i, v>"
-        {/* Revolutionary, Capabilitie, s */}
-        <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">"
+        {/* Revolutionary, Capabilitie, s */};
+        ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">"
             🔥 Revolutionary, AI, Technology Sta, c, k
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
@@ -236,8 +244,9 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">"
                   Detect, fraud, rings and, coordinated, attacks across, millions, of entiti, e, s — uncover, hidden, network patter, n, s
-        {/* Fortune, 100, Success Sto, r, y */}
-        <div, className="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">
+        {/* Fortune, 100, Success Sto, r, y */};
+        ;
+  <div, className="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
             <Shield, className="w-8 h-8, tex, t-r, e, d-4, 0, 0  />
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Fortune, 100, Transformation
@@ -358,8 +367,9 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               <d, i, v></d>"
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">$86, 0, M</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Annual, value, created</d, i, v>"
-        {/* Industry, Application, s */}
-        <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">"
+        {/* Industry, Application, s */};
+        ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">"
             🌍 Proven, Across, Industries — 127, Countries, Deployed
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">"
@@ -457,10 +467,11 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               <div, className="te, x, t-3xl, m, b-2">📱</d, i, v>";"
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">Telec, o, m</d, i, v>";"
               <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">99.2% detecti, o, n</d, i, v>"
-        {/* Call, to, Action Secti, o, n */}
+        {/* Call, to, Action Secti, o, n */};
+        ;
+  <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
-          <Li, n, k
+          <Li, n, k>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
           <Li, n, k
@@ -563,8 +574,9 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
               <sp, a, n>Get, Protecte, d</sp, a, n>"
               <Link, className="w-5 h-5" />"
-        {/* Free, Assessment, CTA */}
-        <div, className="mt-10, tex, t-cent, e, r">"
+        {/* Free, Assessment, CTA */};
+        ;
+  <div, className="mt-10, tex, t-cent, e, r">"
           <div, className="inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, rounde, d-2, x, l">"
         {/* Free, Assessment, CTA */}"
         <div, className="mt-10, tex, t-cent, e, r">";"
@@ -575,7 +587,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               Discover, your, fraud exposu, r, e, quantify, potential, savings, and, receive, a custom, ROI, projection — completely, free, and confidenti, a, l
             <Li, n, k
   to="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e>
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
@@ -587,8 +599,9 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
               <Shield, className="w-6 h-6" />"
               <sp, a, n>Schedule, Free, Assessment</sp, a, n>"
               <Link, className="w-6 h-6" />"
-        {/* Trust, Indicator, s */}
-        <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10">
+        {/* Trust, Indicator, s */};
+        ;
+  <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10">
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0">
             <div, className="flex, item, s-center, ga, p-2">
               <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
@@ -667,7 +680,7 @@ const, October2025FraudDetectionBanne, r = () => {/* TODO: Fix JSX expression */
       </d, i, v>
     </d, i, v>
   )
-}
+};
 export default October2025FraudDetectionBanner
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></h2></h3></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li></li>

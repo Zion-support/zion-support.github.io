@@ -11,16 +11,16 @@ export interface Service {
     | 'Cloud & DevOps'
     | 'Data & Analytics'
   description: string
-  features: string[]
+  features: string[];
   pricing: {
     starter: string
     professional: string
     enterprise: string
     custom?: string
-  }
-  technologyStack: string[]
-  benefits: string[]
-  useCases: string[]
+  };
+  technologyStack: string[];
+  benefits: string[];
+  useCases: string[];
   status: 'active' | 'beta' | 'coming-soon'
   priority: number
   demoUrl?: string
@@ -29,8 +29,8 @@ export interface Service {
     email: string
     phone: string
     address: string
-  }
-}
+  };
+};
 export const services: Service[] = [
   // AI Services
   {
@@ -77,7 +77,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-content-generator',
@@ -121,7 +121,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-data-analytics',
@@ -165,7 +165,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // IT Services
   {
@@ -210,7 +210,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'cybersecurity-audit',
@@ -254,7 +254,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Micro SAAS
   {
@@ -299,7 +299,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'project-management',
@@ -343,7 +343,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Blockchain Services
   {
@@ -388,7 +388,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // IoT & Edge Computing
   {
@@ -433,7 +433,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Cloud & DevOps
   {
@@ -478,7 +478,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Data & Analytics
   {
@@ -523,18 +523,18 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-]
+    };
+  };
+];
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter((service) => service.category === category)
-}
+};
 export const getServiceById = (id: string) => {
   return services.find((service) => service.id === id)
-}
+};
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)))
-}
+};
 export interface Service {
   id: string
   name: string
@@ -548,16 +548,16 @@ export interface Service {
     | 'Cloud & DevOps'
     | 'Data & Analytics'
   description: string
-  features: string[]
+  features: string[];
   pricing: {
     starter: string
     professional: string
     enterprise: string
     custom?: string
-  }
-  technologyStack: string[]
-  benefits: string[]
-  useCases: string[]
+  };
+  technologyStack: string[];
+  benefits: string[];
+  useCases: string[];
   status: 'active' | 'beta' | 'coming-soon'
   priority: number
   demoUrl?: string
@@ -566,8 +566,8 @@ export interface Service {
     email: string
     phone: string
     address: string
-  }
-}
+  };
+};
 export const services: Service[] = [
   // AI Services
   {
@@ -614,7 +614,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-content-generator',
@@ -658,7 +658,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-data-analytics',
@@ -702,7 +702,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // IT Services
   {
@@ -747,7 +747,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'cybersecurity-audit',
@@ -791,7 +791,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Micro SAAS
   {
@@ -836,7 +836,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'project-management',
@@ -880,7 +880,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Blockchain Services
   {
@@ -925,7 +925,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // IoT & Edge Computing
   {
@@ -970,7 +970,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Cloud & DevOps
   {
@@ -1015,7 +1015,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Data & Analytics
   {
@@ -1060,34 +1060,34 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-]
+    };
+  };
+];
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter((service) => service.category === category)
-}
+};
 export const getServiceById = (id: string) => {
   return services.find((service) => service.id === id)
-}
+};
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)))
-}
+};
 export interface Service {id: string
 export interface Service {
   id: string
   name: string
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics'
   description: string
-  features: string[]
+  features: string[];
   pricing: {
     starter: string
     professional: string
     enterprise: string
     custom?: string
-  }
-  technologyStack: string[]
-  benefits: string[]
-  useCases: string[]
+  };
+  technologyStack: string[];
+  benefits: string[];
+  useCases: string[];
   status: 'active' | 'beta' | 'coming-soon'
   priority: number
   demoUrl?: string
@@ -1096,8 +1096,8 @@ export interface Service {
     email: string
     phone: string
     address: string
-  }
-}
+  };
+};
 export const services: Service[] = [
   // AI Services
   {
@@ -1143,7 +1143,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-content-generator',
@@ -1186,7 +1186,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-data-analytics',
@@ -1229,7 +1229,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-sales-copilot',
@@ -1267,7 +1267,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'cloud-cost-optimizer',
@@ -1304,7 +1304,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'cyber-threat-intel',
@@ -1341,7 +1341,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // IT Services
   {
@@ -1385,7 +1385,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'cybersecurity-audit',
@@ -1428,7 +1428,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Micro SAAS
   {
@@ -1472,7 +1472,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'project-management',
@@ -1515,7 +1515,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Blockchain Services
   {
@@ -1559,7 +1559,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // IoT & Edge Computing
   {
@@ -1603,7 +1603,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Cloud & DevOps
   {
@@ -1647,7 +1647,7 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   // Data & Analytics
   {
@@ -1691,15 +1691,15 @@ export const services: Service[] = [
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-]
+    };
+  };
+];
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter(service => service.category === category)
-}
+};
 export const getServiceById = (id: string) => {
   return services.find(service => service.id === id)
-}
+};
 export const getCategories = () => {
   return Array.from(new Set(services.map(service => service.category)))
-}
+};

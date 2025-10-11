@@ -33,9 +33,10 @@ export const useRecordActivity = () => {
     } catch (err: any) {
       console.error("Error recording activity:", err)
       return null
-    }
-  }
+    };
+  };
+  ;
   return {
     recordMilestoneActivity
-  }
-}
+  };
+};

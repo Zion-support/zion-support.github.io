@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async'
 interface SEOData {
  title: string
  description: string
- keywords: string[]
+ keywords: string[];
  canonicalUrl: string
  ogTitle?: string
  ogDescription?: string
@@ -19,12 +19,14 @@ interface SEOData {
  publishedTime?: string
  modifiedTime?: string
  section?: string
- tags?: string[]
-interface SEOData {/* TODO: Fix JSX expression */}
+ tags?: string[];
+interface SEOData {/* TODO: Fix JSX expression */};
+};
+interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */};
 }
-interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-}
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
+;
+  ;
+  const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  seoData
  enableStructuredData = true,
  enableOpenGraph = true,
@@ -57,10 +59,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  'https: //github.com/Zion-Holdings',
 const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+}) => {/* TODO: Fix JSX expression */};
  },
  contactPoin,
-  t: {/* TODO: Fix JSX expression */}
+  t: {/* TODO: Fix JSX expression */};
  },
  sameA,
   s: [
@@ -70,8 +72,9 @@ const,
   s://twitter.com/ziontechgroup',
  'http,
   s://github.com/Zion-Holdings'],
- ...seoData.structuredData}
- return baseStructuredData
+ ...seoData.structuredData};
+ ;
+  return baseStructuredData
  }, [seoData, enableStructuredData])
  const generateBreadcrumbStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null
@@ -89,10 +92,10 @@ const,
  position: 2
  name: seoData.title
  item: seoData.canonicalUrl
- const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+ const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */};
  },
- {/* TODO: Fix JSX expression */}
- }]}
+ {/* TODO: Fix JSX expression */};
+ }]};
  }, [seoData, enableSchemaMarkup])
  const generateFAQStructuredData = useCallback(() => {
  if (!enableSchemaMarkup) return null
@@ -118,13 +121,14 @@ const,
  acceptedAnswer: {,
  '@type': 'Answer',
  text: 'We specialize in cutting-edge AI micro SaaS services, cloud automation, and provide comprehensive digital transformation solutions with a focus on enterprise-grade security and performance.',
- const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+ const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */};
  }},
- {/* TODO: Fix JSX expression */}
+ {/* TODO: Fix JSX expression */};
  }},
- {/* TODO: Fix JSX expression */}
- }}]}
- return faqData
+ {/* TODO: Fix JSX expression */};
+ }}]};
+ ;
+  return faqData
  }, [enableSchemaMarkup])
  const _structuredData = generateStructuredData()
  const _breadcrumbData = generateBreadcrumbStructuredData()
@@ -138,22 +142,22 @@ const,
  metaDescription = document.createElement('meta')
  metaDescription.setAttribute('name', 'description')
  document.head.appendChild(metaDescription)
- useEffect(() => {/* TODO: Fix JSX expression */}
- }
+ useEffect(() => {/* TODO: Fix JSX expression */};
+ };
  metaDescription.setAttribute('content', seoData.description)
  // Update canonical URL
  let _canonicalLink = document.querySelector('link[rel="canonical"]')
- if (!canonicalLink) {/* TODO: Fix JSX expression */}
- }
+ if (!canonicalLink) {/* TODO: Fix JSX expression */};
+ };
  canonicalLink.setAttribute('href', seoData.canonicalUrl)
- }
+ };
  }, [seoData])
  // const _addMetaTag = (name: string, content: string, attribute: string = 'name') => {,
  // const metaTag = document.createElement('meta')
  // metaTag.setAttribute(attribute, name)
  // metaTag.content = content
  // document.head.appendChild(metaTag)
- // }
+ // };
  // const _updateCanonicalUrl = (url: string) => {
  // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
  // ,
@@ -164,7 +168,7 @@ const,
  // canonicalLink.rel = 'canonical'
  // canonicalLink.href = url
  // document.head.appendChild(canonicalLink)
- // }
+ // };
  // };origin/
  // const _addStructuredData = (data: Record<string, unknown>) => {
  // // Remove existing structured data
@@ -173,22 +177,22 @@ const,
  // const _addMetaTag = (nam,
   e: string, conten,
   t: string, attribut)
-  e: string = 'name') => {/* TODO: Fix JSX expression */}
- // }
+  e: string = 'name') => {/* TODO: Fix JSX expression */};
+ // };
  // const _updateCanonicalUrl = (ur)
-  l: string) => {/* TODO: Fix JSX expression */}
- // } else {/* TODO: Fix JSX expression */}
- // }
+  l: string) => {/* TODO: Fix JSX expression */};
+ // } else {/* TODO: Fix JSX expression */};
+ // };
  // };origin/
  // const _addStructuredData = (dat)
-  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
- // // }
+  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */};
+ // // };
  // 
  // const script = document.createElement('script')
  // script.type = 'application/ld+json'
  // script.textContent = JSON.stringify(data)
  // document.head.appendChild(script)
- // }
+ // };
  // Add new structured data
  const _script = document.createElement('script')
  script.type = 'application/ld+json'
@@ -197,18 +201,22 @@ const,
  document.head.appendChild(script)
  structuredDataRef.current = script
  }
- const _trackPageView = (config: SEOData) => {,
+ ;
+  ;
+  const _trackPageView = (config: SEOData) => {,
  if (typeof window !== 'undefined' && 'gtag' in window) {,
  (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {)
  page_title: config.title),
  page_location: config.canonicalUrl),
  const _trackPageView = (confi)
-  g: SEOData) => {/* TODO: Fix JSX expression */}
+  g: SEOData) => {/* TODO: Fix JSX expression */};
   g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
  })
+ };
  }
- }
- const _trackPerformanceMetrics = () => {
+ ;
+  ;
+  const _trackPerformanceMetrics = () => {
  if (typeof window !== 'undefined' && 'performance' in window) {
  window.addEventListener('load', () => {
  const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -217,28 +225,29 @@ const,
  event_category: 'Performance'),
  event_label: 'Page Load'),
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
- const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
+ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */};
   s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */})
  })
- }
+ };
  })
- }
+ };
  };origin/
  return(<Helmet>)
  {/* Basic Meta Tags */})
- <title>{seoData.title}</title>)
+ <title>{seoData.title};
+  </title>)
  <meta name="description" content={seoData.description} />)
  <meta name="keywords" content={seoData.keywords.join(', ')} />
  <link rel="canonical" href={seoData.canonicalUrl} />
- {/* Open Graph Tags */}
+ {/* Open Graph Tags */};
  {enableOpenGraph && (
  <React.Fragment>
  <meta property="og:title" content={seoData.title} />
  <meta property="og: image:height" content="630" />,
  <meta property="og:site_name" content="Zion Tech Group" />,
  <meta property="og:locale" content="en_US" />,
- </React.Fragment>)}
- {/* Twitter Card Tags */}
+ </React.Fragment>)};
+ {/* Twitter Card Tags */};
  {enableTwitterCards && (
  <React.Fragment>
  <meta name="twitter: card" content="summary_large_image" />,
@@ -247,9 +256,10 @@ const,
  <meta name="twitter:image" content={seoData.ogImage} />
  <meta name="twitter: site" content="@ziontechgroup" />,
  <meta name="twitter:creator" content="@ziontechgroup" />,
- </React.Fragment>)}
- {/* Additional SEO Meta Tags */}
- <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
+ </React.Fragment>)};
+ {/* Additional SEO Meta Tags */};
+ ;
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
  <meta name="googlebot" content="index, follow" />
  <meta name="bingbot" content="index, follow" />
  <meta name="author" content="Zion Tech Group" />
@@ -261,12 +271,14 @@ const,
  <meta name="rating" content="general" />
  <meta name="theme-color" content="#4F46E5" />
  return (<Helmet>
- {/* Basic Meta Tags */}
- <title>{seoData.title}</title>"
+ {/* Basic Meta Tags */};
+ ;
+  <title>{seoData.title};
+  </title>"
  <meta name="description" content={seoData.description} /></meta>")
  <meta name="keywords" content={seoData.keywords.join(', ')} /></meta>"
  <link rel="canonical" href={seoData.canonicalUrl} />
- {/* Open Graph Tags */}
+ {/* Open Graph Tags */};
  {/* TODO: Fix JSX expression */}"
   g:title" content={seoData.title} /></meta>"
  <meta property="o,
@@ -276,8 +288,8 @@ const,
   g:site_name" content="Zion Tech Group" /></meta>"
  <meta property="o,"
   g:locale" content="en_US" />
- )}
- {/* Twitter Card Tags */}
+ )};
+ {/* Twitter Card Tags */};
  {/* TODO: Fix JSX expression */}"
   r:title" content={seoData.title} /></meta>"
  <meta name="twitte,"
@@ -288,7 +300,7 @@ const,
   r:site" content="@ziontechgroup" /></meta>"
  <meta name="twitte,"
   r:creator" content="@ziontechgroup" />
- )}
+ )};
  {/* Additional SEO Meta Tags */}"
  <meta name="robots" content="index, follow, max-snippe,
   t:-1, max-image-previe,
@@ -304,24 +316,26 @@ const,
  <meta name="distribution" content="global" /></meta>"
  <meta name="rating" content="general" /></meta>"
  <meta name="theme-color" content="#4F46E5" />
- {/* Structured Data */}
- {/* TODO: Fix JSX expression */}
- {JSON.stringify(structuredData)}
- )}
- {/* TODO: Fix JSX expression */}
- {JSON.stringify(breadcrumbData)}
- )}
- {/* TODO: Fix JSX expression */}
- {JSON.stringify(faqData)}
- )}
- {/* Preconnect to external domains for performance */}
- <link rel="preconnect" href="https: //fonts.googleapis.com" />,
+ {/* Structured Data */};
+ {/* TODO: Fix JSX expression */};
+ {JSON.stringify(structuredData)};
+ )};
+ {/* TODO: Fix JSX expression */};
+ {JSON.stringify(breadcrumbData)};
+ )};
+ {/* TODO: Fix JSX expression */};
+ {JSON.stringify(faqData)};
+ )};
+ {/* Preconnect to external domains for performance */};
+ ;
+  <link rel="preconnect" href="https: //fonts.googleapis.com" />,
  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
  <link rel="preconnect" href="https://www.google-analytics.com" />,
  <link rel="preconnect" href="https://www.googletagmanager.com" />,
 ,
- {/* DNS Prefetch for better performance */}
- <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+ {/* DNS Prefetch for better performance */};
+ ;
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
  <link rel="dns-prefetch" href="//www.google-analytics.com" />
  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
  {/* Preconnect to external domains for performance */}"
@@ -338,5 +352,5 @@ const,
  <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
  )
-}
+};
 export default AdvancedSEOOptimizer;"</li></li></li></li></li></li></li></li></li></li></li></li>

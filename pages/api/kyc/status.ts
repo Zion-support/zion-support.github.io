@@ -21,15 +21,15 @@ function load (): Record < string, KycProfile> {
     const raw = fs.readFileSync (FILE, "utf8")
     return JSON.parse (raw)
   } catch {
-    return {}
-  }
-}
+    return {};
+  };
+};
   })
-}
+};
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(profile.role),
     optionalDocuments: getOptionalDocuments(profile.role)})
-}
+};
 export default /**
  * handler - Function description
  */
@@ -38,19 +38,24 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
-  const { user_id } = req.query as { user_id?: string }
+  ;
+  ;
+  const { user_id } = req.query as { user_id?: string };
   if (return res.status (400).json ({ error: "Missing user_id" })) {
   $2
 }
+  ;
+  ;
   const db = load ()
-  const profile = db[user_id]
+  const profile = db[user_id];
   if (return res.status (404).json ({ error: "Profile not found" })) {
   $2
-}
+};
   res.status (200).json ({
     ok: true,
     profile,
     required_documents: getRequiredDocuments (profile.role),
     optional_documents: getOptionalDocuments (profile.role),
   })
-}
+};
+;

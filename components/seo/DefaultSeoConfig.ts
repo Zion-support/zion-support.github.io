@@ -14,7 +14,7 @@ const config: DefaultSeoProps = {
     cardType: 'summary_large_image'},
   additionalMetaTags: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'theme-color', content: '#111827' }]}
+    { name: 'theme-color', content: '#111827' }]};
     siteName: 'Zion Tech Solutions',
   },
   twitter: {
@@ -26,5 +26,5 @@ const config: DefaultSeoProps = {
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'theme-color', content: '#111827' },
   ],
-}
+};
 export default config

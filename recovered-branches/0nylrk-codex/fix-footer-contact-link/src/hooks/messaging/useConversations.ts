@@ -50,7 +50,7 @@ export function useConversations(
           context_type: conv.context_type,
           context_id: conv.context_id,
           context_data: conv.context_data
-        }
+        };
       })
       setConversations(formattedConversations)
       // Calculate total unread count
@@ -63,8 +63,8 @@ export function useConversations(
       console.error('Error fetching conversations:', error)
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
   /**
    * Create a new conversation and send initial message
    */
@@ -98,7 +98,7 @@ export function useConversations(
               updated_at: new Date().toISOString()
             })
             .eq('id', conversationId)
-        }
+        };
       } else {
         // Get recipient information
         const { data: recipientData, error: recipientError } = await supabase
@@ -131,7 +131,7 @@ export function useConversations(
           .single()
         if (createError) throw createError
         conversationId = newConversation.id
-      }
+      };
       // Send the initial message
       await supabase
         .from('messages')
@@ -154,11 +154,13 @@ export function useConversations(
         description: "Please try again later",
         variant: "destructive"
       })
-    }
-  }
+    };
+  };
+  ;
   return {
     fetchConversations,
-    createConversation}
+    createConversation};
     createConversation,
-  }
-}
+  };
+};
+;

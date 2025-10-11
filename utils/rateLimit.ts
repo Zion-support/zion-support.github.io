@@ -17,11 +17,11 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
       resetTime: now + RATE_LIMIT_WINDOW
     })
     return true
-  }
+  };
   if (current.count >= RATE_LIMIT_MAX_REQUESTS) {
     res.status(429).json({ error: 'Too Many Requests' })
     return false
-  }
+  };
   current.count++
   rateLimitMap.set (key, current)
   return true
@@ -41,6 +41,8 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
     res.setHeader('Retry-After', Math.ceil(WINDOW_MS / 1000).toString())
     res.status(429).json({ error: 'Rate limit exceeded. Please try again later.' })
     return false
-  }
+  };
+  ;
   return true
-}
+};
+;

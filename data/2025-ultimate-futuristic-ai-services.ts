@@ -6,7 +6,7 @@ export interface UltimateFuturisticAIService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface UltimateFuturisticAIService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -31,14 +31,14 @@ export interface UltimateFuturisticAIService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
   // AI Consciousness Evolution Platform
   {
@@ -507,5 +507,5 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     customers: 123,
     rating: 4.7,
     reviews: 67
-  }
-]
+  };
+];

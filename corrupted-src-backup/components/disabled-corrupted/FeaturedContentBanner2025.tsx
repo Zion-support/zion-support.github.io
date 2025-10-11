@@ -1,9 +1,9 @@
-export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expression */}
+export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
-    }
+    {/* TODO: Fix JSX expression */};
+    };
   ]; return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-9, 0, 0/80, t, o-bl, u, e-9, 0, 0/80, backdro, p-bl, u, r-lg">
       <div, className="container, m, x-auto, p, x-6">
         <div, className="te, x, t-center, m, b-16">
@@ -38,8 +38,9 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
             <a, ke, y = { in, d, e, x  }, hr, e, f={ conte, n, t.hr, e, f } className="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20">
               <div, className="flex, item, s-start, ga, p-4, m, b-6">
                 <div, className="te, x, t-4xl, fle, x-shri, n, k-0, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">
-                  {conte, n, t.i, m, a, g, e}
-                <div, classNam, e = "fl, e, x-1">
+                  {conte, n, t.i, m, a, g, e};
+                ;
+  <div, classNam, e = "fl, e, x-1">
                   <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-3">
                     <span, className="te, x, t-bl, u, e-400, fon, t-semibold, tex, t-xs, trackin, g-wider, uppercas, e">
 "
@@ -48,23 +49,29 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
             <a, ke, y = { in, d, e, x  }, hr, e, f={ conte, n, t.hr, e, f } className="group, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"></a>"
               <div, className="flex, item, s-start, ga, p-4, m, b-6"></div>"
                 <div, className="te, x, t-4xl, fle, x-shri, n, k-0, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">
-                  {conte, n, t.i, m, a, g, e}
-                </div>"
+                  {conte, n, t.i, m, a, g, e};
+                ;
+  </div>"
                 <div, classNam, e = "fl, e, x-1"></div>"
                   <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-3"></div>"
                     <span, className="te, x, t-bl, u, e-400, fon, t-semibold, tex, t-xs, trackin, g-wider, uppercas, e">
-                      {conte, n, t.category}
-                  </div>"
+                      {conte, n, t.category};
+                  ;
+  </div>"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-3, 0, 0">
-                    {conte, n, t.t, i, t, l, e}
-                  </h3>"
+                    {conte, n, t.t, i, t, l, e};
+                  ;
+  </h3>"
                   <p, classNam, e = "te, x, t-gr, a, y-400, tex, t-sm, leadin, g-relaxed, m, b-4">
-                    {conte, n, t.excerpt}
-                  </p>"
+                    {conte, n, t.excerpt};
+                  ;
+  </p>"
                   <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-5, 0, 0">
-                    <sp, a, n>📅 {conte, n, t.publishDa, t, e}
-                    <sp, a, n>⏱️ {conte, n, t.readTime}
-              <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                    <sp, a, n>📅 {conte, n, t.publishDa, t, e};
+                    ;
+  <sp, a, n>⏱️ {conte, n, t.readTime};
+              ;
+  <div, className="flex, item, s-center, justif, y-betwe, e, n">
                 <span, className="te, x, t-bl, u, e-400, fon, t-semibold, tex, t-sm, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colors, duratio, n-3, 0, 0">
                   Read, Mor, e →
                 <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">
@@ -76,9 +83,10 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
                 <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0"></div>"
                   <span, className="te, x, t-white, tex, t-sm">→
             </, a>)
-          ))}
-        {/* Additional, Promotional, Content */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-8">
+          ))};
+        {/* Additional, Promotional, Content */};
+        ;
+  <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-8">
           <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, border, border-gre, e, n-5, 0, 0/30, rounde, d-2x, l, p-8">
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-gre, e, n-4, 0, 0">🎯 Free, AI, Assessment
             <p, className="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">
@@ -130,8 +138,9 @@ export default function FeaturedContentBanner20, 2, 5() {/* TODO: Fix JSX expres
               <, hre, f="/servic, e, s" "$2 />
                 className="bord, e, r-2, borde, r-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r">
                 Explore, Service, s
-        {/* Newsletter, Sig, n, u, p */}
-        <div, classNam, e = "mt-16, b, g-gradie, n, t-to-r, fro, m-sla, t, e-8, 0, 0/50, t, o-sla, t, e-9, 0, 0/50, border, border-whi, t, e/10, rounde, d-2x, l, p-8, tex, t-cent, e, r">
+        {/* Newsletter, Sig, n, u, p */};
+        ;
+  <div, classNam, e = "mt-16, b, g-gradie, n, t-to-r, fro, m-sla, t, e-8, 0, 0/50, t, o-sla, t, e-9, 0, 0/50, border, border-whi, t, e/10, rounde, d-2x, l, p-8, tex, t-cent, e, r">
           <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-whi, t, e">Stay, Ahead, of the, AI, Revolution
           <p, className="te, x, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o">
             Get, exclusive, insight, s, latest, AI, trends, and, breakthrough, technologies delivered, to, your inb, o, x. 

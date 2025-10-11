@@ -16,7 +16,7 @@ i18n
       },
       'es-ES': {
         translation: esTranslation
-      }
+      };
     },
     fallbackLng: 'en-US', // Default language
     debug: process.env.NODE_ENV === 'development',
@@ -32,7 +32,7 @@ i18n
       order: ['cookie', 'localStorage', 'navigator'],
       lookupCookie: 'zion_language',
       lookupLocalStorage: 'zion_language',
-      caches: ['cookie']
+      caches: ['cookie'];
     }})
     },
   })

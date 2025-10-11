@@ -46,7 +46,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         imageUrl: "https://images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300",
         tags: ["Logistics", "Optimization", "AI"],
         date: "Jan 2023"
-      }
+      };
     ],
     experience: [
       {
@@ -64,7 +64,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description: "Collaborated with academic researchers to bring theoretical AI advances to practical business applications.",
         startDate: "Mar 2016",
         endDate: "Dec 2017"
-      }
+      };
     ],
     availability: {
       status: "limited",
@@ -75,9 +75,9 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: "Tuesday", hours: "9:00 AM - 5:00 PM" },
         { day: "Wednesday", hours: "9:00 AM - 5:00 PM" },
         { day: "Thursday", hours: "9:00 AM - 5:00 PM" },
-        { day: "Friday", hours: "9:00 AM - 3:00 PM" }
-      ]
-    }
+        { day: "Friday", hours: "9:00 AM - 3:00 PM" };
+      ];
+    };
   },
   "talent-1": {
     id: "talent-1",
@@ -125,7 +125,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         imageUrl: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=500&h=300",
         tags: ["Predictive Analytics", "IoT", "Machine Learning"],
         date: "Dec 2022"
-      }
+      };
     ],
     experience: [
       {
@@ -151,7 +151,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description: "Analyzed large datasets to extract business insights and develop predictive models.",
         startDate: "Aug 2016",
         endDate: "May 2018"
-      }
+      };
     ],
     availability: {
       status: "available",
@@ -161,8 +161,8 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
         { day: "Wednesday", hours: "10:00 AM - 6:00 PM" },
         { day: "Thursday", hours: "10:00 AM - 6:00 PM" },
-        { day: "Friday", hours: "10:00 AM - 2:00 PM" }
-      ]
-    }
-  }
-}
+        { day: "Friday", hours: "10:00 AM - 2:00 PM" };
+      ];
+    };
+  };
+};

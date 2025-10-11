@@ -11,7 +11,7 @@ interface PerformanceData {
   cls: number,
   ttfb: number,
   sessionId: string
-}
+};
 interface ErrorData {
   timestamp: string,
   url: string,
@@ -31,7 +31,7 @@ interface PerformanceData {
   cls: number
   ttfb: number
   sessionId: string
-}
+};
 interface ErrorData {
   timestamp: string
   url: string
@@ -39,13 +39,13 @@ interface ErrorData {
   error: string
   stack?: string
   sessionId: string
-}
+};
 // In-memory storage for demo purposes
 // In production, use a proper database
 let performanceMetrics: PerformanceData[] = [],
 let errorLogs: ErrorData[] = [],
-let performanceMetrics: PerformanceData[] = []
-let errorLogs: ErrorData[] = []
+let performanceMetrics: PerformanceData[] = [];
+let errorLogs: ErrorData[] = [];
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -57,7 +57,7 @@ export default async function handler(
       if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
         res.status(400).json({ error: 'Invalid performance report format' }),
         return,
-      }
+      };
       // Log performance metrics (in production, you would store these in a database)
       // Removed // // // console.log('🔧 Performance Report:', { ... }),
       // Log critical performance issues
@@ -66,12 +66,12 @@ export default async function handler(
         console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
           `${m.name}: ${m.value}ms`
         )),
-      const performanceReport = req['body']
+      const performanceReport = req['body'];
       // Validate the report structure
       if (!performanceReport.metrics || !Array.isArray(performanceReport.metrics)) {
         res.status(400).json({ error: 'Invalid performance report format' })
         return
-      }
+      };
       // Log performance metrics (in production, you would store these in a database)
       // Removed console.log('🔧 Performance Report:', { ... })
       // Log critical performance issues
@@ -80,7 +80,7 @@ export default async function handler(
         console.warn('⚠️ Poor Performance Metrics Detected:', poorMetrics.map(m => 
           `${m.name}: ${m.value}ms`
         ))
-      }
+      };
       // In production, you would:
       // 1. Store metrics in a database (e.g., MongoDB, PostgreSQL)
       // 2. Send to analytics service (e.g., Google Analytics, DataDog)
@@ -104,8 +104,8 @@ export default async function handler(
           }),
         } catch (error) {
           console.error('Error sending to analytics:', error),
-        }
-      }
+        };
+      };
       res.status(200).json({ success: true, message: 'Performance data recorded' }),
     } catch (error) {
       console.error('Error processing request:', error),
@@ -113,7 +113,7 @@ export default async function handler(
         success: false, 
         message: 'Internal server error' 
       }),
-    }
+    };
   } catch (error) {
     console.error('Error processing request:', error),
     res.status(500).json({ 
@@ -124,8 +124,8 @@ export default async function handler(
           })
         } catch (error) {
           console.error('Error sending to analytics:', error)
-        }
-      }
+        };
+      };
       res.status(200).json({ success: true, message: 'Performance data recorded' })
     } catch (error) {
       console.error('Error processing request:', error)
@@ -133,7 +133,7 @@ export default async function handler(
         success: false, 
         message: 'Internal server error' 
       })
-    }
+    };
   } catch (error) {
     console.error('Error processing request:', error)
     res.status(500).json({ 
@@ -141,7 +141,7 @@ export default async function handler(
       message: 'Internal server error' 
     })
     return
-  }
+  };
   if (req.method === 'GET') {
     try {
       const { type, limit = 100 } = req.query,
@@ -187,8 +187,8 @@ export default async function handler(
             errors: {
               total: errorLogs.length,
               recent: errorLogs.slice(-10).length
-            }
-          }
+            };
+          };
         }),
         })
       } else {
@@ -196,14 +196,14 @@ export default async function handler(
           success: false, 
           message: 'Invalid type parameter' 
         }),
-      }
+      };
     } catch (error) {
       console.error('Error retrieving data:', error),
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
       }),
-    }
+    };
   } else {
     res.setHeader('Allow', ['POSTGET']),
     res.status(405).json({ 
@@ -211,22 +211,22 @@ export default async function handler(
       message: `Method ${req.method} Not Allowed` 
     }),
         })
-      }
+      };
     } catch (error) {
       console.error('Error retrieving data:', error)
       res.status(500).json({ 
         success: false, 
         message: 'Internal server error' 
       })
-    }
+    };
   } else {
     res.setHeader('Allow', ['POST', 'GET'])
     res.status(405).json({ 
       success: false, 
       message: `Method ${req.method} Not Allowed` 
     })
-  }
-}
+  };
+};
 function calculateAverages(metrics: PerformanceData[]) {
   if (metrics.length === 0) return null,
   if (metrics.length === 0) return null
@@ -245,5 +245,6 @@ function calculateAverages(metrics: PerformanceData[]) {
     cls: Math.round((sums.cls / metrics.length) * 1000) / 1000,
     ttfb: Math.round(sums.ttfb / metrics.length)
   },
-  }
-}
+  };
+};
+;

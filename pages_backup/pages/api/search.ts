@@ -20,7 +20,8 @@ import { searchAll, suggestDidYouMean } from '../../utils/search/filter'
       results
     })
   } catch (e: any) {
-  }
-}
-  }
-}
+  };
+};
+  };
+};
+;

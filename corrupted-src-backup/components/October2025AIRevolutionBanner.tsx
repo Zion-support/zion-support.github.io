@@ -1,17 +1,19 @@
-interface, October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */}
-}
+interface, October2025AIRevolutionBannerProp, s {/* TODO: Fix JSX expression */};
+};
 export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {
   return(<div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
   return (
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
       <div, className="container, m, x-auto, p, x-6, p, y-12">
-        {/* Head, e, r */}
-        <div, className="te, x, t-center, m, b-10">
+        {/* Head, e, r */};
+        ;
+  <div, className="te, x, t-center, m, b-10">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
             <span, className="te, x, t-purp, l, e-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">
-export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */}
-    <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
+export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = '' }: October2025AIRevolutionBannerPro, p, s): vo, i, d {/* TODO: Fix JSX expression */};
+    ;
+  <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
       <div, className="container, m, x-auto, p, x-6, p, y-12">
         {/* Head, e, r */}"
         <div, className="te, x, t-center, m, b-10"></div>"
@@ -35,8 +37,9 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
   return (
     <div, className={`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}>`;`
       <div, className="container, m, x-auto, p, x-6, p, y-12">"
-        {/* Head, e, r */}
-        <div, className="te, x, t-center, m, b-10">"
+        {/* Head, e, r */};
+        ;
+  <div, className="te, x, t-center, m, b-10">"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-4">"
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />"
             The, Complete, AI Revoluti, o, n: 3, Essential, Guides</$1>"
@@ -66,15 +69,18 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             <strong, className="te, x, t-whi, t, e">NEW, TODA, Y: </stro, n, g> Master, autonomous, AI agen, t, s (94% task, automatio, n), "
             AI-powered, development, tools (5x, faster, coding), and, enterprise, AI safe, t, y (99.2% complian, c, e). 
             The, definitive, guides for, forwar, d-thinking, organizations, transforming with, AI, in 20, 2, 5.
-        {/* Featured, Articles, Grid */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
+        {/* Featured, Articles, Grid */};
+        ;
+  <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
           {/* Artic, l, e
-  1: Autonomous, AI, Agents */}
-          <Li, n, k
+  1: Autonomous, AI, Agents */};
+          ;
+  <Li, n, k
           {/* Artic, l, e 
-  1: Autonomous, AI, Agents */}
-          <Li, n, k
+  1: Autonomous, AI, Agents */}>
+          
+  <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-ai-agen, t, s-producti, o, n-deployme, n, t"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-purp, l, e-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e
   r:shad, o, w-purp, l, e-5, 0, 0/20"
@@ -87,9 +93,10 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
         {/* Featured, Articles, Grid */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-          {/* TODO: Fix JSX expression */}
-  1: Autonomous, AI, Agents */}
-          <Li, n, k;"
+          {/* TODO: Fix JSX expression */};
+  1: Autonomous, AI, Agents */};
+          ;
+  <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-autonomo, u, s-ai-agen, t, s-producti, o, n-deployme, n, t""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-purp, l, e-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e,"
   r:shad, o, w-purp, l, e-5, 0, 0/20"
@@ -131,8 +138,9 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
               <sp, a, n>Read, Complete, Guide
               <Link, className="w-5 h-5" />"
           {/* Artic, l, e
-  2: LLM, Development, Tools */}
-          <Li, n, k
+  2: LLM, Development, Tools */};
+          ;
+  <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-l, l, m-power, e, d-developme, n, t-too, l, s-revoluti, o, n"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/30, t, o-indi, g, o-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-indi, g, o-5, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e
   r:shad, o, w-indi, g, o-5, 0, 0/20"
@@ -160,9 +168,10 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Complete, Guide</sp, a, n>"
               <Link, className="w-5 h-5" />"
-          {/* TODO: Fix JSX expression */}
-  2: LLM, Development, Tools */}
-          <Li, n, k;"
+          {/* TODO: Fix JSX expression */};
+  2: LLM, Development, Tools */};
+          ;
+  <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-l, l, m-power, e, d-developme, n, t-too, l, s-revoluti, o, n""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/30, t, o-indi, g, o-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-indi, g, o-5, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e,"
   r:shad, o, w-indi, g, o-5, 0, 0/20"
@@ -208,8 +217,9 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
               <sp, a, n>Read, Complete, Guide
               <Link, className="w-5 h-5" />"
           {/* Artic, l, e
-  3: AI, Safet, y & Alignme, n, t */}
-          <Li, n, k
+  3: AI, Safet, y & Alignme, n, t */};
+          ;
+  <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-ai-safe, t, y-alignme, n, t-enterpri, s, e-deployme, n, t"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/30, t, o-cy, a, n-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-emera, l, d-5, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e
   r:shad, o, w-emera, l, d-5, 0, 0/20"
@@ -237,9 +247,10 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Complete, Guide</sp, a, n>"
               <Link, className="w-5 h-5" />"
-          {/* TODO: Fix JSX expression */}
-  3: AI, Safet, y & Alignme, n, t */}
-          <Li, n, k;"
+          {/* TODO: Fix JSX expression */};
+  3: AI, Safet, y & Alignme, n, t */};
+          ;
+  <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-ai-safe, t, y-alignme, n, t-enterpri, s, e-deployme, n, t""
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/30, t, o-cy, a, n-8, 0, 0/20, rounde, d-2x, l, p-6, border, border-emera, l, d-5, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-xl, hov, e,"
   r:shad, o, w-emera, l, d-5, 0, 0/20"
@@ -301,14 +312,15 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Complete, Guide</sp, a, n>"
               <Link, className="w-5 h-5" />"
-        {/* Call, to, Action */}
-        <div, className="te, x, t-cent, e, r">"
-          <Li, n, k
+        {/* Call, to, Action */};
+        ;
+  <div, className="te, x, t-cent, e, r">"
+          <Li, n, k>
         <div, className="te, x, t-cent, e, r">"
           <Li, n, k
   to="/bl, o, g"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-cy, a, n-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-cy, a, n-700, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-xl, hov, e
-        {/* Call, to, Action */}"
+        {/* Call, to, Action */}">
         <div, className="te, x, t-cent, e, r">"
           <Li, n, k;"
   to="/bl, o, g""
@@ -320,6 +332,6 @@ export, default, function October2025AIRevolutionBann, e, r({ classNa, m, e = ''
             <Link, className="w-5 h-5  /></Link>"
             <Link, className="w-5 h-5" />"
   )
-}
+};
 }"`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></h3></h3></h3>

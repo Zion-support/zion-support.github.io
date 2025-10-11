@@ -1,6 +1,6 @@
-export interface Insight {/* TODO: Fix JSX expression */}
-}
-
+export interface Insight {/* TODO: Fix JSX expression */};
+};
+;
 export const newInsights: Insight[] = [
   {
     id: 'ai-platform-optimization-insights'
@@ -42,7 +42,7 @@ Protect your AI systems with next-generation quantum security frameworks.
     `,
 export const,
   newInsights: Insight[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
-  }]
+  {/* TODO: Fix JSX expression */};
+  }];

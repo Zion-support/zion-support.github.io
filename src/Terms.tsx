@@ -1,6 +1,7 @@
 import { SEO } from "@/components/SEO"
 import { GradientHeading } from "@/components/GradientHeading"
 const Terms: React.FC = () => {
+
   return (
     
       <SEO
@@ -14,7 +15,8 @@ const Terms: React.FC = () => {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="text-center mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
-              <p className="text-lg text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
+              <p className="text-lg text-gray-600">Last updated: {new Date().toLocaleDateString()};
+  </p>
             </div>
 
             <div className="prose prose-lg max-w-none">
@@ -230,5 +232,5 @@ const Terms: React.FC = () => {
       </div>
     
   )
-}
+};
 export default Terms

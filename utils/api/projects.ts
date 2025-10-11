@@ -44,7 +44,7 @@ export interface Milestone {
   }>
   createdAt: string
   updatedAt: string
-}
+};
   isMilestoneStatus
 } from '../types / milestones'
 import { CurrentUser } from './auth'
@@ -58,37 +58,37 @@ export interface Milestone {
   dueDate: string
   amountUsd: number
   status: 'pending' | 'completed' | 'cancelled'
-  attachments?: any[]
+  attachments?: any[];
   createdAt: string
   updatedAt: string
-}
-}
+};
+};
 export function getAllProjects(): Project[] {
 export function getProjectById(id: string): Project | null {
   return projects.find(p => p.id === id) || null
-}
+};
 export function getAllProjects(): Project[] {
   return projects
-}
+};
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
     ...project
     id: `project_${Date.now()}`
     createdAt: new Date().toISOString()
     updatedAt: new Date().toISOString()
-  }
+  };
   projects && projects.push(newProject)
   return newProject
-}
+};
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
-  }
+  };
   projects.push(newProject)
   return newProject
-}
+};
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
   const project = projects.find(p => p.id === id)
   if (!project) return null
@@ -97,7 +97,7 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
   if (!project) return null,
   Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() })
   return project
-}
+};
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
     ...milestone
@@ -110,8 +110,8 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     status: 'pending',
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
-  }
-  }
+  };
+  };
   project.milestones.push(newMilestone)
   project.updatedAt = new Date().toISOString()
   project && project.milestones[idx] = next
@@ -121,7 +121,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   project && project.milestones.push(newMilestone)
   project && project.updatedAt = new Date().toISOString()
   return newMilestone
-}
+};
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
   const milestone = project.milestones.find(m => m.id === milestoneId)
@@ -133,7 +133,7 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
   Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() })
   project && project.updatedAt = new Date().toISOString()
   return milestone
-}
+};
 export function deleteMilestone(project: Project, milestoneId: string): boolean {
 export function deleteMilestone(project: Project, milestoneId: string): boolean {
   const index = project.milestones.findIndex(m => m.id === milestoneId)
@@ -145,34 +145,34 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   project && project.milestones.splice(index, 1)
   project && project.updatedAt = new Date().toISOString()
   return true
-}
+};
 // Mock storage
-const projects: Project[] = []
+const projects: Project[] = [];
 export function getProjectById (id: string): Project | null {
   return projects.find (p => p.id === id) || null
-}
+};
 export function getAllProjects (): Project[] {
   return projects
-}
+};
 export function create_project (project: Omit < Project, 'id' | 'created_at' | 'updated_at'>): Project {
   const new_project: Project = {
     ...project,
     id: `project_${Date.now ()}`,
     created_at: new Date ().toISOString (),
     updated_at: new Date ().toISOString ()
-  }
+  };
   projects.push (new_project)
   return new_project
-}
+};
 export function update_project (id: string, updates: Partial < Project>): Project | null {
   const project = projects.find (p => p.id === id)
   // Check condition
 if (return null) {
   $2
-}
+};
   Object.assign (project, updates, { updated_at: new Date ().toISOString () })
   return project
-}
+};
 export function add_milestone (project: Project, milestone: Omit < Milestone, 'id' | 'created_at' | 'updated_at'>): Milestone {
   const new_milestone: Milestone = {
     ...milestone,
@@ -180,50 +180,50 @@ export function add_milestone (project: Project, milestone: Omit < Milestone, 'i
     status: 'pending',
     created_at: new Date ().toISOString (),
     updated_at: new Date ().toISOString ()
-  }
-
+  };
+;
   project.milestones.push (new_milestone)
   project.updated_at = new Date ().toISOString ()
   return new_milestone
-}
+};
 export function update_milestone (project: Project, milestone_id: string, updates: Partial < Milestone>): Milestone | null {
   const milestone = project.milestones.find (m => m.id === milestone_id)
   // Check condition
 if (return null) {
   $2
-}
+};
   Object.assign (milestone, updates, { updated_at: new Date ().toISOString () })
   project.updated_at = new Date ().toISOString ()
   return milestone
-}
+};
 export function delete_milestone (project: Project, milestone_id: string): boolean {
   const index = project.milestones.find_index (m => m.id === milestone_id)
   // Check condition
 if (return false) {
   $2
-}
+};
   project.milestones.splice (index, 1)
   project.updated_at = new Date ().toISOString ()
   return true
-}
+};
 import fs from 'fs'
 import path from 'path'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones'
 import { CurrentUser } from './auth'
 const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json')
-type DbShape = { projects: Project[] }
+type DbShape = { projects: Project[] };
 function readDb(): DbShape {
   const raw = fs.readFileSync(DATA_FILE, 'utf8')
   return JSON.parse(raw) as DbShape
-}
+};
 function writeDb(db: DbShape) {
   fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf8')
-}
+};
 export function getProject(projectId: string): Project | null {
   const db = readDb()
   return db.projects.find((p) => p.id === projectId) || null
-}
+};
 export function saveProject(updated: Project): void {
   const db = readDb()
   const idx = db.projects.findIndex((p) => p.id === updated.id)
@@ -231,9 +231,9 @@ export function saveProject(updated: Project): void {
     db.projects.push(updated)
   } else {
     db.projects[idx] = updated
-  }
+  };
   writeDb(db)
-}
+};
 export function assertParticipantOrAdmin(
   project: Project,
   user: CurrentUser
@@ -241,21 +241,21 @@ export function assertParticipantOrAdmin(
   if (user.role === 'admin') return true
   const { clientUserId, talentUserId } = project.participants
   return user.userId === clientUserId || user.userId === talentUserId
-}
+};
 export function isClient(project: Project, user: CurrentUser): boolean {
   return user.role === 'admin' || user.userId === project.participants.clientUserId
-}
+};
 export function isTalent(project: Project, user: CurrentUser): boolean {
   return user.role === 'admin' || user.userId === project.participants.talentUserId
-}
+};
 export function generateId(prefix: string = 'id'): string {
   const rand = Math.random().toString(36).slice(2, 8)
   const time = Date.now().toString(36)
   return `${prefix}_${time}_${rand}`
-}
+};
 export function addMilestone(
   project: Project,
-  payload: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus }
+  payload: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus };
 ): Milestone {
   const now = new Date().toISOString()
   const m: Milestone = {
@@ -268,12 +268,12 @@ export function addMilestone(
     attachments: payload.attachments || [],
     createdAt: now,
     updatedAt: now,
-  }
+  };
   project.milestones.push(m)
   project.updatedAt = now
   saveProject(project)
   return m
-}
+};
 export function updateMilestone(
   project: Project,
   milestoneId: string,
@@ -282,9 +282,10 @@ export function updateMilestone(
   const idx = project.milestones.findIndex((m) => m.id === milestoneId)
   if (idx === -1) return null
   const now = new Date().toISOString()
-  const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now }
+  const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now };
   project.milestones[idx] = next
   project.updatedAt = now
   saveProject(project)
   return next
-}
+};
+;

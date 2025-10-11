@@ -25,7 +25,10 @@ title: 'Precision Targeting',;,
 description: 'Target specific goals and objectives with precision.',;,
 benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
 
-const benefits = [
+
+  ;
+  ;
+  const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -34,7 +37,9 @@ const benefits = [
     'Seamless integration with existing systems'
   ]
 
-return (
+;
+  ;
+  return (
     <>
 
       <Helmet>
@@ -47,18 +52,18 @@ return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
+        <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology.">
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"
       </Helmet>
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
+        {/* Hero Section */};
+        ;
+  <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
   </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-Get Started
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"Get Started>
                   <ArrowRight className="ml-2 h-5 w-5"
                 </button>
                 <button className="
@@ -80,8 +85,9 @@ Learn More
     </>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        {/* Features Section */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
@@ -99,22 +105,27 @@ Learn More
       
       <Footer />
     </>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                  <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit), benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300"
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0"
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                        {benefit};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -124,8 +135,9 @@ Learn More
     </>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Benefits Section */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
             </div>
@@ -141,13 +153,15 @@ Learn More
       
       <Footer />
     </>
-                  <p className="text-gray-300">{benefit}</p>
+                  <p className="text-gray-300">{benefit};
+  </p>
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>

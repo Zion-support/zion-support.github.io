@@ -5,7 +5,7 @@ export interface SpecializedIndustrySolution2026 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -17,11 +17,11 @@ export interface SpecializedIndustrySolution2026 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   contactInfo: {
@@ -29,25 +29,27 @@ export interface SpecializedIndustrySolution2026 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-  benefits: string[]
-  capabilities: string[]
+  benefits: string[];
+  capabilities: string[];
   marketAdvantage: string
   averageMarketPrice: string
-  featuresCapabilities: string[]
+  featuresCapabilities: string[];
 }
-const contact = {
+;
+  ;
+  const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+};
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
     id: 'healthcare-ai-diagnostic-platform',
@@ -317,7 +319,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Credit risk modeling',
       'Regulatory compliance',
       'Fraud detection'
-    ]
+    ];
   },
   // Energy & Sustainability Services
   {
@@ -388,7 +390,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Renewable integration',
       'Carbon tracking',
       'Sustainability reporting'
-    ]
+    ];
   },
   // Transportation & Logistics Services
   {
@@ -459,7 +461,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Warehouse automation',
       'Demand forecasting',
       'Sustainability tracking'
-    ]
+    ];
   },
   // Education Technology Services
   {
@@ -530,7 +532,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Success prediction',
       'Intelligent assessment',
       'Learning analytics'
-    ]
+    ];
   },
   // Real Estate Technology Services
   {
@@ -601,7 +603,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Portfolio optimization',
       'Risk assessment',
       'Market forecasting'
-    ]
+    ];
   },
   // Legal Technology Services
   {
@@ -672,7 +674,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Case law analysis',
       'Compliance monitoring',
       'Document generation'
-    ]
+    ];
   },
   // Manufacturing Technology Services
   {
@@ -743,7 +745,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Supply chain optimization',
       'Energy management',
       'Performance analytics'
-    ]
+    ];
   },
   {
     id: 'ai-powered-healthcare-diagnostics',
@@ -989,13 +991,13 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 28,
     rating: 4.7,
     reviews: 58
-  }
-]
+  };
+];
 export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',
   'FinTech Solutions',
   'Manufacturing Technology',
   'Retail Technology',
   'Logistics Technology'
-  }
-]
+  };
+];

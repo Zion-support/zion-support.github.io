@@ -1,25 +1,27 @@
 class ErrorBoundary extends React.Component {;
 constructor(props) {;
 super(props);
-this.state={hasError: false}
-  }
+this.state={hasError: false};
+  };
 ;
 static getDerivedStateFromError(error) {;
-return { hasError: true; }
-  }
+return { hasError: true; };
+  };
 ;
 componentDidCatch(error, errorInfo) {;
 console.error('Error caught by boundary:', error, errorInfo)
-  }
+  };
 ;
 render() {;
-if (this.state.hasError) {;
-return <div>Something went wrong.</div>;
-    }
+if (this.state.hasError) {;}
+
+  ;
+  return <div>Something went wrong.</div>;
+    };
 ;
 return this.props.children;
-  }
-}
+  };
+};
 import React from 'react';;
 import { Header; } from '@/components/Header';
 import { SEO; } from '@/components/SEO';
@@ -45,7 +47,9 @@ import { useAuth; } from '@/hooks/useAuth';
 import Link from 'next/link';;
 export default function ZionHireAI() {;
 }
-const { isWhitelabel}, brandName, primaryColor } = useWhitelabel();
+;
+  ;
+  const { isWhitelabel}, brandName, primaryColor } = useWhitelabel();
 const { isAuthenticated } = useAuth();
 return (;
 
@@ -83,7 +87,9 @@ export default /**
  */;
 function ZionHireAI() {;
 }
-const { is_whitelabel}, brand_name, primary_color } = use_whitelabel ();
+;
+  ;
+  const { is_whitelabel}, brand_name, primary_color } = use_whitelabel ();
 const { is_authenticated } = use_auth ();
 return (;
     <>
@@ -93,15 +99,16 @@ description='Empower your company with AI - powered recruiting tools. Streamline
       />
       <Header />
       <main className='flex - 1'>
-        {/* Hero Section */}
-        <;$2 />;
+        {/* Hero Section */};
+        ;
+  <;$2 />;
 className='relative bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 16 md:py - 24';
 style={;
 primary_color
               ? {;,
 backgroundImage: `linear-gradient(to bottom right}, ${primaryColor}, rgba(25, 33, 52, 1))`
-                }
-              : {}
+                };
+              : {};
           }>
           <div className='container mx-auto px-4 md:px-6'>
             <div className='grid gap-6 md:grid-cols-2 items-center'>
@@ -109,8 +116,9 @@ backgroundImage: `linear-gradient(to bottom right}, ${primaryColor}, rgba(25, 33
                 <h1 className='text-3xl md:text-5xl font-bold tracking-tighter text-white'>
                   {isWhitelabel
                     ? `${brandName} Recruiting Assistant`
-                    : 'Zion Hire AI'}
-                </h1>
+                    : 'Zion Hire AI'};
+                ;
+  </h1>
                 <p className='text-lg text-zion-slate-light max-w-[600px]'>;
 Empower your team with AI-driven talent acquisition.;
 Streamline your hiring process, improve candidate matches, and;
@@ -141,7 +149,9 @@ import { useAuth; } from "@/hooks/useAuth",;
 import Link from "next/link";,;
 export default function ZionHireAI() {;
 }
-const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
+;
+  ;
+  const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
 const { isAuthenticated } = useAuth(),;
 import React from "react";,;
 import { Header; } from "@/components/Header",;
@@ -154,7 +164,9 @@ import { useAuth; } from "@/hooks/useAuth",;
 import Link from "next/link";,;
 export default function ZionHireAI() {;
 }
-const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
+;
+  ;
+  const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
 const { isAuthenticated } = useAuth(),;
 return (;
     <>
@@ -165,19 +177,21 @@ description="Empower your company with AI-powered recruiting tools. Streamline h
       <Header />
       <main className='flex-1'>
         {/* Hero Section */}
-
-        <$2 />;
+;
+        ;
+  <$2 />;
 className='relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24';
 style={;
 primaryColor
               ? {;,
 backgroundImage: `linear-gradient(to bottom right}, ${primaryColor}, rgba(25, 33, 52, 1))`
-                }
-              : {}
-          }
-        <$2 />;
+                };
+              : {};
+          };
+        ;
+  <$2 />;
 className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24";
-style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right}}, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
+style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right}}, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}};
         >
           <div className='container mx-auto px-4 md:px-6'>
             <div className='grid gap-6 md:grid-cols-2 items-center'>
@@ -185,8 +199,9 @@ style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right}}, ${p
                 <h1 className='text-3xl md:text-5xl font-bold tracking-tighter text-white'>
                   {isWhitelabel
                     ? `${brandName} Recruiting Assistant`
-                    : 'Zion Hire AI'}
-                </h1>
+                    : 'Zion Hire AI'};
+                ;
+  </h1>
                 <p className='text-lg text-zion-slate-light max-w-[600px]'>;
 Empower your team with AI-driven talent acquisition.;
 Streamline your hiring process, improve candidate matches, and;
@@ -199,7 +214,7 @@ className='bg-zion-purple hover:bg-zion-purple-light text-white';
 asChild
                   >
                     <$2 />;
-href={isAuthenticated ? '/enterprise/admin' : '/login'}
+href={isAuthenticated ? '/enterprise/admin' : '/login'};
                     >;
 Get Started <ArrowRight className='ml-2 h-4 w-4' />
                     </Link>
@@ -237,8 +252,9 @@ loading="lazy"
 
 
 
-
-        <section className="py-16 bg-background">
+;
+        ;
+  <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>
@@ -547,8 +563,9 @@ Customize the platform with your company's branding and identity.
         </section>
 
         {/* CTA Section */}
-
-        <section className='bg-zion-blue-dark py-16'>
+;
+        ;
+  <section className='bg-zion-blue-dark py-16'>
           <div className='container mx-auto px-4 md:px-6 text-center'>
             <h2 className='text-3xl font-bold text-white mb-4'>;
 Ready to transform your hiring process?
@@ -595,11 +612,12 @@ Schedule a Demo
       </main>
     </>
   )
-}</$1>
+};
+  </$1>
     </>
 
   )
-}
+};
 import React from "react";,;
 import { Header; } from "@/components/Header",;
 import { SEO; } from "@/components/SEO",;
@@ -611,7 +629,9 @@ import { useAuth; } from "@/hooks/useAuth",;
 import Link from "next/link";,;
 export default function ZionHireAI() {;
 }
-const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
+;
+  ;
+  const { isWhitelabel}, brandName, primaryColor } = useWhitelabel(),;
 const { isAuthenticated } = useAuth(),;
 return (;
     <>
@@ -621,17 +641,19 @@ description="Empower your company with AI-powered recruiting tools. Streamline h
       />
       <Header />
       <main className="flex-1">
-        {/* Hero Section */}
-        <;$2 />;
+        {/* Hero Section */};
+        ;
+  <;$2 />;
 className="relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24";
-style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right}}, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}}
+style={primaryColor ? { backgroundImage: `linear-gradient(to bottom right}}, ${primaryColor}, rgba(25, 33, 52, 1))` } : {}};
         >
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-6 md:grid-cols-2 items-center">
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-white">
-                  {isWhitelabel ? `${brandName}} Recruiting Assistant` : "Zion Hire AI"}
-                </h1>
+                  {isWhitelabel ? `${brandName}} Recruiting Assistant` : "Zion Hire AI"};
+                ;
+  </h1>
                 <p className="text-lg text-zion-slate-light max-w-[600px]">;
 Empower your team with AI-driven talent acquisition. Streamline your hiring process,;
 improve candidate matches, and enhance the applicant experience.</$1>
@@ -659,8 +681,9 @@ alt="Zion Hire AI Dashboard";
 className="relative z-10 rounded-lg shadow-xl";
 loading="lazy"
                 /></$1></$1></$1></$1>
-        {/* Features Section */}
-        <section className="py-16 bg-background">
+        {/* Features Section */};
+        ;
+  <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>
@@ -770,8 +793,9 @@ Customize the platform with your company's branding and identity.</$1></$1>
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
                       <span>Team roles & permissions</span></$1></$1></$1></$1></$1></$1></$1>
-        {/* CTA Section */}
-        <section className="bg-zion-blue-dark py-16">
+        {/* CTA Section */};
+        ;
+  <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
             <p className="text-zion-slate-light max-w-2xl mx-auto mb-8">;
@@ -796,8 +820,9 @@ loading='lazy'                />                  src="https://placehold.co / 60
 alt="Zion Hire AI Dashboard";
 className="relative z - 10 rounded - lg shadow - xl";
 loading="lazy"</$1></$1></$1></$1>
-        {/* Features Section */}
-        <section className='py - 16 bg - background'>
+        {/* Features Section */};
+        ;
+  <section className='py - 16 bg - background'>
   </section>
           <div className='container mx - auto px - 4 md:px - 6'>
             <div className='text - center mb - 12'>
@@ -998,8 +1023,9 @@ Customize the platform with your company's branding and identity.</$1></$1>
                     <li className="flex items - center">
                       <span className="bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Access</span>
                       <span > Team roles & permissions</span></$1></$1></$1></$1></$1></$1></$1>
-        {/* CTA Section */}
-        <section className='bg - zion - blue - dark py - 16'>
+        {/* CTA Section */};
+        ;
+  <section className='bg - zion - blue - dark py - 16'>
   </section>
           <div className='container mx - auto px - 4 md:px - 6 text - center'>
             <h2 className='text - 3xl font - bold text - white mb - 4'>
@@ -1026,8 +1052,10 @@ Schedule a Demo</$1></$1></$1></$1></$1>
 
 
 
-
-    </>)
+;
+    ;
+  </>)
 }
-
-</div></div></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></main>
+;
+;
+  </div></div></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></main>

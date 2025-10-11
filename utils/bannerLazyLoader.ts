@@ -5,9 +5,9 @@
  * to improve initial page load performance.
  */
 
-interface BannerModule {/* TODO: Fix JSX expression */}
-}
-
+interface BannerModule {/* TODO: Fix JSX expression */};
+};
+;
 /**
  * Lazy load a banner component with retry logic
  */
@@ -28,8 +28,8 @@ export const lazyLoadBanner = (importF)
       })
     })
   )
-}
-
+};
+;
 /**
  * Preload banner components for better performance
  */
@@ -41,12 +41,12 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
         importFn().catch(() => {,
           // Silently fail for preload
 export const preloadBanner = (importF)
-  n: () => Promise<BannerModule>): void => {/* TODO: Fix JSX expression */}
+  n: () => Promise<BannerModule>): void => {/* TODO: Fix JSX expression */};
         })
       })
-  }
-}
-
+  };
+};
+;
 /**
  * Banner loader with intersection observer
  */
@@ -58,14 +58,15 @@ export const createBannerLoader = () => {
           if (importFn) {
             // Load the banner when it comes into view
             eval(importFn)()
-export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
-          }
-        }
+export const createBannerLoader = () => {/* TODO: Fix JSX expression */};
+          };
+        };
       })
     },
-    {/* TODO: Fix JSX expression */}
-  n: '50px' }
+    {/* TODO: Fix JSX expression */};
+  n: '50px' };
   )
-  return {/* TODO: Fix JSX expression */}
-  }
-}
+  return {/* TODO: Fix JSX expression */};
+  };
+};
+;

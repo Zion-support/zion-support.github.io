@@ -56,6 +56,7 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
         </div>)
       </div>)
     </d, i, v > )
-export default function October2025SelfHealingSpotlightBann, e, r() {/* TODO: Fix JSX expression */}
- }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></h3></h4></ul></li></li></li></li></li>
+export default function October2025SelfHealingSpotlightBann, e, r() {/* TODO: Fix JSX expression */};
+ };
+;
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></h3></h4></ul></li></li></li></li></li>

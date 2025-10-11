@@ -5,17 +5,18 @@ import Footer from '../components/Footer';;
 import SEOOptimizer from '../components/SEOOptimizer';;
 import { Phone;, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 const SupportPage: React.FC = () => {;
+
 const [searchQuery, setSearchQuery] = useState('');
 const [selectedCategory, setSelectedCategory] = useState('all');
 const supportCategories = [;
-}
+};
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 8 },
     { id: 'billing', name: 'Billing & Pricing', icon: CreditCard, count: 6 },
     { id: 'technical', name: 'Technical Support', icon: Code, count: 10 },
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
-    { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
+    { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 };
   ];
 const faqs = [;
     {;,
@@ -53,7 +54,7 @@ id: 6,;,
 question: 'What is your typical project timeline?',;,
 answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',;,
 category: 'getting-started'
-    }
+    };
   ];
 const supportChannels = [;
     {;,
@@ -87,7 +88,7 @@ description: 'Book a consultation with our team',;,
 contact: 'Book Now',;,
 availability: 'Flexible scheduling',;,
 color: 'text-cyan-400'
-    }
+    };
   ];
 const resources = [;
     {;,
@@ -125,7 +126,7 @@ title: 'Community Forum',;,
 description: 'Connect with other users and experts',;,
 icon: Users,;,
 link: '/community'
-    }
+    };
   ];
 const filteredFaqs = selectedCategory === 'all'; 
     ? faqs 
@@ -141,14 +142,15 @@ return (;
       <SEOOptimizer;
 title="Support Center - Zion Tech Group";
 description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources.";
-keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}
+keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']};
         canonicalUrl="https://ziontechgroup.com/support"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
+          {/* Hero Section */};
+          ;
+  <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">;
 Support Center
   
@@ -158,75 +160,87 @@ We're here to help you succeed with AI,
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">;
 Get instant answers to your questions, access comprehensive resources,;
 and connect with our expert support team.
-          {/* Search Section */}
-          <section className="mb-16">
+          {/* Search Section */};
+          ;
+  <section className="mb-16">
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
 type="text";
 placeholder="Search for help...";
-value={searchQuery}
+value={searchQuery};
                   onChange={(e) =>
-  </input> setSearchQuery(e.target.value)}
+  </input> setSearchQuery(e.target.value)};
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
-          {/* Support Channels */}
-          <section className="mb-16">
+          {/* Support Channels */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Get Support
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel), index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}}`} />
-                  <h3 className="text-xl font-bold text-white mb-2">{channel.title}
-                  <p className="text-gray-300 mb-4">{channel.description}
-                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact}
-                  <div className="text-gray-400 text-sm">{channel.availability}
-              ))}
-          {/* FAQ Categories */}
-          <section className="mb-16">
+                  <h3 className="text-xl font-bold text-white mb-2">{channel.title};
+                  ;
+  <p className="text-gray-300 mb-4">{channel.description};
+                  ;
+  <div className="text-cyan-400 font-semibold mb-2">{channel.contact};
+                  ;
+  <div className="text-gray-400 text-sm">{channel.availability};
+              ))};
+          {/* FAQ Categories */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
               {supportCategories.map((category) => (
                 <$2 />;
-key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+key={category.id};
+                  onClick={() => setSelectedCategory(category.id)};
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${};
 selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'}`}
+                      : 'bg-slate-800 text-white hover:bg-slate-700'}`};
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
-                  <div className="text-sm font-semibold">{category.name}
-                  <div className="text-xs opacity-75">{category.count} topics
-              ))}
-          {/* FAQ Section */}
-          <section className="mb-16">
+                  <div className="text-sm font-semibold">{category.name};
+                  ;
+  <div className="text-xs opacity-75">{category.count} topics
+              ))};
+          {/* FAQ Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Frequently Asked Questions
             <div className="max-w-4xl mx-auto space-y-4">
               {searchResults.map((faq) => (
                 <div key={faq.id} className="cyber-card p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}
-              ))}
-          {/* Resources Section */}
-          <section className="mb-16">
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question};
+                  ;
+  <p className="text-gray-300 leading-relaxed">{faq.answer};
+              ))};
+          {/* Resources Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Helpful Resources
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {resources.map((resource), index) => (
                 <$2 />;
-key={index}
-                  to={resource.link}
+key={index};
+                  to={resource.link};
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
                     <resource.icon className="w-8 h-8 text-cyan-400 mr-4" />
                     <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {resource.title}
-                  <p className="text-gray-300">{resource.description}
-              ))}
-          {/* Contact CTA */}
-          <section className="text-center">
+                    {resource.title};
+                  ;
+  <p className="text-gray-300">{resource.description};
+              ))};
+          {/* Contact CTA */};
+          ;
+  <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">;
 Still Need Help?
@@ -254,7 +268,7 @@ Send Email
       </div>
     </React.Fragment>
   ),
-}
+};
 export default SupportPage</a>
   </a>
   </p>

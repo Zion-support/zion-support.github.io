@@ -5,55 +5,57 @@ import Footer from '../components/Footer'
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react'
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react'
 const AIComputerVisionPage: React.FC = () => {
+
     const features = [],
   return (
     {// TODO: Add content
-  }
-}
-  ico,
-  n: Eye,
+  };
+};
+  icon: Eye,
       titl,
   e: 'Object Detection',
       descriptio,
   n: 'Advanced object detection and recognition with high accuracy',
       benefit,
-  s: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
+  s: ['Real-time detection', 'Multi-class recognition', 'Custom model training'];
     },
-      ico,
-  n: Camera,
+      icon: Camera,
       titl,
   e: 'Image Classification',
       descriptio,
   n: 'Automated image categorization and content analysis',
       benefit,
-  s: ['99%+ accuracy', 'Batch processing', 'Custom categories']
-      ico,
-  n: Target,
+  s: ['99%+ accuracy', 'Batch processing', 'Custom categories'];
+      icon: Target,
       titl,
   e: 'Facial Recognition',
       descriptio,
   n: 'Secure and accurate facial recognition technology',
       benefit,
-  s: ['Identity verification', 'Access control', 'Privacy protection']
-    }
+  s: ['Identity verification', 'Access control', 'Privacy protection'];
+    };
   ]
+  
+  ;
+  ;
   const applications = [
       titl,
   e: 'Security & Surveillance',
       descriptio,
   n: 'Intelligent security monitoring and threat detection systems',
-      ico,
-  n: Shield,
+      icon: Shield,
       useCase,
-  s: ['Intrusion detection', 'Person tracking', 'Anomaly detection']
+  s: ['Intrusion detection', 'Person tracking', 'Anomaly detection'];
       titl,
   e: 'Manufacturing',
       descriptio,
   n: 'Quality control and automated inspection systems',
-      ico,
-  n: Settings,
+      icon: Settings,
       useCase,
   s: ['Defect detection', 'Quality assurance', 'Process monitoring']
+  
+  ;
+  ;
   const pricing = [
       nam,
   e: 'Starter',
@@ -72,6 +74,7 @@ const AIComputerVisionPage: React.FC = () => {
 //       ],
       popular: false,
 const PagePage: React.FC = () => {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -97,8 +100,9 @@ Transform your business with cutting-edge computer vision technology. From objec
               +1 302 464 0950,
           </div>
         </section>
-        {/* Features Section */}
-        <section className="mb-16"></section>"
+        {/* Features Section */};
+        ;
+  <section className="mb-16"></section>"
           < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities,
@@ -112,17 +116,18 @@ Transform your business with cutting-edge computer vision technology. From objec
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                </h3>"
+                  {feature.title};
+                ;
+  </h3>"
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}"
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
-        {/* Applications Section */}
+                      {benefit};
+                  ))};
+        {/* Applications Section */};
             Industry Applications;"
           < className="grid grid-cols-1,"$2 />
   md:grid-cols-2 gap-8">
@@ -142,13 +147,14 @@ Transform your business with cutting-edge computer vision technology. From objec
                   {application.useCases.map((useCase, useCaseIndex) => ()}"
           <div key={useCaseIndex} className="flex items-center text-sm text-gray-300"></div>"
                       <ArrowRight className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {useCase}
-{/* Pricing Section */}
+                      {useCase};
+{/* Pricing Section */};
             Choose Your Plan;"
           < className="grid grid-cols-1,"$2 />
   md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => ()}
-          < key={index} className={/* TODO: Fix JSX expression */}$2 />
+            {pricing.map((plan, index) => ()};
+          ;
+  < key={index} className={/* TODO: Fix JSX expression */}$2 />
   hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && ()}"
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
@@ -156,25 +162,28 @@ Transform your business with cutting-edge computer vision technology. From objec
 Most Popular
                 )}"
                 <div className="text-center mb-6"></div>"
-                  <h3 className="text-2xl font-bold text-white mb-2 neon-text">{plan.name}</h3>"
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{plan.price}</div>"
-                  <p className="text-gray-400 text-sm">{plan.description}</p>"
+                  <h3 className="text-2xl font-bold text-white mb-2 neon-text">{plan.name};
+  </h3>"
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{plan.price};
+  </div>"
+                  <p className="text-gray-400 text-sm">{plan.description};
+  </p>"
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature}`
-                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
+                  className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${};
   // TOD,
   O: Add content,
-}
+};
 //                     plan.popular
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover:text-slate-900'`
-                  }`}
-        {/* CTA Section */}
+                  }`};
+        {/* CTA Section */};
           "
           <section className="text-center"></section>"
           <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
@@ -191,6 +200,6 @@ Ready to See the Future?"
       <Footer /></Footer>
     </div>
   ),
-}
+};
 export default PagePage</p>
 </p></p></p></h3></h4></ul></ul>

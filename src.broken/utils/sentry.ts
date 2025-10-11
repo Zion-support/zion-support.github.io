@@ -12,14 +12,15 @@ if (SENTRY_DSN && !SENTRY_DSN.includes('dummy') && !SENTRY_DSN.startsWith('YOUR_
     //   release: process.env.npm_package_version})
     //   release: process.env.npm_package_version,
   })
-}
+};
 export function captureException(error: unknown, context?: any): void { // Added context capability
   // The @sentry/nextjs SDK handles initialization.
   // We can directly call captureException.
   if (context) {
     return Sentry.captureException(error, context)
-  }
+  };
+  ;
   return Sentry.captureException(error)
-}
+};
 // It's good practice to also export Sentry itself if you need to use other Sentry methods elsewhere.
-export { Sentry }
+export { Sentry };

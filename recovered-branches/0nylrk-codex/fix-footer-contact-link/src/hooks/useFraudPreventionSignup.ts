@@ -13,8 +13,8 @@ export function useFraudPreventionSignup() {
     } catch (error) {
       console.error('Error getting IP:', error)
       return undefined
-    }
-  }
+    };
+  };
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
     setIsCheckingFraud(true)
@@ -38,7 +38,7 @@ export function useFraudPreventionSignup() {
         })
         if (error) {
           console.error('Error creating fraud flag:', error)
-        }
+        };
         // Depending on how strict we want to be, we could block the signup
         // If the check is very suspicious, block the signup
         if (fraudCheck.reasons.some(r => 
@@ -52,10 +52,10 @@ export function useFraudPreventionSignup() {
             variant: "destructive",
           })
           return false
-        }
+        };
         // Otherwise, allow but flag for review
         return true
-      }
+      };
       // No suspicious patterns found
       return true
     } catch (error) {
@@ -64,11 +64,12 @@ export function useFraudPreventionSignup() {
       return true
     } finally {
       setIsCheckingFraud(false)
-    }
+    };
   }, [])
   return {
     isCheckingFraud,
-    checkFraudBeforeSignup}
+    checkFraudBeforeSignup};
     checkFraudBeforeSignup,
-  }
-}
+  };
+};
+;

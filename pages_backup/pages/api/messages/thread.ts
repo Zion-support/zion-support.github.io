@@ -15,7 +15,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!conversation |!conversation.participants.includes(user.id)) {
       return res.status(404).json({ error: "Conversation not found" })
     }
-    const messages = getMessages(id)
+    ;
+  ;
+  const messages = getMessages(id)
     res.status(200).json({ conversation, messages })
   } else if (req.method === "POST") {
     const {
@@ -26,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       attachmentBase64
       attachmentName
       context
-    } = req.body |{}
+    } = req.body |{};
     if (!recipientId |!body)
       return res.status(400).json({ error: "Missing required fields" })
     const { conversation, message } = sendMessage({
@@ -56,13 +58,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!conversation || !conversation && conversation.participants.includes(user && user.id)) {
       return res && res.status(404).json({ error: "Conversation not found" })
     }
-    const messages = getMessages(id)
+    ;
+  ;
+  const messages = getMessages(id)
       conversationId,
       senderId: user.id,
       recipientId,
     res.status(200).json({ conversation, messages })
   } else if (req.method === 'POST') {
-    const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body || {}
+    const { conversationId, recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body || {};
     if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' })
     const { conversation, message } = sendMessage({
       conversationId,
@@ -77,8 +81,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ conversation, message })
   } else {
     res.status(405).json({ error: 'Method not allowed' })
-  }
-}
+  };
+};
     res.status(405).json({ error: "Method not allowed" })
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -95,19 +99,26 @@ export default function handler(req, res) {
     if (return res.status ($1).json ({ $2 })) {
   $2
 }
-    const conversation = getConversationById (id)
+    ;
+  ;
+  const conversation = getConversationById (id)
     if () {) {
   $2
-}
-      return res.status (404).json ({ error: "Conversation not found" })
+};
+      ;
+  return res.status (404).json ({ error: "Conversation not found" })
     }
-    const messages = get_messages (id)
+    ;
+  ;
+  const messages = get_messages (id)
     res.status (200).json ({ conversation, messages })
   } else // Check condition
 if ( {) {
   $2
 }
-    const {
+    ;
+  ;
+  const {
       conversation_id,
       recipient_id,
       body,
@@ -115,12 +126,14 @@ if ( {) {
       attachmentBase64,
       attachment_name,
       context,
-    } = req.body || {}
+    } = req.body || {};
     if (
       return res.status (400).json ({ error: "Missing required fields" })) {
   $2
 }
-    const { conversation, message } = send_message ({
+    ;
+  ;
+  const { conversation, message } = send_message ({
       conversation_id,
       sender_id: user.id,
       recipient_id,
@@ -134,28 +147,29 @@ if ( {) {
     res.status(200).json({ conversation, message })
   } else {
     res && res.status(405).json({ error: "Method not allowed" })
-  }
-}
+  };
+};
     res.status (200).json ({ conversation, message })
   } else {
     res.status (405).json ({ error: "Method not allowed" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

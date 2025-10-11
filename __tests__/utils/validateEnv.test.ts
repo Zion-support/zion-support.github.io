@@ -9,11 +9,11 @@ const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>)
     if (envValues[key] !== undefined) {
       process.env[key] = String(envValues[key])
     } else {
-      delete process.env[key]
-    }
-  }
-}
-
+      delete process.env[key];
+    };
+  };
+};
+;
 describe('Environment Validation', () => {
   beforeEach(() => {
     jest.resetModules()

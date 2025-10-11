@@ -7,27 +7,31 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AICustomerSupportBotPage: React.FC = () => {
+
   const features = [
     {
       icon: Bot,
       title: '24/7 AI Support',
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
-      benefits: ['90% response time reduction', 'Instant responses', 'Always available']
+      benefits: ['90% response time reduction', 'Instant responses', 'Always available'];
     },
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
-      benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
+      benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support'];
       icon: Users,
       title: 'Human Handoff',
       description: 'Seamless escalation to human agents when complex issues arise',
-      benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
+      benefits: ['Smart escalation', 'Seamless transitions', 'Expert support'];
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
-      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
-    }
+      benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement'];
+    };
   ]
+  
+  ;
+  ;
   const pricingPlans = [
       name: 'Starter',
       price: '$149',
@@ -65,7 +69,8 @@ const AICustomerSupportBotPage: React.FC = () => {
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
-    { icon: Star, value: '4.8/5', label: 'Customer Rating' }
+    { icon: Star, value: '4.8/5', label: 'Customer Rating' };
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -82,37 +87,48 @@ const AICustomerSupportBotPage: React.FC = () => {
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}
-              <div className="text-gray-300">{stat.label}
-          ))}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <div className="text-3xl font-bold text-white mb-2">{stat.value};
+              ;
+  <div className="text-gray-300">{stat.label};
+          ))};
+        ;
+  <div className="grid md:grid-cols-2 gap-8 mb-16">
           {features.map((feature, index) => (
             <div key={index} className="bg-slate-800/50 rounded-lg p-6">
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-              <p className="text-gray-300 mb-4">{feature.description}
-              <ul className="space-y-2">
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+              ;
+  <p className="text-gray-300 mb-4">{feature.description};
+              ;
+  <ul className="space-y-2">
                 {feature.benefits.map((benefit, benefitIndex) => (
                   <li key={benefitIndex} className="flex items-center text-gray-300">
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                    {benefit}
-          <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans
+                    {benefit};
+          ;
+  <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
-                )}
-                <h3 className="text-xl font-semibold text-white mb-2">{plan.name}
-                <div className="text-3xl font-bold text-white mb-1">
-                  {plan.price}<span className="text-lg text-gray-400">{plan.period}
-                <p className="text-gray-300 mb-6">{plan.description}
-                <ul className="space-y-3 mb-6">
+                )};
+                ;
+  <h3 className="text-xl font-semibold text-white mb-2">{plan.name};
+                ;
+  <div className="text-3xl font-bold text-white mb-1">
+                  {plan.price};
+  <span className="text-lg text-gray-400">{plan.period};
+                ;
+  <p className="text-gray-300 mb-6">{plan.description};
+                ;
+  <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      {feature}
-                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
+                      {feature};
+                ;
+  <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
                   Get Started
   
         <div className="text-center">
@@ -126,7 +142,7 @@ const AICustomerSupportBotPage: React.FC = () => {
               View Case Studies
       <Footer />
   ),
-}
+};
 export default $1
 'use client'
 import React, { useState, useEffect } from 'react'

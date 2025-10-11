@@ -17,8 +17,8 @@ author?: string;
 publishedTime?: string;
 modifiedTime?: string;
 section?: string;
-tags?: string[]
-}
+tags?: string[];
+};
 ;
 export class SEOUtils {
   /**
@@ -42,7 +42,8 @@ tags
     } = data;
 let metaTags = '';
     // Basic meta tags;
-metaTags += `<title>${this.escapeHtml(title)}</title>\n`;
+metaTags += `<title>${this.escapeHtml(title)};
+  </title>\n`;
 metaTags += `<meta name="description" content="${this.escapeHtml(description)}">\n`;
 metaTags += `<meta name="keywords" content="${keywords.join(', ')}">\n`;
 metaTags += `<meta name="author" content="${this.escapeHtml(author)}">\n`;
@@ -67,23 +68,23 @@ metaTags += `<meta name="twitter:creator" content="@ziontechgroup">\n`
     // Additional meta tags;
 if (publishedTime) {;
 metaTags += `<meta property="article:published_time" content="${publishedTime}">\n`
-    }
+    };
     if (modifiedTime) {;
 metaTags += `<meta property="article:modified_time" content="${modifiedTime}">\n`
-    }
+    };
     if (section) {;
 metaTags += `<meta property="article:section" content="${this.escapeHtml(section)}">\n`
-    }
+    };
     if (tags && tags.length > 0) {;
 tags.forEach(tag => {;
-}
+};
 metaTags += `<meta property="article:tag" content="${this.escapeHtml(tag)}">\n`
       })
-    }
+    };
 ;
 return metaTags;
-  }
-
+  };
+;
   /**
    * Generate structured data for organization
    */;
@@ -132,12 +133,12 @@ return {;
             "name": "IT Services",
             "description": "Comprehensive IT solutions",
             "priceRange": "$800-$3,000/month"
-          }
-        ]
-      }
-    }
-  }
-
+          };
+        ];
+      };
+    };
+  };
+;
   /**
    * Generate FAQ structured data
    */;
@@ -151,11 +152,11 @@ return {;
         "acceptedAnswer": {
           "@type": "Answer",
           "text": faq.answer
-        }
+        };
       }))
-    }
-  }
-
+    };
+  };
+;
   /**
    * Generate breadcrumb structured data
    */;
@@ -169,9 +170,9 @@ return {;
         "name": crumb.name,
         "item": crumb.url
       }))
-    }
-  }
-
+    };
+  };
+;
   /**
    * Generate service structured data
    */;
@@ -196,10 +197,10 @@ return {;
         "@type": "Offer",
         "price": service.price,
         "priceCurrency": "USD"
-      }
-    }
-  }
-
+      };
+    };
+  };
+;
   /**
    * Generate sitemap data
    */;
@@ -208,17 +209,21 @@ let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';;
 sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 pages.forEach(page => {;
 sitemap += '  <url>\n';
-}
-sitemap += `    <loc>${page.url}</loc>\n`;
-sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`;
-sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
-sitemap += `    <priority>${page.priority}</priority>\n`;
+};
+sitemap += `    <loc>${page.url};
+  </loc>\n`;
+sitemap += `    <lastmod>${page.lastmod};
+  </lastmod>\n`;
+sitemap += `    <changefreq>${page.changefreq};
+  </changefreq>\n`;
+sitemap += `    <priority>${page.priority};
+  </priority>\n`;
 sitemap += '  </url>\n'
     });
 sitemap += '</urlset>';
 return sitemap;
-  }
-
+  };
+;
   /**
    * Generate robots.txt content
    */;
@@ -227,8 +232,8 @@ return `User-agent: *;;,
 Allow: /
 
 # Sitemaps;,
-Sitemap: ${sitemapUrl}
-
+Sitemap: ${sitemapUrl};
+;
 # Crawl-delay;
 Crawl-delay: 1
 
@@ -237,8 +242,8 @@ Disallow: /admin/;,
 Disallow: /api/;,
 Disallow: /_next/;,
 Disallow: /private/`
-  }
-
+  };
+;
   /**
    * Optimize title for SEO
    */;
@@ -252,12 +257,12 @@ if ((optimized + ' ' + word).trim().length <= maxLength) {;
 optimized += (optimized ? ' ' : '') + word
       } else {;
 break
-      }
-    }
+      };
+    };
 ;
 return optimized || title.substring(0;, maxLength - 3) + '...'
-  }
-
+  };
+;
   /**
    * Optimize description for SEO
    */;
@@ -272,12 +277,12 @@ if (test.length <= maxLength) {;
 optimized = test
       } else {;
 break
-      }
-    }
+      };
+    };
 ;
 return optimized || description.substring(0;, maxLength - 3) + '...'
-  }
-
+  };
+;
   /**
    * Generate keyword suggestions
    */;
@@ -301,24 +306,24 @@ const variations = [;
       'IoT',
       'edge computing'
     ];
-return [...new Set([...baseKeywords];, ...variations])]
-  }
-
+return [...new Set([...baseKeywords];, ...variations])];
+  };
+;
   /**
    * Check if URL is SEO-friendly
    */;
 static isSEO FriendlyURL(url: string): boolean {;
 const seoPattern = /^[a-z0-9\-/]+$/;;
 return seoPattern.test(url) && !url.includes('_') && !url.includes(' ');
-  }
-
+  };
+;
   /**
    * Generate meta viewport tag
    */;
 static generateViewportTag(): string {;
 return '<meta name="viewport" content="width=device-width;, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">'
-  }
-
+  };
+;
   /**
    * Generate preconnect tags for performance
    */;
@@ -327,8 +332,8 @@ return domains.map(domain =>;
       `<link rel="preconnect" href="${domain}" crossorigin>
   </link>`
     ).join('\n')
-  }
-
+  };
+;
   /**
    * Escape HTML characters
    */;
@@ -339,9 +344,10 @@ const map: Record<string, string> = {
       '>': '&gt;',
       '"': '&quot;',
       "'": '&#039;'
-    }
-    return text.replace(/[&<>"']/g;, (m) => map[m])
-  }
-}
+    };
+    ;
+  return text.replace(/[&<>"']/g;, (m) => map[m])
+  };
+};
 ;
 export default SEOUtils</$1></li></li>

@@ -10,7 +10,7 @@ export default async function handler(
     mrr: 82000
     yoyGrowth: 1.85
     completedProjects: 3275
-    globalReach: ["USEUAPACLATAM"]
+    globalReach: ["USEUAPACLATAM"];
 res.status(200).json(data)
 import type { NextApiRequest, NextApiResponse } from 'next'
   try {
@@ -28,14 +28,15 @@ import type { NextApiRequest, NextApiResponse } from 'next'
         churnRate: 0.05,
         ltv: 2400,
         cac: 180
-      }
+      };
       res.json({ data })
     } else {
       res.setHeader('Allow', 'GET')
       res.status(405).end('Method Not Allowed')
-    }
+    };
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

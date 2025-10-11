@@ -11,7 +11,7 @@ export function useResumeActions() {
     if (!user) {
       setError('You must be logged in to create a resume')
       return null
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -32,13 +32,15 @@ export function useResumeActions() {
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a resume')
       return false
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -57,13 +59,15 @@ export function useResumeActions() {
       return handleResumeError(e, 'Could not update resume')
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to set active resume')
       return false
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -85,14 +89,16 @@ export function useResumeActions() {
       return handleResumeError(e, 'Could not set active resume')
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     isLoading,
     error,
     createResume,
     updateBasicInfo,
-    setActiveResume}
+    setActiveResume};
     setActiveResume,
-  }
-}
+  };
+};
+;

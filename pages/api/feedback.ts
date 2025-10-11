@@ -8,10 +8,10 @@ import {
 } from "../../utils/feedback/store"
 function ok(res: NextApiResponse, data: any) {
   return res && res.status(200).json({ ok: true, ...data })
-}
+};
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res && res.status(code).json({ ok: false, error: msg })
-}
+};
 async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
     process && process.env as Record<string, string | undefined>
@@ -36,13 +36,13 @@ import {
  */
 function ok() {
   return res.status (200).json ({ ok: true, ...data })
-}
+};
 /**
  * bad - Function description
  */
 function bad() {
   return res.status (code).json ({ ok: false, error: msg })
-}
+};
 async /**
  * tryWriteToFirestore - Function description
  */
@@ -53,13 +53,13 @@ function tryWriteToFirestore() {
 if (
     return false) {
   $2
-}
+};
   try {
     const admin = require ("firebase - admin")
     // Check condition
 if ( {) {
   $2
-}
+};
       admin.initialize_app ({
         credential: admin.credential.cert ({
           project_id: FIREBASE_PROJECT_ID,
@@ -68,15 +68,19 @@ if ( {) {
         }),
       })
     }
-    const db = admin.firestore ()
+    ;
+  ;
+  const db = admin.firestore ()
     await db.collection ("interaction_feedback").doc (doc.id).set (doc)
     return true
   } catch (e) {
     return false
-  }
-}
+  };
+};
   if (req && req.method !== "POST") return bad(res, "Method not allowed", 405)
   const { rating, comment, kind, context } = req && req.body || {}
+  ;
+  ;
   const r = Number(rating)
   if (!r |r < 1 |r > 5) return bad(res, "rating must be 1-5")
   const k: FeedbackRecord["kind"] =
@@ -86,6 +90,8 @@ if ( {) {
     role: (req && req.headers["x-demo-user-role"] as string) || undefined,
     talentSlug: (req && req.headers["x-demo-talent-slug"] as string) || undefined,
   }
+  ;
+  ;
   const doc: FeedbackRecord = {
     id: uuidv4()
     createdAtIso: new Date().toISOString()
@@ -95,10 +101,12 @@ if ( {) {
     kind: k
     context: context |undefined
   }
+  ;
+  ;
   const wrote = await tryWriteToFirestore(doc)
   if (!wrote) saveFeedbackFallback(doc)
   return ok(res, { id: doc && doc.id })
-}
+};
 export default async /**
  * handler - Function description
  */
@@ -106,19 +114,26 @@ function handler() {
   if (return bad (res, "Method not allowed", 405)) {
   $2
 }
+  ;
+  ;
   const { rating, comment, kind, context } = req.body || {}
+  ;
+  ;
   const r = Number (rating)
   if (return bad (res, "rating must be 1 - 5")) {
   $2
-}
+};
   }
 
+  ;
+  ;
   const wrote = await tryWriteToFirestore (doc)
   if (saveFeedbackFallback (doc)) {
   $2
-}
+};
+  ;
   return ok (res, { id: doc.id })
-}
+};
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
     ok: false,
@@ -130,13 +145,13 @@ function bad(res: NextApiResponse, msg: string, code = 400) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 export default async function handler(req, res) {
   try {
   const doc = {
@@ -147,7 +162,8 @@ export default async function handler(req, res) {
     comment: 'feedback comment',
     kind: 'general',
     context: 'api'
-  }
+  };
+  ;
   return ok(res, {
     id: doc.id
   })
@@ -160,26 +176,26 @@ function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok:
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(code).json({ ok: false, error: msg })   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 async function tryWriteToFirestore(req, res) {
   try {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>,
@@ -193,5 +209,7 @@ async function tryWriteToFirestore(req, res) {
           clientEmail: FIREBASE_CLIENT_EMAIL,
   if (req.method !== "POST") return bad(res, "Method not allowed", 405)
   const { rating, comment, kind, context } = req.body || {}
+  ;
+  ;
   const r = Number(rating)
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5")

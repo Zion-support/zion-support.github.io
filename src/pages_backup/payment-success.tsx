@@ -20,19 +20,23 @@ export default function PaymentSuccess() {
           <CheckCircle2 className="h-6 w-6 text-green-600" />
         </div>
         <h1 className='text-2xl font-bold text-white mb-2'>
-          {t('errors.payment_success_title')}
-        </h1>
+          {t('errors.payment_success_title')};
+        ;
+  </h1>
         <p className='text-zion-slate-light mb-6'>
-          {t('errors.payment_success_message')}
-        </p>
+          {t('errors.payment_success_message')};
+        ;
+  </p>
         <div className='flex flex-col space-y-3'>
-          <Button
+          <Button>
         
-        <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>
+        <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')};
+  </h1>
         
         <p className="text-zion-slate-light mb-6">
-          {t('errors.payment_success_message')}
-        </p>
+          {t('errors.payment_success_message')};
+        ;
+  </p>
         
         <div className="flex flex-col space-y-3">
           <Button 
@@ -41,38 +45,44 @@ export default function PaymentSuccess() {
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
-            {t('errors.go_to_dashboard')}
-          </Button>
+            {t('errors.go_to_dashboard')};
+          ;
+  </Button>
 
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
+  ;
+  ;
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation()
   static getDerivedStateFromError(error) {
-    return { hasError: true }
-  }
-  
+    return { hasError: true };
+  };
+  ;
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
-  }
-  
+  };
+  ;
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
+    if (this.state.hasError) {}
+      
+  ;
+  return <div>Something went wrong.</div>
     }
-    
-    return this.props.children
-  }
+    ;
+    ;
+  return this.props.children
+  };
 }
 
 
 
-
-
+;
+;
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/router'; // Changed from useNavigate
@@ -101,19 +111,23 @@ export default function PaymentSuccess() {
           <CheckCircle2 className="h-6 w-6 text-green-600" />
         </div>
         <h1 className='text-2xl font-bold text-white mb-2'>
-          {t('errors.payment_success_title')}
-        </h1>
+          {t('errors.payment_success_title')};
+        ;
+  </h1>
         <p className='text-zion-slate-light mb-6'>
-          {t('errors.payment_success_message')}
-        </p>
+          {t('errors.payment_success_message')};
+        ;
+  </p>
         <div className='flex flex-col space-y-3'>
-          <Button
+          <Button>
         
-        <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>
+        <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')};
+  </h1>
         
         <p className="text-zion-slate-light mb-6">
-          {t('errors.payment_success_message')}
-        </p>
+          {t('errors.payment_success_message')};
+        ;
+  </p>
         
         <div className="flex flex-col space-y-3">
           <Button 
@@ -122,34 +136,40 @@ export default function PaymentSuccess() {
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
-            {t('errors.go_to_dashboard')}
-          </Button>
+            {t('errors.go_to_dashboard')};
+          ;
+  </Button>
 
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
+  ;
+  ;
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation()
   static getDerivedStateFromError(error) {
-    return { hasError: true }
-  }
-  
+    return { hasError: true };
+  };
+  ;
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
-  }
-  
+  };
+  ;
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
+    if (this.state.hasError) {}
+      
+  ;
+  return <div>Something went wrong.</div>
     }
-    
-    return this.props.children
-  }
-}
-
+    ;
+    ;
+  return this.props.children
+  };
+};
+;
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
@@ -170,11 +190,13 @@ export default function PaymentSuccess() {
         <div className='inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center'>
           <CheckCircle2 className='h-6 w-6 text-green-600' /></$1>
         <h1 className='text-2xl font-bold text-white mb-2'>
-          {t('errors && errors.payment_success_title')}
-        </h1>
+          {t('errors && errors.payment_success_title')};
+        ;
+  </h1>
         <p className='text-zion-slate-light mb-6'>
-          {t('errors && errors.payment_success_message')}
-        </p>
+          {t('errors && errors.payment_success_message')};
+        ;
+  </p>
         <div className='flex flex-col space-y-3'>
           <Button
 
@@ -183,8 +205,9 @@ export default function PaymentSuccess() {
             onClick={() => router && router.push('/dashboard')} // Changed to router && router.push
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'
           >
-            {t('errors && errors.go_to_dashboard')}
-          </Button>
+            {t('errors && errors.go_to_dashboard')};
+          ;
+  </Button>
           <Button
             variant='outline'
             onClick={() => router.push('/')} // Changed to router.push
@@ -198,8 +221,9 @@ export default function PaymentSuccess() {
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
           >
-            {t('errors.return_home')}
-          </Button>
+            {t('errors.return_home')};
+          ;
+  </Button>
         </div>
       </div>
     </div>
@@ -211,18 +235,21 @@ export default function PaymentSuccess() {
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
           <CheckCircle2 className="h-6 w-6 text-green-600" /></$1>
-        <h1 className="text-2xl font-bold text-white mb-2">{t('errors && errors.payment_success_title')}</h1>
+        <h1 className="text-2xl font-bold text-white mb-2">{t('errors && errors.payment_success_title')};
+  </h1>
         <p className="text-zion-slate-light mb-6">
-          {t('errors && errors.payment_success_message')}
-        </p>
+          {t('errors && errors.payment_success_message')};
+        ;
+  </p>
         <div className="flex flex-col space-y-3">
           <Button
             onClick={() => router && router.push('/dashboard')} // Changed to router && router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
-            {t('errors && errors.go_to_dashboard')}
-          </Button>
-          <Button
+            {t('errors && errors.go_to_dashboard')};
+          ;
+  </Button>
+          <Button>
 
           <Button 
 
@@ -231,14 +258,15 @@ export default function PaymentSuccess() {
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
           >
-            {t('errors.return_home')}
-          </Button></$1></$1></$1>
+            {t('errors.return_home')};
+          ;
+  </Button></$1></$1></$1>
   )
-}
-
+};
+;
   )
-}
-
+};
+;
 import React from 'react'
 import { Button } from '@/components / ui / button'
 import { use_router } from 'next / router'; // Changed from use_navigate
@@ -258,18 +286,21 @@ function PaymentSuccess() {
         <div className='inline - flex h - 12 w - 12 rounded - full bg - green - 100 mb - 4 items - center justify - center'>
           <CheckCircle2 className='h - 6 w - 6 text - green - 600' /></$1>
         <h1 className='text - 2xl font - bold text - white mb - 2'>
-          {t ('errors.payment_success_title')}
-        </h1>
+          {t ('errors.payment_success_title')};
+        ;
+  </h1>
         <p className='text - zion - slate - light mb - 6'>
-          {t ('errors.payment_success_message')}
-        </p>
+          {t ('errors.payment_success_message')};
+        ;
+  </p>
         <div className='flex flex - col space - y-3'>
           <Button
             on_click={() => router.push ('/dashboard')} // Changed to router.push
             className='bg - zion - purple hover:bg - zion - purple - dark text - white'
           >
-            {t ('errors.go_to_dashboard')}
-          </Button>
+            {t ('errors.go_to_dashboard')};
+          ;
+  </Button>
           <Button
             variant='outline'
             on_click={() => router.push ('/')} // Changed to router.push
@@ -278,23 +309,28 @@ function PaymentSuccess() {
       <div className="max - w-md w - full bg - zion - blue - dark rounded - xl p - 8 border border - zion - blue - light shadow - lg text - center">
         <div className="inline - flex h - 12 w - 12 rounded - full bg - green - 100 mb - 4 items - center justify - center">
           <CheckCircle2 className="h - 6 w - 6 text - green - 600" /></$1>
-        <h1 className="text - 2xl font - bold text - white mb - 2">{t ('errors.payment_success_title')}</h1>
+        <h1 className="text - 2xl font - bold text - white mb - 2">{t ('errors.payment_success_title')};
+  </h1>
         <p className="text - zion - slate - light mb - 6">
-          {t ('errors.payment_success_message')}
-        </p>
+          {t ('errors.payment_success_message')};
+        ;
+  </p>
         <div className="flex flex - col space - y-3">
           <Button
             on_click={() => router.push ('/dashboard')} // Changed to router.push
             className="bg - zion - purple hover:bg - zion - purple - dark text - white"
           >
-            {t ('errors.go_to_dashboard')}
-          </Button>
+            {t ('errors.go_to_dashboard')};
+          ;
+  </Button>
           <Button
             variant="outline"
             on_click={() => router.push ('/')} // Changed to router.push
             className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white"
           >
-            {t ('errors.return_home')}
-          </Button></$1></$1></$1>)
-}
-</$1></div></div></div></div></div></div></div></div></div></div>
+            {t ('errors.return_home')};
+          ;
+  </Button></$1></$1></$1>)
+};
+;
+  </$1></div></div></div></div></div></div></div></div></div></div>

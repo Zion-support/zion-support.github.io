@@ -6,7 +6,7 @@ export interface AdvancedInnovativeService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface AdvancedInnovativeService {
   setup_time: string
   category: string
   real_service: boolean
-  technology: string[]
-  integrations: string[]
-  use_cases: string[]
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   market_size: string
   growth_rate: string
   variant: ServiceVariant
@@ -31,7 +31,7 @@ export interface AdvancedInnovativeService {
     email: string
     address: string
     website: string,
-  }
+  };
   real_implementation: boolean
   implementation_details: string
   launch_date: string
@@ -42,7 +42,7 @@ const contact =
   website: 'https://ziontechgroup.com'}  mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'}
+  website: 'https://ziontechgroup.com'};
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -66,7 +66,7 @@ export interface AdvancedInnovativeService {id: string, name: string,
   contactInfo: unknown,
     mobile: string, email: string
     address: string,
-    website: string}
+    website: string};
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -89,8 +89,7 @@ export interface AdvancedInnovativeService {id: string, name: string,
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   text_colo,
@@ -134,7 +133,7 @@ export interface AdvancedInnovativeService {id: string, name: string,
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   real_implementatio,
   n: boolean,
   implementation_detail,
@@ -172,7 +171,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
   mobil,
   e: '+1 302 464 0950',
   emai,
@@ -190,8 +189,8 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
-export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
-  e: string}
+export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
+  e: string};
     },
     realImplementatio,
   n: boolean, implementationDetail,
@@ -207,15 +206,17 @@ export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
   s: string[],
   marketAdvantag,
   e: string}
-const contact =
+;
+  ;
+  const contact =
   mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
   addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services,
-    ]
+    ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy'
     id: 'ai-autonomous-devops-orchestrator',
     name: 'AI Autonomous DevOps Orchestrator',
@@ -252,7 +253,7 @@ export const,
       'Automated rollback and recovery'
       'Cost optimization and resource management'
       'Multi-cloud deployment orchestration'
-    ]
+    ];
     popular: true,
     marketPosition: 'Next-generation DevOps platform with autonomous operations and AI-driven optimization',
     targetAudience: 'DevOps engineers, Platform teams, Engineering managers'
@@ -278,15 +279,15 @@ export const,
     technolog,
   y: [,
       'Python, Kubernetes, Docker, Jenkins, GitLab CI, Terraform, Ansible'
-    ]
+    ];
     integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty']
+  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty'];
     useCase,
   s: [,
       'Continuous deployment automation, Infrastructure optimization, Incident response automation'
-    ]
+    ];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
     marketSize: '$8 B+ DevOps tools market'
     growthRate: '25% YoY'
     variant: 'ai-autonomous-enterprise'
@@ -296,7 +297,7 @@ export const,
     ro,
   i: 'Reduce deployment time by 70% and infrastructure costs by 40%'
     competitor,
-  s: ['GitLab, Jenkins, CircleCI, GitHub Actions']
+  s: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
     marketSiz,
   e: '$8B+ DevOps tools market'
     growthRat,
@@ -315,7 +316,7 @@ export const,
       'Self-healing deployments'
       'Intelligent resource optimization'
       'Automated security compliance'],
-    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'}
+    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'};
   // Quantum Computing Services
     id: 'quantum-financial-modeling-platform',
     name: 'Quantum Financial Modeling Platform',
@@ -334,10 +335,10 @@ export const,
     realService: true,
     technology: [,
       'Automated security compliance'
-    ]
+    ];
     marketAdvantag,
   e: 'First autonomous DevOps platform with proven enterprise adoption and ROI'
-  }
+  };
   // Quantum Computing Services,
   id: 'quantum-financial-modeling-platform'
     nam,
@@ -369,17 +370,17 @@ export const,
     technolog,
   y: [,
       'Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics'
-    ]
+    ];
     integration,
   s: [,
       'Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum'
-    ]
+    ];
     useCase,
   s: [,
       'Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction'
-    ]
+    ];
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%',
-    competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
+    competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin'];
     marketSize: '$12 B+ financial modeling market'
     growthRate: '35% YoY'
     variant: 'quantum-finance-enterprise'
@@ -389,7 +390,7 @@ export const,
     ro,
   i: 'Improve portfolio returns by 15-25% and reduce risk by 30%'
     competitor,
-  s: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
+  s: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin'];
     marketSiz,
   e: '$12B+ financial modeling market'
     growthRat,
@@ -408,7 +409,7 @@ export const,
       '1000 x faster complex calculations'
       'Quantum advantage in financial modeling'
       'Regulatory compliance automation'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -417,7 +418,7 @@ export const,
       'Risk modeling'
       'Market prediction'
       'Quantum encryption'],
-    marketAdvantage: 'Only quantum computing platform specifically designed for financial services'}
+    marketAdvantage: 'Only quantum computing platform specifically designed for financial services'};
   // Advanced Cybersecurity Services
     id: 'ai-powered-threat-hunting-platform',
     name: 'AI-Powered Threat Hunting Platform',
@@ -433,13 +434,13 @@ export const,
     setupTime: '2-3 weeks',
     category: 'Cybersecurity',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis']
+    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis'];
     integrations: [,
       'Quantum encryption'
-    ]
+    ];
     marketAdvantag,
   e: 'Only quantum computing platform specifically designed for financial services'
-  }
+  };
   // Advanced Cybersecurity Services,
   id: 'ai-powered-threat-hunting-platform'
     nam,
@@ -468,17 +469,17 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis']
+  y: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis'];
     integration,
   s: [,
       'SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security'
-    ]
+    ];
     useCase,
   s: [,
       'Threat detection, Incident response, Security monitoring, Compliance'
-    ]
+    ];
     roi: 'Reduce threat detection time by 80% and false positives by 60%',
-    competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
+    competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'];
     marketSize: '$20 B+ cybersecurity market'
     growthRate: '40% YoY'
     variant: 'ai-cybersecurity-enterprise'
@@ -488,7 +489,7 @@ export const,
     ro,
   i: 'Reduce threat detection time by 80% and false positives by 60%'
     competitor,
-  s: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
+  s: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'];
     marketSiz,
   e: '$20B+ cybersecurity market'
     growthRat,
@@ -507,7 +508,7 @@ export const,
       '24/7 autonomous monitoring'
       'Proactive threat prevention'
       'Compliance automation'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -516,7 +517,7 @@ export const,
       'Real-time threat intelligence'
       'Automated response'
       'Predictive modeling'],
-    marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'}
+    marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'};
   // Edge Computing & IoT Services
     id: 'edge-ai-inference-platform'
     name: 'Edge AI Inference Platform',
@@ -533,13 +534,13 @@ export const,
     setupTime: '1-2 weeks',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++']
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP']
+    technology: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++'];
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'];
     useCases: [,
       'Real-time AI inference, IoT decision making, Edge computing, Mobile AI'
-    ]
+    ];
     roi: 'Reduce latency by 90% and bandwidth costs by 70%',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'];
     marketSize: '$15 B+ edge computing market'
     growthRate: '45% YoY'
     variant: 'ai-edge-enterprise'
@@ -547,10 +548,10 @@ export const,
     realImplementation: true
     implementationDetails: benefits: [,
       'Predictive modeling'
-    ]
+    ];
     marketAdvantag,
   e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'
-  }
+  };
   // Edge Computing & IoT Services,
   id: 'edge-ai-inference-platform'
     nam,
@@ -580,17 +581,17 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++']
+  y: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++'];
     integration,
-  s: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP']
+  s: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'];
     useCase,
   s: [,
       'Real-time AI inference, IoT decision making, Edge computing, Mobile AI'
-    ]
+    ];
     ro,
   i: 'Reduce latency by 90% and bandwidth costs by 70%'
     competitor,
-  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
+  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'];
     marketSiz,
   e: '$15B+ edge computing market'
     growthRat,
@@ -609,7 +610,7 @@ export const,
       'Real-time AI decision making'
       'Offline AI capabilities'
       'Scalable edge deployment'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -618,7 +619,7 @@ export const,
       'Model optimization'
       'Edge device management'
       'Performance analytics'],
-    marketAdvantage: 'Comprehensive edge AI platform with advanced optimization and management capabilities'}
+    marketAdvantage: 'Comprehensive edge AI platform with advanced optimization and management capabilities'};
   // Space Technology Services
     id: 'satellite-ai-mission-control',
     name: 'Satellite AI Mission Control',
@@ -636,10 +637,10 @@ export const,
     realService: true,
     technology: [,
       'Performance analytics'
-    ]
+    ];
     marketAdvantag,
   e: 'Comprehensive edge AI platform with advanced optimization and management capabilities'
-  }
+  };
   // Space Technology Services,
   id: 'satellite-ai-mission-control'
     nam,
@@ -669,17 +670,17 @@ export const,
     technolog,
   y: [,
       'Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics'
-    ]
+    ];
     integration,
   s: [,
       'Ground station networks, Weather APIs, Space weather data, Mission planning tools'
-    ]
+    ];
     useCase,
   s: [,
       'Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance'
-    ]
+    ];
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%',
-    competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
+    competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman'];
     marketSize: '$8 B+ satellite operations market'
     growthRate: '30% YoY'
     variant: 'ai-space-enterprise'
@@ -689,7 +690,7 @@ export const,
     ro,
   i: 'Improve mission success rate by 25% and reduce operational costs by 40%'
     competitor,
-  s: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
+  s: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman'];
     marketSiz,
   e: '$8B+ satellite operations market'
     growthRat,
@@ -708,7 +709,7 @@ export const,
       'Predictive maintenance capabilities'
       'Autonomous mission optimization'
       'Enhanced collision avoidance'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -717,7 +718,7 @@ export const,
       'Mission optimization'
       'Collision avoidance'
       'Real-time control'],
-    marketAdvantage: 'Only AI-powered satellite mission control platform with proven space operations'}
+    marketAdvantage: 'Only AI-powered satellite mission control platform with proven space operations'};
   // Neural Technology & BCI Services
     id: 'brain-computer-interface-development-kit',
     name: 'Brain-Computer Interface Development Kit',
@@ -736,10 +737,10 @@ export const,
     realService: true,
     technology: [,
       'Real-time control'
-    ]
+    ];
     marketAdvantag,
   e: 'Only AI-powered satellite mission control platform with proven space operations'
-  }
+  };
   // Neural Technology & BCI Services,
   id: 'brain-computer-interface-development-kit'
     nam,
@@ -771,17 +772,17 @@ export const,
     technolog,
   y: [,
       'Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience'
-    ]
+    ];
     integration,
   s: [,
       'Medical devices, Gaming platforms, Accessibility tools, Research platforms'
-    ]
+    ];
     useCase,
   s: [,
       'Medical applications, Gaming interfaces, Accessibility tools, Research projects'
-    ]
+    ];
     roi: 'Accelerate BCI development by 5x and reduce development costs by 60%',
-    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
+    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
     marketSize: '$3 B+ BCI market'
     growthRate: '50% YoY'
     variant: 'neural-advanced'
@@ -791,7 +792,7 @@ export const,
     ro,
   i: 'Accelerate BCI development by 5x and reduce development costs by 60%'
     competitor,
-  s: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
+  s: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
     marketSiz,
   e: '$3B+ BCI market'
     growthRat,
@@ -810,7 +811,7 @@ export const,
       'Complete development stack'
       'Expert consultation'
       'Safety compliance'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -819,7 +820,7 @@ export const,
       'Machine learning integration'
       'Development tools'
       'Safety frameworks'],
-    marketAdvantage: 'Most comprehensive BCI development platform with complete hardware and software stack'}
+    marketAdvantage: 'Most comprehensive BCI development platform with complete hardware and software stack'};
   // Advanced Data Analytics Services
     id: 'real-time-streaming-analytics-platform',
     name: 'Real-Time Streaming Analytics Platform',
@@ -838,10 +839,10 @@ export const,
     realService: true,
     technology: [,
       'Safety frameworks'
-    ]
+    ];
     marketAdvantag,
   e: 'Most comprehensive BCI development platform with complete hardware and software stack'
-  }
+  };
   // Advanced Data Analytics Services,
   id: 'real-time-streaming-analytics-platform'
     nam,
@@ -873,17 +874,17 @@ export const,
     technolog,
   y: [,
       'Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala'
-    ]
+    ];
     integration,
   s: [,
       'Databases, Message queues, APIs, Cloud platforms, BI tools'
-    ]
+    ];
     useCase,
   s: [,
       'Real-time monitoring, Fraud detection, IoT analytics, Financial trading'
-    ]
+    ];
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%',
-    competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
+    competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics'];
     marketSize: '$18 B+ streaming analytics market'
     growthRate: '30% YoY'
     variant: 'ai-analytics-enterprise'
@@ -893,7 +894,7 @@ export const,
     ro,
   i: 'Reduce decision latency by 90% and improve operational efficiency by 35%'
     competitor,
-  s: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
+  s: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics'];
     marketSiz,
   e: '$18B+ streaming analytics market'
     growthRat,
@@ -912,7 +913,7 @@ export const,
       'Real-time insights'
       'Scalable processing'
       'Low-latency analytics'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -921,7 +922,7 @@ export const,
       'Machine learning'
       'Real-time dashboards'
       'Data quality monitoring'],
-    marketAdvantage: 'High-performance streaming analytics platform with proven enterprise scalability'}
+    marketAdvantage: 'High-performance streaming analytics platform with proven enterprise scalability'};
   // Blockchain & DeFi Services
     id: 'enterprise-blockchain-orchestration-platform',
     name: 'Enterprise Blockchain Orchestration Platform',
@@ -938,13 +939,13 @@ export const,
     setupTime: '3-4 weeks',
     category: 'Blockchain & DeFi',
     realService: true,
-    technology: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python']
+    technology: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python'];
     integrations: [,
       'Data quality monitoring'
-    ]
+    ];
     marketAdvantag,
   e: 'High-performance streaming analytics platform with proven enterprise scalability'
-  }
+  };
   // Blockchain & DeFi Services,
   id: 'enterprise-blockchain-orchestration-platform'
     nam,
@@ -974,17 +975,17 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python']
+  y: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python'];
     integration,
   s: [,
       'Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms'
-    ]
+    ];
     useCase,
   s: [,
       'Supply chain tracking, Financial transactions, Identity management, Asset tokenization'
-    ]
+    ];
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%',
-    competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
+    competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger'];
     marketSize: '$22 B+ enterprise blockchain market'
     growthRate: '40% YoY'
     variant: 'blockchain-enterprise'
@@ -994,7 +995,7 @@ export const,
     ro,
   i: 'Reduce blockchain deployment time by 70% and operational costs by 50%'
     competitor,
-  s: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
+  s: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger'];
     marketSiz,
   e: '$22B+ enterprise blockchain market'
     growthRat,
@@ -1013,7 +1014,7 @@ export const,
       'Enterprise-grade security'
       'Multi-blockchain support'
       'Compliance automation'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -1022,7 +1023,7 @@ export const,
       'Enterprise security'
       'Compliance automation'
       'Performance optimization'],
-    marketAdvantage: 'Most comprehensive enterprise blockchain platform with multi-chain support'}
+    marketAdvantage: 'Most comprehensive enterprise blockchain platform with multi-chain support'};
   // Healthcare AI Services
     id: 'ai-powered-medical-imaging-analysis',
     name: 'AI-Powered Medical Imaging Analysis',
@@ -1040,10 +1041,10 @@ export const,
     realService: true,
     technology: [,
       'Performance optimization'
-    ]
+    ];
     marketAdvantag,
   e: 'Most comprehensive enterprise blockchain platform with multi-chain support'
-  }
+  };
   // Healthcare AI Services,
   id: 'ai-powered-medical-imaging-analysis'
     nam,
@@ -1074,17 +1075,17 @@ export const,
     technolog,
   y: [,
       'TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM'
-    ]
+    ];
     integration,
   s: [,
       'PACS systems, EMR systems, Medical devices, Cloud platforms'
-    ]
+    ];
     useCase,
   s: [,
       'Radiology diagnosis, Pathology analysis, Medical research, Clinical trials'
-    ]
+    ];
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%',
-    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     marketSize: '$35 B+ medical imaging market'
     growthRate: '45% YoY'
     variant: 'ai-healthcare-enterprise'
@@ -1094,7 +1095,7 @@ export const,
     ro,
   i: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%'
     competitor,
-  s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+  s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     marketSiz,
   e: '$35B+ medical imaging market'
     growthRat,
@@ -1113,7 +1114,7 @@ export const,
       'FDA compliance'
       'Enterprise integration'
       'Expert support'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -1122,7 +1123,7 @@ export const,
       'Real-time processing'
       'Automated reporting'
       'Quality assurance'],
-    marketAdvantage: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'}
+    marketAdvantage: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'};
   // Climate & Sustainability Services
     id: 'ai-climate-prediction-platform',
     name: 'AI Climate Prediction Platform',
@@ -1141,10 +1142,10 @@ export const,
     realService: true,
     technology: [,
       'Quality assurance'
-    ]
+    ];
     marketAdvantag,
   e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'
-  }
+  };
   // Climate & Sustainability Services,
   id: 'ai-climate-prediction-platform'
     nam,
@@ -1176,17 +1177,17 @@ export const,
     technolog,
   y: [,
       'Python, TensorFlow, PyTorch, Climate models, Environmental data, GIS'
-    ]
+    ];
     integration,
   s: [,
       'Environmental sensors, Weather APIs, Satellite data, Research platforms'
-    ]
+    ];
     useCase,
   s: [,
       'Climate modeling, Environmental monitoring, Sustainability planning, Research projects'
-    ]
+    ];
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
-    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
+    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
     marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY'
     variant: 'ai-climate-enterprise'
@@ -1196,7 +1197,7 @@ export const,
     ro,
   i: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%'
     competitor,
-  s: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
+  s: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
     marketSiz,
   e: '$12B+ climate technology market'
     growthRat,
@@ -1215,7 +1216,7 @@ export const,
       'Real-time monitoring'
       'Environmental compliance'
       'Expert consultation'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -1224,31 +1225,31 @@ export const,
       'Weather forecasting'
       'Sustainability analytics'
       'Custom model development'],
-    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'}
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'};
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]
+    ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy',
       'Custom model development'
-    ]
+    ];
     marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
+  };
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]
+    ];
     marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
-]
-      'Most advanced AI climate prediction platform with research-grade accuracy'}
+  };
+];
+      'Most advanced AI climate prediction platform with research-grade accuracy'};
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]
+    ];
     marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy'
-export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   textColor: string
   link: string
   marketPosition: string
@@ -1257,34 +1258,34 @@ export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
   contactInfo: {,
     mobile: string
     email: string
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-  benefits: string[]
-  capabilities: string[]
+  benefits: string[];
+  capabilities: string[];
   marketAdvantage: string,
-}
+};
 // const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
   website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean,
@@ -1303,19 +1304,19 @@ export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
   capabilitie,
   s: string[],
   marketAdvantag,
-  e: string}
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+  e: string};
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
   websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
 export const,
   advancedInnovativeServices: AdvancedInnovativeService[] = [
   email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
   website: 'https://ziontechgroup.com'
-}
+};
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1348,11 +1349,13 @@ export interface AdvancedInnovativeService {
   benefits: string[], capabilities: string[],
   marketAdvantage: string
 }
-const contact = {
+;
+  ;
+  const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+};
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
@@ -1374,7 +1377,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Automated rollback and recovery'
       'Cost optimization and resource management'
       'Multi-cloud deployment orchestration'
-    ]
+    ];
     popular: true
     icon: '🤖'
     color: 'from-emerald-600 to-teal-700'
@@ -1389,13 +1392,13 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     realService: true
     technology: [
       'Python, Kubernetes, Docker, Jenkins, GitLab CI, Terraform, Ansible'
-    ]
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty']
+    ];
+    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty'];
     useCases: [
       'Continuous deployment automation, Infrastructure optimization, Incident response automation'
-    ]
+    ];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%'
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
     marketSize: '$8B+ DevOps tools market'
     growthRate: '25% YoY'
     variant: 'ai-autonomous-enterprise'
@@ -1413,17 +1416,17 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '99.9% deployment success rate'
       'Zero-downtime deployments'
       '24/7 autonomous monitoring'
-    ]
+    ];
     capabilities: [
       'Autonomous pipeline management'
       'Predictive scaling'
       'Self-healing deployments'
       'Intelligent resource optimization'
       'Automated security compliance'
-    ]
+    ];
     marketAdvantage:
       'First autonomous DevOps platform with proven enterprise adoption and ROI'
-  }
+  };
   // Advanced AI & Machine Learning Services
   {
     id: 'ai-autonomous-devops-orchestrator'
@@ -1442,7 +1445,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'Autonomous CI/CD pipeline optimizationPredictive infrastructure scalingSelf-healing deployment failuresIntelligent resource allocationAutomated security scanning and patchingReal-time performance monitoring and alertingAI-powered code review and quality gatesAutomated rollback and recovery'
       'Cost optimization and resource managementMulti-cloud deployment orchestration'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -1454,11 +1457,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1-2 weeks'
     category: 'AI & Machine Learning'
     realService: true,
-    technology: ['Python, Kubernetes, Docker, Jenkins, GitLab CI, Terraform, Ansible']
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty']
-    useCases: ['Continuous deployment automation, Infrastructure optimization, Incident response automation']
+    technology: ['Python, Kubernetes, Docker, Jenkins, GitLab CI, Terraform, Ansible'];
+    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty'];
+    useCases: ['Continuous deployment automation, Infrastructure optimization, Incident response automation'];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
     marketSize: '$8 B+ DevOps tools market'
     growthRate: '25% YoY'
     variant: 'ai-autonomous-enterprise'
@@ -1471,13 +1474,13 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     reviews: 67,
     benefits: [,
       '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring',
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance'
-    ]
-    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'}
+    ];
+    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'};
   // Quantum Computing Services
   {
     id: 'quantum-financial-modeling-platform'
@@ -1489,7 +1492,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'Quantum Monte Carlo simulationsPortfolio optimization algorithmsRisk assessment and modelingReal-time market predictionQuantum machine learning for tradingMulti-asset correlation analysisRegulatory compliance automationAdvanced backtesting capabilities'
       'Quantum encryption for data securityAPI access for custom integrations'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -1501,11 +1504,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '3-4 weeks'
     category: 'Quantum Computing & AI'
     realService: true,
-    technology: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics']
-    integrations: ['Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum']
-    useCases: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction']
+    technology: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics'];
+    integrations: ['Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum'];
+    useCases: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction'];
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%',
-    competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
+    competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin'];
     marketSize: '$12 B+ financial modeling market'
     growthRate: '35% YoY'
     variant: 'quantum-finance-enterprise'
@@ -1520,15 +1523,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '15-25% improvement in portfolio returns30% reduction in portfolio risk1000x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation',
     marketAdvantag,
   e: 'First autonomous DevOps platform with proven enterprise adoption and ROI'
-  }
+  };
   // Quantum Computing Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Quantum Monte Carlo simulationsPortfolio optimizationRisk modelingMarket predictionQuantum encryption'
-    ]
-    marketAdvantage: 'Only quantum computing platform specifically designed for financial services'}
+    ];
+    marketAdvantage: 'Only quantum computing platform specifically designed for financial services'};
   // Advanced Cybersecurity Services
   {
     id: 'ai-powered-threat-hunting-platform'
@@ -1540,7 +1543,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'Autonomous threat hunting and detectionAI-powered behavioral analysisReal-time threat intelligence feedsAutomated incident responseZero-day threat detectionAdvanced malware analysisThreat actor profilingPredictive threat modeling'
       'Compliance reporting and auditingIntegration with existing security tools'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -1552,11 +1555,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '2-3 weeks'
     category: 'Cybersecurity'
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis']
-    integrations: ['SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security']
-    useCases: ['Threat detection, Incident response, Security monitoring, Compliance']
+    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis'];
+    integrations: ['SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security'];
+    useCases: ['Threat detection, Incident response, Security monitoring, Compliance'];
     roi: 'Reduce threat detection time by 80% and false positives by 60%',
-    competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
+    competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'];
     marketSize: '$20 B+ cybersecurity market'
     growthRate: '40% YoY'
     variant: 'ai-cybersecurity-enterprise'
@@ -1571,15 +1574,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '80% faster threat detection60% reduction in false positives24/7 autonomous monitoringProactive threat preventionCompliance automation',
     marketAdvantag,
   e: 'Only quantum computing platform specifically designed for financial services'
-  }
+  };
   // Advanced Cybersecurity Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Autonomous threat huntingAI behavioral analysisReal-time threat intelligenceAutomated responsePredictive modeling'
-    ]
-    marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'}
+    ];
+    marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'};
   // Edge Computing & IoT Services
   {
     id: 'edge-ai-inference-platform'
@@ -1591,7 +1594,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'Edge AI model deployment and managementReal-time inference optimizationAutomatic model versioning and updatesEdge device management and monitoringBandwidth optimization and compressionOffline capability and syncMulti-edge node orchestrationPerformance analytics and optimization'
       'Security and encryption at edgeIntegration with cloud AI platforms'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -1603,11 +1606,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1-2 weeks'
     category: 'Edge Computing & IoT'
     realService: true,
-    technology: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++']
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP']
-    useCases: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI']
+    technology: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++'];
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'];
+    useCases: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI'];
     roi: 'Reduce latency by 90% and bandwidth costs by 70%',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'];
     marketSize: '$15 B+ edge computing market'
     growthRate: '45% YoY'
     variant: 'ai-edge-enterprise'
@@ -1622,15 +1625,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '90% reduction in latency70% reduction in bandwidth costsReal-time AI decision makingOffline AI capabilitiesScalable edge deployment',
     marketAdvantag,
   e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'
-  }
+  };
   // Edge Computing & IoT Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Edge AI deploymentReal-time inferenceModel optimizationEdge device managementPerformance analytics'
-    ]
-    marketAdvantage: 'Comprehensive edge AI platform with advanced optimization and management capabilities'}
+    ];
+    marketAdvantage: 'Comprehensive edge AI platform with advanced optimization and management capabilities'};
   // Space Technology Services
   {
     id: 'satellite-ai-mission-control'
@@ -1642,7 +1645,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'AI-powered satellite health monitoringPredictive maintenance and anomaly detectionAutonomous mission planning and optimizationReal-time satellite tracking and controlAdvanced orbit optimization algorithmsWeather and space weather integrationAutomated collision avoidanceMission success rate optimization'
       'Comprehensive reporting and analyticsIntegration with ground stations'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-violet-600 to-purple-700'
@@ -1654,11 +1657,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '4-6 weeks'
     category: 'Space Technology & Innovation'
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics']
-    integrations: ['Ground station networks, Weather APIs, Space weather data, Mission planning tools']
-    useCases: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance']
+    technology: ['Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics'];
+    integrations: ['Ground station networks, Weather APIs, Space weather data, Mission planning tools'];
+    useCases: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance'];
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%',
-    competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
+    competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman'];
     marketSize: '$8 B+ satellite operations market'
     growthRate: '30% YoY'
     variant: 'ai-space-enterprise'
@@ -1673,15 +1676,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '25% improvement in mission success rate40% reduction in operational costsPredictive maintenance capabilitiesAutonomous mission optimizationEnhanced collision avoidance',
     marketAdvantag,
   e: 'Comprehensive edge AI platform with advanced optimization and management capabilities'
-  }
+  };
   // Space Technology Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'AI satellite monitoringPredictive maintenanceMission optimizationCollision avoidanceReal-time control'
-    ]
-    marketAdvantage: 'Only AI-powered satellite mission control platform with proven space operations'}
+    ];
+    marketAdvantage: 'Only AI-powered satellite mission control platform with proven space operations'};
   // Neural Technology & BCI Services
   {
     id: 'brain-computer-interface-development-kit'
@@ -1693,7 +1696,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'Complete BCI hardware and software stackNeural signal processing algorithmsMachine learning model trainingReal-time brain activity visualizationCustom interface development toolsSafety and compliance frameworksIntegration with existing systemsPerformance optimization tools'
       'Comprehensive documentation and tutorialsExpert consultation and support'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-pink-600 to-rose-700'
@@ -1705,11 +1708,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '6-8 weeks'
     category: 'Neural Technology & BCI'
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience']
-    integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms']
-    useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects']
+    technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience'];
+    integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms'];
+    useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects'];
     roi: 'Accelerate BCI development by 5 x and reduce development costs by 60%',
-    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
+    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
     marketSize: '$3 B+ BCI market'
     growthRate: '50% YoY'
     variant: 'neural-advanced'
@@ -1724,15 +1727,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '5x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance',
     marketAdvantag,
   e: 'Only AI-powered satellite mission control platform with proven space operations'
-  }
+  };
   // Neural Technology & BCI Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Complete BCI platformNeural signal processingMachine learning integrationDevelopment toolsSafety frameworks'
-    ]
-    marketAdvantage: 'Most comprehensive BCI development platform with complete hardware and software stack'}
+    ];
+    marketAdvantage: 'Most comprehensive BCI development platform with complete hardware and software stack'};
   // Advanced Data Analytics Services
   {
     id: 'real-time-streaming-analytics-platform'
@@ -1744,7 +1747,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'Real-time data stream processingAdvanced analytics and machine learningLow-latency data ingestionScalable stream processingReal-time dashboards and alertsData quality monitoringIntegration with data sourcesCustom analytics pipelines'
       'Performance optimizationEnterprise security and compliance'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -1756,11 +1759,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '1-2 weeks'
     category: 'AI & Analytics'
     realService: true,
-    technology: ['Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala']
-    integrations: ['Databases, Message queues, APIs, Cloud platforms, BI tools']
-    useCases: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading']
+    technology: ['Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala'];
+    integrations: ['Databases, Message queues, APIs, Cloud platforms, BI tools'];
+    useCases: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading'];
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%',
-    competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
+    competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics'];
     marketSize: '$18 B+ streaming analytics market'
     growthRate: '30% YoY'
     variant: 'ai-analytics-enterprise'
@@ -1775,15 +1778,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '90% reduction in decision latency35% improvement in operational efficiencyReal-time insightsScalable processingLow-latency analytics',
     marketAdvantag,
   e: 'Most comprehensive BCI development platform with complete hardware and software stack'
-  }
+  };
   // Advanced Data Analytics Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Real-time processingStream analyticsMachine learningReal-time dashboardsData quality monitoring'
-    ]
-    marketAdvantage: 'High-performance streaming analytics platform with proven enterprise scalability'}
+    ];
+    marketAdvantage: 'High-performance streaming analytics platform with proven enterprise scalability'};
   // Blockchain & DeFi Services
   {
     id: 'enterprise-blockchain-orchestration-platform'
@@ -1795,7 +1798,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'Multi-blockchain network managementSmart contract development and deploymentEnterprise-grade security and complianceScalable blockchain infrastructureIntegration with existing systemsPerformance monitoring and optimizationAutomated governance and complianceMulti-party transaction management'
       'Advanced analytics and reporting24/7 support and maintenance'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-orange-600 to-yellow-700'
@@ -1807,11 +1810,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '3-4 weeks'
     category: 'Blockchain & DeFi'
     realService: true,
-    technology: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python']
-    integrations: ['Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms']
-    useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization']
+    technology: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python'];
+    integrations: ['Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms'];
+    useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization'];
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%',
-    competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
+    competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger'];
     marketSize: '$22 B+ enterprise blockchain market'
     growthRate: '40% YoY'
     variant: 'blockchain-enterprise'
@@ -1826,15 +1829,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '70% faster blockchain deployment50% reduction in operational costsEnterprise-grade securityMulti-blockchain supportCompliance automation',
     marketAdvantag,
   e: 'High-performance streaming analytics platform with proven enterprise scalability'
-  }
+  };
   // Blockchain & DeFi Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Multi-blockchain managementSmart contract developmentEnterprise securityCompliance automationPerformance optimization'
-    ]
-    marketAdvantage: 'Most comprehensive enterprise blockchain platform with multi-chain support'}
+    ];
+    marketAdvantage: 'Most comprehensive enterprise blockchain platform with multi-chain support'};
   // Healthcare AI Services
   {
     id: 'ai-powered-medical-imaging-analysis'
@@ -1846,7 +1849,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'AI-powered image analysis and diagnosisSupport for multiple imaging modalitiesReal-time analysis and reportingIntegration with PACS systemsAutomated report generationQuality assurance and validationCompliance with medical regulationsPerformance tracking and optimization'
       'Custom model training capabilitiesExpert consultation and support'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-teal-600 to-green-700'
@@ -1858,11 +1861,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '4-6 weeks'
     category: 'Healthcare AI'
     realService: true,
-    technology: ['TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM']
-    integrations: ['PACS systems, EMR systems, Medical devices, Cloud platforms']
-    useCases: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials']
+    technology: ['TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM'];
+    integrations: ['PACS systems, EMR systems, Medical devices, Cloud platforms'];
+    useCases: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials'];
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%',
-    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     marketSize: '$35 B+ medical imaging market'
     growthRate: '45% YoY'
     variant: 'ai-healthcare-enterprise'
@@ -1877,15 +1880,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support',
     marketAdvantag,
   e: 'Most comprehensive enterprise blockchain platform with multi-chain support'
-  }
+  };
   // Healthcare AI Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance'
-    ]
-    marketAdvantage: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'}
+    ];
+    marketAdvantage: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'};
   // Climate & Sustainability Services
   {
     id: 'ai-climate-prediction-platform'
@@ -1897,7 +1900,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [
       'AI-powered climate modeling and predictionReal-time environmental monitoringAdvanced weather forecastingClimate impact assessmentSustainability analytics and reportingIntegration with environmental sensorsCustom model developmentPerformance optimization and validation'
       'Compliance with environmental standardsExpert consultation and support'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -1909,11 +1912,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     setupTime: '3-4 weeks'
     category: 'Climate & Sustainability'
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Climate models, Environmental data, GIS']
-    integrations: ['Environmental sensors, Weather APIs, Satellite data, Research platforms']
-    useCases: ['Climate modeling, Environmental monitoring, Sustainability planning, Research projects']
+    technology: ['Python, TensorFlow, PyTorch, Climate models, Environmental data, GIS'];
+    integrations: ['Environmental sensors, Weather APIs, Satellite data, Research platforms'];
+    useCases: ['Climate modeling, Environmental monitoring, Sustainability planning, Research projects'];
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
-    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
+    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
     marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY'
     variant: 'ai-climate-enterprise'
@@ -1926,7 +1929,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     reviews: 17
     benefits: [
       '30% improvement in prediction accuracy50% reduction in modeling timeReal-time monitoringEnvironmental complianceExpert consultation'
-    ]
+    ];
     capabilities: [
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ],
@@ -1937,11 +1940,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'DevOps engineers, Platform teams, Engineering managers',
     trialDays: 21, setupTime: '1-2 weeks',
     category: 'AI & Machine Learning', realService: true,
-    technology: ['Python, Kubernetes, Docker, Jenkins, GitLab CI, Terraform, Ansible']
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty']
-    useCases: ['Continuous deployment automation, Infrastructure optimization, Incident response automation']
+    technology: ['Python, Kubernetes, Docker, Jenkins, GitLab CI, Terraform, Ansible'];
+    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty'];
+    useCases: ['Continuous deployment automation, Infrastructure optimization, Incident response automation'];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
     marketSize: '$8B+ DevOps tools market', growthRate: '25% YoY',
     variant: 'ai-autonomous-enterprise', contactInfo: contact
     realImplementation: true,
@@ -1950,10 +1953,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.8, reviews: 67
     benefits: [
       '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring'],,
-    capabilities: [}
+    capabilities: [};
       'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance'
-    ]}
-    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'}
+    ]};
+    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'};
   // Quantum Computing Services
   // Quantum Computing Services
     realImplementation: true
@@ -1962,10 +1965,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.8, reviews: 67
     benefits: [
       '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring'];,
-    capabilities: [}
+    capabilities: [};
       'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance'
-    ]}
-    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'}
+    ]};
+    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'};
   // Quantum Computing Services
     id: 'quantum-financial-modeling-platform', name: 'Quantum Financial Modeling Platform',
     tagline: 'Quantum-powered financial modeling for unprecedented accuracy and speed',
@@ -1981,11 +1984,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'Investment banks, Hedge funds, Asset managers, Financial analysts',
     trialDays: 14, setupTime: '3-4 weeks',
     category: 'Quantum Computing & AI', realService: true,
-    technology: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics']
-    integrations: ['Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum']
-    useCases: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction']
+    technology: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics'];
+    integrations: ['Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum'];
+    useCases: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction'];
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%',
-    competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
+    competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin'];
     marketSize: '$12B+ financial modeling market', growthRate: '35% YoY',
     variant: 'quantum-finance-enterprise', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Custom quantum computing infrastructure with dedicated quantum hardware access',
@@ -1993,10 +1996,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.9, reviews: 28
     benefits: [
       '15-25% improvement in portfolio returns30% reduction in portfolio risk1000 x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation'
-    ]
+    ];
     capabilities: [,
       'Quantum Monte Carlo simulationsPortfolio optimizationRisk modelingMarket predictionQuantum encryption'],
-    marketAdvantage: 'Only quantum computing platform specifically designed for financial services'}
+    marketAdvantage: 'Only quantum computing platform specifically designed for financial services'};
   // Advanced Cybersecurity Services
     id: 'ai-powered-threat-hunting-platform', name: 'AI-Powered Threat Hunting Platform',
     tagline: 'Proactive threat detection with autonomous hunting and response',
@@ -2012,11 +2015,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'CISOs, Security teams, SOC analysts, IT managers',
     trialDays: 30, setupTime: '2-3 weeks',
     category: 'Cybersecurity', realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis']
-    integrations: ['SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security']
-    useCases: ['Threat detection, Incident response, Security monitoring, Compliance']
+    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis'];
+    integrations: ['SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security'];
+    useCases: ['Threat detection, Incident response, Security monitoring, Compliance'];
     roi: 'Reduce threat detection time by 80% and false positives by 60%',
-    competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
+    competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'];
     marketSize: '$20B+ cybersecurity market', growthRate: '40% YoY',
     variant: 'ai-cybersecurity-enterprise', contactInfo: contact
     realImplementation: true,
@@ -2025,10 +2028,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.7, reviews: 112
     benefits: [
       '80% faster threat detection60% reduction in false positives24/7 autonomous monitoringProactive threat preventionCompliance automation'
-    ]
+    ];
     capabilities: [,
       'Autonomous threat huntingAI behavioral analysisReal-time threat intelligenceAutomated responsePredictive modeling'],
-    marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'}
+    marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'};
   // Edge Computing & IoT Services
     id: 'edge-ai-inference-platform', name: 'Edge AI Inference Platform',
     tagline: 'Deploy AI models at the edge for real-time inference and decision making', price: '$899',
@@ -2043,11 +2046,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'IoT developers, Edge computing engineers, AI engineers, Product managers',
     trialDays: 21, setupTime: '1-2 weeks',
     category: 'Edge Computing & IoT', realService: true,
-    technology: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++']
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP']
-    useCases: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI']
+    technology: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++'];
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'];
+    useCases: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI'];
     roi: 'Reduce latency by 90% and bandwidth costs by 70%',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'];
     marketSize: '$15B+ edge computing market', growthRate: '45% YoY',
     variant: 'ai-edge-enterprise', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Cloud-native platform with edge device management and AI model optimization',
@@ -2055,10 +2058,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.6, reviews: 45
     benefits: [
       '90% reduction in latency70% reduction in bandwidth costsReal-time AI decision makingOffline AI capabilitiesScalable edge deployment'
-    ]
+    ];
     capabilities: [,
       'Edge AI deploymentReal-time inferenceModel optimizationEdge device managementPerformance analytics'],
-    marketAdvantage: 'Comprehensive edge AI platform with advanced optimization and management capabilities'}
+    marketAdvantage: 'Comprehensive edge AI platform with advanced optimization and management capabilities'};
   // Space Technology Services
     id: 'satellite-ai-mission-control', name: 'Satellite AI Mission Control',
     tagline: 'AI-powered satellite operations and mission optimization',
@@ -2074,11 +2077,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'Satellite operators, Space agencies, Aerospace companies, Research institutions',
     trialDays: 14, setupTime: '4-6 weeks',
     category: 'Space Technology & Innovation', realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics']
-    integrations: ['Ground station networks, Weather APIs, Space weather data, Mission planning tools']
-    useCases: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance']
+    technology: ['Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics'];
+    integrations: ['Ground station networks, Weather APIs, Space weather data, Mission planning tools'];
+    useCases: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance'];
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%',
-    competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
+    competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman'];
     marketSize: '$8B+ satellite operations market', growthRate: '30% YoY',
     variant: 'ai-space-enterprise', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Custom satellite control infrastructure with AI model training and optimization',
@@ -2086,10 +2089,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.8, reviews: 18
     benefits: [
       '25% improvement in mission success rate40% reduction in operational costsPredictive maintenance capabilitiesAutonomous mission optimizationEnhanced collision avoidance'
-    ]
+    ];
     capabilities: [,
       'AI satellite monitoringPredictive maintenanceMission optimizationCollision avoidanceReal-time control'],
-    marketAdvantage: 'Only AI-powered satellite mission control platform with proven space operations'}
+    marketAdvantage: 'Only AI-powered satellite mission control platform with proven space operations'};
   // Neural Technology & BCI Services
     id: 'brain-computer-interface-development-kit', name: 'Brain-Computer Interface Development Kit',
     tagline: 'Complete BCI development platform for next-generation neural interfaces',
@@ -2105,11 +2108,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'BCI researchers, Medical device companies, Gaming companies, Accessibility developers',
     trialDays: 30, setupTime: '6-8 weeks',
     category: 'Neural Technology & BCI', realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience']
-    integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms']
-    useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects']
+    technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience'];
+    integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms'];
+    useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects'];
     roi: 'Accelerate BCI development by 5 x and reduce development costs by 60%',
-    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
+    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
     marketSize: '$3B+ BCI market', growthRate: '50% YoY',
     variant: 'neural-advanced', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Complete hardware and software platform with expert consultation and support',
@@ -2117,10 +2120,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.9, reviews: 8
     benefits: [
       '5 x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance'
-    ]
+    ];
     capabilities: [,
       'Complete BCI platformNeural signal processingMachine learning integrationDevelopment toolsSafety frameworks'],
-    marketAdvantage: 'Most comprehensive BCI development platform with complete hardware and software stack'}
+    marketAdvantage: 'Most comprehensive BCI development platform with complete hardware and software stack'};
   // Advanced Data Analytics Services
     id: 'real-time-streaming-analytics-platform', name: 'Real-Time Streaming Analytics Platform',
     tagline: 'Process and analyze data streams in real-time for instant insights',
@@ -2136,11 +2139,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'Data engineers, Analytics teams, Product managers, Operations teams',
     trialDays: 21, setupTime: '1-2 weeks',
     category: 'AI & Analytics', realService: true,
-    technology: ['Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala']
-    integrations: ['Databases, Message queues, APIs, Cloud platforms, BI tools']
-    useCases: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading']
+    technology: ['Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala'];
+    integrations: ['Databases, Message queues, APIs, Cloud platforms, BI tools'];
+    useCases: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading'];
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%',
-    competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
+    competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics'];
     marketSize: '$18B+ streaming analytics market', growthRate: '30% YoY',
     variant: 'ai-analytics-enterprise', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Cloud-native platform with real-time processing and analytics capabilities',
@@ -2148,10 +2151,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.7, reviews: 98
     benefits: [
       '90% reduction in decision latency35% improvement in operational efficiencyReal-time insightsScalable processingLow-latency analytics'
-    ]
+    ];
     capabilities: [,
       'Real-time processingStream analyticsMachine learningReal-time dashboardsData quality monitoring'],
-    marketAdvantage: 'High-performance streaming analytics platform with proven enterprise scalability'}
+    marketAdvantage: 'High-performance streaming analytics platform with proven enterprise scalability'};
   // Blockchain & DeFi Services
     id: 'enterprise-blockchain-orchestration-platform', name: 'Enterprise Blockchain Orchestration Platform',
     tagline: 'Simplify enterprise blockchain deployment and management',
@@ -2167,11 +2170,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'Enterprise developers, Financial institutions, Supply chain companies, Government agencies',
     trialDays: 30, setupTime: '3-4 weeks',
     category: 'Blockchain & DeFi', realService: true,
-    technology: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python']
-    integrations: ['Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms']
-    useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization']
+    technology: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python'];
+    integrations: ['Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms'];
+    useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization'];
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%',
-    competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
+    competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger'];
     marketSize: '$22B+ enterprise blockchain market', growthRate: '40% YoY',
     variant: 'blockchain-enterprise', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Enterprise-grade platform with multi-blockchain support and compliance features',
@@ -2179,10 +2182,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.6, reviews: 56
     benefits: [
       '70% faster blockchain deployment50% reduction in operational costsEnterprise-grade securityMulti-blockchain supportCompliance automation'
-    ]
+    ];
     capabilities: [,
       'Multi-blockchain managementSmart contract developmentEnterprise securityCompliance automationPerformance optimization'],
-    marketAdvantage: 'Most comprehensive enterprise blockchain platform with multi-chain support'}
+    marketAdvantage: 'Most comprehensive enterprise blockchain platform with multi-chain support'};
   // Healthcare AI Services
     id: 'ai-powered-medical-imaging-analysis', name: 'AI-Powered Medical Imaging Analysis',
     tagline: 'Advanced AI for medical image analysis and diagnosis support',
@@ -2197,11 +2200,11 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     targetAudience: 'Hospitals, Medical imaging centers, Radiologists, Healthcare AI teams',
     trialDays: 30, setupTime: '4-6 weeks',
     category: 'Healthcare AI', realService: true,
-    technology: ['TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM']
-    integrations: ['PACS systems, EMR systems, Medical devices, Cloud platforms']
-    useCases: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials']
+    technology: ['TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM'];
+    integrations: ['PACS systems, EMR systems, Medical devices, Cloud platforms'];
+    useCases: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials'];
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%',
-    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     marketSize: '$35B+ medical imaging market', growthRate: '45% YoY',
     variant: 'ai-healthcare-enterprise', contactInfo: contact,
     realImplementation: true, implementationDetails: 'FDA-compliant platform with enterprise integration and expert support',
@@ -2209,10 +2212,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     rating: 4.8, reviews: 34
     benefits: [
       '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support'
-    ]
+    ];
     capabilities: [,
       'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance'],
-    marketAdvantage: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'}
+    marketAdvantage: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'};
   // Climate & Sustainability Services
     id: 'ai-climate-prediction-platform', name: 'AI Climate Prediction Platform',
     tagline: 'Advanced AI for climate modeling and environmental prediction',
@@ -2222,15 +2225,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     features: [,
     marketAdvantag,
   e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'
-  }
+  };
   // Climate & Sustainability Services
-  {/* TODO: Fix JSX expression */}
-  s: [}
+  {/* TODO: Fix JSX expression */};
+  s: [};
       'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance'
-    ]}
+    ]};
     marketAdvantag,
   e: 'First autonomous DevOps platform with proven enterprise adoption and ROI'
-  }
+  };
   // Quantum Computing Services,
   id: 'quantum-financial-modeling-platform', nam,
   e: 'Quantum Financial Modeling Platform',
@@ -2248,8 +2251,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Quantum encryption for data securityAPI access for custom integrations'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-green-600 to-emerald-700', textColo,
   r: 'text-green-400',
@@ -2266,15 +2268,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   y: 'Quantum Computing & AI', realServic,
   e: true,
     technolog,
-  y: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics']
+  y: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics'];
     integration,
-  s: ['Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum']
+  s: ['Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum'];
     useCase,
-  s: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction']
+  s: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction'];
     ro,
   i: 'Improve portfolio returns by 15-25% and reduce risk by 30%',
     competitor,
-  s: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
+  s: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin'];
     marketSiz,
   e: '$12B+ financial modeling market', growthRat,
   e: '35% YoY',
@@ -2300,7 +2302,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantag,
   e: 'Only quantum computing platform specifically designed for financial services'
-  }
+  };
   // Advanced Cybersecurity Services,
   id: 'ai-powered-threat-hunting-platform', nam,
   e: 'AI-Powered Threat Hunting Platform',
@@ -2318,8 +2320,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Compliance reporting and auditingIntegration with existing security tools'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-red-600 to-pink-700', textColo,
   r: 'text-red-400',
@@ -2336,15 +2337,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   y: 'Cybersecurity', realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis']
+  y: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis'];
     integration,
-  s: ['SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security']
+  s: ['SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security'];
     useCase,
-  s: ['Threat detection, Incident response, Security monitoring, Compliance']
+  s: ['Threat detection, Incident response, Security monitoring, Compliance'];
     ro,
   i: 'Reduce threat detection time by 80% and false positives by 60%',
     competitor,
-  s: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
+  s: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'];
     marketSiz,
   e: '$20B+ cybersecurity market', growthRat,
   e: '40% YoY',
@@ -2371,7 +2372,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantag,
   e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'
-  }
+  };
   // Edge Computing & IoT Services,
   id: 'edge-ai-inference-platform', nam,
   e: 'Edge AI Inference Platform',
@@ -2388,8 +2389,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Security and encryption at edgeIntegration with cloud AI platforms'
     ],
     popula,
-  r: false, ico,
-  n: '',
+  r: false, icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700', textColo,
   r: 'text-blue-400',
@@ -2406,15 +2406,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   y: 'Edge Computing & IoT', realServic,
   e: true,
     technolog,
-  y: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++']
+  y: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++'];
     integration,
-  s: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP']
+  s: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'];
     useCase,
-  s: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI']
+  s: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI'];
     ro,
   i: 'Reduce latency by 90% and bandwidth costs by 70%',
     competitor,
-  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
+  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'];
     marketSiz,
   e: '$15B+ edge computing market', growthRat,
   e: '45% YoY',
@@ -2440,7 +2440,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantag,
   e: 'Comprehensive edge AI platform with advanced optimization and management capabilities'
-  }
+  };
   // Space Technology Services,
   id: 'satellite-ai-mission-control', nam,
   e: 'Satellite AI Mission Control',
@@ -2458,8 +2458,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Comprehensive reporting and analyticsIntegration with ground stations'
     ],
     popula,
-  r: false, ico,
-  n: '',
+  r: false, icon: '',
     colo,
   r: 'from-violet-600 to-purple-700', textColo,
   r: 'text-violet-400',
@@ -2476,15 +2475,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   y: 'Space Technology & Innovation', realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics']
+  y: ['Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics'];
     integration,
-  s: ['Ground station networks, Weather APIs, Space weather data, Mission planning tools']
+  s: ['Ground station networks, Weather APIs, Space weather data, Mission planning tools'];
     useCase,
-  s: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance']
+  s: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance'];
     ro,
   i: 'Improve mission success rate by 25% and reduce operational costs by 40%',
     competitor,
-  s: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
+  s: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman'];
     marketSiz,
   e: '$8B+ satellite operations market', growthRat,
   e: '30% YoY',
@@ -2510,7 +2509,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantag,
   e: 'Only AI-powered satellite mission control platform with proven space operations'
-  }
+  };
   // Neural Technology & BCI Services,
   id: 'brain-computer-interface-development-kit', nam,
   e: 'Brain-Computer Interface Development Kit',
@@ -2528,8 +2527,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Comprehensive documentation and tutorialsExpert consultation and support'
     ],
     popula,
-  r: false, ico,
-  n: '',
+  r: false, icon: '',
     colo,
   r: 'from-pink-600 to-rose-700', textColo,
   r: 'text-pink-400',
@@ -2546,15 +2544,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   y: 'Neural Technology & BCI', realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience']
+  y: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience'];
     integration,
-  s: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms']
+  s: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms'];
     useCase,
-  s: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects']
+  s: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects'];
     ro,
   i: 'Accelerate BCI development by 5x and reduce development costs by 60%',
     competitor,
-  s: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
+  s: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
     marketSiz,
   e: '$3B+ BCI market', growthRat,
   e: '50% YoY',
@@ -2580,7 +2578,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantag,
   e: 'Most comprehensive BCI development platform with complete hardware and software stack'
-  }
+  };
   // Advanced Data Analytics Services,
   id: 'real-time-streaming-analytics-platform', nam,
   e: 'Real-Time Streaming Analytics Platform',
@@ -2598,8 +2596,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Performance optimizationEnterprise security and compliance'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-cyan-600 to-blue-700', textColo,
   r: 'text-cyan-400',
@@ -2616,15 +2613,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   y: 'AI & Analytics', realServic,
   e: true,
     technolog,
-  y: ['Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala']
+  y: ['Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala'];
     integration,
-  s: ['Databases, Message queues, APIs, Cloud platforms, BI tools']
+  s: ['Databases, Message queues, APIs, Cloud platforms, BI tools'];
     useCase,
-  s: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading']
+  s: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading'];
     ro,
   i: 'Reduce decision latency by 90% and improve operational efficiency by 35%',
     competitor,
-  s: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
+  s: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics'];
     marketSiz,
   e: '$18B+ streaming analytics market', growthRat,
   e: '30% YoY',
@@ -2650,7 +2647,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantag,
   e: 'High-performance streaming analytics platform with proven enterprise scalability'
-  }
+  };
   // Blockchain & DeFi Services,
   id: 'enterprise-blockchain-orchestration-platform', nam,
   e: 'Enterprise Blockchain Orchestration Platform',
@@ -2668,8 +2665,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Advanced analytics and reporting24/7 support and maintenance'
     ],
     popula,
-  r: false, ico,
-  n: '',
+  r: false, icon: '',
     colo,
   r: 'from-orange-600 to-yellow-700', textColo,
   r: 'text-orange-400',
@@ -2686,15 +2682,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   y: 'Blockchain & DeFi', realServic,
   e: true,
     technolog,
-  y: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python']
+  y: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python'];
     integration,
-  s: ['Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms']
+  s: ['Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms'];
     useCase,
-  s: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization']
+  s: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization'];
     ro,
   i: 'Reduce blockchain deployment time by 70% and operational costs by 50%',
     competitor,
-  s: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
+  s: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger'];
     marketSiz,
   e: '$22B+ enterprise blockchain market', growthRat,
   e: '40% YoY',
@@ -2720,7 +2716,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantag,
   e: 'Most comprehensive enterprise blockchain platform with multi-chain support'
-  }
+  };
   // Healthcare AI Services,
   id: 'ai-powered-medical-imaging-analysis', nam,
   e: 'AI-Powered Medical Imaging Analysis',
@@ -2737,8 +2733,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Custom model training capabilitiesExpert consultation and support'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-teal-600 to-green-700', textColo,
   r: 'text-teal-400',
@@ -2755,15 +2750,15 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   y: 'Healthcare AI', realServic,
   e: true,
     technolog,
-  y: ['TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM']
+  y: ['TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM'];
     integration,
-  s: ['PACS systems, EMR systems, Medical devices, Cloud platforms']
+  s: ['PACS systems, EMR systems, Medical devices, Cloud platforms'];
     useCase,
-  s: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials']
+  s: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials'];
     ro,
   i: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%',
     competitor,
-  s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+  s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     marketSiz,
   e: '$35B+ medical imaging market', growthRat,
   e: '45% YoY',
@@ -2789,7 +2784,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     marketAdvantag,
   e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'
-  }
+  };
   // Climate & Sustainability Services,
   id: 'ai-climate-prediction-platform', nam,
   e: 'AI Climate Prediction Platform',
@@ -2813,7 +2808,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Performance optimization and validation'
       'Compliance with environmental standards'
       'Expert consultation and support'
-    ]
+    ];
     popular: false,
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -2829,8 +2824,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     technology: [,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-600 to-emerald-700'
     textColo,
@@ -2854,17 +2848,17 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     technolog,
   y: [,
       'Python, TensorFlow, PyTorch, Climate models, Environmental data, GIS'
-    ]
+    ];
     integration,
   s: [,
       'Environmental sensors, Weather APIs, Satellite data, Research platforms'
-    ]
+    ];
     useCase,
   s: [,
       'Climate modeling, Environmental monitoring, Sustainability planning, Research projects'
-    ]
+    ];
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
-    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
+    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
     marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY'
     variant: 'ai-climate-enterprise'
@@ -2879,7 +2873,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ro,
   i: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%'
     competitor,
-  s: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
+  s: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
     marketSiz,
   e: '$12B+ climate technology market'
     growthRat,
@@ -2907,7 +2901,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Real-time monitoring'
       'Environmental compliance'
       'Expert consultation'
-    ]
+    ];
     capabilities: [
     capabilitie,
   s: [,
@@ -2917,25 +2911,25 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Sustainability analytics'
       'Custom model development'
     ],
-    marketAdvantage: market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy']
+    marketAdvantage: market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy'];
     marketAdvantag,
   e:
     market_advantag,
   e: 'Most advanced AI climate prediction platform with research - grade accuracy'
-      'Most advanced AI climate prediction platform with research-grade accuracy'}
+      'Most advanced AI climate prediction platform with research-grade accuracy'};
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]
+    ];
     marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy'
-export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
       'Most advanced AI climate prediction platform with research-grade accuracy',
-  }
+  };
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]
+    ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
 import { ServiceVariant } from '../types/service-variants',
 export interface AdvancedInnovativeService {
@@ -2981,7 +2975,9 @@ export interface AdvancedInnovativeService {
   capabilities: string[],
   marketAdvantage: string
 }
-const contact = {
+;
+  ;
+  const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3445,10 +3441,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     capabilities: [
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]
+    ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
-]
+  };
+];
 import { ServiceVariant } from '../types/service-variants',
 export interface AdvancedInnovativeService {
   id: string,
@@ -3493,7 +3489,9 @@ export interface AdvancedInnovativeService {
   capabilities: string[],
   marketAdvantage: string
 }
-const contact = {
+;
+  ;
+  const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3957,10 +3955,10 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     ],
     capabilities: [
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]
+    ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
-]
+  };
+];
     id: 'ai-autonomous-devops-orchestrator',
     name: 'AI Autonomous DevOps Orchestrator',
     tagline: 'Self-healing DevOps with intelligent automation and predictive maintenance',
@@ -4570,14 +4568,14 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   customers: number
   rating: number
   reviews: number
-  benefits: string[]
-  capabilities: string[]
+  benefits: string[];
+  capabilities: string[];
   marketAdvantage: string,
-}
+};
 // const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
   website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean,
@@ -4596,22 +4594,22 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   capabilitie,
   s: string[],
   marketAdvantag,
-  e: string}
+  e: string};
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-  benefits: string[]
-  capabilities: string[]
+  benefits: string[];
+  capabilities: string[];
   marketAdvantage: string
-}
-
+};
+;
 // const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
   website: 'https://ziontechgroup.com',
   realImplementatio,
   n: boolean
@@ -4626,18 +4624,18 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   review,
   s: number
   benefit,
-  s: string[]
+  s: string[];
   capabilitie,
-  s: string[]
+  s: string[];
   marketAdvantag,
-  e: string}
-
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+  e: string};
+;
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
   websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
 export const,
   advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
@@ -4651,7 +4649,7 @@ export const,
     features: [
       'Autonomous CI/CD pipeline optimizationPredictive infrastructure scalingSelf-healing deployment failuresIntelligent resource allocationAutomated security scanning and patchingReal-time performance monitoring and alertingAI-powered code review and quality gatesAutomated rollback and recovery'
       'Cost optimization and resource managementMulti-cloud deployment orchestration'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -4663,11 +4661,11 @@ export const,
     setupTime: '1-2 weeks'
     category: 'AI & Machine Learning'
     realService: true,
-    technology: ['Python, Kubernetes, Docker, Jenkins, GitLab CI, Terraform, Ansible']
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty']
-    useCases: ['Continuous deployment automation, Infrastructure optimization, Incident response automation']
+    technology: ['Python, Kubernetes, Docker, Jenkins, GitLab CI, Terraform, Ansible'];
+    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack, PagerDuty'];
+    useCases: ['Continuous deployment automation, Infrastructure optimization, Incident response automation'];
     roi: 'Reduce deployment time by 70% and infrastructure costs by 40%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions']
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
     marketSize: '$8 B+ DevOps tools market'
     growthRate: '25% YoY'
     variant: 'ai-autonomous-enterprise'
@@ -4680,13 +4678,13 @@ export const,
     reviews: 67,
     benefits: [,
       '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring',
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance'
-    ]
-    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'}
+    ];
+    marketAdvantage: 'First autonomous DevOps platform with proven enterprise adoption and ROI'};
   // Quantum Computing Services
   {
     id: 'quantum-financial-modeling-platform'
@@ -4698,7 +4696,7 @@ export const,
     features: [
       'Quantum Monte Carlo simulationsPortfolio optimization algorithmsRisk assessment and modelingReal-time market predictionQuantum machine learning for tradingMulti-asset correlation analysisRegulatory compliance automationAdvanced backtesting capabilities'
       'Quantum encryption for data securityAPI access for custom integrations'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -4710,11 +4708,11 @@ export const,
     setupTime: '3-4 weeks'
     category: 'Quantum Computing & AI'
     realService: true,
-    technology: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics']
-    integrations: ['Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum']
-    useCases: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction']
+    technology: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Financial mathematics'];
+    integrations: ['Bloomberg Terminal, Reuters, FactSet, AWS Braket, Azure Quantum'];
+    useCases: ['Portfolio optimization, Risk modeling, Algorithmic trading, Market prediction'];
     roi: 'Improve portfolio returns by 15-25% and reduce risk by 30%',
-    competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin']
+    competitors: ['Bloomberg, FactSet, MSCI, BlackRock Aladdin'];
     marketSize: '$12 B+ financial modeling market'
     growthRate: '35% YoY'
     variant: 'quantum-finance-enterprise'
@@ -4729,15 +4727,15 @@ export const,
       '15-25% improvement in portfolio returns30% reduction in portfolio risk1000x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation',
     marketAdvantag,
   e: 'First autonomous DevOps platform with proven enterprise adoption and ROI'
-  }
+  };
   // Quantum Computing Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Quantum Monte Carlo simulationsPortfolio optimizationRisk modelingMarket predictionQuantum encryption'
-    ]
-    marketAdvantage: 'Only quantum computing platform specifically designed for financial services'}
+    ];
+    marketAdvantage: 'Only quantum computing platform specifically designed for financial services'};
   // Advanced Cybersecurity Services
   {
     id: 'ai-powered-threat-hunting-platform'
@@ -4749,7 +4747,7 @@ export const,
     features: [
       'Autonomous threat hunting and detectionAI-powered behavioral analysisReal-time threat intelligence feedsAutomated incident responseZero-day threat detectionAdvanced malware analysisThreat actor profilingPredictive threat modeling'
       'Compliance reporting and auditingIntegration with existing security tools'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -4761,11 +4759,11 @@ export const,
     setupTime: '2-3 weeks'
     category: 'Cybersecurity'
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis']
-    integrations: ['SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security']
-    useCases: ['Threat detection, Incident response, Security monitoring, Compliance']
+    technology: ['Python, TensorFlow, PyTorch, Elasticsearch, Kafka, Redis'];
+    integrations: ['SIEM systems, EDR solutions, Firewalls, IDS/IPS, Email security'];
+    useCases: ['Threat detection, Incident response, Security monitoring, Compliance'];
     roi: 'Reduce threat detection time by 80% and false positives by 60%',
-    competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye']
+    competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'];
     marketSize: '$20 B+ cybersecurity market'
     growthRate: '40% YoY'
     variant: 'ai-cybersecurity-enterprise'
@@ -4780,15 +4778,15 @@ export const,
       '80% faster threat detection60% reduction in false positives24/7 autonomous monitoringProactive threat preventionCompliance automation',
     marketAdvantag,
   e: 'Only quantum computing platform specifically designed for financial services'
-  }
+  };
   // Advanced Cybersecurity Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Autonomous threat huntingAI behavioral analysisReal-time threat intelligenceAutomated responsePredictive modeling'
-    ]
-    marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'}
+    ];
+    marketAdvantage: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'};
   // Edge Computing & IoT Services
   {
     id: 'edge-ai-inference-platform'
@@ -4800,7 +4798,7 @@ export const,
     features: [
       'Edge AI model deployment and managementReal-time inference optimizationAutomatic model versioning and updatesEdge device management and monitoringBandwidth optimization and compressionOffline capability and syncMulti-edge node orchestrationPerformance analytics and optimization'
       'Security and encryption at edgeIntegration with cloud AI platforms'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -4812,11 +4810,11 @@ export const,
     setupTime: '1-2 weeks'
     category: 'Edge Computing & IoT'
     realService: true,
-    technology: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++']
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP']
-    useCases: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI']
+    technology: ['TensorFlow Lite, ONNX, Docker, Kubernetes, Python, C++'];
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP'];
+    useCases: ['Real-time AI inference, IoT decision making, Edge computing, Mobile AI'];
     roi: 'Reduce latency by 90% and bandwidth costs by 70%',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge']
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge'];
     marketSize: '$15 B+ edge computing market'
     growthRate: '45% YoY'
     variant: 'ai-edge-enterprise'
@@ -4831,15 +4829,15 @@ export const,
       '90% reduction in latency70% reduction in bandwidth costsReal-time AI decision makingOffline AI capabilitiesScalable edge deployment',
     marketAdvantag,
   e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption'
-  }
+  };
   // Edge Computing & IoT Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Edge AI deploymentReal-time inferenceModel optimizationEdge device managementPerformance analytics'
-    ]
-    marketAdvantage: 'Comprehensive edge AI platform with advanced optimization and management capabilities'}
+    ];
+    marketAdvantage: 'Comprehensive edge AI platform with advanced optimization and management capabilities'};
   // Space Technology Services
   {
     id: 'satellite-ai-mission-control'
@@ -4851,7 +4849,7 @@ export const,
     features: [
       'AI-powered satellite health monitoringPredictive maintenance and anomaly detectionAutonomous mission planning and optimizationReal-time satellite tracking and controlAdvanced orbit optimization algorithmsWeather and space weather integrationAutomated collision avoidanceMission success rate optimization'
       'Comprehensive reporting and analyticsIntegration with ground stations'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-violet-600 to-purple-700'
@@ -4863,11 +4861,11 @@ export const,
     setupTime: '4-6 weeks'
     category: 'Space Technology & Innovation'
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics']
-    integrations: ['Ground station networks, Weather APIs, Space weather data, Mission planning tools']
-    useCases: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance']
+    technology: ['Python, TensorFlow, PyTorch, Satellite protocols, Orbital mechanics'];
+    integrations: ['Ground station networks, Weather APIs, Space weather data, Mission planning tools'];
+    useCases: ['Satellite operations, Mission optimization, Predictive maintenance, Collision avoidance'];
     roi: 'Improve mission success rate by 25% and reduce operational costs by 40%',
-    competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman']
+    competitors: ['Lockheed Martin, Boeing, Airbus Defence, Northrop Grumman'];
     marketSize: '$8 B+ satellite operations market'
     growthRate: '30% YoY'
     variant: 'ai-space-enterprise'
@@ -4882,15 +4880,15 @@ export const,
       '25% improvement in mission success rate40% reduction in operational costsPredictive maintenance capabilitiesAutonomous mission optimizationEnhanced collision avoidance',
     marketAdvantag,
   e: 'Comprehensive edge AI platform with advanced optimization and management capabilities'
-  }
+  };
   // Space Technology Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'AI satellite monitoringPredictive maintenanceMission optimizationCollision avoidanceReal-time control'
-    ]
-    marketAdvantage: 'Only AI-powered satellite mission control platform with proven space operations'}
+    ];
+    marketAdvantage: 'Only AI-powered satellite mission control platform with proven space operations'};
   // Neural Technology & BCI Services
   {
     id: 'brain-computer-interface-development-kit'
@@ -4902,7 +4900,7 @@ export const,
     features: [
       'Complete BCI hardware and software stackNeural signal processing algorithmsMachine learning model trainingReal-time brain activity visualizationCustom interface development toolsSafety and compliance frameworksIntegration with existing systemsPerformance optimization tools'
       'Comprehensive documentation and tutorialsExpert consultation and support'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-pink-600 to-rose-700'
@@ -4914,11 +4912,11 @@ export const,
     setupTime: '6-8 weeks'
     category: 'Neural Technology & BCI'
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience']
-    integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms']
-    useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects']
+    technology: ['Python, TensorFlow, PyTorch, Signal processing, Machine learning, Neuroscience'];
+    integrations: ['Medical devices, Gaming platforms, Accessibility tools, Research platforms'];
+    useCases: ['Medical applications, Gaming interfaces, Accessibility tools, Research projects'];
     roi: 'Accelerate BCI development by 5 x and reduce development costs by 60%',
-    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI']
+    competitors: ['Neuralink, CTRL-labs, Kernel, OpenBCI'];
     marketSize: '$3 B+ BCI market'
     growthRate: '50% YoY'
     variant: 'neural-advanced'
@@ -4933,15 +4931,15 @@ export const,
       '5x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance',
     marketAdvantag,
   e: 'Only AI-powered satellite mission control platform with proven space operations'
-  }
+  };
   // Neural Technology & BCI Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Complete BCI platformNeural signal processingMachine learning integrationDevelopment toolsSafety frameworks'
-    ]
-    marketAdvantage: 'Most comprehensive BCI development platform with complete hardware and software stack'}
+    ];
+    marketAdvantage: 'Most comprehensive BCI development platform with complete hardware and software stack'};
   // Advanced Data Analytics Services
   {
     id: 'real-time-streaming-analytics-platform'
@@ -4953,7 +4951,7 @@ export const,
     features: [
       'Real-time data stream processingAdvanced analytics and machine learningLow-latency data ingestionScalable stream processingReal-time dashboards and alertsData quality monitoringIntegration with data sourcesCustom analytics pipelines'
       'Performance optimizationEnterprise security and compliance'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -4965,11 +4963,11 @@ export const,
     setupTime: '1-2 weeks'
     category: 'AI & Analytics'
     realService: true,
-    technology: ['Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala']
-    integrations: ['Databases, Message queues, APIs, Cloud platforms, BI tools']
-    useCases: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading']
+    technology: ['Apache Kafka, Apache Flink, Apache Spark, Python, Java, Scala'];
+    integrations: ['Databases, Message queues, APIs, Cloud platforms, BI tools'];
+    useCases: ['Real-time monitoring, Fraud detection, IoT analytics, Financial trading'];
     roi: 'Reduce decision latency by 90% and improve operational efficiency by 35%',
-    competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics']
+    competitors: ['Confluent, Databricks, AWS Kinesis, Azure Stream Analytics'];
     marketSize: '$18 B+ streaming analytics market'
     growthRate: '30% YoY'
     variant: 'ai-analytics-enterprise'
@@ -4984,15 +4982,15 @@ export const,
       '90% reduction in decision latency35% improvement in operational efficiencyReal-time insightsScalable processingLow-latency analytics',
     marketAdvantag,
   e: 'Most comprehensive BCI development platform with complete hardware and software stack'
-  }
+  };
   // Advanced Data Analytics Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Real-time processingStream analyticsMachine learningReal-time dashboardsData quality monitoring'
-    ]
-    marketAdvantage: 'High-performance streaming analytics platform with proven enterprise scalability'}
+    ];
+    marketAdvantage: 'High-performance streaming analytics platform with proven enterprise scalability'};
   // Blockchain & DeFi Services
   {
     id: 'enterprise-blockchain-orchestration-platform'
@@ -5004,7 +5002,7 @@ export const,
     features: [
       'Multi-blockchain network managementSmart contract development and deploymentEnterprise-grade security and complianceScalable blockchain infrastructureIntegration with existing systemsPerformance monitoring and optimizationAutomated governance and complianceMulti-party transaction management'
       'Advanced analytics and reporting24/7 support and maintenance'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-orange-600 to-yellow-700'
@@ -5016,11 +5014,11 @@ export const,
     setupTime: '3-4 weeks'
     category: 'Blockchain & DeFi'
     realService: true,
-    technology: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python']
-    integrations: ['Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms']
-    useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization']
+    technology: ['Ethereum, Hyperledger, Solidity, Go, JavaScript, Python'];
+    integrations: ['Enterprise systems, Cloud platforms, Financial systems, Supply chain platforms'];
+    useCases: ['Supply chain tracking, Financial transactions, Identity management, Asset tokenization'];
     roi: 'Reduce blockchain deployment time by 70% and operational costs by 50%',
-    competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger']
+    competitors: ['IBM Blockchain, ConsenSys, R3 Corda, Hyperledger'];
     marketSize: '$22 B+ enterprise blockchain market'
     growthRate: '40% YoY'
     variant: 'blockchain-enterprise'
@@ -5035,15 +5033,15 @@ export const,
       '70% faster blockchain deployment50% reduction in operational costsEnterprise-grade securityMulti-blockchain supportCompliance automation',
     marketAdvantag,
   e: 'High-performance streaming analytics platform with proven enterprise scalability'
-  }
+  };
   // Blockchain & DeFi Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'Multi-blockchain managementSmart contract developmentEnterprise securityCompliance automationPerformance optimization'
-    ]
-    marketAdvantage: 'Most comprehensive enterprise blockchain platform with multi-chain support'}
+    ];
+    marketAdvantage: 'Most comprehensive enterprise blockchain platform with multi-chain support'};
   // Healthcare AI Services
   {
     id: 'ai-powered-medical-imaging-analysis'
@@ -5055,7 +5053,7 @@ export const,
     features: [
       'AI-powered image analysis and diagnosisSupport for multiple imaging modalitiesReal-time analysis and reportingIntegration with PACS systemsAutomated report generationQuality assurance and validationCompliance with medical regulationsPerformance tracking and optimization'
       'Custom model training capabilitiesExpert consultation and support'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-teal-600 to-green-700'
@@ -5067,11 +5065,11 @@ export const,
     setupTime: '4-6 weeks'
     category: 'Healthcare AI'
     realService: true,
-    technology: ['TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM']
-    integrations: ['PACS systems, EMR systems, Medical devices, Cloud platforms']
-    useCases: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials']
+    technology: ['TensorFlow, PyTorch, Computer Vision, Medical imaging protocols, DICOM'];
+    integrations: ['PACS systems, EMR systems, Medical devices, Cloud platforms'];
+    useCases: ['Radiology diagnosis, Pathology analysis, Medical research, Clinical trials'];
     roi: 'Improve diagnostic accuracy by 25% and reduce analysis time by 60%',
-    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     marketSize: '$35 B+ medical imaging market'
     growthRate: '45% YoY'
     variant: 'ai-healthcare-enterprise'
@@ -5086,15 +5084,15 @@ export const,
       '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support',
     marketAdvantag,
   e: 'Most comprehensive enterprise blockchain platform with multi-chain support'
-  }
+  };
   // Healthcare AI Services
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
-  s: [}
+  s: [};
       'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance'
-    ]
-    marketAdvantage: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'}
+    ];
+    marketAdvantage: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'};
   // Climate & Sustainability Services
   {
     id: 'ai-climate-prediction-platform'
@@ -5106,7 +5104,7 @@ export const,
     features: [
       'AI-powered climate modeling and predictionReal-time environmental monitoringAdvanced weather forecastingClimate impact assessmentSustainability analytics and reportingIntegration with environmental sensorsCustom model developmentPerformance optimization and validation'
       'Compliance with environmental standardsExpert consultation and support'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -5118,11 +5116,11 @@ export const,
     setupTime: '3-4 weeks'
     category: 'Climate & Sustainability'
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Climate models, Environmental data, GIS']
-    integrations: ['Environmental sensors, Weather APIs, Satellite data, Research platforms']
-    useCases: ['Climate modeling, Environmental monitoring, Sustainability planning, Research projects']
+    technology: ['Python, TensorFlow, PyTorch, Climate models, Environmental data, GIS'];
+    integrations: ['Environmental sensors, Weather APIs, Satellite data, Research platforms'];
+    useCases: ['Climate modeling, Environmental monitoring, Sustainability planning, Research projects'];
     roi: 'Improve climate prediction accuracy by 30% and reduce modeling time by 50%',
-    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern']
+    competitors: ['Climate Corp, Jupiter Intelligence, ClimateAI, One Concern'];
     marketSize: '$12 B+ climate technology market'
     growthRate: '35% YoY'
     variant: 'ai-climate-enterprise'
@@ -5135,24 +5133,24 @@ export const,
     reviews: 17,
     benefits: [,
       '30% improvement in prediction accuracy50% reduction in modeling timeReal-time monitoringEnvironmental complianceExpert consultation'];,
-    capabilities: [}
+    capabilities: [};
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]}
+    ]};
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy',
     marketAdvantag,
   e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy'
-  }
+  };
   // Climate & Sustainability Services
-  {/* TODO: Fix JSX expression */}
-  s: [}
+  {/* TODO: Fix JSX expression */};
+  s: [};
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
-    ]}
+    ]};
     marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy'
-  }
-]
-  }
-]
+  };
+];
+  };
+];
     benefit,
   s: [,
     benefits: [,
@@ -5172,12 +5170,12 @@ export const,
     market_advantag,
   e: unknown,
       'Most advanced AI climate prediction platform with research - grade accuracy'}];      'AI climate modeling_environmental monitoring_weather forecasting_sustainability analytics_custom model development'
-    ]
+    ];
     market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy',
     market_advantag,
   e: 'Most advanced AI climate prediction platform with research - grade accuracy'
-  }
-]
+  };
+];
 i,
   d: string, nam,
   e: string, taglin,
@@ -5186,8 +5184,7 @@ i,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, text_colo,
   r: string, lin,
   k: string, market_positio,
@@ -5246,8 +5243,7 @@ i,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -5278,7 +5274,9 @@ i,
   s: number, benefit,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
-  e: string } const contact = ' mobil,
+  e: string } ;
+  ;
+  const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'} export const,
@@ -5553,7 +5551,7 @@ i,
   s: [' 'AI climate modeling'' 'Environmental monitoring'' 'Weather forecasting'' 'Sustainability analytics'' 'Custom model development' ] marketAdvantag,
   e:' 'Most advanced AI climate prediction platform with research-grade accuracy' }' ]; 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ];' marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy' } ]; ' 'Most advanced AI climate prediction platform with research-grade accuracy'}' ]; 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ];' marketAdvantag,
-  e: 'Most advanced AI climate prediction platform with research-grade accuracy'' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
+  e: 'Most advanced AI climate prediction platform with research-grade accuracy'' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -5564,39 +5562,41 @@ i,
   s: number, benefit,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
-  e: string} const contact = {/* TODO: Fix JSX expression */}
+  e: string} ;
+  ;
+  const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } export const,
-  advancedInnovativeServices: AdvancedInnovativeService[] = [; // Advanced AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
+  advancedInnovativeServices: AdvancedInnovativeService[] = [; // Advanced AI & Machine Learning Services, {/* TODO: Fix JSX expression */};
   s: [,' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
   s: [,' 'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance' ]}' marketAdvantag,
-  e: 'First autonomous DevOps platform with proven enterprise adoption and ROI' } // Quantum Computing Services; {/* TODO: Fix JSX expression */}
+  e: 'First autonomous DevOps platform with proven enterprise adoption and ROI' } // Quantum Computing Services; {/* TODO: Fix JSX expression */};
   s: [,' '15-25% improvement in portfolio returns30% reduction in portfolio risk1000x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation' ]} capabilitie,
   s: [,' 'Quantum Monte Carlo simulationsPortfolio optimizationRisk modelingMarket predictionQuantum encryption' ]}' marketAdvantag,
-  e: 'Only quantum computing platform specifically designed for financial services' } // Advanced Cybersecurity Services; {/* TODO: Fix JSX expression */}
+  e: 'Only quantum computing platform specifically designed for financial services' } // Advanced Cybersecurity Services; {/* TODO: Fix JSX expression */};
   s: [,' '80% faster threat detection60% reduction in false positives24/7 autonomous monitoringProactive threat preventionCompliance automation' ]} capabilitie,
   s: [,' 'Autonomous threat huntingAI behavioral analysisReal-time threat intelligenceAutomated responsePredictive modeling' ]}' marketAdvantag,
-  e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption' } // Edge Computing & IoT Services; {/* TODO: Fix JSX expression */}
+  e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption' } // Edge Computing & IoT Services; {/* TODO: Fix JSX expression */};
   s: [,' '90% reduction in latency70% reduction in bandwidth costsReal-time AI decision makingOffline AI capabilitiesScalable edge deployment' ]} capabilitie,
   s: [,' 'Edge AI deploymentReal-time inferenceModel optimizationEdge device managementPerformance analytics' ]}' marketAdvantag,
-  e: 'Comprehensive edge AI platform with advanced optimization and management capabilities' } // Space Technology Services; {/* TODO: Fix JSX expression */}
+  e: 'Comprehensive edge AI platform with advanced optimization and management capabilities' } // Space Technology Services; {/* TODO: Fix JSX expression */};
   s: [,' '25% improvement in mission success rate40% reduction in operational costsPredictive maintenance capabilitiesAutonomous mission optimizationEnhanced collision avoidance' ]} capabilitie,
   s: [,' 'AI satellite monitoringPredictive maintenanceMission optimizationCollision avoidanceReal-time control' ]}' marketAdvantag,
-  e: 'Only AI-powered satellite mission control platform with proven space operations' } // Neural Technology & BCI Services; {/* TODO: Fix JSX expression */}
+  e: 'Only AI-powered satellite mission control platform with proven space operations' } // Neural Technology & BCI Services; {/* TODO: Fix JSX expression */};
   s: [,' '5x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance' ]} capabilitie,
   s: [,' 'Complete BCI platformNeural signal processingMachine learning integrationDevelopment toolsSafety frameworks' ]}' marketAdvantag,
-  e: 'Most comprehensive BCI development platform with complete hardware and software stack' } // Advanced Data Analytics Services; {/* TODO: Fix JSX expression */}
+  e: 'Most comprehensive BCI development platform with complete hardware and software stack' } // Advanced Data Analytics Services; {/* TODO: Fix JSX expression */};
   s: [,' '90% reduction in decision latency35% improvement in operational efficiencyReal-time insightsScalable processingLow-latency analytics' ]} capabilitie,
   s: [,' 'Real-time processingStream analyticsMachine learningReal-time dashboardsData quality monitoring' ]}' marketAdvantag,
-  e: 'High-performance streaming analytics platform with proven enterprise scalability' } // Blockchain & DeFi Services; {/* TODO: Fix JSX expression */}
+  e: 'High-performance streaming analytics platform with proven enterprise scalability' } // Blockchain & DeFi Services; {/* TODO: Fix JSX expression */};
   s: [,' '70% faster blockchain deployment50% reduction in operational costsEnterprise-grade securityMulti-blockchain supportCompliance automation' ]} capabilitie,
   s: [,' 'Multi-blockchain managementSmart contract developmentEnterprise securityCompliance automationPerformance optimization' ]}' marketAdvantag,
-  e: 'Most comprehensive enterprise blockchain platform with multi-chain support' } // Healthcare AI Services; {/* TODO: Fix JSX expression */}
+  e: 'Most comprehensive enterprise blockchain platform with multi-chain support' } // Healthcare AI Services; {/* TODO: Fix JSX expression */};
   s: [,' '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support' ]} capabilitie,
   s: [,' 'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance' ]}' marketAdvantag,
-  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' } // Climate & Sustainability Services; {/* TODO: Fix JSX expression */}
+  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' } // Climate & Sustainability Services; {/* TODO: Fix JSX expression */};
   s: [' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
   s: [' 'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance' ]}' marketAdvantag,
   e: 'First autonomous DevOps platform with proven enterprise adoption and ROI' } // Quantum Computing Services ' i,
@@ -5607,8 +5607,7 @@ i,
   d: '/month',' descriptio,
   n: 'Revolutionary financial modeling platform leveraging quantum computing to solve complex financial problems, optimize portfolios, and predict market movements with unprecedented accuracy.', feature,
   s: [' 'Quantum Monte Carlo simulationsPortfolio optimization algorithmsRisk assessment and modelingReal-time market predictionQuantum machine learning for tradingMulti-asset correlation analysisRegulatory compliance automationAdvanced backtesting capabilities'' 'Quantum encryption for data securityAPI access for custom integrations' ],' popula,
-  r: true, ico,
-  n: '💰',' colo,
+  r: true, icon: '💰',' colo,
   r: 'from-green-600 to-emerald-700', textColo,
   r: 'text-green-400',' lin,
   k: 'http,
@@ -5644,8 +5643,7 @@ i,
   d: '/month',' descriptio,
   n: 'Advanced cybersecurity platform that combines artificial intelligence with autonomous threat hunting to proactively identify, analyze, and respond to cyber threats before they impact your organization.', feature,
   s: [' 'Autonomous threat hunting and detectionAI-powered behavioral analysisReal-time threat intelligence feedsAutomated incident responseZero-day threat detectionAdvanced malware analysisThreat actor profilingPredictive threat modeling'' 'Compliance reporting and auditingIntegration with existing security tools' ],' popula,
-  r: true, ico,
-  n: '🔍',' colo,
+  r: true, icon: '🔍',' colo,
   r: 'from-red-600 to-pink-700', textColo,
   r: 'text-red-400',' lin,
   k: 'http,
@@ -5681,8 +5679,7 @@ i,
   d: '/month',' descriptio,
   n: 'Advanced edge computing platform that enables real-time AI inference and decision making at the edge, reducing latency and bandwidth costs while improving user experience.', feature,
   s: [' 'Edge AI model deployment and managementReal-time inference optimizationAutomatic model versioning and updatesEdge device management and monitoringBandwidth optimization and compressionOffline capability and syncMulti-edge node orchestrationPerformance analytics and optimization'' 'Security and encryption at edgeIntegration with cloud AI platforms' ],' popula,
-  r: false, ico,
-  n: '🌐',' colo,
+  r: false, icon: '🌐',' colo,
   r: 'from-blue-600 to-indigo-700', textColo,
   r: 'text-blue-400',' lin,
   k: 'http,
@@ -5718,8 +5715,7 @@ i,
   d: '/month',' descriptio,
   n: 'Revolutionary satellite mission control platform that uses artificial intelligence to optimize satellite operations, predict maintenance needs, and maximize mission success rates.', feature,
   s: [' 'AI-powered satellite health monitoringPredictive maintenance and anomaly detectionAutonomous mission planning and optimizationReal-time satellite tracking and controlAdvanced orbit optimization algorithmsWeather and space weather integrationAutomated collision avoidanceMission success rate optimization'' 'Comprehensive reporting and analyticsIntegration with ground stations' ],' popula,
-  r: false, ico,
-  n: '🛰️',' colo,
+  r: false, icon: '🛰️',' colo,
   r: 'from-violet-600 to-purple-700', textColo,
   r: 'text-violet-400',' lin,
   k: 'http,
@@ -5755,8 +5751,7 @@ i,
   d: '/month',' descriptio,
   n: 'Comprehensive brain-computer interface development platform that provides all the tools, hardware, and software needed to build, test, and deploy neural interfaces for various applications.', feature,
   s: [' 'Complete BCI hardware and software stackNeural signal processing algorithmsMachine learning model trainingReal-time brain activity visualizationCustom interface development toolsSafety and compliance frameworksIntegration with existing systemsPerformance optimization tools'' 'Comprehensive documentation and tutorialsExpert consultation and support' ],' popula,
-  r: false, ico,
-  n: '🧠',' colo,
+  r: false, icon: '🧠',' colo,
   r: 'from-pink-600 to-rose-700', textColo,
   r: 'text-pink-400',' lin,
   k: 'http,
@@ -5792,8 +5787,7 @@ i,
   d: '/month',' descriptio,
   n: 'High-performance streaming analytics platform that processes and analyzes data streams in real-time, enabling instant insights and decision making for time-sensitive applications.', feature,
   s: [' 'Real-time data stream processingAdvanced analytics and machine learningLow-latency data ingestionScalable stream processingReal-time dashboards and alertsData quality monitoringIntegration with data sourcesCustom analytics pipelines'' 'Performance optimizationEnterprise security and compliance' ],' popula,
-  r: true, ico,
-  n: '📊',' colo,
+  r: true, icon: '📊',' colo,
   r: 'from-cyan-600 to-blue-700', textColo,
   r: 'text-cyan-400',' lin,
   k: 'http,
@@ -5829,8 +5823,7 @@ i,
   d: '/month',' descriptio,
   n: 'Comprehensive enterprise blockchain platform that simplifies the deployment, management, and operation of blockchain networks for enterprise applications and DeFi solutions.', feature,
   s: [' 'Multi-blockchain network managementSmart contract development and deploymentEnterprise-grade security and complianceScalable blockchain infrastructureIntegration with existing systemsPerformance monitoring and optimizationAutomated governance and complianceMulti-party transaction management'' 'Advanced analytics and reporting24/7 support and maintenance' ],' popula,
-  r: false, ico,
-  n: '🔗',' colo,
+  r: false, icon: '🔗',' colo,
   r: 'from-orange-600 to-yellow-700', textColo,
   r: 'text-orange-400',' lin,
   k: 'http,
@@ -5866,8 +5859,7 @@ i,
   d: '/month', descriptio,
   n: 'Revolutionary medical imaging analysis platform that uses advanced artificial intelligence to assist healthcare professionals in diagnosing diseases and conditions from medical images.', feature,
   s: [' 'AI-powered image analysis and diagnosisSupport for multiple imaging modalitiesReal-time analysis and reportingIntegration with PACS systemsAutomated report generationQuality assurance and validationCompliance with medical regulationsPerformance tracking and optimization'' 'Custom model training capabilitiesExpert consultation and support' ],' popula,
-  r: true, ico,
-  n: '🏥',' colo,
+  r: true, icon: '🏥',' colo,
   r: 'from-teal-600 to-green-700', textColo,
   r: 'text-teal-400',' lin,
   k: 'http,
@@ -5903,8 +5895,7 @@ i,
   d: '/month',' descriptio,
   n: 'Cutting-edge climate prediction platform that uses artificial intelligence and machine learning to model climate patterns, predict environmental changes, and support sustainability initiatives.', feature,
   s: [' 'AI-powered climate modeling and prediction'' 'Real-time environmental monitoring'' 'Advanced weather forecasting'' 'Climate impact assessment'' 'Sustainability analytics and reporting'' 'Integration with environmental sensors'' 'Custom model development'' 'Performance optimization and validation'' 'Compliance with environmental standards'' 'Expert consultation and support' ] popula,
-  r: false' ico,
-  n: '🌍'' colo,
+  r: false' icon: '🌍'' colo,
   r: 'from-green-600 to-emerald-700'' textColo,
   r: 'text-green-400'' lin,
   k: 'http,
@@ -5934,7 +5925,7 @@ i,
   s: [' 'AI climate modeling'' 'Environmental monitoring'' 'Weather forecasting'' 'Sustainability analytics'' 'Custom model development' ] marketAdvantag,
   e:' market_advantag,
   e: 'Most advanced AI climate prediction platform with research - grade accuracy' ' 'Most advanced AI climate prediction platform with research-grade accuracy'}' ]; 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ];' marketAdvantag,
-  e: 'Most advanced AI climate prediction platform with research-grade accuracy' ' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */}
+  e: 'Most advanced AI climate prediction platform with research-grade accuracy' ' import { ServiceVariant } from '../types/service-variants'; export interface AdvancedInnovativeService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -5945,39 +5936,41 @@ i,
   s: number, benefit,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
-  e: string} const contact = {/* TODO: Fix JSX expression */}
+  e: string} ;
+  ;
+  const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } export const,
-  advancedInnovativeServices: AdvancedInnovativeService[] = [; // Advanced AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
+  advancedInnovativeServices: AdvancedInnovativeService[] = [; // Advanced AI & Machine Learning Services, {/* TODO: Fix JSX expression */};
   s: [,' '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring' ]} capabilitie,
   s: [,' 'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance' ]}' marketAdvantag,
-  e: 'First autonomous DevOps platform with proven enterprise adoption and ROI' } // Quantum Computing Services; {/* TODO: Fix JSX expression */}
+  e: 'First autonomous DevOps platform with proven enterprise adoption and ROI' } // Quantum Computing Services; {/* TODO: Fix JSX expression */};
   s: [,' '15-25% improvement in portfolio returns30% reduction in portfolio risk1000x faster complex calculationsQuantum advantage in financial modelingRegulatory compliance automation' ]} capabilitie,
   s: [,' 'Quantum Monte Carlo simulationsPortfolio optimizationRisk modelingMarket predictionQuantum encryption' ]}' marketAdvantag,
-  e: 'Only quantum computing platform specifically designed for financial services' } // Advanced Cybersecurity Services; {/* TODO: Fix JSX expression */}
+  e: 'Only quantum computing platform specifically designed for financial services' } // Advanced Cybersecurity Services; {/* TODO: Fix JSX expression */};
   s: [,' '80% faster threat detection60% reduction in false positives24/7 autonomous monitoringProactive threat preventionCompliance automation' ]} capabilitie,
   s: [,' 'Autonomous threat huntingAI behavioral analysisReal-time threat intelligenceAutomated responsePredictive modeling' ]}' marketAdvantag,
-  e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption' } // Edge Computing & IoT Services; {/* TODO: Fix JSX expression */}
+  e: 'First AI-powered autonomous threat hunting platform with proven enterprise adoption' } // Edge Computing & IoT Services; {/* TODO: Fix JSX expression */};
   s: [,' '90% reduction in latency70% reduction in bandwidth costsReal-time AI decision makingOffline AI capabilitiesScalable edge deployment' ]} capabilitie,
   s: [,' 'Edge AI deploymentReal-time inferenceModel optimizationEdge device managementPerformance analytics' ]}' marketAdvantag,
-  e: 'Comprehensive edge AI platform with advanced optimization and management capabilities' } // Space Technology Services; {/* TODO: Fix JSX expression */}
+  e: 'Comprehensive edge AI platform with advanced optimization and management capabilities' } // Space Technology Services; {/* TODO: Fix JSX expression */};
   s: [,' '25% improvement in mission success rate40% reduction in operational costsPredictive maintenance capabilitiesAutonomous mission optimizationEnhanced collision avoidance' ]} capabilitie,
   s: [,' 'AI satellite monitoringPredictive maintenanceMission optimizationCollision avoidanceReal-time control' ]}' marketAdvantag,
-  e: 'Only AI-powered satellite mission control platform with proven space operations' } // Neural Technology & BCI Services; {/* TODO: Fix JSX expression */}
+  e: 'Only AI-powered satellite mission control platform with proven space operations' } // Neural Technology & BCI Services; {/* TODO: Fix JSX expression */};
   s: [,' '5x faster BCI development60% reduction in development costsComplete development stackExpert consultationSafety compliance' ]} capabilitie,
   s: [,' 'Complete BCI platformNeural signal processingMachine learning integrationDevelopment toolsSafety frameworks' ]}' marketAdvantag,
-  e: 'Most comprehensive BCI development platform with complete hardware and software stack' } // Advanced Data Analytics Services; {/* TODO: Fix JSX expression */}
+  e: 'Most comprehensive BCI development platform with complete hardware and software stack' } // Advanced Data Analytics Services; {/* TODO: Fix JSX expression */};
   s: [,' '90% reduction in decision latency35% improvement in operational efficiencyReal-time insightsScalable processingLow-latency analytics' ]} capabilitie,
   s: [,' 'Real-time processingStream analyticsMachine learningReal-time dashboardsData quality monitoring' ]}' marketAdvantag,
-  e: 'High-performance streaming analytics platform with proven enterprise scalability' } // Blockchain & DeFi Services; {/* TODO: Fix JSX expression */}
+  e: 'High-performance streaming analytics platform with proven enterprise scalability' } // Blockchain & DeFi Services; {/* TODO: Fix JSX expression */};
   s: [,' '70% faster blockchain deployment50% reduction in operational costsEnterprise-grade securityMulti-blockchain supportCompliance automation' ]} capabilitie,
   s: [,' 'Multi-blockchain managementSmart contract developmentEnterprise securityCompliance automationPerformance optimization' ]}' marketAdvantag,
-  e: 'Most comprehensive enterprise blockchain platform with multi-chain support' } // Healthcare AI Services; {/* TODO: Fix JSX expression */}
+  e: 'Most comprehensive enterprise blockchain platform with multi-chain support' } // Healthcare AI Services; {/* TODO: Fix JSX expression */};
   s: [,' '25% improvement in diagnostic accuracy60% reduction in analysis timeFDA complianceEnterprise integrationExpert support' ]} capabilitie,
   s: [,' 'AI image analysisMulti-modality supportReal-time processingAutomated reportingQuality assurance' ]}' marketAdvantag,
-  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' } // Climate & Sustainability Services; {/* TODO: Fix JSX expression */}
+  e: 'Most advanced AI-powered medical imaging platform with proven clinical accuracy' } // Climate & Sustainability Services; {/* TODO: Fix JSX expression */};
   s: [}' 'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development' ]}' marketAdvantag,
   e: 'Most advanced AI climate prediction platform with research-grade accuracy' } ]; } ]; benefit,
   s: [,' '30% improvement in prediction accuracy',' '50% reduction in modeling time',' 'Real - time monitoring',' 'Environmental compliance',' 'Expert consultation'], capabilitie,

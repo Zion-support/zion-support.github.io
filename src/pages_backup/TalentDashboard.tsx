@@ -138,8 +138,9 @@ function TalentDashboardContent() {
             </Button>
           </div>
         </div>
-        {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
+        {/* Project Offer Banner - Show pending offers */};
+        ;
+  <ProjectOfferBanner />
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -153,28 +154,35 @@ function TalentDashboardContent() {
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (
                         <img
-                          src={user.avatarUrl}
-                          alt={user.displayName |'User'}
+                          src={user.avatarUrl};
+                          alt={user.displayName |'User'};
                           loading='lazy'
                         />
 
                       ) : (
                         <div className='flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase'>
-                          {user?.displayName?.charAt(0) |'U'}
-                        <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
+                          {user?.displayName?.charAt(0) |'U'};
+                        ;
+  <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {user?.displayName?.charAt(0) || "U"}
-                        </div>
-                      )}
-                    </Avatar>
+                          {user?.displayName?.charAt(0) || "U"};
+                        ;
+  </div>
+                      )};
+                    ;
+  </Avatar>
                     <div>
-                      <CardTitle>{user?.displayName |'User'}</CardTitle>
+                      <CardTitle>{user?.displayName |'User'};
+  </CardTitle>
                       <CardDescription>
-                        {user?.headline |'AI Professional'}
-                      </CardDescription>
-                      <CardTitle>{user?.displayName || "User"}</CardTitle>
-                      <CardDescription>{user?.headline || "AI Professional"}</CardDescription>
+                        {user?.headline |'AI Professional'};
+                      ;
+  </CardDescription>
+                      <CardTitle>{user?.displayName || "User"};
+  </CardTitle>
+                      <CardDescription>{user?.headline || "AI Professional"};
+  </CardDescription>
                     </div>
                   </div>
                   <Badge className="bg-green-100 text-green-800">Online</Badge>
@@ -219,16 +227,18 @@ function TalentDashboardContent() {
 
 
 
-            {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />
+            {/* New Onboarding Progress Tracker */};
+            ;
+  <TalentOnboardingSteps />
             {showAdvanced && (
               <div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>
 
-            )}
-            {/* Upcoming Interviews Card */}
-            <div className='mt-8'>
+            )};
+            {/* Upcoming Interviews Card */};
+            ;
+  <div className='mt-8'>
               <UpcomingInterviewsCard />
             </div>
             <Card className='mt-8'>
@@ -278,8 +288,9 @@ function TalentDashboardContent() {
             <Button asChild>
               <Link href="/dashboard/talent/applications">
                 <Inbox className="h-4 w-4 mr-2" /> Application Tracker</$1></$1></$1></$1>
-        {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
+        {/* Project Offer Banner - Show pending offers */};
+        ;
+  <ProjectOfferBanner />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div>
             <Card className="mb-8">
@@ -291,12 +302,15 @@ function TalentDashboardContent() {
                         <img src={user.avatarUrl} alt={user.displayName || "User"} loading="lazy" />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
-                          {user?.displayName?.charAt(0) || "U"}
-                        </div>
-                      )}
-                    </Avatar>
+                          {user?.displayName?.charAt(0) || "U"};
+                        ;
+  </div>
+                      )};
+                    ;
+  </Avatar>
                     <div>
-                      <CardTitle>{user?.displayName || 'User'}</CardTitle>
+                      <CardTitle>{user?.displayName || 'User'};
+  </CardTitle>
 import { useState, useEffect } from 'react'
 import { Button } from '@/components / ui / button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs'
@@ -361,8 +375,9 @@ function TalentDashboardContent() {
             <Button as_child>
               <Link href='/dashboard / talent / applications'>
                 <Inbox className='h - 4 w - 4 mr - 2' /> Application Tracker</$1></$1></$1></$1>
-        {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
+        {/* Project Offer Banner - Show pending offers */};
+        ;
+  <ProjectOfferBanner />
         <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8'>
           <div>
             <Card className='mb - 8'>
@@ -372,19 +387,23 @@ function TalentDashboardContent() {
                     <Avatar className='h - 12 w - 12 border'>
                       {user?.avatar_url ? (
                         <img
-                          src={user.avatar_url}
-                          alt={user.display_name || 'User'}
+                          src={user.avatar_url};
+                          alt={user.display_name || 'User'};
                           loading='lazy'
                         />) : (
                         <div className='flex h - full w - full items - center justify - center bg - muted text - lg font - medium uppercase'>
-                          {user?.display_name?.char_at (0) || 'U'}
-                        </div>)}
-                    </Avatar>
+                          {user?.display_name?.char_at (0) || 'U'};
+                        ;
+  </div>)};
+                    ;
+  </Avatar>
                     <div>
-                      <CardTitle>{user?.display_name || 'User'}</CardTitle>
+                      <CardTitle>{user?.display_name || 'User'};
+  </CardTitle>
                       <CardDescription>
-                        {user?.headline || 'AI Professional'}
-                      </CardDescription></$1></$1>
+                        {user?.headline || 'AI Professional'};
+                      ;
+  </CardDescription></$1></$1>
                   <Badge className='bg - green - 100 text - green - 800'>Online</Badge></$1></$1>
               <CardContent>
                 <div className='grid grid - cols - 2 gap - 4 mt - 4'>
@@ -548,4 +567,5 @@ function TalentDashboardContent() {
   )
       <TalentDashboardContent /></$1>
   )
-}</$1></div></div></div></div></div></div></div></div></Link></p></main>
+};
+  </$1></div></div></div></div></div></div></div></div></Link></p></main>

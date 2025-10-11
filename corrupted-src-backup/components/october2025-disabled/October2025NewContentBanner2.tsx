@@ -1,21 +1,23 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o, m "luci, d, e-rea, c, t"
-const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
+const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
-    }
+    {/* TODO: Fix JSX expression */};
+    };
   ]; return(<section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
+      {/* Animated, background, elements */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0" />
       <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10">
-        {/* Head, e, r */}
-        <div, className="te, x, t-center, m, b-12">
+        {/* Head, e, r */};
+        ;
+  <div, className="te, x, t-center, m, b-12">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">
             <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5
@@ -31,15 +33,19 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             const Ico, n = artic, l, e.ic, o, n; return (
               <, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}$2 />
                 className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1">
-                {/* B, a, d, g, e */}
-                <div, classNam, e = "absolute, to, p-4, righ, t-4">
+                {/* B, a, d, g, e */};
+                ;
+  <div, classNam, e = "absolute, to, p-4, righ, t-4">
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">
-                    {artic, l, e.bad, g, e}
-                </d, i, v  > {/* Ic, o, n */}
-                <div, classNam, e = { `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}>
+                    {artic, l, e.bad, g, e};
+                ;
+  </d, i, v  > {/* Ic, o, n */};
+                ;
+  <div, classNam, e = { `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}>
                   <Icon, classNam, e = "w-8 h-8, tex, t-whi, t, e"
-                {/* Conte, n, t */}
-                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">
+                {/* Conte, n, t */}>
+                
+  <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">
   ]; return ("
     <section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, elements */}"
@@ -60,24 +66,28 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">
-          {/* TODO: Fix JSX expression */}
-              <, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}"$2 />
+          {/* TODO: Fix JSX expression */};
+              ;
+  <, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}"$2 />
                 className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1">
                 {/* B, a, d, g, e */}"
                 <div, classNam, e = "absolute, to, p-4, righ, t-4"></div>"
                   <span, className="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">
-                    {artic, l, e.bad, g, e}
-                </d, i, v  > {/* Ic, o, n */}`
+                    {artic, l, e.bad, g, e};
+                ;
+  </d, i, v  > {/* Ic, o, n */}`
                 <div, classNam, e = { `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}></div>"
                   <Icon, classNam, e = "w-8 h-8, tex, t-whi, t, e"</div>
                 {/* Conte, n, t */}"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">
-                  {artic, l, e.t, i, t, l, e}
-                </h3>"
+                  {artic, l, e.t, i, t, l, e};
+                ;
+  </h3>"
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-4, leadin, g-relax, e, d">
-                  {artic, l, e.description}
-                {/* Read, More, Link */}
-                <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
+                  {artic, l, e.description};
+                {/* Read, More, Link */};
+                ;
+  <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
                   <sp, a, n>Read, Articl, e
                   <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */})
@@ -90,9 +100,10 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
               </Li, n, k>)
             )
-          })}
-        {/* CTA, Sectio, n */}
-        <div, classNam, e = "te, x, t-cent, e, r">
+          })};
+        {/* CTA, Sectio, n */};
+        ;
+  <div, classNam, e = "te, x, t-cent, e, r">
           <, t, o="/bl, o, g"$2 />
         {/* CTA, Sectio, n */}"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
@@ -105,7 +116,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
       </div>
     </sec, t, i, o, n>
   )
-}
+};
 export default October2025NewContentBanner2
 "`
 </div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></p></p></p></h2></h2></h3></section></section>

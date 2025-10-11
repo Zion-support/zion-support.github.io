@@ -1,4 +1,4 @@
-      req && req.body || {}
+      req && req.body || {};
     if (
       !name |
       !entityType |
@@ -7,7 +7,7 @@
       !useCaseType
     ) {
       return res && res.status(400).json({ error: "Missing required fields" })
-    }
+    };
     try {
       const { partner, apiKey } = await createPartner({
         name
@@ -30,13 +30,15 @@
       })
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" })
-    }
-    return res && res.status(500).json({ error: "Failed to create partner" })
-  }
-}
-}
-      return res.status (400).json ({ error: "Missing required fields" })
-    }
+    };
+    ;
+  return res && res.status(500).json({ error: "Failed to create partner" })
+  };
+};
+};
+      ;
+  return res.status (400).json ({ error: "Missing required fields" })
+    };
     try {
       const { partner, api_key } = await create_partner ({
         name,
@@ -59,8 +61,9 @@
       })
     } catch (e) {
       return res.status (500).json ({ error: "Failed to create partner" })
-    }
-    return res.status (500).json ({ error: "Failed to create partner" })
+    };
+    ;
+  return res.status (500).json ({ error: "Failed to create partner" })
 import type { NextApiRequest, NextApiResponse  } from "next"
 import {  createPartner   } from "../../../utils/api/partnerAuth"
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -68,10 +71,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader("Allow", "POST")
     return res.status(405).json({ error: "Method Not Allowed" })
   }
-  const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {}
+  ;
+  ;
+  const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
   if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
     return res.status(400).json({ error: "Missing required fields" })
-  }
+  };
   try {
     const { partner, apiKey } = await createPartner({
       name,
@@ -98,9 +103,11 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
     res.setHeader("Allow", _"POST")
     return res.status(405).json({ error: "Method Not Allowed"})
   }
-  const {_name, _entityType, _pointOfContact, _useCaseType, _brand} = req.body || {}
+  ;
+  ;
+  const {_name, _entityType, _pointOfContact, _useCaseType, _brand} = req.body || {};
   if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {_return res.status(400).json({ error: "Missing required fields"})
-  }
+  };
   try {_const { partner, _apiKey} = await createPartner({_name, _entityType, _pointOfContact, _useCaseType, _brand})
     return res.status(201).json({_partner: {
         id: partner.id, _name: partner.name, _status: partner.status, _entityType: partner.entityType, _useCaseType: partner.useCaseType, _createdAt: partner.createdAt},
@@ -109,8 +116,8 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"})
 import type { NextApiRequest, NextApiResponse  } from "next"
 import {  createPartner   } from "../../../utils/api/partnerAuth"
-  }
-}
+  };
+};
         createdAt: partner.createdAt,
       },
       apiKey: apiKey.key,
@@ -118,5 +125,6 @@ import {  createPartner   } from "../../../utils/api/partnerAuth"
     })
   } catch (e) {
     return res.status(500).json({ error: "Failed to create partner" })
-  }
-}
+  };
+};
+;

@@ -6,7 +6,7 @@ export interface NextGenInnovation2025 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,16 +18,16 @@ export interface NextGenInnovation2025 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
   description: string
-  features: string[]
+  features: string[];
   link: string
   category: string
   realImplementation: boolean
@@ -36,14 +36,14 @@ export interface NextGenInnovation2025 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   // Next-Gen AI & Robotics
   {
@@ -407,8 +407,8 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     customers: 320,
     rating: 4.8,
     reviews: 267
-  }
-}
+  };
+};
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   {
     address: string,
@@ -422,7 +422,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
   tagline: string
   price: string
   description: string
-  features: string[]
+  features: string[];
   link: string
   category: string
     address: string
@@ -443,7 +443,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
   categor,
   y: string,
     addres,
-  s: string}
+  s: string};
 export const,
   nextGenInnovations2025: NextGenInnovation2025[] = [,
     i,
@@ -463,19 +463,19 @@ export const,
       'Future-ready features'
       'Innovation platform'
       'Expert support'
-    ]
+    ];
     link: '/services/next-gen-ai-suite'
     category: 'Next-Gen Innovations 2025'
     realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709'};
+  };
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
-]
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
+  };
+];
     id: "next-gen-ai-suite"
     id: "next-gen-ai-suite",
     name: "Next-Gen AI Suite",
@@ -508,17 +508,17 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+    };
+  };
 ];      mobil,
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com"
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
+    };
+  };
+];
     i,"
   d: "next-gen-ai-suite",
     nam,"
@@ -549,8 +549,8 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
+    };
+  };
 ]]],
       mobil,"
   e: "+1 302 464 0950",
@@ -559,7 +559,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobile: "+1 302 464 0950",
       mobile: "+1 302 464 0950",
       mobile: "+1 302 464 0950",
@@ -574,9 +574,9 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]]
+    };
+  };
+]];
 ]],
 i,
   d: string, nam,

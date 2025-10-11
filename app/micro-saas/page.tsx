@@ -1,5 +1,7 @@
 import React from 'react'
   ]
+  ;
+  ;
   return (
     <>
       <Helmet>
@@ -13,8 +15,9 @@ import React from 'react'
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        {/* Hero Section */}
-            </div>
+        {/* Hero Section */};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -28,8 +31,9 @@ import React from 'react'
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -43,8 +47,9 @@ import React from 'react'
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -54,8 +59,9 @@ import React from 'react'
     </>
         </section>
 
-        {/* CTA Section */}
-              </button>
+        {/* CTA Section */};
+              ;
+  </button>
             </div>
       
       <Footer />

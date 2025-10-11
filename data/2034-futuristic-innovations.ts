@@ -4,12 +4,12 @@ export interface Service2034 {
   description: string
   category: string
   price: string
-  features: string[]
-  benefits: string[]
-  useCases: string[]
-  technology: string[]
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  technology: string[];
   marketSize: string
-  competitors: string[]
+  competitors: string[];
   competitiveAdvantage: string
   implementationTime: string
   roi: string
@@ -17,14 +17,14 @@ export interface Service2034 {
   documentation: string
   api: boolean
   sdk: boolean
-  integrations: string[]
-  compliance: string[]
-  security: string[]
+  integrations: string[];
+  compliance: string[];
+  security: string[];
   scalability: string
   uptime: string
   contact: string
   website: string
-}
+};
 export const futuristic2034Services: Service2034[] = [
   {
     id: 'ai-quantum-hybrid-brain',
@@ -367,5 +367,5 @@ export const futuristic2034Services: Service2034[] = [
     uptime: '99.99% prediction platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/quantum-financial-prediction'
-  }
-]
+  };
+];

@@ -68,24 +68,25 @@ import {
   Graph
 } from 'lucide-react'
 const AIHRRecruitment: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Candidate Matching",
       description: "Advanced algorithms that analyze skills, experience, and cultural fit to find the perfect candidates for your organization.",
-      benefits: ["Skill-based matching", "Cultural fit analysis", "Predictive success modeling"]
+      benefits: ["Skill-based matching", "Cultural fit analysis", "Predictive success modeling"];
     },
     {
       icon: Target,
       title: "Intelligent Sourcing",
       description: "Automated talent discovery across multiple platforms and databases to identify passive candidates and expand your talent pool.",
-      benefits: ["Multi-platform sourcing", "Passive candidate discovery", "Talent pipeline building"]
+      benefits: ["Multi-platform sourcing", "Passive candidate discovery", "Talent pipeline building"];
     },
     {
       icon: BarChart3,
       title: "Predictive Analytics",
       description: "Data-driven insights that forecast hiring success, employee retention, and workforce planning needs.",
-      benefits: ["Hiring success prediction", "Retention forecasting", "Workforce planning"]
+      benefits: ["Hiring success prediction", "Retention forecasting", "Workforce planning"];
     },
     {
       icon: Zap,
@@ -125,33 +126,36 @@ const AIHRRecruitment: React.FC = () => {
       title: "Streamlined Onboarding",
       description: "Automated onboarding workflows that ensure smooth transitions for new hires."
       description: "Intelligent resume parsing and initial screening that saves time and ensures consistent evaluation criteria.",
-      benefits: ["Resume parsing", "Automated screening", "Bias reduction"]
-    }
+      benefits: ["Resume parsing", "Automated screening", "Bias reduction"];
+    };
   ]
+  
+  ;
+  ;
   const services = [
     {
       title: "Talent Acquisition",
       description: "End-to-end recruitment process automation from job posting to candidate onboarding.",
       icon: UserPlus,
-      features: ["Job posting optimization", "Candidate sourcing", "Interview scheduling", "Offer management"]
+      features: ["Job posting optimization", "Candidate sourcing", "Interview scheduling", "Offer management"];
     },
     {
       title: "Employee Retention",
       description: "AI-driven insights to improve employee satisfaction and reduce turnover rates.",
       icon: Heart,
-      features: ["Satisfaction monitoring", "Retention prediction", "Engagement strategies", "Exit interview analysis"]
+      features: ["Satisfaction monitoring", "Retention prediction", "Engagement strategies", "Exit interview analysis"];
     },
     {
       title: "Performance Management",
       description: "Continuous performance tracking and development planning powered by AI analytics.",
       icon: TrendingUp,
-      features: ["Goal tracking", "Performance analytics", "Development planning", "Feedback systems"]
+      features: ["Goal tracking", "Performance analytics", "Development planning", "Feedback systems"];
     },
     {
       title: "Workforce Planning",
       description: "Strategic workforce planning using predictive analytics and market intelligence.",
       icon: Graph,
-      features: ["Demand forecasting", "Skill gap analysis", "Succession planning", "Market intelligence"]
+      features: ["Demand forecasting", "Skill gap analysis", "Succession planning", "Market intelligence"];
   BarChart3, 
   MessageSquare, 
   Calendar, 
@@ -222,32 +226,35 @@ export default function AIHRRecruitment() {
         'Learning analytics'
       ],
       price: 'Starting at $2,999/month'
-    }
+    };
   ]
+  
+  ;
+  ;
   const recruitmentFeatures = [
     {
       title: 'Smart Sourcing',
       description: 'AI-powered candidate discovery across multiple platforms and databases',
       icon: Search,
-      benefits: ['Passive candidate identification', 'Skills-based matching', 'Market intelligence', 'Competitive analysis']
+      benefits: ['Passive candidate identification', 'Skills-based matching', 'Market intelligence', 'Competitive analysis'];
     },
     {
       title: 'Automated Screening',
       description: 'Intelligent filtering and ranking of candidates based on job requirements',
       icon: Target,
-      benefits: ['Resume parsing', 'Keyword matching', 'Experience validation', 'Cultural fit assessment']
+      benefits: ['Resume parsing', 'Keyword matching', 'Experience validation', 'Cultural fit assessment'];
     },
     {
       title: 'Interview Automation',
       description: 'AI-driven interview scheduling, conducting, and evaluation',
       icon: MessageSquare,
-      benefits: ['Automated scheduling', 'Video interview analysis', 'Response evaluation', 'Candidate scoring']
+      benefits: ['Automated scheduling', 'Video interview analysis', 'Response evaluation', 'Candidate scoring'];
     },
     {
       title: 'Predictive Analytics',
       description: 'Data-driven insights for hiring decisions and candidate success prediction',
       icon: BarChart3,
-      benefits: ['Success probability scoring', 'Retention prediction', 'Performance forecasting', 'Hiring ROI analysis']
+      benefits: ['Success probability scoring', 'Retention prediction', 'Performance forecasting', 'Hiring ROI analysis'];
       icon: Brain,
       title: 'AI-Powered Candidate Matching',
       description: 'Advanced algorithms that match candidates to job requirements with 95% accuracy.'
@@ -306,8 +313,11 @@ import {
 export default function AIHRRecruitment() {
   const features = [
     {
-    }
+    };
   ]
+  
+  ;
+  ;
   const benefits = [
     "Reduce time-to-hire by 60-80%",
     "Improve candidate quality by 40%",
@@ -316,6 +326,9 @@ export default function AIHRRecruitment() {
     "Streamlined interview scheduling",
     "Better candidate experience"
   ]
+  
+  ;
+  ;
   const solutions = [
     {
       title: "Talent Acquisition",
@@ -335,61 +348,67 @@ export default function AIHRRecruitment() {
       title: "AI-Powered Candidate Screening",
       description: "Intelligent resume parsing and candidate matching using advanced NLP and ML algorithms",
       icon: Search,
-      benefits: ["90% faster screening", "Bias-free evaluation", "Skills-based matching", "Cultural fit analysis"]
+      benefits: ["90% faster screening", "Bias-free evaluation", "Skills-based matching", "Cultural fit analysis"];
     },
     {
       title: "Predictive Hiring Analytics",
       description: "Data-driven insights to predict candidate success and optimize hiring decisions",
       icon: Brain,
-      benefits: ["Success probability scoring", "Retention prediction", "Performance forecasting", "Risk assessment"]
+      benefits: ["Success probability scoring", "Retention prediction", "Performance forecasting", "Risk assessment"];
     },
     {
       title: "Automated Interview Scheduling",
       description: "Smart scheduling system that coordinates interviews across multiple stakeholders",
       icon: Clock,
-      benefits: ["Automated coordination", "Calendar integration", "Reminder system", "Rescheduling handling"]
+      benefits: ["Automated coordination", "Calendar integration", "Reminder system", "Rescheduling handling"];
     },
     {
       title: "Video Interview Analysis",
       description: "AI-powered video interview assessment with facial expression and sentiment analysis",
       icon: Video,
-      benefits: ["Emotional intelligence scoring", "Communication skills assessment", "Cultural fit evaluation", "Bias detection"]
+      benefits: ["Emotional intelligence scoring", "Communication skills assessment", "Cultural fit evaluation", "Bias detection"];
     },
     {
       title: "Talent Pipeline Management",
       description: "Intelligent candidate relationship management with automated follow-ups and engagement",
       icon: Users,
-      benefits: ["Automated nurturing", "Engagement scoring", "Pipeline analytics", "Talent rediscovery"]
+      benefits: ["Automated nurturing", "Engagement scoring", "Pipeline analytics", "Talent rediscovery"];
     },
     {
       title: "Compliance & Diversity Monitoring",
       description: "Ensure fair hiring practices and regulatory compliance with AI-powered monitoring",
       icon: Shield,
-      benefits: ["Bias detection", "Compliance reporting", "Diversity analytics", "Audit trails"]
-    }
+      benefits: ["Bias detection", "Compliance reporting", "Diversity analytics", "Audit trails"];
+    };
   ]
+  
+  ;
+  ;
   const recruitmentStages = [
     {
       stage: "Sourcing & Attraction",
       description: "AI-powered job posting optimization and candidate attraction",
-      tools: ["Smart job descriptions", "Targeted advertising", "Passive candidate outreach", "Employer branding"]
+      tools: ["Smart job descriptions", "Targeted advertising", "Passive candidate outreach", "Employer branding"];
     },
     {
       stage: "Screening & Assessment",
       description: "Automated candidate evaluation and skills assessment",
-      tools: ["Resume parsing", "Skills testing", "Cultural fit assessment", "Background verification"]
+      tools: ["Resume parsing", "Skills testing", "Cultural fit assessment", "Background verification"];
     },
     {
       stage: "Interview & Selection",
       description: "Intelligent interview process with AI-powered insights",
-      tools: ["Video interviews", "Structured questions", "Performance scoring", "Decision support"]
+      tools: ["Video interviews", "Structured questions", "Performance scoring", "Decision support"];
     },
     {
       stage: "Onboarding & Retention",
       description: "Automated onboarding and employee retention monitoring",
-      tools: ["Onboarding automation", "Performance tracking", "Engagement monitoring", "Retention analytics"]
-    }
+      tools: ["Onboarding automation", "Performance tracking", "Engagement monitoring", "Retention analytics"];
+    };
   ]
+  
+  ;
+  ;
   const pricingPlans = [
     {
       name: "Starter",
@@ -441,8 +460,11 @@ export default function AIHRRecruitment() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+    };
   ]
+  
+  ;
+  ;
   const successMetrics = [
     {
       metric: "60%",
@@ -463,8 +485,11 @@ export default function AIHRRecruitment() {
       metric: "85%",
       description: "Improved retention rates",
       detail: "Better cultural fit and performance prediction"
-    }
+    };
   ]
+  
+  ;
+  ;
   const industries = [
     "Reduce time-to-hire by 60%",
     "Improve candidate quality by 40%",
@@ -473,6 +498,9 @@ export default function AIHRRecruitment() {
     "Automate 80% of repetitive tasks",
     "Enhance diversity and inclusion"
   ]
+  
+  ;
+  ;
   const pricingPlans = [
     {
       title: "Reduce Time-to-Hire",
@@ -493,8 +521,11 @@ export default function AIHRRecruitment() {
       title: "Increase Retention",
       value: "40%",
       description: "Better candidate selection and cultural alignment"
-    }
+    };
   ]
+  
+  ;
+  ;
   const pricing = [
     {
       name: "Starter",
@@ -612,8 +643,11 @@ const AIHRRecruitment = () => {
       icon: Zap,
       title: "Predictive Performance Analytics",
       description: "Data-driven insights to predict candidate success and optimize hiring decisions."
-    }
+    };
   ]
+  
+  ;
+  ;
   const useCases = [
     {
       description: "Complete HR solution for large organizations",
@@ -630,27 +664,29 @@ const AIHRRecruitment = () => {
       name: "Technology",
       description: "AI-powered technical assessment and skills matching",
       icon: Brain,
-      benefits: ["Technical skills testing", "Code review automation", "Project portfolio analysis"]
+      benefits: ["Technical skills testing", "Code review automation", "Project portfolio analysis"];
     },
     {
       name: "Healthcare",
       description: "Compliance-focused hiring with credential verification",
       icon: Shield,
-      benefits: ["License verification", "Compliance monitoring", "Clinical skills assessment"]
+      benefits: ["License verification", "Compliance monitoring", "Clinical skills assessment"];
     },
     {
       name: "Finance",
       description: "Risk assessment and regulatory compliance monitoring",
       icon: BarChart3,
-      benefits: ["Background screening", "Compliance checks", "Risk assessment"]
+      benefits: ["Background screening", "Compliance checks", "Risk assessment"];
     },
     {
       name: "Manufacturing",
       description: "Skills-based hiring with safety compliance focus",
       icon: Award,
-      benefits: ["Safety training verification", "Skills assessment", "Performance tracking"]
-    }
+      benefits: ["Safety training verification", "Skills assessment", "Performance tracking"];
+    };
   ]
+  ;
+  ;
   return (
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -688,27 +724,30 @@ const AIHRRecruitment = () => {
       industry: "Technology",
       title: "Technical Talent Acquisition",
       description: "AI-powered screening for technical roles with skill assessment and cultural fit analysis",
-      metrics: ["60% faster hiring", "40% better quality hires", "30% cost reduction"]
+      metrics: ["60% faster hiring", "40% better quality hires", "30% cost reduction"];
     },
     {
       industry: "Healthcare",
       title: "Clinical Staff Recruitment",
       description: "Intelligent matching of healthcare professionals with specific clinical requirements",
-      metrics: ["50% faster placement", "35% retention improvement", "45% compliance accuracy"]
+      metrics: ["50% faster placement", "35% retention improvement", "45% compliance accuracy"];
     },
     {
       industry: "Finance",
       title: "Compliance-Focused Hiring",
       description: "Regulatory compliance verification and background screening automation",
-      metrics: ["90% compliance accuracy", "70% faster screening", "Zero compliance violations"]
+      metrics: ["90% compliance accuracy", "70% faster screening", "Zero compliance violations"];
     },
     {
       industry: "Manufacturing",
       title: "Skills-Based Matching",
       description: "AI-driven matching of technical skills with manufacturing requirements",
-      metrics: ["55% better skill matching", "40% training reduction", "25% productivity increase"]
-    }
+      metrics: ["55% better skill matching", "40% training reduction", "25% productivity increase"];
+    };
   ]
+  
+  ;
+  ;
   const technologies = [
     {
       name: "Machine Learning",
@@ -739,8 +778,11 @@ const AIHRRecruitment = () => {
       name: "Compliance Engine",
       description: "Built-in compliance and bias detection features",
       icon: Shield
-    }
+    };
   ]
+  
+  ;
+  ;
   const pricingTiers = [
     {
       name: "Starter",
@@ -771,24 +813,27 @@ const AIHRRecruitment = () => {
         "Automated communication"
       industry: "Technology",
       description: "Technical skill assessment, coding challenges, and culture fit evaluation",
-      metrics: ["Time-to-Hire", "Quality of Hire", "Retention Rate"]
+      metrics: ["Time-to-Hire", "Quality of Hire", "Retention Rate"];
     },
     {
       industry: "Healthcare",
       description: "Clinical competency verification, license validation, and patient safety assessment",
-      metrics: ["Credential Verification", "Clinical Skills", "Patient Outcomes"]
+      metrics: ["Credential Verification", "Clinical Skills", "Patient Outcomes"];
     },
     {
       industry: "Finance",
       description: "Regulatory compliance, background checks, and risk assessment",
-      metrics: ["Compliance Rate", "Background Check Speed", "Risk Score"]
+      metrics: ["Compliance Rate", "Background Check Speed", "Risk Score"];
     },
     {
       industry: "Manufacturing",
       description: "Safety training verification, skill assessment, and operational readiness",
-      metrics: ["Safety Score", "Skill Proficiency", "Training Completion"]
-    }
+      metrics: ["Safety Score", "Skill Proficiency", "Training Completion"];
+    };
   ]
+  
+  ;
+  ;
   const pricing = [
     {
       name: "Starter",
@@ -801,7 +846,7 @@ const AIHRRecruitment = () => {
         "Resume parsing",
         "Interview scheduling",
         "Email support"
-      ]
+      ];
     },
     {
       name: "Professional",
@@ -848,9 +893,11 @@ const AIHRRecruitment = () => {
         "Dedicated support",
         "Advanced security",
         "API access"
-      ]
-    }
+      ];
+    };
   ]
+  ;
+  ;
   return (
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
         <div className="relative z-10 container mx-auto px-4 py-24">
@@ -885,8 +932,9 @@ const AIHRRecruitment = () => {
             </div>
           </div>
           
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
+          {/* Key Metrics */};
+          ;
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
               <div className="text-gray-400">Faster Hiring</div>
@@ -912,8 +960,9 @@ const AIHRRecruitment = () => {
         canonical="https://ziontechgroup.com/services/ai-hr-recruitment"
       />
 
-      {/* Hero Section with Futuristic Background */}
-      <section className="relative overflow-hidden">
+      {/* Hero Section with Futuristic Background */};
+      ;
+  <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-600/20 to-cyan-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)]"></div>
@@ -952,8 +1001,9 @@ const AIHRRecruitment = () => {
             </button>
           </div>
 
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          {/* Key Metrics */};
+          ;
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
               <div className="text-gray-400 text-sm">Faster Hiring</div>
@@ -989,8 +1039,11 @@ const AIHRRecruitment = () => {
       title: "Employee Retention",
       description: "Predict turnover risk and identify factors that contribute to employee satisfaction.",
       icon: TrendingUp
-    }
+    };
   ]
+  
+  ;
+  ;
   const benefits = [
     "Reduce time-to-hire by 60-80%",
     "Improve candidate quality by 40-60%",
@@ -999,10 +1052,13 @@ const AIHRRecruitment = () => {
     "Improve candidate experience",
     "Better employee retention rates"
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
@@ -1027,20 +1083,22 @@ const AIHRRecruitment = () => {
           </div>
         </div>
         
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Background Elements */};
+        ;
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
         </div>
       </section>
 
-      {/* Features Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+      {/* Features Section */};
+          ;
+  <motion.div
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1055,18 +1113,20 @@ const AIHRRecruitment = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                key={feature.title};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                viewport={{ once: true }};
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-3">{feature.title};
+  </h3>
+                <p className="text-gray-300">{feature.description};
+  </p>
               </motion.div>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1125,8 +1185,9 @@ const AIHRRecruitment = () => {
         </div>
       </div>
 
-      {/* Key Benefits */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Key Benefits */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Why Choose AI HR & Recruitment?
@@ -1145,8 +1206,10 @@ const AIHRRecruitment = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-4 text-white">{feature.title};
+  </h3>
+                <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -1156,27 +1219,33 @@ const AIHRRecruitment = () => {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
+                  {feature.title};
+                ;
+  </h3>
                 <p className="text-gray-300 mb-4">
-                  {feature.description}
-                </p>
+                  {feature.description};
+                ;
+  </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                      {benefit};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      {/* Services Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1193,14 +1262,17 @@ const AIHRRecruitment = () => {
                 <div className="p-4 rounded-lg bg-blue-500/20 inline-block mb-4">
                   <service.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{service.title};
+  </h3>
+                <p className="text-gray-300 mb-4 text-sm">{service.description};
+  </p>
                 <ul className="space-y-1 text-sm">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="text-gray-400">
-                      • {feature}
-      {/* Recruitment Stages Section */}
-      <section className="py-20 bg-green-900/30">
+                      • {feature};
+      {/* Recruitment Stages Section */};
+      ;
+  <section className="py-20 bg-green-900/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1216,32 +1288,38 @@ const AIHRRecruitment = () => {
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-center mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{index + 1}</span>
+                    <span className="text-2xl font-bold text-white">{index + 1};
+  </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{stage.stage}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{stage.stage};
+  </h3>
                 </div>
-                <p className="text-gray-300 mb-4 text-center">{stage.description}</p>
+                <p className="text-gray-300 mb-4 text-center">{stage.description};
+  </p>
                 <ul className="space-y-2">
                   {stage.tools.map((tool, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                      {tool}
-                    </li>
-                  ))}
-                </ul>
+                      {tool};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1254,37 +1332,42 @@ const AIHRRecruitment = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -20 }};
+              whileInView={{ opacity: 1, x: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
+                    <span className="text-gray-300">{benefit};
+  </span>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 20 }};
+              whileInView={{ opacity: 1, x: 0 }};
+              transition={{ duration: 0.8 }};
+              viewport={{ once: true }};
             >
               <h3 className="text-2xl font-semibold mb-6">Solutions</h3>
               <div className="space-y-4">
                 {solutions.map((solution, index) => (
                   <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
-                    <h4 className="font-semibold text-cyan-400 mb-2">{solution.title}</h4>
-                    <p className="text-gray-300 text-sm">{solution.description}</p>
+                    <h4 className="font-semibold text-cyan-400 mb-2">{solution.title};
+  </h4>
+                    <p className="text-gray-300 text-sm">{solution.description};
+  </p>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </motion.div>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1294,8 +1377,9 @@ const AIHRRecruitment = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience unprecedented efficiency and success in your hiring process.
-      {/* Industry Solutions Section */}
-      <section className="py-20 bg-black/50">
+      {/* Industry Solutions Section */};
+      ;
+  <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1313,31 +1397,37 @@ const AIHRRecruitment = () => {
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
                     <industry.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{industry.name}</h3>
+                  <h3 className="text-xl font-semibold text-white">{industry.name};
+  </h3>
                 </div>
-                <p className="text-gray-300 mb-4">{industry.description}</p>
+                <p className="text-gray-300 mb-4">{industry.description};
+  </p>
                 <ul className="space-y-2">
                   {industry.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                      {benefit};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Industries Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1351,18 +1441,20 @@ const AIHRRecruitment = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
               <motion.div
-                key={industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                key={industry};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                viewport={{ once: true }};
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
               >
                 <Briefcase className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
-                <h3 className="font-semibold">{industry}</h3>
+                <h3 className="font-semibold">{industry};
+  </h3>
               </motion.div>
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1376,14 +1468,16 @@ const AIHRRecruitment = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <$2 />
-                key={index}
+                key={index};
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title};
+  </h3>
+                <p className="text-gray-300">{useCase.description};
+  </p>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1398,11 +1492,15 @@ const AIHRRecruitment = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">{benefit.value}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-      {/* Success Metrics Section */}
-      <section className="py-20 bg-green-900/30">
+                <div className="text-4xl font-bold text-blue-400 mb-2">{benefit.value};
+  </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title};
+  </h3>
+                <p className="text-gray-300 text-sm">{benefit.description};
+  </p>
+      {/* Success Metrics Section */};
+      ;
+  <section className="py-20 bg-green-900/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1416,17 +1514,22 @@ const AIHRRecruitment = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
               <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
-                <div className="text-4xl font-bold text-green-400 mb-2">{metric.metric}</div>
-                <div className="text-white font-semibold mb-2">{metric.description}</div>
-                <div className="text-gray-400 text-sm">{metric.detail}</div>
+                <div className="text-4xl font-bold text-green-400 mb-2">{metric.metric};
+  </div>
+                <div className="text-white font-semibold mb-2">{metric.description};
+  </div>
+                <div className="text-gray-400 text-sm">{metric.detail};
+  </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      {/* Pricing Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1471,32 +1574,38 @@ const AIHRRecruitment = () => {
                       Most Popular
                     </span>
                   </div>
-                )}
-                
+                )};
+                ;
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-400">{plan.description}</p>
+                      {feature};
+                ;
+  <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+  </h3>
+                  <div className="text-4xl font-bold text-green-400 mb-2">{plan.price};
+  </div>
+                  <p className="text-gray-400">{plan.description};
+  </p>
                 </div>
                 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                      {feature};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
                 
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                       : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'
-                  }`}
+                  }`};
                 >
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -1507,22 +1616,25 @@ const AIHRRecruitment = () => {
                     ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:scale-105'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
                 }`}>
-                  {plan.cta}
-                </button>
+                  {plan.cta};
+                ;
+  </button>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Revolutionize Your HR?
@@ -1564,21 +1676,26 @@ const AIHRRecruitment = () => {
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                      <p className="text-gray-400">{service.price}</p>
+                      <h3 className="text-2xl font-bold text-white">{service.title};
+  </h3>
+                      <p className="text-gray-400">{service.price};
+  </p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <p className="text-gray-300 mb-6">{service.description};
+  </p>
                   
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                        {feature};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                   
                   <$2 />
                     to="/contact"
@@ -1588,13 +1705,15 @@ const AIHRRecruitment = () => {
                   </Link>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* Recruitment Features Section */}
-      <div className="py-20">
+      {/* Recruitment Features Section */};
+      ;
+  <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Intelligent Recruitment Features</h2>
@@ -1613,8 +1732,10 @@ const AIHRRecruitment = () => {
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
-                      <p className="text-gray-300">{feature.description}</p>
+                      <h3 className="text-2xl font-bold text-white">{feature.title};
+  </h3>
+                      <p className="text-gray-300">{feature.description};
+  </p>
                     </div>
                   </div>
                   
@@ -1622,10 +1743,12 @@ const AIHRRecruitment = () => {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                        {benefit};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
             {features.map((feature, index) => {
               const Icon = feature.icon
               return (
@@ -1633,21 +1756,26 @@ const AIHRRecruitment = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-green-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title};
+  </h3>
+                  <p className="text-gray-300">{feature.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
               </div>
             )
-          })}
-        </div>
+          })};
+        ;
+  </div>
       </div>
 
-      {/* Use Cases */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Use Cases */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Industry Applications
@@ -1662,26 +1790,33 @@ const AIHRRecruitment = () => {
             <div key={index} className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50">
               <div className="flex items-center mb-4">
                 <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                  {useCase.industry}
-                </span>
+                  {useCase.industry};
+                ;
+  </span>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
-              <p className="text-gray-300 mb-4">{useCase.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title};
+  </h3>
+              <p className="text-gray-300 mb-4">{useCase.description};
+  </p>
               <div className="space-y-2">
                 {useCase.metrics.map((metric, idx) => (
                   <div key={idx} className="flex items-center text-sm">
                     <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                    <span className="text-cyan-400 font-medium">{metric}</span>
+                    <span className="text-cyan-400 font-medium">{metric};
+  </span>
                   </div>
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </div>
 
-      {/* Technologies */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Technologies */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Powered by Cutting-Edge Technology
@@ -1699,16 +1834,20 @@ const AIHRRecruitment = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{tech.name}</h3>
-                <p className="text-gray-300">{tech.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-white">{tech.name};
+  </h3>
+                <p className="text-gray-300">{tech.description};
+  </p>
               </div>
             )
-          })}
-        </div>
+          })};
+        ;
+  </div>
       </div>
 
-      {/* Pricing */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Pricing */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Choose Your Plan
@@ -1732,24 +1871,31 @@ const AIHRRecruitment = () => {
                   </span>
                 </div>
               )}
-              
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2 text-white">{tier.name}</h3>
+              ;
+              ;
+  <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold mb-2 text-white">{tier.name};
+  </h3>
                 <div className="mb-4">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
-                  <span className="text-gray-400">{tier.period}</span>
+                  <span className="text-4xl font-bold text-white">{tier.price};
+  </span>
+                  <span className="text-gray-400">{tier.period};
+  </span>
                 </div>
-                <p className="text-gray-300">{tier.description}</p>
+                <p className="text-gray-300">{tier.description};
+  </p>
               </div>
               
               <ul className="space-y-3 mb-8">
                 {tier.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+                    {feature};
+                  ;
+  </li>
+                ))};
+              ;
+  </ul>
               
               <$2 />
                 to="/contact"
@@ -1757,17 +1903,19 @@ const AIHRRecruitment = () => {
                   tier.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                     : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
-                }`}
+                }`};
               >
                 Get Started
               </Link>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* CTA Section */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Recruitment?
@@ -1790,8 +1938,9 @@ const AIHRRecruitment = () => {
             Find the best talent faster and build stronger teams with intelligent automation.
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
+        {/* Hero Section */};
+        ;
+  <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Users className="w-10 h-10 text-white" />
@@ -1847,7 +1996,7 @@ const AIHRRecruitment = () => {
       </section>
     </div>
   )
-}
+};
 export default AIHRRecruitment
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
@@ -1889,8 +2038,9 @@ export default AIHRRecruitment
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1911,19 +2061,23 @@ export default AIHRRecruitment
                       <Icon className="w-6 h-6 text-green-400" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                      <p className="text-gray-300">{useCase.description}</p>
+                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title};
+  </h3>
+                      <p className="text-gray-300">{useCase.description};
+  </p>
                     </div>
                   </div>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1938,14 +2092,17 @@ export default AIHRRecruitment
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 text-lg">{benefit}</span>
+                <span className="text-gray-300 text-lg">{benefit};
+  </span>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="mb-20">
+        {/* Features Grid */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Advanced HR & Recruitment Features
           </h2>
@@ -1957,16 +2114,20 @@ export default AIHRRecruitment
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title};
+  </h3>
+                  <p className="text-zion-slate-light">{feature.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="mb-20">
+        {/* Benefits Section */};
+        ;
+  <div className="mb-20">
           <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white text-center mb-8">
               Proven Recruitment Results
@@ -1975,39 +2136,48 @@ export default AIHRRecruitment
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light">{benefit}</span>
+                  <span className="text-zion-slate-light">{benefit};
+  </span>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </div>
 
-        {/* Use Cases */}
-        <div className="mb-20">
+        {/* Use Cases */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Industry Applications
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
-                <p className="text-zion-slate-light mb-4">{useCase.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry};
+  </h3>
+                <p className="text-zion-slate-light mb-4">{useCase.description};
+  </p>
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
                   {useCase.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zion-slate-light text-sm">{metric}</span>
+                      <span className="text-zion-slate-light text-sm">{metric};
+  </span>
                     </div>
-                  ))}
-                </div>
+                  ))};
+                ;
+  </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
 
-        {/* Pricing */}
-        <div className="mb-20">
+        {/* Pricing */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing
           </h2>
@@ -2022,40 +2192,49 @@ export default AIHRRecruitment
                       Most Popular
                     </span>
                   </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                )};
+                ;
+  <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+  </h3>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
+                    <span className="text-4xl font-bold text-zion-cyan">{plan.price};
+  </span>
+                    <span className="text-zion-slate-light ml-1">{plan.period};
+  </span>
                   </div>
-                  <p className="text-zion-slate-light mt-2">{plan.description}</p>
+                  <p className="text-zion-slate-light mt-2">{plan.description};
+  </p>
                 </div>
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                      <span className="text-zion-slate-light">{feature};
+  </span>
                     </li>
-                  ))}
-                </ul>
+                  ))};
+                ;
+  </ul>
                 <$2 />
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
                       : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
-                  }`}
+                  }`};
                 >
                   Get Started
                 </Link>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
+        {/* CTA Section */};
+        ;
+  <div className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Hiring?
@@ -2083,15 +2262,17 @@ export default AIHRRecruitment
       </div>
     </div>
   )
-}
+};
 export default AIHRRecruitment
-}
-}
-}
-      </section>
+};
+};
+};
+      ;
+  </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-teal-500/10">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-teal-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Hiring Process?
@@ -2110,8 +2291,9 @@ export default AIHRRecruitment
         </div>
       </section>
 
-      {/* Navigation Links */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Navigation Links */};
+      ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
@@ -2159,7 +2341,8 @@ export default AIHRRecruitment
       </section>
     </div>
   )
-}
+};
 export default AIHRRecruitment
-}
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></p></p></ul></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>
+};
+;
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></p></p></ul></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>

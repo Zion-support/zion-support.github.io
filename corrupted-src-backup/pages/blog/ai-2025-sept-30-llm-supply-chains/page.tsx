@@ -19,7 +19,8 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, ai 2025, sept, 30 llm, supply, chains and, how, it can, benefit, your enterpri, s, e.
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, ai 2025, sept, 30 llm, supply, chains and, how, it can, benefit, your enterpri, s, e.
-}
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
-</div></div></div></p></p></h1>
+};
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+};
+;
+  </div></div></div></p></p></h1>

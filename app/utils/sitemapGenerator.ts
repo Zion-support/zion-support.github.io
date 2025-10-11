@@ -38,16 +38,22 @@
     '/marketing-tools',
     '/productivity'
   ]
+  
+  ;
+  ;
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-    <lastmod>${new Date().toISOString()}</lastmod>
+    <lastmod>${new Date().toISOString()};
+  </lastmod>
     <changefreq>weekly</changefreq>
-    <priority>${page === '' ? '1.0' : '0.8'}</priority>
+    <priority>${page === '' ? '1.0' : '0.8'};
+  </priority>
   </url>`).join(''))
 </urlset>`
   return sitemap
-}
-export const generateRobotsTxt = useCallback((...args) => {}
+};
+export const generateRobotsTxt = useCallback((...args) => {};
+  ;
   return `User-agent: *
 Allow: /
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -57,27 +63,34 @@ Crawl-delay: 1,
 Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
-Disallow: /private/`,}
+Disallow: /private/`,};
     '/developer-tools',
     '/marketing-tools',
     '/productivity'
   ]
+  
+  ;
+  ;
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   ${staticPages.map(page =&gt;),
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;}
-  ${staticPages.map(page =&gt;)}
-  <url>}
-    <loc>${baseUrl}${page}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;};
+  ${staticPages.map(page =&gt;)}>
+  
+  <url>};
+    ;
+  <loc>${baseUrl}${page};
+  </loc>
+    <lastmod>${new Date().toISOString()};
+  </lastmod>
     <changefreq>weekly</changefreq>
 Crawl-delay: 1,
 # Disallow admin and private areas
 Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
-Disallow: /private/`;}
-}
+Disallow: /private/`;};
+};
   d: currentDate,
       changefre,
   q: 'daily',
@@ -153,7 +166,7 @@ Disallow: /private/`;}
   q: 'yearly',
       priorit,
   y: 0.3,
-    }
-  ]
-}
+    };
+  ];
+};
 }`</$1></p>

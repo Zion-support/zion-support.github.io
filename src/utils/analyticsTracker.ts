@@ -9,21 +9,21 @@ interface AnalyticsEvent {
   label?: string
   value?: number,
   nonInteraction?: boolean
-  }
+  };
 interface PerformanceMetrics {
     metric: string
   value: number,
   rating?: 'good' | 'needs-improvement' | 'poor'
-  }
+  };
 interface ErrorReport {
     message: string
   stack?: string
   componentStack?: string,
   severity: 'low' | 'medium' | 'high' | 'critical'
-  }
+  };
 class AnalyticsTracker {
     private isInitialized = false
-  private queue: Array<() => void> = []
+  private queue: Array<() => void> = [];
   /**
    * Initialize the analytics tracker
    */
@@ -35,7 +35,7 @@ class AnalyticsTracker {
     this.queue = [],
     // Track initial page view
     this.trackPageView(window.location.pathname)
-  }
+  };
   /**
    * Track a custom event
    */
@@ -48,10 +48,10 @@ class AnalyticsTracker {
           value: event.value,
           non_interaction: event.nonInteraction
         })
-      }
+      };
       // Also log to console in development
-      if (process.env.NODE_ENV === 'development') {}
-    }
+      if (process.env.NODE_ENV === 'development') {};
+    };
     if (this.isInitialized) {} else {
     'use client'
 /**
@@ -60,77 +60,77 @@ class AnalyticsTracker {
  */
 
 interface AnalyticsEvent {// TODO: Add content
-  }
-}
+  };
+};
   category: string,,
     action: string
   label?: string
   value?: number
   nonInteraction?: boolean
-}
+};
 interface PerformanceMetrics {
     // TODO: Add content
-  }
-}
+  };
+};
   metric: string,,
     value: number
   rating?: 'good' | 'needs-improvement' | 'poor'
-}
+};
 interface ErrorReport {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
   messag,
   e: string
   stack?: string
   componentStack?: string,,
     severit,
   y: 'low' | 'medium' | 'high' | 'critical'
-}
-
+};
+;
 class AnalyticsTracker {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
   private isInitialized = false
   private,
   queue: Array
-          <() => void> = []
+          <() => void> = [];
   /**
    * Initialize the analytics tracker,
    */
 
   initialize(): void {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
     if (typeof window === 'undefined') return
     this.isInitialized = true
     // Process queued events
     this.queue.forEach(fn => fn())
-    this.queue = []
+    this.queue = [];
     // Track initial page view
     this.trackPageView(window.location.pathname)
-  }
+  };
   /**
    * Track a custom event
    */
 
   trackEvent(event: AnalyticsEvent): void {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
     if (typeof window === 'undefined') return
-      if (window.gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        window.gtag('event', event.action, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+      if (window.gtag) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+        window.gtag('event', event.action, {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   event_categor,
   y: event.category,
           event_labe,
@@ -140,22 +140,22 @@ class AnalyticsTracker {
           non_interactio,
   n: event.nonInteraction,)
         })
-      }
+      };
       // Also log to console in development
-      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-
+      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+        };
+    };
+;
     if (this.isInitialized) {} else {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
       this.queue.push(track)
-    }
-  }
+    };
+  };
   /**
    * Track page views
    */
@@ -168,27 +168,27 @@ class AnalyticsTracker {
           page_title: document.title,
           page_location: window.location.href
         })
-      }
-      if (process.env.NODE_ENV === 'development') {}
-    }
+      };
+      if (process.env.NODE_ENV === 'development') {};
+    };
     if (this.isInitialized) {} else {
     * Track performance metrics
    */
 
   trackPerformance(metrics: PerformanceMetrics): void {// TODO: Add content
-  }
-
-}
+  };
+;
+};
     if (typeof window === 'undefined') return
-    const track = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (window.gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        window.gtag('event', 'performance', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    const track = () => {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+      if (window.gtag) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+        window.gtag('event', 'performance', {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   event_categor,
   y: 'Web Vitals',
           event_labe,
@@ -198,21 +198,21 @@ class AnalyticsTracker {
           metric_ratin,
   g: metrics.rating,
         })
-      }
-      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-
+      };
+      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+        };
+    };
+;
     if (this.isInitialized) {} else {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
       this.queue.push(track)
-    }
-  }
+    };
+  };
   /**
    * Track performance metrics
    */
@@ -226,13 +226,13 @@ class AnalyticsTracker {
           value: Math.round(metrics.value),
           metric_rating: metrics.rating
         })
-      }
-      if (process.env.NODE_ENV === 'development') {}
-    }
+      };
+      if (process.env.NODE_ENV === 'development') {};
+    };
     if (this.isInitialized) {} else {
     this.queue.push(track)
-  }
-  }
+  };
+  };
   /**
    * Track errors
    */
@@ -245,14 +245,14 @@ class AnalyticsTracker {
           fatal: error.severity === 'critical',
           error_severity: error.severity
         })
-      }
+      };
       // Always log errors to console
       // // console.error('[Analytics Error]', error)
-    }
+    };
     if (this.isInitialized) {} else {
     this.queue.push(track)
-  }
-  }
+  };
+  };
   /**
    * Track user timing
    */
@@ -266,13 +266,13 @@ class AnalyticsTracker {
           event_category: category,
           event_label: label
         })
-      }
-      if (process.env.NODE_ENV === 'development') {}
-    }
+      };
+      if (process.env.NODE_ENV === 'development') {};
+    };
     if (this.isInitialized) {} else {
     this.queue.push(track)
-  }
-  }
+  };
+  };
   /**
    * Track conversions
    */
@@ -285,27 +285,27 @@ class AnalyticsTracker {
           value: value,
           currency:         ,
 $4})
-      }
-      if (process.env.NODE_ENV === 'development') {}
-    }
+      };
+      if (process.env.NODE_ENV === 'development') {};
+    };
     if (this.isInitialized) {} else {
     * Track user timing
    */
 
   trackTiming(category: string, variable: string, value: number, label?: string): void {// TODO: Add content
-  }
-
-}
+  };
+;
+};
     if (typeof window === 'undefined') return
-    const track = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (window.gtag) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        window.gtag('event', 'timing_complete', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    const track = () => {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+      if (window.gtag) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+        window.gtag('event', 'timing_complete', {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   nam,
   e: variable,
           valu)
@@ -315,22 +315,22 @@ $4})
           event_labe,
   l: label,
         })
-      }
-      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-
+      };
+      if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+        };
+    };
+;
     if (this.isInitialized) {} else {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
       this.queue.push(track)
-    }
-  }
-}
+    };
+  };
+};
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker()
 // Auto-initialize when window is available
@@ -342,22 +342,22 @@ if (typeof window !== 'undefined') {
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker()
 // Auto-initialize when window is available
-if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+  if (document.readyState === 'complete') {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
     analyticsTracker.initialize()
-  } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  } else {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+    window.addEventListener('load', () => {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
       analyticsTracker.initialize()
     })
-  }
-}
+  };
+};
 export default analyticsTracker
 export default analyticsTracker

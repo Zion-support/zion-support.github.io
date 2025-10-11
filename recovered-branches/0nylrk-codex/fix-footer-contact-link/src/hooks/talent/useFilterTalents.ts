@@ -12,23 +12,29 @@ export function useFilterTalents(talents: TalentProfile[]) {
     setSelectedSkills(prev => 
       prev.includes(skill) 
         ? prev.filter(s => s !== skill)
-        : [...prev, skill]
+        : [...prev, skill];
     )
   }
+  ;
+  ;
   const toggleAvailability = (availability: string) => {
     setSelectedAvailability(prev => 
       prev.includes(availability) 
         ? prev.filter(a => a !== availability)
-        : [...prev, availability]
+        : [...prev, availability];
     )
   }
+  ;
+  ;
   const toggleRegion = (region: string) => {
     setSelectedRegions(prev => 
       prev.includes(region) 
         ? prev.filter(r => r !== region)
-        : [...prev, region]
+        : [...prev, region];
     )
   }
+  ;
+  ;
   const clearFilters = () => {
     setSearchTerm('')
     setSelectedSkills([])
@@ -37,10 +43,10 @@ export function useFilterTalents(talents: TalentProfile[]) {
     setPriceRange([50, 200])
     setExperienceRange([0, 15])
     setSortOption('relevance')
-  }
+  };
   // Filter and sort talents
   const filteredTalents = useMemo(() => {
-    let result = [...talents]
+    let result = [...talents];
     // Filter by search term
     if (searchTerm) {
       const lowerSearch = searchTerm.toLowerCase()
@@ -50,7 +56,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
         talent.bio?.toLowerCase().includes(lowerSearch) ||
         talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch))
       )
-    }
+    };
     // Filter by selected skills
     if (selectedSkills.length > 0) {
       result = result.filter(talent => 
@@ -60,13 +66,13 @@ export function useFilterTalents(talents: TalentProfile[]) {
           )
         )
       )
-    }
+    };
     // Filter by availability
     if (selectedAvailability.length > 0) {
       result = result.filter(talent => 
         selectedAvailability.includes(talent.availability_type || '')
       )
-    }
+    };
     // Filter by location/region
     if (selectedRegions.length > 0) {
       result = result.filter(talent => 
@@ -74,16 +80,16 @@ export function useFilterTalents(talents: TalentProfile[]) {
           talent.location?.includes(region)
         )
       )
-    }
+    };
     // Filter by price range
     result = result.filter(talent => {
       const hourlyRate = talent.hourly_rate || 0
-      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
+      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1];
     })
     // Filter by experience range
     result = result.filter(talent => {
       const years = talent.years_experience || 0
-      return years >= experienceRange[0] && years <= experienceRange[1]
+      return years >= experienceRange[0] && years <= experienceRange[1];
     })
     // Sort talents
     switch (sortOption) {
@@ -102,8 +108,9 @@ export function useFilterTalents(talents: TalentProfile[]) {
       default:
         // Default sorting by relevance (no specific order)
         break
-    }
-    return result
+    };
+    ;
+  return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption])
   return {
     filteredTalents,
@@ -121,7 +128,8 @@ export function useFilterTalents(talents: TalentProfile[]) {
     toggleSkill,
     toggleAvailability,
     toggleRegion,
-    clearFilters}
+    clearFilters};
     clearFilters,
-  }
-}
+  };
+};
+;

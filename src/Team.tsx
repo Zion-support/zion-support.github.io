@@ -31,18 +31,18 @@ export default function Team() {;
 const [selectedDepartment, setSelectedDepartment] = useState('all');
 const [selectedLocation, setSelectedLocation] = useState('all');
 const departments = [;
-}
+};
     { id: 'all', name: 'All Departments', count: 45 },
     { id: 'leadership', name: 'Leadership', count: 8 },
     { id: 'engineering', name: 'Engineering', count: 18 },
     { id: 'ai-research', name: 'AI Research', count: 12 },
-    { id: 'sales', name: 'Sales & Business', count: 7 }
+    { id: 'sales', name: 'Sales & Business', count: 7 };
   ];
 const locations = [;
     { id: 'all', name: 'All Locations', count: 45 },
     { id: 'middletown', name: 'Middletown, DE', count: 25 },
     { id: 'remote', name: 'Remote', count: 15 },
-    { id: 'amsterdam', name: 'Amsterdam, NL', count: 5 }
+    { id: 'amsterdam', name: 'Amsterdam, NL', count: 5 };
   ];
 const teamMembers = [;
     {;
@@ -52,7 +52,7 @@ import { Link; } from 'react-router-dom';
 export default function Team() {;
 const leadership = [;
     {;,
-}
+};
 name: 'Kleber Santos'},;,
 role: 'Founder & CEO',;,
 bio: 'Visionary leader with over 15 years of experience in AI and quantum computing. Former CTO at major tech companies.',;,
@@ -67,7 +67,7 @@ bio: 'Visionary leader with 15+ years of experience in AI and quantum computing.
 expertise: ['AI Strategy', 'Quantum Computing', 'Business Innovation'],;,
 avatar: 'SC',;,
 linkedin: '#',;,
-achievements: ['PhD Computer Science', '20+ Patents', 'Forbes 30 Under 30']
+achievements: ['PhD Computer Science', '20+ Patents', 'Forbes 30 Under 30'];
     },
     {;,
 name: 'Michael Rodriguez',;,
@@ -76,7 +76,7 @@ bio: 'Technology innovator specializing in autonomous systems and enterprise arc
 expertise: ['Autonomous Systems', 'Enterprise Architecture', 'Digital Transformation'],;,
 avatar: 'MR',;,
 linkedin: '#',;,
-achievements: ['MSc Engineering', '15+ Years Experience', 'Industry Speaker']
+achievements: ['MSc Engineering', '15+ Years Experience', 'Industry Speaker'];
     },
     {;,
 name: 'Dr. James Kim',;,
@@ -85,7 +85,7 @@ bio: 'Research pioneer in emerging technologies. Leading our quantum computing a
 expertise: ['Quantum Computing', 'Blockchain', 'Emerging Tech'],;,
 avatar: 'JK',;,
 linkedin: '#',;,
-achievements: ['PhD Physics', 'Research Papers', 'Innovation Awards']
+achievements: ['PhD Physics', 'Research Papers', 'Innovation Awards'];
     },
     {;,
 name: 'Emily Watson',;,
@@ -94,8 +94,8 @@ bio: 'Operations expert with deep experience in scaling technology companies. En
 expertise: ['Operations Management', 'Global Scaling', 'Service Delivery'],;,
 avatar: 'EW',;,
 linkedin: '#',;,
-achievements: ['MBA Business', '10+ Years Operations', 'Process Optimization']
-    }
+achievements: ['MBA Business', '10+ Years Operations', 'Process Optimization'];
+    };
   ];
 const departmentHeads = [;
     {;,
@@ -125,7 +125,7 @@ role: 'Head of Digital Transformation',;,
 department: 'Business Solutions',;,
 bio: 'Digital transformation consultant helping businesses navigate technological change.',;,
 avatar: 'MG'
-    }
+    };
   ];
 const companyStats = [;
     {;,
@@ -270,7 +270,7 @@ email: "rachel.martinez@ziontechgroup.com",;,
 image: "/images/team/rachel-martinez.jpg",;,
 achievements: ["Customer Success Excellence", "Client Satisfaction Award", "Team Leadership"],;,
 featured: false
-    }
+    };
   ];
 const departments = [;
     {;
@@ -288,19 +288,20 @@ role: 'Quantum Computing Advisor',;,
 bio: 'Former research director at leading quantum computing labs.',;,
 image: '/images/team/elena-petrova.jpg',;,
 linkedin: 'https://linkedin.com/in/elena-petrova'
-    }
+    };
   ];
 return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO;
 title="Our Team - Zion Tech Group";
 description="Meet the exceptional team of innovators, engineers, and industry experts driving Zion Tech Group's mission to revolutionize technology.";
-tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]}
+tags={["team", "leadership", "experts", "AI specialists", "quantum physicists", "cybersecurity experts", "Zion Tech Group"]};
         url="https://ziontechgroup.com/team"
       />
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
@@ -327,8 +328,9 @@ Join Our Team
         </div>
       </section>
 
-      {/* Team Stats */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Team Stats */};
+      ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
@@ -351,8 +353,9 @@ Join Our Team
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section id="team" className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Leadership Team */};
+      ;
+  <section id="team" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">;
@@ -406,14 +409,15 @@ name: "Customer Experience",;,
 icon: Award,;,
 description: "Customer success and satisfaction",;,
 memberCount: 1
-    }
+    };
   ];
 const featuredMembers = teamMembers.filter(member => member.featured);;
 const regularMembers = teamMembers.filter(member => !member.featured);;
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="text-center">
@@ -443,70 +447,82 @@ innovative solutions that drive business success.
         </div>
       </div>
 
-      {/* Department Overview */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      {/* Department Overview */};
+      ;
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Departments</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {departments.map((dept), index) => {;
 const Icon = dept.icon;;
 return (;
               <$2 />;
-}
-key={index}
+};
+key={index};
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{dept.name}</h3>
-                <p className="text-gray-400 text-sm mb-3">{dept.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{dept.name};
+  </h3>
+                <p className="text-gray-400 text-sm mb-3">{dept.description};
+  </p>
                 <span className="text-cyan-400 text-sm font-medium">{dept.memberCount} member</span>
               </div>
             )
-          })}
-        </div>
+          })};
+        ;
+  </div>
       </div>
 
-      {/* Featured Team Members */}
+      {/* Featured Team Members */};
       {featuredMembers.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Leadership Team</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredMembers.map((member) => (
               <$2 />;
-key={member.id}
+key={member.id};
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="p-6">
-                  {/* Member Image Placeholder */}
-                  <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  {/* Member Image Placeholder */};
+                  ;
+  <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
                     <span className="text-white text-3xl font-bold">
-                      {member.name.split(' ').map(n => n[0]).join('')}
-                    </span>
+                      {member.name.split(' ').map(n => n[0]).join('')};
+                    ;
+  </span>
                   </div>
                   
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                    <p className="text-cyan-400 font-semibold mb-1">{member.role}</p>
-                    <p className="text-gray-400 text-sm">{member.department}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{member.name};
+  </h3>
+                    <p className="text-cyan-400 font-semibold mb-1">{member.role};
+  </p>
+                    <p className="text-gray-400 text-sm">{member.department};
+  </p>
                   </div>
                   
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed">
-                    {member.bio}
-                  </p>
+                    {member.bio};
+                  ;
+  </p>
                   
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Expertise</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.expertise.slice(0, 3).map((skill), index) => (
                         <$2 />;
-key={index}
+key={index};
                           className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
                         >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
+                          {skill};
+                        ;
+  </span>
+                      ))};
+                    ;
+  </div>
                   </div>
                   
                   <div className="mb-6">
@@ -515,89 +531,103 @@ key={index}
                       {member.achievements.slice(0, 2).map((achievement), index) => (
                         <li key={index} className="text-gray-300 text-xs flex items-center">
                           <Award className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                          {achievement}
-                        </li>
-                      ))}
-                    </ul>
+                          {achievement};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
                   
-                  {/* Social Links */}
-                  <div className="flex justify-center space-x-4">
+                  {/* Social Links */};
+                  ;
+  <div className="flex justify-center space-x-4">
                     {member.linkedin && (
                       <$2 />;
-href={member.linkedin}
+href={member.linkedin};
                         target="_blank";
 rel="noopener noreferrer";
 className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                       >
                         <Linkedin className="w-5 h-5" />
                       </a>
-                    )}
+                    )};
                     {member.twitter && (
                       <$2 />;
-href={member.twitter}
+href={member.twitter};
                         target="_blank";
 rel="noopener noreferrer";
 className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                       >
                         <Twitter className="w-5 h-5" />
                       </a>
-                    )}
+                    )};
                     {member.email && (
                       <$2 />;
-href={`mailto:${member.email}}`}
+href={`mailto:${member.email}}`};
                         className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                       >
                         <Mail className="w-5 h-5" />
                       </a>
-                    )}
-                  </div>
+                    )};
+                  ;
+  </div>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
-      )}
-
-      {/* All Team Members */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      )};
+;
+      {/* All Team Members */};
+      ;
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {regularMembers.map((member) => (
             <$2 />;
-key={member.id}
+key={member.id};
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
               <div className="p-6">
-                {/* Member Image Placeholder */}
-                <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                {/* Member Image Placeholder */};
+                ;
+  <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-white text-xl font-bold">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                    {member.name.split(' ').map(n => n[0]).join('')};
+                  ;
+  </span>
                 </div>
                 
                 <div className="text-center mb-4">
-                  <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
-                  <p className="text-cyan-400 text-sm font-medium mb-1">{member.role}</p>
-                  <p className="text-gray-400 text-xs">{member.department}</p>
+                  <h3 className="text-lg font-bold text-white mb-1">{member.name};
+  </h3>
+                  <p className="text-cyan-400 text-sm font-medium mb-1">{member.role};
+  </p>
+                  <p className="text-gray-400 text-xs">{member.department};
+  </p>
                 </div>
                 
                 <p className="text-gray-300 text-xs mb-4 leading-relaxed line-clamp-3">
-                  {member.bio}
-                </p>
+                  {member.bio};
+                ;
+  </p>
                 
                 <div className="mb-4">
                   <h4 className="text-xs font-semibold text-cyan-400 mb-2">Expertise</h4>
                   <div className="flex flex-wrap gap-1">
                     {member.expertise.slice(0, 2).map((skill), index) => (
                       <$2 />;
-key={index}
+key={index};
                         className="px-1 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center"
                       >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                        {skill};
+                      ;
+  </span>
+                    ))};
+                  ;
+  </div>
                 </div>;,
 id: 1,;,
 name: "Dr. Kleber Santos",;,
@@ -619,7 +649,7 @@ achievements: [
         "Led 50+ enterprise AI transformations",
         "Published 25+ research papers",
         "Speaker at major tech conferences"
-      ]
+      ];
     },
     {;,
 id: 2,;,
@@ -642,7 +672,7 @@ achievements: [
         "100+ AI system deployments",
         "15 patents in AI technology",
         "IEEE Fellow"
-      ]
+      ];
     },
     {;,
 id: 3,;,
@@ -665,7 +695,7 @@ achievements: [
         "Published in Nature & Science",
         "Collaboration with CERN",
         "Nobel Prize nominee 2023"
-      ]
+      ];
     },
     {;,
 id: 4,;,
@@ -688,7 +718,7 @@ achievements: [
         "SOC2 compliance automation expert",
         "Zero security breaches in 5 years",
         "CISSP, CISM certified"
-      ]
+      ];
     },
     {;,
 id: 5,;,
@@ -711,7 +741,7 @@ achievements: [
         "Managed 100+ engineering team",
         "Reduced development time by 40%",
         "Former Google Engineering Manager"
-      ]
+      ];
     },
     {;,
 id: 6,;,
@@ -734,7 +764,7 @@ achievements: [
         "Published 20+ research papers",
         "AI optimization breakthroughs",
         "Former Tesla AI researcher"
-      ]
+      ];
     },
     {;,
 id: 7,;,
@@ -757,7 +787,7 @@ achievements: [
         "$50M+ in new business",
         "100+ strategic partnerships",
         "Former McKinsey consultant"
-      ]
+      ];
     },
     {;,
 id: 8,;,
@@ -780,21 +810,22 @@ achievements: [
         "Hardware integration expert",
         "3 quantum computing patents",
         "Former IBM Quantum researcher"
-      ]
-    }
+      ];
+    };
   ];
 const filteredTeam = teamMembers.filter(member => {;;
 const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment;;
 const matchesLocation = selectedLocation === 'all' || member.location === selectedLocation;;
 return matchesDepartment && matchesLocation;
-}
+};
   });
 const featuredMembers = filteredTeam.filter(member => member.featured);;
 const regularMembers = filteredTeam.filter(member => !member.featured);;
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">;
 Meet Our Team
@@ -806,23 +837,29 @@ businesses through cutting-edge technology solutions.
         </div>
       </section>
 
-      {/* Company Stats */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      {/* Company Stats */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {companyStats.map((stat), index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number}</div>
-                <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
-                <p className="text-sm text-gray-300">{stat.description}</p>
+                <div className="text-4xl font-bold text-blue-400 mb-2">{stat.number};
+  </div>
+                <div className="text-lg font-semibold text-white mb-2">{stat.label};
+  </div>
+                <p className="text-sm text-gray-300">{stat.description};
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Leadership Team */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Leadership Team */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Leadership Team</h2>
@@ -835,22 +872,28 @@ Meet the visionaries and experts driving innovation at Zion Tech Group
               <div key={index} className="bg-white/5 rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
                 <div className="flex items-start space-x-6">
                   <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-2xl">{member.avatar}</span>
+                    <span className="text-white font-bold text-2xl">{member.avatar};
+  </span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
-                    <p className="text-blue-400 text-lg mb-3">{member.role}</p>
-                    <p className="text-gray-300 mb-4">{member.bio}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{member.name};
+  </h3>
+                    <p className="text-blue-400 text-lg mb-3">{member.role};
+  </p>
+                    <p className="text-gray-300 mb-4">{member.bio};
+  </p>
                     
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise:</h4>
                       <div className="flex flex-wrap gap-2">
                         {member.expertise.map((skill), idx) => (
                           <span key={idx} className="text-xs bg-blue-500/20 text-blue-400 px-2 py-1 rounded-full">
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
+                            {skill};
+                          ;
+  </span>
+                        ))};
+                      ;
+  </div>
                     </div>
 
                     <div className="mb-4">
@@ -858,10 +901,12 @@ Meet the visionaries and experts driving innovation at Zion Tech Group
                       <div className="flex flex-wrap gap-2">
                         {member.achievements.map((achievement), idx) => (
                           <span key={idx} className="text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
-                            {achievement}
-                          </span>
-                        ))}
-                      </div>
+                            {achievement};
+                          ;
+  </span>
+                        ))};
+                      ;
+  </div>
                     </div>
 
     <div className="min-h-screen bg-background">
@@ -873,8 +918,9 @@ canonical="https://ziontechgroup.com/team"
       />
 
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
+        {/* Hero Section */};
+        ;
+  <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">;
 Meet Our Team
           </h1>
@@ -885,8 +931,9 @@ innovation to deliver transformative results.
           </p>
         </div>
 
-        {/* Leadership Team */}
-        <div className="mb-20">
+        {/* Leadership Team */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Leadership Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {leadership.map((member), index) => (
@@ -898,29 +945,35 @@ innovation to deliver transformative results.
   </path>
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{member.bio}</p>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name};
+  </h3>
+                  <p className="text-cyan-400 font-semibold mb-3">{member.role};
+  </p>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">{member.bio};
+  </p>
                   <div className="flex justify-center space-x-3">
-                {/* Social Links */}
-                <div className="flex justify-center space-x-3">
+                {/* Social Links */};
+                ;
+  <div className="flex justify-center space-x-3">
                   {member.linkedin && (
                     <$2 />;
-href={member.linkedin}
+href={member.linkedin};
                       target="_blank";
 rel="noopener noreferrer"
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {departments.map((dept), index) => (
               <$2 />;
-key={index}
+key={index};
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${dept.color}} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <dept.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{dept.name}</h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">{dept.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{dept.name};
+  </h3>
+                <p className="text-gray-400 mb-4 leading-relaxed">{dept.description};
+  </p>
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-medium">{dept.memberCount} members</span>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />;
@@ -928,29 +981,36 @@ className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                     >
                       <Linkedin className="w-4 h-4" />
                     </a>
-                  )}
+                  )};
                   {member.email && (
                     <$2 />;
-href={`mailto:${member.email}}`}
+href={`mailto:${member.email}}`};
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                     >
                       <Mail className="w-4 h-4" />
                     </a>
-                  )}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{head.name}</h3>
-                <p className="text-blue-400 text-sm mb-1">{head.role}</p>
-                <p className="text-cyan-400 text-xs mb-3">{head.department}</p>
-                <p className="text-gray-300 text-sm">{head.bio}</p>
+                  )};
+                ;
+  </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{head.name};
+  </h3>
+                <p className="text-blue-400 text-sm mb-1">{head.role};
+  </p>
+                <p className="text-cyan-400 text-xs mb-3">{head.department};
+  </p>
+                <p className="text-gray-300 text-sm">{head.bio};
+  </p>
               </div>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </div>
 
 
-        {/* Join Our Team */}
-        <div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 md:p-12 mb-16 border border-cyan-500/20">
+        {/* Join Our Team */};
+        ;
+  <div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 md:p-12 mb-16 border border-cyan-500/20">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Join Our Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">;
@@ -967,9 +1027,9 @@ View Open Positions
               </Link>
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-medium text-lg"
-      {/* Join Our Team CTA */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-medium text-lg"{/* Join Our Team CTA */}>
+      
+  <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">;
@@ -999,5 +1059,5 @@ Contact Us
       </div>
     </div>
   )
-}
+};
 export default Team</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></section></section>

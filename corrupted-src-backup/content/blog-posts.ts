@@ -6,12 +6,12 @@ export interface BlogPost {
   author: string
   date: string
   category: string
-  tags: string[]
+  tags: string[];
   featured: boolean
   readTime: string,
   image?: string
-  }
-
+  };
+;
 export const blogPosts: BlogPost[] = [,
   {,
     slug: 'ai-2025-oct-04-operational-ai-scorecards-v2',
@@ -121,18 +121,18 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
     featured: true,
     readTime: '10 min read',
     image: '/images/enterprise-ai-governance-2025.jpg',
-export interface BlogPost {/* TODO: Fix JSX expression */}
-}
-
+export interface BlogPost {/* TODO: Fix JSX expression */};
+};
+;
 export const,
   blogPosts: BlogPost[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
-  }]
+  {/* TODO: Fix JSX expression */};
+  }];

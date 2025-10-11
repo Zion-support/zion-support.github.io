@@ -2,14 +2,14 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-}
+};
 serve(async (req) => {
   // Handle CORS preflight request
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: corsHeaders })
-  }
+  };
   try {
     const supabaseClient = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
@@ -28,17 +28,17 @@ serve(async (req) => {
     if (error) {
       console.error("Error fetching analytics data:", error)
       throw error
-    }
+    };
     // Group events by date and event type
-    const eventsByDate = {}
+    const eventsByDate = {};
     data.forEach((event) => {
-      const date = new Date(event.created_at).toISOString().split("T")[0]
+      const date = new Date(event.created_at).toISOString().split("T")[0];
       if (!eventsByDate[date]) {
-        eventsByDate[date] = { date }
-      }
+        eventsByDate[date] = { date };
+      };
       if (!eventsByDate[date][event.event_type]) {
         eventsByDate[date][event.event_type] = 0
-      }
+      };
       eventsByDate[date][event.event_type]++
     })
     // Convert to array for easier consumption by frontend
@@ -63,5 +63,5 @@ serve(async (req) => {
       },
       status: 500,
     })
-  }
+  };
 })

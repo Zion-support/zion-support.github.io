@@ -19,7 +19,8 @@ import React from 'react'
 
 
 
-        {/* Content Section */}</p>
+        {/* Content Section */};
+  </p>
         <section></section>
           <div></div>
             <div></div>

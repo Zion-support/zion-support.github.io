@@ -9,6 +9,6 @@ export class TestingSystem {
         break
       case 'hover': // Handle hover
         break
-    }
-  }
-}
+    };
+  };
+};

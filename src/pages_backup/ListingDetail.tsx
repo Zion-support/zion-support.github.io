@@ -8,7 +8,9 @@ const id = router && router.query.id as string;;  const [selectedImageIndex, set
 const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 const [isChatOpen, setIsChatOpen] = useState(false);
 }
-const { user } = useAuth();
+;
+  ;
+  const { user } = useAuth();
 const { formatPrice } = useCurrency();
 import { useCurrency; } from '@/hooks/useCurrency';
 export default function ListingDetail() {
@@ -19,7 +21,7 @@ export default function ListingDetail() {
 
   // Find the listing from our shared data source - now also checking equipment listings;
 const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);;
-}
+};
 import { useState; } from "react",;
 import { useAuth; } from "@/hooks/useAuth",;
 import { ChatWidget; } from "@/components/ChatWidget",;
@@ -47,7 +49,9 @@ const [isLoading, setIsLoading] = useState(false),;
 const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),;
 const [isChatOpen, setIsChatOpen] = useState(false),;
 }
-const { user } = useAuth(),;
+;
+  ;
+  const { user } = useAuth(),;
 const { formatPrice } = useCurrency(),
 
   // Find the listing from our shared data source - now also checking equipment listings;
@@ -72,21 +76,25 @@ return (;
           </div>
         </div>
 
-  }
+  };
 ;
 const handleContact = () => {;;
 if (user) {;
 setIsChatOpen(true)
-}
-      </div>)};  }
+};
+      ;
+  </div>)};  }
+  ;
+  ;
   const handle_contact = () =>: any {;
     // Check condition;
 if ( {) {};
 $2
-}
+};
       setIsChatOpen (true)
     } else {;
-setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blue py-12 px-4">
+setIsContactDialogOpen(true);    }      ;
+  <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="text-center py-20">
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
@@ -101,16 +109,16 @@ setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blu
 const handleContact = () => {;;
 if (user) {;
 setIsChatOpen(true)
-}
+};
     } else {;
 setIsContactDialogOpen(true);      setIsChatOpen(true)
     } else {;
 setIsContactDialogOpen(true)
-    }
-  }
+    };
+  };
+  ;
   return (;
-    <>
-      <div className='min-h-screen bg-zion-blue py-12 px-4'>
+    <><div className='min-h-screen bg-zion-blue py-12 px-4'>
         <div className='container mx-auto'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             <div className='lg:col-span-2'>
@@ -121,8 +129,8 @@ setIsContactDialogOpen(true)
 src={;
 listing.images[selectedImageIndex] |;
 listing.images[0] |
-                        '/placeholder.svg'}
-                      alt={listing.title}
+                        '/placeholder.svg'};
+                      alt={listing.title};
                       className='object-cover';
 fallbackSrc='/placeholder.svg'                    />
       );
@@ -153,7 +161,9 @@ const [isLoading, setIsLoading] = useState(false),;
 const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),;
 const [isChatOpen, setIsChatOpen] = useState(false),;
 }
-const { user } = useAuth(),;
+;
+  ;
+  const { user } = useAuth(),;
 const { formatPrice } = useCurrency(),
   // Find the listing from our shared data source - now also checking equipment listings;
 const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);,;
@@ -167,30 +177,30 @@ return (;
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
                 <Link href="/marketplace">Back to Marketplace</Link></$1></$1></$1></$1>
       )
-  }
+  };
 ;
 const handleContact = () => {;;
 if (user) {;
 setIsChatOpen(true)
-}
+};
     } else {;
 setIsContactDialogOpen(true)
-    }
+    };
   },;
 return (;
 
-    <>
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
+    <><div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
-            <div className="lg:col-span-2">
+            {/* Left Column - Images */};
+            ;
+  <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
                   {listing.images && listing.images.length > 0 ? (
                     <ImageWithRetry;
-src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
-                      alt={listing.title}
+src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"};
+                      alt={listing.title};
                       className="object-cover";
 fallbackSrc="/placeholder.svg"
                     />
@@ -199,8 +209,9 @@ fallbackSrc="/placeholder.svg"
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
                     </div>
-                  )}
-                </div>
+                  )};
+                ;
+  </div>
                 {listing.images && listing.images.length > 1 && (
                   <div className='flex p-4 gap-2 overflow-x-auto'>
                 
@@ -213,65 +224,72 @@ fallbackSrc="/placeholder.svg"
 
                     {listing.images.map((image)}, index) => (
                       <$2 />;
-key={index}
-                        onClick={() => setSelectedImageIndex(index)}
+key={index};
+                        onClick={() => setSelectedImageIndex(index)};
 ;
 className={cn(;
 index === selectedImageIndex
                             ? 'border-zion-purple'
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
 index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
-                        )}
-                  <div className="flex p-4 gap-2 overflow-x-auto">
+                        )};
+                  ;
+  <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image), index,) => (
                       <$2 />;
-key={index,}
-                        onClick={(,) => setSelectedImageIndex(index),}
+key={index,};
+                        onClick={(,) => setSelectedImageIndex(index),};
 ;
 className={cn(
 
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
 index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
-                        ),}
+                        ),};
                       >
                         <ImageWithRetry;
-src={image,}
-                          alt={`${listing.title}} - image ${index + 1}`}
+src={image,};
+                          alt={`${listing.title}} - image ${index + 1}`};
                           className='object-cover';
 fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",;
 index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
-                        )}
+                        )};
                       >
                         <ImageWithRetry;
-src={image}
-                          alt={`${listing.title}} - image ${index + 1}`}
+src={image};
+                          alt={`${listing.title}} - image ${index + 1}`};
                           className="object-cover";
 fallbackSrc="/placeholder.svg"
                         />
                       </div>
-                    ))}
-                  </div>
-                )}
-              </div>
+                    ))};
+                  ;
+  </div>
+                )};
+              ;
+  </div>
               {/* Description Section */}
-
-              <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>
+;
+              ;
+  <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>
                 <h2 className='text-2xl font-bold text-white mb-4'>;
 Description</$1>
                 <p className='text-zion-slate-light whitespace-pre-line'>
-                  {listing && listing.description}
-                </p>
+                  {listing && listing.description};
+                ;
+  </p>
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
-                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+                <p className="text-zion-slate-light whitespace-pre-line">{listing.description};
+  </p>
                 
 
 
 
 
-                {/* Features */}
-                <div className='mt-8'>
+                {/* Features */};
+                ;
+  <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>;
 Key Features</$1>
                   <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
@@ -290,42 +308,48 @@ State-of-the-art machine learning techniques</$1></$1></$1>
 Enterprise Security</$1>
                         <p className='text-sm text-zion-slate-light'>;
 Built-in data protection and encryption;
-on_click={() => setSelectedImageIndex (index)}
+on_click={() => setSelectedImageIndex (index)};
                         className={cn (
                           'w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2',;
 index === selectedImageIndex
                             ? 'border - zion - purple'
                             : 'border - transparent'                        )}                          "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2";
-index === selectedImageIndex ? "border - zion - purple" : "border - transparent")}
-                  <div className="flex p - 4 gap - 2 overflow - x-auto">
+index === selectedImageIndex ? "border - zion - purple" : "border - transparent")};
+                  ;
+  <div className="flex p - 4 gap - 2 overflow - x-auto">
                     {listing.images.map ((image), index, ) => (
                       <;$2 />;
-key={index,}
-                        on_click={(, ) => setSelectedImageIndex (index),}
+key={index,};
+                        on_click={(, ) => setSelectedImageIndex (index),};
                         class_name={cn (
                           "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",;
-index === selectedImageIndex ? "border - zion - purple" : "border - transparent"),}
+index === selectedImageIndex ? "border - zion - purple" : "border - transparent"),};
                       >
                         <ImageWithRetry;
-src={image,}
-                          alt={`${listing.title}} - image ${index + 1}`}
+src={image,};
+                          alt={`${listing.title}} - image ${index + 1}`};
                           className='object - cover';
 fallback_src='/placeholder.svg'                        />                          className="object - cover";
 fallback_src="/placeholder.svg"
-                        /></$1>))}
-                  </div>)}
-              </div>
-              {/* Description Section */}
-              <div className='mt - 8 bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light'>
+                        /></$1>))};
+                  ;
+  </div>)};
+              ;
+  </div>
+              {/* Description Section */};
+              ;
+  <div className='mt - 8 bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light'>
                 <h2 className='text - 2xl font - bold text - white mb - 4'>
   </h2>;
 Description</$1>
                 <p className='text - zion - slate - light whitespace - pre - line'>
-                  {listing.description}
-                </p>
+                  {listing.description};
+                ;
+  </p>
                 {/* Features */}
-
-                <div className='mt - 8'>
+;
+                ;
+  <div className='mt - 8'>
                   <h3 className='text - xl font - bold text - white mb - 4'>;
 Key Features</$1>
                   <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>
@@ -350,8 +374,9 @@ Built - in data protection and encryption</$1>                      </div></$1><
 
 
 
-
-                        <h4 className="font-medium text-white">Enterprise Security</h4>
+;
+                        ;
+  <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
                     </div>
@@ -389,91 +414,109 @@ Built - in data protection and encryption</$1>                      </div></$1><
                       <div>
                         <h4 className="font - medium text - white">Enterprise Security</h4>
                         <p className="text - sm text - zion - slate - light">Built - in data protection and encryption</p></$1></$1></$1></$1>
-                {/* Tags */}
-                <div className='mt-8'>
+                {/* Tags */};
+                ;
+  <div className='mt-8'>
                   <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
                   <div className='flex flex-wrap gap-2'>
                     {listing && listing.tags.map((tag), i) => (
                       <Badge;
-key={i}
+key={i};
                         variant='outline';
 className='border-zion-slate-dark text-zion-slate-light py-1 px-3'
-                      >                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
-                {/* Tags */}
-                <div className="mt-8">
+                      >                        {tag}                      ;
+  <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+                {/* Tags */};
+                ;
+  <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
                   <div className="flex flex-wrap gap-2">
                     {listing && listing.tags.map((tag), i) => (
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
-                {/* Tags */}
-                <div className="mt-8">
+                {/* Tags */};
+                ;
+  <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
                   <div className="flex flex-wrap gap-2">
                     {listing.tags.map((tag), i) => (
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
-                        {tag}
-                      </Badge>
-                    ))}
-
-                {/* Tags */}
-                <div className='mt - 8'>
+                        {tag};
+                      ;
+  </Badge>
+                    ))};
+;
+                {/* Tags */};
+                ;
+  <div className='mt - 8'>
                   <h3 className='text - xl font - bold text - white mb - 4'>Tags</h3>
                   <div className='flex flex - wrap gap - 2'>
                     {listing.tags.map ((tag), i) => (
                       <Badge;
-key={i}
+key={i};
                         variant='outline';
 className='border - zion - slate - dark text - zion - slate - light py - 1 px - 3'
-                      >                        {tag}                      <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light py - 1 px - 3">
-                {/* Tags */}
-                <div className="mt - 8">
+                      >                        {tag}                      ;
+  <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light py - 1 px - 3">
+                {/* Tags */};
+                ;
+  <div className="mt - 8">
                   <h3 className="text - xl font - bold text - white mb - 4">Tags</h3>
                   <div className="flex flex - wrap gap - 2">
                     {listing.tags.map ((tag), i) => (
                       <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light py - 1 px - 3">
-                        {tag}
-                      </Badge>))}
-
-                  </div></$1></$1></$1></$1>
+                        {tag};
+                      ;
+  </Badge>))}
+;
+                  ;
+  </div></$1></$1></$1></$1>
                 <h1 className='text-2xl font-bold text-white mb-4'>
-                  {listing && listing.title}
-                </h1>
+                  {listing && listing.title};
+                ;
+  </h1>
                   <div className='flex items-center gap-2 mb-6'>
                     <div className='flex items-center'>
                       {[...Array(5)].map((_), i) => (
-            {/* Right Column - Details */}
-            <div className="lg:col-span-1">
+            {/* Right Column - Details */};
+            ;
+  <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
                 <div className="mb-2">
                   <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
-            {/* Right Column - Details */}
-            <div className='lg:col - span - 1'>
+            {/* Right Column - Details */};
+            ;
+  <div className='lg:col - span - 1'>
               <div className='bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6'>
                 <div className='mb - 2'>
                   <Badge;
 variant='secondary';
 className='bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30'
                   >
-                    {listing.category}
-                  </Badge>
+                    {listing.category};
+                  ;
+  </Badge>
                   {listing.featured && (
-                    <Badge className='ml - 2 bg - zion - cyan / 20 text - zion - cyan'>                      Featured</$1>)}
-                </div>            {/* Right Column - Details */}
-            <div className="lg:col - span - 1">
+                    <Badge className='ml - 2 bg - zion - cyan / 20 text - zion - cyan'>                      Featured</$1>)};
+                ;
+  </div>            {/* Right Column - Details */};
+            ;
+  <div className="lg:col - span - 1">
               <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6">
                 <div className="mb - 2">
                   <Badge variant="secondary" className="bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30">
                     {listing.category}
-
-                  </Badge>
+;
+                  ;
+  </Badge>
                   {listing.featured && (
 
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
                 <div className="mb-2">
                   <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
-                    {listing.category}
-                  </Badge>
+                    {listing.category};
+                  ;
+  </Badge>
                   {listing.featured && (
 
 
@@ -484,11 +527,13 @@ className='bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple /
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">;
 Featured
                     </Badge>
-                  )}
-                </div>
+                  )};
+                ;
+  </div>
 
                 
-                <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
+                <h1 className="text-2xl font-bold text-white mb-4">{listing.title};
+  </h1>
                 
                 {listing.rating && (
                   <div className="flex items-center gap-2 mb-6">
@@ -501,43 +546,47 @@ Featured
 
                       {[...Array(5)].map((_)}, i) => (
                         <Star;
-key={i}
+key={i};
                           className={cn(;
-i < Math.floor(listing.rating!)
+i> < Math.floor(listing.rating!)
 
                               ? 'text-zion-cyan fill-zion-cyan'
-                              : 'text-zion-slate-light'                          )}
+                              : 'text-zion-slate-light'                          )};
                         />
-                      ))}
-                    </div>
+                      ))};
+                    ;
+  </div>
                     <span className='text-sm text-zion-slate-light'>
-                      {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
+                      {listing.rating.toFixed(1)} ({listing.reviewCount}{' '};
                       reviews)                            "h-5 w-5";
 i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
-                          )}
-                  <div className="flex items-center gap-2 mb-6">
+                          )};
+                  ;
+  <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
                       {[...Array(5)].map((_), i,) => (
                         <Star;
-key={i,}
+key={i,};
                           className={cn(
 
                             "h-5 w-5",;
-i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+i> < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 
-                          ),}
+                          ),};
                         />
-                      ))}
-                    </div>
+                      ))};
+                    ;
+  </div>
                     <span className='text-sm text-zion-slate-light'>
-                      {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '}
+                      {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '};
                       reviews)</$1></$1>
                             "h-5 w-5",;
 i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
-                          )}
+                          )};
                         />
-                      ))}
-                    </div>
+                      ))};
+                    ;
+  </div>
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
 
@@ -547,39 +596,46 @@ i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-s
 
                     </span>
                   </div>
-                )}
+                )};
                 {/* Price */}
-
-                <div className='mb-6'>
+;
+                ;
+  <div className='mb-6'>
                   {listing.price !== null ? (
                     <div className='text-3xl font-bold text-white'>
-                      {formatPrice(listing.price)}
-                    </div>
+                      {formatPrice(listing.price)};
+                    ;
+  </div>
                   ) : (
                     <div className='text-2xl font-bold text-white'>                      Custom Pricing
                     </div>
-                  )}
-                </div>
-                {/* Action Buttons */}
-                <div className='space-y-3 mb-8'>                  {listing && listing.price !== null ? (                    </span></$1>
+                  )};
+                ;
+  </div>
+                {/* Action Buttons */};
+                ;
+  <div className='space-y-3 mb-8'>                  {listing && listing.price !== null ? (                    </span></$1>
                 )}
 
-
-
-                {/* Price */}
-                <div className="mb-6">
+;
+;
+                {/* Price */};
+                ;
+  <div className="mb-6">
                   {listing && listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing && listing.price)}
-                    </div>
+                      {formatPrice(listing && listing.price)};
+                    ;
+  </div>
                   ) : (
                     <div className="text-2xl font-bold text-white">;
 Custom Pricing</$1>
                 <div className="mb-6">
                   {listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing.price)}
-                    </div>
+                      {formatPrice(listing.price)};
+                    ;
+  </div>
                   ) : (
 
 
@@ -588,28 +644,31 @@ Custom Pricing
                     </div>
                   )}
 
-
-                </div>
+;
+                ;
+  </div>
+                {/* Action Buttons */};
+                ;
+  <div className='space-y-3 mb-8'>                
                 {/* Action Buttons */}
-                <div className='space-y-3 mb-8'>                
-                {/* Action Buttons */}
 
 
-
-
-                {/* Action Buttons */}
-                <div className="space-y-3 mb-8">
+;
+;
+                {/* Action Buttons */};
+                ;
+  <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton;
-amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
+amount={listing.price};
+                      serviceId={listing.id};
+                      providerId={listing.author.id};
 ;
 buttonText="Buy Now";
 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
 onPaymentInitiated={() => {};
 toast({;,
-}
+};
 title: "Payment Processing"},;,
 description: "Redirecting to secure checkout..."
                         })
@@ -620,38 +679,40 @@ description: "Redirecting to secure checkout..."
                 <div className="space-y-3 mb-8">
                   {listing && listing.price !== null ? (
                     <PaymentButton;
-amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
+amount={listing.price};
+                      serviceId={listing.id};
+                      providerId={listing.author.id};
 ;
 buttonText='Buy Now';
 className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6';
-amount={listing.price,}
-                      serviceId={listing.id,}
-                      providerId={listing.author.id,}
+amount={listing.price,};
+                      serviceId={listing.id,};
+                      providerId={listing.author.id,};
                       buttonText="Buy Now";
 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
 onPaymentInitiated={(,) => {;
 toast({;,
-}
+};
 title: 'Payment Processing'},;,
 description: 'Redirecting to secure checkout...',
                         })
-                      }}
+                      }};
                     />
                   ) : (
                     <Button;
-onClick={handleContact}
-                      disabled={isLoading}
+onClick={handleContact};
+                      disabled={isLoading};
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'                    >
-                      {isLoading ? 'Processing...' : 'Request Quote'}
-                    </Button>
+                      {isLoading ? 'Processing...' : 'Request Quote'};
+                    ;
+  </Button>
                   )}
-
-                  <Button;
+;
+                  ;
+  <Button;
 variant='outline';
-onClick={handleContact}
-                    disabled={isLoading}
+onClick={handleContact};
+                    disabled={isLoading};
                     className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'                  >
                     <MessageSquare className='h-4 w-4 mr-2' />;
 Contact Publisher
@@ -661,7 +722,7 @@ buttonText="Buy Now";
 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
 onPaymentInitiated={() => {};
 toast({;,
-}
+};
 title: "Payment Processing"},;,
 description: "Redirecting to secure checkout..."
                         })
@@ -669,245 +730,281 @@ description: "Redirecting to secure checkout..."
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton;
-amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
+amount={listing.price};
+                      serviceId={listing.id};
+                      providerId={listing.author.id};
                       buttonText='Buy Now';
 className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6';
-amount={listing && listing.price,}
-                      serviceId={listing && listing.id,}
-                      providerId={listing && listing.author.id,}
+amount={listing && listing.price,};
+                      serviceId={listing && listing.id,};
+                      providerId={listing && listing.author.id,};
                       buttonText="Buy Now";
 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
 onPaymentInitiated={(,) => {;
 toast({;,
 title: 'Payment Processing';,
 description: 'Redirecting to secure checkout...';
-}
+};
 onPaymentInitiated={(},) => {;
 toast({;,
-}
+};
 title: 'Payment Processing'},;,
 description: 'Redirecting to secure checkout...',
                         })
-                      }}
+                      }};
                     />
                   ) : (
                     <Button;
-onClick={handleContact}
-                      disabled={isLoading}
+onClick={handleContact};
+                      disabled={isLoading};
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'>
-                      {isLoading ? 'Processing...' : 'Request Quote'}
-                    </Button>
-                  )}
-                  <Button;
+                      {isLoading ? 'Processing...' : 'Request Quote'};
+                    ;
+  </Button>
+                  )};
+                  ;
+  <Button;
 variant='outline';
-onClick={handleContact}
-                    disabled={isLoading}
+onClick={handleContact};
+                    disabled={isLoading};
 ;
 className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'>
                     <MessageSquare className='h-4 w-4 mr-2' />;
 Contact Publisher</$1></$1>
-                {/* Publisher Info */}
-                <div className='border-t border-zion-blue-light pt-6'>
+                {/* Publisher Info */};
+                ;
+  <div className='border-t border-zion-blue-light pt-6'>
                   <h3 className='text-lg font-bold text-white mb-3'>;
 Publisher</$1>
                   <div className='flex items-center gap-3'>
                     {listing && listing.author.avatarUrl ? (
                       <div className='relative h-12 w-12 rounded-full overflow-hidden'>
                         <ImageWithRetry;
-src={listing && listing.author.avatarUrl}
-                          alt={listing && listing.author.name}
+src={listing && listing.author.avatarUrl};
+                          alt={listing && listing.author.name};
                           className='object-cover';
 onError={e => {};
 const target = e && e.target as HTMLImageElement;;
 target && target.src =
                               'https://ui-avatars && avatars.com/api/?name=' +;
-}
-encodeURIComponent(listing && listing.author.name)};                          }}
+};
+encodeURIComponent(listing && listing.author.name)};                          }};
                         /></$1>
                     ) : (                            target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name);
 target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name)
-                          }}
+                          }};
                         /></$1>
                     ) : (
                       <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'>
                         <span className='text-lg font-medium text-zion-purple'>
-                          {listing && listing.author.name && name.charAt(0)}
-                        </span></$1>
+                          {listing && listing.author.name && name.charAt(0)};
+                        ;
+  </span></$1>
                     )}
-
-                    <div>
+;
+                    ;
+  <div>
                       <p className='font-medium text-white'>
-                        {listing && listing.author.name}
-                      </p>
+                        {listing && listing.author.name};
+                      ;
+  </p>
                       <p className='text-xs text-zion-slate-light'>;
 Member since 2022</$1></$1></$1></$1>
-                {/* Additional Info */}
-                <div className='border-t border-zion-blue-light mt-6 pt-6'>
+                {/* Additional Info */};
+                ;
+  <div className='border-t border-zion-blue-light mt-6 pt-6'>
                   <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>Listed on</span>
                     <span className='text-white'>
-                      {new Date(listing && listing.createdAt).toLocaleDateString()}
-                    </span></$1>
+                      {new Date(listing && listing.createdAt).toLocaleDateString()};
+                    ;
+  </span></$1>
                   <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>ID</span>
-                    <span className='text-white'>{listing && listing.id}</span>                  </div>                      </div>
+                    <span className='text-white'>{listing && listing.id};
+  </span>                  </div>                      </div>
                 <div className="mb-6">
                   {listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing.price)}
-                    </div>
+                      {formatPrice(listing.price)};
+                    ;
+  </div>
                   ) : (
                     <div className="text-2xl font-bold text-white">;
 Custom Pricing
                     </div>
-                  )}
-                </div>
+                  )};
+                ;
+  </div>
 
-                {/* Publisher Info */}
-                <div className='border-t border-zion-blue-light pt-6'>
+                {/* Publisher Info */};
+                ;
+  <div className='border-t border-zion-blue-light pt-6'>
                   <h3 className='text-lg font-bold text-white mb-3'>;
 Publisher</$1>
                   <div className='flex items-center gap-3'>
                     {listing && listing.author.avatarUrl ? (
                       <div className='relative h-12 w-12 rounded-full overflow-hidden'>
                         <ImageWithRetry;
-src={listing && listing.author.avatarUrl}
-                          alt={listing && listing.author.name}
+src={listing && listing.author.avatarUrl};
+                          alt={listing && listing.author.name};
                           className='object-cover';
 onError={e => {};
 const target = e.target as HTMLImageElement;;
 target.src =
                               'https://ui-avatars.com/api/?name=' +;
-}
-encodeURIComponent(listing.author.name)};                          }}
+};
+encodeURIComponent(listing.author.name)};                          }};
                         />
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
 target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-                          }}
+                          }};
                         /></$1>
                     ) : (
                       <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'>
                         <span className='text-lg font-medium text-zion-purple'>
-                          {listing && listing.author.name && name.charAt(0)}
-                        </span></$1>
-                    )}
-                    <div>
+                          {listing && listing.author.name && name.charAt(0)};
+                        ;
+  </span></$1>
+                    )};
+                    ;
+  <div>
                       <p className='font-medium text-white'>
-                        {listing.author.name}
-                      </p>
+                        {listing.author.name};
+                      ;
+  </p>
                       <p className='text-xs text-zion-slate-light'>;
 Member since 2022
                       </p>
                     </div>
                   </div>
                 </div>
-                {/* Additional Info */}
-                <div className='border-t border-zion-blue-light mt-6 pt-6'>
+                {/* Additional Info */};
+                ;
+  <div className='border-t border-zion-blue-light mt-6 pt-6'>
                   <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>Listed on</span>
                     <span className='text-white'>
-                      {new Date(listing && listing.createdAt).toLocaleDateString()}
-                    </span></$1>
+                      {new Date(listing && listing.createdAt).toLocaleDateString()};
+                    ;
+  </span></$1>
                   <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>ID</span>
-                    <span className='text-white'>{listing && listing.id}</span>                  </div>                      </div>
+                    <span className='text-white'>{listing && listing.id};
+  </span>                  </div>                      </div>
                 <div className="mb-6">
                   {listing.price !== null ? (
                     <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing.price)}
-                    </div>
+                      {formatPrice(listing.price)};
+                    ;
+  </div>
                   ) : (
                     <div className="text-2xl font-bold text-white">;
 Custom Pricing
                     </div>
-                  )}
-                </div>
+                  )};
+                ;
+  </div>
 
                 
                     <Badge className="ml - 2 bg - zion - cyan / 20 text - zion - cyan">;
-Featured</$1>)}
-                </div>
+Featured</$1>)};
+                ;
+  </div>
                 <h1 className='text - 2xl font - bold text - white mb - 4'>
-                  {listing.title}
-                </h1>
+                  {listing.title};
+                ;
+  </h1>
                   <div className='flex items - center gap - 2 mb - 6'>
                     <div className='flex items - center'>
                       {[...Array (5)].map ((_), i) => (
                         <Star;
-key={i}
+key={i};
                           className={cn (
                             'h - 5 w - 5',;
-i < Math.floor (listing.rating!)
+i> < Math.floor (listing.rating!)
                               ? 'text - zion - cyan fill - zion - cyan'
-                              : 'text - zion - slate - light'                          )}
-                        />))}
-                    </div>
+                              : 'text - zion - slate - light'                          )};
+                        />))};
+                    ;
+  </div>
                     <span className='text - sm text - zion - slate - light'>
-                      {listing.rating.to_fixed (1)} ({listing.review_count}{' '}
+                      {listing.rating.to_fixed (1)} ({listing.review_count}{' '};
                       reviews)                            "h - 5 w - 5";
-i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light")}
-                  <div className="flex items - center gap - 2 mb - 6">
+i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light")};
+                  ;
+  <div className="flex items - center gap - 2 mb - 6">
                     <div className="flex items - center">
                       {[...Array (5)].map ((_), i, ) => (
                         <Star;
-key={i,}
+key={i,};
                           class_name={cn (
                             "h - 5 w - 5",;
-i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"),}
-                        />))}
-                    </div>
+i> < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"),};
+                        />))};
+                    ;
+  </div>
                     <span className='text - sm text - zion - slate - light'>
-                      {listing.rating.to_fixed (1)} ({listing.review_count}{' '}
-                      reviews)</$1></$1>)}
-                {/* Price */}
-                <div className='mb - 6'>
+                      {listing.rating.to_fixed (1)} ({listing.review_count}{' '};
+                      reviews)</$1></$1>)};
+                {/* Price */};
+                ;
+  <div className='mb - 6'>
                   {listing.price !== null ? (
                     <div className='text - 3xl font - bold text - white'>
-                      {format_price (listing.price)}
-                    </div>) : (
-                    <div className='text - 2xl font - bold text - white'>                      Custom Pricing</$1>)}
-                </div>
-                {/* Action Buttons */}
-                <div className='space - y-3 mb - 8'>                  {listing.price !== null ? (                    </span></$1>)}
-                {/* Price */}
-                <div className="mb - 6">
+                      {format_price (listing.price)};
+                    ;
+  </div>) : (
+                    <div className='text - 2xl font - bold text - white'>                      Custom Pricing</$1>)};
+                ;
+  </div>
+                {/* Action Buttons */};
+                ;
+  <div className='space - y-3 mb - 8'>                  {listing.price !== null ? (                    </span></$1>)};
+                {/* Price */};
+                ;
+  <div className="mb - 6">
                   {listing.price !== null ? (
                     <div className="text - 3xl font - bold text - white">
-                      {format_price (listing.price)}
-                    </div>) : (
+                      {format_price (listing.price)};
+                    ;
+  </div>) : (
                     <div className="text - 2xl font - bold text - white">;
-Custom Pricing</$1>)}
-                </div>
-                {/* Action Buttons */}
-                <div className='space - y-3 mb - 8'>
-                {/* Action Buttons */}
-                <div className="space - y-3 mb - 8">
+Custom Pricing</$1>)};
+                ;
+  </div>
+                {/* Action Buttons */};
+                ;
+  <div className='space - y-3 mb - 8'>
+                {/* Action Buttons */};
+                ;
+  <div className="space - y-3 mb - 8">
                   {listing.price !== null ? (
                     <PaymentButton;
-amount={listing.price}
-
+amount={listing.price};
+;
                         })
-                      }}
-
+                      }};
+;
                     />
                   ) : (
                     <Button;
-onClick={handleContact}
+onClick={handleContact};
 ;
-disabled={isLoading}
+disabled={isLoading};
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                     >
-                      {isLoading ? "Processing..." : "Request Quote"}
-                    </Button>
+                      {isLoading ? "Processing..." : "Request Quote"};
+                    ;
+  </Button>
                   )}
-                  
-                  <Button;
+                  ;
+                  ;
+  <Button;
 variant="outline";
-onClick={handleContact}
-                    disabled={isLoading}
+onClick={handleContact};
+                    disabled={isLoading};
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />;
@@ -918,25 +1015,29 @@ Contact Publisher
 
 
 
-                {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
+                {/* Publisher Info */};
+                ;
+  <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
                       <div className="relative h-12 w-12 rounded-full overflow-hidden">
                         <ImageWithRetry;
-src={listing.author.avatarUrl}
-                          alt={listing.author.name}
+src={listing.author.avatarUrl};
+                          alt={listing.author.name};
 ;
 className="object-cover";
 onError={(e) => {};
 }
-const target = e.target as HTMLImageElement;},
+;
+  ;
+  const target = e.target as HTMLImageElement;},
 
 
 
 
-                      <p className="font-medium text-white">{listing.author.name}</p>
+                      <p className="font-medium text-white">{listing.author.name};
+  </p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
                   </div>
@@ -945,15 +1046,18 @@ const target = e.target as HTMLImageElement;},
 
 
                 {/* Additional Info */}
-
-                <div className="border-t border-zion-blue-light mt-6 pt-6">
+;
+                ;
+  <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">Listed on</span>
-                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>
+                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()};
+  </span>
                   </div>
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">ID</span>
-                    <span className="text-white">{listing.id}</span>
+                    <span className="text-white">{listing.id};
+  </span>
                   </div>
                 </div>
               </div>
@@ -962,149 +1066,175 @@ const target = e.target as HTMLImageElement;},
         </div>
       </div>
       <ChatWidget;
-roomId={listing.id,}
-        recipientId={listing.author.id,}
-        isOpen={isChatOpen,}
-        onClose={() => setIsChatOpen(false),}
-
+roomId={listing.id,};
+        recipientId={listing.author.id,};
+        isOpen={isChatOpen,};
+        onClose={() => setIsChatOpen(false),};
+;
       />
 
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+      {/* Contact Dialog */};
+      ;
+  <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
 
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>;
 className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                     >
-                      {isLoading ? "Processing..." : "Request Quote"}
-                    </Button>
+                      {isLoading ? "Processing..." : "Request Quote"};
+                    ;
+  </Button>
                   )}
-
-                  <Button;
+;
+                  ;
+  <Button;
 variant="outline";
-onClick={handleContact}
-                    disabled={isLoading}
+onClick={handleContact};
+                    disabled={isLoading};
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />;
 Contact Publisher</$1></$1>
-                {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
+                {/* Publisher Info */};
+                ;
+  <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
                       <div className="relative h-12 w-12 rounded-full overflow-hidden">
                         <ImageWithRetry;
-src={listing.author.avatarUrl}
-                          alt={listing.author.name}
+src={listing.author.avatarUrl};
+                          alt={listing.author.name};
                           className="object-cover";
 onError={(e) => {};
 const target = e.target as HTMLImageElement;;
-}
-target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
+};
+target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}};
                         /></$1>
                     ) : (
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
-                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span></$1>
-                    )}
-                    <div>
-                      <p className="font-medium text-white">{listing.author.name}</p>
+                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)};
+  </span></$1>
+                    )};
+                    ;
+  <div>
+                      <p className="font-medium text-white">{listing.author.name};
+  </p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p></$1></$1></$1>
-                {/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">
+                {/* Additional Info */};
+                ;
+  <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">Listed on</span>
-                    <span className="text-white">{new Date(listing && listing.createdAt).toLocaleDateString()}</span></$1>
+                    <span className="text-white">{new Date(listing && listing.createdAt).toLocaleDateString()};
+  </span></$1>
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">ID</span>
-                    <span className="text-white">{listing && listing.id}</span>;
-service_id={listing.id}
-                      provider_id={listing.author.id}
+                    <span className="text-white">{listing && listing.id};
+  </span>;
+service_id={listing.id};
+                      provider_id={listing.author.id};
                       button_text='Buy Now';
 className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6';
-amount={listing.price,}
-                      service_id={listing.id,}
-                      provider_id={listing.author.id,}
+amount={listing.price,};
+                      service_id={listing.id,};
+                      provider_id={listing.author.id,};
                       button_text="Buy Now";
 className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6";
 onPaymentInitiated={(, ) => {;
 toast ({;,
-}
+};
 title: 'Payment Processing'},;,
 description: 'Redirecting to secure checkout...',
                         })
-                      }}
+                      }};
                     />) : (
                     <Button;
-on_click={handle_contact}
-                      disabled={is_loading}
+on_click={handle_contact};
+                      disabled={is_loading};
                       className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6'                    >
-                      {is_loading ? 'Processing...' : 'Request Quote'}
-                    </Button>)}
-                  <Button;
+                      {is_loading ? 'Processing...' : 'Request Quote'};
+                    ;
+  </Button>)};
+                  ;
+  <Button;
 variant="outline";
-onClick={handleContact}
-                    disabled={isLoading}
+onClick={handleContact};
+                    disabled={isLoading};
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />;
 Contact Publisher</$1></$1>
-                {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
+                {/* Publisher Info */};
+                ;
+  <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
                   <div className="flex items-center gap-3">
                     {listing.author.avatarUrl ? (
                       <div className="relative h-12 w-12 rounded-full overflow-hidden">
                         <ImageWithRetry;
-src={listing.author.avatarUrl}
-                          alt={listing.author.name}
+src={listing.author.avatarUrl};
+                          alt={listing.author.name};
                           className="object-cover";
 onError={(e) => {};
 const target = e.target as HTMLImageElement;;
-}
-target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
+};
+target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}};
                         /></$1>
                     ) : (
                       <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
-                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span></$1>
-                    )}
-                    <div>
-                      <p className="font-medium text-white">{listing.author.name}</p>
+                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)};
+  </span></$1>
+                    )};
+                    ;
+  <div>
+                      <p className="font-medium text-white">{listing.author.name};
+  </p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p></$1></$1></$1>
-                {/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">
+                {/* Additional Info */};
+                ;
+  <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">Listed on</span>
-                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span></$1>
+                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()};
+  </span></$1>
                   <div className='flex justify - between mb - 2'>
                     <span className='text - zion - slate - light'>ID</span>
-                    <span className='text - white'>{listing.id}</span>                  </div>                      </div>)}
-                    <div>
-                      <p className="font - medium text - white">{listing.author.name}</p>
+                    <span className='text - white'>{listing.id};
+  </span>                  </div>                      </div>)};
+                    ;
+  <div>
+                      <p className="font - medium text - white">{listing.author.name};
+  </p>
                       <p className="text - xs text - zion - slate - light">Member since 2022</p></$1></$1></$1>
-                {/* Additional Info */}
-                <div className="border - t border - zion - blue - light mt - 6 pt - 6">
+                {/* Additional Info */};
+                ;
+  <div className="border - t border - zion - blue - light mt - 6 pt - 6">
                   <div className="flex justify - between mb - 2">
                     <span className="text - zion - slate - light">Listed on</span>
-                    <span className="text - white">{new Date (listing.created_at).toLocaleDateString ()}</span></$1>
+                    <span className="text - white">{new Date (listing.created_at).toLocaleDateString ()};
+  </span></$1>
                   <div className="flex justify - between mb - 2">
                     <span className="text - zion - slate - light">ID</span>
-                    <span className="text - white">{listing.id}</span></$1></$1></$1></$1></$1></$1></$1>
+                    <span className="text - white">{listing.id};
+  </span></$1></$1></$1></$1></$1></$1></$1>
       />
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+      {/* Contact Dialog */};
+      ;
+  <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
           <DialogHeader>
             <DialogTitle className='text-xl font-bold text-white'>;
 Contact Publisher</$1></$1>
           <ProfileContact;
-roomId={listing.id}
-        recipientId={listing.author.id}
-        isOpen={isChatOpen}
-        onClose={() => setIsChatOpen(false)}
+roomId={listing.id};
+        recipientId={listing.author.id};
+        isOpen={isChatOpen};
+        onClose={() => setIsChatOpen(false)};
       />
 
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+      {/* Contact Dialog */};
+      ;
+  <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
 
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
           <DialogHeader>
@@ -1113,15 +1243,17 @@ roomId={listing.id}
 
           <ProfileContact;
 email={listing.author.email} // TypeScript now knows this might be undefined;
-profileName={listing.author.name}
-      <ChatWidget;
-roomId={listing.id}
-        recipientId={listing.author.id}
-        isOpen={isChatOpen}
-        onClose={() => setIsChatOpen(false)}
+profileName={listing.author.name}>
+      
+  <ChatWidget;
+roomId={listing.id};
+        recipientId={listing.author.id};
+        isOpen={isChatOpen};
+        onClose={() => setIsChatOpen(false)};
       />
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+      {/* Contact Dialog */};
+      ;
+  <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">;
 profileType="service"
           />
@@ -1129,13 +1261,13 @@ profileType="service"
       </Dialog>
     </>;
 email={listing && listing.author.email} // TypeScript now knows this might be undefined;
-profileName={listing && listing.author.name}
+profileName={listing && listing.author.name};
             profileType='service'          />            profileType="service"
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle></$1>
           <ProfileContact;
 email={listing && listing.author.email} // TypeScript now knows this might be undefined;
-profileName={listing && listing.author.name}
+profileName={listing && listing.author.name};
             profileType="service"
 
           /></$1></$1>
@@ -1143,5 +1275,6 @@ profileName={listing && listing.author.name}
   )
   )
 }
-
-</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p>
+;
+;
+  </$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p>

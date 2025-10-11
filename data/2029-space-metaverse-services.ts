@@ -2,17 +2,17 @@ export interface SpaceMetaverseService2029 {
   id: string
   name: string
   description: string
-  category: string[]
+  category: string[];
   price: string
-  features: string[]
-  benefits: string[]
-  useCases: string[]
+  features: string[];
+  benefits: string[];
+  useCases: string[];
   marketSize: string
-  competitors: string[]
-  technology: string[]
-  integration: string[]
-  support: string[]
-  compliance: string[]
+  competitors: string[];
+  technology: string[];
+  integration: string[];
+  support: string[];
+  compliance: string[];
   scalability: string
   roi: string
   deployment: string
@@ -37,8 +37,8 @@ export interface SpaceMetaverseService2029 {
     email: string
     website: string
     address: string
-  }
-}
+  };
+};
 export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
   {
     id: 'space-mining-automation-platform',
@@ -102,7 +102,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'metaverse-digital-reality-platform',
@@ -166,7 +166,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-predictive-health-analytics',
@@ -230,7 +230,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+    };
   },
   {
     id: 'ai-autonomous-business-manager',
@@ -294,6 +294,6 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-]
+    };
+  };
+];

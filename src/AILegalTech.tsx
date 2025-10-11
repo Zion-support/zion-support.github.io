@@ -109,12 +109,13 @@ import {
   Target
 } from 'lucide-react'
 const AILegalTech: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Document Analysis",
       description: "Advanced natural language processing that analyzes legal documents, contracts, and case files with human-like understanding.",
-      benefits: ["Contract review automation", "Risk assessment", "Compliance checking"]
+      benefits: ["Contract review automation", "Risk assessment", "Compliance checking"];
   Brain, 
   Shield, 
   Zap,
@@ -211,32 +212,35 @@ export default function AILegalTech() {
         'Electronic signatures'
       ],
       price: 'Starting at $2,499/month'
-    }
+    };
   ]
+  
+  ;
+  ;
   const legalTechFeatures = [
     {
       title: 'Contract Intelligence',
       description: 'AI-powered contract analysis and risk assessment',
       icon: FileText,
-      benefits: ['Risk identification', 'Compliance checking', 'Clause analysis', 'Automated review']
+      benefits: ['Risk identification', 'Compliance checking', 'Clause analysis', 'Automated review'];
     },
     {
       title: 'Legal Research AI',
       description: 'Intelligent legal research and precedent discovery',
       icon: Search,
-      benefits: ['Case law analysis', 'Precedent identification', 'Research automation', 'Citation tracking']
+      benefits: ['Case law analysis', 'Precedent identification', 'Research automation', 'Citation tracking'];
     },
     {
       title: 'Compliance Automation',
       description: 'Automated regulatory compliance and risk management',
       icon: Shield,
-      benefits: ['Regulatory monitoring', 'Risk assessment', 'Policy management', 'Audit trails']
+      benefits: ['Regulatory monitoring', 'Risk assessment', 'Policy management', 'Audit trails'];
     },
     {
       title: 'Document Automation',
       description: 'Intelligent document generation and management',
       icon: Zap,
-      benefits: ['Template automation', 'Workflow management', 'Collaboration tools', 'Version control']
+      benefits: ['Template automation', 'Workflow management', 'Collaboration tools', 'Version control'];
       icon: Scale,
       title: "Contract Analysis",
       description: "AI-powered contract review that identifies risks, obligations, and opportunities in legal documents."
@@ -276,8 +280,11 @@ export default function AILegalTech() {
       icon: Lock,
       title: "Secure Document Management",
       description: "Enterprise-grade security with encryption, access controls, and audit trails for sensitive legal documents."
-    }
+    };
   ]
+  
+  ;
+  ;
   const useCases = [
     {
       title: "Contract Management",
@@ -298,8 +305,11 @@ export default function AILegalTech() {
       title: "Compliance & Risk",
       description: "Monitor regulatory changes and identify compliance risks with automated AI systems.",
       icon: Shield
-    }
+    };
   ]
+  
+  ;
+  ;
   const benefits = [
     "Reduce legal document review time by 80%",
     "Improve contract accuracy by 95%",
@@ -308,6 +318,9 @@ export default function AILegalTech() {
     "Faster legal research and analysis",
     "Better risk management and mitigation"
   ]
+  
+  ;
+  ;
   const solutions = [
     {
       title: "Contract Management",
@@ -345,39 +358,42 @@ export default function AILegalTech() {
       title: "AI Contract Analysis",
       description: "Intelligent contract review and analysis using advanced NLP and legal AI",
       icon: FileText,
-      benefits: ["90% faster review", "Risk identification", "Compliance checking", "Automated summaries"]
+      benefits: ["90% faster review", "Risk identification", "Compliance checking", "Automated summaries"];
     },
     {
       title: "Legal Research Automation",
       description: "AI-powered legal research that finds relevant cases, statutes, and precedents",
       icon: Search,
-      benefits: ["Instant case law search", "Precedent analysis", "Citation tracking", "Research summaries"]
+      benefits: ["Instant case law search", "Precedent analysis", "Citation tracking", "Research summaries"];
     },
     {
       title: "Document Generation",
       description: "Automated legal document creation with customizable templates and AI assistance",
       icon: BookOpen,
-      benefits: ["Template library", "Custom clauses", "Legal compliance", "Version control"]
+      benefits: ["Template library", "Custom clauses", "Legal compliance", "Version control"];
     },
     {
       title: "Compliance Monitoring",
       description: "Real-time regulatory compliance monitoring and automated reporting",
       icon: Shield,
-      benefits: ["Regulatory updates", "Compliance alerts", "Automated reporting", "Risk assessment"]
+      benefits: ["Regulatory updates", "Compliance alerts", "Automated reporting", "Risk assessment"];
     },
     {
       title: "Predictive Analytics",
       description: "AI-powered case outcome prediction and litigation risk assessment",
       icon: Brain,
-      benefits: ["Case outcome prediction", "Risk scoring", "Settlement recommendations", "Cost forecasting"]
+      benefits: ["Case outcome prediction", "Risk scoring", "Settlement recommendations", "Cost forecasting"];
     },
     {
       title: "Client Portal & Communication",
       description: "Secure client communication and document sharing platform",
       icon: Users,
-      benefits: ["Secure messaging", "Document sharing", "Progress tracking", "Client collaboration"]
-    }
+      benefits: ["Secure messaging", "Document sharing", "Progress tracking", "Client collaboration"];
+    };
   ]
+  
+  ;
+  ;
   const practiceAreas = [
     {
       title: 'Time Savings',
@@ -398,8 +414,11 @@ export default function AILegalTech() {
       title: 'Improved Accuracy',
       description: 'Enhance accuracy and consistency in legal work',
       icon: CheckCircle
-    }
+    };
   ]
+  
+  ;
+  ;
   const industries = [
     {
       title: 'Corporate Law',
@@ -420,7 +439,7 @@ export default function AILegalTech() {
       title: 'Real Estate',
       description: 'Property contracts, lease agreements, and compliance',
       icon: Home
-    }
+    };
     "Reduce legal document review time by 70-90%",
     "Improve contract accuracy and risk identification",
     "Accelerate due diligence processes",
@@ -428,9 +447,11 @@ export default function AILegalTech() {
     "Enhance compliance monitoring and reporting",
     "Improve client service and response times"
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
+      {/* Hero Section */};
     "Reduce legal research time by 70%",
     "Improve contract review accuracy by 90%",
     "Cut legal costs by 40-60%",
@@ -438,6 +459,9 @@ export default function AILegalTech() {
     "Automate 80% of repetitive legal tasks",
     "Enhance risk assessment and compliance"
   ]
+  
+  ;
+  ;
   const pricingPlans = [
     {
       name: "Starter",
@@ -451,7 +475,7 @@ export default function AILegalTech() {
         "Basic compliance monitoring",
         "Up to 100 documents/month",
         "Email support"
-      ]
+      ];
     },
     {
       name: "Professional",
@@ -483,7 +507,7 @@ export default function AILegalTech() {
       title: "Increase Efficiency",
       value: "3x",
       description: "Faster case preparation and legal strategy development"
-    }
+    };
     "Reduce legal document review time by 60-80% with AI analysis",
     "Cut legal research costs by 40-60% through automation",
     "Improve contract accuracy by 85-95% with AI validation",
@@ -491,28 +515,34 @@ export default function AILegalTech() {
     "Enhance compliance monitoring with 24/7 automated tracking",
     "Achieve 99%+ accuracy in legal document processing"
   ]
+  
+  ;
+  ;
   const useCases = [
     {
       industry: "Corporate Law",
       description: "Contract review, M&A due diligence, and corporate governance compliance",
-      metrics: ["Contract Review Speed", "Risk Detection Rate", "Compliance Score"]
+      metrics: ["Contract Review Speed", "Risk Detection Rate", "Compliance Score"];
     },
     {
       industry: "Litigation",
       description: "E-discovery, case research, and evidence analysis",
-      metrics: ["Document Review Speed", "Evidence Discovery Rate", "Case Success Rate"]
+      metrics: ["Document Review Speed", "Evidence Discovery Rate", "Case Success Rate"];
     },
     {
       industry: "Real Estate",
       description: "Lease agreement analysis, title review, and regulatory compliance",
-      metrics: ["Agreement Review Speed", "Risk Assessment", "Compliance Rate"]
+      metrics: ["Agreement Review Speed", "Risk Assessment", "Compliance Rate"];
     },
     {
       industry: "Healthcare",
       description: "Regulatory compliance, patient consent, and medical malpractice defense",
-      metrics: ["Compliance Rate", "Risk Assessment", "Document Accuracy"]
-    }
+      metrics: ["Compliance Rate", "Risk Assessment", "Document Accuracy"];
+    };
   ]
+  
+  ;
+  ;
   const pricing = [
     {
       name: "Starter",
@@ -525,7 +555,7 @@ export default function AILegalTech() {
         "Document generation",
         "Legal research tools",
         "Email support"
-      ]
+      ];
     },
     {
       name: "Professional",
@@ -544,27 +574,30 @@ export default function AILegalTech() {
       name: "Corporate Law",
       description: "AI-powered contract management and corporate compliance",
       icon: Building,
-      tools: ["Contract analysis", "M&A due diligence", "Corporate governance", "Regulatory compliance"]
+      tools: ["Contract analysis", "M&A due diligence", "Corporate governance", "Regulatory compliance"];
     },
     {
       name: "Litigation",
       description: "AI-assisted case preparation and outcome prediction",
       icon: Scale,
-      tools: ["Case research", "Evidence analysis", "Outcome prediction", "Cost forecasting"]
+      tools: ["Case research", "Evidence analysis", "Outcome prediction", "Cost forecasting"];
     },
     {
       name: "Real Estate",
       description: "Automated real estate transaction management and compliance",
       icon: Home,
-      tools: ["Title research", "Contract review", "Compliance checking", "Transaction management"]
+      tools: ["Title research", "Contract review", "Compliance checking", "Transaction management"];
     },
     {
       name: "Intellectual Property",
       description: "AI-powered IP research and patent analysis",
       icon: Lightbulb,
-      tools: ["Patent search", "Trademark analysis", "IP monitoring", "Infringement detection"]
-    }
+      tools: ["Patent search", "Trademark analysis", "IP monitoring", "Infringement detection"];
+    };
   ]
+  
+  ;
+  ;
   const pricingPlans = [
     {
       name: "Solo Practitioner",
@@ -610,9 +643,9 @@ export default function AILegalTech() {
         "Dedicated support",
         "Advanced security",
         "API access"
-      ]
-    }
-  ]
+      ];
+    };
+  ];
       description: "Comprehensive solution for large legal organizations",
       features: [
         "Custom AI models",
@@ -639,8 +672,11 @@ export default function AILegalTech() {
       ],
       cta: "Contact Sales",
       popular: false
-    }
+    };
   ]
+  
+  ;
+  ;
   const successMetrics = [
     {
       metric: "90%",
@@ -661,30 +697,35 @@ export default function AILegalTech() {
       metric: "95%",
       description: "Compliance accuracy",
       detail: "AI-powered compliance monitoring"
-    }
+    };
   ]
+  
+  ;
+  ;
   const useCases = [
     {
       scenario: "Contract Review",
       description: "Automated contract analysis with risk identification and compliance checking",
-      benefits: ["Faster review process", "Risk mitigation", "Compliance assurance", "Cost savings"]
+      benefits: ["Faster review process", "Risk mitigation", "Compliance assurance", "Cost savings"];
     },
     {
       scenario: "Legal Research",
       description: "AI-powered case law research with precedent analysis and citation tracking",
-      benefits: ["Instant results", "Comprehensive coverage", "Precedent analysis", "Time savings"]
+      benefits: ["Instant results", "Comprehensive coverage", "Precedent analysis", "Time savings"];
     },
     {
       scenario: "Compliance Monitoring",
       description: "Real-time regulatory updates and automated compliance reporting",
-      benefits: ["Proactive compliance", "Risk reduction", "Automated reporting", "Regulatory awareness"]
+      benefits: ["Proactive compliance", "Risk reduction", "Automated reporting", "Regulatory awareness"];
     },
     {
       scenario: "Document Generation",
       description: "Automated legal document creation with customizable templates",
-      benefits: ["Consistent quality", "Time savings", "Template library", "Customization options"]
-    }
+      benefits: ["Consistent quality", "Time savings", "Template library", "Customization options"];
+    };
   ]
+  ;
+  ;
   return (
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -728,8 +769,9 @@ export default function AILegalTech() {
             </div>
           </div>
           
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
+          {/* Key Metrics */};
+          ;
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
             <div className="text-center">
               <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
               <div className="text-gray-400">Faster Review Time</div>
@@ -755,8 +797,9 @@ export default function AILegalTech() {
         canonical="https://ziontechgroup.com/services/ai-legal-tech"
       />
 
-      {/* Hero Section with Futuristic Background */}
-      <section className="relative overflow-hidden">
+      {/* Hero Section with Futuristic Background */};
+      ;
+  <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-600/20 to-blue-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]"></div>
@@ -795,8 +838,9 @@ export default function AILegalTech() {
             </button>
           </div>
 
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          {/* Key Metrics */};
+          ;
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-indigo-400 mb-2">90%</div>
               <div className="text-gray-400 text-sm">Faster Review</div>
@@ -839,20 +883,22 @@ export default function AILegalTech() {
           </div>
         </div>
         
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Background Elements */};
+        ;
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-amber-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-amber-400 rounded-full animate-bounce"></div>
         </div>
       </section>
 
-      {/* Features Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+      {/* Features Section */};
+          ;
+  <motion.div
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -867,18 +913,20 @@ export default function AILegalTech() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                key={feature.title};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                viewport={{ once: true }};
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-3">{feature.title};
+  </h3>
+                <p className="text-gray-300">{feature.description};
+  </p>
               </motion.div>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -923,8 +971,9 @@ export default function AILegalTech() {
         </div>
       </div>
 
-      {/* Services Section */}
-      <div className="py-20 bg-black/20">
+      {/* Services Section */};
+      ;
+  <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">AI Legal Tech Services</h2>
@@ -939,27 +988,33 @@ export default function AILegalTech() {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
+                  {feature.title};
+                ;
+  </h3>
                 <p className="text-gray-300 mb-4">
-                  {feature.description}
-                </p>
+                  {feature.description};
+                ;
+  </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                      {benefit};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      {/* Services Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -976,18 +1031,23 @@ export default function AILegalTech() {
                 <div className="p-4 rounded-lg bg-green-500/20 inline-block mb-4">
                   <service.icon className="w-8 h-8 text-green-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{service.title};
+  </h3>
+                <p className="text-gray-300 mb-4 text-sm">{service.description};
+  </p>
                 <ul className="space-y-1 text-sm">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="text-gray-400">
-                      • {feature}
-                    </li>
-                  ))}
-                </ul>
+                      • {feature};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
               </div>
-            ))}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+            ))};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1006,18 +1066,22 @@ export default function AILegalTech() {
                   <div className="w-16 h-16 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-amber-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title};
+  </h3>
+                  <p className="text-gray-300">{feature.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-            ))}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      {/* Use Cases Section */};
+            ))};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1038,19 +1102,23 @@ export default function AILegalTech() {
                       <Icon className="w-6 h-6 text-amber-400" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                      <p className="text-gray-300">{useCase.description}</p>
+                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title};
+  </h3>
+                      <p className="text-gray-300">{useCase.description};
+  </p>
                     </div>
                   </div>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1066,30 +1134,35 @@ export default function AILegalTech() {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <span className="text-gray-300 text-lg">{benefit};
+  </span>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
             <div className="space-y-6">
               {benefits.slice(3).map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <span className="text-gray-300 text-lg">{benefit};
+  </span>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </div>
       </section>
 
-      {/* Practice Areas Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Practice Areas Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1103,18 +1176,20 @@ export default function AILegalTech() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {practiceAreas.map((area, index) => (
               <motion.div
-                key={area}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                key={area};
+                initial={{ opacity: 0, y: 20 }};
+                whileInView={{ opacity: 1, y: 0 }};
+                transition={{ duration: 0.8, delay: index * 0.1 }};
+                viewport={{ once: true }};
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
               >
                 <Gavel className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
-                <h3 className="font-semibold">{area}</h3>
+                <h3 className="font-semibold">{area};
+  </h3>
               </motion.div>
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1122,8 +1197,9 @@ export default function AILegalTech() {
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI legal technology platform adapts to your specific practice area and requirements.
-      {/* Practice Areas Section */}
-      <section className="py-20 bg-indigo-900/30">
+      {/* Practice Areas Section */};
+      ;
+  <section className="py-20 bg-indigo-900/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1141,25 +1217,31 @@ export default function AILegalTech() {
                   <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{area.name}</h3>
+                  <h3 className="text-xl font-semibold text-white">{area.name};
+  </h3>
                 </div>
-                <p className="text-gray-300 mb-4">{area.description}</p>
+                <p className="text-gray-300 mb-4">{area.description};
+  </p>
                 <ul className="space-y-2">
                   {area.tools.map((tool, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-indigo-500 mr-3 flex-shrink-0" />
-                      {tool}
-                    </li>
-                  ))}
-                </ul>
+                      {tool};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-black/50">
+      {/* Use Cases Section */};
+      ;
+  <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1186,20 +1268,27 @@ export default function AILegalTech() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 text-center">
-                <div className="text-4xl font-bold text-green-400 mb-2">{benefit.value}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <div className="text-4xl font-bold text-green-400 mb-2">{benefit.value};
+  </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title};
+  </h3>
+                <p className="text-gray-300 text-sm">{benefit.description};
+  </p>
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-indigo-500/50 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.scenario}</h3>
-                <p className="text-gray-300 mb-4">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.scenario};
+  </h3>
+                <p className="text-gray-300 mb-4">{useCase.description};
+  </p>
                 <ul className="space-y-2">
                   {useCase.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-indigo-500 mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                      {benefit};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1215,10 +1304,12 @@ export default function AILegalTech() {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-amber-400 flex-shrink-0" />
-                <span className="text-gray-300 text-lg">{benefit}</span>
+                <span className="text-gray-300 text-lg">{benefit};
+  </span>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
@@ -1264,32 +1355,38 @@ export default function AILegalTech() {
                       Most Popular
                     </span>
                   </div>
-                )}
-                
+                )};
+                ;
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-indigo-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-400">{plan.description}</p>
+                      {feature};
+                ;
+  <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+  </h3>
+                  <div className="text-4xl font-bold text-indigo-400 mb-2">{plan.price};
+  </div>
+                  <p className="text-gray-400">{plan.description};
+  </p>
                 </div>
                 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-indigo-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                      {feature};
+                    ;
+  </li>
+                  ))};
+                ;
+  </ul>
                 
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
                       : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'
-                  }`}
+                  }`};
                 >
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -1300,22 +1397,25 @@ export default function AILegalTech() {
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:scale-105'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
                 }`}>
-                  {plan.cta}
-                </button>
+                  {plan.cta};
+                ;
+  </button>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20 }};
+            whileInView={{ opacity: 1, y: 0 }};
+            transition={{ duration: 0.8 }};
+            viewport={{ once: true }};
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Legal Practice?
@@ -1341,8 +1441,9 @@ export default function AILegalTech() {
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of legal professionals who have already revolutionized their practice with AI technology.
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Legal Practice?
@@ -1357,21 +1458,26 @@ export default function AILegalTech() {
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                      <p className="text-gray-400">{service.price}</p>
+                      <h3 className="text-2xl font-bold text-white">{service.title};
+  </h3>
+                      <p className="text-gray-400">{service.price};
+  </p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <p className="text-gray-300 mb-6">{service.description};
+  </p>
                   
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                        {feature};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                   
                   <$2 />
                     to="/contact"
@@ -1381,13 +1487,15 @@ export default function AILegalTech() {
                   </Link>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* Legal Tech Features Section */}
-      <div className="py-20">
+      {/* Legal Tech Features Section */};
+      ;
+  <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Advanced Legal Tech Features</h2>
@@ -1406,8 +1514,10 @@ export default function AILegalTech() {
                       <Icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
-                      <p className="text-gray-300">{feature.description}</p>
+                      <h3 className="text-2xl font-bold text-white">{feature.title};
+  </h3>
+                      <p className="text-gray-300">{feature.description};
+  </p>
                     </div>
                   </div>
                   
@@ -1415,19 +1525,23 @@ export default function AILegalTech() {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-gray-300">
                         <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                        {benefit};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* Industries Section */}
-      <div className="py-20 bg-black/20">
+      {/* Industries Section */};
+      ;
+  <div className="py-20 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
@@ -1444,17 +1558,21 @@ export default function AILegalTech() {
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{industry.title}</h3>
-                  <p className="text-gray-300">{industry.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-white">{industry.title};
+  </h3>
+                  <p className="text-gray-300">{industry.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* Benefits Section */}
-      <div className="py-20">
+      {/* Benefits Section */};
+      ;
+  <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Why Choose AI Legal Tech?</h2>
@@ -1471,17 +1589,21 @@ export default function AILegalTech() {
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-white">{benefit.title};
+  </h3>
+                  <p className="text-gray-300">{benefit.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+      {/* CTA Section */};
+      ;
+  <div className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Legal Practice?</h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -1489,8 +1611,9 @@ export default function AILegalTech() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
+        {/* Hero Section */};
+        ;
+  <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Scale className="w-10 h-10 text-white" />
@@ -1555,8 +1678,9 @@ export default function AILegalTech() {
         </div>
       </section>
 
-      {/* Navigation Links */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Navigation Links */};
+      ;
+  <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
@@ -1604,7 +1728,7 @@ export default function AILegalTech() {
       </section>
     </div>
   )
-}
+};
 export default AILegalTech
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
@@ -1629,8 +1753,9 @@ export default AILegalTech
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="mb-20">
+        {/* Features Grid */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Advanced Legal Technology Features
           </h2>
@@ -1642,16 +1767,20 @@ export default AILegalTech
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title};
+  </h3>
+                  <p className="text-zion-slate-light">{feature.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
 
-        {/* Benefits Section */}
-        <div className="mb-20">
+        {/* Benefits Section */};
+        ;
+  <div className="mb-20">
           <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white text-center mb-8">
               Proven Legal Practice Results
@@ -1660,39 +1789,48 @@ export default AILegalTech
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light">{benefit}</span>
+                  <span className="text-zion-slate-light">{benefit};
+  </span>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </div>
 
-        {/* Use Cases */}
-        <div className="mb-20">
+        {/* Use Cases */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Practice Area Applications
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
-                <p className="text-zion-slate-light mb-4">{useCase.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry};
+  </h3>
+                <p className="text-zion-slate-light mb-4">{useCase.description};
+  </p>
                 <div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
                   {useCase.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zion-slate-light text-sm">{metric}</span>
+                      <span className="text-zion-slate-light text-sm">{metric};
+  </span>
                     </div>
-                  ))}
-                </div>
+                  ))};
+                ;
+  </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
 
-        {/* Pricing */}
-        <div className="mb-20">
+        {/* Pricing */};
+        ;
+  <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Transparent Pricing
           </h2>
@@ -1707,40 +1845,49 @@ export default AILegalTech
                       Most Popular
                     </span>
                   </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                )};
+                ;
+  <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+  </h3>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
+                    <span className="text-4xl font-bold text-zion-cyan">{plan.price};
+  </span>
+                    <span className="text-zion-slate-light ml-1">{plan.period};
+  </span>
                   </div>
-                  <p className="text-zion-slate-light mt-2">{plan.description}</p>
+                  <p className="text-zion-slate-light mt-2">{plan.description};
+  </p>
                 </div>
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                      <span className="text-zion-slate-light">{feature};
+  </span>
                     </li>
-                  ))}
-                </ul>
+                  ))};
+                ;
+  </ul>
                 <$2 />
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
                       : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
-                  }`}
+                  }`};
                 >
                   Get Started
                 </Link>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
+        {/* CTA Section */};
+        ;
+  <div className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Legal Practice?
@@ -1768,9 +1915,10 @@ export default AILegalTech
       </div>
     </div>
   )
-}
-}
-}
+};
+};
+};
 export default AILegalTech
-}
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></li></section></section></section></section></section></section></section></section></section></section></section>
+};
+;
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></li></section></section></section></section></section></section></section></section></section></section></section>

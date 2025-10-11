@@ -8,19 +8,19 @@ export interface HireRequestData {
     full_name: string
     professional_title: string
     email?: string
-  }
+  };
   requester: {
     name: string
     email: string
     id?: string
-  }
+  };
   project: {
     overview: string
     timeline: string
     budgetMin: number
     budgetMax: number
-  }
-}
+  };
+};
 export function useHireRequest() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -39,7 +39,7 @@ export function useHireRequest() {
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`})
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`,
       })
-      return { success: true, requestId: response?.request_id }
+      return { success: true, requestId: response?.request_id };
     } catch (error) {
       console.error("Error submitting hire request:", error)
       const errorMessage = error instanceof Error 
@@ -52,14 +52,16 @@ export function useHireRequest() {
         variant: "destructive"})
         variant: "destructive",
       })
-      return { success: false, error: errorMessage }
+      return { success: false, error: errorMessage };
     } finally {
       setIsSubmitting(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     submitHireRequest,
     isSubmitting,
     error
-  }
-}
+  };
+};
+;

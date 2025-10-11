@@ -5,7 +5,7 @@ export interface BiotechAIService {id: string
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -17,24 +17,24 @@ export interface BiotechAIService {id: string
   setup_time: string
   category: string
   real_service: boolean
-  technology: string[]
-  integrations: string[]
-  use_cases: string[]
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   market_size: string
   growth_rate: string
   variant: string
   contact_info: unknown
     mobile: string
     email: string,
-    address: string}
-    website: string}
-export interface BiotechAIService {/* TODO: Fix JSX expression */}
-  s: string}
+    address: string};
+    website: string};
+export interface BiotechAIService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
       'Machine Learning',
       'Bioinformatics',
       'React',
@@ -113,8 +113,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 600 to - indigo - 700',
     text_colo,
@@ -260,8 +259,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - purple - 600 to - pink - 700',
     text_colo,
@@ -407,8 +405,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - green - 600 to - emerald - 700',
     text_colo,
@@ -554,8 +551,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - cyan - 600 to - blue - 700',
     text_colo,
@@ -701,8 +697,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - indigo - 600 to - purple - 700',
     text_colo,
@@ -848,8 +843,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - orange - 600 to - red - 700',
     text_colo,
@@ -997,8 +991,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - teal - 600 to - cyan - 700',
     text_colo,
@@ -1144,8 +1137,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - gray - 600 to - slate - 700',
     text_colo,
@@ -1233,7 +1225,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
+};
 export const biotechAIServices: BiotechAIService[] = [,
     id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform',
     tagline: 'Accelerate drug development with AI-powered discovery',
@@ -1255,7 +1247,7 @@ export const biotechAIServices: BiotechAIService[] = [,
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true,
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.'
     launch_date: '2024 - 03 - 10'
@@ -1311,8 +1303,7 @@ export const biotechAIServices: BiotechAIService[] = [,
   feature,
   s: string[], popula,
   r: boolean,
-  ico,
-  n: string, colo,
+  icon: string, colo,
   r: string,
   textColo,
   r: string, lin,
@@ -1356,7 +1347,7 @@ export const biotechAIServices: BiotechAIService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   biotechAIServices: BiotechAIService[] = [,
     i,
@@ -1375,8 +1366,7 @@ export const,
       'API for research integrationMulti-omics data analysis'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700', textColo,
   r: 'text-emerald-400',
@@ -1415,7 +1405,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1427,12 +1417,12 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 45}
-export interface BiotechAIService {/* TODO: Fix JSX expression */}
-  }
-]
-}
-]
+  s: 45};
+export interface BiotechAIService {/* TODO: Fix JSX expression */};
+  };
+];
+};
+];
 realImplementation: true,
     implementationDetails:,
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
@@ -1440,7 +1430,7 @@ realImplementation: true,
     customers: 120
     rating: 5.0
     reviews: 60,
-  }
+  };
     id: 'ai-genetic-engineering-suite',
     name: 'AI Genetic Engineering Suite',
     tagline: 'Revolutionary genetic engineering with AI precision',
@@ -1459,7 +1449,7 @@ realImplementation: true,
     ratin,
   g: 5.0,
     review,
-  s: 60}
+  s: 60};
     i,
   d: 'ai-genetic-engineering-suite'
     nam,
@@ -1485,7 +1475,7 @@ realImplementation: true,
       'Research collaboration'
       'Mobile app'
       'API for lab integration'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -1495,8 +1485,7 @@ realImplementation: true,
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700'
     textColo,
@@ -1527,7 +1516,7 @@ realImplementation: true,
       'Gene synthesis'
       'Research databases'
       'Regulatory platforms'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -1538,7 +1527,7 @@ realImplementation: true,
       'Medical research'
       'Industrial biotechnology'],
     roi: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',
-    competitors: ['Manual methods', 'Basic tools']
+    competitors: ['Manual methods', 'Basic tools'];
     marketSize: '$50 B genetic engineering market'
     growthRate: '300% annual growth'
     variant: 'biotech-futuristic'
@@ -1546,11 +1535,11 @@ realImplementation: true,
       'Revolutionary technology with no direct competitors. Basic protein design tools exist but lack AI capabilities. Our advantage: AI-powered design and comprehensive features.',
     targetAudience:,
       'Industrial biotechnology'
-    ]
+    ];
     ro,
   i: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.'
     competitor,
-  s: ['Manual methods', 'Basic tools']
+  s: ['Manual methods', 'Basic tools'];
     marketSiz,
   e: '$50B genetic engineering market'
     growthRat,
@@ -1582,7 +1571,7 @@ realImplementation: true,
       'Expression systems'
       'Research platforms'
       'Analytical tools'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -1593,7 +1582,7 @@ realImplementation: true,
       'Biomaterials'
       'Drug delivery'],
     roi: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',
-    competitors: ['Basic tools', 'Manual design']
+    competitors: ['Basic tools', 'Manual design'];
     marketSize: '$30 B protein engineering market'
     growthRate: '280% annual growth'
     variant: 'biotech-futuristic'
@@ -1601,11 +1590,11 @@ realImplementation: true,
       'Revolutionary technology with no direct competitors. Traditional trial management uses basic tools. Our advantage: AI optimization and comprehensive features.',
     targetAudience:,
       'Drug delivery'
-    ]
+    ];
     ro,
   i: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.'
     competitor,
-  s: ['Basic tools', 'Manual design']
+  s: ['Basic tools', 'Manual design'];
     marketSiz,
   e: '$30B protein engineering market'
     growthRat,
@@ -1637,7 +1626,7 @@ realImplementation: true,
       'Regulatory platforms'
       'Analytical tools'
       'Healthcare systems'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -1648,7 +1637,7 @@ realImplementation: true,
       'Compliance monitoring'
       'Performance tracking'],
     roi: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',
-    competitors: ['Basic tools', 'Manual management']
+    competitors: ['Basic tools', 'Manual management'];
     marketSize: '$45 B clinical trial market'
     growthRate: '220% annual growth'
     variant: 'biotech-futuristic'
@@ -1656,11 +1645,11 @@ realImplementation: true,
       'Revolutionary technology with no direct competitors. Basic biomarker research uses manual methods. Our advantage: AI discovery and comprehensive analysis.',
     targetAudience:,
       'Performance tracking'
-    ]
+    ];
     ro,
   i: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.'
     competitor,
-  s: ['Basic tools', 'Manual management']
+  s: ['Basic tools', 'Manual management'];
     marketSiz,
   e: '$45B clinical trial market'
     growthRat,
@@ -1692,7 +1681,7 @@ realImplementation: true,
       'Research platforms'
       'Analytical tools'
       'Data sources'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -1703,7 +1692,7 @@ realImplementation: true,
       'Personalized medicine'
       'Research discovery'],
     roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',
-    competitors: ['Manual methods', 'Basic tools']
+    competitors: ['Manual methods', 'Basic tools'];
     marketSize: '$25 B biomarker market'
     growthRate: '240% annual growth'
     variant: 'biotech-futuristic'
@@ -1711,11 +1700,11 @@ realImplementation: true,
       'Revolutionary technology with no direct competitors. Basic personalized medicine uses limited analysis. Our advantage: AI-powered precision and comprehensive features.',
     targetAudience:,
       'Research discovery'
-    ]
+    ];
     ro,
   i: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.'
     competitor,
-  s: ['Manual methods', 'Basic tools']
+  s: ['Manual methods', 'Basic tools'];
     marketSiz,
   e: '$25B biomarker market'
     growthRat,
@@ -1747,7 +1736,7 @@ realImplementation: true,
       'Electronic health records'
       'Laboratory systems'
       'Clinical platforms'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -1758,7 +1747,7 @@ realImplementation: true,
       'Clinical trials'
       'Healthcare research'],
     roi: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',
-    competitors: ['Basic analysis', 'Limited tools']
+    competitors: ['Basic analysis', 'Limited tools'];
     marketSize: '$60 B personalized medicine market'
     growthRate: '260% annual growth'
     variant: 'biotech-futuristic'
@@ -1766,11 +1755,11 @@ realImplementation: true,
       'Revolutionary technology with no direct competitors. Basic repurposing uses manual research. Our advantage: AI discovery and comprehensive analysis.',
     targetAudience:,
       'Healthcare research'
-    ]
+    ];
     ro,
   i: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.'
     competitor,
-  s: ['Basic analysis', 'Limited tools']
+  s: ['Basic analysis', 'Limited tools'];
     marketSiz,
   e: '$60B personalized medicine market'
     growthRat,
@@ -1802,7 +1791,7 @@ realImplementation: true,
       'Research platforms'
       'Analytical tools'
       'Market data'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -1813,7 +1802,7 @@ realImplementation: true,
       'Faster approval'
       'Research discovery'],
     roi: 'Accelerate drug development and reduce costs by 80%. ROI through faster time-to-market and cost savings.',
-    competitors: ['Manual research', 'Basic tools']
+    competitors: ['Manual research', 'Basic tools'];
     marketSize: '$20 B drug repurposing market'
     growthRate: '200% annual growth'
     variant: 'biotech-futuristic'
@@ -1821,11 +1810,11 @@ realImplementation: true,
       'Revolutionary technology with no direct competitors. Basic bioinformatics tools exist but lack AI capabilities. Our advantage: AI-powered analysis and comprehensive features.',
     targetAudience:,
       'Research discovery'
-    ]
+    ];
     ro,
   i: 'Accelerate drug development and reduce costs by 80%. ROI through faster time-to-market and cost savings.'
     competitor,
-  s: ['Manual research', 'Basic tools']
+  s: ['Manual research', 'Basic tools'];
     marketSiz,
   e: '$20B drug repurposing market'
     growthRat,
@@ -1857,7 +1846,7 @@ realImplementation: true,
       'Analytical tools'
       'Cloud platforms'
       'Data sources'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -1868,7 +1857,7 @@ realImplementation: true,
       'Data processing'
       'Statistical analysis'],
     roi: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',
-    competitors: ['Basic tools', 'Manual analysis']
+    competitors: ['Basic tools', 'Manual analysis'];
     marketSize: '$35 B bioinformatics market'
     growthRate: '230% annual growth'
     variant: 'biotech-futuristic'
@@ -1876,11 +1865,11 @@ realImplementation: true,
       'Revolutionary technology with no direct competitors. Traditional biomanufacturing uses basic optimization. Our advantage: AI optimization and comprehensive features.',
     targetAudience:,
       'Statistical analysis'
-    ]
+    ];
     ro,
   i: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.'
     competitor,
-  s: ['Basic tools', 'Manual analysis']
+  s: ['Basic tools', 'Manual analysis'];
     marketSiz,
   e: '$35B bioinformatics market'
     growthRat,
@@ -1912,7 +1901,7 @@ realImplementation: true,
       'Quality control'
       'Automation systems'
       'Monitoring tools'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -1923,14 +1912,14 @@ realImplementation: true,
       'Automation'
       'Performance monitoring'],
     roi: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',
-    competitors: ['Basic optimization', 'Manual processes']
+    competitors: ['Basic optimization', 'Manual processes'];
     marketSize: '$40 B biomanufacturing market'
     growthRate: '210% annual growth'
     variant: 'biotech-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails:,
       'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.'
@@ -1941,7 +1930,7 @@ realImplementation: true,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Complete biomanufacturing platform with AI optimization, real-time monitoring, and automation tools. Includes mobile app and system integration.'
     launchDate: '2024-03-10'
@@ -1949,11 +1938,11 @@ realImplementation: true,
     rating: 4.9
     reviews: 45,
       'Performance monitoring'
-    ]
+    ];
     ro,
   i: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.'
     competitor,
-  s: ['Basic optimization', 'Manual processes']
+  s: ['Basic optimization', 'Manual processes'];
     marketSiz,
   e: '$40B biomanufacturing market'
     growthRat,
@@ -1970,7 +1959,7 @@ realImplementation: true,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1992,7 +1981,7 @@ realImplementation: true,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2004,20 +1993,20 @@ realImplementation: true,
     ratin,
   g: 4.9,
     review,
-  s: 45}
-]
-export interface BiotechAIService {/* TODO: Fix JSX expression */}
-  s: string}
+  s: 45};
+];
+export interface BiotechAIService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number,
-}
+};
 export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform'
@@ -2030,8 +2019,8 @@ export const biotechAIServices: BiotechAIService[] = [
   customers: number
   rating: number
   reviews: number
-}
-
+};
+;
 export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform'
@@ -2043,7 +2032,7 @@ export const biotechAIServices: BiotechAIService[] = [
     features: [
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'
       'API for research integrationMulti-omics data analysis'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -2055,23 +2044,23 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '2 weeks'
     category: 'Biotech AI'
     realService: true
-    technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing']
-    integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature']
-    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration']
+    technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing'];
+    integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'];
+    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'];
     roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.'
-    competitors: ['InsitroRecursionBasic research tools']
+    competitors: ['InsitroRecursionBasic research tools'];
     marketSize: '$150 B AI in healthcare market'
     growthRate: '250% annual growth',
-    variant: 'biotech-futuristic'}
-    contactInfo: {}
+    variant: 'biotech-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
       website: 'https://ziontechgroup.com'
-    }
+    };
     real_implementation: true,
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -2083,19 +2072,19 @@ export const biotechAIServices: BiotechAIService[] = [
     setupTime: '2 weeks'
     category: 'Biotech AI'
     realService: true
-    technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing']
-    integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature']
-    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration']
+    technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing'];
+    integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'];
+    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'];
     roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.'
-    competitors: ['InsitroRecursionBasic research tools']
+    competitors: ['InsitroRecursionBasic research tools'];
     marketSize: '$150 B AI in healthcare market'
     growthRate: '250% annual growth'
-    variant: 'biotech-futuristic'}
-    contactInfo: {}
+    variant: 'biotech-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.'
     launch_date: '2024 - 03 - 10'
@@ -2113,13 +2102,13 @@ export const biotechAIServices: BiotechAIService[] = [
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   biotechAIServices: BiotechAIService[] = [,
-  {/* TODO: Fix JSX expression */}
-  t: 'biotech-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'biotech-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -2129,7 +2118,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -2141,9 +2130,9 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 45}
-]
-  }
+  s: 45};
+];
+  };
 export interface BiotechAIService,
   id: string, nam,
   e: string, taglin,
@@ -2152,8 +2141,7 @@ export interface BiotechAIService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, text_colo,
   r: string, lin,
   k: string, market_positio,
@@ -2193,8 +2181,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI - powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.', feature,
   s: [, ' 'AI gene editing algorithms',' 'Synthetic biology design',' 'CRISPR optimization',' 'Genetic circuit design',' 'Metabolic pathway optimization',' 'Safety assessment tools',' 'Regulatory compliance',' 'Research collaboration',' 'Mobile app',' 'API for lab integration'], popula,
-  r: true,' ico,
-  n: '🔬', ' colo,
+  r: true,' icon: '🔬', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
@@ -2233,8 +2220,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI platform that designs novel proteins for therapeutic, industrial, and research applications. Create proteins with specific functions and properties.', feature,
   s: [, ' 'AI protein design algorithms',' 'Structure prediction',' 'Function optimization',' 'Stability analysis',' 'Expression optimization',' 'Design validation',' 'Collaboration tools',' 'Analytics dashboard',' 'Mobile app',' 'API for integration'], popula,
-  r: true,' ico,
-  n: '🧪', ' colo,
+  r: true,' icon: '🧪', ' colo,
   r: 'from - purple - 600 to - pink - 700',' text_colo,
   r: 'text - purple - 400',' lin,
   k: 'http,
@@ -2273,8 +2259,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI platform that optimizes clinical trial design, patient recruitment, and data analysis. Reduce trial costs by 40% and accelerate completion by 60%.', feature,
   s: [, ' 'Trial design optimization',' 'Patient recruitment AI',' 'Data analysis automation',' 'Risk assessment',' 'Compliance monitoring',' 'Real - time analytics',' 'Mobile app',' 'API for integration',' 'Regulatory tools',' 'Collaboration platform'], popula,
-  r: true,' ico,
-  n: '🏥', ' colo,
+  r: true,' icon: '🏥', ' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
@@ -2313,8 +2298,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI platform that discovers and validates biomarkers for disease diagnosis, prognosis, and treatment response. Accelerate biomarker research by 10x.', feature,
   s: [, ' 'AI biomarker discovery',' 'Multi - omics analysis',' 'Validation algorithms',' 'Clinical correlation',' 'Data visualization',' 'Collaboration tools',' 'Mobile app',' 'API for integration',' 'Research database',' 'Analytics dashboard'], popula,
-  r: true,' ico,
-  n: '🔍', ' colo,
+  r: true,' icon: '🔍', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 400',' lin,
   k: 'http,
@@ -2353,8 +2337,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI platform that enables personalized medicine through genomic analysis, drug response prediction, and treatment optimization. Transform healthcare with precision medicine.', feature,
   s: [, ' 'Genomic analysis AI',' 'Drug response prediction',' 'Treatment optimization',' 'Risk assessment',' 'Clinical decision support',' 'Patient monitoring',' 'Mobile app',' 'API for integration',' 'Healthcare integration',' 'Analytics dashboard'], popula,
-  r: true,' ico,
-  n: '👤', ' colo,
+  r: true,' icon: '👤', ' colo,
   r: 'from - indigo - 600 to - purple - 700',' text_colo,
   r: 'text - indigo - 400',' lin,
   k: 'http,
@@ -2393,8 +2376,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI platform that discovers new therapeutic uses for existing drugs. Accelerate drug development by finding new applications for approved medications.', feature,
   s: [, ' 'AI drug repurposing',' 'Target identification',' 'Efficacy prediction',' 'Safety assessment',' 'Clinical correlation',' 'Market analysis',' 'Collaboration tools',' 'Mobile app',' 'API for integration',' 'Analytics dashboard'], popula,
-  r: true,' ico,
-  n: '💊', ' colo,
+  r: true,' icon: '💊', ' colo,
   r: 'from - orange - 600 to - red - 700',' text_colo,
   r: 'text - orange - 400',' lin,
   k: 'http,
@@ -2433,8 +2415,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive AI - powered bioinformatics platform that analyzes genomic, proteomic, and metabolomic data. Accelerate biological research with advanced computational tools.', feature,
   s: [,' 'Multi - omics analysis', ' 'AI data processing',' 'Statistical analysis',' 'Data visualization',' 'Research collaboration',' 'Mobile app',' 'API for integration',' 'Cloud computing',' 'Real - time analysis',' 'Advanced algorithms'], popula,
-  r: true,' ico,
-  n: '📊', ' colo,
+  r: true,' icon: '📊', ' colo,
   r: 'from - teal - 600 to - cyan - 700',' text_colo,
   r: 'text - teal - 400',' lin,
   k: 'http,
@@ -2473,8 +2454,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI platform that optimizes biomanufacturing processes, improves yield, and reduces costs. Transform bioproduction with intelligent optimization.', feature,
   s: [, ' 'Process optimization AI',' 'Yield improvement',' 'Quality control',' 'Cost optimization',' 'Real - time monitoring',' 'Predictive maintenance',' 'Mobile app',' 'API for integration',' 'Analytics dashboard',' 'Automation tools'], popula,
-  r: true,' ico,
-  n: '🏭', ' colo,
+  r: true,' icon: '🏭', ' colo,
   r: 'from - gray - 600 to - slate - 700',' text_colo,
   r: 'text - gray - 400',' lin,
   k: 'http,
@@ -2515,8 +2495,7 @@ export interface BiotechAIService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -2553,8 +2532,7 @@ export interface BiotechAIService,
   d: '/month', descriptio,
   n: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.', feature,
   s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'' 'API for research integrationMulti-omics data analysis' ],' popula,
-  r: true, ico,
-  n: '🧬',' colo,
+  r: true, icon: '🧬',' colo,
   r: 'from-emerald-600 to-teal-700', textColo,
   r: 'text-emerald-400',' lin,
   k: 'http,
@@ -2599,8 +2577,7 @@ export interface BiotechAIService,
   d: '/month' descriptio,
   n:' 'Advanced AI-powered genetic engineering platform that enables precise gene editing, synthetic biology, and genetic optimization. Create new organisms and optimize existing ones.' feature,
   s: [' 'AI gene editing algorithms'' 'Synthetic biology design'' 'CRISPR optimization'' 'Genetic circuit design'' 'Metabolic pathway optimization'' 'Safety assessment tools'' 'Regulatory compliance'' 'Research collaboration'' 'Mobile app'' 'API for lab integration' ] popula,
-  r: true' ico,
-  n: '🔬'' colo,
+  r: true' icon: '🔬'' colo,
   r: 'from-blue-600 to-indigo-700'' textColo,
   r: 'text-blue-400'' lin,
   k: 'http,
@@ -2754,7 +2731,7 @@ export interface BiotechAIService,
   e: '2024-03-10' customer,
   s: 90, ratin,
   g: 4.9,
-  reviews: 45 } ]; export interface BiotechAIService {/* TODO: Fix JSX expression */}
+  reviews: 45 } ]; export interface BiotechAIService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -2763,7 +2740,7 @@ export interface BiotechAIService,
   s: number, ratin,
   g: number, review,
   s: number} export const,
-  biotechAIServices: BiotechAIService[] = [, {/* TODO: Fix JSX expression */}
+  biotechAIServices: BiotechAIService[] = [, {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,

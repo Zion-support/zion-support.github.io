@@ -35,9 +35,12 @@ const AIPoweredITAssetManagement = () => {
             icon: Target,
             title: "Predictive Maintenance",
             description: "AI algorithms predict potential failures and maintenance needs before they impact operations."
-        }
+        };
     ]
-    const capabilities = [
+    
+  ;
+  ;
+  const capabilities = [
         {
             icon: Cpu,
             title: "Intelligent Asset Discovery",
@@ -57,9 +60,12 @@ const AIPoweredITAssetManagement = () => {
             icon: Database,
             title: "Centralized Management",
             description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."
-        }
+        };
     ]
-    const benefits = [
+    
+  ;
+  ;
+  const benefits = [
         {
             icon: CheckCircle,
             title: "Reduced Downtime",
@@ -79,23 +85,26 @@ const AIPoweredITAssetManagement = () => {
             icon: Users,
             title: "Improved Productivity",
             description: "Streamlined asset management reduces administrative overhead"
-        }
+        };
     ]
-    return (
+    ;
+  ;
+  return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
             <Helmet>
                 <title>AI-Powered IT Asset Management | Zion Tech Group</title>
                 <meta name="description" content="Revolutionary AI-powered IT asset management solution with intelligent discovery, real-time monitoring, and predictive maintenance capabilities." />
             </Helmet>
 
-            {/* Hero Section */}
-            <section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white overflow-hidden">
+            {/* Hero Section */};
+            ;
+  <section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="container mx-auto px-4 relative z-10">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }};
+                        animate={{ opacity: 1, y: 0 }};
+                        transition={{ duration: 0.8 }};
                         className="text-center max-w-4xl mx-auto"
                     >
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -123,13 +132,14 @@ const AIPoweredITAssetManagement = () => {
                 </div>
             </section>
 
-            {/* Features Section */}
-            <section className="py-20">
+            {/* Features Section */};
+            ;
+  <section className="py-20">
                 <div className="container mx-auto px-4">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }};
+                        whileInView={{ opacity: 1, y: 0 }};
+                        transition={{ duration: 0.8 }};
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -144,30 +154,34 @@ const AIPoweredITAssetManagement = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {features.map((feature, index) => (
                             <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                key={index};
+                                initial={{ opacity: 0, y: 30 }};
+                                whileInView={{ opacity: 1, y: 0 }};
+                                transition={{ duration: 0.8, delay: index * 0.1 }};
                                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                             >
                                 <div className="text-blue-600 mb-4">
                                     <feature.icon className="w-12 h-12" />
                                 </div>
-                                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                                <p className="text-gray-600">{feature.description}</p>
+                                <h3 className="text-xl font-semibold mb-4">{feature.title};
+  </h3>
+                                <p className="text-gray-600">{feature.description};
+  </p>
                             </motion.div>
-                        ))}
-                    </div>
+                        ))};
+                    ;
+  </div>
                 </div>
             </section>
 
-            {/* Capabilities Section */}
-            <section className="py-20 bg-gray-50">
+            {/* Capabilities Section */};
+            ;
+  <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }};
+                        whileInView={{ opacity: 1, y: 0 }};
+                        transition={{ duration: 0.8 }};
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -181,10 +195,10 @@ const AIPoweredITAssetManagement = () => {
                     <div className="grid md:grid-cols-2 gap-8">
                         {capabilities.map((capability, index) => (
                             <motion.div
-                                key={index}
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                key={index};
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }};
+                                whileInView={{ opacity: 1, x: 0 }};
+                                transition={{ duration: 0.8, delay: index * 0.1 }};
                                 className="bg-white p-8 rounded-xl shadow-lg"
                             >
                                 <div className="flex items-start space-x-4">
@@ -192,23 +206,27 @@ const AIPoweredITAssetManagement = () => {
                                         <capability.icon className="w-8 h-8" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-semibold mb-2">{capability.title}</h3>
-                                        <p className="text-gray-600">{capability.description}</p>
+                                        <h3 className="text-xl font-semibold mb-2">{capability.title};
+  </h3>
+                                        <p className="text-gray-600">{capability.description};
+  </p>
                                     </div>
                                 </div>
                             </motion.div>
-                        ))}
-                    </div>
+                        ))};
+                    ;
+  </div>
                 </div>
             </section>
 
-            {/* Benefits Section */}
-            <section className="py-20">
+            {/* Benefits Section */};
+            ;
+  <section className="py-20">
                 <div className="container mx-auto px-4">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }};
+                        whileInView={{ opacity: 1, y: 0 }};
+                        transition={{ duration: 0.8 }};
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -222,30 +240,34 @@ const AIPoweredITAssetManagement = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {benefits.map((benefit, index) => (
                             <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                key={index};
+                                initial={{ opacity: 0, y: 30 }};
+                                whileInView={{ opacity: 1, y: 0 }};
+                                transition={{ duration: 0.8, delay: index * 0.1 }};
                                 className="text-center"
                             >
                                 <div className="text-green-600 mb-4 flex justify-center">
                                     <benefit.icon className="w-12 h-12" />
                                 </div>
-                                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                                <p className="text-gray-600">{benefit.description}</p>
+                                <h3 className="text-xl font-semibold mb-2">{benefit.title};
+  </h3>
+                                <p className="text-gray-600">{benefit.description};
+  </p>
                             </motion.div>
-                        ))}
-                    </div>
+                        ))};
+                    ;
+  </div>
                 </div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+            {/* CTA Section */};
+            ;
+  <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
                 <div className="container mx-auto px-4 text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30 }};
+                        whileInView={{ opacity: 1, y: 0 }};
+                        transition={{ duration: 0.8 }};
                         className="max-w-4xl mx-auto"
                     >
                         <h2 className="text-4xl font-bold mb-6">
@@ -274,5 +296,5 @@ const AIPoweredITAssetManagement = () => {
             </section>
         </div>
     )
-}
+};
 export default AIPoweredITAssetManagement

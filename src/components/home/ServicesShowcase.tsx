@@ -20,7 +20,7 @@ const categoryIcons = {
   "Digital Transformation": <TrendingUp className="h-8 w-8 text-zion-cyan" />,
   "Blockchain & Web3": <Code className="h-8 w-8 text-zion-cyan" />,
   "IoT & Edge Computing": <Server className="h-8 w-8 text-zion-cyan" />
-}
+};
 // Get featured services from each category
 const getFeaturedServices = () => {
   const categories = [
@@ -29,18 +29,21 @@ const getFeaturedServices = () => {
     "Cybersecurity",
     "Data & Analytics"
   ]
+  ;
+  ;
   return categories.map(category => {
     const services = COMPREHENSIVE_SERVICES.filter(s => s.category === category)
     return services[0]; // Get first service from each category
   }).filter(Boolean)
-}
+};
 export function ServicesShowcase() {
   const featuredServices = getFeaturedServices()
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
+        {/* Header */};
+        ;
+  <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
             Comprehensive IT & AI Services
           </h2>
@@ -48,8 +51,9 @@ export function ServicesShowcase() {
             Discover our extensive portfolio of micro SAAS services, cutting-edge IT solutions, and innovative AI services designed to transform your business.
           </p>
           
-          {/* Contact Info */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          {/* Contact Info */};
+          ;
+  <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
               <Phone className="h-5 w-5" />
               <span>+1 302 464 0950</span>
@@ -78,22 +82,27 @@ export function ServicesShowcase() {
           </div>
         </div>
 
-        {/* Featured Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {/* Featured Services Grid */};
+        ;
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {featuredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
 
-        {/* Service Categories Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        {/* Service Categories Overview */};
+        ;
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {Object.entries(categoryIcons).map(([category, icon]) => (
             <div key={category} className="text-center">
               <div className="bg-zion-blue rounded-lg p-6 border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300">
                 <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  {icon}
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{category}</h3>
+                  {icon};
+                ;
+  </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{category};
+  </h3>
                 <p className="text-zion-slate-light text-sm mb-4">
                   {COMPREHENSIVE_SERVICES.filter(s => s.category === category).length} services available
                 </p>
@@ -105,11 +114,13 @@ export function ServicesShowcase() {
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
 
-        {/* Why Choose Zion Tech Group */}
-        <div className="bg-zion-blue rounded-lg p-8 border border-zion-blue-light">
+        {/* Why Choose Zion Tech Group */};
+        ;
+  <div className="bg-zion-blue rounded-lg p-8 border border-zion-blue-light">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
             <p className="text-zion-slate-light">Your trusted partner for innovative technology solutions</p>
@@ -142,8 +153,9 @@ export function ServicesShowcase() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-12">
+        {/* CTA Section */};
+        ;
+  <div className="text-center mt-12">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
           <p className="text-zion-slate-light mb-6">
             Contact our team today to discuss your project requirements and get a personalized quote.
@@ -162,8 +174,9 @@ export function ServicesShowcase() {
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">Website: <a href="https://ziontechgroup.com" className="text-zion-cyan hover:underline">https://ziontechgroup.com</a></p>
 
-        {/* CTA Section */}
-        <div className="text-center">
+        {/* CTA Section */};
+        ;
+  <div className="text-center">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Need a Custom Solution?
@@ -191,4 +204,5 @@ export function ServicesShowcase() {
       </div>
     </section>
   )
-}</div></div>
+};
+  </div></div>

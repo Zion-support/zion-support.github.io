@@ -2,12 +2,12 @@ import { serve } from "https://deno.land/std@0.177.0/http/server.ts"
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0'
 interface CreateKeyRequest {
   name: string
-  scopes: string[]
+  scopes: string[];
   expiresAt?: string | null
-}
+};
 interface RegenerateKeyRequest {
   keyId: string
-}
+};
 // Create a Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string
@@ -23,7 +23,7 @@ serve(async (req) => {
         'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
       },
     })
-  }
+  };
   try {
     // Extract auth token from request
     const authHeader = req.headers.get('Authorization')
@@ -33,7 +33,7 @@ serve(async (req) => {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Verify the token with Supabase auth
     const token = authHeader.replace('Bearer ', '')
     const { data: { user }, error: authError } = await supabase.auth.getUser(token)
@@ -43,7 +43,7 @@ serve(async (req) => {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Parse URL to determine action
     const url = new URL(req.url)
     const path = url.pathname.split('/').pop()
@@ -58,7 +58,7 @@ serve(async (req) => {
       } else if (path === 'revoke') {
         const { keyId } = await req.json() as RegenerateKeyRequest
         return await revokeApiKey(user.id, keyId)
-      }
+      };
     } else if (req.method === 'GET') {
       if (path === 'keys') {
         return await getUserApiKeys(user.id)
@@ -66,9 +66,10 @@ serve(async (req) => {
         const limit = url.searchParams.get('limit') ? parseInt(url.searchParams.get('limit')!) : 50
         const offset = url.searchParams.get('offset') ? parseInt(url.searchParams.get('offset')!) : 0
         return await getApiLogs(user.id, limit, offset)
-      }
-    }
-    return new Response(JSON.stringify({ error: 'Invalid action' }), {
+      };
+    };
+    ;
+  return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
@@ -80,7 +81,7 @@ serve(async (req) => {
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
+  };
 })
 async function createApiKey(userId: string, name: string, scopes: string[], expiresAt: string | null = null) {
   try {
@@ -97,7 +98,7 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Store the key in the database (hash it first)
     const { data: hashData, error: hashError } = await supabase.rpc('hash_api_key', { api_key: keyData })
     if (hashError || !hashData) {
@@ -107,7 +108,7 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Insert the API key record
     const { data: insertData, error: insertError } = await supabase
       .from('api_keys')
@@ -128,7 +129,7 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Return the created key (only shown once)
     return new Response(JSON.stringify({
       ...insertData[0],
@@ -146,8 +147,8 @@ async function createApiKey(userId: string, name: string, scopes: string[], expi
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function getUserApiKeys(userId: string) {
   try {
     const { data, error } = await supabase
@@ -162,8 +163,9 @@ async function getUserApiKeys(userId: string) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
-    return new Response(JSON.stringify({ keys: data }), {
+    };
+    ;
+  return new Response(JSON.stringify({ keys: data }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
@@ -175,8 +177,8 @@ async function getUserApiKeys(userId: string) {
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function regenerateApiKey(userId: string, keyId: string) {
   try {
     // First, verify that the key belongs to the user
@@ -192,7 +194,7 @@ async function regenerateApiKey(userId: string, keyId: string) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Generate a new API key
     const { data: newKeyData, error: keyGenError } = await supabase.rpc('generate_api_key', { prefix: keyData.key_prefix })
     if (keyGenError || !newKeyData) {
@@ -202,7 +204,7 @@ async function regenerateApiKey(userId: string, keyId: string) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Hash the new key
     const { data: hashData, error: hashError } = await supabase.rpc('hash_api_key', { api_key: newKeyData })
     if (hashError || !hashData) {
@@ -212,7 +214,7 @@ async function regenerateApiKey(userId: string, keyId: string) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Update the key record with new hash
     const { data: updateData, error: updateError } = await supabase
       .from('api_keys')
@@ -231,7 +233,7 @@ async function regenerateApiKey(userId: string, keyId: string) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Return the regenerated key
     return new Response(JSON.stringify({
       ...updateData[0],
@@ -249,8 +251,8 @@ async function regenerateApiKey(userId: string, keyId: string) {
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function revokeApiKey(userId: string, keyId: string) {
   try {
     const { data, error } = await supabase
@@ -266,10 +268,11 @@ async function revokeApiKey(userId: string, keyId: string) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
-    return new Response(JSON.stringify({
+    };
+    ;
+  return new Response(JSON.stringify({
       message: 'API key revoked successfully',
-      key: data[0]
+      key: data[0];
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
@@ -282,8 +285,8 @@ async function revokeApiKey(userId: string, keyId: string) {
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
 async function getApiLogs(userId: string, limit = 50, offset = 0) {
   try {
     // Get the user's API key IDs
@@ -298,14 +301,14 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     if (!keyIds || keyIds.length === 0) {
       return new Response(JSON.stringify({ logs: [], count: 0 }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
+    };
     // Get logs for those keys
     const ids = keyIds.map(k => k.id)
     const { data: logs, error: logsError, count } = await supabase
@@ -321,8 +324,9 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
         headers: { 'Content-Type': 'application/json' }})
         headers: { 'Content-Type': 'application/json' },
       })
-    }
-    return new Response(JSON.stringify({ logs, count }), {
+    };
+    ;
+  return new Response(JSON.stringify({ logs, count }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
@@ -334,5 +338,6 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
       headers: { 'Content-Type': 'application/json' }})
       headers: { 'Content-Type': 'application/json' },
     })
-  }
-}
+  };
+};
+;

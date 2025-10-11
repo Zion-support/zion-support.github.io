@@ -28,7 +28,8 @@ export default function IotEdgeComputingPage() {
       </div>
     </div>
   )
-  }
+  };
+  ;
   </a>
   </h1>
 </p></p></h2>

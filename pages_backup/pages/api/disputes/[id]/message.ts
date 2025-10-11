@@ -21,7 +21,9 @@ export default async function handler(
     } catch (e: any) {
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" })
     }
-    const { body } = req && req.body || {}
+    ;
+  ;
+  const { body } = req && req.body || {};
     if (!body || typeof body !== "string")
       return res && res.status(400).json({ error: "Message body required" })
     const now = new Date().toISOString()
@@ -40,10 +42,10 @@ export default async function handler(
     dispute.updatedAt = now
     await upsertDispute(dispute)
     return res.status(201).json({ dispute })
-  }
+  };
 res.setHeader("Allow", "POST")
   return res.status(405).end("Method Not Allowed")
-}
+};
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST'])
@@ -63,14 +65,16 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
-    const { body } = req.body || {}
+    ;
+  ;
+  const { body } = req.body || {};
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
       authorUserId: user.id,
       authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),
@@ -85,17 +89,17 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
   res.setHeader("Allow", "POST")
   return res.status(405).end("Method Not Allowed")
-}
-}
+};
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   res.setHeader('Allow', 'POST')
   return res.status(405).end('Method Not Allowed')
   } catch (error) {
@@ -104,10 +108,11 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

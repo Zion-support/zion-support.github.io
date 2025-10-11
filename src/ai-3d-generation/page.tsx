@@ -5,32 +5,33 @@ import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 ;
 const AI3DGenerationPage: React.FC = () => {;
+
 const industries = [;
     {;,
-}
+};
 title: 'Architecture & Real Estate'},;,
 description: 'Create 3D visualizations and virtual tours',;,
 icon: Building,;,
-features: ['3D building models', 'Virtual walkthroughs', 'Interior design', 'Landscape visualization']
+features: ['3D building models', 'Virtual walkthroughs', 'Interior design', 'Landscape visualization'];
     },
     {;,
 title: 'Gaming & Entertainment',;,
 description: 'Generate game assets and characters',;,
 icon: Gamepad2,;,
-features: ['Character models', 'Environment assets', 'Animation sequences', 'Texture generation']
+features: ['Character models', 'Environment assets', 'Animation sequences', 'Texture generation'];
     },
     {;,
 title: 'Manufacturing & Product Design',;,
 description: 'Prototype and visualize products',;,
 icon: Wrench,;,
-features: ['Product prototypes', 'Assembly visualization', 'Material testing', 'Quality inspection']
+features: ['Product prototypes', 'Assembly visualization', 'Material testing', 'Quality inspection'];
     },
     {;,
 title: 'Healthcare & Medical',;,
 description: 'Create medical models and simulations',;,
 icon: Stethoscope,;,
-features: ['Anatomical models', 'Surgical planning', 'Medical training', 'Prosthetic design']
-    }
+features: ['Anatomical models', 'Surgical planning', 'Medical training', 'Prosthetic design'];
+    };
   ];
 ;
 const features = [;
@@ -38,20 +39,20 @@ const features = [;
 icon: Cube,;,
 title: 'AI-Powered 3D Modeling',;,
 description: 'Generate complex 3D models from text descriptions or 2D images',;,
-benefits: ['90% faster modeling', 'Unlimited creativity', 'Consistent quality', 'Cost effective']
+benefits: ['90% faster modeling', 'Unlimited creativity', 'Consistent quality', 'Cost effective'];
     },
     {;,
 icon: Palette,;,
 title: 'Advanced Texturing',;,
 description: 'Create realistic textures and materials automatically',;,
-benefits: ['Photorealistic results', 'Material variety', 'Lighting optimization', 'Seamless integration']
+benefits: ['Photorealistic results', 'Material variety', 'Lighting optimization', 'Seamless integration'];
     },
     {;,
 icon: Camera,;,
 title: 'Rendering & Animation',;,
 description: 'Produce high-quality renders and smooth animations',;,
-benefits: ['Professional quality', 'Real-time preview', 'Batch processing', 'Custom styles']
-    }
+benefits: ['Professional quality', 'Real-time preview', 'Batch processing', 'Custom styles'];
+    };
   ];
 ;
 const benefits = [;
@@ -88,8 +89,9 @@ return (;
       
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
+          {/* Hero Section */};
+          ;
+  <section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">;
 AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">3D Generation</span>
             </h1>
@@ -113,77 +115,96 @@ View Demo
             </div>
           </section>
 
-          {/* Features Section */}
-          <section className="mb-16">
+          {/* Features Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature), index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                  <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit), idx) => (
                       <li key={idx} className="text-sm text-gray-400 flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                        {benefit};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </section>
 
-          {/* Industries Section */}
-          <section className="mb-16">
+          {/* Industries Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Industries We Serve</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {industries.map((industry), index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <industry.icon className="w-12 h-12 text-purple-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{industry.title}</h3>
-                  <p className="text-gray-300 mb-4">{industry.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{industry.title};
+  </h3>
+                  <p className="text-gray-300 mb-4">{industry.description};
+  </p>
                   <ul className="space-y-2">
                     {industry.features.map((feature), idx) => (
                       <li key={idx} className="text-sm text-gray-400 flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-purple-400" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                        {feature};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </section>
 
-          {/* Benefits Section */}
-          <section className="mb-16">
+          {/* Benefits Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Key Benefits</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit), index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                   <div className="text-2xl mb-3">🚀</div>
-                  <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  <h3 className="text-lg font-semibold text-white">{benefit};
+  </h3>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </section>
 
-          {/* Technologies Section */}
-          <section className="mb-16">
+          {/* Technologies Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Technologies Used</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {technologies.map((tech), index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
-                  <span className="text-white font-medium">{tech}</span>
+                  <span className="text-white font-medium">{tech};
+  </span>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-lg p-12">
+          {/* CTA Section */};
+          ;
+  <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing 3D Content?</h2>
             <p className="text-xl text-cyan-100 mb-8">Let our AI 3D generation technology transform your creative process</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

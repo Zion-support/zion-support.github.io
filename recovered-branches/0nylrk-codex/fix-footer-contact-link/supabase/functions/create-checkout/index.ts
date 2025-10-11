@@ -3,13 +3,15 @@ import Stripe from "https://esm.sh/stripe@14.21.0"
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-}
+};
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+  ;
+  ;
   const supabaseClient = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_ANON_KEY") ?? ""
@@ -18,7 +20,7 @@ serve(async (req) => {
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false } }
+    { auth: { persistSession: false } };
   )
   try {
     // Retrieve the request body
@@ -36,7 +38,7 @@ serve(async (req) => {
     // Verify the amount is valid
     if (!amount || isNaN(Number(amount)) || Number(amount) <= 0) {
       throw new Error("Invalid payment amount")
-    }
+    };
     // Authenticate the user
     const authHeader = req.headers.get("Authorization")!
     const token = authHeader.replace("Bearer ", "")
@@ -51,7 +53,7 @@ serve(async (req) => {
     let customerId
     if (customers.data.length > 0) {
       customerId = customers.data[0].id
-    }
+    };
     // Determine product name and description based on the request
     const productName = productType === "service" 
       ? "Service Payment" 
@@ -87,7 +89,7 @@ serve(async (req) => {
         providerId: providerId,
         escrow: escrow.toString(),
         productType: productType
-      }
+      };
     })
     // Record transaction in database
     if (serviceId && providerId) {
@@ -102,8 +104,9 @@ serve(async (req) => {
         in_escrow: escrow,
         created_at: new Date().toISOString()
       })
-    }
-    return new Response(JSON.stringify({ url: session.url }), {
+    };
+    ;
+  return new Response(JSON.stringify({ url: session.url }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
       status: 200,
@@ -115,5 +118,5 @@ serve(async (req) => {
       status: 500})
       status: 500,
     })
-  }
+  };
 })

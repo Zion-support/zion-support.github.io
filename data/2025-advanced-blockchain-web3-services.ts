@@ -6,24 +6,24 @@ export interface AdvancedBlockchainWeb3Service {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
   textColor: string
   link: string
   marketPosition: string
-  targetAudience: string[]
+  targetAudience: string[];
   targetAudience: string
   trialDays: number
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -32,7 +32,7 @@ export interface AdvancedBlockchainWeb3Service {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -40,12 +40,14 @@ export interface AdvancedBlockchainWeb3Service {
   rating: number
   reviews: number
 }
-const contact = {
+;
+  ;
+  const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+};
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   {
     id: 'ai-powered-defi-protocol',
@@ -576,5 +578,5 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 123,
     rating: 4.7,
     reviews: 45
-  }
-]
+  };
+];

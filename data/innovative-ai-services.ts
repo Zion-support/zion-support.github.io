@@ -4,7 +4,7 @@ export interface InnovativeAIService {id: string
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -16,11 +16,11 @@ export interface InnovativeAIService {id: string
   setup_time: string
   category: string
   real_service: boolean
-  technology: string[]
-  integrations: string[]
-  use_cases: string[]
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -44,15 +44,15 @@ export interface InnovativeAIService {id: string
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
     mobile: string,
-    email: string}
+    email: string};
     address: string,
-export interface InnovativeAIService {/* TODO: Fix JSX expression */}
-  l: string}
+export interface InnovativeAIService {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
   s: string,
       'Advanced computer vision AI',
@@ -66,15 +66,15 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
       'Emergency response systems',
       'Performance analytics'],
     popular: true,
-    website: string}
-  }
+    website: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number,
-}
+};
 export const innovativeAIServices: InnovativeAIService[] = [,
     id: 'quantum - ai - brain - computer - interface',
     name: 'Quantum AI Brain - Computer Interface',
@@ -85,8 +85,8 @@ export const innovativeAIServices: InnovativeAIService[] = [,
     popula,
   r: true,
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -98,7 +98,7 @@ export const innovativeAIServices: InnovativeAIService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeAIServices: InnovativeAIService[] = [,
     i,
@@ -130,8 +130,7 @@ export const,
     icon: '',
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
       'Neuralink ($10)000+/month)',
       'Kernel ($50)000+/month)',
       'Synchron'],
@@ -304,8 +303,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 600 to - cyan - 700',
     text_colo,
@@ -447,8 +445,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - emerald - 600 to - teal - 700',
     text_colo,
@@ -589,8 +586,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - yellow - 600 to - orange - 700',
     text_colo,
@@ -731,8 +727,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - cyan - 600 to - blue - 700',
     text_colo,
@@ -875,8 +870,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - pink - 600 to - purple - 700',
     text_colo,
@@ -1017,8 +1011,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - indigo - 600 to - purple - 700',
     text_colo,
@@ -1160,8 +1153,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 600 to - orange - 700',
     text_colo,
@@ -1302,8 +1294,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - green - 600 to - emerald - 700',
     text_colo,
@@ -1372,13 +1363,13 @@ export const,
     customers: 67
     rating: 4.7
     reviews: 34,
-  }
+  };
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDate: '2024-08-01'
     customers: 67
     rating: 4 && 4.7
     reviews: 34,
-  }
+  };
     id: 'quantum - logistics - platform',
     name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI - powered supply chain optimization',
@@ -1423,7 +1414,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 34}
+  s: 34};
       'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDat,
   e: '2024-08-01',
@@ -1432,7 +1423,7 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 34}
+  s: 34};
     i,
   d: 'quantum - logistics - platform',
     nam,
@@ -1474,8 +1465,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 600 to - indigo - 700',
     text_colo,
@@ -1541,15 +1531,15 @@ export const,
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true
     implementation_details: 'Quantum AI logistics platform with supply chain optimization and real - time analytics capabilities.'
     launch_date: '2024 - 08 - 01'
     customers: 67
     rating: 4 && 4.7
     reviews: 34,
-  }
-]
+  };
+];
     reviews: 34,
     market_siz,
   e: '$300B supply chain management',
@@ -1589,7 +1579,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -1601,13 +1591,13 @@ export const,
     ratin,
   g: 4 && 4.7,
     review,
-  s: 34}
-]
+  s: 34};
+];
     review,
-  s: 34}
-]
-  }
-]
+  s: 34};
+];
+  };
+];
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1642,8 +1632,7 @@ export const,
   feature,
   s: string[], popula,
   r: boolean,
-  ico,
-  n: string, colo,
+  icon: string, colo,
   r: string,
   textColo,
   r: string, lin,
@@ -1687,13 +1676,13 @@ export const,
   ratin,
   g: number,
   review,
-  s: number}
-]
-export interface InnovativeAIService {/* TODO: Fix JSX expression */}
-  s: string}
+  s: number};
+];
+export interface InnovativeAIService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -1711,7 +1700,7 @@ export interface InnovativeAIService {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeAIServices: InnovativeAIService[] = [,
     i,
@@ -1726,7 +1715,7 @@ export const,
   n: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.',
     feature,
   s: [,
-}
+};
 export const innovativeAIServices: InnovativeAIService[] = [
   {
     id: 'quantum-ai-content-generator',
@@ -1959,8 +1948,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.9
     reviews: 8
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-purple-600 to-indigo-700', textColo,
   r: 'text-purple-400',
@@ -2057,8 +2045,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.8
     reviews: 12,
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-blue-600 to-cyan-700', textColo,
   r: 'text-blue-400',
@@ -2159,8 +2146,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.7
     reviews: 23,
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700', textColo,
   r: 'text-emerald-400',
@@ -2263,8 +2249,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     reviews: 9,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-yellow-600 to-orange-700',
     textColo,
@@ -2360,8 +2345,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.8
     reviews: 16,
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-cyan-600 to-blue-700', textColo,
   r: 'text-cyan-400',
@@ -2456,8 +2440,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.6
     reviews: 42,
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-pink-600 to-purple-700', textColo,
   r: 'text-pink-400',
@@ -2543,7 +2526,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     launchDate: '2024-09-15', customers: 28
     rating: 4.7
     reviews: 15,
-  }
+  };
     id: 'quantum-cybersecurity-platform', name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum-resistant security with AI threat detection',
     price: '$2,999',
@@ -2578,7 +2561,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     customers: 95
     rating: 4.8
     reviews: 48,
-  }
+  };
     id: 'quantum-internet-security', name: 'Quantum Internet Security Platform',
     tagline: 'Quantum-secured internet infrastructure',
     price: '$4,999',
@@ -2621,7 +2604,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.9,
     reviews: 6,
     reviews: 6
-  }
+  };
     id: 'quantum-logistics-platform', name: 'Quantum Logistics Platform',
     tagline: 'Quantum AI-powered supply chain optimization',
     price: '$3,499',
@@ -2659,8 +2642,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     rating: 4.7
     reviews: 34,
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-indigo-600 to-purple-700', textColo,
   r: 'text-indigo-400',
@@ -2710,7 +2692,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     ratin,
   g: 4.7,
     review,
-  s: 15}
+  s: 15};
     i,
   d: 'quantum-cybersecurity-platform', nam,
   e: 'Quantum Cybersecurity Platform',
@@ -2728,8 +2710,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Automated responseIntegration APIs'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-red-600 to-orange-700', textColo,
   r: 'text-red-400',
@@ -2785,7 +2766,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     ratin,
   g: 4.8,
     review,
-  s: 48}
+  s: 48};
     i,
   d: 'quantum-internet-security', nam,
   e: 'Quantum Internet Security Platform',
@@ -2803,8 +2784,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Integration APIs24/7 support'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-green-600 to-emerald-700', textColo,
   r: 'text-green-400',
@@ -2861,7 +2841,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
     ratin,
   g: 4.9,
     review,
-  s: 6}
+  s: 6};
     i,
   d: 'quantum-logistics-platform', nam,
   e: 'Quantum Logistics Platform',
@@ -2879,8 +2859,7 @@ export const innovativeAIServices: InnovativeAIService[] = [
       'Mobile applications24/7 support'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700', textColo,
   r: 'text-blue-400',
@@ -2936,21 +2915,21 @@ export const innovativeAIServices: InnovativeAIService[] = [
     ratin,
   g: 4.7,
     review,
-  s: 34}
+  s: 34};
     implementationDetails: 'Quantum AI logistics platform with supply chain optimization and real-time analytics capabilities.',
     launchDate: '2024-08-01',
     customers: 67,
     rating: 4.7,
     reviews: 34
-  }
-]
-]
-}
-]
-]
-]
-  }
-]
+  };
+];
+];
+};
+];
+];
+];
+  };
+];
 export interface InnovativeAIService,
   id: string, nam,
   e: string, taglin,
@@ -2959,8 +2938,7 @@ export interface InnovativeAIService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, text_colo,
   r: string, lin,
   k: string, market_positio,
@@ -2997,8 +2975,7 @@ export interface InnovativeAIService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, mobil,
   e: string, emai,
   l: string, addres,
@@ -3019,8 +2996,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,"
   n:  ,' "World's first quantum - enhanced AI with human - like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.", feature,
   s: [,' 'Quantum neural signal processing',' 'Real - time brain activity monitoring',' 'AI - powered cognitive enhancement',' 'Neural pattern recognition',' 'Secure quantum encryption',' 'Multi - modal interface support',' 'Advanced analytics dashboard',' 'API for research integration',' 'Compliance with medical standards',' '24 / 7 quantum AI support'], popula,
-  r: true,' ico,
-  n: '🧠',' 'Neuralink ($10)000+/month)',' 'Kernel ($50)000+/month)',' 'Synchron'],' marketSiz,
+  r: true,' icon: '🧠',' 'Neuralink ($10)000+/month)',' 'Kernel ($50)000+/month)',' 'Synchron'],' marketSiz,
   e: '$1 && 1.5B BCI market',' growthRat,
   e: '300% annual growth',' varian,
   t: 'quantum-neural-advanced', contactInf,
@@ -3063,8 +3039,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'Enterprise - grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.', feature,
   s: [, ' 'Advanced computer vision AI',' 'Real - time decision making',' 'Multi - sensor fusion',' 'Predictive maintenance',' 'Fleet management dashboard',' 'Safety compliance tools',' 'Weather adaptation',' 'Traffic prediction',' 'Emergency response systems',' 'Performance analytics'], popula,
-  r: true,' ico,
-  n: '🚗', ' colo,
+  r: true,' icon: '🚗', ' colo,
   r: 'from - blue - 600 to - cyan - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
@@ -3102,8 +3077,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'AI - powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%. Advanced protein folding and drug interaction modeling.', feature,
   s: [, ' 'AI drug discovery algorithms',' 'Genetic sequence analysis',' 'Protein folding prediction',' 'Drug interaction modeling',' 'Clinical trial optimization',' 'Regulatory compliance tools',' 'Research collaboration platform',' 'Advanced analytics dashboard',' 'API for research integration',' 'Multi - omics data analysis'], popula,
-  r: true,' ico,
-  n: '🧬', ' colo,
+  r: true,' icon: '🧬', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 400',' lin,
   k: 'http,
@@ -3141,8 +3115,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'Quantum AI - powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and profit generation.', feature,
   s: [, ' 'Quantum AI trading algorithms',' 'Nanosecond execution speed',' 'Real - time market analysis',' 'Risk management tools',' 'Portfolio optimization',' 'Multi - asset trading',' 'Advanced backtesting',' 'Regulatory compliance',' 'Performance analytics',' 'API for integration'], popula,
-  r: true,' ico,
-  n: '💰', ' colo,
+  r: true,' icon: '💰', ' colo,
   r: 'from - yellow - 600 to - orange - 700',' text_colo,
   r: 'text - yellow - 400',' lin,
   k: 'http,
@@ -3180,8 +3153,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'Complete space mission management and satellite operations platform. Enable commercial space companies to operate like NASA with advanced mission planning and satellite tracking.', feature,
   s: [, ' 'Satellite mission planning',' 'Orbital mechanics calculations',' 'Real - time satellite tracking',' 'Space weather monitoring',' 'Launch vehicle integration',' 'Ground station management',' 'Space debris tracking',' 'Mission analytics dashboard',' 'Regulatory compliance tools',' 'Multi - satellite operations'], popula,
-  r: true,' ico,
-  n: '🚀', ' colo,
+  r: true,' icon: '🚀', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 400',' lin,
   k: 'http,
@@ -3219,8 +3191,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'Complete AI - powered metaverse development platform with virtual world creation, AI NPCs, and immersive experiences. Build the next generation of digital worlds.', feature,
   s: [,' 'AI - powered world generation', ' 'Intelligent NPCs and avatars',' '3D environment creation',' 'Virtual economy systems',' 'Multi - user interactions',' 'VR / AR integration',' 'Content creation tools',' 'Analytics and insights',' 'Monetization tools',' 'Cross - platform support'], popula,
-  r: true,' ico,
-  n: '🌐', ' colo,
+  r: true,' icon: '🌐', ' colo,
   r: 'from - pink - 600 to - purple - 700',' text_colo,
   r: 'text - pink - 400',' lin,
   k: 'http,
@@ -3258,8 +3229,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced quantum AI robotics platform for industrial automation, precision manufacturing, and autonomous systems. Revolutionize manufacturing with quantum - enhanced robotics.', feature,
   s: [, ' 'Quantum AI decision making',' 'Precision robotics control',' 'Industrial automation',' 'Predictive maintenance',' 'Quality control systems',' 'Safety monitoring',' 'Performance optimization',' 'Remote operation',' 'Analytics dashboard',' 'Integration APIs'], popula,
-  r: true,' ico,
-  n: '🤖', ' colo,
+  r: true,' icon: '🤖', ' colo,
   r: 'from - indigo - 600 to - purple - 700',' text_colo,
   r: 'text - indigo - 400',' lin,
   k: 'http,
@@ -3297,8 +3267,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'Next - generation quantum - resistant cybersecurity platform with AI - powered threat detection, quantum encryption, and advanced security analytics.', feature,
   s: [,' 'Quantum - resistant encryption', ' 'AI threat detection',' 'Real - time monitoring',' 'Incident response',' 'Vulnerability assessment',' 'Compliance tools',' 'Security analytics',' 'Threat intelligence',' 'Automated response',' 'Integration APIs'], popula,
-  r: true,' ico,
-  n: '🔒', ' colo,
+  r: true,' icon: '🔒', ' colo,
   r: 'from - red - 600 to - orange - 700',' text_colo,
   r: 'text - red - 400',' lin,
   k: 'http,
@@ -3336,8 +3305,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary quantum - secured internet infrastructure with quantum key distribution, quantum networks, and ultra - secure communications.', feature,
   s: [, ' 'Quantum key distribution',' 'Quantum networks',' 'Ultra - secure communications',' 'Quantum routing',' 'Network monitoring',' 'Security analytics',' 'Compliance tools',' 'Performance optimization',' 'Integration APIs',' '24 / 7 support'], popula,
-  r: true,' ico,
-  n: '🌍', ' colo,
+  r: true,' icon: '🌍', ' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
@@ -3383,8 +3351,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n:  ,' 'Advanced quantum AI logistics platform for supply chain optimization, route planning, and inventory management with unprecedented efficiency.', feature,
   s: [, ' 'Quantum AI optimization',' 'Supply chain analytics',' 'Route optimization',' 'Inventory management',' 'Demand forecasting',' 'Real - time tracking',' 'Performance analytics',' 'Integration APIs',' 'Mobile applications',' '24 / 7 support'], popula,
-  r: true,' ico,
-  n: '📦', ' colo,
+  r: true,' icon: '📦', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
@@ -3434,8 +3401,7 @@ export interface InnovativeAIService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -3463,7 +3429,7 @@ export interface InnovativeAIService,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } ]; export interface InnovativeAIService {/* TODO: Fix JSX expression */}
+  s: number } ]; export interface InnovativeAIService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -3480,8 +3446,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n: 'World\'s first quantum-enhanced AI with human-like reasoning capabilities. Achieve breakthrough discoveries with 1000% ROI within 6 months. Advanced neural signal processing with quantum encryption.', feature,
   s: [' 'Quantum neural signal processing',' 'Real-time brain activity monitoring',' 'AI-powered cognitive enhancement',' 'Neural pattern recognition',' 'Secure quantum encryption',' 'Multi-modal interface support',' 'Advanced analytics dashboard',' 'API for research integration',' 'Compliance with medical standards', ' '24/7 quantum AI support' ],' popula,
-  r: true, ico,
-  n: '🧠',' colo,
+  r: true, icon: '🧠',' colo,
   r: 'from-purple-600 to-indigo-700', textColo,
   r: 'text-purple-400',' lin,
   k: 'http,
@@ -3519,8 +3484,7 @@ export interface InnovativeAIService,
   d: '/month',' descriptio,
   n: 'Enterprise-grade autonomous driving platform with advanced AI, computer vision, and safety systems. Enable commercial fleets to operate autonomously with 99.99% safety record.', feature,
   s: [' 'Advanced computer vision AI',' 'Real-time decision making',' 'Multi-sensor fusion',' 'Predictive maintenance',' 'Fleet management dashboard',' 'Safety compliance tools',' 'Weather adaptation',' 'Traffic prediction',' 'Emergency response systems', ' 'Performance analytics' ],' popula,
-  r: true, ico,
-  n: '🚗',' colo,
+  r: true, icon: '🚗',' colo,
   r: 'from-blue-600 to-cyan-700', textColo,
   r: 'text-blue-400',' lin,
   k: 'http,
@@ -3558,8 +3522,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n: 'AI-powered drug discovery and genetic engineering platform. Accelerate drug development by 10x while reducing costs by 90%. Advanced protein folding and drug interaction modeling.', feature,
   s: [' 'AI drug discovery algorithms',' 'Genetic sequence analysis',' 'Protein folding prediction',' 'Drug interaction modeling',' 'Clinical trial optimization',' 'Regulatory compliance tools',' 'Research collaboration platform',' 'Advanced analytics dashboard',' 'API for research integration', ' 'Multi-omics data analysis' ],' popula,
-  r: true, ico,
-  n: '🧬',' colo,
+  r: true, icon: '🧬',' colo,
   r: 'from-emerald-600 to-teal-700', textColo,
   r: 'text-emerald-400',' lin,
   k: 'http,
@@ -3597,8 +3560,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n: 'Quantum AI-powered algorithmic trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and profit generation.', feature,
   s: [' 'Quantum AI trading algorithms',' 'Nanosecond execution speed',' 'Real-time market analysis',' 'Risk management tools',' 'Portfolio optimization',' 'Multi-asset trading',' 'Advanced backtesting',' 'Regulatory compliance',' 'Performance analytics',' 'API for integration' ], popula,
-  r: true,' ico,
-  n: '💰',' colo,
+  r: true,' icon: '💰',' colo,
   r: 'from-yellow-600 to-orange-700',' textColo,
   r: 'text-yellow-400',' lin,
   k: 'http,
@@ -3636,8 +3598,7 @@ export interface InnovativeAIService,
   d: '/month', descriptio,
   n: 'Complete space mission management and satellite operations platform. Enable commercial space companies to operate like NASA with advanced mission planning and satellite tracking.', feature,
   s: [' 'Satellite mission planning',' 'Orbital mechanics calculations',' 'Real-time satellite tracking',' 'Space weather monitoring',' 'Launch vehicle integration',' 'Ground station management',' 'Space debris tracking',' 'Mission analytics dashboard',' 'Regulatory compliance tools', ' 'Multi-satellite operations' ],' popula,
-  r: true, ico,
-  n: '🚀',' colo,
+  r: true, icon: '🚀',' colo,
   r: 'from-cyan-600 to-blue-700', textColo,
   r: 'text-cyan-400',' lin,
   k: 'http,
@@ -3675,8 +3636,7 @@ export interface InnovativeAIService,
   d: '/month',' descriptio,
   n: 'Complete AI-powered metaverse development platform with virtual world creation, AI NPCs, and immersive experiences. Build the next generation of digital worlds.', feature,
   s: [' 'AI-powered world generation',' 'Intelligent NPCs and avatars',' '3D environment creation',' 'Virtual economy systems',' 'Multi-user interactions',' 'VR/AR integration',' 'Content creation tools',' 'Analytics and insights',' 'Monetization tools', ' 'Cross-platform support' ],' popula,
-  r: true, ico,
-  n: '🌐',' colo,
+  r: true, icon: '🌐',' colo,
   r: 'from-pink-600 to-purple-700', textColo,
   r: 'text-pink-400',' lin,
   k: 'http,
@@ -3714,8 +3674,7 @@ export interface InnovativeAIService,
   d: '/month',' descriptio,
   n: 'Advanced quantum AI robotics platform for industrial automation, precision manufacturing, and autonomous systems. Revolutionize manufacturing with quantum-enhanced robotics.', feature,
   s: [' 'Quantum AI decision making', 'Precision robotics control', 'Industrial automation', 'Predictive maintenance', 'Quality control systems', 'Safety monitoring', 'Performance optimization', 'Remote operation',' 'Analytics dashboard', 'Integration APIs' ],' popula,
-  r: true, ico,
-  n: '🤖',' colo,
+  r: true, icon: '🤖',' colo,
   r: 'from-indigo-600 to-purple-700', textColo,
   r: 'text-indigo-400',' lin,
   k: 'http,
@@ -3753,8 +3712,7 @@ export interface InnovativeAIService,
   d: '/month',' descriptio,
   n: 'Next-generation quantum-resistant cybersecurity platform with AI-powered threat detection, quantum encryption, and advanced security analytics.', feature,
   s: [' 'Quantum-resistant encryptionAI threat detectionReal-time monitoringIncident responseVulnerability assessmentCompliance toolsSecurity analyticsThreat intelligence'' 'Automated responseIntegration APIs' ],' popula,
-  r: true, ico,
-  n: '🔒',' colo,
+  r: true, icon: '🔒',' colo,
   r: 'from-red-600 to-orange-700', textColo,
   r: 'text-red-400',' lin,
   k: 'http,
@@ -3792,8 +3750,7 @@ export interface InnovativeAIService,
   d: '/month',' descriptio,
   n: 'Revolutionary quantum-secured internet infrastructure with quantum key distribution, quantum networks, and ultra-secure communications.', feature,
   s: [' 'Quantum key distributionQuantum networksUltra-secure communicationsQuantum routingNetwork monitoringSecurity analyticsCompliance toolsPerformance optimization'' 'Integration APIs24/7 support' ],' popula,
-  r: true, ico,
-  n: '🌍',' colo,
+  r: true, icon: '🌍',' colo,
   r: 'from-green-600 to-emerald-700', textColo,
   r: 'text-green-400',' lin,
   k: 'http,
@@ -3831,8 +3788,7 @@ export interface InnovativeAIService,
   d: '/month',' descriptio,
   n: 'Advanced quantum AI logistics platform for supply chain optimization, route planning, and inventory management with unprecedented efficiency.', feature,
   s: [' 'Quantum AI optimizationSupply chain analyticsRoute optimizationInventory managementDemand forecastingReal-time trackingPerformance analyticsIntegration APIs'' 'Mobile applications24/7 support' ],' popula,
-  r: true, ico,
-  n: '📦',' colo,
+  r: true, icon: '📦',' colo,
   r: 'from-blue-600 to-indigo-700', textColo,
   r: 'text-blue-400',' lin,
   k: 'http,

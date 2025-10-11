@@ -5,16 +5,17 @@ import Footer from '../components/Footer';;
 import SEOOptimizer from '../components/SEOOptimizer';;
 import { Search;, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
 const DocsPage: React.FC = () => {;
+
 const [searchQuery, setSearchQuery] = useState('');
 const [selectedCategory, setSelectedCategory] = useState('all');
 const docCategories = [;
-}
+};
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
     { id: 'api', name: 'API Reference', icon: Code, count: 15 },
     { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
-    { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
+    { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 };
   ];
 const documentation = [;
     {;,
@@ -116,7 +117,7 @@ difficulty: 'Advanced',;,
 readTime: '40 min',;,
 icon: Zap,;,
 content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
-    }
+    };
   ];
 const quickLinks = [;
     {;,
@@ -146,7 +147,7 @@ description: 'Connect with other developers',;,
 icon: Users,;,
 link: '/community',;,
 color: 'text-cyan-400'
-    }
+    };
   ];
 const filteredDocs = selectedCategory === 'all'; 
     ? documentation 
@@ -162,24 +163,26 @@ const getDifficultyColor = (difficulty: string) => {;;
 switch (difficulty) {;
 case 'Beginner': return 'text-green-400 bg-green-500/20';;
 case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';;
-}
+};
 case 'Advanced': return 'text-red-400 bg-red-500/20';},;,
 default: return 'text-gray-400 bg-gray-500/20';
-  }
-  }
+  };
+  };
+  ;
   return (;
     <React.Fragment>
       <SEOOptimizer;
 title="Documentation - Zion Tech Group";
 description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples.";
-keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}
+keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']};
         canonicalUrl="https://ziontechgroup.com/docs"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
+          {/* Hero Section */};
+          ;
+  <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">;
 Documentation
   
@@ -189,53 +192,59 @@ Everything you need to build with AI,
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">;
 Comprehensive guides, API references, and tutorials to help you;
 integrate and optimize our AI services for your business.
-          {/* Search Section */}
-          <section className="mb-16">
+          {/* Search Section */};
+          ;
+  <section className="mb-16">
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
 type="text";
 placeholder="Search documentation...";
-value={searchQuery}
+value={searchQuery};
                   onChange={(e) =>
-  </input> setSearchQuery(e.target.value)}
+  </input> setSearchQuery(e.target.value)};
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
-          {/* Quick Links */}
-          <section className="mb-16">
+          {/* Quick Links */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Quick Links
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {quickLinks.map((link), index) => (
                 <$2 />;
-key={index}
-                  to={link.link}
+key={index};
+                  to={link.link};
                   className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">
                   <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}}`} />
   </link>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {link.title}
-                  <p className="text-gray-300">{link.description}
-              ))}
-          {/* Categories */}
-          <section className="mb-16">
+                    {link.title};
+                  ;
+  <p className="text-gray-300">{link.description};
+              ))};
+          {/* Categories */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
               {docCategories.map((category) => (
                 <$2 />;
-key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+key={category.id};
+                  onClick={() => setSelectedCategory(category.id)};
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${};
 selectedCategory === category.id
                       ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'}`}
+                      : 'bg-slate-800 text-white hover:bg-slate-700'}`};
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
-                  <div className="text-sm font-semibold">{category.name}
-                  <div className="text-xs opacity-75">{category.count} docs
-              ))}
-          {/* Documentation List */}
-          <section className="mb-16">
+                  <div className="text-sm font-semibold">{category.name};
+                  ;
+  <div className="text-xs opacity-75">{category.count} docs
+              ))};
+          {/* Documentation List */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Documentation
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {searchResults.map((doc) => (
@@ -245,25 +254,31 @@ selectedCategory === category.id
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-2">
                         <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(doc.difficulty)}}`}>
-                          {doc.difficulty}
-                        <span className="text-gray-400 text-xs">{doc.readTime}
-                  <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
-                    {doc.title}
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {doc.description}
-                  <p className="text-gray-400 text-sm mb-4">
-                    {doc.content}
-                  <div className="flex items-center justify-between">
+                          {doc.difficulty};
+                        ;
+  <span className="text-gray-400 text-xs">{doc.readTime};
+                  ;
+  <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
+                    {doc.title};
+                  ;
+  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {doc.description};
+                  ;
+  <p className="text-gray-400 text-sm mb-4">
+                    {doc.content};
+                  ;
+  <div className="flex items-center justify-between">
                     <$2 />;
-to={`/docs/${doc.id}}`}
+to={`/docs/${doc.id}}`};
                       className="inline-flex items-center text-cyan-400 hover:text-white transition-colors">;
 Read More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     <span className="text-gray-500 text-xs">
-                      {doc.category}
-              ))}
-          {/* Getting Started CTA */}
-          <section className="text-center">
+                      {doc.category};
+              ))};
+          {/* Getting Started CTA */};
+          ;
+  <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">;
 Ready to Get Started?
@@ -291,7 +306,7 @@ Request Demo
       </div>
     </React.Fragment>
   ),
-}
+};
 export default DocsPage</Link>
   </Link>
   </p>

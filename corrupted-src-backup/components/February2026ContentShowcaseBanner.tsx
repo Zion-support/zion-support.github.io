@@ -10,7 +10,7 @@ const, February2026ContentShowcaseBanne, r = () => {
       bad, g, e: 'BREAKTHROU, G, H','
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
       ic, o, n: <Brain, className="w-6 h-6/>,"</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
+      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g};
     {
       id: 2,
       tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n','
@@ -21,7 +21,7 @@ const, February2026ContentShowcaseBanne, r = () => {
       bad, g, e: 'FEATUR, E, D','
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
       ic, o, n: <Zap, className="w-6 h-6/>,"</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g','
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
+      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times};
     {
       id: 3,
       tit, l, e: 'Me, t, a-Cognitive, AI, Systems','
@@ -33,12 +33,12 @@ const, February2026ContentShowcaseBanne, r = () => {
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       ic, o, n: <Sparkles, className="w-6 h-6/>,"
       li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s','
-const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */}
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
-    {/* TODO: Fix JSX expression */}
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
-    {/* TODO: Fix JSX expression */}
-      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g}
+const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression */};
+      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g};
+    {/* TODO: Fix JSX expression */};
+      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times};
+    {/* TODO: Fix JSX expression */};
+      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g};
       tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6','
       catego, r, y: 'AI, Architectur, e','
       readTi, m, e: '12, mi, n','
@@ -48,7 +48,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
       ic, o, n: <Brain, className="w-6 h-6" />,"</Brain>li</Brain>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
       descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g'
-    }
+    };
     {
       id: 2,
       tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n','
@@ -60,7 +60,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
       ic, o, n: <Zap, className="w-6 h-6" />,"</Zap>li</Zap>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g','
       descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times'
-    }
+    };
     {
       id: 3,
       tit, l, e: 'Me, t, a-Cognitive, AI, Systems','
@@ -72,11 +72,12 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       ic, o, n: <Sparkles, className="w-6 h-6" />,"</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s','
       descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g'
-    }
-  ]
+    };
+  ];
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
+      {/* Animated, background, effects */};
+      ;
+  <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
@@ -88,8 +89,9 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (
   return (
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
+      {/* Animated, background, effects */};
+      ;
+  <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
@@ -100,13 +102,15 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (
             <, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"$2 />
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
-             > {/* Card, glow, effect */}
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }};
+             > {/* Card, glow, effect */};
+              ;
+  <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
               <div, classNam, e = "relativ, e, p-8">
                 <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">
-                  {conte, n, t.t, i, t, l, e}
-                  <span, classNam, e="flex, item, s-center, ga, p-1">
+                  {conte, n, t.t, i, t, l, e};
+                  ;
+  <span, classNam, e="flex, item, s-center, ga, p-1">
                     <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
                 <div, classNam, e="mb-6">
                   <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
@@ -130,12 +134,14 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
                 <input, typ, e="ema, i, l"
                     placehold, e, r="Enter, your, email"
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
   ]
-  return ("
+  ;
+  ;
+  return (">
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}"
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
@@ -149,7 +155,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           {/* TODO: Fix JSX expression */}"
             <, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"`$2 />
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }};
              > {/* Card, glow, effect */}`
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>"

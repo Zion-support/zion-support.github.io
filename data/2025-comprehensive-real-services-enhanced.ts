@@ -40,8 +40,8 @@ export interface Service {
   benefits: string[];
   marketPrice: string;
   savings: string;
-}
-
+};
+;
 // Micro SAAS Services - Real, Market-Validated Solutions
 export const microSaasServices: Service[] = [
   {
@@ -68,7 +68,7 @@ export const microSaasServices: Service[] = [
           'Up to 1,000 customers',
           'Basic AI features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 499,
@@ -78,7 +78,7 @@ export const microSaasServices: Service[] = [
           'Advanced AI features',
           'Priority support',
           'Custom workflows'
-        ]
+        ];
       },
       enterprise: {
         price: 1299,
@@ -88,8 +88,8 @@ export const microSaasServices: Service[] = [
           'Full AI platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Customer Success',
     tags: ['Customer Success', 'AI', 'Churn Prediction', 'Engagement', 'Analytics'],
@@ -139,7 +139,7 @@ export const microSaasServices: Service[] = [
           'Basic optimization features',
           'Standard analytics',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 799,
@@ -149,7 +149,7 @@ export const microSaasServices: Service[] = [
           'Quantum algorithms',
           'Priority support',
           'Custom modeling'
-        ]
+        ];
       },
       enterprise: {
         price: 1999,
@@ -159,8 +159,8 @@ export const microSaasServices: Service[] = [
           'Custom algorithms',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Supply Chain',
     tags: ['Supply Chain', 'Quantum Computing', 'Logistics', 'Optimization', 'Analytics'],
@@ -210,7 +210,7 @@ export const microSaasServices: Service[] = [
           'Up to 1,000 verifications',
           'Basic verification features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 399,
@@ -220,7 +220,7 @@ export const microSaasServices: Service[] = [
           'Advanced verification features',
           'Priority support',
           'Custom workflows'
-        ]
+        ];
       },
       enterprise: {
         price: 999,
@@ -230,8 +230,8 @@ export const microSaasServices: Service[] = [
           'Full verification platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Identity Verification',
     tags: ['Identity Verification', 'Blockchain', 'Biometrics', 'Security', 'Compliance'],
@@ -281,7 +281,7 @@ export const microSaasServices: Service[] = [
           'Up to 500 employees',
           'Basic analytics features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 649,
@@ -291,7 +291,7 @@ export const microSaasServices: Service[] = [
           'Advanced analytics features',
           'Priority support',
           'Custom reporting'
-        ]
+        ];
       },
       enterprise: {
         price: 1699,
@@ -301,8 +301,8 @@ export const microSaasServices: Service[] = [
           'Full analytics platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'HR Analytics',
     tags: ['HR Analytics', 'AI', 'Performance Management', 'Employee Engagement', 'Predictive Analytics'],
@@ -352,7 +352,7 @@ export const microSaasServices: Service[] = [
           'Basic risk management',
           'Standard analytics',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 999,
@@ -362,7 +362,7 @@ export const microSaasServices: Service[] = [
           'Quantum algorithms',
           'Priority support',
           'Custom models'
-        ]
+        ];
       },
       enterprise: {
         price: 2499,
@@ -372,8 +372,8 @@ export const microSaasServices: Service[] = [
           'Custom algorithms',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Financial Risk Management',
     tags: ['Risk Management', 'Quantum Computing', 'Financial Analytics', 'Portfolio Optimization', 'Compliance'],
@@ -423,7 +423,7 @@ export const microSaasServices: Service[] = [
           'Up to 100 content pieces',
           'Basic AI features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 299,
@@ -433,7 +433,7 @@ export const microSaasServices: Service[] = [
           'Advanced AI features',
           'Priority support',
           'Custom templates'
-        ]
+        ];
       },
       enterprise: {
         price: 799,
@@ -443,8 +443,8 @@ export const microSaasServices: Service[] = [
           'Full AI platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Content Creation',
     tags: ['Content Creation', 'AI', 'Marketing', 'Social Media', 'SEO'],
@@ -494,7 +494,7 @@ export const microSaasServices: Service[] = [
           'Up to 1,000 SKUs',
           'Basic forecasting',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 449,
@@ -504,7 +504,7 @@ export const microSaasServices: Service[] = [
           'Advanced AI features',
           'Priority support',
           'Custom integrations'
-        ]
+        ];
       },
       enterprise: {
         price: 1199,
@@ -514,8 +514,8 @@ export const microSaasServices: Service[] = [
           'Full AI platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Inventory Management',
     tags: ['Inventory Management', 'AI', 'Supply Chain', 'Retail', 'E-commerce'],
@@ -565,7 +565,7 @@ export const microSaasServices: Service[] = [
           'Up to 10,000 subscribers',
           'Basic automation',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 199,
@@ -575,7 +575,7 @@ export const microSaasServices: Service[] = [
           'Advanced AI features',
           'Priority support',
           'Custom templates'
-        ]
+        ];
       },
       enterprise: {
         price: 499,
@@ -585,8 +585,8 @@ export const microSaasServices: Service[] = [
           'Full AI platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Email Marketing',
     tags: ['Email Marketing', 'AI', 'Automation', 'Personalization', 'Analytics'],
@@ -636,7 +636,7 @@ export const microSaasServices: Service[] = [
           'Up to 5 social accounts',
           'Basic AI features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 399,
@@ -646,7 +646,7 @@ export const microSaasServices: Service[] = [
           'Advanced AI features',
           'Priority support',
           'Custom analytics'
-        ]
+        ];
       },
       enterprise: {
         price: 999,
@@ -656,8 +656,8 @@ export const microSaasServices: Service[] = [
           'Full AI platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Social Media Management',
     tags: ['Social Media', 'AI', 'Content Creation', 'Analytics', 'Automation'],
@@ -707,7 +707,7 @@ export const microSaasServices: Service[] = [
           'Up to 10 projects',
           'Basic AI features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 499,
@@ -717,7 +717,7 @@ export const microSaasServices: Service[] = [
           'Advanced AI features',
           'Priority support',
           'Custom workflows'
-        ]
+        ];
       },
       enterprise: {
         price: 1299,
@@ -727,8 +727,8 @@ export const microSaasServices: Service[] = [
           'Full AI platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Project Management',
     tags: ['Project Management', 'AI', 'Resource Planning', 'Risk Management', 'Collaboration'],
@@ -753,7 +753,7 @@ export const microSaasServices: Service[] = [
     benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
     marketPrice: '$299',
     savings: '33%'
-  }
+  };
 ];
 
 // AI Services - Advanced Enterprise Solutions
@@ -782,7 +782,7 @@ export const aiServices: Service[] = [
           'Up to 10 models',
           'Basic MLOps features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 5000,
@@ -792,7 +792,7 @@ export const aiServices: Service[] = [
           'Advanced MLOps features',
           'Priority support',
           'Custom integrations'
-        ]
+        ];
       },
       enterprise: {
         price: 15000,
@@ -802,8 +802,8 @@ export const aiServices: Service[] = [
           'Full MLOps platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Machine Learning',
     tags: ['Machine Learning', 'MLOps', 'AI', 'Data Science', 'Model Management'],
@@ -853,7 +853,7 @@ export const aiServices: Service[] = [
           'Up to 100K API calls',
           'Basic NLP features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 3500,
@@ -863,7 +863,7 @@ export const aiServices: Service[] = [
           'Advanced NLP features',
           'Priority support',
           'Custom models'
-        ]
+        ];
       },
       enterprise: {
         price: 8000,
@@ -873,8 +873,8 @@ export const aiServices: Service[] = [
           'Full NLP platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Natural Language Processing',
     tags: ['NLP', 'Text Analysis', 'AI', 'Language Processing', 'Conversational AI'],
@@ -924,7 +924,7 @@ export const aiServices: Service[] = [
           'Up to 10K images/month',
           'Basic CV features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 4500,
@@ -934,7 +934,7 @@ export const aiServices: Service[] = [
           'Advanced CV features',
           'Priority support',
           'Custom models'
-        ]
+        ];
       },
       enterprise: {
         price: 10000,
@@ -944,8 +944,8 @@ export const aiServices: Service[] = [
           'Full CV platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Computer Vision',
     tags: ['Computer Vision', 'Image Analysis', 'AI', 'Object Detection', 'Visual Recognition'],
@@ -995,7 +995,7 @@ export const aiServices: Service[] = [
           'Basic threat detection',
           'Standard monitoring',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 5500,
@@ -1005,7 +1005,7 @@ export const aiServices: Service[] = [
           'AI-powered analysis',
           'Priority support',
           'Custom rules'
-        ]
+        ];
       },
       enterprise: {
         price: 12000,
@@ -1015,8 +1015,8 @@ export const aiServices: Service[] = [
           'Custom AI models',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Cybersecurity',
     tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security', 'Compliance'],
@@ -1066,7 +1066,7 @@ export const aiServices: Service[] = [
           'Basic diagnostic features',
           'Standard analytics',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 7000,
@@ -1076,7 +1076,7 @@ export const aiServices: Service[] = [
           'AI-powered analysis',
           'Priority support',
           'Custom models'
-        ]
+        ];
       },
       enterprise: {
         price: 15000,
@@ -1086,8 +1086,8 @@ export const aiServices: Service[] = [
           'Custom AI models',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Healthcare AI',
     tags: ['Healthcare', 'AI', 'Medical Imaging', 'Diagnostics', 'Clinical Decision Support'],
@@ -1112,7 +1112,7 @@ export const aiServices: Service[] = [
     benefits: ['Improved accuracy', 'Faster diagnosis', 'Better outcomes'],
     marketPrice: '$6000',
     savings: '42%'
-  }
+  };
 ];
 
 // IT Services - Infrastructure and Support
@@ -1141,7 +1141,7 @@ export const itServices: Service[] = [
           'Basic migration support',
           'Standard monitoring',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 3000,
@@ -1150,7 +1150,7 @@ export const itServices: Service[] = [
           'Advanced migration features',
           'Priority support',
           'Custom configurations'
-        ]
+        ];
       },
       enterprise: {
         price: 8000,
@@ -1159,8 +1159,8 @@ export const itServices: Service[] = [
           'Full migration platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Cloud Services',
     tags: ['Cloud Migration', 'Infrastructure', 'AWS', 'Azure', 'GCP'],
@@ -1210,7 +1210,7 @@ export const itServices: Service[] = [
           'Basic security services',
           'Standard monitoring',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 4500,
@@ -1219,7 +1219,7 @@ export const itServices: Service[] = [
           'Advanced security features',
           'Priority support',
           'Custom security policies'
-        ]
+        ];
       },
       enterprise: {
         price: 10000,
@@ -1228,8 +1228,8 @@ export const itServices: Service[] = [
           'Full security platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Cybersecurity',
     tags: ['Cybersecurity', 'Security', 'Compliance', 'Threat Detection', 'Incident Response'],
@@ -1279,7 +1279,7 @@ export const itServices: Service[] = [
           'Basic infrastructure support',
           'Standard monitoring',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 3500,
@@ -1288,7 +1288,7 @@ export const itServices: Service[] = [
           'Advanced infrastructure features',
           'Priority support',
           'Custom configurations'
-        ]
+        ];
       },
       enterprise: {
         price: 8000,
@@ -1297,8 +1297,8 @@ export const itServices: Service[] = [
           'Full infrastructure platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Infrastructure Management',
     tags: ['Infrastructure', 'Server Management', 'Network Management', 'Database Administration', 'Monitoring'],
@@ -1348,7 +1348,7 @@ export const itServices: Service[] = [
           'Basic CI/CD setup',
           'Standard monitoring',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 3200,
@@ -1357,7 +1357,7 @@ export const itServices: Service[] = [
           'Advanced CI/CD features',
           'Priority support',
           'Custom integrations'
-        ]
+        ];
       },
       enterprise: {
         price: 7500,
@@ -1366,8 +1366,8 @@ export const itServices: Service[] = [
           'Full DevOps platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'DevOps',
     tags: ['DevOps', 'CI/CD', 'Automation', 'Containers', 'Infrastructure as Code'],
@@ -1417,7 +1417,7 @@ export const itServices: Service[] = [
           'Basic database support',
           'Standard monitoring',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 2400,
@@ -1426,7 +1426,7 @@ export const itServices: Service[] = [
           'Advanced database features',
           'Priority support',
           'Custom configurations'
-        ]
+        ];
       },
       enterprise: {
         price: 5500,
@@ -1435,8 +1435,8 @@ export const itServices: Service[] = [
           'Full database platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Database Services',
     tags: ['Database', 'SQL', 'NoSQL', 'Performance Tuning', 'Data Management'],
@@ -1461,7 +1461,7 @@ export const itServices: Service[] = [
     benefits: ['Optimized performance', 'Data security', 'Reliable backups'],
     marketPrice: '$2200',
     savings: '45%'
-  }
+  };
 ];
 
 // Specialized Services - Advanced Solutions
@@ -1490,7 +1490,7 @@ export const specializedServices: Service[] = [
           'Basic BI features',
           'Standard analytics',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 5000,
@@ -1500,7 +1500,7 @@ export const specializedServices: Service[] = [
           'AI-powered insights',
           'Priority support',
           'Custom dashboards'
-        ]
+        ];
       },
       enterprise: {
         price: 12000,
@@ -1510,8 +1510,8 @@ export const specializedServices: Service[] = [
           'Custom AI models',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Business Intelligence',
     tags: ['Business Intelligence', 'AI', 'Analytics', 'Data Visualization', 'Predictive Analytics'],
@@ -1561,7 +1561,7 @@ export const specializedServices: Service[] = [
           'Basic blockchain features',
           'Standard development',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 6000,
@@ -1570,7 +1570,7 @@ export const specializedServices: Service[] = [
           'Advanced blockchain features',
           'Priority support',
           'Custom solutions'
-        ]
+        ];
       },
       enterprise: {
         price: 15000,
@@ -1579,8 +1579,8 @@ export const specializedServices: Service[] = [
           'Full blockchain platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Blockchain & Web3',
     tags: ['Blockchain', 'Web3', 'Smart Contracts', 'DeFi', 'NFTs'],
@@ -1630,7 +1630,7 @@ export const specializedServices: Service[] = [
           'Basic IoT features',
           'Standard edge computing',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 4500,
@@ -1639,7 +1639,7 @@ export const specializedServices: Service[] = [
           'Advanced IoT features',
           'Priority support',
           'Custom integrations'
-        ]
+        ];
       },
       enterprise: {
         price: 10000,
@@ -1648,8 +1648,8 @@ export const specializedServices: Service[] = [
           'Full IoT platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'IoT & Edge Computing',
     tags: ['IoT', 'Edge Computing', 'Real-time Processing', 'Device Management', 'Automation'],
@@ -1699,7 +1699,7 @@ export const specializedServices: Service[] = [
           'Basic app development',
           'Standard features',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 3500,
@@ -1708,7 +1708,7 @@ export const specializedServices: Service[] = [
           'Advanced app features',
           'Priority support',
           'Custom integrations'
-        ]
+        ];
       },
       enterprise: {
         price: 8000,
@@ -1717,8 +1717,8 @@ export const specializedServices: Service[] = [
           'Full app platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'Mobile Development',
     tags: ['Mobile Development', 'iOS', 'Android', 'Cross-platform', 'AI Integration'],
@@ -1768,7 +1768,7 @@ export const specializedServices: Service[] = [
           'Basic e-commerce features',
           'Standard analytics',
           'Email support'
-        ]
+        ];
       },
       professional: {
         price: 4000,
@@ -1777,7 +1777,7 @@ export const specializedServices: Service[] = [
           'Advanced e-commerce features',
           'Priority support',
           'Custom integrations'
-        ]
+        ];
       },
       enterprise: {
         price: 9000,
@@ -1786,8 +1786,8 @@ export const specializedServices: Service[] = [
           'Full e-commerce platform',
           'Dedicated specialists',
           '24/7 support'
-        ]
-      }
+        ];
+      };
     },
     category: 'E-commerce',
     tags: ['E-commerce', 'Online Store', 'Payment Integration', 'AI Recommendations', 'Analytics'],
@@ -1812,7 +1812,7 @@ export const specializedServices: Service[] = [
     benefits: ['Increased sales', 'Better user experience', 'AI-powered recommendations'],
     marketPrice: '$3500',
     savings: '43%'
-  }
+  };
 ];
 
 // Export all services combined

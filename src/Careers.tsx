@@ -14,7 +14,7 @@ id: 'all',;,
 name: 'All Departments',;,
 icon: Users,;,
 color: 'from-purple-500 to-pink-500'
-}
+};
     },
     {;,
 id: 'ai-research',;,
@@ -45,7 +45,7 @@ id: 'cloud',;,
 name: 'Cloud & Infrastructure',;,
 icon: Cloud,;,
 color: 'from-green-500 to-emerald-500'
-    }
+    };
 import { Link; } from 'react-router-dom';
 import { Link; } from 'react-router-dom';
 import React;, { useState } from 'react';
@@ -99,7 +99,7 @@ const [selectedDepartment, setSelectedDepartment] = useState('all');
 const [selectedLocation, setSelectedLocation] = useState('all');
 const [selectedType, setSelectedType] = useState('all');
 const departments = [;
-}
+};
     { id: 'all', name: 'All Departments', count: 24, icon: Building2 },
     { id: 'engineering', name: 'Engineering', count: 12, icon: Code },
     { id: 'ai-ml', name: 'AI & Machine Learning', count: 6, icon: Brain },
@@ -107,19 +107,19 @@ const departments = [;
     { id: 'quantum', name: 'Quantum Technology', count: 3, icon: Zap },
     { id: 'sales', name: 'Sales & Business Development', count: 5, icon: Target },
     { id: 'marketing', name: 'Marketing', count: 3, icon: Lightbulb },
-    { id: 'operations', name: 'Operations', count: 2, icon: Settings }
+    { id: 'operations', name: 'Operations', count: 2, icon: Settings };
   ];
 const locations = [;
     { id: 'all', name: 'All Locations', count: 24 },
     { id: 'remote', name: 'Remote', count: 18 },
     { id: 'middletown-de', name: 'Middletown, DE', count: 4 },
-    { id: 'new-york', name: 'New York, NY', count: 2 }
+    { id: 'new-york', name: 'New York, NY', count: 2 };
   ];
 const jobTypes = [;
     { id: 'all', name: 'All Types', count: 24 },
     { id: 'full-time', name: 'Full-time', count: 20 },
     { id: 'part-time', name: 'Part-time', count: 2 },
-    { id: 'contract', name: 'Contract', count: 2 }
+    { id: 'contract', name: 'Contract', count: 2 };
 import { motion; } from 'framer-motion';
 import {;;
 Briefcase,;
@@ -148,24 +148,24 @@ const [selectedDepartment, setSelectedDepartment] = useState('all');
 const [selectedLocation, setSelectedLocation] = useState('all');
 const [selectedType, setSelectedType] = useState('all');
 const departments = [;
-}
+};
     { id: 'all', name: 'All Departments', count: 23 },
     { id: 'engineering', name: 'Engineering', count: 12 },
     { id: 'ai-research', name: 'AI Research', count: 6 },
     { id: 'sales', name: 'Sales & Business', count: 3 },
-    { id: 'marketing', name: 'Marketing', count: 2 }
+    { id: 'marketing', name: 'Marketing', count: 2 };
   ];
 const locations = [;
     { id: 'all', name: 'All Locations', count: 23 },
     { id: 'middletown', name: 'Middletown, DE', count: 15 },
     { id: 'remote', name: 'Remote', count: 6 },
-    { id: 'amsterdam', name: 'Amsterdam, NL', count: 2 }
+    { id: 'amsterdam', name: 'Amsterdam, NL', count: 2 };
   ];
 const jobTypes = [;
     { id: 'all', name: 'All Types', count: 23 },
     { id: 'full-time', name: 'Full Time', count: 18 },
     { id: 'part-time', name: 'Part Time', count: 3 },
-    { id: 'contract', name: 'Contract', count: 2 }
+    { id: 'contract', name: 'Contract', count: 2 };
   ];
 const openPositions = [;
     {;,
@@ -235,16 +235,17 @@ import FuturisticNeonButton from '../components/ui/FuturisticNeonButton';;
 import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground';;
 import { SEO; } from '../components/SEO';
 const Careers: React.FC = () => {;
+
 const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
 const [isApplying, setIsApplying] = useState<string | null>(null);
 const departments = [;
-}
+};
     { id: 'all', name: 'All Departments', color: 'from-zion-cyan to-zion-blue' },
     { id: 'engineering', name: 'Engineering', color: 'from-purple-500 to-pink-500' },
     { id: 'ai', name: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
     { id: 'design', name: 'Design', color: 'from-green-500 to-emerald-500' },
     { id: 'sales', name: 'Sales & Marketing', color: 'from-yellow-500 to-orange-500' },
-    { id: 'operations', name: 'Operations', color: 'from-red-500 to-pink-500' }
+    { id: 'operations', name: 'Operations', color: 'from-red-500 to-pink-500' };
 import {;;
 MapPin,;
 Clock,;
@@ -317,7 +318,7 @@ benefits: [
 icon: Brain,;,
 urgent: true,;,
 postedDate: "2024-12-15"
-}
+};
     },
     {;,
 id: 2,;,
@@ -517,7 +518,7 @@ benefits: [
         "Learning and development"
       ],;,
 urgent: false
-    }
+    };
   ];
 const companyValues = [;
     {;,
@@ -539,7 +540,7 @@ icon: Globe
 title: "Continuous Learning",;,
 description: "We foster a culture of curiosity and skill development",;,
 icon: BookOpen
-    }
+    };
   ];,
 id: 1,;,
 title: "Senior AI Research Engineer",;,
@@ -737,7 +738,7 @@ benefits: [
 salary: "$80,000 - $120,000 + commission",;,
 urgent: false,;,
 postedDate: "2025-01-03"
-    }
+    };
   ];
 const companyValues = [;
     {;,
@@ -768,14 +769,14 @@ import { Link; } from 'react-router-dom';
 export default function Careers() {;
 const openPositions = [;
     {;,
-}
+};
 title: 'Senior AI Engineer'},;,
 department: 'AI & Machine Learning',;,
 location: 'Remote / Middletown, DE',;,
 type: 'Full-time',;,
 experience: '5+ years',;,
 description: 'Lead the development of cutting-edge AI solutions and autonomous systems.',;,
-skills: ['Python', 'TensorFlow', 'PyTorch', 'MLOps', 'Cloud Platforms']
+skills: ['Python', 'TensorFlow', 'PyTorch', 'MLOps', 'Cloud Platforms'];
     },
     {;,
 title: 'Cybersecurity Specialist',;,
@@ -784,7 +785,7 @@ location: 'Remote / Middletown, DE',;,
 type: 'Full-time',;,
 experience: '3+ years',;,
 description: 'Protect our clients with advanced cybersecurity solutions and quantum-safe security.',;,
-skills: ['Network Security', 'Penetration Testing', 'Compliance', 'Incident Response']
+skills: ['Network Security', 'Penetration Testing', 'Compliance', 'Incident Response'];
     },
     {;,
 title: 'Full-Stack Developer',;,
@@ -793,7 +794,7 @@ location: 'Remote / Middletown, DE',;,
 type: 'Full-time',;,
 experience: '3+ years',;,
 description: 'Build scalable web applications and microservices for our clients.',;,
-skills: ['React', 'Node.js', 'Python', 'AWS', 'Docker']
+skills: ['React', 'Node.js', 'Python', 'AWS', 'Docker'];
     },
     {;,
 title: 'Quantum Computing Researcher',;,
@@ -802,7 +803,7 @@ location: 'Remote / Middletown, DE',;,
 type: 'Full-time',;,
 experience: 'PhD or 5+ years',;,
 description: 'Pioneer quantum computing solutions and quantum-safe cryptography.',;,
-skills: ['Quantum Algorithms', 'Qiskit', 'Quantum Cryptography', 'Research']
+skills: ['Quantum Algorithms', 'Qiskit', 'Quantum Cryptography', 'Research'];
     },
     {;,
 title: 'DevOps Engineer',;,
@@ -811,7 +812,7 @@ location: 'Remote / Middletown, DE',;,
 type: 'Full-time',;,
 experience: '3+ years',;,
 description: 'Automate and optimize our cloud infrastructure and deployment pipelines.',;,
-skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Monitoring']
+skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Monitoring'];
     },
     {;,
 title: 'AI Solutions Architect',;,
@@ -820,8 +821,8 @@ location: 'Remote / Middletown, DE',;,
 type: 'Full-time',;,
 experience: '7+ years',;,
 description: 'Design and implement AI solutions for enterprise clients.',;,
-skills: ['Solution Architecture', 'AI/ML', 'Enterprise Integration', 'Consulting']
-    }
+skills: ['Solution Architecture', 'AI/ML', 'Enterprise Integration', 'Consulting'];
+    };
   ];
 const benefits = [;
     {;,
@@ -840,7 +841,7 @@ benefits: [
         'Latest tools and technology',
         'Collaborative team culture',
         'Career advancement paths'
-      ]
+      ];
     },
     {;,
 id: 'ui-ux-designer',;,
@@ -864,7 +865,7 @@ benefits: [
         'Collaboration with cross-functional teams',
         'Professional development opportunities',
         'Competitive compensation package'
-      ]
+      ];
     },
     {;,
 id: 'sales-director',;,
@@ -888,8 +889,8 @@ benefits: [
         'High-growth company environment',
         'Competitive base salary',
         'Performance-based bonuses'
-      ]
-    }
+      ];
+    };
   ];
 const filteredPositions = openPositions.filter(position => {;;
 const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment;;
@@ -899,7 +900,7 @@ const matchesSearch = searchQuery === '' ||;;
 position.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 position.description.toLowerCase().includes(searchQuery.toLowerCase());
 return matchesDepartment && matchesLocation && matchesType && matchesSearch;
-}
+};
   });
 const featuredPositions = filteredPositions.filter(position => position.featured);;
 const regularPositions = filteredPositions.filter(position => !position.featured);;
@@ -907,11 +908,12 @@ const filteredJobs = jobOpenings.filter(job => {;;
 const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;;
 const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;;
 return matchesDepartment && matchesLocation;
-}
+};
   })
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20"></div>
         <div className="relative container mx-auto px-4 py-24">
           <div className="text-center max-w-4xl mx-auto">
@@ -939,12 +941,14 @@ Help us build solutions that transform businesses and shape the future of techno
             </div>;
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
@@ -959,15 +963,16 @@ Be part of a team that's pushing the boundaries of AI, quantum technology, and c
 Help us build solutions that will shape the future of business and technology.
             </p>
             
-            {/* Search Bar */}
-            <div className="relative max-w-2xl mx-auto mb-8">
+            {/* Search Bar */};
+            ;
+  <div className="relative max-w-2xl mx-auto mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
               <input;
 type="text";
 placeholder="Search for jobs, departments, or skills...";
-value={searchQuery}
+value={searchQuery};
                 onChange={(e) =>
-  </input> setSearchQuery(e.target.value)}
+  </input> setSearchQuery(e.target.value)};
                 className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
@@ -988,9 +993,9 @@ Learn About Us
               </Link>
             </div>
           <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.6}}}
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.6}}};
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4 mr-2" />;
@@ -1003,16 +1008,17 @@ Build the Future with Us
 Join our team of innovators, researchers, and technology leaders who are shaping the future of AI, quantum computing, and enterprise technology.
             </p>
             
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
+            {/* Search Bar */};
+            ;
+  <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
 type="text";
 placeholder="Search for positions, skills, or keywords...";
-value={searchQuery}
+value={searchQuery};
                   onChange={(e) =>
-  </input> setSearchQuery(e.target.value)}
+  </input> setSearchQuery(e.target.value)};
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
                 />
               </div>
@@ -1021,58 +1027,67 @@ value={searchQuery}
         </div>
       </section>
 
-      {/* Filters Section */}
-      <section className="pb-12 px-4 sm:px-6 lg:px-8">
+      {/* Filters Section */};
+      ;
+  <section className="pb-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
-            {/* Departments */}
-            <div className="flex flex-wrap gap-3">
+            {/* Departments */};
+            ;
+  <div className="flex flex-wrap gap-3">
               {departments.map((dept) => (
                 <$2 />;
-key={dept.id}
-                  onClick={() => setSelectedDepartment(dept.id)}
+key={dept.id};
+                  onClick={() => setSelectedDepartment(dept.id)};
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${};
 selectedDepartment === dept.id
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`}
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`};
                 >
-                  {dept.name}
-                  <span className="ml-2 px-2 py-1 bg-gray-700/50 rounded-full text-xs">
-                    {dept.count}
-                  </span>
+                  {dept.name};
+                  ;
+  <span className="ml-2 px-2 py-1 bg-gray-700/50 rounded-full text-xs">
+                    {dept.count};
+                  ;
+  </span>
                 </button>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
 
-            {/* Locations & Types */}
-            <div className="flex flex-wrap gap-2">
+            {/* Locations & Types */};
+            ;
+  <div className="flex flex-wrap gap-2">
               {locations.map((location) => (
                 <$2 />;
-key={location.id}
-                  onClick={() => setSelectedLocation(location.id)}
+key={location.id};
+                  onClick={() => setSelectedLocation(location.id)};
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${};
 selectedLocation === location.id
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`}
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`};
                 >
-                  {location.name}
-                  <span className="ml-1 text-xs opacity-75">({location.count})</span>
+                  {location.name};
+                  ;
+  <span className="ml-1 text-xs opacity-75">({location.count})</span>
                 </button>
-              ))}
+              ))};
               {jobTypes.map((type) => (
                 <$2 />;
-key={type.id}
-                  onClick={() => setSelectedType(type.id)}
+key={type.id};
+                  onClick={() => setSelectedType(type.id)};
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${};
 selectedType === type.id
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`}
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`};
                 >
-                  {type.name}
-                  <span className="ml-1 text-xs opacity-75">({type.count})</span>
+                  {type.name};
+                  ;
+  <span className="ml-1 text-xs opacity-75">({type.count})</span>
                 </button>
-              ))}
-            </div>;
+              ))};
+            ;
+  </div>;
 import { Link; } from 'react-router-dom';
 import {;;
 Users,;
@@ -1125,8 +1140,8 @@ benefits: [
         'Health, dental, and vision insurance',
         'Professional development budget',
         'Unlimited PTO'
-      ]
-}
+      ];
+};
     },
     {;,
 id: 2,;,
@@ -1150,7 +1165,7 @@ benefits: [
         'Conference attendance and research opportunities',
         'Health, dental, and vision insurance',
         'Flexible work arrangements'
-      ]
+      ];
     },
     {;,
 id: 3,;,
@@ -1174,7 +1189,7 @@ benefits: [
         'Creative freedom and ownership',
         'Health, dental, and vision insurance',
         'Professional development opportunities'
-      ]
+      ];
     },
     {;,
 id: 4,;,
@@ -1198,7 +1213,7 @@ benefits: [
         'Flexible remote work options',
         'Health, dental, and vision insurance',
         'Professional development budget'
-      ]
+      ];
     },
     {;,
 id: 5,;,
@@ -1222,8 +1237,8 @@ benefits: [
         'Customer interaction and market research',
         'Health, dental, and vision insurance',
         'Professional development opportunities'
-      ]
-    }
+      ];
+    };
   ];
 const filteredJobs = jobListings.filter(job => {;;
 const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;;
@@ -1231,7 +1246,7 @@ const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase())
 job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 job.department.toLowerCase().includes(searchTerm.toLowerCase());
 return matchesDepartment && matchesSearch;
-}
+};
   });
 const companyValues = [;
     {;,
@@ -1497,7 +1512,7 @@ benefits: [
       ],;,
 featured: false,;,
 postedDate: "2025-01-03"
-    }
+    };
   ];
 const filteredJobs = jobOpenings.filter(job => {;;
 const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;;
@@ -1506,7 +1521,7 @@ job.department.toLowerCase().includes(searchTerm.toLowerCase());
 const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;;
 const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;;
 return matchesSearch && matchesDepartment && matchesLocation;
-}
+};
   });
 const featuredJobs = filteredJobs.filter(job => job.featured);;
 const regularJobs = filteredJobs.filter(job => !job.featured);;
@@ -1516,9 +1531,11 @@ return date.toLocaleDateString('en-US';, {;,
 year: 'numeric',;,
 month: 'long',;,
 day: 'numeric' 
-}
+};
     })
   }
+  ;
+  ;
   const companyValues = [;
     {;,
 title: "Innovation First",;,
@@ -1539,7 +1556,7 @@ icon: Users
 title: "Integrity",;,
 description: "We maintain the highest ethical standards in all our interactions",;,
 icon: Shield
-    }
+    };
   ];
 const benefits = [;
     {;,
@@ -1592,14 +1609,14 @@ Lightbulb
 const Careers = () => {;;
 const openPositions = [;
     {;,
-}
+};
 title: "Senior AI Engineer"},;,
 department: "Artificial Intelligence",;,
 location: "Remote / Wilmington, DE",;,
 type: "Full-time",;,
 experience: "5+ years",;,
 description: "Lead development of cutting-edge AI solutions and machine learning models for enterprise clients.",;,
-skills: ["Python", "TensorFlow", "PyTorch", "MLOps", "Cloud Platforms"]
+skills: ["Python", "TensorFlow", "PyTorch", "MLOps", "Cloud Platforms"];
     },
     {;,
 title: "Cloud Solutions Architect",;,
@@ -1608,7 +1625,7 @@ location: "Remote / Wilmington, DE",;,
 type: "Full-time",;,
 experience: "7+ years",;,
 description: "Design and implement scalable cloud infrastructure solutions for enterprise applications.",;,
-skills: ["AWS", "Azure", "Kubernetes", "Terraform", "CI/CD"]
+skills: ["AWS", "Azure", "Kubernetes", "Terraform", "CI/CD"];
     },
     {;,
 title: "Cybersecurity Specialist",;,
@@ -1617,7 +1634,7 @@ location: "Remote / Wilmington, DE",;,
 type: "Full-time",;,
 experience: "4+ years",;,
 description: "Protect client systems and data through advanced security measures and threat detection.",;,
-skills: ["Penetration Testing", "SIEM", "Compliance", "Incident Response"]
+skills: ["Penetration Testing", "SIEM", "Compliance", "Incident Response"];
     },
     {;,
 title: "Full Stack Developer",;,
@@ -1626,7 +1643,7 @@ location: "Remote / Wilmington, DE",;,
 type: "Full-time",;,
 experience: "3+ years",;,
 description: "Build modern, responsive web applications using cutting-edge technologies.",;,
-skills: ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker"]
+skills: ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker"];
     },
     {;,
 title: "Data Scientist",;,
@@ -1635,7 +1652,7 @@ location: "Remote / Wilmington, DE",;,
 type: "Full-time",;,
 experience: "4+ years",;,
 description: "Transform raw data into actionable insights for business decision-making.",;,
-skills: ["Python", "R", "SQL", "Tableau", "Machine Learning"]
+skills: ["Python", "R", "SQL", "Tableau", "Machine Learning"];
     },
     {;,
 title: "DevOps Engineer",;,
@@ -1644,8 +1661,8 @@ location: "Remote / Wilmington, DE",;,
 type: "Full-time",;,
 experience: "3+ years",;,
 description: "Automate and optimize development and deployment processes.",;,
-skills: ["Docker", "Kubernetes", "Jenkins", "Ansible", "Monitoring"]
-    }
+skills: ["Docker", "Kubernetes", "Jenkins", "Ansible", "Monitoring"];
+    };
   ];
 const benefits = [;
     {;,
@@ -1677,7 +1694,7 @@ description: "Clear career progression paths and mentorship"
 icon: "🎉",;,
 title: "Team Events",;,
 description: "Regular team building and social activities"
-    }
+    };
   ];
 const values = [;
     {;,
@@ -1712,13 +1729,13 @@ icon: Brain
 title: "Health & Wellness",;,
 description: "Comprehensive health, dental, and vision coverage",;,
 icon: Shield
-    }
+    };
   ];
 return (;
     <>
       <SEO;
 title="Careers at Zion - Join Our Team";
-description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
+description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform.">
     
       <SEO;
 title="Careers at Zion - Join Our Team";
@@ -1754,8 +1771,9 @@ Contact Us
         </div>
       </section>
 
-      {/* Company Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      {/* Company Values */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">;
@@ -1767,8 +1785,9 @@ These core principles guide everything we do and shape our company culture.
           </div>
           
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+      {/* Header Section */};
+      ;
+  <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">;
 Join Our Team
@@ -1787,8 +1806,9 @@ Submit Application
         </div>
       </div>
 
-      {/* Values Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+      {/* Values Section */};
+      ;
+  <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -1802,14 +1822,18 @@ The principles that guide everything we do
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value), index) => (
               <div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-3">{value.title};
+  </h3>
+                <p className="text-gray-300">{value.description};
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
-      {/* Benefits Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Benefits Section */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Why Work With Us</h2>
           <p className="text-zion-slate-light text-lg">;
@@ -1818,8 +1842,9 @@ We invest in our people because they're our greatest asset
         </div>
       </section>
 
-      {/* Job Openings */}
-      <section id="openings" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      {/* Job Openings */};
+      ;
+  <section id="openings" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">;
@@ -1830,25 +1855,29 @@ Find the perfect role for your skills and career goals.
             </p>
           </div>
 
-          {/* Department Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {/* Department Filter */};
+          ;
+  <div className="flex flex-wrap justify-center gap-3 mb-12">
             {departments.map((dept) => (
               <$2 />;
-key={dept.id}
-                onClick={() => setSelectedDepartment(dept.id)}
+key={dept.id};
+                onClick={() => setSelectedDepartment(dept.id)};
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${};
 selectedDepartment === dept.id
                     ? 'border-purple-500 bg-purple-500/20 text-purple-400'
-                    : 'border-gray-700 text-gray-300 hover:border-purple-500/50 hover:text-purple-400'}`}
+                    : 'border-gray-700 text-gray-300 hover:border-purple-500/50 hover:text-purple-400'}`};
               >
                 <dept.icon className="w-4 h-4" />
-                <span>{dept.name}</span>
+                <span>{dept.name};
+  </span>
                 <span className="text-xs bg-gray-700 px-2 py-1 rounded-full">
-                  {dept.count}
-                </span>
+                  {dept.count};
+                ;
+  </span>
               </button>
-            ))}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            ))};
+          ;
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
               <p className="text-zion-slate-light text-lg mb-6">;
@@ -1880,38 +1909,45 @@ className="object-cover w-full h-full"
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                   <div className="mb-4 lg:mb-0">
                     <div className="flex items-center space-x-3 mb-2">
-                      <h3 className="text-2xl font-bold">{job.title}</h3>
+                      <h3 className="text-2xl font-bold">{job.title};
+  </h3>
                       {job.urgent && (
                         <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full border border-red-500/30">;
 Urgent
                         </span>
-                      )}
-                    </div>
+                      )};
+                    ;
+  </div>
                     <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
                       <div className="flex items-center space-x-1">
                         <Building className="w-4 h-4" />
-                        <span>{departments.find(d => d.id === job.department)?.name}</span>
+                        <span>{departments.find(d => d.id === job.department)?.name};
+  </span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <MapPin className="w-4 h-4" />
-                        <span>{job.location}</span>
+                        <span>{job.location};
+  </span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <Clock className="w-4 h-4" />
-                        <span>{job.type}</span>
+                        <span>{job.type};
+  </span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <Briefcase className="w-4 h-4" />
-                        <span>{job.experience}</span>
+                        <span>{job.experience};
+  </span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <DollarSign className="w-4 h-4" />
-                        <span>{job.salary}</span>
+                        <span>{job.salary};
+  </span>
                       </div>
                     </div>
                   </div>
                   <$2 />;
-to={`/careers/${job.id}}`}
+to={`/careers/${job.id}}`};
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2"
                   >
                     <span>Apply Now</span>
@@ -1919,7 +1955,8 @@ to={`/careers/${job.id}}`}
                   </Link>
                 </div>
                 
-                <p className="text-gray-300 mb-4">{job.description}</p>
+                <p className="text-gray-300 mb-4">{job.description};
+  </p>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div>
@@ -1928,10 +1965,12 @@ to={`/careers/${job.id}}`}
                       {job.requirements.map((req), idx) => (
                         <li key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                          <span className="text-gray-300 text-sm">{req}</span>
+                          <span className="text-gray-300 text-sm">{req};
+  </span>
                         </li>
-                      ))}
-                    </ul>
+                      ))};
+                    ;
+  </ul>
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1946,22 +1985,26 @@ The principles that guide everything we do
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {companyValues.map((value), index) => (
               <$2 />;
-key={index}
+key={index};
                 className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${value.color}} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-gray-300 text-sm">{value.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-2">{value.title};
+  </h3>
+                <p className="text-gray-300 text-sm">{value.description};
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">;
@@ -1975,20 +2018,24 @@ We invest in our people because they're our greatest asset
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {benefits.map((category), index) => (
               <$2 />;
-key={index}
+key={index};
                 className="bg-gray-800/50 rounded-xl border border-gray-700 p-6"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{category.category};
+  </h3>
                 <div className="space-y-3">
                   {category.items.map((item), itemIndex) => (
                     <div key={itemIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                      <span className="text-gray-300">{item.name}</span>
+                      <span className="text-gray-300">{item.name};
+  </span>
                     </div>
-                  ))}
-                </div>
-      {/* Company Culture */}
-      <section className="py-20">
+                  ))};
+                ;
+  </div>
+      {/* Company Culture */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">;
@@ -2006,18 +2053,21 @@ of innovation, collaboration, and continuous growth.
                   <value.icon className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                  {value.title}
-                </h3>
+                  {value.title};
+                ;
+  </h3>
                 <p className="text-zion-slate">
-                  {value.description}
-                </p>
+                  {value.description};
+                ;
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Featured Positions */}
+      {/* Featured Positions */};
       {featuredPositions.length > 0 && (
         <section className="pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2029,10 +2079,10 @@ of innovation, collaboration, and continuous growth.
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredPositions.map((position)}, index) => (
                 <motion.div;
-key={position.id}
-                  initial={{ opacity: 0}}, y: 20 }}
-                  animate={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.6}}, delay: index * 0.1 }}
+key={position.id};
+                  initial={{ opacity: 0}}, y: 20 }};
+                  animate={{ opacity: 1}}, y: 0 }};
+                  transition={{ duration: 0.6}}, delay: index * 0.1 }};
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
@@ -2044,27 +2094,32 @@ key={position.id}
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30">;
 Featured
                       </span>
-                      <span className="text-gray-400 text-sm capitalize">{position.department}</span>
+                      <span className="text-gray-400 text-sm capitalize">{position.department};
+  </span>
                     </div>
                     
                     <h3 className="text-2xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-200">
-                      {position.title}
-                    </h3>
+                      {position.title};
+                    ;
+  </h3>
                     
                     <p className="text-gray-300 mb-4 leading-relaxed">
-                      {position.description}
-                    </p>
+                      {position.description};
+                    ;
+  </p>
                     
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <div className="flex items-center gap-2">
                           <MapPin className="w-4 h-4" />
-                          {locations.find(l => l.id === position.location)?.name}
-                        </div>
+                          {locations.find(l => l.id === position.location)?.name};
+                        ;
+  </div>
                         <div className="flex items-center gap-2">
                           <Clock className="w-4 h-4" />
-                          {position.experience}
-                        </div>
+                          {position.experience};
+                        ;
+  </div>
                         <div className="flex items-center gap-2">
                           <Users className="w-4 h-4" />
                           {position.applications} applications
@@ -2078,8 +2133,9 @@ Featured
                         {position.requirements.slice(0, 3).map((req), idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-      {/* Benefits */}
-      <section className="py-20 bg-white">
+      {/* Benefits */};
+      ;
+  <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">;
@@ -2097,15 +2153,18 @@ your professional and personal growth.
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
-                  {benefit.title}
-                </h3>
+                  {benefit.title};
+                ;
+  </h3>
                 <p className="text-zion-slate text-sm">
-                  {benefit.description}
-                </p>
+                  {benefit.description};
+                ;
+  </p>
       </div>
 
-      {/* Benefits Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+      {/* Benefits Section */};
+      ;
+  <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -2119,12 +2178,16 @@ We offer more than just a job - we offer a career with purpose
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit), index) => (
               <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <div className="text-4xl mb-4">{benefit.icon};
+  </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title};
+  </h3>
+                <p className="text-gray-300">{benefit.description};
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
                     <div>
                       <h4 className="font-semibold text-zion-blue-dark mb-2">Benefits:</h4>
@@ -2132,16 +2195,19 @@ We offer more than just a job - we offer a career with purpose
                         {job.benefits.map((benefit), index) => (
                           <li key={index} className="flex items-start text-sm text-zion-slate">
                             <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
+                            {benefit};
+                          ;
+  </li>
+                        ))};
+                      ;
+  </ul>
                     </div>
                   </div>
                 </div>
               ))
-            )}
-    <div className="min-h-screen bg-background">
+            )};
+    ;
+  <div className="min-h-screen bg-background">
       <SEO;
 title="Careers - Join Zion Tech Group";
 description="Join our team and help build the future of technology. Explore career opportunities at Zion Tech Group.";
@@ -2149,8 +2215,9 @@ keywords="careers, jobs, Zion Tech Group, employment, tech jobs, AI jobs";
 canonical="https://ziontechgroup.com/careers"
       />
 
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
+      {/* Hero Section */};
+      ;
+  <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
 Join Our <span className="text-zion-cyan">Team</span>
@@ -2165,8 +2232,9 @@ innovative minds to join our mission.
         </div>
       </section>
 
-      {/* Why Work With Us */}
-      <section className="py-20">
+      {/* Why Work With Us */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Why Work With Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -2174,25 +2242,30 @@ innovative minds to join our mission.
               <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
                 <CardHeader className="text-center">
                   <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {benefit.icon}
-                  </div>
-                  <CardTitle className="text-zion-cyan">{benefit.title}</CardTitle>
+                    {benefit.icon};
+                  ;
+  </div>
+                  <CardTitle className="text-zion-cyan">{benefit.title};
+  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-zion-slate-light text-center">
-                    {benefit.description}
-                  </p>
+                    {benefit.description};
+                  ;
+  </p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
       </div>
 
-      {/* Open Positions */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+      {/* Open Positions */};
+      ;
+  <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -2213,8 +2286,9 @@ Find your next opportunity to make a difference
   ];
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
@@ -2239,16 +2313,18 @@ Learn About Culture
           </div>
         </div>
         
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Background Elements */};
+        ;
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-bounce"></div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Values Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -2263,15 +2339,18 @@ We're building more than technology - we're building a culture of innovation, co
             {values.map((value), index) => (
               <div key={index} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300 text-lg">{value}</span>
+                <span className="text-gray-300 text-lg">{value};
+  </span>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -2286,22 +2365,27 @@ We offer competitive benefits and a supportive environment where you can thrive 
             {benefits.map((benefit), index) => {;
 const Icon = benefit.icon;;
 return (;
-}
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
+};
+                ;
+  <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4">{benefit.title};
+  </h3>
+                  <p className="text-gray-300">{benefit.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Open Positions Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Open Positions Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -2316,25 +2400,30 @@ Join our team and help shape the future of AI and technology
             {openPositions.map((position), index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-white">{position.title}</h3>
+                  <h3 className="text-xl font-semibold text-white">{position.title};
+  </h3>
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
-                    {position.type}
-                  </span>
+                    {position.type};
+                  ;
+  </span>
                 </div>
                 
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-4 text-sm text-gray-300">
                     <div className="flex items-center space-x-2">
                       <Briefcase className="w-4 h-4 text-blue-400" />
-                      <span>{position.department}</span>
+                      <span>{position.department};
+  </span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <MapPin className="w-4 h-4 text-blue-400" />
-                      <span>{position.location}</span>
+                      <span>{position.location};
+  </span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <Clock className="w-4 h-4 text-blue-400" />
-                      <span>{position.experience}</span>
+                      <span>{position.experience};
+  </span>
                     </div>
                   </div>
                 </div>
@@ -2344,7 +2433,8 @@ Join our team and help shape the future of AI and technology
                       {job.benefits.map((benefit), idx) => (
                         <li key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                          <span className="text-gray-300 text-sm">{benefit}</span>
+                          <span className="text-gray-300 text-sm">{benefit};
+  </span>
     <div className="min-h-screen bg-background relative overflow-hidden">
       <SEO;
 title="Careers - Join Zion Tech Group";
@@ -2353,13 +2443,14 @@ keywords="careers, jobs, employment, Zion Tech Group, technology careers, remote
 canonical="https://ziontechgroup.com/careers"
       />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">;
@@ -2395,7 +2486,7 @@ color: 'from-blue-500 to-cyan-500'
 icon: "🌱",;,
 title: "Growth",;,
 description: "Continuous learning and personal development"
-    }
+    };
   ];
 return (;
     <>
@@ -2406,8 +2497,9 @@ keywords="careers, jobs, employment, Zion Tech Group, technology jobs, AI jobs, 
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Hero Section */};
+        ;
+  <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -2415,15 +2507,15 @@ keywords="careers, jobs, employment, Zion Tech Group, technology jobs, AI jobs, 
           
           <motion.div;
 className="max-w-7xl mx-auto text-center relative z-10";
-initial={{ opacity: 0}}, y: 30 }}
-            animate={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+            animate={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
           >
             <motion.h1;
 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6";
-initial={{ opacity: 0}}, y: 30 }}
-              animate={{ opacity: 1}}, y: 0 }}
-              transition={{ duration: 0.8}}, delay: 0.2 }}
+initial={{ opacity: 0}}, y: 30 }};
+              animate={{ opacity: 1}}, y: 0 }};
+              transition={{ duration: 0.8}}, delay: 0.2 }};
             >;
 Join Our
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -2433,9 +2525,9 @@ Join Our
             
             <motion.p;
 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
-initial={{ opacity: 0}}, y: 30 }}
-              animate={{ opacity: 1}}, y: 0 }}
-              transition={{ duration: 0.8}}, delay: 0.4 }}
+initial={{ opacity: 0}}, y: 30 }};
+              animate={{ opacity: 1}}, y: 0 }};
+              transition={{ duration: 0.8}}, delay: 0.4 }};
             >;
 Be part of a team that's revolutionizing technology and shaping the future.;
 We're looking for passionate individuals who want to make a real impact.
@@ -2443,9 +2535,9 @@ We're looking for passionate individuals who want to make a real impact.
             
             <motion.div;
 className="flex flex-col sm:flex-row gap-4 justify-center";
-initial={{ opacity: 0}}, y: 30 }}
-              animate={{ opacity: 1}}, y: 0 }}
-              transition={{ duration: 0.8}}, delay: 0.6 }}
+initial={{ opacity: 0}}, y: 30 }};
+              animate={{ opacity: 1}}, y: 0 }};
+              transition={{ duration: 0.8}}, delay: 0.6 }};
             >
               <$2 />;
 href="#open-positions";
@@ -2467,15 +2559,16 @@ Contact HR
           </motion.div>
         </section>
 
-        {/* Why Work With Us */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        {/* Why Work With Us */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div;
 className="text-center mb-16";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}};
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">;
 Why Work With Zion Tech Group?
@@ -2487,36 +2580,41 @@ We're not just another tech company. We're a team of innovators, problem-solvers
             
             <motion.div;
 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-variants={staggerContainer}
+variants={staggerContainer};
               initial="initial";
 whileInView="animate";
-viewport={{ once: true}}}
+viewport={{ once: true}}};
             >
               {values.map((value), index) => (
                 <motion.div;
-key={index}
+key={index};
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20";
-variants={fadeInUp}
-                  whileHover={{ scale: 1.02}}}
+variants={fadeInUp};
+                  whileHover={{ scale: 1.02}}};
                 >
-                  <div className="text-5xl mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{value.description}</p>
+                  <div className="text-5xl mb-4">{value.icon};
+  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{value.title};
+  </h3>
+                  <p className="text-gray-300 leading-relaxed">{value.description};
+  </p>
                 </motion.div>
-              ))}
-            </motion.div>
+              ))};
+            ;
+  </motion.div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Benefits Section */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
 className="text-center mb-16";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}};
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">;
 Benefits & Perks
@@ -2528,36 +2626,41 @@ We take care of our team so you can focus on doing your best work
             
             <motion.div;
 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-variants={staggerContainer}
+variants={staggerContainer};
               initial="initial";
 whileInView="animate";
-viewport={{ once: true}}}
+viewport={{ once: true}}};
             >
               {benefits.map((benefit), index) => (
                 <motion.div;
-key={index}
+key={index};
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300";
-variants={fadeInUp}
-                  whileHover={{ scale: 1.02}}}
+variants={fadeInUp};
+                  whileHover={{ scale: 1.02}}};
                 >
-                  <div className="text-5xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                  <div className="text-5xl mb-4">{benefit.icon};
+  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title};
+  </h3>
+                  <p className="text-gray-300 leading-relaxed">{benefit.description};
+  </p>
                 </motion.div>
-              ))}
-            </motion.div>
+              ))};
+            ;
+  </motion.div>
           </div>
         </section>
 
-        {/* Open Positions */}
-        <section id="open-positions" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        {/* Open Positions */};
+        ;
+  <section id="open-positions" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div;
 className="text-center mb-16";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}};
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">;
 Open Positions
@@ -2569,23 +2672,25 @@ Ready to join our team? Check out our current openings and find your perfect fit
             
             <motion.div;
 className="grid grid-cols-1 lg:grid-cols-2 gap-8";
-variants={staggerContainer}
+variants={staggerContainer};
               initial="initial";
 whileInView="animate";
-viewport={{ once: true}}}
+viewport={{ once: true}}};
             >
               {openPositions.map((position), index) => (
                 <motion.div;
-key={index}
+key={index};
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15";
-variants={fadeInUp}
-                  whileHover={{ scale: 1.02}}}
+variants={fadeInUp};
+                  whileHover={{ scale: 1.02}}};
                 >
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-semibold text-white">{position.title}</h3>
+                    <h3 className="text-xl font-semibold text-white">{position.title};
+  </h3>
                     <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
-                      {position.type}
-                    </span>
+                      {position.type};
+                    ;
+  </span>
                   </div>
                   
                   <div className="flex items-center text-gray-400 text-sm mb-4 space-x-4">
@@ -2594,8 +2699,9 @@ variants={fadeInUp}
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
   </path>
                       </svg>
-                      {position.department}
-                    </span>
+                      {position.department};
+                    ;
+  </span>
                     <span className="flex items-center">
                       <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -2603,35 +2709,40 @@ variants={fadeInUp}
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
   </path>
                       </svg>
-                      {position.location}
-                    </span>
+                      {position.location};
+                    ;
+  </span>
                     <span className="flex items-center">
                       <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
   </path>
                       </svg>
-                      {position.experience}
-                    </span>
+                      {position.experience};
+                    ;
+  </span>
                   </div>
                   
-                  <p className="text-gray-300 mb-4 leading-relaxed">{position.description}</p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{position.description};
+  </p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Required Skills:</h4>
                     <div className="flex flex-wrap gap-2">
                       {position.skills.map((skill), skillIndex) => (
                         <$2 />;
-key={skillIndex}
+key={skillIndex};
                           className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full border border-blue-600/30"
                         >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
+                          {skill};
+                        ;
+  </span>
+                      ))};
+                    ;
+  </div>
                   </div>
                   
                   <$2 />;
-href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}}`}
+href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}}`};
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                   >;
 Apply Now
@@ -2640,38 +2751,40 @@ Apply Now
                     </svg>
                   </a>
                 </motion.div>
-              ))}
-            </motion.div>
+              ))};
+            ;
+  </motion.div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        {/* CTA Section */};
+        ;
+  <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center px-4">
             <motion.h2;
 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}};
             >;
 Don't See Your Perfect Role?
             </motion.h2>
             <motion.p;
 className="text-xl text-gray-300 mb-8 leading-relaxed";
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}, delay: 0.2 }}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}, delay: 0.2 }};
             >;
 We're always looking for talented individuals to join our team.;
 Send us your resume and let's discuss how you can contribute to our mission.
             </motion.p>
             <motion.div;
-initial={{ opacity: 0}}, y: 30 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              viewport={{ once: true}}}
-              transition={{ duration: 0.8}}, delay: 0.4 }}
+initial={{ opacity: 0}}, y: 30 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              viewport={{ once: true}}};
+              transition={{ duration: 0.8}}, delay: 0.4 }};
             >
               <$2 />;
 href="mailto:careers@ziontechgroup.com?subject=General Application";
@@ -2685,28 +2798,32 @@ Send Your Resume
             </motion.div>
           </div>
         </section>
-      </div>
-    </>
+      </div></>
   )
-}
+};
             {openPositions.map((position), index) => (
               <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">{position.title};
+  </h3>
                     <div className="flex flex-wrap gap-2 mb-3">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">
-                        {position.department}
-                      </span>
+                        {position.department};
+                      ;
+  </span>
                       <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">
-                        {position.location}
-                      </span>
+                        {position.location};
+                      ;
+  </span>
                       <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">
-                        {position.type}
-                      </span>
+                        {position.type};
+                      ;
+  </span>
                       <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">
-                        {position.experience}
-                      </span>
+                        {position.experience};
+                      ;
+  </span>
                     </div>
                   </div>
                   <button className="lg:ml-4 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300">;
@@ -2714,20 +2831,24 @@ Apply Now
                   </button>
                 </div>
                 
-                <p className="text-gray-300 mb-4">{position.description}</p>
+                <p className="text-gray-300 mb-4">{position.description};
+  </p>
                 
                 <div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Required Skills:</h4>
                   <div className="flex flex-wrap gap-2">
                     {position.skills.map((skill), skillIndex) => (
                       <span key={skillIndex} className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-sm">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                        {skill};
+                      ;
+  </span>
+                    ))};
+                  ;
+  </div>
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <div className="text-center">
@@ -2740,16 +2861,17 @@ researchers, and industry experts committed to transforming businesses;
 through cutting-edge AI solutions.
             </p>
             
-            {/* Search and Filter */}
-            <div className="max-w-4xl mx-auto mb-8">
+            {/* Search and Filter */};
+            ;
+  <div className="max-w-4xl mx-auto mb-8">
               <div className="relative mb-6">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
 type="text";
 placeholder="Search jobs, departments, or keywords...";
-value={searchTerm}
+value={searchTerm};
                   onChange={(e) =>
-  </input> setSearchTerm(e.target.value)}
+  </input> setSearchTerm(e.target.value)};
                   className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
@@ -2758,27 +2880,31 @@ value={searchTerm}
                 <div className="flex items-center gap-2">
                   <Filter className="w-4 h-4 text-gray-400" />
                   <select;
-value={selectedDepartment}
-                    onChange={(e) => setSelectedDepartment(e.target.value)}
+value={selectedDepartment};
+                    onChange={(e) => setSelectedDepartment(e.target.value)};
                     className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {departments.map((dept) => (
-                      <option key={dept} value={dept}>{dept}</option>
-                    ))}
-                  </select>
+                      <option key={dept} value={dept}>{dept};
+  </option>
+                    ))};
+                  ;
+  </select>
                 </div>
                 
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-gray-400" />
                   <select;
-value={selectedLocation}
-                    onChange={(e) => setSelectedLocation(e.target.value)}
+value={selectedLocation};
+                    onChange={(e) => setSelectedLocation(e.target.value)};
                     className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {locations.map((location) => (
-                      <option key={location} value={location}>{location}</option>
-                    ))}
-                  </select>
+                      <option key={location} value={location}>{location};
+  </option>
+                    ))};
+                  ;
+  </select>
                 </div>
               </div>
             </div>
@@ -2801,14 +2927,14 @@ value={selectedLocation}
         </div>
       </div>
 
-      {/* Featured Jobs */}
+      {/* Featured Jobs */};
       {featuredJobs.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Positions</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredJobs.map((job) => (
               <$2 />;
-key={job.id}
+key={job.id};
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="p-6">
@@ -2817,31 +2943,37 @@ key={job.id}
 Featured
                     </span>
                     <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
-                      {job.department}
-                    </span>
+                      {job.department};
+                    ;
+  </span>
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
-                    {job.title}
-                  </h3>
+                    {job.title};
+                  ;
+  </h3>
                   
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {job.description}
-                  </p>
+                    {job.description};
+                  ;
+  </p>
                   
                   <div className="flex items-center space-x-6 mb-6 text-sm text-gray-400">
                     <div className="flex items-center">
                       <MapPin className="w-4 h-4 mr-2" />
-                      {job.location}
-                    </div>
+                      {job.location};
+                    ;
+  </div>
                     <div className="flex items-center">
                       <Clock className="w-4 h-4 mr-2" />
-                      {job.type}
-                    </div>
+                      {job.type};
+                    ;
+  </div>
                     <div className="flex items-center">
                       <Users className="w-4 h-4 mr-2" />
-                      {job.experience}
-                    </div>
+                      {job.experience};
+                    ;
+  </div>
                   </div>
                   
                   <div className="mb-6">
@@ -2850,10 +2982,12 @@ Featured
                       {job.requirements.slice(0, 3).map((req), index) => (
                         <li key={index} className="text-gray-300 text-sm flex items-start">
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0" />
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
+                          {req};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
                   
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">;
@@ -2862,46 +2996,53 @@ Apply Now
                   </button>
                 </div>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
-      )}
-
-      {/* All Job Openings */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      )};
+;
+      {/* All Job Openings */};
+      ;
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">;
 All Open Positions
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {regularJobs.map((job) => (
             <$2 />;
-key={job.id}
+key={job.id};
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
-                    {job.department}
-                  </span>
+                    {job.department};
+                  ;
+  </span>
                 </div>
                 
                 <h3 className="text-xl font-bold text-white mb-4 leading-tight">
-                  {job.title}
-                </h3>
+                  {job.title};
+                ;
+  </h3>
                 
                 <p className="text-gray-300 mb-6 text-sm leading-relaxed line-clamp-3">
-                  {job.description}
-                </p>
+                  {job.description};
+                ;
+  </p>
                 
                 <div className="flex items-center space-x-4 mb-6 text-sm text-gray-400">
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 mr-2" />
-                    {job.location}
-                  </div>
+                    {job.location};
+                  ;
+  </div>
                   <div className="flex items-center">
                     <Clock className="w-4 h-4 mr-2" />
-                    {job.type}
-                  </div>
+                    {job.type};
+                  ;
+  </div>
                 </div>
                 
                 <div className="mb-6">
@@ -2909,13 +3050,14 @@ key={job.id}
                   <div className="flex flex-wrap gap-1">
                     {job.requirements.slice(0, 2).map((req), index) => (
                       <$2 />;
-key={index}
+key={index};
                         className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center"
                       >
                         {req.split(' ').slice(0, 3).join(' ')}...
                       </span>
-                    ))}
-                  </div>
+                    ))};
+                  ;
+  </div>
                 </div>
                 
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">;
@@ -2924,12 +3066,14 @@ Apply Now
                 </button>
               </div>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </div>
 
-      {/* Company Values */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+      {/* Company Values */};
+      ;
+  <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -2937,42 +3081,49 @@ Apply Now
 const Icon = value.icon;;
 return (;
                 <$2 />;
-}
-key={index}
+};
+key={index};
                   className="text-center"
                 >
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{value.title};
+  </h3>
+                  <p className="text-gray-300">{value.description};
+  </p>
                 </div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* Benefits */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      {/* Benefits */};
+      ;
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit), index) => {;
 const Icon = benefit.icon;;
 return (;
               <$2 />;
-}
-key={index}
+};
+key={index};
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3">{benefit.title};
+  </h3>
+                <p className="text-gray-300 text-sm">{benefit.description};
+  </p>
               </div>
-      {/* Application Process */}
-      <section className="py-20 bg-zion-blue-dark">
+      {/* Application Process */};
+      ;
+  <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Application Process</h2>
@@ -2984,12 +3135,14 @@ the right fit for both you and our team.
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             )
-          })}
-        </div>
+          })};
+        ;
+  </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+      {/* CTA Section */};
+      ;
+  <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">;
@@ -3017,8 +3170,9 @@ Contact Us
           </div>
         </div>
       </div>
-      {/* Open Positions */}
-      <section id="open-positions" className="py-20">
+      {/* Open Positions */};
+      ;
+  <section id="open-positions" className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Open Positions</h2>
           <div className="grid gap-6">
@@ -3028,32 +3182,39 @@ Contact Us
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                     <div>
                       <div className="flex items-center gap-3 mb-2">
-                        <CardTitle className="text-xl text-white">{position.title}</CardTitle>
+                        <CardTitle className="text-xl text-white">{position.title};
+  </CardTitle>
                         {position.featured && (
                           <Badge className="bg-zion-cyan text-zion-blue-dark">Featured</Badge>
-                        )}
-                      </div>
+                        )};
+                      ;
+  </div>
                       <div className="flex flex-wrap gap-2 text-sm text-zion-slate-light">
                         <span className="flex items-center gap-1">
                           <Briefcase className="w-4 h-4" />
-                          {position.department}
-                        </span>
+                          {position.department};
+                        ;
+  </span>
                         <span className="flex items-center gap-1">
                           <MapPin className="w-4 h-4" />
-                          {position.location}
-                        </span>
+                          {position.location};
+                        ;
+  </span>
                         <span className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
-                          {position.type}
-                        </span>
+                          {position.type};
+                        ;
+  </span>
                         <span className="flex items-center gap-1">
                           <Star className="w-4 h-4" />
-                          {position.experience}
-                        </span>
+                          {position.experience};
+                        ;
+  </span>
                         <span className="flex items-center gap-1">
                           <DollarSign className="w-4 h-4" />
-                          {position.salary}
-                        </span>
+                          {position.salary};
+                        ;
+  </span>
                       </div>
                     </div>
                     <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
@@ -3065,23 +3226,28 @@ Apply Now
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-zion-slate-light mb-4">{position.description}</p>
+                  <p className="text-zion-slate-light mb-4">{position.description};
+  </p>
                   <div className="flex flex-wrap gap-2">
                     {position.skills.map((skill), index) => (
                       <Badge key={index} variant="outline" className="border-zion-purple/30 text-zion-slate-light">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
+                        {skill};
+                      ;
+  </Badge>
+                    ))};
+                  ;
+  </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Application Process */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      {/* Application Process */};
+      ;
+  <section className="py-20 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Application Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -3125,8 +3291,9 @@ Welcome to the Zion Tech Group team!
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-blue">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">;
 Don't See the Right Role?
@@ -3184,8 +3351,9 @@ export default Careers
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-purple-dark via-zion-blue to-zion-blue-dark">
+      {/* CTA Section */};
+      ;
+  <section className="py-20 bg-gradient-to-br from-zion-purple-dark via-zion-blue to-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Make History?</h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">;
@@ -3209,5 +3377,6 @@ Learn More About Us
       </main>
     
   )
-}
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>
+};
+;
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>

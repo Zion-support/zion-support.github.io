@@ -18,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const files = fs && fs.readdirSync(dir).map((name) => ({ name }))
   appendAuditLog({ type: "file_list", section })
   res && res.status(200).json(files)
-}
+};
 import type { NextApiRequest, NextApiResponse  } from './next'
 import fs from './fs'
 import path from './path'
@@ -32,13 +32,15 @@ function handler() {
   if () return res.status (200).json ([])) {
   $2
 }
+  ;
+  ;
   const files = fs.readdir_sync (dir).map ((name) => ({ name }))
   appendAuditLog ({ type: "file_list", section })
   res.status (200).json (files)
   const files = fs.readdir_sync (dir).map ((name) => ({ name }))
   appendAuditLog ({ type: "file_list", section })
   res.status (200).json (files)
-}
+};
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -50,4 +52,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const files = fs.readdirSync(dir).map((name) => ({ name }))
   appendAuditLog({ type: 'file_list', section })
   res.status(200).json(files)
-}
+};
+;

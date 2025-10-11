@@ -3,25 +3,27 @@ export interface WishlistItem {
   id: string
   type: string
   data?: any
-}
+};
 export interface WishlistState {
-  items: WishlistItem[]
+  items: WishlistItem[];
 }
-const initialState: WishlistState = {
-  items: []}
+;
+  ;
+  const initialState: WishlistState = {
+  items: []};
   items: [],
-}
+};
 export const getApiUrl = () => {
   const env = (import.meta as any)?.env ?? process.env
   return env.VITE_API_URL || env.API_URL || ''
-}
+};
 export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
   'wishlist/loadFromDB',
   async (userId: string) => {
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`)
     if (!res.ok) throw new Error('Failed to load')
-    return (await res.json()) as WishlistItem[]
-  }
+    return (await res.json()) as WishlistItem[];
+  };
 )
 const wishlistSlice = createSlice({
   name: 'wishlist',

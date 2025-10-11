@@ -9,13 +9,14 @@ export function formatDate(date: Date | string | undefined): string {
   try {
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM d, yyyy')
-    }
-    return format(date, 'MMM d, yyyy')
+    };
+    ;
+  return format(date, 'MMM d, yyyy')
   } catch (e) {
     console.error('Error formatting date:', e)
     return '-'
-  }
-}
+  };
+};
 /**
  * Stores referral code in localStorage when detected in URL
  */
@@ -29,9 +30,10 @@ export function checkUrlForReferralCode(): string | null {
     url.searchParams.delete('ref')
     window.history.replaceState({}, document.title, url.toString())
     return refCode
-  }
+  };
+  ;
   return localStorage.getItem('referral_code')
-}
+};
 /**
  * Track referral when a user signs up
  */
@@ -57,8 +59,9 @@ export async function trackReferral(userId: string, email: string) {
     if (response.ok) {
       // Clear the stored referral code
       localStorage.removeItem('referral_code')
-    }
+    };
   } catch (error) {
     console.error('Error tracking referral:', error)
-  }
-}
+  };
+};
+;

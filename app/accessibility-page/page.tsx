@@ -4,9 +4,10 @@ import {Helmet} from 'react-helmet-async'
 import {Eye, Ear, Hand, Brain, Shield, CheckCircle, ArrowRight, Target, BarChart, Zap} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AccessibilityPage: React.FC = () => {const features = [
+const AccessibilityPage: React.FC = () => {
+const features = [
     {
-      ico, n: Eye,
+      icon: Eye,
       title: 'Visual Accessibility',
       description: 'Comprehensive solutions for users with visual impairments and color vision deficiencies.',
       benefits: ['Screen reader compatibility', 'High contrast modes', 'Color blind support', 'Text scaling']} ,
@@ -30,6 +31,9 @@ const AccessibilityPage: React.FC = () => {const features = [
       title: 'Performance Optimization',
       description: 'Fast, efficient accessibility features that don\'t compromise performance.',
       benefits: ['Optimized loading', 'Efficient rendering', 'Minimal overhead', 'Fast interactions']} ]
+  
+  ;
+  ;
   const services = [
     {title: 'Accessibility Audits',
       description: 'Comprehensive evaluation of your digital products for accessibility compliance.',
@@ -47,12 +51,18 @@ const AccessibilityPage: React.FC = () => {const features = [
       description: 'Comprehensive training for your team on accessibility best practices.',
       icon: Brain,
       benefits: ['Team training', 'Best practices', 'Tool training', 'Compliance education']} ]
+  
+  ;
+  ;
   const standards = [
     'WCAG 2.1 AA Compliance',
     'Section 508 Compliance',
     'ADA Compliance',
     'EN 301 549 Compliance'
   ]
+  
+  ;
+  ;
   const benefits = [
     {title: 'Legal Compliance',
       description: 'Meet accessibility requirements and avoid legal issues.',
@@ -66,6 +76,8 @@ const AccessibilityPage: React.FC = () => {const features = [
     {title: 'SEO Benefits',
       description: 'Accessibility improvements often lead to better search engine rankings.',
       icon: BarChart} ]
+  ;
+  ;
   return (
     <>
       <Helmet>
@@ -83,9 +95,9 @@ const AccessibilityPage: React.FC = () => {const features = [
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"{/* Hero Section */}>
+        
+  <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accessibility</span> First
@@ -99,34 +111,37 @@ const AccessibilityPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Features Section */}
-        <section className="
-    g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6"
+        {/* Features Section */};
+        ;
+  <section className="
+    g: px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6">
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
                 Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
               </p>
 
             <div className="grid md: grid-cols-2 l, g:grid-cols-3 gap-8"
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4"
-                  <h3 className="text-xl font-semibold text-white mb-3"
-                  <p className="text-gray-300 mb-4"
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                  <p className="text-gray-300 mb-4">
                   <ul className="space-y-2"
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300"
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2"
-                        {benefit}
-                      </li>
+                        {benefit};
+                      ;
+  </li>
                     )
     </>
   )
                   </ul>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -141,23 +156,28 @@ const AccessibilityPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                    <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
+                          {benefit};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
       
       <Footer />
     </>
                 );
-              })}
-            </div>
+              })};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -167,11 +187,12 @@ const AccessibilityPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
+        {/* Benefits Section */};
+        ;
+  <section className="py-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
                 Accessibility isn't just the right thing to do—it's also good for business.
               </p>
@@ -181,16 +202,17 @@ const AccessibilityPage: React.FC = () => {const features = [
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center"
-                  <benefit.icon className="w-16 h-16 text-purple-400 mx-auto mb-6"
-                  <h3 className="text-xl font-semibold text-white mb-4"
+                <div key={index} className="text-center">
+                  <benefit.icon className="w-16 h-16 text-purple-400 mx-auto mb-6">
+                  <h3 className="text-xl font-semibold text-white mb-4">
                   <p className="text-gray-300"
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -200,9 +222,10 @@ const AccessibilityPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-4xl mx-auto text-center"
+        {/* CTA Section */};
+        ;
+  <section className="py-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
               Ready to Make Your Products Accessible?
             </h2>
@@ -231,6 +254,6 @@ const AccessibilityPage: React.FC = () => {const features = [
       <Footer />
     </>
   )
-}
+};
 export default AccessibilityPage
                     </Navigation>

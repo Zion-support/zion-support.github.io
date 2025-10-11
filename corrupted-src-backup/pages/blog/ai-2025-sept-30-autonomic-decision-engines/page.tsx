@@ -18,7 +18,8 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, ai 2025, sept, 30 autonomic, decision, engines and, how, it can, benefit, your enterpri, s, e.
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-}
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
-</div></div></div></div></p></h1>
+};
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+};
+;
+  </div></div></div></div></p></h1>

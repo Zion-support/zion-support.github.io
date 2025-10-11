@@ -6,7 +6,7 @@ export interface BlockchainInnovation2026 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface BlockchainInnovation2026 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -31,14 +31,14 @@ export interface BlockchainInnovation2026 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const blockchainInnovations2026: BlockchainInnovation2026[] = [
   // Blockchain Infrastructure Platform 2026
   {
@@ -299,5 +299,5 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     customers: 420,
     rating: 4.8,
     reviews: 210
-  }
-]
+  };
+];

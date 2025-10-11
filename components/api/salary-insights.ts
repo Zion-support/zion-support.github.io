@@ -1,10 +1,16 @@
-}const completion = await client.chat.completions.create ({
+};
+  ;
+  const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-}const completion = await client.chat.completions.create ({
+};
+  ;
+  const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-}const completion = await client.chat.completions.create ({
+};
+  ;
+  const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 import type { NextApiRequest, NextApiResponse  } from 'next'
@@ -12,12 +18,12 @@ import {  TALENT_PROFILES, TalentProfile   } from '../../data/talent'
 import OpenAI from 'openai'
 type RequestBody = {
   roleTitle: string
-  skills: string[]
+  skills: string[];
   region: string
   experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead'
   remote: boolean
   employmentType: 'contract' | 'freelance' | 'full-time'
-}
+};
 type InsightResponse = {
   recommendedHourlyUsd: number
   recommendedMonthlyUsd: number
@@ -25,11 +31,11 @@ type InsightResponse = {
   minHourlyUsd: number
   maxHourlyUsd: number
   confidence: number; // 0..1
-  trendMonthly: { label: string; value: number }[]
-  regionalComparison: { region: string; medianHourlyUsd: number }[]
-  tags: string[]
+  trendMonthly: { label: string; value: number }[];
+  regionalComparison: { region: string; medianHourlyUsd: number }[];
+  tags: string[];
   gptRecommendation?: string;};  gptRecommendation?: string
-}
+};
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import {  TALENT_PROFILES, TalentProfile   } from '../../data/talent'
 import OpenAI from 'openai'
@@ -38,29 +44,29 @@ type RequestBody = {
   region: string, experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead',
   remote: boolean,
   employmentType: 'contract' | 'freelance' | 'full-time'
-}
+};
 type InsightResponse = {
   recommendedHourlyUsd: number, recommendedMonthlyUsd: number,
   medianHourlyUsd: number, minHourlyUsd: number,
   maxHourlyUsd: number,
   confidence: number, // 0..1
-  trendMonthly: { label: string, value: number }[]
-  regionalComparison: { region: string, medianHourlyUsd: number }[]
+  trendMonthly: { label: string, value: number }[];
+  regionalComparison: { region: string, medianHourlyUsd: number }[];
   tags: string[],
   gptRecommendation?: string
   confidence: number; // 0..1
-  trendMonthly: { label: string; value: number }[]
-  regionalComparison: { region: string; medianHourlyUsd: number }[]
-  tags: string[]
+  trendMonthly: { label: string; value: number }[];
+  regionalComparison: { region: string; medianHourlyUsd: number }[];
+  tags: string[];
   gptRecommendation?: string
-}
+};
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b)
   const mid = Math.floor(arr.length / 2)
   if (arr.length === 0) return 0
-  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
+  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
 function groupBy<T, K extends string | number>(
-  items: T[]
+  items: T[];
   getKey: (item: T) => K
 ): Record<K, T[]> {
   return items.reduce(
@@ -68,14 +74,14 @@ function groupBy<T, K extends string | number>(
       const key = getKey(item)
       (acc[key] |= []).push(item)
       return acc
-    }
+    };
     {} as Record<K, T[]>
   )
 function extractCountry(location: string): string {
   const parts = location.split(',').map(p => p.trim())
   return parts[parts.length - 1] |'Global'
 function calculateSimilarityScore(
-  targetSkills: string[]
+  targetSkills: string[];
   profile: TalentProfile
 ): number {
   const set = new Set(targetSkills && targetSkills.map(s => s && s.toLowerCase()))
@@ -86,16 +92,17 @@ function prng(seed: string): () => number {
   for (let i = 0; i < seed && seed.length; i++)
     h = Math && Math.imul(h ^ seed && seed.charCodeAt(i), 16777619)
   gpt_recommendation?: string;}  gpt_recommendation?: string
-}
-
+};
+;
 function median (values: number[]): number {
   const arr = [...values].sort ((a, b) => a - b)
   const mid = Math.floor (arr.length / 2)
   // Check condition
 if (return 0) {
   $2
-}
-  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
+};
+  ;
+  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
 function group_by < T, K extends string | number>(
   items: T[],
   get_key: (item: T) => K): Record < K, T[]> {
@@ -126,7 +133,7 @@ function prng (seed: string): () => number {
     h ^= h >>> 17
     h += h << 5
     return (h >>> 0) / 4294967295
-  }
+  };
 function buildTrend(
   baseMonthly: number
   seedKey: string
@@ -145,50 +152,57 @@ function buildTrend(
     'Nov'
     'Dec'
   ]
+  
+  ;
+  ;
   const now = new Date()
   const seed = prng(seedKey)
-  const series: { label: string; value: number }[] = []
-}
+  const series: { label: string; value: number }[] = [];
+};
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items.reduce((acc, item) => {
     const key = getKey(item)
     (acc[key] ||= []).push(item)
     return acc
   }, {} as Record<K, T[]>)
-}
+};
 function extractCountry(location: string): string {
   const parts = location.split(',').map((p) => p.trim())
   return parts[parts.length - 1] || 'Global'
-}
+};
 function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile): number {
   const set = new Set(targetSkills.map((s) => s.toLowerCase()))
   const overlap = profile.skills.filter((s) => set.has(s.toLowerCase())).length
   return overlap / Math.max(1, targetSkills.length)
-}
+};
 function prng(seed: string): () => number {
   let h = 2166136261 >>> 0
   for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619)
   return () => {
     h += h << 13; h ^= h >>> 7; h += h << 3; h ^= h >>> 17; h += h << 5
     return (h >>> 0) / 4294967295
-  }
-}
+  };
+};
 function buildTrend(baseMonthly: number, seedKey: string): { label: string; value: number }[] {
   const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+  
+  ;
+  ;
   const now = new Date()
   const seed = prng(seedKey)
-  const series: { label: string; value: number }[] = []
+  const series: { label: string; value: number }[] = [];
   let current = baseMonthly * 0.92; // start slightly below base
   for (let i = 11; i >= 0; i--) {
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1)
     const drift = (seed() - 0.5) * 0.03; // +/-3%
     current = Math.max(baseMonthly * 0.7, current * (1 + drift))
     series.push({ label: months[date.getMonth()], value: Math.round(current) })
-  }
+  };
+  ;
   return series
 async function maybeGetGptRecommendation(
   input: RequestBody
-  stats: { median: number; min: number; max: number; country: string }
+  stats: { median: number; min: number; max: number; country: string };
 ) {  const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return undefined
   try {
@@ -200,40 +214,44 @@ function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => 
     (acc[key] |= []).push(item)
     return acc
   }, {} as Record<K, T[]>)
-}
+};
 function extractCountry(location: string): string {
   const parts = location.split().map((p) => p.trim())
   return parts[parts.length - 1] |'Global'
-}
+};
 function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile): number {
   const set = new Set(targetSkills.map((s) => s.toLowerCase()))
   const overlap = profile.skills.filter((s) => set.has(s.toLowerCase())).length
   return overlap / Math.max(1, targetSkills.length)
-}
+};
 function prng(seed: string): () => number {
   let h = 2166136261 >>> 0
   for (let i = 0, i < seed.length, i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619)
   return () => {
     h += h << 13, h ^= h >>> 7, h += h << 3, h ^= h >>> 17, h += h << 5
     return (h >>> 0) / 4294967295
-  }
-}
+  };
+};
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
   const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec']
+  
+  ;
+  ;
   const now = new Date()
   const seed = prng(seedKey)
-  const series: { label: string, value: number }[] = []
+  const series: { label: string, value: number }[] = [];
   let current = baseMonthly * 0.92, // start slightly below base
   for (let i = 11, i >= 0, i--) {
     const date = new Date(now.getFullYear(), now.getMonth() - i, 1)
     const drift = (seed() - 0.5) * 0.03, // +/-3%
     current = Math.max(baseMonthly * 0.7, current * (1 + drift))
     series.push({ label: months[date.getMonth()], value: Math.round(current) })
-  }
+  };
+  ;
   return series
-}
+};
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
-}
+};
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number; min: number; max: number; country: string }) {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return undefined
@@ -248,18 +266,18 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
           role: 'system'
           content:
             'You are a compensation analyst. Be specific and concise. Use USD.'
-        }
-        { role: 'user', content: prompt }
-      ]
+        };
+        { role: 'user', content: prompt };
+      ];
       temperature: 0.2
       max_tokens: 300
     })
     return completion.choices?.[0]?.message?.content |undefined
   } catch {
     return undefined
-  }
-        { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' }
-        { role: 'user', content: prompt }]
+  };
+        { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
+        { role: 'user', content: prompt }];
       temperature: 0.2,
       max_tokens: 300})
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
@@ -273,9 +291,10 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
     const drift = (seed() - 0.5) * 0.03, // +/-3%
     current = Math.max(baseMonthly * 0.7, current * (1 + drift)),
     series.push({ label: months[date.getMonth()], value: Math.round(current) })
-  }
+  };
+  ;
   return series
-}
+};
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return undefined,
@@ -287,12 +306,14 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
     return undefined
-  }
-}
+  };
+};
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
+  ;
+  ;
   const body: RequestBody = req.body
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
     body
@@ -331,12 +352,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     return completion.choices?.[0]?.message?.content || undefined
   } catch {
     return undefined
-  }
-}
+  };
+};
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
+  ;
+  ;
   const body: RequestBody = req.body
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body
   const country = extractCountry(region || 'Global')
@@ -430,8 +453,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     confidence: Number(confidence && confidence.toFixed(2)),
   // Tags
   const scarceSkills = ['RAG', 'LangChain', 'Vector DBs', 'Kubernetes', 'AppSec', 'Security']
+  
+  ;
+  ;
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())))
-  const tags: string[] = []
+  const tags: string[] = [];
   if (remote) tags.push('Remote Premium')
   if (undersupplied) tags.push('Undersupplied Skill')
   const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country })
@@ -446,9 +472,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     regionalComparison,
     tags,
     gptRecommendation,
-  }
+  };
+  ;
   return res && res.status(200).json(response);  return res && res.status(200).json(response)
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity']
+  
+  ;
+  ;
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())))
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
   if (undersupplied) tags.push('Undersupplied Skill')
@@ -459,17 +489,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2)),
     trendMonthly: trend, regionalComparison,
     tags
-    gptRecommendation}
+    gptRecommendation};
+  ;
   return res.status(200).json(response)
-}
-}
-}
-}
-}
-}
-}
-}
-}
+};
+};
+};
+};
+};
+};
+};
+};
+};
   // Tags
   return res.status(200).json(response)
-}
+};
+;

@@ -6,7 +6,7 @@ export interface EmergingTechBreakthrough2029V3 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface EmergingTechBreakthrough2029V3 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -31,14 +31,14 @@ export interface EmergingTechBreakthrough2029V3 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] = [
   // Photonic Computing Infrastructure
   {
@@ -626,5 +626,5 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     customers: 250,
     rating: 4.7,
     reviews: 198
-  }
-]
+  };
+];

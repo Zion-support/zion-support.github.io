@@ -6,12 +6,12 @@ export interface AddedService {
   price: string | number
   period?: string
   category: string
-  features: string[]
+  features: string[];
   icon?: string
   link?: string
   rating?: number
   customerCount?: number
-}
+};
 export const added2025Services: AddedService[] = [
   {
     id: 'ai-assistant-pro',
@@ -166,5 +166,5 @@ export const added2025Services: AddedService[] = [
     link: 'https://ziontechgroup.com/webhook-relay-replay',
     rating: 4.6,
     customerCount: 640
-  }
-]
+  };
+];

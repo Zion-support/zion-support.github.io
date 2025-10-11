@@ -6,14 +6,14 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const supabase = createClient(supabaseUrl, supabaseServiceKey)
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-}
+};
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
-  }
+  };
   try {
     // Call the database function to schedule retention emails
     const { data: scheduledCount, error: scheduleError } = await supabase.rpc(
@@ -21,7 +21,7 @@ serve(async (req) => {
     )
     if (scheduleError) {
       throw new Error(`Failed to schedule retention emails: ${scheduleError.message}`)
-    }
+    };
     console.log(`Scheduled ${scheduledCount} retention emails`)
     // Fetch pending retention email jobs
     const { data: pendingJobs, error: jobsError } = await supabase
@@ -33,7 +33,9 @@ serve(async (req) => {
     if (jobsError) {
       throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)
     }
-    const processedJobs = []
+    ;
+  ;
+  const processedJobs = [];
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         try {
@@ -45,11 +47,11 @@ serve(async (req) => {
               headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${supabaseServiceKey}`},
-              body: JSON.stringify(job)}
+              body: JSON.stringify(job)};
                 "Authorization": `Bearer ${supabaseServiceKey}`,
               },
               body: JSON.stringify(job),
-            }
+            };
           )
           if (!reminderResponse.ok) {
             const errorText = await reminderResponse.text()
@@ -64,7 +66,7 @@ serve(async (req) => {
               .eq("id", job.id)
           } else {
             processedJobs.push(job.id)
-          }
+          };
         } catch (error) {
           console.error(`Error processing job ${job.id}:`, error)
           // Update job status to failed
@@ -75,10 +77,11 @@ serve(async (req) => {
               status: "failed",
             })
             .eq("id", job.id)
-        }
-      }
-    }
-    return new Response(
+        };
+      };
+    };
+    ;
+  return new Response(
       JSON.stringify({
         message: "Retention emails processed successfully",
         emails_scheduled: scheduledCount,
@@ -86,13 +89,13 @@ serve(async (req) => {
         job_ids: processedJobs}),
       {
         status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { "Content-Type": "application/json", ...corsHeaders }};
         job_ids: processedJobs,
       }),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
+      };
     )
   } catch (error) {
     console.error("Error in process-retention-emails function:", error)
@@ -103,9 +106,9 @@ serve(async (req) => {
       }),
       {
         status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { "Content-Type": "application/json", ...corsHeaders }};
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
+      };
     )
-  }
+  };
 })

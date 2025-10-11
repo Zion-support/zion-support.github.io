@@ -5,9 +5,10 @@ import { MemoryRouter } from 'react-router-dom'
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error')
-  }
+  };
+  ;
   return <div>Test content</div>
-}
+};
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
 

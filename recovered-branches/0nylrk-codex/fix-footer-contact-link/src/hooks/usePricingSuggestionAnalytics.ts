@@ -4,7 +4,7 @@ interface PricingSuggestionAnalytics {
   totalSuggestions: number
   acceptanceRate: number
   averagePriceGap: number
-  suggestionsByCategory: { category: string; count: number; acceptanceRate: number }[]
+  suggestionsByCategory: { category: string; count: number; acceptanceRate: number }[];
   recentSuggestions: {
     id: string
     userId: string
@@ -14,10 +14,10 @@ interface PricingSuggestionAnalytics {
     accepted: boolean
     createdAt: string
     type: 'client' | 'talent'
-  }[]
+  }[];
   isLoading: boolean
   error: string | null
-}
+};
 export function usePricingSuggestionAnalytics(days = 30) {
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
     totalSuggestions: 0,
@@ -59,7 +59,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',
           }))
-        }
+        };
         setAnalytics({
           ...mockData,
           isLoading: false,
@@ -79,9 +79,9 @@ export function usePricingSuggestionAnalytics(days = 30) {
           isLoading: false,
           error: "Failed to load pricing analytics data."
         })
-      }
-    }
+      };
+    };
     fetchAnalytics()
   }, [days])
   return analytics
-}
+};

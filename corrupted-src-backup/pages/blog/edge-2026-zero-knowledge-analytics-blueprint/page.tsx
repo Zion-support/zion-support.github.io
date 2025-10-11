@@ -18,7 +18,8 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, edge 2026, zero, knowledge analytics, blueprint, and how, it, can benefit, your, enterprise.
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-}
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
-</div></div></div></div></p></h1>
+};
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+};
+;
+  </div></div></div></div></p></h1>

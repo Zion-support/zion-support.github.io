@@ -10,11 +10,13 @@ import { nextVersionFor } from "../../../utils/sync/versioning"
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+  ;
+  ;
   const { milestoneId, title, timestamp } = req && req.body as {
     milestoneId: string
     title: string
     timestamp?: number
-  }
+  };
   if (!milestoneId |!title)
     return res.status(400).json({ error: "milestoneId, title required" })
   const version = nextVersionFor(state, milestoneId)
@@ -34,13 +36,15 @@ export default async function handler(req, res) {
   const state = readState(),
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
+  ;
+  ;
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" }),
   const version = nextVersionFor(state, milestoneId),
@@ -54,7 +58,7 @@ export default async function handler(req, res) {
       category: `milestone:${title}`
       period: undefined
       rank: undefined
-    }
+    };
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp |Date.now()
@@ -63,15 +67,19 @@ export default async function handler(req, res) {
       id: milestoneId,
       subjectId: milestoneId,
   }
+  ;
+  ;
   const { milestone_id, title, timestamp } = req.body as {
     milestone_id: string
     title: string
     timestamp?: number
-  }
+  };
   if (
     return res.status (400).json ({ error: "milestone_id, title required" })) {
   $2
 }
+  ;
+  ;
   const version = nextVersionFor (state, milestone_id)
   const event = {
     event_id: uuidv4 (),
@@ -90,11 +98,15 @@ export default async function handler(req, res) {
     originInstanceId: state.config.instanceId,
     version,
     timestamp: timestamp || Date.now()
-  }
+  };
   upsertEvent(state, event)
   writeState(state)
   const body = { ...event, propagate: false }
+  ;
+  ;
   const headers: Record<string, string> = {}
+  ;
+  ;
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
     payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
@@ -117,7 +129,7 @@ export default async function handler(req, res) {
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
-        } catch {}
+        } catch {};
       })
   )
   return res
@@ -130,17 +142,21 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-
+  };
+;
   upsert_event (state, event)
   write_state (state)
   const body = { ...event, propagate: false }
+  ;
+  ;
   const headers: Record < string, string> = {}
+  ;
+  ;
   const sig = sign_payload (body)
   // Check condition
 if (headers["x - zion - signature"] = sig) {
   $2
-}
+};
   await Promise.all (
     state.config.peers
       .filter ((p) => !p.paused)
@@ -148,15 +164,16 @@ if (headers["x - zion - signature"] = sig) {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string ()
         try {
           await axios.post (url, body, { headers, timeout: 5000 })
-        } catch {}
+        } catch {};
       }),
   )
   return res
     .status (200)
     .json ({ status: "created", version, event_id: event.event_id })
-}
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

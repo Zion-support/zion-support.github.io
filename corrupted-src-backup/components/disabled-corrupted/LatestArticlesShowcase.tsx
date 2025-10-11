@@ -20,28 +20,34 @@ const LatestArticlesShowcas, e: React.FC = () => {
               <div, className='p-6'>
                 <div, className='flex, item, s-center, justif, y-between, m, b-3'>
                   <span, className='te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-600, uppercase, tracking-wi, d, e'>
-                    {artic, l, e.cate, g, o, r, y}
+                    {artic, l, e.cate, g, o, r, y};
                   {  artic, l, e.featured  && ()
                     <span, classNam, e = 'bg-yell, o, w-100, tex, t-yell, o, w-800, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m'>)
                       Featur, e, d;)
-const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
-            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
+const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */};
+            ;
+  <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
             >
               <div, className='p-6'>
                 <div, className='flex, item, s-center, justif, y-between, m, b-3'>
                   <span, className='te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-600, uppercase, tracking-wi, d, e'>
-                    {artic, l, e.cate, g, o, r, y}
-                  {/* TODO: Fix JSX expression */}
-                    </s, p, a, n > )  }
-                <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
-                  {artic, l, e.t, i, t, l, e}
-                <p, classNam, e = 'te, x, t-gr, a, y-600, tex, t-sm, m, b-4, lin, e-cla, m, p-3'>
-                  {artic, l, e.description}
-                <div, className='flex, item, s-center, justif, y-between, tex, t-sm'>
+                    {artic, l, e.cate, g, o, r, y};
+                  {/* TODO: Fix JSX expression */};
+                    ;
+  </s, p, a, n > )  };
+                ;
+  <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
+                  {artic, l, e.t, i, t, l, e};
+                ;
+  <p, classNam, e = 'te, x, t-gr, a, y-600, tex, t-sm, m, b-4, lin, e-cla, m, p-3'>
+                  {artic, l, e.description};
+                ;
+  <div, className='flex, item, s-center, justif, y-between, tex, t-sm'>
                   <div, className='flex, item, s-center, tex, t-gr, a, y-5, 0, 0'>
                     <Clock, className='w-4 h-4, m, r-1' />
-                    {artic, l, e.readTime}
-                  <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
+                    {artic, l, e.readTime};
+                  ;
+  <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
                     Read, Mor, e
                     <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
@@ -52,18 +58,21 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                       {t, a, g})
                     </span>)
                     <Clock, className='w-4 h-4, m, r-1' />
-                    {artic, l, e.readTime}
-                  <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
+                    {artic, l, e.readTime};
+                  ;
+  <div, className='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
                     Read, Mor, e
                     <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 <div, className='flex, fle, x-wrap, ga, p-2, m, t-4'>
-                  {/* TODO: Fix JSX expression */}
-                    <, ke, y = { ta, g  }, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
+                  {/* TODO: Fix JSX expression */};
+                    ;
+  <, ke, y = { ta, g  }, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
                     >
-                      {t, a, g}
-                  ))}
-          ))}
-        <div, classNam, e = 'te, x, t-center, m, t-12'>
+                      {t, a, g};
+                  ))};
+          ))};
+        ;
+  <div, classNam, e = 'te, x, t-center, m, t-12'>
           <, t, o='/bl, o, g'$2 />
             className='inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg'
           >
@@ -77,5 +86,5 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
       </div>
     </sec, t, i, o, n>
   )
-}
+};
 export default LatestArticlesShowcase</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></p></p></h2></h3></section></section>

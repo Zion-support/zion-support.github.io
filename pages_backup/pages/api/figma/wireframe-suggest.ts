@@ -5,15 +5,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(405).json({ error: 'Method not allowed' })
     return
   }
-  const { screenName, role } = req.body |{}
+  ;
+  ;
+  const { screenName, role } = req.body |{};
   if (!screenName) {res.status(400).json({ error: 'screenName is required' })
     return
-  }
+  };
   try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`
     const completion = await openai.chat.completions.create({model: 'gpt-4o-mini'
       messages: [
-        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' }
-        { role: 'user', content: prompt }]
+        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' };
+        { role: 'user', content: prompt }];
       temperature: 0.4
       max_tokens: 400})
     const suggestion = completion.choices?.[0]?.message?.content |'No suggestion generated.'
@@ -40,14 +42,16 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
-  const { screenName, role } = req.body || {}
+  ;
+  ;
+  const { screenName, role } = req.body || {};
   if (!screenName) {
     res.status(400).json({
       error: 'screenName is required'
@@ -59,13 +63,13 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   try {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`
     const completion = await openai.chat.completions.create({
@@ -101,26 +105,28 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
+  ;
+  ;
   const { screenName, role } = req.body || {  } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   if (!screenName) {
     res.status(400).json({ error: 'screenName is required' })
     return
@@ -130,21 +136,21 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   try {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`
     const completion = await openai.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },
-        { role: 'user', content: prompt }]
+        { role: 'user', content: prompt }];
       temperature: 0.4
       max_tokens: 400})
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.'
@@ -161,20 +167,21 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  }
-}
+  };
+};
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

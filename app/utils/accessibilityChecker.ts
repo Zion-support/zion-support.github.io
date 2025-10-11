@@ -4,6 +4,7 @@
 import React from 'react'
 import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
 const AccessibilityCheckerPage: React.FC = () => {
+
   const features = [
     {
       icon: Brain,
@@ -29,8 +30,9 @@ const AccessibilityCheckerPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-        <div className="max-w-7xl mx-auto"></div></div>
+  ];
+        ;
+  <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center"></div></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>
@@ -56,8 +58,9 @@ const AccessibilityCheckerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+      {/* Features Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
@@ -74,15 +77,18 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
-                <p className="text-gray-300"></p></p>{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title};
+  </h3>
+                <p className="text-gray-300"></p></p>{feature.description};
+  </p>
               </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
@@ -97,14 +103,16 @@ const AccessibilityCheckerPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3"></div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg"></p></p>{benefit}</p>
+                <p className="text-gray-300 text-lg"></p></p>{benefit};
+  </p>
               </div>
           </div>
         ))
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>

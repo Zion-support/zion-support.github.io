@@ -5,6 +5,8 @@ export function getUserFromRequest(req: any): User | null {
   if (!authHeader |!authHeader.startsWith('Bearer ')) {
     return null
   }
+  ;
+  ;
   const token = authHeader.substring(7)
   if (token && token.length > 0) {
     return {
@@ -12,13 +14,14 @@ export function getUserFromRequest(req: any): User | null {
       email: 'user@example.com'
       role: 'client'
       name: 'Test User'
-    }
-  }
+    };
+  };
+  ;
   return null
-}
+};
 export function assertTalentOrClientForOffer(
   req: NextApiRequest
-  offer: { clientId: string; talentSlug: string }
+  offer: { clientId: string; talentSlug: string };
   req: NextApiRequest,
   offer: { clientId: string; talentSlug: string },
   talentSlugHeader?: string
@@ -37,26 +40,32 @@ export function assertTalentOrClientForOffer(
   const user = getUserFromRequest(req)
   if (!user) {
     throw new Error('Authentication required')
-  }
+  };
+  ;
   return user
-}
-}
-    return null
+};
+};
+    ;
+  return null
   }
+  ;
+  ;
   const token = auth_header.substring (7)
   // Check condition
 if ( {) {
   $2
-}
-    return {
+};
+    ;
+  return {
       id: 'user - 1',
       email: 'user@example.com',
       role: 'client',
       name: 'Test User'
-    }
-  }
+    };
+  };
+  ;
   return null
-}
+};
 export function assertTalentOrClientForOffer (
   req: NextApiRequest,
   offer: { client_id: string; talent_slug: string },
@@ -65,11 +74,11 @@ export function assertTalentOrClientForOffer (
   // Check condition
 if (return u) {
   $2
-}
+};
   // Check condition
 if (=== offer.talent_slug) {
   $2
-}
+};
   )
     return u
   const err = new Error ('Not authorized for this offer')
@@ -80,20 +89,21 @@ if (=== offer.talent_slug) {
   // Check condition
 if ( {) {
   $2
-}
+};
     throw new Error ('Authentication required'),
-  }
+  };
+  ;
   return user
-}
+};
 import { NextApiRequest } from "next"
-type DemoUser = { id: string; role: "client" | "talent"; talentSlug?: string }
+type DemoUser = { id: string; role: "client" | "talent"; talentSlug?: string };
 export function getDemoUser(req: NextApiRequest): DemoUser {
   // Prefer headers for server-side calls; fallback to cookies-like header or defaults
   const role = (req.headers["x-demo-user-role"] as string) || "client"
   const id = (req.headers["x-demo-user-id"] as string) || (role === "client" ? "client-1" : "talent-1")
   const talentSlug = (req.headers["x-demo-talent-slug"] as string) || undefined
-  return { id, role: role === "talent" ? "talent" : "client", talentSlug }
-}
+  return { id, role: role === "talent" ? "talent" : "client", talentSlug };
+};
 export function assertClient(req: NextApiRequest): DemoUser {
   const u = getDemoUser(req)
   if (u.role !== "client") {
@@ -101,9 +111,10 @@ export function assertClient(req: NextApiRequest): DemoUser {
     // @ts-ignore add code
     err.statusCode = 403
     throw err
-  }
+  };
+  ;
   return u
-}
+};
 export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clientId: string; talentSlug: string }, talentSlugHeader?: string): DemoUser {
   const u = getDemoUser(req)
   if (u.role === "client" && u.id === offer.clientId) return u
@@ -112,4 +123,5 @@ export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clien
   // @ts-ignore
   err.statusCode = 403
   throw err
-}
+};
+;

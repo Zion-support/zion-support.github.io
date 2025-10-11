@@ -13,7 +13,7 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
       role: 'Operations Manager'
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."
       avatar: '/placeholder.svg'
-    }
+    };
     {
 
 
@@ -55,25 +55,28 @@ export default function ITSupportPage() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
-  }
-  
+    this.state = { hasError: false };
+  };
+  ;
   static getDerivedStateFromError(error) {
-    return { hasError: true }
-  }
-  
+    return { hasError: true };
+  };
+  ;
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
-  }
-  
+  };
+  ;
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
+    if (this.state.hasError) {}
+      
+  ;
+  return <div>Something went wrong.</div>
     }
-    
-    return this.props.children
-  }
-}
+    ;
+    ;
+  return this.props.children
+  };
+};
 import React from 'react'
 import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate'
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
@@ -94,24 +97,24 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
 
-      benefits = {benefits,}
-      testimonials = {testimonials,}
+      benefits = {benefits,};
+      testimonials = {testimonials,};
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
-  );      benefits={benefits}
-      testimonials={testimonials}
+  );      benefits={benefits};
+      testimonials={testimonials};
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
   )
-}
-
-}
-}
-
-      benefits={benefits}
-      testimonials={testimonials}
+};
+;
+};
+};
+;
+      benefits={benefits};
+      testimonials={testimonials};
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
@@ -140,6 +143,9 @@ export default function ITSupportPage() {
       icon: <Phone className='h-8 w-8' />,
     },
   ]
+  
+  ;
+  ;
   const testimonials = [
     {
       name: 'Lisa Wong',
@@ -154,11 +160,13 @@ export default function ITSupportPage() {
       avatar: '/placeholder && placeholder.svg',
     },
   ]
-    return (
+    ;
+  ;
+  return (
 
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
-      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes.">
 

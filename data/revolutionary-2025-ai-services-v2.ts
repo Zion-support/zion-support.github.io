@@ -6,7 +6,7 @@ export interface RevolutionaryAI2025ServiceV2 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface RevolutionaryAI2025ServiceV2 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -31,14 +31,14 @@ export interface RevolutionaryAI2025ServiceV2 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
   // AI Consciousness & Advanced Intelligence
   {
@@ -348,5 +348,5 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
     customers: 65,
     rating: 4.6,
     reviews: 38
-  }
-]
+  };
+];

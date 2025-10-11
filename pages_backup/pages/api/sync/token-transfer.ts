@@ -18,6 +18,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+  ;
+  ;
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string
     token: string
@@ -25,22 +27,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     fromSubnet: string
     toSubnet: string
     timestamp?: number
-  }
+  };
   if (!txId |!token |typeof amount !== "number" |!fromSubnet |!toSubnet) {
     return res.status(400).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })
   }
+  ;
+  ;
   const version = nextVersionFor(state, txId)
   const event = {
     eventId: uuidv4()
     type: "token_transfer" as const
-    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp |Date.now() }
+    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp |Date.now() };
     originInstanceId: state.config.instanceId
     version
-    timestamp: Date.now()}
+    timestamp: Date.now()};
   upsertEvent(state, event)
   writeState(state)
   const body = { ...event, propagate: false }
+  ;
+  ;
   const headers: Record<string, string> = {}
+  ;
+  ;
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -65,13 +73,15 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
+  ;
+  ;
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string,
     token: string,
@@ -88,13 +98,15 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
+  ;
+  ;
   const version = nextVersionFor(state, txId),
   const event = {
     eventId: uuidv4(),
@@ -116,7 +128,7 @@ export default async function handler(req, res) {
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
           await axios.post (url, body, { headers, timeout: 5000 })
-        } catch {}
+        } catch {};
       })
   )
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
@@ -129,9 +141,9 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
+  };
+};
+};
       })
   ),
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
@@ -150,14 +162,16 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
+  ;
+  ;
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string
     token: string
@@ -174,14 +188,16 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
+  ;
+  ;
   const version = nextVersionFor(state, txId)
   const event = {
     eventId: uuidv4()
@@ -194,6 +210,8 @@ export default async function handler(req, res) {
   writeState(state)
   const body = { ...event, propagate: false },
   const headers: Record<string, string> = {}
+  ;
+  ;
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
   await Promise.all(
@@ -209,13 +227,13 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
       })
   )
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
@@ -225,11 +243,12 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
+  };
+};
+};
+;

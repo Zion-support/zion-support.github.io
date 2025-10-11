@@ -3,8 +3,9 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
   return (
     <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-purp, l, e-950, t, o-sla, t, e-9, 5, 0">"
       <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">"
-        {/* Head, e, r */}
-        <header, className="mb-12">"
+        {/* Head, e, r */};
+        ;
+  <header, className="mb-12">"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-6">"
             <span, className="te, x, t-purp, l, e-400, fon, t-semibold, tex, t-sm">DEVOPS, BREAKTHROUG, H</sp, a, n>"
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>"
@@ -23,8 +24,9 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <span, className="bg-pi, n, k-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-pi, n, k-300, tex, t-sm, fon, t-semibo, l, d">Automati, o, n</sp, a, n>"
             <span, className="bg-bl, u, e-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">CI/CD</sp, a, n>"
             <span, className="bg-indi, g, o-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibo, l, d">Infrastructu, r, e</sp, a, n>"
-        {/* Conte, n, t */}
-        <div, className="prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e">"
+        {/* Conte, n, t */};
+        ;
+  <div, className="prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e">"
           <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Executive, Summar, y</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4">"
@@ -88,9 +90,10 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">📊 Re, a, l-Time, Intelligence, Dashboard</h3>"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">"
-export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {/* TODO: Fix JSX expression */}
-        {/* Head, e, r */}
-        <header, className="mb-12">";"
+export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {/* TODO: Fix JSX expression */};
+        {/* Head, e, r */};
+        ;
+  <header, className="mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-6">";"
             <span, className="te, x, t-purp, l, e-400, fon, t-semibold, tex, t-sm">DEVOPS, BREAKTHROUG, H</sp, a, n>";"
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>";"
@@ -428,6 +431,6 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
   r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">"
                 Request, Dem, o
   )
-}
+};
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></a></a></a></a></a></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h3></h3></h3></h4></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></article></header></header>

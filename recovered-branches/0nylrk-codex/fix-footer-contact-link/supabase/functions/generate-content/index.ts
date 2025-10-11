@@ -2,41 +2,43 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-}
+};
 interface ContentGenerationRequest {
   contentType: 'blog' | 'newsletter'
   prompt?: string
   topic?: string
   autoPublish?: boolean
   includeImage?: boolean
-}
+};
 interface GeneratedBlogContent {
   title: string
   metaDescription: string
   body: string
-  tags: string[]
+  tags: string[];
   tweetSummary?: string
   imagePrompt?: string
-}
+};
 interface GeneratedNewsletterContent {
   subject: string
   previewText: string
   body: string
   cta: string
-}
+};
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
-  }
+  };
   try {
     const openAIApiKey = Deno.env.get("OPENAI_API_KEY")
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
-    const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest
+    ;
+  ;
+  const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest
     // Default topic if none provided
     const contentTopic = topic || "AI freelancing marketplace trends"
     // Build the prompt based on content type
@@ -60,7 +62,7 @@ serve(async (req) => {
       - Top blog post summary
       - Industry news roundup
       Keep it concise with clear sections and an engaging call-to-action to browse jobs or talent.`
-    }
+    };
     // Call OpenAI API
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -73,7 +75,7 @@ serve(async (req) => {
         model: "gpt-4o",
         messages: [
           { role: "system", content: systemPrompt },
-          { role: "user", content: userPrompt }
+          { role: "user", content: userPrompt };
         ],
         temperature: 0.7})})
         temperature: 0.7,
@@ -83,7 +85,9 @@ serve(async (req) => {
       const errorData = await response.json()
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
-    const data = await response.json()
+    ;
+  ;
+  const data = await response.json()
     const generatedContent = JSON.parse(data.choices[0].message.content)
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
@@ -104,7 +108,7 @@ serve(async (req) => {
             { 
               role: "user", 
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
-            }
+            };
           ],
           temperature: 0.7,
           max_tokens: 100})})
@@ -113,7 +117,7 @@ serve(async (req) => {
       })
       const imagePromptData = await imagePromptResponse.json()
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content
-    }
+    };
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
       const supabaseUrl = Deno.env.get("SUPABASE_URL")
@@ -121,7 +125,9 @@ serve(async (req) => {
       if (!supabaseUrl || !supabaseKey) {
         throw new Error("Supabase credentials are not set in environment variables")
       }
-      const supabase = createClient(supabaseUrl, supabaseKey)
+      ;
+  ;
+  const supabase = createClient(supabaseUrl, supabaseKey)
       // Create slug from title
       const slug = generatedContent.title
         .toLowerCase()
@@ -178,9 +184,10 @@ serve(async (req) => {
             action_url: `/blog/${slug}`,
             action_text: "View Post"
           })
-      }
-    }
-    return new Response(JSON.stringify(generatedContent), {
+      };
+    };
+    ;
+  return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
       status: 200,
@@ -192,5 +199,5 @@ serve(async (req) => {
       status: 500})
       status: 500,
     })
-  }
+  };
 })

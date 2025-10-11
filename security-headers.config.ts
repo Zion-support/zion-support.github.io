@@ -4,19 +4,19 @@
  */
 
 export const securityHeaders = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
   },
   {
     key: 'Content-Security-Policy',
@@ -28,6 +28,6 @@ export const securityHeaders = [
       "font-src 'self' data: ",
       "connect-src 'self' *.google-analytics.com",
       "frame-ancestors 'self'"].join('; '),
-  {/* TODO: Fix JSX expression */}
-  }]
+  {/* TODO: Fix JSX expression */};
+  }];
 export default securityHeaders

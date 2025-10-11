@@ -16,13 +16,13 @@ export function useUIState() {
   const toggleSection = (sectionName: keyof typeof expandedSections) => {
     setExpandedSections(prev => ({
       ...prev,
-      [sectionName]: !prev[sectionName]
+      [sectionName]: !prev[sectionName];
     }))
-  }
+  };
   // Handler for closing mobile filter sidebar
   const closeMobileFilter = () => {
     setIsMobileFilterOpen(false)
-  }
+  };
   // Effect to listen for the custom event to close mobile filter
   // This would typically be in a useEffect hook, but we'll handle it via the button's onClick
   return {
@@ -34,7 +34,8 @@ export function useUIState() {
     setSelectedTalent,
     expandedSections,
     toggleSection,
-    closeMobileFilter}
+    closeMobileFilter};
     closeMobileFilter,
-  }
-}
+  };
+};
+;

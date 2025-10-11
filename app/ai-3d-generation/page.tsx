@@ -4,9 +4,10 @@ import {Helmet} from 'react-helmet-async'
 import {Cube, Zap, Eye, Palette, ArrowRight, CheckCircle, Target, BarChart, Brain, Shield} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AI3DGenerationPage: React.FC = () => {const features = [
+const AI3DGenerationPage: React.FC = () => {
+const features = [
     {
-      ico, n: Cube,
+      icon: Cube,
       title: 'AI-Powered 3D Modeling',
       description: 'Generate high-quality 3D models from text descriptions or 2D images using advanced AI algorithms.',
       benefits: ['Text-to-3D conversion', 'Image-to-3D generation', 'Automated modeling', 'High-quality output']} ,
@@ -30,6 +31,9 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       title: 'Enterprise Security',
       description: 'Secure cloud-based processing with enterprise-grade security and compliance.',
       benefits: ['Data encryption', 'Secure processing', 'Compliance ready', 'Access controls']} ]
+  
+  ;
+  ;
   const useCases = [
     {title: 'Game Development',
       description: 'Rapidly generate 3D assets, characters, and environments for games.',
@@ -47,6 +51,9 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       description: 'Create interactive 3D content for educational and training purposes.',
       icon: Brain,
       benefits: ['Educational models', 'Training simulations', 'Interactive content', 'VR integration']} ]
+  
+  ;
+  ;
   const pricingTiers = [
     {name: 'Starter',
       price: '$99',
@@ -86,6 +93,8 @@ const AI3DGenerationPage: React.FC = () => {const features = [
         'On-premise deployment'
       ],
       popular: false} ]
+  ;
+  ;
   return (
     <>
       <Helmet>
@@ -107,9 +116,9 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"{/* Hero Section */}>
+        
+  <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -118,9 +127,8 @@ const AI3DGenerationPage: React.FC = () => {const features = [
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Revolutionary AI-powered 3D model generation and design automation solutions
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"
-                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
-                  Start Creating
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"Start Creating>
                   <ArrowRight className="w-5 h-5 ml-2"
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
@@ -140,33 +148,36 @@ const AI3DGenerationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Features Section */}
-            </div>
+        {/* Features Section */};
+            ;
+  </div>
       
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4"
-                  <h3 className="text-xl font-semibold text-white mb-3"
-                  <p className="text-gray-300 mb-4"
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4">
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                  <p className="text-gray-300 mb-4">
                   <ul className="space-y-2"
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300"
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2"
-                        {benefit}
-                      </li>
+                        {benefit};
+                      ;
+  </li>
                     )
     </>
   )
                   </ul>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
 
-        <section className="py-20 bg-gray-100"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center mb-16"
+        <section className="py-20 bg-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
                 Why Choose Us
               </h2>
@@ -180,32 +191,37 @@ const AI3DGenerationPage: React.FC = () => {const features = [
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon
                 return (
-                  <div key={index} className="text-center"
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white"
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-4"
+                    <h3 className="text-xl font-semibold text-white mb-4">
                     <p className="text-gray-300"
                   </div>
       
       <Footer />
     </>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                  <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                        {benefit};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
       
       <Footer />
     </>
-              ))}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+              ))};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -229,23 +245,28 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                    <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
+                          {benefit};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
       
       <Footer />
     </>
                 )
-              })}
-            </div>
+              })};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -259,8 +280,9 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        {/* Use Cases Section */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -284,15 +306,18 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-                    <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
-                    <p className="text-gray-300">{useCase.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-4">{useCase.title};
+  </h3>
+                    <p className="text-gray-300">{useCase.description};
+  </p>
                   </div>
       
       <Footer />
     </>
                 )
-              })}
-            </div>
+              })};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -302,8 +327,9 @@ const AI3DGenerationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Benefits Section */};
+        ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -325,13 +351,15 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-                  <p className="text-gray-300">{benefit}</p>
+                  <p className="text-gray-300">{benefit};
+  </p>
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -341,8 +369,9 @@ const AI3DGenerationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
+        {/* Features Section */};
+        ;
+  <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -366,23 +395,28 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title};
+  </h3>
+                    <p className="text-gray-300 mb-4">{feature.description};
+  </p>
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
+                          {benefit};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
       
       <Footer />
     </>
                 );
-              })}
-            </div>
+              })};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -392,8 +426,9 @@ const AI3DGenerationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-slate-800/50">
+        {/* Benefits Section */};
+        ;
+  <section className="py-20 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -410,13 +445,15 @@ const AI3DGenerationPage: React.FC = () => {const features = [
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <span className="text-gray-300 text-lg">{benefit};
+  </span>
                 </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -426,13 +463,14 @@ const AI3DGenerationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
+        {/* Pricing Section */};
+        ;
+  <section className="py-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="
     ,
-    d: text-4xl font-bold text-white mb-6"
+    d: text-4xl font-bold text-white mb-6">
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
                 Choose the perfect plan for your 3D generation needs. Scale up or down as your requirements change.
               </p>
@@ -451,15 +489,18 @@ const AI3DGenerationPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-                    <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
-                    <p className="text-gray-300">{useCase.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-4">{useCase.title};
+  </h3>
+                    <p className="text-gray-300">{useCase.description};
+  </p>
                   </div>
       
       <Footer />
     </>
                 );
-              })}
-            </div>
+              })};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -469,9 +510,10 @@ const AI3DGenerationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-4xl mx-auto text-center"
+        {/* CTA Section */};
+        ;
+  <section className="py-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
               Ready to Create Amazing 3D Content?
             </h2>

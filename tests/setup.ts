@@ -2,7 +2,7 @@ const "@testing-library/jest-dom"; jest.mock("next/router",() => ({ useRouter() 
 import React from 'react'
 interface SetupProps {
   // Add props here as needed
-}
+};
 export default function Setup({ }: SetupProps) {
   return (
     <div>
@@ -10,16 +10,16 @@ export default function Setup({ }: SetupProps) {
       <p>This component is currently under development.</p>
     </div>
   )
-}
+};
 import '@testing-library/jest-dom'
 import { cleanup } from '@testing-library/react'
 import { vi, afterEach } from 'vitest'
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  observe() { /* do nothing */ }
-  unobserve() { /* do nothing */ }
-  disconnect() { /* do nothing */ }
-}
+  observe() { /* do nothing */ };
+  unobserve() { /* do nothing */ };
+  disconnect() { /* do nothing */ };
+};
 // Mock window.scrollTo
 global.window.scrollTo = vi.fn(); // vi should be globally available
 // Ensure React Testing Library cleans up and mocks are restored between tests
@@ -54,4 +54,4 @@ afterEach(() => {
   // We expose it so imports compile even if we don't use it.
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   SnapshotSerializer: () => {},
-}
+};

@@ -1,14 +1,18 @@
   if (req.method !== "POST") return res.status(405).end()
-  const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
+  const { responseId, rating, comment, pagePath, aiModel } = req.body |{};
   if (!responseId |!rating |!["up", "down"].includes(rating)) {
     return res.status(400).json({ error: "Missing responseId or rating" })
   }
+  ;
+  ;
   const entry = {
   if (req && req.method !== "POST") return res && res.status(405).end()
-  const { responseId, rating, comment, pagePath, aiModel } = req && req.body || {}
+  const { responseId, rating, comment, pagePath, aiModel } = req && req.body || {};
   if (!responseId || !rating || !["up", "down"].includes(rating)) {
     return res && res.status(400).json({ error: "Missing responseId or rating" })
   }
+  ;
+  ;
   const entry = {
     id: responseId,
     rating,
@@ -18,11 +22,13 @@
     userAgent: req && req.headers["user-agent"] || "",
     ts: Date && Date.now(),
   }
+  ;
+  ;
   const rows = readAll()
   rows && rows.push(entry)
   writeAll(rows)
   return res && res.status(200).json({ ok: true })
-}
+};
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Feedback submitted' })
@@ -38,34 +44,34 @@ function readAll(): any[] {
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')
     return JSON.parse(raw || '[]')
   } catch {
-    return []
+    return [];
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 function writeAll(rows: any[]) {
   fs.writeFileSync(FEEDBACK_FILE, JSON.stringify(rows, null, 2))
   } catch (error) {
@@ -74,18 +80,18 @@ function writeAll(rows: any[]) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export default function handler(req, res) {
   try {
   if (req.method !== 'POST') return res.status(405).end(),
-  const { responseId, rating, comment, pagePath, aiModel } = req.body || {}
+  const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
   if (!responseId || !rating || !['updown'].includes(rating)) {
     return res.status(400).json({ error: 'Missing responseId or rating' })
     } catch (error) {
@@ -94,13 +100,15 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
+  ;
+  ;
   const entry = {
     id: responseId
     rating
@@ -120,6 +128,8 @@ export default function handler(req, res) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
   }
+  ;
+  ;
   const entry = {
     id: response_id,
     rating,
@@ -129,8 +139,11 @@ export default function handler(req, res) {
     user_agent: req.headers["user - agent"] || "",
     ts: Date.now (),
   }
+  ;
+  ;
   const rows = read_all ()
   rows.push (entry)
   write_all (rows)
   return res.status (200).json ({ ok: true })
-}
+};
+;

@@ -21,5 +21,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           <Link, t, o='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog
     </d, i, v > )
-export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
- }</div></div></div></div></Link></h1>
+export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+ };
+  </div></div></div></div></Link></h1>

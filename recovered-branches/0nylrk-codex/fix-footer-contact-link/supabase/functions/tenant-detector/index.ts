@@ -9,20 +9,24 @@ interface TenantInfo {
   logo_url: string | null
   theme_preset: string
 }
-const corsHeaders = {
+;
+  ;
+  const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info',
-  'Access-Control-Max-Age': '86400'}
+  'Access-Control-Max-Age': '86400'};
   'Access-Control-Max-Age': '86400',
-}
+};
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get('SUPABASE_URL')
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')
 if (!supabaseUrl || !supabaseServiceKey) {
   throw new Error('Required environment variables are not set')
 }
-const supabase = createClient(supabaseUrl, supabaseServiceKey)
+;
+  ;
+  const supabase = createClient(supabaseUrl, supabaseServiceKey)
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -31,7 +35,7 @@ serve(async (req) => {
       headers: corsHeaders})
       headers: corsHeaders,
     })
-  }
+  };
   try {
     const url = new URL(req.url)
     const hostnameParam = url.searchParams.get('host')
@@ -43,7 +47,7 @@ serve(async (req) => {
       url.hostname
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided')
-    }
+    };
     // Extract tenant info
     let tenantInfo: TenantInfo | null = null
     if (subdomainParam) {
@@ -57,7 +61,7 @@ serve(async (req) => {
       if (error) {
         console.error('Database error:', error)
         throw new Error(`Database error: ${error.message}`)
-      }
+      };
       tenantInfo = data as TenantInfo
     } else {
       // Try matching custom domain first
@@ -69,7 +73,7 @@ serve(async (req) => {
         .single()
       // If no match on custom domain, try subdomain
       if (!data && !error) {
-        const subdomain = hostname.split('.')[0]
+        const subdomain = hostname.split('.')[0];
         if (subdomain && !['www', 'app', 'local', 'localhost'].includes(subdomain)) {
           const subdomainResult = await supabase
             .from('whitelabel_tenants')
@@ -79,13 +83,14 @@ serve(async (req) => {
             .single()
           if (!subdomainResult.error) {
             tenantInfo = subdomainResult.data as TenantInfo
-          }
-        }
+          };
+        };
       } else if (data) {
         tenantInfo = data as TenantInfo
-      }
-    }
-    return new Response(
+      };
+    };
+    ;
+  return new Response(
       JSON.stringify({
         tenant: tenantInfo,
         status: 'success'
@@ -114,5 +119,5 @@ serve(async (req) => {
         },
       },
     )
-  }
+  };
 })

@@ -7,7 +7,7 @@ export interface Innovative2026MicroSaasV2 {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -19,16 +19,16 @@ export interface Innovative2026MicroSaasV2 {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
   description: string
-  features: string[]
+  features: string[];
   link: string
   category: string
   realImplementation: boolean
@@ -37,14 +37,14 @@ export interface Innovative2026MicroSaasV2 {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -461,10 +461,10 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     customers: 75,
     rating: 4.9,
     reviews: 40
-  }
-]
-  }
-}
+  };
+];
+  };
+};
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
   {
     id: "2026-micro-saas-v2",
@@ -486,6 +486,6 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
+    };
+  };
+];

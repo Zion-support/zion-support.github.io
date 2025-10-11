@@ -7,12 +7,12 @@ export interface ApiKey {
   id: string
   name: string
   key_prefix: string
-  scopes: ApiKeyScope[]
+  scopes: ApiKeyScope[];
   created_at: string
   last_used_at: string | null
   expires_at: string | null
   is_active: boolean
-}
+};
 export interface ApiLog {
   id: string
   endpoint: string
@@ -21,7 +21,7 @@ export interface ApiLog {
   created_at: string
   ip_address?: string
   response_time_ms?: number
-}
+};
 export function useApiKeys() {
   const { user } = useAuth()
   const [keys, setKeys] = useState<ApiKey[]>([])
@@ -38,7 +38,7 @@ export function useApiKeys() {
     const env = (import.meta as any)?.env ?? process.env
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL
     return `${url}/functions/v1/api-key-manager`
-  }
+  };
   // Fetch user's API keys
   const fetchApiKeys = async () => {
     if (!user) return
@@ -50,17 +50,19 @@ export function useApiKeys() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getApiUrl()}/keys`, {
+      ;
+  ;
+  const response = await fetch(`${getApiUrl()}/keys`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
-        }
+        };
       })
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to fetch API keys')
-      }
+      };
       setKeys(result.keys || [])
     } catch (err) {
       console.error('Error fetching API keys:', err)
@@ -73,8 +75,8 @@ export function useApiKeys() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   // Create new API key
   const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
     if (!user) return
@@ -87,7 +89,9 @@ export function useApiKeys() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getApiUrl()}/create`, {
+      ;
+  ;
+  const response = await fetch(`${getApiUrl()}/create`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -102,7 +106,7 @@ export function useApiKeys() {
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to create API key')
-      }
+      };
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev])
       // Store the actual key value temporarily so it can be displayed once
@@ -124,8 +128,8 @@ export function useApiKeys() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   // Regenerate API key
   const regenerateApiKey = async (keyId: string) => {
     if (!user) return
@@ -138,7 +142,9 @@ export function useApiKeys() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getApiUrl()}/regenerate`, {
+      ;
+  ;
+  const response = await fetch(`${getApiUrl()}/regenerate`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -149,7 +155,7 @@ export function useApiKeys() {
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to regenerate API key')
-      }
+      };
       // Update the key in the list
       setKeys(prev => prev.map(key => 
         key.id === keyId ? { ...result, key: undefined } : key
@@ -173,8 +179,8 @@ export function useApiKeys() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   // Revoke API key
   const revokeApiKey = async (keyId: string) => {
     if (!user) return
@@ -186,7 +192,9 @@ export function useApiKeys() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getApiUrl()}/revoke`, {
+      ;
+  ;
+  const response = await fetch(`${getApiUrl()}/revoke`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -197,7 +205,7 @@ export function useApiKeys() {
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to revoke API key')
-      }
+      };
       // Update the key's active status in the list
       setKeys(prev => prev.map(key => 
         key.id === keyId ? { ...key, is_active: false } : key
@@ -219,8 +227,8 @@ export function useApiKeys() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   // Fetch API usage logs
   const fetchApiLogs = async (limit = 50, offset = 0) => {
     if (!user) return
@@ -232,20 +240,22 @@ export function useApiKeys() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(
+      ;
+  ;
+  const response = await fetch(
         `${getApiUrl()}/logs?limit=${limit}&offset=${offset}`, 
         {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${session.access_token}`,
             'Content-Type': 'application/json'
-          }
-        }
+          };
+        };
       )
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to fetch API logs')
-      }
+      };
       setLogs(result.logs || [])
       setTotalLogs(result.count || 0)
       return result
@@ -260,8 +270,9 @@ export function useApiKeys() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     keys,
     logs,
@@ -275,5 +286,6 @@ export function useApiKeys() {
     revokeApiKey,
     fetchApiLogs,
     clearNewApiKey: () => setNewApiKey(null)
-  }
-}
+  };
+};
+;

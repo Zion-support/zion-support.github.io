@@ -4,7 +4,7 @@ export interface ComprehensiveITService {id: string
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -16,17 +16,17 @@ export interface ComprehensiveITService {id: string
   setup_time: string
   category: string
   real_service: boolean
-  technology: string[]
-  integrations: string[]
-  use_cases: string[]
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   market_size: string
   growth_rate: string
   variant: string
   contact_info: unknown
     mobile: string
-    email: string}
+    email: string};
     address: string
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
@@ -56,8 +56,8 @@ export interface ComprehensiveITService {id: string
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
     market_position: unknown,
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  l: string}
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
   s: string,
     i,
@@ -110,8 +110,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - gray - 600 to - blue - 700',
     text_colo,
@@ -168,7 +167,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'}
+      website: 'https://ziontechgroup && ziontechgroup.com'};
     },
     real_implementation: true
     implementation_details: unknown,
@@ -197,7 +196,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'}
+  s://ziontechgroup && ziontechgroup.com'};
     },
     real_implementatio,
   n: true,
@@ -370,8 +369,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 600 to - cyan - 700',
     text_colo,
@@ -525,8 +523,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 600 to - pink - 700',
     text_colo,
@@ -659,8 +656,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 600 to - pink - 700',
     text_colo,
@@ -750,7 +746,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
+};
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services
     id: 'enterprise-it-infrastructure', name: 'Enterprise IT Infrastructure Management',
@@ -823,8 +819,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   feature,
   s: string[], popula,
   r: boolean,
-  ico,
-  n: string, colo,
+  icon: string, colo,
   r: string,
   textColo,
   r: string, lin,
@@ -868,7 +863,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services,
@@ -888,8 +883,7 @@ export const,
       'Help desk supportStrategic IT consulting'
     ],
     popula,
-  r: true, ico,
-  n: '',
+  r: true, icon: '',
     colo,
   r: 'from-gray-600 to-blue-700', textColo,
   r: 'text-gray-400',
@@ -979,8 +973,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - green - 600 to - emerald - 700',
     text_colo,
@@ -1136,8 +1129,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - indigo - 600 to - purple - 700',
     text_colo,
@@ -1289,8 +1281,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - orange - 600 to - red - 700',
     text_colo,
@@ -1439,8 +1430,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - purple - 600 to - pink - 700',
     text_colo,
@@ -1593,8 +1583,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 600 to - indigo - 700',
     text_colo,
@@ -1744,8 +1733,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - green - 600 to - emerald - 700',
     text_colo,
@@ -1896,8 +1884,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 600 to - pink - 700',
     text_colo,
@@ -1989,7 +1976,7 @@ export const,
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -2001,11 +1988,11 @@ export const,
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -2020,7 +2007,7 @@ export const,
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
+};
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services
     reviews: 156
@@ -2045,7 +2032,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -2057,11 +2044,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -2074,7 +2061,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   launchDate: string, customers: number
   rating: number
   reviews: number
-}
+};
 export const comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services
     price: '$25,999',
@@ -2126,8 +2113,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   feature,
   s: string[], popula,
   r: boolean,
-  ico,
-  n: string, colo,
+  icon: string, colo,
   r: string,
   textColo,
   r: string, lin,
@@ -2169,8 +2155,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   textColo,
@@ -2223,7 +2208,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
   // Enterprise IT Infrastructure Services,
@@ -2256,8 +2241,7 @@ export const,
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-gray-600 to-blue-700',
     textColo,
@@ -2318,7 +2302,7 @@ export const,
   price: string,
   period: string,,
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -2330,11 +2314,11 @@ export const,
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string,
@@ -2343,9 +2327,9 @@ export const,
     email: string,
     mobile: string
     email: string
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -2387,8 +2371,7 @@ export const,
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   textColo,
@@ -2424,11 +2407,11 @@ export const,
   varian,
   t: string,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string}
+  o: {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -2440,10 +2423,10 @@ export const,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [
-}
+};
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
@@ -2461,8 +2444,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   ratin,
   g: number
   review,
-  s: number}
-
+  s: number};
+;
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
@@ -2476,7 +2459,7 @@ export const,
     features: [
       'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management'
       'Help desk supportStrategic IT consulting'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-gray-600 to-blue-700'
@@ -2488,21 +2471,21 @@ export const,
     setupTime: '8-12 weeks'
     category: 'Enterprise IT Infrastructure'
     realService: true
-    technology: ['Cloud computingVirtualizationNetwork managementSecurity systemsMonitoring toolsAutomation platformsAI operations']
-    integrations: ['ERP systemsCRM platformsSecurity toolsMonitoring systemsCloud platformsLegacy systems']
+    technology: ['Cloud computingVirtualizationNetwork managementSecurity systemsMonitoring toolsAutomation platformsAI operations'];
+    integrations: ['ERP systemsCRM platformsSecurity toolsMonitoring systemsCloud platformsLegacy systems'];
     useCases: ['IT infrastructure managementDigital transformationCloud migrationSecurity enhancementPerformance optimizationCompliance management'],
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security'
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'],
     marketSize: '$1.2 T IT services market, 8% annual growth'
     growthRate: '8% annual growth',
-    variant: 'enterprise-futuristic'}
-    contactInfo: {}
+    variant: 'enterprise-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true,
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-gray-600 to-blue-700'
@@ -2514,29 +2497,29 @@ export const,
     setupTime: '8-12 weeks'
     category: 'Enterprise IT Infrastructure'
     realService: true
-    technology: ['Cloud computingVirtualizationNetwork managementSecurity systemsMonitoring toolsAutomation platformsAI operations']
-    integrations: ['ERP systemsCRM platformsSecurity toolsMonitoring systemsCloud platformsLegacy systems']
-    useCases: ['IT infrastructure managementDigital transformationCloud migrationSecurity enhancementPerformance optimizationCompliance management']
+    technology: ['Cloud computingVirtualizationNetwork managementSecurity systemsMonitoring toolsAutomation platformsAI operations'];
+    integrations: ['ERP systemsCRM platformsSecurity toolsMonitoring systemsCloud platformsLegacy systems'];
+    useCases: ['IT infrastructure managementDigital transformationCloud migrationSecurity enhancementPerformance optimizationCompliance management'];
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security'
-    competitors: ['IBM Global ServicesAccentureDeloittePwCEY']
+    competitors: ['IBM Global ServicesAccentureDeloittePwCEY'];
     marketSize: '$1.2 T IT services market, 8% annual growth'
     growthRate: '8% annual growth'
-    variant: 'enterprise-futuristic'}
-    contactInfo: {}
+    variant: 'enterprise-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true
     implementation_details: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launch_date: '2024 - 09 - 15'
     customers: 180
     rating: 4.9
     reviews: 156,
-  {/* TODO: Fix JSX expression */}
-  t: 'enterprise-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'enterprise-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -2546,7 +2529,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -2558,22 +2541,22 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 156}
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  }
-]
-}
-]
+  s: 156};
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */};
+  };
+];
+};
+];
 realImplementation: true,
     implementationDetails:,
 export interface ComprehensiveITService {
-  }
-]
+  };
+];
     realImplementation: true
     implementationDetails:
-]
-  }
-]
+];
+  };
+];
     realImplementation: true
     implementationDetails:,
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
@@ -2581,7 +2564,7 @@ export interface ComprehensiveITService {
     customers: 18
     rating: 4.7
     reviews: 12,
-  }
+  };
   // Cybersecurity Operations Center
     id: 'cybersecurity-operations-center',
     name: 'Cybersecurity Operations Center (SOC)',
@@ -2601,7 +2584,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.7,
     review,
-  s: 12}
+  s: 12};
   // Cybersecurity Operations Center,
   id: 'cybersecurity-operations-center'
     nam,
@@ -2627,7 +2610,7 @@ export interface ComprehensiveITService {
       'Security awareness training'
       'Penetration testing'
       'Security consulting'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -2638,8 +2621,7 @@ export interface ComprehensiveITService {
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-600 to-pink-700'
     textColo,
@@ -2671,7 +2653,7 @@ export interface ComprehensiveITService {
       'Incident response'
       'Vulnerability scanning'
       'Penetration testing'
-    ]
+    ];
     integration,
   s: [,
       'SIEM systems'
@@ -2680,7 +2662,7 @@ export interface ComprehensiveITService {
       'Identity management'
       'Vulnerability scanners'
       'Compliance tools'
-    ]
+    ];
     useCase,
   s: [,
       'Threat monitoring'
@@ -2689,7 +2671,7 @@ export interface ComprehensiveITService {
       'Security compliance'
       'Security training'
       'Penetration testing'
-    ]
+    ];
     roi: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction'
     competitors: [
       'CrowdStrike Falcon Complete'
@@ -2703,7 +2685,7 @@ export interface ComprehensiveITService {
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails:,
       'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.'
@@ -2711,7 +2693,7 @@ export interface ComprehensiveITService {
     customers: 32
     rating: 4.8
     reviews: 24,
-  }
+  };
   // Data Center Management Services
     id: 'data-center-management',
     name: 'Data Center Management & Optimization',
@@ -2728,7 +2710,7 @@ export interface ComprehensiveITService {
       'SentinelOne Vigilance'
       'Carbon Black'
       'Cylance'
-    ]
+    ];
     marketSiz,
   e: '$200B cybersecurity market, 15% annual growth'
     growthRat,
@@ -2745,7 +2727,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2758,7 +2740,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.8,
     review,
-  s: 24}
+  s: 24};
   // Data Center Management Services,
   id: 'data-center-management'
     nam,
@@ -2784,7 +2766,7 @@ export interface ComprehensiveITService {
       'Capacity planning'
       'Energy efficiency optimization'
       '24/7 operations center'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -2795,8 +2777,7 @@ export interface ComprehensiveITService {
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-600 to-emerald-700'
     textColo,
@@ -2828,7 +2809,7 @@ export interface ComprehensiveITService {
       'Network management'
       'Storage systems'
       'Security tools'
-    ]
+    ];
     integration,
   s: [,
       'Data center infrastructure'
@@ -2837,7 +2818,7 @@ export interface ComprehensiveITService {
       'Backup systems'
       'Network equipment'
       'Power systems'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -2860,14 +2841,14 @@ export interface ComprehensiveITService {
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.'
     launchDate: '2024-01-20'
     customers: 15
     rating: 4.7
     reviews: 11,
-  }
+  };
   // Network Security & SD-WAN Services
     id: 'network-security-sdwan',
     name: 'Network Security & SD-WAN Management',
@@ -2877,7 +2858,7 @@ export interface ComprehensiveITService {
     description:,
       'Capacity planning'
       'Disaster recovery'
-    ]
+    ];
     ro,
   i: 'Enterprises achieve 450% ROI through improved uptime, energy efficiency, and operational optimization'
     competitor,
@@ -2887,7 +2868,7 @@ export interface ComprehensiveITService {
       'CyrusOne'
       'CoreSite'
       'QTS Realty'
-    ]
+    ];
     marketSiz,
   e: '$200B data center market, 12% annual growth'
     growthRat,
@@ -2904,7 +2885,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -2916,7 +2897,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.7,
     review,
-  s: 11}
+  s: 11};
   // Network Security & SD-WAN Services,
   id: 'network-security-sdwan'
     nam,
@@ -2942,7 +2923,7 @@ export interface ComprehensiveITService {
       'Security compliance'
       'Network automation'
       '24/7 network support'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-indigo-600 to-purple-700'
@@ -2953,8 +2934,7 @@ export interface ComprehensiveITService {
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-indigo-600 to-purple-700'
     textColo,
@@ -2986,7 +2966,7 @@ export interface ComprehensiveITService {
       'Network automation'
       'Monitoring tools'
       'Security analytics'
-    ]
+    ];
     integration,
   s: [,
       'Network equipment'
@@ -2995,7 +2975,7 @@ export interface ComprehensiveITService {
       'Cloud platforms'
       'Legacy networks'
       'Security platforms'
-    ]
+    ];
     useCase,
   s: [,
       'Network optimization'
@@ -3004,7 +2984,7 @@ export interface ComprehensiveITService {
       'Performance improvement'
       'Remote work support'
       'Multi-location management'
-    ]
+    ];
     roi: 'Enterprises achieve 350% ROI through improved network performance and security'
     competitors: [
       'Cisco SD-WAN'
@@ -3018,14 +2998,14 @@ export interface ComprehensiveITService {
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.'
     launchDate: '2024-02-15'
     customers: 28
     rating: 4.6
     reviews: 19,
-  }
+  };
   // IT Project Management Services
     id: 'it-project-management',
     name: 'IT Project Management & Consulting',
@@ -3042,7 +3022,7 @@ export interface ComprehensiveITService {
       'Fortinet'
       'Palo Alto Networks'
       'Juniper Networks'
-    ]
+    ];
     marketSiz,
   e: '$8B SD-WAN market, 35% annual growth'
     growthRat,
@@ -3059,7 +3039,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3071,7 +3051,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.6,
     review,
-  s: 19}
+  s: 19};
   // IT Project Management Services,
   id: 'it-project-management'
     nam,
@@ -3097,7 +3077,7 @@ export interface ComprehensiveITService {
       'Strategic consulting'
       'Technology advisory'
       'Project recovery'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -3108,8 +3088,7 @@ export interface ComprehensiveITService {
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-orange-600 to-red-700'
     textColo,
@@ -3141,7 +3120,7 @@ export interface ComprehensiveITService {
       'Quality assurance'
       'Risk management'
       'Reporting tools'
-    ]
+    ];
     integration,
   s: [,
       'Project management platforms'
@@ -3150,7 +3129,7 @@ export interface ComprehensiveITService {
       'Reporting tools'
       'Development platforms'
       'Testing tools'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -3161,21 +3140,21 @@ export interface ComprehensiveITService {
       'Project recovery'
       'Change management'],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
-    competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
+    competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte'];
     marketSize: '$50 B IT consulting market, 10% annual growth'
     growthRate: '10% annual growth'
     variant: 'consulting-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.'
     launchDate: '2024-01-10'
     customers: 45
     rating: 4.7
     reviews: 32,
-  }
+  };
   // IT Training & Certification Services
     id: 'it-training-certification',
     name: 'IT Training & Certification Programs',
@@ -3184,11 +3163,11 @@ export interface ComprehensiveITService {
     period: '/month',
     description:,
       'Change management'
-    ]
+    ];
     ro,
   i: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance'
     competitor,
-  s: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
+  s: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte'];
     marketSiz,
   e: '$50B IT consulting market, 10% annual growth'
     growthRat,
@@ -3205,7 +3184,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3217,7 +3196,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.7,
     review,
-  s: 32}
+  s: 32};
   // IT Training & Certification Services,
   id: 'it-training-certification'
     nam,
@@ -3243,7 +3222,7 @@ export interface ComprehensiveITService {
       'Learning management system'
       'Progress tracking'
       '24/7 learning support'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -3254,8 +3233,7 @@ export interface ComprehensiveITService {
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-600 to-pink-700'
     textColo,
@@ -3287,7 +3265,7 @@ export interface ComprehensiveITService {
       'Assessment tools'
       'Progress tracking'
       'Mobile learning'
-    ]
+    ];
     integration,
   s: [,
       'Learning platforms'
@@ -3296,7 +3274,7 @@ export interface ComprehensiveITService {
       'Social learning'
       'Assessment systems'
       'Progress tracking'
-    ]
+    ];
     useCase,
   s: [,
       'Professional development'
@@ -3305,7 +3283,7 @@ export interface ComprehensiveITService {
       'Certification preparation'
       'Team training'
       'Knowledge transfer'
-    ]
+    ];
     roi: 'Individuals achieve 200% ROI through career advancement and increased earning potential'
     competitors: [
       'CompTIA'
@@ -3319,14 +3297,14 @@ export interface ComprehensiveITService {
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.'
     launchDate: '2024-01-05'
     customers: 120
     rating: 4.8
     reviews: 89,
-  }
+  };
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next-generation quantum-powered cloud infrastructure',
@@ -3342,7 +3320,7 @@ export interface ComprehensiveITService {
       'Microsoft'
       'AWS Training'
       'Google Cloud Training'
-    ]
+    ];
     marketSiz,
   e: '$15B IT training market, 12% annual growth'
     growthRat,
@@ -3359,7 +3337,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3371,7 +3349,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.8,
     review,
-  s: 89}
+  s: 89};
     i,
   d: 'quantum-cloud-infrastructure'
     nam,
@@ -3397,7 +3375,7 @@ export interface ComprehensiveITService {
       'Quantum IoT platform'
       'Quantum analytics engine'
       '24/7 quantum operations center'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -3406,8 +3384,7 @@ export interface ComprehensiveITService {
     marketPosition:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700'
     textColo,
@@ -3438,7 +3415,7 @@ export interface ComprehensiveITService {
       'Redis'
       'AWS'
       'Custom quantum hardware'
-    ]
+    ];
     integration,
   s: [,
       'Enterprise systems'
@@ -3446,7 +3423,7 @@ export interface ComprehensiveITService {
       'Cloud platforms'
       'Security tools'
       'Monitoring systems'
-    ]
+    ];
     useCase,
   s: [,
       'High-performance computing'
@@ -3455,7 +3432,7 @@ export interface ComprehensiveITService {
       'Climate modeling'
       'AI training'
       'Blockchain operations'
-    ]
+    ];
     roi: 'Enterprises report 300% ROI through improved performance and quantum-grade security.'
     competitors: [
       'AWS'
@@ -3468,7 +3445,7 @@ export interface ComprehensiveITService {
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails:,
       'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.'
@@ -3476,7 +3453,7 @@ export interface ComprehensiveITService {
     customers: 45
     rating: 4.9
     reviews: 32,
-  }
+  };
     id: 'ai-powered-devops-automation',
     name: 'AI-Powered DevOps Automation',
     tagline: 'Intelligent DevOps automation with AI-driven optimization',
@@ -3491,7 +3468,7 @@ export interface ComprehensiveITService {
       'Azure'
       'Google Cloud'
       'Traditional cloud providers'
-    ]
+    ];
     marketSiz,
   e: '$400B cloud market, quantum segment growing 400% annually'
     growthRat,
@@ -3508,7 +3485,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3521,7 +3498,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.9,
     review,
-  s: 32}
+  s: 32};
     i,
   d: 'ai-powered-devops-automation'
     nam,
@@ -3547,7 +3524,7 @@ export interface ComprehensiveITService {
       'Real-time performance monitoring'
       'Predictive analytics dashboard'
       '24/7 AI operations center'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -3557,8 +3534,7 @@ export interface ComprehensiveITService {
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-600 to-emerald-700'
     textColo,
@@ -3590,7 +3566,7 @@ export interface ComprehensiveITService {
       'AWS'
       'Docker'
       'Kubernetes'
-    ]
+    ];
     integration,
   s: [,
       'GitHub'
@@ -3602,7 +3578,7 @@ export interface ComprehensiveITService {
       'AWS'
       'Azure'
       'Google Cloud'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -3613,14 +3589,14 @@ export interface ComprehensiveITService {
       'Compliance automation'
       'Resource optimization'],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
-    competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
+    competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions'];
     marketSize: '$8 B DevOps market, AI segment growing 350% annually'
     growthRate: '350% annual growth'
     variant: 'ai-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails:,
       'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.'
@@ -3628,7 +3604,7 @@ export interface ComprehensiveITService {
     customers: 320
     rating: 4.8
     reviews: 245,
-  }
+  };
     id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Unhackable quantum-secured cybersecurity platform',
@@ -3637,11 +3613,11 @@ export interface ComprehensiveITService {
     description: 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.'
     features: [,
       'Resource optimization'
-    ]
+    ];
     ro,
   i: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.'
     competitor,
-  s: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
+  s: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions'];
     marketSiz,
   e: '$8B DevOps market, AI segment growing 350% annually'
     growthRat,
@@ -3658,7 +3634,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3671,7 +3647,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.8,
     review,
-  s: 245}
+  s: 245};
     i,
   d: 'quantum-cybersecurity-suite'
     nam,
@@ -3696,7 +3672,7 @@ export interface ComprehensiveITService {
       'Advanced security analytics'
       'Compliance automation'
       '24/7 quantum security operations'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -3712,8 +3688,7 @@ export interface ComprehensiveITService {
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-600 to-pink-700'
     textColo,
@@ -3744,7 +3719,7 @@ export interface ComprehensiveITService {
       'Redis'
       'AWS'
       'Custom quantum hardware'
-    ]
+    ];
     integration,
   s: [,
       'SIEM systems'
@@ -3752,7 +3727,7 @@ export interface ComprehensiveITService {
       'Endpoint protection'
       'Identity management'
       'Compliance tools'
-    ]
+    ];
     useCase,
   s: [,
       'Network security'
@@ -3761,7 +3736,7 @@ export interface ComprehensiveITService {
       'Threat detection'
       'Incident response'
       'Compliance management'
-    ]
+    ];
     roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.'
     competitors: [
       'Palo Alto Networks'
@@ -3775,7 +3750,7 @@ export interface ComprehensiveITService {
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails:,
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
@@ -3783,17 +3758,17 @@ export interface ComprehensiveITService {
     customers: 180
     rating: 4.9
     reviews: 156,
-  }
+  };
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15'
     customers: 180
     rating: 4.9
     reviews: 156,
-  }
+  };
 ];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launchDate: '2024-09-15'
@@ -3808,7 +3783,7 @@ export interface ComprehensiveITService {
       'CrowdStrike'
       'Symantec'
       'Traditional security tools'
-    ]
+    ];
     marketSiz,
   e:
       '$150B cybersecurity market, quantum segment growing 400% annually'
@@ -3826,7 +3801,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3839,7 +3814,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.9,
     review,
-  s: 156}
+  s: 156};
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDat,
   e: '2024-09-15',
@@ -3848,7 +3823,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.9,
     review,
-  s: 156}
+  s: 156};
 ];      mobil,
   e: '+1 302 464 0950'
       emai,
@@ -3858,7 +3833,7 @@ export interface ComprehensiveITService {
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -3870,7 +3845,7 @@ export interface ComprehensiveITService {
     ratin,
   g: 4.9,
     review,
-  s: 156}
+  s: 156};
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15',
     customers: 180,
@@ -3881,7 +3856,7 @@ export interface ComprehensiveITService {
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
-    }
+    };
     realImplementation: true,
     implementationDetails: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launchDate: '2024-09-15'
@@ -3926,18 +3901,18 @@ export interface ComprehensiveITService {
   customers: number,
   rating: number,
   reviews: number
-]
+];
   s: 180
     ratin,
   g: 4.9
     review,
-  s: 156}
-]
-export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
-  s: string}
+  s: 156};
+];
+export interface ComprehensiveITService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -3955,7 +3930,7 @@ export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
@@ -3963,7 +3938,7 @@ export const,
     id: 'enterprise-it-infrastructure'
     name: 'Enterprise IT Infrastructure Management'
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
-}
+};
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
@@ -4001,7 +3976,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-    }
+    };
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
@@ -4021,7 +3996,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management'
       'Help desk supportStrategic IT consulting'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-gray-600 to-blue-700'
@@ -4033,26 +4008,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '8-12 weeks'
     category: 'Enterprise IT Infrastructure'
     realService: true
-    technology: ['Cloud computingVirtualizationNetwork managementSecurity systemsMonitoring toolsAutomation platformsAI operations']
-    integrations: ['ERP systemsCRM platformsSecurity toolsMonitoring systemsCloud platformsLegacy systems']
+    technology: ['Cloud computingVirtualizationNetwork managementSecurity systemsMonitoring toolsAutomation platformsAI operations'];
+    integrations: ['ERP systemsCRM platformsSecurity toolsMonitoring systemsCloud platformsLegacy systems'];
     useCases: ['IT infrastructure managementDigital transformationCloud migrationSecurity enhancementPerformance optimizationCompliance management'],
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security'
     competitors: ['IBM Global ServicesAccentureDeloittePwCEY'],
     marketSize: '$1.2 T IT services market, 8% annual growth'
     growthRate: '8% annual growth',
-    variant: 'enterprise-futuristic'}
-    contactInfo: {}
+    variant: 'enterprise-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'
     launchDate: '2024-01-01'
     customers: 25
     rating: 4.8
     reviews: 18,
-  }
+  };
   // Cloud Migration & Optimization Services
   {
     id: 'cloud-migration-optimization'
@@ -4062,14 +4037,14 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month'
     description: 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and window.window.window.performance. Guarantees 50% cost reduction and improved scalability.'
       address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'
     launchDate: '2024-01-01'
     customers: 25
     rating: 4.8
     reviews: 18
-  }
+  };
   // Cloud Migration & Optimization Services
   {
     id: 'cloud-migration-optimization'
@@ -4081,7 +4056,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'Cloud migration planningWorkload assessmentCost optimizationPerformance optimizationSecurity migrationData migrationApplication modernizationCloud governance'
       'Training and supportPost-migration optimization'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-blue-600 to-cyan-700'
@@ -4093,26 +4068,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '12-16 weeks'
     category: 'Cloud Migration & Optimization'
     realService: true
-    technology: ['AWSAzureGoogle CloudKubernetesDockerTerraformAnsibleCloud native tools']
-    integrations: ['On-premises systemsLegacy applicationsDatabase systemsSecurity toolsMonitoring systemsBackup systems']
-    useCases: ['Cloud migrationApplication modernizationCost optimizationPerformance improvementScalability enhancementDisaster recovery']
+    technology: ['AWSAzureGoogle CloudKubernetesDockerTerraformAnsibleCloud native tools'];
+    integrations: ['On-premises systemsLegacy applicationsDatabase systemsSecurity toolsMonitoring systemsBackup systems'];
+    useCases: ['Cloud migrationApplication modernizationCost optimizationPerformance improvementScalability enhancementDisaster recovery'];
     roi: 'Enterprises achieve 600% ROI through cloud cost reduction and performance improvements'
     competitors: ['AWS Professional ServicesMicrosoft ConsultingGoogle CloudAccentureDeloitte'],
     marketSize: '$400 B cloud services market, 20% annual growth'
     growthRate: '20% annual growth',
-    variant: 'cloud-futuristic'}
-    contactInfo: {}
+    variant: 'cloud-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
     launchDate: '2024-02-01'
     customers: 18
     rating: 4.7
     reviews: 12,
-  }
+  };
   // Cybersecurity Operations Center
   {
     id: 'cybersecurity-operations-center'
@@ -4124,7 +4099,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       '24/7 threat monitoringAI-powered threat detectionIncident response automationSecurity analytics dashboardThreat intelligenceVulnerability managementSecurity complianceSecurity awareness training'
       'Penetration testingSecurity consulting'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -4136,26 +4111,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '4-6 weeks'
     category: 'Cybersecurity Operations'
     realService: true
-    technology: ['AI threat detectionMachine learningSecurity analyticsThreat intelligenceIncident responseVulnerability scanningPenetration testing']
-    integrations: ['SIEM systemsEDR platformsFirewallsIdentity managementVulnerability scannersCompliance tools']
-    useCases: ['Threat monitoringIncident responseVulnerability managementSecurity complianceSecurity trainingPenetration testing']
+    technology: ['AI threat detectionMachine learningSecurity analyticsThreat intelligenceIncident responseVulnerability scanningPenetration testing'];
+    integrations: ['SIEM systemsEDR platformsFirewallsIdentity managementVulnerability scannersCompliance tools'];
+    useCases: ['Threat monitoringIncident responseVulnerability managementSecurity complianceSecurity trainingPenetration testing'];
     roi: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction'
     competitors: ['CrowdStrike Falcon CompletePalo Alto Networks CortexSentinelOne VigilanceCarbon BlackCylance'],
     marketSize: '$200 B cybersecurity market, 15% annual growth'
     growthRate: '15% annual growth',
-    variant: 'cybersecurity-futuristic'}
-    contactInfo: {}
+    variant: 'cybersecurity-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Fully functional cybersecurity operations center with 24/7 monitoring, AI threat detection, and automated incident response. Includes security operations center and comprehensive support.'
     launchDate: '2024-01-15'
     customers: 32
     rating: 4.8
     reviews: 24,
-  }
+  };
   // Data Center Management Services
   {
     id: 'data-center-management'
@@ -4167,7 +4142,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'Data center infrastructure managementPower and cooling optimizationNetwork performance optimizationStorage managementBackup and disaster recoverySecurity managementPerformance monitoringCapacity planning'
       'Energy efficiency optimization24/7 operations center'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -4179,26 +4154,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '8-12 weeks'
     category: 'Data Center Management'
     realService: true
-    technology: ['AI optimizationAutomation platformsMonitoring systemsEnergy managementNetwork managementStorage systemsSecurity tools']
-    integrations: ['Data center infrastructureMonitoring systemsSecurity toolsBackup systemsNetwork equipmentPower systems']
+    technology: ['AI optimizationAutomation platformsMonitoring systemsEnergy managementNetwork managementStorage systemsSecurity tools'];
+    integrations: ['Data center infrastructureMonitoring systemsSecurity toolsBackup systemsNetwork equipmentPower systems'];
     useCases: ['Data center managementInfrastructure optimizationPerformance improvementEnergy efficiencyCapacity planningDisaster recovery'],
     roi: 'Enterprises achieve 450% ROI through improved uptime, energy efficiency, and operational optimization'
     competitors: ['EquinixDigital RealtyCyrusOneCoreSiteQTS Realty'],
     marketSize: '$200 B data center market, 12% annual growth'
     growthRate: '12% annual growth',
-    variant: 'datacenter-futuristic'}
-    contactInfo: {}
+    variant: 'datacenter-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional data center management service with comprehensive infrastructure management and AI optimization capabilities. Includes 24/7 operations center and strategic consulting.'
     launchDate: '2024-01-20'
     customers: 15
     rating: 4.7
     reviews: 11,
-  }
+  };
   // Network Security & SD-WAN Services
   {
     id: 'network-security-sdwan'
@@ -4210,7 +4185,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'SD-WAN implementationNetwork security managementThreat protectionTraffic optimizationCentralized managementPerformance monitoringBandwidth optimizationSecurity compliance'
       'Network automation24/7 network support'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-indigo-600 to-purple-700'
@@ -4222,26 +4197,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '6-8 weeks'
     category: 'Network Security & SD-WAN'
     realService: true
-    technology: ['SD-WANNetwork securityThreat protectionTraffic optimizationNetwork automationMonitoring toolsSecurity analytics']
-    integrations: ['Network equipmentSecurity toolsMonitoring systemsCloud platformsLegacy networksSecurity platforms']
-    useCases: ['Network optimizationSecurity enhancementTraffic managementPerformance improvementRemote work supportMulti-location management']
+    technology: ['SD-WANNetwork securityThreat protectionTraffic optimizationNetwork automationMonitoring toolsSecurity analytics'];
+    integrations: ['Network equipmentSecurity toolsMonitoring systemsCloud platformsLegacy networksSecurity platforms'];
+    useCases: ['Network optimizationSecurity enhancementTraffic managementPerformance improvementRemote work supportMulti-location management'];
     roi: 'Enterprises achieve 350% ROI through improved network performance and security'
     competitors: ['Cisco SD-WANVMware SD-WANFortinetPalo Alto NetworksJuniper Networks'],
     marketSize: '$8 B SD-WAN market, 35% annual growth'
     growthRate: '35% annual growth',
-    variant: 'network-futuristic'}
-    contactInfo: {}
+    variant: 'network-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional network security and SD-WAN management service with comprehensive security integration and network optimization capabilities. Includes 24/7 network support and monitoring.'
     launchDate: '2024-02-15'
     customers: 28
     rating: 4.6
     reviews: 19,
-  }
+  };
   // IT Project Management Services
   {
     id: 'it-project-management'
@@ -4253,7 +4228,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'Project planning and managementResource allocationRisk managementQuality assuranceStakeholder communicationProject reportingChange managementStrategic consulting'
       'Technology advisoryProject recovery'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -4265,26 +4240,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '2-4 weeks'
     category: 'IT Project Management'
     realService: true
-    technology: ['Project management toolsAgile methodologiesDevOps practicesChange managementQuality assuranceRisk managementReporting tools']
-    integrations: ['Project management platformsCommunication toolsDocumentation systemsReporting toolsDevelopment platformsTesting tools']
-    useCases: ['IT project managementDigital transformationTechnology implementationStrategic planningProject recoveryChange management']
+    technology: ['Project management toolsAgile methodologiesDevOps practicesChange managementQuality assuranceRisk managementReporting tools'];
+    integrations: ['Project management platformsCommunication toolsDocumentation systemsReporting toolsDevelopment platformsTesting tools'];
+    useCases: ['IT project managementDigital transformationTechnology implementationStrategic planningProject recoveryChange management'];
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance'
     competitors: ['McKinseyBCGBainAccentureDeloitte'],
     marketSize: '$50 B IT consulting market, 10% annual growth'
     growthRate: '10% annual growth',
-    variant: 'consulting-futuristic'}
-    contactInfo: {}
+    variant: 'consulting-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional IT project management and consulting service with comprehensive project delivery and strategic consulting capabilities. Includes project management center and strategic support.'
     launchDate: '2024-01-10'
     customers: 45
     rating: 4.7
     reviews: 32,
-  }
+  };
   // IT Training & Certification Services
   {
     id: 'it-training-certification'
@@ -4296,7 +4271,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'Comprehensive IT trainingIndustry certificationsHands-on labsExpert instructorsFlexible learning optionsCertification preparationCareer guidanceLearning management system'
       'Progress tracking24/7 learning support'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -4308,26 +4283,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '1 week'
     category: 'IT Training & Certification'
     realService: true
-    technology: ['Learning management systemsVirtual labsVideo conferencingInteractive contentAssessment toolsProgress trackingMobile learning']
-    integrations: ['Learning platformsCertification bodiesCareer platformsSocial learningAssessment systemsProgress tracking']
-    useCases: ['Professional developmentCareer advancementSkill acquisitionCertification preparationTeam trainingKnowledge transfer']
+    technology: ['Learning management systemsVirtual labsVideo conferencingInteractive contentAssessment toolsProgress trackingMobile learning'];
+    integrations: ['Learning platformsCertification bodiesCareer platformsSocial learningAssessment systemsProgress tracking'];
+    useCases: ['Professional developmentCareer advancementSkill acquisitionCertification preparationTeam trainingKnowledge transfer'];
     roi: 'Individuals achieve 200% ROI through career advancement and increased earning potential'
     competitors: ['CompTIACiscoMicrosoftAWS TrainingGoogle Cloud Training'],
     marketSize: '$15 B IT training market, 12% annual growth'
     growthRate: '12% annual growth',
-    variant: 'training-futuristic'}
-    contactInfo: {}
+    variant: 'training-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true
     implementationDetails: 'Fully functional IT training and certification service with comprehensive training programs and industry certifications. Includes learning management system and 24/7 support.'
     launchDate: '2024-01-05'
     customers: 120
     rating: 4.8
     reviews: 89,
-  }
+  };
   {
     id: 'quantum-cloud-infrastructure'
     name: 'Quantum Cloud Infrastructure'
@@ -4338,7 +4313,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'Quantum computing resourcesQuantum-secured networkingQuantum encryption at rest and in transitQuantum load balancingQuantum database optimizationQuantum machine learning accelerationQuantum blockchain integrationQuantum IoT platform'
       'Quantum analytics engine24/7 quantum operations center'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -4350,26 +4325,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '2 weeks'
     category: 'Quantum IT Infrastructure'
     realService: true
-    technology: ['Quantum computingQuantum networkingReactNode.jsPostgreSQLRedisAWSCustom quantum hardware']
-    integrations: ['Enterprise systemsLegacy applicationsCloud platformsSecurity toolsMonitoring systems']
-    useCases: ['High-performance computingFinancial modelingDrug discoveryClimate modelingAI trainingBlockchain operations']
+    technology: ['Quantum computingQuantum networkingReactNode.jsPostgreSQLRedisAWSCustom quantum hardware'];
+    integrations: ['Enterprise systemsLegacy applicationsCloud platformsSecurity toolsMonitoring systems'];
+    useCases: ['High-performance computingFinancial modelingDrug discoveryClimate modelingAI trainingBlockchain operations'];
     roi: 'Enterprises report 300% ROI through improved performance and quantum-grade security.'
     competitors: ['AWSAzureGoogle CloudTraditional cloud providers'],
     marketSize: '$400 B cloud market, quantum segment growing 400% annually'
     growthRate: '400% annual growth',
-    variant: 'quantum-advanced'}
-    contactInfo: {}
+    variant: 'quantum-advanced'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Advanced quantum cloud infrastructure with quantum computing resources, quantum-secured networking, and comprehensive enterprise features.'
     launchDate: '2024-11-15'
     customers: 45
     rating: 4.9
     reviews: 32,
-  }
+  };
   {
     id: 'ai-powered-devops-automation'
     name: 'AI-Powered DevOps Automation'
@@ -4380,7 +4355,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'AI-powered deployment optimizationIntelligent infrastructure scalingPredictive failure detectionAutomated performance tuningSmart resource allocationAI-driven security scanningAutomated compliance checksReal-time performance monitoring'
       'Predictive analytics dashboard24/7 AI operations center'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -4392,26 +4367,26 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '1 day'
     category: 'AI & DevOps Automation'
     realService: true,
-    technology: ['AI algorithmsMachine learningReactNode.jsPostgreSQLRedisAWSDocker', 'Kubernetes']
-    integrations: ['GitHubGitLabBitbucketSlackJiraConfluenceAWSAzure', 'Google Cloud']
-    useCases: ['CI/CD automationInfrastructure managementPerformance optimizationSecurity automationCompliance automationResource optimization']
+    technology: ['AI algorithmsMachine learningReactNode.jsPostgreSQLRedisAWSDocker', 'Kubernetes'];
+    integrations: ['GitHubGitLabBitbucketSlackJiraConfluenceAWSAzure', 'Google Cloud'];
+    useCases: ['CI/CD automationInfrastructure managementPerformance optimizationSecurity automationCompliance automationResource optimization'];
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.'
     competitors: ['GitLab CI/CDJenkinsCircleCIGitHub Actions'],
     marketSize: '$8 B DevOps market, AI segment growing 350% annually'
     growthRate: '350% annual growth',
-    variant: 'ai-futuristic'}
-    contactInfo: {}
+    variant: 'ai-futuristic'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Comprehensive AI-powered DevOps automation platform with intelligent deployment optimization, infrastructure management, and operational efficiency features.'
     launchDate: '2024-10-01'
     customers: 320
     rating: 4.8
     reviews: 245,
-  }
+  };
   {
     id: 'quantum-cybersecurity-suite'
     name: 'Quantum Cybersecurity Suite'
@@ -4426,7 +4401,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [
       'Quantum encryption algorithmsAI-powered threat detectionQuantum key distributionPost-quantum cryptographyReal-time threat intelligenceAutomated incident responseQuantum-secured communicationAdvanced security analytics'
       'Compliance automation24/7 quantum security operations'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -4438,29 +4413,29 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     setupTime: '1 week'
     category: 'Quantum Cybersecurity'
     realService: true
-    technology: ['Quantum encryptionAI algorithmsReactNode.jsPostgreSQLRedisAWSCustom quantum hardware']
-    integrations: ['SIEM systemsFirewallsEndpoint protectionIdentity managementCompliance tools']
-    useCases: ['Network securityEndpoint protectionData encryptionThreat detectionIncident responseCompliance management']
+    technology: ['Quantum encryptionAI algorithmsReactNode.jsPostgreSQLRedisAWSCustom quantum hardware'];
+    integrations: ['SIEM systemsFirewallsEndpoint protectionIdentity managementCompliance tools'];
+    useCases: ['Network securityEndpoint protectionData encryptionThreat detectionIncident responseCompliance management'];
     roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.'
     competitors: ['Palo Alto NetworksCrowdStrikeSymantecTraditional security tools'],
     marketSize: '$150 B cybersecurity market, quantum segment growing 400% annually'
     growthRate: '400% annual growth',
-    variant: 'quantum-cyberpunk'}
-    contactInfo: {}
+    variant: 'quantum-cyberpunk'};
+    contactInfo: {};
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launchDate: '2024-09-15'
     customers: 180
     rating: 4.9
     reviews: 156,
-  {/* TODO: Fix JSX expression */}
-  t: 'enterprise-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'enterprise-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4470,7 +4445,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4482,12 +4457,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.8,
     review,
-  s: 18}
+  s: 18};
   // Cloud Migration & Optimization Services
-  {/* TODO: Fix JSX expression */}
-  t: 'cloud-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'cloud-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4497,7 +4472,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4509,12 +4484,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.7,
     review,
-  s: 12}
+  s: 12};
   // Cybersecurity Operations Center
-  {/* TODO: Fix JSX expression */}
-  t: 'cybersecurity-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'cybersecurity-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4524,7 +4499,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4536,12 +4511,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.8,
     review,
-  s: 24}
+  s: 24};
   // Data Center Management Services
-  {/* TODO: Fix JSX expression */}
-  t: 'datacenter-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'datacenter-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4551,7 +4526,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4563,12 +4538,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.7,
     review,
-  s: 11}
+  s: 11};
   // Network Security & SD-WAN Services
-  {/* TODO: Fix JSX expression */}
-  t: 'network-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'network-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4578,7 +4553,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4590,12 +4565,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.6,
     review,
-  s: 19}
+  s: 19};
   // IT Project Management Services
-  {/* TODO: Fix JSX expression */}
-  t: 'consulting-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'consulting-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4605,7 +4580,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4617,12 +4592,12 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.7,
     review,
-  s: 32}
+  s: 32};
   // IT Training & Certification Services
-  {/* TODO: Fix JSX expression */}
-  t: 'training-futuristic'}
+  {/* TODO: Fix JSX expression */};
+  t: 'training-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4632,7 +4607,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4644,11 +4619,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.8,
     review,
-  s: 89}
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-advanced'}
+  s: 89};
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-advanced'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4658,7 +4633,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4670,11 +4645,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.9,
     review,
-  s: 32}
-  {/* TODO: Fix JSX expression */}
-  t: 'ai-futuristic'}
+  s: 32};
+  {/* TODO: Fix JSX expression */};
+  t: 'ai-futuristic'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4684,7 +4659,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4696,11 +4671,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.8,
     review,
-  s: 245}
-  {/* TODO: Fix JSX expression */}
-  t: 'quantum-cyberpunk'}
+  s: 245};
+  {/* TODO: Fix JSX expression */};
+  t: 'quantum-cyberpunk'};
     contactInf,
-  o: {}
+  o: {};
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -4710,7 +4685,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4722,14 +4697,14 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.9,
     review,
-  s: 156}
-]
-  }
-]
+  s: 156};
+];
+  };
+];
     website: string,
     websit,
-  e: string}
-  }
+  e: string};
+  };
       'Network infrastructure management',
       'Server and storage management',
       'Security monitoring and management',
@@ -4752,8 +4727,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
       'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.',
     target_audienc,
@@ -4855,7 +4829,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'IT asset management'
       'Help desk support'
       'Strategic IT consulting'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-gray-600 to-blue-700'
@@ -4866,8 +4840,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-gray-600 to-blue-700'
     textColo,
@@ -4899,7 +4872,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Monitoring tools'
       'Automation platforms'
       'AI operations'
-    ]
+    ];
     integration,
   s: [,
       'ERP systems'
@@ -4908,7 +4881,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Monitoring systems'
       'Cloud platforms'
       'Legacy systems'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -4919,14 +4892,14 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Performance optimization',
       'Compliance management'],
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security'
-    competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY']
+    competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'];
     marketSize: '$1.2 T IT services market, 8% annual growth'
     growthRate: '8% annual growth'
     variant: 'enterprise-futuristic',
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     realImplementation: true,
     implementationDetails:,
       'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.'
@@ -4934,7 +4907,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     customers: 25
     rating: 4.8
     reviews: 18,
-  }
+  };
   // Cloud Migration & Optimization Services
     id: 'cloud-migration-optimization',
     name: 'Cloud Migration & Optimization Service',
@@ -4945,11 +4918,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     features: [,
       'Performance optimization'
       'Compliance management'
-    ]
+    ];
     ro,
   i: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security'
     competitor,
-  s: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY']
+  s: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'];
     marketSiz,
   e: '$1.2T IT services market, 8% annual growth'
     growthRat,
@@ -4966,7 +4939,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     realImplementatio,
   n: true,
     implementationDetail,
@@ -4979,7 +4952,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     ratin,
   g: 4.8,
     review,
-  s: 18}
+  s: 18};
   // Cloud Migration & Optimization Services,
   id: 'cloud-migration-optimization'
     nam,
@@ -4998,7 +4971,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     customers: 25
     rating: 4.8
     reviews: 18,
-  }
+  };
   // Cloud Migration & Optimization Services
     id: 'cloud-migration-optimization'
     name: 'Cloud Migration & Optimization Service'
@@ -5023,8 +4996,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     marketPositio,
   n: 'Competes with AWS Professional Services ($200/hour), Microsoft Consulting ($250/hour), and Google Cloud ($180/hour). Our,
   advantage: Fixed pricing and guaranteed cost reduction.'
@@ -5049,7 +5021,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Terraform'
       'Ansible'
       'Cloud native tools'
-    ]
+    ];
     integration,
   s: [,
       'On-premises systems'
@@ -5058,7 +5030,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Security tools'
       'Monitoring systems'
       'Backup systems'
-    ]
+    ];
     useCase,
   s: [,
       'Cloud migration'
@@ -5067,7 +5039,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Performance improvement'
       'Scalability enhancement'
       'Disaster recovery'
-    ]
+    ];
     roi: 'Enterprises achieve 600% ROI through cloud cost reduction and performance improvements'
     competitors: [
       'AWS Professional Services'
@@ -5107,7 +5079,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Google Cloud'
       'Accenture'
       'Deloitte'
-    ]
+    ];
     marketSiz,
   e: '$400B cloud services market, 20% annual growth'
     growthRat,
@@ -5171,8 +5143,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     targetAudienc,
   e: 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations'
     trialDay,
@@ -5192,7 +5163,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Incident response'
       'Vulnerability scanning'
       'Penetration testing'
-    ]
+    ];
     integration,
   s: [,
       'SIEM systems'
@@ -5201,7 +5172,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Identity management'
       'Vulnerability scanners'
       'Compliance tools'
-    ]
+    ];
     useCase,
   s: [,
       'Threat monitoring'
@@ -5210,7 +5181,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Security compliance'
       'Security training'
       'Penetration testing'
-    ]
+    ];
     roi: 'Enterprises achieve 500% ROI through cyber attack prevention and security cost reduction'
     competitors: [
       'CrowdStrike Falcon Complete'
@@ -5242,7 +5213,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'SentinelOne Vigilance'
       'Carbon Black'
       'Cylance'
-    ]
+    ];
     marketSiz,
   e: '$200B cybersecurity market, 15% annual growth'
     growthRat,
@@ -5295,8 +5266,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     marketPositio,
   n: 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
   advantage: Comprehensive management and AI optimization.'
@@ -5320,7 +5290,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Network management'
       'Storage systems'
       'Security tools'
-    ]
+    ];
     integration,
   s: [,
       'Data center infrastructure'
@@ -5329,7 +5299,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Backup systems'
       'Network equipment'
       'Power systems'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -5371,7 +5341,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     description:,
       'Capacity planning'
       'Disaster recovery'
-    ]
+    ];
     ro,
   i: 'Enterprises achieve 450% ROI through improved uptime, energy efficiency, and operational optimization'
     competitor,
@@ -5381,7 +5351,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'CyrusOne'
       'CoreSite'
       'QTS Realty'
-    ]
+    ];
     marketSiz,
   e: '$200B data center market, 12% annual growth'
     growthRat,
@@ -5439,8 +5409,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     marketPositio,
   n: 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our,
   advantage: Comprehensive security integration and competitive pricing.'
@@ -5464,7 +5433,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Network automation'
       'Monitoring tools'
       'Security analytics'
-    ]
+    ];
     integration,
   s: [,
       'Network equipment'
@@ -5473,7 +5442,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Cloud platforms'
       'Legacy networks'
       'Security platforms'
-    ]
+    ];
     useCase,
   s: [,
       'Network optimization'
@@ -5482,7 +5451,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Performance improvement'
       'Remote work support'
       'Multi-location management'
-    ]
+    ];
     roi: 'Enterprises achieve 350% ROI through improved network performance and security'
     competitors: [
       'Cisco SD-WAN'
@@ -5522,7 +5491,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Fortinet'
       'Palo Alto Networks'
       'Juniper Networks'
-    ]
+    ];
     marketSiz,
   e: '$8B SD-WAN market, 35% annual growth'
     growthRat,
@@ -5584,8 +5553,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     marketPositio,
   n: 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
   advantage: Specialized IT focus and competitive pricing.'
@@ -5609,7 +5577,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Quality assurance'
       'Risk management'
       'Reporting tools'
-    ]
+    ];
     integration,
   s: [,
       'Project management platforms'
@@ -5618,7 +5586,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Reporting tools'
       'Development platforms'
       'Testing tools'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -5629,7 +5597,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Project recovery'
       'Change management'],
     roi: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance',
-    competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
+    competitors: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte'];
     marketSize: '$50 B IT consulting market, 10% annual growth'
     growthRate: '10% annual growth'
     variant: 'consulting-futuristic'
@@ -5654,11 +5622,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     period: '/month',
     description:,
       'Change management'
-    ]
+    ];
     ro,
   i: 'Enterprises achieve 300% ROI through successful project delivery and strategic guidance'
     competitor,
-  s: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte']
+  s: ['McKinsey', 'BCG', 'Bain', 'Accenture', 'Deloitte'];
     marketSiz,
   e: '$50B IT consulting market, 10% annual growth'
     growthRat,
@@ -5720,8 +5688,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     targetAudience:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     marketPositio,
   n: 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
   advantage: Comprehensive training and competitive pricing.'
@@ -5745,7 +5712,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Assessment tools'
       'Progress tracking'
       'Mobile learning'
-    ]
+    ];
     integration,
   s: [,
       'Learning platforms'
@@ -5754,7 +5721,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Social learning'
       'Assessment systems'
       'Progress tracking'
-    ]
+    ];
     useCase,
   s: [,
       'Professional development'
@@ -5763,7 +5730,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Certification preparation'
       'Team training'
       'Knowledge transfer'
-    ]
+    ];
     roi: 'Individuals achieve 200% ROI through career advancement and increased earning potential'
     competitors: [
       'CompTIA'
@@ -5795,7 +5762,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Microsoft'
       'AWS Training'
       'Google Cloud Training'
-    ]
+    ];
     marketSiz,
   e: '$15B IT training market, 12% annual growth'
     growthRat,
@@ -5847,8 +5814,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     marketPositio,
   n: 'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.'
     targetAudienc,
@@ -5878,7 +5844,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Cloud platforms'
       'Security tools'
       'Monitoring systems'
-    ]
+    ];
     useCase,
   s: [,
       'High-performance computing'
@@ -5887,7 +5853,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Climate modeling'
       'AI training'
       'Blockchain operations'
-    ]
+    ];
     roi: 'Enterprises report 300% ROI through improved performance and quantum-grade security.'
     competitors: [
       'AWS'
@@ -5917,7 +5883,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Azure'
       'Google Cloud'
       'Traditional cloud providers'
-    ]
+    ];
     marketSiz,
   e: '$400B cloud market, quantum segment growing 400% annually'
     growthRat,
@@ -5969,8 +5935,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     marketPositio,
   n: 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.'
     targetAudienc,
@@ -6006,7 +5971,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'AWS'
       'Azure'
       'Google Cloud'
-    ]
+    ];
     useCases: [
     useCase,
   s: [,
@@ -6017,7 +5982,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Compliance automation'
       'Resource optimization'],
     roi: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.',
-    competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
+    competitors: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions'];
     marketSize: '$8 B DevOps market, AI segment growing 350% annually'
     growthRate: '350% annual growth'
     variant: 'ai-futuristic'
@@ -6034,11 +5999,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     rating: 4 && 4.8
     reviews: 245,
       'Resource optimization'
-    ]
+    ];
     ro,
   i: 'DevOps teams report 500% ROI through faster deployments and reduced operational overhead.'
     competitor,
-  s: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions']
+  s: ['GitLab CI/CD', 'Jenkins', 'CircleCI', 'GitHub Actions'];
     marketSiz,
   e: '$8B DevOps market, AI segment growing 350% annually'
     growthRat,
@@ -6090,8 +6055,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     technology: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     marketPositio,
   n: 'First-to-market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.'
     targetAudienc,
@@ -6121,7 +6085,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Endpoint protection'
       'Identity management'
       'Compliance tools'
-    ]
+    ];
     useCase,
   s: [,
       'Network security'
@@ -6130,7 +6094,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
       'Threat detection'
       'Incident response'
       'Compliance management'
-    ]
+    ];
     roi: 'Enterprises report 400% ROI through enhanced security and reduced breach risk.'
     competitors: [
       'Palo Alto Networks'
@@ -6177,11 +6141,11 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   launchDate: string, customers: number
   rating: number
   reviews: number,
-}
+};
 export const comprehensiveITServices: ComprehensiveITService[] = [,
       address: '364 E Main St STE 1008 Middletown DE 19709',
     reviews: 156,
-      website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'};
     real_implementation: true,
     implementation_details: 'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.'
     launch_date: '2024 - 09 - 15'
@@ -6196,7 +6160,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
       'CrowdStrike'
       'Symantec'
       'Traditional security tools'
-    ]
+    ];
     marketSiz,
   e:
       '$150B cybersecurity market, quantum segment growing 400% annually'
@@ -6243,8 +6207,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   feature,
   s: string[], popula,
   r: boolean,
-  ico,
-  n: string, colo,
+  icon: string, colo,
   r: string,
   textColo,
   r: string, lin,
@@ -6288,7 +6251,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   comprehensiveITServices: ComprehensiveITService[] = [,
       addres,
@@ -6298,7 +6261,7 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
-    }
+    };
     real_implementatio,
   n: true,
     implementation_detail,
@@ -6310,7 +6273,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 156}
+  s: 156};
 export interface ComprehensiveITService,
   id: string, nam,
   e: string, taglin,
@@ -6319,8 +6282,7 @@ export interface ComprehensiveITService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, text_colo,
   r: string, lin,
   k: string, market_positio,
@@ -6353,8 +6315,7 @@ export interface ComprehensiveITService,
   k: 'http,
   s://ziontechgroup.com / quantum - cloud - infrastructure', market_positio,
   n:  ,' 'First - to - market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.',' 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24 / 7 monitoring and support.',' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24 / 7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' 'Strategic IT consulting'], popula,
-  r: true,' ico,
-  n: '🏢',' colo,
+  r: true,' icon: '🏢',' colo,
   r: 'from - gray - 600 to - blue - 700',' text_colo,
   r: 'text - gray - 400',' lin,
   k: 'http,
@@ -6416,8 +6377,7 @@ export interface ComprehensiveITService,
   e: '350% annual growth',' varian,
   t: 'ai - futuristic', contact_inf,
   o: ' 'Cloud migration planning',' 'Workload assessment',' 'Cost optimization',' 'Performance optimization',' 'Security migration',' 'Data migration',' 'Application modernization',' 'Cloud governance',' 'Training and support',' 'Post - migration optimization'], popula,
-  r: true,' ico,
-  n: '☁️',' colo,
+  r: true,' icon: '☁️',' colo,
   r: 'from - blue - 600 to - cyan - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
@@ -6452,8 +6412,7 @@ export interface ComprehensiveITService,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.', feature,
   s: [, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
-  r: true,' ico,
-  n: '🔒', ' colo,
+  r: true,' icon: '🔒', ' colo,
   r: 'from - red - 600 to - pink - 700',' text_colo,
   r: 'text - red - 400',' lin,
   k: 'http,
@@ -6484,8 +6443,7 @@ export interface ComprehensiveITService,
   d: '/month', descriptio,
   n:  ,' 'Advanced cybersecurity operations center providing 24 / 7 threat monitoring, incident response, and security management. Features AI - powered threat detection and automated response capabilities.', feature,
   s: [,' '24 / 7 threat monitoring',' 'AI - powered threat detection',' 'Incident response automation',' 'Security analytics dashboard',' 'Threat intelligence',' 'Vulnerability management',' 'Security compliance',' 'Security awareness training',' 'Penetration testing',' 'Security consulting'], popula,
-  r: true,' ico,
-  n: '🛡️',' colo,
+  r: true,' icon: '🛡️',' colo,
   r: 'from - red - 600 to - pink - 700',' text_colo,
   r: 'text - red - 400',' lin,
   k: 'http,
@@ -6520,8 +6478,7 @@ export interface ComprehensiveITService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -6558,8 +6515,7 @@ export interface ComprehensiveITService,
   d: '/month',' descriptio,
   n: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.', feature,
   s: [' 'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management'' 'Help desk supportStrategic IT consulting' ],' popula,
-  r: true, ico,
-  n: '🏢',' colo,
+  r: true, icon: '🏢',' colo,
   r: 'from-gray-600 to-blue-700', textColo,
   r: 'text-gray-400',' lin,
   k: 'http,
@@ -6594,8 +6550,7 @@ export interface ComprehensiveITService,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI - powered optimization.', feature,
   s: [,' 'Data center infrastructure management',' 'Power and cooling optimization',' 'Network performance optimization',' 'Storage management',' 'Backup and disaster recovery',' 'Security management',' 'Performance monitoring',' 'Capacity planning',' 'Energy efficiency optimization',' '24 / 7 operations center'], popula,
-  r: true,' ico,
-  n: '🏗️',' colo,
+  r: true,' icon: '🏗️',' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
@@ -6635,8 +6590,7 @@ export interface ComprehensiveITService,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive network security and SD - WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.', feature,
   s: [,' 'SD - WAN implementation',' 'Network security management',' 'Threat protection',' 'Traffic optimization',' 'Centralized management',' 'Performance monitoring',' 'Bandwidth optimization',' 'Security compliance',' 'Network automation',' '24 / 7 network support'], popula,
-  r: true,' ico,
-  n: '🌐',' colo,
+  r: true,' icon: '🌐',' colo,
   r: 'from - indigo - 600 to - purple - 700',' text_colo,
   r: 'text - indigo - 400',' lin,
   k: 'http,
@@ -6675,8 +6629,7 @@ export interface ComprehensiveITService,
   d: '/month', descriptio,
   n:  ,' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on - time delivery.', feature,
   s: [,' 'Project planning and management',' 'Resource allocation',' 'Risk management',' 'Quality assurance',' 'Stakeholder communication',' 'Project reporting',' 'Change management',' 'Strategic consulting',' 'Technology advisory',' 'Project recovery'], popula,
-  r: true,' ico,
-  n: '📋',' colo,
+  r: true,' icon: '📋',' colo,
   r: 'from - orange - 600 to - red - 700',' text_colo,
   r: 'text - orange - 400',' lin,
   k: 'http,
@@ -6715,8 +6668,7 @@ export interface ComprehensiveITService,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive IT training and certification service providing expert instruction, hands - on labs, and industry - recognized certifications. Covers all major IT domains and technologies.', feature,
   s: [,' 'Comprehensive IT training',' 'Industry certifications',' 'Hands - on labs',' 'Expert instructors',' 'Flexible learning options',' 'Certification preparation',' 'Career guidance',' 'Learning management system',' 'Progress tracking',' '24 / 7 learning support'], popula,
-  r: true,' ico,
-  n: '🎓',' colo,
+  r: true,' icon: '🎓',' colo,
   r: 'from - purple - 600 to - pink - 700',' text_colo,
   r: 'text - purple - 400',' lin,
   k: 'http,
@@ -6756,8 +6708,7 @@ export interface ComprehensiveITService,
   n:  ,' 'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.', feature,
   s: [, ' 'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.', feature,
   s: [, ' 'Quantum computing resources',' 'Quantum - secured networking',' 'Quantum encryption at rest and in transit',' 'Quantum load balancing',' 'Quantum database optimization',' 'Quantum machine learning acceleration',' 'Quantum blockchain integration',' 'Quantum IoT platform',' 'Quantum analytics engine',' '24 / 7 quantum operations center'], popula,
-  r: true,' ico,
-  n: '☁️', ' colo,
+  r: true,' icon: '☁️', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 400',' lin,
   k: 'http,
@@ -6795,8 +6746,7 @@ export interface ComprehensiveITService,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.', feature,
   s: [,' 'AI - powered deployment optimization', ' 'Intelligent infrastructure scaling',' 'Predictive failure detection',' 'Automated performance tuning',' 'Smart resource allocation',' 'AI - driven security scanning',' 'Automated compliance checks',' 'Real - time performance monitoring',' 'Predictive analytics dashboard',' '24 / 7 AI operations center'], popula,
-  r: true,' ico,
-  n: '🤖', ' colo,
+  r: true,' icon: '🤖', ' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
   r: 'text - green - 400',' lin,
   k: 'http,
@@ -6834,8 +6784,7 @@ export interface ComprehensiveITService,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.', feature,
   s: [, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
-  r: true,' ico,
-  n: '🔒', ' colo,
+  r: true,' icon: '🔒', ' colo,
   r: 'from - red - 600 to - pink - 700',' text_colo,
   r: 'text - red - 400',' lin,
   k: 'http,
@@ -6875,8 +6824,7 @@ export interface ComprehensiveITService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -6901,8 +6849,7 @@ export interface ComprehensiveITService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -6935,8 +6882,7 @@ export interface ComprehensiveITService,
   e: '$25,999',' perio,
   d: '/month', descriptio,
   n: ' 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99 && 99.99% uptime with 24/7 monitoring and support.',' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24/7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' 'Strategic IT consulting'], popula,
-  r: true,' ico,
-  n: '',' colo,
+  r: true,' icon: '',' colo,
   r: 'from-gray-600 to-blue-700',' textColo,
   r: 'text-gray-400',' lin,
   k: 'http,
@@ -6968,8 +6914,7 @@ export interface ComprehensiveITService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -6987,7 +6932,7 @@ export interface ComprehensiveITService,
   e: string, growthRat,
   e: string, varian,
   t: string, contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -6996,7 +6941,7 @@ export interface ComprehensiveITService,
   s: number, ratin,
   g: number, review,
   s: number} export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services, {/* TODO: Fix JSX expression */}
+  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services, {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7020,8 +6965,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.' feature,
   s: [' '24/7 threat monitoring'' 'AI-powered threat detection'' 'Incident response automation'' 'Security analytics dashboard'' 'Threat intelligence'' 'Vulnerability management'' 'Security compliance'' 'Security awareness training'' 'Penetration testing'' 'Security consulting' ] popula,
-  r: true' ico,
-  n: '🛡️'' colo,
+  r: true' icon: '🛡️'' colo,
   r: 'from-red-600 to-pink-700'' textColo,
   r: 'text-red-400'' lin,
   k: 'http,
@@ -7060,8 +7004,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Comprehensive data center management service providing complete infrastructure management, optimization, and monitoring. Achieves 99.999% uptime with advanced automation and AI-powered optimization.' feature,
   s: [' 'Data center infrastructure management'' 'Power and cooling optimization'' 'Network performance optimization'' 'Storage management'' 'Backup and disaster recovery'' 'Security management'' 'Performance monitoring'' 'Capacity planning'' 'Energy efficiency optimization'' '24/7 operations center' ] popula,
-  r: true' ico,
-  n: '🏗️'' colo,
+  r: true' icon: '🏗️'' colo,
   r: 'from-green-600 to-emerald-700'' textColo,
   r: 'text-green-400'' lin,
   k: 'http,
@@ -7100,8 +7043,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Comprehensive network security and SD-WAN management service providing advanced threat protection, network optimization, and centralized management. Achieves 99.9% network availability.' feature,
   s: [' 'SD-WAN implementation'' 'Network security management'' 'Threat protection'' 'Traffic optimization'' 'Centralized management'' 'Performance monitoring'' 'Bandwidth optimization'' 'Security compliance'' 'Network automation'' '24/7 network support' ] popula,
-  r: true' ico,
-  n: '🌐'' colo,
+  r: true' icon: '🌐'' colo,
   r: 'from-indigo-600 to-purple-700'' textColo,
   r: 'text-indigo-400'' lin,
   k: 'http,
@@ -7140,8 +7082,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.' feature,
   s: [' 'Project planning and management'' 'Resource allocation'' 'Risk management'' 'Quality assurance'' 'Stakeholder communication'' 'Project reporting'' 'Change management'' 'Strategic consulting'' 'Technology advisory'' 'Project recovery' ] popula,
-  r: true' ico,
-  n: '📋'' colo,
+  r: true' icon: '📋'' colo,
   r: 'from-orange-600 to-red-700'' textColo,
   r: 'text-orange-400'' lin,
   k: 'http,
@@ -7180,8 +7121,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.' feature,
   s: [' 'Comprehensive IT training'' 'Industry certifications'' 'Hands-on labs'' 'Expert instructors'' 'Flexible learning options'' 'Certification preparation'' 'Career guidance'' 'Learning management system'' 'Progress tracking'' '24/7 learning support' ] popula,
-  r: true' ico,
-  n: '🎓'' colo,
+  r: true' icon: '🎓'' colo,
   r: 'from-purple-600 to-pink-700'' textColo,
   r: 'text-purple-400'' lin,
   k: 'http,
@@ -7220,8 +7160,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Revolutionary quantum-powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum-grade computing capabilities.' feature,
   s: [' 'Quantum computing resources'' 'Quantum-secured networking'' 'Quantum encryption at rest and in transit'' 'Quantum load balancing'' 'Quantum database optimization'' 'Quantum machine learning acceleration'' 'Quantum blockchain integration'' 'Quantum IoT platform'' 'Quantum analytics engine'' '24/7 quantum operations center' ] popula,
-  r: true' ico,
-  n: '☁️'' colo,
+  r: true' icon: '☁️'' colo,
   r: 'from-blue-600 to-indigo-700'' textColo,
   r: 'text-blue-400'' lin,
   k: 'http,
@@ -7259,8 +7198,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.' feature,
   s: [' 'AI-powered deployment optimization'' 'Intelligent infrastructure scaling'' 'Predictive failure detection'' 'Automated performance tuning'' 'Smart resource allocation'' 'AI-driven security scanning'' 'Automated compliance checks'' 'Real-time performance monitoring'' 'Predictive analytics dashboard'' '24/7 AI operations center' ] popula,
-  r: true' ico,
-  n: '🤖'' colo,
+  r: true' icon: '🤖'' colo,
   r: 'from-green-600 to-emerald-700'' textColo,
   r: 'text-green-400'' lin,
   k: 'http,
@@ -7298,8 +7236,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Revolutionary quantum-secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.' feature,
   s: [' 'Quantum encryption algorithms'' 'AI-powered threat detection'' 'Quantum key distribution'' 'Post-quantum cryptography'' 'Real-time threat intelligence'' 'Automated incident response'' 'Quantum-secured communication'' 'Advanced security analytics'' 'Compliance automation'' '24/7 quantum security operations' ] popula,
-  r: true' ico,
-  n: '🔒'' colo,
+  r: true' icon: '🔒'' colo,
   r: 'from-red-600 to-pink-700'' textColo,
   r: 'text-red-400'' lin,
   k: 'http,
@@ -7344,7 +7281,7 @@ export interface ComprehensiveITService,
   e: '2024-09-15' customer,
   s: 180, ratin,
   g: 4.9,
-  reviews: 156 } ]; export interface ComprehensiveITService {/* TODO: Fix JSX expression */}
+  reviews: 156 } ]; export interface ComprehensiveITService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -7353,7 +7290,7 @@ export interface ComprehensiveITService,
   s: number, ratin,
   g: number, review,
   s: number} export const,
-  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services, {/* TODO: Fix JSX expression */}
+  comprehensiveITServices: ComprehensiveITService[] = [; // Enterprise IT Infrastructure Services, {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7363,7 +7300,7 @@ export interface ComprehensiveITService,
   e: '2024-01-01', customer,
   s: 25, ratin,
   g: 4.8, review,
-  s: 18} // Cloud Migration & Optimization Services; {/* TODO: Fix JSX expression */}
+  s: 18} // Cloud Migration & Optimization Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7373,7 +7310,7 @@ export interface ComprehensiveITService,
   e: '2024-02-01', customer,
   s: 18, ratin,
   g: 4.7, review,
-  s: 12} // Cybersecurity Operations Center; {/* TODO: Fix JSX expression */}
+  s: 12} // Cybersecurity Operations Center; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7383,7 +7320,7 @@ export interface ComprehensiveITService,
   e: '2024-01-15', customer,
   s: 32, ratin,
   g: 4.8, review,
-  s: 24} // Data Center Management Services; {/* TODO: Fix JSX expression */}
+  s: 24} // Data Center Management Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7393,7 +7330,7 @@ export interface ComprehensiveITService,
   e: '2024-01-20', customer,
   s: 15, ratin,
   g: 4.7, review,
-  s: 11} // Network Security & SD-WAN Services; {/* TODO: Fix JSX expression */}
+  s: 11} // Network Security & SD-WAN Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7403,7 +7340,7 @@ export interface ComprehensiveITService,
   e: '2024-02-15', customer,
   s: 28, ratin,
   g: 4.6, review,
-  s: 19} // IT Project Management Services; {/* TODO: Fix JSX expression */}
+  s: 19} // IT Project Management Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7413,7 +7350,7 @@ export interface ComprehensiveITService,
   e: '2024-01-10', customer,
   s: 45, ratin,
   g: 4.7, review,
-  s: 32} // IT Training & Certification Services; {/* TODO: Fix JSX expression */}
+  s: 32} // IT Training & Certification Services; {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7423,7 +7360,7 @@ export interface ComprehensiveITService,
   e: '2024-01-05', customer,
   s: 120, ratin,
   g: 4.8, review,
-  s: 89} {/* TODO: Fix JSX expression */}
+  s: 89} {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7433,7 +7370,7 @@ export interface ComprehensiveITService,
   e: '2024-11-15', customer,
   s: 45, ratin,
   g: 4.9, review,
-  s: 32} {/* TODO: Fix JSX expression */}
+  s: 32} {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7443,7 +7380,7 @@ export interface ComprehensiveITService,
   e: '2024-10-01', customer,
   s: 320, ratin,
   g: 4.8, review,
-  s: 245} {/* TODO: Fix JSX expression */}
+  s: 245} {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
@@ -7455,8 +7392,7 @@ export interface ComprehensiveITService,
   g: 4.9, review,
   s: 156} ]; } ]; websit,
   e: string}' 'Network infrastructure management',' 'Server and storage management',' 'Security monitoring and management',' '24 / 7 infrastructure monitoring',' 'Performance optimization',' 'Disaster recovery planning',' 'Compliance management',' 'IT asset management',' 'Help desk support',' 'Strategic IT consulting'], popula,
-  r: true,' ico,
-  n: '🏢',' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
+  r: true,' icon: '🏢',' 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our,
   advantage: Modern technology stack and competitive pricing.', target_audienc,
   e:  ,' 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions', trial_day,
   s: 0,' setup_tim,
@@ -7485,8 +7421,7 @@ export interface ComprehensiveITService,
   e: '$25,999'' perio,
   d: '/month' descriptio,
   n:' 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.'' 'Network infrastructure management'' 'Server and storage management'' 'Security monitoring and management'' '24/7 infrastructure monitoring'' 'Performance optimization'' 'Disaster recovery planning'' 'Compliance management'' 'IT asset management'' 'Help desk support'' 'Strategic IT consulting' ] popula,
-  r: true' ico,
-  n: '🏢'' colo,
+  r: true' icon: '🏢'' colo,
   r: 'from-gray-600 to-blue-700'' textColo,
   r: 'text-gray-400'' lin,
   k: 'http,
@@ -7525,8 +7460,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Comprehensive cloud migration service that seamlessly moves enterprise workloads to the cloud while optimizing costs and performance. Guarantees 50% cost reduction and improved scalability.' feature,
   s: [' 'Cloud migration planning',' 'Workload assessment',' 'Cost optimization',' 'Performance optimization',' 'Security migration',' 'Data migration',' 'Application modernization',' 'Cloud governance',' 'Training and support',' 'Post - migration optimization'], popula,
-  r: true,' ico,
-  n: '☁️', marketPositio,
+  r: true,' icon: '☁️', marketPositio,
   n: ' 'Competes with AWS Professional Services ($200/hour), Microsoft Consulting ($250/hour), and Google Cloud ($180/hour). Our,
   advantage: Fixed pricing and guaranteed cost reduction.' targetAudienc,
   e:' 'Enterprises planning cloud migration, Legacy system modernization, Digital transformation projects, Cost optimization initiatives' trialDay,
@@ -7561,8 +7495,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Advanced cybersecurity operations center providing 24/7 threat monitoring, incident response, and security management. Features AI-powered threat detection and automated response capabilities.' feature,
   s: [' 'Incident response automation',' 'Security analytics dashboard',' 'Threat intelligence',' 'Vulnerability management',' 'Security compliance',' 'Security awareness training',' 'Penetration testing',' 'Security consulting'], popula,
-  r: true,' ico,
-  n: '🛡️', targetAudienc,
+  r: true,' icon: '🛡️', targetAudienc,
   e: ' 'Enterprises requiring 24/7 security, Financial institutions, Healthcare providers, Government agencies, Critical infrastructure, High-security organizations' trialDay,
   s: 0' setupTim,
   e: '4-6 weeks'' categor,
@@ -7590,8 +7523,7 @@ export interface ComprehensiveITService,
   s: 24}, // Data Center Management Services; ' i,
   d: 'data - center - management',' nam,
   e: 'Data Center Management & Optimization',' 'Data center infrastructure management',' 'Power and cooling optimization',' 'Network performance optimization',' 'Storage management',' 'Backup and disaster recovery',' 'Security management',' 'Performance monitoring',' 'Capacity planning',' 'Energy efficiency optimization',' '24 / 7 operations center'], popula,
-  r: true,' ico,
-  n: '🏗️', marketPositio,
+  r: true,' icon: '🏗️', marketPositio,
   n: ' 'Competes with Equinix ($10K+), Digital Realty ($15K+), and CyrusOne ($20K+). Our,
   advantage: Comprehensive management and AI optimization.' targetAudienc,
   e:' 'Large enterprises, Cloud providers, Colocation facilities, Financial institutions, Healthcare systems, Government agencies' trialDay,
@@ -7625,8 +7557,7 @@ export interface ComprehensiveITService,
   e: '$12,999'' perio,
   d: '/month' descriptio,
   n:' 'Network security management',' 'Threat protection',' 'Traffic optimization',' 'Centralized management',' 'Performance monitoring',' 'Bandwidth optimization',' 'Security compliance',' 'Network automation',' '24 / 7 network support'], popula,
-  r: true,' ico,
-  n: '🌐', marketPositio,
+  r: true,' icon: '🌐', marketPositio,
   n: ' 'Competes with Cisco SD-WAN ($50K+), VMware SD-WAN ($40K+), and Fortinet ($35K+). Our,
   advantage: Comprehensive security integration and competitive pricing.' targetAudienc,
   e:' 'Enterprises with distributed networks, Multi-location businesses, Remote work organizations, Healthcare systems, Financial institutions' trialDay,
@@ -7661,8 +7592,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Professional IT project management and consulting service providing expert guidance, project delivery, and strategic consulting. Guarantees project success and on-time delivery.' feature,
   s: [' 'Project planning and management',' 'Resource allocation',' 'Risk management',' 'Quality assurance',' 'Stakeholder communication',' 'Project reporting',' 'Change management',' 'Strategic consulting',' 'Technology advisory',' 'Project recovery'], popula,
-  r: true,' ico,
-  n: '📋', marketPositio,
+  r: true,' icon: '📋', marketPositio,
   n: ' 'Competes with McKinsey ($500K+), BCG ($400K+), and Bain ($450K+). Our,
   advantage: Specialized IT focus and competitive pricing.' targetAudienc,
   e:' 'Enterprises undertaking IT projects, Digital transformation initiatives, Technology implementations, Strategic IT planning, Project recovery' trialDay,
@@ -7697,8 +7627,7 @@ export interface ComprehensiveITService,
   d: '/month' descriptio,
   n:' 'Comprehensive IT training and certification service providing expert instruction, hands-on labs, and industry-recognized certifications. Covers all major IT domains and technologies.' feature,
   s: [' 'Comprehensive IT training',' 'Industry certifications',' 'Hands - on labs',' 'Expert instructors',' 'Flexible learning options',' 'Certification preparation',' 'Career guidance',' 'Learning management system',' 'Progress tracking',' '24 / 7 learning support'], popula,
-  r: true,' ico,
-  n: '🎓', marketPositio,
+  r: true,' icon: '🎓', marketPositio,
   n: ' 'Competes with CompTIA ($300+), Cisco ($300+), and Microsoft ($165+). Our,
   advantage: Comprehensive training and competitive pricing.' targetAudienc,
   e:' 'IT professionals, Career changers, Students, Enterprises, Government agencies, Educational institutions' trialDay,
@@ -7726,8 +7655,7 @@ export interface ComprehensiveITService,
   s: 120, ratin,
   g: 4 && 4.8, review,
   s: 89}, ' 'Quantum computing resources',' 'Quantum - secured networking',' 'Quantum encryption at rest and in transit',' 'Quantum load balancing',' 'Quantum database optimization',' 'Quantum machine learning acceleration',' 'Quantum blockchain integration',' 'Quantum IoT platform',' 'Quantum analytics engine',' '24 / 7 quantum operations center'], popula,
-  r: true,' ico,
-  n: '☁️', marketPositio,
+  r: true,' icon: '☁️', marketPositio,
   n: ' 'First-to-market quantum cloud infrastructure. Traditional cloud providers (AWS, Azure) GCP) lack quantum capabilities.' targetAudienc,
   e: ' 'Large enterprises, Financial institutions, Research organizations, Government agencies, Tech companies' trialDay,
   s: 30' setupTim,
@@ -7754,8 +7682,7 @@ export interface ComprehensiveITService,
   s: 45, ratin,
   g: 4 && 4.9, review,
   s: 32}, ' 'Intelligent infrastructure scaling',' 'Predictive failure detection',' 'Automated performance tuning',' 'Smart resource allocation',' 'AI - driven security scanning',' 'Automated compliance checks',' 'Real - time performance monitoring',' 'Predictive analytics dashboard',' '24 / 7 AI operations center'], popula,
-  r: true,' ico,
-  n: '🤖', marketPositio,
+  r: true,' icon: '🤖', marketPositio,
   n: ' 'Advanced AI-powered DevOps automation. Competitors like GitLab CI/CD and Jenkins lack AI optimization capabilities.' targetAudienc,
   e:' 'DevOps teams, Engineering organizations, Tech companies, Enterprisestups' trialDay,
   s: 21' setupTim,
@@ -7782,8 +7709,7 @@ export interface ComprehensiveITService,
   s: 320, ratin,
   g: 4 && 4.8, review,
   s: 245}, ' 'Quantum encryption algorithms',' 'AI - powered threat detection',' 'Quantum key distribution',' 'Post - quantum cryptography',' 'Real - time threat intelligence',' 'Automated incident response',' 'Quantum - secured communication',' 'Advanced security analytics',' 'Compliance automation',' '24 / 7 quantum security operations'], popula,
-  r: true,' ico,
-  n: '🔒', marketPositio,
+  r: true,' icon: '🔒', marketPositio,
   n: ' 'First-to-market quantum cybersecurity platform. Traditional security tools (Palo Alto) CrowdStrike) lack quantum capabilities.' targetAudienc,
   e: ' 'Enterprises, Financial institutions, Government agencies, Healthcare organizations, Tech companies' trialDay,
   s: 30' setupTim,
@@ -7819,8 +7745,7 @@ export interface ComprehensiveITService,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -7860,5 +7785,5 @@ export interface ComprehensiveITService,
   s: 180, ratin,
   g: 4.9, review,
   s: 156} '
-  }
-]
+  };
+];

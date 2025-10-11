@@ -17,7 +17,7 @@ export function useInterviews() {
         variant: "destructive"
       })
       return null
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -43,7 +43,7 @@ export function useInterviews() {
         console.error("Error requesting interview:", insertError)
         setError(insertError.message)
         return null
-      }
+      };
       // Create notification for talent
       await createInterviewNotification(
         interviewRequest.talent_id,
@@ -59,14 +59,14 @@ export function useInterviews() {
       return null
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
   // Fetch interviews for the current user (as client or talent)
   const fetchInterviews = async (): Promise<Interview[]> => {
     if (!user?.id) {
       setInterviews([])
-      return []
-    }
+      return [];
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -83,8 +83,8 @@ export function useInterviews() {
       if (fetchError) {
         console.error("Error fetching interviews:", fetchError)
         setError(fetchError.message)
-        return []
-      }
+        return [];
+      };
       // Transform the data to match Interview type
       const formattedInterviews = data.map((interview: any): Interview => ({
         id: interview.id,
@@ -112,11 +112,11 @@ export function useInterviews() {
     } catch (err: any) {
       console.error("Error in fetchInterviews:", err)
       setError(err.message)
-      return []
+      return [];
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
   // Respond to an interview request (as talent)
   const respondToInterview = async (
     interviewId: string,
@@ -129,7 +129,7 @@ export function useInterviews() {
         variant: "destructive"
       })
       return false
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -145,7 +145,7 @@ export function useInterviews() {
         console.error("Error responding to interview:", updateError)
         setError(updateError.message)
         return false
-      }
+      };
       // Get the interview to notify the client
       const { data: interview, error: fetchError } = await supabase
         .from('interviews')
@@ -156,7 +156,7 @@ export function useInterviews() {
         console.error("Error fetching interview:", fetchError)
         setError(fetchError.message)
         return false
-      }
+      };
       // Create notification for client
       let notificationType = 'interview_confirmed'
       let title = 'Interview Confirmed'
@@ -169,7 +169,7 @@ export function useInterviews() {
         notificationType = 'interview_rescheduled'
         title = 'Interview Rescheduled'
         message = `Your interview has been rescheduled to ${response.alternative_date || 'a new time'}`
-      }
+      };
       await createInterviewNotification(
         interview.client_id,
         notificationType,
@@ -186,8 +186,8 @@ export function useInterviews() {
       return false
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
   // Helper function to create interview notifications
   const createInterviewNotification = async (
     userId: string,
@@ -207,8 +207,8 @@ export function useInterviews() {
       })
     } catch (error) {
       console.error("Error creating notification:", error)
-    }
-  }
+    };
+  };
   // Cancel an interview (either client or talent can cancel)
   const cancelInterview = async (interviewId: string): Promise<boolean> => {
     if (!user?.id) return false
@@ -224,12 +224,12 @@ export function useInterviews() {
       if (fetchError) {
         setError(fetchError.message)
         return false
-      }
+      };
       // Check if user is part of this interview
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {
         setError("You don't have permission to cancel this interview")
         return false
-      }
+      };
       // Update the interview status
       const { error: updateError } = await supabase
         .from('interviews')
@@ -241,7 +241,7 @@ export function useInterviews() {
       if (updateError) {
         setError(updateError.message)
         return false
-      }
+      };
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
@@ -263,8 +263,9 @@ export function useInterviews() {
       return false
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     interviews,
     isLoading,
@@ -272,7 +273,8 @@ export function useInterviews() {
     requestInterview,
     fetchInterviews,
     respondToInterview,
-    cancelInterview}
+    cancelInterview};
     cancelInterview,
-  }
-}
+  };
+};
+;

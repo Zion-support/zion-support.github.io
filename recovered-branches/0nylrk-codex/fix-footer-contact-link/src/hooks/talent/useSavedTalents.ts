@@ -14,7 +14,7 @@ export function useSavedTalents() {
       if (!isAuthenticated || !userDetails.id) {
         setIsLoading(false)
         return
-      }
+      };
       setIsLoading(true)
       try {
         // Get saved talent IDs
@@ -36,8 +36,8 @@ export function useSavedTalents() {
             setSavedTalents(talentData || [])
           } else {
             setSavedTalents([])
-          }
-        }
+          };
+        };
       } catch (error) {
         console.error('Error fetching saved talents:', error)
         toast({
@@ -47,8 +47,8 @@ export function useSavedTalents() {
         })
       } finally {
         setIsLoading(false)
-      }
-    }
+      };
+    };
     fetchSavedTalents()
   }, [isAuthenticated, userDetails.id])
   // Toggle save talent
@@ -61,7 +61,9 @@ export function useSavedTalents() {
       })
       return
     }
-    const isSaved = savedTalentIds.includes(talent.id)
+    ;
+  ;
+  const isSaved = savedTalentIds.includes(talent.id)
     try {
       if (isSaved) {
         // Remove from saved_talents
@@ -95,7 +97,7 @@ export function useSavedTalents() {
           description: `${talent.full_name} has been added to your favorites`})
           description: `${talent.full_name} has been added to your favorites`,
         })
-      }
+      };
     } catch (error) {
       console.error('Error toggling saved talent:', error)
       toast({
@@ -103,17 +105,19 @@ export function useSavedTalents() {
         description: "There was a problem updating your favorites. Please try again.",
         variant: "destructive"
       })
-    }
-  }
+    };
+  };
   // Check if talent is saved
   const isTalentSaved = (talentId: string) => {
     return savedTalentIds.includes(talentId)
-  }
+  };
+  ;
   return {
     savedTalents,
     savedTalentIds,
     isLoading,
     toggleSaveTalent,
     isTalentSaved
-  }
-}
+  };
+};
+;

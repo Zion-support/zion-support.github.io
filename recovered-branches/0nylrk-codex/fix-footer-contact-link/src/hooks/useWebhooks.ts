@@ -7,16 +7,16 @@ export interface Webhook {
   id: string
   name: string
   url: string
-  event_types: WebhookEventType[]
+  event_types: WebhookEventType[];
   is_active: boolean
   created_at: string
   last_triggered_at: string | null
-}
+};
 export interface TestWebhookResult {
   status: number
   statusText: string
   responseBody: string
-}
+};
 export function useWebhooks() {
   const { user } = useAuth()
   const [webhooks, setWebhooks] = useState<Webhook[]>([])
@@ -31,7 +31,7 @@ export function useWebhooks() {
     const env = (import.meta as any)?.env ?? process.env
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL
     return `${url}/functions/v1/webhook-manager`
-  }
+  };
   // Fetch user's webhooks
   const fetchWebhooks = async () => {
     if (!user) return
@@ -43,17 +43,19 @@ export function useWebhooks() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getWebhookUrl()}/webhooks`, {
+      ;
+  ;
+  const response = await fetch(`${getWebhookUrl()}/webhooks`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
-        }
+        };
       })
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to fetch webhooks')
-      }
+      };
       setWebhooks(result.webhooks || [])
     } catch (err) {
       console.error('Error fetching webhooks:', err)
@@ -66,8 +68,8 @@ export function useWebhooks() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   // Create new webhook
   const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {
     if (!user) return
@@ -79,7 +81,9 @@ export function useWebhooks() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getWebhookUrl()}/create`, {
+      ;
+  ;
+  const response = await fetch(`${getWebhookUrl()}/create`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -95,7 +99,7 @@ export function useWebhooks() {
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to create webhook')
-      }
+      };
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev])
       toast({
@@ -115,8 +119,8 @@ export function useWebhooks() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   // Toggle webhook active status
   const toggleWebhook = async (webhookId: string, isActive: boolean) => {
     if (!user) return
@@ -128,7 +132,9 @@ export function useWebhooks() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getWebhookUrl()}/toggle`, {
+      ;
+  ;
+  const response = await fetch(`${getWebhookUrl()}/toggle`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -139,7 +145,7 @@ export function useWebhooks() {
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to update webhook')
-      }
+      };
       // Update the webhook in the list
       setWebhooks(prev => prev.map(webhook => 
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
@@ -161,8 +167,8 @@ export function useWebhooks() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   // Delete webhook
   const deleteWebhook = async (webhookId: string) => {
     if (!user) return
@@ -174,7 +180,9 @@ export function useWebhooks() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getWebhookUrl()}/delete`, {
+      ;
+  ;
+  const response = await fetch(`${getWebhookUrl()}/delete`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -185,7 +193,7 @@ export function useWebhooks() {
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to delete webhook')
-      }
+      };
       // Remove the webhook from the list
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId))
       toast({
@@ -205,8 +213,8 @@ export function useWebhooks() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   // Test webhook
   const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     if (!user) return
@@ -219,7 +227,9 @@ export function useWebhooks() {
         setError("Authentication required")
         return
       }
-      const response = await fetch(`${getWebhookUrl()}/test`, {
+      ;
+  ;
+  const response = await fetch(`${getWebhookUrl()}/test`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${session.access_token}`,
@@ -230,7 +240,7 @@ export function useWebhooks() {
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to test webhook')
-      }
+      };
       // Store test result
       setTestResult({
         status: result.status,
@@ -258,8 +268,9 @@ export function useWebhooks() {
       })
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     webhooks,
     loading,
@@ -271,5 +282,6 @@ export function useWebhooks() {
     deleteWebhook,
     testWebhook,
     clearTestResult: () => setTestResult(null)
-  }
-}
+  };
+};
+;

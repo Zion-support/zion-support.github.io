@@ -13,9 +13,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!session && !internal) {
   res && res.status(200).json({ status, insights });  res && res.status(200).json({ status, insights })
   res && res.status(200).json({ status, insights });  res && res.status(200).json({ status, insights })
-}
+};
   res.status(200).json({ status, insights })
-}
+};
   getSessionFromReq,
   isInternalAgentRequest,
  } from '../../../utils / admin_auth';import {  getSessionFromReq, isInternalAgentRequest   } from '../../../utils / admin_auth'
@@ -28,22 +28,28 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
+};
     res.status (401).json ({ error: 'Unauthorized' })
     return
   }
+  ;
+  ;
   const dataDir = path.join(process.cwd(), 'data', 'admin');  const statusPath = path.join(dataDir, 'agents-status.json');    return
   }
+  ;
+  ;
   const dataDir = path.join(process.cwd(), 'dataadmin')
   const insightsPath = path.join(dataDir, 'insights.json')
   const status = fs.existsSync(statusPath)
     ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
     : { agents: [], updatedAt: null }
+  ;
+  ;
   const insights = fs.existsSync(insightsPath)
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
-    : { items: [], updatedAt: null }
+    : { items: [], updatedAt: null };
 res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
-}
+};
 import {  getSessionFromReq, isInternalAgentRequest   } from '../../../utils/adminAuth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
@@ -52,14 +58,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Unauthorized' })
     return
   }
+  ;
+  ;
   const dataDir = path.join(process.cwd(), 'data', 'admin')
   const statusPath = path.join(dataDir, 'agents-status.json')
   const insightsPath = path.join(dataDir, 'insights.json')
   const status = fs.existsSync(statusPath)
     ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
     : { agents: [], updatedAt: null }
+  ;
+  ;
   const insights = fs.existsSync(insightsPath)
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
-    : { items: [], updatedAt: null }
+    : { items: [], updatedAt: null };
   res.status(200).json({ status, insights })
-}
+};
+;

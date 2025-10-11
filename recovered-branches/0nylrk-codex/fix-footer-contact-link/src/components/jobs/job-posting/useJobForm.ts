@@ -9,7 +9,7 @@ import { useAuth } from "@/hooks/useAuth"
 export interface JobPostingProps {
   jobId?: string
   onSuccess?: () => void
-}
+};
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth()
   const navigate = useNavigate()
@@ -49,7 +49,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       toast.error("You must be logged in to post a job")
       navigate("/login")
       return
-    }
+    };
     setIsLoading(true)
     try {
       const publishedDate = startDate ? startDate.toString() : ''
@@ -59,21 +59,23 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
         published_date: publishedDate,
         expiry_date: expiryDate,
         is_remote: isRemote,
-        user_id: user.id}
+        user_id: user.id};
         user_id: user.id,
-      }
+      };
       if (onSuccess) {
         onSuccess()
-      }
-      return jobData
+      };
+      ;
+  return jobData
     } catch (error: any) {
       console.error("Error in job form submission:", error)
       toast.error(error.message || "Failed to process form")
       throw error
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     form,
     isLoading,
@@ -86,5 +88,5 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     initialValues,
     setInitialValues,
     submitJob
-  }
-}
+  };
+};

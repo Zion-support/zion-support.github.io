@@ -5,7 +5,7 @@
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -17,11 +17,11 @@
   setup_time: string
   category: string
   real_service: boolean
-  technology: string[]
-  integrations: string[]
-  use_cases: string[]
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   market_size: string
   growth_rate: string
   variant: ServiceVariant
@@ -30,23 +30,25 @@
     email: string
     address: string
     website: string,
-  }
+  };
   real_implementation: boolean
   implementation_details: string
   launch_date: string
   customers: number
   rating: number
   reviews: number
-  benefits: string[]
+  benefits: string[];
   marketAdvantage: string,
   capabilities: string[],
   market_advantage: string,
 }
-const contact =
+;
+  ;
+  const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'}
+  website: 'https://ziontechgroup && ziontechgroup.com'};
 export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
     id: 'ai - content - generation - platform'
@@ -69,11 +71,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setupTime: '1-2 days',
     category: 'AI & Machine Learning',
     realService: true,
-    technology: ['OpenAI GPT-4, Claude, Python, React, Node && Node.js, PostgreSQL']
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms']
-    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions']
+    technology: ['OpenAI GPT-4, Claude, Python, React, Node && Node.js, PostgreSQL'];
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
+    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
-    competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot']
+    competitors: ['Jasper, Copy && Copy.ai, Writesonic, ContentBot'];
     marketSize: '$8 B+ content marketing market'
     growthRate: '180% YoY'
     variant: 'ai-futuristic'
@@ -86,7 +88,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     features: [
       'AI - powered content writingSEO optimization tools_multi - language support_content templates library_plagiarism detection_brand voice customization_content scheduling_performance analytics'
       'Collaboration toolsAPI integration'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from - blue - 600 to - indigo - 600'
@@ -98,11 +100,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '1 - 2 days',
     category: 'AI & Machine Learning',
     real_service: true,
-    technology: ['OpenAI GPT - 4, Claude, Python, React, Node.js, PostgreSQL']
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms']
-    use_cases: ['Blog writing, Social media content, Marketing copy, Product descriptions']
+    technology: ['OpenAI GPT - 4, Claude, Python, React, Node.js, PostgreSQL'];
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
+    use_cases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
-    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot']
+    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
     market_size: '$8 B+ content marketing market'
     growth_rate: '180% YoY'
     variant: 'ai - futuristic'
@@ -119,12 +121,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security',
     marketPosition: 'Advanced zero-trust security platform for modern enterprises',
     targetAudience: 'Enterprise security teams, Government agencies, Financial institutions'
-    trialDays: 30}
+    trialDays: 30};
     setupTime: '2-3 weeks',
     category: 'Cybersecurity',
     capabilities: [,
-      'AI content generationSEO optimization_multi - language support_brand customization_performance analytics']}
-    market_advantage: 'Advanced AI models with enterprise - grade features and integrations'}
+      'AI content generationSEO optimization_multi - language support_brand customization_performance analytics']};
+    market_advantage: 'Advanced AI models with enterprise - grade features and integrations'};
 // Cybersecurity Services
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
@@ -135,7 +137,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     features: [
       'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security'
       'Data encryption_security analytics dashboard'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from - red - 600 to - pink - 600'
@@ -147,13 +149,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '2 - 3 weeks',
     category: 'Cybersecurity',
     real_service: true,
-    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js']
+    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
     realService: true,
-    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js']
-    integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace']
-    use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security']
+    technology: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js'];
+    integrations: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'];
+    use_cases: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
     roi: 'Reduce security incidents by 90% and compliance costs by 60%',
-    competitors: ['Okta, Ping Identity, ForgeRock, CyberArk']
+    competitors: ['Okta, Ping Identity, ForgeRock, CyberArk'];
     market_size: '$25 B+ identity and access management market'
     growth_rate: '140% YoY'
     variant: 'cybersecurity - futuristic'
@@ -169,7 +171,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Identity verification_device trust scoring_application control_network segmentation_continuous monitoring'],
-    market_advantage: 'Comprehensive zero - trust platform with advanced threat detection'}
+    market_advantage: 'Comprehensive zero - trust platform with advanced threat detection'};
 // DevOps & Infrastructure Services
     id: 'ai - powered - devops - automation'
     name: 'AI - Powered DevOps Automation',
@@ -182,16 +184,16 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setupTime: '1-2 weeks',
     category: 'DevOps & Infrastructure',
     realService: true,
-    technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI']
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack']
-    useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization']
+    technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
+    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
+    useCases: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
     period: '/month',
     description: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.'
     features: [
       'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools'
       'Compliance automation_analytics and reporting'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from - green - 600 to - teal - 600'
@@ -203,11 +205,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '1 - 2 weeks',
     category: 'DevOps & Infrastructure',
     real_service: true,
-    technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI']
-    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack']
-    use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization']
+    technology: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
+    integrations: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
+    use_cases: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
     roi: 'Reduce deployment time by 70% and increase team productivity by 50%',
-    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps']
+    competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
     market_size: '$18 B+ DevOps tools market'
     growth_rate: '160% YoY'
     variant: 'devops - futuristic'
@@ -223,7 +225,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Intelligent CI / CDAutomated testing_predictive optimization_performance monitoring_infrastructure automation'],
-    market_advantage: 'First AI - powered DevOps platform with predictive optimization'}
+    market_advantage: 'First AI - powered DevOps platform with predictive optimization'};
 // Edge Computing Services
     id: 'iot - edge - intelligence - platform'
     name: 'IoT Edge Intelligence Platform',
@@ -236,16 +238,16 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setupTime: '2-4 weeks',
     category: 'Edge Computing',
     realService: true,
-    technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP']
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols']
-    useCases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation']
+    technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
+    useCases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
     period: '/month',
     description: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.'
     features: [
       'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications'
       'Performance optimization_integration APIs'
-    ]
+    ];
     popular: false,
     icon: ''
     color: 'from - purple - 600 to - blue - 600'
@@ -257,11 +259,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '2 - 4 weeks',
     category: 'Edge Computing',
     real_service: true,
-    technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP']
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols']
-    use_cases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation']
+    technology: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
+    use_cases: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     roi: 'Reduce latency by 80% and improve operational efficiency by 45%',
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry']
+    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
     market_size: '$12 B+ edge computing market'
     growth_rate: '220% YoY'
     variant: 'edge - futuristic'
@@ -277,7 +279,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Edge data processing_real - time analyticsML at the edge_device management_security features'],
-    market_advantage: 'Advanced edge computing with AI - powered intelligence'}
+    market_advantage: 'Advanced edge computing with AI - powered intelligence'};
 // Healthcare AI Services
     id: 'ai - medical - imaging - analysis',
     name: 'AI Medical Imaging Analysis',
@@ -288,7 +290,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     features: [
       'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics'
       'HIPAA compliance_integration with PACS systems'
-    ]
+    ];
     popular: true,
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-medical-imaging',
@@ -298,9 +300,9 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setupTime: '4-6 weeks',
     category: 'Healthcare AI',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure']
-    integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices']
-    useCases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies']
+    technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
+    integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
+    useCases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
     color: 'from - emerald - 600 to - green - 600',
     text_color: 'text - emerald - 400',
@@ -311,11 +313,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '4 - 6 weeks',
     category: 'Healthcare AI',
     real_service: true,
-    technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure']
-    integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices']
-    use_cases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies']
+    technology: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
+    integrations: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
+    use_cases: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     roi: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
-    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+    competitors: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     market_size: '$28 B+ medical imaging market'
     growth_rate: '190% YoY'
     variant: 'healthcare - futuristic'
@@ -331,7 +333,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Multi - modality analysisAI diagnosis_early detection_treatment recommendations_clinical decision support'],
-    market_advantage: 'Advanced AI medical imaging with proven clinical outcomes'}
+    market_advantage: 'Advanced AI medical imaging with proven clinical outcomes'};
 // Financial Technology Services
     id: 'ai - financial - risk - management',
     name: 'AI Financial Risk Management',
@@ -348,7 +350,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     features: [
       'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios'
       'Risk analytics dashboardAPI integration'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from - yellow - 600 to - orange - 600'
@@ -360,13 +362,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '3 - 4 weeks',
     category: 'Financial Technology',
     real_service: true,
-    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js']
+    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js'];
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js']
-    integrations: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools']
-    use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management']
+    technology: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js'];
+    integrations: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools'];
+    use_cases: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
     roi: 'Reduce risk losses by 40% and compliance costs by 50%',
-    competitors: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global']
+    competitors: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];
     market_size: '$32 B+ risk management market'
     growth_rate: '170% YoY'
     variant: 'financial - futuristic'
@@ -382,7 +384,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Real - time risk assessment_fraud detection_compliance monitoring_portfolio analysis_regulatory reporting'],
-    market_advantage: 'Advanced AI risk management with real - time capabilities'}
+    market_advantage: 'Advanced AI risk management with real - time capabilities'};
 // Education Technology Services
     id: 'ai - personalized - learning - platform',
     name: 'AI Personalized Learning Platform',
@@ -393,7 +395,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     features: [
       'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard'
       'Mobile learning support_integration with LMS systems'
-    ]
+    ];
     popular: false,
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-personalized-learning',
@@ -411,13 +413,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '2 - 3 weeks',
     category: 'Education Technology',
     real_service: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis']
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'];
     realService: true,
-    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis']
-    integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams']
-    use_cases: ['K - 12 education, Higher education, Corporate training, Skills development']
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'];
+    integrations: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams'];
+    use_cases: ['K - 12 education, Higher education, Corporate training, Skills development'];
     roi: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
-    competitors: ['Coursera, Udemy, Khan Academy, Duolingo']
+    competitors: ['Coursera, Udemy, Khan Academy, Duolingo'];
     market_size: '$15 B+ edtech market'
     growth_rate: '200% YoY'
     variant: 'education - futuristic'
@@ -433,7 +435,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Personalized learning paths_adaptive content delivery_progress tracking_intelligent tutoring_learning analytics'],
-    market_advantage: 'Advanced AI learning platform with proven educational outcomes'}
+    market_advantage: 'Advanced AI learning platform with proven educational outcomes'};
 // Supply Chain & Logistics Services
     id: 'ai - supply - chain - optimization',
     name: 'AI Supply Chain Optimization',
@@ -450,7 +452,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     features: [
       'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics'
       'Performance analytics_integration with ERP systems'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from - teal - 600 to - cyan - 600'
@@ -462,13 +464,13 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '3 - 4 weeks',
     category: 'Supply Chain & Logistics',
     real_service: true,
-    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js']
+    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js'];
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js']
-    integrations: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers']
-    use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management']
+    technology: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js'];
+    integrations: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers'];
+    use_cases: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
     roi: 'Reduce inventory costs by 30% and improve delivery times by 40%',
-    competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates']
+    competitors: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
     market_size: '$22 B+ supply chain management market'
     growth_rate: '160% YoY'
     variant: 'logistics - futuristic'
@@ -484,7 +486,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     ],
     capabilities: [,
       'Demand forecasting_inventory optimization_logistics optimization_supplier management_risk assessment'],
-    market_advantage: 'Advanced AI supply chain platform with comprehensive optimization'}
+    market_advantage: 'Advanced AI supply chain platform with comprehensive optimization'};
 // Energy & Sustainability Services
     id: 'ai - energy - optimization - platform',
     name: 'AI Energy Optimization Platform',
@@ -495,9 +497,9 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setupTime: '4-6 weeks',
     category: 'Energy & Sustainability',
     realService: true,
-    technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React']
-    integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems']
-    useCases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting']
+    technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
+    integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
+    useCases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
     tagline: 'Intelligent energy management and sustainability',
     price: '$1, 299'
@@ -506,7 +508,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     features: [
       'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring'
       'Performance analytics_integration with smart meters'
-    ]
+    ];
     popular: false,
     icon: ''
     color: 'from - green - 600 to - emerald - 600'
@@ -518,11 +520,11 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     setup_time: '4 - 6 weeks',
     category: 'Energy & Sustainability',
     real_service: true,
-    technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React']
-    integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems']
-    use_cases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting']
+    technology: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
+    integrations: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
+    use_cases: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     roi: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
-    competitors: ['Schneider Electric, Siemens, GE Digital, ABB']
+    competitors: ['Schneider Electric, Siemens, GE Digital, ABB'];
     market_size: '$18 B+ energy management market'
     growth_rate: '180% YoY'
     variant: 'energy - futuristic'
@@ -535,7 +537,7 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     reviews: 56
     benefits: [
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
-    ]
+    ];
 export interface ComprehensiveInnovativeService {
   id: string
   name: string
@@ -543,7 +545,7 @@ export interface ComprehensiveInnovativeService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -555,34 +557,34 @@ export interface ComprehensiveInnovativeService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant,
   contactInfo: {,
     mobile: string
     email: string,
-    address: string}
-    website: string}
-  }
+    address: string};
+    website: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-  benefits: string[]
-  capabilities: string[]
+  benefits: string[];
+  capabilities: string[];
   marketAdvantage: string,
-}
+};
 // const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709'};
   website: 'https://ziontechgroup.com',
   i,
   d: string,
@@ -600,8 +602,7 @@ export interface ComprehensiveInnovativeService {
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   text_colo,
@@ -645,7 +646,7 @@ export interface ComprehensiveInnovativeService {
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   real_implementatio,
   n: boolean,
   implementation_detail,
@@ -666,7 +667,9 @@ export interface ComprehensiveInnovativeService {
   s: string[],
   market_advantag,
   e: string}
-const contact =
+;
+  ;
+  const contact =
   mobil,
   e: '+1 302 464 0950'
   emai,
@@ -676,7 +679,7 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
-}
+};
 export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [,
   // AI & Machine Learning Services,
@@ -695,8 +698,8 @@ export const,
 export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services,
-  {/* TODO: Fix JSX expression */}
-  s: 30}
+  {/* TODO: Fix JSX expression */};
+  s: 30};
     setupTim,
   e: '2-3 weeks'
     categor,
@@ -704,10 +707,10 @@ export const,
     capabilitie,
   s: [,
       'AI content generationSEO optimization_multi - language support_brand customization_performance analytics'
-    ]}
+    ]};
     market_advantag,
   e: 'Advanced AI models with enterprise - grade features and integrations'
-  }
+  };
 // Cybersecurity Services
     i,
   d: 'zero - trust - security - platform'
@@ -728,8 +731,7 @@ export const,
     ],
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 600 to - pink - 600'
     text_colo,
@@ -750,19 +752,19 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js']
+  y: ['Python, Kubernetes, Redis, Elasticsearch, React, Node.js'];
     realServic,
   e: true,
     technolog,
-  y: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js']
+  y: ['Python, Kubernetes, Redis, Elasticsearch, React, Node && Node.js'];
     integration,
-  s: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace']
+  s: ['Active Directory, Okta, Azure AD, AWS IAM, Google Workspace'];
     use_case,
-  s: ['Enterprise security, Government compliance, Financial security, Healthcare security']
+  s: ['Enterprise security, Government compliance, Financial security, Healthcare security'];
     ro,
   i: 'Reduce security incidents by 90% and compliance costs by 60%',
     competitor,
-  s: ['Okta, Ping Identity, ForgeRock, CyberArk']
+  s: ['Okta, Ping Identity, ForgeRock, CyberArk'];
     market_siz,
   e: '$25B+ identity and access management market'
     growth_rat,
@@ -793,7 +795,7 @@ export const,
     ],
     market_advantag,
   e: 'Comprehensive zero - trust platform with advanced threat detection'
-  }
+  };
 // DevOps & Infrastructure Services
     i,
   d: 'ai - powered - devops - automation'
@@ -819,11 +821,11 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI']
+  y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
     integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack']
+  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     useCase,
-  s: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization']
+  s: ['CI/CD automation, Testing automation, Infrastructure management, Performance optimization'];
     ro,
   i: 'Reduce deployment time by 70% and increase team productivity by 50%'
     perio,
@@ -837,8 +839,7 @@ export const,
     ],
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - green - 600 to - teal - 600'
     text_colo,
@@ -859,15 +860,15 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI']
+  y: ['Python, TensorFlow, Kubernetes, Docker, Jenkins, GitLab CI'];
     integration,
-  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack']
+  s: ['AWS, Azure, GCP, GitHub, GitLab, Jira, Slack'];
     use_case,
-  s: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization']
+  s: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];
     ro,
   i: 'Reduce deployment time by 70% and increase team productivity by 50%',
     competitor,
-  s: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps']
+  s: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];
     market_siz,
   e: '$18B+ DevOps tools market'
     growth_rat,
@@ -898,7 +899,7 @@ export const,
     ],
     market_advantag,
   e: 'First AI - powered DevOps platform with predictive optimization'
-  }
+  };
 // Edge Computing Services
     i,
   d: 'iot - edge - intelligence - platform'
@@ -924,11 +925,11 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP']
+  y: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
     integration,
-  s: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols']
+  s: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
     useCase,
-  s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation']
+  s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     ro,
   i: 'Reduce latency by 80% and improve operational efficiency by 45%'
     perio,
@@ -942,8 +943,7 @@ export const,
     ],
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - purple - 600 to - blue - 600'
     text_colo,
@@ -964,15 +964,15 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP']
+  y: ['Python, TensorFlow Lite, Kubernetes Edge, Docker, MQTT, CoAP'];
     integration,
-  s: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols']
+  s: ['AWS IoT, Azure IoT, Google Cloud IoT, Industrial protocols'];
     use_case,
-  s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation']
+  s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];
     ro,
   i: 'Reduce latency by 80% and improve operational efficiency by 45%',
     competitor,
-  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry']
+  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];
     market_siz,
   e: '$12B+ edge computing market'
     growth_rat,
@@ -1003,7 +1003,7 @@ export const,
     ],
     market_advantag,
   e: 'Advanced edge computing with AI - powered intelligence'
-  }
+  };
 // Healthcare AI Services
     i,
   d: 'ai - medical - imaging - analysis'
@@ -1024,8 +1024,7 @@ export const,
     ],
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-medical-imaging'
@@ -1042,11 +1041,11 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure']
+  y: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
     integration,
-  s: ['PACS systems, EHR platforms, DICOM standards, Medical devices']
+  s: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
     useCase,
-  s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies']
+  s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     ro,
   i: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%'
     colo,
@@ -1069,15 +1068,15 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure']
+  y: ['Python, TensorFlow, PyTorch, Medical imaging libraries, HIPAA infrastructure'];
     integration,
-  s: ['PACS systems, EHR platforms, DICOM standards, Medical devices']
+  s: ['PACS systems, EHR platforms, DICOM standards, Medical devices'];
     use_case,
-  s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies']
+  s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];
     ro,
   i: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',
     competitor,
-  s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']
+  s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];
     market_siz,
   e: '$28B+ medical imaging market'
     growth_rat,
@@ -1108,7 +1107,7 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI medical imaging with proven clinical outcomes'
-  }
+  };
 // Financial Technology Services
     i,
   d: 'ai - financial - risk - management'
@@ -1142,8 +1141,7 @@ export const,
     ],
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - yellow - 600 to - orange - 600'
     text_colo,
@@ -1164,19 +1162,19 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js']
+  y: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node.js'];
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js']
+  y: ['Python, TensorFlow, PyTorch, Financial libraries, React, Node && Node.js'];
     integration,
-  s: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools']
+  s: ['Bloomberg, Reuters, Banking systems, Trading platforms, Compliance tools'];
     use_case,
-  s: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management']
+  s: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];
     ro,
   i: 'Reduce risk losses by 40% and compliance costs by 50%',
     competitor,
-  s: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global']
+  s: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];
     market_siz,
   e: '$32B+ risk management market'
     growth_rat,
@@ -1207,7 +1205,7 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI risk management with real - time capabilities'
-  }
+  };
 // Education Technology Services
     i,
   d: 'ai - personalized - learning - platform'
@@ -1228,8 +1226,7 @@ export const,
     ],
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-personalized-learning'
@@ -1263,19 +1260,19 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis']
+  y: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'];
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis']
+  y: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'];
     integration,
-  s: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams']
+  s: ['Canvas, Blackboard, Moodle, Google Classroom, Microsoft Teams'];
     use_case,
-  s: ['K - 12 education, Higher education, Corporate training, Skills development']
+  s: ['K - 12 education, Higher education, Corporate training, Skills development'];
     ro,
   i: 'Improve learning outcomes by 35% and reduce dropout rates by 50%',
     competitor,
-  s: ['Coursera, Udemy, Khan Academy, Duolingo']
+  s: ['Coursera, Udemy, Khan Academy, Duolingo'];
     market_siz,
   e: '$15B+ edtech market'
     growth_rat,
@@ -1306,7 +1303,7 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI learning platform with proven educational outcomes'
-  }
+  };
 // Supply Chain & Logistics Services
     i,
   d: 'ai - supply - chain - optimization'
@@ -1340,8 +1337,7 @@ export const,
     ],
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - teal - 600 to - cyan - 600'
     text_colo,
@@ -1362,19 +1358,19 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js']
+  y: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node.js'];
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js']
+  y: ['Python, TensorFlow, PyTorch, Optimization algorithms, React, Node && Node.js'];
     integration,
-  s: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers']
+  s: ['SAP, Oracle, Salesforce, Shopify, Shipping carriers'];
     use_case,
-  s: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management']
+  s: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];
     ro,
   i: 'Reduce inventory costs by 30% and improve delivery times by 40%',
     competitor,
-  s: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates']
+  s: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];
     market_siz,
   e: '$22B+ supply chain management market'
     growth_rat,
@@ -1405,7 +1401,7 @@ export const,
     ],
     market_advantag,
   e: 'Advanced AI supply chain platform with comprehensive optimization'
-  }
+  };
 // Energy & Sustainability Services
     i,
   d: 'ai - energy - optimization - platform'
@@ -1427,11 +1423,11 @@ export const,
     realServic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, IoT platforms, Energy management systems, React']
+  y: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
     integration,
-  s: ['Smart meters, Solar inverters, Battery systems, Grid management systems']
+  s: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
     useCase,
-  s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting']
+  s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     ro,
   i: 'Reduce energy costs by 25% and improve sustainability metrics by 40%'
     taglin,
@@ -1449,8 +1445,7 @@ export const,
     ],
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - green - 600 to - emerald - 600'
     text_colo,
@@ -1471,15 +1466,15 @@ export const,
     real_servic,
   e: true,
     technolog,
-  y: ['Python, TensorFlow, IoT platforms, Energy management systems, React']
+  y: ['Python, TensorFlow, IoT platforms, Energy management systems, React'];
     integration,
-  s: ['Smart meters, Solar inverters, Battery systems, Grid management systems']
+  s: ['Smart meters, Solar inverters, Battery systems, Grid management systems'];
     use_case,
-  s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting']
+  s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];
     ro,
   i: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',
     competitor,
-  s: ['Schneider Electric, Siemens, GE Digital, ABB']
+  s: ['Schneider Electric, Siemens, GE Digital, ABB'];
     market_siz,
   e: '$18B+ energy management market'
     growth_rat,
@@ -1504,11 +1499,11 @@ export const,
   s: [,
       '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking'
     ],
-export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -1526,13 +1521,13 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   capabilitie,
   s: string[],
   marketAdvantag,
-  e: string}
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+  e: string};
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
   websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
 export const,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [
   // AI & Machine Learning Services
@@ -1546,7 +1541,7 @@ export const,
     features: [
       'AI-powered content writingSEO optimization toolsMulti-language supportContent templates libraryPlagiarism detectionBrand voice customizationContent schedulingPerformance analytics'
       'Collaboration toolsAPI integration'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-blue-600 to-indigo-600'
@@ -1558,11 +1553,11 @@ export const,
     setupTime: '1-2 days'
     category: 'AI & Machine Learning'
     realService: true,
-    technology: ['OpenAI GPT-4, Claude, Python, React, Node.js, PostgreSQL']
-    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms']
-    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions']
+    technology: ['OpenAI GPT-4, Claude, Python, React, Node.js, PostgreSQL'];
+    integrations: ['WordPress, Shopify, HubSpot, Mailchimp, Social media platforms'];
+    useCases: ['Blog writing, Social media content, Marketing copy, Product descriptions'];
     roi: 'Reduce content creation time by 80% and increase engagement by 40%',
-    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot']
+    competitors: ['Jasper, Copy.ai, Writesonic, ContentBot'];
     marketSize: '$8 B+ content marketing market'
     growthRate: '180% YoY'
     variant: 'ai-futuristic'
@@ -1574,34 +1569,34 @@ export const,
     rating: 4.8
     reviews: 267,
     benefits: [,
-      '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency']}
+      '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency']};
     capabilities: [,
-      'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance']}
+      'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance']};
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features',
-  {/* TODO: Fix JSX expression */}
-    ]}
+  {/* TODO: Fix JSX expression */};
+    ]};
     capabilitie,
   s: [,
       'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance'
-    ]}
+    ]};
     market_advantag,
   e: 'Advanced AI energy platform with comprehensive sustainability features'
-  }
-]
+  };
+];
 export default comprehensiveInnovativeServices
-export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
-  s: string}
+export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-  benefits: string[]
-  capabilities: string[]
+  benefits: string[];
+  capabilities: string[];
   marketAdvantage: string,
   realImplementatio,
   n: boolean,
@@ -1620,7 +1615,7 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   capabilitie,
   s: string[],
   marketAdvantag,
-  e: string}
+  e: string};
 export default comprehensiveInnovativeServices
 i,
   d: string, nam,
@@ -1630,8 +1625,7 @@ i,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, text_colo,
   r: string, lin,
   k: string, market_positio,
@@ -1663,7 +1657,9 @@ i,
   s: string[], marketAdvantag,
   e: string,
   capabilities: string[], market_advantag,
-  e: string} const contact = mobil,
+  e: string} ;
+  ;
+  const contact = mobil,
   e: '+1 302 464 0950' ' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -1677,7 +1673,7 @@ i,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-content-generation'' marketPositio,
   n: 'Leading AI content generation platform with enterprise features', export const,
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [ // AI & Machine Learning Services {/* TODO: Fix JSX expression */}
+  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [ // AI & Machine Learning Services {/* TODO: Fix JSX expression */};
   s: 30}' setupTim,
   e: '2-3 weeks'' categor,
   y: 'Cybersecurity' capabilitie,
@@ -1690,8 +1686,7 @@ i,
   d: '/month',' descriptio,
   n: 'Comprehensive zero - trust security platform that implements continuous verification and least - privilege access across all users, devices, and applications.' feature,
   s: [;' 'Identity verification and management_device trust scoring_application access control_network segmentation_continuous monitoring_threat detection and response_compliance reportingAPI security'' 'Data encryption_security analytics dashboard' ], popula,
-  r: true,' ico,
-  n: '🔐'' colo,
+  r: true,' icon: '🔐'' colo,
   r: 'from - red - 600 to - pink - 600'' text_colo,
   r: 'text - red - 400'' lin,
   k: 'http,
@@ -1741,8 +1736,7 @@ i,
   d: '/month',' descriptio,
   n: 'AI - driven DevOps platform that automates deployment, testing, monitoring, and optimization using machine learning and predictive analytics.' feature,
   s: [;' 'Intelligent CI / CD pipelines_automated testing and QAPredictive deployment optimization_performance monitoring and alerting_infrastructure as code automation_security scanning integration_cost optimization recommendations_team collaboration tools'' 'Compliance automation_analytics and reporting' ], popula,
-  r: true,' ico,
-  n: '⚙️'' colo,
+  r: true,' icon: '⚙️'' colo,
   r: 'from - green - 600 to - teal - 600'' text_colo,
   r: 'text - green - 400'' lin,
   k: 'http,
@@ -1790,8 +1784,7 @@ i,
   d: '/month',' descriptio,
   n: 'Advanced IoT edge computing platform that processes data locally, provides real - time analytics, and enables intelligent decision - making at the edge.' feature,
   s: [;' 'Edge data processing_real - time analytics_machine learning at the edge_device management and monitoring_data synchronization_security and encryption_scalable edge deployment_custom edge applications'' 'Performance optimization_integration APIs' ], popula,
-  r: false,' ico,
-  n: '🌐'' colo,
+  r: false,' icon: '🌐'' colo,
   r: 'from - purple - 600 to - blue - 600'' text_colo,
   r: 'text - purple - 400'' lin,
   k: 'http,
@@ -1827,8 +1820,7 @@ i,
   d: '/month', ' descriptio,
   n: 'Revolutionary AI platform for medical imaging analysis that provides accurate diagnosis, early detection, and treatment recommendations for various medical conditions.' feature,
   s: [;' 'Multi - modality image analysisAI - powered diagnosis_early detection algorithms_treatment recommendations_radiologist assistance tools_clinical decision support_patient outcome prediction_research and analytics'' 'HIPAA compliance_integration with PACS systems' ], popula,
-  r: true,' ico,
-  n: '🏥' ' lin,
+  r: true,' icon: '🏥' ' lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-medical-imaging'' marketPositio,
   n: 'Leading AI medical imaging platform with FDA clearance', ' targetAudienc,
@@ -1883,8 +1875,7 @@ i,
   d: '/month',' descriptio,
   n: 'Advanced AI - powered financial risk management platform that provides real - time risk assessment, fraud detection, and compliance monitoring for financial institutions.' feature,
   s: [;' 'Real - time risk assessmentAI - powered fraud detection_compliance monitoring_portfolio risk analysis_market risk modeling_credit risk evaluation_regulatory reporting_stress testing scenarios'' 'Risk analytics dashboardAPI integration' ], popula,
-  r: true,' ico,
-  n: '💰'' colo,
+  r: true,' icon: '💰'' colo,
   r: 'from - yellow - 600 to - orange - 600'' text_colo,
   r: 'text - yellow - 400'' lin,
   k: 'http,
@@ -1922,8 +1913,7 @@ i,
   d: '/month'' descriptio,
   n: 'Intelligent learning platform that personalizes education content, tracks student progress, and provides adaptive learning paths using AI and machine learning.' feature,
   s: [;' 'Personalized learning paths_adaptive content delivery_progress tracking and analytics_intelligent tutoring system_assessment and feedback_collaborative learning tools_content creation tools_learning analytics dashboard'' 'Mobile learning support_integration with LMS systems' ], popula,
-  r: false,' ico,
-  n: '🎓' ' lin,
+  r: false,' icon: '🎓' ' lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-personalized-learning'' marketPositio,
   n: 'Advanced AI-powered personalized learning platform', ' targetAudienc,
@@ -1975,8 +1965,7 @@ i,
   d: '/month',' descriptio,
   n: 'AI - powered supply chain platform that optimizes inventory, predicts demand, manages logistics, and provides real - time visibility across the entire supply chain.' feature,
   s: [;' 'Demand forecasting_inventory optimization_logistics route optimization_supplier management_real - time tracking_risk assessment_cost optimization_sustainability metrics'' 'Performance analytics_integration with ERP systems' ], popula,
-  r: true,' ico,
-  n: '📦'' colo,
+  r: true,' icon: '📦'' colo,
   r: 'from - teal - 600 to - cyan - 600'' text_colo,
   r: 'text - teal - 400'' lin,
   k: 'http,
@@ -2026,8 +2015,7 @@ i,
   d: '/month',' descriptio,
   n: 'AI - powered energy optimization platform that manages renewable energy systems, optimizes consumption, and provides sustainability insights for businesses and utilities.' feature,
   s: [;' 'Renewable energy management_energy consumption optimization_grid integration and management_sustainability reporting_carbon footprint tracking_energy trading optimization_predictive maintenance_real - time monitoring'' 'Performance analytics_integration with smart meters' ], popula,
-  r: false,' ico,
-  n: '⚡'' colo,
+  r: false,' icon: '⚡'' colo,
   r: 'from - green - 600 to - emerald - 600'' text_colo,
   r: 'text - green - 400'' lin,
   k: 'http,
@@ -2053,7 +2041,7 @@ i,
   s: 78, ratin,
   g: 4 && 4.6, review,
   s: 56, benefit,
-  s: [,' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
+  s: [,' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -2064,15 +2052,17 @@ i,
   s: number, benefit,
   s: string[], capabilitie,
   s: string[], marketAdvantag,
-  e: string} const contact = {/* TODO: Fix JSX expression */}
+  e: string} ;
+  ;
+  const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } export const,
-  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
+  comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services, {/* TODO: Fix JSX expression */};
   s: [,' '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency' ]} capabilitie,
   s: [,' 'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance' ]}' market_advantag,
-  e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
+  e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

@@ -40,8 +40,10 @@ export function useJobMatches(jobId: string) {
       })
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const triggerAIMatching = async () => {
     setIsProcessing(true)
     try {
@@ -67,8 +69,8 @@ export function useJobMatches(jobId: string) {
       })
     } finally {
       setIsProcessing(false)
-    }
-  }
+    };
+  };
   useEffect(() => {
     fetchMatches()
   }, [jobId])
@@ -77,5 +79,6 @@ export function useJobMatches(jobId: string) {
     isLoading,
     isProcessing,
     triggerAIMatching
-  }
-}
+  };
+};
+;

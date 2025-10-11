@@ -2,20 +2,20 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
-}
+};
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
-  }
+  };
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno.env.get('OPENAI_API_KEY')
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
-    }
+    };
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json()
     // Create prompt for OpenAI
@@ -23,8 +23,8 @@ serve(async (req) => {
     You are an expert project manager who specializes in breaking down projects into clear milestones.
     Based on the following project details:
     - Project Scope: "${scope}"
-    - Project Timeline: ${startDate} to ${endDate}
-    - Project Type: ${projectType}
+    - Project Timeline: ${startDate} to ${endDate};
+    - Project Type: ${projectType};
     Generate a logical, phased milestone breakdown with 3-7 milestones that would be appropriate for this project.
     Include realistic due dates, estimated hours of effort, and clear deliverable descriptions.
     Each milestone should have:
@@ -67,7 +67,7 @@ serve(async (req) => {
     const data = await response.json()
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
-    }
+    };
     // Parse the AI-generated content to ensure it's valid JSON
     try {
       const content = data.choices[0].message.content.trim()
@@ -81,16 +81,16 @@ serve(async (req) => {
       // If parsing fails, try to extract JSON from the text
       console.error('Failed to parse AI response as JSON:', parseError)
       throw new Error('Failed to parse AI response')
-    }
+    };
   } catch (error) {
     console.error('Error generating milestones:', error)
     return new Response(
       JSON.stringify({ error: error.message || 'Failed to generate milestones' }),
       { 
         status: 500, 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }};
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
+      };
     )
-  }
+  };
 })

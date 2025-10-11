@@ -7,7 +7,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
   const totalsByToken: Record<string, number> = {}
-  const contributionsBySubject: Record<string, number> = {}
+  ;
+  ;
+  const contributionsBySubject: Record<string, number> = {};
   let globalVotes = 0
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
@@ -39,8 +41,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       const p = e.payload as any,
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
-    }
+    };
   }
+  ;
+  ;
   const topContributors = Object.entries(contributionsBySubject)
     .map(([subjectId, score]) => ({ subjectId, score }))
     .sort((a, b) => b.score - a.score)
@@ -55,7 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     topContributors,
     totalVoteCount: globalVotes,
     lastSyncedAt: state.lastSyncedAt})
-}
+};
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
@@ -64,7 +68,9 @@ export default function handler(req, res) {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
   const events = filterEventsByScope(state.events, state.config.scope)
   const totalsByToken: Record<string, number> = {}
-  const contributionsBySubject: Record<string, number> = {}
+  ;
+  ;
+  const contributionsBySubject: Record<string, number> = {};
   let globalVotes = 0
   for (const e of events) {
     if (e.type === "token_transfer") {
@@ -82,27 +88,29 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
+  ;
+  ;
   const topContributors = Object.entries(contributionsBySubject)
     .map(([subjectId, score]) => ({ subjectId, score }))
     .sort((a, b) => b.score - a.score)
@@ -118,12 +126,13 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
-}
+  };
+};
+};
+};
+;

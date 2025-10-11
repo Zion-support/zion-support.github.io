@@ -6,7 +6,7 @@ export interface NextGenerationAIService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface NextGenerationAIService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -35,11 +35,11 @@ export interface NextGenerationAIService {
   launchDate: string
   customers: number
   rating: number,
-export interface NextGenerationAIService {}
+export interface NextGenerationAIService {};
   reviews: number,    mobile: string
     email: string
     address: string,
-    website: string}
+    website: string};
   },
   realImplementation: boolean
   implementationDetails: string
@@ -47,8 +47,8 @@ export interface NextGenerationAIService {}
   customers: number
   rating: number
   reviews: number,
-export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
-export interface NextGenerationAIService {}
+export interface NextGenerationAIService {/* TODO: Fix JSX expression */};
+export interface NextGenerationAIService {};
   review,
   s: number,    mobil,
   e: string,
@@ -57,7 +57,7 @@ export interface NextGenerationAIService {}
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   },
   realImplementatio,
   n: boolean,
@@ -70,7 +70,7 @@ export interface NextGenerationAIService {}
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
   i,
   d: string,
   nam,
@@ -87,8 +87,7 @@ export interface NextGenerationAIService {}
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   textColo,
@@ -124,18 +123,18 @@ export interface NextGenerationAIService {}
   varian,
   t: string,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  s: string}
+  o: {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-  }
+  e: string};
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number,
-}
+};
 export const nextGenerationAIServices: NextGenerationAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',
@@ -196,7 +195,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
   review,
   s: number,    mobil,
   e: string,
@@ -205,7 +204,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -217,7 +216,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   nextGenerationAIServices: NextGenerationAIService[] = [,
   // Advanced AI Agents & Autonomous Systems,
@@ -298,8 +297,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-purple-700',
     textColo,
@@ -456,8 +454,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-600 to-indigo-700',
     textColo,
@@ -583,8 +580,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-600 to-emerald-700',
     textColo,
@@ -710,8 +706,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-indigo-600 to-blue-700',
     textColo,
@@ -1004,8 +999,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-emerald-600 to-teal-700',
     textColo,
@@ -1142,8 +1136,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-yellow-600 to-orange-700',
     textColo,
@@ -1269,8 +1262,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-pink-600 to-rose-700',
     textColo,
@@ -1396,8 +1388,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-gray-600 to-slate-700',
     textColo,
@@ -1523,8 +1514,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-600 to-pink-700',
     textColo,
@@ -1642,8 +1632,7 @@ export const,
     reviews: 125,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-orange-600 to-amber-700',
     textColo,
@@ -1705,11 +1694,11 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 125}
-  }
-]
-]
-export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
+  s: 125};
+  };
+];
+];
+export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */};
   g: number, export interface NextGenerationAIService {} review,
   s: number, mobil,
   e: string, emai,
@@ -1729,8 +1718,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -1748,7 +1736,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   e: string, growthRat,
   e: string, varian,
   t: string, contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -1776,8 +1764,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.', feature,
   s: [' 'Autonomous decision-making engine',' 'Natural language business communication',' 'Multi-platform task execution',' 'Real-time market analysis',' 'Automated customer service',' 'Financial decision automation',' 'Supply chain optimization',' 'Predictive analytics',' 'Risk assessment and mitigation',' 'Performance optimization' ], popula,
-  r: true,' ico,
-  n: '🤖',' colo,
+  r: true,' icon: '🤖',' colo,
   r: 'from-blue-600 to-purple-700',' textColo,
   r: 'text-blue-400',' lin,
   k: 'http,
@@ -1816,8 +1803,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.', feature,
   s: [' 'Quantum AI algorithm optimization',' 'Hybrid quantum-classical computing',' 'Quantum machine learning models',' 'Real-time quantum simulations',' 'Quantum cryptography integration',' 'Advanced quantum error correction',' 'Quantum neural networks',' 'Quantum optimization algorithms',' 'Quantum chemistry simulations',' 'Quantum financial modeling' ], popula,
-  r: true,' ico,
-  n: '⚛️',' colo,
+  r: true,' icon: '⚛️',' colo,
   r: 'from-purple-600 to-indigo-700',' textColo,
   r: 'text-purple-400',' lin,
   k: 'http,
@@ -1855,8 +1841,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.', feature,
   s: [' 'Neural signal processing',' 'Brain-computer interface SDK',' 'Real-time neural data analysis',' 'Machine learning for neural patterns',' 'Safety protocols and testing',' 'Multi-modal interface support',' 'Neural data visualization',' 'API for custom applications',' 'Compliance with medical standards',' '24/7 neural interface support' ], popula,
-  r: true,' ico,
-  n: '🧠',' colo,
+  r: true,' icon: '🧠',' colo,
   r: 'from-green-600 to-emerald-700',' textColo,
   r: 'text-green-400',' lin,
   k: 'http,
@@ -1894,8 +1879,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.', feature,
   s: [' 'Autonomous satellite operations',' 'AI-powered mission planning',' 'Real-time space data analysis',' 'Predictive maintenance for satellites',' 'Autonomous navigation systems',' 'Space debris tracking and avoidance',' 'Mission optimization algorithms',' 'Multi-satellite coordination',' 'Earth observation analytics',' 'Space weather monitoring' ], popula,
-  r: true,' ico,
-  n: '🚀',' colo,
+  r: true,' icon: '🚀',' colo,
   r: 'from-indigo-600 to-blue-700',' textColo,
   r: 'text-indigo-400',' lin,
   k: 'http,
@@ -1933,8 +1917,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.', feature,
   s: [' 'AI molecular modeling',' 'Drug target identification',' 'Predictive toxicity analysis',' 'Molecular docking simulations',' 'Drug repurposing algorithms',' 'Clinical trial optimization',' 'Biomarker discovery',' 'Personalized medicine algorithms',' 'Drug interaction prediction',' 'Regulatory compliance tools' ], popula,
-  r: true,' ico,
-  n: '🧬',' colo,
+  r: true,' icon: '🧬',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
   r: 'text-emerald-400',' lin,
   k: 'http,
@@ -1972,8 +1955,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.', feature,
   s: [' 'Quantum algorithmic trading',' 'Real-time risk assessment',' 'Portfolio optimization algorithms',' 'Market prediction models',' 'Quantum cryptography for security',' 'Multi-asset trading support',' 'Regulatory compliance tools',' 'Performance analytics dashboard',' 'API for broker integration',' '24/7 trading operations' ], popula,
-  r: true,' ico,
-  n: '💰',' colo,
+  r: true,' icon: '💰',' colo,
   r: 'from-yellow-600 to-orange-700',' textColo,
   r: 'text-yellow-400',' lin,
   k: 'http,
@@ -2011,8 +1993,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.', feature,
   s: [' 'AI-powered NPC generation',' 'Dynamic content creation',' 'Real-time environment adaptation',' 'Natural language interactions',' 'Emotional AI responses',' 'Multi-user synchronization',' 'VR/AR integration',' 'Blockchain integration',' 'Performance optimization',' 'Analytics and insights' ], popula,
-  r: true,' ico,
-  n: '🌐',' colo,
+  r: true,' icon: '🌐',' colo,
   r: 'from-pink-600 to-rose-700',' textColo,
   r: 'text-pink-400',' lin,
   k: 'http,
@@ -2050,8 +2031,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and performance.', feature,
   s: [' 'Advanced computer vision',' 'Real-time decision making',' 'Predictive safety systems',' 'Multi-sensor fusion',' 'Behavioral prediction',' 'Traffic optimization',' 'Fleet management',' 'Safety monitoring',' 'Regulatory compliance',' 'Performance analytics' ], popula,
-  r: true,' ico,
-  n: '🚗',' colo,
+  r: true,' icon: '🚗',' colo,
   r: 'from-gray-600 to-slate-700',' textColo,
   r: 'text-gray-400',' lin,
   k: 'http,
@@ -2089,8 +2069,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.', feature,
   s: [' 'Quantum key distribution (QKD)',' 'Post-quantum cryptography',' 'Quantum entanglement security',' 'Real-time threat detection',' 'Multi-node quantum network',' 'Government compliance',' 'Quantum network monitoring',' 'API for enterprise integration',' '24/7 quantum security operations',' 'Unhackable communication channels' ], popula,
-  r: true,' ico,
-  n: '🔒',' colo,
+  r: true,' icon: '🔒',' colo,
   r: 'from-red-600 to-pink-700',' textColo,
   r: 'text-red-400',' lin,
   k: 'http,
@@ -2128,8 +2107,7 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   d: '/month',' descriptio,
   n: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real-time optimization.', feature,
   s: [' 'Predictive maintenance',' 'Quality control automation',' 'Process optimization',' 'Supply chain optimization',' 'Energy efficiency management',' 'Real-time monitoring',' 'Performance analytics',' 'Predictive analytics',' 'Automation workflows',' 'Compliance management' ], popula,
-  r: true,' ico,
-  n: '🏭',' colo,
+  r: true,' icon: '🏭',' colo,
   r: 'from-orange-600 to-amber-700',' textColo,
   r: 'text-orange-400',' lin,
   k: 'http,

@@ -23,7 +23,8 @@ export function useConversationState() {
     activeConversation,
     setActiveConversation,
     isLoading,
-    setIsLoading}
+    setIsLoading};
     setIsLoading,
-  }
-}
+  };
+};
+;

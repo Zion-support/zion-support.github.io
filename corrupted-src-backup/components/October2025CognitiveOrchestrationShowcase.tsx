@@ -29,40 +29,45 @@ Cognitive, Orchestratio, n: The, Future, of Enterprise, A, I
 Discover, how, Fortune 50, companies, are achievi, n, g $84.7 B, in, value with, autonomous, AI operatio, n, s
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
 {/* Blog, Post, Card */
-}
-          <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
+};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
   r:shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,"
 {/* Blog, Post, Card */
-}
-          <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
+};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
   r:shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">"
-}
-          <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
+};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
   r:shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,"
 {/* Blog, Post, Card */
-}
-          <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
+};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
   r:shad, o, w-cy, a, n-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">"
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>"
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Cognitive, Orchestration, Breakthrough</h3>"
             <div, className="spa, c, e-y-2, m, b-6, tex, t-whi, t, e/90">"
-const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-}
-          <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hove,$2 />
+const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
+};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hove,$2 />
   r: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e,"
   r:shad, o, w-cy, a, n-5, 0, 0/50">""
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4"></div>"
               <span, className="fo, n, t-bold, tex, t-sm">📖 COMPREHENSIVE, GUID, E</sp, a, n>"
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">,"
-{/* TODO: Fix JSX expression */}
+{/* TODO: Fix JSX expression */};
 }"
           <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-2x, l, p-8, transform, hove,$2 />
   r: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e,"
@@ -78,7 +83,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
               <p>📊 Complete, implementation, guide
             <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-cogniti, v, e-orchestrati, o, n-breakthrou, g, h"
-              classNa, m, e="bloc, k, w-full, b, g-white, tex, t-cy, a, n-600, hove, r: bg-yell, o, w-400, hov, e
+              classNa, m, e="bloc, k, w-full, b, g-white, tex, t-cy, a, n-600, hove, r: bg-yell, o, w-400, hov, e>
             <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-cogniti, v, e-orchestrati, o, n-breakthrou, g, h""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-cy, a, n-600, hove, r: bg-yell, o, w-400, hov, e,"
@@ -88,8 +93,9 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">"
               18, min, read • Published, Oct, 1, 20, 2, 5
-          {/* Case, Study, Card */}
-          <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
+          {/* Case, Study, Card */};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
   r:shad, o, w-emera, l, d-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
               <span, className="fo, n, t-bold, tex, t-sm">💰 SUCCESS, STOR, Y
@@ -126,7 +132,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
               <p>🎯 3.2-month, payback, period
             <Li, n, k
   to="/ca, s, e-studi, e, s/cogniti, v, e-orchestrati, o, n-84-billi, o, n-succe, s, s"
-              classNa, m, e="bloc, k, w-full, b, g-white, tex, t-te, a, l-600, hove, r: bg-yell, o, w-400, hov, e
+              classNa, m, e="bloc, k, w-full, b, g-white, tex, t-te, a, l-600, hove, r: bg-yell, o, w-400, hov, e>
             <Li, n, k;"
   to="/ca, s, e-studi, e, s/cogniti, v, e-orchestrati, o, n-84-billi, o, n-succe, s, s""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-te, a, l-600, hove, r: bg-yell, o, w-400, hov, e,"
@@ -136,8 +142,9 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">"
               Fortune, 50, Manufacturing • 20, 2, 5
-          {/* Service, Car, d */}
-          <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
+          {/* Service, Car, d */};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
   r:shad, o, w-purp, l, e-5, 0, 0/50">"
             <div, className="bg-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-lg, p, x-4, p, y-2, inlin, e-block, m, b-4">
           <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, transform, hover: sca, l, e-105, transitio, n-all, shado, w-2xl, hov, e$2 />
@@ -168,7 +175,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
               <p>📞 24/7, expert, support
             <Li, n, k
   to="/servic, e, s/cogniti, v, e-orchestrati, o, n-platfo, r, m-servic, e, s"
-              classNa, m, e="bloc, k, w-full, b, g-white, tex, t-purp, l, e-600, hove, r: bg-yell, o, w-400, hov, e
+              classNa, m, e="bloc, k, w-full, b, g-white, tex, t-purp, l, e-600, hove, r: bg-yell, o, w-400, hov, e>
             <Li, n, k;"
   to="/servic, e, s/cogniti, v, e-orchestrati, o, n-platfo, r, m-servic, e, s""
               classNa, m, e="bloc, k, w-full, b, g-white, tex, t-purp, l, e-600, hove, r: bg-yell, o, w-400, hov, e,"
@@ -178,8 +185,9 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
             </Li, n, k>"
             <div, className="mt-4, tex, t-center, tex, t-sm, tex, t-whi, t, e/80">"
               Enterprise, Pricin, g • 18-24, Week, Deployment
-        {/* Bottom, CT, A */}
-        <div, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, rounde, d-2x, l, p-8, tex, t-center, tex, t-bla, c, k">"
+        {/* Bottom, CT, A */};
+        ;
+  <div, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, rounde, d-2x, l, p-8, tex, t-center, tex, t-bla, c, k">"
         {/* Bottom, CT, A */}"
         <div, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, rounde, d-2x, l, p-8, tex, t-center, tex, t-bla, c, k">";"
           <h3, className="te, x, t-3xl, fon, t-extrabold, m, b-4">"
@@ -202,7 +210,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
             >
               📞 Ca, l, l +1, 302, 464 09, 5, 0
             <Li, n, k
-  to="/conta, c, t"
+  to="/conta, c, t">
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="bg-white, tex, t-black, hove, r: bg-gr, a, y-100, fon, t-bold, p, y-4, p, x-8, rounde, d-lg, tex, t-lg, transitio, n-a, l, l"
@@ -212,7 +220,7 @@ const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {/* TOD
       </d, i, v>)
     </secti, o, n>)
   )
-}
+};
 export default October2025 CognitiveOrchestrationShowcase
 }"
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></section></section></section></section>

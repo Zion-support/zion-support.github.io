@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const QuantumComputingPage: React.FC = () => {
+
     return (
     <React.Fragment>
       <Helmet>
@@ -73,7 +74,7 @@ const QuantumComputingPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )
-  }
+  };
 export default QuantumComputingPage</a>
   </a>
   </li>

@@ -4,7 +4,7 @@ export interface InnovativeITService2024 {id: string
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   rating: number
   customers: number
   popular: boolean
@@ -18,25 +18,25 @@ export interface InnovativeITService2024 {id: string
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
   contactInfo: unknown
     mobile: string
     email: string,
-    address: string}
-    website: string}
-}
+    address: string};
+    website: string};
+};
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   reviews: number,
-}
+};
 export const innovativeITServices2024: InnovativeITService2024[] = [
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
@@ -86,11 +86,11 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: 950
     rating: 4.8
     reviews: 520,
-export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
-  s: string}
+export interface InnovativeITService2024 {/* TODO: Fix JSX expression */};
+  s: string};
     websit,
-  e: string}
-}
+  e: string};
+};
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -98,7 +98,7 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   launchDat,
   e: string,
   review,
-  s: number}
+  s: number};
 export const,
   innovativeITServices2024: InnovativeITService2024[] = [,
     i,
@@ -189,8 +189,8 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 520}
-]
+  s: 520};
+];
 export interface InnovativeITService2024,
   id: string, nam,
   e: string, taglin,
@@ -201,8 +201,7 @@ export interface InnovativeITService2024,
   s: string[], ratin,
   g: number, customer,
   s: number, popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,

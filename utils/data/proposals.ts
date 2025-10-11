@@ -31,15 +31,15 @@ export type ProposalMeta = {
   type: string
   regionalScope: string
   budgetOrResolution: string
-  supportingMultiverses: string[]
-  languages: string[]
+  supportingMultiverses: string[];
+  languages: string[];
   status: ProposalStatus
   artifacts: {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 },
 export type ProposalPayload = {
   title: string
@@ -50,20 +50,22 @@ export type ProposalPayload = {
     ipfsCid?: string
     ensRecordHash?: string
     signature?: string
-  }
-}
+  };
+};
 export type ProposalPayload = {
   title: string
   targetInstitution: string
   type: string
   regionalScope: string
   budgetOrResolution: string
-  supportingMultiverses: string[]
+  supportingMultiverses: string[];
   contentMarkdown: string
   language?: string
   metadata?: Record<string, any>
 }
-const dataDir = path.join(process.cwd(), 'dataproposals'),
+;
+  ;
+  const dataDir = path.join(process.cwd(), 'dataproposals'),
 const publicDir = path.join(process.cwd(), 'publicproposals'),
 function ensureDirs() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
@@ -71,18 +73,20 @@ function ensureDirs() {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   ensureDirs(),
 }
-const dataDir = path.join(process.cwd(), 'data', 'proposals')
+;
+  ;
+  const dataDir = path.join(process.cwd(), 'data', 'proposals')
 const publicDir = path.join(process.cwd(), 'public', 'proposals')
 function ensureDirs() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true })
-}
+};
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   ensureDirs()
   const id = uuidv4()
@@ -102,18 +106,18 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
     type: payload.type
     regionalScope: payload.regionalScope
     budgetOrResolution: payload.budgetOrResolution
-    supportingMultiverses: payload.supportingMultiverses |[]
-    languages: payload.language ? [payload.language] : ['en']
+    supportingMultiverses: payload.supportingMultiverses |[];
+    languages: payload.language ? [payload.language] : ['en'];
     status: 'Draft'
     artifacts: {
       markdownPath: `/proposals/${id}/proposal.md`
-      jsonPath: path.relative(process.cwd(), jsonPath)}}
+      jsonPath: path.relative(process.cwd(), jsonPath)}};
   fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8')
   fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8')
   const metaPath = path.join(proposalDir, 'meta.json')
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8')
   return meta
-}
+};
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs()
   const markdownPath = path.join(publicProposalDir, 'proposal.md')
   const jsonPath = path.join(proposalDir, 'proposal.json')
@@ -133,13 +137,13 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
       markdownPath: `/proposals/${id}/proposal.md`,
       jsonPath: path.relative(process.cwd(), jsonPath),
     },
-  }
+  };
   fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8')
   fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8')
   const metaPath = path.join(proposalDir, 'meta.json')
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8')
   return meta
-}
+};
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {
   ensureDirs()
   const metaPath = path.join(dataDir, id, 'meta.json')
@@ -148,7 +152,7 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   const next = updater({ ...current, updatedAt: new Date().toISOString() })
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8')
   return next
-}
+};
 export function listProposals(): ProposalMeta[] {
   ensureDirs()
   const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')))
@@ -158,12 +162,14 @@ export function listProposals(): ProposalMeta[] {
   })
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
 }
-    const metaPath = path.join(dataDir, id, 'meta.json')
+    ;
+  ;
+  const metaPath = path.join(dataDir, id, 'meta.json')
     if (!fs.existsSync(metaPath)) return null
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta
   } catch {return null
-  }
-}
+  };
+};
 export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs()
     markdownPath?: string,
     jsonPath?: string,
@@ -171,7 +177,7 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs()
     ipfsCid?: string,
     ensRecordHash?: string,
     signature?: string
-  }
+  };
 },
 export type ProposalPayload = {
   title: string,
@@ -189,8 +195,8 @@ const publicDir = path.join(process.cwd(), 'publicproposals'),
 function ensureDirs() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true }),
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true })
-}
-
+};
+;
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   ensureDirs(),
   const id = uuidv4(),
@@ -222,8 +228,8 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
   const metaPath = path.join(proposalDir, 'meta.json'),
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8'),
   return meta
-}
-
+};
+;
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {
   ensureDirs(),
   const metaPath = path.join(dataDir, id, 'meta.json'),
@@ -232,8 +238,8 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   const next = updater({ ...current, updatedAt: new Date().toISOString() }),
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8'),
   return next
-}
-
+};
+;
 export function listProposals(): ProposalMeta[] {
   ensureDirs(),
   const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json'))),
@@ -242,8 +248,8 @@ export function listProposals(): ProposalMeta[] {
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta
   }),
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1))
-}
-
+};
+;
 export function getProposal(id: string): ProposalMeta | null {
   try {
     const metaPath = path.join(dataDir, id, 'meta.json'),
@@ -251,9 +257,9 @@ export function getProposal(id: string): ProposalMeta | null {
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta
   } catch {
     return null
-  }
-}
-
+  };
+};
+;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs(),
   const publicProposalDir = path.join(publicDir, id),
@@ -261,13 +267,13 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf'),
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes))
   return `/proposals/${id}/proposal.pdf`
-}
-
+};
+;
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 },
 export type ProposalPayload = {
   title: string
@@ -275,12 +281,14 @@ export type ProposalPayload = {
   type: string
   regionalScope: string
   budgetOrResolution: string
-  supportingMultiverses: string[]
+  supportingMultiverses: string[];
   contentMarkdown: string
   language?: string
   metadata?: Record<string, any>
 }
-const dataDir = path.join(process.cwd(), 'dataproposals'),
+;
+  ;
+  const dataDir = path.join(process.cwd(), 'dataproposals'),
 const publicDir = path.join(process.cwd(), 'publicproposals'),
 function ensureDirs() {
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
@@ -288,9 +296,9 @@ function ensureDirs() {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   ensureDirs(),
   const id = uuidv4()
@@ -325,9 +333,9 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {
   ensureDirs(),
   const metaPath = path.join(dataDir, id, 'meta.json')
@@ -339,9 +347,9 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export function listProposals(): ProposalMeta[] {
   ensureDirs(),
   const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json'))),
@@ -353,9 +361,9 @@ export function listProposals(): ProposalMeta[] {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export function getProposal(id: string): ProposalMeta | null {
   try {
     const metaPath = path.join(dataDir, id, 'meta.json')
@@ -366,14 +374,14 @@ export function getProposal(id: string): ProposalMeta | null {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs(),
 export function getProposal(id: string): ProposalMeta | null {
@@ -383,8 +391,8 @@ export function getProposal(id: string): ProposalMeta | null {
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta
   } catch {
     return null
-  }
-}
+  };
+};
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs()
   const publicProposalDir = path.join(publicDir, id)
@@ -392,25 +400,26 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf')
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes))
   return `/proposals/${id}/proposal.pdf`
-}
+};
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {return updateProposalMeta(id, (meta) => ({
     ...meta
     artifacts: { ...meta.artifacts, ...artifacts }}))
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {
   return updateProposalMeta(id, (meta) => ({
     ...meta
     artifacts: { ...meta.artifacts, ...artifacts }}))
-}
-}
+};
+};
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {
   return updateProposalMeta(id, (meta) => ({
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts },
   }))
-}
+};
+;

@@ -5,39 +5,39 @@ export interface EmergingTechInnovationService {
   description: string
   price: string
   period: string
-  features: string[]
+  features: string[];
   category: string
   marketSize: string
-  targetAudience: string[]
+  targetAudience: string[];
   competitiveAdvantage: string
-  useCases: string[]
-  integrations: string[]
-  compliance: string[]
+  useCases: string[];
+  integrations: string[];
+  compliance: string[];
   website: string
   contact: {
     phone: string
     email: string
     address: string
-  }
+  };
   trialDays: number
   setupTime: string
-  competitors: string[]
+  competitors: string[];
   roi: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-  technologyStack: string[]
+  technologyStack: string[];
   innovationLevel: string
   futureProofing: string
-  researchPartnerships: string[]
+  researchPartnerships: string[];
   popular?: boolean
   icon?: string
   color?: string
   textColor?: string
   link?: string
   marketPosition?: string
-  technology?: string[]
+  technology?: string[];
   growthRate?: string
   variant?: string
   contactInfo?: {
@@ -49,7 +49,7 @@ export interface EmergingTechInnovation {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -61,11 +61,11 @@ export interface EmergingTechInnovation {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
@@ -74,10 +74,10 @@ export interface EmergingTechInnovation {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation?: boolean
   implementationDetails?: string
-}
+};
 export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
   {
     id: 'ai-quantum-fusion-2025',
@@ -139,24 +139,26 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     technology: ['AI', 'Quantum Computing', 'Machine Learning'],
     growthRate: '45% YoY',
     variant: 'premium'
-  }
-]
+  };
+];
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-  benefits: string[]
-  capabilities: string[]
+  benefits: string[];
+  capabilities: string[];
   marketAdvantage: string
 }
-const contact = {
+;
+  ;
+  const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-}
+};
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
   {
@@ -715,5 +717,5 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Threat hunting'
     ],
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
-  }
-]
+  };
+];

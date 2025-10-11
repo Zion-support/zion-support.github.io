@@ -19,17 +19,20 @@ export function useContractTemplates() {
     queryKey: ['contractTemplates', user?.id],
     queryFn: async () => {
       if (!isAuthenticated || !user) {
-        return []
+        return [];
       }
-      const { data, error } = await supabase
+      ;
+  ;
+  const { data, error } = await supabase
         .from('contract_templates')
         .select('*')
         .order('is_default', { ascending: false })
         .order('created_at', { ascending: false })
       if (error) {
         throw error
-      }
-      return data as ContractTemplate[]
+      };
+      ;
+  return data as ContractTemplate[];
     },
     enabled: isAuthenticated && !!user
   })
@@ -54,7 +57,7 @@ export function useContractTemplates() {
             .update({ is_default: false })
             .eq('user_id', user.id)
             .eq('is_default', true)
-        }
+        };
         // Insert the new template
         const { data, error } = await supabase
           .from('contract_templates')
@@ -70,7 +73,7 @@ export function useContractTemplates() {
         return data as ContractTemplate
       } finally {
         setIsLoading(false)
-      }
+      };
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
@@ -88,7 +91,7 @@ export function useContractTemplates() {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
+    };
   })
   // Update an existing template
   const updateTemplate = useMutation({
@@ -114,7 +117,7 @@ export function useContractTemplates() {
             .eq('user_id', user.id)
             .eq('is_default', true)
             .neq('id', templateId)
-        }
+        };
         // Update the template
         const { data, error } = await supabase
           .from('contract_templates')
@@ -132,7 +135,7 @@ export function useContractTemplates() {
         return data as ContractTemplate
       } finally {
         setIsLoading(false)
-      }
+      };
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
@@ -150,7 +153,7 @@ export function useContractTemplates() {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
+    };
   })
   // Delete a template
   const deleteTemplate = useMutation({
@@ -166,7 +169,7 @@ export function useContractTemplates() {
         if (error) throw error
       } finally {
         setIsLoading(false)
-      }
+      };
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
@@ -184,7 +187,7 @@ export function useContractTemplates() {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
+    };
   })
   // Set a template as default
   const setDefaultTemplate = useMutation({
@@ -207,7 +210,7 @@ export function useContractTemplates() {
         if (error) throw error
       } finally {
         setIsLoading(false)
-      }
+      };
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
@@ -225,7 +228,7 @@ export function useContractTemplates() {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
+    };
   })
   return {
     templates,
@@ -235,5 +238,5 @@ export function useContractTemplates() {
     updateTemplate,
     deleteTemplate,
     setDefaultTemplate
-  }
-}
+  };
+};

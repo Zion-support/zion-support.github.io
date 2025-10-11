@@ -309,8 +309,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true,
     location: "North America",
     availability: "2-4 Weeks"
-  }
-]
+  };
+];
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
@@ -332,13 +332,13 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "GPU cluster",
     "Edge computing",
     "High performance storage"
-  ]
+  ];
   // Convert strings to SearchSuggestion objects
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
-}
+};
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
@@ -359,7 +359,7 @@ export const generateFilterOptions = (): FilterOptions => {
       value: item
     })),
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
-  }
-}
+  };
+};
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0))
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0))

@@ -6,7 +6,7 @@ export interface UltimateFuturisticMicroSaasService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface UltimateFuturisticMicroSaasService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -31,14 +31,14 @@ export interface UltimateFuturisticMicroSaasService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaasService[] = [
   // AI-Powered Autonomous Business Operations
   {
@@ -559,5 +559,5 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     customers: 15,
     rating: 4.9,
     reviews: 8
-  }
-]
+  };
+];

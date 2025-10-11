@@ -4,12 +4,12 @@ export interface SpaceTechBreakthroughService2029 {
   tagline: string
   price: string
   description: string
-  features: string[]
+  features: string[];
   link: string
   marketPosition: string
   targetAudience: string
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   realImplementation: boolean
@@ -17,13 +17,13 @@ export interface SpaceTechBreakthroughService2029 {
     mobile: string
     email: string
     address: string
-  }
+  };
   category: string
-  technology: string[]
-  benefits: string[]
-  useCases: string[]
-  spaceCapabilities: string[]
-}
+  technology: string[];
+  benefits: string[];
+  useCases: string[];
+  spaceCapabilities: string[];
+};
 export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029[] = [
   {
     id: "space-mining-automation-platform",
@@ -73,7 +73,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Resource detection",
       "Mining automation",
       "Space logistics"
-    ]
+    ];
   },
   {
     id: "metaverse-digital-reality-platform",
@@ -123,7 +123,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Sensory immersion",
       "AI interactions",
       "Real-time generation"
-    ]
+    ];
   },
   {
     id: "ai-predictive-health-analytics",
@@ -173,7 +173,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Disease detection",
       "Treatment optimization",
       "Health monitoring"
-    ]
+    ];
   },
   {
     id: "virtual-event-hologram-platform",
@@ -223,7 +223,7 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Global synchronization",
       "Interactive displays",
       "Spatial audio"
-    ]
+    ];
   },
   {
     id: "quantum-space-communication",
@@ -273,6 +273,6 @@ export const spaceTechBreakthroughServices2029: SpaceTechBreakthroughService2029
       "Instant communication",
       "Unbreakable security",
       "Space-time messaging"
-    ]
-  }
-]
+    ];
+  };
+];

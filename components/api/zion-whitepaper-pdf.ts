@@ -46,7 +46,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
     width: 480,
     align: 'left',
   })
-}
+};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const editionParam = (req.query.edition as string) || 'full'
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full'
@@ -117,10 +117,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.addPage()
   doc.fontSize(10).fillColor('#444444').text('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')
   doc.end()
-}
+};
   doc.end()
-}
-
+};
+;
 export default async /**
  * handler - Function description
  */
@@ -184,10 +184,11 @@ function handler() {
   doc.add_page ()
   doc.font_size (10).fill_color ('#444444').text (' Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.')
   doc.end ()
-}
+};
   sections.forEach(s => writeSection(doc, s.title, s.contentMd))
   doc.moveDown(0.5)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
   const sections = getWhitepaperSections(edition as any)
   doc.end()
-}
+};
+;

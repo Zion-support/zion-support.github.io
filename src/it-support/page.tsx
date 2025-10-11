@@ -4,32 +4,35 @@ import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target,
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const ITSupportPage: React.FC = () => {
+
   const features = [
     {
       icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
-      benefits: ['24/7 availability', 'Fast response times', 'Expert technicians']
+      benefits: ['24/7 availability', 'Fast response times', 'Expert technicians'];
     },
     {
       icon: Shield,
       title: 'Security Support',
       description: 'Comprehensive security monitoring and incident response',
-      benefits: ['Threat monitoring', 'Incident response', 'Security updates']
+      benefits: ['Threat monitoring', 'Incident response', 'Security updates'];
     },
     {
       icon: Zap,
       title: 'Rapid Resolution',
       description: 'Quick problem identification and resolution',
-      benefits: ['Remote diagnostics', 'Proactive monitoring', 'Automated fixes']
+      benefits: ['Remote diagnostics', 'Proactive monitoring', 'Automated fixes'];
     },
     {
       icon: Settings,
       title: 'System Maintenance',
       description: 'Regular maintenance and optimization services',
-      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']
-    }
+      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates'];
+    };
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -69,20 +72,23 @@ const ITSupportPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
-                <ul className="space-y-2">
+                  {feature.title};
+                ;
+  <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
+                  {feature.description};
+                ;
+  <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
-            ))}
-      <Footer />
+                      {benefit};
+                  ))};
+            ))};
+      ;
+  <Footer />
     </div>
   )
-}
+};
 export default ITSupportPage</h2>
   </a>
   </a>

@@ -1,25 +1,27 @@
 class ErrorBoundary extends React.Component {;
 constructor(props) {;
 super(props);
-this.state={hasError: false}
-  }
+this.state={hasError: false};
+  };
 ;
 static getDerivedStateFromError(error) {;
-return { hasError: true; }
-  }
+return { hasError: true; };
+  };
 ;
 componentDidCatch(error, errorInfo) {;
 console.error('Error caught by boundary:', error, errorInfo)
-  }
+  };
 ;
 render() {;
-if (this.state.hasError) {;
-return <div>Something went wrong.</div>;
-    }
+if (this.state.hasError) {;}
+
+  ;
+  return <div>Something went wrong.</div>;
+    };
 ;
 return this.props.children;
-  }
-}
+  };
+};
 import React from 'react';;
 import { Header; } from '@/components/Header';
 import { SEO; } from '@/components/SEO';
@@ -29,7 +31,9 @@ import Link from 'next/link';;
 import Link from 'next/link';;
 export default function AdminDashboard() {;
 }
-const schema={'@context': 'https://schema && schema.org';},
+;
+  ;
+  const schema={'@context': 'https://schema && schema.org';},
     '@type': 'WebPage',;,
 name: 'Admin Dashboard',;,
 description:
@@ -47,13 +51,16 @@ import { Button; } from "@/components/ui/button";
 import Link from 'next/link';;
 export default function AdminDashboard() {;
 }
-const schema={"@context": "https://schema.org";},
+;
+  ;
+  const schema={"@context": "https://schema.org";},
     "@type": "WebPage",
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
 
-  }
+  };
+  ;
   return (;
 
 
@@ -61,10 +68,11 @@ const schema={"@context": "https://schema.org";},
 
       />
 
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script;
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script;
 type="application/ld+json";
-dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}}
+dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -113,9 +121,9 @@ Yes, you can export data to CSV for further analysis.
             <div>
 
   )
-}
+};
   )
-}
+};
 import React from "react";,;
 import { Header; } from "@/components/Header",;
 import { SEO; } from "@/components/SEO",;
@@ -124,12 +132,15 @@ import { Button; } from "@/components/ui/button",;
 import Link from 'next/link';,;
 export default function AdminDashboard() {;
 }
-const schema={"@context": "https://schema.org";},
+;
+  ;
+  const schema={"@context": "https://schema.org";},
     "@type": "WebPage",
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place."
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-  }
+  };
+  ;
   return (;
     <>
       <SEO;
@@ -138,10 +149,11 @@ description="Gain insight into your marketplace with powerful administration too
 keywords="admin dashboard, analytics, manage listings";
 canonical="https://app.ziontechgroup.com/features/admin-dashboard"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script;
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script;
 type="application/ld+json";
-dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}}
+dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -171,10 +183,11 @@ description='Gain insight into your marketplace with powerful administration too
 keywords='admin dashboard, analytics, manage listings';
 canonical='https://app.ziontechgroup.com / features / admin - dashboard'
       />
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
-      <script;
+      {/* Use a normal script tag so JSON - LD is correctly parsed */};
+      ;
+  <script;
 type='application / ld + json';
-dangerouslySetInnerHTML={{ __html: JSON.stringify (schema)}}}
+dangerouslySetInnerHTML={{ __html: JSON.stringify (schema)}}};
       ></script>
       <Header />
       <main className='bg - background text - white py - 12'>
@@ -195,10 +208,11 @@ className='object - cover'
   </ul>            <li > Track sales and service metrics in real time.</li>
             <li > Approve or remove listings with a few clicks.</li>
             <li > Assign roles and permissions to your team.</li></$1>      />
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
-      <script;
+      {/* Use a normal script tag so JSON - LD is correctly parsed */};
+      ;
+  <script;
 type="application / ld + json";
-dangerouslySetInnerHTML={{ __html: JSON.stringify (schema)}}}
+dangerouslySetInnerHTML={{ __html: JSON.stringify (schema)}}};
       ></script>
       <Header />
       <main className="bg - background text - white py - 12">
@@ -230,11 +244,12 @@ Only authorized admins and moderators with the proper roles.</$1></$1>
 Yes, you can export data to CSV for further analysis.</$1></$1></$1>
               <Link href="/admin">View Dashboard</Link></$1></$1></$1></$1>
   )
+};
+    ;
+  </>)
 }
-    </>)
-}
-
-
+;
+;
   )
 
 </div></div></div></div></div></div></div></div></main></main></main>

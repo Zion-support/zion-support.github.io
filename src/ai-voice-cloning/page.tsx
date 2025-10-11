@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 const AIVoiceCloningPage: React.FC = () => {
+
   const features = [
     'Voice Cloning',
     'Text-to-Speech',
@@ -16,6 +17,9 @@ const AIVoiceCloningPage: React.FC = () => {
     'Custom Voice Models',
     'Batch Processing'
   ]
+  
+  ;
+  ;
   const benefits = [
     'Natural voice quality',
     'Cost-effective solution',
@@ -24,6 +28,9 @@ const AIVoiceCloningPage: React.FC = () => {
     'Multi-language support',
     'Easy integration'
   ]
+  
+  ;
+  ;
   const pricingPlans = [
     {
       name: 'Starter',
@@ -45,21 +52,24 @@ const AIVoiceCloningPage: React.FC = () => {
       period: '/month',
       features: ['Everything in Pro', 'Unlimited hours', 'Custom training', 'Dedicated support', 'White-label'],
       popular: false
-    }
+    };
   ]
+  ;
+  ;
   return (
     <React.Fragment>
       <SEOOptimizer
         title="AI Voice Cloning Studio - Create Realistic Voice Clones | Zion Tech Group"
         description="Create realistic voice clones for content, presentations, and customer service with AI Voice Cloning Studio. Professional voice synthesis technology starting at $199/month."
-        keywords={['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voice automation']}
+        keywords={['AI voice cloning', 'voice synthesis', 'text to speech', 'voice generation', 'AI voices', 'voice automation']};
         canonicalUrl="https://ziontechgroup.com/ai-voice-cloning"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
+          {/* Hero Section */};
+          ;
+  <section className="text-center mb-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex items-center justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
@@ -86,18 +96,20 @@ const AIVoiceCloningPage: React.FC = () => {
               </div>
             </div>
           </section>
-          {/* Features Section */}
-          <section className="mb-16">
+          {/* Features Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Advanced Voice Cloning Features
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">{feature}
-              ))}
-          {/* Benefits Section */}
-          <section className="mb-16">
+                    <h3 className="text-lg font-semibold text-white">{feature};
+              ))};
+          {/* Benefits Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Voice Cloning Studio?
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -105,10 +117,11 @@ const AIVoiceCloningPage: React.FC = () => {
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Zap className="w-8 h-8 text-white" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit}
-              ))}
-          {/* Pricing Section */}
-          <section className="mb-16">
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit};
+              ))};
+          {/* Pricing Section */};
+          ;
+  <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Simple, Transparent Pricing
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
@@ -116,30 +129,36 @@ const AIVoiceCloningPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}
-                      <span className="text-gray-400 ml-1">{plan.period}
-                  <ul className="space-y-3 mb-8">
+                  )};
+                  ;
+  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+                    ;
+  <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-cyan-400">{plan.price};
+                      ;
+  <span className="text-gray-400 ml-1">{plan.period};
+                  ;
+  <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                    ))}
-                  <$2 />
+                        {feature};
+                    ))};
+                  ;
+  <$2 />
                     href="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'cyber-button'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                    }`};
                   >
                     Get Started
-              ))}
-          {/* CTA Section */}
-          <section className="text-center mb-16">
+              ))};
+          {/* CTA Section */};
+          ;
+  <section className="text-center mb-16">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
                 Ready to Create Amazing Voice Content?
@@ -165,7 +184,7 @@ const AIVoiceCloningPage: React.FC = () => {
       </div>
     </React.Fragment>
   ),
-}
+};
 export default AIVoiceCloningPage</a>
   </p>
   </a>

@@ -2,8 +2,9 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import fs from "fs"
 import path from "path"
 async function fetchFromGitHub() {
-  try {
-    const response = await fetch(
+  try {}
+    ;
+  const response = await fetch(
       "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
     )
     if (!response && response.ok) return null
@@ -16,24 +17,27 @@ async /**
  * fetchFromGitHub - Function description
  */
 function fetchFromGitHub() {
-  try {
-    const response = await fetch (
+  try {}
+    ;
+  const response = await fetch (
       "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json",
     )
     // Check condition
 if (return null) {
   $2
 }
-    const data = await response.json ()
+    ;
+  ;
+  const data = await response.json ()
     return JSON.parse (Buffer.from (data.content, "base64").to_string ())
   } catch {
     return null
-  }
-}
+  };
+};
   if (req && req.method !== "GET") {
     return res && res.status(405).json({ error: "Method not allowed" })
-  }
-}
+  };
+};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600')
   try {
@@ -44,15 +48,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).json(json)
       } catch {
         // fall back to remote
-      }
+      };
     }
-    const remote = await fetchFromGitHub()
+    ;
+  ;
+  const remote = await fetchFromGitHub()
     if (remote) return res.status(200).json(remote)
     return res.status(200).json(null)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Internal error' })
-  }
-  }
+  };
+  };
   try {
     const localPath = path && path.join(process && process.cwd(), "data", "homepage && homepage.json")
     if (fs && fs.existsSync(localPath)) {
@@ -65,27 +71,34 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
-    return res.status (405).json ({ error: "Method not allowed" })
-  }
+};
+    ;
+  return res.status (405).json ({ error: "Method not allowed" })
+  };
   try {
     const local_path = path.join (process.cwd (), "data", "homepage.json")
     if () {) {
   $2
 }
-      const local = JSON.parse (fs.readFileSync (local_path, "utf - 8"))
+      ;
+  ;
+  const local = JSON.parse (fs.readFileSync (local_path, "utf - 8"))
       return res.status (200).json (local)
-    }
+    };
   } catch {
     // fall back to remote
-  }
+  };
   if (remote) return res && res.status(200).json(remote)
   return res && res.status(200).json(null)
 }
+  ;
+  ;
   const remote = await fetchFromGitHub ()
   if (return res.status (200).json (remote)) {
   $2
-}
+};
+  ;
   return res.status (200).json (null)
-}
-}
+};
+};
+;

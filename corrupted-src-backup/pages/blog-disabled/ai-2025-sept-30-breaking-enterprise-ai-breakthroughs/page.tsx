@@ -54,19 +54,19 @@ export default function BlogPost(): React.JSX.Element {
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>
                 <div className="flex gap-4"></div>
                   <$2 />
-                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Breaking Enterprise Ai Breakthroughs')}&url=${encodeURIComponent(window.location.href)}`}
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Breaking Enterprise Ai Breakthroughs')}&url=${encodeURIComponent(window.location.href)}`};
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     Twitter,
                   </a>,
                   <;$2 />
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`};
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
-  s://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Breaking Enterprise Ai Breakthroughs')}&url=${encodeURIComponent(window.location.href)}`}
+export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */};
+  s://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Breaking Enterprise Ai Breakthroughs')}&url=${encodeURIComponent(window.location.href)}`};
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
@@ -101,5 +101,5 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
         </div>
       </div>,
     </React.Fragment>)
-}
+};
 "`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></a></p></p></p></h1></h1></h2></h2></h3>

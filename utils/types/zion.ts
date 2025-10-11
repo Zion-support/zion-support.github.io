@@ -3,7 +3,7 @@ export interface Branding {logoUrl?: string
   primaryColor?: string
   secondaryColor?: string
   subdomain?: string
-}
+};
 export interface DeployModules {marketplace: boolean
 export interface Branding {
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid"
@@ -19,12 +19,12 @@ export interface Branding {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export interface DeployModules {
   marketplace: boolean
-}
+};
 export interface DeployModules {
   marketplace: boolean
   gpt: boolean
@@ -45,7 +45,7 @@ export interface DeployModules {
   grantPortal?: boolean
   trailer?: boolean
   bookStore?: boolean
-}
+};
 export interface DeployInput {instanceName: string
   defaultLanguage: string
   deploymentRegion: string
@@ -53,17 +53,17 @@ export interface DeployInput {instanceName: string
   governanceMode: GovernanceMode
   branding: Branding
   modules: DeployModules
-  requestedRoutes?: string[]
-}
+  requestedRoutes?: string[];
+};
 export interface DeployLogEntry {timestamp: string
   level: "info" | "warn" | "error"
   action: string
   details?: Record<string unknown> | string
-}
+};
 export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event"
   path: string
   description?: string
-}
+};
 export interface DeployResult {success: boolean
   globalMap?: boolean,
   franchiseOnboarding?: boolean,
@@ -71,20 +71,20 @@ export interface DeployResult {success: boolean
   grantPortal?: boolean,
   trailer?: boolean,
   bookStore?: boolean
-}
+};
 export interface DeployInput {instanceName: string
   defaultLanguage: string
   deploymentRegion: string
   tokenActivation: boolean
-}
-
+};
+;
 export interface DeployLogEntry {
   timestamp: string
   level: "info" | "warn" | "error"
   action: string
   details?: Record<string unknown> | string
-}
-
+};
+;
 export interface GeneratedAsset {
   kind: "file" | "page" | "config" | "job" | "event"
   path: string
@@ -92,13 +92,13 @@ export interface GeneratedAsset {
   governanceMode: GovernanceMode,
   branding: Branding,
   modules: DeployModules,
-  requestedRoutes?: string[]
+  requestedRoutes?: string[];
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export interface DeployInput {
 export interface DeployInput {
   instanceName: string
@@ -108,16 +108,16 @@ export interface DeployInput {
   governanceMode: GovernanceMode
   branding: Branding
   modules: DeployModules
-  requestedRoutes?: string[]
-}
-
+  requestedRoutes?: string[];
+};
+;
 export interface DeployLogEntry {
   timestamp: string
   level: "info" | "warn" | "error"
   action: string
   details?: Record<string unknown> | string
-}
-
+};
+;
 export interface GeneratedAsset {
   kind: "file" | "page" | "config" | "job" | "event"
   path: string
@@ -125,13 +125,13 @@ export interface GeneratedAsset {
   governanceMode: GovernanceMode,
   branding: Branding,
   modules: DeployModules,
-  requestedRoutes?: string[]
+  requestedRoutes?: string[];
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export interface DeployLogEntry {
   timestamp: string
   level: "info" | "warn" | "error",
@@ -140,9 +140,9 @@ export interface DeployLogEntry {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export interface GeneratedAsset {
   kind: "file" | "page" | "config" | "job" | "event",
   path: string
@@ -150,9 +150,9 @@ export interface GeneratedAsset {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export interface DeployResult {
   success: boolean
 export interface DeployLogEntry {
@@ -160,28 +160,28 @@ export interface DeployLogEntry {
   level: "info" | "warn" | "error"
   action: string
   details?: Record<string, unknown> | string
-}
+};
 export interface GeneratedAsset {
   kind: "file" | "page" | "config" | "job" | "event"
   path: string
   description?: string
-}
+};
 export interface DeployResult {
   success: boolean
   instanceSlug: string
   configPath: string
-  assets: GeneratedAsset[]
-  logs: DeployLogEntry[]
+  assets: GeneratedAsset[];
+  logs: DeployLogEntry[];
   summary: string
   version: string
-}
-export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]
+};
+export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 export interface DeployModules {
   marketplace: boolean,
   gpt: boolean,
@@ -201,7 +201,7 @@ export interface DeployModules {
   grant_portal?: boolean,
   trailer?: boolean,
   book_store?: boolean
-}
+};
 export interface DeployInput {
   instance_name: string,
   default_language: string,
@@ -210,19 +210,19 @@ export interface DeployInput {
   governance_mode: GovernanceMode,
   branding: Branding,
   modules: DeployModules,
-  requested_routes?: string[]
-}
+  requested_routes?: string[];
+};
 export interface DeployLogEntry {
   timestamp: string,
   level: "info" | "warn" | "error",
   action: string,
   details?: Record < string unknown> | string
-}
+};
 export interface GeneratedAsset {
   kind: "file" | "page" | "config" | "job" | "event",
   path: string,
   description?: string
-}
+};
 export interface DeployResult {
   success: boolean,
   instance_slug: string,
@@ -231,17 +231,18 @@ export interface DeployResult {
   logs: DeployLogEntry[],
   summary: string,
   version: string
-}
+};
 export interface AccessControlConfig {
-  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[]
+  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
+  };
+};
+};
 export interface AccessControlConfig {
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]
+  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean
-}
+};
+;

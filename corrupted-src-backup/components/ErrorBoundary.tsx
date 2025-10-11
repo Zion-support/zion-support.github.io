@@ -1,21 +1,21 @@
 import { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-interface Props {/* TODO: Fix JSX expression */}
-}
-interface State {/* TODO: Fix JSX expression */}
-}
+interface Props {/* TODO: Fix JSX expression */};
+};
+interface State {/* TODO: Fix JSX expression */};
+};
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props)
-    this.state = { hasError: false }
-  }
+    this.state = { hasError: false };
+  };
   static getDerivedStateFromError(error: Error): State {,
     return {,
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
-  }
+    };
+  };
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     ,
 //     // Report error to analytics/monitoring service
@@ -23,8 +23,8 @@ class ErrorBoundary extends Component<Props, State> {
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
-  }
-  }
+  };
+  };
   private reportError = (error: Error, errorInfo: ErrorInfo) => {,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -34,34 +34,36 @@ class ErrorBoundary extends Component<Props, State> {
         custom_map: {,
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack,
-class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false }
-  }
+class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */};
+  r: false };
+  };
   static getDerivedStateFromError(erro)
-  r: Error): State {/* TODO: Fix JSX expression */}
+  r: Error): State {/* TODO: Fix JSX expression */};
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }
-  }
+    };
+  };
   componentDidCatch(erro,
   r: Error, errorInf)
-  o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    }
-  }
+  o: ErrorInfo) {/* TODO: Fix JSX expression */};
+    };
+  };
   private reportError = (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => {/* TODO: Fix JSX expression */}
-        }
+  o: ErrorInfo) => {/* TODO: Fix JSX expression */};
+        };
       })
-    }
-  }
-  private handleRetry = () => {/* TODO: Fix JSX expression */}
+    };
+  };
+  private handleRetry = () => {/* TODO: Fix JSX expression */};
   d: undefined })
-  }
-  private handleGoHome = () => {/* TODO: Fix JSX expression */}
-  }
+  };
+  private handleGoHome = () => {/* TODO: Fix JSX expression */};
+  };
   render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
+    if (this.state.hasError) {}
+      
+  ;
+  return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           <div className="text-center p-8 max-w-md">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
@@ -71,34 +73,35 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
 :src/components/ErrorBoundary.tsx
             {this.state.errorId && (
               <p className="text-gray-400 mb-4 text-sm">
-                Error ID: {this.state.errorId}
-            )}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+                Error ID: {this.state.errorId};
+            )};
+            ;
+  <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <$2 />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
-                onClick={this.handleRetry}
+                onClick={this.handleRetry};
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <RefreshCw className="w-4 h-4" />
                 Try Again,
               </button>,
               <;$2 />
-                onClick={this.handleGoHome}
+                onClick={this.handleGoHome};
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <Home className="w-4 h-4" />
                 Go Home,
               </button>,
             </div>,
             <$2 />
-              onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover: text-white text-sm underline",
+              onClick={() => window.location.reload()};
+              className="mt-4 text-gray-400 hover: text-white text-sm underline",>
             <$2 />
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
-  render() {/* TODO: Fix JSX expression */}
-  ID: {this.state.errorId}
-            )}
-            < className="flex flex-col,"$2 />
+              onClick={() => window.location.reload()};
+              className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"render() {/* TODO: Fix JSX expression */};
+  ID: {this.state.errorId};
+            )}>
+            
+  < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center">
               <button>
                 onClick={this.handleRetry}"
@@ -119,8 +122,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </div>
             <button></button>
               onClick={() => window.location.reload()}"
-              className="mt-4 text-gray-400,"
-  hover:text-white text-sm underline"
+              className="mt-4 text-gray-400,"hover:text-white text-sm underline">
             <button>
               onClick={() => window.location.reload()}"
               className="bg-blue-600,"
@@ -130,8 +132,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </button>
           </div>,
         </div>)
-    }
-    return this.props.children
-  }
-}
+    };
+    ;
+  return this.props.children
+  };
+};
 export default ErrorBoundary;"`</div></button></button></button></button></p></p></h1>

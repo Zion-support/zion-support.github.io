@@ -6,24 +6,24 @@
 
 export interface AppConfig {
     // TODO: Add content
-  }
-
-}
+  };
+;
+};
   ap,
-  p: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  p: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   nam,
   e: string,,
     versio,
   n: string,,
     environmen,
   t: 'development' | 'production' | 'test',
-  }
+  };
   ap,
-  i: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  i: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   baseUr,
   l: string,,
     timeou,
@@ -31,31 +31,31 @@ export interface AppConfig {
     retryAttempt,
   s: number,,
     feature,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
+  s: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+;
   analytics: boolean,,
     monitoring: boolean,,
     errorTracking: boolean,,
     performanceOptimization: boolean,,
     performance: {
     // TODO: Add content
-  }
-}
+  };
+};
   enableLazyLoading: boolean,,
     imageLazyLoadThreshold: number,,
     componentLazyLoadThreshold: number,,
     cacheMaxAge: number,,
     security: {
     // TODO: Add content
-  }
-}
+  };
+};
   enableCSP: boolean,,
     enableHSTS: boolean,,
     enableXSSProtection: boolean
 
-}
+};
     nam,
   e: 'Zion Tech Group',
     versio,
@@ -85,41 +85,47 @@ export function getConfig,
   h: string): T {
     const keys = keyPath.split('.')
   }
+  ;
+  ;
   const __keys = keyPath.split('.')
   let,
   value: unknown = config,
-  for (const key of keys) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  for (const key of keys) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+    if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
       value = (value as Record;)
-          <string, unknown>)[key]
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+          <string, unknown>)[key];
+    } else {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
       throw new Error(`Configuration key "${keyPath}" not found`)
   return value as T
  * Check if a feature is enabled
 export function isFeatureEnabled(featur)
-  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  return config.features[feature]
+  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+  ;
+  return config.features[feature];
  * Get current environment
-export function getEnvironment(): string {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+export function getEnvironment(): string {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+  ;
   return config.app.environment
  * Check if running in production
-export function isProduction(): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+export function isProduction(): boolean {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+  ;
   return config.app.environment === 'production'
  * Check if running in development
-export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+export function isDevelopment(): boolean {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+  ;
   return config.app.environment === 'development'
 export default config

@@ -14,21 +14,23 @@ const UnifiedBanner = lazy(() =>
 const ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     // TODO: Add content
-  }
-}
-    return { default: EmptyComponent } as { default: React.ComponentType }
+  };
+};
+    ;
+  return { default: EmptyComponent } as { default: React.ComponentType };
   })
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
     // TODO: Add content
-  }
-}
+  };
+};
   default: EmptyComponent,
   }))
 export default function OptimizedHomePage() {
     // TODO: Add content
-  }
-}
+  };
+};
+  ;
   return (
           <div>Coming Soon
   )
@@ -37,10 +39,12 @@ export default function OptimizedHomePage() {
       <AccessibilityEnhancer>
         <div />
       <PerformanceMonitor />
-      {/* Main Content */}
-      <main className="relative">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
+      {/* Main Content */};
+      ;
+  <main className="relative">
+        {/* Hero Section */};
+        ;
+  <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">
             <div className="text-center">
@@ -69,7 +73,8 @@ View Success Stories
       <Footer />
     </div>
   ),
-}
+};
+  ;
   </div>
   </div>
 </div></div>

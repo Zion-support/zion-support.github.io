@@ -22,29 +22,33 @@ await app.register(cors, {
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
       cb(null, true)
       return
-    }
+    };
     cb(new Error('Not allowed'), false)
   })
 })
 app && app.post('/jobs/generate', async (req: any, reply: any) => {
   const body = (req && req.body as any) || {}
+  ;
+  ;
   const role = (body && body.role as string) || 'Engineer'
   const userId = getUserId(req)
   const description = await generateJobPost(openai, role, body)
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
        VALUES ($1, $2, $3, $4, $5, 'draft')`
-      [userId, role, description, body && body.location || null, body && body.tags || null]
+      [userId, role, description, body && body.location || null, body && body.tags || null];
     )
 
 app.post ('/jobs / generate', async (req: any, reply: any) => {
   const body = (req.body as any) || {}
+  ;
+  ;
   const role = (body.role as string) || 'Engineer'
   const user_id = getUserId (req)
   const description = await generateJobPost (openai, role, body)
   // Check condition
 if (return { description }) {
   $2
-}
+};
   await with_user (user_id, async client => {
     await client.query (
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
@@ -56,7 +60,7 @@ if (return { description }) {
       VALUES ($1, $2, $3, $4, $5, 'draft')`
       [user_id, role, description, body.location || null, body.tags || null])
   })
-  return { saved: Boolean (user_id), description }
+  return { saved: Boolean (user_id), description };
 })
 app && app.get('/talent/search', async (req: any, reply: any) => {
   const q = (req && req.query as any).q as string
@@ -66,34 +70,38 @@ app && app.get('/talent/search', async (req: any, reply: any) => {
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
   },
-  methods: ['GET', 'POST', 'OPTIONS']
+  methods: ['GET', 'POST', 'OPTIONS'];
 })
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' })
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '')
 function getUserId(req: any): string | null {
   return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null
-}
+};
 app.post('/ai/ask', async (req: any, reply: any) => {
   const body = (req.body as any) || {}
+  ;
+  ;
   const prompt = body.prompt as string
   if (!prompt) return reply.code(400).send({ error: 'prompt required' })
   const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt })
-  return { text: completion.output_text }
+  return { text: completion.output_text };
 })
 app.post('/jobs/generate', async (req: any, reply: any) => {
   const body = (req.body as any) || {}
+  ;
+  ;
   const role = (body.role as string) || 'Engineer'
   const userId = getUserId(req)
   const description = await generateJobPost(openai, role, body)
-  if (!userId) return { description }
+  if (!userId) return { description };
   await withUser(userId, async (client) => {
     await client.query(
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
        VALUES ($1, $2, $3, $4, $5, 'draft')`,
-      [userId, role, description, body.location || null, body.tags || null]
+      [userId, role, description, body.location || null, body.tags || null];
     )
   })
-  return { saved: Boolean(userId), description }
+  return { saved: Boolean(userId), description };
 })
 app.get('/talent/search', async (req: any, reply: any) => {
   const q = (req.query as any).q as string
@@ -111,7 +119,7 @@ app.get('/talent/search', async (req: any, reply: any) => {
     )
     return res && res.rows
   })
-  return { results: rows }
+  return { results: rows };
 })
 app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   const name = (req && req.params as any).name as string
@@ -133,7 +141,7 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   })
   return { items };    return res && res.rows
   })
-  return { items }
+  return { items };
 })
 const port = Number(process.env.API_PORT |4000)
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
@@ -150,11 +158,11 @@ app.log.error(err)
            ))
        ORDER BY created_at DESC
        LIMIT 25`,
-      [country || null, q || null]
+      [country || null, q || null];
     )
     return res.rows
   })
-  return { results: rows }
+  return { results: rows };
 })
 app.get('/projects/:name/track', async (req: any, reply: any) => {
   const name = (req.params as any).name as string
@@ -162,10 +170,10 @@ app.get('/projects/:name/track', async (req: any, reply: any) => {
   if (!userId) return reply.code(401).send({ error: 'unauthorized' })
   const project = await withUser(userId, async (client) => {
     const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name])
-    return res.rows[0]
+    return res.rows[0];
   })
   if (!project) return reply.code(404).send({ error: 'not found' })
-  return { project }
+  return { project };
 })
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req)
@@ -177,13 +185,13 @@ app.get('/notifications', async (req: any, reply: any) => {
     )
     return res.rows
   })
-  return { items }
+  return { items };
 })
 const port = Number(process.env.API_PORT || 4000)
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
     return res.rows
   })
-  return { items }
+  return { items };
 })
 const port = Number(process.env.API_PORT || 4000)
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {

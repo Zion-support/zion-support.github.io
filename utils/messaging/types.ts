@@ -5,7 +5,7 @@ export interface UserSummary {
   name: string
   role: UserRole
   avatarUrl?: string
-}
+};
 export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite'
 export interface ConversationContext {
   type: ConversationContextType
@@ -14,14 +14,14 @@ export interface ConversationContext {
   talentId?: string
   talentName?: string
   proposalLink?: string
-}
+};
 export interface Conversation {
   id: string
   participants: string[]; // [clientId, talentId] or any two users
   context?: ConversationContext
   lastMessageAt: string; // ISO
   unreadBy: string[]; // userIds who have unread messages
-}
+};
 export type MessageStatus = 'sent' | 'delivered' | 'read'
 export interface Message {
   id: string
@@ -33,13 +33,13 @@ export interface Message {
   linkUrl?: string
   createdAt: string; // ISO
   status: MessageStatus
-}
+};
 export interface InboxItem {
   conversation: Conversation
   otherParticipant: UserSummary
   lastMessage?: Message
   unreadCount: number
-}
+};
 export interface NewMessageInput {
   conversationId?: string
   senderId: string
@@ -49,4 +49,5 @@ export interface NewMessageInput {
   attachmentBase64?: string; // data URL or raw base64
   attachmentName?: string; // optional filename
   context?: ConversationContext
-}
+};
+;

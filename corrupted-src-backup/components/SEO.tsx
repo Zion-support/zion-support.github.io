@@ -1,6 +1,8 @@
-interface SEOProps {/* TODO: Fix JSX expression */}
-      <title>{title}
-      <meta name="description" content={description} />
+interface SEOProps {/* TODO: Fix JSX expression */};
+      ;
+  <title>{title};
+      ;
+  <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -13,8 +15,9 @@ interface SEOProps {/* TODO: Fix JSX expression */}
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
   </link>
-}
-      <meta name="description" content={description} /></meta>"
+};
+      ;
+  <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
       <meta property="o,";,
 g:title" content={title} /></meta>"

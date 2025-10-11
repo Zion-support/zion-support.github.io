@@ -6,7 +6,7 @@ export interface MilestoneSuggestionInput {
   startDateIso: string, // ISO 8601
   endDateIso: string,   // ISO 8601
   project_type: ProjectType
-}
+};
 export interface SuggestedMilestoneItem {title: string
   description: string
 export interface SuggestedMilestoneItem {
@@ -14,26 +14,27 @@ export interface SuggestedMilestoneItem {
   description: string,
   suggestedDueDateIso: string
   estimatedEffortHours: number, // estimated hours
-  tags?: string[], // e.g., ["AI Suggested"]
-}
-export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[]
+  tags?: string[], // e.g., ["AI Suggested"];
+};
+export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[];
 export interface MilestoneSuggestionResponse {
-  milestones: SuggestedMilestoneItem[]
-}
+  milestones: SuggestedMilestoneItem[];
+};
 export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other"
 export interface MilestoneSuggestionInput {
   scopeOfWork: string
   startDateIso: string; // ISO 8601
   endDateIso: string;   // ISO 8601
   projectType: ProjectType
-}
+};
 export interface SuggestedMilestoneItem {
   title: string
   description: string
   suggestedDueDateIso: string
   estimatedEffortHours: number; // estimated hours
-  tags?: string[]; // e.g., ["AI Suggested"]
-}
+  tags?: string[]; // e.g., ["AI Suggested"];
+};
 export interface MilestoneSuggestionResponse {
-  milestones: SuggestedMilestoneItem[]
-}
+  milestones: SuggestedMilestoneItem[];
+};
+;

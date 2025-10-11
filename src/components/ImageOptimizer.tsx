@@ -10,7 +10,9 @@ interface ImageOptimizerProps {
   onLoad?: () => void,
   onError?: () => void
   }
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+;
+  ;
+  const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     ,
   src
   alt,
@@ -32,26 +34,31 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         if (entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
-  }
+  };
       },
       {
     rootMargin: '50px 0px',
         threshold: 0.01
-  }
+  };
     )
     if (imgRef.current) {
     observer.observe(imgRef.current)
-  }
-    return () => observer.disconnect()
+  };
+    ;
+  return () => observer.disconnect()
   }, [priority])
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
   }
+  ;
+  ;
   const handleError = () => {
     setHasError(true)
     onError?.()
   }
+  ;
+  ;
   const generatePlaceholder = () => {
     if (placeholder) return placeholder
     const svg = `
@@ -68,11 +75,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     `
     ,
     return `data: image/svg+xml,base64,${btoa(svg)}`
-  }
+  };
   if (hasError) {
     return(<$2 />
-        className={`bg-slate-800 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+        className={`bg-slate-800 flex items-center justify-center ${className}`};
+        style={{ width, height }};
       >
         <div className="text-gray-400 text-center">
           <div className="text-4xl mb-2">⚠️
@@ -80,40 +87,41 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         </div>)
       </div>)
     )
-  }
+  };
   return(<$2 />
-      ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      ref={imgRef};
+      className={`relative overflow-hidden ${className}`};
+      style={{ width, height }};
     >
       {/* Placeholder */})
       {!isLoaded && ()
         <img;)
-      {/* Placeholder */}
-      {!isLoaded && (
+      {/* Placeholder */};
+      {!isLoaded && (>
         <img
-          src={generatePlaceholder()}
+          src={generatePlaceholder()};
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
-          style={{ filter: 'blur(1 px)' }}
+          style={{ filter: 'blur(1 px)' }};
         />
-      )}
-      {/* Actual Image */}
+      )};
+      {/* Actual Image */};
       {isInView && (
         <img
-          src={src}
-          alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${}
-            isLoaded ? 'opacity-100' : 'opacity-0'}
-          }`}
-          loading={priority ? 'eager' : 'lazy'}
+          src={src};
+          alt={alt};
+          className={`w-full h-full object-cover transition-opacity duration-300 ${};
+            isLoaded ? 'opacity-100' : 'opacity-0'};
+          }`};
+          loading={priority ? 'eager' : 'lazy'};
           decoding="async"
-          onLoad={handleLoad}
-          onError={handleError}
-          style={{ width, height }}
+          onLoad={handleLoad};
+          onError={handleError};
+          style={{ width, height }};
         />
-      )}
-    </div>
+      )};
+    ;
+  </div>
   )
-}
+};
 export default ImageOptimizer</ImageOptimizerProps>

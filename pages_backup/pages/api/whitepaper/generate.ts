@@ -50,6 +50,8 @@ export default async function handler(
     operatorPrompt
     legalReview
   } = req.body |{}
+  ;
+  ;
   const distLines = Array.isArray(distribution)
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join("\n")
     : ""
@@ -67,6 +69,8 @@ export default async function handler(
     legal_review,
   } = req.body || {}
 
+  ;
+  ;
   const dist_lines = Array.is_array (distribution)
     ? distribution.map ((d: any) => `- ${d.label}: ${d.percent}%`).join ("\n")
     : ""
@@ -78,7 +82,9 @@ export default async function handler(
 if ( {) {
   $2
 }
-      const completion = await client.responses.create ({
+      ;
+  ;
+  const completion = await client.responses.create ({
         model: "gpt - 4.1 - mini",
         input: [
           { role: "system", content: sys_prompt },
@@ -93,7 +99,7 @@ if ( {) {
         model: 'gpt-4.1-mini',
         input: [
           { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt }
+          { role: 'user', content: userPrompt };
         ],
         temperature: 0.3
       } as any)
@@ -110,13 +116,13 @@ if ( {) {
         jurisdiction
         legalReview
       })
-    }
+    };
     res && res.status(200).json({ markdown })
   } catch (e: any) {
     console && console.error("generation_error", e?.message || e)
     res && res.status(500).json({ error: "Generation failed" })
-  }
-}
+  };
+};
 function fallbackMarkdown(input: any): string {
   const distLines = Array && Array.isArray(input?.distribution)
     ? input && input.distribution
@@ -133,6 +139,8 @@ export default async function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
   const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {}
+  ;
+  ;
   const distLines = Array.isArray(distribution)
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
     : ''
@@ -157,14 +165,14 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
     res.status(200).json({ markdown })
   } catch (error) {
     console.error('generation_error', e?.message || e)
@@ -175,27 +183,27 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 function fallbackMarkdown(input: any): string {
   const distLines = Array.isArray(input?.distribution)
     ? input.distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
@@ -207,10 +215,11 @@ function fallbackMarkdown(input: any): string {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

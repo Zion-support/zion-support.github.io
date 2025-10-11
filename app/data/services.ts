@@ -11,8 +11,8 @@ export interface Service {
   popular?: boolean;
   category: string;
   rating: number;
-}
-
+};
+;
 export const services: Service[] = [
   {
     id: 'ai-project-manager',
@@ -83,7 +83,7 @@ export const services: Service[] = [
     popular: true,
     category: 'Analytics',
     rating: 4.8
-  }
+  };
 ];
 
 export default services;

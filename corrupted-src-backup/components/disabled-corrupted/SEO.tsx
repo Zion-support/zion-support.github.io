@@ -1,8 +1,10 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-interface SEOProps {/* TODO: Fix JSX expression */}
+interface SEOProps {/* TODO: Fix JSX expression */};
 }
-const SEO: React.FC<SEOProps> = ({,
+;
+  ;
+  const SEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
   keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
@@ -10,8 +12,9 @@ const SEO: React.FC<SEOProps> = ({,
   url = 'https: //zion.app',
   type = 'website'}) => {
   return(<Helmet>
-      <title>{title}
-      <meta name="description" content={description} />
+      <title>{title};
+      ;
+  <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />)
       <meta property="og:description" content={description} />)
@@ -25,9 +28,11 @@ const SEO: React.FC<SEOProps> = ({,
       <link rel="canonical" href={url} />
 const,
   SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-      <title>{title}
-      <meta name="description" content={description} /></meta>"
+}) => {/* TODO: Fix JSX expression */};
+      ;
+  <title>{title};
+      ;
+  <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"
       <meta property="o,"
   g:title" content={title} /></meta>"
@@ -50,7 +55,7 @@ const,
       <link rel="canonical" href={url} /></link>
     </Helmet>
   )
-}
+};
 export default SEO
 "
   </SEOProps>

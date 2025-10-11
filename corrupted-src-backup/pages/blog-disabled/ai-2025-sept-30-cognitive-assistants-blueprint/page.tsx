@@ -25,9 +25,10 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           <p>
             This, is, a placeholder, for, the blog, post, content. The, original, content had, syntax, errors that, prevented, proper parsi, n, g. Please, update, this content, with, the correct, informatio, n.
         <div, className='mt-8'>
-          <Link, t, o='/<bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
+          <Link, t, o='/><bl, o, g' className='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
             ← Back, to, Blog
     </d, i, v > )
-export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
- }
-</div></div></div></div></div></Link></p></p></p></h1>
+export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */};
+ };
+;
+  </div></div></div></div></div></Link></p></p></p></h1>

@@ -124,7 +124,7 @@ describe('Composite Validation', () => {
     const validators = [
       (val: unknown) => validateRequired(val, 'Test'),
       (val: unknown) => validateLength(val as string, 5, 20, 'Test'),
-    ]
+    ];
     expect(validateComposite('hello world', validators).isValid).toBe(true)
   })
   test('fails on first invalid validator', () => {
@@ -132,7 +132,10 @@ describe('Composite Validation', () => {
       (val: unknown) => validateRequired(val, 'Test'),
       (val: unknown) => validateLength(val as string, 10, 20, 'Test'),
     ]
-    const result = validateComposite('short', validators)
+    
+  ;
+  ;
+  const result = validateComposite('short', validators)
     expect(result.isValid).toBe(false)
     expect(result.error).toContain('at least 10')
   })

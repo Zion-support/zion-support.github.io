@@ -5,8 +5,8 @@ export interface PerformanceMetrics {
   fid: number
   cls: number
   ttfb: number
-}
-
+};
+;
 export class PerformanceMonitor {
   private metrics: PerformanceMetrics = {
     fcp: 0,
@@ -14,24 +14,24 @@ export class PerformanceMonitor {
     fid: 0,
     cls: 0,
     ttfb: 0
-  }
-
+  };
+;
   private isInitialized = false
-  private observers: PerformanceObserver[] = []
-
+  private observers: PerformanceObserver[] = [];
+;
   constructor() {
     if (typeof window !== 'undefined') {
       this.init()
-    }
-  }
-
+    };
+  };
+;
   init(): void {
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
     this.setupCustomMetrics();
-  }
-
+  };
+;
   private setupWebVitals(): void {
     // First Contentful Paint
     try {
@@ -41,31 +41,31 @@ export class PerformanceMonitor {
         if (fcpEntry) {
           this.metrics.fcp = fcpEntry.startTime
           this.reportMetric('FCP', this.metrics.fcp)
-        }
+        };
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
       console.warn('Failed to observe FCP:', error)
-    }
-
+    };
+;
     // Largest Contentful Paint
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
+        const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           this.metrics.lcp = lastEntry.startTime
           this.reportMetric('LCP', this.metrics.lcp)
-        }
+        };
       })
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch (error) {
       console.warn('Failed to observe LCP:', error);
-    }
-  }
-
+    };
+  };
+;
   private setupCustomMetrics(): void {
     // First Input Delay
     try {
@@ -81,12 +81,12 @@ export class PerformanceMonitor {
       this.observers.push(observer)
     } catch (error) {
       console.warn('Failed to observe FID:', error);
-    }
-
+    };
+;
     // Cumulative Layout Shift
     this.setupCLSObserver()
-  }
-
+  };
+;
   private setupCLSObserver(): void {
     try {
       let clsValue = 0
@@ -97,32 +97,32 @@ export class PerformanceMonitor {
             clsValue += (entry as any).value
             this.metrics.cls = clsValue
             this.reportMetric('CLS', this.metrics.cls)
-          }
+          };
         })
       })
       clsObserver.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(clsObserver)
     } catch (error) {
       console.warn('Failed to observe CLS:', error);
-    }
-  }
-
+    };
+  };
+;
   private reportMetric(name: string, value: number): void {
     if (process.env.NODE_ENV === 'development') {
       console.log(`Performance Metric - ${name}:`, value)
-    }
-  }
-
+    };
+  };
+;
   getMetrics(): PerformanceMetrics {
-    return { ...this.metrics }
-  }
-
+    return { ...this.metrics };
+  };
+;
   destroy(): void {
     this.observers.forEach(observer => observer.disconnect())
-    this.observers = []
-  }
-}
-
+    this.observers = [];
+  };
+};
+;
 // Global performance monitoring
 let performanceMonitor: PerformanceMonitor | null = null
 
@@ -131,14 +131,15 @@ export const measureWebVitals = (): void => {
   
   if (!performanceMonitor) {
     performanceMonitor = new PerformanceMonitor()
-  }
-}
-
+  };
+};
+;
 export const getPerformanceMetrics = (): PerformanceMetrics | null => {
   return performanceMonitor?.getMetrics() || null
-}
-
+};
+;
 export const cleanupPerformanceMonitoring = (): void => {
   performanceMonitor?.destroy()
   performanceMonitor = null
-}
+};
+;

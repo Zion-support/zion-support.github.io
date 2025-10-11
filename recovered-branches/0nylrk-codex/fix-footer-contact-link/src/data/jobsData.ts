@@ -25,7 +25,7 @@ export const JOB_POSTS: Job[] = [
     deadline: "2024-06-15",
     status: "new",
     created_at: "2024-05-05",
-    updated_at: "2024-05-05"}
+    updated_at: "2024-05-05"};
     updated_at: "2024-05-05",
-  }
-]
+  };
+];

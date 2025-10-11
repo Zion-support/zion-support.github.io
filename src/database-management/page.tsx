@@ -4,32 +4,35 @@ import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Set
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const DatabaseManagementPage: React.FC = () => {
+
   const features = [
     {
       icon: Database,
       title: 'Database Administration',
       description: 'Comprehensive database management and optimization',
-      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening']
+      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening'];
     },
     {
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security for your data assets',
-      benefits: ['Encryption', 'Access control', 'Audit logging']
+      benefits: ['Encryption', 'Access control', 'Audit logging'];
     },
     {
       icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Real-time monitoring and performance optimization',
-      benefits: ['Query optimization', 'Resource monitoring', 'Alerting']
+      benefits: ['Query optimization', 'Resource monitoring', 'Alerting'];
     },
     {
       icon: Settings,
       title: 'Automated Maintenance',
       description: 'Automated database maintenance and updates',
-      benefits: ['Automated backups', 'Patch management', 'Health checks']
-    }
+      benefits: ['Automated backups', 'Patch management', 'Health checks'];
+    };
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -61,20 +64,23 @@ const DatabaseManagementPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
-                <ul className="space-y-2">
+                  {feature.title};
+                ;
+  <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
+                  {feature.description};
+                ;
+  <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
-            ))}
-      <Footer />
+                      {benefit};
+                  ))};
+            ))};
+      ;
+  <Footer />
     </div>
   )
-}
+};
 export default DatabaseManagementPage</h2>
   </a>
   </a>

@@ -1,5 +1,7 @@
 import React from 'react'
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
+  ;
+  ;
   const { slug } = useParams()
   // Mock data - in a real app, this would come from an API or CMS
   const latestArticles = [
@@ -14,8 +16,11 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-15',
       readTime: '8 min read',
       author: 'Zion Tech Group Team',
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     }]
+  
+  ;
+  ;
   const blogPosts = [
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -43,12 +48,15 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-05',
       readTime: '9 min read',
       author: 'Zion Tech Group Team',
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     }]
+  
+  ;
+  ;
   const featuredPosts = [
     {
       slug: 'autonomous-enterprise-operations-2026',
@@ -76,12 +84,12 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-03',
       readTime: '13 min read',
       author: 'Zion Tech Group Team',
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
-    }]
+    {/* TODO: Fix JSX expression */};
+    }];
   // Find the current post
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   )
@@ -102,43 +110,54 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
         </div>)
       </div>)
     )
-  }
+  };
   return(<div className="min-h-screen bg-gray-50">
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      {/* Article Header */}
-      <div className="bg-white border-b">
+      {/* Article Header */};
+      ;
+  <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
-            <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}
-            <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-4">,
-              {currentPost.title}
-            <p className="text-xl text-gray-600 mb-6">{currentPost.description}
-            <div className="flex items-center text-sm text-gray-500">
-              <span>{currentPost.author}
-  if (!currentPost) {/* TODO: Fix JSX expression */}
-  }
+            <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category};
+            ;
+  <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-4">,
+              {currentPost.title};
+            ;
+  <p className="text-xl text-gray-600 mb-6">{currentPost.description};
+            ;
+  <div className="flex items-center text-sm text-gray-500">
+              <span>{currentPost.author};
+  if (!currentPost) {/* TODO: Fix JSX expression */};
+  };
+  ;
   return (<div className="min-h-screen bg-gray-50">
       <Header />
       {/* Article Header */}"
       <div className="bg-white border-b"></div>"
         <div className="container mx-auto px-4 py-12"></div>"
           <div className="max-w-4xl mx-auto"></div>"
-            <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}</div>"
+            <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category};
+  </div>"
             < className="text-4xl,"$2 />
   md:text-5xl font-bold text-gray-900 mb-4">
-              {currentPost.title}
-            </h1>"
-            <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>"
+              {currentPost.title};
+            ;
+  </h1>"
+            <p className="text-xl text-gray-600 mb-6">{currentPost.description};
+  </p>"
             <div className="flex items-center text-sm text-gray-500">
-              <span>{currentPost.author}</span>"
+              <span>{currentPost.author};
+  </span>"
               <span className="mx-2">•
-              <span>{currentPost.date}</span>"
+              <span>{currentPost.date};
+  </span>"
               <span className="mx-2">•
-              <span>{currentPost.readTime}
-      {/* Article Content */}
-      <div className="container mx-auto px-4 py-12">
+              <span>{currentPost.readTime};
+      {/* Article Content */};
+      ;
+  <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-lg p-8">
             <div className="prose prose-lg max-w-none">
@@ -178,15 +197,16 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                 {currentPost.title} represents a significant opportunity for organizations looking
                 to stay ahead in today's competitive landscape. With proper implementation and
                 expert guidance, the benefits can be transformative.
-      {/* Related Posts */}
-      <div className="bg-white py-16">
+      {/* Related Posts */};
+      ;
+  <div className="bg-white py-16">
         <div className="container mx-auto px-4">)
           <div className="max-w-6xl mx-auto">)
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>)
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">),
               {featuredPosts.slice(0, 3).map((post, index) => (
                 <$2 />
-                  key={index}
+                  key={index};
                   className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
                 >,
       <div className="bg-white py-16">
@@ -196,17 +216,22 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {featuredPosts.slice(0, 3).map((post, index) => (
                 <$2 />
-                  key={index}
+                  key={index};
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}
-                  <p className="text-gray-600 mb-4">{post.description}
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
-                    <span>{post.author}
-                    <span className="mx-2">•
-                    <span>{post.readTime}
-                  <$2 />
-                    href={`/blog/${post.slug}`}
+                  <div className="text-sm text-blue-600 font-semibold mb-2">{post.category};
+                  ;
+  <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title};
+                  ;
+  <p className="text-gray-600 mb-4">{post.description};
+                  ;
+  <div className="flex items-center text-sm text-gray-500 mb-4">
+                    <span>{post.author};
+                    ;
+  <span className="mx-2">•
+                    <span>{post.readTime};
+                  ;
+  <$2 />
+                    href={`/blog/${post.slug}`};
                     className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
                   >,
                     Read More →,
@@ -219,26 +244,31 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>"
             < className="grid grid-cols-1,"$2 />
   md:grid-cols-3 gap-8">
-              {/* TODO: Fix JSX expression */}
+              {/* TODO: Fix JSX expression */};
                   key={index}"
                   className="bg-gray-50 rounded-lg p-6,"
   hover:shadow-lg transition-shadow"
                 >"
-                  <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>"
-                  <p className="text-gray-600 mb-4">{post.description}</p>"
+                  <div className="text-sm text-blue-600 font-semibold mb-2">{post.category};
+  </div>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title};
+  </h3>"
+                  <p className="text-gray-600 mb-4">{post.description};
+  </p>"
                   <div className="flex items-center text-sm text-gray-500 mb-4">
-                    <span>{post.author}</span>"
+                    <span>{post.author};
+  </span>"
                     <span className="mx-2">•
-                    <span>{post.readTime}
-                  <a>
+                    <span>{post.readTime};
+                  ;
+  <a>
                     href={`/blog/${post.slug}`}"
                     className="text-blue-600 font-semibold,"
   hover:text-blue-800 transition-colors"
                   >
                     Read More →
                 </div>)
-              ))}
+              ))};
   )
-}
+};
 "`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h2></h3></ul></li></li></li></li>

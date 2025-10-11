@@ -22,7 +22,7 @@ i18n
       },
       ar: {
         translation: arTranslation
-      }
+      };
     },
     fallbackLng: 'en', // Default language
     debug: process.env.NODE_ENV === 'development',
@@ -32,7 +32,7 @@ i18n
     detection: {
       order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'zion_language',
-      caches: ['localStorage']
+      caches: ['localStorage'];
     }})
     },
   })

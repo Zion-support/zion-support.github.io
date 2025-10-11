@@ -5,9 +5,9 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type"}
+    "authorization, x-client-info, apikey, content-type"};
     "authorization, x-client-info, apikey, content-type",
-}
+};
 serve(async (req: Request) => {
   // Handle CORS
   if (req.method === "OPTIONS") {
@@ -16,7 +16,7 @@ serve(async (req: Request) => {
       headers: corsHeaders})
       headers: corsHeaders,
     })
-  }
+  };
   try {
     const supabase = createClient(
       supabaseUrl,
@@ -30,11 +30,11 @@ serve(async (req: Request) => {
         JSON.stringify({ error: "Failed to create scheduled reminders", details: error }),
         {
           status: 500,
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
+          headers: { "Content-Type": "application/json", ...corsHeaders }};
           headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
+        };
       )
-    }
+    };
     // Process pending reminder jobs
     const { data: pendingJobs, error: jobsError } = await supabase
       .from("scheduled_jobs")
@@ -48,12 +48,14 @@ serve(async (req: Request) => {
         JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError }),
         {
           status: 500,
-          headers: { "Content-Type": "application/json", ...corsHeaders }}
+          headers: { "Content-Type": "application/json", ...corsHeaders }};
           headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
+        };
       )
     }
-    const processedJobs = []
+    ;
+  ;
+  const processedJobs = [];
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
@@ -64,11 +66,11 @@ serve(async (req: Request) => {
             headers: {
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`},
-            body: JSON.stringify(job.payload)}
+            body: JSON.stringify(job.payload)};
               "Authorization": `Bearer ${supabaseServiceKey}`,
             },
             body: JSON.stringify(job.payload),
-          }
+          };
         )
         if (reminderResponse.ok) {
           // Update job status to completed
@@ -84,7 +86,7 @@ serve(async (req: Request) => {
             console.error("Failed to update job status:", updateError)
           } else {
             processedJobs.push(job.id)
-          }
+          };
         } else {
           console.error("Failed to send reminder for job:", job.id)
           // Update job status to failed
@@ -95,23 +97,24 @@ serve(async (req: Request) => {
               status: "failed",
             })
             .eq("id", job.id)
-        }
-      }
-    }
-    return new Response(
+        };
+      };
+    };
+    ;
+  return new Response(
       JSON.stringify({
         message: "Reminders processed successfully",
         processed_jobs: processedJobs.length,
         job_ids: processedJobs}),
       {
         status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { "Content-Type": "application/json", ...corsHeaders }};
         job_ids: processedJobs,
       }),
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
+      };
     )
   } catch (error) {
     console.error(error)
@@ -119,9 +122,9 @@ serve(async (req: Request) => {
       JSON.stringify({ error: "Internal server error", details: error.message }),
       {
         status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}
+        headers: { "Content-Type": "application/json", ...corsHeaders }};
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
+      };
     )
-  }
+  };
 })

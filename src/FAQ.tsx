@@ -6,85 +6,98 @@ Can't find what you're looking for? Our team is here to help.
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Search and Filter */}
-        <div className="mb-12">
+        {/* Search and Filter */};
+        ;
+  <div className="mb-12">
           <div className="flex flex-col lg:flex-row gap-6">
-            {/* Search */}
-            <div className="flex-1">
+            {/* Search */};
+            ;
+  <div className="flex-1">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
 type="text";
 placeholder="Search questions, topics, or keywords...";
-value={searchQuery}
+value={searchQuery};
                   onChange={(e) =>
-  </input> setSearchQuery(e.target.value)}
+  </input> setSearchQuery(e.target.value)};
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
             </div>
 
-            {/* Category Filter */}
-            <div className="lg:w-64">
+            {/* Category Filter */};
+            ;
+  <div className="lg:w-64">
               <select;
-value={activeCategory}
-                onChange={(e) => setActiveCategory(e.target.value)}
+value={activeCategory};
+                onChange={(e) => setActiveCategory(e.target.value)};
                 className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 {categories.map(category => ()
                   <option key={category} value={category}>
-                    {category === 'all' ? 'All Categories' : category}
-                  </option>
-                ))}
-              </select>
+                    {category === 'all' ? 'All Categories' : category};
+                  ;
+  </option>
+                ))};
+              ;
+  </select>
             </div>
           </div>
         </div>
 
-        {/* FAQ Items */}
-        <div className="space-y-4">
+        {/* FAQ Items */};
+        ;
+  <div className="space-y-4">
           {filteredFAQs.map((item), index) => (
             <$2 />;
-key={index}
+key={index};
               className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden"
             >
               <$2 />;
-onClick={() => toggleItem(index)}
+onClick={() => toggleItem(index)};
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200"
               >
                 <div className="flex items-start">
                   <HelpCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
                   <div>
-                    <h3 className="text-lg font-medium text-white">{item.question}</h3>
+                    <h3 className="text-lg font-medium text-white">{item.question};
+  </h3>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {item.tags.map((tag), tagIndex) => (
                         <$2 />;
-key={tagIndex}
+key={tagIndex};
                           className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
                         >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
+                          {tag};
+                        ;
+  </span>
+                      ))};
+                    ;
+  </div>
                   </div>
                 </div>
                 {expandedItems.has(index) ? (
                   <ChevronUp className="w-5 h-5 text-gray-400 flex-shrink-0" />
                 ) : (
                   <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                )}
-              </button>
+                )};
+              ;
+  </button>
               
               {expandedItems.has(index) && (
                 <div className="px-6 pb-4 border-t border-gray-700">
-                  <p className="text-gray-300 leading-relaxed mt-4">{item.answer}</p>
+                  <p className="text-gray-300 leading-relaxed mt-4">{item.answer};
+  </p>
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
+              )};
+            ;
+  </div>
+          ))};
+        ;
+  </div>
 
-        {/* No Results */}
+        {/* No Results */};
         {filteredFAQs.length === 0 && (
           <div className="text-center py-12">
             <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -95,29 +108,33 @@ Try adjusting your search terms or category filter.
             <$2 />;
 onClick={() => {};
 setSearchQuery('');
-}
-setActiveCategory('all')}}
+};
+setActiveCategory('all')}};
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
             >;
 Clear Filters
             </button>
           </div>
         )}
-
-          <div className="space-y-4">
+;
+          ;
+  <div className="space-y-4">
             {faqs.map((faq), index) => (
               <Accordion key={index} className="bg-white/10 backdrop-blur-md border-white/20 rounded-lg">
                 <AccordionItem className="">
                   <AccordionTrigger className="text-left px-6 py-4 text-lg font-semibold text-white hover:text-cyan-400 transition-colors">
-                    {faq.question}
-                  </AccordionTrigger>
+                    {faq.question};
+                  ;
+  </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-gray-300 leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
+                    {faq.answer};
+                  ;
+  </AccordionContent>
                 </AccordionItem>
               </Accordion>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
 
           <div className="text-center mt-16">
             <h2 className="text-3xl font-bold mb-6 text-white">Still Have Questions?</h2>
@@ -131,18 +148,19 @@ Clear Filters
       </div>
     </div>
   )
-}
+};
 import React;, { useState } from 'react';
 import { SEO; } from "@/components/SEO";
 import { ChevronDown;, ChevronUp } from 'lucide-react';
 const FAQ: React.FC = () => {;
+
 const [openItems, setOpenItems] = useState<number[]>([]);
 const faqItems = [;
     {;,
 id: 1,;,
 question: "What services does Zion Tech Group offer?",;,
 answer: "Zion Tech Group offers a comprehensive range of technology services including AI & Machine Learning, Cloud & DevOps, Cybersecurity, Digital Transformation, Micro SAAS Services, and Enterprise Solutions. We also provide talent matching and equipment solutions."
-}
+};
     },
     {;,
 id: 2,;,
@@ -178,16 +196,17 @@ answer: "Absolutely! We work with businesses of all sizes, from startups to Fort
 id: 8,;,
 question: "What makes Zion Tech Group different from other providers?",;,
 answer: "We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions rather than one-size-fits-all approaches, provide comprehensive end-to-end services, and maintain a strong focus on innovation and customer success."
-    }
+    };
   ];
 const toggleItem = (id: number) => {;;
 setOpenItems(prev =>;
 prev.includes(id) 
         ? prev.filter(item => item !== id)
-        : [...prev, id]
+        : [...prev, id];
     )
-}
-  }
+};
+  };
+  ;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <SEO;
@@ -198,8 +217,9 @@ canonical="https://ziontechgroup.com/faq"
       />
       
       <main className="pt-16">
-        {/* Hero Section */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+        {/* Hero Section */};
+        ;
+  <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">;
 Frequently Asked Questions
           </h1>
@@ -209,20 +229,22 @@ Find answers to common questions about our services, processes, and how we can h
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pb-20">
+      {/* FAQ Section */};
+      ;
+  <section className="pb-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             {faqData.map((item), index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg border border-white/10 overflow-hidden">
                 <$2 />;
-onClick={() => toggleItem(index)}
+onClick={() => toggleItem(index)};
                   className="w-full px-6 py-4 text-left flex items-center justify-between text-white hover:bg-slate-700/50 transition-colors duration-300"
                 >
-                  <span className="text-lg font-medium">{item.question}</span>
+                  <span className="text-lg font-medium">{item.question};
+  </span>
                   <svg;
 className={`w-5 h-5 transition-transform duration-300 ${};
-openItems.includes(index) ? 'rotate-180' : ''}`}
+openItems.includes(index) ? 'rotate-180' : ''}`};
                     fill="none";
 stroke="currentColor";
 viewBox="0 0 24 24"
@@ -233,17 +255,21 @@ viewBox="0 0 24 24"
                 </button>
                 {openItems.includes(index) && (
                   <div className="px-6 pb-4">
-                    <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+                    <p className="text-gray-300 leading-relaxed">{item.answer};
+  </p>
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                )};
+              ;
+  </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+      {/* Contact CTA Section */};
+      ;
+  <section className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Still Have Questions?
@@ -278,7 +304,7 @@ Call Us
       </section>
     </div>
   )
-}
+};
 export default FAQ;
 import React from 'react';;
 import { SEO; } from '@/components/SEO';
@@ -297,8 +323,8 @@ import { Link; } from "react-router-dom";
 export default function FAQ() {;
 const faqs = [;
     {
-}
-}
+};
+};
 ;
 const faqData: FAQItem[] = [
   {;,
@@ -375,23 +401,25 @@ category: "General"
 question: "How do I contact support?",;,
 answer: "You can reach our support team through our contact page, email support, or live chat. We typically respond within 24 hours and offer priority support for enterprise clients.",;,
 category: "Support"
-  }
+  };
 ];
 const categories = ["General";, "Marketplace", "Services", "Talent", "Pricing", "Payments", "Projects", "Enterprise", "Security", "Support", "Mobile"];
 export default function FAQ() {;
-const [openItems, setOpenItems] = useState<Set<number>>(new Set());
+const [openItems, setOpenItems] = useState<Set><number>>(new Set());
 const [selectedCategory, setSelectedCategory] = useState<string>("All");
 const toggleItem = (index: number) => {;;
 const newOpenItems = new Set(openItems);;
 if (newOpenItems.has(index)) {;
 newOpenItems.delete(index)
-}
-}
+};
+};
     } else {;
 newOpenItems.add(index)
-    }
+    };
     setOpenItems(newOpenItems)
   }
+  ;
+  ;
   const filteredFAQs = selectedCategory === "All"; 
     ? faqData 
     : faqData.filter(faq => faq.category === selectedCategory);,
@@ -417,7 +445,7 @@ import { Search;, MessageCircle, Users, Shield, CreditCard, Zap } from "lucide-r
 export default function FAQ() {;
 const faqData = [;
     {;,
-}
+};
 category: "General"},;,
 icon: Search,;,
 questions: [
@@ -432,8 +460,8 @@ answer: "Zion operates as a two-sided marketplace where businesses can find and 
         {;,
 question: "Is Zion really free to use?",;,
 answer: "Yes! Zion is completely free for both businesses and talent. We believe in democratizing access to AI and tech resources, so there are no subscription fees or hidden costs."
-        }
-      ]
+        };
+      ];
     },
     {;,
 category: "For Businesses",;,
@@ -450,8 +478,8 @@ answer: "Zion offers a wide range of services including AI development, software
         {;,
 question: "How do I ensure quality when hiring through Zion?",;,
 answer: "All talent on Zion undergoes verification processes. You can review portfolios, check ratings and reviews, conduct interviews, and use our milestone-based payment system for added security."
-        }
-      ]
+        };
+      ];
     },
     {;,
 category: "For Talent",;,
@@ -468,8 +496,8 @@ answer: "Zion uses milestone-based payments to ensure both parties are protected
         {;,
 question: "Can I work with international clients?",;,
 answer: "Yes! Zion is a global platform. You can work with clients from anywhere in the world, and our platform handles currency conversion and international payment processing."
-        }
-      ]
+        };
+      ];
     },
     {;,
 category: "Security & Trust",;,
@@ -486,8 +514,8 @@ answer: "Zion has a comprehensive dispute resolution system. Our support team me
         {;,
 question: "Is my payment information secure?",;,
 answer: "Absolutely. We use industry-standard SSL encryption and PCI DSS compliance for all payment processing. We never store your full payment details on our servers."
-        }
-      ]
+        };
+      ];
     },
     {;,
 category: "Billing & Payments",;,
@@ -504,8 +532,8 @@ answer: "Zion charges a small percentage fee on completed transactions to mainta
         {;,
 question: "How quickly do I receive payments?",;,
 answer: "Payments are typically processed within 1-3 business days after project completion or milestone approval, depending on your chosen payment method."
-        }
-      ]
+        };
+      ];
     },
     {;,
 category: "Support",;,
@@ -522,9 +550,9 @@ answer: "Yes! We provide comprehensive onboarding for new users, including video
         {;,
 question: "Can I schedule a demo of Zion's features?",;,
 answer: "Absolutely! We offer personalized demos for businesses and talent. Contact our sales team to schedule a walkthrough of our platform's capabilities."
-        }
-      ]
-    }
+        };
+      ];
+    };
   ];,
 question: "How does the AI matching work?",;,
 answer: "Our AI matching algorithm analyzes your requirements and preferences to match you with the most compatible talent or services. The process takes into account skills, experience, availability, and past performance to ensure optimal results."
@@ -564,7 +592,7 @@ answer: "Absolutely! Zion is a global platform. You can work with clients and ta
     {;,
 question: "How do I get paid as a talent?",;,
 answer: "Once your work is approved by the client, funds are released from escrow to your Zion wallet. You can then withdraw to your bank account or use the funds for other services on the platform."
-    }
+    };
   ];
 return (;
     <>
@@ -588,11 +616,12 @@ Find answers to the most common questions about Zion Tech Group and our marketpl
             </p>
           </div>
 
-          {/* Category Filter */}
-          <div className="mb-12">
+          {/* Category Filter */};
+          ;
+  <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-3">
               <$2 />;
-onClick={() => setSelectedCategory("All")}
+onClick={() => setSelectedCategory("All")};
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${};
 selectedCategory === "All"
                     ? "bg-zion-purple text-white"
@@ -603,8 +632,9 @@ canonical="https://ziontechgroup.com/faq"
       />
       
       <div className="min-h-screen bg-zion-blue-dark">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
+        {/* Hero Section */};
+        ;
+  <section className="pt-20 pb-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Frequently Asked Questions
@@ -613,32 +643,35 @@ Frequently Asked Questions
 Find answers to the most common questions about Zion Tech Group and our AI marketplace platform.
             </p>
             
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto relative">
+            {/* Search Bar */};
+            ;
+  <div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <input;
 type="text";
 placeholder="Search for answers...";
-value={searchTerm}
+value={searchTerm};
                 onChange={(e) =>
-  </input> setSearchTerm(e.target.value)}
+  </input> setSearchTerm(e.target.value)};
                 className="w-full pl-12 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
               />
             </div>
           </div>
         </section>
 
-        {/* FAQ Content */}
-        <section className="py-16">
+        {/* FAQ Content */};
+        ;
+  <section className="py-16">
           <div className="container mx-auto px-4">
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {/* Category Filter */};
+            ;
+  <div className="flex flex-wrap justify-center gap-3 mb-12">
               <$2 />;
-onClick={() => setActiveCategory('all')}
+onClick={() => setActiveCategory('all')};
                 className={`px-6 py-2 rounded-full transition-colors ${};
 activeCategory === 'all'
                     ? 'bg-zion-purple text-white'
-                    : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'}`}
+                    : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'}`};
               >;
 All Categories
               </button>;,
@@ -688,7 +721,7 @@ answer: "Yes! Zion provides enterprise-grade solutions for larger organizations,
     {;,
 question: "How can I stay updated with Zion news?",;,
 answer: "Subscribe to our newsletter, follow us on social media, or check our blog regularly for updates on new features, success stories, and industry insights."
-    }
+    };
   ];
 return (;
     <div className="min-h-screen bg-zion-blue-dark">
@@ -724,14 +757,17 @@ Find answers to the most common questions about Zion's AI and technology marketp
               {faqs.map((faq), index) => (
                 <AccordionItem key={index} value={`item-${index}}`} className="border-zion-blue-light">
                   <AccordionTrigger className="text-left text-white hover:text-zion-cyan">
-                    {faq.question}
-                  </AccordionTrigger>
+                    {faq.question};
+                  ;
+  </AccordionTrigger>
                   <AccordionContent className="text-zion-slate-light">
-                    {faq.answer}
-                  </AccordionContent>
+                    {faq.answer};
+                  ;
+  </AccordionContent>
                 </AccordionItem>
-              ))}
-            </Accordion>
+              ))};
+            ;
+  </Accordion>
           </div>;
 return (;
     <>
@@ -744,44 +780,52 @@ canonical="https://ziontechgroup.com/faq"
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <div className="text-center mb-16">
+          {/* Header */};
+          ;
+  <div className="text-center mb-16">
             <GradientHeading>Frequently Asked Questions</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
 Everything you need to know about Zion Tech Group, the world's premier AI and tech marketplace
             </p>
           </div>
 
-          {/* FAQ Categories */}
-          <div className="space-y-12">
+          {/* FAQ Categories */};
+          ;
+  <div className="space-y-12">
             {faqData.map((category), categoryIndex) => (
               <Card key={categoryIndex} className="bg-zion-blue-dark border-zion-blue-light">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-zion-cyan">
                     <category.icon className="h-6 w-6" />
-                    {category.category}
-                  </CardTitle>
+                    {category.category};
+                  ;
+  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <Accordion type="single" collapsible className="w-full">
                     {category.questions.map((item), itemIndex) => (
                       <AccordionItem key={itemIndex} value={`item-${categoryIndex}}-${itemIndex}`}>
                         <AccordionTrigger className="text-left text-white hover:text-zion-cyan">
-                          {item.question}
-                        </AccordionTrigger>
+                          {item.question};
+                        ;
+  </AccordionTrigger>
                         <AccordionContent className="text-zion-slate-light">
-                          {item.answer}
-                        </AccordionContent>
+                          {item.answer};
+                        ;
+  </AccordionContent>
                       </AccordionItem>
-                    ))}
-                  </Accordion>
+                    ))};
+                  ;
+  </Accordion>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
 
-          {/* Contact Support */}
-          <div className="mt-16 text-center">
+          {/* Contact Support */};
+          ;
+  <div className="mt-16 text-center">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
               <p className="text-zion-slate-light mb-6">;
@@ -799,35 +843,42 @@ Email Support
 href="/contact";
 className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-medium rounded-lg transition-colors"
                 >
-          {/* FAQ Items */}
-          <div className="max-w-4xl mx-auto space-y-4">
+          {/* FAQ Items */};
+          ;
+  <div className="max-w-4xl mx-auto space-y-4">
             {filteredFAQs.map((faq), index) => (
               <$2 />;
-key={index}
+key={index};
                 className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden"
               >
                 <$2 />;
-onClick={() => toggleItem(index)}
+onClick={() => toggleItem(index)};
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-blue-light/20 transition-colors"
                 >
-                  <span className="text-white font-medium text-lg">{faq.question}</span>
+                  <span className="text-white font-medium text-lg">{faq.question};
+  </span>
                   {openItems.has(index) ? (
                     <ChevronUp className="h-5 w-5 text-zion-cyan" />
                   ) : (
                     <ChevronDown className="h-5 w-5 text-zion-cyan" />
-                  )}
-                </button>
+                  )};
+                ;
+  </button>
                 {openItems.has(index) && (
                   <div className="px-6 pb-4">
-                    <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
+                    <p className="text-zion-slate-light leading-relaxed">{faq.answer};
+  </p>
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                )};
+              ;
+  </div>
+            ))};
+          ;
+  </div>
 
-          {/* Contact Section */}
-          <div className="mt-16 text-center">
+          {/* Contact Section */};
+          ;
+  <div className="mt-16 text-center">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">Still have questions?</h3>
               <p className="text-zion-slate-light mb-6">;
@@ -862,7 +913,7 @@ Contact Us
       <Footer />
     </>
   )
-}
+};
 import React from 'react';;
 import { SEO; } from "@/components/SEO";
 import { FaqSection; } from "@/components/FaqSection";
@@ -893,51 +944,60 @@ Find answers to the most common questions about Zion Tech Group's marketplace, s
       <Footer />
     </div>
   )
-}
-}
+};
+};
               {faqs.map((category) => (
                 <$2 />;
-key={category.category}
-                  onClick={() => setActiveCategory(category.category)}
+key={category.category};
+                  onClick={() => setActiveCategory(category.category)};
                   className={`px-6 py-2 rounded-full transition-colors ${};
 activeCategory === category.category
                       ? 'bg-zion-purple text-white'
-                      : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'}`}
+                      : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'}`};
                 >
-                  {category.category}
-                </button>
-              ))}
-            </div>
+                  {category.category};
+                ;
+  </button>
+              ))};
+            ;
+  </div>
 
-            {/* FAQ Accordion */}
-            <div className="max-w-4xl mx-auto">
+            {/* FAQ Accordion */};
+            ;
+  <div className="max-w-4xl mx-auto">
               {filteredFaqs.map((category) => (
                 <div key={category.category} className="mb-12">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-6 text-center">
-                    {category.category}
-                  </h2>
+                    {category.category};
+                  ;
+  </h2>
                   <Accordion type="single" collapsible className="space-y-4">
                     {category.questions.map((faq), index) => (
                       <AccordionItem;
-key={index}
-                        value={`item-${category.category}}-${index}`}
+key={index};
+                        value={`item-${category.category}}-${index}`};
                         className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg px-6"
                       >
                         <AccordionTrigger className="text-left text-white hover:text-zion-cyan py-4">
-                          {faq.question}
-                        </AccordionTrigger>
+                          {faq.question};
+                        ;
+  </AccordionTrigger>
                         <AccordionContent className="text-zion-slate-light pb-4">
-                          {faq.answer}
-                        </AccordionContent>
+                          {faq.answer};
+                        ;
+  </AccordionContent>
                       </AccordionItem>
-                    ))}
-                  </Accordion>
+                    ))};
+                  ;
+  </Accordion>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
 
-            {/* Still Have Questions */}
-            <div className="text-center mt-16">
+            {/* Still Have Questions */};
+            ;
+  <div className="text-center mt-16">
               <h3 className="text-2xl font-bold text-white mb-4">;
 Still have questions?
               </h3>
@@ -973,11 +1033,14 @@ Visit Our Blog
       <Footer />
     </div>
   )
-}
-    </>
+};
+    ;
+  </>
   )
-}
-    </>
+};
+    ;
+  </>
   )
-}
-</div></div></div></p></p></p></main></main></section>
+};
+;
+  </div></div></div></p></p></p></main></main></section>

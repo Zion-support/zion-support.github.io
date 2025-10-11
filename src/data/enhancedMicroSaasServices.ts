@@ -1,8 +1,8 @@
   marketPosition: string
-  competitors: string[]
+  competitors: string[];
   roi: string
   implementationTime: string
-}
+};
 export const ENHANCED_MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // Productivity & Collaboration
   {
@@ -31,11 +31,11 @@ export interface EnhancedMicroSaasService {
     monthly: number
     yearly: number
     currency: string
-  }
-  features: string[]
-  benefits: string[]
-  useCases: string[]
-  targetAudience: string[]
+  };
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
       "Customer behavior analysis",
       "Operational efficiency monitoring",
       "Market trend analysis"
@@ -95,23 +95,23 @@ export interface EnhancedMicroSaasService {
   },
   // Sustainable Business Intelligence
   {
-  technology: string[]
-  integrations: string[]
-  support: string[]
-  deployment: string[]
+  technology: string[];
+  integrations: string[];
+  support: string[];
+  deployment: string[];
   scalability: string
-  security: string[]
-  compliance: string[]
+  security: string[];
+  compliance: string[];
   roi: string
   implementationTime: string
   contactInfo: {
     email: string
     phone: string
     website: string
-  }
+  };
   demoUrl?: string
   documentationUrl?: string
-  caseStudies?: string[]
+  caseStudies?: string[];
   testimonials?: Array<{
     name: string
     company: string
@@ -119,11 +119,11 @@ export interface EnhancedMicroSaasService {
     content: string
     rating: number
   }>
-  tags: string[]
+  tags: string[];
   isFeatured?: boolean
   isNew?: boolean
   isPopular?: boolean
-}
+};
 export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   {
     id: "ai-powered-customer-intelligence",
@@ -235,7 +235,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
         role: "VP of Marketing",
         content: "This platform transformed our customer understanding and increased our conversion rates dramatically.",
         rating: 5
-      }
+      };
     ],
     tags: ["AI", "Analytics", "Customer Intelligence", "Machine Learning", "Personalization"],
     isFeatured: true,
@@ -351,7 +351,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
         role: "Chief Security Officer",
         content: "The quantum security gives us confidence in protecting our most sensitive financial data.",
         rating: 5
-      }
+      };
     ],
     tags: ["Quantum Security", "Encryption", "Cybersecurity", "Government", "Compliance"],
     isFeatured: true,
@@ -467,7 +467,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
         role: "DevOps Lead",
         content: "The autonomous optimization has saved us countless hours and significant costs.",
         rating: 5
-      }
+      };
     ],
     tags: ["Cloud", "AI", "Automation", "Cost Optimization", "DevOps"],
     isFeatured: true,
@@ -580,7 +580,7 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
         role: "Supply Chain Director",
         content: "The blockchain platform has revolutionized our supply chain transparency and consumer trust.",
         rating: 5
-      }
+      };
     ],
     tags: ["Blockchain", "Supply Chain", "Transparency", "Sustainability", "Compliance"],
     isFeatured: true,
@@ -694,36 +694,36 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
         role: "Content Director",
         content: "This AI platform has transformed our content strategy and dramatically improved our SEO performance.",
         rating: 5
-      }
+      };
     ],
     tags: ["AI", "Content Creation", "SEO", "Marketing", "Automation"],
     isFeatured: true,
     isNew: true
-  }
-]
+  };
+];
 export const getServiceByCategory = (category: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   )
-}
+};
 export const getFeaturedServices = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isFeatured)
-}
+};
 export const getNewServices = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isNew)
-}
+};
 export const getPopularServices = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isPopular)
-}
+};
 export const getServiceById = (id: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id)
-}
+};
     marketPosition: "AI-powered HR automation",
     competitors: ["BambooHR", "Workday", "Zenefits"],
     roi: "350% within 4 months",
     implementationTime: "3-4 weeks"
-  }
-]
+  };
+];
 export const SERVICE_CATEGORIES = [
   {
     id: "productivity",
@@ -772,8 +772,8 @@ export const SERVICE_CATEGORIES = [
     name: "Content Creation",
     icon: "✍️",
     count: 1
-  }
-]
+  };
+];
     aiScore: 91,
     rating: 4.4,
     reviewCount: 56,
@@ -781,8 +781,8 @@ export const SERVICE_CATEGORIES = [
     competitors: ["Epic", "Cerner", "Athenahealth"],
     marketSize: "$45.2B (2024)",
     roi: "200% within 8 months"
-  }
-]
+  };
+];
 export const MICRO_SAAS_CATEGORIES = [
   "AI & Analytics",
   "AI & Marketing", 
@@ -794,12 +794,12 @@ export const MICRO_SAAS_CATEGORIES = [
   "AI & E-commerce",
   "AI & Legal",
   "AI & Healthcare"
-]
+];
 export const MICRO_SAAS_PRICING_TIERS = [
   { name: "Starter", price: "$99-299", features: ["Basic features", "Email support", "Up to 5 users"] },
   { name: "Professional", price: "$299-799", features: ["Advanced features", "Priority support", "Up to 25 users"] },
-  { name: "Enterprise", price: "$799+", features: ["Custom features", "24/7 support", "Unlimited users"] }
-]
+  { name: "Enterprise", price: "$799+", features: ["Custom features", "24/7 support", "Unlimited users"] };
+];
 export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase()
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service =>
@@ -808,4 +808,4 @@ export const searchServices = (query: string) => {
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
     service.category.toLowerCase().includes(searchTerm)
   )
-}
+};

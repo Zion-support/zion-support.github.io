@@ -20,18 +20,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const o = parseInt(String(offset || 0), 10) || 0
     const l = parseInt(String(limit || 20), 10) || 20
     return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
-  }
+  };
   if (req.method === 'POST') {
     if (!requireAdmin(req, res)) return
     const body = req.body as Partial<BlogPost>
     if (!body.title || !body.slug || !body.author || !body.publishDate) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
-    const posts = readPosts()
+    ;
+  ;
+  const posts = readPosts()
     if (posts.some((p) => p.slug === body.slug)) {
       return res.status(409).json({ error: 'Slug already exists' })
     }
-    const post: BlogPost = {
+    ;
+  ;
+  const post: BlogPost = {
       id: uuidv4(),
       title: body.title!,
       slug: body.slug!,
@@ -48,15 +52,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       body: body.body || '',
       status: body.status || 'draft',
       metrics: { views: 0, likes: 0, shares: 0 },
-    }
+    };
     posts.unshift (post)
     write_posts (posts)
     return res.status (201).json (post)
-  }
-    }
+  };
+    };
     posts.unshift(post)
     writePosts(posts)
     return res.status(201).json(post)
-  }
+  };
+  ;
   return res.status(405).end()
-}
+};
+;

@@ -6,8 +6,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
     try {
       setIsLoading(true)
       if (!data.id) {
-        return { error: "User ID is required" }
-      }
+        return { error: "User ID is required" };
+      };
       // Update user metadata
       const { error: authError } = await supabase.auth.updateUser({
         data: {
@@ -24,8 +24,8 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           variant: "destructive"})
           variant: "destructive",
         })
-        return { error: authError }
-      }
+        return { error: authError };
+      };
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
@@ -47,14 +47,14 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
           variant: "destructive"})
           variant: "destructive",
         })
-        return { error: profileError }
-      }
+        return { error: profileError };
+      };
       toast({
         title: "Profile updated",
         description: "Your profile has been updated successfully."})
         description: "Your profile has been updated successfully.",
       })
-      return { success: true }
+      return { success: true };
     } catch (error: any) {
       console.error("Profile update error:", error)
       toast({
@@ -63,10 +63,11 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
         variant: "destructive"})
         variant: "destructive",
       })
-      return { error }
+      return { error };
     } finally {
       setIsLoading(false)
-    }
-  }
-  return { updateProfile }
-}
+    };
+  };
+  ;
+  return { updateProfile };
+};

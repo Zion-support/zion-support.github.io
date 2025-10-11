@@ -4,6 +4,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const ApiDocs: React.FC = () => {
+
     return (
     <div>Coming Soon</div>
   )
@@ -36,5 +37,5 @@ const ApiDocs: React.FC = () => {
       <Footer /></Footer>
     </div>
   )
-  }
+  };
 export default ApiDocsPage

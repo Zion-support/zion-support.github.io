@@ -3,8 +3,9 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
   return (
     <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-9, 5, 0">"
       <article, className="container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l">"
-        {/* Head, e, r */}
-        <header, className="mb-12">"
+        {/* Head, e, r */};
+        ;
+  <header, className="mb-12">"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, m, b-6">"
             <span, className="te, x, t-cy, a, n-400, fon, t-semibold, tex, t-sm">BREAKTHROUGH, TECHNOLOG, Y</sp, a, n>"
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>"
@@ -23,8 +24,9 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
             <span, className="bg-bl, u, e-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">Edge, A, I</sp, a, n>"
             <span, className="bg-indi, g, o-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibo, l, d">Re, a, l-Time, Processin, g</sp, a, n>"
             <span, className="bg-purp, l, e-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibo, l, d">Enterprise, A, I</sp, a, n>"
-        {/* Conte, n, t */}
-        <div, className="prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e">"
+        {/* Conte, n, t */};
+        ;
+  <div, className="prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e">"
           <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Executive, Summar, y</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4">"
@@ -71,9 +73,10 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
                   Deploy, sophisticated, AI models, directly, on edge, device, s—from, IoT, sensors to, manufacturing, equipment—with, zero, cloud dependen, c, y. Our, model, compression and, optimization, techniques enable, quantu, m-accelerated, models, to run, on, resource-constrained, devices, while maintaining, full, accuracy.
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-indi, g, o-300, m, b-3">🛡️ Priva, c, y-Preserving, Computin, g</h3>"
-export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: Fix JSX expression */}
-        {/* Head, e, r */}
-        <header, className="mb-12">";"
+export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: Fix JSX expression */};
+        {/* Head, e, r */};
+        ;
+  <header, className="mb-12">";"
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, m, b-6">";"
             <span, className="te, x, t-cy, a, n-400, fon, t-semibold, tex, t-sm">BREAKTHROUGH, TECHNOLOG, Y</sp, a, n>";"
             <span, className="te, x, t-gr, a, y-4, 0, 0">•</sp, a, n>";"
@@ -468,8 +471,9 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
   r:te, x, t-white, transitio, n-all, duratio, n-3, 0, 0"
                 >
                   View, Success, Story →
-        {/* Foot, e, r */}
-        <footer, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/10">
+        {/* Foot, e, r */};
+        ;
+  <footer, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/10">
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-center, justif, y-betwe, e, n">
             <div, className="flex, ga, p-4">
               <a, titl, e="Internal, lin, k" hr, e, f="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-400, hove, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">← Back, to, Blog</a>"
@@ -505,6 +509,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {/* TODO: 
               <, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hov, e,"$2 />
   r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">Linked, I, n</a>"
   )
-}
+};
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></article></header></header></footer></footer></footer>

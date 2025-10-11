@@ -14,15 +14,15 @@ export function useWebSocket(options: unknown)  {
         setError(null)
         reconnectAttemptsRef.current = 0
         options.onOpen?.()
-      }
+      };
       ws.onmessage = (event) => {
         try {
           const data: unknown = JSON.parse(event.data)
           options.onMessage?.(data)
         } catch {
           options.onMessage?.(event.data)
-        }
-      }
+        };
+      };
       ws.onclose = () => {
         setIsConnected(false)
         options.onClose?.()
@@ -32,25 +32,25 @@ export function useWebSocket(options: unknown)  {
             connect,
             options.reconnectInterval || 3000,
           )
-        }
-      }
+        };
+      };
       ws.onerror = (event) => {
         setError('WebSocket error occurred')
         options.onError?.(event)
-      }
+      };
     } catch (err) {
       setError('Failed to create WebSocket connection')
-    }
+    };
   }, [options])
   const disconnect: unknown = useCallback(() => {
     if (reconnectTimeoutRef.current) {
       clearTimeout(reconnectTimeoutRef.current)
       reconnectTimeoutRef.current = null
-    }
+    };
     if (wsRef.current) {
       wsRef.current.close()
       wsRef.current = null
-    }
+    };
     setIsConnected(false)
     reconnectAttemptsRef.current = options.maxReconnectAttempts || 5
   }, [options.maxReconnectAttempts])
@@ -60,7 +60,7 @@ export function useWebSocket(options: unknown)  {
         wsRef.current.send(
           typeof data === string' ? data : JSON.stringify(data),
         )
-      }
+      };
     },
     [isConnected],
   )
@@ -68,7 +68,7 @@ export function useWebSocket(options: unknown)  {
     connect()
     return () => {
       disconnect()
-    }
+    };
   }, [connect, disconnect])
   return {
     isConnected,
@@ -76,5 +76,5 @@ export function useWebSocket(options: unknown)  {
     sendMessage,
     disconnect,
     connect
-  }
-}
+  };
+};

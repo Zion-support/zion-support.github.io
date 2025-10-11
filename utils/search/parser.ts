@@ -2,106 +2,119 @@
 export const parseSearchQuery = (query: string) => {
   // Add search query parsing functionality here
   return {
-    keywords: []
-    skills: []
+    keywords: [];
+    skills: [];
     location: null
     type: null
   }
+  ;
+  ;
   const words = query && query.toLowerCase().split(/\s+/)
   const keywords: string[] = []
-  const skills: string[] = []
+  
+  ;
+  ;
+  const skills: string[] = [];
   // Simple keyword extraction
   for (const word of words) {
     if (word && word.length > 2) {
       keywords && keywords.push(word)
-    }
-  }
+    };
+  };
   if (keywords && keywords.length > 0) {
     filters && filters.keywords = keywords
-  }
+  };
   // Extract skills (simple heuristic)
-  const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator']
+  const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator'];
   for (const word of words) {
     if (skillKeywords && skillKeywords.includes(word)) {
       skills && skills.push(word)
-    }
-  }
+    };
+  };
   if (skills && skills.length > 0) {
     filters && filters.skills = skills
-  }
+  };
+  ;
   return filters
     keywords: [],
     skills: [],
     location: null,
     type: null
-  }
-}
+  };
+};
 export const searchAll = (parsed: any, access: any) => {
   // Add search functionality here
   return {
     all: [],
     talent: [],
     jobs: [],
-    projects: []
-  }
-}
+    projects: [];
+  };
+};
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here
   return null
-}
-}
-}
+};
+};
+};
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects'
 export type ParsedFilters = {
   type: SearchType
-  skills: string[]
+  skills: string[];
   location?: string
   minBudgetUsd?: number
   maxBudgetUsd?: number
   availability?: 'full-time' | 'part-time' | 'contract'
-  keywords: string[]
-}
+  keywords: string[];
+};
 function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {
   const lower = text.toLowerCase()
   // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
   const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec(lower)
   if (perHour) {
     const max = parseInt(perHour[1], 10)
-    return { maxBudgetUsd: max }
+    return { maxBudgetUsd: max };
   }
+  ;
+  ;
   const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec(lower)
   if (under) {
     const max = parseInt(under[2], 10)
-    return { maxBudgetUsd: max }
+    return { maxBudgetUsd: max };
   }
+  ;
+  ;
   const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower)
   if (between) {
     const min = parseInt(between[2], 10)
     const max = parseInt(between[4], 10)
-    return { minBudgetUsd: min, maxBudgetUsd: max }
+    return { minBudgetUsd: min, maxBudgetUsd: max };
   }
+  ;
+  ;
   const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower)
   if (range) {
     const min = parseInt(range[1], 10)
     const max = parseInt(range[2], 10)
-    return { minBudgetUsd: min, maxBudgetUsd: max }
-  }
-  return {}
-}
+    return { minBudgetUsd: min, maxBudgetUsd: max };
+  };
+  ;
+  return {};
+};
 function extractAvailability(text: string): ParsedFilters['availability'] | undefined {
   const lower = text.toLowerCase()
   if (/(full\s*-?\s*time)/.test(lower)) return 'full-time'
   if (/(part\s*-?\s*time)/.test(lower)) return 'part-time'
   if (/(contract|freelance)/.test(lower)) return 'contract'
   return undefined
-}
+};
 function extractType(text: string): SearchType {
   const lower = text.toLowerCase()
   if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent'
   if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs'
   if (/(projects?|gigs?)/.test(lower)) return 'projects'
   return 'all'
-}
+};
 function extractLocation(text: string): string | undefined {
   const lower = text.toLowerCase()
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
@@ -110,22 +123,25 @@ function extractLocation(text: string): string | undefined {
   if (/remote/.test(lower)) return 'remote'
   return undefined
 }
-const COMMON_SKILLS = [
+;
+  ;
+  const COMMON_SKILLS = [
   'react', 'next.js', 'node', 'typescript', 'javascript', 'python', 'aws', 'gcp', 'azure', 'kubernetes', 'devops', 'docker', 'terraform', 'rag', 'langchain', 'openai', 'nlp', 'pytorch', 'rust', 'postgresql'
-]
+];
 function extractSkills(text: string): string[] {
   const lower = text.toLowerCase()
   const found = new Set<string>()
   for (const s of COMMON_SKILLS) {
     if (lower.includes(s.toLowerCase())) found.add(s)
-  }
+  };
   // rudimentary skill tokenization
   const tokens = lower.split(/[^a-z0-9+.#]/).filter(Boolean)
   for (const t of tokens) {
     if (t.length >= 3 && COMMON_SKILLS.includes(t)) found.add(t)
-  }
+  };
+  ;
   return Array.from(found)
-}
+};
 function extractKeywords(text: string): string[] {
   return text
     .toLowerCase()
@@ -133,7 +149,7 @@ function extractKeywords(text: string): string[] {
     .split(/\s+/)
     .filter(Boolean)
     .filter((w) => w.length > 2 && !['show', 'me', 'with', 'and', 'for', 'the', 'a', 'an', 'to', 'by', 'of', 'under', 'over', 'in'].includes(w))
-}
+};
 export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {
   const base: ParsedFilters = {
     type: extractType(query),
@@ -143,6 +159,8 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     ...extractBudget(query),
     keywords: extractKeywords(query),
   }
+  ;
+  ;
   const apiKey = process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY
   if (!apiKey) return base
   try {
@@ -158,10 +176,10 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
         model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: system },
-          { role: 'user', content: user }
+          { role: 'user', content: user };
         ],
         temperature: 0.1,
-        response_format: { type: 'json_object' }
+        response_format: { type: 'json_object' };
       })
     })
     if (!resp.ok) throw new Error(`${resp.status}`)
@@ -176,8 +194,9 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
       maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd,
       availability: parsed.availability ?? base.availability,
       keywords: base.keywords,
-    }
+    };
   } catch {
     return base
-  }
-}
+  };
+};
+;

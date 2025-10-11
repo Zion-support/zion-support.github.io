@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react'
 const MicroSAASPage: React.FC = () => {
+
   const _microSAASServices = [
     // AI-Powered Developer Tools
     {
@@ -1662,8 +1663,8 @@ $4},
       category: 'Ultimate Reality',
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
-$4}
-  ]
+$4};
+  ];
   /* const realEstateSaaS = [
     {
       title: 'AI Property Valuation Platform',
@@ -2110,7 +2111,7 @@ $4},
       benefits: ['Assess risks', 'Optimize pricing', 'Recommend policies'],
       marketPrice: '$250-500/month',
       category: 'Insurance Underwriting',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Onboarding Platform',
@@ -2121,7 +2122,7 @@ $4},
       benefits: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],
       marketPrice: '$200-500/month',
       category: 'Customer Onboarding',
-      technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+      technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Retention Manager',
@@ -2132,7 +2133,7 @@ $4},
       benefits: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],
       marketPrice: '$200-400/month',
       category: 'Customer Retention',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Support Optimizer',
@@ -2143,7 +2144,7 @@ $4},
       benefits: ['Optimize support', 'Improve satisfaction', 'Automate responses'],
       marketPrice: '$180-350/month',
       category: 'Customer Support',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Feedback Analyzer',
@@ -2154,7 +2155,7 @@ $4},
       benefits: ['Analyze feedback', 'Identify trends', 'Recommend actions'],
       marketPrice: '$150-300/month',
       category: 'Customer Feedback',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Journey Mapper',
@@ -2165,7 +2166,7 @@ $4},
       benefits: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],
       marketPrice: '$200-500/month',
       category: 'Customer Journey',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Lifetime Value Predictor',
@@ -2176,7 +2177,7 @@ $4},
       benefits: ['Predict CLV', 'Segment customers', 'Optimize targeting'],
       marketPrice: '$200-400/month',
       category: 'Customer Analytics',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Segmentation Engine',
@@ -2187,7 +2188,7 @@ $4},
       benefits: ['Segment customers', 'Create personas', 'Optimize targeting'],
       marketPrice: '$180-350/month',
       category: 'Customer Segmentation',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Personalization Engine',
@@ -2198,7 +2199,7 @@ $4},
       benefits: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],
       marketPrice: '$250-450/month',
       category: 'Customer Personalization',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Data Platform',
@@ -2209,7 +2210,7 @@ $4},
       benefits: ['Integrate data', 'Clean data', 'Enable analytics'],
       marketPrice: '$300-600/month',
       category: 'Customer Data',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Privacy Manager',
@@ -2220,7 +2221,7 @@ $4},
       benefits: ['Track consent', 'Protect data', 'Ensure compliance'],
       marketPrice: '$200-500/month',
       category: 'Customer Privacy',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Communication Manager',
@@ -2231,7 +2232,7 @@ $4},
       benefits: ['Optimize channels', 'Personalize messages', 'Track engagement'],
       marketPrice: '$200-400/month',
       category: 'Customer Communication',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Experience Optimizer',
@@ -2242,7 +2243,7 @@ $4},
       benefits: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],
       marketPrice: '$250-450/month',
       category: 'Customer Experience',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Success Manager',
@@ -2253,7 +2254,7 @@ $4},
       benefits: ['Score health', 'Recommend interventions', 'Optimize outcomes'],
       marketPrice: '$250-500/month',
       category: 'Customer Success',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Advocacy Platform',
@@ -2264,7 +2265,7 @@ $4},
       benefits: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],
       marketPrice: '$200-400/month',
       category: 'Customer Advocacy',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Insights Platform',
@@ -2275,7 +2276,7 @@ $4},
       benefits: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],
       marketPrice: '$200-500/month',
       category: 'Customer Insights',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI Customer Intelligence Suite',
@@ -2286,7 +2287,7 @@ $4},
       benefits: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],
       marketPrice: '$400-800/month',
       category: 'Customer Intelligence',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES
     {
@@ -2298,7 +2299,7 @@ $4},
       benefits: ['Save 5+ hours/week', 'Never miss important details', 'Improve meeting productivity'],
       marketPrice: '$120-250/month',
       category: 'Productivity',
-      technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
+      technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC'];
     },
     {
       title: 'Smart Expense Tracker AI',
@@ -2309,7 +2310,7 @@ $4},
       benefits: ['Save 10+ hours/month', 'Reduce expense errors by 90%', 'Optimize spending patterns'],
       marketPrice: '$150-300/month',
       category: 'Finance',
-      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
+      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'];
     },
     {
       title: 'AI-Powered Password Manager',
@@ -2320,7 +2321,7 @@ $4},
       benefits: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],
       marketPrice: '$80-150/month',
       category: 'Security',
-      technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+      technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models'];
     },
     {
       title: 'Smart Time Tracking Assistant',
@@ -2331,7 +2332,7 @@ $4},
       benefits: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],
       marketPrice: '$100-200/month',
       category: 'Productivity',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Logo Generator',
@@ -2342,7 +2343,7 @@ $4},
       benefits: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],
       marketPrice: '$150-300/month',
       category: 'Design',
-      technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
       title: 'Smart Invoice Generator',
@@ -2353,7 +2354,7 @@ $4},
       benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],
       marketPrice: '$100-200/month',
       category: 'Finance',
-      technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
+      technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation'];
     },
     {
       title: 'AI-Powered Website Builder',
@@ -2364,7 +2365,7 @@ $4},
       benefits: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],
       marketPrice: '$300-600/month',
       category: 'Web Development',
-      technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
+      technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models'];
     },
     {
       title: 'Smart Contract Generator',
@@ -2375,7 +2376,7 @@ $4},
       benefits: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],
       marketPrice: '$250-500/month',
       category: 'Legal',
-      technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
+      technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Email Signature Generator',
@@ -2386,7 +2387,7 @@ $4},
       benefits: ['Professional email presence', 'Consistent branding', 'Easy team management'],
       marketPrice: '$60-120/month',
       category: 'Marketing',
-      technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
+      technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics'];
     },
     {
       title: 'Smart QR Code Generator',
@@ -2397,7 +2398,7 @@ $4},
       benefits: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],
       marketPrice: '$80-150/month',
       category: 'Marketing',
-      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools'];
     },
     {
       title: 'AI-Powered Color Palette Generator',
@@ -2408,7 +2409,7 @@ $4},
       benefits: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],
       marketPrice: '$100-200/month',
       category: 'Design',
-      technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+      technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models'];
     },
     {
       title: 'Smart Business Card Designer',
@@ -2419,7 +2420,7 @@ $4},
       benefits: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],
       marketPrice: '$120-250/month',
       category: 'Design',
-      technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
+      technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates'];
     },
     {
       title: 'AI-Powered Newsletter Generator',
@@ -2430,7 +2431,7 @@ $4},
       benefits: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours/week'],
       marketPrice: '$150-300/month',
       category: 'Marketing',
-      technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
+      technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics'];
     },
     {
       title: 'Smart PDF Converter Pro',
@@ -2441,7 +2442,7 @@ $4},
       benefits: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],
       marketPrice: '$150-300/month',
       category: 'Productivity',
-      technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Video Thumbnail Generator',
@@ -2452,7 +2453,7 @@ $4},
       benefits: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],
       marketPrice: '$120-250/month',
       category: 'Video Marketing',
-      technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
+      technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models'];
     },
     {
       title: 'Smart Social Media Scheduler',
@@ -2463,7 +2464,7 @@ $4},
       benefits: ['Increase engagement by 60%', 'Save 20+ hours/week', 'Optimize posting times'],
       marketPrice: '$200-400/month',
       category: 'Social Media',
-      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'];
     },
     {
       title: 'AI-Powered Hashtag Generator',
@@ -2474,7 +2475,7 @@ $4},
       benefits: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],
       marketPrice: '$80-150/month',
       category: 'Social Media',
-      technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
       title: 'Smart Email Template Builder',
@@ -2485,7 +2486,7 @@ $4},
       benefits: ['Create professional emails', 'Improve open rates', 'Consistent branding'],
       marketPrice: '$150-300/month',
       category: 'Email Marketing',
-      technologies: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
+      technologies: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Competitor Analysis Tool',
@@ -2496,7 +2497,7 @@ $4},
       benefits: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],
       marketPrice: '$300-600/month',
       category: 'Market Research',
-      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics'];
     },
     {
       title: 'Smart Customer Feedback Analyzer',
@@ -2507,7 +2508,7 @@ $4},
       benefits: ['Understand customer sentiment', 'Improve products/services', 'Increase customer satisfaction'],
       marketPrice: '$200-400/month',
       category: 'Customer Analytics',
-      technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Landing Page Optimizer',
@@ -2518,7 +2519,7 @@ $4},
       benefits: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience'],
       marketPrice: '$250-500/month',
       category: 'Conversion Optimization',
-      technologies: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'Smart Inventory Photo Manager',
@@ -2529,7 +2530,7 @@ $4},
       benefits: ['Professional product photos', 'Save 20+ hours/week', 'Consistent image quality'],
       marketPrice: '$150-300/month',
       category: 'E-commerce',
-      technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Price Monitoring Tool',
@@ -2540,7 +2541,7 @@ $4},
       benefits: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],
       marketPrice: '$120-250/month',
       category: 'E-commerce',
-      technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
+      technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems'];
     },
     {
       title: 'Smart Appointment Scheduler',
@@ -2551,7 +2552,7 @@ $4},
       benefits: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],
       marketPrice: '$100-200/month',
       category: 'Scheduling',
-      technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
+      technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Resume Builder',
@@ -2562,7 +2563,7 @@ $4},
       benefits: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],
       marketPrice: '$100-200/month',
       category: 'Career Tools',
-      technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
+      technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models'];
     },
     {
       title: 'Smart Weather API Service',
@@ -2573,7 +2574,7 @@ $4},
       benefits: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],
       marketPrice: '$150-300/month',
       category: 'Weather Services',
-      technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Translation Service',
@@ -2584,7 +2585,7 @@ $4},
       benefits: ['Break language barriers', 'Improve global reach', 'Professional translations'],
       marketPrice: '$150-300/month',
       category: 'Translation',
-      technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
       title: 'Smart Data Backup Service',
@@ -2595,7 +2596,7 @@ $4},
       benefits: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],
       marketPrice: '$120-250/month',
       category: 'Data Management',
-      technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+      technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Form Builder',
@@ -2606,7 +2607,7 @@ $4},
       benefits: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],
       marketPrice: '$150-300/month',
       category: 'Form Management',
-      technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'Smart Uptime Monitor',
@@ -2617,7 +2618,7 @@ $4},
       benefits: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],
       marketPrice: '$100-200/month',
       category: 'Monitoring',
-      technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+      technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Survey Creator',
@@ -2628,7 +2629,7 @@ $4},
       benefits: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],
       marketPrice: '$120-250/month',
       category: 'Survey Tools',
-      technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'Smart File Converter',
@@ -2639,7 +2640,7 @@ $4},
       benefits: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],
       marketPrice: '$100-200/month',
       category: 'File Management',
-      technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+      technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered QR Code Scanner',
@@ -2650,7 +2651,7 @@ $4},
       benefits: ['Track QR code performance', 'Customize designs', 'Gather business insights'],
       marketPrice: '$80-150/month',
       category: 'QR Code Tools',
-      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools'];
     },
     {
       title: 'Smart Password Generator',
@@ -2661,7 +2662,7 @@ $4},
       benefits: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],
       marketPrice: '$60-120/month',
       category: 'Security',
-      technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+      technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Color Picker',
@@ -2672,7 +2673,7 @@ $4},
       benefits: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],
       marketPrice: '$80-150/month',
       category: 'Design Tools',
-      technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
+      technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models'];
     },
     {
       title: 'Smart Text Summarizer',
@@ -2683,7 +2684,7 @@ $4},
       benefits: ['Save reading time', 'Extract key insights', 'Process large documents'],
       marketPrice: '$100-200/month',
       category: 'Text Processing',
-      technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+      technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Image Resizer',
@@ -2694,7 +2695,7 @@ $4},
       benefits: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],
       marketPrice: '$100-200/month',
       category: 'Image Processing',
-      technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+      technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models'];
     },
     {
       title: 'Smart URL Shortener',
@@ -2705,7 +2706,7 @@ $4},
       benefits: ['Track link performance', 'Customize URLs', 'Manage campaigns'],
       marketPrice: '$60-120/month',
       category: 'URL Management',
-      technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
+      technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation'];
     },
     {
       title: 'AI-Powered Favicon Generator',
@@ -2716,7 +2717,7 @@ $4},
       benefits: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],
       marketPrice: '$80-150/month',
       category: 'Web Development',
-      technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
+      technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models'];
     },
     {
       title: 'Smart Meta Tag Generator',
@@ -2727,7 +2728,7 @@ $4},
       benefits: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],
       marketPrice: '$100-200/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Sitemap Generator',
@@ -2738,7 +2739,7 @@ $4},
       benefits: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],
       marketPrice: '$100-200/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models'];
     },
     {
       title: 'Smart Robots.txt Generator',
@@ -2749,7 +2750,7 @@ $4},
       benefits: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],
       marketPrice: '$60-120/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Schema Markup Generator',
@@ -2760,7 +2761,7 @@ $4},
       benefits: ['Improve search visibility', 'Rich snippets', 'Better search results'],
       marketPrice: '$120-250/month',
       category: 'SEO Tools',
-      technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+      technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models'];
     },
     {
       title: 'Smart Alt Text Generator',
@@ -2771,7 +2772,7 @@ $4},
       benefits: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],
       marketPrice: '$80-150/month',
       category: 'SEO Tools',
-      technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+      technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Internal Link Optimizer',
@@ -2782,7 +2783,7 @@ $4},
       benefits: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],
       marketPrice: '$150-300/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'Smart Keyword Density Analyzer',
@@ -2793,7 +2794,7 @@ $4},
       benefits: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],
       marketPrice: '$120-250/month',
       category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Page Speed Optimizer',
@@ -2804,7 +2805,7 @@ $4},
       benefits: ['Improve page speed', 'Better user experience', 'Higher search rankings'],
       marketPrice: '$250-500/month',
       category: 'Performance Optimization',
-      technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'Smart Core Web Vitals Monitor',
@@ -2815,7 +2816,7 @@ $4},
       benefits: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],
       marketPrice: '$150-300/month',
       category: 'Performance Monitoring',
-      technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+      technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Mobile Optimization Tool',
@@ -2826,7 +2827,7 @@ $4},
       benefits: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],
       marketPrice: '$200-400/month',
       category: 'Mobile Optimization',
-      technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
+      technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models'];
     },
     {
       title: 'Smart Local SEO Optimizer',
@@ -2837,7 +2838,7 @@ $4},
       benefits: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],
       marketPrice: '$200-400/month',
       category: 'Local SEO',
-      technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
+      technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Competitor SEO Analyzer',
@@ -2848,7 +2849,7 @@ $4},
       benefits: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],
       marketPrice: '$300-600/month',
       category: 'Competitive Analysis',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'Smart Backlink Analyzer',
@@ -2859,7 +2860,7 @@ $4},
       benefits: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],
       marketPrice: '$250-500/month',
       category: 'Link Building',
-      technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Content Gap Analyzer',
@@ -2870,7 +2871,7 @@ $4},
       benefits: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],
       marketPrice: '$300-600/month',
       category: 'Content Strategy',
-      technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+      technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
     {
       title: 'Smart Technical SEO Auditor',
@@ -2881,7 +2882,7 @@ $4},
       benefits: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],
       marketPrice: '$300-600/month',
       category: 'Technical SEO',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered E-commerce SEO Optimizer',
@@ -2892,7 +2893,7 @@ $4},
       benefits: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],
       marketPrice: '$400-800/month',
       category: 'E-commerce SEO',
-      technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
+      technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models'];
     },
     {
       title: 'Smart Voice Search Optimizer',
@@ -2903,7 +2904,7 @@ $4},
       benefits: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],
       marketPrice: '$250-500/month',
       category: 'Voice Search SEO',
-      technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
+      technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Video SEO Optimizer',
@@ -2914,7 +2915,7 @@ $4},
       benefits: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],
       marketPrice: '$300-600/month',
       category: 'Video SEO',
-      technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
+      technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models'];
     },
     {
       title: 'Smart Featured Snippet Optimizer',
@@ -2925,7 +2926,7 @@ $4},
       benefits: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],
       marketPrice: '$200-400/month',
       category: 'Featured Snippets',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered Image SEO Optimizer',
@@ -2936,7 +2937,7 @@ $4},
       benefits: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],
       marketPrice: '$150-300/month',
       category: 'Image SEO',
-      technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
+      technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models'];
     },
     {
       title: 'Smart International SEO Manager',
@@ -2947,7 +2948,7 @@ $4},
       benefits: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],
       marketPrice: '$300-600/month',
       category: 'International SEO',
-      technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
+      technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models'];
     },
     {
       title: 'AI-Powered SEO Reporting Dashboard',
@@ -2958,7 +2959,7 @@ $4},
       benefits: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
       marketPrice: '$250-500/month',
       category: 'SEO Reporting',
-      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models'];
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
     // AI Productivity & Time Management
@@ -3367,11 +3368,14 @@ $4},
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo:     ,
-$4}
+$4};
   ]
+  
+  ;
+  ;
   const categories = [
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+    };
   ]; */
   /* const categories = [
     { name: 'All', count: microSAASServices.length },
@@ -3395,7 +3399,7 @@ $4}
     { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
+    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length };
   ]; */
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -3403,8 +3407,9 @@ $4}
         <title>Micro SAAS Solutions - Zion Tech Group
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
+      {/* Hero Section */};
+      ;
+  <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
             Micro SAAS Solutions,
@@ -3413,24 +3418,26 @@ $4}
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react'
 const MicroSAASPage: React.FC = () => {
+
     return (
     <div>Coming Soon</div>
   )
   }
+  ;
+  ;
   const _microSAASServices = [
   // TOD,
   O: Add items
-]
+];
     // AI-Powered Developer Tools,
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Code Review Assistant Pro',
       descriptio,
   n: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -3452,15 +3459,14 @@ const MicroSAASPage: React.FC = () => {
       popula,
   r: true,
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Test Generation Suite',
       descriptio,
   n: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -3477,15 +3483,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart API Documentation Generator',
       descriptio,
   n: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -3503,15 +3508,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Marketing & SEO Tools
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI SEO Optimizer Pro',
       descriptio,
   n: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -3528,15 +3532,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Social Media Manager',
       descriptio,
   n: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -3553,15 +3556,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Email Marketing Platform',
       descriptio,
   n: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -3578,15 +3580,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Content Generator Pro',
       descriptio,
   n: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$119/month',
       feature,
@@ -3604,15 +3605,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Business Intelligence & Analytics
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Analytics Dashboard Pro',
       descriptio,
   n: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -3629,15 +3629,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Lead Scoring Engine',
       descriptio,
   n: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$139/month',
       feature,
@@ -3654,15 +3653,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Insights Platform',
       descriptio,
   n: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -3680,15 +3678,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Finance & Accounting Tools
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Invoice Generator Pro',
       descriptio,
   n: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -3705,15 +3702,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Financial Planning Assistant',
       descriptio,
   n: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -3730,15 +3726,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Expense Management System',
       descriptio,
   n: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -3756,15 +3751,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Healthcare & Wellness
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Health Monitoring Platform',
       descriptio,
   n: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -3781,15 +3775,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Fitness Coach Pro',
       descriptio,
   n: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$49/month',
       feature,
@@ -3806,15 +3799,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Mental Health Assistant',
       descriptio,
   n: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -3832,15 +3824,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Education & Learning
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Language Learning Platform',
       descriptio,
   n: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -3857,15 +3848,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Study Assistant Pro',
       descriptio,
   n: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$59/month',
       feature,
@@ -3882,15 +3872,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Skill Assessment Platform',
       descriptio,
   n: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -3908,15 +3897,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI E-commerce & Retail
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Inventory Optimizer Pro',
       descriptio,
   n: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -3933,15 +3921,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Product Recommendation Engine',
       descriptio,
   n: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -3958,15 +3945,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Price Optimization Tool',
       descriptio,
   n: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -3984,15 +3970,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Legal & Compliance
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Legal Document Analyzer',
       descriptio,
   n: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -4010,15 +3995,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Real Estate & Property Management
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Property Valuation Engine',
       descriptio,
   n: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4036,15 +4020,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI HR & Recruitment
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Resume Parser & Matcher',
       descriptio,
   n: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -4061,15 +4044,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Interview Scheduler Pro',
       descriptio,
   n: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -4086,15 +4068,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
   n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4112,15 +4093,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Finance & Accounting
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Expense Tracker & Categorizer',
       descriptio,
   n: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -4137,15 +4117,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Invoice Processing System',
       descriptio,
   n: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -4162,15 +4141,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Financial Forecasting Tool',
       descriptio,
   n: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -4188,15 +4166,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Project Management
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Project Manager Assistant',
       descriptio,
   n: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -4213,15 +4190,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Time Tracking & Analytics',
       descriptio,
   n: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -4239,15 +4215,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Customer Service
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Live Chat Assistant',
       descriptio,
   n: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -4264,15 +4239,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Ticket Classification System',
       descriptio,
   n: 'Automated ticket routing and prioritization with intelligent categorization and escalation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -4290,15 +4264,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Sales & CRM
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Lead Scoring Engine',
       descriptio,
   n: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4315,15 +4288,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Sales Forecasting Platform',
       descriptio,
   n: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -4341,15 +4313,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Healthcare & Wellness
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Symptom Checker Pro',
       descriptio,
   n: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -4366,15 +4337,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Fitness Coach Platform',
       descriptio,
   n: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -4392,15 +4362,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Security & Compliance
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Security Monitoring System',
       descriptio,
   n: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -4417,15 +4386,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Compliance Checker',
       descriptio,
   n: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -4443,15 +4411,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Productivity & Automation
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Meeting Assistant Pro',
       descriptio,
   n: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -4468,15 +4435,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Email Management System',
       descriptio,
   n: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -4493,15 +4459,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Document Management Platform',
       descriptio,
   n: 'Intelligent document organization with search, version control, and collaboration features.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -4519,15 +4484,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Analytics & Reporting
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Business Intelligence Suite',
       descriptio,
   n: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -4544,15 +4508,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Social Media Analytics',
       descriptio,
   n: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -4570,15 +4533,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Development & DevOps
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Code Quality Monitor',
       descriptio,
   n: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4595,15 +4557,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Deployment Automation',
       descriptio,
   n: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -4621,15 +4582,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Communication & Collaboration
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Team Collaboration Hub',
       descriptio,
   n: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4646,15 +4606,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Video Conferencing Assistant',
       descriptio,
   n: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -4672,15 +4631,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Marketing & Advertising
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Ad Campaign Optimizer',
       descriptio,
   n: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -4697,15 +4655,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Influencer Marketing Platform',
       descriptio,
   n: 'Smart influencer discovery and management with performance tracking and campaign optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4723,15 +4680,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI E-commerce & Retail
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Behavior Analyzer',
       descriptio,
   n: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -4748,15 +4704,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Supply Chain Optimizer',
       descriptio,
   n: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -4774,15 +4729,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Education & Training
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Corporate Training Platform',
       descriptio,
   n: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4799,15 +4753,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Knowledge Management System',
       descriptio,
   n: 'Smart knowledge base with intelligent search, content organization, and automated updates.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -4825,15 +4778,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Legal & Compliance
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Contract Management System',
       descriptio,
   n: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -4850,15 +4802,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Privacy Compliance Monitor',
       descriptio,
   n: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4876,15 +4827,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Real Estate & Property
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Property Management Suite',
       descriptio,
   n: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -4901,15 +4851,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Market Research Platform',
       descriptio,
   n: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -4927,15 +4876,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Agriculture & Environment
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Crop Monitoring System',
       descriptio,
   n: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -4952,15 +4900,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Environmental Monitoring',
       descriptio,
   n: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -4978,15 +4925,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Transportation & Logistics
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Fleet Management System',
       descriptio,
   n: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$349/month',
       feature,
@@ -5003,15 +4949,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Logistics Optimizer',
       descriptio,
   n: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -5029,15 +4974,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Entertainment & Media
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Content Moderation Platform',
       descriptio,
   n: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5054,15 +4998,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Video Production Assistant',
       descriptio,
   n: 'Intelligent video production with automated editing, subtitle generation, and content optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -5080,15 +5023,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Gaming & Entertainment
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Game Development Platform',
       descriptio,
   n: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -5105,15 +5047,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Player Behavior Analytics',
       descriptio,
   n: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5131,15 +5072,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Research & Development
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
   n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -5156,15 +5096,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Patent Analysis Tool',
       descriptio,
   n: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -5182,15 +5121,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Energy & Utilities
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Energy Management System',
       descriptio,
   n: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -5207,15 +5145,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Smart Grid Optimizer',
       descriptio,
   n: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -5233,15 +5170,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Manufacturing & Industrial
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Quality Control System',
       descriptio,
   n: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$349/month',
       feature,
@@ -5258,15 +5194,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Production Planning Optimizer',
       descriptio,
   n: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -5284,15 +5219,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Insurance & Risk Management
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Risk Assessment Platform',
       descriptio,
   n: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -5309,15 +5243,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Claims Processing System',
       descriptio,
   n: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -5335,15 +5268,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Government & Public Sector
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Citizen Services Platform',
       descriptio,
   n: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$499/month',
       feature,
@@ -5360,15 +5292,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Public Safety System',
       descriptio,
   n: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$599/month',
       feature,
@@ -5386,15 +5317,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Non-Profit & Social Impact
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Donor Management System',
       descriptio,
   n: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5411,15 +5341,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Volunteer Matching Platform',
       descriptio,
   n: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -5437,15 +5366,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Travel & Hospitality
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Travel Planning Assistant',
       descriptio,
   n: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -5462,15 +5390,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Hotel Revenue Optimizer',
       descriptio,
   n: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -5488,15 +5415,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Sports & Fitness
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Sports Performance Analyzer',
       descriptio,
   n: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -5513,15 +5439,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Fitness Nutrition Coach',
       descriptio,
   n: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -5539,15 +5464,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Beauty & Fashion
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Virtual Try-On Platform',
       descriptio,
   n: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -5564,15 +5488,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Beauty Analysis Tool',
       descriptio,
   n: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5590,15 +5513,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Home & Lifestyle
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Smart Home Controller',
       descriptio,
   n: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5615,15 +5537,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Personal Assistant Platform',
       descriptio,
   n: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -5641,15 +5562,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Pets & Animals
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Pet Health Monitor',
       descriptio,
   n: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -5666,15 +5586,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Pet Training Assistant',
       descriptio,
   n: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -5692,15 +5611,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Education & Learning
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Tutoring Platform',
       descriptio,
   n: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5717,15 +5635,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Homework Helper',
       descriptio,
   n: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -5743,15 +5660,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Music & Audio
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Music Composition Tool',
       descriptio,
   n: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -5768,15 +5684,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Audio Enhancement Platform',
       descriptio,
   n: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5794,15 +5709,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Art & Design
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Design Assistant Pro',
       descriptio,
   n: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5819,15 +5733,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Logo Generator Platform',
       descriptio,
   n: 'Intelligent logo creation with brand analysis, style matching, and customization options.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -5845,15 +5758,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Dating & Relationships
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Dating Assistant',
       descriptio,
   n: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -5870,15 +5782,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Relationship Counselor',
       descriptio,
   n: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -5896,15 +5807,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Parenting & Family
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Parenting Assistant',
       descriptio,
   n: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -5921,15 +5831,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Family Organizer',
       descriptio,
   n: 'Smart family management with scheduling, task coordination, and communication tools.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -5947,15 +5856,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Senior Care & Aging
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Senior Care Monitor',
       descriptio,
   n: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -5972,15 +5880,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Memory Assistant',
       descriptio,
   n: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -5998,15 +5905,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Accessibility & Inclusion
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Accessibility Assistant',
       descriptio,
   n: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -6023,15 +5929,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Language Translation Pro',
       descriptio,
   n: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -6049,15 +5954,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Emergency & Crisis Management
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Emergency Response System',
       descriptio,
   n: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$499/month',
       feature,
@@ -6074,15 +5978,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Crisis Communication Platform',
       descriptio,
   n: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -6100,15 +6003,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Space & Astronomy
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Space Mission Planner',
       descriptio,
   n: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$599/month',
       feature,
@@ -6125,15 +6027,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Astronomical Data Analyzer',
       descriptio,
   n: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -6151,15 +6052,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Ocean & Marine
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Marine Life Tracker',
       descriptio,
   n: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -6176,15 +6076,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Ocean Current Predictor',
       descriptio,
   n: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -6202,15 +6101,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Archaeology & History
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Archaeological Site Analyzer',
       descriptio,
   n: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -6227,15 +6125,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Historical Document Processor',
       descriptio,
   n: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -6253,15 +6150,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Psychology & Mental Health
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Mental Health Tracker',
       descriptio,
   n: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -6278,15 +6174,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Therapy Assistant',
       descriptio,
   n: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -6304,15 +6199,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Philosophy & Ethics
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Ethical Decision Maker',
       descriptio,
   n: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -6329,15 +6223,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Philosophy Research Assistant',
       descriptio,
   n: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -6355,15 +6248,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Spirituality & Religion
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Spiritual Guidance Platform',
       descriptio,
   n: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -6380,15 +6272,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Religious Text Analyzer',
       descriptio,
   n: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -6406,15 +6297,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Future & Innovation
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Innovation Predictor',
       descriptio,
   n: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -6431,15 +6321,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Future Scenario Generator',
       descriptio,
   n: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -6457,15 +6346,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Consciousness & AI Ethics
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Consciousness Monitor',
       descriptio,
   n: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$499/month',
       feature,
@@ -6482,15 +6370,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Rights Management System',
       descriptio,
   n: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -6508,15 +6395,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Time & Space
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Time Management Master',
       descriptio,
   n: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -6533,15 +6419,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Space-Time Analyzer',
       descriptio,
   n: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$599/month',
       feature,
@@ -6559,15 +6444,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Quantum & Advanced Physics
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Quantum Simulator Pro',
       descriptio,
   n: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$799/month',
       feature,
@@ -6584,15 +6468,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Physics Research Assistant',
       descriptio,
   n: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -6610,15 +6493,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Multiverse & Parallel Realities
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Multiverse Explorer',
       descriptio,
   n: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$999/month',
       feature,
@@ -6635,15 +6517,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Reality Manipulation Tool',
       descriptio,
   n: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$1299/month',
       feature,
@@ -6661,15 +6542,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Transcendence & Enlightenment
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Enlightenment Assistant',
       descriptio,
   n: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$599/month',
       feature,
@@ -6686,15 +6566,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Transcendence Platform',
       descriptio,
   n: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$999/month',
       feature,
@@ -6712,15 +6591,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Universal Consciousness
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Universal Consciousness Connector',
       descriptio,
   n: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$1999/month',
       feature,
@@ -6737,15 +6615,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Cosmic Intelligence Platform',
       descriptio,
   n: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$2999/month',
       feature,
@@ -6763,15 +6640,14 @@ const MicroSAASPage: React.FC = () => {
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Infinite Possibilities
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Infinite Possibility Generator',
       descriptio,
   n: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$4999/month',
       feature,
@@ -6788,15 +6664,14 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Ultimate Reality Creator',
       descriptio,
   n: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$9999/month',
       feature,
@@ -6812,18 +6687,20 @@ const MicroSAASPage: React.FC = () => {
       contactInf,
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+    };
   ]
-const realEstateSaaS = [
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+
+  ;
+  ;
+  const realEstateSaaS = [
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Property Valuation Platform',
       descriptio,
   n: 'Advanced property valuation using machine learning and real estate data analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -6840,15 +6717,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Tenant Screening Platform',
       descriptio,
   n: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -6866,15 +6742,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Agriculture & Food Tech
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Crop Monitoring System',
       descriptio,
   n: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -6891,15 +6766,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Food Safety Inspector',
       descriptio,
   n: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -6917,15 +6791,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Transportation & Logistics
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Route Optimization Pro',
       descriptio,
   n: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -6942,15 +6815,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Fleet Maintenance Predictor',
       descriptio,
   n: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -6968,15 +6840,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Energy & Sustainability
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Energy Management System',
       descriptio,
   n: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -6993,15 +6864,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Carbon Footprint Tracker',
       descriptio,
   n: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -7019,15 +6889,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Entertainment & Media
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Content Moderation Suite',
       descriptio,
   n: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -7044,15 +6913,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Video Editor Pro',
       descriptio,
   n: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -7070,15 +6938,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Security & Surveillance
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Security Camera System',
       descriptio,
   n: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -7095,15 +6962,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Fraud Detection Engine',
       descriptio,
   n: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -7121,15 +6987,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Research & Development
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
   n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -7146,15 +7011,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Patent Search Engine',
       descriptio,
   n: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -7171,15 +7035,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Compliance Monitoring Suite',
       descriptio,
   n: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -7197,15 +7060,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Real Estate & Property
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Real Estate Analyzer Pro',
       descriptio,
   n: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -7222,15 +7084,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Property Management System',
       descriptio,
   n: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -7248,15 +7109,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI HR & Recruitment
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI HR Recruitment Suite',
       descriptio,
   n: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -7273,15 +7133,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
   n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -7299,15 +7158,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Project Management
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Project Manager Pro',
       descriptio,
   n: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -7324,15 +7182,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Task Automation Suite',
       descriptio,
   n: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -7350,15 +7207,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Supply Chain & Logistics
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Supply Chain Optimizer',
       descriptio,
   n: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -7375,15 +7231,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Warehouse Management System',
       descriptio,
   n: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -7401,15 +7256,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Agriculture & Food Tech
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Precision Agriculture Platform',
       descriptio,
   n: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -7426,15 +7280,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Food Safety Monitor',
       descriptio,
   n: 'Automated food safety inspection with contamination detection and quality control.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -7452,15 +7305,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Energy & Sustainability
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Energy Management System',
       descriptio,
   n: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -7477,15 +7329,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Carbon Footprint Tracker',
       descriptio,
   n: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -7503,15 +7354,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Gaming & Entertainment
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Game Development Suite',
       descriptio,
   n: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -7528,15 +7378,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Content Moderation Platform',
       descriptio,
   n: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -7554,15 +7403,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Transportation & Mobility
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Fleet Management System',
       descriptio,
   n: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$349/month',
       feature,
@@ -7579,15 +7427,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Traffic Management Platform',
       descriptio,
   n: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$499/month',
       feature,
@@ -7605,15 +7452,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Research & Development
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
   n: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -7630,15 +7476,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Patent Analysis Tool',
       descriptio,
   n: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -7656,15 +7501,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Personal Productivity
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Personal Assistant Pro',
       descriptio,
   n: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$49/month',
       feature,
@@ -7681,15 +7525,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Meeting Assistant',
       descriptio,
   n: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -7706,15 +7549,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Insurance Underwriting Assistant',
       descriptio,
   n: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -7726,17 +7568,16 @@ const realEstateSaaS = [
       categor,
   y: 'Insurance Underwriting',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Onboarding Platform',
       descriptio,
   n: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -7748,17 +7589,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Onboarding',
       technologie,
-  s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Retention Manager',
       descriptio,
   n: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -7770,17 +7610,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Retention',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Support Optimizer',
       descriptio,
   n: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$119/month',
       feature,
@@ -7792,17 +7631,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Support',
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Feedback Analyzer',
       descriptio,
   n: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -7814,17 +7652,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Feedback',
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Journey Mapper',
       descriptio,
   n: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -7836,17 +7673,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Journey',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Lifetime Value Predictor',
       descriptio,
   n: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$139/month',
       feature,
@@ -7858,17 +7694,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Analytics',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Segmentation Engine',
       descriptio,
   n: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$119/month',
       feature,
@@ -7880,17 +7715,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Segmentation',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Personalization Engine',
       descriptio,
   n: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$159/month',
       feature,
@@ -7902,17 +7736,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Personalization',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Data Platform',
       descriptio,
   n: 'Unified customer data management with integration, cleansing, and analytics capabilities.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -7924,17 +7757,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Data',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Privacy Manager',
       descriptio,
   n: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -7946,17 +7778,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Privacy',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Communication Manager',
       descriptio,
   n: 'Smart communication management with channel optimization, message personalization, and engagement tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -7968,17 +7799,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Communication',
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Experience Optimizer',
       descriptio,
   n: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$159/month',
       feature,
@@ -7990,17 +7820,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Experience',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Success Manager',
       descriptio,
   n: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -8012,17 +7841,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Success',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Advocacy Platform',
       descriptio,
   n: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$139/month',
       feature,
@@ -8034,17 +7862,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Advocacy',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Insights Platform',
       descriptio,
   n: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -8056,17 +7883,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Insights',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Intelligence Suite',
       descriptio,
   n: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -8078,18 +7904,17 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Intelligence',
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models'];
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Meeting Transcriber',
       descriptio,
   n: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -8101,17 +7926,16 @@ const realEstateSaaS = [
       categor,
   y: 'Productivity',
       technologie,
-  s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
+  s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Expense Tracker AI',
       descriptio,
   n: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -8123,17 +7947,16 @@ const realEstateSaaS = [
       categor,
   y: 'Finance',
       technologie,
-  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
+  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Password Manager',
       descriptio,
   n: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$49/month',
       feature,
@@ -8145,17 +7968,16 @@ const realEstateSaaS = [
       categor,
   y: 'Security',
       technologie,
-  s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+  s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Time Tracking Assistant',
       descriptio,
   n: 'AI-powered time tracking with automatic project detection and productivity insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$69/month',
       feature,
@@ -8167,17 +7989,16 @@ const realEstateSaaS = [
       categor,
   y: 'Productivity',
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Logo Generator',
       descriptio,
   n: 'Professional logo creation with brand analysis and unlimited variations using AI.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -8189,17 +8010,16 @@ const realEstateSaaS = [
       categor,
   y: 'Design',
       technologie,
-  s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
+  s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Invoice Generator',
       descriptio,
   n: 'Automated invoice creation with payment tracking, reminders, and financial analytics.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$59/month',
       feature,
@@ -8211,17 +8031,16 @@ const realEstateSaaS = [
       categor,
   y: 'Finance',
       technologie,
-  s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
+  s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Website Builder',
       descriptio,
   n: 'Intelligent website creation with content generation, SEO optimization, and responsive design.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -8233,17 +8052,16 @@ const realEstateSaaS = [
       categor,
   y: 'Web Development',
       technologie,
-  s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
+  s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Contract Generator',
       descriptio,
   n: 'AI-powered legal document creation with template customization and compliance checking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -8255,17 +8073,16 @@ const realEstateSaaS = [
       categor,
   y: 'Legal',
       technologie,
-  s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
+  s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Email Signature Generator',
       descriptio,
   n: 'Professional email signature creation with brand consistency and contact management.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$39/month',
       feature,
@@ -8277,17 +8094,16 @@ const realEstateSaaS = [
       categor,
   y: 'Marketing',
       technologie,
-  s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
+  s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart QR Code Generator',
       descriptio,
   n: 'Advanced QR code creation with analytics, customization, and dynamic content management.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$49/month',
       feature,
@@ -8299,17 +8115,16 @@ const realEstateSaaS = [
       categor,
   y: 'Marketing',
       technologie,
-  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Color Palette Generator',
       descriptio,
   n: 'Intelligent color scheme creation with accessibility checking and brand analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$59/month',
       feature,
@@ -8321,17 +8136,16 @@ const realEstateSaaS = [
       categor,
   y: 'Design',
       technologie,
-  s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+  s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Business Card Designer',
       descriptio,
   n: 'AI-powered business card creation with professional templates and contact management.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -8343,17 +8157,16 @@ const realEstateSaaS = [
       categor,
   y: 'Design',
       technologie,
-  s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
+  s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Newsletter Generator',
       descriptio,
   n: 'Automated newsletter creation with content curation and subscriber analytics.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -8365,17 +8178,16 @@ const realEstateSaaS = [
       categor,
   y: 'Marketing',
       technologie,
-  s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
+  s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart PDF Converter Pro',
       descriptio,
   n: 'Advanced PDF conversion with OCR, form filling, and document optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -8387,17 +8199,16 @@ const realEstateSaaS = [
       categor,
   y: 'Productivity',
       technologie,
-  s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
+  s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Video Thumbnail Generator',
       descriptio,
   n: 'Intelligent thumbnail creation with A/B testing and performance optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -8409,17 +8220,16 @@ const realEstateSaaS = [
       categor,
   y: 'Video Marketing',
       technologie,
-  s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
+  s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Social Media Scheduler',
       descriptio,
   n: 'AI-powered social media scheduling with optimal timing and content optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$119/month',
       feature,
@@ -8431,17 +8241,16 @@ const realEstateSaaS = [
       categor,
   y: 'Social Media',
       technologie,
-  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Hashtag Generator',
       descriptio,
   n: 'Intelligent hashtag research and generation for maximum social media reach.',
-      ico,
-  n: '#',
+      icon: '#',
       pric,
   e: '$49/month',
       feature,
@@ -8453,17 +8262,16 @@ const realEstateSaaS = [
       categor,
   y: 'Social Media',
       technologie,
-  s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Email Template Builder',
       descriptio,
   n: 'AI-powered email template creation with responsive design and A/B testing.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -8475,17 +8283,16 @@ const realEstateSaaS = [
       categor,
   y: 'Email Marketing',
       technologie,
-  s: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
+  s: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Competitor Analysis Tool',
       descriptio,
   n: 'Comprehensive competitor research with pricing analysis and market insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -8497,17 +8304,16 @@ const realEstateSaaS = [
       categor,
   y: 'Market Research',
       technologie,
-  s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+  s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Customer Feedback Analyzer',
       descriptio,
   n: 'AI-powered sentiment analysis and feedback categorization for customer insights.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -8519,17 +8325,16 @@ const realEstateSaaS = [
       categor,
   y: 'Customer Analytics',
       technologie,
-  s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
+  s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Landing Page Optimizer',
       descriptio,
   n: 'Intelligent landing page testing and optimization for maximum conversion rates.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -8541,17 +8346,16 @@ const realEstateSaaS = [
       categor,
   y: 'Conversion Optimization',
       technologie,
-  s: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Inventory Photo Manager',
       descriptio,
   n: 'AI-powered product photo organization, editing, and optimization for e-commerce.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -8563,17 +8367,16 @@ const realEstateSaaS = [
       categor,
   y: 'E-commerce',
       technologie,
-  s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Price Monitoring Tool',
       descriptio,
   n: 'Automated price tracking and alerts for competitive pricing strategies.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -8585,17 +8388,16 @@ const realEstateSaaS = [
       categor,
   y: 'E-commerce',
       technologie,
-  s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
+  s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Appointment Scheduler',
       descriptio,
   n: 'AI-powered scheduling with time zone handling and automated reminders.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$69/month',
       feature,
@@ -8607,17 +8409,16 @@ const realEstateSaaS = [
       categor,
   y: 'Scheduling',
       technologie,
-  s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
+  s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Resume Builder',
       descriptio,
   n: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$59/month',
       feature,
@@ -8629,17 +8430,16 @@ const realEstateSaaS = [
       categor,
   y: 'Career Tools',
       technologie,
-  s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
+  s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Weather API Service',
       descriptio,
   n: 'Advanced weather data with AI-powered forecasts and business impact analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -8651,17 +8451,16 @@ const realEstateSaaS = [
       categor,
   y: 'Weather Services',
       technologie,
-  s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Translation Service',
       descriptio,
   n: 'Real-time translation with context awareness and industry-specific terminology.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -8673,17 +8472,16 @@ const realEstateSaaS = [
       categor,
   y: 'Translation',
       technologie,
-  s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Data Backup Service',
       descriptio,
   n: 'Automated data backup with AI-powered deduplication and recovery optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -8695,17 +8493,16 @@ const realEstateSaaS = [
       categor,
   y: 'Data Management',
       technologie,
-  s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+  s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Form Builder',
       descriptio,
   n: 'Intelligent form creation with conditional logic and response analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -8717,17 +8514,16 @@ const realEstateSaaS = [
       categor,
   y: 'Form Management',
       technologie,
-  s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Uptime Monitor',
       descriptio,
   n: 'AI-powered website monitoring with predictive alerts and performance optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$69/month',
       feature,
@@ -8739,17 +8535,16 @@ const realEstateSaaS = [
       categor,
   y: 'Monitoring',
       technologie,
-  s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+  s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Survey Creator',
       descriptio,
   n: 'Intelligent survey design with question optimization and response analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -8761,17 +8556,16 @@ const realEstateSaaS = [
       categor,
   y: 'Survey Tools',
       technologie,
-  s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart File Converter',
       descriptio,
   n: 'AI-powered file conversion with format optimization and quality enhancement.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$59/month',
       feature,
@@ -8783,17 +8577,16 @@ const realEstateSaaS = [
       categor,
   y: 'File Management',
       technologie,
-  s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+  s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered QR Code Scanner',
       descriptio,
   n: 'Advanced QR code scanning with analytics, customization, and business intelligence.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$49/month',
       feature,
@@ -8805,17 +8598,16 @@ const realEstateSaaS = [
       categor,
   y: 'QR Code Tools',
       technologie,
-  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Password Generator',
       descriptio,
   n: 'AI-powered password creation with security analysis and breach monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$39/month',
       feature,
@@ -8827,17 +8619,16 @@ const realEstateSaaS = [
       categor,
   y: 'Security',
       technologie,
-  s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+  s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Color Picker',
       descriptio,
   n: 'Intelligent color selection with accessibility checking and brand analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$49/month',
       feature,
@@ -8849,17 +8640,16 @@ const realEstateSaaS = [
       categor,
   y: 'Design Tools',
       technologie,
-  s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
+  s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Text Summarizer',
       descriptio,
   n: 'AI-powered text summarization with key point extraction and multi-language support.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$69/month',
       feature,
@@ -8871,17 +8661,16 @@ const realEstateSaaS = [
       categor,
   y: 'Text Processing',
       technologie,
-  s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+  s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Image Resizer',
       descriptio,
   n: 'Intelligent image resizing with quality optimization and batch processing.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$59/month',
       feature,
@@ -8893,17 +8682,16 @@ const realEstateSaaS = [
       categor,
   y: 'Image Processing',
       technologie,
-  s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+  s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart URL Shortener',
       descriptio,
   n: 'AI-powered URL shortening with analytics, customization, and link management.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$39/month',
       feature,
@@ -8915,17 +8703,16 @@ const realEstateSaaS = [
       categor,
   y: 'URL Management',
       technologie,
-  s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
+  s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Favicon Generator',
       descriptio,
   n: 'Intelligent favicon creation with brand analysis and multiple format generation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$49/month',
       feature,
@@ -8937,17 +8724,16 @@ const realEstateSaaS = [
       categor,
   y: 'Web Development',
       technologie,
-  s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
+  s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Meta Tag Generator',
       descriptio,
   n: 'AI-powered SEO meta tag creation with optimization and performance tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$59/month',
       feature,
@@ -8959,17 +8745,16 @@ const realEstateSaaS = [
       categor,
   y: 'SEO Tools',
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Sitemap Generator',
       descriptio,
   n: 'Intelligent sitemap creation with SEO optimization and search engine submission.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$69/month',
       feature,
@@ -8981,17 +8766,16 @@ const realEstateSaaS = [
       categor,
   y: 'SEO Tools',
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Robots.txt Generator',
       descriptio,
   n: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$39/month',
       feature,
@@ -9003,17 +8787,16 @@ const realEstateSaaS = [
       categor,
   y: 'SEO Tools',
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Schema Markup Generator',
       descriptio,
   n: 'Intelligent schema markup creation for enhanced search engine visibility.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -9025,17 +8808,16 @@ const realEstateSaaS = [
       categor,
   y: 'SEO Tools',
       technologie,
-  s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+  s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Alt Text Generator',
       descriptio,
   n: 'AI-powered alt text creation for images with SEO optimization and accessibility.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$49/month',
       feature,
@@ -9047,17 +8829,16 @@ const realEstateSaaS = [
       categor,
   y: 'SEO Tools',
       technologie,
-  s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+  s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Internal Link Optimizer',
       descriptio,
   n: 'Intelligent internal linking strategy with SEO optimization and performance tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -9069,17 +8850,16 @@ const realEstateSaaS = [
       categor,
   y: 'SEO Tools',
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Keyword Density Analyzer',
       descriptio,
   n: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -9091,17 +8871,16 @@ const realEstateSaaS = [
       categor,
   y: 'SEO Tools',
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Page Speed Optimizer',
       descriptio,
   n: 'Intelligent page speed optimization with performance monitoring and recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -9113,17 +8892,16 @@ const realEstateSaaS = [
       categor,
   y: 'Performance Optimization',
       technologie,
-  s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Core Web Vitals Monitor',
       descriptio,
   n: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -9135,17 +8913,16 @@ const realEstateSaaS = [
       categor,
   y: 'Performance Monitoring',
       technologie,
-  s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+  s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Mobile Optimization Tool',
       descriptio,
   n: 'Intelligent mobile optimization with responsive design analysis and performance improvements.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$119/month',
       feature,
@@ -9157,17 +8934,16 @@ const realEstateSaaS = [
       categor,
   y: 'Mobile Optimization',
       technologie,
-  s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
+  s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Local SEO Optimizer',
       descriptio,
   n: 'AI-powered local SEO optimization with Google My Business management and review monitoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -9179,17 +8955,16 @@ const realEstateSaaS = [
       categor,
   y: 'Local SEO',
       technologie,
-  s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
+  s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Competitor SEO Analyzer',
       descriptio,
   n: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -9201,17 +8976,16 @@ const realEstateSaaS = [
       categor,
   y: 'Competitive Analysis',
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Backlink Analyzer',
       descriptio,
   n: 'AI-powered backlink analysis with quality assessment and link building recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -9223,17 +8997,16 @@ const realEstateSaaS = [
       categor,
   y: 'Link Building',
       technologie,
-  s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Content Gap Analyzer',
       descriptio,
   n: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -9245,17 +9018,16 @@ const realEstateSaaS = [
       categor,
   y: 'Content Strategy',
       technologie,
-  s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Technical SEO Auditor',
       descriptio,
   n: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -9267,17 +9039,16 @@ const realEstateSaaS = [
       categor,
   y: 'Technical SEO',
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered E-commerce SEO Optimizer',
       descriptio,
   n: 'Intelligent e-commerce SEO optimization with product page optimization and category management.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -9289,17 +9060,16 @@ const realEstateSaaS = [
       categor,
   y: 'E-commerce SEO',
       technologie,
-  s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
+  s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Voice Search Optimizer',
       descriptio,
   n: 'AI-powered voice search optimization with conversational content and featured snippet optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -9311,17 +9081,16 @@ const realEstateSaaS = [
       categor,
   y: 'Voice Search SEO',
       technologie,
-  s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
+  s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Video SEO Optimizer',
       descriptio,
   n: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -9333,17 +9102,16 @@ const realEstateSaaS = [
       categor,
   y: 'Video SEO',
       technologie,
-  s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
+  s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart Featured Snippet Optimizer',
       descriptio,
   n: 'AI-powered featured snippet optimization with content analysis and ranking improvements.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -9355,17 +9123,16 @@ const realEstateSaaS = [
       categor,
   y: 'Featured Snippets',
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered Image SEO Optimizer',
       descriptio,
   n: 'Intelligent image SEO optimization with alt text generation and image performance analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -9377,17 +9144,16 @@ const realEstateSaaS = [
       categor,
   y: 'Image SEO',
       technologie,
-  s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
+  s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Smart International SEO Manager',
       descriptio,
   n: 'AI-powered international SEO management with hreflang optimization and multi-language content.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -9399,17 +9165,16 @@ const realEstateSaaS = [
       categor,
   y: 'International SEO',
       technologie,
-  s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
+  s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models'];
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI-Powered SEO Reporting Dashboard',
       descriptio,
   n: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -9421,19 +9186,18 @@ const realEstateSaaS = [
       categor,
   y: 'SEO Reporting',
       technologie,
-  s: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+  s: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models'];
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
     // AI Productivity & Time Management
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Time Tracking & Productivity Analyzer',
       descriptio,
   n: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -9450,15 +9214,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Task Management & Prioritization',
       descriptio,
   n: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -9475,15 +9238,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Email Management & Prioritization',
       descriptio,
   n: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$69/month',
       feature,
@@ -9501,15 +9263,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI HR & Recruitment
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Resume Parser & Candidate Matcher',
       descriptio,
   n: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -9526,15 +9287,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Employee Performance Tracker',
       descriptio,
   n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -9551,15 +9311,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Workplace Safety Monitor',
       descriptio,
   n: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -9577,15 +9336,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Customer Service & Support
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Support Ticket Router',
       descriptio,
   n: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$129/month',
       feature,
@@ -9602,15 +9360,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Customer Feedback Analyzer',
       descriptio,
   n: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -9627,15 +9384,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Live Chat Assistant',
       descriptio,
   n: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -9653,15 +9409,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Sales & CRM
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Sales Pipeline Optimizer',
       descriptio,
   n: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -9678,15 +9433,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Sales Call Analyzer',
       descriptio,
   n: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -9703,15 +9457,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Proposal Generator Pro',
       descriptio,
   n: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$119/month',
       feature,
@@ -9729,15 +9482,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Project Management
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Project Risk Predictor',
       descriptio,
   n: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -9754,15 +9506,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Resource Allocation Optimizer',
       descriptio,
   n: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -9779,15 +9530,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Project Timeline Predictor',
       descriptio,
   n: 'Accurate project timeline prediction with milestone tracking and delay prevention.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -9805,15 +9555,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Security & Compliance
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Security Threat Detector',
       descriptio,
   n: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -9830,15 +9579,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Compliance Monitor',
       descriptio,
   n: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -9855,15 +9603,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Data Privacy Manager',
       descriptio,
   n: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -9881,15 +9628,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Quality Assurance & Testing
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Automated Testing Suite',
       descriptio,
   n: 'Comprehensive automated testing with test generation, execution, and maintenance.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$179/month',
       feature,
@@ -9906,15 +9652,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Bug Prediction & Prevention',
       descriptio,
   n: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -9931,15 +9676,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Performance Monitoring Pro',
       descriptio,
   n: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -9957,15 +9701,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Content & Media
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Video Content Generator',
       descriptio,
   n: 'Intelligent video creation with script generation, editing, and optimization for social media.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -9982,15 +9725,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Podcast Production Suite',
       descriptio,
   n: 'Complete podcast production with audio editing, transcription, and show notes generation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -10007,15 +9749,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Image & Design Generator',
       descriptio,
   n: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -10033,15 +9774,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Research & Development
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Research Assistant Pro',
       descriptio,
   n: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -10058,15 +9798,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Patent Analyzer & Generator',
       descriptio,
   n: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$399/month',
       feature,
@@ -10083,15 +9822,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Innovation Tracker',
       descriptio,
   n: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$149/month',
       feature,
@@ -10109,15 +9847,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Personal & Lifestyle
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Personal Finance Manager',
       descriptio,
   n: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$79/month',
       feature,
@@ -10134,15 +9871,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Personal Assistant Pro',
       descriptio,
   n: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$99/month',
       feature,
@@ -10159,15 +9895,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Home Energy Optimizer',
       descriptio,
   n: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$89/month',
       feature,
@@ -10185,15 +9920,14 @@ const realEstateSaaS = [
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // AI Gaming & Entertainment
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Game Development Assistant',
       descriptio,
   n: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$299/month',
       feature,
@@ -10210,15 +9944,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Music Composition Studio',
       descriptio,
   n: 'Intelligent music creation with composition assistance, style transfer, and production tools.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$199/month',
       feature,
@@ -10235,15 +9968,14 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Streaming Content Optimizer',
       descriptio,
   n: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
-      ico,
-  n: '',
+      icon: '',
       pric,
   e: '$249/month',
       feature,
@@ -10259,54 +9991,59 @@ const realEstateSaaS = [
       contactInf,
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+    };
   ]
-const categories = [
-    {/* TODO: Fix JSX expression */}
+
+  ;
+  ;
+  const categories = [
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Marketing').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Analytics').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Finance').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Education').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Legal').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Project Management').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Productivity').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Communication').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Research').length },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
   t: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Game Development').length }
+    {/* TODO: Fix JSX expression */};
+  t: microSAASServices.filter(s => s.category === 'Game Development').length };
   ]
+  ;
+  ;
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -10325,8 +10062,9 @@ const categories = [
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
   
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          {/* Stats */};
+          ;
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+
               <div className="text-gray-300">Applications
@@ -10339,8 +10077,9 @@ const categories = [
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-orange-400 mb-2">99.9%
               <div className="text-gray-300">Uptime
-          {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+          {/* Contact Info */};
+          ;
+  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
@@ -10379,35 +10118,43 @@ const categories = [
               <div className="flex items-center space-x-2"></div>"
                 <MapPin className="w-5 h-5" /></MapPin>"
                 <span className="text-white font-medium">Middletown, DE
-      {/* Services Grid */}
-      <section className="py-16 px-4">
+      {/* Services Grid */};
+      ;
+  <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Choose Your Perfect AI Tools
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}
-                  <p className="text-gray-600 text-sm">{service.description}
-                <div className="mb-6">
+                  <div className="text-5xl mb-4">{service.icon};
+                  ;
+  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title};
+                  ;
+  <p className="text-gray-600 text-sm">{service.description};
+                ;
+  <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}
-                    <span className="text-sm text-gray-500">Market: {service.marketPrice}
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category}
-                <div className="mb-6">
+                    <span className="text-2xl font-bold text-green-600">{service.price};
+                    ;
+  <span className="text-sm text-gray-500">Market: {service.marketPrice};
+                  ;
+  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
+                    {service.category};
+                ;
+  <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                    ))}
+                        {feature};
+                    ))};
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">+{service.features.length - 4} more features
-                    )}
-                <div className="mb-6">
+                    )};
+                ;
+  <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
@@ -10426,19 +10173,25 @@ const categories = [
   hover:shadow-2xl transition-all duration-300,"
   hover:scale-105"></div>"
                 <div className="text-center mb-6"></div>"
-                  <div className="text-5xl mb-4">{service.icon}</div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
-                  <p className="text-gray-600 text-sm">{service.description}
-                </div>"
+                  <div className="text-5xl mb-4">{service.icon};
+  </div>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title};
+  </h3>"
+                  <p className="text-gray-600 text-sm">{service.description};
+                ;
+  </div>"
                 <div className="mb-6"></div>"
                   <div className="flex items-center justify-between mb-4"></div>"
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>"
+                    <span className="text-2xl font-bold text-green-600">{service.price};
+  </span>"
                     <span className="text-sm text-gray-500">Marke,
-  t: {service.marketPrice}
-                  </div>"
+  t: {service.marketPrice};
+                  ;
+  </div>"
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category}
-                </div>"
+                    {service.category};
+                ;
+  </div>"
                 <div className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Key,
   Features:</h4>"
@@ -10446,13 +10199,14 @@ const categories = [
                     {service.features.slice(0, 4).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                    ))}
+                        {feature};
+                    ))};
                     {service.features.length > 4 && ()}"
           <li className="text-sm text-gray-500">
                         +{service.features.length - 4} more features
-                    )}
-                </div>"
+                    )};
+                ;
+  </div>"
                 <div className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Benefit,
   s:</h4>"
@@ -10460,9 +10214,10 @@ const categories = [
                     {service.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>"
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-                        {benefit}
-                    ))}
-                <div className="mb-6">
+                        {benefit};
+                    ))};
+                ;
+  <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Technologies:
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
@@ -10474,11 +10229,12 @@ const categories = [
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {tech}
-                    ))}
-                <div className="text-center">
+                        {tech};
+                    ))};
+                ;
+  <div className="text-center">
                   <$2 />
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`};
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
                     Get Started Now,
   
@@ -10486,7 +10242,7 @@ const categories = [
                 </div>"
                 <div className="text-center">
                   <a>
-                    href={/* TODO: Fix JSX expression */}
+                    href={/* TODO: Fix JSX expression */};
   o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-purple-700,"
@@ -10495,10 +10251,11 @@ const categories = [
 //                     Get Started Now,
           </a>"
                   <p className="text-xs text-gray-500 mt-2"></p>
-                    {service.contactInfo}
-            ))}
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+                    {service.contactInfo};
+            ))};
+      {/* CTA Section */};
+      ;
+  <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -10541,7 +10298,7 @@ const categories = [
       </section>
     </div>
   ),
-}
+};
 export default MicroSAASPage;"`
   </a>
   </a>

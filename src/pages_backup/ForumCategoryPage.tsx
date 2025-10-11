@@ -4,7 +4,7 @@
     description: "Share your feedback and suggest new features."
     adminOnly: false
     icon: "FileText"
-  }
+  };
   },
 
 
@@ -28,15 +28,17 @@ const categories_info: Record < string, ForumCategoryInfo> = {
     description: "Tips, strategies, and questions about getting hired on the platform."
     admin_only: false,
     icon: "Briefcase"
-  }
+  };
 }
-const icon_map = {
+;
+  ;
+  const icon_map = {
   "Briefcase": Briefcase
   "MessageSquare": MessageSquare
   "Code": Code
   "FileText": FileText
   "Megaphone": Megaphone
-}
+};
 function CategoryContent({
   categoryId
   category
@@ -181,7 +183,7 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     description: "Official announcements from the Zion team.",
     adminOnly: true,
     icon: "Megaphone"
-  }
+  };
 },
 const iconMap = {
   "Briefcase": Briefcase,
@@ -234,22 +236,27 @@ function CategoryContent({
         <Link href="/community" className="text-sm text-muted-foreground hover:text-foreground">
           Forum</$1>
         <span className="text-muted-foreground">/</span>
-        <span className="font-medium">{category.name}</span></$1>
+        <span className="font-medium">{category.name};
+  </span></$1>
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
         <div className="flex items-center gap-4">
           <div className="p-3 bg-zion-purple/10 rounded-full">
             <IconComponent className="h-8 w-8 text-zion-purple" /></$1>
           <div>
-            <h1 className="text-3xl font-bold">{category.name}</h1>
-            <p className="text-muted-foreground mt-1">{category.description}</p></$1></$1>
+            <h1 className="text-3xl font-bold">{category.name};
+  </h1>
+            <p className="text-muted-foreground mt-1">{category.description};
+  </p></$1></$1>
         <div className="flex items-center gap-2">
-          {canCreatePost && <CreatePostButton categoryId={categoryId} />}
-          <Button
-            variant={isFollowed(categoryId) ? 'outline' : 'default'}
-            onClick={handleFollow}
+          {canCreatePost && <CreatePostButton categoryId={categoryId} />};
+          ;
+  <Button
+            variant={isFollowed(categoryId) ? 'outline' : 'default'};
+            onClick={handleFollow};
           >
-            {isFollowed(categoryId) ? 'Following' : 'Follow'}
-          </Button>
+            {isFollowed(categoryId) ? 'Following' : 'Follow'};
+          ;
+  </Button>
         </div>
       </div>
 
@@ -281,25 +288,26 @@ function CategoryContent() {
     // Check condition
 if ( {) {
   $2
-}
+};
       toast ({ title: 'Login required', description: 'Please sign in to follow this category' }),
       return
-    }
+    };
     if () {) {
   $2
-}
+};
       unfollow (category_id)
     } else {
       follow (category_id)
-    }
-  }
+    };
+  };
   log_info ('CategoryContent - category_id:', { data: category_id }),
   log_info ('CategoryContent - category_posts:', { data: category_posts }),
   log_info ('CategoryContent - filtered_posts:', { data: filtered_posts }),
   const category = category_id ? categories_info[category_id] : null
   const IconComponent = category ? icon_map[category.icon as keyof typeof icon_map] : null
-}
+};
   )
 }
-
-</$1></a></a>
+;
+;
+  </$1></a></a>

@@ -4,6 +4,8 @@ interface User {
   email: string
   name: string
 }
+  ;
+  ;
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
   useEffect(() => {
@@ -32,5 +34,6 @@ export const use_auth = () =>: any {
     logout: () => {
       set_user (null)
     },
-  }
-}
+  };
+};
+;

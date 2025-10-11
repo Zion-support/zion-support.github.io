@@ -8,8 +8,8 @@ export type SitemapItem = {
   lastmod?: string
   requiredAuth?: boolean
   requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>
-  children?: SitemapItem[]
-}
+  children?: SitemapItem[];
+};
 // Current date for lastmod
 const currentDate = '2025-05-15'
 // Public Pages - Accessible to all users
@@ -119,10 +119,10 @@ export const publicPages: SitemapItem[] = [
     description: 'How we handle your data',
     priority: 0.5,
     changeFreq: 'monthly',
-    lastmod: currentDate}]
+    lastmod: currentDate}];
     lastmod: currentDate,
   },
-]
+];
 // Authentication Pages
 export const authPages: SitemapItem[] = [
   {
@@ -157,10 +157,10 @@ export const authPages: SitemapItem[] = [
         description: 'Sign up as an employer or buyer',
         priority: 0.6,
         changeFreq: 'monthly',
-        lastmod: currentDate}
+        lastmod: currentDate};
         lastmod: currentDate,
-      }
-    ]
+      };
+    ];
   },
   {
     path: '/forgot-password',
@@ -168,10 +168,10 @@ export const authPages: SitemapItem[] = [
     description: 'Reset your password',
     priority: 0.5,
     changeFreq: 'monthly',
-    lastmod: currentDate}]
+    lastmod: currentDate}];
     lastmod: currentDate,
   },
-]
+];
 // Talent/Creator Routes - Requires authentication and appropriate role
 export const talentRoutes: SitemapItem[] = [
   {
@@ -215,10 +215,10 @@ export const talentRoutes: SitemapItem[] = [
     requiredRoles: ['jobSeeker', 'creator'],
     priority: 0.7,
     changeFreq: 'monthly',
-    lastmod: currentDate}]
+    lastmod: currentDate}];
     lastmod: currentDate,
   },
-]
+];
 // Client/Employer Routes - Requires authentication and appropriate role
 export const clientRoutes: SitemapItem[] = [
   {
@@ -251,10 +251,10 @@ export const clientRoutes: SitemapItem[] = [
     requiredRoles: ['employer', 'buyer'],
     priority: 0.7,
     changeFreq: 'daily',
-    lastmod: currentDate}]
+    lastmod: currentDate}];
     lastmod: currentDate,
   },
-]
+];
 // Shared Routes - Authenticated Users
 export const sharedRoutes: SitemapItem[] = [
   {
@@ -294,10 +294,10 @@ export const sharedRoutes: SitemapItem[] = [
     requiredAuth: true,
     priority: 0.7,
     changeFreq: 'daily',
-    lastmod: currentDate}]
+    lastmod: currentDate}];
     lastmod: currentDate,
   },
-]
+];
 // Admin Routes
 export const adminRoutes: SitemapItem[] = [
   {
@@ -330,10 +330,10 @@ export const adminRoutes: SitemapItem[] = [
     requiredRoles: ['admin'],
     priority: 0.8,
     changeFreq: 'daily',
-    lastmod: currentDate}]
+    lastmod: currentDate}];
     lastmod: currentDate,
   },
-]
+];
 // Dynamic Path Patterns
 export const dynamicPaths = {
   talentProfile: '/talent/:id',
@@ -342,9 +342,9 @@ export const dynamicPaths = {
   projectRoom: '/project/:projectId/room',
   jobDetails: '/job/:id',
   categoryDetails: '/categories/:slug',
-  disputeDetails: '/dashboard/disputes/:disputeId'}
+  disputeDetails: '/dashboard/disputes/:disputeId'};
   disputeDetails: '/dashboard/disputes/:disputeId',
-}
+};
 // The complete sitemap
 export const completeSitemap: SitemapItem[] = [
   ...publicPages,
@@ -352,29 +352,30 @@ export const completeSitemap: SitemapItem[] = [
   ...talentRoutes,
   ...clientRoutes,
   ...sharedRoutes,
-  ...adminRoutes]
+  ...adminRoutes];
   ...adminRoutes,
-]
+];
 // Helper function to get appropriate routes based on user role
 export const getAccessibleRoutes = (
   isAuthenticated: boolean, 
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
 ) => {
   // Public routes accessible to everyone
-  let accessibleRoutes = [...publicPages, ...authPages]
+  let accessibleRoutes = [...publicPages, ...authPages];
   // Add authenticated-only routes
   if (isAuthenticated) {
-    accessibleRoutes = [...accessibleRoutes, ...sharedRoutes]
+    accessibleRoutes = [...accessibleRoutes, ...sharedRoutes];
     // Add role-specific routes
     if (userType === 'creator' || userType === 'jobSeeker') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
-    }
+      accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
+    };
     if (userType === 'employer' || userType === 'buyer') {
-      accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
-    }
+      accessibleRoutes = [...accessibleRoutes, ...clientRoutes];
+    };
     if (userType === 'admin') {
-      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
-    }
-  }
+      accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes];
+    };
+  };
+  ;
   return accessibleRoutes
-}
+};

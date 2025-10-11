@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react'
-export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+  ;
   return (<div>Coming Soon</div>)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -19,8 +20,9 @@ import React from 'react',
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      {/* Header */};
+      ;
+  <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -158,7 +160,7 @@ Advanced machine learning algorithms that identify and target your ideal custome
                 Market,
   Price: $1,000-3,000/month | Our,
   Price: $600/month,
-      {/* Pricing Section */}
+      {/* Pricing Section */};
 Transparent Pricing
               Choose the plan that fits your advertising needs;"
           < className="grid grid-cols-1,"$2 />
@@ -205,8 +207,9 @@ Transparent Pricing
                   <span>Custom integrations
                   <span>White-label options
                 Contact Sales
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      {/* CTA Section */};
+      ;
+  <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
 Ready to Transform Your Advertising?
@@ -216,7 +219,7 @@ Ready to Transform Your Advertising?
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               View Success Stories
   ),
-}
+};
 export default ServicesAdvertisingPage</p>
   </h2>
   </div>

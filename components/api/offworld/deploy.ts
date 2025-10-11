@@ -8,7 +8,9 @@ import type { NextApiRequest, NextApiResponse  } from 'next'
       try {
         execSync('next build && next export', { stdio: 'inherit' })
     }
-    const { cid, provider } = await addDirectory(outDir)
+    ;
+  ;
+  const { cid, provider } = await addDirectory(outDir)
 import {  execSync   } from 'child_process'
 import path from 'path'
 import fs from 'fs'
@@ -24,30 +26,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // attempt minimal static export
       try {
         execSync('next build && next export', { stdio: 'inherit' })
-      } catch (e2) {}
-    }
+      } catch (e2) {};
+    };
     if (!fs.existsSync(outDir)) {
       return res.status(500).json({ error: 'Export failed, no out/ directory found' })
     }
-    const { cid, provider } = await addDirectory(outDir)
+    ;
+  ;
+  const { cid, provider } = await addDirectory(outDir)
     if (!cid) return res.status(500).json({ error: 'IPFS upload failed' })
     return res.status(200).json({ cid, provider })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
     return res.status(500).json({ error: error?.message || 'Unknown error' })
-  }    return res.status(200).json({ cid, provider })
+  }    ;
+  return res.status(200).json({ cid, provider })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
-}
-}
-    return res && res.status(200).json({ cid, provider })
+};
+};
+    ;
+  return res && res.status(200).json({ cid, provider })
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
-  }    return res && res.status(200).json({ cid, provider })
+  }    ;
+  return res && res.status(200).json({ cid, provider })
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
-  }
-}
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
-  }
-}
+  };
+};
+    ;
+  return res.status(500).json({ error: error?.message || 'Unknown error' })
+  };
+};
+;

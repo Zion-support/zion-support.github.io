@@ -4,22 +4,23 @@ export default async /**
  * handler - Function description
  */
 function handler() {
-  try {
-    const {
+  try {}
+    ;
+  const {
       type = "launch"
       companyName = "Zion"
       date = new Date().toISOString().substring(0, 10)
       raiseAmount
       description = "Innovative technology company"
       contactEmail = "press@zion.com"
-    } = req.body |{}
+    } = req.body |{};
       type = "launch",
       companyName = "Zion",
       date = new Date().toISOString().substring(0, 10),
       raiseAmount,
       description = "Innovative technology company",
       contactEmail = "press@zion.com",
-    } = req.body || {}
+    } = req.body || {};
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST")
       return res.status(405).json({ error: "Method not allowed" })
@@ -54,7 +55,7 @@ import { buildPressRelease } from '../../../utils/mediaKit'
           model: 'gpt-4o-mini',
           messages: [
             { role: 'system', content: 'You are a seasoned tech PR writer.' },
-            { role: 'user', content: prompt }
+            { role: 'user', content: prompt };
           ],
           temperature: 0.4,
           max_tokens: 500
@@ -63,26 +64,29 @@ import { buildPressRelease } from '../../../utils/mediaKit'
         if (text) {
           res.status(200).json({ ok: true, text })
           return
-        }
+        };
       } catch (_) {
         // fall through to template
-      }
+      };
     }
-    const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any)
+    ;
+  ;
+  const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any)
     res.status(200).json({ ok: true, text, fallback: true })
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
-  }
-}
-}
+  };
+};
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
+  };
+};
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

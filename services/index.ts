@@ -3,18 +3,18 @@ export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools',
     description: 'Essential tools for everyday tasks',
-    services: ['urlShortener', 'passwordGenerator', 'qrCodeGenerator']
+    services: ['urlShortener', 'passwordGenerator', 'qrCodeGenerator'];
   },
   MEDIA: {
     name: 'Media & Files',
     description: 'File conversion and media processing tools',
-    services: ['fileConverter']
+    services: ['fileConverter'];
   },
   ANALYSIS: {
     name: 'Analysis & Insights',
     description: 'Text analysis and content insights',
-    services: ['textAnalysis']
-  }
+    services: ['textAnalysis'];
+  };
 } as const
 
 // Service metadata for the application
@@ -93,7 +93,7 @@ export const SERVICES_METADATA = {
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
-  }
+  };
 } as const
 
 // Service availability and status
@@ -103,10 +103,10 @@ export const getServiceStatus = () => {
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-  }
-}
-
+    textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
+  };
+};
+;
 // Service usage statistics
 export const getServiceStats = () => {
   return {
@@ -118,7 +118,7 @@ export const getServiceStats = () => {
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
-      textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
-    }
-  }
-}
+      textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 };
+    };
+  };
+};

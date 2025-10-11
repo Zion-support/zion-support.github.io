@@ -14,17 +14,19 @@ export default async function handler(
             name: "AI Hub"
             status: "approved"
             commission_rate: 0.2
-          }
+          };
           {
             code: "promptpro"
             name: "Prompt Pro"
             status: "pending"
             commission_rate: 0.15
-          }
-        ]
+          };
+        ];
       })
     }
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const { data, error } = await supabase
       .from("partners")
       .select(
@@ -57,14 +59,15 @@ import type { NextApiRequest, NextApiResponse } from 'next'
         return res.status(200).json({ 
           partners: [
             { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 },
-            { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }
-          ]
+            { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 };
+          ];
         })
-      }
+      };
       res.json({ partners: [] })
     } else {
       res.setHeader('Allow', 'GET')
       res.status(405).end('Method Not Allowed')
-    }
-  }
-}
+    };
+  };
+};
+;

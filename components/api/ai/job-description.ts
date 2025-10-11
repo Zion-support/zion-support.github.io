@@ -16,6 +16,8 @@ export default async function handler(
   const auth = authenticateRequest(req, false)
   if (!auth.ok) return res.status(401).json({ error: auth.error })
   const { title, level, location, skills, responsibilities } = req.body |{}
+  ;
+  ;
   const prompt =
     `Generate a compelling, unbiased job description for a role.\n` +
     `- Title: ${title |'Software Engineer'}\n` +
@@ -36,13 +38,19 @@ export default async function handler(
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.')
   return res.status(200).json({ jobDescription: text })
+};
 }
-}
+  ;
+  ;
   const auth = authenticate_request (req, false)
   if (return res.status (401).json ({ error: auth.error })) {
   $2
 }
+  ;
+  ;
   const { title, level, location, skills, responsibilities } = req.body || {}
+  ;
+  ;
   const prompt =
     `Generate a compelling, unbiased job description for a role.\n` +
     `- Title: ${title || 'Software Engineer'}\n` +
@@ -62,7 +70,7 @@ export default async function handler(
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`
   const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.')
   return res.status (200).json ({ job_description: text })
-}
+};
 import {  authenticateRequest   } from '@/utils/auth'
 import {  generateText   } from '@/utils/ai'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -71,6 +79,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = authenticateRequest(req, false)
   if (!auth.ok) return res.status(401).json({ error: auth.error })
   const { title, level, location, skills, responsibilities } = req.body || {}
+  ;
+  ;
   const prompt = `Generate a compelling, unbiased job description for a role.\n` +
     `- Title: ${title || 'Software Engineer'}\n` +
     `- Level: ${level || 'Mid'}\n` +
@@ -80,4 +90,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.')
   return res.status(200).json({ jobDescription: text })
-}
+};
+;

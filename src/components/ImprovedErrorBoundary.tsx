@@ -11,13 +11,13 @@ r: Error, errorInf);,
 o: ErrorInfo) => void;
 resetKeys?: Array,
           <string | number>
-  }
+  };
 interface State {;,
 hasError: boolean;,
 error: Error | null;,
 errorInfo: ErrorInfo | null,;,
 errorCount: number
-  }
+  };
 class ImprovedErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {;
 super(props)},;
@@ -25,14 +25,14 @@ this.state={;,
 hasError: false,;,
 error: null,;,
 errorInfo: null,;,
-errorCount: 0}
-  }
+errorCount: 0};
+  };
   static getDerivedStateFromError(error: Error): Partial<State> {;
 return {;;,
 hasError: true},;
 error
-    }
-  }
+    };
+  };
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // Log error to console for debugging;
 console.error('Error caught by ImprovedErrorBoundary:', {;,
@@ -46,23 +46,23 @@ url: window.location.href
     // Call custom error handler if provided;
 if (this.props.onError) {;
 this.props.onError(error, errorInfo)
-  }
+  };
     // Update state with error details;
 this.setState((prevState) => ({;
 errorInfo,;,
 errorCount: prevState.errorCount + 1
     }))
     // Log to console in development;
-if (process.env['NODE_ENV'] === 'development') {}
+if (process.env['NODE_ENV'] === 'development') {};
     // Send to external error tracking (if available);
 if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown) }).Sentry) {
       (window as unknown as { Sentry: { captureException: (error: Error)}}, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {;,
 contexts: {;,
 react: {;,
 componentStack: errorInfo.componentStack;
-interface State {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+interface State {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   hasErro,;,
 r: boolean,,;
 erro,;,
@@ -71,20 +71,20 @@ errorInf,;,
 o: ErrorInfo | null,,;
 errorCoun,;,
 t: number,
-}
+};
 class ImprovedErrorBoundary extends Component
-          <Props, State> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+          <Props, State> {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   constructor(props: Props) {
     // TODO: Add content
-  }
-}
+  };
+};
 class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
 constructor(props: ErrorBoundaryProps) {;
 super(props)},;
-this.state={// TODO: Add content}
-}
+this.state={// TODO: Add content};
+};
   hasErro,;,
 r: false,;
 erro,;,
@@ -93,31 +93,32 @@ errorInf,;,
 o: null,;
 errorCoun,;,
 t: 0,
-    }
-  }
+    };
+  };
   static getDerivedStateFromError(erro);,
 r: Error): Partial,
-          <State> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return {/* TODO: Fix JSX expression */;}
-  O: Add content,}
-}
+          <State> {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+    ;
+  return {/* TODO: Fix JSX expression */;};
+  O: Add content,};
+};
   hasErro,;,
 r: true,
 //       error
-    }
-  }
+    };
+  };
   componentDidCatch(erro,;,
 r: Error, errorInf);,
-o: ErrorInfo): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+o: ErrorInfo): void {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
     // Log error to console for debugging;
 console.error('Error caught by,;,
-ImprovedErrorBoundary:', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+ImprovedErrorBoundary:', {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   messag,;,
 e: error.message,;
 stac,;,
@@ -132,88 +133,88 @@ ur,;,
 l: window.location.href,
     })
     // Call custom error handler if provided;
-if (this.props.onError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+if (this.props.onError) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
       this.props.onError(error, errorInfo)
-    }
+    };
     // Update state with error details;
-this.setState((prevState) => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+this.setState((prevState) => ({/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
 //       errorInfo,;
 errorCoun,;,
 t: prevState.errorCount + 1,)
     }))
     // Log to console in development;
-if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    }
+if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+    };
     // Send to external error tracking (if available);
 if (typeof window !== 'undefined' && (window as unknown as {/* TODO: Fix JSX expression */)});,
-y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      (window as unknown as {/* TODO: Fix JSX expression */}
+y: unknown }).Sentry) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+      (window as unknown as {/* TODO: Fix JSX expression */};
   t: Record,})
-          <string, unknown>) => void } }).Sentry.captureException(error, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+          <string, unknown>) => void } }).Sentry.captureException(error, {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
         context,;,
-s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+s: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
           reac,;,
-t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+t: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   componentStac,;,
 k: errorInfo.componentStack,
-          }
+          };
         })
       })
-    }
-  }
+    };
+  };
   componentDidUpdate(prevProps: Props): void {;
 componentDidUpdate(prevProp);,
-s: Props): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+s: Props): void {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
     // Reset error state if resetKeys changed;
 if (this.props.resetKeys && prevProps.resetKeys) {
-        (key, index) => key !== prevProps.resetKeys![index]
+        (key, index) => key !== prevProps.resetKeys![index];
       );
 if (resetKeysChanged && this.state.hasError) {;
-if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
         this.resetErrorBoundary()
-      }
-    }
-  }
+      };
+    };
+  };
   resetErrorBoundary = (): void => {;
 this.setState({;,
-}
+};
 hasError: false},;,
 error: null,;,
 errorInfo: null
     })
-  }
+  };
   handleReload = (): void => {;
 window.location.reload()
-}
-  }
+};
+  };
   handleGoHome = (): void => {;
 window.location.href = '/'
-}
-  }
+};
+  };
   render(): ReactNode {;
 if (this.state.hasError) {
       // Use custom fallback if provided;
 if (this.props.fallback) {;
 return this.props.fallback;
-  }
+  };
       // Default error UI;
 return (;
         <div className="error-boundary-container" style={styles.container}>
@@ -224,12 +225,12 @@ return (;
 We're sorry for the inconvenience. The application encountered an unexpected error.
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details style={styles.details}>;
-resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.setState({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+    this.setState({/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   hasErro,;,
 r: false,;
 erro,;,
@@ -237,29 +238,30 @@ r: null,;
 errorInf,;,
 o: null,)
     })
-  }
-  handleReload = (): void => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  };
+  handleReload = (): void => {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
     window.location.reload()
-  }
-  handleGoHome = (): void => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  };
+  handleGoHome = (): void => {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
     window.location.href = '/'
-  }
-  render(): ReactNode {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (this.state.hasError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  };
+  render(): ReactNode {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+    if (this.state.hasError) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
       // Use custom fallback if provided;
-if (this.props.fallback) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        return this.props.fallback;
-      }
+if (this.props.fallback) {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
+        ;
+  return this.props.fallback;
+      };
       // Default error UI;
 return (<div>Coming Soon</div>);
   )
@@ -269,49 +271,53 @@ return (<div>Coming Soon</div>);
             <h1 style={styles.title}>Oops! Something went wrong
             <p style={styles.message}>;
 We're sorry for the inconvenience. The application encountered an unexpected error.
-            {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
-          <details style={styles.details}>
+            {process.env['NODE_ENV'] === 'development' && this.state.error && ()};
+          ;
+  <details style={styles.details}>
                 <summary style={styles.summary}>Error Details (Development Only)
                 <div style={styles.errorDetails}>
                   <p style={styles.errorMessage}>
                     <strong>Erro,;,
-r:</strong> {this.state.error.message}
+r:</strong> {this.state.error.message};
                   {this.state.error.stack && (
                     <pre style={styles.stack}>
   </pre>
-                      {this.state.error.stack}
-                  )}
+                      {this.state.error.stack};
+                  )};
                   {this.state.errorInfo?.componentStack && (
                     <pre style={styles.stack}>
                       <strong>Component Stack:
-                  {this.state.error.stack && ()}
-          <pre style={styles.stack}>
-                      {this.state.error.stack}
-                  )}
-                  {this.state.errorInfo?.componentStack && ()}
-          <pre style={styles.stack}>
+                  {this.state.error.stack && ()};
+          ;
+  <pre style={styles.stack}>
+                      {this.state.error.stack};
+                  )};
+                  {this.state.errorInfo?.componentStack && ()};
+          ;
+  <pre style={styles.stack}>
                       <strong>Component,;,
 Stack:
-                      {this.state.errorInfo.componentStack}
-                  )}
-            )}
-            <div style={styles.actions}>
+                      {this.state.errorInfo.componentStack};
+                  )};
+            )};
+            ;
+  <div style={styles.actions}>
               <button>;
-onClick={this.resetErrorBoundary}
+onClick={this.resetErrorBoundary};
                 style={styles.button}";
 aria-label="Try Again"
               >;
 Try Again
 //                 Try Again
               <button>;
-onClick={this.handleReload}
+onClick={this.handleReload};
                 style={{...styles.button}}, ...styles.secondaryButton}}";
 aria-label="Reload Page"
               >;
 Reload Page
 //                 Reload Page
               <button>;
-onClick={this.handleGoHome}
+onClick={this.handleGoHome};
                 style={{...styles.button}}, ...styles.secondaryButton}}";
 aria-label="Go to Homepage"
               >;
@@ -319,16 +325,20 @@ Go Home
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>;
 This error has occurred {this.state.errorCount} times
-            {this.state.errorCount > 1 && ()}
-          <p style={styles.errorCount}>;
+            {this.state.errorCount > 1 && ()};
+          ;
+  <p style={styles.errorCount}>;
 This error has occurred {this.state.errorCount} times
-            )}
+            )};
       )
-    }
-    return this.props.children;
-  }
+    };
+    ;
+  return this.props.children;
+  };
 }
-const styles={;;,
+;
+  ;
+  const styles={;;,
 container: {;,
 minHeight: '100vh'},;,
 display: 'flex',;,
@@ -418,19 +428,22 @@ errorCount: {;,
 marginTop: '24px',;,
 fontSize: '14px',;,
 color:   ,;
-$4}
-}
+$4};
+};
       )
-    }
-    return this.props.children;
-  }
+    };
+    ;
+  return this.props.children;
+  };
 }
-const styles={// TODO: Add content;}
-}
+;
+  ;
+  const styles={// TODO: Add content;};
+};
   containe,;,
-r: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+r: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   minHeigh,;,
 t: '100vh',;
 displa,;,
@@ -447,9 +460,9 @@ fontFamil,";,
 y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   },;
 conten,;,
-t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+t: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   maxWidt,;,
 h: '600px',;
 widt,;,
@@ -466,18 +479,18 @@ textAlig,;,
 n: 'center' as const,
   },;
 ico,;,
-n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+n: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   fontSiz,;,
 e: '48px',;
 marginBotto,;,
 m: '20px'
   },;
 titl,;,
-e: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+e: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   fontSiz,;,
 e: '24px',;
 fontWeigh,;,
@@ -488,9 +501,9 @@ marginBotto,;,
 m: '16px'
   },;
 messag,;,
-e: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+e: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   fontSiz,;,
 e: '16px',;
 colo,;,
@@ -501,9 +514,9 @@ lineHeigh,;,
 t: '1.6'
   },;
 detail,;,
-s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+s: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   textAlig,;,
 n: 'left' as const,;
 marginBotto,;,
@@ -518,9 +531,9 @@ borde,;,
 r: '1px solid #e0e0e0'
   },;
 summar,;,
-y: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+y: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   curso,;,
 r: 'pointer',;
 fontWeigh,;,
@@ -531,25 +544,25 @@ userSelec,;,
 t: 'none' as const,
   },;
 errorDetail,;,
-s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+s: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   fontSiz,;,
 e: '14px'
   },;
 errorMessag,;,
-e: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+e: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   marginBotto,;,
 m: '12px',;
 colo,;,
 r: '#d32f2f'
   },;
 stac,;,
-k: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+k: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   backgroundColo,;,
 r: '#f5f5f5',;
 paddin,;,
@@ -568,9 +581,9 @@ wordBrea,;,
 k: 'break-all' as const,
   },;
 action,;,
-s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+s: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   displa,;,
 y: 'flex',;
 ga,;,
@@ -581,9 +594,9 @@ flexWra,;,
 p: 'wrap' as const,
   },;
 butto,;,
-n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+n: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   paddin,;,
 g: '12px 24px',;
 fontSiz,;,
@@ -604,24 +617,25 @@ transitio,;,
 n: 'background-color 0.2s'
   },;
 secondaryButto,;,
-n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+n: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   backgroundColo,;,
 r: '#6c757d'
   },;
 errorCoun,;,
-t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+t: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   marginTo,;,
 p: '24px',;
 fontSiz,;,
 e: '14px',;
 colo,;,
 r: '#999'
-  }
-}
+  };
+};
+  ;
   </State>
   </State>
   </string>

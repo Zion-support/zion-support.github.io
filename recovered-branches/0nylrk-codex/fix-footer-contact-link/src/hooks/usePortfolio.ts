@@ -11,8 +11,8 @@ export function usePortfolio() {
   const fetchProjects = useCallback(async () => {
     if (!user) {
       setError('You must be logged in to access portfolio projects')
-      return []
-    }
+      return [];
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -23,20 +23,20 @@ export function usePortfolio() {
         .order('created_at', { ascending: false })
       if (error) throw error
       setProjects(data || [])
-      return data || []
+      return data || [];
     } catch (e: any) {
       console.error('Error fetching portfolio projects:', e)
       setError(e.message)
-      return []
+      return [];
     } finally {
       setIsLoading(false)
-    }
+    };
   }, [user])
   const addProject = async (project: PortfolioProject): Promise<string | null> => {
     if (!user) {
       setError('You must be logged in to add a portfolio project')
       return null
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -72,13 +72,15 @@ export function usePortfolio() {
       return null
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a portfolio project')
       return false
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -113,13 +115,15 @@ export function usePortfolio() {
       return false
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete a portfolio project')
       return false
-    }
+    };
     setIsLoading(true)
     setError(null)
     try {
@@ -146,8 +150,9 @@ export function usePortfolio() {
       return false
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     isLoading,
     error,
@@ -156,5 +161,6 @@ export function usePortfolio() {
     addProject,
     updateProject,
     deleteProject
-  }
-}
+  };
+};
+;

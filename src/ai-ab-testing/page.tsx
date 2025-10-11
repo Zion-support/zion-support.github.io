@@ -5,18 +5,21 @@ import Footer from '../components/Footer'
 import { TestTube, Target, Settings, CheckCircle } from 'lucide-react'
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react'
 const AIABTestingPage: React.FC = () => {
+
   const features = [
     {
       icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
-      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
+      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation'];
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
-    }
+    {/* TODO: Fix JSX expression */};
+    };
   ]
+  ;
+  ;
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation /></Navigation>"
       <main className="container mx-auto px-4 py-16 pt-24"></main>"
@@ -60,24 +63,28 @@ const AIABTestingPage: React.FC = () => {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                </h3>"
+                  {feature.title};
+                ;
+  </h3>"
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
-                </p>"
+                  {feature.description};
+                ;
+  </p>"
                 <ul className="space-y-2"></ul>)
                   {feature.benefits.map((benefit, benefitIndex) => (}"
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>)
-                  ))}
-            ))}
-          </div>
+                      {benefit};
+                    ;
+  </li>)
+                  ))};
+            ))};
+          ;
+  </div>
         </section>
       </main>
       <Footer /></Footer>
     </div>
   )
-}
+};
 export default AIABTestingPage

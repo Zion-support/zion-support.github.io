@@ -24,14 +24,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(result)
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
-  }
-}
+  };
+};
 import type { NextApiRequest, NextApiResponse } from "next"
 import { redeemToCredits } from "../../../utils/token/service"
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-  const { userId, amount } = req.body || {}
+  const { userId, amount } = req.body || {};
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
     const result = redeemToCredits(userId, Math.floor(amount))
     return res.status(200).json(result)
@@ -43,25 +43,26 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-  }
-}
+  };
+};
+  };
+};
+;

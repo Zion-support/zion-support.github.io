@@ -1,17 +1,21 @@
 'use client';
 import React;, { useState } from 'react';
 const,;,
-InteractiveAIROICalculator: React.FC = () => {return (;}
-    <div>Coming Soon</div>)
+InteractiveAIROICalculator: React.FC = () => {return (;};
+    ;
+  <div>Coming Soon</div>)
   )
 }
+  ;
+  ;
   const [currentCost, setCurrentCost] = useState(100000);
 const [efficiencyGain, setEfficiencyGain] = useState(70);
 const [timeframe, setTimeframe] = useState(12);
 const calculateROI = () => {;;
 return Math.max(0;, roi)
-}
-  }return (;
+};
+  };
+  return (;
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>;
@@ -24,9 +28,9 @@ AI ROI Calculator
 Current Annual Cost ($)
                 <input;
 type='number';
-value={currentCost}
+value={currentCost};
                   onChange={e =>
-  </input> setCurrentCost(Number(e.target.value))}
+  </input> setCurrentCost(Number(e.target.value))};
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg,;,
 focus:ring-2,;,
 focus:ring-blue-500,;,
@@ -36,16 +40,16 @@ Expected Efficiency Gain (%);
 type='range';
 min='10';
 max='90';
-value={efficiencyGain}
-                  onChange={e => setEfficiencyGain(Number(e.target.value))}
+value={efficiencyGain};
+                  onChange={e => setEfficiencyGain(Number(e.target.value))};
                   className='w-full'
 <div className='text-center text-sm text-gray-600'>
                   {efficiencyGain}%;
 Implementation Timeframe (months)
                 <select>
   </select>;
-value={timeframe}
-                  onChange={e => setTimeframe(Number(e.target.value))}
+value={timeframe};
+                  onChange={e => setTimeframe(Number(e.target.value))};
                 >
                   <option value={6}>6 months
                   <option value={12}>12 months

@@ -5,32 +5,35 @@ import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIHRAssistantPage: React.FC = () => {
+
   const features = [
     {
       icon: Users,
       title: 'HR Automation',
       description: 'AI-powered HR process automation',
-      benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
+      benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management'];
     },
     {
       icon: Target,
       title: 'Talent Management',
       description: 'Intelligent talent acquisition and management',
-      benefits: ['Candidate screening', 'Skill matching', 'Career development']
+      benefits: ['Candidate screening', 'Skill matching', 'Career development'];
     },
     {
       icon: Zap,
       title: 'Employee Engagement',
       description: 'Automated employee engagement and satisfaction',
-      benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies']
+      benefits: ['Engagement surveys', 'Feedback analysis', 'Retention strategies'];
     },
     {
       icon: Settings,
       title: 'HR Analytics',
       description: 'Comprehensive HR analytics and insights',
-      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
-    }
+      benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights'];
+    };
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -70,20 +73,23 @@ const AIHRAssistantPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
-                  {feature.title}
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
-                <ul className="space-y-2">
+                  {feature.title};
+                ;
+  <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
+                  {feature.description};
+                ;
+  <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
-            ))}
-      <Footer />
+                      {benefit};
+                  ))};
+            ))};
+      ;
+  <Footer />
     </div>
   )
-}
+};
 export default AIHRAssistantPage</h2>
   </a>
   </a>

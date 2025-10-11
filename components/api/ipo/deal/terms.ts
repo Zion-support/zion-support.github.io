@@ -26,8 +26,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     discount: '20%'
     leadInvestor: 'TBD'})
   res.status(200).json(terms)
+};
 }
-}
+  ;
+  ;
   const terms = readJsonFile ('deal / terms.json', {
     round: 'Series A',
     target: '$10, 000, 000',
@@ -42,6 +44,8 @@ function handler() {
   if () return) {
   $2
 }
+  ;
+  ;
   const terms = readJsonFile ('deal / terms.json', {
     round: 'Series A',
     target: '$10, 000, 000'
@@ -49,8 +53,9 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'})
   res.status (200).json (terms)
-}
+};
     leadInvestor: 'TBD',
   })
   res.status(200).json(terms)
-}
+};
+;

@@ -5,8 +5,8 @@ import { toast } from "@/hooks/use-toast"
 import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils"
 import { cleanupAuthState } from "@/utils/authUtils"
 export function useAuthOperations(
-  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
-  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
+  setUser: React.Dispatch<React.SetStateAction><UserProfile | null>>,
+  setIsLoading: React.Dispatch<React.SetStateAction><boolean>>
 ) {
   // Check for referral code in URL when the hook is first used
   useEffect(() => {
@@ -29,14 +29,14 @@ export function useAuthOperations(
           description: error.message})
           description: error.message,
         })
-        return { data: null, error: error.message }
-      }
+        return { data: null, error: error.message };
+      };
       toast({
         title: "Login successful!",
         description: `Welcome back, ${email}!`})
         description: `Welcome back, ${email}!`,
       })
-      return { data, error: null }
+      return { data, error: null };
     } catch (error) {
       toast({
         variant: "destructive",
@@ -44,11 +44,13 @@ export function useAuthOperations(
         description: "Failed to sign in. Please check your credentials."})
         description: "Failed to sign in. Please check your credentials.",
       })
-      return { data: null, error: "Failed to sign in." }
+      return { data: null, error: "Failed to sign in." };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const signup = async ({ email, password, display_name }) => {
     setIsLoading(true)
     try {
@@ -69,19 +71,19 @@ export function useAuthOperations(
           description: error.message})
           description: error.message,
         })
-        return { data: null, error: error.message }
-      }
+        return { data: null, error: error.message };
+      };
       // Add this after successful signup
       if (data?.user) {
         // Track referral if there was a referral code
         await trackReferral(data.user.id, email)
-      }
+      };
       toast({
         title: "Signup successful!",
         description: `Welcome, ${display_name}! Please check your email to verify your account.`})
         description: `Welcome, ${display_name}! Please check your email to verify your account.`,
       })
-      return { data, error: null }
+      return { data, error: null };
     } catch (error) {
       toast({
         variant: "destructive",
@@ -89,11 +91,13 @@ export function useAuthOperations(
         description: "Failed to sign up. Please try again."})
         description: "Failed to sign up. Please try again.",
       })
-      return { data: null, error: "Failed to sign up." }
+      return { data: null, error: "Failed to sign up." };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const logout = async () => {
     setIsLoading(true)
     try {
@@ -112,7 +116,7 @@ export function useAuthOperations(
           description: "You have been successfully logged out."})
           description: "You have been successfully logged out.",
         })
-      }
+      };
     } catch (error) {
       console.error("Logout failed:", error)
       toast({
@@ -123,8 +127,10 @@ export function useAuthOperations(
       })
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const resetPassword = async (email: string) => {
     setIsLoading(true)
     try {
@@ -139,14 +145,14 @@ export function useAuthOperations(
           description: error.message})
           description: error.message,
         })
-        return { data: null, error: error.message }
-      }
+        return { data: null, error: error.message };
+      };
       toast({
         title: "Password reset email sent!",
         description: `Please check your email (${email}) for instructions on how to reset your password.`})
         description: `Please check your email (${email}) for instructions on how to reset your password.`,
       })
-      return { data, error: null }
+      return { data, error: null };
     } catch (error) {
       toast({
         variant: "destructive",
@@ -154,18 +160,22 @@ export function useAuthOperations(
         description: "Failed to send reset password email. Please try again."})
         description: "Failed to send reset password email. Please try again.",
       })
-      return { data: null, error: "Failed to send reset password email." }
+      return { data: null, error: "Failed to send reset password email." };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const updateProfile = async (profileData: Partial<UserProfile>) => {
     setIsLoading(true)
     try {
       if (!profileData || !profileData.id) {
         throw new Error("Profile data or user ID is missing.")
       }
-      const { error } = await supabase
+      ;
+  ;
+  const { error } = await supabase
         .from("profiles")
         .update({
           display_name: profileData.displayName,
@@ -184,21 +194,22 @@ export function useAuthOperations(
           description: error.message})
           description: error.message,
         })
-        return { error: error.message }
-      }
+        return { error: error.message };
+      };
       // Optimistically update the local user state
       setUser((prevUser) => {
         if (prevUser) {
-          return { ...prevUser, ...profileData }
-        }
-        return prevUser
+          return { ...prevUser, ...profileData };
+        };
+        ;
+  return prevUser
       })
       toast({
         title: "Profile updated!",
         description: "Your profile has been successfully updated."})
         description: "Your profile has been successfully updated.",
       })
-      return { error: null }
+      return { error: null };
     } catch (error) {
       console.error("Profile update failed:", error)
       toast({
@@ -207,11 +218,13 @@ export function useAuthOperations(
         description: "There was an issue updating your profile. Please try again."})
         description: "There was an issue updating your profile. Please try again.",
       })
-      return { error: "Failed to update profile." }
+      return { error: "Failed to update profile." };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const loginWithGoogle = async () => {
     setIsLoading(true)
     try {
@@ -226,11 +239,13 @@ export function useAuthOperations(
           description: error.message})
           description: error.message,
         })
-      }
+      };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const loginWithFacebook = async () => {
     setIsLoading(true)
     try {
@@ -245,11 +260,13 @@ export function useAuthOperations(
           description: error.message})
           description: error.message,
         })
-      }
+      };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const loginWithTwitter = async () => {
     setIsLoading(true)
     try {
@@ -264,11 +281,13 @@ export function useAuthOperations(
           description: error.message})
           description: error.message,
         })
-      }
+      };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const loginWithWeb3 = async () => {
     setIsLoading(true)
     try {
@@ -276,11 +295,13 @@ export function useAuthOperations(
       if (!ethereum) {
         throw new Error("Web3 wallet not found")
       }
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
-      const address = accounts[0]
+      ;
+  ;
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+      const address = accounts[0];
       await ethereum.request({
         method: 'personal_sign',
-        params: [address, address]
+        params: [address, address];
       })
       // Fix: Create a proper UserProfile object
       setUser({
@@ -301,8 +322,9 @@ export function useAuthOperations(
       })
     } finally {
       setIsLoading(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     login,
     signup,
@@ -312,7 +334,8 @@ export function useAuthOperations(
     loginWithGoogle,
     loginWithFacebook,
     loginWithTwitter,
-    loginWithWeb3}
+    loginWithWeb3};
     loginWithWeb3,
-  }
-}
+  };
+};
+;

@@ -4,25 +4,26 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react'
 const PagePage: React.FC = () => {
+
   const features = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'];
     },
     {
       icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'];
     },
     {
       icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3'];
+    };
   ];
 
   const benefits = [
@@ -47,8 +48,9 @@ const PagePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */};
+        ;
+  <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -91,20 +93,25 @@ const PagePage: React.FC = () => {
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">{feature.title};
+  </h3>
                   </div>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <p className="text-gray-600 mb-4">{feature.description};
+  </p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
+                        {benefit};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </section>
 
@@ -124,11 +131,13 @@ const PagePage: React.FC = () => {
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3" />
-                    <span className="text-lg font-medium text-gray-900">{benefit}</span>
+                    <span className="text-lg font-medium text-gray-900">{benefit};
+  </span>
                   </div>
                 </div>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </section>
 

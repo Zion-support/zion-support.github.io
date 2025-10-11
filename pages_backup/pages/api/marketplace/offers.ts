@@ -43,7 +43,7 @@ import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / ty
  */
 function bad() {
   return res.status (code).json ({ ok: false, error: message })
-}
+};
 export default /**
  * handler - Function description
  */
@@ -53,23 +53,30 @@ function handler() {
 if ( {) {
   $2
 }
-      const user = getDemoUser (req)
+      ;
+  ;
+  const user = getDemoUser (req)
       // Check condition
 if ( {) {
   $2
 }
-        const offers = list_offers ({ client_id: user.id })
+        ;
+  ;
+  const offers = list_offers ({ client_id: user.id })
         return res.json ({ ok: true, offers })
-      }
+      };
       // Check condition
 if ( {) {
   $2
 }
-        const offers = list_offers ({ talent_slug: user.talent_slug })
+        ;
+  ;
+  const offers = list_offers ({ talent_slug: user.talent_slug })
         return res.json ({ ok: true, offers })
-      }
-      return bad(res, "Unknown role", 403)
-    }
+      };
+      ;
+  return bad(res, "Unknown role", 403)
+    };
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req)
@@ -79,11 +86,13 @@ if ( {) {
         scopeSummary
         paymentTerms
         agreementUrl
-      } = req.body |{}
+      } = req.body |{};
       if (!talentSlug |!startDateIso |!scopeSummary |!paymentTerms) {
         return bad(res, "Missing required fields")
       }
-      const offer: Offer = {
+      ;
+  ;
+  const offer: Offer = {
         id: uuidv4()
         createdAtIso: new Date().toISOString()
         clientId: client.id
@@ -93,13 +102,13 @@ if ( {) {
         paymentTerms: paymentTerms as PaymentTerms
         agreementUrl
         status: "SENT"
-      }
+      };
       saveOffer(offer)
       return res.status(201).json({ ok: true, offer })
-    }
+    };
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body |{}
+      const { id, action, changeRequestNote } = req.body |{};
       if (!id |!action) return bad(res, "Missing id or action")
       const existing = getOfferById(id)
       if (!existing) return bad(res, "Offer not found", 404)
@@ -123,8 +132,8 @@ if ( {) {
           status: "ACTIVE"
           timeline:
             existing.paymentTerms.type === "milestone"
-              ? existing.paymentTerms.milestones |[]
-              : []
+              ? existing.paymentTerms.milestones |[];
+              : [];
           documents: existing.agreementUrl
             ? [
                 {
@@ -132,16 +141,16 @@ if ( {) {
                   name: "Agreement"
                   url: existing.agreementUrl
                   uploadedAtIso: new Date().toISOString()
-                }
-              ]
-            : []
-          notes: []
-        }
+                };
+              ];
+            : [];
+          notes: [];
+        };
         saveProject(project)
         existing.projectId = project.id
         saveOffer(existing)
         return res.json({ ok: true, offer: existing, project })
-      }
+      };
       if (action === "request_changes") {
         if (user.role !== "talent")
           return bad(res, "Only talent can request changes", 403)
@@ -149,26 +158,27 @@ if ( {) {
         existing.changeRequestNote = changeRequestNote |""
         saveOffer(existing)
         return res.json({ ok: true, offer: existing })
-      }
+      };
       if (action === "decline") {
         if (user.role !== "talent")
           return bad(res, "Only talent can decline", 403)
         existing.status = "DECLINED"
         return res.json({ ok: true, offers })
-      }
+      };
       if (user.role === "talent") {
     if (req.method === "GET") {
       const user = getDemoUser(req)
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id })
         return res.json({ ok: true, offers })
-      }
+      };
       if (user.role === "talent") {
         const offers = listOffers({ talentSlug: user.talentSlug })
         return res.json({ ok: true, offers })
-      }
-      return bad(res, "Unknown role", 403)
-    }
+      };
+      ;
+  return bad(res, "Unknown role", 403)
+    };
     if (req && req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req)
@@ -178,13 +188,13 @@ if ( {) {
         scopeSummary,
         paymentTerms,
         agreementUrl,
-      } = req && req.body || {}
+      } = req && req.body || {};
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
         return bad(res, "Missing required fields")
-      }
+      };
     if (req && req.method === "PATCH") {
       // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req && req.body || {}
+      const { id, action, changeRequestNote } = req && req.body || {};
       if (!id || !action) return bad(res, "Missing id or action")
       const existing = getOfferById(id)
       if (!existing) return bad(res, "Offer not found", 404)
@@ -209,29 +219,33 @@ if ( {) {
                   url: existing && existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString(),
                 },
-              ]
-            : []
-          notes: []
-        }
+              ];
+            : [];
+          notes: [];
+        };
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403)
-      }
+      };
       save_offer (offer)
       return res.status (201).json ({ ok: true, offer })
-    }
+    };
     // Check condition
 if ( {) {
   $2
-}
+};
       // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body || {}
+      const { id, action, changeRequestNote } = req.body || {};
       if (return bad (res, "Missing id or action")) {
   $2
 }
-      const existing = getOfferById (id)
+      ;
+  ;
+  const existing = getOfferById (id)
       if (return bad (res, "Offer not found", 404)) {
   $2
 }
-      const user = assertTalentOrClientForOffer (
+      ;
+  ;
+  const user = assertTalentOrClientForOffer (
         req,
         existing,
         req.headers["x - demo - talent - slug"] as string,
@@ -239,15 +253,15 @@ if ( {) {
       // Check condition
 if ( {) {
   $2
-}
+};
         if (
           return bad (res, "Only talent can accept", 403)) {
   $2
-}
+};
         existing.status = "CONFIRMED"
         // Create a project upon acceptance
         const project: Project = {
-  }
+  };
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
           summary: existing.scope_summary,
@@ -257,7 +271,7 @@ if ( {) {
           status: "ACTIVE",
           timeline:
             existing.payment_terms.type === "milestone"
-              ? existing.payment_terms.milestones || []
+              ? existing.payment_terms.milestones || [];
               : [],
           documents: existing.agreement_url
             ? [
@@ -267,21 +281,21 @@ if ( {) {
                   url: existing.agreement_url,
                   uploadedAtIso: new Date ().toISOString (),
                 },
-              ]
+              ];
             : [],
           notes: [],
-        }
+        };
         save_project (project)
         existing.project_id = project.id
         save_offer (existing)
         return res.json ({ ok: true, offer: existing, project })
-      }
+      };
       // Check condition
 if ( {) {
   $2
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
-}
+};
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method === "GET") {
@@ -289,13 +303,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id })
         return res.json({ ok: true, offers })
-      }
+      };
       if (user.role === "talent") {
         const offers = listOffers({ talentSlug: user.talentSlug })
         return res.json({ ok: true, offers })
-      }
-      return bad(res, "Unknown role", 403)
-    }
+      };
+      ;
+  return bad(res, "Unknown role", 403)
+    };
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req)
@@ -305,11 +320,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         scopeSummary
         paymentTerms
         agreementUrl
-      } = req.body |{}
+      } = req.body |{};
       if (!talentSlug |!startDateIso |!scopeSummary |!paymentTerms) {
         return bad(res, "Missing required fields")
       }
-      const offer: Offer = {
+      ;
+  ;
+  const offer: Offer = {
         id: uuidv4()
         createdAtIso: new Date().toISOString()
         clientId: client.id
@@ -319,13 +336,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         paymentTerms: paymentTerms as PaymentTerms
         agreementUrl
         status: "SENT"
-      }
+      };
       saveOffer(offer)
       return res.status(201).json({ ok: true, offer })
-    }
+    };
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body |{}
+      const { id, action, changeRequestNote } = req.body |{};
       if (!id |!action) return bad(res, "Missing id or action")
       const existing = getOfferById(id)
       if (!existing) return bad(res, "Offer not found", 404)
@@ -349,8 +366,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           status: "ACTIVE"
           timeline:
             existing.paymentTerms.type === "milestone"
-              ? existing.paymentTerms.milestones |[]
-              : []
+              ? existing.paymentTerms.milestones |[];
+              : [];
           documents: existing.agreementUrl
             ? [
                 {
@@ -358,16 +375,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   name: "Agreement"
                   url: existing.agreementUrl
                   uploadedAtIso: new Date().toISOString()
-                }
-              ]
-            : []
-          notes: []
-        }
+                };
+              ];
+            : [];
+          notes: [];
+        };
         saveProject(project)
         existing.projectId = project.id
         saveOffer(existing)
         return res.json({ ok: true, offer: existing, project })
-      }
+      };
       if (action === "request_changes") {
         if (user.role !== "talent")
           return bad(res, "Only talent can request changes", 403)
@@ -375,7 +392,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.changeRequestNote = changeRequestNote |""
         saveOffer(existing)
         return res.json({ ok: true, offer: existing })
-      }
+      };
       if (action === "decline") {
         if (user.role !== "talent")
           return bad(res, "Only talent can decline", 403)
@@ -389,13 +406,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
-      }
+      };
       saveOffer(offer)
       return res.status(201).json({ ok: true, offer })
-    }
+    };
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body || {}
+      const { id, action, changeRequestNote } = req.body || {};
       if (!id || !action) return bad(res, "Missing id or action")
       const existing = getOfferById(id)
       if (!existing) return bad(res, "Offer not found", 404)
@@ -423,24 +440,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   id: uuidv4(),
                   name: "Agreement",
                   url: existing.agreementUrl,
-                  uploadedAtIso: new Date().toISOString()}]
+                  uploadedAtIso: new Date().toISOString()}];
             : [],
-        }
+        };
         saveProject(project)
         existing.projectId = project.id
         saveOffer(existing)
         return res.json({ ok: true, offer: existing, project })
-      }
+      };
       if (action === "request_changes") {
         if (user.role !== "talent") return bad(res, "Only talent can request changes", 403)
         existing.status = "CHANGES_REQUESTED"
         existing.changeRequestNote = changeRequestNote || ""
         saveOffer(existing)
         return res.json({ ok: true, offer: existing })
-      }
-      return bad(res, "Unknown action")
-    }
-    return bad(res, "Method not allowed", 405)
+      };
+      ;
+  return bad(res, "Unknown action")
+    };
+    ;
+  return bad(res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode |500
     return res
@@ -459,12 +478,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
         if (
           return bad (res, "Only talent can decline", 403)) {
   $2
-}
+};
       if (action === "request_changes") {
         if (user.role !== "talent") return bad(res, "Only talent can request changes", 403),
         existing.status = "CHANGES_REQUESTED",
@@ -477,34 +496,36 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
       if (action === "decline") {
         if (user.role !== "talent") return bad(res, "Only talent can decline", 403)
         existing.status = "DECLINED"
         save_offer (existing)
         return res.json ({ ok: true, offer: existing })
-      }
-      return bad (res, "Unknown action")
-    }
-    return bad (res, "Method not allowed", 405)
+      };
+      ;
+  return bad (res, "Unknown action")
+    };
+    ;
+  return bad (res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode || 500
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
-  }
-}
-}
+  };
+};
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
       )
       if (action === "accept") {
           id: uuidv4(),
@@ -522,20 +543,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   url: existing && existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString(),
                 },
-              ]
-            : []
-          notes: []
-        }
+              ];
+            : [];
+          notes: [];
+        };
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

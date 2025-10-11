@@ -6,7 +6,7 @@ export interface UltimateFuturisticITService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,11 +18,11 @@ export interface UltimateFuturisticITService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -31,14 +31,14 @@ export interface UltimateFuturisticITService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
   // Zero-Trust Quantum Security Platform
   {
@@ -507,5 +507,5 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     customers: 19,
     rating: 4.7,
     reviews: 10
-  }
-]
+  };
+];

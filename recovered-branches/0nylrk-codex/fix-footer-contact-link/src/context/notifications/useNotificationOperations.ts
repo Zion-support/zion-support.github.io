@@ -20,7 +20,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       console.error('Error fetching notifications:', err)
     } finally {
       setLoading(false)
-    }
+    };
   }, [userId])
   const markAsRead = useCallback(async (id: string) => {
     if (!userId) return
@@ -34,7 +34,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       await fetchNotifications()
     } catch (err) {
       console.error('Error marking notification as read:', err)
-    }
+    };
   }, [userId, fetchNotifications])
   const markAllAsRead = useCallback(async () => {
     if (!userId) return
@@ -48,7 +48,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       await fetchNotifications()
     } catch (err) {
       console.error('Error marking all notifications as read:', err)
-    }
+    };
   }, [userId, fetchNotifications])
   const dismissNotification = useCallback(async (id: string) => {
     if (!userId) return
@@ -62,7 +62,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       await fetchNotifications()
     } catch (err) {
       console.error('Error dismissing notification:', err)
-    }
+    };
   }, [userId, fetchNotifications])
   const filteredNotifications = notifications.filter(notification => {
     switch (filter) {
@@ -76,7 +76,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
         return notification.type === 'system'
       default:
         return true
-    }
+    };
   })
   const unreadCount = notifications.filter(n => !n.read).length
   return {
@@ -89,7 +89,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAllAsRead,
     dismissNotification,
     setFilter,
-    fetchNotifications}
+    fetchNotifications};
     fetchNotifications,
-  }
-}
+  };
+};

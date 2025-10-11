@@ -8,10 +8,12 @@ export default async function handler(
   try {
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" })
-  const { providerId } = req && req.body as { providerId?: string }
+  const { providerId } = req && req.body as { providerId?: string };
   if (!providerId || !getProviderById(providerId)) {
     return res && res.status(400).json({ error: "Invalid providerId" })
   }
+  ;
+  ;
   const state = readState()
   const conn = state && state.connections.find((c) => c && c.providerId === providerId)
   if (!conn) return res && res.status(404).json({ error: "Connection not found" })
@@ -28,7 +30,7 @@ export default async function handler(
     if (target) target.lastSyncAt = now
   })
   res.status(200).json({ ok: true })
-}
+};
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' })
@@ -44,14 +46,16 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
     })
-}
+};
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' })
   }
+  ;
+  ;
   const state = readState()
   const conn = state.connections.find(c => c.providerId === providerId)
   if (!conn) return res.status(400).json({ error: 'Provider not connected' })
@@ -63,11 +67,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   })
   res.status(200).json({ ok: true })
 }
-    const target = s.connections.find ((c) => c.provider_id === provider_id)
+    ;
+  ;
+  const target = s.connections.find ((c) => c.provider_id === provider_id)
     // Check condition
 if (target.lastSyncAt = now) {
   $2
-}
+};
   })
   res.status (200).json ({ ok: true })
-}
+};
+;

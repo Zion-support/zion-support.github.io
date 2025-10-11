@@ -1,42 +1,49 @@
 const, October2025RevOpsBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
+      {/* Animated, background, elements */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">
-      {/* Animated, background, elements */}</div>
+      {/* Animated, background, elements */};
+  </div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>
         <div>
       </d, i, v>
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, p, y-8">"
-        {/* Breaking, News, Badge */}
-        <div, className="flex, justif, y-center, m, b-4">
+        {/* Breaking, News, Badge */};
+        ;
+  <div, className="flex, justif, y-center, m, b-4">
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">
             <Sparkles, className="w-4 h-4, m, r-2  />
             JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5
             <Sparkles, className="w-4 h-4, m, l-2  />
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">"
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10">"
+      {/* Animated, background, elements */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10">"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />';)
       </d, i, v>)
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),$2 />
-      {/* Animated, background, elements */}</div>
+      {/* Animated, background, elements */};
+  </div>
       <div, className="absolute, inse, t-0, opacit, y-10">"</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />"</div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }} />'</d, i, v>
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8, p, y-8">"
-        {/* Breaking, News, Badge */}</div>
+        {/* Breaking, News, Badge */};
+  </div>
         <div, className="flex, justif, y-center, m, b-4">"</div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e">"</div>
-const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10"></div>"
+const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */};
+      {/* Animated, background, elements */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  /></div>"
         <div>
       </d, i, v>"
@@ -61,8 +68,9 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <Sparkles, className="w-4 h-4, m, r-2" />"
             JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5;"
             <Sparkles, className="w-4 h-4, m, l-2" />"
-        {/* Main, Headlin, e */}
-        <div, className="te, x, t-center, m, b-6">
+        {/* Main, Headlin, e */};
+        ;
+  <div, className="te, x, t-center, m, b-6">
         {/* Main, Headlin, e */}"
         <div, className="te, x, t-center, m, b-6"></div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, m, b-3">"
@@ -83,8 +91,9 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             Discover, how, leading enterprises, are, achieving</p> <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>, "
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d "
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s"
-        {/* Key, Metrics, Grid */}
-        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"
+        {/* Key, Metrics, Grid */};
+        ;
+  <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"
           <, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hov, e$2 />
   r:sca, l, e-1, 0, 5">"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">"
@@ -134,11 +143,13 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
             <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2" />"
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">$12, 7, M</d, i, v>"
             <div, className="te, x, t-sm, tex, t-emera, l, d-2, 0, 0">Revenue, Impac, t</d, i, v>"
-        {/* Featured, Conten, t */}
-        <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">
+        {/* Featured, Conten, t */};
+        ;
+  <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"
-            {/* Blog, Pos, t */}
-            <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-te, a, l-8, 0, 0/50, rounde, d-l, g, p-5, border, border-emera, l, d-4, 0, 0/40">
+            {/* Blog, Pos, t */};
+            ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-te, a, l-8, 0, 0/50, rounde, d-l, g, p-5, border, border-emera, l, d-4, 0, 0/40">
               <div, className="te, x, t-emera, l, d-300, fon, t-bold, m, b-2, flex, items-cent, e, r">
                 <Sparkles, className="w-4 h-4, m, r-2  />
                 NEW, COMPREHENSIVE, GUIDE
@@ -148,8 +159,9 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                 Master, autonomous, revenue operations, with, AI-powered, forecastin, g, intelligent, pipeline, management
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">"
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"
-            {/* Blog, Pos, t */}
-            <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-te, a, l-8, 0, 0/50, rounde, d-l, g, p-5, border, border-emera, l, d-4, 0, 0/40">"
+            {/* Blog, Pos, t */};
+            ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-te, a, l-8, 0, 0/50, rounde, d-l, g, p-5, border, border-emera, l, d-4, 0, 0/40">"
               <div, className="te, x, t-emera, l, d-300, fon, t-bold, m, b-2, flex, items-cent, e, r">"
           </p>"
           <p, className="te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o"></p>"
@@ -238,7 +250,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                 and, automated, deal accelerati, o, n. Learn, proven, strategies delivering, 12, 7% ROI, and, 89% forecast, accurac, y.
               <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revoluti, o, n"
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e>
               <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revoluti, o, n""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e,"
@@ -247,8 +259,9 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                 Read, the, Guide;"
                 <Link, className="w-4 h-4, m, l-2  /></Link>"
                 <Link, className="w-4 h-4, m, l-2" />"
-            {/* Case, Stud, y */}
-            <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-indi, g, o-8, 0, 0/50, rounde, d-l, g, p-5, border, border-bl, u, e-4, 0, 0/40">
+            {/* Case, Stud, y */};
+            ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-indi, g, o-8, 0, 0/50, rounde, d-l, g, p-5, border, border-bl, u, e-4, 0, 0/40">
               <div, className="te, x, t-bl, u, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r">
                 <Sparkles, className="w-4 h-4, m, r-2  />
                 NEW, CASE, STUDY
@@ -282,7 +295,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                 89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, autonomous, revenue operatio, n, s.
               <Li, n, k
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succe, s, s"
-                classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-600, hove, r:to-indi, g, o-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e
+                classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-600, hove, r:to-indi, g, o-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e>
               <Li, n, k;"
   to="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succe, s, s""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-600, hove, r:to-indi, g, o-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hov, e,"
@@ -291,8 +304,9 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
                 Read, Case, Study;"
                 <Link, className="w-4 h-4, m, l-2  /></Link>"
                 <Link, className="w-4 h-4, m, l-2" />"
-        {/* Key, Highlight, s */}
-        <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">
+        {/* Key, Highlight, s */};
+        ;
+  <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r">
             What, Yo, u'll, Discover, in These, New, Resources
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-emera, l, d-1, 0, 0">"
@@ -417,8 +431,9 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
               <d, i, v></d>"
                 <div, className="fo, n, t-bold, tex, t-whi, t, e">90-Day, Implementatio, n</d, i, v>";"
                 <div, className="te, x, t-sm">Fast, tim, e-to-value, with, proven methodolo, g, y</d, i, v>"
-        {/* CTA, Sectio, n */}
-        <div, className="te, x, t-center, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-x, l, p-8, shado, w-2, x, l">"
+        {/* CTA, Sectio, n */};
+        ;
+  <div, className="te, x, t-center, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-x, l, p-8, shado, w-2, x, l">"
         {/* CTA, Sectio, n */}"
         <div, className="te, x, t-center, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-x, l, p-8, shado, w-2, x, l">";"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">"
@@ -429,7 +444,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
   can, deliver, 127% ROI, for, your organizati, o, n
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-            <Li, n, k
+            <Li, n, k>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
             <Li, n, k
@@ -446,7 +461,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
               <Link, className="w-5 h-5, m, l-2  /></Link>"
               <Link, className="w-5 h-5, m, l-2" />"
             <Li, n, k
-  to="/bl, o, g"
+  to="/bl, o, g">
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-emera, l, d-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: bg-emera, l, d-900, transitio, n-all, shado, w-xl"
@@ -459,7 +474,7 @@ const, October2025RevOpsBanne, r = () => {/* TODO: Fix JSX expression */}
       </d, i, v>
     </d, i, v>
   )
-}
+};
 export default October2025RevOpsBanner
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3>

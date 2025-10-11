@@ -28,7 +28,8 @@ export default function RoboticsPage() {
       </div>
     </div>
   )
-  }
+  };
+  ;
   </a>
   </h1>
 </p></p></h2>

@@ -26,24 +26,26 @@ export function useSmartContracts() {
           endDate: values.endDate?.toISOString(),
           paymentTerms: values.paymentTerms,
           paymentAmount: values.paymentAmount,
-          additionalClauses: values.additionalClauses || []}
+          additionalClauses: values.additionalClauses || []};
           additionalClauses: values.additionalClauses || [],
-        }
+        };
       })
       if (error) throw error
       if (data && data.solidityCode) {
         return data.solidityCode
       } else {
         throw new Error("Failed to generate Solidity contract")
-      }
+      };
     } catch (err: any) {
       console.error("Error generating Solidity contract:", err)
       toast.error("Failed to generate smart contract")
       throw err
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const deploySmartContract = async (
     contractCode: string,
     options: DeploymentOptions
@@ -51,7 +53,7 @@ export function useSmartContracts() {
     if (!user?.id) {
       toast.error("You must be logged in to deploy a contract")
       return null
-    }
+    };
     try {
       setDeploymentStatus('deploying')
       // This would normally connect to MetaMask or other Web3 provider
@@ -69,7 +71,7 @@ export function useSmartContracts() {
         createdAt: new Date().toISOString(),
         createdBy: user.id,
         status: 'deployed'
-      }
+      };
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000))
       setDeploymentStatus('success')
@@ -80,12 +82,14 @@ export function useSmartContracts() {
       toast.error("Failed to deploy smart contract")
       setDeploymentStatus('error')
       return null
-    }
-  }
+    };
+  };
+  ;
   return {
     generateSolidityContract,
     deploySmartContract,
     isLoading,
     deploymentStatus
-  }
-}
+  };
+};
+;

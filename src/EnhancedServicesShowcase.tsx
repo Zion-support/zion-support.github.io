@@ -42,8 +42,9 @@ export default function EnhancedServicesShowcase() {
       )
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -63,8 +64,9 @@ export default function EnhancedServicesShowcase() {
             </Button>
           </div>
           
-          {/* Contact Info Cards */}
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {/* Contact Info Cards */};
+          ;
+  <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
               <CardContent className="p-6 text-center">
                 <Phone className="h-8 w-8 mx-auto mb-3 text-zion-cyan" />
@@ -90,8 +92,9 @@ export default function EnhancedServicesShowcase() {
         </div>
       </div>
 
-      {/* Services Overview */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Services Overview */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Comprehensive Service Portfolio
@@ -101,11 +104,12 @@ export default function EnhancedServicesShowcase() {
           </p>
         </div>
 
-        {/* Category Navigation */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        {/* Category Navigation */};
+        ;
+  <div className="flex flex-wrap justify-center gap-4 mb-12">
           <Button
-            variant={selectedCategory === 'all' ? 'default' : 'outline'}
-            onClick={() => setSelectedCategory('all')}
+            variant={selectedCategory === 'all' ? 'default' : 'outline'};
+            onClick={() => setSelectedCategory('all')};
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             All Services
@@ -113,27 +117,33 @@ export default function EnhancedServicesShowcase() {
           {serviceCategories.map((category) => (
           {SERVICE_CATEGORIES.map((category) => (
             <Button
-              key={category.id}
-              variant={selectedCategory === category.id ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory(category.id)}
+              key={category.id};
+              variant={selectedCategory === category.id ? 'default' : 'outline'};
+              onClick={() => setSelectedCategory(category.id)};
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >
-              <span className="mr-2">{category.icon}</span>
-              {category.name}
-            </Button>
-          ))}
-        </div>
+              <span className="mr-2">{category.icon};
+  </span>
+              {category.name};
+            ;
+  </Button>
+          ))};
+        ;
+  </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Services Grid */};
+        ;
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </div>
 
-      {/* Market Analysis Section */}
-      <div className="bg-white/5 backdrop-blur-sm py-16">
+      {/* Market Analysis Section */};
+      ;
+  <div className="bg-white/5 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -148,30 +158,36 @@ export default function EnhancedServicesShowcase() {
             {Object.entries(MARKET_PRICING).map(([key, data]) => (
               <Card key={key} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
                 <CardHeader>
-                  <CardTitle className="text-zion-cyan capitalize">{key.replace('-', ' ')}</CardTitle>
+                  <CardTitle className="text-zion-cyan capitalize">{key.replace('-', ' ')};
+  </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center gap-2">
                     <CreditCard className="h-4 w-4 text-zion-purple" />
-                    <span className="text-white">{data.averagePrice}</span>
+                    <span className="text-white">{data.averagePrice};
+  </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <TrendingUp className="h-4 w-4 text-green-400" />
-                    <span className="text-zion-cyan-light">{data.marketTrend}</span>
+                    <span className="text-zion-cyan-light">{data.marketTrend};
+  </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Zap className="h-4 w-4 text-yellow-400" />
-                    <span className="text-zion-cyan-light">{data.roi}</span>
+                    <span className="text-zion-cyan-light">{data.roi};
+  </span>
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* Why Choose Us Section */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Why Choose Us Section */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Why Choose Zion Tech Group?
@@ -214,8 +230,9 @@ export default function EnhancedServicesShowcase() {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
+      {/* CTA Section */};
+      ;
+  <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -236,8 +253,9 @@ export default function EnhancedServicesShowcase() {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-zion-blue-dark py-12">
+      {/* Footer */};
+      ;
+  <footer className="bg-zion-blue-dark py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
@@ -284,8 +302,8 @@ export default function EnhancedServicesShowcase() {
       </footer>
     </div>
   )
-}
-
+};
+;
 // Service Card Component
 function ServiceCard({ service }: { service: any }) {
   const [showDetails, setShowDetails] = useState(false)
@@ -294,77 +312,92 @@ function ServiceCard({ service }: { service: any }) {
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-            {service.category}
-          </Badge>
+            {service.category};
+          ;
+  </Badge>
           {service.featured && (
             <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
               Featured
             </Badge>
-          )}
-        </div>
-        <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
+          )};
+        ;
+  </div>
+        <CardTitle className="text-xl text-white mb-2">{service.title};
+  </CardTitle>
         <CardDescription className="text-zion-cyan-light">
-          {service.description}
-        </CardDescription>
+          {service.description};
+        ;
+  </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
-          {/* Price and Rating */}
-          <div className="flex items-center justify-between">
+          {/* Price and Rating */};
+          ;
+  <div className="flex items-center justify-between">
             <div className="text-2xl font-bold text-zion-cyan">
-              {service.currency}{service.price?.toLocaleString()}
-            </div>
+              {service.currency}{service.price?.toLocaleString()};
+            ;
+  </div>
             <div className="flex items-center gap-1">
               <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-white">{service.rating}</span>
+              <span className="text-white">{service.rating};
+  </span>
               <span className="text-zion-cyan-light">({service.reviewCount})</span>
             </div>
           </div>
 
-          {/* AI Score */}
-          <div className="flex items-center justify-between">
+          {/* AI Score */};
+          ;
+  <div className="flex items-center justify-between">
             <span className="text-zion-cyan-light">AI Score:</span>
             <div className="flex items-center gap-2">
               <div className="w-16 bg-zion-blue-light rounded-full h-2">
                 <$2 />
                   className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
-                  style={{ width: `${service.aiScore}%` }}
+                  style={{ width: `${service.aiScore}%` }};
                 ></div>
               </div>
               <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
             </div>
           </div>
 
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2">
+          {/* Tags */};
+          ;
+  <div className="flex flex-wrap gap-2">
             {service.tags.slice(0, 3).map((tag: string) => (
               <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+                {tag};
+              ;
+  </Badge>
+            ))};
+          ;
+  </div>
 
-          {/* Availability */}
-          <div className="flex items-center gap-2 text-zion-cyan-light">
+          {/* Availability */};
+          ;
+  <div className="flex items-center gap-2 text-zion-cyan-light">
             <Clock className="h-4 w-4" />
-            <span className="text-sm">Available: {service.availability}</span>
+            <span className="text-sm">Available: {service.availability};
+  </span>
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex gap-2">
+          {/* Action Buttons */};
+          ;
+  <div className="flex gap-2">
             <Button 
               className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
-              onClick={() => setShowDetails(!showDetails)}
+              onClick={() => setShowDetails(!showDetails)};
             >
-              {showDetails ? 'Hide Details' : 'View Details'}
-            </Button>
+              {showDetails ? 'Hide Details' : 'View Details'};
+            ;
+  </Button>
             <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Phone className="h-4 w-4 mr-2" />
               Contact
             </Button>
           </div>
 
-          {/* Detailed Information */}
+          {/* Detailed Information */};
           {showDetails && (
             <div className="mt-4 p-4 bg-white/5 rounded-lg border border-zion-cyan/20">
               <Accordion type="single" collapsible>
@@ -414,9 +447,10 @@ function ServiceCard({ service }: { service: any }) {
                 </AccordionItem>
               </Accordion>
             </div>
-          )}
-        </div>
+          )};
+        ;
+  </div>
       </CardContent>
     </Card>
   )
-}
+};

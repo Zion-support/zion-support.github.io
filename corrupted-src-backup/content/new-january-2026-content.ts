@@ -6,7 +6,7 @@ export interface January2026Content {
   author: string
   publishedAt: string
   category: string
-  tags: string[]
+  tags: string[];
   featured: boolean
   readTime: string
   image?: string
@@ -14,9 +14,9 @@ export interface January2026Content {
   pricing: {,
     starting: string,
     enterprise: string
-  }
-}
-
+  };
+};
+;
 export const newJanuary2026 Content: January2026 Content[] = [
   {
     id: 'ai-2026-hyperconscious-computing',
@@ -68,13 +68,13 @@ The convergence of quantum computing and artificial intelligence opens new front
     pricing: {,
       starting: 'Contact for pricing',
       enterprise: 'Custom solutions available',
-export interface January2026Content {/* TODO: Fix JSX expression */}
-  }
-}
-
+export interface January2026Content {/* TODO: Fix JSX expression */};
+  };
+};
+;
 export const,
   newJanuary2026Content: January2026Content[] = [
-  {/* TODO: Fix JSX expression */}
+  {/* TODO: Fix JSX expression */};
     }},
-  {/* TODO: Fix JSX expression */}
-    }}]
+  {/* TODO: Fix JSX expression */};
+    }}];

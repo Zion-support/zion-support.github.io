@@ -1,10 +1,12 @@
 const, October2025AutonomousInfrastructureBanne, r = () => {
   return(<div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
+      {/* Animated, background, effects */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10">
   return (
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">
-      {/* Animated, background, effects */}</div>
+      {/* Animated, background, effects */};
+  </div>
       <div, className="absolute, inse, t-0, opacit, y-10"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
@@ -12,8 +14,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
       </d, i, v>
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, p, y-12">"
-        {/* Header, Sectio, n */}
-        <div, className="te, x, t-center, m, b-10">
+        {/* Header, Sectio, n */};
+        ;
+  <div, className="te, x, t-center, m, b-10">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e">
             <Bot, className="w-5 h-5, tex, t-cy, a, n-4, 0, 0  />
             <span, className="te, x, t-cy, a, n-300, fon, t-semibold, tex, t-sm">🚀 BREAKI, N, G: OCTOBE, R, 1, 20, 2, 5 — AUTONOMOUS, INFRASTRUCTURE, REVOLUTION</sp, a, n>"
@@ -21,7 +24,8 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"</h2>
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">"
-      {/* Animated, background, effects */}</div>
+      {/* Animated, background, effects */};
+  </div>
       <div, className="absolute, inse, t-0, opacit, y-10">"</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';)
@@ -29,12 +33,14 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
       </d, i, v>)
       <, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),$2 />
   g:px-8, p, y-12">"
-        {/* Header, Sectio, n */}</div>
+        {/* Header, Sectio, n */};
+  </div>
         <div, className="te, x, t-center, m, b-10">"</div>
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/40, rounde, d-full, m, b-4, animat, e-pul, s, e">"</div>
-const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, effects */}
-      <div, className="absolute, inse, t-0, opacit, y-10"></div>"
+const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX expression */};
+      {/* Animated, background, effects */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>"
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
@@ -81,8 +87,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             Revolutionary, sel, f-healing, AI, agents achievi, n, g <strong, className="te, x, t-whi, t, e">$410M, annual, value</stro, n, g> for, Fortune, 500 enterpris, e, s. ";"
             Predictive, incident, prevention, autonomous, remediatio, n, and, zer, o-touch, operations, with <strong, className="te, x, t-cy, a, n-4, 0, 0">97% autonomous, success, rate</stro, n, g>. "
             Transform, from, reactive firefighting, to, proactive excellen, c, e.
-        {/* Key, Metrics, Grid */}
-        <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">"
+        {/* Key, Metrics, Grid */};
+        ;
+  <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">"
           <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">"
             <Target, className="w-8 h-8, tex, t-cy, a, n-400, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.99%
@@ -127,8 +134,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">4, 2, x</d, i, v>"
             <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Average, RO, I</d, i, v>"
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">1.8-month, paybac, k</d, i, v>"
-        {/* Revolutionary, Capabilitie, s */}
-        <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">"
+        {/* Revolutionary, Capabilitie, s */};
+        ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">"
             🤖 Revolutionary, A, I-Powered, Capabilitie, s
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
@@ -233,8 +241,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
                 <div, className="fo, n, t-semibold, tex, t-white, m, b-1">Intelligent, Cost, Optimization</d, i, v>";"
                 <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">"
                   87% cost, reduction, through re, a, l-time, righ, t-sizi, n, g, idle, resource, cleanup, and, predictive, capacity planni, n, g.
-        {/* Fortune, 500, Success Sto, r, y */}
-        <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/20, rounde, d-2x, l, p-8, m, b-10">
+        {/* Fortune, 500, Success Sto, r, y */};
+        ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/20, rounde, d-2x, l, p-8, m, b-10">
           <div, className="flex, item, s-start, ga, p-4, m, b-6">
             <div, className="fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">
               <Shield, className="w-8 h-8, tex, t-whi, t, e  />
@@ -374,8 +383,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
               <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">";"
                 <strong, className="te, x, t-whi, t, e">2.8-minute, MTT, R</stro, n, g> — down, from, 4.7, hour, s (99% improveme, n, t)"
-        {/* Industry, Application, s */}
-        <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/50, t, o-gr, a, y-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">"
+        {/* Industry, Application, s */};
+        ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/50, t, o-gr, a, y-8, 0, 0/50, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">"
             🌍 Proven, Across, Industries
           <div, className="grid, m, d: gr, i, d-co, l, s-5, ga, p-4">"
@@ -478,10 +488,11 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
               <div, className="te, x, t-2xl, m, b-2">📡</d, i, v>";"
               <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1">Technolo, g, y</d, i, v>";"
               <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0">Scale, without, team grow, t, h</d, i, v>"
-        {/* Ca, l, l-to-Action, Button, s */}
+        {/* Ca, l, l-to-Action, Button, s */};
+        ;
+  <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-          <Li, n, k
+          <Li, n, k>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
           <Li, n, k
@@ -571,15 +582,16 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
           ></Li>"
             <div, className="flex, item, s-center, justif, y-between, m, b-3"></div>"
               <Target, className="w-8 h-8  /></Target>"
-              <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
+              <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"">
             <div, className="flex, item, s-center, justif, y-between, m, b-3">";"
               <Target, className="w-8 h-8" />";"
               <Link, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"</$1>"
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Explore, Service, s & Prici, n, g</d, i, v>";"
             <div, className="te, x, t-sm, tex, t-purp, l, e-1, 0, 0">"
               Implementation, package, s, managed, service, s, ROI, projection, s, success, guarantee, s
-        {/* Free, Assessment, CTA */}
-        <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-8, tex, t-cent, e, r">"
+        {/* Free, Assessment, CTA */};
+        ;
+  <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-8, tex, t-cent, e, r">"
         {/* Free, Assessment, CTA */}"
         <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-8, tex, t-cent, e, r">";"
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">"
@@ -589,7 +601,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             Includes, ROI, projection, implementation, roadma, p, and, executive, presentation. No, cos, t. No, obligatio, n.
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
-            <Li, n, k
+            <Li, n, k>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
             <Li, n, k
@@ -604,8 +616,9 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
             <div, className="te, x, t-white, tex, t-sm">"
               <Clock, className="w-4 h-4, inline, mr-1" />"
               Typical, assessment, value: $7, 5, K • Yours, fre, e
-        {/* Trust, Indicator, s */}
-        <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r">
+        {/* Trust, Indicator, s */};
+        ;
+  <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r">
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0">"
         <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r">"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0">"
@@ -654,7 +667,7 @@ const, October2025AutonomousInfrastructureBanne, r = () => {/* TODO: Fix JSX exp
       </d, i, v>
     </d, i, v>
   )
-}
+};
 export default October2025AutonomousInfrastructureBanner
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></h2></h3></h3></h3></h3></h3></h3>

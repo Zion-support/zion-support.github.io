@@ -1,25 +1,28 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
-  }
-  
+    this.state = { hasError: false };
+  };
+  ;
   static getDerivedStateFromError(error) {
-    return { hasError: true }
-  }
-  
+    return { hasError: true };
+  };
+  ;
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
-  }
-  
+  };
+  ;
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
+    if (this.state.hasError) {}
+      
+  ;
+  return <div>Something went wrong.</div>
     }
-    
-    return this.props.children
-  }
-}
+    ;
+    ;
+  return this.props.children
+  };
+};
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -53,7 +56,8 @@ export default function SearchFeature() {
     "description": "Quickly locate products, services and talent using intelligent search filters.",
     "url": "https://app.ziontechgroup.com/features/search"
 
-  }
+  };
+  ;
   return (
     <>
             <li>
@@ -81,12 +85,13 @@ export default function SearchFeature() {
 
 
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
 
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -124,10 +129,11 @@ export default function SearchFeature() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -171,8 +177,8 @@ export default function SearchFeature() {
     </>
   )
 
-}
-
+};
+;
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -186,7 +192,8 @@ export default function SearchFeature() {
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
-  }
+  };
+  ;
   return (
     <>
       <SEO
@@ -195,10 +202,11 @@ export default function SearchFeature() {
         keywords="search engine, filtering, tech marketplace search"
         canonical="https://app.ziontechgroup.com/features/search"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -210,7 +218,7 @@ export default function SearchFeature() {
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of search results"
-              className="object-cover"
+              className="object-cover">
 
 
               <Link href="/search">Try Search</Link></$1></$1></$1></$1></$1></div></main>

@@ -12,9 +12,10 @@ export function getSupabaseClient(): ZionSupabase {try {
     if (typeof window !== 'undefined') {
       if (!browserClient) {
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-      }
-      return browser_client
-    }
+      };
+      ;
+  return browser_client
+    };
     // Server-side: create a new client per call to avoid cross-request state
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
   } catch {return undefined
@@ -31,14 +32,15 @@ export function getSupabaseClient(): ZionSupabase {
         } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-      return browserClient
+  };
+};
+      ;
+  return browserClient
       } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
     // Server-side: create a new client per call to avoid cross-request state
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
   } catch {
@@ -50,13 +52,13 @@ export function getSupabaseClient(): ZionSupabase {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 let browserClient: SupabaseClient | undefined
 export function getSupabaseClient(): ZionSupabase {
   try {
@@ -64,12 +66,14 @@ export function getSupabaseClient(): ZionSupabase {
     if (typeof window !== 'undefined') {
       if (!browserClient) {
         browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-      }
-      return browserClient
-    }
+      };
+      ;
+  return browserClient
+    };
     // Server-side: create a new client per call to avoid cross-request state
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
   } catch {
     return undefined
-  }
-}
+  };
+};
+;

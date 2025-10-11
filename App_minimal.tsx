@@ -6,6 +6,7 @@ import Footer from './app/components/Footer'
 import HomePage from './app/page'
 
 const App: React.FC = () => {
+
   return (
     <>
 <HelmetProvider>
@@ -22,5 +23,7 @@ const App: React.FC = () => {
       </Router>
     </HelmetProvider>
     </>
-  )
-export default App
+  );
+};
+
+export default App;

@@ -8,8 +8,8 @@ canonical?: string
 ogImage?: string
 ogType?: string
 twitterCard?: string
-structuredData?: object}
-
+structuredData?: object};
+;
 export default function SEOHead({
 title = "Zion Tech Group - Leading AI & Technology Solutions",
 description = "Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence.",
@@ -58,29 +58,34 @@ const defaultStructuredData={"@context": "https://schema.org";,
           "description": "Enterprise-grade infrastructure from 5G networks to space technology"},
         {"@type": "Offer",
           "name": "Micro SaaS",
-          "description": "Innovative SaaS solutions from AI code generation to metaverse builders"}
-      ]
-    }
+          "description": "Innovative SaaS solutions from AI code generation to metaverse builders"};
+      ];
+    };
   }
+  ;
+  ;
   const finalStructuredData = structuredData || defaultStructuredData;
 return (
     <>
 
     <Head>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      {/* Basic Meta Tags */};
+      ;
+  <title>{fullTitle};
+  </title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Canonical URL */}
+      {/* Canonical URL */};
       {canonicalUrl && <link rel="canonical" href={canonicalUrl}} />
-  </link>}
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
+  </link>};
+      ;
+      {/* Open Graph Meta Tags */};
+      ;
+  <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonicalUrl} />
@@ -88,23 +93,26 @@ return (
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
+      {/* Twitter Card Meta Tags */};
+      ;
+  <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#1e40af" />
+      {/* Additional SEO Meta Tags */};
+      ;
+  <meta name="theme-color" content="#1e40af" />
       <meta name="msapplication-TileColor" content="#1e40af" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
+      {/* Favicon */};
+      ;
+  <link rel="icon" href="/favicon.ico" />
   </link>
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   </link>
@@ -115,34 +123,39 @@ return (
       <link rel="manifest" href="/site.webmanifest" />
   </link>
       
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      {/* Preconnect to external domains */};
+      ;
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   </link>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
   </link>
       <link rel="preconnect" href="https://www.google-analytics.com" />
   </link>
       
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      {/* DNS Prefetch */};
+      ;
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   </link>
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
   </link>
       
-      {/* Structured Data */}
-      <script
+      {/* Structured Data */};
+      ;
+  <script
 type="application/ld+json"
 dangerouslySetInnerHTML={{};,
 __html: JSON.stringify(finalStructuredData
     </>
   );,
-        }}
+        }};
       />
       
-      {/* Additional Performance Hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      {/* Additional Performance Hints */};
+      ;
+  <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
   </link>
     </Head>
   )
-}
-</li></li></li></li></li></li></li></li></li></li></li></li>
+};
+;
+  </li></li></li></li></li></li></li></li></li></li></li></li>

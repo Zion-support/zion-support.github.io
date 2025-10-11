@@ -10,8 +10,10 @@ function summarizeModules(
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ]
+  ;
+  ;
   return active && active.length ? active && active.sort().join(", ") : "None"
-}
+};
 function missionParagraph(
   region: string
   instanceName: string
@@ -22,7 +24,7 @@ function missionParagraph(
     Object && Object.values(modules).filter(Boolean).length +
     Object && Object.values(bonus).filter(Boolean).length
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
-}
+};
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -33,19 +35,23 @@ function summarizeModules(modules: Record<string, boolean>, bonus: Record<string
   const active = [
     ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
     ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)]
+  ;
+  ;
   return active.length ? active.sort().join() : 'None'
-}
+};
 function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
-}
+};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
-  }
+  };
   try {
     const body = req && req.body || {}
-    const {
+    ;
+  ;
+  const {
       instanceName,
       defaultLanguage = "en",
       deploymentRegion,
@@ -59,22 +65,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion",
       })
-    }
+    };
     // Simulated provisioning operations
     const now = new Date().toISOString()
     const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`
     const outputActions = {
       zionGPT: {
         initialized: true
-        routes: ["/gpt", "/gpt/router"]
-        agents: ["proposal-writer", "resume-generator"]
-      }
+        routes: ["/gpt", "/gpt/router"];
+        agents: ["proposal-writer", "resume-generator"];
+      };
       daoAndToken: {
         token: tokenActivation ? "ZION$" : "disabled"
         treasury: tokenActivation ? `${provisionId}-treasury` : null
         governanceMode
         votingDashboard: "/dao"
-      }
+      };
 import type { NextApiRequest, NextApiResponse } from './next'
 /**
  * summarize_modules - Function description
@@ -88,8 +94,10 @@ function summarize_modules() {
       .filter (([, v]) => v)
       .map (([k]) => `/${k}`),
   ]
+  ;
+  ;
   return active.length ? active.sort ().join (", ") : "None"
-}
+};
 /**
  * mission_paragraph - Function description
  */
@@ -98,7 +106,7 @@ function mission_paragraph() {
     Object.values (modules).filter (Boolean).length +
     Object.values (bonus).filter (Boolean).length
   return `"${instance_name}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${active_count} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
-}
+};
 export default async /**
  * handler - Function description
  */
@@ -106,12 +114,15 @@ function handler() {
   // Check condition
 if ( {) {
   $2
-}
-    return res.status (405).json ({ error: "Method not allowed" })
-  }
+};
+    ;
+  return res.status (405).json ({ error: "Method not allowed" })
+  };
   try {
     const body = req.body || {}
-    const {
+    ;
+  ;
+  const {
       instance_name,
       default_language = "en",
       deployment_region,
@@ -124,11 +135,12 @@ if ( {) {
     // Check condition
 if ( {) {
   $2
-}
-      return res.status (400).json ({
+};
+      ;
+  return res.status (400).json ({
         error: "Missing required fields: instance_name, deployment_region",
       })
-    }
+    };
     // Simulated provisioning operations
     const now = new Date ().toISOString ()
     const provision_id = `zion-${instance_name.toLowerCase ().replace (/[^a - z0 - 9]+/g, "-")}-${Date.now ()}`
@@ -162,9 +174,11 @@ if ( {) {
         "/marketplace"
         "/dao"
         `/nation/${defaultLanguage |"en"}`
-      ]
+      ];
     }
-    const operator = {
+    ;
+  ;
+  const operator = {
       activeModulesSummary: summarizeModules(modules, bonusModules)
       mission: missionParagraph(
         deploymentRegion
@@ -172,7 +186,7 @@ if ( {) {
         modules
         bonusModules
       )
-    }
+    };
           pdf: "/book / manifesto.pdf",
           trailer_script: "/trailer / script",
         },
@@ -190,7 +204,9 @@ if ( {) {
       ],
     }
 
-    const operator = {
+    ;
+  ;
+  const operator = {
       activeModulesSummary: summarize_modules (modules, bonus_modules),
       mission: mission_paragraph (
         deployment_region,
@@ -200,13 +216,15 @@ if ( {) {
       ),
     }
 
-    const access = {
-      roles: ["Founder", "Superadmin", "DAO Multisig"]
+    ;
+  ;
+  const access = {
+      roles: ["Founder", "Superadmin", "DAO Multisig"];
       export: {
         type: "application/json",
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
       },
-    }
+    };
       operator,
       access,
     })
@@ -226,29 +244,36 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
-    const operator = {
+    ;
+  ;
+  const operator = {
       activeModulesSummary: summarizeModules(modules, bonusModules),
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)}
-    const access = {
+    ;
+  ;
+  const access = {
       roles: ['FounderSuperadminDAO Multisig'],
       export: {
         type: 'application/json',
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}}
-    return res.status(200).json({ outputActions, deployLog, access, operator })
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+    ;
+  return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
-  }
-}
+  };
+};
   try {
     const body = req.body || {}
-    const {
+    ;
+  ;
+  const {
       instanceName,
       defaultLanguage,
       deploymentRegion,
@@ -262,13 +287,13 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
     } = body
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({
@@ -280,13 +305,13 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString()
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`
@@ -294,7 +319,7 @@ export default async function handler(req, res) {
       zionGPT: {
         initialized: true,
         routes: ['/gpt/gpt/router'],
-        agents: ['proposal-writer', 'resume-generator']
+        agents: ['proposal-writer', 'resume-generator'];
       },
       daoAndToken: {
         token: tokenActivation ? 'ZION$' : 'disabled',
@@ -310,8 +335,8 @@ export default async function handler(req, res) {
         },
         summit: '/summit'
       },
-      publicPages: []
-    }
+      publicPages: [];
+    };
     res.status(200).json({
       success: true,
       provisionId,
@@ -327,6 +352,8 @@ function summarizeModules(modules: Record<string, boolean>, bonus: Record<string
   const active = [
     ...Object.entries(modules).filter(([ v]) => v).map(([k]) => `/${k}`)
     ...Object.entries(bonus).filter(([ v]) => v).map(([k]) => `/${k}`)]
+  ;
+  ;
   return active.length ? active.sort().join() : 'None'
   } catch (error) {
     console.error("Error:", error)
@@ -334,13 +361,13 @@ function summarizeModules(modules: Record<string, boolean>, bonus: Record<string
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
 function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length,
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
@@ -354,14 +381,14 @@ function missionParagraph(region: string, instanceName: string, modules: Record<
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
@@ -372,24 +399,26 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
   try {
     const body = req.body || {}
-    const {
+    ;
+  ;
+  const {
       instanceName
       defaultLanguage
       deploymentRegion
       tokenActivation,
       governanceMode,
       branding,
-      modules = {}
+      modules = {};
       bonusModules = {}} = body
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })
@@ -399,22 +428,22 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-
+  };
+};
+;
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString()
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`,
     const outputActions = {
       zionGPT: {
         initialized: true
-        routes: ['/gpt/gpt/router']
-        agents: ['proposal-writerresume-generator']}
+        routes: ['/gpt/gpt/router'];
+        agents: ['proposal-writerresume-generator']};
       daoAndToken: {
         token: tokenActivation ? 'ZION$' : 'disabled'
         treasury: tokenActivation ? `${provisionId}-treasury` : null,
@@ -446,35 +475,37 @@ export default async function handler(req, res) {
       activeModulesSummary: summarizeModules(modules, bonusModules)
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)},
     const access = {
-      roles: ['FounderSuperadminDAO Multisig']
+      roles: ['FounderSuperadminDAO Multisig'];
       export: {
         type: 'application/json'
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}}
-    return res.status(200).json({ outputActions, deployLog, access, operator })
+        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+    ;
+  return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

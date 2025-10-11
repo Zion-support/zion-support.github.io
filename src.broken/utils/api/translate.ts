@@ -4,7 +4,7 @@ const provider: SupportedProvider = (process.env.TRANSLATION_PROVIDER as Support
 let openai: OpenAI | null = null
 if (provider === 'openai') {
   openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-}
+};
 async function translateWithOpenAI(text: string, to: string, from?: string): Promise<string> {
   if (!openai) throw new Error('OpenAI not configured')
   const system = 'You translate text. Respond with only the translated content without extra commentary.'
@@ -20,7 +20,7 @@ async function translateWithOpenAI(text: string, to: string, from?: string): Pro
     temperature: 0.2,
   })
   return (completion.choices?.[0]?.message?.content || '').trim()
-}
+};
 async function translateWithDeepL(text: string, to: string, from?: string): Promise<string> {
   const key = process.env.DEEPL_API_KEY
   if (!key) throw new Error('DeepL not configured')
@@ -41,7 +41,7 @@ async function translateWithDeepL(text: string, to: string, from?: string): Prom
   const data = await res.json()
   if (!res.ok) throw new Error(data?.message || 'DeepL error')
   return data?.translations?.[0]?.text || ''
-}
+};
 export async function translateText(text: string, to: string, from?: string): Promise<string> {
   if (!text) return text
   try {
@@ -50,10 +50,10 @@ export async function translateText(text: string, to: string, from?: string): Pr
     return text
   } catch {
     return text
-  }
-}
+  };
+};
 export function detectLanguageSimple(text: string): string {
   // Very simple heuristic; in production use a language detection library or model
   // Default to 'en'
   return 'en'
-}
+};

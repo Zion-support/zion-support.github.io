@@ -1,11 +1,11 @@
-export const aiAutonomousServices2026 = [] as any[]
+export const aiAutonomousServices2026 = [] as any[];
 export interface AiAutonomousService2026 {
   id: string
   name: string
   tagline: string
   price: string
   description: string
-  features: string[]
+  features: string[];
   link: string
   category: string
   realImplementation: boolean
@@ -13,8 +13,8 @@ export interface AiAutonomousService2026 {
     mobile: string
     email: string
     address: string
-  }
-}
+  };
+};
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
     id: "2026-ai-autonomous",
@@ -36,7 +36,7 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
-]
+    };
+  };
+];
+];

@@ -1,17 +1,17 @@
 impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t'
-const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
+const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */};
      },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
      },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
      },
-    {/* TODO: Fix JSX expression */}
-     }
+    {/* TODO: Fix JSX expression */};
+     };
   ]; const successMetric, s = [
     { metr, i, c: '2., 5, M+', lab, e, l: 'Global, Use, r, s' },
     { metr, i, c: '$15, B+', lab, e, l: 'Value, Creat, e, d' },
     { metr, i, c: '99.9, 9%', lab, e, l: 'Success, Ra, t, e' },
-    { metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s' }
+    { metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s' };
   ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
   ]; return (
@@ -32,12 +32,16 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (
           <, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`}$2 />
           >
-            <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}
-            <h3, className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.t, i, t, l, e}
-            <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.description}
-            <div, className="flex, item, s-center, justif, y-betwe, e, n">
-              <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
+            <div, classNam, e = "mb-4">{ar, e, a.ic, o, n};
+            ;
+  <h3, className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.t, i, t, l, e};
+            ;
+  <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.description};
+            ;
+  <div, className="flex, item, s-center, justif, y-betwe, e, n">
+              <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e};
+              ;
+  <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
   ]; return (<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l"></div>"
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6"></div>"
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Globe>"
@@ -50,39 +54,49 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.
       </p>"
       <div, className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
-        {/* TODO: Fix JSX expression */}
-          <, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hove,`$2 />
-  r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`}
+        {/* TODO: Fix JSX expression */};
+          ;
+  <, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hove,`$2 />
+  r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`};
           ></Link>"
-            <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}</div>"
-            <h3, className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.t, i, t, l, e}</h3>"
-            <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.description}</p>"
+            <div, classNam, e = "mb-4">{ar, e, a.ic, o, n};
+  </div>"
+            <h3, className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.t, i, t, l, e};
+  </h3>"
+            <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.description};
+  </p>"
             <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>"
-              <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>"
+              <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e};
+  </sp, a, n>"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
           </Li, n, k>)
-        ))}
-      <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, rounde, d-x, l, p-6, m, b-8, border, border-bl, u, e-4, 0, 0/30">
+        ))};
+      ;
+  <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, rounde, d-x, l, p-6, m, b-8, border, border-bl, u, e-4, 0, 0/30">
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
           <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />
           <span, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
           { successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (
             <div, ke, y = {ind, e, x }>
-              <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}
-      </div>"
+              <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c};
+      ;
+  </div>"
       <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, rounde, d-x, l, p-6, m, b-8, border, border-bl, u, e-4, 0, 0/30"></div>"
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4"></div>"
           <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" /></TrendingUp>"
           <span, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics
         </div>"
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
-          {/* TODO: Fix JSX expression */}
-            <div, ke, y = {ind, e, x }></div>"
-              <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}</div>"
-              <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">{it, e, m.lab, e, l}
-          ))}
-      <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
+          {/* TODO: Fix JSX expression */};
+            ;
+  <div, ke, y = {ind, e, x }></div>"
+              <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c};
+  </div>"
+              <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">{it, e, m.lab, e, l};
+          ))};
+      ;
+  <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
         <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <Rocket, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
@@ -143,6 +157,6 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
       </div>
     </div>
   )
-}
+};
 export default GlobalAITransformationHub;"`
 </div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></p></h2></h2></h3></h3></h3></h3>

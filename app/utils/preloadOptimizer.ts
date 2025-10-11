@@ -1,6 +1,6 @@
   // Preload critical fonts
-  }
-export const preloadCriticalResources = useCallback((...args) => {}
+  };
+export const preloadCriticalResources = useCallback((...args) => {};
   if (typeof window === 'undefined') return
   // Preload critical fonts
   const fontPreloads = [
@@ -8,7 +8,10 @@ export const preloadCriticalResources = useCallback((...args) => {}
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
     link.rel = 'preload';
   fontPreloads.forEach(href => {)}]
-    const link = document.createElement('link')
+    
+  ;
+  ;
+  const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style',
     link.href = href
@@ -16,39 +19,41 @@ export const preloadCriticalResources = useCallback((...args) => {}
     link.rel = 'preload';
     link.as = 'image';
     link.href = src;
-    document.head.appendChild(link)}
+    document.head.appendChild(link)};
   })
-}
+};
   // Preload route-specific resources;
   const routeResources = {}export const preloadRoute = useCallback((...args) => {}if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};
   })
   // Preload critical images
   const criticalImages = [
     '/images/hero-bg.webp',
     '/images/logo.webp',
     '/images/favicon.ico'
-  ]
+  ];
   })
-}
+};
 export const preloadRoute = useCallback((...args) => {
   if (typeof window === 'undefined') return
   // Preload route-specific resources
-  const routeResources = {}
-export const preloadRoute = useCallback((...args) => {}
+  const routeResources = {};
+export const preloadRoute = useCallback((...args) => {};
   if (typeof window === 'undefined') return
   // Preload route-specific resources
-  const routeResources = {}
+  const routeResources = {};
     '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],
     '/services': ['/api/services', '/images/services-hero.webp'],
-    '/contact': ['/api/contact', '/images/contact-hero.webp']}
+    '/contact': ['/api/contact', '/images/contact-hero.webp']};
   }
-  const resources = routeResources[route as keyof typeof routeResources]
-      document.head.appendChild(link)}
+  ;
+  ;
+  const resources = routeResources[route as keyof typeof routeResources];
+      document.head.appendChild(link)};
     })
-  }
-}
+  };
+};
   // Add loading="lazy" to images below the fold;
   })
   // Add intersection observer for lazy loading;
@@ -58,19 +63,23 @@ export const preloadRoute = useCallback((...args) => {}
           if (img.dataset['src']) {}export const optimizeImages = useCallback((...args) => {}if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
   const images = document.querySelectorAll('img[data-lazy]');
-  images.forEach(img => {)}img.setAttribute('loading', 'lazy')}
+  images.forEach(img => {)}img.setAttribute('loading', 'lazy')};
   })
   // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {}const imageObserver = new IntersectionObserver((entries) => {}entries.forEach(entry => {)}if (entry.isIntersecting) {}const img = entry.target as HTMLImageElement;
-          if (img.dataset['src']) {}img['src'] = img.dataset['src']
+  if ('IntersectionObserver' in window) {};
+  ;
+  const imageObserver = new IntersectionObserver((entries) => {}entries.forEach(entry => {)}if (entry.isIntersecting) {};
+  ;
+  const img = entry.target as HTMLImageElement;
+          if (img.dataset['src']) {}img['src'] = img.dataset['src'];
             img.removeAttribute('data-src');
 export const optimizeImages = useCallback((...args) => {
     if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {)
-  }
-    img.setAttribute('loading', 'lazy')}
+  };
+    img.setAttribute('loading', 'lazy')};
   })
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {
@@ -78,8 +87,8 @@ export const optimizeImages = useCallback((...args) => {
       entries.forEach(entry => {)
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement
-          if (img.dataset['src']) {}
-export const optimizeImages = useCallback((...args) => {}
+          if (img.dataset['src']) {};
+export const optimizeImages = useCallback((...args) => {};
   if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
@@ -88,51 +97,57 @@ export const optimizeImages = useCallback((...args) => {}
   })
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {}
-    const imageObserver = new IntersectionObserver((entries) => {}
+    ;
+  ;
+  const imageObserver = new IntersectionObserver((entries) => {};
       entries.forEach(entry => {</div>
         if (entry.isIntersecting) {}
-          const img = entry.target as HTMLImageElement
-          if (img.dataset['src']) {}
-            img['src'] = img.dataset['src']
+          ;
+  ;
+  const img = entry.target as HTMLImageElement
+          if (img.dataset['src']) {};
+            img['src'] = img.dataset['src'];
             img.removeAttribute('data-src')
-            imageObserver.unobserve(img)}
-  ]
+            imageObserver.unobserve(img)};
+  ];
   criticalImages.forEach(src => {/* TODO: Fix JSX expression */,)})
   })
 }
-  const resources = routeResources[route as keyof typeof routeResources]
+  ;
+  ;
+  const resources = routeResources[route as keyof typeof routeResources];
   if (resources) {/* TODO: Fix JSX expression */,}})
-  }
-}
-        }
+  };
+};
+        };
       })
     })
     const lazyImages = document.querySelectorAll('img[data-src]')
     lazyImages.forEach(img => imageObserver.observe(img))
-  }
-}
+  };
+};
   // Defer non-critical scripts;
   })
   // Load analytics after page load;
   if (document.readyState === 'loading') {document.addEventListener('DOMContentLoaded', () => {}export const optimizeThirdPartyScripts = useCallback((...args) => {}if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]');
-  scripts.forEach(script => {)}script.setAttribute('defer', '')}
+  scripts.forEach(script => {)}script.setAttribute('defer', '')};
   })
   // Load analytics after page load;
-  if (document.readyState === 'loading') {}document.addEventListener('DOMContentLoaded', () => {}loadAnalytics()}
+  if (document.readyState === 'loading') {}document.addEventListener('DOMContentLoaded', () => {}loadAnalytics()};
 export const optimizeThirdPartyScripts = useCallback((...args) => {
     if (typeof window === 'undefined') return
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)
-  }
-    script.setAttribute('defer', '')}
+  };
+    script.setAttribute('defer', '')};
   })
   // Load analytics after page load
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {}
-export const optimizeThirdPartyScripts = useCallback((...args) => {}
+    document.addEventListener('DOMContentLoaded', () => {};
+export const optimizeThirdPartyScripts = useCallback((...args) => {};
   if (typeof window === 'undefined') return
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
@@ -140,11 +155,12 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
     script.setAttribute('defer', ''</div&gt;
   })
   // Load analytics after page load
-  if (document.readyState === 'loading') {}
-    document.addEventListener('DOMContentLoaded', () => {}
+  if (document.readyState === 'loading') {};
+    document.addEventListener('DOMContentLoaded', () => {};
     })
-  } else {}}loadAnalytics()}
-  }
-}
-}
-}
+  } else {}}loadAnalytics()};
+  };
+};
+};
+};
+;

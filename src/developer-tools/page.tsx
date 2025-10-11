@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react'
 const DeveloperToolsPage: React.FC = () => {
+
   const _devTools = [
     {
       title: 'AI Code Generator',
@@ -53,8 +54,10 @@ $4},
       features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       price:     ,
-$4}
+$4};
   ]
+  ;
+  ;
   return (
     <React.Fragment>
       <Helmet>
@@ -63,8 +66,9 @@ $4}
         <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
+        {/* Hero Section */};
+        ;
+  <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Tools
@@ -72,8 +76,9 @@ $4}
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               AI-powered development tools that accelerate your coding workflow and improve productivity,
   
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {/* Stats */};
+            ;
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">60%
                 <div className="text-gray-300">Productivity Boost
@@ -86,8 +91,9 @@ $4}
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                 <div className="text-3xl font-bold text-orange-400 mb-2">99.9%
                 <div className="text-gray-300">Uptime
-            {/* Contact Info */}
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+            {/* Contact Info */};
+            ;
+  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
               <div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5" />
@@ -100,19 +106,20 @@ $4}
     <div>Coming Soon</div>
   ),
 }
+  ;
+  ;
   const _devTools = [
   // TOD,
   O: Add items
 ],
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'AI Code Generator',
       descriptio,
   n: 'Generate high-quality code using advanced AI models',
-      ico,
-  n: Code,
+      icon: Code,
       feature,
   s: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
       benefit,
@@ -120,15 +127,14 @@ $4}
       pric,
   e: 'Starting at $99/month'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'API Testing Suite',
       descriptio,
   n: 'Comprehensive API testing and monitoring tools',
-      ico,
-  n: Zap,
+      icon: Zap,
       feature,
   s: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
       benefit,
@@ -136,15 +142,14 @@ $4}
       pric,
   e: 'Starting at $149/month'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Database Management Tool',
       descriptio,
   n: 'Advanced database administration and optimization',
-      ico,
-  n: BarChart,
+      icon: BarChart,
       feature,
   s: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
       benefit,
@@ -152,15 +157,14 @@ $4}
       pric,
   e: 'Starting at $199/month'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'DevOps Automation',
       descriptio,
   n: 'Streamline development and deployment processes',
-      ico,
-  n: Target,
+      icon: Target,
       feature,
   s: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
       benefit,
@@ -168,15 +172,14 @@ $4}
       pric,
   e: 'Starting at $299/month'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Code Review Assistant',
       descriptio,
   n: 'AI-powered code review and quality assurance',
-      ico,
-  n: Users,
+      icon: Users,
       feature,
   s: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
       benefit,
@@ -184,23 +187,24 @@ $4}
       pric,
   e: 'Starting at $79/month'
     },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+    {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   titl,
   e: 'Performance Profiler',
       descriptio,
   n: 'Advanced application performance monitoring and optimization',
-      ico,
-  n: TrendingUp,
+      icon: TrendingUp,
       feature,
   s: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
       benefit,
   s: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       pric,
   e: 'Starting at $179/month'
-    }
+    };
   ]
+  ;
+  ;
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
@@ -257,8 +261,9 @@ $4}
                 <div className="flex items-center space-x-2"></div>"
                   <MapPin className="w-5 h-5" /></MapPin>"
                   <span className="text-white font-medium">Middletown, DE
-        {/* Tools Grid */}
-        <section className="py-16 px-4">
+        {/* Tools Grid */};
+        ;
+  <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Our Developer Tools
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -267,11 +272,14 @@ $4}
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <tool.icon className="w-8 h-8 text-white" />
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title}
-                    <p className="text-gray-600 text-sm">{tool.description}
-                  <div className="mb-6">
-                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}
-                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title};
+                    ;
+  <p className="text-gray-600 text-sm">{tool.description};
+                  ;
+  <div className="mb-6">
+                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price};
+                  ;
+  <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:
                     <ul className="space-y-2">
                       {tool.features.map((feature, featureIndex) => (
@@ -293,12 +301,15 @@ $4}
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>"
                       <tool.icon className="w-8 h-8 text-white" />
                     </div>"
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title}</h3>"
-                    <p className="text-gray-600 text-sm">{tool.description}
-                  </div>"
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title};
+  </h3>"
+                    <p className="text-gray-600 text-sm">{tool.description};
+                  ;
+  </div>"
                   <div className="mb-6"></div>"
-                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}
-                  </div>"
+                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price};
+                  ;
+  </div>"
                   <div className="mb-6"></div>"
                     <h4 className="font-semibold text-gray-900 mb-3">Key,
   Features:</h4>"
@@ -306,9 +317,10 @@ $4}
                       {tool.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                      ))}
-                  <div className="mb-6">
+                          {feature};
+                      ))};
+                  ;
+  <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                     <ul className="space-y-1">
                       {tool.benefits.map((benefit, benefitIndex) => (
@@ -322,18 +334,19 @@ $4}
                       {tool.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>"
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-                          {benefit}
-                      ))}
-                  <div className="text-center">
+                          {benefit};
+                      ))};
+                  ;
+  <div className="text-center">
                     <$2 />
-                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`};
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
                       Get Started Now,
   
                   </div>"
                   <div className="text-center"></div>
                     <a></a>
-                      href={/* TODO: Fix JSX expression */}
+                      href={/* TODO: Fix JSX expression */};
   o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
   hover:from-purple-700,"
@@ -343,9 +356,10 @@ $4}
           </a>
                   </div>
                 </div>
-              ))}
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+              ))};
+        {/* CTA Section */};
+        ;
+  <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Supercharge Your Development?
@@ -394,7 +408,7 @@ $4}
       <Footer /></Footer>
     </div>
   ),
-}
+};
 export default DeveloperToolsPage</a>
   </a>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></h2></h2></h2></h3></h4></h4></ul></ul></ul></ul></li></li></section>

@@ -7,7 +7,7 @@ export interface AdvancedHealthcareBiotechService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -19,11 +19,11 @@ export interface AdvancedHealthcareBiotechService {
   setup_time: string
   category: string
   real_service: boolean
-  technology: string[]
-  integrations: string[]
-  use_cases: string[]
+  technology: string[];
+  integrations: string[];
+  use_cases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   market_size: string
   growth_rate: string
   variant: string
@@ -48,8 +48,7 @@ export interface AdvancedHealthcareBiotechService {
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   text_colo,
@@ -93,11 +92,11 @@ export interface AdvancedHealthcareBiotechService {
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
     email: string
     address: string
     website: string
-  }
+  };
         'AI-powered molecular modeling and simulation',
   real_implementatio,
   n: boolean,
@@ -155,17 +154,16 @@ export const,
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics'],
       integration,
   s: [,
         'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms'
-      ]
+      ];
       useCase,
   s: [,
         'Drug discovery identification, Molecular modeling, Clinical trial optimization, Drug repurposing'
-      ]
+      ];
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.',
       competitors: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],
@@ -354,17 +352,16 @@ export const,
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing'],
       integration,
   s: [,
         'Epic, Cerner, Allscripts, Lab systems, Research databases'
-      ]
+      ];
       useCase,
   s: [,
         'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health'
-      ]
+      ];
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.',
       competitors: [,
         '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],
@@ -552,18 +549,17 @@ export const,
       ],
       integrations: [
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'
-      ]
+      ];
       useCases: [
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries'],
       integration,
   s: [,
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms'
-      ]
+      ];
       useCases: [,
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
@@ -704,18 +700,17 @@ export const,
       ],
       integrations: [
         'Epic, Cerner, Allscripts, Practice management systems, Insurance systems'
-      ]
+      ];
       useCases: [
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis'],
       integration,
   s: [,
         'Epic, Cerner, Allscripts, Practice management systems, Insurance systems'
-      ]
+      ];
       useCase,
   s: [,
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],
@@ -881,21 +876,20 @@ export const,
       integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
       useCases: [
         'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'
-      ]
+      ];
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.'
       competitors: [
       icon: '',
       popula,
   r: true,
-      ico,
-  n: '',
+      icon: '',
         'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software'],
       integration,
   s: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
       useCase,
   s: [,
         'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'
-      ]
+      ];
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
       competitors: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],
@@ -1037,8 +1031,7 @@ i,
   d: string, descriptio,
   n: string, feature,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, text_colo,
   r: string, lin,
   k: string, market_positio,
@@ -1075,8 +1068,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI platform that accelerates drug discovery through molecular modeling, target identification, and predictive analytics, reducing development time and costs significantly.', feature,
   s: [,' 'AI - powered molecular modeling and simulation', ' 'Target identification and validation',' 'Drug repurposing and optimization',' 'Predictive toxicity and efficacy analysis',' 'Clinical trial optimization',' 'Real - time collaboration tools',' 'Integration with research databases',' 'Advanced analytics and reporting',' 'Mobile research app',' 'API for research institutions'], popula,
-  r: true,' ico,
-  n: '🧬', ' 'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics'], integration,
+  r: true,' icon: '🧬', ' 'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics'], integration,
   s: [' 'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms' ] useCase,
   s: [' 'Drug discovery identification, Molecular modeling, Clinical trial optimization, Drug repurposing' ]' ro,
   i: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.' competitor,
@@ -1123,8 +1115,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive precision medicine platform that combines genomic analysis, AI - powered diagnostics, and personalized treatment recommendations for improved patient outcomes.', feature,
   s: [, ' 'Whole genome sequencing and analysis',' 'AI - powered disease risk assessment',' 'Personalized treatment recommendations',' 'Drug response prediction',' 'Clinical decision support',' 'Patient data management',' 'Integration with EHR systems',' 'Research collaboration tools',' 'Mobile patient app',' 'API for healthcare providers'], popula,
-  r: true,' ico,
-  n: '🧬', ' 'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing'], integration,
+  r: true,' icon: '🧬', ' 'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing'], integration,
   s: [' 'Epic, Cerner, Allscripts, Lab systems, Research databases' ] useCase,
   s: [' 'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health' ]' ro,
   i: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.' competitor,
@@ -1171,8 +1162,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI platform that provides automated medical image analysis, diagnosis assistance, and clinical decision support for radiologists and healthcare providers.', feature,
   s: [,' 'AI - powered image analysis and diagnosis',' 'Multi - modality support (X - ray, MRI, CT) Ultrasound)', ' 'Automated abnormality detection',' 'Clinical decision support tools',' 'Integration with PACS systems',' 'Real - time analysis and reporting',' 'Mobile imaging app',' 'API for healthcare systems',' 'Advanced analytics and insights',' 'Compliance and audit tools'], popula,
-  r: true,' ico,
-  n: '🩻', ' 'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries'], integration,
+  r: true,' icon: '🩻', ' 'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries'], integration,
   s: [' 'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms' ] useCase,
   s: [ ' colo,
   r: 'from - purple - 600 to - pink - 600',' text_colo,
@@ -1213,8 +1203,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Integrated digital health platform that provides telemedicine, remote patient monitoring, health analytics, and patient engagement tools for modern healthcare delivery.', feature,
   s: [,' 'High - quality video consultations', ' 'Remote patient monitoring',' 'Health data analytics and insights',' 'Patient engagement and education',' 'Integration with EHR systems',' 'Mobile health apps',' 'AI - powered health recommendations',' 'Secure messaging and file sharing',' 'Billing and insurance integration',' 'API for healthcare applications'], popula,
-  r: true,' ico,
-  n: '🏥', ' 'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis'], integration,
+  r: true,' icon: '🏥', ' 'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis'], integration,
   s: [' 'Epic, Cerner, Allscripts, Practice management systems, Insurance systems' ] useCase,
   s: [ ' 'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],' ro,
   i: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',' competitor,
@@ -1261,8 +1250,7 @@ i,
   d: '/month', descriptio,
   n:  ,' 'Advanced clinical trial platform that uses AI to optimize trial design, patient recruitment, data collection, and analysis for faster, more efficient clinical research.', feature,
   s: [,' 'AI - powered trial design optimization', ' 'Intelligent patient recruitment and matching',' 'Real - time data collection and monitoring',' 'Predictive analytics and insights',' 'Regulatory compliance management',' 'Site and investigator management',' 'Risk assessment and mitigation',' 'Integration with EDC systems',' 'Mobile data collection app',' 'API for research platforms'], popula,
-  r: true,' ico,
-  n: '🔬', ' 'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software'],' integration,
+  r: true,' icon: '🔬', ' 'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software'],' integration,
   s: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'], useCase,
   s: [' 'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management' ]' ro,
   i: 'Research organizations report 400% ROI through faster trial completion and improved data quality.' competitor,

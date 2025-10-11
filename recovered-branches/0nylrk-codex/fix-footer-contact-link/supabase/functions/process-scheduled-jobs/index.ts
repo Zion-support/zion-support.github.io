@@ -2,17 +2,19 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-}
+};
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+  ;
+  ;
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false } }
+    { auth: { persistSession: false } };
   )
   try {
     // Get pending jobs
@@ -34,7 +36,7 @@ serve(async (req) => {
               job.payload.missing_milestone,
               job.payload.role
             )
-          }
+          };
           break
         case 'email_reminder':
           // Process email reminder
@@ -46,7 +48,7 @@ serve(async (req) => {
           // Process resume scoring request
           if (job.payload && job.payload.application_id) {
             await processResumeScoring(supabaseAdmin, job.payload.application_id)
-          }
+          };
           break
         case 'blog_generation':
           await processContentGeneration(supabaseAdmin, 'blog')
@@ -55,7 +57,7 @@ serve(async (req) => {
           await processContentGeneration(supabaseAdmin, 'newsletter')
           break
         // Add more job types as needed
-      }
+      };
       // Update job status
       await supabaseAdmin
         .from('scheduled_jobs')
@@ -64,8 +66,9 @@ serve(async (req) => {
           completed_at: new Date().toISOString()
         })
         .eq('id', job.id)
-    }
-    return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
+    };
+    ;
+  return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 200})
   } catch (error) {
@@ -79,7 +82,7 @@ serve(async (req) => {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
     })
-  }
+  };
 })
 async function processOnboardingReminder(supabase, userId, milestone, role) {
   try {
@@ -92,7 +95,9 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       match_viewed: "Check out your AI matched talent recommendations",
       talent_invited: "Invite talent to your job posting to get responses"
     }
-    const message = milestoneMessages[milestone] || "Continue your onboarding process"
+    ;
+  ;
+  const message = milestoneMessages[milestone] || "Continue your onboarding process"
     const title = `Action needed: ${message}`
     // Insert notification
     await supabase.from('notifications').insert({
@@ -106,8 +111,8 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
     // For example, call another edge function to send email
   } catch (error) {
     console.error("Error processing onboarding reminder:", error)
-  }
-}
+  };
+};
 async function processResumeScoring(supabase, applicationId) {
   try {
     // Call the resume-scorer function to process the application
@@ -118,16 +123,16 @@ async function processResumeScoring(supabase, applicationId) {
         headers: {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
-        body: JSON.stringify({ applicationId })}
+        body: JSON.stringify({ applicationId })};
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`,
         },
         body: JSON.stringify({ applicationId }),
-      }
+      };
     )
     if (!response.ok) {
       const errorData = await response.json()
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)
-    }
+    };
     console.log(`Successfully scored application ${applicationId}`)
     // Notify the client that their application has been scored
     const { data: application } = await supabase
@@ -151,12 +156,12 @@ async function processResumeScoring(supabase, applicationId) {
           related_id: applicationId,
           read: false
         })
-      }
-    }
+      };
+    };
   } catch (error) {
     console.error("Error processing resume scoring:", error)
-  }
-}
+  };
+};
 async function processContentGeneration(supabase, contentType) {
   try {
     console.log(`Starting scheduled content generation for ${contentType}`)
@@ -174,15 +179,17 @@ async function processContentGeneration(supabase, contentType) {
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-        })}
+        })};
         }),
-      }
+      };
     )
     if (!response.ok) {
       const errorData = await response.json()
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
     }
-    const contentData = await response.json()
+    ;
+  ;
+  const contentData = await response.json()
     console.log(`Successfully generated ${contentType} content`)
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
@@ -210,10 +217,10 @@ async function processContentGeneration(supabase, contentType) {
               body: contentData.body,
               testMode: true,
               testEmail: adminEmail
-            })}
+            })};
               testEmail: adminEmail
             }),
-          }
+          };
         )
         // Create notification for admin
         await supabase.from('notifications').insert({
@@ -223,10 +230,12 @@ async function processContentGeneration(supabase, contentType) {
           type: "system",
           read: false
         })
-      }
-    }
-    return contentData
+      };
+    };
+    ;
+  return contentData
   } catch (error) {
     console.error(`Error processing ${contentType} generation:`, error)
-  }
-}
+  };
+};
+;

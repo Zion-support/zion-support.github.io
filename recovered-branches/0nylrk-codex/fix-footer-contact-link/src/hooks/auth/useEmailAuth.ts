@@ -24,9 +24,10 @@ export const useEmailAuth = (
           variant: "destructive"})
           variant: "destructive",
         })
-        return { error }
-      }
-      return { data }
+        return { error };
+      };
+      ;
+  return { data };
     } catch (error: any) {
       console.error("Login error:", error)
       toast({
@@ -35,11 +36,13 @@ export const useEmailAuth = (
         variant: "destructive"})
         variant: "destructive",
       })
-      return { error }
+      return { error };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const signup = async (email: string, password: string, userData?: any) => {
     try {
       setIsLoading(true)
@@ -51,7 +54,7 @@ export const useEmailAuth = (
       } catch (err) {
         // Continue even if signout fails
         console.log("Sign out before signup failed:", err)
-      }
+      };
       // Create a proper options object
       const { data, error } = await supabase.auth.signUp({
         email,
@@ -71,14 +74,14 @@ export const useEmailAuth = (
           variant: "destructive"})
           variant: "destructive",
         })
-        return { error }
-      }
+        return { error };
+      };
       toast({
         title: "Signup successful",
         description: "Check your email for verification instructions."})
         description: "Check your email for verification instructions.",
       })
-      return { data }
+      return { data };
     } catch (error: any) {
       console.error("Signup error:", error)
       toast({
@@ -87,11 +90,13 @@ export const useEmailAuth = (
         variant: "destructive"})
         variant: "destructive",
       })
-      return { error }
+      return { error };
     } finally {
       setIsLoading(false)
-    }
+    };
   }
+  ;
+  ;
   const resetPassword = async (email: string) => {
     try {
       setIsLoading(true)
@@ -106,14 +111,14 @@ export const useEmailAuth = (
           variant: "destructive"})
           variant: "destructive",
         })
-        return { error }
-      }
+        return { error };
+      };
       toast({
         title: "Password reset email sent",
         description: "Check your email for password reset instructions."})
         description: "Check your email for password reset instructions.",
       })
-      return {}
+      return {};
     } catch (error: any) {
       console.error("Password reset error:", error)
       toast({
@@ -122,10 +127,11 @@ export const useEmailAuth = (
         variant: "destructive"})
         variant: "destructive",
       })
-      return { error }
+      return { error };
     } finally {
       setIsLoading(false)
-    }
-  }
-  return { login, signup, resetPassword }
-}
+    };
+  };
+  ;
+  return { login, signup, resetPassword };
+};

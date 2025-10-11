@@ -5,7 +5,7 @@ export interface AdvancedCybersecurityService {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -17,11 +17,11 @@ export interface AdvancedCybersecurityService {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -30,14 +30,14 @@ export interface AdvancedCybersecurityService {
     email: string
     address: string
     website: string
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
   customers: number
   rating: number
   reviews: number
-}
+};
 export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
   // Advanced Threat Intelligence Platform
   {
@@ -506,5 +506,5 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [
     customers: 130,
     rating: 4.6,
     reviews: 78
-  }
-]
+  };
+];

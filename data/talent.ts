@@ -9,7 +9,7 @@ export const TALENT_PROFILES = [
     location: 'Remote'
     timezone: 'UTC'
     region: 'Global'
-    skills: ['React', 'Node.js', 'TypeScript']
+    skills: ['React', 'Node.js', 'TypeScript'];
     summary: 'Experienced developer with expertise in modern web technologies.'
     bio: 'Passionate about creating innovative solutions.'
     hourlyRateUsd: 75
@@ -23,7 +23,7 @@ export const TALENT_PROFILES = [
     reviewsCount: 0
     createdAt: new Date().toISOString()
     originalLanguage: 'en'
-translations: {}
+translations: {};
 // Stub talent data - placeholder for missing functionality
 export const TALENT_PROFILES = [
   {
@@ -51,7 +51,7 @@ export const TALENT_PROFILES = [
     originalLanguage: 'en',
 translations: {},
   },
-]
+];
 // Stub talent data - placeholder for missing functionality
 export const TALENT_PROFILES = [
   {
@@ -77,9 +77,9 @@ export const TALENT_PROFILES = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
-    translations: {}
-  }
-]
-    translations: {}
-  }
-]
+    translations: {};
+  };
+];
+    translations: {};
+  };
+];

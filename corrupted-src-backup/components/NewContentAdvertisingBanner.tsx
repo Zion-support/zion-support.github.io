@@ -11,7 +11,7 @@ gradie, n, t: stri, n, g;
 ic, o, n: Rea, c, t.ReactNo, d, e;
 l, i, n;,
 k: stri, n, g
-  }
+  };
 const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {;
 const, featuredConte, n;,
 t: FeaturedConte, n, t[] = [
@@ -24,8 +24,8 @@ rati, n, g: 5.0,;
 reade, r, s: '2, 5, K+',';
 bad, g, e: 'N, E, W',';
 gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0',';
-}
-ic, o, n: <Sparkles, className="w-6 h-6/>,"</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s}
+};
+ic, o, n: <Sparkles, className="w-6 h-6/>,"</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s};
     {;,
 id: 7,;
 tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)',';
@@ -35,7 +35,7 @@ rati, n, g: 4.9,;
 reade, r, s: '1, 9, K+',';
 bad, g, e: 'FEATUR, E, D',';
 gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
-ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t}
+ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t};
     {;,
 id: 1,;
 tit, l, e: 'AI, 20, 2
@@ -46,7 +46,7 @@ rati, n, g: 4.9,;
 reade, r, s: '5, 8, K+',';
 bad, g, e: 'N, E, W',';
 gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
-ic, o, n: <Star, className="w-6 h-6/>,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t}
+ic, o, n: <Star, className="w-6 h-6/>,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t};
     {;,
 id: 2,;
 tit, l, e: 'Edge, 20, 2
@@ -57,7 +57,7 @@ rati, n, g: 4.8,;
 reade, r, s: '4, 1, K+',';
 bad, g, e: 'TRENDI, N, G',';
 gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
-ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s}
+ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s};
     {;,
 id: 3,;
 tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)',';
@@ -68,24 +68,24 @@ reade, r, s: '4, 7, K+',';
 bad, g, e: 'FEATUR, E, D',';
 gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
 ic, o, n: <Award, className="w-6 h-6/>,";
-interface, FeaturedConten, t {/* TODO: Fix JSX expression */}
-}
-const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s}
-    {/* TODO: Fix JSX expression */}
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t}
-    {/* TODO: Fix JSX expression */}
-      li, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t}
-    {/* TODO: Fix JSX expression */}
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s}
-    {/* TODO: Fix JSX expression */}
-      li, n, k: '/bl, o, g/gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6}
+interface, FeaturedConten, t {/* TODO: Fix JSX expression */};
+};
+const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
+      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s};
+    {/* TODO: Fix JSX expression */};
+      li, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t};
+    {/* TODO: Fix JSX expression */};
+      li, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t};
+    {/* TODO: Fix JSX expression */};
+      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s};
+    {/* TODO: Fix JSX expression */};
+      li, n, k: '/bl, o, g/gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6};
   ];
 const, achievement, s = ["
     { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-8 h-8" /> }"
     { val, u, e: '98%', lab, e, l: 'Customer, Satisfactio, n', ic, o, n: <Star, className="w-8 h-8" /> }"
     { val, u, e: '2, 0, 0+', lab, e, l: 'Expert, Article, s', ic, o, n: <Award, className="w-8 h-8" /> }"
-    { val, u, e: '50+', lab, e, l: 'Industry, Award, s', ic, o, n: <Target, className="w-8 h-8" /> }
+    { val, u, e: '50+', lab, e, l: 'Industry, Award, s', ic, o, n: <Target, className="w-8 h-8" /> };
       tit, l, e: 'Governed, Agent, Rollbacks',';
 catego, r, y: 'AI, Operation, s',';
 readTi, m, e: '7, mi, n',';
@@ -95,7 +95,7 @@ bad, g, e: 'N, E, W',';
 gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0',';";
 ic, o, n: <Sparkles, className="w-6 h-6" />,";
 li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s'
-    }
+    };
     {;,
 id: 7,;
 tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)',';
@@ -106,7 +106,7 @@ reade, r, s: '1, 9, K+',';
 bad, g, e: 'FEATUR, E, D',';
 gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
 ic, o, n: <TrendingUp, className="w-6 h-6" />,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t'
-    }
+    };
     {;,
 id: 1,;
 tit, l, e: 'AI, 20, 2
@@ -118,7 +118,7 @@ reade, r, s: '5, 8, K+',';
 bad, g, e: 'N, E, W',';
 gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
 ic, o, n: <Star, className="w-6 h-6" />,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t'
-    }
+    };
     {;,
 id: 2,;
 tit, l, e: 'Edge, 20, 2
@@ -130,7 +130,7 @@ reade, r, s: '4, 1, K+',';
 bad, g, e: 'TRENDI, N, G',';
 gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
 ic, o, n: <TrendingUp, className="w-6 h-6" />,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s'
-    }
+    };
     {;,
 id: 3,;
 tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)',';
@@ -142,14 +142,14 @@ bad, g, e: 'FEATUR, E, D',';
 gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
 ic, o, n: <Award, className="w-6 h-6" />,";
 li, n, k: '/bl, o, g/gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6'
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
   ];
 const, achievement, s = ["
     { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reader, s', ic, o, n: <Users, className="w-8 h-8" /> },";"
@@ -158,8 +158,9 @@ const, achievement, s = ["
     { val, u, e: '50+', lab, e, l: 'Industry, Award, s', ic, o, n: <Target, className="w-8 h-8" /> }"
   ];
 return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
+      {/* Animated, background, effects */};
+      ;
+  <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel}}, a, y: ', 2, s' }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel}}, a, y: ', 4, s' }} />
@@ -171,8 +172,9 @@ Revolutionary, New, Content H, u, b;)
                 <div, classNam, e="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r">;
 return (;
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">"
-      {/* Animated, background, effects */}
-      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
+      {/* Animated, background, effects */};
+      ;
+  <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel}}, a, y: ', 2, s' }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel}}, a, y: ', 4, s' }} />
@@ -185,13 +187,15 @@ Revolutionary, New, Content H, u, b
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { featuredConte, n, t.m, a, p((con), t, e, n, t, ind, e, x) = > (
             <, ke, y={conte, n, t.i, d}, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20"$2 />;
-sty, l, e={{ animationDel}}, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
-             > {/* Card, glow, effect */}
-              <div, classNam, e={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t}, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
+sty, l, e={{ animationDel}}, a, y: `${ind, e, x * 2, 0, 0 }, ms` }};
+             > {/* Card, glow, effect */};
+              ;
+  <div, classNam, e={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t}, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
               <div, classNam, e = "relativ, e, p-8">
                 <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">
-                  {conte, n, t.t, i, t, l, e}
-                  <span, classNam, e="flex, item, s-center, ga, p-1">
+                  {conte, n, t.t, i, t, l, e};
+                  ;
+  <span, classNam, e="flex, item, s-center, ga, p-1">
                     <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
                 <div, classNam, e="mb-6">
                   <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
@@ -213,10 +217,11 @@ classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600,
                   <Sparkles, classNam, e="w-5 h-5" />
                   <Link, classNam, e="w-5 h-5" />
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
-                <input, typ, e="ema, i, l"
+                <input, typ, e="ema, i, l">
                   <Link, classNam, e="w-5 h-5" />
   </input>
-}}
+}};
+  ;
   return (";
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}"
@@ -233,7 +238,7 @@ Revolutionary, New, Content H, u, b;"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           {/* TODO: Fix JSX expression */}"
             <, ke, y={conte, n, t.i, d}, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20"$2 />;
-sty, l, e={{ animationDel}}, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+sty, l, e={{ animationDel}}, a, y: `${ind, e, x * 2, 0, 0 }, ms` }};
              > {/* Card, glow, effect */}`
               <div, classNam, e={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t}, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} /></div>"
               <div, classNam, e = "relativ, e, p-8"></div>"
@@ -259,7 +264,7 @@ classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600,
                   <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"
                   <Link, classNam, e="w-5 h-5" /></Link>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
-                <input, typ, e="ema, i, l""
+                <input, typ, e="ema, i, l"">
                   <Link, classNam, e="w-5 h-5" />
   </input>
 }}")`

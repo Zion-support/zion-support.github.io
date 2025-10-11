@@ -18,8 +18,8 @@ descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime
 tit, l, e: "Natural, Language, Processing",";
 descripti, o, n: "Advanced, NLP, capabilities that, understand, context, sentime, n, t, and, intent, with 95% accura, c, y.",";
 benef, i, t: "95% conversation, accuracy, rate"
-}
-    }
+};
+    };
     {;
 ic, o, n: MessageCirc, l, e;
 tit, l, e: "Mul, t, i-Channel, Suppor, t",";
@@ -27,7 +27,7 @@ descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, 
 tit, l, e: "Mul, t, i-Channel, Suppor, t",";
 descripti, o, n: "Deploy, across, web, mobi, l, e, social, medi, a, and, voice, channels with, unified, conversation histo, r, y.",";
 benef, i, t: "Unified, customer, experience"
-    }
+    };
     {;
 ic, o, n: Languag, e, s;
 tit, l, e: "1, 2, 0+ Language, Suppor, t",";
@@ -35,7 +35,7 @@ descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for glo
 tit, l, e: "1, 2, 0+ Language, Suppor, t",";
 descripti, o, n: "Re, a, l-time, translation, and multilingual, support, for global, customer, bases.",";
 benef, i, t: "Global, reach, capability"
-    }
+    };
     {;
 ic, o, n: Shie, l, d;
 tit, l, e: "Enterprise, Securit, y",";
@@ -43,7 +43,7 @@ descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, G
 tit, l, e: "Enterprise, Securit, y",";
 descripti, o, n: "Ba, n, k-grade, security, with e, n, d-to-end, encryptio, n, GDPR, complianc, e, and, data, privacy protecti, o, n.",";
 benef, i, t: "1, 0, 0% compliance, guarantee, d"
-    }
+    };
     {;
 ic, o, n: Clo, c, k;
 tit, l, e: "24/7, Availabilit, y",";
@@ -51,7 +51,7 @@ descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock
 tit, l, e: "24/7, Availabilit, y",";
 descripti, o, n: "Never, miss, a customer, inquiry, with rou, n, d-t, h, e-clock, intelligent, assistance.",";
 benef, i, t: "99.9% uptime, SL, A"
-    }
+    };
     {;
 ic, o, n: Use, r, s;
 tit, l, e: "Human, Handof, f",";
@@ -59,7 +59,7 @@ descripti, o, n: "Seamless, escalation, to human, agents, when complex, issues, 
 tit, l, e: "Human, Handof, f",";
 descripti, o, n: "Seamless, escalation, to human, agents, when complex, issues, require personal, attentio, n.",";
 benef, i, t: "Perfect, customer, satisfaction"
-    }
+    };
   ];
 return(<React.Fragment>
       <Helmet>
@@ -68,18 +68,18 @@ return(<React.Fragment>
 na, m, e="descripti, o, n";
 content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquiries, 2, 4/7, with, 95% accura, c, y. Mul, t, i-channel, suppor, t, 1, 2, 0+ languag, e, s, enterprise, securit, y." /><meta name="keywor, d, s" content="AI, virtual, assistant, chatb, o, t, customer, support, automation, conversational, A, I, virtual, agen, t, AI, customer, service" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/ai-virtu, a, l-assista, n, t/>
   </link>";
-const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
-    {/* TODO: Fix JSX expression */}
-    }
+const, AIVirtualAssistan, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
+    {/* TODO: Fix JSX expression */};
+    };
   ];
 return (<React.Fragment>;
       <Helmet>
@@ -94,8 +94,9 @@ content="Deploy, A, I-powered, virtual, assistants that, handle, customer inquir
   </link>"
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">"
-        {/* Hero, Sectio, n */}
-        <section, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">
+        {/* Hero, Sectio, n */};
+        ;
+  <section, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-white, p, y-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
 g:px-8">",
             <div, className="te, x, t-cent, e, r">
@@ -169,8 +170,9 @@ r:te, x, t-purp, l, e-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, 
 View, Pricin, g;"
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
                   <Link, className="w-5 h-5, m, l-2" />"
-        {/* Key, Benefit, s */}
-        <section, className="py-16, b, g-gr, a, y-50">
+        {/* Key, Benefit, s */};
+        ;
+  <section, className="py-16, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
 g:px-8">",
             <div, className="text-center mb-12">
@@ -265,8 +267,9 @@ d: gr, i, d-co, l, s-4, ga, p-8">""
                   <Shield, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Enterprise, Securit, y</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Ba, n, k-grade, encryption, and complian, c, e</p>"
-        {/* Featur, e, s */}
-        <section, className="py-20">
+        {/* Featur, e, s */};
+        ;
+  <section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
 g:px-8">",
             <div, className="te, x, t-center, m, b-16">)
@@ -298,22 +301,24 @@ Powerful, features, that make, your, virtual assistant, truly, intelligent and, 
 g:gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu), r, e, ind, e, x) => {;
 const, Ico, n = featu, r, e.ic, o, n;
-}
+};
 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">;
 return (;
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">
                       <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  />
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e};
+                    ;
+  <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n};
+                    ;
+  <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <, className="grid, m, d: gr, i, d-co, l, s-2 l;)$2 />;,
 g:gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu), r, e, ind, e, x) => {;
 const, Ico, n = featu, r, e.ic, o, n;
-}
+};
 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
@@ -323,12 +328,15 @@ g:gr, i, d-co, l, s-3, ga, p-8"></div>"
               {featur, e, s.m, a, p((featu), r, e, ind, e, x) => {;
 const, Ico, n = featu, r, e.ic, o, n;
 return (;
-}
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+};
+                  ;
+  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">"
                       <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" />"
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e};
+  </h3>"
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n};
+  </p>"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">"
                       <CheckCircle, className="w-4 h-4, m, r-1" />"
                       {featu, r, e.benef, i, t})
@@ -341,8 +349,10 @@ g:gr, i, d-co, l, s-3, ga, p-8">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4"></div>"
                       <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  />
                     </d, i, v>"
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e};
+  </h3>"
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n};
+  </p>"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>"
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
@@ -351,16 +361,20 @@ g:gr, i, d-co, l, s-3, ga, p-8">"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, m, b-4">";"
                       <Icon, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" />"</$1>"
-                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>";"
-                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>";"
+                    <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e};
+  </h3>";"
+                    <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n};
+  </p>";"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">";"
                       <CheckCircle, className="w-4 h-4, m, r-1" />"
-                      {featu, r, e.benef, i, t}
-                  </d, i, v>)
+                      {featu, r, e.benef, i, t};
+                  ;
+  </d, i, v>)
                 )
-              })}
-        {/* CTA, Sectio, n */}
-        <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">
+              })};
+        {/* CTA, Sectio, n */};
+        ;
+  <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
 g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
@@ -420,7 +434,7 @@ View, Success, Stories;"
       <Foot, e, r   /></Foot>
     </React.Fragment>
   )
-}
+};
 export default AIVirtualAssistant
 }}"
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></p></p></p></h2></h2></h2></h2></h2></h3></li></li></li></main></section></section></section></section></section></section></section></section></section>

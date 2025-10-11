@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react'
 const ITServicesPage: React.FC = () => {
+
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
@@ -34,6 +35,7 @@ import {
   X
 } from 'lucide-react'
 const ITServicesPage: React.FC = () => {
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedService, setSelectedService] = useState<any>(null)
   const serviceCategories = [
@@ -78,8 +80,11 @@ const ITServicesPage: React.FC = () => {
       icon: <Globe className="w-6 h-6" />,
       description: 'Modernize your business operations',
       color: 'from-indigo-500 to-purple-500'
-    }
+    };
   ]
+  
+  ;
+  ;
   const itServices = [
     // Infrastructure & Cloud Services
     {
@@ -111,7 +116,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
       id: 2,
@@ -157,7 +162,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
       id: 3,
@@ -203,7 +208,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
       id: 4,
@@ -253,7 +258,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
       id: 5,
@@ -299,7 +304,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
       id: 6,
@@ -349,7 +354,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
       id: 7,
@@ -395,7 +400,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
 
     // DevOps Services
@@ -428,7 +433,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
       id: 8,
@@ -475,7 +480,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
 
     // Data Services
@@ -508,7 +513,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
       id: 11,
@@ -539,7 +544,7 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
+      };
     },
 
     // Digital Transformation
@@ -572,11 +577,20 @@ const ITServicesPage: React.FC = () => {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
-      }
-    }
+      };
+    };
   ]
+  
+  ;
+  ;
   const categories = ['all', 'Cloud Services', 'Security', 'Networking', 'Data Management', 'DevOps', 'Asset Management', 'Support Services', 'Database']
+  
+  ;
+  ;
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
+  
+  ;
+  ;
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -595,8 +609,10 @@ const ITServicesPage: React.FC = () => {
         return `$${price.toLocaleString()}`
       default:
         return `$${price}`
-    }
+    };
   }
+  ;
+  ;
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Cloud Services': return <Cloud className="w-6 h-6" />
@@ -608,21 +624,25 @@ const ITServicesPage: React.FC = () => {
       case 'Support Services': return <MessageSquare className="w-6 h-6" />
       case 'Database': return <Database className="w-6 h-6" />
       default: return <Server className="w-6 h-6" />
-    }
+    };
   }
+  ;
+  ;
   const getPricingColor = (pricing: string) => {
     switch (pricing) {
       case 'Freemium': return 'text-green-400'
       case 'Subscription': return 'text-blue-400'
       case 'One-time': return 'text-purple-400'
       default: return 'text-gray-400'
-    }
-  }
+    };
+  };
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
+        {/* Header */};
+        ;
+  <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent mb-4">
             IT Services
           </h1>
@@ -675,7 +695,7 @@ const IT_SERVICES = [
     category: 'Infrastructure',
     badge: 'Popular',
     link: '/services/cloud-services',
-    benefits: ['Reduced Infrastructure Costs', 'Improved Scalability', 'Enhanced Security', 'Better Performance']
+    benefits: ['Reduced Infrastructure Costs', 'Improved Scalability', 'Enhanced Security', 'Better Performance'];
   },
   {
     id: 'cybersecurity',
@@ -687,7 +707,7 @@ const IT_SERVICES = [
     category: 'Security',
     badge: 'Critical',
     link: '/services/cybersecurity',
-    benefits: ['Protection Against Threats', 'Regulatory Compliance', 'Risk Mitigation', 'Business Continuity']
+    benefits: ['Protection Against Threats', 'Regulatory Compliance', 'Risk Mitigation', 'Business Continuity'];
   },
   {
     id: 'network-infrastructure',
@@ -699,7 +719,7 @@ const IT_SERVICES = [
     category: 'Infrastructure',
     badge: 'Essential',
     link: '/services/network-infrastructure',
-    benefits: ['Improved Connectivity', 'Enhanced Security', 'Better Performance', 'Scalable Solutions']
+    benefits: ['Improved Connectivity', 'Enhanced Security', 'Better Performance', 'Scalable Solutions'];
   },
   {
     id: 'data-management',
@@ -711,7 +731,7 @@ const IT_SERVICES = [
     category: 'Data',
     badge: 'Trending',
     link: '/services/data-management',
-    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Better Customer Insights', 'Competitive Advantage']
+    benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Better Customer Insights', 'Competitive Advantage'];
   },
   {
     id: 'managed-it-services',
@@ -723,7 +743,7 @@ const IT_SERVICES = [
     category: 'Management',
     badge: 'Best Value',
     link: '/services/managed-it',
-    benefits: ['Reduced Downtime', 'Lower IT Costs', 'Expert Support', 'Focus on Core Business']
+    benefits: ['Reduced Downtime', 'Lower IT Costs', 'Expert Support', 'Focus on Core Business'];
   },
   {
     id: 'software-development',
@@ -735,7 +755,7 @@ const IT_SERVICES = [
     category: 'Development',
     badge: 'Premium',
     link: '/services/software-development',
-    benefits: ['Tailored Solutions', 'Competitive Advantage', 'Process Automation', 'Improved Efficiency']
+    benefits: ['Tailored Solutions', 'Competitive Advantage', 'Process Automation', 'Improved Efficiency'];
   },
   {
     id: 'disaster-recovery',
@@ -747,7 +767,7 @@ const IT_SERVICES = [
     category: 'Recovery',
     badge: 'Critical',
     link: '/services/disaster-recovery',
-    benefits: ['Business Continuity', 'Risk Mitigation', 'Compliance', 'Peace of Mind']
+    benefits: ['Business Continuity', 'Risk Mitigation', 'Compliance', 'Peace of Mind'];
   },
   {
     id: 'virtualization',
@@ -759,7 +779,7 @@ const IT_SERVICES = [
     category: 'Infrastructure',
     badge: 'Efficient',
     link: '/services/virtualization',
-    benefits: ['Better Resource Utilization', 'Reduced Costs', 'Improved Scalability', 'Easier Management']
+    benefits: ['Better Resource Utilization', 'Reduced Costs', 'Improved Scalability', 'Easier Management'];
   },
   {
     id: 'mobile-device-management',
@@ -771,7 +791,7 @@ const IT_SERVICES = [
     category: 'Management',
     badge: 'Modern',
     link: '/services/mobile-management',
-    benefits: ['Enhanced Security', 'Better Control', 'Compliance', 'Improved Productivity']
+    benefits: ['Enhanced Security', 'Better Control', 'Compliance', 'Improved Productivity'];
   },
   {
     id: 'it-consulting',
@@ -783,7 +803,7 @@ const IT_SERVICES = [
     category: 'Consulting',
     badge: 'Strategic',
     link: '/services/it-consulting',
-    benefits: ['Strategic Alignment', 'Cost Optimization', 'Risk Mitigation', 'Technology Roadmap']
+    benefits: ['Strategic Alignment', 'Cost Optimization', 'Risk Mitigation', 'Technology Roadmap'];
   },
   {
     id: 'performance-monitoring',
@@ -795,7 +815,7 @@ const IT_SERVICES = [
     category: 'Monitoring',
     badge: 'Proactive',
     link: '/services/performance-monitoring',
-    benefits: ['Improved Performance', 'Proactive Issue Detection', 'Better User Experience', 'Reduced Downtime']
+    benefits: ['Improved Performance', 'Proactive Issue Detection', 'Better User Experience', 'Reduced Downtime'];
   },
   {
     id: 'compliance-auditing',
@@ -807,10 +827,13 @@ const IT_SERVICES = [
     category: 'Compliance',
     badge: 'Required',
     link: '/services/compliance-auditing',
-    benefits: ['Regulatory Compliance', 'Risk Mitigation', 'Customer Trust', 'Business Continuity']
-  }
+    benefits: ['Regulatory Compliance', 'Risk Mitigation', 'Customer Trust', 'Business Continuity'];
+  };
 ]
-const IT_SERVICE_CATEGORIES = [
+
+  ;
+  ;
+  const IT_SERVICE_CATEGORIES = [
   { name: 'Infrastructure', count: 3, color: 'bg-blue-500' },
   { name: 'Security', count: 2, color: 'bg-red-500' },
   { name: 'Data', count: 1, color: 'bg-purple-500' },
@@ -819,9 +842,12 @@ const IT_SERVICE_CATEGORIES = [
   { name: 'Recovery', count: 1, color: 'bg-yellow-500' },
   { name: 'Consulting', count: 1, color: 'bg-gray-500' },
   { name: 'Monitoring', count: 1, color: 'bg-teal-500' },
-  { name: 'Compliance', count: 1, color: 'bg-emerald-500' }
+  { name: 'Compliance', count: 1, color: 'bg-emerald-500' };
 ]
-const SERVICE_BENEFITS = [
+
+  ;
+  ;
+  const SERVICE_BENEFITS = [
   {
     icon: <Zap className="h-12 w-12 text-zion-cyan" />,
     title: 'Increased Efficiency',
@@ -841,8 +867,8 @@ const SERVICE_BENEFITS = [
     icon: <Users className="h-12 w-12 text-zion-purple" />,
     title: 'Expert Support',
     description: 'Access to certified IT professionals and 24/7 technical support'
-  }
-]
+  };
+];
 export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark">
@@ -853,8 +879,9 @@ export default function ITServicesPage() {
         canonical="https://ziontechgroup.com/it-services"
       />
 
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -1178,8 +1205,11 @@ export default function ITServicesPage() {
       deliveryTime: "3-6 weeks",
       rating: 4.8,
       reviewCount: 134
-    }
+    };
   ]
+  
+  ;
+  ;
   const categories = [
     "All Services",
     "Cloud Services",
@@ -1195,6 +1225,9 @@ export default function ITServicesPage() {
     "Support",
     "Communications"
   ]
+  
+  ;
+  ;
   const [selectedCategory, setSelectedCategory] = React.useState("All Services")
   const [filteredServices, setFilteredServices] = React.useState(itServices)
   React.useEffect(() => {
@@ -1202,12 +1235,13 @@ export default function ITServicesPage() {
       setFilteredServices(itServices)
     } else {
       setFilteredServices(itServices.filter(service => service.category === selectedCategory))
-    }
+    };
   }, [selectedCategory])
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
@@ -1240,8 +1274,9 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* Contact Info Banner */}
-      <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
+      {/* Contact Info Banner */};
+      ;
+  <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-wrap items-center justify-center gap-8 text-center">
             <div className="flex items-center gap-3">
@@ -1260,58 +1295,70 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* Category Filter */}
-      <div className="py-8 bg-zion-blue-dark/50">
+      {/* Category Filter */};
+      ;
+  <div className="py-8 bg-zion-blue-dark/50">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
+                key={category};
+                variant={selectedCategory === category ? "default" : "outline"};
+                onClick={() => setSelectedCategory(category)};
                 className={`${
                   selectedCategory === category
                     ? "bg-zion-purple text-white"
                     : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                }`}
+                }`};
               >
-                {category}
-              </Button>
-      {/* Service Benefits */}
-      <div className="py-16 bg-zion-slate/50">
+                {category};
+              ;
+  </Button>
+      {/* Service Benefits */};
+      ;
+  <div className="py-16 bg-zion-slate/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our IT Services?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {SERVICE_BENEFITS.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-zion-cyan/80">{benefit.description}</p>
+                <div className="mb-4">{benefit.icon};
+  </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title};
+  </h3>
+                <p className="text-zion-cyan/80">{benefit.description};
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* Categories Overview */}
-      <div className="py-16 bg-zion-slate">
+      {/* Categories Overview */};
+      ;
+  <div className="py-16 bg-zion-slate">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">IT Service Categories</h2>
           <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-4">
             {IT_SERVICE_CATEGORIES.map((category) => (
               <div key={category.name} className="text-center">
                 <div className={`w-16 h-16 ${category.color} rounded-full mx-auto mb-3 flex items-center justify-center`}>
-                  <span className="text-white font-bold text-lg">{category.count}</span>
+                  <span className="text-white font-bold text-lg">{category.count};
+  </span>
                 </div>
-                <p className="text-zion-cyan font-medium text-sm">{category.name}</p>
+                <p className="text-zion-cyan font-medium text-sm">{category.name};
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </div>
 
-      {/* IT Services Grid */}
-      <div className="py-20 bg-zion-blue-dark/30">
+      {/* IT Services Grid */};
+      ;
+  <div className="py-20 bg-zion-blue-dark/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive IT Solutions</h2>
@@ -1325,15 +1372,19 @@ export default function ITServicesPage() {
               <Card key={service.id} className="bg-zion-blue-dark/50 border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-3">
-                    {service.icon}
+                    {service.icon};
                     {service.badge && (
                       <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
-                        {service.badge}
-                      </Badge>
-                    )}
-                  </div>
-                  <CardTitle className="text-xl text-white">{service.title}</CardTitle>
-                  <CardDescription className="text-zion-cyan/80">{service.description}</CardDescription>
+                        {service.badge};
+                      ;
+  </Badge>
+                    )};
+                  ;
+  </div>
+                  <CardTitle className="text-xl text-white">{service.title};
+  </CardTitle>
+                  <CardDescription className="text-zion-cyan/80">{service.description};
+  </CardDescription>
                 </CardHeader>
                 
                 <CardContent className="space-y-4">
@@ -1343,10 +1394,12 @@ export default function ITServicesPage() {
                       {service.features.map((feature, index) => (
                         <li key={index} className="text-sm text-zion-cyan/70 flex items-center">
                           <span className="w-2 h-2 bg-zion-cyan rounded-full mr-2"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                          {feature};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
                   
                   <div>
@@ -1355,18 +1408,23 @@ export default function ITServicesPage() {
                       {service.benefits.map((benefit, index) => (
                         <li key={index} className="text-sm text-zion-cyan/70 flex items-center">
                           <span className="w-2 h-2 bg-zion-cyan rounded-full mr-2"></span>
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
+                          {benefit};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
                   
                   <div>
                     <h4 className="text-white font-semibold mb-2">Pricing:</h4>
                     <div className="text-sm text-zion-cyan/70 space-y-1">
-                      <p>Starting: {service.pricing.starting}</p>
-                      <p>Average: {service.pricing.average}</p>
-                      <p>Enterprise: {service.pricing.enterprise}</p>
+                      <p>Starting: {service.pricing.starting};
+  </p>
+                      <p>Average: {service.pricing.average};
+  </p>
+                      <p>Enterprise: {service.pricing.enterprise};
+  </p>
                     </div>
                   </div>
                   
@@ -1377,18 +1435,23 @@ export default function ITServicesPage() {
                   </div>
                 </CardContent>
               </Card>
-            ))}
-                </div>
+            ))};
+                ;
+  </div>
               </div>
               
-              <p className="text-gray-300 mb-4">{service.description}</p>
+              <p className="text-gray-300 mb-4">{service.description};
+  </p>
               
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
-                  {formatPrice(service.price, service.pricingModel)}
-                </div>
-                <div className="text-sm text-gray-400">{service.userLimit}</div>
-                <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
+                  {formatPrice(service.price, service.pricingModel)};
+                ;
+  </div>
+                <div className="text-sm text-gray-400">{service.userLimit};
+  </div>
+                <div className="text-sm text-green-400 font-medium">{service.marketPrice};
+  </div>
               </div>
 
               <div className="mb-4">
@@ -1396,10 +1459,12 @@ export default function ITServicesPage() {
                 <div className="flex flex-wrap gap-2">
                   {service.features.slice(0, 3).map((feature, index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
-                      {feature}
-                    </span>
-                  ))}
-                </div>
+                      {feature};
+                    ;
+  </span>
+                  ))};
+                ;
+  </div>
               </div>
 
               <div className="mb-4">
@@ -1407,10 +1472,12 @@ export default function ITServicesPage() {
                 <div className="flex flex-wrap gap-2">
                   {service.benefits.slice(0, 2).map((benefit, index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
-                      {benefit}
-                    </span>
-                  ))}
-                </div>
+                      {benefit};
+                    ;
+  </span>
+                  ))};
+                ;
+  </div>
               </div>
 
               <div className="mb-4">
@@ -1418,17 +1485,19 @@ export default function ITServicesPage() {
                 <div className="flex flex-wrap gap-2">
                   {service.targetAudience.slice(0, 2).map((audience, index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
-                      {audience}
-                    </span>
-                  ))}
-                </div>
+                      {audience};
+                    ;
+  </span>
+                  ))};
+                ;
+  </div>
               </div>
 
               <div className="border-t border-gray-600 pt-4">
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span>Start your free trial today</span>
                   <$2 />
-                    href={service.contactInfo.website}
+                    href={service.contactInfo.website};
                     className="text-blue-400 hover:text-blue-300 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -1438,11 +1507,13 @@ export default function ITServicesPage() {
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
 
-        {/* Contact Information */}
-        <div className="mt-16 text-center">
+        {/* Contact Information */};
+        ;
+  <div className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
             <p className="text-gray-300 mb-6">
@@ -1469,8 +1540,9 @@ export default function ITServicesPage() {
         </div>
       </div>
 
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-blue-dark">
+      {/* CTA Section */};
+      ;
+  <div className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Infrastructure?</h2>
           <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
@@ -1670,16 +1742,21 @@ export default function ITServicesPage() {
       reviewCount: 56,
       deliveryTime: '3-5 weeks',
       link: '/services/it-automation'
-    }
+    };
   ]
+  
+  ;
+  ;
   const categories = [
     { name: 'All Services', count: itServices.length, active: true },
     { name: 'Cloud', count: itServices.filter(s => s.category === 'Cloud').length },
     { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
     { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
     { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length }
+    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length };
   ]
+  ;
+  ;
   return (
     <>
       <SEO 
@@ -1691,13 +1768,15 @@ export default function ITServicesPage() {
       <Header />
       
       <main className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-cyan py-20 overflow-hidden">
+        {/* Hero Section */};
+        ;
+  <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-cyan py-20 overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10"></div>
           
-          {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-zion-blue/20 rounded-full blur-3xl animate-pulse"></div>
+          {/* Animated Background Elements */};
+          ;
+  <div className="absolute top-20 left-10 w-32 h-32 bg-zion-blue/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-zion-purple/30 rounded-full blur-2xl animate-pulse delay-500"></div>
           
@@ -1722,8 +1801,9 @@ export default function ITServicesPage() {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20 bg-background">
+        {/* Services Grid */};
+        ;
+  <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1735,69 +1815,82 @@ export default function ITServicesPage() {
               </p>
             </div>
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {/* Category Filter */};
+            ;
+  <div className="flex flex-wrap justify-center gap-3 mb-12">
               {categories.map((category, index) => (
                 <Button
-                  key={index}
-                  variant={category.active ? "default" : "outline"}
-                  className={category.active ? "bg-zion-cyan text-zion-slate-dark" : "border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"}
+                  key={index};
+                  variant={category.active ? "default" : "outline"};
+                  className={category.active ? "bg-zion-cyan text-zion-slate-dark" : "border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"};
                 >
                   {category.name} ({category.count})
                 </Button>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Services Grid */};
+            ;
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service) => (
                 <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-zion-cyan/20 hover:border-zion-cyan/50 bg-card/50 backdrop-blur-sm">
                   <CardHeader className="pb-4">
                     <div className="flex justify-between items-start mb-3">
-                      {service.icon}
+                      {service.icon};
                       {service.badge && (
                         <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-                          {service.badge}
-                        </Badge>
-                      )}
-                    </div>
+                          {service.badge};
+                        ;
+  </Badge>
+                      )};
+                    ;
+  </div>
                     <CardTitle className="text-xl group-hover:text-zion-cyan transition-colors">
-                      {service.title}
-                    </CardTitle>
+                      {service.title};
+                    ;
+  </CardTitle>
                     <CardDescription className="text-muted-foreground">
-                      {service.description}
-                    </CardDescription>
+                      {service.description};
+                    ;
+  </CardDescription>
                   </CardHeader>
                   
                   <CardContent className="pb-4">
                     <div className="mb-4">
-                      <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
+                      <span className="text-2xl font-bold text-zion-cyan">{service.price};
+  </span>
                     </div>
                     
                     <div className="space-y-2 mb-4">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <div key={index} className="flex items-center text-sm">
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
+                          <span className="text-muted-foreground">{feature};
+  </span>
                         </div>
-                      ))}
-                    </div>
+                      ))};
+                    ;
+  </div>
                     
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-1">
                         <Star className="h-4 w-4 text-yellow-500 fill-current" />
-                        <span className="text-sm text-muted-foreground">{service.rating}</span>
+                        <span className="text-sm text-muted-foreground">{service.rating};
+  </span>
                         <span className="text-sm text-muted-foreground">({service.reviewCount})</span>
                       </div>
                       <Badge variant="outline" className="text-xs">
-                        {service.category}
-                      </Badge>
+                        {service.category};
+                      ;
+  </Badge>
                     </div>
 
                     <div className="flex items-center justify-between text-sm text-muted-foreground">
                       <div className="flex items-center gap-1">
                         <Clock className="h-4 w-4" />
-                        <span>{service.deliveryTime}</span>
+                        <span>{service.deliveryTime};
+  </span>
                       </div>
                       <div className="flex items-center gap-1">
                         <DollarSign className="h-4 w-4" />
@@ -1815,13 +1908,15 @@ export default function ITServicesPage() {
                     </Button>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-cyan-dark">
+        {/* CTA Section */};
+        ;
+  <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-cyan-dark">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your IT Infrastructure?
@@ -1845,8 +1940,8 @@ export default function ITServicesPage() {
       <Footer />
     </>
   )
-}
-}
-}
-}
+};
+};
+};
+};
 export default ITServicesPage</$1></div></div></div></div></div></div></div>

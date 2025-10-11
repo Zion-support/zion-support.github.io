@@ -9,33 +9,33 @@ export type EmergingTechService2027 =
     yearly: number
     custom: string
     currency: string,
-    pricingModel: string}
-  features: string[]
-  benefits: string[]
-  useCases: string[]
-  targetAudience: string[]
-  technologies: string[]
-  integrations: string[]
-  support: string[]
+    pricingModel: string};
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  technologies: string[];
+  integrations: string[];
+  support: string[];
   link: string
   badge: string
   icon: string
   image: string
   innovationLevel: string
   marketSize: string
-  competitors: string[]
+  competitors: string[];
   technicalSpecs: unknown
     performance: string
     scalability: string
     security: string,
-    compliance: string[]}
+    compliance: string[]};
   roi: string
   estimatedDelivery: string
   contactInfo: unknown
     phone: string
     email: string
     website: string,
-    address: string}}
+    address: string}};
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   // Quantum Internet Infrastructure,
     id: "quantum-internet-infrastructure",
@@ -70,7 +70,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     currenc,
   y: string,
     pricingMode,
-  l: string}
+  l: string};
   feature,
   s: string[],
   benefit,
@@ -89,8 +89,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   k: string,
   badg,
   e: string,
-  ico,
-  n: string,
+  icon: string,
   imag,
   e: string,
   innovationLeve,
@@ -108,7 +107,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     securit,
   y: string,
     complianc,
-  e: string[]}
+  e: string[]};
   ro,
   i: string,
   estimatedDeliver,
@@ -122,7 +121,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     websit,
   e: string,
     addres,
-  s: string}}
+  s: string}};
 export const,
   EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [,
   // Quantum Internet Infrastructure,
@@ -207,7 +206,7 @@ export const,
       performance: "Quantum speed advantage",
       scalability: "Global quantum network",
       security: "Quantum-secured",
-      compliance["NIST", "ISO 27001", "FedRAMP", "SOC 2"]
+      compliance["NIST", "ISO 27001", "FedRAMP", "SOC 2"];
     },
     roi: "1000-2000%"
     estimatedDelivery: "24-36 weeks"
@@ -215,7 +214,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
   },
   // Space-Based Quantum Computing
     id: "space-based-quantum-computing",
@@ -252,7 +251,7 @@ export const,
   y: "Global quantum network",
       securit,"
   y: "Quantum-secured","
-      compliance["NIST", "ISO 27001", "FedRAMP", "SOC 2"]
+      compliance["NIST", "ISO 27001", "FedRAMP", "SOC 2"];
     },
     ro,"
   i: "1000-2000%",
@@ -269,7 +268,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    };
   },
   // Space-Based Quantum Computing,"
   id: "space-based-quantum-computing",
@@ -353,7 +352,7 @@ export const,
       performance: "Space-optimized quantum processing",
       scalability: "Multi-satellite constellation",
       security: "Space-grade security",
-      compliance["NASA standards", "Space safety", "International treaties"]
+      compliance["NASA standards", "Space safety", "International treaties"];
     },
     roi: "1500-3000%"
     estimatedDelivery: "36-48 weeks"
@@ -361,7 +360,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
   },
   // Biocomputing Platform
     id: "biocomputing-platform",
@@ -398,7 +397,7 @@ export const,
   y: "Multi-satellite constellation",
       securit,"
   y: "Space-grade security","
-      compliance["NASA standards", "Space safety", "International treaties"]
+      compliance["NASA standards", "Space safety", "International treaties"];
     },
     ro,"
   i: "1500-3000%",
@@ -415,7 +414,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    };
   },
   // Biocomputing Platform,"
   id: "biocomputing-platform",
@@ -499,7 +498,7 @@ export const,
       performance: "Biological parallel processing",
       scalability: "Cellular network expansion",
       security: "Biological security protocols",
-      compliance["FDA", "NIH", "Research ethics", "Biosafety"]
+      compliance["FDA", "NIH", "Research ethics", "Biosafety"];
     },
     roi: "800-1500%"
     estimatedDelivery: "18-24 weeks"
@@ -507,7 +506,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
   },
   // Neuromorphic Computing Platform
     id: "neuromorphic-computing-platform",
@@ -544,7 +543,7 @@ export const,
   y: "Cellular network expansion",
       securit,"
   y: "Biological security protocols","
-      compliance["FDA", "NIH", "Research ethics", "Biosafety"]
+      compliance["FDA", "NIH", "Research ethics", "Biosafety"];
     },
     ro,"
   i: "800-1500%",
@@ -561,7 +560,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    };
   },
   // Neuromorphic Computing Platform,"
   id: "neuromorphic-computing-platform",
@@ -645,7 +644,7 @@ export const,
       performance: "Neuromorphic processing",
       scalability: "Neural network expansion",
       security: "Cognitive security",
-      compliance["AI ethics", "Research standards", "Industry best practices"]
+      compliance["AI ethics", "Research standards", "Industry best practices"];
     },
     roi: "600-1200%"
     estimatedDelivery: "20-28 weeks"
@@ -653,7 +652,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
   },
   // Fusion Energy Computing Platform
     id: "fusion-energy-computing-platform",
@@ -690,7 +689,7 @@ export const,
   y: "Neural network expansion",
       securit,"
   y: "Cognitive security","
-      compliance["AI ethics", "Research standards", "Industry best practices"]
+      compliance["AI ethics", "Research standards", "Industry best practices"];
     },
     ro,"
   i: "600-1200%",
@@ -707,7 +706,7 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
+    };
   },
   // Fusion Energy Computing Platform,"
   id: "fusion-energy-computing-platform",
@@ -791,7 +790,7 @@ export const,
       performance: "Fusion-powered computing",
       scalability: "Modular fusion systems",
       security: "Energy security protocols",
-      compliance["Nuclear safety", "Environmental standards", "Energy regulations"]
+      compliance["Nuclear safety", "Environmental standards", "Energy regulations"];
     },
     roi: "1200-2500%"
     estimatedDelivery: "48-60 weeks"
@@ -823,7 +822,7 @@ export const,
   y: "Modular fusion systems",
       securit,"
   y: "Energy security protocols","
-      compliance["Nuclear safety", "Environmental standards", "Energy regulations"]
+      compliance["Nuclear safety", "Environmental standards", "Energy regulations"];
     },
     ro,"
   i: "1200-2500%",
@@ -840,9 +839,9 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
+    };
+  };
+];
 export type EmergingTechService2027 = i,
   d: string, titl,
   e: string, descriptio,
@@ -863,8 +862,7 @@ export type EmergingTechService2027 = i,
   s: string[], suppor,
   t: string[], lin,
   k: string, badg,
-  e: string, ico,
-  n: string, imag,
+  e: string, icon: string, imag,
   e: string, innovationLeve,
   l: string, marketSiz,
   e: string, competitor,

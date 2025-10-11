@@ -5,25 +5,25 @@ export type ZionCuttingEdgeService2029 =
   price: string
   period: string
   description: string
-  features: string[]
-  benefits: string[]
+  features: string[];
+  benefits: string[];
   popular: boolean
   icon: string
   color: string
   textColor: string
   link: string
   marketPosition: string
-  targetAudience: string[]
+  targetAudience: string[];
   trialDays: number
   setupTime: string
   category: string
-  aiTechnology: string[]
+  aiTechnology: string[];
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: string
@@ -32,7 +32,7 @@ export type ZionCuttingEdgeService2029 =
     email: string
     address: string
     website: string,
-  }
+  };
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -45,8 +45,8 @@ export type ZionCuttingEdgeService2029 =
     enterprise: number
     currency: string
     period: string,
-  }
-}
+  };
+};
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // 1. AI-Powered Quantum Computing Optimization Platform,
     id: 'ai-quantum-computing-optimization',
@@ -74,8 +74,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   s: string[],
   popula,
   r: boolean,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   textColo,
@@ -121,7 +120,7 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     addres,
   s: string,
     websit,
-  e: string}
+  e: string};
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -145,8 +144,8 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     currenc,
   y: string,
     perio,
-  d: string}
-}
+  d: string};
+};
 export const,
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
@@ -217,7 +216,7 @@ export const,
       professional: 7999
       enterprise: 19999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 2. Autonomous Drone Fleet Management System
     id: 'autonomous-drone-fleet-management',
@@ -229,8 +228,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-indigo-600 to-purple-700',
     textColo,
@@ -304,7 +302,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 2. Autonomous Drone Fleet Management System,
   id: 'autonomous-drone-fleet-management',
@@ -374,7 +372,7 @@ export const,
       professional: 3999
       enterprise: 9999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 3. Blockchain-Based Decentralized Identity Management
     id: 'blockchain-decentralized-identity',
@@ -386,8 +384,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-600 to-emerald-700',
     textColo,
@@ -461,7 +458,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 3. Blockchain-Based Decentralized Identity Management,
   id: 'blockchain-decentralized-identity',
@@ -531,7 +528,7 @@ export const,
       professional: 799
       enterprise: 1999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 4. AI-Powered Climate Change Prediction & Mitigation Platform
     id: 'ai-climate-change-prediction',
@@ -543,8 +540,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-cyan-700',
     textColo,
@@ -618,7 +614,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 4. AI-Powered Climate Change Prediction & Mitigation Platform,
   id: 'ai-climate-change-prediction',
@@ -688,7 +684,7 @@ export const,
       professional: 4999
       enterprise: 12999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 5. Neuromorphic Computing AI Platform
     id: 'neuromorphic-computing-ai',
@@ -700,8 +696,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-teal-600 to-green-700',
     textColo,
@@ -775,7 +770,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 5. Neuromorphic Computing AI Platform,
   id: 'neuromorphic-computing-ai',
@@ -845,7 +840,7 @@ export const,
       professional: 9999
       enterprise: 24999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 6. Autonomous Supply Chain Optimization Platform
     id: 'autonomous-supply-chain-optimization',
@@ -857,8 +852,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-600 to-pink-700',
     textColo,
@@ -932,7 +926,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 6. Autonomous Supply Chain Optimization Platform,
   id: 'autonomous-supply-chain-optimization',
@@ -1002,7 +996,7 @@ export const,
       professional: 5999
       enterprise: 14999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 7. AI-Powered Healthcare Diagnostics & Treatment Platform
     id: 'ai-healthcare-diagnostics-treatment',
@@ -1014,8 +1008,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-orange-600 to-red-700',
     textColo,
@@ -1089,7 +1082,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 7. AI-Powered Healthcare Diagnostics & Treatment Platform,
   id: 'ai-healthcare-diagnostics-treatment',
@@ -1159,7 +1152,7 @@ export const,
       professional: 4499
       enterprise: 11999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 8. Autonomous Financial Trading & Portfolio Management
     id: 'autonomous-financial-trading',
@@ -1171,8 +1164,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-600 to-pink-700',
     textColo,
@@ -1246,7 +1238,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 8. Autonomous Financial Trading & Portfolio Management,
   id: 'autonomous-financial-trading',
@@ -1316,7 +1308,7 @@ export const,
       professional: 9999
       enterprise: 24999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 9. AI-Powered Cybersecurity Threat Intelligence Platform
     id: 'ai-cybersecurity-threat-intelligence',
@@ -1328,8 +1320,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-600 to-emerald-700',
     textColo,
@@ -1403,7 +1394,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 9. AI-Powered Cybersecurity Threat Intelligence Platform,
   id: 'ai-cybersecurity-threat-intelligence',
@@ -1473,7 +1464,7 @@ export const,
       professional: 5499
       enterprise: 13999,
       currency: 'USD',
-      period: 'month'}
+      period: 'month'};
   },
   // 10. Autonomous Smart City Infrastructure Management
     id: 'autonomous-smart-city-infrastructure',
@@ -1485,8 +1476,7 @@ export const,
     features: [,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-slate-700 to-zinc-800',
     textColo,
@@ -1560,7 +1550,7 @@ export const,
   y: 'USD',
       perio,
   d: 'month'
-    }
+    };
   },
   // 10. Autonomous Smart City Infrastructure Management,
   id: 'autonomous-smart-city-infrastructure',
@@ -1630,15 +1620,14 @@ export const,
       professional: 12999
       enterprise: 29999,
       currency: 'USD',
-      period: 'month'}
-  }
-]
+      period: 'month'};
+  };
+];
 export const getServicesByCategory = (category: string) =>
   return zionCuttingEdgeServices2029.filter(service => service.category === category),,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-600 to-indigo-700',
     textColo,
@@ -1712,20 +1701,20 @@ export const getServicesByCategory = (category: string) =>
   y: 'USD',
       perio,
   d: 'month'
-    }
-  }
-]
+    };
+  };
+];
 export const getServicesByCategory = (categor)
   y: string) =>
   return zionCuttingEdgeServices2029.filter(service => service.category === category),
-}
+};
 export const getPopularServices = () =>
   return zionCuttingEdgeServices2029.filter(service => service.popular)
-}
+};
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
   return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)})
-}
+};
 export const getServicesByTechnology = (technology: string) =>,
   return zionCuttingEdgeServices2029.filter(service =>),
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase())),
@@ -1736,13 +1725,13 @@ export const getServicesByPriceRange = (minPric)
 //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
   })
-}
+};
 export const getServicesByTechnology = (technolog)
   y: string) =>
   return zionCuttingEdgeServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
   ),
-}
+};
 export type ZionCuttingEdgeService2029 = i,
   d: string, nam,
   e: string, taglin,
@@ -1752,8 +1741,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: string, feature,
   s: string[], benefit,
   s: string[], popula,
-  r: boolean, ico,
-  n: string, colo,
+  r: boolean, icon: string, colo,
   r: string, textColo,
   r: string, lin,
   k: string, marketPositio,
@@ -1798,8 +1786,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Revolutionary platform that combines AI and quantum computing to solve complex optimization problems in logistics, finance, drug discovery, and materials science.', feature,
   s: [' 'AI-powered quantum algorithm optimization',' 'Hybrid classical-quantum computing workflows',' 'Real-time quantum error correction',' 'Quantum machine learning models',' 'Multi-qubit system management',' 'Quantum advantage benchmarking',' 'Industry-specific quantum solutions',' 'API for quantum algorithm deployment',' 'Real-time quantum system monitoring',' 'Quantum workforce training platform' ], benefit,
   s: [' 'Solve problems 1000x faster than classical computers',' 'Reduce optimization costs by 80%',' 'Enable breakthrough discoveries in science',' 'Create competitive advantage in quantum era' ], popula,
-  r: true,' ico,
-  n: '⚛️',' colo,
+  r: true,' icon: '⚛️',' colo,
   r: 'from-indigo-600 to-purple-700',' textColo,
   r: 'text-indigo-200',' lin,
   k: 'http,
@@ -1845,8 +1832,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Enterprise-grade autonomous drone fleet management platform that enables businesses to deploy, monitor, and optimize large-scale drone operations for delivery, inspection, and surveillance.', feature,
   s: [' 'AI-powered flight path optimization',' 'Real-time fleet monitoring and control',' 'Autonomous obstacle avoidance',' 'Battery management and charging optimization',' 'Weather-aware flight planning',' 'Regulatory compliance automation',' 'Multi-drone coordination algorithms',' 'Real-time video streaming and analysis',' 'Predictive maintenance scheduling',' 'Integration with existing logistics systems' ], benefit,
   s: [' 'Reduce delivery costs by 60%',' 'Improve delivery speed by 3x',' 'Eliminate human pilot costs',' 'Enable 24/7 autonomous operations' ], popula,
-  r: true,' ico,
-  n: '🚁',' colo,
+  r: true,' icon: '🚁',' colo,
   r: 'from-green-600 to-emerald-700',' textColo,
   r: 'text-green-200',' lin,
   k: 'http,
@@ -1892,8 +1878,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Revolutionary decentralized identity platform that gives users complete control over their digital identity while ensuring security, privacy, and compliance with global regulations.', feature,
   s: [' 'Self-sovereign identity management',' 'Zero-knowledge proof verification',' 'Multi-chain blockchain support',' 'Regulatory compliance automation',' 'Biometric authentication integration',' 'Decentralized credential verification',' 'Privacy-preserving data sharing',' 'Cross-border identity portability',' 'Enterprise SSO integration',' 'Mobile wallet applications' ], benefit,
   s: [' 'Eliminate identity fraud by 99.9%',' 'Reduce compliance costs by 70%',' 'Improve user privacy and control',' 'Enable seamless cross-border operations' ], popula,
-  r: true,' ico,
-  n: '🔐',' colo,
+  r: true,' icon: '🔐',' colo,
   r: 'from-blue-600 to-cyan-700',' textColo,
   r: 'text-blue-200',' lin,
   k: 'http,
@@ -1939,8 +1924,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Advanced climate modeling platform that uses AI and machine learning to predict climate change impacts and provide actionable mitigation strategies for businesses and governments.', feature,
   s: [' 'AI-powered climate modeling',' 'Real-time environmental monitoring',' 'Predictive risk assessment',' 'Carbon footprint tracking',' 'Sustainability optimization',' 'Regulatory compliance automation',' 'Climate impact visualization',' 'Mitigation strategy recommendations',' 'Integration with IoT sensors',' 'Mobile applications for field workers' ], benefit,
   s: [' 'Reduce climate-related risks by 80%',' 'Optimize sustainability investments',' 'Ensure regulatory compliance',' 'Improve corporate ESG ratings' ], popula,
-  r: true,' ico,
-  n: '🌍',' colo,
+  r: true,' icon: '🌍',' colo,
   r: 'from-teal-600 to-green-700',' textColo,
   r: 'text-teal-200',' lin,
   k: 'http,
@@ -1986,8 +1970,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure to enable ultra-efficient AI processing on edge devices and IoT sensors.', feature,
   s: [' 'Brain-inspired neural architecture',' 'Ultra-low power consumption',' 'Real-time learning and adaptation',' 'Edge device optimization',' 'Spiking neural networks',' 'Neuromorphic hardware integration',' 'Adaptive learning algorithms',' 'Multi-modal sensor processing',' 'Federated learning support',' 'Hardware-software co-design' ], benefit,
   s: [' 'Reduce power consumption by 90%',' 'Enable real-time AI on edge devices',' 'Improve learning efficiency by 5x',' 'Create new AI applications' ], popula,
-  r: true,' ico,
-  n: '🧠',' colo,
+  r: true,' icon: '🧠',' colo,
   r: 'from-purple-600 to-pink-700',' textColo,
   r: 'text-purple-200',' lin,
   k: 'http,
@@ -2033,8 +2016,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Intelligent supply chain platform that uses AI to autonomously optimize inventory, logistics, and supplier relationships in real-time, reducing costs and improving efficiency.', feature,
   s: [' 'AI-powered demand forecasting',' 'Autonomous inventory optimization',' 'Real-time supplier performance monitoring',' 'Dynamic pricing optimization',' 'Risk assessment and mitigation',' 'Sustainability optimization',' 'Multi-echelon inventory management',' 'Transportation route optimization',' 'Supplier relationship management',' 'Compliance automation' ], benefit,
   s: [' 'Reduce supply chain costs by 35%',' 'Improve inventory turnover by 50%',' 'Reduce stockouts by 80%',' 'Optimize sustainability metrics' ], popula,
-  r: true,' ico,
-  n: '📦',' colo,
+  r: true,' icon: '📦',' colo,
   r: 'from-orange-600 to-red-700',' textColo,
   r: 'text-orange-200',' lin,
   k: 'http,
@@ -2080,8 +2062,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Comprehensive healthcare AI platform that provides accurate diagnostics, personalized treatment recommendations, and predictive health analytics for healthcare providers and patients.', feature,
   s: [' 'AI-powered medical image analysis',' 'Personalized treatment recommendations',' 'Predictive health analytics',' 'Drug interaction checking',' 'Clinical decision support',' 'Patient outcome prediction',' 'Medical literature analysis',' 'Telemedicine integration',' 'Mobile health applications',' 'HIPAA-compliant data security' ], benefit,
   s: [' 'Improve diagnostic accuracy by 40%',' 'Reduce treatment costs by 30%',' 'Improve patient outcomes by 50%',' 'Enable personalized medicine' ], popula,
-  r: true,' ico,
-  n: '🏥',' colo,
+  r: true,' icon: '🏥',' colo,
   r: 'from-red-600 to-pink-700',' textColo,
   r: 'text-red-200',' lin,
   k: 'http,
@@ -2127,8 +2108,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Advanced autonomous trading platform that uses AI and machine learning to automatically manage portfolios, execute trades, and optimize investment strategies in real-time.', feature,
   s: [' 'AI-powered market analysis',' 'Autonomous portfolio rebalancing',' 'Real-time risk management',' 'Predictive market modeling',' 'Multi-asset class trading',' 'Regulatory compliance automation',' 'Performance analytics and reporting',' 'Custom trading strategies',' 'Mobile trading applications',' 'API for institutional clients' ], benefit,
   s: [' 'Improve portfolio returns by 25%',' 'Reduce trading costs by 40%',' 'Eliminate emotional trading decisions',' 'Enable 24/7 market monitoring' ], popula,
-  r: true,' ico,
-  n: '📈',' colo,
+  r: true,' icon: '📈',' colo,
   r: 'from-green-600 to-emerald-700',' textColo,
   r: 'text-green-200',' lin,
   k: 'http,
@@ -2174,8 +2154,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Advanced cybersecurity platform that uses AI to predict, detect, and respond to cyber threats in real-time, providing comprehensive protection for enterprise networks and applications.', feature,
   s: [' 'AI-powered threat detection',' 'Predictive threat modeling',' 'Real-time incident response',' 'Behavioral analysis',' 'Threat intelligence sharing',' 'Vulnerability assessment',' 'Compliance automation',' 'Security awareness training',' 'Mobile security management',' 'Cloud security integration' ], benefit,
   s: [' 'Reduce security incidents by 90%',' 'Improve response time by 95%',' 'Reduce compliance costs by 60%',' 'Enable proactive threat prevention' ], popula,
-  r: true,' ico,
-  n: '🛡️',' colo,
+  r: true,' icon: '🛡️',' colo,
   r: 'from-slate-700 to-zinc-800',' textColo,
   r: 'text-slate-200',' lin,
   k: 'http,
@@ -2221,8 +2200,7 @@ export type ZionCuttingEdgeService2029 = i,
   n: 'Comprehensive smart city platform that uses AI and IoT to autonomously manage urban infrastructure, optimize resource usage, and improve citizen quality of life.', feature,
   s: [' 'AI-powered traffic optimization',' 'Smart energy management',' 'Waste management optimization',' 'Public safety monitoring',' 'Environmental monitoring',' 'Citizen engagement platform',' 'Infrastructure maintenance prediction',' 'Emergency response optimization',' 'Data analytics dashboard',' 'Mobile applications for citizens' ], benefit,
   s: [' 'Reduce energy costs by 30%',' 'Improve traffic flow by 40%',' 'Reduce emergency response time by 50%',' 'Improve citizen satisfaction' ], popula,
-  r: true,' ico,
-  n: '🏙️',' colo,
+  r: true,' icon: '🏙️',' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
   r: 'text-blue-200',' lin,
   k: 'http,

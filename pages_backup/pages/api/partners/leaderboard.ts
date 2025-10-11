@@ -10,25 +10,27 @@ export default async function handler(
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
-    }
+    };
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue
       const key = row && row.partner_code as string
       map && map.set(key, (map && map.get(key) || 0) + 1)
     }
-    const leaders = Array && Array.from(map && map.entries())
+    ;
+  ;
+  const leaders = Array && Array.from(map && map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10)
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     res.status(500).json({ error: 'Internal server error' })
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -49,15 +51,17 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
-    const supabase = getServerSupabase()
+    ;
+  ;
+  const supabase = getServerSupabase()
     const startOfMonth = new Date()
     startOfMonth.setDate(1)
     startOfMonth.setHours(0, 0, 0, 0)
@@ -72,7 +76,9 @@ export default async function handler(req, res) {
       const key = row.partner_code as string
       map.set(key, (map.get(key) |0) + 1)
     }
-    const leaders = Array.from(map.entries())
+    ;
+  ;
+  const leaders = Array.from(map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b.profile_completions - a.profile_completions)
       .slice(0, 10)
@@ -90,15 +96,17 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
+  };
 }
 
-    const leaders = Array.from(map.entries())
+    ;
+  ;
+  const leaders = Array.from(map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b.profile_completions - a.profile_completions)
       .slice(0, 10)
@@ -111,5 +119,6 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
+;

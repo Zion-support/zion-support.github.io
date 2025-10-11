@@ -1,25 +1,28 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
-  }
-  
+    this.state = { hasError: false };
+  };
+  ;
   static getDerivedStateFromError(error) {
-    return { hasError: true }
-  }
-  
+    return { hasError: true };
+  };
+  ;
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
-  }
-  
+  };
+  ;
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
+    if (this.state.hasError) {}
+      
+  ;
+  return <div>Something went wrong.</div>
     }
-    
-    return this.props.children
-  }
-}
+    ;
+    ;
+  return this.props.children
+  };
+};
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -53,7 +56,8 @@ export default function InstantMessaging() {
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
 
-  }
+  };
+  ;
   return (
     <>
             <li>
@@ -82,12 +86,13 @@ export default function InstantMessaging() {
 
 
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
 
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -125,10 +130,11 @@ export default function InstantMessaging() {
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -172,8 +178,8 @@ export default function InstantMessaging() {
     </>
   )
 
-}
-
+};
+;
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -187,7 +193,8 @@ export default function InstantMessaging() {
     "name": "Instant Messaging",
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging."
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
-  }
+  };
+  ;
   return (
     <>
       <SEO
@@ -196,10 +203,11 @@ export default function InstantMessaging() {
         keywords="real-time messaging, Socket.IO chat, project communication"
         canonical="https://app.ziontechgroup.com/features/instant-messaging"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+      {/* Use a normal script tag so JSON-LD is correctly parsed */};
+      ;
+  <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }};
       ></script>
       <Header />
       <main className="bg-background text-white py-12">

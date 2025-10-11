@@ -26,11 +26,11 @@ export default async function handler(
       `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
       `Treasury stable and contributors earning consistently across regions`
-    ]
+    ];
   } catch (e) {
     res && res.status(200).json({ summary: [], error: 'Failed to compute summary' })
-  }
-
+  };
+;
 export default async /**
  * handler - Function description
  */
@@ -56,12 +56,12 @@ function handler() {
       `Token momentum: ${wallets} active wallets; daily volume around ${Number (tx).toLocaleString ()}`,
       `Multiverse scale: ${instances} active sub - instances with cross - instance flows`,
       `Treasury stable and contributors earning consistently across regions`,
-    ]
+    ];
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () })
   } catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' })
-  }
-}
+  };
+};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const r = await fetch(`${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`)
@@ -77,9 +77,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`,
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`,
       `Treasury stable and contributors earning consistently across regions`,
-    ]
+    ];
     res.status(200).json({ summary, timestamp: new Date().toISOString() })
   } catch (e) {
     res.status(200).json({ summary: [], error: 'Failed to compute summary' })
-  }
-}
+  };
+};
+;

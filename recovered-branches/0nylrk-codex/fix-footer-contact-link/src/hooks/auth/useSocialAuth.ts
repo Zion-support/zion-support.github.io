@@ -14,7 +14,7 @@ export const useSocialAuth = () => {
           variant: "destructive"})
           variant: "destructive",
         })
-      }
+      };
     } catch (error: any) {
       console.error("Google login error:", error)
       toast({
@@ -23,8 +23,10 @@ export const useSocialAuth = () => {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
+    };
   }
+  ;
+  ;
   const loginWithFacebook = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
@@ -38,7 +40,7 @@ export const useSocialAuth = () => {
           variant: "destructive"})
           variant: "destructive",
         })
-      }
+      };
     } catch (error: any) {
       console.error("Facebook login error:", error)
       toast({
@@ -47,8 +49,10 @@ export const useSocialAuth = () => {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
+    };
   }
+  ;
+  ;
   const loginWithTwitter = async () => {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
@@ -62,7 +66,7 @@ export const useSocialAuth = () => {
           variant: "destructive"})
           variant: "destructive",
         })
-      }
+      };
     } catch (error: any) {
       console.error("Twitter login error:", error)
       toast({
@@ -71,7 +75,8 @@ export const useSocialAuth = () => {
         variant: "destructive"})
         variant: "destructive",
       })
-    }
-  }
-  return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
-}
+    };
+  };
+  ;
+  return { loginWithGoogle, loginWithFacebook, loginWithTwitter };
+};

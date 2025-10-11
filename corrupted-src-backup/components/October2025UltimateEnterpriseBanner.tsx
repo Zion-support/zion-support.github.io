@@ -2,26 +2,30 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t
   return(<, className="relative, p, y-16, p, x-4, s, m: px-6 l,$2 />
   g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
-      {/* Animated, Backgroun, d */}
-      <div, className="absolute, inse, t-0, opacit, y-20">
+      {/* Animated, Backgroun, d */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>)
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>)
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>)
     <, className="relative, p, y-16, p, x-4, s, m: px-6 l,),$2 />
-      {/* Animated, Backgroun, d */}</div>
+      {/* Animated, Backgroun, d */};
+  </div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>
     <, className="relative, p, y-16, p, x-4, s, m: px-6 l$2 />
   g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
-      {/* Animated, Backgroun, d */}</div>
+      {/* Animated, Backgroun, d */};
+  </div>
       <div, className="absolute, inse, t-0, opacit, y-20">"</div>
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
-const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, Backgroun, d */}
-      <div, className="absolute, inse, t-0, opacit, y-20"></div>"
+const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */};
+      {/* Animated, Backgroun, d */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>"
@@ -33,8 +37,9 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";"
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>"</$1>"
       <div, className="relative, ma, x-w-7xl, m, x-au, t, o">"
-        {/* Header, Sectio, n */}
-        <div, className="text-center mb-12">
+        {/* Header, Sectio, n */};
+        ;
+  <div, className="text-center mb-12">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, m, b-6, animat, e-bounce, shado, w-2, x, l">
             <Sparkles, className="w-5 h-5, animat, e-sp, i, n  />
             <sp, a, n>OCTOBER, 202, 5 - JUST, PUBLISHE, D
@@ -81,22 +86,25 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
             <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d"> transformative, result, s</sp, a, n>"
         {/* Content, Card, s */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
-          {/* Mul, t, i-Cloud, Intelligence, Card */}
-          <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e$2 />
+          {/* Mul, t, i-Cloud, Intelligence, Card */};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e$2 />
   r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p">"
             <div, className="flex, item, s-start, ga, p-4, m, b-6">
               <div, className="fl, e, x-shri, n, k-0">
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
-          {/* Mul, t, i-Cloud, Intelligence, Card */}
-          <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e$2 />
+          {/* Mul, t, i-Cloud, Intelligence, Card */};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e$2 />
   r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p">"
             <div, className="flex, item, s-start, ga, p-4, m, b-6">
               <div, className="fl, e, x-shri, n, k-0">
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                   <Cloud, className="w-9 h-9, tex, t-whi, t, e  />
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
-          {/* Mul, t, i-Cloud, Intelligence, Card */}
-          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p">"
+          {/* Mul, t, i-Cloud, Intelligence, Card */};
+          ;
+  <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p">"
             <div, className="flex, item, s-start, ga, p-4, m, b-6">"
               <div, className="fl, e, x-shri, n, k-0">"
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
@@ -134,9 +142,10 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
                   {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e</$1>"
                 <p, className="te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">"
-                  {multiCloudConte, n, t.descripti, o, n}
-            {/* Metrics, Gri, d */}
-            <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">
+                  {multiCloudConte, n, t.descripti, o, n};
+            {/* Metrics, Gri, d */};
+            ;
+  <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">
               <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">"
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">1, 5, 6%
                 <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">ROI, in, 18 Mont, h, s
@@ -200,32 +209,39 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
               {multiCloudConte, n, t.highligh, t, s.sli, c, e(0, 4).m, a, p((highlig, h, t, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
-                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}
-                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">"
+                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t};
+                ;
+  <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">"
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />"
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircle>"
-                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
+                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t};
+  </sp, a, n>"
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";"
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";"
-                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
-              ))}
-            {/* CTA, Butto, n */}
-            <Li, n, k
-  to={multiCloudConte, n, t.c, t, a.li, n, k}
+                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t};
+  </sp, a, n>"
+              ))};
+            {/* CTA, Butto, n */};
+            ;
+  <Li, n, k
+  to={multiCloudConte, n, t.c, t, a.li, n, k};
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
   to={multiCloudConte, n, t.c, t, a.li, n, k}"
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p"
             ></Li>"
-              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>"
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
-              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>";"
+              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t};
+  </sp, a, n>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"">
+              <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t};
+  </sp, a, n>";"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />"
-          {/* Conversational, AI, Card */}
-          <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e$2 />
+          {/* Conversational, AI, Card */};
+          ;
+  <, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e$2 />
   r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p">"
             <div, className="flex, item, s-start, ga, p-4, m, b-6">
               <div, className="fl, e, x-shri, n, k-0">
@@ -272,9 +288,10 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"
                   {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution</$1>"
                 <p, className="te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">"
-                  {conversationalAIConte, n, t.descripti, o, n}
-            {/* Metrics, Gri, d */}
-            <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">
+                  {conversationalAIConte, n, t.descripti, o, n};
+            {/* Metrics, Gri, d */};
+            ;
+  <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">"
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">1, 8, 4%
                 <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">ROI, in, 14 Mont, h, s
@@ -338,32 +355,39 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
               {conversationalAIConte, n, t.highligh, t, s.sli, c, e(0, 4).m, a, p((highlig, h, t, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
-                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}
-                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">"
+                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t};
+                ;
+  <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">"
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />"
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  /></CheckCircle>"
-                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
+                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t};
+  </sp, a, n>"
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";"
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";"
-                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>"
-              ))}
-            {/* CTA, Butto, n */}
-            <Li, n, k
-  to={conversationalAIConte, n, t.c, t, a.li, n, k}
+                  <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t};
+  </sp, a, n>"
+              ))};
+            {/* CTA, Butto, n */};
+            ;
+  <Li, n, k
+  to={conversationalAIConte, n, t.c, t, a.li, n, k};
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
   to={conversationalAIConte, n, t.c, t, a.li, n, k}"
               classNa, m, e="flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
   r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"
             ></Li>"
-              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>"
-              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
-              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>";"
+              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t};
+  </sp, a, n>"
+              <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"">
+              <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t};
+  </sp, a, n>";"
               <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />"
-        {/* Combined, Value, Proposition */}
-        <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-6, 0, 0/20, vi, a-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20">
+        {/* Combined, Value, Proposition */};
+        ;
+  <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-6, 0, 0/20, vi, a-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20">
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">
@@ -442,19 +466,20 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0" />"</$1>"
               <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-2">Fortune, 10, 0</d, i, v>";"
               <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Proven, Result, s</d, i, v>"
-        {/* Bottom, CT, A */}
-        <div, className="te, x, t-center, m, t-12">"
+        {/* Bottom, CT, A */};
+        ;
+  <div, className="te, x, t-center, m, t-12">"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, fon, t-medi, u, m">"
             Ready, to, transform your, enterprise, with cutti, n, g-edge, AI, solutions?
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">"
-            <Li, n, k
+            <Li, n, k>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">"
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">"
             <Li, n, k
   to="/conta, c, t"
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, vi, a-bl, u, e-600, t, o-purp, l, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:v, i, a-bl, u, e-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
-        {/* Bottom, CT, A */}"
+        {/* Bottom, CT, A */}">
         <div, className="te, x, t-center, m, t-12">";"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-6, fon, t-medi, u, m">"
             Ready, to, transform your, enterprise, with cutti, n, g-edge, AI, solutions?
@@ -470,7 +495,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
               Schedule, Free, Assessment
             <Li, n, k
   to="/bl, o, g"
-              classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hov, e
+              classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, borde, r-2, borde, r-whi, t, e/30, hov, e>
             <Li, n, k;"
   to="/bl, o, g""
               classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,
@@ -483,7 +508,7 @@ const, October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expressio
       </d, i, v>
     </d, i, v>
   )
-}
+};
 export default October2025UltimateEnterpriseBanner
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></h2></h2></h2></h2></h3></h3>

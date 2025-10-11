@@ -4,7 +4,7 @@ const contact = {
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-}
+};
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 	{
 		id: 'ai-rfp-bid-writer',
@@ -751,11 +751,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     setupTime: '30 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
-    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
-    useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
+    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook'];
+    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack'];
+    useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting'];
     roi: 'Cuts manual email time by 6080%',
-    competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
+    competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons'];
     marketSize: '$10B+ email productivity',
     growthRate: '15% CAGR',
     variant: 'network-futuristic',
@@ -763,8 +763,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-cyan-600 to-blue-700'
     textColo,
@@ -785,15 +784,15 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realServic,
   e: true,
     technolog,
-  y: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
+  y: ['Gmail/Outlook APIs', 'LLM', 'Webhook'];
     integration,
-  s: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
+  s: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack'];
     useCase,
-  s: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
+  s: ['Inbound triage', 'Nurture sequences', 'SLA reporting'];
     ro,
   i: 'Cuts manual email time by 6080%'
     competitor,
-  s: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
+  s: ['Superhuman AI', 'Front AI', 'Gmail add-ons'];
     marketSiz,
   e: '$10B+ email productivity'
     growthRat,
@@ -832,7 +831,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     customers: 48
     rating: 4.7
     reviews: 12,
-  }
+  };
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_size: '$10B+ email productivity'
     growth_rate: '15% CAGR'
@@ -872,8 +871,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     reviews: 12,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - cyan - 600 to - blue - 700',
     text_colo,
@@ -910,7 +908,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     ratin,
   g: 4.7,
     review,
-  s: 12}
+  s: 12};
     competitor,
   s: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_siz,
@@ -982,7 +980,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     ratin,
   g: 4.7,
     review,
-  s: 12}
+  s: 12};
       'Branching logic + A/B prompts',
       'SMS/WhatsApp/web delivery',
       'Real-time analytics',
@@ -1052,8 +1050,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - emerald - 600 to - teal - 700',
     text_colo,
@@ -1162,8 +1159,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - purple - 600 to - indigo - 700',
     text_colo,
@@ -1270,8 +1266,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - pink - 600 to - rose - 700',
     text_colo,
@@ -1376,8 +1371,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - amber - 600 to - orange - 700',
     text_colo,
@@ -1483,8 +1477,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - sky - 600 to - indigo - 700',
     text_colo,
@@ -1591,8 +1584,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 600 to - indigo - 700',
     text_colo,
@@ -1698,8 +1690,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - violet - 600 to - fuchsia - 700',
     text_colo,
@@ -1797,8 +1788,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     reviews: 8,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - cyan - 600 to - teal - 700',
     text_colo,
@@ -1904,8 +1894,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - indigo - 600 to - blue - 700',
     text_colo,
@@ -2011,8 +2000,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - emerald - 600 to - green - 700',
     text_colo,
@@ -2117,8 +2105,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - fuchsia - 600 to - pink - 700',
     text_colo,
@@ -2223,8 +2210,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 600 to - sky - 700',
     text_colo,
@@ -2329,8 +2315,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - emerald - 600 to - teal - 700',
     text_colo,
@@ -2415,7 +2400,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub Actions'],
     use_cases: ['Policy updates', 'Audits'],
     roi: 'Automates tedious checks'
-    competitors: ['Cookiebot (lite)']
+    competitors: ['Cookiebot (lite)'];
     market_size: '$1B cookie tools'
     growth_rate: '8% CAGR'
     variant: 'holographic - matrix'
@@ -2435,8 +2420,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - amber - 600 to - yellow - 700',
     text_colo,
@@ -2521,7 +2505,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['Pingdom', 'UptimeRobot'],
     use_cases: ['SLA reports', 'Status page'],
     roi: 'Reduce support tickets ~20%'
-    competitors: ['Statuspage (lite)']
+    competitors: ['Statuspage (lite)'];
     market_size: '$1B status tools'
     growth_rate: '9% CAGR'
     variant: 'ai - futuristic'
@@ -2541,8 +2525,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - sky - 600 to - cyan - 700',
     text_colo,
@@ -2785,8 +2768,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - teal - 600 to - emerald - 700',
     text_colo,
@@ -2891,8 +2873,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description:,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 600 to - rose - 700',
     text_colo,
@@ -2962,7 +2943,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
       'Risk detection'
       'PR suggestions'
       'CI integration'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-rose-600 to-pink-700'
@@ -2974,11 +2955,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     setupTime: '30 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Git APIs', 'Static analysis']
-    integrations: ['GitHub', 'GitLab', 'Flagsmith']
-    useCases: ['Cleanup debt', 'Reduce risk']
+    technology: ['Git APIs', 'Static analysis'];
+    integrations: ['GitHub', 'GitLab', 'Flagsmith'];
+    useCases: ['Cleanup debt', 'Reduce risk'];
     roi: 'Avoid outages, reduce toil',
-  competitors: ['LaunchDarkly add-ons']
+  competitors: ['LaunchDarkly add-ons'];
     marketSize: '$1 B flags'
     growthRate: '10% CAGR'
     variant: 'ai-futuristic'
@@ -2991,8 +2972,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     reviews: 3,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-rose-600 to-pink-700'
     textColo,
@@ -3013,11 +2993,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realServic,
   e: true,
     technolog,
-  y: ['Git APIs', 'Static analysis']
+  y: ['Git APIs', 'Static analysis'];
     integration,
-  s: ['GitHub', 'GitLab', 'Flagsmith']
+  s: ['GitHub', 'GitLab', 'Flagsmith'];
     useCase,
-  s: ['Cleanup debt', 'Reduce risk']
+  s: ['Cleanup debt', 'Reduce risk'];
     ro,
   i: 'Avoid outages, reduce toil',
   competitor,
@@ -3041,7 +3021,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     ratin,
   g: 4.4,
     review,
-  s: 3}
+  s: 3};
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -3062,7 +3042,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub', 'GitLab', 'Flagsmith'],
     use_cases: ['Cleanup debt', 'Reduce risk'],
     roi: 'Avoid outages, reduce toil',
-    competitors: ['LaunchDarkly add - ons']
+    competitors: ['LaunchDarkly add - ons'];
     market_size: '$1B flags'
     growth_rate: '10% CAGR'
     variant: 'ai - futuristic'
@@ -3082,8 +3062,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - rose - 600 to - pink - 700',
     text_colo,
@@ -3160,7 +3139,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub Actions'],
     use_cases: ['DB tuning', 'Perf boosts'],
     roi: 'Cut query costs 2050%'
-    competitors: ['pganalyze (adjacent)']
+    competitors: ['pganalyze (adjacent)'];
     market_size: '$2B DB tuning'
     growth_rate: '9% CAGR'
     variant: 'network - futuristic'
@@ -3219,7 +3198,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['AWS'],
     use_cases: ['Storage hygiene', 'Cost cuts'],
     roi: 'Save 1030% storage spend'
-    competitors: ['Kubecost (adjacent)']
+    competitors: ['Kubecost (adjacent)'];
     market_size: '$3B cloud cost'
     growth_rate: '12% CAGR'
     variant: 'holographic - matrix'
@@ -3305,7 +3284,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub', 'Slack'],
     use_cases: ['Schema governance', 'Release safety'],
     roi: 'Fewer incidents, faster integration',
-    competitors: ['Stoplight (adjacent)']
+    competitors: ['Stoplight (adjacent)'];
     market_size: '$1B API tooling'
     growth_rate: '9% CAGR'
     variant: 'network - futuristic'
@@ -3430,7 +3409,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
       'Risk scoring'
       'PR generation'
       'Rollback assist'
-    ]
+    ];
     popular: true
     icon: ''
     color: 'from-blue-700 to-indigo-800'
@@ -3442,11 +3421,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Developer Tools',
     realService: true,
-    technology: ['pg_stat_statements', 'Advisor']
+    technology: ['pg_stat_statements', 'Advisor'];
     integrations: ['GitHub Actions'],
-    useCases: ['DB tuning', 'Perf boosts']
+    useCases: ['DB tuning', 'Perf boosts'];
     roi: 'Cut query costs 2050%'
-    competitors: ['pganalyze (adjacent)']
+    competitors: ['pganalyze (adjacent)'];
     marketSize: '$2 B DB tuning'
     growthRate: '9% CAGR'
     variant: 'network-futuristic'
@@ -3459,8 +3438,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     reviews: 5,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-700 to-indigo-800'
     textColo,
@@ -3481,11 +3459,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realServic,
   e: true,
     technolog,
-  y: ['pg_stat_statements', 'Advisor']
+  y: ['pg_stat_statements', 'Advisor'];
     integration,
   s: ['GitHub Actions'],
     useCase,
-  s: ['DB tuning', 'Perf boosts']
+  s: ['DB tuning', 'Perf boosts'];
     ro,
   i: 'Cut query costs 2050%'
     competitor,
@@ -3509,7 +3487,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     ratin,
   g: 4.6,
     review,
-  s: 5}
+  s: 5};
     i,
   d: 's3-lifecycle-optimizer'
     nam,
@@ -3529,7 +3507,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
       'Cost simulator'
       'Change sets'
       'Alerting'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-emerald-700 to-teal-800'
@@ -3541,11 +3519,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     setupTime: '1 hour',
     category: 'Cloud & FinOps',
     realService: true,
-    technology: ['AWS S3', 'Cost models']
+    technology: ['AWS S3', 'Cost models'];
     integrations: ['AWS'],
-    useCases: ['Storage hygiene', 'Cost cuts']
+    useCases: ['Storage hygiene', 'Cost cuts'];
     roi: 'Save 1030% storage spend'
-    competitors: ['Kubecost (adjacent)']
+    competitors: ['Kubecost (adjacent)'];
     marketSize: '$3 B cloud cost'
     growthRate: '12% CAGR'
     variant: 'holographic-matrix'
@@ -3556,7 +3534,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     customers: 17
     rating: 4.5
     reviews: 4,
-  }
+  };
     id: 'pii-discovery-scanner'
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
@@ -3565,8 +3543,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description:,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-emerald-700 to-teal-800'
     textColo,
@@ -3587,11 +3564,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realServic,
   e: true,
     technolog,
-  y: ['AWS S3', 'Cost models']
+  y: ['AWS S3', 'Cost models'];
     integration,
   s: ['AWS'],
     useCase,
-  s: ['Storage hygiene', 'Cost cuts']
+  s: ['Storage hygiene', 'Cost cuts'];
     ro,
   i: 'Save 1030% storage spend'
     competitor,
@@ -3615,7 +3592,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     ratin,
   g: 4.5,
     review,
-  s: 4}
+  s: 4};
     i,
   d: 'pii-discovery-scanner'
     nam,
@@ -3636,7 +3613,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
       'Sampling with redaction'
       'Findings export'
       'Alerting'
-    ]
+    ];
     popular: true,
     icon: ''
     color: 'from-red-700 to-rose-800'
@@ -3648,11 +3625,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     setupTime: '12 days',
     category: 'Quality & Monitoring',
     realService: true,
-    technology: ['DLP', 'Connectors']
-    integrations: ['AWS', 'GCP', 'Snowflake']
-    useCases: ['Compliance audits', 'Risk reduction']
+    technology: ['DLP', 'Connectors'];
+    integrations: ['AWS', 'GCP', 'Snowflake'];
+    useCases: ['Compliance audits', 'Risk reduction'];
     roi: 'Avoid incidents and fines',
-    competitors: ['Google DLP', 'AWS Macie']
+    competitors: ['Google DLP', 'AWS Macie'];
     marketSize: '$5 B data security'
     growthRate: '15% CAGR'
     variant: 'ai-futuristic'
@@ -3665,8 +3642,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     reviews: 5,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-700 to-rose-800'
     textColo,
@@ -3687,15 +3663,15 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realServic,
   e: true,
     technolog,
-  y: ['DLP', 'Connectors']
+  y: ['DLP', 'Connectors'];
     integration,
-  s: ['AWS', 'GCP', 'Snowflake']
+  s: ['AWS', 'GCP', 'Snowflake'];
     useCase,
-  s: ['Compliance audits', 'Risk reduction']
+  s: ['Compliance audits', 'Risk reduction'];
     ro,
   i: 'Avoid incidents and fines'
     competitor,
-  s: ['Google DLP', 'AWS Macie']
+  s: ['Google DLP', 'AWS Macie'];
     marketSiz,
   e: '$5B data security'
     growthRat,
@@ -3715,7 +3691,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     ratin,
   g: 4.6,
     review,
-  s: 5}
+  s: 5};
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -3734,9 +3710,9 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realService: true,
     technology: ['Git APIs', 'Static analysis'],
     integrations: ['GitHub', 'GitLab', 'Flagsmith'],
-    useCases: ['Cleanup debt', 'Reduce risk']
+    useCases: ['Cleanup debt', 'Reduce risk'];
     roi: 'Avoid outages, reduce toil',
-    competitors: ['LaunchDarkly add-ons']
+    competitors: ['LaunchDarkly add-ons'];
     marketSize: '$1B flags'
     growthRate: '10% CAGR'
     variant: 'ai-futuristic'
@@ -3756,8 +3732,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-rose-600 to-pink-700',
     textColo,
@@ -3782,7 +3757,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integration,
   s: ['GitHub', 'GitLab', 'Flagsmith'],
     useCase,
-  s: ['Cleanup debt', 'Reduce risk']
+  s: ['Cleanup debt', 'Reduce risk'];
     ro,
   i: 'Avoid outages, reduce toil',
     competitor,
@@ -3842,7 +3817,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub Actions'],
     use_cases: ['DB tuning', 'Perf boosts'],
     roi: 'Cut query costs 2050%'
-    competitors: ['pganalyze (adjacent)']
+    competitors: ['pganalyze (adjacent)'];
     market_size: '$2B DB tuning'
     growth_rate: '9% CAGR'
     variant: 'network - futuristic'
@@ -3862,8 +3837,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 700 to - indigo - 800',
     text_colo,
@@ -3948,7 +3922,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['AWS'],
     use_cases: ['Storage hygiene', 'Cost cuts'],
     roi: 'Save 1030% storage spend'
-    competitors: ['Kubecost (adjacent)']
+    competitors: ['Kubecost (adjacent)'];
     market_size: '$3B cloud cost'
     growth_rate: '12% CAGR'
     variant: 'holographic - matrix'
@@ -3968,8 +3942,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - emerald - 700 to - teal - 800',
     text_colo,
@@ -4081,8 +4054,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 700 to - rose - 800',
     text_colo,
@@ -4180,7 +4152,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub', 'Slack'],
     use_cases: ['Schema governance', 'Release safety'],
     roi: 'Fewer incidents, faster integration',
-    competitors: ['Stoplight (adjacent)']
+    competitors: ['Stoplight (adjacent)'];
     market_size: '$1B API tooling'
     growth_rate: '9% CAGR'
     variant: 'network - futuristic'
@@ -4193,8 +4165,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     reviews: 3,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - indigo - 700 to - violet - 800',
     text_colo,
@@ -4252,7 +4223,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
       'Owner mapping'
       'CI checks'
       'Changelog hints'
-    ]
+    ];
     popular: false
     icon: ''
     color: 'from-indigo-700 to-violet-800'
@@ -4264,11 +4235,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     setupTime: '1 hour',
     category: 'Developer Tools',
     realService: true,
-    technology: ['OpenAPI', 'GraphQL']
-    integrations: ['GitHub', 'Slack']
-    useCases: ['Schema governance', 'Release safety']
+    technology: ['OpenAPI', 'GraphQL'];
+    integrations: ['GitHub', 'Slack'];
+    useCases: ['Schema governance', 'Release safety'];
     roi: 'Fewer incidents, faster integration',
-  competitors: ['Stoplight (adjacent)']
+  competitors: ['Stoplight (adjacent)'];
     marketSize: '$1 B API tooling'
     growthRate: '9% CAGR'
     variant: 'network-futuristic'
@@ -4279,7 +4250,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     customers: 12
     rating: 4.5
     reviews: 3,
-  }
+  };
     id: 'feature - flag - auditor'
     name: 'Feature Flag Auditor',
     tagline: 'Flag hygiene checks and end - of - life automation',
@@ -4288,8 +4259,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-indigo-700 to-violet-800'
     textColo,
@@ -4310,11 +4280,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     realServic,
   e: true,
     technolog,
-  y: ['OpenAPI', 'GraphQL']
+  y: ['OpenAPI', 'GraphQL'];
     integration,
-  s: ['GitHub', 'Slack']
+  s: ['GitHub', 'Slack'];
     useCase,
-  s: ['Schema governance', 'Release safety']
+  s: ['Schema governance', 'Release safety'];
     ro,
   i: 'Fewer incidents, faster integration',
   competitor,
@@ -4338,7 +4308,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     ratin,
   g: 4.5,
     review,
-  s: 3}
+  s: 3};
     i,
   d: 'feature - flag - auditor',
     nam,
@@ -4374,7 +4344,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub', 'GitLab', 'Flagsmith'],
     use_cases: ['Cleanup debt', 'Reduce risk'],
     roi: 'Avoid outages, reduce toil',
-    competitors: ['LaunchDarkly add - ons']
+    competitors: ['LaunchDarkly add - ons'];
     market_size: '$1B flags'
     growth_rate: '10% CAGR'
     variant: 'ai - futuristic'
@@ -4394,8 +4364,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - rose - 600 to - pink - 700',
     text_colo,
@@ -4480,7 +4449,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub Actions'],
     use_cases: ['DB tuning', 'Perf boosts'],
     roi: 'Cut query costs 2050%'
-    competitors: ['pganalyze (adjacent)']
+    competitors: ['pganalyze (adjacent)'];
     market_size: '$2B DB tuning'
     growth_rate: '9% CAGR'
     variant: 'network - futuristic'
@@ -4500,8 +4469,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 700 to - indigo - 800',
     text_colo,
@@ -4586,7 +4554,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['AWS'],
     use_cases: ['Storage hygiene', 'Cost cuts'],
     roi: 'Save 1030% storage spend'
-    competitors: ['Kubecost (adjacent)']
+    competitors: ['Kubecost (adjacent)'];
     market_size: '$3B cloud cost'
     growth_rate: '12% CAGR'
     variant: 'holographic - matrix'
@@ -4606,8 +4574,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - emerald - 700 to - teal - 800',
     text_colo,
@@ -4720,8 +4687,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - red - 700 to - rose - 800',
     text_colo,
@@ -4821,7 +4787,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['GitHub', 'Slack'],
     use_cases: ['Schema governance', 'Release safety'],
     roi: 'Fewer incidents, faster integration',
-    competitors: ['Stoplight (adjacent)']
+    competitors: ['Stoplight (adjacent)'];
     market_size: '$1B API tooling'
     growth_rate: '9% CAGR'
     variant: 'network - futuristic'
@@ -4841,8 +4807,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - indigo - 700 to - violet - 800',
     text_colo,
@@ -4948,8 +4913,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - cyan - 700 to - blue - 800',
     text_colo,
@@ -5033,9 +4997,9 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     real_service: true,
     technology: ['AWS / GCP / IAM'],
     integrations: ['AWS', 'GCP'],
-    use_cases: ['Reduce blast radius']
+    use_cases: ['Reduce blast radius'];
     roi: 'Reduce risk + audit toil'
-    competitors: ['Cloud Custodian (DIY)']
+    competitors: ['Cloud Custodian (DIY)'];
     market_size: '$3B cloud sec'
     growth_rate: '13% CAGR'
     variant: 'ai - futuristic'
@@ -5055,8 +5019,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - blue - 700 to - slate - 800',
     text_colo,
@@ -5141,7 +5104,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     integrations: ['dbt', 'GHA'],
     use_cases: ['Cost control', 'Ops hygiene'],
     roi: '1030% lower DW costs'
-    competitors: ['SelectStar (adjacent)']
+    competitors: ['SelectStar (adjacent)'];
     market_size: '$2B finops DW'
     growth_rate: '12% CAGR'
     variant: 'network - futuristic'
@@ -5161,8 +5124,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - indigo - 700 to - violet - 800',
     text_colo,
@@ -5267,8 +5229,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     description: unknown,
     popula,
   r: false,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - orange - 600 to - rose - 700',
     text_colo,
@@ -5351,9 +5312,9 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     real_service: true,
     technology: ['ASR', 'LLM'],
     integrations: ['Jira', 'GitHub'],
-    use_cases: ['Project follow - through']
+    use_cases: ['Project follow - through'];
     roi: 'Close the loop on action items'
-    competitors: ['Fathom + manual']
+    competitors: ['Fathom + manual'];
     market_size: '$2B productivity'
     growth_rate: '9% CAGR'
     variant: 'ai - futuristic'
@@ -5365,14 +5326,16 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6
     reviews: 6,
   }]
-const contact =
+
+  ;
+  ;
+  const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com',
     popula,
   r: true,
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from - cyan - 700 to - blue - 800',
     text_colo,
@@ -5422,7 +5385,10 @@ const contact =
   g: 4 && 4.6,
     review,
   s: 6}]
-const contact =
+
+  ;
+  ;
+  const contact =
 	mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
@@ -5431,7 +5397,7 @@ const contact =
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
 export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
 		i,
@@ -5451,10 +5417,10 @@ export const,
 		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.',
     features: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		]
+		];
 		popular: true,
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		]
+		];
 		popular: true
 		icon: ''
 		color: 'from-cyan-600 to-blue-700',
@@ -5466,11 +5432,11 @@ export const,
 		setupTime: '30 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Gmail/Outlook APIsLLMWebhook']
-		integrations: ['GmailOutlookHubSpotPipedriveSlack']
-		useCases: ['Inbound triageNurture sequencesSLA reporting']
+		technology: ['Gmail/Outlook APIsLLMWebhook'];
+		integrations: ['GmailOutlookHubSpotPipedriveSlack'];
+		useCases: ['Inbound triageNurture sequencesSLA reporting'];
 		roi: 'Cuts manual email time by 6080%'
-		competitors: ['Superhuman AIFront AIGmail add-ons']
+		competitors: ['Superhuman AIFront AIGmail add-ons'];
 		marketSize: '$10 B+ email productivity'
 		growthRate: '15% CAGR'
 		variant: 'network-futuristic'
@@ -5484,7 +5450,7 @@ export const,
 		customers: 48
 		rating: 4 && 4.7
 		reviews: 12
-	}
+	};
 		id: 'mobile-survey-studio',
 		name: 'Mobile Survey Studio',
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics'
@@ -5493,7 +5459,7 @@ export const,
   description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
 		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		]
+		];
 		popular: false,
 		icon: ''
 		color: 'from-emerald-600 to-teal-700',
@@ -5505,11 +5471,11 @@ export const,
 		setupTime: '15 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['TwilioNext && TwilioNext.jsVercel/Netlify']
-		integrations: ['HubSpotSheetsSlack']
-		useCases: ['NPSFeature feedbackOnboarding']
+		technology: ['TwilioNext && TwilioNext.jsVercel/Netlify'];
+		integrations: ['HubSpotSheetsSlack'];
+		useCases: ['NPSFeature feedbackOnboarding'];
 		roi: '24 x higher completion on mobile'
-		competitors: ['TypeformSurveyMonkey']
+		competitors: ['TypeformSurveyMonkey'];
 		marketSize: '$7 B research tooling'
 		growthRate: '9% CAGR'
 		variant: 'holographic-matrix'
@@ -5520,7 +5486,7 @@ export const,
 		customers: 22
 		rating: 4 && 4.6
 		reviews: 9,
-	}
+	};
 		id: 'niche-productivity-planner',
 		name: 'Niche Productivity Planner',
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks'
@@ -5529,7 +5495,7 @@ export const,
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
 		features: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		]
+		];
 		popular: false
 		icon: ''
 		color: 'from-purple-600 to-indigo-700'
@@ -5541,11 +5507,11 @@ export const,
 		setupTime: '10 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Next && Next.jsSQLite/Postgres']
-		integrations: ['Google CalendarOutlook']
-		useCases: ['Agency opsClinic opsBoutique retail']
+		technology: ['Next && Next.jsSQLite/Postgres'];
+		integrations: ['Google CalendarOutlook'];
+		useCases: ['Agency opsClinic opsBoutique retail'];
 		roi: 'Saves 35 hrs/week per user'
-		competitors: ['Notion templatesClickUp']
+		competitors: ['Notion templatesClickUp'];
 		marketSize: '$3 B productivity niche'
 		growthRate: '8% CAGR'
 		variant: 'ai-futuristic'
@@ -5556,7 +5522,7 @@ export const,
 		customers: 18
 		rating: 4 && 4.5
 		reviews: 7,
-	}
+	};
 		id: 'event-management-dashboard',
 		name: 'Event Management Dashboard',
 		tagline: 'Tickets, scheduling, comms, and post-event analytics'
@@ -5565,7 +5531,7 @@ export const,
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
 		features: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		]
+		];
 		popular: true,
 		icon: ''
 		color: 'from-pink-600 to-rose-700'
@@ -5577,11 +5543,11 @@ export const,
 		setupTime: '1 hour'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Next && Next.jsStripeTwilio']
-		integrations: ['ZoomGoogle CalendarSlack']
-		useCases: ['WebinarsTown hallsCustomer training']
+		technology: ['Next && Next.jsStripeTwilio'];
+		integrations: ['ZoomGoogle CalendarSlack'];
+		useCases: ['WebinarsTown hallsCustomer training'];
 		roi: 'Saves 50% ops time per event'
-		competitors: ['EventbriteHopin (basic)']
+		competitors: ['EventbriteHopin (basic)'];
 		marketSize: '$6 B event tooling'
 		growthRate: '10% CAGR'
 		variant: 'network-futuristic'
@@ -5592,14 +5558,14 @@ export const,
 		customers: 31
 		rating: 4 && 4.7
 		reviews: 11,
-	}
+	};
 		id: 'affiliate-tracking-suite',
 		name: 'Affiliate Tracking Suite',
 		tagline: 'Links, attribution, commission rules, and payouts'
 		price: '$29',
 		period: '/month',
 		description: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'
-		features: ['Custom referral linksUTM attributionRule-based commissionsPayout exportsFraud checks']
+		features: ['Custom referral linksUTM attributionRule-based commissionsPayout exportsFraud checks'];
 		popular: false,
 		icon: ''
 		color: 'from-amber-600 to-orange-700'
@@ -5611,11 +5577,11 @@ export const,
 		setupTime: '45 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Next && Next.jsPostgres']
-		integrations: ['StripePaddleShopify']
-		useCases: ['SaaS referralsCourse affiliatesPartner programs']
+		technology: ['Next && Next.jsPostgres'];
+		integrations: ['StripePaddleShopify'];
+		useCases: ['SaaS referralsCourse affiliatesPartner programs'];
 		roi: '+1525% new revenue from partners'
-		competitors: ['FirstPromoterRewardful']
+		competitors: ['FirstPromoterRewardful'];
 		marketSize: '$12 B affiliate'
 		growthRate: '9% CAGR'
 		variant: 'holographic-matrix'
@@ -5626,14 +5592,14 @@ export const,
 		customers: 12
 		rating: 4 && 4.5
 		reviews: 5,
-	}
+	};
 		id: 'smb-analytics-lite',
 		name: 'SMB Analytics Lite',
 		tagline: 'Traffic, funnels, and conversions without complexity'
 		price: '$15'
 		period: '/month'
   description: 'Privacy-friendly analytics for small businesses with funnel insights and weekly summaries.'
-		features: ['Page + event analyticsFunnels + cohortsWeekly email summariesCSV exportNo cookies mode']
+		features: ['Page + event analyticsFunnels + cohortsWeekly email summariesCSV exportNo cookies mode'];
 		popular: false,
 		icon: ''
 		color: 'from-sky-600 to-indigo-700',
@@ -5645,11 +5611,11 @@ export const,
 		setupTime: '10 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Next && Next.jsEdge analytics']
+		technology: ['Next && Next.jsEdge analytics'];
 		integrations: ['ShopifyWordPress'],
 		useCases: ['Website analyticsCampaign tracking'],
 		roi: 'Clarity on what converts, 1020% lift'
-		competitors: ['FathomPlausible']
+		competitors: ['FathomPlausible'];
 		marketSize: '$2 B privacy analytics'
 		growthRate: '14% CAGR'
 		variant: 'network-futuristic'
@@ -5660,14 +5626,14 @@ export const,
 		customers: 40
 		rating: 4 && 4.6
 		reviews: 8,
-	}
+	};
 		id: 'it-helpdesk-portal',
 		name: 'IT Helpdesk Portal',
 		tagline: 'Tickets, knowledge base, SLAs, and client portal'
 		price: '$59',
 		period: '/month',
 		description: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client-visible status.'
-		features: ['Email-to-ticketKB + article templatesSLAs + escalationsClient portalReports']
+		features: ['Email-to-ticketKB + article templatesSLAs + escalationsClient portalReports'];
 		popular: true,
 		icon: ''
 		color: 'from-blue-600 to-indigo-700'
@@ -5679,11 +5645,11 @@ export const,
 		setupTime: '13 days'
 		category: 'Enterprise IT'
 		realService: true
-		technology: ['Next && Next.jsPostgres']
-		integrations: ['OktaGoogleSlack']
-		useCases: ['IT supportAsset requestsApprovals']
+		technology: ['Next && Next.jsPostgres'];
+		integrations: ['OktaGoogleSlack'];
+		useCases: ['IT supportAsset requestsApprovals'];
 		roi: '2540% faster resolution time'
-		competitors: ['FreshserviceJira Service Management']
+		competitors: ['FreshserviceJira Service Management'];
 		marketSize: '$10 B ITSM SMB'
 		growthRate: '11% CAGR'
 		variant: 'ai-futuristic'
@@ -5694,14 +5660,14 @@ export const,
 		customers: 16
 		rating: 4 && 4.7
 		reviews: 6,
-	}
+	};
 		id: 'ecommerce-returns-manager',
 		name: 'Ecommerce Returns Manager',
 		tagline: 'Customer-friendly returns with labels and status tracking',
 		price: '$39',
 		period: '/month',
 		description: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'
-		features: ['Self-serve returns portalLabel generationReturn reasons analyticsInventory syncNotifications']
+		features: ['Self-serve returns portalLabel generationReturn reasons analyticsInventory syncNotifications'];
 		popular: true,
 		icon: ''
 		color: 'from-violet-600 to-fuchsia-700'
@@ -5713,11 +5679,11 @@ export const,
 		setupTime: '2 hours'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Shopify APINext && APINext.js']
-		integrations: ['ShopifyShippo']
-		useCases: ['RMAsReturn analytics']
+		technology: ['Shopify APINext && APINext.js'];
+		integrations: ['ShopifyShippo'];
+		useCases: ['RMAsReturn analytics'];
 		roi: 'Reduce returns costs by 1020%'
-		competitors: ['Loop ReturnsHappy Returns (PayPal)']
+		competitors: ['Loop ReturnsHappy Returns (PayPal)'];
 		marketSize: '$4 B returns tooling'
 		growthRate: '13% CAGR'
 		variant: 'holographic-matrix'
@@ -5728,14 +5694,14 @@ export const,
 		customers: 14
 		rating: 4 && 4.6
 		reviews: 5,
-	}
+	};
 		id: 'automated-email-followups'
 		name: 'Automated Email Followups'
 		tagline: 'No-lead-left-behind sequences across inboxes'
 		price: '$15'
 		period: '/month'
   description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.'
-		features: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics']
+		features: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics'];
 		popular: false,
 		icon: ''
 		color: 'from-cyan-600 to-teal-700'
@@ -5747,11 +5713,11 @@ export const,
 		setupTime: '20 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Email APIsLLM']
-		integrations: ['GmailOutlookHubSpot']
-		useCases: ['Lead follow-upTicket nudges']
+		technology: ['Email APIsLLM'];
+		integrations: ['GmailOutlookHubSpot'];
+		useCases: ['Lead follow-upTicket nudges'];
 		roi: '+1025% more replies'
-		competitors: ['Mailshake (lite)GMass']
+		competitors: ['Mailshake (lite)GMass'];
 		marketSize: '$5 B sales engagement (SMB)'
 		growthRate: '10% CAGR'
 		variant: 'network-futuristic'
@@ -5762,14 +5728,14 @@ export const,
 		customers: 28
 		rating: 4 && 4.5
 		reviews: 8,
-	}
+	};
 		id: 'podcast-transcription-service',
 		name: 'Podcast Transcription Service',
 		tagline: 'Accurate transcripts, chapters, and SEO blog exports'
 		price: '$12',
 		period: '/month',
 		description: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress-ready blog exports.'
-		features: ['Fast transcriptsTimestamps + chaptersSummaries + highlightsBlog exportGlossary']
+		features: ['Fast transcriptsTimestamps + chaptersSummaries + highlightsBlog exportGlossary'];
 		popular: false,
 		icon: ''
 		color: 'from-indigo-600 to-blue-700'
@@ -5781,11 +5747,11 @@ export const,
 		setupTime: '10 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Whisper/ASRNext && ASRNext.js']
-		integrations: ['RSSYouTube']
-		useCases: ['AccessibilitySEO content']
+		technology: ['Whisper/ASRNext && ASRNext.js'];
+		integrations: ['RSSYouTube'];
+		useCases: ['AccessibilitySEO content'];
 		roi: 'Saves 24 hrs/episode'
-		competitors: ['RevDescript (lite)']
+		competitors: ['RevDescript (lite)'];
 		marketSize: '$1 B+ transcription'
 		growthRate: '12% CAGR'
 		variant: 'ai-futuristic'
@@ -5796,14 +5762,14 @@ export const,
 		customers: 20
 		rating: 4 && 4.6
 		reviews: 6,
-	}
+	};
 		id: 'ai-seo-content-optimizer',
 		name: 'AI SEO Content Optimizer',
 		tagline: 'Live on-page audits and SEO-aware rewrites',
 		price: '$29',
 		period: '/month',
 		description: 'In-editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'
-		features: ['On-page auditsTopic clusteringSERP intent matchInternal link hintsRewrite suggestions']
+		features: ['On-page auditsTopic clusteringSERP intent matchInternal link hintsRewrite suggestions'];
 		popular: true,
 		icon: ''
 		color: 'from-emerald-600 to-green-700'
@@ -5815,11 +5781,11 @@ export const,
 		setupTime: '20 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['CrawlerLLM']
-		integrations: ['WordPressWebflow']
-		useCases: ['SEO rewritesGap analysis']
+		technology: ['CrawlerLLM'];
+		integrations: ['WordPressWebflow'];
+		useCases: ['SEO rewritesGap analysis'];
 		roi: '+2040% organic traffic lift'
-		competitors: ['Surfer SEOMarketMuse']
+		competitors: ['Surfer SEOMarketMuse'];
 		marketSize: '$2 B SEO tooling'
 		growthRate: '11% CAGR'
 		variant: 'network-futuristic'
@@ -5830,14 +5796,14 @@ export const,
 		customers: 33
 		rating: 4 && 4.7
 		reviews: 10,
-	}
+	};
 		id: 'social-scheduler-ai',
 		name: 'Social Scheduler AI',
 		tagline: 'Auto-generate, schedule, and repurpose posts cross-platform'
 		price: '$15',
 		period: '/month',
 		description: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best-time predictions.'
-		features: ['Content repurposingCalendar + auto-timesHashtag + emoji assistantLink trackingClient approvals']
+		features: ['Content repurposingCalendar + auto-timesHashtag + emoji assistantLink trackingClient approvals'];
 		popular: false,
 		icon: ''
 		color: 'from-fuchsia-600 to-pink-700'
@@ -5849,11 +5815,11 @@ export const,
 		setupTime: '15 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['SchedulerLLM']
-		integrations: ['XLinkedInInstagram']
-		useCases: ['Content calendarRepurposing']
+		technology: ['SchedulerLLM'];
+		integrations: ['XLinkedInInstagram'];
+		useCases: ['Content calendarRepurposing'];
 		roi: 'Saves 46 hrs/week'
-		competitors: ['BufferHootsuite (lite)']
+		competitors: ['BufferHootsuite (lite)'];
 		marketSize: '$4 B social tooling'
 		growthRate: '10% CAGR'
 		variant: 'holographic-matrix'
@@ -5864,14 +5830,14 @@ export const,
 		customers: 26
 		rating: 4 && 4.5
 		reviews: 7,
-	}
+	};
 		id: 'lead-enrichment-api',
 		name: 'Lead Enrichment API',
 		tagline: 'Company, role, and social signals from an email/domain'
 		price: '$49'
 		period: '/month'
   description: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'
-		features: ['FirmographicsRole detectionValidated email signalsConfidence scoringUsage dashboards']
+		features: ['FirmographicsRole detectionValidated email signalsConfidence scoringUsage dashboards'];
 		popular: false,
 		icon: ''
 		color: 'from-blue-600 to-sky-700'
@@ -5883,11 +5849,11 @@ export const,
 		setupTime: '1 hour'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['CrawlerGraphAPI']
-		integrations: ['HubSpotSalesforce (export)']
-		useCases: ['Lead routingScoring']
+		technology: ['CrawlerGraphAPI'];
+		integrations: ['HubSpotSalesforce (export)'];
+		useCases: ['Lead routingScoring'];
 		roi: 'Improves MQLSQL by 1020%'
-		competitors: ['Clearbit (lite)Apollo enrichment']
+		competitors: ['Clearbit (lite)Apollo enrichment'];
 		marketSize: '$3 B enrichment'
 		growthRate: '9% CAGR'
 		variant: 'ai-futuristic'
@@ -5898,14 +5864,14 @@ export const,
 		customers: 9
 		rating: 4 && 4.4
 		reviews: 4,
-	}
+	};
 		id: 'consent-management-cmp',
 		name: 'Consent Management CMP',
 		tagline: 'GDPR/CCPA consent banners, preferences, and audit logs'
 		price: '$25',
 		period: '/month',
 		description: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo-aware rules.'
-		features: ['Geo rulesIAB TCFPreference centerAudit logsMulti-brand themes']
+		features: ['Geo rulesIAB TCFPreference centerAudit logsMulti-brand themes'];
 		popular: true,
 		icon: ''
 		color: 'from-emerald-600 to-teal-700',
@@ -5917,11 +5883,11 @@ export const,
 		setupTime: '1 hour'
 		category: 'Quality & Monitoring'
 		realService: true
-		technology: ['JS widgetAPI']
+		technology: ['JS widgetAPI'];
 		integrations: ['SegmentGA4'],
 		useCases: ['ComplianceUser trust'],
 		roi: 'Avoid fines, preserve UX'
-		competitors: ['OneTrust (lite)CookieYes']
+		competitors: ['OneTrust (lite)CookieYes'];
 		marketSize: '$4 B privacy tooling'
 		growthRate: '14% CAGR'
 		variant: 'network-futuristic'
@@ -5932,14 +5898,14 @@ export const,
 		customers: 37
 		rating: 4 && 4.7
 		reviews: 10,
-	}
+	};
 		id: 'cookie-scanner-pro',
 		name: 'Cookie Scanner Pro',
 		tagline: 'Auto-detects cookies + trackers and updates your policy',
 		price: '$9',
 		period: '/month',
 		description: 'Scan your site for cookies/trackers, classify them, and generate policy updates with change diffs.'
-		features: ['Site scanTracker classificationPolicy generatorDiffs + historyCI hook']
+		features: ['Site scanTracker classificationPolicy generatorDiffs + historyCI hook'];
 		popular: false,
 		icon: ''
 		color: 'from-amber-600 to-yellow-700'
@@ -5951,11 +5917,11 @@ export const,
 		setupTime: '10 minutes'
 		category: 'Quality & Monitoring'
 		realService: true
-		technology: ['CrawlerClassifier']
-		integrations: ['GitHub Actions']
-		useCases: ['Policy updatesAudits']
+		technology: ['CrawlerClassifier'];
+		integrations: ['GitHub Actions'];
+		useCases: ['Policy updatesAudits'];
 		roi: 'Automates tedious checks'
-		competitors: ['Cookiebot (lite)']
+		competitors: ['Cookiebot (lite)'];
 		marketSize: '$1 B cookie tools'
 		growthRate: '8% CAGR'
 		variant: 'holographic-matrix'
@@ -5966,14 +5932,14 @@ export const,
 		customers: 19
 		rating: 4 && 4.5
 		reviews: 5,
-	}
+	};
 		id: 'statuspage-sla-tracker',
 		name: 'StatusPage SLA Tracker',
 		tagline: 'Track uptime/incidents and publish SLA reports',
 		price: '$19',
 		period: '/month',
 		description: 'Connect monitors, log incidents, and share public SLA/uptime reports with customers.'
-		features: ['Incident logPublic status pageSLA calculatorRSS + webhooksExports']
+		features: ['Incident logPublic status pageSLA calculatorRSS + webhooksExports'];
 		popular: false
 		icon: ''
 		color: 'from-sky-600 to-cyan-700'
@@ -5985,11 +5951,11 @@ export const,
 		setupTime: '20 minutes'
 		category: 'Observability'
 		realService: true
-		technology: ['Next && Next.jsCRON']
-		integrations: ['PingdomUptimeRobot']
-		useCases: ['SLA reportsStatus page']
+		technology: ['Next && Next.jsCRON'];
+		integrations: ['PingdomUptimeRobot'];
+		useCases: ['SLA reportsStatus page'];
 		roi: 'Reduce support tickets ~20%'
-		competitors: ['Statuspage (lite)']
+		competitors: ['Statuspage (lite)'];
 		marketSize: '$1 B status tools'
 		growthRate: '9% CAGR'
 		variant: 'ai-futuristic'
@@ -6000,14 +5966,14 @@ export const,
 		customers: 11
 		rating: 4 && 4.4
 		reviews: 3,
-	}
+	};
 		id: 'agentic-lead-qualifier',
 		name: 'Agentic Lead Qualifier',
 		tagline: 'Website chat agent that pre-qualifies and routes leads',
 		price: '$29',
 		period: '/month',
 		description: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'
-		features: ['Qualifying flowsCalendar bookingCRM routingVisitor insightsHand-off to human']
+		features: ['Qualifying flowsCalendar bookingCRM routingVisitor insightsHand-off to human'];
 		popular: true,
 		icon: ''
 		color: 'from-teal-600 to-emerald-700'
@@ -6019,11 +5985,11 @@ export const,
 		setupTime: '30 minutes'
 		category: 'AI & Data'
 		realService: true
-		technology: ['LLMEmbeddings']
-		integrations: ['HubSpotCalendly']
-		useCases: ['Lead captureMeeting booking']
+		technology: ['LLMEmbeddings'];
+		integrations: ['HubSpotCalendly'];
+		useCases: ['Lead captureMeeting booking'];
 		roi: '+1530% qualified demos'
-		competitors: ['Drift (lite)Intercom Fin']
+		competitors: ['Drift (lite)Intercom Fin'];
 		marketSize: '$3 B chatbots'
 		growthRate: '12% CAGR'
 		variant: 'network-futuristic'
@@ -6034,14 +6000,14 @@ export const,
 		customers: 23
 		rating: 4 && 4.6
 		reviews: 7,
-	}
+	};
 		id: 'gdpr-dsar-portal-lite',
 		name: 'GDPR DSAR Portal Lite',
 		tagline: 'Accept, verify, export, and fulfill data subject requests'
 		price: '$49',
 		period: '/month',
 		description: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'
-		features: ['Request intakeIdentity checkTriage + workflowExportsAudit logs']
+		features: ['Request intakeIdentity checkTriage + workflowExportsAudit logs'];
 		popular: true
 		icon: ''
 		color: 'from-red-600 to-rose-700'
@@ -6053,11 +6019,11 @@ export const,
 		setupTime: '1 day'
 		category: 'Quality & Monitoring'
 		realService: true
-		technology: ['Next && Next.jsStorage']
-		integrations: ['ZendeskGoogle Drive']
-		useCases: ['DSAR fulfillment']
+		technology: ['Next && Next.jsStorage'];
+		integrations: ['ZendeskGoogle Drive'];
+		useCases: ['DSAR fulfillment'];
 		roi: 'Avoid compliance toil and risk'
-		competitors: ['Transcend (lite)Osano']
+		competitors: ['Transcend (lite)Osano'];
 		marketSize: '$6 B privacy ops'
 		growthRate: '18% CAGR'
 		variant: 'holographic-matrix'
@@ -6068,14 +6034,14 @@ export const,
 		customers: 10
 		rating: 4 && 4.5
 		reviews: 4,
-	}
+	};
 		id: 'feature-flag-auditor',
 		name: 'Feature Flag Auditor',
 		tagline: 'Flag hygiene checks and end-of-life automation',
 		price: '$19',
 		period: '/month',
 		description: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
-		features: ['Repo scannerFlag inventoryRisk detectionPR suggestionsCI integration']
+		features: ['Repo scannerFlag inventoryRisk detectionPR suggestionsCI integration'];
 		popular: false
 		icon: ''
 		color: 'from-rose-600 to-pink-700'
@@ -6087,11 +6053,11 @@ export const,
 		setupTime: '30 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Git APIsStatic analysis']
+		technology: ['Git APIsStatic analysis'];
 		integrations: ['GitHubGitLabFlagsmith'],
 		useCases: ['Cleanup debtReduce risk'],
 		roi: 'Avoid outages, reduce toil'
-		competitors: ['LaunchDarkly add-ons']
+		competitors: ['LaunchDarkly add-ons'];
 		marketSize: '$1 B flags'
 		growthRate: '10% CAGR'
 		variant: 'ai-futuristic'
@@ -6102,14 +6068,14 @@ export const,
 		customers: 8
 		rating: 4 && 4.4
 		reviews: 3,
-	}
+	};
 		id: 'postgres-index-advisor-pro',
 		name: 'Postgres Index Advisor Pro',
 		tagline: 'Index recommendations and controlled PR rollouts',
 		price: '$79',
 		period: '/month',
 		description: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
-		features: ['Slow query captureIndex suggestionsRisk scoringPR generationRollback assist']
+		features: ['Slow query captureIndex suggestionsRisk scoringPR generationRollback assist'];
 		popular: true
 		icon: ''
 		color: 'from-blue-700 to-indigo-800'
@@ -6121,11 +6087,11 @@ export const,
 		setupTime: '1 day'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['pg_stat_statementsAdvisor']
-		integrations: ['GitHub Actions']
-		useCases: ['DB tuningPerf boosts']
+		technology: ['pg_stat_statementsAdvisor'];
+		integrations: ['GitHub Actions'];
+		useCases: ['DB tuningPerf boosts'];
 		roi: 'Cut query costs 2050%'
-		competitors: ['pganalyze (adjacent)']
+		competitors: ['pganalyze (adjacent)'];
 		marketSize: '$2 B DB tuning'
 		growthRate: '9% CAGR'
 		variant: 'network-futuristic'
@@ -6136,14 +6102,14 @@ export const,
 		customers: 15
 		rating: 4 && 4.6
 		reviews: 5,
-	}
+	};
 		id: 's3-lifecycle-optimizer'
 		name: 'S3 Lifecycle Optimizer'
 		tagline: 'Move objects between storage classes to cut costs'
 		price: '$59'
 		period: '/month'
   description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-		features: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting']
+		features: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'];
 		popular: false
 		icon: ''
 		color: 'from-emerald-700 to-teal-800'
@@ -6155,11 +6121,11 @@ export const,
 		setupTime: '1 hour'
 		category: 'Cloud & FinOps'
 		realService: true
-		technology: ['AWS S3 Cost models']
-		integrations: ['AWS']
-		useCases: ['Storage hygieneCost cuts']
+		technology: ['AWS S3 Cost models'];
+		integrations: ['AWS'];
+		useCases: ['Storage hygieneCost cuts'];
 		roi: 'Save 1030% storage spend'
-		competitors: ['Kubecost (adjacent)']
+		competitors: ['Kubecost (adjacent)'];
 		marketSize: '$3 B cloud cost'
 		growthRate: '12% CAGR'
 		variant: 'holographic-matrix'
@@ -6170,14 +6136,14 @@ export const,
 		customers: 17
 		rating: 4 && 4.5
 		reviews: 4,
-	}
+	};
 		id: 'pii-discovery-scanner',
 		name: 'PII Discovery Scanner',
 		tagline: 'Scan buckets and DBs for PII/PHI with evidence exports',
 		price: '$89',
 		period: '/month',
 		description: 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
-		features: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting']
+		features: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting'];
 		popular: true,
 		icon: ''
 		color: 'from-red-700 to-rose-800'
@@ -6189,11 +6155,11 @@ export const,
 		setupTime: '12 days'
 		category: 'Quality & Monitoring'
 		realService: true
-		technology: ['DLPConnectors']
-		integrations: ['AWSGCPSnowflake']
-		useCases: ['Compliance auditsRisk reduction']
+		technology: ['DLPConnectors'];
+		integrations: ['AWSGCPSnowflake'];
+		useCases: ['Compliance auditsRisk reduction'];
 		roi: 'Avoid incidents and fines'
-		competitors: ['Google DLPAWS Macie']
+		competitors: ['Google DLPAWS Macie'];
 		marketSize: '$5 B data security'
 		growthRate: '15% CAGR'
 		variant: 'ai-futuristic'
@@ -6204,14 +6170,14 @@ export const,
 		customers: 13
 		rating: 4 && 4.6
 		reviews: 5,
-	}
+	};
 		id: 'api-breaking-change-watcher',
 		name: 'API Breaking Change Watcher',
 		tagline: 'Schema diffs with CI gates and notifications',
 		price: '$49',
 		period: '/month',
 		description: 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'
-		features: ['Schema registryDiff rulesOwner mappingCI checksChangelog hints']
+		features: ['Schema registryDiff rulesOwner mappingCI checksChangelog hints'];
 		popular: false
 		icon: ''
 		color: 'from-indigo-700 to-violet-800'
@@ -6223,11 +6189,11 @@ export const,
 		setupTime: '1 hour'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['OpenAPIGraphQL']
+		technology: ['OpenAPIGraphQL'];
 		integrations: ['GitHubSlack'],
 		useCases: ['Schema governanceRelease safety'],
 		roi: 'Fewer incidents, faster integration'
-		competitors: ['Stoplight (adjacent)']
+		competitors: ['Stoplight (adjacent)'];
 		marketSize: '$1 B API tooling'
 		growthRate: '9% CAGR'
 		variant: 'network-futuristic'
@@ -6238,14 +6204,14 @@ export const,
 		customers: 12
 		rating: 4 && 4.5
 		reviews: 3,
-	}
+	};
 		id: 'synthetic-journey-monitor',
 		name: 'Synthetic Journey Monitor',
 		tagline: 'Record and replay user flows with SLO alerts',
 		price: '$39',
 		period: '/month',
 		description: 'Browser-based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'
-		features: ['RecorderSelector healingSchedulesSLO alertsReports']
+		features: ['RecorderSelector healingSchedulesSLO alertsReports'];
 		popular: false,
 		icon: ''
 		color: 'from-cyan-700 to-blue-800'
@@ -6257,11 +6223,11 @@ export const,
 		setupTime: '30 minutes'
 		category: 'Observability'
 		realService: true
-		technology: ['Playwright']
-		integrations: ['Checkly (export)Slack']
-		useCases: ['Regression checksSLO monitoring']
+		technology: ['Playwright'];
+		integrations: ['Checkly (export)Slack'];
+		useCases: ['Regression checksSLO monitoring'];
 		roi: 'Prevent broken funnels'
-		competitors: ['ChecklyDatadog Synthetics']
+		competitors: ['ChecklyDatadog Synthetics'];
 		marketSize: '$2 B testing/obs'
 		growthRate: '10% CAGR'
 		variant: 'holographic-matrix'
@@ -6272,14 +6238,14 @@ export const,
 		customers: 21
 		rating: 4 && 4.5
 		reviews: 6,
-	}
+	};
 		id: 'iam-permission-analyzer'
 		name: 'IAM Permission Analyzer'
 		tagline: 'Detect over-privileged access and propose least-privilege policies'
 		price: '$79'
 		period: '/month'
   description: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'
-		features: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting']
+		features: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'];
 		popular: true
 		icon: ''
 		color: 'from-blue-700 to-slate-800'
@@ -6291,11 +6257,11 @@ export const,
 		setupTime: '12 days'
 		category: 'Cloud & FinOps'
 		realService: true
-		technology: ['AWS/GCP/IAM']
-		integrations: ['AWSGCP']
-		useCases: ['Reduce blast radius']
+		technology: ['AWS/GCP/IAM'];
+		integrations: ['AWSGCP'];
+		useCases: ['Reduce blast radius'];
 		roi: 'Reduce risk + audit toil'
-		competitors: ['Cloud Custodian (DIY)']
+		competitors: ['Cloud Custodian (DIY)'];
 		marketSize: '$3 B cloud sec'
 		growthRate: '13% CAGR'
 		variant: 'ai-futuristic'
@@ -6306,14 +6272,14 @@ export const,
 		customers: 9
 		rating: 4 && 4.6
 		reviews: 3,
-	}
+	};
 		id: 'warehouse-cost-optimizer'
 		name: 'Data Warehouse Cost Optimizer'
 		tagline: 'Right-size warehouses and schedule off-peak workloads'
 		price: '$99'
 		period: '/month'
   description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.'
-		features: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts']
+		features: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'];
 		popular: true
 		icon: ''
 		color: 'from-indigo-700 to-violet-800'
@@ -6325,11 +6291,11 @@ export const,
 		setupTime: '13 days'
 		category: 'Cloud & FinOps'
 		realService: true
-		technology: ['Snowflake/BigQuery APIs']
-		integrations: ['dbtGHA']
-		useCases: ['Cost controlOps hygiene']
+		technology: ['Snowflake/BigQuery APIs'];
+		integrations: ['dbtGHA'];
+		useCases: ['Cost controlOps hygiene'];
 		roi: '1030% lower DW costs'
-		competitors: ['SelectStar (adjacent)']
+		competitors: ['SelectStar (adjacent)'];
 		marketSize: '$2 B finops DW'
 		growthRate: '12% CAGR'
 		variant: 'network-futuristic'
@@ -6340,14 +6306,14 @@ export const,
 		customers: 7
 		rating: 4 && 4.5
 		reviews: 3,
-	}
+	};
 		id: 'email-warmup-monitor'
 		name: 'Email Warmup & Reputation Monitor'
 		tagline: 'Track sender reputation and run inbox placement tests'
 		price: '$39'
 		period: '/month'
   description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
-		features: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports']
+		features: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'];
 		popular: false
 		icon: ''
 		color: 'from-orange-600 to-rose-700'
@@ -6359,11 +6325,11 @@ export const,
 		setupTime: '20 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['EmailSeeds']
-		integrations: ['SendGridSES']
-		useCases: ['DeliverabilityInbox tests']
+		technology: ['EmailSeeds'];
+		integrations: ['SendGridSES'];
+		useCases: ['DeliverabilityInbox tests'];
 		roi: 'Protects domain reputation'
-		competitors: ['Warmup InboxMailreach']
+		competitors: ['Warmup InboxMailreach'];
 		marketSize: '$1 B deliverability'
 		growthRate: '9% CAGR'
 		variant: 'holographic-matrix'
@@ -6374,14 +6340,14 @@ export const,
 		customers: 16
 		rating: 4 && 4.5
 		reviews: 4,
-	}
+	};
 		id: 'ai-meeting-to-ticket',
 		name: 'AI MeetingtoTicket Copilot',
 		tagline: 'Turn meeting action items into Jira/GitHub tickets',
 		price: '$25',
 		period: '/user/mo',
 		description: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'
-		features: ['TranscriptionAction extractionTicket creationOwner mappingSummaries']
+		features: ['TranscriptionAction extractionTicket creationOwner mappingSummaries'];
 		popular: true,
 		icon: ''
 		color: 'from-cyan-700 to-blue-800'
@@ -6393,11 +6359,11 @@ export const,
 		setupTime: '30 minutes'
 		category: 'AI & Data'
 		realService: true
-		technology: ['ASRLLM']
-		integrations: ['JiraGitHub']
-		useCases: ['Project follow-through']
+		technology: ['ASRLLM'];
+		integrations: ['JiraGitHub'];
+		useCases: ['Project follow-through'];
 		roi: 'Close the loop on action items'
-		competitors: ['Fathom + manual']
+		competitors: ['Fathom + manual'];
 		marketSize: '$2 B productivity'
 		growthRate: '9% CAGR'
 		variant: 'ai-futuristic'
@@ -6408,8 +6374,8 @@ export const,
 		customers: 24
 		rating: 4 && 4.6
 		reviews: 6,
-	}
-]
+	};
+];
   id: 'ai - email - responder',
   name: 'AI Email Responder',
   tagline: 'Autonomous email triage, drafting, and follow - ups for sales and support'
@@ -6418,7 +6384,7 @@ export const,
   description: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.'
   features: [
   'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs'
-  ]
+  ];
   popular: true,
   icon: ''
   color: 'from - cyan - 600 to - blue - 700',
@@ -6430,11 +6396,11 @@ export const,
   setup_time: '30 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['Gmail / Outlook APIsLLMWebhook']
-  integrations: ['GmailOutlookHubSpotPipedriveSlack']
-  use_cases: ['Inbound triage_nurture sequencesSLA reporting']
+  technology: ['Gmail / Outlook APIsLLMWebhook'];
+  integrations: ['GmailOutlookHubSpotPipedriveSlack'];
+  use_cases: ['Inbound triage_nurture sequencesSLA reporting'];
   roi: 'Cuts manual email time by 6080%'
-  competitors: ['Superhuman AIFront AIGmail add - ons']
+  competitors: ['Superhuman AIFront AIGmail add - ons'];
   market_size: '$10 B+ email productivity'
   growth_rate: '15% CAGR'
   variant: 'network - futuristic'
@@ -6445,7 +6411,7 @@ export const,
   customers: 48
   rating: 4.7
   reviews: 12,
-}
+};
   id: 'mobile - survey - studio',
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics'
@@ -6454,7 +6420,7 @@ export const,
   description: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.'
   features: [
   'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API'
-  ]
+  ];
   popular: false,
   icon: ''
   color: 'from - emerald - 600 to - teal - 700',
@@ -6466,11 +6432,11 @@ export const,
   setup_time: '15 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['TwilioNext.js_vercel / Netlify']
-  integrations: ['HubSpotSheetsSlack']
-  use_cases: ['NPSFeature feedback_onboarding']
+  technology: ['TwilioNext.js_vercel / Netlify'];
+  integrations: ['HubSpotSheetsSlack'];
+  use_cases: ['NPSFeature feedback_onboarding'];
   roi: '24 x higher completion on mobile'
-  competitors: ['TypeformSurveyMonkey']
+  competitors: ['TypeformSurveyMonkey'];
   market_size: '$7 B research tooling'
   growth_rate: '9% CAGR'
   variant: 'holographic - matrix'
@@ -6481,7 +6447,7 @@ export const,
   customers: 22
   rating: 4.6
   reviews: 9,
-}
+};
   id: 'niche - productivity - planner',
   name: 'Niche Productivity Planner',
   tagline: 'Industry - specific planners with templates, rituals, and benchmarks'
@@ -6490,7 +6456,7 @@ export const,
   description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
   features: [
   'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views'
-  ]
+  ];
   popular: false
   icon: ''
   color: 'from - purple - 600 to - indigo - 700'
@@ -6502,11 +6468,11 @@ export const,
   setup_time: '10 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['Next.jsSQLite / Postgres']
-  integrations: ['Google CalendarOutlook']
-  use_cases: ['Agency ops_clinic ops_boutique retail']
+  technology: ['Next.jsSQLite / Postgres'];
+  integrations: ['Google CalendarOutlook'];
+  use_cases: ['Agency ops_clinic ops_boutique retail'];
   roi: 'Saves 35 hrs / week per user'
-  competitors: ['Notion templatesClickUp']
+  competitors: ['Notion templatesClickUp'];
   market_size: '$3 B productivity niche'
   growth_rate: '8% CAGR'
   variant: 'ai - futuristic'
@@ -6517,7 +6483,7 @@ export const,
   customers: 18
   rating: 4.5
   reviews: 7,
-}
+};
   id: 'event - management - dashboard',
   name: 'Event Management Dashboard',
   tagline: 'Tickets, scheduling, comms, and post - event analytics'
@@ -6526,7 +6492,7 @@ export const,
   description: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.'
   features: [
   'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports'
-  ]
+  ];
   popular: true,
   icon: ''
   color: 'from - pink - 600 to - rose - 700'
@@ -6538,11 +6504,11 @@ export const,
   setup_time: '1 hour'
   category: 'Developer Tools'
   real_service: true
-  technology: ['Next.jsStripeTwilio']
-  integrations: ['ZoomGoogle CalendarSlack']
-  use_cases: ['WebinarsTown halls_customer training']
+  technology: ['Next.jsStripeTwilio'];
+  integrations: ['ZoomGoogle CalendarSlack'];
+  use_cases: ['WebinarsTown halls_customer training'];
   roi: 'Saves 50% ops time per event'
-  competitors: ['EventbriteHopin (basic)']
+  competitors: ['EventbriteHopin (basic)'];
   market_size: '$6 B event tooling'
   growth_rate: '10% CAGR'
   variant: 'network - futuristic'
@@ -6553,14 +6519,14 @@ export const,
   customers: 31
   rating: 4.7
   reviews: 11,
-}
+};
   id: 'affiliate - tracking - suite',
   name: 'Affiliate Tracking Suite',
   tagline: 'Links, attribution, commission rules, and payouts'
   price: '$29',
   period: '/month',
   description: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'
-  features: ['Custom referral linksUTM attribution_rule - based commissions_payout exports_fraud checks']
+  features: ['Custom referral linksUTM attribution_rule - based commissions_payout exports_fraud checks'];
   popular: false,
   icon: ''
   color: 'from - amber - 600 to - orange - 700'
@@ -6572,11 +6538,11 @@ export const,
   setup_time: '45 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['Next.js_postgres']
-  integrations: ['StripePaddleShopify']
-  use_cases: ['SaaS referrals_course affiliates_partner programs']
+  technology: ['Next.js_postgres'];
+  integrations: ['StripePaddleShopify'];
+  use_cases: ['SaaS referrals_course affiliates_partner programs'];
   roi: '+1525% new revenue from partners'
-  competitors: ['FirstPromoterRewardful']
+  competitors: ['FirstPromoterRewardful'];
   market_size: '$12 B affiliate'
   growth_rate: '9% CAGR'
   variant: 'holographic - matrix'
@@ -6587,14 +6553,14 @@ export const,
   customers: 12
   rating: 4.5
   reviews: 5,
-}
+};
   id: 'smb - analytics - lite',
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity'
   price: '$15'
   period: '/month'
   description: 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.'
-  features: ['Page + event analytics_funnels + cohorts_weekly email summariesCSV export_no cookies mode']
+  features: ['Page + event analytics_funnels + cohorts_weekly email summariesCSV export_no cookies mode'];
   popular: false,
   icon: ''
   color: 'from - sky - 600 to - indigo - 700',
@@ -6610,7 +6576,7 @@ export const,
   integrations: ['ShopifyWordPress'],
   use_cases: ['Website analytics_campaign tracking'],
   roi: 'Clarity on what converts, 1020% lift'
-  competitors: ['FathomPlausible']
+  competitors: ['FathomPlausible'];
   market_size: '$2 B privacy analytics'
   growth_rate: '14% CAGR'
   variant: 'network - futuristic'
@@ -6621,14 +6587,14 @@ export const,
   customers: 40
   rating: 4.6
   reviews: 8,
-}
+};
   id: 'it - helpdesk - portal',
   name: 'IT Helpdesk Portal',
   tagline: 'Tickets, knowledge base, SLAs, and client portal'
   price: '$59',
   period: '/month',
   description: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.'
-  features: ['Email - to - ticketKB + article templatesSLAs + escalations_client portal_reports']
+  features: ['Email - to - ticketKB + article templatesSLAs + escalations_client portal_reports'];
   popular: true,
   icon: ''
   color: 'from - blue - 600 to - indigo - 700'
@@ -6640,11 +6606,11 @@ export const,
   setup_time: '13 days'
   category: 'Enterprise IT'
   real_service: true
-  technology: ['Next.js_postgres']
-  integrations: ['OktaGoogleSlack']
-  use_cases: ['IT support_asset requests_approvals']
+  technology: ['Next.js_postgres'];
+  integrations: ['OktaGoogleSlack'];
+  use_cases: ['IT support_asset requests_approvals'];
   roi: '2540% faster resolution time'
-  competitors: ['FreshserviceJira Service Management']
+  competitors: ['FreshserviceJira Service Management'];
   market_size: '$10 B ITSM SMB'
   growth_rate: '11% CAGR'
   variant: 'ai - futuristic'
@@ -6655,14 +6621,14 @@ export const,
   customers: 16
   rating: 4.7
   reviews: 6,
-}
+};
   id: 'ecommerce - returns - manager',
   name: 'Ecommerce Returns Manager',
   tagline: 'Customer - friendly returns with labels and status tracking',
   price: '$39',
   period: '/month',
   description: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'
-  features: ['Self - serve returns portal_label generation_return reasons analytics_inventory sync_notifications']
+  features: ['Self - serve returns portal_label generation_return reasons analytics_inventory sync_notifications'];
   popular: true,
   icon: ''
   color: 'from - violet - 600 to - fuchsia - 700'
@@ -6674,11 +6640,11 @@ export const,
   setup_time: '2 hours'
   category: 'Developer Tools'
   real_service: true
-  technology: ['Shopify APINext.js']
-  integrations: ['ShopifyShippo']
-  use_cases: ['RMAsReturn analytics']
+  technology: ['Shopify APINext.js'];
+  integrations: ['ShopifyShippo'];
+  use_cases: ['RMAsReturn analytics'];
   roi: 'Reduce returns costs by 1020%'
-  competitors: ['Loop ReturnsHappy Returns (PayPal)']
+  competitors: ['Loop ReturnsHappy Returns (PayPal)'];
   market_size: '$4 B returns tooling'
   growth_rate: '13% CAGR'
   variant: 'holographic - matrix'
@@ -6689,14 +6655,14 @@ export const,
   customers: 14
   rating: 4.6
   reviews: 5,
-}
+};
   id: 'automated - email - followups'
   name: 'Automated Email Followups'
   tagline: 'No - lead - left - behind sequences across inboxes'
   price: '$15'
   period: '/month'
   description: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.'
-  features: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics']
+  features: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics'];
   popular: false,
   icon: ''
   color: 'from - cyan - 600 to - teal - 700'
@@ -6708,11 +6674,11 @@ export const,
   setup_time: '20 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['Email APIsLLM']
-  integrations: ['GmailOutlookHubSpot']
-  use_cases: ['Lead follow - up_ticket nudges']
+  technology: ['Email APIsLLM'];
+  integrations: ['GmailOutlookHubSpot'];
+  use_cases: ['Lead follow - up_ticket nudges'];
   roi: '+1025% more replies'
-  competitors: ['Mailshake (lite)GMass']
+  competitors: ['Mailshake (lite)GMass'];
   market_size: '$5 B sales engagement (SMB)'
   growth_rate: '10% CAGR'
   variant: 'network - futuristic'
@@ -6723,14 +6689,14 @@ export const,
   customers: 28
   rating: 4.5
   reviews: 8,
-}
+};
   id: 'podcast - transcription - service',
   name: 'Podcast Transcription Service',
   tagline: 'Accurate transcripts, chapters, and SEO blog exports'
   price: '$12',
   period: '/month',
   description: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.'
-  features: ['Fast transcripts_timestamps + chapters_summaries + highlights_blog export_glossary']
+  features: ['Fast transcripts_timestamps + chapters_summaries + highlights_blog export_glossary'];
   popular: false,
   icon: ''
   color: 'from - indigo - 600 to - blue - 700'
@@ -6742,11 +6708,11 @@ export const,
   setup_time: '10 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['Whisper / ASRNext.js']
-  integrations: ['RSSYouTube']
-  use_cases: ['AccessibilitySEO content']
+  technology: ['Whisper / ASRNext.js'];
+  integrations: ['RSSYouTube'];
+  use_cases: ['AccessibilitySEO content'];
   roi: 'Saves 24 hrs / episode'
-  competitors: ['RevDescript (lite)']
+  competitors: ['RevDescript (lite)'];
   market_size: '$1 B+ transcription'
   growth_rate: '12% CAGR'
   variant: 'ai - futuristic'
@@ -6757,14 +6723,14 @@ export const,
   customers: 20
   rating: 4.6
   reviews: 6,
-}
+};
   id: 'ai - seo - content - optimizer',
   name: 'AI SEO Content Optimizer',
   tagline: 'Live on - page audits and SEO - aware rewrites',
   price: '$29',
   period: '/month',
   description: 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'
-  features: ['On - page audits_topic clusteringSERP intent match_internal link hints_rewrite suggestions']
+  features: ['On - page audits_topic clusteringSERP intent match_internal link hints_rewrite suggestions'];
   popular: true,
   icon: ''
   color: 'from - emerald - 600 to - green - 700'
@@ -6776,11 +6742,11 @@ export const,
   setup_time: '20 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['CrawlerLLM']
-  integrations: ['WordPressWebflow']
-  use_cases: ['SEO rewrites_gap analysis']
+  technology: ['CrawlerLLM'];
+  integrations: ['WordPressWebflow'];
+  use_cases: ['SEO rewrites_gap analysis'];
   roi: '+2040% organic traffic lift'
-  competitors: ['Surfer SEOMarketMuse']
+  competitors: ['Surfer SEOMarketMuse'];
   market_size: '$2 B SEO tooling'
   growth_rate: '11% CAGR'
   variant: 'network - futuristic'
@@ -6791,14 +6757,14 @@ export const,
   customers: 33
   rating: 4.7
   reviews: 10,
-}
+};
   id: 'social - scheduler - ai',
   name: 'Social Scheduler AI',
   tagline: 'Auto - generate, schedule, and repurpose posts cross - platform'
   price: '$15',
   period: '/month',
   description: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.'
-  features: ['Content repurposing_calendar + auto - times_hashtag + emoji assistant_link tracking_client approvals']
+  features: ['Content repurposing_calendar + auto - times_hashtag + emoji assistant_link tracking_client approvals'];
   popular: false,
   icon: ''
   color: 'from - fuchsia - 600 to - pink - 700'
@@ -6810,11 +6776,11 @@ export const,
   setup_time: '15 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['SchedulerLLM']
-  integrations: ['XLinkedInInstagram']
-  use_cases: ['Content calendar_repurposing']
+  technology: ['SchedulerLLM'];
+  integrations: ['XLinkedInInstagram'];
+  use_cases: ['Content calendar_repurposing'];
   roi: 'Saves 46 hrs / week'
-  competitors: ['BufferHootsuite (lite)']
+  competitors: ['BufferHootsuite (lite)'];
   market_size: '$4 B social tooling'
   growth_rate: '10% CAGR'
   variant: 'holographic - matrix'
@@ -6825,14 +6791,14 @@ export const,
   customers: 26
   rating: 4.5
   reviews: 7,
-}
+};
   id: 'lead - enrichment - api',
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain'
   price: '$49'
   period: '/month'
   description: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'
-  features: ['FirmographicsRole detection_validated email signals_confidence scoring_usage dashboards']
+  features: ['FirmographicsRole detection_validated email signals_confidence scoring_usage dashboards'];
   popular: false,
   icon: ''
   color: 'from - blue - 600 to - sky - 700'
@@ -6844,11 +6810,11 @@ export const,
   setup_time: '1 hour'
   category: 'Developer Tools'
   real_service: true
-  technology: ['CrawlerGraphAPI']
-  integrations: ['HubSpotSalesforce (export)']
-  use_cases: ['Lead routing_scoring']
+  technology: ['CrawlerGraphAPI'];
+  integrations: ['HubSpotSalesforce (export)'];
+  use_cases: ['Lead routing_scoring'];
   roi: 'Improves MQLSQL by 1020%'
-  competitors: ['Clearbit (lite)Apollo enrichment']
+  competitors: ['Clearbit (lite)Apollo enrichment'];
   market_size: '$3 B enrichment'
   growth_rate: '9% CAGR'
   variant: 'ai - futuristic'
@@ -6859,14 +6825,14 @@ export const,
   customers: 9
   rating: 4.4
   reviews: 4,
-}
+};
   id: 'consent - management - cmp',
   name: 'Consent Management CMP',
   tagline: 'GDPR / CCPA consent banners, preferences, and audit logs'
   price: '$25',
   period: '/month',
   description: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.'
-  features: ['Geo rulesIAB TCFPreference center_audit logs_multi - brand themes']
+  features: ['Geo rulesIAB TCFPreference center_audit logs_multi - brand themes'];
   popular: true,
   icon: ''
   color: 'from - emerald - 600 to - teal - 700',
@@ -6882,7 +6848,7 @@ export const,
   integrations: ['SegmentGA4'],
   use_cases: ['ComplianceUser trust'],
   roi: 'Avoid fines, preserve UX'
-  competitors: ['OneTrust (lite)CookieYes']
+  competitors: ['OneTrust (lite)CookieYes'];
   market_size: '$4 B privacy tooling'
   growth_rate: '14% CAGR'
   variant: 'network - futuristic'
@@ -6893,14 +6859,14 @@ export const,
   customers: 37
   rating: 4.7
   reviews: 10,
-}
+};
   id: 'cookie - scanner - pro',
   name: 'Cookie Scanner Pro',
   tagline: 'Auto - detects cookies + trackers and updates your policy',
   price: '$9',
   period: '/month',
   description: 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.'
-  features: ['Site scan_tracker classification_policy generator_diffs + historyCI hook']
+  features: ['Site scan_tracker classification_policy generator_diffs + historyCI hook'];
   popular: false,
   icon: ''
   color: 'from - amber - 600 to - yellow - 700'
@@ -6912,11 +6878,11 @@ export const,
   setup_time: '10 minutes'
   category: 'Quality & Monitoring'
   real_service: true
-  technology: ['CrawlerClassifier']
-  integrations: ['GitHub Actions']
-  use_cases: ['Policy updates_audits']
+  technology: ['CrawlerClassifier'];
+  integrations: ['GitHub Actions'];
+  use_cases: ['Policy updates_audits'];
   roi: 'Automates tedious checks'
-  competitors: ['Cookiebot (lite)']
+  competitors: ['Cookiebot (lite)'];
   market_size: '$1 B cookie tools'
   growth_rate: '8% CAGR'
   variant: 'holographic - matrix'
@@ -6927,14 +6893,14 @@ export const,
   customers: 19
   rating: 4.5
   reviews: 5,
-}
+};
   id: 'statuspage - sla - tracker',
   name: 'StatusPage SLA Tracker',
   tagline: 'Track uptime / incidents and publish SLA reports',
   price: '$19',
   period: '/month',
   description: 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.'
-  features: ['Incident log_public status pageSLA calculatorRSS + webhooks_exports']
+  features: ['Incident log_public status pageSLA calculatorRSS + webhooks_exports'];
   popular: false
   icon: ''
   color: 'from - sky - 600 to - cyan - 700'
@@ -6946,11 +6912,11 @@ export const,
   setup_time: '20 minutes'
   category: 'Observability'
   real_service: true
-  technology: ['Next.jsCRON']
-  integrations: ['PingdomUptimeRobot']
-  use_cases: ['SLA reports_status page']
+  technology: ['Next.jsCRON'];
+  integrations: ['PingdomUptimeRobot'];
+  use_cases: ['SLA reports_status page'];
   roi: 'Reduce support tickets ~20%'
-  competitors: ['Statuspage (lite)']
+  competitors: ['Statuspage (lite)'];
   market_size: '$1 B status tools'
   growth_rate: '9% CAGR'
   variant: 'ai - futuristic'
@@ -6961,14 +6927,14 @@ export const,
   customers: 11
   rating: 4.4
   reviews: 3,
-}
+};
   id: 'agentic - lead - qualifier',
   name: 'Agentic Lead Qualifier',
   tagline: 'Website chat agent that pre - qualifies and routes leads',
   price: '$29',
   period: '/month',
   description: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'
-  features: ['Qualifying flows_calendar bookingCRM routing_visitor insights_hand - off to human']
+  features: ['Qualifying flows_calendar bookingCRM routing_visitor insights_hand - off to human'];
   popular: true,
   icon: ''
   color: 'from - teal - 600 to - emerald - 700'
@@ -6980,11 +6946,11 @@ export const,
   setup_time: '30 minutes'
   category: 'AI & Data'
   real_service: true
-  technology: ['LLMEmbeddings']
-  integrations: ['HubSpotCalendly']
-  use_cases: ['Lead capture_meeting booking']
+  technology: ['LLMEmbeddings'];
+  integrations: ['HubSpotCalendly'];
+  use_cases: ['Lead capture_meeting booking'];
   roi: '+1530% qualified demos'
-  competitors: ['Drift (lite)Intercom Fin']
+  competitors: ['Drift (lite)Intercom Fin'];
   market_size: '$3 B chatbots'
   growth_rate: '12% CAGR'
   variant: 'network - futuristic'
@@ -6995,14 +6961,14 @@ export const,
   customers: 23
   rating: 4.6
   reviews: 7,
-}
+};
   id: 'gdpr - dsar - portal - lite',
   name: 'GDPR DSAR Portal Lite',
   tagline: 'Accept, verify, export, and fulfill data subject requests'
   price: '$49',
   period: '/month',
   description: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'
-  features: ['Request intake_identity check_triage + workflowExportsAudit logs']
+  features: ['Request intake_identity check_triage + workflowExportsAudit logs'];
   popular: true
   icon: ''
   color: 'from - red - 600 to - rose - 700'
@@ -7014,11 +6980,11 @@ export const,
   setup_time: '1 day'
   category: 'Quality & Monitoring'
   real_service: true
-  technology: ['Next.js_storage']
-  integrations: ['ZendeskGoogle Drive']
-  use_cases: ['DSAR fulfillment']
+  technology: ['Next.js_storage'];
+  integrations: ['ZendeskGoogle Drive'];
+  use_cases: ['DSAR fulfillment'];
   roi: 'Avoid compliance toil and risk'
-  competitors: ['Transcend (lite)Osano']
+  competitors: ['Transcend (lite)Osano'];
   market_size: '$6 B privacy ops'
   growth_rate: '18% CAGR'
   variant: 'holographic - matrix'
@@ -7029,14 +6995,14 @@ export const,
   customers: 10
   rating: 4.5
   reviews: 4,
-}
+};
   id: 'feature - flag - auditor',
   name: 'Feature Flag Auditor',
   tagline: 'Flag hygiene checks and end - of - life automation',
   price: '$19',
   period: '/month',
   description: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.'
-  features: ['Repo scanner_flag inventory_risk detectionPR suggestionsCI integration']
+  features: ['Repo scanner_flag inventory_risk detectionPR suggestionsCI integration'];
   popular: false
   icon: ''
   color: 'from - rose - 600 to - pink - 700'
@@ -7052,7 +7018,7 @@ export const,
   integrations: ['GitHubGitLabFlagsmith'],
   use_cases: ['Cleanup debt_reduce risk'],
   roi: 'Avoid outages, reduce toil'
-  competitors: ['LaunchDarkly add - ons']
+  competitors: ['LaunchDarkly add - ons'];
   market_size: '$1 B flags'
   growth_rate: '10% CAGR'
   variant: 'ai - futuristic'
@@ -7063,14 +7029,14 @@ export const,
   customers: 8
   rating: 4.4
   reviews: 3,
-}
+};
   id: 'postgres - index - advisor - pro',
   name: 'Postgres Index Advisor Pro',
   tagline: 'Index recommendations and controlled PR rollouts',
   price: '$79',
   period: '/month',
   description: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
-  features: ['Slow query capture_index suggestions_risk scoringPR generation_rollback assist']
+  features: ['Slow query capture_index suggestions_risk scoringPR generation_rollback assist'];
   popular: true
   icon: ''
   color: 'from - blue - 700 to - indigo - 800'
@@ -7082,11 +7048,11 @@ export const,
   setup_time: '1 day'
   category: 'Developer Tools'
   real_service: true
-  technology: ['pg_stat_statementsAdvisor']
-  integrations: ['GitHub Actions']
-  use_cases: ['DB tuning_perf boosts']
+  technology: ['pg_stat_statementsAdvisor'];
+  integrations: ['GitHub Actions'];
+  use_cases: ['DB tuning_perf boosts'];
   roi: 'Cut query costs 2050%'
-  competitors: ['pganalyze (adjacent)']
+  competitors: ['pganalyze (adjacent)'];
   market_size: '$2 B DB tuning'
   growth_rate: '9% CAGR'
   variant: 'network - futuristic'
@@ -7097,14 +7063,14 @@ export const,
   customers: 15
   rating: 4.6
   reviews: 5,
-}
+};
   id: 's3 - lifecycle - optimizer'
   name: 'S3 Lifecycle Optimizer'
   tagline: 'Move objects between storage classes to cut costs'
   price: '$59'
   period: '/month'
   description: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
-  features: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting']
+  features: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'];
   popular: false
   icon: ''
   color: 'from - emerald - 700 to - teal - 800'
@@ -7116,11 +7082,11 @@ export const,
   setup_time: '1 hour'
   category: 'Cloud & FinOps'
   real_service: true
-  technology: ['AWS S3 Cost models']
-  integrations: ['AWS']
-  use_cases: ['Storage hygiene_cost cuts']
+  technology: ['AWS S3 Cost models'];
+  integrations: ['AWS'];
+  use_cases: ['Storage hygiene_cost cuts'];
   roi: 'Save 1030% storage spend'
-  competitors: ['Kubecost (adjacent)']
+  competitors: ['Kubecost (adjacent)'];
   market_size: '$3 B cloud cost'
   growth_rate: '12% CAGR'
   variant: 'holographic - matrix'
@@ -7131,14 +7097,14 @@ export const,
   customers: 17
   rating: 4.5
   reviews: 4,
-}
+};
   id: 'pii - discovery - scanner',
   name: 'PII Discovery Scanner',
   tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
   price: '$89',
   period: '/month',
   description: 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.'
-  features: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting']
+  features: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting'];
   popular: true,
   icon: ''
   color: 'from - red - 700 to - rose - 800'
@@ -7150,11 +7116,11 @@ export const,
   setup_time: '12 days'
   category: 'Quality & Monitoring'
   real_service: true
-  technology: ['DLPConnectors']
-  integrations: ['AWSGCPSnowflake']
-  use_cases: ['Compliance audits_risk reduction']
+  technology: ['DLPConnectors'];
+  integrations: ['AWSGCPSnowflake'];
+  use_cases: ['Compliance audits_risk reduction'];
   roi: 'Avoid incidents and fines'
-  competitors: ['Google DLPAWS Macie']
+  competitors: ['Google DLPAWS Macie'];
   market_size: '$5 B data security'
   growth_rate: '15% CAGR'
   variant: 'ai - futuristic'
@@ -7165,14 +7131,14 @@ export const,
   customers: 13
   rating: 4.6
   reviews: 5,
-}
+};
   id: 'api - breaking - change - watcher',
   name: 'API Breaking Change Watcher',
   tagline: 'Schema diffs with CI gates and notifications',
   price: '$49',
   period: '/month',
   description: 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'
-  features: ['Schema registry_diff rules_owner mappingCI checks_changelog hints']
+  features: ['Schema registry_diff rules_owner mappingCI checks_changelog hints'];
   popular: false
   icon: ''
   color: 'from - indigo - 700 to - violet - 800'
@@ -7188,7 +7154,7 @@ export const,
   integrations: ['GitHubSlack'],
   use_cases: ['Schema governance_release safety'],
   roi: 'Fewer incidents, faster integration'
-  competitors: ['Stoplight (adjacent)']
+  competitors: ['Stoplight (adjacent)'];
   market_size: '$1 B API tooling'
   growth_rate: '9% CAGR'
   variant: 'network - futuristic'
@@ -7199,14 +7165,14 @@ export const,
   customers: 12
   rating: 4.5
   reviews: 3,
-}
+};
   id: 'synthetic - journey - monitor',
   name: 'Synthetic Journey Monitor',
   tagline: 'Record and replay user flows with SLO alerts',
   price: '$39',
   period: '/month',
   description: 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'
-  features: ['RecorderSelector healingSchedulesSLO alerts_reports']
+  features: ['RecorderSelector healingSchedulesSLO alerts_reports'];
   popular: false,
   icon: ''
   color: 'from - cyan - 700 to - blue - 800'
@@ -7218,11 +7184,11 @@ export const,
   setup_time: '30 minutes'
   category: 'Observability'
   real_service: true
-  technology: ['Playwright']
-  integrations: ['Checkly (export)Slack']
-  use_cases: ['Regression checksSLO monitoring']
+  technology: ['Playwright'];
+  integrations: ['Checkly (export)Slack'];
+  use_cases: ['Regression checksSLO monitoring'];
   roi: 'Prevent broken funnels'
-  competitors: ['ChecklyDatadog Synthetics']
+  competitors: ['ChecklyDatadog Synthetics'];
   market_size: '$2 B testing / obs'
   growth_rate: '10% CAGR'
   variant: 'holographic - matrix'
@@ -7233,14 +7199,14 @@ export const,
   customers: 21
   rating: 4.5
   reviews: 6,
-}
+};
   id: 'iam - permission - analyzer'
   name: 'IAM Permission Analyzer'
   tagline: 'Detect over - privileged access and propose least - privilege policies'
   price: '$79'
   period: '/month'
   description: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.'
-  features: ['Policy inventory_usage analysisRecommendationsPR generation_alerting']
+  features: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'];
   popular: true
   icon: ''
   color: 'from - blue - 700 to - slate - 800'
@@ -7252,11 +7218,11 @@ export const,
   setup_time: '12 days'
   category: 'Cloud & FinOps'
   real_service: true
-  technology: ['AWS / GCP / IAM']
-  integrations: ['AWSGCP']
-  use_cases: ['Reduce blast radius']
+  technology: ['AWS / GCP / IAM'];
+  integrations: ['AWSGCP'];
+  use_cases: ['Reduce blast radius'];
   roi: 'Reduce risk + audit toil'
-  competitors: ['Cloud Custodian (DIY)']
+  competitors: ['Cloud Custodian (DIY)'];
   market_size: '$3 B cloud sec'
   growth_rate: '13% CAGR'
   variant: 'ai - futuristic'
@@ -7267,14 +7233,14 @@ export const,
   customers: 9
   rating: 4.6
   reviews: 3,
-}
+};
   id: 'warehouse - cost - optimizer'
   name: 'Data Warehouse Cost Optimizer'
   tagline: 'Right - size warehouses and schedule off - peak workloads'
   price: '$99'
   period: '/month'
   description: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.'
-  features: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts']
+  features: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'];
   popular: true
   icon: ''
   color: 'from - indigo - 700 to - violet - 800'
@@ -7286,11 +7252,11 @@ export const,
   setup_time: '13 days'
   category: 'Cloud & FinOps'
   real_service: true
-  technology: ['Snowflake / BigQuery APIs']
-  integrations: ['dbtGHA']
-  use_cases: ['Cost control_ops hygiene']
+  technology: ['Snowflake / BigQuery APIs'];
+  integrations: ['dbtGHA'];
+  use_cases: ['Cost control_ops hygiene'];
   roi: '1030% lower DW costs'
-  competitors: ['SelectStar (adjacent)']
+  competitors: ['SelectStar (adjacent)'];
   market_size: '$2 B finops DW'
   growth_rate: '12% CAGR'
   variant: 'network - futuristic'
@@ -7301,14 +7267,14 @@ export const,
   customers: 7
   rating: 4.5
   reviews: 3,
-}
+};
   id: 'email - warmup - monitor'
   name: 'Email Warmup & Reputation Monitor'
   tagline: 'Track sender reputation and run inbox placement tests'
   price: '$39'
   period: '/month'
   description: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'
-  features: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports']
+  features: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'];
   popular: false
   icon: ''
   color: 'from - orange - 600 to - rose - 700'
@@ -7320,11 +7286,11 @@ export const,
   setup_time: '20 minutes'
   category: 'Developer Tools'
   real_service: true
-  technology: ['EmailSeeds']
-  integrations: ['SendGridSES']
-  use_cases: ['DeliverabilityInbox tests']
+  technology: ['EmailSeeds'];
+  integrations: ['SendGridSES'];
+  use_cases: ['DeliverabilityInbox tests'];
   roi: 'Protects domain reputation'
-  competitors: ['Warmup InboxMailreach']
+  competitors: ['Warmup InboxMailreach'];
   market_size: '$1 B deliverability'
   growth_rate: '9% CAGR'
   variant: 'holographic - matrix'
@@ -7335,14 +7301,14 @@ export const,
   customers: 16
   rating: 4.5
   reviews: 4,
-}
+};
   id: 'ai - meeting - to - ticket',
   name: 'AI MeetingtoTicket Copilot',
   tagline: 'Turn meeting action items into Jira / GitHub tickets',
   price: '$25',
   period: '/user / mo',
   description: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'
-  features: ['TranscriptionAction extraction_ticket creation_owner mapping_summaries']
+  features: ['TranscriptionAction extraction_ticket creation_owner mapping_summaries'];
   popular: true,
   icon: ''
   color: 'from - cyan - 700 to - blue - 800'
@@ -7354,11 +7320,11 @@ export const,
   setup_time: '30 minutes'
   category: 'AI & Data'
   real_service: true
-  technology: ['ASRLLM']
-  integrations: ['JiraGitHub']
-  use_cases: ['Project follow - through']
+  technology: ['ASRLLM'];
+  integrations: ['JiraGitHub'];
+  use_cases: ['Project follow - through'];
   roi: 'Close the loop on action items'
-  competitors: ['Fathom + manual']
+  competitors: ['Fathom + manual'];
   market_size: '$2 B productivity'
   growth_rate: '9% CAGR'
   variant: 'ai - futuristic'
@@ -7369,14 +7335,14 @@ export const,
   customers: 24
   rating: 4.6
   reviews: 6,
-}
+};
 		rating: 4.6
 		reviews: 6
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'}
+	address: '364 E Main St STE 1008 Middletown DE 19709'};
+	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{,
 		id: 'ai-email-responder'
@@ -7387,7 +7353,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
 		features: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		]
+		];
 		popular: true
 		icon: ''
 		color: 'from-cyan-600 to-blue-700'
@@ -7399,11 +7365,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		setupTime: '30 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Gmail/Outlook APIsLLMWebhook']
-		integrations: ['GmailOutlookHubSpotPipedriveSlack']
-		useCases: ['Inbound triageNurture sequencesSLA reporting']
+		technology: ['Gmail/Outlook APIsLLMWebhook'];
+		integrations: ['GmailOutlookHubSpotPipedriveSlack'];
+		useCases: ['Inbound triageNurture sequencesSLA reporting'];
 		roi: 'Cuts manual email time by 6080%'
-		competitors: ['Superhuman AIFront AIGmail add-ons']
+		competitors: ['Superhuman AIFront AIGmail add-ons'];
 		marketSize: '$10 B+ email productivity'
 		growthRate: '15% CAGR'
 		variant: 'network-futuristic'
@@ -7412,9 +7378,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
 		launchDate: '2025-08-20'
 		customers: 48,
-		rating: 4.7}
-		reviews: 12}
-	}
+		rating: 4.7};
+		reviews: 12};
+	};
 	{
 		id: 'mobile-survey-studio'
 		name: 'Mobile Survey Studio',
@@ -7424,7 +7390,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
 		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		]
+		];
 		popular: false
 		icon: ''
 		color: 'from-emerald-600 to-teal-700'
@@ -7436,11 +7402,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		setupTime: '15 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['TwilioNext.jsVercel/Netlify']
-		integrations: ['HubSpotSheetsSlack']
-		useCases: ['NPSFeature feedbackOnboarding']
+		technology: ['TwilioNext.jsVercel/Netlify'];
+		integrations: ['HubSpotSheetsSlack'];
+		useCases: ['NPSFeature feedbackOnboarding'];
 		roi: '24 x higher completion on mobile'
-		competitors: ['TypeformSurveyMonkey']
+		competitors: ['TypeformSurveyMonkey'];
 		marketSize: '$7 B research tooling'
 		growthRate: '9% CAGR'
 		variant: 'holographic-matrix'
@@ -7449,9 +7415,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		implementationDetails: 'Survey builder + delivery channels + analytics + export'
 		launchDate: '2025-08-20'
 		customers: 22,
-		rating: 4.6}
-		reviews: 9}
-	}
+		rating: 4.6};
+		reviews: 9};
+	};
 	{
 		id: 'niche-productivity-planner'
 		name: 'Niche Productivity Planner',
@@ -7461,7 +7427,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
 		features: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		]
+		];
 		popular: false
 		icon: ''
 		color: 'from-purple-600 to-indigo-700'
@@ -7473,11 +7439,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		setupTime: '10 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Next.jsSQLite/Postgres']
-		integrations: ['Google CalendarOutlook']
-		useCases: ['Agency opsClinic opsBoutique retail']
+		technology: ['Next.jsSQLite/Postgres'];
+		integrations: ['Google CalendarOutlook'];
+		useCases: ['Agency opsClinic opsBoutique retail'];
 		roi: 'Saves 35 hrs/week per user'
-		competitors: ['Notion templatesClickUp']
+		competitors: ['Notion templatesClickUp'];
 		marketSize: '$3 B productivity niche'
 		growthRate: '8% CAGR'
 		variant: 'ai-futuristic'
@@ -7486,9 +7452,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		implementationDetails: 'Templates + KPI widgets + export'
 		launchDate: '2025-08-20'
 		customers: 18,
-		rating: 4.5}
-		reviews: 7}
-	}
+		rating: 4.5};
+		reviews: 7};
+	};
 	{
 		id: 'event-management-dashboard'
 		name: 'Event Management Dashboard',
@@ -7498,7 +7464,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
 		features: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		]
+		];
 		popular: true
 		icon: ''
 		color: 'from-pink-600 to-rose-700'
@@ -7510,11 +7476,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		setupTime: '1 hour'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Next.jsStripeTwilio']
-		integrations: ['ZoomGoogle CalendarSlack']
-		useCases: ['WebinarsTown hallsCustomer training']
+		technology: ['Next.jsStripeTwilio'];
+		integrations: ['ZoomGoogle CalendarSlack'];
+		useCases: ['WebinarsTown hallsCustomer training'];
 		roi: 'Saves 50% ops time per event'
-		competitors: ['EventbriteHopin (basic)']
+		competitors: ['EventbriteHopin (basic)'];
 		marketSize: '$6 B event tooling'
 		growthRate: '10% CAGR'
 		variant: 'network-futuristic'
@@ -7523,12 +7489,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		implementationDetails: 'Ticketing + agenda + comms + analytics'
 		launchDate: '2025-08-20'
 		customers: 31,
-		rating: 4.7}
-		reviews: 11}
+		rating: 4.7};
+		reviews: 11};
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-cyan-600 to-blue-700'
 		textColo,
@@ -7577,7 +7542,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 12}
+  s: 12};
 		i,
   d: 'mobile-survey-studio'
 		nam,
@@ -7596,8 +7561,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-emerald-600 to-teal-700'
 		textColo,
@@ -7646,7 +7610,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 9}
+  s: 9};
 		i,
   d: 'niche-productivity-planner'
 		nam,
@@ -7665,8 +7629,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-purple-600 to-indigo-700'
 		textColo,
@@ -7715,7 +7678,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 7}
+  s: 7};
 		i,
   d: 'event-management-dashboard'
 		nam,
@@ -7734,8 +7697,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-pink-600 to-rose-700'
 		textColo,
@@ -7784,7 +7746,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 11}
+  s: 11};
 		i,
   d: 'affiliate-tracking-suite'
 		nam,
@@ -7801,8 +7763,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Custom referral linksUTM attributionRule-based commissionsPayout exportsFraud checks'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-amber-600 to-orange-700'
 		textColo,
@@ -7851,7 +7812,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'smb-analytics-lite'
 		nam,
@@ -7868,8 +7829,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Page + event analyticsFunnels + cohortsWeekly email summariesCSV exportNo cookies mode'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-sky-600 to-indigo-700'
 		textColo,
@@ -7918,7 +7878,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 8}
+  s: 8};
 		i,
   d: 'it-helpdesk-portal'
 		nam,
@@ -7935,8 +7895,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Email-to-ticketKB + article templatesSLAs + escalationsClient portalReports'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-blue-600 to-indigo-700'
 		textColo,
@@ -7985,7 +7944,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'ecommerce-returns-manager'
 		nam,
@@ -8002,8 +7961,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Self-serve returns portalLabel generationReturn reasons analyticsInventory syncNotifications'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-violet-600 to-fuchsia-700'
 		textColo,
@@ -8052,7 +8010,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'automated-email-followups'
 		nam,
@@ -8069,8 +8027,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-cyan-600 to-teal-700'
 		textColo,
@@ -8119,7 +8076,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 8}
+  s: 8};
 		i,
   d: 'podcast-transcription-service'
 		nam,
@@ -8136,8 +8093,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Fast transcriptsTimestamps + chaptersSummaries + highlightsBlog exportGlossary'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-indigo-600 to-blue-700'
 		textColo,
@@ -8186,7 +8142,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'ai-seo-content-optimizer'
 		nam,
@@ -8203,8 +8159,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['On-page auditsTopic clusteringSERP intent matchInternal link hintsRewrite suggestions'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-emerald-600 to-green-700'
 		textColo,
@@ -8253,7 +8208,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 10}
+  s: 10};
 		i,
   d: 'social-scheduler-ai'
 		nam,
@@ -8270,8 +8225,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Content repurposingCalendar + auto-timesHashtag + emoji assistantLink trackingClient approvals'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-fuchsia-600 to-pink-700'
 		textColo,
@@ -8320,7 +8274,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 7}
+  s: 7};
 		i,
   d: 'lead-enrichment-api'
 		nam,
@@ -8337,8 +8291,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['FirmographicsRole detectionValidated email signalsConfidence scoringUsage dashboards'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-blue-600 to-sky-700'
 		textColo,
@@ -8387,7 +8340,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'consent-management-cmp'
 		nam,
@@ -8404,8 +8357,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Geo rulesIAB TCFPreference centerAudit logsMulti-brand themes'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-emerald-600 to-teal-700'
 		textColo,
@@ -8454,7 +8406,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 10}
+  s: 10};
 		i,
   d: 'cookie-scanner-pro'
 		nam,
@@ -8471,8 +8423,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Site scanTracker classificationPolicy generatorDiffs + historyCI hook'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-amber-600 to-yellow-700'
 		textColo,
@@ -8521,7 +8472,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'statuspage-sla-tracker'
 		nam,
@@ -8538,8 +8489,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Incident logPublic status pageSLA calculatorRSS + webhooksExports'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-sky-600 to-cyan-700'
 		textColo,
@@ -8588,7 +8538,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'agentic-lead-qualifier'
 		nam,
@@ -8605,8 +8555,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Qualifying flowsCalendar bookingCRM routingVisitor insightsHand-off to human'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-teal-600 to-emerald-700'
 		textColo,
@@ -8655,7 +8604,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 7}
+  s: 7};
 		i,
   d: 'gdpr-dsar-portal-lite'
 		nam,
@@ -8672,8 +8621,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Request intakeIdentity checkTriage + workflowExportsAudit logs'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-red-600 to-rose-700'
 		textColo,
@@ -8722,7 +8670,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'feature-flag-auditor'
 		nam,
@@ -8739,8 +8687,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Repo scannerFlag inventoryRisk detectionPR suggestionsCI integration'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-rose-600 to-pink-700'
 		textColo,
@@ -8789,7 +8736,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'postgres-index-advisor-pro'
 		nam,
@@ -8806,8 +8753,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Slow query captureIndex suggestionsRisk scoringPR generationRollback assist'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-blue-700 to-indigo-800'
 		textColo,
@@ -8856,7 +8802,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 's3-lifecycle-optimizer'
 		nam,
@@ -8873,8 +8819,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-emerald-700 to-teal-800'
 		textColo,
@@ -8923,7 +8868,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'pii-discovery-scanner'
 		nam,
@@ -8940,8 +8885,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-red-700 to-rose-800'
 		textColo,
@@ -8990,7 +8934,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5}
+  s: 5};
 		i,
   d: 'api-breaking-change-watcher'
 		nam,
@@ -9007,8 +8951,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Schema registryDiff rulesOwner mappingCI checksChangelog hints'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-indigo-700 to-violet-800'
 		textColo,
@@ -9057,7 +9000,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'synthetic-journey-monitor'
 		nam,
@@ -9074,8 +9017,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['RecorderSelector healingSchedulesSLO alertsReports'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-cyan-700 to-blue-800'
 		textColo,
@@ -9124,7 +9066,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6}
+  s: 6};
 		i,
   d: 'iam-permission-analyzer'
 		nam,
@@ -9141,8 +9083,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-blue-700 to-slate-800'
 		textColo,
@@ -9191,7 +9132,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'warehouse-cost-optimizer'
 		nam,
@@ -9208,8 +9149,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-indigo-700 to-violet-800'
 		textColo,
@@ -9258,7 +9198,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3}
+  s: 3};
 		i,
   d: 'email-warmup-monitor'
 		nam,
@@ -9275,8 +9215,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'],
 		popula,
   r: false,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-orange-600 to-rose-700'
 		textColo,
@@ -9325,7 +9264,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4}
+  s: 4};
 		i,
   d: 'ai-meeting-to-ticket'
 		nam,
@@ -9342,8 +9281,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['TranscriptionAction extractionTicket creationOwner mappingSummaries'],
 		popula,
   r: true,
-		ico,
-  n: '',
+		icon: '',
 		colo,
   r: 'from-cyan-700 to-blue-800'
 		textColo,
@@ -9392,8 +9330,8 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 6}
-]
+  s: 6};
+];
   i,
   d: 'ai - email - responder'
   nam,
@@ -9412,8 +9350,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - cyan - 600 to - blue - 700'
   text_colo,
@@ -9462,7 +9399,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.7,
   review,
-  s: 12}
+  s: 12};
   i,
   d: 'mobile - survey - studio'
   nam,
@@ -9481,8 +9418,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - emerald - 600 to - teal - 700'
   text_colo,
@@ -9531,7 +9467,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 9}
+  s: 9};
   i,
   d: 'niche - productivity - planner'
   nam,
@@ -9550,8 +9486,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - purple - 600 to - indigo - 700'
   text_colo,
@@ -9600,7 +9535,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 7}
+  s: 7};
   i,
   d: 'event - management - dashboard'
   nam,
@@ -9619,8 +9554,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - pink - 600 to - rose - 700'
   text_colo,
@@ -9669,7 +9603,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.7,
   review,
-  s: 11}
+  s: 11};
   i,
   d: 'affiliate - tracking - suite'
   nam,
@@ -9686,8 +9620,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Custom referral linksUTM attribution_rule - based commissions_payout exports_fraud checks'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - amber - 600 to - orange - 700'
   text_colo,
@@ -9736,7 +9669,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 'smb - analytics - lite'
   nam,
@@ -9753,8 +9686,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Page + event analytics_funnels + cohorts_weekly email summariesCSV export_no cookies mode'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - sky - 600 to - indigo - 700'
   text_colo,
@@ -9803,7 +9735,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 8}
+  s: 8};
   i,
   d: 'it - helpdesk - portal'
   nam,
@@ -9820,8 +9752,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Email - to - ticketKB + article templatesSLAs + escalations_client portal_reports'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - blue - 600 to - indigo - 700'
   text_colo,
@@ -9870,7 +9801,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.7,
   review,
-  s: 6}
+  s: 6};
   i,
   d: 'ecommerce - returns - manager'
   nam,
@@ -9887,8 +9818,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Self - serve returns portal_label generation_return reasons analytics_inventory sync_notifications'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - violet - 600 to - fuchsia - 700'
   text_colo,
@@ -9937,7 +9867,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 'automated - email - followups'
   nam,
@@ -9954,8 +9884,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - cyan - 600 to - teal - 700'
   text_colo,
@@ -10004,7 +9933,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 8}
+  s: 8};
   i,
   d: 'podcast - transcription - service'
   nam,
@@ -10021,8 +9950,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Fast transcripts_timestamps + chapters_summaries + highlights_blog export_glossary'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - indigo - 600 to - blue - 700'
   text_colo,
@@ -10071,7 +9999,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 6}
+  s: 6};
   i,
   d: 'ai - seo - content - optimizer'
   nam,
@@ -10088,8 +10016,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['On - page audits_topic clusteringSERP intent match_internal link hints_rewrite suggestions'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - emerald - 600 to - green - 700'
   text_colo,
@@ -10138,7 +10065,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.7,
   review,
-  s: 10}
+  s: 10};
   i,
   d: 'social - scheduler - ai'
   nam,
@@ -10155,8 +10082,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Content repurposing_calendar + auto - times_hashtag + emoji assistant_link tracking_client approvals'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - fuchsia - 600 to - pink - 700'
   text_colo,
@@ -10205,7 +10131,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 7}
+  s: 7};
   i,
   d: 'lead - enrichment - api'
   nam,
@@ -10222,8 +10148,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['FirmographicsRole detection_validated email signals_confidence scoring_usage dashboards'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - blue - 600 to - sky - 700'
   text_colo,
@@ -10272,7 +10197,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.4,
   review,
-  s: 4}
+  s: 4};
   i,
   d: 'consent - management - cmp'
   nam,
@@ -10289,8 +10214,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Geo rulesIAB TCFPreference center_audit logs_multi - brand themes'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - emerald - 600 to - teal - 700'
   text_colo,
@@ -10339,7 +10263,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.7,
   review,
-  s: 10}
+  s: 10};
   i,
   d: 'cookie - scanner - pro'
   nam,
@@ -10356,8 +10280,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Site scan_tracker classification_policy generator_diffs + historyCI hook'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - amber - 600 to - yellow - 700'
   text_colo,
@@ -10406,7 +10329,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 'statuspage - sla - tracker'
   nam,
@@ -10423,8 +10346,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Incident log_public status pageSLA calculatorRSS + webhooks_exports'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - sky - 600 to - cyan - 700'
   text_colo,
@@ -10473,7 +10395,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.4,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'agentic - lead - qualifier'
   nam,
@@ -10490,8 +10412,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Qualifying flows_calendar bookingCRM routing_visitor insights_hand - off to human'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - teal - 600 to - emerald - 700'
   text_colo,
@@ -10540,7 +10461,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 7}
+  s: 7};
   i,
   d: 'gdpr - dsar - portal - lite'
   nam,
@@ -10557,8 +10478,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Request intake_identity check_triage + workflowExportsAudit logs'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - red - 600 to - rose - 700'
   text_colo,
@@ -10607,7 +10527,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 4}
+  s: 4};
   i,
   d: 'feature - flag - auditor'
   nam,
@@ -10624,8 +10544,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Repo scanner_flag inventory_risk detectionPR suggestionsCI integration'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - rose - 600 to - pink - 700'
   text_colo,
@@ -10674,7 +10593,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.4,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'postgres - index - advisor - pro'
   nam,
@@ -10691,8 +10610,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Slow query capture_index suggestions_risk scoringPR generation_rollback assist'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - blue - 700 to - indigo - 800'
   text_colo,
@@ -10741,7 +10659,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 's3 - lifecycle - optimizer'
   nam,
@@ -10758,8 +10676,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - emerald - 700 to - teal - 800'
   text_colo,
@@ -10808,7 +10725,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 4}
+  s: 4};
   i,
   d: 'pii - discovery - scanner'
   nam,
@@ -10825,8 +10742,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - red - 700 to - rose - 800'
   text_colo,
@@ -10875,7 +10791,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 5}
+  s: 5};
   i,
   d: 'api - breaking - change - watcher'
   nam,
@@ -10892,8 +10808,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Schema registry_diff rules_owner mappingCI checks_changelog hints'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - indigo - 700 to - violet - 800'
   text_colo,
@@ -10942,7 +10857,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'synthetic - journey - monitor'
   nam,
@@ -10959,8 +10874,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['RecorderSelector healingSchedulesSLO alerts_reports'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - cyan - 700 to - blue - 800'
   text_colo,
@@ -11009,7 +10923,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 6}
+  s: 6};
   i,
   d: 'iam - permission - analyzer'
   nam,
@@ -11026,8 +10940,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - blue - 700 to - slate - 800'
   text_colo,
@@ -11076,7 +10989,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'warehouse - cost - optimizer'
   nam,
@@ -11093,8 +11006,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - indigo - 700 to - violet - 800'
   text_colo,
@@ -11143,7 +11055,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 3}
+  s: 3};
   i,
   d: 'email - warmup - monitor'
   nam,
@@ -11160,8 +11072,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'],
   popula,
   r: false,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - orange - 600 to - rose - 700'
   text_colo,
@@ -11210,7 +11121,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.5,
   review,
-  s: 4}
+  s: 4};
   i,
   d: 'ai - meeting - to - ticket'
   nam,
@@ -11227,8 +11138,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   s: ['TranscriptionAction extraction_ticket creation_owner mapping_summaries'],
   popula,
   r: true,
-  ico,
-  n: '',
+  icon: '',
   colo,
   r: 'from - cyan - 700 to - blue - 800'
   text_colo,
@@ -11277,165 +11187,165 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
   ratin,
   g: 4.6,
   review,
-  s: 6}
+  s: 6};
 		ratin,
   g: 4.6,
 		review,
   s: 6,
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
 export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 12}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 12};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 9}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 9};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 7};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 11}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 11};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 8}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 8};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 6}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 6};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 8}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 8};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 6};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 10};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 7};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 10};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 7}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 7};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 6}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 6};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
-	}
-]
+  s: 6};
+	};
+];
 // const contact = {
 	mobile: '+1 302 464 0950'
 	email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com'}
+	address: '364 E Main St STE 1008 Middletown DE 19709'};
+	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{,
 		id: 'ai-email-responder'
@@ -11446,7 +11356,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		description: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.'
 		features: [
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
-		]
+		];
 		popular: true
 		icon: ''
 		color: 'from-cyan-600 to-blue-700'
@@ -11458,11 +11368,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		setupTime: '30 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Gmail/Outlook APIsLLMWebhook']
-		integrations: ['GmailOutlookHubSpotPipedriveSlack']
-		useCases: ['Inbound triageNurture sequencesSLA reporting']
+		technology: ['Gmail/Outlook APIsLLMWebhook'];
+		integrations: ['GmailOutlookHubSpotPipedriveSlack'];
+		useCases: ['Inbound triageNurture sequencesSLA reporting'];
 		roi: 'Cuts manual email time by 6080%'
-		competitors: ['Superhuman AIFront AIGmail add-ons']
+		competitors: ['Superhuman AIFront AIGmail add-ons'];
 		marketSize: '$10 B+ email productivity'
 		growthRate: '15% CAGR'
 		variant: 'network-futuristic'
@@ -11471,9 +11381,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		implementationDetails: 'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
 		launchDate: '2025-08-20'
 		customers: 48,
-		rating: 4.7}
-		reviews: 12}
-	}
+		rating: 4.7};
+		reviews: 12};
+	};
 	{
 		id: 'mobile-survey-studio'
 		name: 'Mobile Survey Studio',
@@ -11483,7 +11393,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		description: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.'
 		features: [
 			'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API'
-		]
+		];
 		popular: false
 		icon: ''
 		color: 'from-emerald-600 to-teal-700'
@@ -11495,11 +11405,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		setupTime: '15 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['TwilioNext.jsVercel/Netlify']
-		integrations: ['HubSpotSheetsSlack']
-		useCases: ['NPSFeature feedbackOnboarding']
+		technology: ['TwilioNext.jsVercel/Netlify'];
+		integrations: ['HubSpotSheetsSlack'];
+		useCases: ['NPSFeature feedbackOnboarding'];
 		roi: '24 x higher completion on mobile'
-		competitors: ['TypeformSurveyMonkey']
+		competitors: ['TypeformSurveyMonkey'];
 		marketSize: '$7 B research tooling'
 		growthRate: '9% CAGR'
 		variant: 'holographic-matrix'
@@ -11508,9 +11418,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		implementationDetails: 'Survey builder + delivery channels + analytics + export'
 		launchDate: '2025-08-20'
 		customers: 22,
-		rating: 4.6}
-		reviews: 9}
-	}
+		rating: 4.6};
+		reviews: 9};
+	};
 	{
 		id: 'niche-productivity-planner'
 		name: 'Niche Productivity Planner',
@@ -11520,7 +11430,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		description: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.'
 		features: [
 			'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views'
-		]
+		];
 		popular: false
 		icon: ''
 		color: 'from-purple-600 to-indigo-700'
@@ -11532,11 +11442,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		setupTime: '10 minutes'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Next.jsSQLite/Postgres']
-		integrations: ['Google CalendarOutlook']
-		useCases: ['Agency opsClinic opsBoutique retail']
+		technology: ['Next.jsSQLite/Postgres'];
+		integrations: ['Google CalendarOutlook'];
+		useCases: ['Agency opsClinic opsBoutique retail'];
 		roi: 'Saves 35 hrs/week per user'
-		competitors: ['Notion templatesClickUp']
+		competitors: ['Notion templatesClickUp'];
 		marketSize: '$3 B productivity niche'
 		growthRate: '8% CAGR'
 		variant: 'ai-futuristic'
@@ -11545,9 +11455,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		implementationDetails: 'Templates + KPI widgets + export'
 		launchDate: '2025-08-20'
 		customers: 18,
-		rating: 4.5}
-		reviews: 7}
-	}
+		rating: 4.5};
+		reviews: 7};
+	};
 	{
 		id: 'event-management-dashboard'
 		name: 'Event Management Dashboard',
@@ -11557,7 +11467,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		description: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.'
 		features: [
 			'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports'
-		]
+		];
 		popular: true
 		icon: ''
 		color: 'from-pink-600 to-rose-700'
@@ -11569,11 +11479,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		setupTime: '1 hour'
 		category: 'Developer Tools'
 		realService: true
-		technology: ['Next.jsStripeTwilio']
-		integrations: ['ZoomGoogle CalendarSlack']
-		useCases: ['WebinarsTown hallsCustomer training']
+		technology: ['Next.jsStripeTwilio'];
+		integrations: ['ZoomGoogle CalendarSlack'];
+		useCases: ['WebinarsTown hallsCustomer training'];
 		roi: 'Saves 50% ops time per event'
-		competitors: ['EventbriteHopin (basic)']
+		competitors: ['EventbriteHopin (basic)'];
 		marketSize: '$6 B event tooling'
 		growthRate: '10% CAGR'
 		variant: 'network-futuristic'
@@ -11582,250 +11492,249 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		implementationDetails: 'Ticketing + agenda + comms + analytics'
 		launchDate: '2025-08-20'
 		customers: 31,
-		rating: 4.7}
-		reviews: 11}
-// const contact = {/* TODO: Fix JSX expression */}
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+		rating: 4.7};
+		reviews: 11};
+// const contact = {/* TODO: Fix JSX expression */};
+  s: '364 E Main St STE 1008 Middletown DE 19709'};
 	websit,
   e: 'http,
   s://ziontechgroup.com'
-}
+};
 export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 12}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 12};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 9}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 9};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 7};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 11}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 11};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 8}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 8};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 6}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 6};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 8}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 8};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 6};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 10};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 7};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 10};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 7}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 7};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 6}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 6};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 6};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 10};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 7}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 7};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.7}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.7};
 		review,
-  s: 10}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 10};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 7}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 7};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.4}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.4};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 5}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 5};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 6}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 6};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 3}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.5}
+  s: 3};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.5};
 		review,
-  s: 4}
-	}
-	{/* TODO: Fix JSX expression */}
-  g: 4.6}
+  s: 4};
+	};
+	{/* TODO: Fix JSX expression */};
+  g: 4.6};
 		review,
-  s: 6}
-	}
-]
+  s: 6};
+	};
+];
 'Intent classification + prioritization'' 'On-brand response drafting'' 'Automatic polite follow-ups'' 'Lead/contact enrichment'' 'Analytics and response SLAs' ] popula,
-  r: true' ico,
-  n: '📧'' colo,
+  r: true' icon: '📧'' colo,
   r: 'from-cyan-600 to-blue-700'' textColo,
   r: 'text-cyan-300'' lin,
   k: 'http,
@@ -11846,8 +11755,7 @@ export const,
   t: 'network-futuristic' contactInf,
   o: contact,
   realImplementation: true' 'Intent classification + prioritization',' 'On-brand response drafting',' 'Automatic polite follow-ups',' 'Lead/contact enrichment', ' 'Intent classification + prioritization',' 'On - brand response drafting',' 'Automatic polite follow - ups',' 'Lead / contact enrichment', 'Analytics and response SLAs'], popula,
-  r: true,' ico,
-  n: '📧', ' colo,
+  r: true,' icon: '📧', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
@@ -11910,8 +11818,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.', feature,
   s: [,' 'Branching logic + A / B prompts',' 'SMS / WhatsApp / web delivery',' 'Real - time analytics',' 'CSV / Sheets export', ' 'Webhooks + API'], popula,
-  r: false,' ico,
-  n: '📱', ' colo,
+  r: false,' icon: '📱', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
@@ -11944,8 +11851,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.', feature,
   s: [, ' 'Industry templates',' 'Calendar + task sync',' 'Benchmark KPIs',' 'Export to PDF',' 'Role - based views'], popula,
-  r: false,' ico,
-  n: '🗂️', ' colo,
+  r: false,' icon: '🗂️', ' colo,
   r: 'from - purple - 600 to - indigo - 700',' text_colo,
   r: 'text - purple - 300',' lin,
   k: 'http,
@@ -11978,8 +11884,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.', feature,
   s: [,' 'QR tickets + check - in',' 'Email / SMS reminders', ' 'Agenda builder',' 'Feedback forms',' 'Post - event reports'], popula,
-  r: true,' ico,
-  n: '🎟️', ' colo,
+  r: true,' icon: '🎟️', ' colo,
   r: 'from - pink - 600 to - rose - 700',' text_colo,
   r: 'text - pink - 300',' lin,
   k: 'http,
@@ -12012,8 +11917,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Create affiliate programs with branded links, flexible commission rules, and payout exports.', feature,
   s: [, ' 'Custom referral links',' 'UTM attribution',' 'Rule - based commissions',' 'Payout exports',' 'Fraud checks'], popula,
-  r: false,' ico,
-  n: '🔗', ' colo,
+  r: false,' icon: '🔗', ' colo,
   r: 'from - amber - 600 to - orange - 700',' text_colo,
   r: 'text - amber - 300',' lin,
   k: 'http,
@@ -12046,8 +11950,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.', feature,
   s: [, ' 'Page + event analytics',' 'Funnels + cohorts',' 'Weekly email summaries',' 'CSV export',' 'No cookies mode'], popula,
-  r: false,' ico,
-  n: '📊', ' colo,
+  r: false,' icon: '📊', ' colo,
   r: 'from - sky - 600 to - indigo - 700',' text_colo,
   r: 'text - sky - 300',' lin,
   k: 'http,
@@ -12080,8 +11983,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.', feature,
   s: [,' 'Email - to - ticket', ' 'KB + article templates',' 'SLAs + escalations',' 'Client portal',' 'Reports'], popula,
-  r: true,' ico,
-  n: '🆘', ' colo,
+  r: true,' icon: '🆘', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
@@ -12114,8 +12016,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.', feature,
   s: [,' 'Self - serve returns portal', ' 'Label generation',' 'Return reasons analytics',' 'Inventory sync',' 'Notifications'], popula,
-  r: true,' ico,
-  n: '📦', ' colo,
+  r: true,' icon: '📦', ' colo,
   r: 'from - violet - 600 to - fuchsia - 700',' text_colo,
   r: 'text - violet - 300',' lin,
   k: 'http,
@@ -12148,8 +12049,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.', feature,
   s: [, ' 'Sequences + delays',' 'Inbox integration',' 'Smart stop on reply',' 'Templates',' 'Analytics'], popula,
-  r: false,' ico,
-  n: '📨', ' colo,
+  r: false,' icon: '📨', ' colo,
   r: 'from - cyan - 600 to - teal - 700',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
@@ -12182,8 +12082,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.', feature,
   s: [, ' 'Fast transcripts',' 'Timestamps + chapters',' 'Summaries + highlights',' 'Blog export',' 'Glossary'], popula,
-  r: false,' ico,
-  n: '🎙️', ' colo,
+  r: false,' icon: '🎙️', ' colo,
   r: 'from - indigo - 600 to - blue - 700',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
@@ -12216,8 +12115,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.', feature,
   s: [,' 'On - page audits', ' 'Topic clustering',' 'SERP intent match',' 'Internal link hints',' 'Rewrite suggestions'], popula,
-  r: true,' ico,
-  n: '🔎', ' colo,
+  r: true,' icon: '🔎', ' colo,
   r: 'from - emerald - 600 to - green - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
@@ -12250,8 +12148,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.', feature,
   s: [, ' 'Content repurposing',' 'Calendar + auto - times',' 'Hashtag + emoji assistant',' 'Link tracking',' 'Client approvals'], popula,
-  r: false,' ico,
-  n: '📆', ' colo,
+  r: false,' icon: '📆', ' colo,
   r: 'from - fuchsia - 600 to - pink - 700',' text_colo,
   r: 'text - fuchsia - 300',' lin,
   k: 'http,
@@ -12284,8 +12181,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.', feature,
   s: [, ' 'Firmographics',' 'Role detection',' 'Validated email signals',' 'Confidence scoring',' 'Usage dashboards'], popula,
-  r: false,' ico,
-  n: '🧩', ' colo,
+  r: false,' icon: '🧩', ' colo,
   r: 'from - blue - 600 to - sky - 700',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
@@ -12318,8 +12214,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.', feature,
   s: [, ' 'Geo rules',' 'IAB TCF',' 'Preference center',' 'Audit logs',' 'Multi - brand themes'], popula,
-  r: true,' ico,
-  n: '✅', ' colo,
+  r: true,' icon: '✅', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
@@ -12352,8 +12247,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.', feature,
   s: [, ' 'Site scan',' 'Tracker classification',' 'Policy generator',' 'Diffs + history',' 'CI hook'], popula,
-  r: false,' ico,
-  n: '🍪', ' colo,
+  r: false,' icon: '🍪', ' colo,
   r: 'from - amber - 600 to - yellow - 700',' text_colo,
   r: 'text - amber - 300',' lin,
   k: 'http,
@@ -12386,8 +12280,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.', feature,
   s: [, ' 'Incident log',' 'Public status page',' 'SLA calculator',' 'RSS + webhooks',' 'Exports'], popula,
-  r: false,' ico,
-  n: '📈', ' colo,
+  r: false,' icon: '📈', ' colo,
   r: 'from - sky - 600 to - cyan - 700',' text_colo,
   r: 'text - sky - 300',' lin,
   k: 'http,
@@ -12462,8 +12355,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.', feature,
   s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human'], popula,
-  r: true,' ico,
-  n: '🤖',' colo,
+  r: true,' icon: '🤖',' colo,
   r: 'from - teal - 600 to - emerald - 700',' text_colo,
   r: 'text - teal - 300',' lin,
   k: 'http,
@@ -12496,8 +12388,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Hosted portal for DSARs with identity verification, workflow, and export helpers.', feature,
   s: [,' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs'], popula,
-  r: true,' ico,
-  n: '🛡️',' colo,
+  r: true,' icon: '🛡️',' colo,
   r: 'from - red - 600 to - rose - 700',' text_colo,
   r: 'text - red - 300',' lin,
   k: 'http,
@@ -12530,8 +12421,7 @@ export const,
   d: '/month' descriptio,
   n:' 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.' feature,
   s: [' 'Repo scanner'' 'Flag inventory'' 'Risk detection'' 'PR suggestions'' 'CI integration' ] popula,
-  r: false' ico,
-  n: '🚩'' colo,
+  r: false' icon: '🚩'' colo,
   r: 'from-rose-600 to-pink-700'' textColo,
   r: 'text-rose-300'' lin,
   k: 'http,
@@ -12557,8 +12447,7 @@ export const,
   s: 8,
   rating: 4.4,
   reviews: 3 }' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration'], popula,
-  r: false,' ico,
-  n: '🚩', ' colo,
+  r: false,' icon: '🚩', ' colo,
   r: 'from - rose - 600 to - pink - 700',' text_colo,
   r: 'text - rose - 300',' lin,
   k: 'http,
@@ -12677,8 +12566,7 @@ export const,
   d: '/month' descriptio,
   n:' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.' feature,
   s: [' 'Slow query capture'' 'Index suggestions'' 'Risk scoring'' 'PR generation'' 'Rollback assist' ] popula,
-  r: true' ico,
-  n: '🗄️'' colo,
+  r: true' icon: '🗄️'' colo,
   r: 'from-blue-700 to-indigo-800'' textColo,
   r: 'text-blue-300'' lin,
   k: 'http,
@@ -12711,8 +12599,7 @@ export const,
   d: '/month' descriptio,
   n:' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.' feature,
   s: [' 'Usage analysis'' 'Rule suggestions'' 'Cost simulator'' 'Change sets'' 'Alerting' ] popula,
-  r: false' ico,
-  n: '🗂️'' colo,
+  r: false' icon: '🗂️'' colo,
   r: 'from-emerald-700 to-teal-800'' textColo,
   r: 'text-emerald-300'' lin,
   k: 'http,
@@ -12745,8 +12632,7 @@ export const,
   d: '/month' descriptio,
   n:' 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.' feature,
   s: [' 'Connectors'' 'Sensitive entity detection'' 'Sampling with redaction'' 'Findings export'' 'Alerting' ] popula,
-  r: true' ico,
-  n: '🕵️'' colo,
+  r: true' icon: '🕵️'' colo,
   r: 'from-red-700 to-rose-800'' textColo,
   r: 'text-red-300'' lin,
   k: 'http,
@@ -12772,8 +12658,7 @@ export const,
   s: 13,
   rating: 4.6,
   reviews: 5 } ' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration'], popula,
-  r: false,' ico,
-  n: '🚩',' colo,
+  r: false,' icon: '🚩',' colo,
   r: 'from-rose-600 to-pink-700',' textColo,
   r: 'text-rose-300',' lin,
   k: 'http,
@@ -12806,8 +12691,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
   s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
-  r: true,' ico,
-  n: '🗄️',' colo,
+  r: true,' icon: '🗄️',' colo,
   r: 'from - blue - 700 to - indigo - 800',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
@@ -12840,8 +12724,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.', feature,
   s: [,' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
-  r: false,' ico,
-  n: '🗂️',' colo,
+  r: false,' icon: '🗂️',' colo,
   r: 'from - emerald - 700 to - teal - 800',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
@@ -12874,8 +12757,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.', feature,
   s: [,' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
-  r: true,' ico,
-  n: '🕵️',' colo,
+  r: true,' icon: '🕵️',' colo,
   r: 'from - red - 700 to - rose - 800',' text_colo,
   r: 'text - red - 300',' lin,
   k: 'http,
@@ -12914,8 +12796,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
-  r: false,' ico,
-  n: '🧭', ' colo,
+  r: false,' icon: '🧭', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
@@ -12942,8 +12823,7 @@ export const,
   g: 4 && 4.5, review,
   s: 3}, ' 'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.', feature,
   s: [' 'Schema registry'' 'Diff rules'' 'Owner mapping'' 'CI checks'' 'Changelog hints' ] popula,
-  r: false' ico,
-  n: '🧭'' colo,
+  r: false' icon: '🧭'' colo,
   r: 'from-indigo-700 to-violet-800'' textColo,
   r: 'text-indigo-300'' lin,
   k: 'http,
@@ -12976,8 +12856,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.', feature,
   s: [, ' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration'], popula,
-  r: false,' ico,
-  n: '🚩', ' colo,
+  r: false,' icon: '🚩', ' colo,
   r: 'from - rose - 600 to - pink - 700',' text_colo,
   r: 'text - rose - 300',' lin,
   k: 'http,
@@ -13010,8 +12889,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
   s: [, ' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
-  r: true,' ico,
-  n: '🗄️', ' colo,
+  r: true,' icon: '🗄️', ' colo,
   r: 'from - blue - 700 to - indigo - 800',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
@@ -13044,8 +12922,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.', feature,
   s: [, ' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
-  r: false,' ico,
-  n: '🗂️', ' colo,
+  r: false,' icon: '🗂️', ' colo,
   r: 'from - emerald - 700 to - teal - 800',' text_colo,
   r: 'text - emerald - 300',' lin,
   k: 'http,
@@ -13078,8 +12955,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.', feature,
   s: [, ' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
-  r: true,' ico,
-  n: '🕵️', ' colo,
+  r: true,' icon: '🕵️', ' colo,
   r: 'from - red - 700 to - rose - 800',' text_colo,
   r: 'text - red - 300',' lin,
   k: 'http,
@@ -13119,8 +12995,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
   s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
-  r: false,' ico,
-  n: '🧭', ' colo,
+  r: false,' icon: '🧭', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
@@ -13153,8 +13028,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.', feature,
   s: [, ' 'Recorder',' 'Selector healing',' 'Schedules',' 'SLO alerts',' 'Reports'], popula,
-  r: false,' ico,
-  n: '🧪', ' colo,
+  r: false,' icon: '🧪', ' colo,
   r: 'from - cyan - 700 to - blue - 800',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
@@ -13187,8 +13061,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.', feature,
   s: [, ' 'Policy inventory',' 'Usage analysis',' 'Recommendations',' 'PR generation',' 'Alerting'], popula,
-  r: true,' ico,
-  n: '🔐', ' colo,
+  r: true,' icon: '🔐', ' colo,
   r: 'from - blue - 700 to - slate - 800',' text_colo,
   r: 'text - blue - 300',' lin,
   k: 'http,
@@ -13221,8 +13094,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.', feature,
   s: [, ' 'Query profiling',' 'Size / schedule proposals',' 'Cost simulator',' 'PR templates',' 'Alerts'], popula,
-  r: true,' ico,
-  n: '🧱', ' colo,
+  r: true,' icon: '🧱', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
   r: 'text - indigo - 300',' lin,
   k: 'http,
@@ -13255,8 +13127,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.', feature,
   s: [, ' 'Warmup campaigns',' 'Seed inbox tests',' 'Domain / auth checks',' 'Alerts',' 'Reports'], popula,
-  r: false,' ico,
-  n: '🔥', ' colo,
+  r: false,' icon: '🔥', ' colo,
   r: 'from - orange - 600 to - rose - 700',' text_colo,
   r: 'text - orange - 300',' lin,
   k: 'http,
@@ -13289,8 +13160,7 @@ export const,
   d: '/user / mo', descriptio,
   n:  ,' 'Transcribe meetings, extract action items, and open tickets with owners and due dates.', feature,
   s: [, ' 'Transcription',' 'Action extraction',' 'Ticket creation',' 'Owner mapping',' 'Summaries'], popula,
-  r: true,' ico,
-  n: '📝', ' colo,
+  r: true,' icon: '📝', ' colo,
   r: 'from - cyan - 700 to - blue - 800',' text_colo,
   r: 'text - cyan - 300',' lin,
   k: 'http,
@@ -13329,8 +13199,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high-quality replies, and schedules polite follow-ups. Escalates edge cases to humans with context summaries.', feature,
   s: [ ' 'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs' ], popula,
-  r: true,' ico,
-  n: '📧'' colo,
+  r: true,' icon: '📧'' colo,
   r: 'from-cyan-600 to-blue-700'' textColo,
   r: 'text-cyan-300' ' lin,
   k: 'http,
@@ -13363,8 +13232,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS/WhatsApp delivery and one-tap choices.' feature,
   s: [' 'Branching logic + A/B promptsSMS/WhatsApp/web deliveryReal-time analyticsCSV/Sheets exportWebhooks + API' ], popula,
-  r: false,' ico,
-  n: '📱'' colo,
+  r: false,' icon: '📱'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300' ' lin,
   k: 'http,
@@ -13397,8 +13265,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.' feature,
   s: [' 'Industry templatesCalendar + task syncBenchmark KPIsExport to PDFRole-based views' ], popula,
-  r: false,' ico,
-  n: '🗂️'' colo,
+  r: false,' icon: '🗂️'' colo,
   r: 'from-purple-600 to-indigo-700'' textColo,
   r: 'text-purple-300'' lin,
   k: 'http,
@@ -13431,8 +13298,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Run webinars or in-person events with landing pages, reminders, QR tickets, and feedback analytics.' feature,
   s: [' 'QR tickets + check-inEmail/SMS remindersAgenda builderFeedback formsPost-event reports' ], popula,
-  r: true,' ico,
-  n: '🎟️'' colo,
+  r: true,' icon: '🎟️'' colo,
   r: 'from-pink-600 to-rose-700'' textColo,
   r: 'text-pink-300' ' lin,
   k: 'http,
@@ -13465,8 +13331,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'' feature,
   s: ['Custom referral linksUTM attributionRule-based commissionsPayout exportsFraud checks'], popula,
-  r: false,' ico,
-  n: '🔗'' colo,
+  r: false,' icon: '🔗'' colo,
   r: 'from-amber-600 to-orange-700'' textColo,
   r: 'text-amber-300' ' lin,
   k: 'http,
@@ -13499,8 +13364,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Privacy-friendly analytics for small businesses with funnel insights and weekly summaries.'' feature,
   s: ['Page + event analyticsFunnels + cohortsWeekly email summariesCSV exportNo cookies mode'], popula,
-  r: false,' ico,
-  n: '📊'' colo,
+  r: false,' icon: '📊'' colo,
   r: 'from-sky-600 to-indigo-700'' textColo,
   r: 'text-sky-300' ' lin,
   k: 'http,
@@ -13533,8 +13397,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client-visible status.'' feature,
   s: ['Email-to-ticketKB + article templatesSLAs + escalationsClient portalReports'], popula,
-  r: true,' ico,
-  n: '🆘'' colo,
+  r: true,' icon: '🆘'' colo,
   r: 'from-blue-600 to-indigo-700'' textColo,
   r: 'text-blue-300' ' lin,
   k: 'http,
@@ -13567,8 +13430,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'' feature,
   s: ['Self-serve returns portalLabel generationReturn reasons analyticsInventory syncNotifications'], popula,
-  r: true,' ico,
-  n: '📦'' colo,
+  r: true,' icon: '📦'' colo,
   r: 'from-violet-600 to-fuchsia-700'' textColo,
   r: 'text-violet-300' ' lin,
   k: 'http,
@@ -13601,8 +13463,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto-scheduling.'' feature,
   s: ['Sequences + delaysInbox integrationSmart stop on replyTemplatesAnalytics'], popula,
-  r: false,' ico,
-  n: '📨'' colo,
+  r: false,' icon: '📨'' colo,
   r: 'from-cyan-600 to-teal-700'' textColo,
   r: 'text-cyan-300' ' lin,
   k: 'http,
@@ -13635,8 +13496,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress-ready blog exports.'' feature,
   s: ['Fast transcriptsTimestamps + chaptersSummaries + highlightsBlog exportGlossary'], popula,
-  r: false,' ico,
-  n: '🎙️'' colo,
+  r: false,' icon: '🎙️'' colo,
   r: 'from-indigo-600 to-blue-700'' textColo,
   r: 'text-indigo-300' ' lin,
   k: 'http,
@@ -13669,8 +13529,7 @@ export const,
   d: '/month'' descriptio,
   n: 'In-editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'' feature,
   s: ['On-page auditsTopic clusteringSERP intent matchInternal link hintsRewrite suggestions'], popula,
-  r: true,' ico,
-  n: '🔎'' colo,
+  r: true,' icon: '🔎'' colo,
   r: 'from-emerald-600 to-green-700'' textColo,
   r: 'text-emerald-300' ' lin,
   k: 'http,
@@ -13703,8 +13562,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best-time predictions.'' feature,
   s: ['Content repurposingCalendar + auto-timesHashtag + emoji assistantLink trackingClient approvals'], popula,
-  r: false,' ico,
-  n: '📆'' colo,
+  r: false,' icon: '📆'' colo,
   r: 'from-fuchsia-600 to-pink-700'' textColo,
   r: 'text-fuchsia-300' ' lin,
   k: 'http,
@@ -13737,8 +13595,7 @@ export const,
   d: '/month',' descriptio,
   n: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'' feature,
   s: ['FirmographicsRole detectionValidated email signalsConfidence scoringUsage dashboards'], popula,
-  r: false,' ico,
-  n: '🧩'' colo,
+  r: false,' icon: '🧩'' colo,
   r: 'from-blue-600 to-sky-700'' textColo,
   r: 'text-blue-300' ' lin,
   k: 'http,
@@ -13771,8 +13628,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo-aware rules.'' feature,
   s: ['Geo rulesIAB TCFPreference centerAudit logsMulti-brand themes'], popula,
-  r: true,' ico,
-  n: '✅'' colo,
+  r: true,' icon: '✅'' colo,
   r: 'from-emerald-600 to-teal-700'' textColo,
   r: 'text-emerald-300' ' lin,
   k: 'http,
@@ -13805,8 +13661,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Scan your site for cookies/trackers, classify them, and generate policy updates with change diffs.'' feature,
   s: ['Site scanTracker classificationPolicy generatorDiffs + historyCI hook'], popula,
-  r: false,' ico,
-  n: '🍪'' colo,
+  r: false,' icon: '🍪'' colo,
   r: 'from-amber-600 to-yellow-700'' textColo,
   r: 'text-amber-300' ' lin,
   k: 'http,
@@ -13839,8 +13694,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Connect monitors, log incidents, and share public SLA/uptime reports with customers.'' feature,
   s: ['Incident logPublic status pageSLA calculatorRSS + webhooksExports'], popula,
-  r: false,' ico,
-  n: '📈'' colo,
+  r: false,' icon: '📈'' colo,
   r: 'from-sky-600 to-cyan-700'' textColo,
   r: 'text-sky-300'' lin,
   k: 'http,
@@ -13873,8 +13727,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'' feature,
   s: ['Qualifying flowsCalendar bookingCRM routingVisitor insightsHand-off to human'], popula,
-  r: true,' ico,
-  n: '🤖'' colo,
+  r: true,' icon: '🤖'' colo,
   r: 'from-teal-600 to-emerald-700'' textColo,
   r: 'text-teal-300' ' lin,
   k: 'http,
@@ -13907,8 +13760,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'' feature,
   s: ['Request intakeIdentity checkTriage + workflowExportsAudit logs'], popula,
-  r: true,' ico,
-  n: '🛡️'' colo,
+  r: true,' icon: '🛡️'' colo,
   r: 'from-red-600 to-rose-700'' textColo,
   r: 'text-red-300'' lin,
   k: 'http,
@@ -13941,8 +13793,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'' feature,
   s: ['Repo scannerFlag inventoryRisk detectionPR suggestionsCI integration'], popula,
-  r: false,' ico,
-  n: '🚩'' colo,
+  r: false,' icon: '🚩'' colo,
   r: 'from-rose-600 to-pink-700'' textColo,
   r: 'text-rose-300'' lin,
   k: 'http,
@@ -13975,8 +13826,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'' feature,
   s: ['Slow query captureIndex suggestionsRisk scoringPR generationRollback assist'], popula,
-  r: true,' ico,
-  n: '🗄️'' colo,
+  r: true,' icon: '🗄️'' colo,
   r: 'from-blue-700 to-indigo-800'' textColo,
   r: 'text-blue-300'' lin,
   k: 'http,
@@ -14009,8 +13859,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'' feature,
   s: ['Usage analysisRule suggestionsCost simulatorChange setsAlerting'], popula,
-  r: false,' ico,
-  n: '🗂️'' colo,
+  r: false,' icon: '🗂️'' colo,
   r: 'from-emerald-700 to-teal-800'' textColo,
   r: 'text-emerald-300'' lin,
   k: 'http,
@@ -14043,8 +13892,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'' feature,
   s: ['ConnectorsSensitive entity detectionSampling with redactionFindings exportAlerting'], popula,
-  r: true,' ico,
-  n: '🕵️'' colo,
+  r: true,' icon: '🕵️'' colo,
   r: 'from-red-700 to-rose-800'' textColo,
   r: 'text-red-300' ' lin,
   k: 'http,
@@ -14077,8 +13925,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Monitor OpenAPI/GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'' feature,
   s: ['Schema registryDiff rulesOwner mappingCI checksChangelog hints'], popula,
-  r: false,' ico,
-  n: '🧭'' colo,
+  r: false,' icon: '🧭'' colo,
   r: 'from-indigo-700 to-violet-800'' textColo,
   r: 'text-indigo-300'' lin,
   k: 'http,
@@ -14111,8 +13958,7 @@ export const,
   d: '/month'' descriptio,
   n: 'Browser-based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'' feature,
   s: ['RecorderSelector healingSchedulesSLO alertsReports'], popula,
-  r: false,' ico,
-  n: '🧪'' colo,
+  r: false,' icon: '🧪'' colo,
   r: 'from-cyan-700 to-blue-800'' textColo,
   r: 'text-cyan-300' ' lin,
   k: 'http,
@@ -14145,8 +13991,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Continuously analyze IAM policies/usage to propose safe permission reductions and open PRs.'' feature,
   s: ['Policy inventoryUsage analysisRecommendationsPR generationAlerting'], popula,
-  r: true,' ico,
-  n: '🔐'' colo,
+  r: true,' icon: '🔐'' colo,
   r: 'from-blue-700 to-slate-800'' textColo,
   r: 'text-blue-300'' lin,
   k: 'http,
@@ -14179,8 +14024,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake/BigQuery costs.'' feature,
   s: ['Query profilingSize/schedule proposalsCost simulatorPR templatesAlerts'], popula,
-  r: true,' ico,
-  n: '🧱'' colo,
+  r: true,' icon: '🧱'' colo,
   r: 'from-indigo-700 to-violet-800'' textColo,
   r: 'text-indigo-300'' lin,
   k: 'http,
@@ -14213,8 +14057,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'' feature,
   s: ['Warmup campaignsSeed inbox testsDomain/auth checksAlertsReports'], popula,
-  r: false,' ico,
-  n: '🔥'' colo,
+  r: false,' icon: '🔥'' colo,
   r: 'from-orange-600 to-rose-700'' textColo,
   r: 'text-orange-300'' lin,
   k: 'http,
@@ -14247,8 +14090,7 @@ export const,
   d: '/user/mo'' descriptio,
   n: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'' feature,
   s: ['TranscriptionAction extractionTicket creationOwner mappingSummaries'], popula,
-  r: true,' ico,
-  n: '📝'' colo,
+  r: true,' icon: '📝'' colo,
   r: 'from-cyan-700 to-blue-800'' textColo,
   r: 'text-cyan-300' ' lin,
   k: 'http,
@@ -14281,8 +14123,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Reads inbound emails, classifies intent, drafts high - quality replies, and schedules polite follow - ups. Escalates edge cases to humans with context summaries.' feature,
   s: [;' 'Intent classification + prioritization_on - brand response drafting_automatic polite follow - ups_lead / contact enrichment_analytics and response SLAs' ], popula,
-  r: true,' ico,
-  n: '📧'' colo,
+  r: true,' icon: '📧'' colo,
   r: 'from - cyan - 600 to - blue - 700'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
@@ -14315,8 +14156,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.' feature,
   s: [;' 'Branching logic + A / B promptsSMS / WhatsApp / web delivery_real - time analyticsCSV / Sheets export_webhooks + API' ], popula,
-  r: false,' ico,
-  n: '📱'' colo,
+  r: false,' icon: '📱'' colo,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
@@ -14349,8 +14189,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.' feature,
   s: [;' 'Industry templates_calendar + task sync_benchmark KPIsExport to PDFRole - based views' ], popula,
-  r: false,' ico,
-  n: '🗂️'' colo,
+  r: false,' icon: '🗂️'' colo,
   r: 'from - purple - 600 to - indigo - 700'' text_colo,
   r: 'text - purple - 300'' lin,
   k: 'http,
@@ -14383,8 +14222,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.' feature,
   s: [;' 'QR tickets + check - in_email / SMS reminders_agenda builder_feedback forms_post - event reports' ], popula,
-  r: true,' ico,
-  n: '🎟️'' colo,
+  r: true,' icon: '🎟️'' colo,
   r: 'from - pink - 600 to - rose - 700'' text_colo,
   r: 'text - pink - 300'' lin,
   k: 'http,
@@ -14417,8 +14255,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Create affiliate programs with branded links, flexible commission rules, and payout exports.'' feature,
   s: ['Custom referral linksUTM attribution_rule - based commissions_payout exports_fraud checks'], popula,
-  r: false,' ico,
-  n: '🔗'' colo,
+  r: false,' icon: '🔗'' colo,
   r: 'from - amber - 600 to - orange - 700'' text_colo,
   r: 'text - amber - 300'' lin,
   k: 'http,
@@ -14451,8 +14288,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.'' feature,
   s: ['Page + event analytics_funnels + cohorts_weekly email summariesCSV export_no cookies mode'], popula,
-  r: false,' ico,
-  n: '📊'' colo,
+  r: false,' icon: '📊'' colo,
   r: 'from - sky - 600 to - indigo - 700'' text_colo,
   r: 'text - sky - 300'' lin,
   k: 'http,
@@ -14485,8 +14321,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.'' feature,
   s: ['Email - to - ticketKB + article templatesSLAs + escalations_client portal_reports'], popula,
-  r: true,' ico,
-  n: '🆘'' colo,
+  r: true,' icon: '🆘'' colo,
   r: 'from - blue - 600 to - indigo - 700'' text_colo,
   r: 'text - blue - 300'' lin,
   k: 'http,
@@ -14519,8 +14354,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.'' feature,
   s: ['Self - serve returns portal_label generation_return reasons analytics_inventory sync_notifications'], popula,
-  r: true,' ico,
-  n: '📦'' colo,
+  r: true,' icon: '📦'' colo,
   r: 'from - violet - 600 to - fuchsia - 700'' text_colo,
   r: 'text - violet - 300'' lin,
   k: 'http,
@@ -14553,8 +14387,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.'' feature,
   s: ['Sequences + delays_inbox integration_smart stop on replyTemplatesAnalytics'], popula,
-  r: false,' ico,
-  n: '📨'' colo,
+  r: false,' icon: '📨'' colo,
   r: 'from - cyan - 600 to - teal - 700'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
@@ -14587,8 +14420,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.'' feature,
   s: ['Fast transcripts_timestamps + chapters_summaries + highlights_blog export_glossary'], popula,
-  r: false,' ico,
-  n: '🎙️'' colo,
+  r: false,' icon: '🎙️'' colo,
   r: 'from - indigo - 600 to - blue - 700'' text_colo,
   r: 'text - indigo - 300'' lin,
   k: 'http,
@@ -14621,8 +14453,7 @@ export const,
   d: '/month',' descriptio,
   n: 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.'' feature,
   s: ['On - page audits_topic clusteringSERP intent match_internal link hints_rewrite suggestions'], popula,
-  r: true,' ico,
-  n: '🔎'' colo,
+  r: true,' icon: '🔎'' colo,
   r: 'from - emerald - 600 to - green - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
@@ -14655,8 +14486,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.'' feature,
   s: ['Content repurposing_calendar + auto - times_hashtag + emoji assistant_link tracking_client approvals'], popula,
-  r: false,' ico,
-  n: '📆'' colo,
+  r: false,' icon: '📆'' colo,
   r: 'from - fuchsia - 600 to - pink - 700'' text_colo,
   r: 'text - fuchsia - 300'' lin,
   k: 'http,
@@ -14689,8 +14519,7 @@ export const,
   d: '/month',' descriptio,
   n: 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.'' feature,
   s: ['FirmographicsRole detection_validated email signals_confidence scoring_usage dashboards'], popula,
-  r: false,' ico,
-  n: '🧩'' colo,
+  r: false,' icon: '🧩'' colo,
   r: 'from - blue - 600 to - sky - 700'' text_colo,
   r: 'text - blue - 300'' lin,
   k: 'http,
@@ -14723,8 +14552,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.'' feature,
   s: ['Geo rulesIAB TCFPreference center_audit logs_multi - brand themes'], popula,
-  r: true,' ico,
-  n: '✅'' colo,
+  r: true,' icon: '✅'' colo,
   r: 'from - emerald - 600 to - teal - 700'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
@@ -14757,8 +14585,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.'' feature,
   s: ['Site scan_tracker classification_policy generator_diffs + historyCI hook'], popula,
-  r: false,' ico,
-  n: '🍪'' colo,
+  r: false,' icon: '🍪'' colo,
   r: 'from - amber - 600 to - yellow - 700'' text_colo,
   r: 'text - amber - 300'' lin,
   k: 'http,
@@ -14791,8 +14618,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.'' feature,
   s: ['Incident log_public status pageSLA calculatorRSS + webhooks_exports'], popula,
-  r: false,' ico,
-  n: '📈'' colo,
+  r: false,' icon: '📈'' colo,
   r: 'from - sky - 600 to - cyan - 700'' text_colo,
   r: 'text - sky - 300'' lin,
   k: 'http,
@@ -14825,8 +14651,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.'' feature,
   s: ['Qualifying flows_calendar bookingCRM routing_visitor insights_hand - off to human'], popula,
-  r: true,' ico,
-  n: '🤖'' colo,
+  r: true,' icon: '🤖'' colo,
   r: 'from - teal - 600 to - emerald - 700'' text_colo,
   r: 'text - teal - 300'' lin,
   k: 'http,
@@ -14859,8 +14684,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Hosted portal for DSARs with identity verification, workflow, and export helpers.'' feature,
   s: ['Request intake_identity check_triage + workflowExportsAudit logs'], popula,
-  r: true,' ico,
-  n: '🛡️'' colo,
+  r: true,' icon: '🛡️'' colo,
   r: 'from - red - 600 to - rose - 700'' text_colo,
   r: 'text - red - 300'' lin,
   k: 'http,
@@ -14893,8 +14717,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.'' feature,
   s: ['Repo scanner_flag inventory_risk detectionPR suggestionsCI integration'], popula,
-  r: false,' ico,
-  n: '🚩'' colo,
+  r: false,' icon: '🚩'' colo,
   r: 'from - rose - 600 to - pink - 700'' text_colo,
   r: 'text - rose - 300'' lin,
   k: 'http,
@@ -14927,8 +14750,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'' feature,
   s: ['Slow query capture_index suggestions_risk scoringPR generation_rollback assist'], popula,
-  r: true,' ico,
-  n: '🗄️'' colo,
+  r: true,' icon: '🗄️'' colo,
   r: 'from - blue - 700 to - indigo - 800'' text_colo,
   r: 'text - blue - 300'' lin,
   k: 'http,
@@ -14961,8 +14783,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'' feature,
   s: ['Usage analysis_rule suggestions_cost simulator_change sets_alerting'], popula,
-  r: false,' ico,
-  n: '🗂️'' colo,
+  r: false,' icon: '🗂️'' colo,
   r: 'from - emerald - 700 to - teal - 800'' text_colo,
   r: 'text - emerald - 300'' lin,
   k: 'http,
@@ -14995,8 +14816,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.'' feature,
   s: ['ConnectorsSensitive entity detection_sampling with redaction_findings export_alerting'], popula,
-  r: true,' ico,
-  n: '🕵️'' colo,
+  r: true,' icon: '🕵️'' colo,
   r: 'from - red - 700 to - rose - 800'' text_colo,
   r: 'text - red - 300'' lin,
   k: 'http,
@@ -15029,8 +14849,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.'' feature,
   s: ['Schema registry_diff rules_owner mappingCI checks_changelog hints'], popula,
-  r: false,' ico,
-  n: '🧭'' colo,
+  r: false,' icon: '🧭'' colo,
   r: 'from - indigo - 700 to - violet - 800'' text_colo,
   r: 'text - indigo - 300'' lin,
   k: 'http,
@@ -15063,8 +14882,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.'' feature,
   s: ['RecorderSelector healingSchedulesSLO alerts_reports'], popula,
-  r: false,' ico,
-  n: '🧪'' colo,
+  r: false,' icon: '🧪'' colo,
   r: 'from - cyan - 700 to - blue - 800'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
@@ -15097,8 +14915,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.'' feature,
   s: ['Policy inventory_usage analysisRecommendationsPR generation_alerting'], popula,
-  r: true,' ico,
-  n: '🔐'' colo,
+  r: true,' icon: '🔐'' colo,
   r: 'from - blue - 700 to - slate - 800'' text_colo,
   r: 'text - blue - 300'' lin,
   k: 'http,
@@ -15131,8 +14948,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.'' feature,
   s: ['Query profiling_size / schedule proposals_cost simulatorPR templates_alerts'], popula,
-  r: true,' ico,
-  n: '🧱'' colo,
+  r: true,' icon: '🧱'' colo,
   r: 'from - indigo - 700 to - violet - 800'' text_colo,
   r: 'text - indigo - 300'' lin,
   k: 'http,
@@ -15165,8 +14981,7 @@ export const,
   d: '/month',' descriptio,
   n: 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.'' feature,
   s: ['Warmup campaigns_seed inbox tests_domain / auth checksAlertsReports'], popula,
-  r: false,' ico,
-  n: '🔥'' colo,
+  r: false,' icon: '🔥'' colo,
   r: 'from - orange - 600 to - rose - 700'' text_colo,
   r: 'text - orange - 300'' lin,
   k: 'http,
@@ -15199,8 +15014,7 @@ export const,
   d: '/user / mo',' descriptio,
   n: 'Transcribe meetings, extract action items, and open tickets with owners and due dates.'' feature,
   s: ['TranscriptionAction extraction_ticket creation_owner mapping_summaries'], popula,
-  r: true,' ico,
-  n: '📝'' colo,
+  r: true,' icon: '📝'' colo,
   r: 'from - cyan - 700 to - blue - 800'' text_colo,
   r: 'text - cyan - 300'' lin,
   k: 'http,
@@ -15227,126 +15041,126 @@ export const,
   g: 4.6, review,
   s: 6} ratin,
   g: 4.6,
-  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
+  s: 12} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 9} } {/* TODO: Fix JSX expression */}
+  s: 9} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
+  s: 7} } {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 11} } {/* TODO: Fix JSX expression */}
+  s: 11} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
+  s: 8} } {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
+  s: 6} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
+  s: 8} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
+  s: 6} } {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
+  s: 10} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
+  s: 7} } {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
+  s: 4} } {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
+  s: 10} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
+  s: 7} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
+  s: 4} } {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
+  s: 4} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
+  s: 6} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
+  s: 4} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
+  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */};
   l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,
   e: 'http,
   s://ziontechgroup.com' } export const,
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
+  real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 12} } {/* TODO: Fix JSX expression */}
+  s: 12} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 9} } {/* TODO: Fix JSX expression */}
+  s: 9} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
+  s: 7} } {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 11} } {/* TODO: Fix JSX expression */}
+  s: 11} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
+  s: 8} } {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
+  s: 6} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 8} } {/* TODO: Fix JSX expression */}
+  s: 8} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
+  s: 6} } {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
+  s: 10} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
+  s: 7} } {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
+  s: 4} } {/* TODO: Fix JSX expression */};
   g: 4.7} review,
-  s: 10} } {/* TODO: Fix JSX expression */}
+  s: 10} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 7} } {/* TODO: Fix JSX expression */}
+  s: 7} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
+  s: 4} } {/* TODO: Fix JSX expression */};
   g: 4.4} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
+  s: 4} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 5} } {/* TODO: Fix JSX expression */}
+  s: 5} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 6} } {/* TODO: Fix JSX expression */}
+  s: 6} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 3} } {/* TODO: Fix JSX expression */}
+  s: 3} } {/* TODO: Fix JSX expression */};
   g: 4.5} review,
-  s: 4} } {/* TODO: Fix JSX expression */}
+  s: 4} } {/* TODO: Fix JSX expression */};
   g: 4.6} review,
   s: 6} } ]; '

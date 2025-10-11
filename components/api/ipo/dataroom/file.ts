@@ -32,6 +32,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: "file_open", section, name: file })
   fs.createReadStream(fullPath).pipe(res)
 }
+  ;
+  ;
   const section = String(req && req.query.section || "General")
   const file = String(req && req.query.file || "")
   if (!file) return res && res.status(400).json({ error: "Missing file" })
@@ -46,7 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!fs && fs.existsSync(fullPath))
     return res && res.status(404).json({ error: "Not found" })
   const contentType =
-}
+};
 import type { NextApiRequest, NextApiResponse  } from './next'
 import fs from './fs'
 import path from './path'
@@ -92,7 +94,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Type", contentType)
   appendAuditLog({ type: "file_open", section, name: file })
   fs.createReadStream(fullPath).pipe(res)
-}
+};
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -115,4 +117,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Type', contentType)
   appendAuditLog({ type: 'file_open', section, name: file })
   fs.createReadStream(fullPath).pipe(res)
-}
+};
+;

@@ -7,27 +7,27 @@ export interface ComprehensiveService {
   price: number
   currency: string
   pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based'
-  features: string[]
-  benefits: string[]
-  useCases: string[]
+  features: string[];
+  benefits: string[];
+  useCases: string[];
   marketPrice: string
   contactLink: string
   subcategory: string
   price: number
   currency: string
   pricingModel: 'one-time' | 'subscription' | 'usage-based' | 'project-based'
-  features: string[]
-  benefits: string[]
+  features: string[];
+  benefits: string[];
   marketPrice: string
   deliveryTime: string
-  tags: string[]
+  tags: string[];
   author: {
     name: string
     id: string
     avatarUrl?: string
     verified: boolean
-  }
-  images: string[]
+  };
+  images: string[];
   rating: number
   reviewCount: number
   aiScore: number
@@ -36,8 +36,8 @@ export interface ComprehensiveService {
     phone: string
     email: string
     website: string
-  }
-}
+  };
+};
 export const comprehensiveServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -99,7 +99,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-process-automation",
@@ -145,7 +145,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-healthcare-analytics",
@@ -195,7 +195,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-supply-chain-optimization",
@@ -245,7 +245,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-quality-assurance",
@@ -295,7 +295,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-customer-feedback-analysis",
@@ -345,7 +345,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-predictive-maintenance",
@@ -395,7 +395,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // NEW INNOVATIVE MICSAAS SERVICES
   {
@@ -444,7 +444,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "smart-inventory-manager",
@@ -492,7 +492,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-cybersecurity-suite",
@@ -540,7 +540,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-devops-platform",
@@ -588,7 +588,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-hr-suite",
@@ -636,7 +636,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "blockchain-supply-chain",
@@ -684,7 +684,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-financial-modeling",
@@ -732,7 +732,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-customer-support",
@@ -780,7 +780,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "iot-health-monitoring",
@@ -828,7 +828,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-logistics-optimizer",
@@ -876,7 +876,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-ai-research-platform",
@@ -924,7 +924,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-energy-management",
@@ -972,7 +972,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-legal-assistant",
@@ -1020,7 +1020,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-cryptography-platform",
@@ -1068,7 +1068,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-marketing-orchestrator",
@@ -1116,7 +1116,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "iot-smart-city-platform",
@@ -1164,7 +1164,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-education-platform",
@@ -1210,7 +1210,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Cloud & DevOps Services
   {
@@ -1261,7 +1261,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-financial-advisory-platform",
@@ -1311,7 +1311,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-machine-learning-platform",
@@ -1361,7 +1361,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "cloud-devops-2",
@@ -1409,7 +1409,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Cybersecurity Services
   {
@@ -1461,7 +1461,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
     id: "data-analytics-platform",
     title: "Advanced Data Analytics Platform",
@@ -1546,7 +1546,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-content-marketing-suite",
@@ -1596,7 +1596,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "blockchain-identity-verification-platform",
@@ -1646,7 +1646,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-customer-experience-platform",
@@ -1696,7 +1696,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-cryptography-security-platform",
@@ -1746,7 +1746,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-business-process-optimization",
@@ -1796,7 +1796,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // NEW INNOVATIVE MICSAAS SERVICES STARTING HERE
   {
@@ -1847,7 +1847,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-financial-risk-assessment",
@@ -1897,7 +1897,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-cybersecurity-threat-hunting",
@@ -1947,7 +1947,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "iot-predictive-maintenance-ai",
@@ -1997,7 +1997,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "blockchain-identity-verification",
@@ -2047,7 +2047,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-content-localization",
@@ -2097,7 +2097,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-cryptography-communication",
@@ -2147,7 +2147,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-customer-experience-optimization",
@@ -2197,7 +2197,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "iot-smart-city-infrastructure",
@@ -2247,7 +2247,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-legal-contract-analysis",
@@ -2297,7 +2297,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "blockchain-supply-chain-transparency",
@@ -2347,7 +2347,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-machine-learning-drug-discovery",
@@ -2397,7 +2397,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-energy-grid-optimization",
@@ -2447,7 +2447,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "iot-agricultural-precision-farming",
@@ -2497,7 +2497,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-educational-personalization",
@@ -2547,7 +2547,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "blockchain-nft-marketplace-platform",
@@ -2597,7 +2597,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-ai-research-collaboration",
@@ -2647,7 +2647,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "autonomous-logistics-optimization",
@@ -2697,7 +2697,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "iot-healthcare-remote-monitoring",
@@ -2747,7 +2747,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-powered-marketing-automation-suite",
@@ -2797,7 +2797,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "blockchain-decentralized-finance-platform",
@@ -2847,7 +2847,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "quantum-cybersecurity-penetration-testing",
@@ -2897,9 +2897,9 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
-  }
-]
+    };
+  };
+];
 export const serviceCategories = [
   {
     id: "ai-services",
@@ -2914,7 +2914,7 @@ export interface ServiceCategory {
   description: string
   icon: string
   color: string
-}
+};
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
   {
     id: "ai-services",
@@ -2971,12 +2971,12 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     description: "Strategic technology consulting and advisory services",
     icon: "🎯",
     color: "from-teal-500 to-green-600"
-  }
-]
+  };
+];
 import { ProductListing } from "@/types/listings"
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   supportLevel: 'basic' | 'premium' | 'enterprise'
-}
+};
 export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -3249,7 +3249,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-ml-002",
@@ -3294,7 +3294,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "ai-ml-003",
@@ -3339,7 +3339,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Cloud & DevOps Services
   {
@@ -3536,7 +3536,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   {
     id: "cybersecurity-2",
@@ -3584,7 +3584,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Data & Analytics Services
   {
@@ -3633,7 +3633,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Digital Transformation Services
   {
@@ -3682,7 +3682,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Mobile & Web Development Services
   {
@@ -3731,7 +3731,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // Blockchain & Web3 Services
   {
@@ -3780,7 +3780,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    };
   },
   // IoT & Edge Computing Services
   {
@@ -3829,9 +3829,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
-  }
-]
+    };
+  };
+];
 export const SERVICE_CATEGORIES = [
   {
     id: "ai-ml",
@@ -3888,8 +3888,8 @@ export const SERVICE_CATEGORIES = [
     description: "Internet of Things and edge computing solutions",
     icon: "🌐",
     count: 1
-  }
-]
+  };
+];
 // Featured Services for homepage display
 export const FEATURED_SERVICES = COMPREHENSIVE_SERVICES.filter(service => service.featured)
 // Services by price range
@@ -3897,7 +3897,7 @@ export const SERVICES_BY_PRICE = {
   budget: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price < 5000),
   midRange: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 5000 && s.price < 15000),
   enterprise: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 15000)
-}
+};
   { id: "ai-ml", name: "AI & Machine Learning", description: "Artificial intelligence and machine learning solutions" },
   { id: "cloud-devops", name: "Cloud & DevOps", description: "Cloud infrastructure and development operations" },
   { id: "cybersecurity", name: "Cybersecurity", description: "Security solutions and protection services" },
@@ -3905,8 +3905,8 @@ export const SERVICES_BY_PRICE = {
   { id: "web-mobile", name: "Web & Mobile Development", description: "Application development services" },
   { id: "blockchain-web3", name: "Blockchain & Web3", description: "Decentralized technology solutions" },
   { id: "iot-hardware", name: "IoT & Hardware", description: "Internet of Things and hardware solutions" },
-  { id: "digital-transformation", name: "Digital Transformation", description: "Business transformation consulting" }
-]
+  { id: "digital-transformation", name: "Digital Transformation", description: "Business transformation consulting" };
+];
 // Pricing tiers for subscription services
 export const SUBSCRIPTION_TIERS = [
   {
@@ -3914,25 +3914,25 @@ export const SUBSCRIPTION_TIERS = [
     price: 99,
     currency: "$",
     period: "month",
-    features: ["Basic features", "Email support", "5 projects", "Standard templates"]
+    features: ["Basic features", "Email support", "5 projects", "Standard templates"];
   },
   {
     name: "Professional",
     price: 299,
     currency: "$",
     period: "month",
-    features: ["Advanced features", "Priority support", "Unlimited projects", "Custom templates", "API access"]
+    features: ["Advanced features", "Priority support", "Unlimited projects", "Custom templates", "API access"];
   },
   {
     name: "Enterprise",
     price: 999,
     currency: "$",
     period: "month",
-    features: ["All features", "24/7 support", "Custom integrations", "Dedicated account manager", "SLA guarantee"]
-  }
-]
+    features: ["All features", "24/7 support", "Custom integrations", "Dedicated account manager", "SLA guarantee"];
+  };
+];
   website: "https://ziontechgroup.com"
-}
+};
   "Process Automation",
   "Governance",
   "Quantum Computing",
@@ -3963,4 +3963,4 @@ export const SUBSCRIPTION_TIERS = [
   "Learning Analytics",
   "Digital Assets",
   "Penetration Testing"
-]
+];

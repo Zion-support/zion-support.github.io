@@ -1,8 +1,8 @@
 export interface EmergingTechBreakthrough2029 {
 export interface EmergingTechBreakthrough2029 {
 export interface EmergingTechBreakthrough2029 {
-    email: string}
-    address: string}
+    email: string};
+    address: string};
     lin,"
   k: "/services / 2029 - emerging - tech - breakthrough", categor,"
   y: "Emerging Tech Breakthroughs 2029",
@@ -14,11 +14,11 @@ export interface EmergingTechBreakthrough2029 {
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",      addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
-  l: string}
+export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
-  s: string}
-  }
+  s: string};
+  };
 export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =,
   [
@@ -39,14 +39,14 @@ export const,
         'Future capabilities'
         'Advanced features'
         'Expert insights'
-      ]
+      ];
       link: '/services/2029-emerging-tech-breakthrough'
       category: 'Emerging Tech Breakthroughs 2029'
       realImplementation: true,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'}
-    }
+        address: '364 E Main St STE 1008 Middletown DE 19709'};
+    };
   real_implementation: boolean
   contact_info: unknown
     mobile: string
@@ -59,15 +59,15 @@ export const,
   tagline: string
   price: string
   description: string
-  features: string[]
+  features: string[];
   link: string
   category: string
   realImplementation: boolean,
   contactInfo: {,
     mobile: string,
-    }
-  }
-]
+    };
+  };
+];
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
   [
     {
@@ -111,8 +111,8 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
     mobile: string,
     email: string,
     address: string
-  }
-}
+  };
+};
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
   {
   id: string
@@ -120,16 +120,16 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
   tagline: string
   price: string
   description: string
-  features: string[]
+  features: string[];
   link: string
   category: string
   realImplementation: boolean
   contactInfo: {,
     mobile: string
-    email: string}
-    address: string}
-  }
-}
+    email: string};
+    address: string};
+  };
+};
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
     id: "2029-emerging-tech-breakthrough"
     id: "2029-emerging-tech-breakthrough",
@@ -157,7 +157,7 @@ export interface EmergingTechBreakthrough2029 {
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    contactInfo: unknown}
+    contactInfo: unknown};
       lin,
   k: '/services/2029-emerging-tech-breakthrough'
       categor,
@@ -171,8 +171,8 @@ export interface EmergingTechBreakthrough2029 {
   l: 'kleber@ziontechgroup.com'
         addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    }
+      };
+    };
   real_implementatio,
   n: boolean,
   contact_inf,
@@ -207,12 +207,12 @@ export interface EmergingTechBreakthrough2029 {
   realImplementatio,
   n: boolean,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  l: string}
+  o: {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
-  s: string}
-  }
-}
+  s: string};
+  };
+};
 export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [,
     i,"
@@ -231,19 +231,19 @@ export const,
       "Innovation platform","
       "Future capabilities","
       "Advanced features",
-export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
-  o: unknown}
-    }
-  }
-]
-}
-  }
+export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */};
+  o: unknown};
+    };
+  };
+];
+};
+  };
 ];"
       "Emerging tech breakthroughs""
       "Innovation platform""
       "Future capabilities"
-export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
-  }
+export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */};
+  };
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
   [
       id: '2029-emerging-tech-breakthrough'
@@ -278,7 +278,7 @@ export const,
       contactInfo: unknown,
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'}}
+        address: '364 E Main St STE 1008 Middletown DE 19709'}};
   ];    features: [
       "Emerging tech breakthroughs"
       "Innovation platform"
@@ -296,7 +296,7 @@ export const,
         emai,
   l: 'kleber@ziontechgroup.com',
         addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};
   ];    feature,
   s: [,"
       "Emerging tech breakthroughs""
@@ -322,14 +322,14 @@ export const,
   realImplementatio,
   n: boolean,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  l: string}
+  o: {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
-  s: string}
-  }
+  s: string};
+  };
     address: string
-  }
-}
+  };
+};
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [
   {
 export interface EmergingTechBreakthrough2029 {
@@ -358,19 +358,19 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       address: "364 E Main St STE 1008 Middletown DE 19709",
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709",
       mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com"}
+      email: "kleber@ziontechgroup.com"};
       address: "364 E Main St STE 1008 Middletown DE 19709",
 export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
-  l: "kleber@ziontechgroup.com"}
+  l: "kleber@ziontechgroup.com"};
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-}
-  }
-]
-    }
-  }
+    };
+  };
+};
+  };
+];
+    };
+  };
 "
 "Emerging tech breakthroughs" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ]; lin,"
   k: "/services / 2029 - emerging - tech - breakthrough", categor,"
@@ -379,7 +379,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   o: mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
+  s: "364 E Main St STE 1008 Middletown DE 19709" export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */};
   l: string} addres,
   s: string} } export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [ i,
@@ -413,7 +413,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   k: string, categor,
   y: string, realImplementatio,
   n: boolean, contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   l: string} addres,
   s: string} } } export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [ i,"
@@ -422,7 +422,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   e: "Emerging tech breakthroughs for 2029", pric,"
   e: "$899/month", descriptio,"
   n: "Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.", feature,"
-  s: [ "Emerging tech breakthroughs", "Innovation platform", "Future capabilities", "Advanced features", export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
+  s: [ "Emerging tech breakthroughs", "Innovation platform", "Future capabilities", "Advanced features", export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */};
   n: true} contactInf,"
   o: } } ]; } } ]; "Emerging tech breakthroughs" "Innovation platform" "Future capabilities" export interface EmergingTechBreakthrough2029 { } export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] = [ ' i,
@@ -449,7 +449,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   k: string, categor,
   y: string, realImplementatio,
   n: boolean, contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   l: string} addres,
   s: string} } } export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}"
   l: "kleber@ziontechgroup.com"} addres,"

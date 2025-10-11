@@ -6,7 +6,7 @@ export interface Revolutionary2025Service {
   price: string
   period: string
   description: string
-  features: string[]
+  features: string[];
   popular: boolean
   icon: string
   color: string
@@ -18,16 +18,16 @@ export interface Revolutionary2025Service {
   setupTime: string
   category: string
   realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
   roi: string
-  competitors: string[]
+  competitors: string[];
   marketSize: string
   growthRate: string
   variant: ServiceVariant
   description: string
-  features: string[]
+  features: string[];
   link: string
   category: string
   realImplementation: boolean
@@ -35,7 +35,7 @@ export interface Revolutionary2025Service {
     mobile: string
     email: string,
 export interface Revolutionary2025Service {,
-    address: string}
+    address: string};
   i,
   d: string,
   nam,
@@ -46,7 +46,7 @@ export interface Revolutionary2025Service {,
   tagline: string
   price: string
   description: string
-  features: string[]
+  features: string[];
   link: string
   category: string
   realImplementation: boolean
@@ -54,7 +54,7 @@ export interface Revolutionary2025Service {,
     mobile: string
     email: string
 export interface Revolutionary2025Service {;,
-    address: string}
+    address: string};
   i,
   d: string
   nam,
@@ -79,9 +79,9 @@ export interface Revolutionary2025Service {;,
   e: string,
     emai,
   l: string,
-export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
-  s: string}
-}
+export interface Revolutionary2025Service {/* TODO: Fix JSX expression */};
+  s: string};
+};
   i,
   d: string,
   nam,
@@ -101,15 +101,15 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   realImplementatio,
   n: boolean,
   contactInf,
-  o: {/* TODO: Fix JSX expression */}
-  l: string}
+  o: {/* TODO: Fix JSX expression */};
+  l: string};
     addres,
-  s: string}
-  }
-}
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
-]
+  s: string};
+  };
+};
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
+  };
+];
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -118,8 +118,8 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   contactInfo: unknown,
     mobile: string, email: string
     address: string,
-  }
-}
+  };
+};
 export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
     id: "revolutionary-ai-platform", name: "Revolutionary AI Platform",
     tagline: "Next-generation AI capabilities", price: "$199/month"
@@ -132,20 +132,20 @@ export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
       "Cutting-edge features"],
     link: "/services/revolutionary-ai-platform", category: "Revolutionary 2025 Services",
     realImplementation: true,
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
-]
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"};
+  };
+];
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
-  }
-]
+      address: "364 E Main St STE 1008 Middletown DE 19709"};
+  };
+];
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       addres,
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
+    };
+  };
+];
   i,
   d: string, nam,
   e: string,
@@ -166,8 +166,8 @@ export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
   e: string, emai,
   l: string,
     addres,
-  s: string}
-}
+  s: string};
+};
 export const,
   revolutionary2025Services: Revolutionary2025Service[] = [,
     i,"
@@ -194,27 +194,27 @@ export const,
     contactInf,
   o: addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
+    };
+  };
+];
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
+    };
+  };
+];
       emai,"
   l: "kleber@ziontechgroup.com",
   addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
+    };
+  };
+];
 id: "revolutionary-ai-platform"
     id: "revolutionary-ai-platform",
-]
+];
     id: "revolutionary-ai-platform"
     name: "Revolutionary AI Platform",
     tagline: "Next-generation AI capabilities",
@@ -235,7 +235,7 @@ id: "revolutionary-ai-platform"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
@@ -276,7 +276,7 @@ id: "revolutionary-ai-platform"
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobil,"
   e: "+1 302 464 0950",
   emai,"
@@ -287,9 +287,9 @@ id: "revolutionary-ai-platform"
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-]
+    };
+  };
+];
 i,
   d: string, nam,
   e: string, taglin,
@@ -302,7 +302,7 @@ i,
   n: boolean, contactInf,
   o: mobil,
   e: string, emai,
-  l: string, export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
+  l: string, export interface Revolutionary2025Service {/* TODO: Fix JSX expression */};
   s: string } i,
   d: string, nam,
   e: string, taglin,
@@ -313,7 +313,7 @@ i,
   k: string, categor,
   y: string, realImplementatio,
   n: boolean, contactInf,
-  o: {/* TODO: Fix JSX expression */}
+  o: {/* TODO: Fix JSX expression */};
   l: string} addres,
   s: string} } } addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,

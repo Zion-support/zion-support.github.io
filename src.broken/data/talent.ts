@@ -121,7 +121,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     verified: false,
     rating: 4.5,
     reviewsCount: 9,
-    createdAt: new Date().toISOString()}]
+    createdAt: new Date().toISOString()}];
     createdAt: new Date().toISOString(),
   },
-]
+];

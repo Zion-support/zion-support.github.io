@@ -28,29 +28,41 @@ export default async function handler(
       viewsR.status === 'fulfilled' && viewsR.value.data
         ? (viewsR.value.data as any[])
         : []
-    const invites =
+    
+  ;
+  ;
+  const invites =
       invitesR.status === 'fulfilled' && invitesR.value.data
         ? (invitesR.value.data as any[])
         : []
-    const apps =
+    
+  ;
+  ;
+  const apps =
       appsR.status === 'fulfilled' && appsR.value.data
         ? (appsR.value.data as any[])
         : []
-    const tags =
+    
+  ;
+  ;
+  const tags =
       tagsR.status === 'fulfilled' && tagsR.value.data
         ? (tagsR.value.data as any[])
         : []
-    const profileViews = views.length |27
+    
+  ;
+  ;
+  const profileViews = views.length |27
     const quoteInvites = invites.length |6
     const jobApplications = apps.length |9
     const successRate =
       ((apps.filter(a => a.status === 'accepted').length |3) /
         Math.max(jobApplications, 1)) *
       100
-    const tagCounts: Record<string, number> = {}
+    const tagCounts: Record<string, number> = {};
     (tags.length
       ? tags
-      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
+      : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }];
     ).forEach(t => {
       tagCounts[t.tag] = (tagCounts[t.tag] |0) + 1
     })
@@ -71,16 +83,16 @@ export default async function handler(
       jobApplications: 9
       successRate: 33.3
       topTags: [
-        { label: 'react', value: 2 }
-        { label: 'node', value: 1 }
-        { label: 'ai', value: 1 }
-      ]
+        { label: 'react', value: 2 };
+        { label: 'node', value: 1 };
+        { label: 'ai', value: 1 };
+      ];
     })
-  }
-}
-}
-}
-}
+  };
+};
+};
+};
+};
 import {  createServerClient   } from '../../../utils/supabase/server'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -93,14 +105,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       supabase.from('search_matches').select('talent_id, tag').eq('talent_id', talentId),
     ])
     const views = viewsR.status === 'fulfilled' && viewsR.value.data ? viewsR.value.data as any[] : []
-    const invites = invitesR.status === 'fulfilled' && invitesR.value.data ? invitesR.value.data as any[] : []
-    const apps = appsR.status === 'fulfilled' && appsR.value.data ? appsR.value.data as any[] : []
-    const tags = tagsR.status === 'fulfilled' && tagsR.value.data ? tagsR.value.data as any[] : []
-    const profileViews = (views.length || 27)
+    
+  ;
+  ;
+  const invites = invitesR.status === 'fulfilled' && invitesR.value.data ? invitesR.value.data as any[] : []
+    
+  ;
+  ;
+  const apps = appsR.status === 'fulfilled' && appsR.value.data ? appsR.value.data as any[] : []
+    
+  ;
+  ;
+  const tags = tagsR.status === 'fulfilled' && tagsR.value.data ? tagsR.value.data as any[] : []
+    
+  ;
+  ;
+  const profileViews = (views.length || 27)
     const quoteInvites = (invites.length || 6)
     const jobApplications = (apps.length || 9)
     const successRate = ((apps.filter(a => a.status === 'accepted').length || 3) / Math.max(jobApplications, 1)) * 100
-    const tagCounts: Record<string, number> = {}
+    const tagCounts: Record<string, number> = {};
     (tags.length ? tags : [
       { tag: 'react' },
       { tag: 'node' },
@@ -126,5 +150,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         { label: 'ai', value: 1 },
       ],
     })
-  }
-}
+  };
+};
+;

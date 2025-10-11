@@ -146,7 +146,7 @@ Revenue Impact
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
                 <Target className=" />,";
-Revenue Impact
+Revenue Impact>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className=" />">
@@ -329,8 +329,9 @@ className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg 
 Start Your Personalization Journey",
                 <Target className="ml-2 h-5 w-5 ">,
                 <Target className="ml-2 h-5 w-5" />);
-export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */}
-}
+export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */};
+};
+  ;
   </div>
   </div>
   </div>

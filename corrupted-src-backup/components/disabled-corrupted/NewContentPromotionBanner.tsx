@@ -8,11 +8,13 @@ interface NewContentPromotionBannerProp, s {
   ctaLi, n, k?: string
   dismissib, l, e?: boolean
   classNa, m, e ?  : string
-interface NewContentPromotionBannerProp, s {/* TODO: Fix JSX expression */}
+interface NewContentPromotionBannerProp, s {/* TODO: Fix JSX expression */};
  }
-const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-   }
+;
+  ;
+  const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */};
+   };
   if (!isVisib, l, e) return, nul, l
   const variantClasse, s = {
       in, f, o: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-1, 0, 0",
@@ -20,7 +22,9 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
       warni, n, g: "bg-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, borde, r-yell, o, w-4, 0, 0/30, tex, t-yell, o, w-10, 0",
       err, o, r: "bg-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, borde, r-r, e, d-4, 0, 0/30, tex, t-r, e, d-10, 0",
       defau, l, t: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-10, 0",
-      premi, u, m: "bg-gradie, n, t-to-r, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-r, e, d-6, 0, 0/20, borde, r-purp, l, e-4, 0, 0/30, tex, t-purp, l, e-10, 0"} const iconClasse, s = {
+      premi, u, m: "bg-gradie, n, t-to-r, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-r, e, d-6, 0, 0/20, borde, r-purp, l, e-4, 0, 0/30, tex, t-purp, l, e-10, 0"} ;
+  ;
+  const iconClasse, s = {
       in, f, o: "te, x, t-bl, u, e-4, 0, 0",
       succe, s, s: "te, x, t-gre, e, n-40, 0",
       warni, n, g: "te, x, t-yell, o, w-40, 0",
@@ -28,14 +32,17 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
       defau, l, t: "te, x, t-bl, u, e-40, 0",
       premi, u, m: "te, x, t-purp, l, e-30, 0"
   } return(<div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
-      {/* Background, Patter, n */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
+      {/* Background, Patter, n */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-transpare, n, t" />
         <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 w-2, 0, h-20, b, g-whi, t, e/5, rounde, d-fu, l, l" />
-  } return (
+  } ;
+  return (
     <div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
-      {/* Background, Patter, n */}
-      <div, className="absolute, inse, t-0, opacit, y-10">
+      {/* Background, Patter, n */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10">
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-transpare, n, t" />
         <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 w-2, 0, h-20, b, g-whi, t, e/5, rounde, d-fu, l, l" />
         <div, className="absolu, t, e -bott, o, m-4 -le, f, t-4 w-1, 6, h-16, b, g-whi, t, e/5, rounde, d-fu, l, l" />
@@ -45,11 +52,15 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
             <div, className="flex, item, s-center, ga, p-3, m, b-3">
               <div, className="flex, item, s-center, ga, p-2"></div> <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
                 <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
-  const variantClasse, s = {/* TODO: Fix JSX expression */}
-  } const iconClasse, s = {/* TODO: Fix JSX expression */}
-  } return (<div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}></div>
-      {/* Background, Patter, n */}
-      <div, className="absolute, inse, t-0, opacit, y-10"></div>"
+  const variantClasse, s = {/* TODO: Fix JSX expression */};
+  } ;
+  ;
+  const iconClasse, s = {/* TODO: Fix JSX expression */};
+  } ;
+  return (<div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}></div>
+      {/* Background, Patter, n */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-10"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-transpare, n, t" /></div>"
         <div, className="absolu, t, e -t, o, p-4 -rig, h, t-4 w-2, 0, h-20, b, g-whi, t, e/5, rounde, d-fu, l, l" /></div>"
         <div, className="absolu, t, e -bott, o, m-4 -le, f, t-4 w-1, 6, h-16, b, g-whi, t, e/5, rounde, d-fu, l, l" />
@@ -67,12 +78,14 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
             <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">
             </div>"
             <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">
-              {title}
-            </h3>"
+              {title};
+            ;
+  </h3>"
             <p, className="te, x, t-sm, opacit, y-90, m, b-4, ma, x-w-2, x, l">
-              {description}
-            {/* Featured, Content, Preview */}
-            <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">
+              {description};
+            {/* Featured, Content, Preview */};
+            ;
+  <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
                 <div, className="flex, item, s-center, ga, p-2, m, b-1">
                   <BookOpen, className="w-3 h-3" />
@@ -116,11 +129,12 @@ const NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerPro, p, s> 
             ></button>"
                 <X, className="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />
               </bu, t, t, o, n>)
-          )}
-        </div>
+          )};
+        ;
+  </div>
       </div>
     </div>
   )
-}
+};
 export default NewContentPromotionBanner;"`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></Link></p></h3>

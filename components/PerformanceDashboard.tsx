@@ -3,7 +3,10 @@ interface PerformanceMetrics {loadTime: number
   renderTime: number
   memoryUsage: number,
   fps: number}
-const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>()})
+;
+  ;
+  const PerformanceDashboard: React.FC = () => {
+const [metrics, setMetrics] = useState<PerformanceMetrics>()})
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     const updateMetrics = const updateMetrics = const updateMetrics = () => {
@@ -14,7 +17,7 @@ const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useS
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0
       setMetrics()
       }))
-    }
+    };
     //Update metrics on load
     updateMetrics()
     //Update metrics periodically
@@ -22,9 +25,10 @@ const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useS
     return () => clearInterval(interval)
   }, [])
   //Only show in development
-  if (process.env['NODE_ENV'] !== 'development') {return null}
+  if (process.env['NODE_ENV'] !== 'development') {return null};
+  ;
   return ()
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={() => setIsVisible(!isVisible)};
         className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
         aria-label="Toggle performance dashboard"
       >
@@ -38,13 +42,15 @@ const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useS
             </div>
             <div className="flex justify-between" /></div>
               <span className="text-gray-600">FPS:</span>
-              <span className="font-mono">{metrics?.fps.toFixed(1)}</span>
+              <span className="font-mono">{metrics?.fps.toFixed(1)};
+  </span>
             </div>
           </div>
         </div>
-      )}
-    </div>
+      )};
+    ;
+  </div>
   )
-}
+};
 export default PerformanceDashboard</button>
   </PerformanceMetrics>

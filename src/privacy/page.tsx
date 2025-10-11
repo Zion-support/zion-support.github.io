@@ -8,27 +8,30 @@ export default function PrivacyPage() {
       category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
-      examples: ['Contact forms', 'Newsletter signups', 'Account creation']
+      examples: ['Contact forms', 'Newsletter signups', 'Account creation'];
     },
     {
       category: 'Usage Data',
       icon: Eye,
       description: 'Website interactions, pages visited, time spent',
-      examples: ['Analytics data', 'User behavior', 'Performance metrics']
+      examples: ['Analytics data', 'User behavior', 'Performance metrics'];
     },
     {
       category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, device information',
-      examples: ['Log files', 'Error reports', 'System diagnostics']
+      examples: ['Log files', 'Error reports', 'System diagnostics'];
     },
     {
       category: 'Communication Data',
       icon: Mail,
       description: 'Messages, emails, support tickets',
-      examples: ['Contact forms', 'Support requests', 'Email correspondence']
-    }
+      examples: ['Contact forms', 'Support requests', 'Email correspondence'];
+    };
   ]
+  
+  ;
+  ;
   const rights = [
     {
       title: 'Right to Access',
@@ -59,8 +62,11 @@ export default function PrivacyPage() {
       title: 'Right to Restrict',
       description: 'Limit how we process your data',
       icon: Lock
-    }
+    };
   ]
+  
+  ;
+  ;
   const securityMeasures = [
     'SSL/TLS encryption for data transmission',
     'Regular security audits and penetration testing',
@@ -69,10 +75,13 @@ export default function PrivacyPage() {
     'Employee training on data protection',
     'Incident response and breach notification procedures'
   ]
+  ;
+  ;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -91,17 +100,20 @@ export default function PrivacyPage() {
               <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent
-      {/* Last Updated */}
-      <section className="py-8">
+      {/* Last Updated */};
+      ;
+  <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-lg p-6 text-center">
               <p className="text-gray-300">
-                <strong>Last Updated:</strong> {lastUpdated}
-              <p className="text-sm text-gray-400 mt-2">
+                <strong>Last Updated:</strong> {lastUpdated};
+              ;
+  <p className="text-sm text-gray-400 mt-2">
                 This privacy policy may be updated from time to time. We will notify you of any changes.
-      {/* Introduction */}
-      <section className="py-20">
+      {/* Introduction */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-6">Introduction
@@ -113,8 +125,9 @@ export default function PrivacyPage() {
               <p className="text-gray-300 mb-6">
                 By using our website or services, you agree to the collection and use of information in accordance with 
                 this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
-      {/* Information We Collect */}
-      <section className="py-20 bg-slate-800/50">
+      {/* Information We Collect */};
+      ;
+  <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Information We Collect
@@ -123,19 +136,22 @@ export default function PrivacyPage() {
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <div className="flex items-center space-x-3 mb-4">
                     <type.icon className="w-8 h-8 text-cyan-400" />
-                    <h3 className="text-xl font-bold text-white">{type.category}
-                  <p className="text-gray-300 mb-4">{type.description}
-                  <div className="space-y-2">
+                    <h3 className="text-xl font-bold text-white">{type.category};
+                  ;
+  <p className="text-gray-300 mb-4">{type.description};
+                  ;
+  <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-cyan-400">Examples:
                     <ul className="space-y-1">
                       {type.examples.map((example, exampleIndex) => (
                         <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {example}
-                      ))}
-              ))}
-      {/* How We Use Your Information */}
-      <section className="py-20">
+                          {example};
+                      ))};
+              ))};
+      {/* How We Use Your Information */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8">How We Use Your Information
@@ -160,8 +176,9 @@ export default function PrivacyPage() {
                 <h3 className="text-xl font-bold text-white mb-3">Legal Compliance
                 <p className="text-gray-300">
                   To comply with legal obligations, resolve disputes, and enforce our agreements.
-      {/* Data Security */}
-      <section className="py-20 bg-slate-800/50">
+      {/* Data Security */};
+      ;
+  <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Data Security
@@ -171,10 +188,11 @@ export default function PrivacyPage() {
               {securityMeasures.map((measure, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{measure}
-              ))}
-      {/* Your Rights */}
-      <section className="py-20">
+                  <span className="text-gray-300">{measure};
+              ))};
+      {/* Your Rights */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">Your Rights
@@ -182,11 +200,13 @@ export default function PrivacyPage() {
               {rights.map((right, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
                   <right.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{right.title}
-                  <p className="text-gray-300 text-sm">{right.description}
-              ))}
-      {/* Contact Information */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+                  <h3 className="text-xl font-bold text-white mb-3">{right.title};
+                  ;
+  <p className="text-gray-300 text-sm">{right.description};
+              ))};
+      {/* Contact Information */};
+      ;
+  <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Questions About Your Privacy?
@@ -213,7 +233,8 @@ export default function PrivacyPage() {
       </section>
     </div>
   ),
-}
+};
+  ;
   </a>
   </h1>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h4></ul></li></section></section></section></section></section></section></section>

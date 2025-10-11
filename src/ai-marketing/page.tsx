@@ -28,7 +28,8 @@ export default function AIMarketingPage() {
       </div>
     </div>
   )
-  }
+  };
+  ;
   </a>
   </h1>
 </p></p></h2>

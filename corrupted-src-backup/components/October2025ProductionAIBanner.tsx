@@ -1,7 +1,8 @@
 export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
   return(<section, className="py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n">"
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-20">"
+      {/* Animated, background, elements */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-20">"
         <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";)
       </d, i, v>)
@@ -10,9 +11,10 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
         <div, className="text-center mb-12">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-boun, c, e">
             <Rocket, className="w-4 h-4  />
-export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */}
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-20">";"
+export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO: Fix JSX expression */};
+      {/* Animated, background, elements */};
+      ;
+  <div, className="absolute, inse, t-0, opacit, y-20">";"
         <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"</$1>"
       <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
@@ -51,11 +53,13 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
           {/* Artic, l, e
-  1: Production, AI, Agents */}
-          <Li, n, k
+  1: Production, AI, Agents */};
+          ;
+  <Li, n, k
           {/* Artic, l, e 
-  1: Production, AI, Agents */}
-          <Li, n, k
+  1: Production, AI, Agents */}>
+          
+  <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s"
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, border, border-whi, t, e/20"
@@ -73,9 +77,10 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
                   Production, AI, Agent</$1>"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
-          {/* TODO: Fix JSX expression */}
-  1: Production, AI, Agents */}
-          <Li, n, k;"
+          {/* TODO: Fix JSX expression */};
+  1: Production, AI, Agents */};
+          ;
+  <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s""
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-105, border, border-whi, t, e/20"
@@ -124,8 +129,9 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <sp, a, n>Read, Full, Guide
               <Link, className="w-5 h-5" />"
           {/* Artic, l, e
-  2: Re, a, l-Time, AI, Monitoring */}
-          <Li, n, k
+  2: Re, a, l-Time, AI, Monitoring */};
+          ;
+  <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-realti, m, e-ai-mod, e, l-monitori, n, g-enterpri, s, e"
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, border, border-whi, t, e/20"
@@ -173,9 +179,10 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Full, Guide</sp, a, n>"
               <Link, className="w-5 h-5" />"
-          {/* TODO: Fix JSX expression */}
-  2: Re, a, l-Time, AI, Monitoring */}
-          <Li, n, k;"
+          {/* TODO: Fix JSX expression */};
+  2: Re, a, l-Time, AI, Monitoring */};
+          ;
+  <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-realti, m, e-ai-mod, e, l-monitori, n, g-enterpri, s, e""
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-105, border, border-whi, t, e/20"
@@ -224,8 +231,9 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               <sp, a, n>Read, Full, Guide
               <Link, className="w-5 h-5" />"
           {/* Artic, l, e
-  3: Multimodal, RA, G */}
-          <Li, n, k
+  3: Multimodal, RA, G */};
+          ;
+  <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-r, a, g-syste, m, s-revoluti, o, n"
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
   r:sca, l, e-105, border, border-whi, t, e/20"
@@ -273,9 +281,10 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               <sp, a, n>Read, Full, Guide</sp, a, n>"
               <Link, className="w-5 h-5" />"
-          {/* TODO: Fix JSX expression */}
-  3: Multimodal, RA, G */}
-          <Li, n, k;"
+          {/* TODO: Fix JSX expression */};
+  3: Multimodal, RA, G */};
+          ;
+  <Li, n, k;"
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-r, a, g-syste, m, s-revoluti, o, n""
             classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-105, border, border-whi, t, e/20"
@@ -328,7 +337,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
   m: fl, e, x-row, ga, p-4">"
         <div, className="te, x, t-cent, e, r">"
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-            <Li, n, k
+            <Li, n, k>
         <div, className="te, x, t-cent, e, r">
           <, className="inli, n, e-flex, fle, x-co, l, s$2 />
   m: fl, e, x-row, ga, p-4">"
@@ -383,7 +392,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
               Explore, All, Production AI, Article, s
             <Li, n, k
   to="/conta, c, t"
-              classNa, m, e="px-8, p, y-4, b, g-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-9, 0, 0/70, transitio, n-all, duratio, n-300, hov, e
+              classNa, m, e="px-8, p, y-4, b, g-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-9, 0, 0/70, transitio, n-all, duratio, n-300, hov, e>
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="px-8, p, y-4, b, g-indi, g, o-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-9, 0, 0/70, transitio, n-all, duratio, n-300, hov, e,"
@@ -394,6 +403,6 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
           <p, className="mt-6, tex, t-whi, t, e/70, tex, t-sm">"
             🚀 Joi, n, 5,0, 0, 0+ enterprises, implementing, production-grade, AI, systems
   )
-}
+};
 "
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></section>

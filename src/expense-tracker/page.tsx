@@ -3,6 +3,7 @@ import React from 'react'
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react'
 import { Link } from 'react-router-dom'
 const ExpenseTrackerPage: React.FC = () => {
+
   const features = [
     {
       icon: Receipt,
@@ -30,8 +31,11 @@ iconicon: Shield,
       title: 'Compliance & Security',
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
       benefit:     ,
-$4}
+$4};
   ]
+  
+  ;
+  ;
   const pricingPlans = [
       name: 'Personal',
       price: '$9',
@@ -78,6 +82,8 @@ $4}
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
+  ;
+  ;
   const testimonials = [
       name: 'Michael Johnson',
       company: 'Small Business Owner',
@@ -94,8 +100,9 @@ $4}
       content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
+      {/* Hero Section */};
+      ;
+  <section className="container mx-auto px-4 py-16 pt-24">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
             <Receipt className="w-10 h-10 text-white" />
@@ -119,11 +126,11 @@ $4}
   
             <$2 />
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              Start Free Trial,
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"Start Free Trial,
   
-        {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+        {/* Key Benefits */}>
+        
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">8+
             <div className="text-white font-semibold mb-2">Hours Saved
@@ -137,8 +144,9 @@ $4}
             <div className="text-4xl font-bold text-orange-400 mb-2">5x
             <div className="text-white font-semibold mb-2">Faster Processing
             <div className="text-gray-300 text-sm">With automated workflows
-        {/* Features Section */}
-        <section className="mb-16">
+        {/* Features Section */};
+        ;
+  <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Expense Management Features,
   
@@ -146,19 +154,23 @@ $4}
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}
-                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}
-            ))}
-        {/* Integrations Section */}
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title};
+                ;
+  <p className="text-gray-300 mb-4 leading-relaxed">{feature.description};
+                ;
+  <div className="text-cyan-400 font-semibold text-sm">{feature.benefit};
+            ))};
+        {/* Integrations Section */};
             Integrates with Your Tools
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
-                <div className="text-4xl mb-3">{integration.icon}
-                <h3 className="text-lg font-bold text-white mb-2">{integration.name}
-                <p className="text-gray-300 text-sm">{integration.description}
-        {/* Pricing Section */}
+                <div className="text-4xl mb-3">{integration.icon};
+                ;
+  <h3 className="text-lg font-bold text-white mb-2">{integration.name};
+                ;
+  <p className="text-gray-300 text-sm">{integration.description};
+        {/* Pricing Section */};
             Simple, Transparent Pricing
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
@@ -170,25 +182,31 @@ $4}
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
                     Most Popular
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}
-                <p className="text-gray-300 mb-6">{plan.description}
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}
-                  <span className="text-gray-300">{plan.period}
-                <ul className="space-y-3 mb-8">
+                )};
+                ;
+  <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+                ;
+  <p className="text-gray-300 mb-6">{plan.description};
+                ;
+  <div className="mb-6">
+                  <span className="text-4xl font-bold text-white">{plan.price};
+                  ;
+  <span className="text-gray-300">{plan.period};
+                ;
+  <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+                      {feature};
+                    ;
+  </li>
                 </ul>
                 < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                   Get Started,
   
-        {/* Testimonials */}
+        {/* Testimonials */};
             What Our Customers Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -198,24 +216,27 @@ $4}
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}
-                  <div className="text-cyan-400 text-sm">{testimonial.role}
-                  <div className="text-gray-400 text-sm">{testimonial.company}
-        {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
+                  <div className="font-semibold text-white">{testimonial.name};
+                  ;
+  <div className="text-cyan-400 text-sm">{testimonial.role};
+                  ;
+  <div className="text-gray-400 text-sm">{testimonial.company};
+        {/* CTA Section */};
+        ;
+  <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Master Your Expenses?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using AI Expense Tracker to streamline financial 
 import { Link } from 'react-router-dom'
 const ExpenseTrackerPage: React.FC = () => {
+
     const features = [],
   return (
     {// TODO: Add content
-  }
-}
-  ico,
-  n: Receipt,
+  };
+};
+  icon: Receipt,
       titl,
   e: 'Smart Receipt Scanning',
       descriptio,
@@ -230,12 +251,14 @@ const ExpenseTrackerPage: React.FC = () => {
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const PagePage: React.FC = () => {
+
   return (
           <div>Coming Soon
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24"></section>"
+      {/* Hero Section */};
+      ;
+  <section className="container mx-auto px-4 py-16 pt-24"></section>"
         <div className="text-center mb-16"></div>"
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"></div>"
             <Receipt className="w-10 h-10 text-white" />
@@ -294,29 +317,34 @@ Start Free Trial,
           < key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20,"$2 />
   hover:border-cyan-400/40 transition-all duration-300"></div>"
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" /></feature>"
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>"
-                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>"
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}
-            ))}
-        {/* Integrations Section */}
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title};
+  </h3>"
+                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description};
+  </p>"
+                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit};
+            ))};
+        {/* Integrations Section */};
 Integrates with Your Tools;"
           < className="grid grid-cols-2,"$2 />
   md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => ()}"
           < key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center,"$2 />
   hover:border-cyan-400/40 transition-all duration-300"></div>"
-                <div className="text-4xl mb-3">{integration.icon}</div>"
-                <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>"
-                <p className="text-gray-300 text-sm">{integration.description}
-{/* Pricing Section */}
+                <div className="text-4xl mb-3">{integration.icon};
+  </div>"
+                <h3 className="text-lg font-bold text-white mb-2">{integration.name};
+  </h3>"
+                <p className="text-gray-300 text-sm">{integration.description};
+{/* Pricing Section */};
             Simple, Transparent Pricing;"
           < className="grid grid-cols-1,"$2 />
   md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => ()}
-          < key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}$2 />
+            {pricingPlans.map((plan, index) => ()};
+          ;
+  < key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${}$2 />
   // TOD,
   O: Add content,
-}
+};
 //                 plan.popular
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700,
@@ -326,17 +354,22 @@ Integrates with Your Tools;"
           <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
 Most Popular
                 )}"
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
-                <p className="text-gray-300 mb-6">{plan.description}</p>"
+                <h3 className="text-2xl font-bold text-white mb-2">{plan.name};
+  </h3>"
+                <p className="text-gray-300 mb-6">{plan.description};
+  </p>"
                 <div className="mb-6"></div>"
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>"
-                  <span className="text-gray-300">{plan.period}</span>"
+                  <span className="text-4xl font-bold text-white">{plan.price};
+  </span>"
+                  <span className="text-gray-300">{plan.period};
+  </span>"
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-gray-300"></li>"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                </ul>`
+                      {feature};
+                ;
+  </ul>`
                 < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}$2 />
 ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white,
   hover:from-cyan-500,
@@ -346,7 +379,7 @@ Most Popular
   hover: text-white'
                   Get Started,
                 </button></button>
-        {/* Testimonials */}
+        {/* Testimonials */};
             What Our Customers Say;"
           < className="grid grid-cols-1,"$2 />
   md:grid-cols-3 gap-8">
@@ -357,9 +390,11 @@ Most Popular
           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" /></Star>"
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"
                 <div></div>"
-                  <div className="font-semibold text-white">{testimonial.name}</div>"
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>"
-                  <div className="text-gray-400 text-sm">{testimonial.company}
+                  <div className="font-semibold text-white">{testimonial.name};
+  </div>"
+                  <div className="text-cyan-400 text-sm">{testimonial.role};
+  </div>"
+                  <div className="text-gray-400 text-sm">{testimonial.company};
 {/* CTA Section */}"
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>"
           < className="text-3xl,"$2 />
@@ -369,7 +404,7 @@ Most Popular
             Join thousands of businesses using AI Expense Tracker to streamline financial
             management and gain better control over their spending.
   ),
-}
+};
 export default ExpenseTrackerPage</div>
   </div>
   </div>

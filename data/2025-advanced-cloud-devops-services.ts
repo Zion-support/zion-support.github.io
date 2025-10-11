@@ -1,21 +1,21 @@
-export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
-  s: number}
+export interface CloudDevOpsService {/* TODO: Fix JSX expression */};
+  s: number};
     setupTim,
-  e: string}
-  }
-  keyFeatures: string[]
-  benefits: string[]
-  targetAudience: string[]
+  e: string};
+  };
+  keyFeatures: string[];
+  benefits: string[];
+  targetAudience: string[];
   marketPosition: string
-  competitors: string[]
-  techStack: string[]
+  competitors: string[];
+  techStack: string[];
   realImplementation: boolean
   implementationDetails: string
   roi: string
-  useCases: string[]
-  integrations: string[]
+  useCases: string[];
+  integrations: string[];
   support: string
-  compliance: string[]
+  compliance: string[];
   link: string
   icon: string
   color: string
@@ -24,7 +24,7 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   customers: number
   rating: number
   reviews: number,
-}
+};
 export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     id: 'multi-cloud-orchestration-platform',
     name: 'Multi-Cloud Orchestration Platform',
@@ -66,8 +66,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
   e: string[],
   lin,
   k: string,
-  ico,
-  n: string,
+  icon: string,
   colo,
   r: string,
   popula,
@@ -79,7 +78,7 @@ export const advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
   ratin,
   g: number,
   review,
-  s: number}
+  s: number};
 export const,
   advancedCloudDevOpsServices2025: CloudDevOpsService[] = [,
     i,
@@ -199,8 +198,7 @@ export const,
     lin,
   k: 'http,
   s://ziontechgroup.com/multi-cloud-orchestration-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-blue-500 to-cyan-600',
     popula,
@@ -330,8 +328,7 @@ export const,
     lin,
   k: 'http,
   s://ziontechgroup.com/intelligent-devops-automation-suite',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-green-500 to-emerald-600',
     popula,
@@ -461,8 +458,7 @@ export const,
     lin,
   k: 'http,
   s://ziontechgroup.com/enterprise-kubernetes-management-platform',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-purple-500 to-indigo-600',
     popula,
@@ -592,8 +588,7 @@ export const,
     lin,
   k: 'http,
   s://ziontechgroup.com/intelligent-infrastructure-monitoring',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-yellow-500 to-orange-600',
     popula,
@@ -710,8 +705,7 @@ export const,
     lin,
   k: 'http,
   s://ziontechgroup.com/cloud-security-posture-management',
-    ico,
-  n: '',
+    icon: '',
     colo,
   r: 'from-red-500 to-pink-600',
     popula,
@@ -723,8 +717,8 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 123}
-]
+  s: 123};
+];
 export interface CloudDevOpsService,
   id: string, nam,
   e: string, taglin,
@@ -751,8 +745,7 @@ export interface CloudDevOpsService,
   s: string[], suppor,
   t: string, complianc,
   e: string[], lin,
-  k: string, ico,
-  n: string, colo,
+  k: string, icon: string, colo,
   r: string, popula,
   r: boolean, launchDat,
   e: string, customer,
@@ -787,8 +780,7 @@ export interface CloudDevOpsService,
   t: '24/7 support, cloud consulting, training programs, and custom development.',' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX, PCI DSS'],' lin,
   k: 'http,
-  s://ziontechgroup.com/multi-cloud-orchestration-platform',' ico,
-  n: '☁️',' colo,
+  s://ziontechgroup.com/multi-cloud-orchestration-platform',' icon: '☁️',' colo,
   r: 'from-blue-500 to-cyan-600', popula,
   r: true,' launchDat,
   e: '2024-12-01', customer,
@@ -822,8 +814,7 @@ export interface CloudDevOpsService,
   t: '24/7 support, DevOps consulting, training programs, and custom development.',' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],' lin,
   k: 'http,
-  s://ziontechgroup.com/intelligent-devops-automation-suite',' ico,
-  n: '🚀',' colo,
+  s://ziontechgroup.com/intelligent-devops-automation-suite',' icon: '🚀',' colo,
   r: 'from-green-500 to-emerald-600', popula,
   r: true,' launchDat,
   e: '2024-12-01', customer,
@@ -857,8 +848,7 @@ export interface CloudDevOpsService,
   t: '24/7 support, Kubernetes consulting, training programs, and custom development.',' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],' lin,
   k: 'http,
-  s://ziontechgroup.com/enterprise-kubernetes-management-platform',' ico,
-  n: '⚓',' colo,
+  s://ziontechgroup.com/enterprise-kubernetes-management-platform',' icon: '⚓',' colo,
   r: 'from-purple-500 to-indigo-600', popula,
   r: true,' launchDat,
   e: '2024-11-15', customer,
@@ -892,8 +882,7 @@ export interface CloudDevOpsService,
   t: '24/7 support, monitoring consulting, training programs, and custom development.',' complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, SOX'],' lin,
   k: 'http,
-  s://ziontechgroup.com/intelligent-infrastructure-monitoring',' ico,
-  n: '📊',' colo,
+  s://ziontechgroup.com/intelligent-infrastructure-monitoring',' icon: '📊',' colo,
   r: 'from-yellow-500 to-orange-600', popula,
   r: true,' launchDat,
   e: '2024-12-01', customer,
@@ -927,8 +916,7 @@ export interface CloudDevOpsService,
   t: '24/7 security support, compliance consulting, training programs, and custom development.',' complianc,
   e: ['SOC 2 Type II, ISO 27001, NIST, GDPR, HIPAA, SOX, PCI DSS'],' lin,
   k: 'http,
-  s://ziontechgroup.com/cloud-security-posture-management',' ico,
-  n: '🛡️',' colo,
+  s://ziontechgroup.com/cloud-security-posture-management',' icon: '🛡️',' colo,
   r: 'from-red-500 to-pink-600', popula,
   r: true,' launchDat,
   e: '2024-11-01', customer,

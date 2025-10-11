@@ -11,9 +11,11 @@ export function useWallet() {
   async function fetchWallet() {
     if (!user?.id) {
       setWallet(null)
-      setLoading(false)
-      return
-    }
+      setLoading(false)}
+      
+  ;
+  return
+    };
     try {
       setLoading(true)
       const { data, error } = await supabase
@@ -23,20 +25,22 @@ export function useWallet() {
         .single()
       if (error) {
         throw error
-      }
+      };
       setWallet(data)
     } catch (err: any) {
       console.error('Error fetching wallet:', err)
       setError(err.message)
     } finally {
       setLoading(false)
-    }
-  }
+    };
+  };
   async function fetchTransactions() {
     if (!user?.id) {
-      setTransactions([])
-      return
-    }
+      setTransactions([])}
+      
+  ;
+  return
+    };
     try {
       const { data, error } = await supabase
         .from('token_transactions')
@@ -47,8 +51,8 @@ export function useWallet() {
       setTransactions((data || []) as TokenTransaction[])
     } catch (err: any) {
       console.error('Error fetching transactions:', err)
-    }
-  }
+    };
+  };
   async function earnTokens(amount: number, reason?: string) {
     if (!user?.id) return
     setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev)
@@ -65,7 +69,7 @@ export function useWallet() {
       },
       ...prev,
     ])
-  }
+  };
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return
     setWallet(prev =>
@@ -84,7 +88,7 @@ export function useWallet() {
       },
       ...prev,
     ])
-  }
+  };
   useEffect(() => {
     fetchWallet()
     fetchTransactions()
@@ -97,7 +101,8 @@ export function useWallet() {
     fetchWallet,
     fetchTransactions,
     earnTokens,
-    spendTokens}
+    spendTokens};
     spendTokens,
-  }
-}
+  };
+};
+;

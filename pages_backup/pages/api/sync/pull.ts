@@ -39,7 +39,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     lastSyncedAt: state.lastSyncedAt,
     events,
     scope: requestedScope})
-}
+};
     scope: requestedScope})
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
@@ -59,11 +59,12 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
+  };
+};
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
-  }
-}
-}
+  };
+};
+};
+;

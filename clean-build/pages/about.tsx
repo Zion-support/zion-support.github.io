@@ -10,9 +10,10 @@ content="Learn about Zion Tech Group's mission, values, and commitment to delive
         <link rel="icon" href="/favicon.ico" />
   </link>
       <div className="min-h-screen bg-gray-50">
-}
-        {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+};
+        {/* Hero Section */};
+        ;
+  <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md: text-5xl font-bold mb-6">;
@@ -28,8 +29,9 @@ through innovative digital solutions and cutting-edge technology.
           </div>)
         </section>)
 ),
-        {/* Mission Section */}
-        <section className="py-16">
+        {/* Mission Section */};
+        ;
+  <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="mb-12">
@@ -63,8 +65,9 @@ future growth and innovation.
           </div>,
         </section>,
 ,
-        {/* Values Section */}
-        <section className="py-16 bg-white">
+        {/* Values Section */};
+        ;
+  <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -109,8 +112,9 @@ challenges.
                       🔒
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity
                   <p className="text-gray-600">;
-export default function About() {/* TODO: Fix JSX expression */}
-}
+export default function About() {/* TODO: Fix JSX expression */};
+};
+  ;
   return (<React.Fragment>;
       <Head>
         <title>About Us - Zion Tech Group
@@ -222,8 +226,9 @@ challenges.
                   <p className="text-gray-600">;
 We maintain the highest standards of honesty, transparency, and ethical business;
 practices.
-        {/* Team Section */}
-        <section className="py-16">
+        {/* Team Section */};
+        ;
+  <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -309,8 +314,9 @@ users and drive business results.
                   <p className="text-gray-600">;
 AI experts who develop intelligent solutions using machine learning, natural;
 language processing, and computer vision.
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        {/* CTA Section */};
+        ;
+  <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?
             <p className="text-xl mb-8">;
@@ -325,8 +331,7 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
 Get In Touch
               <$2 />;
 href="/services";
-className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-        {/* CTA Section */}"
+className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"{/* CTA Section */}">
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>"
           <div className="container mx-auto px-4 text-center"></div>"
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>"
@@ -353,5 +358,5 @@ View Our Services
     </React.Fragment>,
     </React.Fragment>)
   )
-}
+};
 "</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h3></h3></h3></h3></h3></li></li></section></section></section>

@@ -134,7 +134,7 @@ Key Outcomes
           <div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
                 <Server className=" />,";
-Key Outcomes
+Key Outcomes>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className=" />">
@@ -257,8 +257,9 @@ className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-l
 Start Your Reliability Transformation",
                 <Zap className="ml-2 h-5 w-5 ">,
                 <Zap className="ml-2 h-5 w-5" />);
-export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix JSX expression */}
-}
+export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix JSX expression */};
+};
+  ;
   </div>
   </div>
   </div>

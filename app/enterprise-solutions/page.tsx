@@ -1,9 +1,10 @@
 'use client';
 
 
-const EnterpriseSolutionsPage: React.FC = () => {const features = [
+const EnterpriseSolutionsPage: React.FC = () => {
+const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
@@ -23,6 +24,9 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+  
+  ;
+  ;
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -31,9 +35,10 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ]
+  ;
+  ;
   return (
-    <>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+    <><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
             </div>
@@ -54,8 +59,9 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -65,13 +71,15 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* Benefits Section */}
-                </div>
+        {/* Benefits Section */};
+                ;
+  </div>
       
       <Footer />
     </>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
       
       <Footer />
     </>
@@ -81,8 +89,9 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* CTA Section */}
-              </button>
+        {/* CTA Section */};
+              ;
+  </button>
             </div>
       
       <Footer />

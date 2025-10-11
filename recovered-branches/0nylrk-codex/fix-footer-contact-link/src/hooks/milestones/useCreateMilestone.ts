@@ -33,10 +33,11 @@ export const useCreateMilestone = (projectId?: string) => {
       return null
     } finally {
       setIsSubmitting(false)
-    }
-  }
+    };
+  };
+  ;
   return {
     createMilestone,
     isSubmitting
-  }
-}
+  };
+};

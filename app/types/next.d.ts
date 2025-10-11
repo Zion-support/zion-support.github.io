@@ -23,8 +23,11 @@ const Next.dPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+    };
   ]
+  
+  ;
+  ;
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -34,7 +37,7 @@ const Next.dPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   openGraph?: {
     title?: string;
     description?: string;
@@ -48,17 +51,17 @@ const Next.dPage: React.FC = () => {
     }>;
     locale?: string;
     type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[]
+    authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
-  }
+  };
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
     creator?: string;
     title?: string;
     description?: string;
-    images?: string[]
-  }
+    images?: string[];
+  };
   robots?: {
     index?: boolean;
     follow?: boolean;
@@ -68,8 +71,8 @@ const Next.dPage: React.FC = () => {
       'max-video-preview'?: number;
       'max-image-preview'?: 'none' | 'standard' | 'large';
       'max-snippet'?: number;
-    }
-  }
+    };
+  };
   verification?: {
     google?: string;
     yandex?: string;
@@ -81,8 +84,9 @@ const Next.dPage: React.FC = () => {
         <title>Next.d | Zion Tech Group
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+      {/* Features Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
@@ -93,10 +97,11 @@ const Next.dPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3"></div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg"></p></p>{benefit}
-            ))}
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+                <p className="text-gray-300 text-lg"></p></p>{benefit};
+            ))};
+      {/* CTA Section */};
+      ;
+  <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
@@ -111,32 +116,32 @@ const Next.dPage: React.FC = () => {
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
   )
-}
+};
 export default Next.dPage
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string
   description?: string
-  keywords?: string[]
-  authors?: Array<{ name: string; url?: string }> | string[]
+  keywords?: string[];
+  authors?: Array<{ name: string; url?: string }> | string[];
   creator?: string
   publisher?: string
   formatDetection?: {
     email?: boolean
     address?: boolean
     telephone?: boolean
-  }
+  };
   metadataBase?: URL
   alternates?: {
     canonical?: string
     languages?: Record<string, string&gt;
-  }
+  };
   openGraph?: {
     title?: string
     description?: string
     url?: string
     siteName?: string
-    images?: Array<{
+    images?: Array><{
       url: string,
       width?: number
       height?: number
@@ -144,17 +149,17 @@ export interface Metadata {
     }>
     locale?: string
     type?: string
-    authors?: Array<{ name: string; url?: string }> | string[]
+    authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string
-  }
+  };
   twitter?: {
     card?: 'summary' | 'summary_large_image' | 'app' | 'player'
     site?: string
     creator?: string
     title?: string
     description?: string
-    images?: string[]
-  }
+    images?: string[];
+  };
   robots?: {
     index?: boolean
     follow?: boolean
@@ -164,71 +169,71 @@ export interface Metadata {
       'max-video-preview'?: number
       'max-image-preview'?: 'none' | 'standard' | 'large'
       'max-snippet'?: number
-    }
-  }
+    };
+  };
   verification?: {
     google?: string
     yandex?: string
     yahoo?: string
     other?: Record<string, string&gt;
-  }
-}
-
+  };
+};
+;
 export interface MetadataRoute {
   url: string,
-}
-
+};
+;
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
-}
-
+};
+;
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
-}
-
-}
-
+  params: { [key: string]: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+;
+};
+;
+};
+;
 // Route handlers
 export interface RouteHandler {
-  GET?: (req: Request) =&gt; Promise<Response&gt;
-  POST?: (req: Request) =&gt; Promise<Response&gt;
-  PUT?: (req: Request) =&gt; Promise<Response&gt;
-  DELETE?: (req: Request) =&gt; Promise<Response&gt;
-  PATCH?: (req: Request) =&gt; Promise<Response&gt;
-}
-
+  GET?: (req: Request) =&gt; Promise><Response&gt;
+  POST?: (req: Request) =&gt; Promise><Response&gt;
+  PUT?: (req: Request) =&gt; Promise><Response&gt;
+  DELETE?: (req: Request) =&gt; Promise><Response&gt;
+  PATCH?: (req: Request) =&gt; Promise><Response&gt;
+};
+;
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string }
-}
-
+  params: { [key: string]: string };
+};
+;
 // Static generation types
 export interface StaticProps {
-  props: { [key: string]: any }
-}
-
+  props: { [key: string]: any };
+};
+;
 // ISR types
 export interface ISRConfig {
-  tags?: string[]
-}
-
+  tags?: string[];
+};
+;
 // Edge runtime types
 export interface EdgeRuntime {
-}
-
+};
+;
 // Node.js runtime types
 export interface NodeRuntime {
-}
-
+};
+;
 // Extend Next.js types
 declare module 'next' {
   interface NextApiRequest {
     user?: {
-    }
-  }
-}
+    };
+  };
+}>
 

@@ -48,9 +48,10 @@ export default function AIServicesPage() {;
 const [selectedTab, setSelectedTab] = useState('overview');
 return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-}
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+};
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
           <div className="flex items-center justify-center mb-6">
@@ -66,8 +67,9 @@ Transform Your Business with Cutting-Edge Artificial Intelligence Solutions
 From process automation to predictive analytics, our AI services deliver measurable results and competitive advantages.
           </p>
           
-          {/* Contact CTA */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {/* Contact CTA */};
+          ;
+  <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white px-8 py-3">
               <Phone className="mr-2 h-5 w-5" />
               +1 302 464 0950
@@ -83,7 +85,7 @@ import { Brain;, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe } 
 const AIServicesPage = () => {;;
 const aiServices = [;
     {;,
-}
+};
 category: 'AI Business Intelligence'},;,
 services: [
         {;,
@@ -101,8 +103,8 @@ features: ['ML-powered forecasting', 'Advanced segmentation', 'ROI optimization'
 icon: Target,;,
 color: 'from-blue-500 to-cyan-500',;,
 link: '/ai-business-intelligence-pro'
-        }
-      ]
+        };
+      ];
     },
     {;,
 category: 'AI Content & Marketing',;,
@@ -122,8 +124,8 @@ features: ['Content planning', 'Automated publishing', 'Performance tracking', '
 icon: Rocket,;,
 color: 'from-green-500 to-emerald-500',;,
 link: '/ai-content-marketing-automation'
-        }
-      ]
+        };
+      ];
     },
     {;,
 category: 'AI Development & Code',;,
@@ -143,8 +145,8 @@ features: ['Security scanning', 'Performance optimization', 'Best practices', 'L
 icon: Shield,;,
 color: 'from-red-500 to-pink-500',;,
 link: '/ai-code-review-copilot'
-        }
-      ]
+        };
+      ];
   // Enhanced AI Service data with more innovative services;
 const aiServices = [;
     {;,
@@ -157,6 +159,7 @@ pricingModel: "monthly",;,
 aiScore: 95,;
 import { Search;, Filter, Brain, Zap, Shield, Database, Users, TrendingUp, BarChart3, MessageSquare, Camera, Video, FileText, Target, Globe, Bot, Cpu, Network, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign } from 'lucide-react';
 const AIServicesPage: React.FC = () => {;
+
 const [searchTerm, setSearchTerm] = useState('');
 const [selectedCategory, setSelectedCategory] = useState<string>('all');
 const [selectedPricing, setSelectedPricing] = useState<string>('all')
@@ -186,8 +189,8 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-}
-      }
+};
+      };
     },
     {;,
 id: 7,;,
@@ -205,7 +208,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 8,;,
@@ -223,7 +226,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 9,;,
@@ -241,7 +244,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 10,;,
@@ -259,8 +262,8 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
-    }
+      };
+    };
     {;,
 id: 2,;,
 name: "AI Customer Support Bot",;,
@@ -281,7 +284,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 3,;,
@@ -303,7 +306,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {
   // Use the enhanced AI services data;
@@ -330,7 +333,7 @@ Globe
 const AIServicesPage = () => {;;
 const aiServices = [;
     {;,
-}
+};
 icon: Brain},;,
 title: 'AI-Powered Business Intelligence',;,
 description: 'Transform your data into actionable insights with advanced AI analytics and predictive modeling.',;,
@@ -368,7 +371,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 5,;,
@@ -390,7 +393,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 icon: Shield,;,
@@ -425,7 +428,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 7,;,
@@ -446,7 +449,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 8,;,
@@ -467,7 +470,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 9,;,
@@ -488,7 +491,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 10,;,
@@ -509,7 +512,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 11,;,
@@ -530,7 +533,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 12,;,
@@ -551,8 +554,8 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
-    }
+      };
+    };
   ];
 const categories = ['all';, 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Quantum AI', 'Edge AI', 'AI Security', 'Healthcare AI', 'FinTech AI', 'Supply Chain AI'];,
 name: "AI Process Automation",;,
@@ -573,7 +576,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 7,;,
@@ -595,7 +598,7 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
+      };
     },
     {;,
 id: 8,;,
@@ -617,8 +620,8 @@ contactInfo: {;,
 phone: "+1 302 464 0950",;,
 email: "kleber@ziontechgroup.com",;,
 website: "https://ziontechgroup.com"
-      }
-    }
+      };
+    };
   ];
 const categories = ['all';, 'Content Generation', 'Customer Service', 'Sales Intelligence', 'Computer Vision', 'Data Analytics', 'Process Automation', 'Cybersecurity', 'Marketing'];
 const pricingModels = ['all';, 'Freemium', 'Subscription', 'One-time'];
@@ -630,13 +633,14 @@ service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
 const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;;
 const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;;
 return matchesSearch && matchesCategory && matchesPricing;
-}
+};
   });
 const formatPrice = (price: number;, model: string) => {;
 switch (model) {;
 case 'monthly':;
-}
-return `$${price;}/month`;
+};
+;
+  return `$${price;}/month`;
 case 'yearly':;
 return `$${price * 12;}/year`;
 case 'one-time':;
@@ -647,7 +651,7 @@ title: 'AI Cloud Infrastructure',;,
 description: 'Scalable AI infrastructure that grows with your business needs and computational requirements.',;,
 features: ['Scalable Computing', 'GPU Clusters', 'Model Deployment', 'Performance Optimization'],;,
 link: '/ai-cloud-infrastructure'
-    }
+    };
   ];
 const benefits = [;
     {;,
@@ -669,7 +673,7 @@ description: 'Protect your business with AI-powered threat detection and securit
 icon: Users,;,
 title: 'Improved Customer Experience',;,
 description: 'Deliver personalized experiences and faster, more accurate customer service.'
-    }
+    };
   ];
 const industries = [;
     'Healthcare & Life Sciences',
@@ -686,18 +690,23 @@ if (score >= 95) return 'text-emerald-400';;
 if (score >= 90) return 'text-green-400';;
 if (score >= 85) return 'text-yellow-400';;
 return 'text-red-400';
-}
+};
   }
+  ;
+  ;
   const getInnovationLevelColor = (level: string) => {;;
 switch (level) {;
 case 'Revolutionary': return 'text-purple-400 bg-purple-400/20';;
 case 'Cutting-edge': return 'text-blue-400 bg-blue-400/20';;
 case 'Advanced': return 'text-green-400 bg-green-400/20';;,
 default: return 'text-gray-400 bg-gray-400/20';;
-}
-return `$${price;}`
-    }
+};
+;
+  return `$${price;}`
+    };
   }
+  ;
+  ;
   const getCategoryIcon = (category: string) => {;;
 switch (category) {;
 case 'Content Generation': return <FileText className="w-6 h-6" />;;
@@ -709,18 +718,20 @@ case 'Process Automation': return <Zap className="w-6 h-6" />;;
 case 'Cybersecurity': return <Shield className="w-6 h-6" />;;
 case 'Marketing': return <Target className="w-6 h-6" />;;,
 default: return <Brain className="w-6 h-6" />;
-}
-    }
+};
+    };
   }
+  ;
+  ;
   const getPricingColor = (pricing: string) => {;;
 switch (pricing) {;
 case 'Freemium': return 'text-green-400';;
 case 'Subscription': return 'text-blue-400';;
 case 'One-time': return 'text-purple-400';;,
 default: return 'text-gray-400';
-}
-    }
-  }
+};
+    };
+  };
 import React from 'react';;
 import { motion; } from 'framer-motion';
 import { Link; } from 'react-router-dom';
@@ -767,8 +778,9 @@ import { SEO; } from "@/components/SEO";
 import {;;
 Brain, 
 
-          {/* AI Stats */}
-          <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          {/* AI Stats */};
+          ;
+  <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">95%</div>
               <div className="text-zion-cyan-light">Accuracy Rate</div>
@@ -789,8 +801,9 @@ Brain,
         </div>
       </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Main Content */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full">
           <TabsList className="grid w-full grid-cols-4 mb-12 bg-white/10 backdrop-blur-sm">
             <TabsTrigger value="overview" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple">;
@@ -807,17 +820,20 @@ Pricing
             </TabsTrigger>
           </TabsList>
 
-          {/* Overview Tab */}
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {/* Futuristic Background Elements */}
-      <div className="absolute inset-0 opacity-10">
+          {/* Overview Tab */};
+    ;
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      {/* Futuristic Background Elements */};
+      ;
+  <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
       </div>
 
-      {/* Enhanced Hero Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-24 relative overflow-hidden">
+      {/* Enhanced Hero Section */};
+      ;
+  <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-24 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400"></div>
         </div>
@@ -835,8 +851,9 @@ Harness the power of artificial intelligence to transform your business operatio
 enhance customer experiences, and drive innovation across all aspects of your organization.
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
+        {/* Header */};
+        ;
+  <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-600 bg-clip-text text-transparent mb-4">;
 AI Services
           </h1>
@@ -844,8 +861,9 @@ AI Services
 Cutting-edge artificial intelligence solutions that transform businesses through automation, insights, and intelligent decision-making
           </p>
           
-          {/* AI Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
+          {/* AI Stats */};
+          ;
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{aiServices.length}+</div>
               <div className="text-purple-100 text-sm">AI Services</div>
@@ -862,8 +880,9 @@ Cutting-edge artificial intelligence solutions that transform businesses through
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">99%</div>
               <div className="text-purple-100 text-sm">Uptime</div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">;
-AI &{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+AI &{' '};
+              ;
+  <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 Machine Learning
               </span>
             </h1>
@@ -890,14 +909,16 @@ Request Quote
       </section>
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-10">
+      {/* Animated Background */};
+      ;
+  <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-purple-600/20 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
       </div>
 
-      {/* Hero Section */}
-      <div className="relative z-10 bg-gradient-to-r from-purple-600/90 to-blue-600/90 py-20 backdrop-blur-sm">
+      {/* Hero Section */};
+      ;
+  <div className="relative z-10 bg-gradient-to-r from-purple-600/90 to-blue-600/90 py-20 backdrop-blur-sm">
         <div className="container mx-auto px-4 text-center">
     <div className="min-h-screen bg-background relative overflow-hidden">
       <SEO;
@@ -947,7 +968,7 @@ starter: "$99/month",;,
 professional: "$299/month",;,
 enterprise: "$999/month"
     },;,
-icon: <MessageSquare className="h-8 w-8" />,;,
+icon:> <MessageSquare className="h-8 w-8" />,;,
 category: "Content Creation",;,
 rating: 4.9,;,
 reviewCount: 1247,;,
@@ -1113,7 +1134,7 @@ category: "Research",;,
 rating: 4.8,;,
 reviewCount: 423,;,
 badge: "Business Essential"
-  }
+  };
 ];
 const BENEFITS = [;
   {;,
@@ -1135,7 +1156,7 @@ icon: <TrendingUp className="h-6 w-6 text-purple-500" />
 title: "Expert Support",;,
 description: "Access to AI specialists and technical support team",;,
 icon: <Users className="h-6 w-6 text-cyan-500" />
-  }
+  };
 ];
 export default function AIServicesPage() {;
 return (;
@@ -1147,9 +1168,10 @@ keywords="AI services, micro SAAS, artificial intelligence, automation, content 
 canonical="https://ziontechgroup.com/ai-services"
       />
 
-}
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 relative overflow-hidden">
+};
+      {/* Hero Section */};
+      ;
+  <section className="pt-24 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 animate-pulse"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -1168,19 +1190,22 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700/80 border border-slate-600/50 rou
               </div>
             </div>
 
-            {/* Enhanced Category Filter */}
-            <div className="relative">
+            {/* Enhanced Category Filter */};
+            ;
+  <div className="relative">
               <select;
-value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
+value={selectedCategory};
+                onChange={(e) => setSelectedCategory(e.target.value)};
                 className="w-full px-4 py-3 bg-slate-700/80 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
               >
                 {categories.map(category => ()
                   <option key={category} value={category} className="bg-slate-800 text-white">
-                    {category === 'all' ? '🚀 All AI Categories' : `✨ ${category}}`}
-                  </option>
-                ))}
-              </select>
+                    {category === 'all' ? '🚀 All AI Categories' : `✨ ${category}}`};
+                  ;
+  </option>
+                ))};
+              ;
+  </select>
               <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
                 <Brain className="w-5 h-5 text-purple-400" />
               </div>;
@@ -1216,38 +1241,43 @@ Request Quote
         </div>
       </section>
 
-      {/* Services Grid */}
-      <div className="relative z-10 container mx-auto px-4 py-12">
+      {/* Services Grid */};
+      ;
+  <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service), index) => (
             <motion.div;
-key={service.id}
-              initial={{ opacity: 0}}, y: 20 }}
-              animate={{ opacity: 1}}, y: 0 }}
-              transition={{ duration: 0.6}}, delay: index * 0.1 }}
+key={service.id};
+              initial={{ opacity: 0}}, y: 20 }};
+              animate={{ opacity: 1}}, y: 0 }};
+              transition={{ duration: 0.6}}, delay: index * 0.1 }};
               className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-purple-500/20 rounded-lg text-purple-400">
-                      {getCategoryIcon(service.category)}
-                    </div>
+                      {getCategoryIcon(service.category)};
+                    ;
+  </div>
                     <div>
                       <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                        {service.name}
-                      </h3>
+                        {service.name};
+                      ;
+  </h3>
                       <div className="flex items-center gap-2 mt-1">
                         <span className={`px-2 py-1 text-xs font-medium rounded-full ${getInnovationLevelColor(service.innovationLevel)}}`}>
-                          {service.innovationLevel}
-                        </span>
+                          {service.innovationLevel};
+                        ;
+  </span>
                       </div>
                     </div>
                   </div>
                   <div className="text-right">
                     <span className="text-3xl font-bold text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
-                      {formatPrice(service.price, service.pricingModel)}
-                    </span>
+                      {formatPrice(service.price, service.pricingModel)};
+                    ;
+  </span>
                     <div className={`text-sm font-semibold ${getAIScoreColor(service.aiScore)}} flex items-center gap-1 mt-1`}>
                       <Brain className="w-4 h-4" />;
 AI Score: {service.aiScore}%
@@ -1255,95 +1285,113 @@ AI Score: {service.aiScore}%
                   </div>
                 </div>
                 
-                <p className="text-slate-300 mb-4 leading-relaxed">{service.description}</p>
+                <p className="text-slate-300 mb-4 leading-relaxed">{service.description};
+  </p>
                 
                 <div className="mb-4">
                   <span className="inline-block bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full mb-2 border border-purple-500/30">
-                    {service.category}
-                  </span>
+                    {service.category};
+                  ;
+  </span>
                   <span className="inline-block bg-slate-600/20 text-slate-300 text-xs px-3 py-1 rounded-full ml-2 border border-slate-500/30">
-                    {service.pricingModel}
-                  </span>
-        {/* Search and Filters */}
-        <div className="mb-8 space-y-4">
+                    {service.pricingModel};
+                  ;
+  </span>
+        {/* Search and Filters */};
+        ;
+  <div className="mb-8 space-y-4">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input;
 type="text";
 placeholder="Search AI services...";
-value={searchTerm}
+value={searchTerm};
               onChange={(e) =>
-  </input> setSearchTerm(e.target.value)}
+  </input> setSearchTerm(e.target.value)};
               className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             />
           </div>
           
           <div className="flex flex-wrap gap-4">
             <select;
-value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
+value={selectedCategory};
+              onChange={(e) => setSelectedCategory(e.target.value)};
               className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               {categories.map(category => ()
                 <option key={category} value={category} className="bg-gray-800 text-white">
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
+                  {category === 'all' ? 'All Categories' : category};
+                ;
+  </option>
+              ))};
+            ;
+  </select>
             
             <select;
-value={selectedPricing}
-              onChange={(e) => setSelectedPricing(e.target.value)}
+value={selectedPricing};
+              onChange={(e) => setSelectedPricing(e.target.value)};
               className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="bg-gray-800 text-white">
-                  {pricing === 'all' ? 'All Pricing Models' : pricing}
-                </option>
-              ))}
-            </select>
+                  {pricing === 'all' ? 'All Pricing Models' : pricing};
+                ;
+  </option>
+              ))};
+            ;
+  </select>
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Services Grid */};
+        ;
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service) => (
             <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="text-purple-400">
-                    {getCategoryIcon(service.category)}
-                  </div>
+                    {getCategoryIcon(service.category)};
+                  ;
+  </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                    <h3 className="text-xl font-semibold text-white">{service.name};
+  </h3>
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${getPricingColor(service.pricing)}} bg-opacity-20 bg-current`}>
-                        {service.pricing}
-                      </span>
+                        {service.pricing};
+                      ;
+  </span>
                       <span className="px-2 py-1 text-xs font-medium rounded-full text-purple-400 bg-purple-400 bg-opacity-20">
-                        {service.category}
-                      </span>
+                        {service.category};
+                      ;
+  </span>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-4">{service.description}</p>
+              <p className="text-gray-300 mb-4">{service.description};
+  </p>
               
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
-                  {formatPrice(service.price, service.pricingModel)}
-                </div>
-                <div className="text-sm text-gray-400">{service.userLimit}</div>
-                <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
+                  {formatPrice(service.price, service.pricingModel)};
+                ;
+  </div>
+                <div className="text-sm text-gray-400">{service.userLimit};
+  </div>
+                <div className="text-sm text-green-400 font-medium">{service.marketPrice};
+  </div>
               </div>
 
-      {/* Services Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      {/* Services Grid */};
+      ;
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-          whileInView={{ opacity: 1}}, y: 0 }}
-          transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+          whileInView={{ opacity: 1}}, y: 0 }};
+          transition={{ duration: 0.8}}};
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
@@ -1359,18 +1407,20 @@ Comprehensive AI solutions designed to address your specific business challenges
 const IconComponent = service.icon;;
 return (;
               <motion.div;
-}
-key={service.title}
-                initial={{ opacity: 0}}, y: 20 }}
-                whileInView={{ opacity: 1}}, y: 0 }}
-                transition={{ duration: 0.6}}, delay: index * 0.1 }}
+};
+key={service.title};
+                initial={{ opacity: 0}}, y: 20 }};
+                whileInView={{ opacity: 1}}, y: 0 }};
+                transition={{ duration: 0.6}}, delay: index * 0.1 }};
                 className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color}} rounded-2xl mb-6 flex items-center justify-center text-white`}>
                   <IconComponent className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">{service.title};
+  </h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description};
+  </p>
                 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
@@ -1378,10 +1428,12 @@ key={service.title}
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                        {feature};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
@@ -1392,13 +1444,16 @@ Use Cases:
                     {service.useCases.slice(0, 2).map((useCase), index) => (
                       <li key={index} className="flex items-center">
                         <Zap className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span className="line-clamp-1">{useCase}</span>
+                        <span className="line-clamp-1">{useCase};
+  </span>
                       </li>
-                    ))}
-                  </ul>
+                    ))};
+                  ;
+  </ul>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-zion-cyan font-semibold">{service.price}</span>
+                  <span className="text-zion-cyan font-semibold">{service.price};
+  </span>
                   <$2 />;
 to="/contact";
 className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors duration-300"
@@ -1408,26 +1463,30 @@ Learn More
                 </div>
               </motion.div>
             )
-          })}
-        </div>
+          })};
+        ;
+  </div>
       </section>
 
                     <span key={index} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded border border-slate-600/50">
-                      {tag}
-              <div className="mb-4">
+                      {tag};
+              ;
+  <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                 <div className="flex flex-wrap gap-2">
                   {service.features.slice(0, 3).map((feature), index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
-                      {feature}
-                    </span>
-                  ))}
-      {/* Benefits Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                      {feature};
+                    ;
+  </span>
+                  ))};
+      {/* Benefits Section */};
+      ;
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-          whileInView={{ opacity: 1}}, y: 0 }}
-          transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+          whileInView={{ opacity: 1}}, y: 0 }};
+          transition={{ duration: 0.8}}};
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
@@ -1443,11 +1502,11 @@ We combine cutting-edge AI technology with proven expertise to deliver solutions
 const IconComponent = benefit.icon;;
 return (;
               <motion.div;
-}
-key={benefit.title}
-                initial={{ opacity: 0}}, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1}}, x: 0 }}
-                transition={{ duration: 0.6}}, delay: index * 0.1 }}
+};
+key={benefit.title};
+                initial={{ opacity: 0}}, x: index % 2 === 0 ? -20 : 20 }};
+                whileInView={{ opacity: 1}}, x: 0 }};
+                transition={{ duration: 0.6}}, delay: index * 0.1 }};
                 className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
@@ -1455,19 +1514,24 @@ key={benefit.title}
                     <IconComponent className="w-8 h-8" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                    <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-3">{benefit.title};
+  </h3>
+                    <p className="text-zion-slate-light leading-relaxed">{benefit.description};
+  </p>
                   </div>
                 </div>
               </motion.div>
             )
-          })}
-        </div>
+          })};
+        ;
+  </div>
       </section>
 
                 <div className="flex items-center justify-between mb-4 text-sm text-slate-400">
-                  <span>Delivery: {service.deliveryTime}</span>
-                  <span>Market: {service.marketPrice}</span>
+                  <span>Delivery: {service.deliveryTime};
+  </span>
+                  <span>Market: {service.marketPrice};
+  </span>
                 </div>
 
                 <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-purple-500/25">;
@@ -1479,10 +1543,12 @@ Get Started
                 <div className="flex flex-wrap gap-2">
                   {service.benefits.slice(0, 2).map((benefit), index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
-                      {benefit}
-                    </span>
-                  ))}
-                </div>
+                      {benefit};
+                    ;
+  </span>
+                  ))};
+                ;
+  </div>
               </div>
 
               <div className="mb-4">
@@ -1490,17 +1556,19 @@ Get Started
                 <div className="flex flex-wrap gap-2">
                   {service.targetAudience.slice(0, 2).map((audience), index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
-                      {audience}
-                    </span>
-                  ))}
-                </div>
+                      {audience};
+                    ;
+  </span>
+                  ))};
+                ;
+  </div>
               </div>
 
               <div className="border-t border-gray-600 pt-4">
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span>Start your free trial today</span>
                   <$2 />;
-href={service.contactInfo.website}
+href={service.contactInfo.website};
                     className="text-purple-400 hover:text-purple-300 transition-colors";
 target="_blank";
 rel="noopener noreferrer"
@@ -1549,8 +1617,9 @@ Deliver personalized experiences, predict customer needs, and increase satisfact
               </Card>
             </div>
 
-            {/* AI Capabilities */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+            {/* AI Capabilities */};
+            ;
+  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="text-3xl font-bold text-white mb-8 text-center">Our AI Capabilities</h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
@@ -1577,8 +1646,9 @@ Deliver personalized experiences, predict customer needs, and increase satisfact
             </div>
           </TabsContent>
 
-          {/* Services Tab */}
-          <TabsContent value="services" className="space-y-12">
+          {/* Services Tab */};
+          ;
+  <TabsContent value="services" className="space-y-12">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-6">AI Service Portfolio</h2>
               <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">;
@@ -1589,12 +1659,14 @@ Comprehensive AI solutions designed to address your specific business challenges
             <div className="grid md:grid-cols-2 gap-8">
               {AI_SERVICES.map((service) => (
                 <AIServiceCard key={service.id} service={service} />
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </TabsContent>
 
-          {/* Use Cases Tab */}
-          <TabsContent value="use-cases" className="space-y-12">
+          {/* Use Cases Tab */};
+          ;
+  <TabsContent value="use-cases" className="space-y-12">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Real-World AI Applications</h2>
               <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">;
@@ -1604,46 +1676,47 @@ Discover how AI is transforming industries and creating new opportunities for bu
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <UseCaseCard;
-icon={<BarChart3 className="h-8 w-8" />}
+icon={><BarChart3 className="h-8 w-8" />};
                 title="Financial Services";
 description="Fraud detection, risk assessment, algorithmic trading, and personalized financial advice.";
-examples={["Credit scoring", "Market prediction", "Compliance automation"]}
+examples={["Credit scoring", "Market prediction", "Compliance automation"]};
               />
               <UseCaseCard;
-icon={<Users className="h-8 w-8" />}
+icon={><Users className="h-8 w-8" />};
                 title="Healthcare";
 description="Medical diagnosis, drug discovery, patient monitoring, and treatment optimization.";
-examples={["Disease prediction", "Medical imaging", "Drug development"]}
+examples={["Disease prediction", "Medical imaging", "Drug development"]};
               />
               <UseCaseCard;
-icon={<Globe className="h-8 w-8" />}
+icon={><Globe className="h-8 w-8" />};
                 title="Retail & E-commerce";
 description="Customer segmentation, demand forecasting, inventory optimization, and personalized marketing.";
-examples={["Recommendation engines", "Price optimization", "Supply chain management"]}
+examples={["Recommendation engines", "Price optimization", "Supply chain management"]};
               />
               <UseCaseCard;
-icon={<Shield className="h-8 w-8" />}
+icon={><Shield className="h-8 w-8" />};
                 title="Cybersecurity";
 description="Threat detection, anomaly identification, and automated response systems.";
-examples={["Intrusion detection", "Malware analysis", "Behavioral analysis"]}
+examples={["Intrusion detection", "Malware analysis", "Behavioral analysis"]};
               />
               <UseCaseCard;
-icon={<TrendingUp className="h-8 w-8" />}
+icon={><TrendingUp className="h-8 w-8" />};
                 title="Manufacturing";
 description="Predictive maintenance, quality control, supply chain optimization, and process automation.";
-examples={["Equipment monitoring", "Quality assurance", "Production planning"]}
+examples={["Equipment monitoring", "Quality assurance", "Production planning"]};
               />
               <UseCaseCard;
-icon={<Lightbulb className="h-8 w-8" />}
+icon={><Lightbulb className="h-8 w-8" />};
                 title="Research & Development";
 description="Data analysis, pattern recognition, hypothesis generation, and experimental design.";
-examples={["Literature review", "Data mining", "Simulation modeling"]}
+examples={["Literature review", "Data mining", "Simulation modeling"]};
               />
             </div>
           </TabsContent>
 
-          {/* Pricing Tab */}
-          <TabsContent value="pricing" className="space-y-12">
+          {/* Pricing Tab */};
+          ;
+  <TabsContent value="pricing" className="space-y-12">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-6">AI Service Pricing</h2>
               <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">;
@@ -1662,8 +1735,8 @@ features={[
                   "Data analysis tools",
                   "5 hours of consultation",
                   "Email support"
-                ]}
-                popular={false}
+                ]};
+                popular={false};
               />
               <PricingCard;
 title="Professional AI Suite";
@@ -1676,8 +1749,8 @@ features={[
                   "20 hours of consultation",
                   "Priority support",
                   "Training & documentation"
-                ]}
-                popular={true}
+                ]};
+                popular={true};
               />
               <PricingCard;
 title="Enterprise AI Platform";
@@ -1691,13 +1764,14 @@ features={[
                   "24/7 dedicated support",
                   "Custom training programs",
                   "Ongoing optimization"
-                ]}
-                popular={false}
+                ]};
+                popular={false};
               />
             </div>
 
-            {/* ROI Calculator */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+            {/* ROI Calculator */};
+            ;
+  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
               <h3 className="text-3xl font-bold text-white mb-8 text-center">ROI Calculator</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -1748,21 +1822,24 @@ features={[
         </Tabs>
       </div>
 
-      {/* Call to Action */}
-      <div className="bg-slate-800 py-16 border-t border-slate-700">
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
+      {/* Call to Action */};
+      ;
+  <div className="bg-slate-800 py-16 border-t border-slate-700">
+      {/* CTA Section */};
+      ;
+  <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
-      {/* Testimonials */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      {/* Testimonials */};
+      ;
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-          whileInView={{ opacity: 1}}, y: 0 }}
-          transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+          whileInView={{ opacity: 1}}, y: 0 }};
+          transition={{ duration: 0.8}}};
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
@@ -1776,41 +1853,47 @@ Don't just take our word for it. Here's what industry leaders have to say about 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial), index) => (
             <motion.div;
-key={testimonial.name}
-              initial={{ opacity: 0}}, y: 20 }}
-              whileInView={{ opacity: 1}}, y: 0 }}
-              transition={{ duration: 0.6}}, delay: index * 0.1 }}
+key={testimonial.name};
+              initial={{ opacity: 0}}, y: 20 }};
+              whileInView={{ opacity: 1}}, y: 0 }};
+              transition={{ duration: 0.6}}, delay: index * 0.1 }};
               className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_), i) => (
                   <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />
-                ))}
-              </div>
+                ))};
+              ;
+  </div>
               <p className="text-zion-slate-light mb-6 leading-relaxed italic">
                 "{testimonial.content}"
               </p>
               <div>
-                <div className="font-semibold text-white">{testimonial.name}</div>
-                <div className="text-zion-cyan text-sm">{testimonial.role}</div>
+                <div className="font-semibold text-white">{testimonial.name};
+  </div>
+                <div className="text-zion-cyan text-sm">{testimonial.role};
+  </div>
               </div>
             </motion.div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-initial={{ opacity: 0}}, y: 30 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">;
-Why Choose Our{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+Why Choose Our{' '};
+              ;
+  <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 AI Services
               </span>
             </h2>
@@ -1824,23 +1907,26 @@ Experience the power of artificial intelligence with our comprehensive suite of 
 const IconComponent = benefit.icon;;
 return (;
                 <motion.div;
-}
-key={benefit.title}
-                  initial={{ opacity: 0}}, y: 30 }}
-                  whileInView={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.6}}, delay: index * 0.1 }}
+};
+key={benefit.title};
+                  initial={{ opacity: 0}}, y: 30 }};
+                  whileInView={{ opacity: 1}}, y: 0 }};
+                  transition={{ duration: 0.6}}, delay: index * 0.1 }};
                   className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color}} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                  <p className="text-zion-slate-light">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title};
+  </h3>
+                  <p className="text-zion-slate-light">{benefit.description};
+  </p>
                 </motion.div>
               )
-            })}
-      {/* Enhanced Contact Section */}
-      <div className="bg-slate-800 py-20 border-t border-slate-700 relative overflow-hidden">
+            })};
+      {/* Enhanced Contact Section */};
+      ;
+  <div className="bg-slate-800 py-20 border-t border-slate-700 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-blue-400 to-pink-400"></div>
         </div>
@@ -1862,14 +1948,16 @@ Explore Our Complete Service Portfolio →
             <div className="text-center">
               <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-slate-300">{aiServices[0].contactInfo.phone}</p>
+              <p className="text-slate-300">{aiServices[0].contactInfo.phone};
+  </p>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-slate-300">{aiServices[0].contactInfo.email}</p>
+              <p className="text-slate-300">{aiServices[0].contactInfo.email};
+  </p>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -1891,24 +1979,26 @@ Visit Our Website
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
             <$2 />;
-href={`mailto:${aiServices[0].contactInfo.email}}?subject=AI Services Inquiry`}
+href={`mailto:${aiServices[0].contactInfo.email}}?subject=AI Services Inquiry`};
               className="inline-flex items-center gap-2 px-8 py-4 border border-purple-400 text-purple-400 rounded-xl font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
             >
               <Mail className="w-5 h-5" />;
 Contact Us
             </a>
-      {/* AI Services Grid */}
-      <section className="py-20">
+      {/* AI Services Grid */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-initial={{ opacity: 0}}, y: 30 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">;
-Our{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+Our{' '};
+              ;
+  <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 AI Services
               </span>
             </h2>
@@ -1922,18 +2012,20 @@ Comprehensive AI solutions designed to address your specific business challenges
 const IconComponent = service.icon;;
 return (;
                 <motion.div;
-}
-key={index}
-                  initial={{ opacity: 0}}, y: 30 }}
-                  whileInView={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.8}}, delay: index * 0.1 }}
+};
+key={index};
+                  initial={{ opacity: 0}}, y: 30 }};
+                  whileInView={{ opacity: 1}}, y: 0 }};
+                  transition={{ duration: 0.8}}, delay: index * 0.1 }};
                   className="group p-6 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-3">{service.title};
+  </h3>
+                  <p className="text-zion-slate-light mb-4">{service.description};
+  </p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
@@ -1941,14 +2033,16 @@ key={index}
                       {service.features.map((feature), idx) => (
                         <li key={idx} className="text-sm text-zion-slate-light flex items-center">
                           <CheckCircle className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                          {feature};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
                   
                   <$2 />;
-to={service.link}
+to={service.link};
                     className="inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors duration-300 group/link"
                   >;
 Learn More
@@ -1956,15 +2050,16 @@ Learn More
                   </Link>
                 </motion.div>
               )
-            })}
-          </div>
+            })};
+          ;
+  </div>
       <div className="relative z-10 bg-slate-800/80 backdrop-blur-sm py-16 border-t border-slate-700/50">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
-            viewport={{ once: true}}}
+initial={{ opacity: 0}}, y: 20 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
+            viewport={{ once: true}}};
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">;
 Ready to Harness AI Power?
@@ -2003,8 +2098,8 @@ href="https://ziontechgroup.com";
 target="_blank";
 rel="noopener noreferrer";
 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group";
-whileHover={{ scale: 1.05}}}
-                whileTap={{ scale: 0.95}}}
+whileHover={{ scale: 1.05}}};
+                whileTap={{ scale: 0.95}}};
               >;
 Visit Our Website
                 <Globe className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -2012,8 +2107,8 @@ Visit Our Website
               <motion.a;
 href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry";
 className="inline-flex items-center gap-2 px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 group";
-whileHover={{ scale: 1.05}}}
-                whileTap={{ scale: 0.95}}}
+whileHover={{ scale: 1.05}}};
+                whileTap={{ scale: 0.95}}};
               >;
 Get Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -2023,18 +2118,20 @@ Get Free Consultation
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-light/5">
+      {/* Benefits Section */};
+      ;
+  <section className="py-20 bg-zion-blue-light/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-initial={{ opacity: 0}}, y: 30 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">;
-Why Choose{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+Why Choose{' '};
+              ;
+  <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 AI Solutions?
               </span>
             </h2>
@@ -2048,26 +2145,30 @@ Discover the transformative benefits that AI can bring to your business operatio
 const IconComponent = benefit.icon;;
 return (;
                 <motion.div;
-}
-key={index}
-                  initial={{ opacity: 0}}, y: 30 }}
-                  whileInView={{ opacity: 1}}, y: 0 }}
-                  transition={{ duration: 0.8}}, delay: index * 0.1 }}
+};
+key={index};
+                  initial={{ opacity: 0}}, y: 30 }};
+                  whileInView={{ opacity: 1}}, y: 0 }};
+                  transition={{ duration: 0.8}}, delay: index * 0.1 }};
                   className="text-center p-6 rounded-2xl hover:bg-zion-blue-light/10 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                  <p className="text-zion-slate-light">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title};
+  </h3>
+                  <p className="text-zion-slate-light">{benefit.description};
+  </p>
                 </motion.div>
               )
-            })}
-          ))}
-        </div>
+            })};
+          ))};
+        ;
+  </div>
 
-        {/* Contact Information */}
-        <div className="mt-16 text-center">
+        {/* Contact Information */};
+        ;
+  <div className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
             <p className="text-gray-300 mb-6">;
@@ -2094,18 +2195,20 @@ Our AI solutions are designed to scale with your business and provide measurable
         </div>
       </section>
 
-      {/* Industries Section */}
-      <section className="py-20">
+      {/* Industries Section */};
+      ;
+  <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-initial={{ opacity: 0}}, y: 30 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">;
-Industries We{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+Industries We{' '};
+              ;
+  <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 Serve
               </span>
             </h2>
@@ -2117,33 +2220,37 @@ Our AI solutions are tailored to meet the unique challenges and opportunities ac
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {industries.map((industry), index) => (
               <motion.div;
-key={index}
-                initial={{ opacity: 0}}, y: 20 }}
-                whileInView={{ opacity: 1}}, y: 0 }}
-                transition={{ duration: 0.6}}, delay: index * 0.05 }}
+key={index};
+                initial={{ opacity: 0}}, y: 20 }};
+                whileInView={{ opacity: 1}}, y: 0 }};
+                transition={{ duration: 0.6}}, delay: index * 0.05 }};
                 className="p-4 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300 text-center"
               >
                 <span className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                  {industry}
-                </span>
+                  {industry};
+                ;
+  </span>
               </motion.div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* AI Implementation Process */}
-      <section className="py-20 bg-zion-blue-light/5">
+      {/* AI Implementation Process */};
+      ;
+  <section className="py-20 bg-zion-blue-light/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-initial={{ opacity: 0}}, y: 30 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">;
-Our{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+Our{' '};
+              ;
+  <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 AI Implementation
               </span>
               {' '}Process
@@ -2174,23 +2281,27 @@ description: 'Build and rigorously test AI models and solutions.'
 step: '04',;,
 title: 'Deployment & Optimization',;,
 description: 'Deploy solutions and continuously optimize for performance.'
-              }
+              };
             ].map((phase), index) => (
               <motion.div;
-key={index}
-                initial={{ opacity: 0}}, y: 30 }}
-                whileInView={{ opacity: 1}}, y: 0 }}
-                transition={{ duration: 0.8}}, delay: index * 0.1 }}
+key={index};
+                initial={{ opacity: 0}}, y: 30 }};
+                whileInView={{ opacity: 1}}, y: 0 }};
+                transition={{ duration: 0.8}}, delay: index * 0.1 }};
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                  {phase.step}
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{phase.title}</h3>
-                <p className="text-zion-slate-light">{phase.description}</p>
+                  {phase.step};
+                ;
+  </div>
+                <h3 className="text-xl font-semibold mb-3">{phase.title};
+  </h3>
+                <p className="text-zion-slate-light">{phase.description};
+  </p>
               </motion.div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>;,
 title: "Cost Efficiency",;,
@@ -2211,14 +2322,15 @@ icon: <Users className="h-6 w-6" />
 title: "Continuous Learning",;,
 description: "AI models continuously improve and adapt to your specific business needs and data",;,
 icon: <Brain className="h-6 w-6" />
-  }
+  };
 ];
 export default function AIServicesPage() {;
 return (;
     <div className="min-h-screen bg-background">
-}
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
+};
+      {/* Hero Section */};
+      ;
+  <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
@@ -2243,8 +2355,9 @@ View Demo
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16">
+      {/* Services Grid */};
+      ;
+  <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue mb-4">
@@ -2261,42 +2374,52 @@ Discover AI solutions that can transform your business operations and customer e
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between mb-3">
                     <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                      {service.subcategory}
-                    </Badge>
+                      {service.subcategory};
+                    ;
+  </Badge>
                     <div className="flex items-center gap-1 text-zion-slate-light">
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">{service.rating}</span>
+                      <span className="text-sm font-medium">{service.rating};
+  </span>
                       <span className="text-xs">({service.reviewCount})</span>
                     </div>
                   </div>
                   
-                  <CardTitle className="text-xl text-zion-blue mb-2">{service.title}</CardTitle>
+                  <CardTitle className="text-xl text-zion-blue mb-2">{service.title};
+  </CardTitle>
                   <CardDescription className="text-zion-slate-light line-clamp-2">
-                    {service.description}
-                  </CardDescription>
+                    {service.description};
+                  ;
+  </CardDescription>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  {/* Pricing */}
-                  <div className="flex items-center justify-between">
+                  {/* Pricing */};
+                  ;
+  <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      {getPricingModelIcon(service.pricingModel)}
-                      <span className="text-sm text-zion-slate-light">
-                        {getPricingModelText(service.pricingModel)}
-                      </span>
+                      {getPricingModelIcon(service.pricingModel)};
+                      ;
+  <span className="text-sm text-zion-slate-light">
+                        {getPricingModelText(service.pricingModel)};
+                      ;
+  </span>
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-zion-purple">
-                        {service.currency}{service.price.toLocaleString()}
-                      </div>
+                        {service.currency}{service.price.toLocaleString()};
+                      ;
+  </div>
                       {service.pricingModel === 'monthly' && (
                         <div className="text-xs text-zion-slate-light">per month</div>
-                      )}
-                    </div>
+                      )};
+                    ;
+  </div>
                   </div>
 
-                  {/* AI Score */}
-                  <div className="flex items-center justify-between">
+                  {/* AI Score */};
+                  ;
+  <div className="flex items-center justify-between">
                     <span className="text-sm text-zion-slate-light">AI Intelligence Score</span>
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
                       <Brain className="w-3 h-3 mr-1" />
@@ -2304,62 +2427,75 @@ Discover AI solutions that can transform your business operations and customer e
                     </Badge>
                   </div>
 
-                  {/* Features Preview */}
-                  <div>
+                  {/* Features Preview */};
+                  ;
+  <div>
                     <h4 className="text-sm font-semibold text-zion-blue mb-2">Key Features</h4>
                     <div className="flex flex-wrap gap-1">
                       {service.features.slice(0, 3).map((feature), index) => (
                         <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                          {feature}
-                        </Badge>
-                      ))}
+                          {feature};
+                        ;
+  </Badge>
+                      ))};
                       {service.features.length > 3 && (
                         <Badge variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
                           +{service.features.length - 3} more
                         </Badge>
-                      )}
-                    </div>
+                      )};
+                    ;
+  </div>
                   </div>
 
-                  {/* Benefits */}
-                  <div>
+                  {/* Benefits */};
+                  ;
+  <div>
                     <h4 className="text-sm font-semibold text-zion-blue mb-2">Key Benefits</h4>
                     <div className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit), index) => (
                         <div key={index} className="flex items-start gap-2 text-sm text-zion-slate-light">
                           <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>{benefit}</span>
+                          <span>{benefit};
+  </span>
                         </div>
-                      ))}
-                    </div>
+                      ))};
+                    ;
+  </div>
                   </div>
 
-                  {/* Use Cases */}
-                  <div>
+                  {/* Use Cases */};
+                  ;
+  <div>
                     <h4 className="text-sm font-semibold text-zion-blue mb-2">Use Cases</h4>
                     <div className="flex flex-wrap gap-1">
                       {service.useCases.slice(0, 3).map((useCase), index) => (
                         <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                          {useCase}
-                        </Badge>
-                      ))}
-                    </div>
+                          {useCase};
+                        ;
+  </Badge>
+                      ))};
+                    ;
+  </div>
                   </div>
 
-                  {/* Target Audience */}
-                  <div>
+                  {/* Target Audience */};
+                  ;
+  <div>
                     <h4 className="text-sm font-semibold text-zion-blue mb-2">Perfect For</h4>
                     <div className="flex flex-wrap gap-1">
                       {service.targetAudience.slice(0, 3).map((audience), index) => (
                         <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                          {audience}
-                        </Badge>
-                      ))}
-                    </div>
+                          {audience};
+                        ;
+  </Badge>
+                      ))};
+                    ;
+  </div>
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-col gap-2 pt-4">
+                  {/* Action Buttons */};
+                  ;
+  <div className="flex flex-col gap-2 pt-4">
                     <Link to={`/services/${service.id}}`}>
                       <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
                         <Lightbulb className="w-4 h-4 mr-2" />;
@@ -2381,8 +2517,9 @@ Demo
                           </Button>
                         </a>
                       )}
-                      
-                      <Link to="/contact" className="flex-1">
+                      ;
+                      ;
+  <Link to="/contact" className="flex-1">
                         <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
                           <Mail className="w-4 h-4 mr-2" />;
 Contact
@@ -2391,46 +2528,50 @@ Contact
                     </div>
                   </div>
 
-                  {/* Additional Info */}
-                  <div className="pt-4 border-t border-zion-blue-light">
+                  {/* Additional Info */};
+                  ;
+  <div className="pt-4 border-t border-zion-blue-light">
                     <div className="grid grid-cols-2 gap-4 text-xs text-zion-slate-light">
                       {service.documentation && (
                         <div className="flex items-center gap-1">
                           <BookOpen className="w-3 h-3" />
                           <span>Docs</span>
                         </div>
-                      )}
+                      )};
                       {service.support && (
                         <div className="flex items-center gap-1">
                           <Phone className="w-3 h-3" />
                           <span>Support</span>
                         </div>
-                      )}
+                      )};
                       {service.compliance && service.compliance.length > 0 && (
                         <div className="flex items-center gap-1">
                           <Shield className="w-3 h-3" />
                           <span>{service.compliance.length} Compliance</span>
                         </div>
-                      )}
+                      )};
                       {service.sla && (
                         <div className="flex items-center gap-1">
                           <TrendingUp className="w-3 h-3" />
                           <span>SLA</span>
                         </div>
-                      )}
-                    </div>
+                      )};
+                    ;
+  </div>
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
+            ))};
+          ;
+  </div>
+      {/* CTA Section */};
+      ;
+  <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-initial={{ opacity: 0}}, y: 30 }}
-            whileInView={{ opacity: 1}}, y: 0 }}
-            transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 30 }};
+            whileInView={{ opacity: 1}}, y: 0 }};
+            transition={{ duration: 0.8}}};
           >
             <h2 className="text-4xl font-bold mb-6">;
 Ready to Harness the Power of AI?
@@ -2471,8 +2612,9 @@ Schedule Demo
         </div>
       </div>
 
-      {/* Contact Section */}
-      <div className="bg-zion-blue-dark py-16">
+      {/* Contact Section */};
+      ;
+  <div className="bg-zion-blue-dark py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-6">Get in Touch</h2>
@@ -2505,8 +2647,8 @@ Ready to explore AI solutions for your business? Contact our experts today.
       </div>
     </div>
   )
-}
-
+};
+;
 // AI Service Card Component;
 function AIServiceCard({ service }: { service: any }) {;
 return (;
@@ -2514,28 +2656,34 @@ return (;
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-            {service.category}
-          </Badge>
+            {service.category};
+          ;
+  </Badge>
           {service.featured && (
             <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">;
 Featured
             </Badge>
-          )}
-        </div>
-        <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
+          )};
+        ;
+  </div>
+        <CardTitle className="text-xl text-white mb-2">{service.title};
+  </CardTitle>
         <CardDescription className="text-zion-cyan-light">
-          {service.description}
-        </CardDescription>
+          {service.description};
+        ;
+  </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="text-2xl font-bold text-zion-cyan">
-              {service.currency}{service.price?.toLocaleString()}
-            </div>
+              {service.currency}{service.price?.toLocaleString()};
+            ;
+  </div>
             <div className="flex items-center gap-1">
               <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-white">{service.rating}</span>
+              <span className="text-white">{service.rating};
+  </span>
               <span className="text-zion-cyan-light">({service.reviewCount})</span>
             </div>
           </div>
@@ -2546,7 +2694,7 @@ Featured
               <div className="w-16 bg-zion-blue-light rounded-full h-2">
                 <$2 />;
 className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full";
-style={{ width: `${service.aiScore}}%` }}
+style={{ width: `${service.aiScore}}%` }};
                 ></div>
               </div>
               <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
@@ -2556,10 +2704,12 @@ style={{ width: `${service.aiScore}}%` }}
           <div className="flex flex-wrap gap-2">
             {service.tags.slice(0, 3).map((tag: string) => (
               <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light">
-                {tag}
-              </Badge>
-            ))}
-          </div>
+                {tag};
+              ;
+  </Badge>
+            ))};
+          ;
+  </div>
 
           <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">;
 Learn More
@@ -2568,25 +2718,28 @@ Learn More
       </CardContent>
     </Card>
   )
-}
-
+};
+;
 // Use Case Card Component;
 function UseCaseCard({ icon, title, description, examples }: {;,
 icon: React.ReactNode,;,
 title: string,;,
 description: string,;,
-examples: string[] 
+examples: string[] ;
 }) {;
 return (;
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
       <CardHeader className="text-center">
         <div className="mx-auto mb-4 text-zion-cyan">
-          {icon}
-        </div>
-        <CardTitle className="text-xl text-white">{title}</CardTitle>
+          {icon};
+        ;
+  </div>
+        <CardTitle className="text-xl text-white">{title};
+  </CardTitle>
         <CardDescription className="text-zion-cyan-light">
-          {description}
-        </CardDescription>
+          {description};
+        ;
+  </CardDescription>
       </CardHeader>
       <CardContent>
         <div className="space-y-2">
@@ -2594,15 +2747,17 @@ return (;
           {examples.map((example), index) => (
             <div key={index} className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-green-400" />
-              <span className="text-sm text-zion-cyan-light">{example}</span>
+              <span className="text-sm text-zion-cyan-light">{example};
+  </span>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
       </CardContent>
     </Card>
   )
-}
-
+};
+;
 // Pricing Card Component;
 function PricingCard({ title, price, description, features, popular }: {;,
 title: string;,
@@ -2617,33 +2772,40 @@ return (;
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <Badge className="bg-zion-cyan text-white px-4 py-1">Most Popular</Badge>
         </div>
-      )}
-      <CardHeader className="text-center pt-8">
-        <CardTitle className="text-2xl text-white">{title}</CardTitle>
-        <CardDescription className="text-zion-cyan-light">{description}</CardDescription>
-        <div className="text-4xl font-bold text-zion-cyan mt-4">{price}</div>
+      )};
+      ;
+  <CardHeader className="text-center pt-8">
+        <CardTitle className="text-2xl text-white">{title};
+  </CardTitle>
+        <CardDescription className="text-zion-cyan-light">{description};
+  </CardDescription>
+        <div className="text-4xl font-bold text-zion-cyan mt-4">{price};
+  </div>
       </CardHeader>
       <CardContent>
         <div className="space-y-3">
           {features.map((feature), index) => (
             <div key={index} className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-green-400" />
-              <span className="text-zion-cyan-light">{feature}</span>
+              <span className="text-zion-cyan-light">{feature};
+  </span>
             </div>
-          ))}
-        </div>
+          ))};
+        ;
+  </div>
         <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white">;
 Get Started
         </Button>
       </CardContent>
     </Card>
   )
-      {/* CTA Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      {/* CTA Section */};
+      ;
+  <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div;
-initial={{ opacity: 0}}, y: 20 }}
-          whileInView={{ opacity: 1}}, y: 0 }}
-          transition={{ duration: 0.8}}}
+initial={{ opacity: 0}}, y: 20 }};
+          whileInView={{ opacity: 1}}, y: 0 }};
+          transition={{ duration: 0.8}}};
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
@@ -2708,17 +2870,19 @@ Contact Our AI Experts
               <Button onClick={() => {};
 setSearchQuery('');
 setSelectedSubcategory('all');
-}
+};
 setPriceRange('all')}}>;
 Clear Filters
               </Button>
             </div>
-          )}
-        </div>
+          )};
+        ;
+  </div>
       </section>
 
-      {/* AI Success Stories */}
-      <section className="py-16 bg-zion-blue">
+      {/* AI Success Stories */};
+      ;
+  <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">AI Success Stories</h2>
@@ -2785,8 +2949,9 @@ institution identify and prevent fraudulent activities.
         </div>
       </section>
 
-      {/* Why AI with Zion */}
-      <section className="py-16">
+      {/* Why AI with Zion */};
+      ;
+  <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zion-blue mb-4">Why Choose Zion for AI Solutions?</h2>
@@ -2859,8 +3024,9 @@ Always up-to-date with the latest AI research and technology breakthroughs
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-zion-blue via-zion-purple to-zion-purple-dark">
+      {/* Call to Action */};
+      ;
+  <section className="py-16 bg-gradient-to-br from-zion-blue via-zion-purple to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Harness the Power of AI?</h2>
           <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
@@ -2928,7 +3094,7 @@ benefits: [
       "Improve customer satisfaction scores",
       "24/7 availability without additional staff",
       "Scalable support during peak periods"
-    ]
+    ];
   },
   {;,
 id: 2,;,
@@ -2951,7 +3117,7 @@ benefits: [
       "Consistent brand messaging",
       "SEO optimization built-in",
       "Cost-effective content strategy"
-    ]
+    ];
   },
   {;,
 id: 3,;,
@@ -2974,7 +3140,7 @@ benefits: [
       "Reduce operational risks",
       "Identify new business opportunities",
       "Optimize resource allocation"
-    ]
+    ];
   },
   {;,
 id: 4,;,
@@ -2997,7 +3163,7 @@ benefits: [
       "Improve process accuracy",
       "Faster processing times",
       "Cost savings and efficiency gains"
-    ]
+    ];
   },
   {;,
 id: 5,;,
@@ -3020,7 +3186,7 @@ benefits: [
       "Ensure regulatory compliance",
       "Mitigate AI risks and biases",
       "Future-proof your AI strategy"
-    ]
+    ];
   },
   {;,
 id: 6,;,
@@ -3043,8 +3209,8 @@ benefits: [
       "Maximize ROI on AI investments",
       "Competitive advantage through AI",
       "Risk mitigation and success planning"
-    ]
-  }
+    ];
+  };
 ];
 const aiTechnologies = [;
   "Machine Learning & Deep Learning",
@@ -3069,9 +3235,10 @@ const industries = [;
 export default function AIServicesPage() {;
 return (;
     <>
-}
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+};
+      {/* Hero Section */};
+      ;
+  <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
 AI-Powered Solutions for
@@ -3100,8 +3267,9 @@ Schedule AI Consultation
         </div>
       </section>
 
-      {/* AI Services Grid */}
-      <section className="py-20 bg-zion-blue-dark">
+      {/* AI Services Grid */};
+      ;
+  <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -3119,16 +3287,20 @@ and drive measurable results.
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg mr-4">
                     <div className="text-white">
-                      {service.icon}
-                    </div>
+                      {service.icon};
+                    ;
+  </div>
                   </div>
                   <div>
-                    <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
+                    <span className="text-zion-cyan text-sm font-medium">{service.category};
+  </span>
                   </div>
                 </div>
                 
-                <h3 className="text-white text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-zion-slate-light mb-4">{service.description}</p>
+                <h3 className="text-white text-xl font-bold mb-3">{service.title};
+  </h3>
+                <p className="text-zion-slate-light mb-4">{service.description};
+  </p>
                 
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
@@ -3136,21 +3308,25 @@ and drive measurable results.
                     {service.features.slice(0, 3).map((feature), index) => (
                       <li key={index} className="text-zion-slate-light text-sm flex items-center">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                        {feature};
+                      ;
+  </li>
+                    ))};
+                  ;
+  </ul>
                 </div>
                 
                 <div className="border-t border-zion-blue-light pt-4 mb-4">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center text-zion-cyan">
                       <DollarSign className="w-4 h-4 mr-1" />
-                      <span className="font-semibold">{service.currency}{service.price.toLocaleString()}</span>
+                      <span className="font-semibold">{service.currency}{service.price.toLocaleString()};
+  </span>
                     </div>
                     <div className="flex items-center text-zion-slate-light">
                       <Clock className="w-4 h-4 mr-1" />
-                      <span>{service.duration}</span>
+                      <span>{service.duration};
+  </span>
                     </div>
                   </div>
                 </div>
@@ -3161,13 +3337,15 @@ Get Quote
                   </Button>
                 </Link>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* AI Technologies */}
-      <section className="py-20 bg-zion-blue">
+      {/* AI Technologies */};
+      ;
+  <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -3185,15 +3363,18 @@ that address complex business challenges.
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-white font-semibold text-sm">{tech}</h3>
+                <h3 className="text-white font-semibold text-sm">{tech};
+  </h3>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Industries We Serve */}
-      <section className="py-20 bg-zion-blue-dark">
+      {/* Industries We Serve */};
+      ;
+  <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -3211,15 +3392,18 @@ across diverse industry sectors.
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-white font-semibold text-sm">{industry}</h3>
+                <h3 className="text-white font-semibold text-sm">{industry};
+  </h3>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Why Choose ZionTech for AI */}
-      <section className="py-20 bg-zion-blue">
+      {/* Why Choose ZionTech for AI */};
+      ;
+  <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -3268,8 +3452,9 @@ to get your AI solution running quickly.
         </div>
       </section>
 
-      {/* Pricing Information */}
-      <section className="py-20 bg-zion-blue-dark">
+      {/* Pricing Information */};
+      ;
+  <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -3344,8 +3529,9 @@ Contact Sales
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-20 bg-zion-blue">
+      {/* Contact Information */};
+      ;
+  <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Ready to Transform Your Business with AI?
@@ -3448,7 +3634,7 @@ Smartphone,
 export default function AIServicesPage() {;
 const aiServices = [;
     {;,
-}
+};
 id: "ai-chatbot"},;,
 title: "AI Chatbot Development",;,
 description: "Custom AI-powered chatbots for customer service, sales, and support with natural language processing capabilities.",;,
@@ -3687,7 +3873,7 @@ category: "IoT AI",;,
 badge: "Industrial",;,
 link: "https://ziontechgroup.com/ai-maintenance",;,
 details: "Reduce downtime and maintenance costs with AI-powered predictive maintenance. Monitor equipment health in real-time and schedule maintenance only when needed."
-    }
+    };
   ];
 const categories = [;
     "All Services",
@@ -3709,15 +3895,16 @@ const [filteredServices, setFilteredServices] = React.useState(aiServices);
 React.useEffect(() => {;
 if (selectedCategory === "All Services") {;
 setFilteredServices(aiServices)
-}
+};
     } else {;
 setFilteredServices(aiServices.filter(service => service.category === selectedCategory))
-    }
+    };
   }, [selectedCategory]);
 return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+      {/* Hero Section */};
+      ;
+  <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
           <div className="flex justify-center mb-6">
@@ -3785,9 +3972,10 @@ import { AI_SERVICES; } from "@/data/expandedServices";
 const AIServicesPage = () => {;;
 return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-}
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
+};
+      {/* Hero Section */};
+      ;
+  <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-6">
@@ -3821,27 +4009,31 @@ Contact AI Experts
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
               <Button;
-key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
+key={category};
+                variant={selectedCategory === category ? "default" : "outline"};
+                onClick={() => setSelectedCategory(category)};
                 className={`${};
 selectedCategory === category
                     ? "bg-zion-purple text-white"
-                    : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}
+                    : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`};
               >
-                {category}
-              </Button>
-      {/* Categories Overview */}
-      <div className="py-16 bg-zion-slate/50">
+                {category};
+              ;
+  </Button>
+      {/* Categories Overview */};
+      ;
+  <div className="py-16 bg-zion-slate/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">AI Service Categories</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {AI_SERVICE_CATEGORIES.map((category) => (
               <div key={category.name} className="text-center">
                 <div className={`w-16 h-16 ${category.color}} rounded-full mx-auto mb-3 flex items-center justify-center`}>
-                  <span className="text-white font-bold text-lg">{category.count}</span>
-      {/* AI Statistics */}
-      <div className="container mx-auto px-4 py-16">
+                  <span className="text-white font-bold text-lg">{category.count};
+  </span>
+      {/* AI Statistics */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-4 gap-8">
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-6">
@@ -3874,8 +4066,9 @@ selectedCategory === category
         </div>
       </div>
 
-      {/* Main Content Tabs */}
-      <div className="container mx-auto px-4 py-16">
+      {/* Main Content Tabs */};
+      ;
+  <div className="container mx-auto px-4 py-16">
         <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full">
           <TabsList className="grid w-full grid-cols-4 bg-white/10 backdrop-blur-sm border-zion-cyan/30">
             <TabsTrigger value="overview" className="text-zion-cyan data-[state=active]:bg-zion-cyan data-[state=active]:text-white">;
@@ -3892,8 +4085,9 @@ Pricing
             </TabsTrigger>
           </TabsList>
 
-          {/* Overview Tab */}
-          <TabsContent value="overview" className="mt-8">
+          {/* Overview Tab */};
+          ;
+  <TabsContent value="overview" className="mt-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-white mb-6">;
@@ -3927,7 +4121,8 @@ personalized customer experiences that drive growth and efficiency.
                     </div>
                   </div>
                 </div>
-                <p className="text-zion-cyan font-medium">{category.name}</p>
+                <p className="text-zion-cyan font-medium">{category.name};
+  </p>
               </div>
               <div className="relative">
                 <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 p-8">
@@ -3975,8 +4170,9 @@ personalized customer experiences that drive growth and efficiency.
             </div>
           </TabsContent>
 
-          {/* AI Services Tab */}
-          <TabsContent value="services" className="mt-8">
+          {/* AI Services Tab */};
+          ;
+  <TabsContent value="services" className="mt-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Our AI Service Portfolio</h2>
               <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">;
@@ -3986,12 +4182,14 @@ Comprehensive AI solutions designed to transform every aspect of your business o
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {AI_SERVICES.map((service) => (
                 <AIServiceCard key={service.id} service={service} />
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </TabsContent>
 
-          {/* Use Cases Tab */}
-          <TabsContent value="use-cases" className="mt-8">
+          {/* Use Cases Tab */};
+          ;
+  <TabsContent value="use-cases" className="mt-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Real-World AI Applications</h2>
               <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">;
@@ -4000,70 +4198,71 @@ Discover how AI is transforming industries and creating new opportunities for gr
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <UseCaseCard;
-icon={<Brain className="h-8 w-8 text-zion-cyan" />}
+icon={><Brain className="h-8 w-8 text-zion-cyan" />};
                 title="Customer Service Automation";
 description="AI-powered chatbots and virtual assistants that provide 24/7 customer support";
 examples={[
                   "Intelligent ticket routing",
                   "Automated responses to common queries",
                   "Sentiment analysis for customer satisfaction"
-                ]}
+                ]};
               />
               <UseCaseCard;
-icon={<BarChart3 className="h-8 w-8 text-zion-cyan" />}
+icon={><BarChart3 className="h-8 w-8 text-zion-cyan" />};
                 title="Predictive Analytics";
 description="Forecast trends and make data-driven decisions with machine learning models";
 examples={[
                   "Sales forecasting",
                   "Inventory optimization",
                   "Risk assessment and management"
-                ]}
+                ]};
               />
               <UseCaseCard;
-icon={<Shield className="h-8 w-8 text-zion-cyan" />}
+icon={><Shield className="h-8 w-8 text-zion-cyan" />};
                 title="Fraud Detection";
 description="Advanced AI systems that identify and prevent fraudulent activities in real-time";
 examples={[
                   "Transaction monitoring",
                   "Behavioral analysis",
                   "Anomaly detection"
-                ]}
+                ]};
               />
               <UseCaseCard;
-icon={<Network className="h-8 w-8 text-zion-cyan" />}
+icon={><Network className="h-8 w-8 text-zion-cyan" />};
                 title="Process Optimization";
 description="Streamline operations and improve efficiency with intelligent automation";
 examples={[
                   "Workflow automation",
                   "Resource allocation",
                   "Performance monitoring"
-                ]}
+                ]};
               />
               <UseCaseCard;
-icon={<Smartphone className="h-8 w-8 text-zion-cyan" />}
+icon={><Smartphone className="h-8 w-8 text-zion-cyan" />};
                 title="Personalization";
 description="Create tailored experiences for customers using AI-driven insights";
 examples={[
                   "Product recommendations",
                   "Content personalization",
                   "Dynamic pricing"
-                ]}
+                ]};
               />
               <UseCaseCard;
-icon={<Globe className="h-8 w-8 text-zion-cyan" />}
+icon={><Globe className="h-8 w-8 text-zion-cyan" />};
                 title="Market Intelligence";
 description="Gain competitive advantages with AI-powered market analysis and insights";
 examples={[
                   "Competitor monitoring",
                   "Trend analysis",
                   "Opportunity identification"
-                ]}
+                ]};
               />
             </div>
           </TabsContent>
 
-          {/* Pricing Tab */}
-          <TabsContent value="pricing" className="mt-8">
+          {/* Pricing Tab */};
+          ;
+  <TabsContent value="pricing" className="mt-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">AI Service Pricing Plans</h2>
               <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">;
@@ -4081,8 +4280,8 @@ features={[
                   "Data analysis tools",
                   "Email support",
                   "Monthly maintenance"
-                ]}
-                popular={false}
+                ]};
+                popular={false};
               />
               <PricingCard;
 title="Professional AI";
@@ -4095,8 +4294,8 @@ features={[
                   "Priority support",
                   "Weekly maintenance",
                   "Performance optimization"
-                ]}
-                popular={true}
+                ]};
+                popular={true};
               />
               <PricingCard;
 title="Enterprise AI";
@@ -4109,16 +4308,17 @@ features={[
                   "Dedicated support team",
                   "Continuous optimization",
                   "Scalability planning"
-                ]}
-                popular={false}
+                ]};
+                popular={false};
               />
             </div>
           </TabsContent>
         </Tabs>
       </div>
 
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
+      {/* CTA Section */};
+      ;
+  <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Ready to Harness the Power of AI?
@@ -4139,8 +4339,9 @@ Request AI Demo
         </div>
       </div>
 
-      {/* AI Services Grid */}
-      <div className="py-20 bg-zion-slate">
+      {/* AI Services Grid */};
+      ;
+  <div className="py-20 bg-zion-slate">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive AI Solutions</h2>
@@ -4155,20 +4356,25 @@ Choose from our extensive range of AI services designed to meet your business ne
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-4">
                     <div className="p-3 rounded-lg bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 text-zion-cyan group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
-                    </div>
+                      {service.icon};
+                    ;
+  </div>
                     {service.badge && (
                       <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
-                        {service.badge}
-                      </Badge>
-                    )}
-                  </div>
+                        {service.badge};
+                      ;
+  </Badge>
+                    )};
+                  ;
+  </div>
                   <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </CardTitle>
+                    {service.title};
+                  ;
+  </CardTitle>
                   <CardDescription className="text-zion-slate-light text-base">
-                    {service.description}
-                  </CardDescription>
+                    {service.description};
+                  ;
+  </CardDescription>
                 </CardHeader>
                 
                 <CardContent className="space-y-4">
@@ -4178,10 +4384,12 @@ Choose from our extensive range of AI services designed to meet your business ne
                       {service.features.slice(0, 4).map((feature), index) => (
                         <li key={index} className="flex items-center text-sm text-zion-slate-light">
                           <CheckCircle className="h-4 w-4 text-zion-cyan mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                          {feature};
+                        ;
+  </li>
+                      ))};
+                    ;
+  </ul>
                   </div>
                   
                   <div className="flex items-center justify-between pt-2">
@@ -4190,15 +4398,17 @@ Choose from our extensive range of AI services designed to meet your business ne
                         {[...Array(5)].map((_), i) => (
                           <Star;
 key={i} ;
-className={`h-4 w-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}}`} 
+className={`h-4 w-4 ${i> < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}}`} ;
                           />
-                        ))}
-                      </div>
+                        ))};
+                      ;
+  </div>
                       <span className="text-sm text-zion-slate-light">({service.reviewCount})</span>
                     </div>
                     <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded">
-                      {service.category}
-                    </span>
+                      {service.category};
+                    ;
+  </span>
                   </div>
                 </CardContent>
                 
@@ -4208,15 +4418,18 @@ className={`h-4 w-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-cur
                     <div className="space-y-1 text-sm">
                       <div className="flex justify-between">
                         <span className="text-zion-slate-light">Starter:</span>
-                        <span className="text-zion-cyan font-semibold">{service.pricing.starter}</span>
+                        <span className="text-zion-cyan font-semibold">{service.pricing.starter};
+  </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zion-slate-light">Professional:</span>
-                        <span className="text-zion-cyan font-semibold">{service.pricing.professional}</span>
+                        <span className="text-zion-cyan font-semibold">{service.pricing.professional};
+  </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-zion-slate-light">Enterprise:</span>
-                        <span className="text-zion-cyan font-semibold">{service.pricing.enterprise}</span>
+                        <span className="text-zion-cyan font-semibold">{service.pricing.enterprise};
+  </span>
                       </div>
                     </div>
                   </div>
@@ -4227,8 +4440,9 @@ className={`h-4 w-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-cur
                     </Button>
                   </div>
                 </CardContent>
-      {/* Contact Information Banner */}
-      <div className="bg-white border-b border-gray-200">
+      {/* Contact Information Banner */};
+      ;
+  <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-6 text-sm text-gray-600">
@@ -4260,8 +4474,9 @@ ziontechgroup.com
         </div>
       </div>
 
-      {/* AI Capabilities Overview */}
-      <div className="py-16 bg-white">
+      {/* AI Capabilities Overview */};
+      ;
+  <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -4308,8 +4523,9 @@ Our AI solutions leverage the latest technologies to deliver measurable business
         </div>
       </div>
 
-      {/* AI Services Grid */}
-      <div className="py-16 bg-gray-50">
+      {/* AI Services Grid */};
+      ;
+  <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -4326,49 +4542,58 @@ Comprehensive AI solutions designed to drive innovation and competitive advantag
                 <div className="relative">
                   <img;
 src={service.images[0]} ;
-alt={service.title}
+alt={service.title};
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
                   {service.featured && (
                     <Badge className="absolute top-4 right-4 bg-blue-600 text-white">;
 Featured
                     </Badge>
-                  )}
-                </div>
+                  )};
+                ;
+  </div>
                 <CardHeader>
                   <div className="flex items-start justify-between mb-2">
                     <Badge className="bg-blue-100 text-blue-800 border-blue-200">
-                      {service.category}
-                    </Badge>
+                      {service.category};
+                    ;
+  </Badge>
                     <div className="flex items-center gap-1 text-sm text-gray-600">
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      <span>{service.rating}</span>
+                      <span>{service.rating};
+  </span>
                       <span className="text-gray-400">({service.reviewCount})</span>
                     </div>
                   </div>
-                  <CardTitle className="text-xl leading-tight">{service.title}</CardTitle>
+                  <CardTitle className="text-xl leading-tight">{service.title};
+  </CardTitle>
                   <CardDescription className="text-base leading-relaxed">
-                    {service.description}
-                  </CardDescription>
+                    {service.description};
+                  ;
+  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-3xl font-bold text-blue-600">
-                      {service.currency}{service.price?.toLocaleString()}
-                    </div>
+                      {service.currency}{service.price?.toLocaleString()};
+                    ;
+  </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Clock className="h-4 w-4" />
-                      <span>{service.availability}</span>
+                      <span>{service.availability};
+  </span>
                     </div>
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+                        {tag};
+                      ;
+  </Badge>
+                    ))};
+                  ;
+  </div>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -4383,13 +4608,15 @@ Learn More
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 bg-zion-blue-dark/30">
+      {/* Benefits Section */};
+      ;
+  <section className="py-16 bg-zion-blue-dark/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -4404,17 +4631,21 @@ Experience the power of AI with our proven, reliable, and scalable solutions
             {BENEFITS.map((benefit), index) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
-                </div>
+                  {benefit.icon};
+                ;
+  </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                  {benefit.title}
-                </h3>
+                  {benefit.title};
+                ;
+  </h3>
                 <p className="text-zion-slate-light leading-relaxed">
-                  {benefit.description}
-                </p>
+                  {benefit.description};
+                ;
+  </p>
               </div>
-            ))}
-          </div>
+            ))};
+          ;
+  </div>
         </div>
       </section>
 
@@ -4436,8 +4667,9 @@ Our AI experts are ready to help you implement cutting-edge solutions that drive
             <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
           </div>
-      {/* AI Benefits Section */}
-      <div className="py-16 bg-white">
+      {/* AI Benefits Section */};
+      ;
+  <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -4500,8 +4732,9 @@ Discover how artificial intelligence can transform your business operations and 
         </div>
       </div>
 
-      {/* AI Implementation Process */}
-      <div className="py-16 bg-gray-50">
+      {/* AI Implementation Process */};
+      ;
+  <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -4548,8 +4781,9 @@ Our proven methodology ensures successful AI integration and maximum ROI
         </div>
       </div>
 
-      {/* AI Use Cases */}
-      <div className="py-16 bg-white">
+      {/* AI Use Cases */};
+      ;
+  <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -4714,8 +4948,9 @@ Real-world applications of AI technology across various industries
         </div>
       </div>
 
-      {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      {/* Call to Action */};
+      ;
+  <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">;
 Ready to Harness the Power of AI?
@@ -4740,8 +4975,9 @@ Schedule Demo
         </div>
       </div>
 
-      {/* Footer Contact */}
-      <div className="bg-gray-900 text-white py-12">
+      {/* Footer Contact */};
+      ;
+  <div className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -4805,7 +5041,7 @@ Star
 export default function AIServicesPage() {;
 const aiServices = [;
     {;,
-}
+};
 id: 'ai-development'},;,
 title: 'AI Development & Integration',;,
 description: 'Custom AI solutions development and seamless integration into existing systems',;,
@@ -4951,7 +5187,7 @@ icon: <Network className="h-8 w-8 text-cyan-500" />,;,
 rating: 4.6,;,
 reviewCount: 38,;,
 link: '/services/ai-iot-solutions'
-    }
+    };
   ];
 const categories = [;
     { name: 'All Services', count: aiServices.length, active: true },
@@ -4959,7 +5195,7 @@ const categories = [;
     { name: 'ML/AI', count: aiServices.filter(s => s.category === 'ML/AI').length },
     { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
     { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
-    { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length }
+    { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length };
   ];
 return (;
     <>
@@ -4972,13 +5208,15 @@ canonical="https://ziontechgroup.com/ai-services"
       <Header />
       
       <main className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 overflow-hidden">
+        {/* Hero Section */};
+        ;
+  <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
           
-          {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
+          {/* Animated Background Elements */};
+          ;
+  <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-zion-blue/30 rounded-full blur-2xl animate-pulse delay-500"></div>
           
@@ -5003,8 +5241,9 @@ to machine learning implementation, we deliver intelligent solutions that drive 
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20 bg-background">
+        {/* Services Grid */};
+        ;
+  <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -5016,63 +5255,75 @@ and drive measurable results.
               </p>
             </div>
 
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {/* Category Filter */};
+            ;
+  <div className="flex flex-wrap justify-center gap-3 mb-12">
               {categories.map((category), index) => (
                 <Button;
-key={index}
-                  variant={category.active ? "default" : "outline"}
-                  className={category.active ? "bg-zion-purple text-white" : "border-zion-purple/30 text-zion-purple hover:bg-zion-purple/10"}
+key={index};
+                  variant={category.active ? "default" : "outline"};
+                  className={category.active ? "bg-zion-purple text-white" : "border-zion-purple/30 text-zion-purple hover:bg-zion-purple/10"};
                 >
                   {category.name} ({category.count})
                 </Button>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Services Grid */};
+            ;
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service) => (
                 <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50 bg-card/50 backdrop-blur-sm">
                   <CardHeader className="pb-4">
                     <div className="flex justify-between items-start mb-3">
-                      {service.icon}
+                      {service.icon};
                       {service.badge && (
                         <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                          {service.badge}
-                        </Badge>
-                      )}
-                    </div>
+                          {service.badge};
+                        ;
+  </Badge>
+                      )};
+                    ;
+  </div>
                     <CardTitle className="text-xl group-hover:text-zion-cyan transition-colors">
-                      {service.title}
-                    </CardTitle>
+                      {service.title};
+                    ;
+  </CardTitle>
                     <CardDescription className="text-muted-foreground">
-                      {service.description}
-                    </CardDescription>
+                      {service.description};
+                    ;
+  </CardDescription>
                   </CardHeader>
                   
                   <CardContent className="pb-4">
                     <div className="mb-4">
-                      <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
+                      <span className="text-2xl font-bold text-zion-cyan">{service.price};
+  </span>
                     </div>
                     
                     <div className="space-y-2 mb-4">
                       {service.features.slice(0, 3).map((feature), index) => (
                         <div key={index} className="flex items-center text-sm">
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
+                          <span className="text-muted-foreground">{feature};
+  </span>
                         </div>
-                      ))}
-                    </div>
+                      ))};
+                    ;
+  </div>
                     
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1">
                         <Star className="h-4 w-4 text-yellow-500 fill-current" />
-                        <span className="text-sm text-muted-foreground">{service.rating}</span>
+                        <span className="text-sm text-muted-foreground">{service.rating};
+  </span>
                         <span className="text-sm text-muted-foreground">({service.reviewCount})</span>
                       </div>
                       <Badge variant="outline" className="text-xs">
-                        {service.category}
-                      </Badge>
+                        {service.category};
+                      ;
+  </Badge>
                     </div>
                   </CardContent>
                   
@@ -5085,13 +5336,15 @@ Learn More
                     </Button>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
+              ))};
+            ;
+  </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark">
+        {/* CTA Section */};
+        ;
+  <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Ready to Harness the Power of AI?
@@ -5118,8 +5371,9 @@ Get a free consultation and discover how AI can transform your operations.
       <QuoteFormSection />
     </>
   )
-}
-}
+};
+};
 export default AIServicesPage
-}
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p>
+};
+;
+  </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p>

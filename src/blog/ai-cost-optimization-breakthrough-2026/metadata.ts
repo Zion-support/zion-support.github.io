@@ -15,17 +15,17 @@ export const metadata = {
         width: 1200,
         height: 630,
         alt:       ,
-$4}
+$4};
         alt: 'AI Cost Optimization Breakthrough 2026'
 
-      }
-    ]
+      };
+    ];
   },
 
   twitte,
-  r: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  r: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   car,
   d: 'summary_large_image',
     titl,
@@ -35,20 +35,20 @@ $4}
   n: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains.',
     image,
   s: ['http,
-  s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
+  s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg'];
   },
   robot,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  s: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   inde,
   x: true,
     follo,
   w: true,
     googleBo,
-  t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  t: {/* TODO: Fix JSX expression */};
+  O: Add content,};
+};
   inde,
   x: true,
       follo,
@@ -57,15 +57,16 @@ $4}
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1
-    }
+    };
   },
   alternates: {
     canonical:   ,
-$4}
-}
-
+$4};
+};
+;
   alternate,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
+  s: {/* TODO: Fix JSX expression */};
+  O: Add content,};
 }
-
+;
+;

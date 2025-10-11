@@ -9,9 +9,9 @@ export default function EnterpriseAISolutions(): React.JSX.Element {
         'Advanced Analytics',
         'Custom AI Models',
         '24/7 Support'],
-export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */}
+export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix JSX expression */};
     },
-    {/* TODO: Fix JSX expression */}
+    {/* TODO: Fix JSX expression */};
     },
     {
       icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
@@ -20,7 +20,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         'Process Automation',
         'Workflow Optimization',
         'Intelligent Routing',
-        'Performance Monitoring']}]
+        'Performance Monitoring']}];
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -42,7 +42,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
           {solutions.map((solution, index) => (
             <$2 />
-              key={index}
+              key={index};
               className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
             >,
               <div className="flex items-center mb-4">,
@@ -51,12 +51,14 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <$2 />
-              key={index}
+              key={index};
               className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
-                <div className="text-blue-600 mr-3">{solution.icon}
-    {/* TODO: Fix JSX expression */}
+                <div className="text-blue-600 mr-3">{solution.icon};
+    {/* TODO: Fix JSX expression */};
     }]
+  ;
+  ;
   return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Enterprise AI Solutions - Zion Website
@@ -75,25 +77,27 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
         < className="grid,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8">
-          {/* TODO: Fix JSX expression */}
+          {/* TODO: Fix JSX expression */};
               key={index}"
               className="bg-white rounded-lg shadow-lg p-6,"
   hover:shadow-xl transition-shadow"
             >"
               <div className="flex items-center mb-4"></div>"
-                <div className="text-blue-600 mr-3">{solution.icon}</div>"
-                <h3 className="text-xl font-semibold text-gray-900">{solution.title}
+                <div className="text-blue-600 mr-3">{solution.icon};
+  </div>"
+                <h3 className="text-xl font-semibold text-gray-900">{solution.title};
 "
-              <p className="text-gray-600 mb-4">{solution.description}
+              <p className="text-gray-600 mb-4">{solution.description};
 "
               <ul className="space-y-2">
                 {/* TODO: Fix JSX expression */}"
                   <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                     <Target className="w-4 h-4 text-green-500 mr-2" />
-                    {feature}
-                  </li>)
-                ))}
-          ))}
+                    {feature};
+                  ;
+  </li>)
+                ))};
+          ))};
   )
-}
+};
 "</div></div></div></div></div></div></div></div></div></p></p></h1></h3></ul>
