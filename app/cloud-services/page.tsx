@@ -7,22 +7,7 @@ import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with our expert guidance.',
-      benefits: ['Reduced costs', 'Improved scalability', 'Enhanced security', 'Better performance']
-    },
-    {
-      title: 'Cloud Security',
-      description: 'Comprehensive security solutions to protect your cloud infrastructure.',
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', '24/7 monitoring']
-    },
-    {
-      title: 'Cloud Optimization',
-      description: 'Optimize your cloud resources for maximum efficiency and cost savings.',
-      benefits: ['Cost optimization', 'Performance tuning', 'Resource management', 'Automated scaling']
-=======
-      icon: Cloud,
+icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud infrastructure with zero downtime',
       benefits: ['Zero Downtime', 'Cost Optimization', 'Scalability', 'Security']
@@ -74,31 +59,11 @@ const CloudServicesPage: React.FC = () => {
       name: 'Google Cloud Platform',
       description: 'Advanced GCP cloud computing and AI services',
       features: ['Compute Engine', 'Cloud Storage', 'BigQuery', 'AI Platform', 'Kubernetes']
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
     }
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-        <title>Cloud Services - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud services including migration, security, and optimization solutions." />
-        <meta name="keywords" content="cloud services, cloud migration, cloud security, cloud optimization" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cloud Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional cloud services to help your business scale and succeed in the digital age.
-=======
-    <>
+<>
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
         <meta name="description" content="Professional cloud services and solutions by Zion Tech Group. Advanced cloud infrastructure and migration services." />
@@ -121,7 +86,6 @@ const CloudServicesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional cloud services and solutions by Zion Tech Group. Advanced cloud infrastructure and migration services.
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -206,11 +170,7 @@ const CloudServicesPage: React.FC = () => {
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Move to the Cloud?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Contact us today to learn more about our cloud services.
-=======
-                Contact us today to learn more about our cloud services and migration solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
+Contact us today to learn more about our cloud services and migration solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -222,19 +182,11 @@ const CloudServicesPage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-=======
-        </section>
+</section>
 
         <Footer />
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
   );
 };
 

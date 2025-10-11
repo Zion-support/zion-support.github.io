@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-// Accessibility enhancement utilities
-
-export const enhanceAccessibility = () => {
-  // Add keyboard navigation support
-  const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Tab') {
-      // Ensure proper tab order
-      const focusableElements = document.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      
-      const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
-      const nextIndex = (currentIndex + 1) % focusableElements.length;
-      
-      (focusableElements[nextIndex] as HTMLElement)?.focus();
-      event.preventDefault();
-    }
-  };
-
-  // Add focus management
-  const manageFocus = (element: HTMLElement) => {
-    element.focus();
-    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
-
-  // Add ARIA labels to interactive elements
-  const addAriaLabels = () => {
-    const buttons = document.querySelectorAll('button:not([aria-label])');
-=======
 /**
  * Accessibility Enhancer Utility
  * Provides comprehensive accessibility improvements for web applications
@@ -450,32 +420,12 @@ export class AccessibilityEnhancer {
 
     // Add ARIA labels to interactive elements without text
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
     buttons.forEach((button) => {
       if (!button.getAttribute('aria-label')) {
         button.setAttribute('aria-label', button.textContent || 'Button');
       }
     });
-<<<<<<< HEAD
-  };
-
-  // Initialize accessibility enhancements
-  const init = () => {
-    document.addEventListener('keydown', handleKeyDown);
-    addAriaLabels();
-  };
-
-  return {
-    init,
-    manageFocus,
-    addAriaLabels
-  };
-};
-
-export default enhanceAccessibility;
-=======
-
-    // Add ARIA labels to links without text
+// Add ARIA labels to links without text
     const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
     links.forEach((link) => {
       const element = link as HTMLElement;
@@ -709,4 +659,3 @@ Recommendations:
 
 // Export default instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
