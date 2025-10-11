@@ -23,6 +23,73 @@ const AboutPage: React.FC = () => {
     }
   ]
 
+  const values = [
+    {
+      icon: Target,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and building strong partnerships.'
+    },
+    {
+      icon: Award,
+      title: 'Excellence',
+      description: 'We maintain the highest standards in everything we do.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through AI and technology solutions." />
+        <meta name="keywords" content="about, company, AI, technology, team, mission, values" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                We are a leading technology company specializing in AI-powered solutions that transform businesses and drive innovation across industries.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Drives Us
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our core principles and commitment to excellence
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -102,7 +169,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-        </main>
       </div>
       
       <Footer />
