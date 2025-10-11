@@ -1,213 +1,231 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of files that need to be fixed based on the error output
-const problematicFiles = [
-  'app/ai-api-management/page.tsx',
-  'app/ai-api-manager/page.tsx',
-  'app/ai-autonomous-systems/page.tsx',
-  'app/ai-blockchain-analytics/page.tsx',
-  'app/ai-blockchain-solutions/page.tsx',
-  'app/ai-climate-solutions-pro/page.tsx',
-  'app/ai-cloud-infrastructure/page.tsx',
-  'app/ai-code-assistant/page.tsx',
-  'app/ai-code-security-auditor/page.tsx',
-  'app/ai-computer-vision/page.tsx',
-  'app/ai-content-delivery-network/page.tsx',
-  'app/ai-content-generation/page.tsx'
-];
-
-// Template for a basic page component
-const createBasicPage = (pageName, title, description) => `'use client';
+// Common template for AI service pages
+const createAIServicePage = (serviceName, title, description, features) => {
+  return `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { Brain, BarChart, CheckCircle, TrendingUp, Shield, Zap, ArrowRight, Database, Lock, Globe, Target, Settings } from 'lucide-react';
 
-const ${pageName}: React.FC = () => {
+const ${serviceName}Page: React.FC = () => {
   const features = [
     {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Machine learning', 'Pattern recognition', 'Predictive analytics', 'Automated insights']
     },
     {
-      title: 'Feature 2',
-      description: 'Description of feature 2',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with compliance monitoring and reporting.',
+      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance reporting']
+    },
+    {
+      icon: Database,
+      title: 'Data Management',
+      description: 'Efficient data handling and storage solutions for your applications.',
+      benefits: ['Data processing', 'Storage optimization', 'Backup solutions', 'Data integration']
     }
   ];
 
   const benefits = [
-    'Benefit 1',
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
+    'Automated ${serviceName.toLowerCase().replace(/-/g, ' ')} processes',
+    'Real-time monitoring and analytics',
+    'Enhanced security and compliance',
+    'Scalable infrastructure management',
+    'Reduced operational costs',
+    'Improved decision-making capabilities'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
       <Helmet>
         <title>${title} | Zion Tech Group</title>
         <meta name="description" content="${description}" />
-        <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            ${title}
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            ${description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">${title} Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+              ${title}
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              ${description}
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our ${title}?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
+              <p className="text-xl text-gray-300">Everything you need for effective ${serviceName.toLowerCase().replace(/-/g, ' ')}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="text-cyan-400 mb-4">
+                    <feature.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our ${title}?</h2>
+              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="flex-shrink-0">
+                    <Zap className="h-6 w-6 text-cyan-400" />
+                  </div>
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using our AI-powered solutions.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our ${title.toLowerCase()} solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
-
+        </section>
+      </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
-export default ${pageName};`;
+export default ${serviceName}Page;`;
+};
 
-// Function to get page name from file path
-function getPageName(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  return fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('') + 'Page';
-}
-
-// Function to get title from file path
-function getTitle(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  return fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-}
-
-// Function to get description from file path
-function getDescription(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  return `Professional ${title.toLowerCase()} solutions by Zion Tech Group. Advanced AI and IT solutions for your business.`;
-}
+// List of problematic files to fix
+const problematicFiles = [
+  {
+    path: 'app/ai-computer-vision/page.tsx',
+    serviceName: 'AiComputerVision',
+    title: 'AI Computer Vision',
+    description: 'Advanced AI-powered computer vision solutions for image recognition, object detection, and visual analytics.'
+  },
+  {
+    path: 'app/ai-content-delivery-network/page.tsx',
+    serviceName: 'AiContentDeliveryNetwork',
+    title: 'AI Content Delivery Network',
+    description: 'Intelligent content delivery network with AI-powered optimization for faster, more reliable content distribution.'
+  },
+  {
+    path: 'app/ai-content-generation/page.tsx',
+    serviceName: 'AiContentGeneration',
+    title: 'AI Content Generation',
+    description: 'Automated content creation using advanced AI algorithms for blogs, articles, and marketing materials.'
+  },
+  {
+    path: 'app/ai-customer-support/page.tsx',
+    serviceName: 'AiCustomerSupport',
+    title: 'AI Customer Support',
+    description: 'Intelligent customer support solutions with chatbots, automated responses, and sentiment analysis.'
+  },
+  {
+    path: 'app/ai-data-analytics/page.tsx',
+    serviceName: 'AiDataAnalytics',
+    title: 'AI Data Analytics',
+    description: 'Advanced data analytics powered by AI for business intelligence, predictive modeling, and insights.'
+  },
+  {
+    path: 'app/ai-workflow-automation/page.tsx',
+    serviceName: 'AiWorkflowAutomation',
+    title: 'AI Workflow Automation',
+    description: 'Intelligent workflow automation solutions that streamline business processes and increase efficiency.'
+  },
+  {
+    path: 'app/cloud-migration/page.tsx',
+    serviceName: 'CloudMigration',
+    title: 'Cloud Migration',
+    description: 'Seamless cloud migration services with AI-powered optimization and minimal downtime.'
+  },
+  {
+    path: 'app/consultation/page.tsx',
+    serviceName: 'Consultation',
+    title: 'Consultation',
+    description: 'Expert consultation services for technology strategy, digital transformation, and business optimization.'
+  },
+  {
+    path: 'app/privacy/page.tsx',
+    serviceName: 'Privacy',
+    title: 'Privacy Policy',
+    description: 'Our commitment to protecting your privacy and personal information.'
+  },
+  {
+    path: 'app/support/page.tsx',
+    serviceName: 'Support',
+    title: 'Support',
+    description: 'Comprehensive support services to help you succeed with our solutions.'
+  }
+];
 
 // Fix each problematic file
-problematicFiles.forEach(filePath => {
-  const fullPath = path.join('/workspace', filePath);
-  const pageName = getPageName(filePath);
-  const title = getTitle(filePath);
-  const description = getDescription(filePath);
-  
+problematicFiles.forEach(file => {
   try {
-    const content = createBasicPage(pageName, title, description);
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
+    const content = createAIServicePage(file.serviceName, file.title, file.description);
+    fs.writeFileSync(file.path, content);
+    console.log(`Fixed: ${file.path}`);
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${file.path}:`, error.message);
   }
 });
 
-console.log('Finished fixing problematic files');
+console.log('All files have been processed.');
