@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
 import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -14,22 +10,13 @@ const FiveGImplementationPage: React.FC = () => {
     {
       icon: Wifi,
       title: 'Ultra-Low Latency',
-<<<<<<< HEAD
-      description: 'Achieve sub-millisecond latency for real-time applications and critical communications.',
-      benefits: ['< 1ms latency', 'Real-time processing', 'Critical communications', 'IoT applications']
-=======
       description: 'Achieve sub-millisecond latency for real-time applications and critical operations.',
       benefits: ['< 1ms latency', 'Real-time processing', 'Critical operations support', 'Edge computing ready']
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
     },
     {
       icon: BarChart,
       title: 'High-Speed Connectivity',
       description: 'Experience blazing-fast speeds up to 10 Gbps for seamless data transfer.',
-<<<<<<< HEAD
-    },
-    {
-=======
       benefits: ['Up to 10 Gbps speeds', 'Massive data transfer', '4K/8K streaming', 'Cloud integration']
     },
     {
@@ -43,34 +30,11 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Massive IoT Support',
       description: 'Connect millions of devices with enhanced capacity and efficiency.',
       benefits: ['1M+ devices per km²', 'Low power consumption', 'Extended battery life', 'Smart city ready']
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
     },
     {
       icon: Shield,
       title: 'Enhanced Security',
-<<<<<<< HEAD
       description: 'Advanced security protocols and encryption for secure 5G communications.',
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your 5G network performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Leverage artificial intelligence for smart network management.',
-      benefits: ['Smart routing', 'Predictive maintenance', 'Automated optimization', 'Intelligent analytics']
-    },
-    {
-      icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Advanced security protocols for 5G network protection.',
       benefits: ['End-to-end encryption', 'Threat detection', 'Secure authentication', 'Privacy protection']
     }
   ];
@@ -82,16 +46,6 @@ const FiveGImplementationPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Enhanced security and compliance'
-=======
-      description: 'Advanced security protocols and encryption for secure communications.',
-      benefits: ['End-to-end encryption', 'Network slicing', 'Zero-trust architecture', 'Compliance ready']
-    },
-    {
-      icon: Zap,
-      title: 'Edge Computing',
-      description: 'Process data closer to the source for faster response times.',
-      benefits: ['Reduced latency', 'Bandwidth optimization', 'Real-time analytics', 'Local processing']
-    }
   ];
 
   const useCases = [
@@ -119,26 +73,10 @@ const FiveGImplementationPage: React.FC = () => {
       icon: PieChart,
       benefits: ['Traffic management', 'Energy optimization', 'Public safety', 'Environmental monitoring']
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
   ];
 
-  const values = [
+  const implementationSteps = [
     {
-<<<<<<< HEAD
-      icon: Brain,
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with AI and technology.'
-    },
-    {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We maintain the highest standards in everything we do.'
-    },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security.'
-=======
       step: '01',
       title: 'Network Assessment',
       description: 'Comprehensive analysis of current infrastructure and requirements.',
@@ -161,7 +99,6 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Optimization',
       description: 'Continuous monitoring and optimization for peak performance.',
       details: ['Performance monitoring', 'Network optimization', 'Capacity management', 'Security updates']
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
     }
   ];
 
@@ -207,8 +144,7 @@ const FiveGImplementationPage: React.FC = () => {
                 Unlock the full potential of 5G technology with our comprehensive implementation services.
               </p>
             </div>
-<<<<<<< HEAD
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -227,31 +163,18 @@ const FiveGImplementationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-=======
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Choose Our 5G Implementation?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -264,7 +187,12 @@ const FiveGImplementationPage: React.FC = () => {
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
-=======
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -276,53 +204,28 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <useCase.icon className="w-12 h-12 text-purple-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description}</p>
-                  <ul className="space-y-2">
-                    {useCase.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
-                </div>
-              ))}
+              {useCases.map((useCase, index) => {
+                const Icon = useCase.icon;
+                return (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                    <Icon className="w-12 h-12 text-purple-400 mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                    <p className="text-gray-300 mb-4">{useCase.description}</p>
+                    <ul className="space-y-2">
+                      {useCase.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Values Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Values
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                The principles that guide everything we do
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => {
-                const Icon = value.icon
-                return (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
-                    <p className="text-gray-300">{value.description}</p>
-                  </div>
-                );
-              })}
-=======
         {/* Implementation Process */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -355,26 +258,11 @@ const FiveGImplementationPage: React.FC = () => {
                   </div>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get started with our 5G implementation services today and experience the future of connectivity.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-              </button>
-            </div>
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -387,7 +275,6 @@ const FiveGImplementationPage: React.FC = () => {
               Start Your 5G Journey
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
           </div>
         </section>
       </main>
@@ -397,9 +284,4 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default FiveGImplementationPage;
-export default FiveGImplementationPage;
-=======
-export default FiveGImplementationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
