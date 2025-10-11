@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import LoadingSpinner from './components/LoadingSpinner';
+import LoadingSpinner from './components/Loading';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -61,11 +61,7 @@ const ConsultationPage = lazy(() => import('./consultation/page'));
 
 // Loading component
 const AppLoadingSpinner = () => (
-  <LoadingSpinner 
-    size="xl" 
-    text="Loading Zion Tech Group..." 
-    fullScreen 
-  />
+  <LoadingSpinner />
 );
 
 const App: React.FC = () => {

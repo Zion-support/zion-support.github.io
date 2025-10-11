@@ -1,6 +1,13 @@
 'use client'
 import React, { useEffect } from 'react'
 
+// Declare gtag function for Google Analytics
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean
   enablePerformanceMonitoring?: boolean
