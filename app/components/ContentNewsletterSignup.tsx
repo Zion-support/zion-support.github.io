@@ -72,10 +72,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               Subscribe another email
             </button>
           </div>
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Welcome to Our Community!
-          </h2>
           <p className="text-xl text-blue-100 mb-8">
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>

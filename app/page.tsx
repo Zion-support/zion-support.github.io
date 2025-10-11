@@ -1,9 +1,13 @@
 'use client'
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import ErrorBoundary from './components/ErrorBoundary'
+import LoadingSpinner from './components/LoadingSpinner'
+import PerformanceMonitor from './components/PerformanceMonitor'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 
 export default function HomePage() {
   const features = [
@@ -40,15 +44,68 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, cloud computing, and digital transformation for modern businesses. Expert technology consulting and implementation." />
+        <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, artificial intelligence, machine learning, technology consulting, business automation" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/ziontechgroup"
+            ]
+          })}
+        </script>
+        </Helmet>
+        
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." className="min-h-screen" />}>
+          <Navigation />
+        </Suspense>
+        
+        <main>
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -98,9 +155,15 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-      </main>
-      
-      <Footer />
-    </div>
+        </main>
+        
+        <Suspense fallback={<LoadingSpinner size="md" text="Loading footer..." />}>
+          <Footer />
+        </Suspense>
+        
+        <PerformanceMonitor enabled={true} />
+        <AccessibilityEnhancer />
+      </div>
+    </ErrorBoundary>
   )
 }
