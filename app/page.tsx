@@ -40,6 +40,7 @@ const HomePage: React.FC = () => {
     {number: '24/7', label: 'Support Available'}
   ];
 
+<<<<<<< HEAD
   return (
     <>
       <Navigation />
@@ -58,24 +59,44 @@ const HomePage: React.FC = () => {
 import React from 'react'
 import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react'
 const AppPage: React.FC = () => {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<<<<<<< HEAD
+=======
+              Zion Tech Group
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional app services delivered by experienced professionals.
+              Advanced AI and IT Solutions for Modern Businesses
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-green-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Expert Solutions</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
+<<<<<<< HEAD
               <p className="text-gray-300 mb-4">
                 Professional app services delivered by experienced professionals.
 >>>>>>> cursor/fix-errors-and-merge-to-main-6202
@@ -112,6 +133,18 @@ const AppPage: React.FC = () => {
                 </div>
               ))}
             </div>
+=======
+            ))}
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
           </div>
 <<<<<<< HEAD
         </main>
@@ -126,8 +159,17 @@ export default HomePage;
 =======
         </div>
       </main>
+      
+      <Footer />
     </div>
+<<<<<<< HEAD
   )
 }
 export default AppPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-6202
+=======
+  );
+};
+
+export default HomePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

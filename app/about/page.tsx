@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import { CheckCircle } from 'lucide-react'
 export default function AboutPage() {
@@ -18,3 +19,8 @@ export default function AboutPage() {
     </div>
   )
 }
+=======
+'use client';
+
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

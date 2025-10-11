@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { CheckCircle, Eye, Ear, Hand, Brain, Shield, Target, BarChart, Zap, ArrowRight } from 'lucide-react';
+=======
+import { CheckCircle, Eye, Ear, Hand, Brain } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default PagePage;
+const AccessibilityPage: React.FC = () => {
   const features = [
 =======
 'use client'
@@ -38,18 +42,19 @@ export default function PagePage() {
     {
       icon: <Ear className="w-8 h-8" />,
       title: 'Audio Accessibility',
-      description: 'Audio descriptions, captions, and alternative audio formats for hearing-impaired users.',
-      benefits: ['Closed captions', 'Audio descriptions', 'Sign language support', 'Visual alerts']
+      description: 'Audio descriptions, captions, and sound alternatives for hearing-impaired users.',
+      benefits: ['Audio descriptions', 'Closed captions', 'Sound alternatives', 'Volume controls']
     },
     {
       icon: <Hand className="w-8 h-8" />,
       title: 'Motor Accessibility',
       description: 'Keyboard navigation, voice control, and alternative input methods for users with motor disabilities.',
-      benefits: ['Keyboard navigation', 'Voice control', 'Switch navigation', 'Gesture alternatives']
+      benefits: ['Keyboard navigation', 'Voice control', 'Alternative inputs', 'Gesture recognition']
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: 'Cognitive Accessibility',
+<<<<<<< HEAD
       description: 'Clear language, consistent navigation, and simplified interfaces for cognitive accessibility.',
       benefits: ['Clear language', 'Consistent design', 'Error prevention', 'Progress indicators']
     }
@@ -91,93 +96,68 @@ export default function PagePage() {
       icon: <Target className="w-8 h-8" />,
       title: 'Brand Reputation',
       description: 'Demonstrate your commitment to inclusion and social responsibility.'
+=======
+      description: 'Clear navigation, simplified interfaces, and cognitive load reduction for better usability.',
+      benefits: ['Clear navigation', 'Simplified interfaces', 'Cognitive load reduction', 'Memory aids']
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
     }
   ]
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
-        <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, ADA compliance, web accessibility" />
+        <meta name="description" content="Professional accessibility services and solutions." />
+        <meta name="keywords" content="accessibility, services, solutions, technology" />
       </Helmet>
+      
       <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accessibility</span> First
+      
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Accessibility
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We believe technology should be accessible to everyone. Our commitment to inclusive design ensures that our solutions work for all users.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional accessibility services to help your business succeed and grow.
             </p>
           </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Accessibility Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Quality Assurance
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Fast Delivery
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  24/7 Support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Custom Solutions
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Advanced Technology</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-gray-300 mb-4">
-                Cutting-edge tools and technologies to deliver superior results.
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our accessibility services.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Latest Tools
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Modern Methods
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Scalable Solutions
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Future-Ready
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-purple-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Proven Results</h3>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
               </div>
+<<<<<<< HEAD
               <p className="text-gray-300 mb-4">
                 Track record of successful projects and satisfied clients.
               </p>
@@ -336,10 +316,22 @@ export default function PagePage() {
             </div>
           </div>
         </section>
+=======
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
       </main>
 
       <Footer />
     </div>
+<<<<<<< HEAD
   )
 }
 export default AccessibilityPage
+=======
+  );
+};
+
+export default AccessibilityPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb

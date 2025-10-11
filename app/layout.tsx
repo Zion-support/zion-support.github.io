@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -26,6 +27,9 @@ const LayoutPage: React.FC = () => {
     </div>
   )
 }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
 export default function RootLayout({
   children,
 }: {
@@ -33,21 +37,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, artificial intelligence, business automation, technology consulting" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-      <body className={`${inter.className} min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`}>
+      <body className={Inter.className}>
         <Navigation />
-        <main className="pt-20">
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>
   )
+<<<<<<< HEAD
 }
 export default LayoutPage
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-8dbb
