@@ -16,31 +16,32 @@ const HomePage: React.FC = () => {
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16 quantum-field neural-network-animated">
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+        <section className="relative py-20 overflow-hidden cyber-pulse">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 quantum-energy-field"></div>
+          <div className="absolute inset-0 cyber-grid-glow"></div>
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text-enhanced">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 holographic-text neon-glow-advanced">
                 Transform Your Business with
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent cyber-text-glitch"> AI & IT Solutions</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. 
-                Transform your business with cutting-edge technology.
+                Transform your business with cutting-edge technology and innovative solutions that drive real results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 futuristic-btn cyber-border"
                 >
                   Get Started Today
                   <ArrowRight className="inline-block ml-2 w-5 h-5" />
                 </a>
                 <a
                   href="/services"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cyber-border"
                 >
                   Explore Services
                 </a>
@@ -50,11 +51,11 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20">
+        <section className="py-20 data-stream">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-white mb-6">Our Services</h2>
+                <h2 className="text-4xl font-bold text-white mb-6 holographic-text">Our Services</h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Comprehensive AI and IT solutions designed to accelerate your digital transformation
                 </p>
@@ -62,11 +63,11 @@ const HomePage: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* AI Services */}
-                <div className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 group border border-gray-700 hover:border-cyan-500/50">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 group border border-gray-700 hover:border-cyan-500/50 holographic-card-enhanced cyber-pulse">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform quantum-glitch">
                     <Brain className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">AI Services</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4 neon-text-enhanced">AI Services</h3>
                   <p className="text-gray-300 mb-6">
                     Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                   </p>
@@ -84,17 +85,17 @@ const HomePage: React.FC = () => {
                       Computer Vision
                     </li>
                   </ul>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
+                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium neon-glow-advanced">
                     Learn More →
                   </a>
                 </div>
 
                 {/* IT Services */}
-                <div className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 group border border-gray-700 hover:border-purple-500/50">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 group border border-gray-700 hover:border-purple-500/50 holographic-card-enhanced cyber-pulse">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform quantum-glitch">
                     <Cloud className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">IT Services</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4 neon-text-enhanced">IT Services</h3>
                   <p className="text-gray-300 mb-6">
                     Complete technology infrastructure solutions including cloud migration, cybersecurity, and custom software development.
                   </p>
@@ -112,17 +113,17 @@ const HomePage: React.FC = () => {
                       Custom Software Development
                     </li>
                   </ul>
-                  <a href="/it-services" className="text-purple-400 hover:text-purple-300 transition-colors font-medium">
+                  <a href="/it-services" className="text-purple-400 hover:text-purple-300 transition-colors font-medium neon-glow-advanced">
                     Learn More →
                   </a>
                 </div>
 
                 {/* Micro SAAS */}
-                <div className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 group border border-gray-700 hover:border-green-500/50">
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 group border border-gray-700 hover:border-green-500/50 holographic-card-enhanced cyber-pulse">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform quantum-glitch">
                     <Zap className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">Micro SAAS</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4 neon-text-enhanced">Micro SAAS</h3>
                   <p className="text-gray-300 mb-6">
                     Ready-to-use business tools with AI automation and intelligent features for immediate productivity gains.
                   </p>
@@ -140,7 +141,7 @@ const HomePage: React.FC = () => {
                       Business Intelligence
                     </li>
                   </ul>
-                  <a href="/micro-saas" className="text-green-400 hover:text-green-300 transition-colors font-medium">
+                  <a href="/micro-saas" className="text-green-400 hover:text-green-300 transition-colors font-medium neon-glow-advanced">
                     Learn More →
                   </a>
                 </div>

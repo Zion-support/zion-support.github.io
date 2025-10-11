@@ -16,11 +16,7 @@ const Breadcrumb: React.FC = () => {
   const breadcrumbItems = [
     { name: 'Home', path: '/', icon: Home }
   ];
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   pathSegments.forEach((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
@@ -28,19 +24,11 @@ const Breadcrumb: React.FC = () => {
   });
 
   return (
-<<<<<<< HEAD
     <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-white/10 py-4">
       <div className="container mx-auto px-4">
         <ol className="flex items-center space-x-2 text-sm">
           {breadcrumbItems.map((item, index) => (
-            <li key={index} className="flex items-center">
-=======
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-gray-700 py-3">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ol className="flex items-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (
             <li key={item.path} className="flex items-center">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
               {index > 0 && <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />}
               <a
                 href={item.path}

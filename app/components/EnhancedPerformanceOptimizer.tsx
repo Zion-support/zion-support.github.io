@@ -1,111 +1,11 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
-  // Image optimization
-  useEffect(() => {
-    if (!enableImageOptimization) return;
-
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      images.forEach((img) => {
-        const image = img as HTMLImageElement;
-        if (image.dataset.src) {
-          image.src = image.dataset.src;
-          image.removeAttribute('data-src');
-        }
-      });
-    };
-
-    // Run optimization after component mount
-    const timer = setTimeout(optimizeImages, 100);
-    return () => clearTimeout(timer);
-  }, [enableImageOptimization]);
-
-  // Lazy loading
-  useEffect(() => {
-    if (!enableLazyLoading) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            target.classList.add('loaded');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, [enableLazyLoading]);
-
-  // Preloading
-  useEffect(() => {
-    if (!enablePreloading) return;
-
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/styles/critical.css';
-      criticalCSS.as = 'style';
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts
-      const criticalFont = document.createElement('link');
-      criticalFont.rel = 'preload';
-      criticalFont.href = '/fonts/inter-var.woff2';
-      criticalFont.as = 'font';
-      criticalFont.type = 'font/woff2';
-      criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);
-    };
-
-    preloadCriticalResources();
-  }, [enablePreloading]);
-
-  // Code splitting optimization
-  useEffect(() => {
-    if (!enableCodeSplitting) return;
-
-    const optimizeCodeSplitting = () => {
-      // Preload next likely routes
-      const links = document.querySelectorAll('a[href^="/"]');
-      links.forEach((link) => {
-        link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href');
-          if (href && !href.startsWith('#')) {
-            // Preload the route
-            import(/* webpackChunkName: "route" */ `../app${href}/page.tsx`);
-          }
-        });
-      });
-    };
-
-    const timer = setTimeout(optimizeCodeSplitting, 1000);
-    return () => clearTimeout(timer);
-  }, [enableCodeSplitting]);
-
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   // Performance monitoring
   useEffect(() => {
     const measurePerformance = () => {
@@ -135,9 +35,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
 
-=======
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
   return <>{children}</>;
 };
 
