@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = {
+	mobile: '+1 302 464 0950',
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
+	{
+		id: 'ai-redteam-evaluator',
+		name: 'AI Red‑Team Evaluator',
+		tagline: 'Continuous LLM red‑teaming and safety scoring',
+		price: '$149',
+=======
 
     id: 'finops - scheduler - optimizer'
     name: 'FinOps Scheduler Optimizer',
@@ -206,11 +221,20 @@
 ];
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'
+<<<<<<< HEAD
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']
 		popular: true,
 		icon: ''
 		color: 'from-rose-600 to-red-700',
 		textColor: 'text-rose-300',
+=======
+		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
+		popular: true;
+		icon: '',
+		color: 'from-rose-600 to-red-700'
+		textColor: 'text-rose-300'
+>>>>>>> main
+>>>>>>> cursor/delete-records-e539
 		period: '/month',
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
     features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,

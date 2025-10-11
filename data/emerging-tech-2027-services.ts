@@ -65,7 +65,16 @@ export interface EmergingTech2027Service {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const emergingTech2027Services: EmergingTech2027Service[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "2027-emerging-tech"
+=======
+;
+>>>>>>> main
+    id: "2027-emerging-tech",
+>>>>>>> cursor/delete-records-e539
     name: "2027 Emerging Tech Platform",
     tagline: "Emerging tech for 2027",
     price: "$349/month",

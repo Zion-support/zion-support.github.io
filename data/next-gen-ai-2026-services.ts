@@ -5,8 +5,24 @@
   price: string;
   description: string;
   features: string[];
+<<<<<<< HEAD
   link: string
   category: string
+=======
+  link: string;
+  category: string;
+<<<<<<< HEAD
+  realImplementation: boolean;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
+  };
+}
+export const nextGenAI2026Services: NextGenAi2026Service[] = [
+  {
+=======
+>>>>>>> cursor/delete-records-e539
     address: string,
   i,
   d: string,
@@ -58,7 +74,12 @@ export const,
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ]
+<<<<<<< HEAD
     id: "2026-next-gen-ai"
+=======
+>>>>>>> main
+    id: "2026-next-gen-ai",
+>>>>>>> cursor/delete-records-e539
     name: "2026 Next-Gen AI Platform",
     tagline: "Next-generation AI for 2026",
     price: "$299/month",

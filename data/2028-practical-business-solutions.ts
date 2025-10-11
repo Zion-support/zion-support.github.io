@@ -65,7 +65,16 @@ export interface PracticalBusinessSolution2028 {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
+<<<<<<< HEAD
       address: "364 E Main St STE 1008 Middletown DE 19709"}
+=======
+<<<<<<< HEAD
+export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
+  {
+=======
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+>>>>>>> cursor/delete-records-e539
   }
 ];
   id: string, name: string,
@@ -155,6 +164,7 @@ export const,
     }
   }
 ];
+<<<<<<< HEAD
       mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com",
@@ -171,6 +181,11 @@ export const,
   }
 ];
 id: "2028-practical-business-solution"
+=======
+;
+>>>>>>> main
+    id: "2028-practical-business-solution",
+>>>>>>> cursor/delete-records-e539
     name: "2028 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2028",
     price: "$249/month",

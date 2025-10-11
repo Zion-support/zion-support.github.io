@@ -1700,6 +1700,55 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
   rating: number
   reviews: number,
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export const advancedITServices: AdvancedITService[] = [
+  {
+    id: 'quantum-cloud-platform',
+    name: 'Quantum Cloud Platform',
+    tagline: 'Next-generation quantum computing in the cloud',
+    price: '$9,999',
+    period: '/month',
+    description: 'Revolutionary quantum cloud platform providing access to quantum computing resources, quantum algorithms, and hybrid classical-quantum workflows for enterprise applications.',
+    features: [
+      'Quantum computing resources',
+      'Quantum algorithm library',
+      'Hybrid classical-quantum workflows',
+      'Quantum machine learning',
+      'Quantum cryptography',
+      'Performance optimization',
+      'Real-time quantum monitoring',
+      'Advanced analytics dashboard',
+      'API for integration',
+      '24/7 quantum support'
+    ],
+    popular: true,
+    icon: '☁️',
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/quantum-cloud-platform',
+    marketPosition: 'First comprehensive quantum cloud platform, competing with IBM Quantum and AWS Braket',
+    targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Defense contractors',
+    trialDays: 30,
+    setupTime: '1 month',
+    category: 'Quantum Computing',
+    realService: true,
+    technology: ['Quantum Computing', 'Cloud Infrastructure', 'Quantum Algorithms', 'AI/ML', 'Quantum Cryptography'],
+    integrations: ['AWS', 'Azure', 'Google Cloud', 'Research platforms', 'Financial systems'],
+    useCases: ['Drug discovery', 'Financial modeling', 'Cryptography', 'Optimization problems'],
+    roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',
+    competitors: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],
+    marketSize: '$500M quantum computing market',
+    growthRate: '500% annual growth',
+    variant: 'quantum-cloud',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+=======
+;
+>>>>>>> cursor/delete-records-e539
 export const advancedITServices: AdvancedITService[] = [;
   {
     id: 'quantum-cloud-platform'
@@ -1732,11 +1781,21 @@ export const advancedITServices: AdvancedITService[] = [;
     growthRate: '500% annual growth',
     variant: 'quantum-cloud'}
     contactInfo: {}
+<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     realImplementation: true,
+=======
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+>>>>>>> main
+      website: 'https://ziontechgroup.com'
+    };
+    realImplementation: true;
+>>>>>>> cursor/delete-records-e539
     implementationDetails: 'Complete quantum cloud platform with quantum computers, algorithm libraries, and hybrid workflow capabilities.';
     launchDate: '2024-12-01';
     customers: 8
