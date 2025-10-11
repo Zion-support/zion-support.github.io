@@ -81,4 +81,11 @@ export default function Unauthorized() {
               className="w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center">
             >
               {t ('errors.login_different_account')}
-            </Link></$1></$1></$1></$1></div>
+            </Link></$1></$1></$1></$1></div>  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

@@ -21,8 +21,6 @@ export default function PagePage() {
     }
   ];
 
-<<<<<<< HEAD
-=======
 const AiApiManagementPage: React.FC = () => {
   const features = [
     {
@@ -54,7 +52,6 @@ const AiApiManagementPage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">
@@ -99,15 +96,7 @@ const AiApiManagementPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-=======
-
-      <Footer />
+<Footer />
     </>
 
       <Footer />
@@ -198,6 +187,19 @@ const AiApiManagementPage: React.FC = () => {
 
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
-}
+}  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+    </main>
+      </section>

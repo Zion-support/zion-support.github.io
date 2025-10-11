@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle } from 'lucide-react';
-=======
-import {Helmet} from 'react-helmet-async';
-import {BarChart, TrendingUp, PieChart, Target, CheckCircle, ArrowRight} from 'lucide-react';
+import {CheckCircle} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AnalyticsDashboardPage: React.FC = () => {
@@ -20,7 +16,6 @@ const AnalyticsDashboardPage: React.FC = () => {
     
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
 
 export default function PagePage() {
   const features = [

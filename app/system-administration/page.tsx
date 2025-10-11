@@ -21,8 +21,6 @@ export default function PagePage() {
     }
   ];
 
-<<<<<<< HEAD
-=======
 const SystemAdministrationPage: React.FC = () => {
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     
@@ -41,7 +39,6 @@ const SystemAdministrationPage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">

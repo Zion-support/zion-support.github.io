@@ -204,4 +204,7 @@ export default function Ecommerce() {
               className="object-cover"
 >
 >
-              <Link href="/marketplace">Start Shopping</Link></$1></$1></$1></$1></$1></div></div></div></main>
+              <Link href="/marketplace">Start Shopping</Link></$1></$1></$1></$1></$1></div></div></div></main>  </div>
+  </div>
+  </div>
+  </div>

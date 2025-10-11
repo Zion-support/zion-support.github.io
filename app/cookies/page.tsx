@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -20,7 +15,6 @@ const CookiesPage: React.FC = () => {
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
 
 export default function PagePage() {
   const features = [
@@ -91,4 +85,4 @@ export default function PagePage() {
       </main>
     </div>
   );
-}
+}  </div>

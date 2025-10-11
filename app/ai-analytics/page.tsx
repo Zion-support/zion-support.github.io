@@ -2,25 +2,6 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  const features = [
-    {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-=======
 const AiAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -51,7 +32,6 @@ const AiAnalyticsPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   ];
 
   return (
@@ -98,15 +78,7 @@ const AiAnalyticsPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-=======
-
-      <Footer />
+<Footer />
     </>
 
       <Footer />
@@ -195,6 +167,23 @@ const AiAnalyticsPage: React.FC = () => {
 
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
-}
+}  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+    </main>
+      </section>
+
+
+export default AiAnalyticsPage;

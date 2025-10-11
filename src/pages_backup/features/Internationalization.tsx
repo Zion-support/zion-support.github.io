@@ -208,4 +208,9 @@ export default function Internationalization() {
               className="object-cover"
 >
 >
-              <Link href="/">Explore Zion</Link></$1></$1></$1></$1></$1></div></main>
+              <Link href="/">Explore Zion</Link></$1></$1></$1></$1></$1></div></main>  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

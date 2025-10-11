@@ -209,4 +209,9 @@ export default function SearchFeature() {
               className="object-cover"
 >
 >
-              <Link href="/search">Try Search</Link></$1></$1></$1></$1></$1></div></main>
+              <Link href="/search">Try Search</Link></$1></$1></$1></$1></$1></div></main>  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

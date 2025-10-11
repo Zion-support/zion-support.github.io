@@ -210,4 +210,9 @@ export default function InstantMessaging() {
               className="object-cover"
 >
 >
-            </Button></$1></$1></$1></$1></div></main>
+            </Button></$1></$1></$1></$1></div></main>  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

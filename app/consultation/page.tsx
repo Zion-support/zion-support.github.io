@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import {CheckCircle, Star, Zap} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
     
@@ -15,7 +11,6 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
 benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
     
 benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
 
 export default function PagePage() {
   const features = [
@@ -82,13 +77,7 @@ export default function PagePage() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </main>
-    </div>
-=======
-
-      <Footer />
+<Footer />
     </>
         </section>
 
@@ -183,6 +172,5 @@ Learn More
 
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
-}
+}    </main>

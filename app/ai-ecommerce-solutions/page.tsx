@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-
-export default function PagePage() {
-  const features = [
-    {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-=======
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -159,7 +124,6 @@ const PagePage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Contact us today to learn how our solutions can transform your business.
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
             </p>
           </div>
           
@@ -195,16 +159,7 @@ const PagePage: React.FC = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
-=======
-
-      <Footer />
+<Footer />
     </>
 </section>
         {/* Features Section */}
@@ -311,4 +266,6 @@ const PagePage: React.FC = () => {
 </ul>
 </li>
 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
+
+
+export default PagePage;

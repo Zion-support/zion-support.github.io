@@ -2,16 +2,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  const features = [
-    {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-=======
 const AIAccountingAssistantPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
     },
     {
       title: 'Advanced Technology',
@@ -70,14 +61,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </main>
-    </div>
-=======
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
                     <div className="text-purple-400 mb-4">
@@ -166,6 +150,22 @@ const AIAccountingAssistantPage: React.FC = () => {
 </div>
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
-}
+}  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+    </main>
+
+
+export default AIAccountingAssistantPage;

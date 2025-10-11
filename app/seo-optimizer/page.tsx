@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-=======
 import React from 'react'
 const SeoOptimizerPage: React.FC = () => {
     {} 'Advanced AI technology integration'},
@@ -17,7 +12,6 @@ const benefits = [
     '24/7 availability',
     'Expert support'
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
 
 export default function PagePage() {
   const features = [

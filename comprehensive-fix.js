@@ -161,4 +161,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { fixMergeConflicts, fixJSXSyntax, processFile };
+export { fixMergeConflicts, fixJSXSyntax, processFile };  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+    </main>
+      </section>

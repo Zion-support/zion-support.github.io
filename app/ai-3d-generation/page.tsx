@@ -2,62 +2,6 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  const features = [
-    {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-=======
 const AI3DGenerationPage: React.FC = () => {
   const features = [
     {
@@ -136,9 +80,9 @@ const AI3DGenerationPage: React.FC = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">3D Generation</span>
+              </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Revolutionary AI-powered 3D model generation and design automation solutions
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -149,12 +93,7 @@ const AI3DGenerationPage: React.FC = () => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-=======
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
                     <div className="text-purple-400 mb-4">
@@ -162,13 +101,19 @@ const AI3DGenerationPage: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
-                      
+                      {feature.benefits?.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
+                        </li>
                       ))}
-                );
-})}</div></section>
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 bg-slate-800/50">
@@ -180,20 +125,29 @@ const AI3DGenerationPage: React.FC = () => {
               </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              
+              {useCases.map((useCase, index) => {
+                const Icon = useCase.icon;
+                return (
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
+                    </div>
                     <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                     <p className="text-gray-300 mb-4">{useCase.description}</p>
                     <ul className="space-y-2">
-                      
+                      {useCase.benefits?.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-purple-400 mr-2 flex-shrink-0" />
                           {benefit}
+                        </li>
                       ))}
+                    </ul>
+                  </div>
                 );
-})}</div></section>
+              })}
+            </div>
+          </div>
+        </section>
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -343,8 +297,31 @@ const AI3DGenerationPage: React.FC = () => {
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Schedule Demo
 </button></div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
       </main>
     </div>
   );
-}
+}  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+export default AI3DGenerationPage;

@@ -200,4 +200,8 @@ export default function TalentMarketplace() {
               className="object-cover"
 >
 >
-              <Link href="/talent">Browse Talent</Link></$1></$1></$1></$1></$1>
+              <Link href="/talent">Browse Talent</Link></$1></$1></$1></$1></$1>  </div>
+  </div>
+  </div>
+  </div>
+  </div>

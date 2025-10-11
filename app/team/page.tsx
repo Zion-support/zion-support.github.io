@@ -2,31 +2,10 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  const features = [
-    {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
-=======
 const PagePage: React.FC = () => {
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />}
       </Helmet>
       <Navigation />
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -74,13 +53,7 @@ const PagePage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </main>
-    </div>
-=======
-
-      <Footer />
+<Footer />
     </>
         </section>
 
@@ -204,6 +177,8 @@ const PagePage: React.FC = () => {
 
   return (
     <div>Page content</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
-}
+}    </main>
+
+
+export default PagePage;

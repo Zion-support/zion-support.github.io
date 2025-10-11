@@ -142,4 +142,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { fixMergeConflicts, fixObjectSyntax, processFile };
+export { fixMergeConflicts, fixObjectSyntax, processFile };  </div>
+  </div>
+    </main>
+      </section>

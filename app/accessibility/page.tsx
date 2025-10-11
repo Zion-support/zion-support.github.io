@@ -2,16 +2,12 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  const features = [
-    {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-=======
 const AccessibilityPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
+  const services = [
+    {
+      title: 'Web Accessibility Audits',
+      description: 'Comprehensive accessibility audits to ensure WCAG compliance.',
+      benefits: ['WCAG 2.1 AA Compliance', 'Screen Reader Testing', 'Keyboard Navigation', 'Color Contrast Analysis']
     },
     {
       title: 'Advanced Technology',
@@ -76,3 +72,5 @@ const AccessibilityPage: React.FC = () => {
     </div>
   );
 }
+
+export default AccessibilityPage;

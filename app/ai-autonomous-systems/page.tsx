@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-=======
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -32,7 +27,6 @@ const PagePage: React.FC = () => {
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       <Navigation />
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
 
 export default function PagePage() {
   const features = [
@@ -97,17 +91,7 @@ export default function PagePage() {
                   Learn More
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
-=======
-
-      <Footer />
+<Footer />
     </>
 
       <Footer />
@@ -214,4 +198,5 @@ export default function PagePage() {
 </ul>
 </li>
 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
+  </div>
+    </main>

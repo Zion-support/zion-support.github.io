@@ -1,33 +1,10 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle } from 'lucide-react';
-
-export default function PagePage() {
-  const features = [
-    {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
-=======
-import {Helmet} from 'react-helmet-async';
-import {Wifi, BarChart, CheckCircle, Brain, Target, Zap, Shield} from 'lucide-react';
+import {CheckCircle} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
 
+const FiveGImplementationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">
@@ -78,4 +55,6 @@ import Footer from '../components/Footer';
       </main>
     </div>
   );
-}
+};
+
+export default FiveGImplementationPage;

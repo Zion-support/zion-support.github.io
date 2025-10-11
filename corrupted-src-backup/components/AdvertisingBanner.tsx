@@ -47,7 +47,7 @@ const,>
           />
       )}
       <div className="banner-content" style={{ flex: 1 }}>
-        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}
+        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}
         <$2 />
           href={ctaUrl}

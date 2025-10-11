@@ -2,16 +2,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  const features = [
-    {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-=======
 const AIAgriculturalIntelligenceProPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
     },
     {
       title: 'Advanced Technology',
@@ -76,3 +67,5 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
     </div>
   );
 }
+
+export default AIAgriculturalIntelligenceProPage;
