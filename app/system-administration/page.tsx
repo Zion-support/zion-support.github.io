@@ -1,44 +1,44 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ClipboardList, Target, Users, Calendar, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap } from 'lucide-react'
+import { Settings, Server, Shield, Monitor, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap } from 'lucide-react'
 
-const ItProjectManagementPage: React.FC = () => {
+const SystemAdministrationPage: React.FC = () => {
   const features = [
-    'Project Planning & Scheduling',
-    'Resource Management',
-    'Risk Assessment',
-    'Quality Assurance',
-    'Stakeholder Communication',
-    'Progress Tracking'
+    'Server Management',
+    'System Monitoring',
+    'Security Hardening',
+    'Performance Optimization',
+    'Backup & Recovery',
+    '24/7 Support'
   ]
 
   const benefits = [
-    'Complete projects on time',
-    'Reduce project costs by 25%',
-    'Improve team productivity',
-    'Minimize project risks',
-    'Better stakeholder satisfaction',
-    'Professional project delivery'
+    'Reduce downtime by 90%',
+    'Improve system performance',
+    'Enhanced security posture',
+    'Automated maintenance',
+    'Proactive monitoring',
+    'Expert administration'
   ]
 
   const pricing = [
     {
-      plan: 'Small Project',
-      price: '$899/month',
-      features: ['Up to 3 months', 'Basic tracking', 'Email support', 'Standard reporting'],
+      plan: 'Basic',
+      price: '$799/month',
+      features: ['Up to 5 servers', 'Basic monitoring', 'Email support', 'Standard maintenance'],
       popular: false
     },
     {
-      plan: 'Medium Project',
+      plan: 'Professional',
       price: '$1,499/month',
-      features: ['Up to 6 months', 'Advanced tracking', 'Priority support', 'Detailed reporting'],
+      features: ['Up to 20 servers', 'Advanced monitoring', 'Priority support', 'Proactive maintenance'],
       popular: true
     },
     {
-      plan: 'Large Project',
+      plan: 'Enterprise',
       price: 'Custom',
-      features: ['Unlimited duration', 'Full tracking suite', 'Dedicated support', 'Custom reporting'],
+      features: ['Unlimited servers', 'Full monitoring suite', 'Dedicated support', 'Custom solutions'],
       popular: false
     }
   ]
@@ -46,9 +46,9 @@ const ItProjectManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>IT Project Management - Zion Tech Group</title>
-        <meta name="description" content="Professional IT project management services. Expert planning, execution, and delivery of technology projects." />
-        <meta name="keywords" content="IT project management, project planning, project execution, technology projects, project delivery" />
+        <title>System Administration - Zion Tech Group</title>
+        <meta name="description" content="Professional system administration services. Server management, monitoring, security, and optimization for your IT infrastructure." />
+        <meta name="keywords" content="system administration, server management, IT infrastructure, system monitoring, server maintenance" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -58,19 +58,19 @@ const ItProjectManagementPage: React.FC = () => {
             <div className="text-center mb-16">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                  <ClipboardList className="w-8 h-8 text-white" />
+                  <Settings className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT Project Management
+                System Administration
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional IT project management services. Expert planning, execution, and delivery 
-                of technology projects to ensure success and stakeholder satisfaction.
+                Professional system administration services for your IT infrastructure. 
+                Server management, monitoring, security, and optimization to keep your systems running smoothly.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Start Project
+                  Get Started
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   View Services
@@ -88,7 +88,7 @@ const ItProjectManagementPage: React.FC = () => {
                 Our Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive project management solutions
+                Comprehensive system administration solutions
               </p>
             </div>
             
@@ -110,10 +110,10 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Project Management?
+                Why Choose Our System Administration?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Expert management with proven results
+                Expert administration with proven results
               </p>
             </div>
             
@@ -137,7 +137,7 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Management Packages
+                Service Packages
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the package that fits your needs
@@ -184,14 +184,14 @@ const ItProjectManagementPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Manage Your IT Project?
+              Ready to Optimize Your Systems?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our experts ensure your project's success
+              Let our experts manage your IT infrastructure
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start Project
+                Start Service
               </button>
               <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Contact Us
@@ -204,4 +204,4 @@ const ItProjectManagementPage: React.FC = () => {
   )
 }
 
-export default ItProjectManagementPage
+export default SystemAdministrationPage

@@ -1,44 +1,44 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ClipboardList, Target, Users, Calendar, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap } from 'lucide-react'
+import { ShoppingCart, TrendingUp, Users, BarChart, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap } from 'lucide-react'
 
-const ItProjectManagementPage: React.FC = () => {
+const AiEcommerceAssistantPage: React.FC = () => {
   const features = [
-    'Project Planning & Scheduling',
-    'Resource Management',
-    'Risk Assessment',
-    'Quality Assurance',
-    'Stakeholder Communication',
-    'Progress Tracking'
+    'AI-Powered Product Recommendations',
+    'Automated Inventory Management',
+    'Smart Pricing Optimization',
+    'Customer Behavior Analysis',
+    'Automated Marketing Campaigns',
+    'Real-time Analytics Dashboard'
   ]
 
   const benefits = [
-    'Complete projects on time',
-    'Reduce project costs by 25%',
-    'Improve team productivity',
-    'Minimize project risks',
-    'Better stakeholder satisfaction',
-    'Professional project delivery'
+    'Increase sales by 35%',
+    'Reduce cart abandonment by 50%',
+    'Optimize pricing automatically',
+    'Personalize customer experience',
+    'Automate marketing tasks',
+    'Gain valuable insights'
   ]
 
   const pricing = [
     {
-      plan: 'Small Project',
-      price: '$899/month',
-      features: ['Up to 3 months', 'Basic tracking', 'Email support', 'Standard reporting'],
+      plan: 'Starter',
+      price: '$249/month',
+      features: ['Up to 1,000 products', 'Basic AI features', 'Email support', 'Standard analytics'],
       popular: false
     },
     {
-      plan: 'Medium Project',
-      price: '$1,499/month',
-      features: ['Up to 6 months', 'Advanced tracking', 'Priority support', 'Detailed reporting'],
+      plan: 'Professional',
+      price: '$499/month',
+      features: ['Up to 10,000 products', 'Advanced AI features', 'Priority support', 'Advanced analytics'],
       popular: true
     },
     {
-      plan: 'Large Project',
+      plan: 'Enterprise',
       price: 'Custom',
-      features: ['Unlimited duration', 'Full tracking suite', 'Dedicated support', 'Custom reporting'],
+      features: ['Unlimited products', 'Full AI suite', 'Dedicated support', 'Custom integrations'],
       popular: false
     }
   ]
@@ -46,9 +46,9 @@ const ItProjectManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>IT Project Management - Zion Tech Group</title>
-        <meta name="description" content="Professional IT project management services. Expert planning, execution, and delivery of technology projects." />
-        <meta name="keywords" content="IT project management, project planning, project execution, technology projects, project delivery" />
+        <title>AI E-commerce Assistant - Zion Tech Group</title>
+        <meta name="description" content="Boost your e-commerce sales with AI-powered automation. Smart recommendations, pricing optimization, and customer insights." />
+        <meta name="keywords" content="AI e-commerce, online store, sales optimization, product recommendations, pricing automation" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -58,22 +58,22 @@ const ItProjectManagementPage: React.FC = () => {
             <div className="text-center mb-16">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                  <ClipboardList className="w-8 h-8 text-white" />
+                  <ShoppingCart className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT Project Management
+                AI E-commerce Assistant
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional IT project management services. Expert planning, execution, and delivery 
-                of technology projects to ensure success and stakeholder satisfaction.
+                Boost your online store sales with AI-powered automation. 
+                Smart recommendations, pricing optimization, and customer insights to maximize revenue.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Start Project
+                  Start Optimizing
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  View Services
+                  View Demo
                 </button>
               </div>
             </div>
@@ -85,10 +85,10 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Services
+                Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive project management solutions
+                Everything you need to optimize your e-commerce store
               </p>
             </div>
             
@@ -110,10 +110,10 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Project Management?
+                Why Choose AI E-commerce Assistant?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Expert management with proven results
+                Transform your online store with intelligent automation
               </p>
             </div>
             
@@ -137,10 +137,10 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Management Packages
+                Simple Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the package that fits your needs
+                Choose the plan that fits your needs
               </p>
             </div>
             
@@ -184,17 +184,17 @@ const ItProjectManagementPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Manage Your IT Project?
+              Ready to Boost Your E-commerce Sales?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our experts ensure your project's success
+              Start optimizing your online store today
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start Project
+                Start Free Trial
               </button>
               <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Contact Us
+                Contact Sales
               </button>
             </div>
           </div>
@@ -204,4 +204,4 @@ const ItProjectManagementPage: React.FC = () => {
   )
 }
 
-export default ItProjectManagementPage
+export default AiEcommerceAssistantPage

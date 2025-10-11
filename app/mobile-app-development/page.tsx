@@ -1,44 +1,44 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ClipboardList, Target, Users, Calendar, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap } from 'lucide-react'
+import { Smartphone, Code, Zap, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Clock, DollarSign } from 'lucide-react'
 
-const ItProjectManagementPage: React.FC = () => {
+const MobileAppDevelopmentPage: React.FC = () => {
   const features = [
-    'Project Planning & Scheduling',
-    'Resource Management',
-    'Risk Assessment',
-    'Quality Assurance',
-    'Stakeholder Communication',
-    'Progress Tracking'
+    'iOS & Android Development',
+    'Cross-Platform Solutions',
+    'Native Performance',
+    'UI/UX Design',
+    'App Store Optimization',
+    'Maintenance & Support'
   ]
 
   const benefits = [
-    'Complete projects on time',
-    'Reduce project costs by 25%',
-    'Improve team productivity',
-    'Minimize project risks',
-    'Better stakeholder satisfaction',
-    'Professional project delivery'
+    'Increase mobile presence by 300%',
+    'Native performance optimization',
+    'Cross-platform compatibility',
+    'Professional UI/UX design',
+    'App store optimization',
+    'Ongoing maintenance support'
   ]
 
   const pricing = [
     {
-      plan: 'Small Project',
-      price: '$899/month',
-      features: ['Up to 3 months', 'Basic tracking', 'Email support', 'Standard reporting'],
+      plan: 'Basic App',
+      price: '$1,999/month',
+      features: ['Simple functionality', 'Basic UI/UX', 'iOS or Android', '3 months support'],
       popular: false
     },
     {
-      plan: 'Medium Project',
-      price: '$1,499/month',
-      features: ['Up to 6 months', 'Advanced tracking', 'Priority support', 'Detailed reporting'],
+      plan: 'Professional App',
+      price: '$4,999/month',
+      features: ['Advanced features', 'Custom UI/UX', 'Both platforms', '6 months support'],
       popular: true
     },
     {
-      plan: 'Large Project',
+      plan: 'Enterprise App',
       price: 'Custom',
-      features: ['Unlimited duration', 'Full tracking suite', 'Dedicated support', 'Custom reporting'],
+      features: ['Complex functionality', 'Premium design', 'All platforms', '12 months support'],
       popular: false
     }
   ]
@@ -46,9 +46,9 @@ const ItProjectManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>IT Project Management - Zion Tech Group</title>
-        <meta name="description" content="Professional IT project management services. Expert planning, execution, and delivery of technology projects." />
-        <meta name="keywords" content="IT project management, project planning, project execution, technology projects, project delivery" />
+        <title>Mobile App Development - Zion Tech Group</title>
+        <meta name="description" content="Professional mobile app development for iOS and Android. Custom solutions with native performance and modern design." />
+        <meta name="keywords" content="mobile app development, iOS, Android, app development, mobile solutions" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -58,22 +58,22 @@ const ItProjectManagementPage: React.FC = () => {
             <div className="text-center mb-16">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                  <ClipboardList className="w-8 h-8 text-white" />
+                  <Smartphone className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT Project Management
+                Mobile App Development
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional IT project management services. Expert planning, execution, and delivery 
-                of technology projects to ensure success and stakeholder satisfaction.
+                Professional mobile app development for iOS and Android. 
+                Create engaging, high-performance mobile applications that drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Start Project
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  View Services
+                  View Portfolio
                 </button>
               </div>
             </div>
@@ -88,7 +88,7 @@ const ItProjectManagementPage: React.FC = () => {
                 Our Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive project management solutions
+                Comprehensive mobile app development solutions
               </p>
             </div>
             
@@ -110,10 +110,10 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Project Management?
+                Why Choose Our Mobile Development?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Expert management with proven results
+                Professional mobile solutions with proven results
               </p>
             </div>
             
@@ -137,7 +137,7 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Management Packages
+                Development Packages
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the package that fits your needs
@@ -184,14 +184,14 @@ const ItProjectManagementPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Manage Your IT Project?
+              Ready to Build Your Mobile App?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our experts ensure your project's success
+              Let's discuss your mobile app requirements and create something amazing
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start Project
+                Start Your Project
               </button>
               <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Contact Us
@@ -204,4 +204,4 @@ const ItProjectManagementPage: React.FC = () => {
   )
 }
 
-export default ItProjectManagementPage
+export default MobileAppDevelopmentPage

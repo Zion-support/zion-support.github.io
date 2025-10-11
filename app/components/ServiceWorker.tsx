@@ -6,6 +6,11 @@ const ServiceWorker: React.FC = () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
 <<<<<<< HEAD
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Service Worker registered successfully:', registration)
+          }
+=======
+<<<<<<< HEAD
           console.log('Service Worker registered:', registration);
         })
         .catch((error) => {
@@ -13,9 +18,12 @@ const ServiceWorker: React.FC = () => {
         });
 =======
           console.log('Service Worker registered successfully:', registration)
+>>>>>>> origin/main
         })
         .catch((error) => {
-          console.log('Service Worker registration failed:', error)
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Service Worker registration failed:', error)
+          }
         })
 >>>>>>> origin/main
     }

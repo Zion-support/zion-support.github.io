@@ -1,44 +1,44 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ClipboardList, Target, Users, Calendar, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap } from 'lucide-react'
+import { Building, Users, Shield, Zap, ArrowRight, CheckCircle, Star, Clock, DollarSign, Globe } from 'lucide-react'
 
-const ItProjectManagementPage: React.FC = () => {
+const EnterpriseSolutionsPage: React.FC = () => {
   const features = [
-    'Project Planning & Scheduling',
-    'Resource Management',
-    'Risk Assessment',
-    'Quality Assurance',
-    'Stakeholder Communication',
-    'Progress Tracking'
+    'Enterprise Architecture',
+    'Scalable Infrastructure',
+    'Advanced Security',
+    'Integration Services',
+    '24/7 Support',
+    'Custom Solutions'
   ]
 
   const benefits = [
-    'Complete projects on time',
-    'Reduce project costs by 25%',
-    'Improve team productivity',
-    'Minimize project risks',
-    'Better stakeholder satisfaction',
-    'Professional project delivery'
+    'Scale to enterprise level',
+    'Reduce operational costs',
+    'Enhanced security posture',
+    'Seamless integrations',
+    'Dedicated support team',
+    'Custom enterprise features'
   ]
 
   const pricing = [
     {
-      plan: 'Small Project',
-      price: '$899/month',
-      features: ['Up to 3 months', 'Basic tracking', 'Email support', 'Standard reporting'],
+      plan: 'Enterprise Starter',
+      price: '$2,999/month',
+      features: ['Up to 500 users', 'Basic enterprise features', 'Email support', 'Standard SLA'],
       popular: false
     },
     {
-      plan: 'Medium Project',
-      price: '$1,499/month',
-      features: ['Up to 6 months', 'Advanced tracking', 'Priority support', 'Detailed reporting'],
+      plan: 'Enterprise Professional',
+      price: '$4,999/month',
+      features: ['Up to 2,000 users', 'Advanced features', 'Priority support', 'Enhanced SLA'],
       popular: true
     },
     {
-      plan: 'Large Project',
+      plan: 'Enterprise Custom',
       price: 'Custom',
-      features: ['Unlimited duration', 'Full tracking suite', 'Dedicated support', 'Custom reporting'],
+      features: ['Unlimited users', 'Full enterprise suite', 'Dedicated support', 'Custom SLA'],
       popular: false
     }
   ]
@@ -46,9 +46,9 @@ const ItProjectManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>IT Project Management - Zion Tech Group</title>
-        <meta name="description" content="Professional IT project management services. Expert planning, execution, and delivery of technology projects." />
-        <meta name="keywords" content="IT project management, project planning, project execution, technology projects, project delivery" />
+        <title>Enterprise Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive enterprise solutions for large organizations. Scalable, secure, and integrated technology solutions." />
+        <meta name="keywords" content="enterprise solutions, enterprise software, large organization, enterprise architecture, enterprise integration" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -58,22 +58,22 @@ const ItProjectManagementPage: React.FC = () => {
             <div className="text-center mb-16">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                  <ClipboardList className="w-8 h-8 text-white" />
+                  <Building className="w-8 h-8 text-white" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                IT Project Management
+                Enterprise Solutions
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional IT project management services. Expert planning, execution, and delivery 
-                of technology projects to ensure success and stakeholder satisfaction.
+                Comprehensive enterprise solutions for large organizations. 
+                Scalable, secure, and integrated technology solutions that drive business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Start Project
+                  Get Started
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  View Services
+                  View Solutions
                 </button>
               </div>
             </div>
@@ -85,10 +85,10 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Services
+                Our Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive project management solutions
+                Comprehensive enterprise technology solutions
               </p>
             </div>
             
@@ -110,10 +110,10 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Project Management?
+                Why Choose Our Enterprise Solutions?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Expert management with proven results
+                Proven enterprise solutions with measurable results
               </p>
             </div>
             
@@ -137,10 +137,10 @@ const ItProjectManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Management Packages
+                Enterprise Packages
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the package that fits your needs
+                Choose the package that fits your organization
               </p>
             </div>
             
@@ -184,14 +184,14 @@ const ItProjectManagementPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Manage Your IT Project?
+              Ready to Scale Your Enterprise?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let our experts ensure your project's success
+              Let our experts design the perfect enterprise solution for your organization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start Project
+                Start Solution
               </button>
               <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Contact Us
@@ -204,4 +204,4 @@ const ItProjectManagementPage: React.FC = () => {
   )
 }
 
-export default ItProjectManagementPage
+export default EnterpriseSolutionsPage

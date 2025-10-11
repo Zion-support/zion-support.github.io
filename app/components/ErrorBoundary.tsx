@@ -49,7 +49,8 @@ interface Props {children: ReactNode;,}
 =======
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react'
+import { AlertTriangle, RefreshCw } from 'lucide-react'
+
 interface Props {
   children: ReactNode
   fallback?: ReactNode
@@ -80,6 +81,22 @@ class ErrorBoundary extends Component<Props, State> {
 
 <<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
+    this.setState({
+      error,
+      errorInfo
+    })
+
+    // Log error to monitoring service
+    if (process.env.NODE_ENV === 'production') {
+      // TODO: Send error to monitoring service
+      console.error('Error caught by boundary:', error, errorInfo)
+    }
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+=======
     console.error('Error caught by boundary:', error, errorInfo);
 =======
   componentDidCatch(error: Error, errorInfo: any) {
@@ -128,6 +145,7 @@ class ErrorBoundary extends Component<Props, State> {
   handleGoHome = () => {
     window.location.href = '/'
 >>>>>>> origin/main
+>>>>>>> origin/main
   }
 
   render() {
@@ -161,10 +179,17 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
+<<<<<<< HEAD
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+=======
         </Props><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           </div><div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
             </div><div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               </div><AlertTriangle className="w-8 h-8 text-red-400" />
+>>>>>>> origin/main
 >>>>>>> origin/main
             </div>
             
@@ -184,6 +209,13 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
+<<<<<<< HEAD
+              <details className="text-left mb-6 p-4 bg-red-500/10 rounded-lg">
+                <summary className="text-red-400 font-medium cursor-pointer mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-red-300 whitespace-pre-wrap">
+=======
 <<<<<<< HEAD
               <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
                 <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
@@ -315,11 +347,32 @@ class ErrorBoundary extends Component<Props, State> {
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 text-xs text-gray-500 bg-gray-800 p-4 rounded overflow-auto">
+>>>>>>> origin/main
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleRetry}
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
+              </button>
+              
+              <button
+                onClick={() => window.location.reload()}
+                className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-300"
+              >
+                Refresh Page
+              </button>
+            </div>
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
           </div>
         </div>
@@ -331,7 +384,12 @@ class ErrorBoundary extends Component<Props, State> {
 }
 <<<<<<< HEAD
 
+export default ErrorBoundary
+=======
+<<<<<<< HEAD
+
 export default ErrorBoundary;
 =======
 export default ErrorBoundary</$1></p>
+>>>>>>> origin/main
 >>>>>>> origin/main
