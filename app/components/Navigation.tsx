@@ -95,24 +95,98 @@ const Navigation: React.FC = () => {
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
+            
+            {/* About Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
+                About
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-2">
+                  <Link to="/about" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    About Us
+                  </Link>
+                  <Link to="/team" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Our Team
+                  </Link>
+                  <Link to="/careers" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Careers
+                  </Link>
+                  <Link to="/partners" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Partners
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
+                Services
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-2">
+                  <Link to="/services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    All Services
+                  </Link>
+                  <Link to="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    AI Services
+                  </Link>
+                  <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    IT Services
+                  </Link>
+                  <Link to="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Micro SaaS
+                  </Link>
+                  <Link to="/enterprise" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Enterprise Solutions
+                  </Link>
+                  <Link to="/consultation" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Consultation
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Pricing
             </Link>
-            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Case Studies
-            </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
-            </Link>
-            <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Tutorials
-            </Link>
+            
+            {/* Resources Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
+                Resources
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-56 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-2">
+                  <Link to="/blog" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Blog
+                  </Link>
+                  <Link to="/tutorials" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Tutorials
+                  </Link>
+                  <Link to="/case-studies" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Case Studies
+                  </Link>
+                  <Link to="/docs" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Documentation
+                  </Link>
+                  <Link to="/api-docs" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    API Reference
+                  </Link>
+                  <Link to="/community" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    Community
+                  </Link>
+                  <Link to="/faq" className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                    FAQ
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
@@ -154,24 +228,77 @@ const Navigation: React.FC = () => {
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
-              <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About
-              </Link>
-              <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
-              </Link>
+              
+              {/* About Section */}
+              <div className="space-y-2">
+                <div className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">About</div>
+                <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  About Us
+                </Link>
+                <Link to="/team" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Our Team
+                </Link>
+                <Link to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Careers
+                </Link>
+                <Link to="/partners" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Partners
+                </Link>
+              </div>
+
+              {/* Services Section */}
+              <div className="space-y-2">
+                <div className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Services</div>
+                <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  All Services
+                </Link>
+                <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  AI Services
+                </Link>
+                <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  IT Services
+                </Link>
+                <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Micro SaaS
+                </Link>
+                <Link to="/enterprise" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Enterprise Solutions
+                </Link>
+                <Link to="/consultation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Consultation
+                </Link>
+              </div>
+
               <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Pricing
               </Link>
-              <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Case Studies
-              </Link>
-              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Tutorials
-              </Link>
+
+              {/* Resources Section */}
+              <div className="space-y-2">
+                <div className="text-cyan-400 font-semibold text-sm uppercase tracking-wider">Resources</div>
+                <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Blog
+                </Link>
+                <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Tutorials
+                </Link>
+                <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Case Studies
+                </Link>
+                <Link to="/docs" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Documentation
+                </Link>
+                <Link to="/api-docs" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  API Reference
+                </Link>
+                <Link to="/community" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  Community
+                </Link>
+                <Link to="/faq" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium ml-4" onClick={closeAllMenus}>
+                  FAQ
+                </Link>
+              </div>
+
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
               </Link>
