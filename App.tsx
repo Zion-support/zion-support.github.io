@@ -130,6 +130,10 @@ const App: React.FC = () => {
                             {/* Additional Service Pages */}
                             <Route path="/cybersecurity" element={<CybersecurityPage />} />
                             <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                            {/* New Service Pages */}
+                            <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+                            <Route path="/ai-services-advanced" element={<AdvancedAiServicesPage />} />
+                            <Route path="/it-services-comprehensive" element={<ComprehensiveItServicesPage />} />
                           </Routes>
                         </Suspense>
                       </main>
@@ -146,4 +150,7 @@ const App: React.FC = () => {
   )
 }
 App.displayName = 'App'
-export default App
+export default App// New Service Pages
+const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
+const AdvancedAiServicesPage = React.lazy(() => import('./app/ai-services-advanced/page'))
+const ComprehensiveItServicesPage = React.lazy(() => import('./app/it-services-comprehensive/page'))
