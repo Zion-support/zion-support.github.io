@@ -51,77 +51,42 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
 
-          {/* AI Services */}
+          {/* Services */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-              <Brain className="w-5 h-5 text-cyan-400 mr-2" />
-              AI Services
+              <Settings className="w-5 h-5 text-cyan-400 mr-2" />
+              Services
             </h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/ai-analytics" className="hover:text-cyan-400 transition-colors">
-                  AI Analytics
+                <Link to="/services" className="hover:text-cyan-400 transition-colors">
+                  All Services
                 </Link>
               </li>
               <li>
-                <Link to="/ai-automation" className="hover:text-cyan-400 transition-colors">
-                  AI Automation
+                <Link to="/ai-services" className="hover:text-cyan-400 transition-colors">
+                  AI Services
                 </Link>
               </li>
               <li>
-                <Link to="/ai-chatbot-builder" className="hover:text-cyan-400 transition-colors">
-                  AI Chatbot
+                <Link to="/it-services" className="hover:text-cyan-400 transition-colors">
+                  IT Services
                 </Link>
               </li>
               <li>
-                <Link to="/ai-cybersecurity" className="hover:text-cyan-400 transition-colors">
-                  AI Cybersecurity
+                <Link to="/micro-saas" className="hover:text-cyan-400 transition-colors">
+                  Micro SaaS
                 </Link>
               </li>
               <li>
-                <Link to="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
-                  View All AI Services →
+                <Link to="/pricing" className="hover:text-cyan-400 transition-colors">
+                  Pricing
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-              <Cloud className="w-5 h-5 text-cyan-400 mr-2" />
-              IT Services
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/cloud-infrastructure" className="hover:text-cyan-400 transition-colors">
-                  Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity-solutions" className="hover:text-cyan-400 transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/web-development" className="hover:text-cyan-400 transition-colors">
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/mobile-development" className="hover:text-cyan-400 transition-colors">
-                  Mobile Development
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
-                  View All IT Services →
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company Links */}
+          {/* Company */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
               <Users className="w-5 h-5 text-cyan-400 mr-2" />
@@ -144,13 +109,48 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-cyan-400 transition-colors">
-                  Contact
+                <Link to="/case-studies" className="hover:text-cyan-400 transition-colors">
+                  Case Studies
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="hover:text-cyan-400 transition-colors">
                   Blog
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <FileText className="w-5 h-5 text-cyan-400 mr-2" />
+              Resources
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/tutorials" className="hover:text-cyan-400 transition-colors">
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link to="/demo" className="hover:text-cyan-400 transition-colors">
+                  Demo
+                </Link>
+              </li>
+              <li>
+                <Link to="/consultation" className="hover:text-cyan-400 transition-colors">
+                  Free Consultation
+                </Link>
+              </li>
+              <li>
+                <Link to="/support" className="hover:text-cyan-400 transition-colors">
+                  Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-cyan-400 transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>

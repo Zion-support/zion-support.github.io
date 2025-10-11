@@ -33,7 +33,7 @@ const FuturisticBackground: React.FC = () => {
     const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
     // Create particles
     for (let i = 0; i < 50; i++) {
-      particles.push()
+      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.5,
@@ -41,9 +41,9 @@ const FuturisticBackground: React.FC = () => {
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.5 + 0.2,
         color: colors[Math.floor(Math.random() * colors.length)]
-        })
-      }
-    const animate = () => {;
+      });
+    }
+    const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
@@ -114,8 +114,7 @@ const FuturisticBackground: React.FC = () => {
     }
   }, []);
 
-  return ()
-  );
+  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />;
 };
 
 export default FuturisticBackground;
