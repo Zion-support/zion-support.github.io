@@ -1,189 +1,51 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
-<<<<<<< HEAD
   const [activeTab, setActiveTab] = useState('ai');
 
-  const aiServices = const aiServices = const aiServices = [
+  const aiServices = [
     { name: 'AI-Powered Chatbots', price: '$299', period: '/month', marketPrice: '$500-2000', features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration'] },
     { name: 'AI Content Generation', price: '$199', period: '/month', marketPrice: '$300-1500', features: ['Blog Post Generation', 'Social Media Content', 'Email Campaigns', 'SEO Optimization'] },
     { name: 'AI Data Analytics', price: '$399', period: '/month', marketPrice: '$800-3000', features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection'] },
     { name: 'AI Workflow Automation', price: '$349', period: '/month', marketPrice: '$600-2500', features: ['Process Mining', 'Workflow Optimization', 'Task Automation', 'Exception Handling'] },
     { name: 'AI Computer Vision', price: '$599', period: '/month', marketPrice: '$1000-5000', features: ['Object Detection', 'Quality Control Automation', 'Facial Recognition', 'Video Analytics'] },
-    { name: 'AI Fraud Detection', price: '$799', period: '/month', marketPrice: '$1500-5000', features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Anomaly Detection'] },
-    { name: 'AI Customer Service', price: '$249', period: '/month', marketPrice: '$400-1800', features: ['Automated Ticket Routing', 'Sentiment Analysis', 'Multi-channel Support', 'Live Agent Handoff'] },
-    { name: 'AI Financial Analysis', price: '$699', period: '/month', marketPrice: '$1200-4000', features: ['Risk Assessment', 'Financial Modeling', 'Market Analysis', 'Credit Scoring'] },
-    { name: 'AI Healthcare Diagnostics', price: '$999', period: '/month', marketPrice: '$2000-8000', features: ['Medical Image Analysis', 'Diagnostic Assistance', 'Patient Monitoring', 'Drug Discovery'] },
-    { name: 'AI Marketing Automation', price: '$399', period: '/month', marketPrice: '$600-2500', features: ['Personalized Campaigns', 'Customer Segmentation', 'A/B Testing', 'Lead Scoring'] },
-    { name: 'AI Predictive Maintenance', price: '$599', period: '/month', marketPrice: '$1000-4000', features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'] },
-    { name: 'AI Language Translation', price: '$149', period: '/month', marketPrice: '$250-1000', features: ['Real-time Translation', 'Multi-language Support', 'Context Understanding', 'Voice Translation'] },
-    { name: 'AI Voice Recognition', price: '$299', period: '/month', marketPrice: '$500-2000', features: ['Speech-to-Text', 'Voice Commands', 'Speaker Identification', 'Noise Cancellation'] },
-    { name: 'AI Data Processing', price: '$199', period: '/month', marketPrice: '$350-1500', features: ['Data Cleaning', 'Validation Rules', 'Duplicate Detection', 'Data Enrichment'] },
-    { name: 'AI Cybersecurity', price: '$799', period: '/month', marketPrice: '$1500-5000', features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Vulnerability Scanning'] },;
-    { name: 'AI Scheduling Assistant', price: '$99', period: '/month', marketPrice: '$150-600', features: ['Smart Scheduling', 'Meeting Optimization', 'Conflict Resolution', 'Time Zone Management'] };
-  ];
-  const itServices = const itServices = const itServices = [
-    { name: 'Cloud Infrastructure & Migration', price: '$2,500', period: '/month', marketPrice: '$4000-15000', features: ['Cloud Architecture Design', 'Multi-cloud Strategies', 'Cost Optimization', 'Disaster Recovery'] },
-    { name: 'Cybersecurity Solutions', price: '$1,800', period: '/month', marketPrice: '$3000-12000', features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring'] },
-    { name: 'Database Management', price: '$1,200', period: '/month', marketPrice: '$2000-8000', features: ['Database Design & Optimization', 'Performance Tuning', 'Backup & Recovery', 'Data Migration'] },
-    { name: 'DevOps & CI/CD', price: '$2,200', period: '/month', marketPrice: '$3500-10000', features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging'] },
-    { name: 'IT Consulting', price: '$200', period: '/hour', marketPrice: '$300-800', features: ['IT Strategy Development', 'Technology Assessment', 'Digital Transformation Planning', 'Vendor Evaluation'] },
-    { name: 'Custom Software Development', price: '$150', period: '/hour', marketPrice: '$200-500', features: ['Custom Application Development', 'API Development', 'Integration Services', 'Performance Optimization'] },
-    { name: 'Mobile App Development', price: '$8,000', period: '/project', marketPrice: '$15000-50000', features: ['iOS & Android Development', 'Cross-platform Solutions', 'App Store Optimization', 'Push Notifications'] },
-    { name: 'Web Development', price: '$5,000', period: '/project', marketPrice: '$10000-30000', features: ['React/Next.js Development', 'Responsive Design', 'SEO Optimization', 'Performance Tuning'] },
-    { name: 'Network Infrastructure', price: '$1,500', period: '/month', marketPrice: '$2500-8000', features: ['Network Design & Implementation', 'Wireless Solutions', 'Security Configuration', 'Performance Monitoring'] },
-    { name: 'IT Support & Helpdesk', price: '$99', period: '/user/month', marketPrice: '$150-300', features: ['24/7 Helpdesk Support', 'Remote Assistance', 'Hardware Maintenance', 'Software Installation'] },
-    { name: 'IT Asset Management', price: '$299', period: '/month', marketPrice: '$500-1500', features: ['Asset Inventory', 'Lifecycle Management', 'Procurement Services', 'Deployment Planning'] },
-    { name: 'Business Intelligence & Analytics', price: '$799', period: '/month', marketPrice: '$1200-4000', features: ['Data Visualization', 'Dashboard Creation', 'Report Automation', 'Data Integration'] },
-    { name: 'Data Backup & Recovery', price: '$199', period: '/month', marketPrice: '$350-1200', features: ['Automated Backups', 'Disaster Recovery Planning', 'Data Encryption', 'Offsite Storage'] },
-    { name: 'System Administration', price: '$1,000', period: '/month', marketPrice: '$1500-5000', features: ['Server Management', 'User Account Management', 'Security Updates', 'Performance Monitoring'] },;
-    { name: 'Performance Optimization', price: '$1,200', period: '/month', marketPrice: '$2000-6000', features: ['Application Optimization', 'Database Tuning', 'Infrastructure Scaling', 'Load Testing'] };
+    { name: 'AI Fraud Detection', price: '$799', period: '/month', marketPrice: '$1500-5000', features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Anomaly Detection'] }
   ];
 
-  const microSaasServices = const microSaasServices = const microSaasServices = [
-    { name: 'Zion Analytics Pro', price: '$89', period: '/month', marketPrice: '$150-500', features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors'] },
-    { name: 'Zion Chat AI', price: '$149', period: '/month', marketPrice: '$300-800', features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing'] },
-    { name: 'Zion Invoice Genius', price: '$49', period: '/month', marketPrice: '$100-300', features: ['AI-powered Invoice Generation', 'Automated Recurring Billing', 'Multi-currency Support', 'Payment Tracking'] },
-    { name: 'Zion Lead Magnet', price: '$99', period: '/month', marketPrice: '$200-600', features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration'] },
-    { name: 'Zion Security Shield', price: '$199', period: '/month', marketPrice: '$400-1200', features: ['Real-time Threat Monitoring', 'Vulnerability Scanning', 'Incident Response', 'Security Analytics'] },
-    { name: 'Zion Cloud Vault', price: '$79', period: '/month', marketPrice: '$150-400', features: ['Automated Backups', 'Cross-platform Sync', 'Version Control', 'Disaster Recovery'] },
-    { name: 'Zion Content Studio', price: '$129', period: '/month', marketPrice: '$250-600', features: ['AI Content Generation', 'SEO Optimization', 'Multi-platform Publishing', 'Content Calendar'] },
-    { name: 'Zion CRM Intelligence', price: '$179', period: '/month', marketPrice: '$300-800', features: ['AI-powered Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Sales Forecasting'] },
-    { name: 'Zion Data Sync', price: '$149', period: '/month', marketPrice: '$250-700', features: ['Real-time Data Sync', 'Multi-source Integration', 'Data Transformation', 'Error Handling'] },
-    { name: 'Zion Project Master', price: '$99', period: '/month', marketPrice: '$200-500', features: ['AI Task Allocation', 'Resource Planning', 'Progress Tracking', 'Team Collaboration'] },
-    { name: 'Zion Email Automation', price: '$89', period: '/month', marketPrice: '$150-400', features: ['AI Personalization', 'Automated Campaigns', 'A/B Testing', 'Behavioral Triggers'] },
-    { name: 'Zion Inventory Smart', price: '$159', period: '/month', marketPrice: '$300-800', features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Management', 'Supplier Integration'] },
-    { name: 'Zion Workflow Automation', price: '$119', period: '/month', marketPrice: '$200-600', features: ['Visual Workflow Builder', 'API Integrations', 'Conditional Logic', 'Task Automation'] },
-    { name: 'Zion Performance Monitor', price: '$139', period: '/month', marketPrice: '$250-700', features: ['Real-time Monitoring', 'AI-powered Alerts', 'Performance Analytics', 'Uptime Tracking'] },
-    { name: 'Zion Compliance Manager', price: '$199', period: '/month', marketPrice: '$400-1000', features: ['Compliance Tracking', 'Automated Reporting', 'Document Management', 'Audit Trail'] },
-    { name: 'Zion Social Scheduler', price: '$79', period: '/month', marketPrice: '$150-400', features: ['AI Content Suggestions', 'Multi-platform Scheduling', 'Performance Analytics', 'Engagement Tracking'] },
-    { name: 'Zion AI Video Editor', price: '$99', period: '/month', marketPrice: '$200-500', features: ['AI Auto-editing', 'Voice Transcription', 'Subtitle Generation', 'Thumbnail Creation'] },
-    { name: 'Zion AI Translator Pro', price: '$69', period: '/month', marketPrice: '$120-300', features: ['Real-time Translation', 'Document Translation', 'Voice Translation', 'Context Awareness'] },
-    { name: 'Zion AI Code Reviewer', price: '$149', period: '/month', marketPrice: '$250-600', features: ['Automated Code Review', 'Security Scanning', 'Performance Analysis', 'Best Practice Suggestions'] },
-    { name: 'Zion Customer Insights Pro', price: '$189', period: '/month', marketPrice: '$350-800', features: ['Customer Segmentation', 'Behavioral Analysis', 'Predictive Analytics', 'Churn Prediction'] },
-    { name: 'Zion AI Email Assistant', price: '$59', period: '/month', marketPrice: '$100-250', features: ['Smart Email Sorting', 'AI Response Suggestions', 'Email Scheduling', 'Priority Detection'] },
-    { name: 'Zion AI Meeting Assistant', price: '$89', period: '/month', marketPrice: '$150-400', features: ['Meeting Transcription', 'Action Item Extraction', 'Follow-up Automation', 'Meeting Analytics'] },
-    { name: 'Zion AI SEO Optimizer', price: '$129', period: '/month', marketPrice: '$250-600', features: ['Content Analysis', 'Keyword Optimization', 'Ranking Tracking', 'Competitor Analysis'] },
-    { name: 'Zion AI Data Cleaner', price: '$79', period: '/month', marketPrice: '$150-400', features: ['Automated Data Cleaning', 'Duplicate Detection', 'Data Validation', 'Quality Scoring'] },
-    { name: 'Zion AI Contract Analyzer', price: '$199', period: '/month', marketPrice: '$400-1000', features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction'] },
-    { name: 'Zion AI Survey Builder', price: '$69', period: '/month', marketPrice: '$120-300', features: ['AI Question Suggestions', 'Multi-format Surveys', 'Real-time Analytics', 'Response Analysis'] },
-    { name: 'Zion AI Accounting Assistant', price: '$149', period: '/month', marketPrice: '$250-600', features: ['Automated Bookkeeping', 'Expense Categorization', 'Financial Analysis', 'Tax Preparation'] },
-    { name: 'Zion AI Recruitment Pro', price: '$179', period: '/month', marketPrice: '$300-800', features: ['AI Candidate Screening', 'Resume Analysis', 'Skill Matching', 'Interview Scheduling'] },
-    { name: 'Zion AI Content Moderation', price: '$159', period: '/month', marketPrice: '$300-700', features: ['Automated Content Filtering', 'Sentiment Analysis', 'Compliance Checking', 'Real-time Monitoring'] },
-    { name: 'Zion AI Predictive Maintenance', price: '$199', period: '/month', marketPrice: '$400-1000', features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization'] },
-    { name: 'Zion AI Energy Manager', price: '$129', period: '/month', marketPrice: '$250-600', features: ['Energy Monitoring', 'Consumption Analysis', 'Cost Optimization', 'Predictive Analytics'] },
-    { name: 'Zion AI Supply Chain Optimizer', price: '$219', period: '/month', marketPrice: '$400-1000', features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Risk Assessment'] },
-    { name: 'Zion AI Fraud Detector', price: '$249', period: '/month', marketPrice: '$500-1500', features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Automated Alerts'] },
-    { name: 'Zion AI Customer Service Pro', price: '$189', period: '/month', marketPrice: '$350-800', features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base'] },
-    { name: 'Zion AI Marketing Automation', price: '$159', period: '/month', marketPrice: '$300-700', features: ['Campaign Automation', 'Personalization Engine', 'Lead Scoring', 'A/B Testing'] },;
-    { name: 'Zion AI Document AI', price: '$139', period: '/month', marketPrice: '$250-600', features: ['Document OCR', 'Data Extraction', 'Form Processing', 'Document Classification'] };
+  const itServices = [
+    { name: 'Cloud Infrastructure', price: '$1,500', period: '/month', marketPrice: '$2500-8000', features: ['Server Management', 'Auto-scaling', 'Backup Solutions', '24/7 Monitoring'] },
+    { name: 'Cybersecurity Solutions', price: '$2,000', period: '/month', marketPrice: '$3500-12000', features: ['Threat Detection', 'Security Audits', 'Compliance', 'Incident Response'] },
+    { name: 'Custom Development', price: '$150', period: '/hour', marketPrice: '$200-500/hour', features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'] },
+    { name: 'IT Consulting', price: '$200', period: '/hour', marketPrice: '$300-800/hour', features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Change Management'] }
   ];
-  const getCurrentServices = const getCurrentServices = const getCurrentServices = () => {;
-    switch (activeTab) {;
+
+  const microSaas = [
+    { name: 'Zion Analytics Pro', price: '$89', period: '/month', marketPrice: '$150-500', features: ['Real-time Data Visualization', 'AI-powered Insights', 'Custom Dashboards', 'Automated Reports'] },
+    { name: 'Zion Chat AI', price: '$149', period: '/month', marketPrice: '$300-800', features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Sentiment Analysis', 'Live Agent Handoff'] },
+    { name: 'Zion Invoice Genius', price: '$49', period: '/month', marketPrice: '$100-300', features: ['AI-powered Generation', 'Automated Billing', 'Multi-currency Support', 'Payment Tracking'] },
+    { name: 'Zion Lead Magnet', price: '$99', period: '/month', marketPrice: '$200-600', features: ['AI Lead Scoring', 'Multi-channel Capture', 'Automated Nurturing', 'CRM Integration'] }
+  ];
+
+  const getCurrentServices = () => {
+    switch (activeTab) {
       case 'ai': return aiServices;
       case 'it': return itServices;
-      case 'saas': return microSaasServices;
+      case 'saas': return microSaas;
       default: return aiServices;
     }
   };
-
-  const getTabIcon = const getTabIcon = const getTabIcon = (tab: string) => {;
-    switch (tab) {;
-      case 'ai': return Brain;
-      case 'it': return Cloud;
-      case 'saas': return Cpu;
-      default: return Brain;
-    }
-  };
-
-  const plans = const plans = const plans = [
-=======
-  const plans = [
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    {
-      name: 'Starter',
-      price: '$2,999',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      features: [
-        'Basic AI Chatbot',
-        'Email Support',
-        '5GB Storage',
-        'Basic Analytics',
-        'Mobile App'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$4,999',
-      period: '/month',
-      description: 'Ideal for growing businesses with advanced needs',
-      features: [
-        'Advanced AI Solutions',
-        'Priority Support',
-        '50GB Storage',
-        'Advanced Analytics',
-        'Custom Integrations',
-        'API Access',
-        'Training Sessions'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$9,999',
-      period: '/month',
-      description: 'Complete solution for large organizations',
-      features: [
-        'Full AI Suite',
-        '24/7 Dedicated Support',
-        'Unlimited Storage',
-        'Custom Analytics',
-        'White-label Solutions',
-        'Advanced Security',
-        'Dedicated Account Manager',
-        'Custom Development'
-      ],
-      popular: false;
-    };
-  ];
-<<<<<<< HEAD
-  return() {plans.map((plan, index) => ()
-                  )}
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  
-                  <div className="mb-6" /></div>
-                    <span className="text-4xl font-bold text-white">${plan.price}</span>
-                    <span className="text-gray-400 ml-2">/month</span>
-                  </div>
-
-                  <ul className="space-y-3 mb-8" /></ul>
-                    {plan.features.map((feature, featureIndex) => ()
-                    ))}
-                  </ul>
-
-                  <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`} /></button>
-                    {plan.popular ? 'Get Started' : 'Choose Plan'}
-=======
 
   return (
     <>
       <Helmet>
         <title>Pricing | Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Choose the perfect plan for your business. Transparent pricing for AI solutions, cloud services, and IT consulting. No hidden fees." />
-        <meta name="keywords" content="pricing, AI solutions pricing, cloud services cost, IT consulting rates, business plans" />
+        <meta name="description" content="Transparent pricing for our AI services, IT solutions, and Micro SaaS products. Choose the plan that fits your business needs." />
+        <meta name="keywords" content="pricing, AI services pricing, IT solutions cost, micro SaaS pricing, technology services" />
       </Helmet>
 
       <Navigation />
@@ -194,130 +56,83 @@ const PricingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
+                Transparent Pricing
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Choose the perfect plan for your business. No hidden fees, no surprises.
+                Choose the perfect plan for your business needs. All our services come with 24/7 support and money-back guarantee.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-20 bg-white">
+        {/* Tab Navigation */}
+        <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
-                <div key={index} className={`relative bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 ${plan.popular ? 'border-2 border-cyan-500' : 'border border-gray-200'}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      {plan.name}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {plan.description}
-                    </p>
+            <div className="flex justify-center mb-12">
+              <div className="bg-gray-100 rounded-lg p-1">
+                <button
+                  onClick={() => setActiveTab('ai')}
+                  className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${
+                    activeTab === 'ai'
+                      ? 'bg-cyan-500 text-white shadow-lg'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  AI Services
+                </button>
+                <button
+                  onClick={() => setActiveTab('it')}
+                  className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${
+                    activeTab === 'it'
+                      ? 'bg-cyan-500 text-white shadow-lg'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  IT Services
+                </button>
+                <button
+                  onClick={() => setActiveTab('saas')}
+                  className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${
+                    activeTab === 'saas'
+                      ? 'bg-cyan-500 text-white shadow-lg'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Micro SaaS
+                </button>
+              </div>
+            </div>
+
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {getCurrentServices().map((service, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-center mb-6">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.name}</h3>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-5xl font-bold text-gray-900">
-                        {plan.price}
-                      </span>
-                      <span className="text-gray-500 ml-1">
-                        {plan.period}
-                      </span>
+                      <span className="text-4xl font-bold text-cyan-600">{service.price}</span>
+                      <span className="text-gray-600 ml-1">{service.period}</span>
+                    </div>
+                    <div className="text-sm text-gray-500 mt-1">
+                      Market Price: <span className="line-through">{service.marketPrice}</span>
                     </div>
                   </div>
                   
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
-                        <span className="text-gray-600">{feature}</span>
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
                   
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}>
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   </button>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-            <div className="text-center mt-16" /></div>
-              <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
-                We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
-              </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300" /></button>
-                Contact Sales
-              </button>
-=======
-        {/* FAQ Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Everything you need to know about our pricing and services.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Can I change plans anytime?
-                </h3>
-                <p className="text-gray-600">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Is there a free trial?
-                </h3>
-                <p className="text-gray-600">
-                  We offer a 14-day free trial for all plans. No credit card required to get started.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  What payment methods do you accept?
-                </h3>
-                <p className="text-gray-600">
-                  We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Do you offer custom solutions?
-                </h3>
-                <p className="text-gray-600">
-                  Yes, we offer custom solutions for enterprise clients. Contact us to discuss your specific needs.
-                </p>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </div>
           </div>
         </section>
@@ -326,13 +141,13 @@ const PricingPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-cyan-500 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Get Started?
+              Need a Custom Solution?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our solutions to transform their operations.
+              Contact our team for a personalized quote tailored to your specific requirements.
             </p>
             <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-              Start Your Free Trial
+              Contact Us Today
             </button>
           </div>
         </section>

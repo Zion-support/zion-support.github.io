@@ -6,9 +6,6 @@ import Footer from '../components/Footer';
 import { Brain, Users, Target, Award, CheckCircle, ArrowRight } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
-<<<<<<< HEAD
-  return ()
-=======
   const values = [
     {
       icon: Brain,
@@ -173,7 +170,6 @@ const AboutPage: React.FC = () => {
 
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 };
 
