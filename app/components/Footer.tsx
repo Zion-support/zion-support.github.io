@@ -43,12 +43,16 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white">
 <<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
 =======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
 >>>>>>> cursor/website-audit-and-update-with-deployment-c744
+=======
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -62,6 +66,7 @@ export default function Footer() {
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
             <div className="flex space-x-4">
+<<<<<<< HEAD
               <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
               </a>
@@ -69,6 +74,15 @@ export default function Footer() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+=======
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -95,6 +109,16 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
               <li>
+                <Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Micro SAAS Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  IT Services
+                </Link>
+              </li>
+              <li>
                 <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm">
                   All AI Services
                 </Link>
@@ -105,6 +129,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+<<<<<<< HEAD
                 <Link to="/ai-chatbot-builder" className="text-gray-400 hover:text-white transition-colors text-sm">
                   AI Chatbot Builder
                 </Link>
@@ -122,6 +147,15 @@ export default function Footer() {
               <li>
                 <Link to="/ai-voice-assistant" className="text-gray-400 hover:text-white transition-colors text-sm">
                   AI Voice Assistant
+=======
+                <Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Cloud Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Digital Transformation
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
                 </Link>
               </li>
             </ul>
@@ -229,6 +263,7 @@ export default function Footer() {
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-gray-400" />
                 <span className="text-gray-400 text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+<<<<<<< HEAD
 =======
             <h3 className="text-lg font-semibold">Resources</h3>
             <ul className="space-y-2">
@@ -273,11 +308,14 @@ export default function Footer() {
                 <p className="text-sm text-gray-400">Location</p>
                 <p className="text-white font-medium">San Francisco, CA</p>
 >>>>>>> cursor/website-audit-and-update-with-deployment-c744
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 mb-8">
           <div className="text-center">
@@ -316,6 +354,20 @@ export default function Footer() {
               <p className="text-gray-500 text-xs">
                 Built with ❤️ by Zion Tech Group
               </p>
+=======
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-gray-400 text-sm text-center sm:text-left">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-6">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm text-center">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm text-center">
+                Terms of Service
+              </a>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
             </div>
           </div>
         </div>
