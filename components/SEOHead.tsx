@@ -1,30 +1,29 @@
-import React from 'react'
-import Head from 'next/head'
-interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
+import React from 'react';;
+import Head from 'next/head';;
+interface SEOHeadProps {;
+title?: string;
+description?: string;
+keywords?: string;
+canonical?: string;
+ogImage?: string;
+ogType?: string;
+twitterCard?: string;
+structuredData?: object
 }
-
-export default function SEOHead({
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence.",
-  keywords = "AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology",
-  canonical,
-  ogImage = "/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image",
-  structuredData,
-}: SEOHeadProps) {
-  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
+;
+export default function SEOHead({;
+title = "Zion Tech Group - Leading AI & Technology Solutions",;
+description = "Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence.",;
+keywords = "AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology",;
+canonical,;
+ogImage = "/og-image.jpg",;
+ogType = "website",;
+twitterCard = "summary_large_image",;
+structuredData,
+}: SEOHeadProps) {;
+const fullTitle = title.includes("Zion Tech Group") ? title : `${title;} | Zion Tech Group`;
+const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');;
+const defaultStructuredData={"@context": "https://schema.org";,
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
@@ -37,8 +36,7 @@ export default function SEOHead({
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
-    },
+      "addressCountry": "US"},
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
@@ -72,8 +70,8 @@ export default function SEOHead({
       ]
     }
   }
-  const finalStructuredData = structuredData || defaultStructuredData
-  return (
+  const finalStructuredData = structuredData || defaultStructuredData;;
+return (;
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -84,7 +82,8 @@ export default function SEOHead({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl}} />
+  </link>}
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
@@ -112,30 +111,41 @@ export default function SEOHead({
       
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
+  </link>
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  </link>
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  </link>
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  </link>
       <link rel="manifest" href="/site.webmanifest" />
+  </link>
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </link>
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+  </link>
       <link rel="preconnect" href="https://www.google-analytics.com" />
+  </link>
       
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  </link>
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  </link>
       
       {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(finalStructuredData),
+      <script;
+type="application/ld+json";
+dangerouslySetInnerHTML={{};,
+__html: JSON.stringify(finalStructuredData)},
         }}
       />
       
       {/* Additional Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+  </link>
     </Head>
   )
 }

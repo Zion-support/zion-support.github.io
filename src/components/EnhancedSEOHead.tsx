@@ -1,22 +1,22 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOHeadProps {
-    title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
+import React from 'react';;
+import { Helmet; } from 'react-helmet-async';
+interface SEOHeadProps {;
+title?: string;
+description?: string;
+keywords?: string;
+image?: string;
+url?: string;
+type?: string
   }
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
-  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
-  keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.png",
-  url = "https://ziontechgroup.com",
-  type = "website"
-}) => {
-  const structuredData = {
-    "@context": "https://schema.org",
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",;
+description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",;
+keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",;
+image = "https://ziontechgroup.com/og-image.png",;
+url = "https://ziontechgroup.com",;
+type = "website"
+}) => {;
+}
+const structuredData={"@context": "https://schema.org";},
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
@@ -55,7 +55,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "Automation"
     ]
   }
-  return (
+  return (;
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}
@@ -92,8 +92,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <link href="https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700,800&display=swap" rel="stylesheet" /></link>
       {/* Favicon */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </link>
       <link rel="apple-touch-icon" href="/logo192.png" />
+  </link>
       <link rel="manifest" href="/manifest.json" />
+  </link>
       {/* Theme Color */}
       <meta name="theme-color" content="#0 f172 a" />
       {/* Structured Data */}
@@ -101,8 +104,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
         {JSON.stringify(structuredData)}
       {/* Additional SEO Scripts */}
       <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
+        {JSON.stringify({}
+          "@context": "https://schema.org"},
           "@type": "WebSite",
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com/",
@@ -114,8 +117,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
         })}
       {/* Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  </link>
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  </link>
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+  </link>
       {/* Performance Optimizations */}
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
@@ -141,11 +147,16 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       {/* Additional Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
+  </link>
       {/* Critical Resource Hints */}
       <link rel="preconnect" href="https://www.google-analytics.com" />
+  </link>
       <link rel="preconnect" href="https://www.googletagmanager.com" />
+  </link>
       <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  </link>
       <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  </link>
       {/* Rich Snippets */}
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -161,6 +172,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta name="twitter:url" content={url} />
       {/* Additional Performance Hints */}
       <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+  </link>
       <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" />
       {/* Manifest */}
       <link rel="manifest" href="/manifest.json" />

@@ -149,8 +149,3 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
-export default FraudDetectionPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
