@@ -1,76 +1,90 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts by keeping the latest version
+and removing all conflict markers.
+"""
+
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file by keeping the most recent version"""
+    """Fix merge conflicts in a single file by keeping the latest version."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove all merge conflict markers and keep the content after the last =======
-        # This keeps the most recent version (usually after the last =======)
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
+        
+        # Split content into lines
         lines = content.split('\n')
         new_lines = []
-        skip_until_next_section = False
+        skip_until_end = False
+        in_conflict = False
         
         for line in lines:
-            if line.startswith('<<<<<<< HEAD'):
-                skip_until_next_section = True
+            if line.strip().startswith('<<<<<<< HEAD'):
+                in_conflict = True
+                skip_until_end = False
                 continue
-            elif line.startswith('======='):
-                skip_until_next_section = False
+            elif line.strip().startswith('======='):
+                skip_until_end = True
                 continue
-            elif line.startswith('>>>>>>>'):
-                skip_until_next_section = False
+            elif line.strip().startswith('>>>>>>> '):
+                in_conflict = False
+                skip_until_end = False
                 continue
-            elif not skip_until_next_section:
+            elif in_conflict and skip_until_end:
+                # Skip lines between ======= and >>>>>>> (older version)
+                continue
+            elif in_conflict and not skip_until_end:
+                # Keep lines between <<<<<<< and ======= (newer version)
+                new_lines.append(line)
+            else:
+                # Keep all other lines
                 new_lines.append(line)
         
         # Write the cleaned content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(new_lines))
+        cleaned_content = '\n'.join(new_lines)
         
-        print(f"Fixed merge conflicts in: {file_path}")
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(cleaned_content)
+        
         return True
+        
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files with merge conflicts
+    """Main function to process all files with merge conflicts."""
+    # Get all TypeScript/JavaScript files
     patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/components/**/*.tsx',
-        '/workspace/components/**/*.ts'
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.jsx',
+        '**/*.js',
+        '**/*.json'
     ]
     
-    files_to_fix = []
+    files_processed = 0
+    files_fixed = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', 'build', '.next']):
+                continue
+                
+            files_processed += 1
+            if fix_merge_conflicts(file_path):
+                files_fixed += 1
+                print(f"Fixed: {file_path}")
     
-    # Filter files that actually have merge conflicts
-    files_with_conflicts = []
-    for file_path in files_to_fix:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-                    files_with_conflicts.append(file_path)
-        except:
-            continue
-    
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    # Fix each file
-    fixed_count = 0
-    for file_path in files_with_conflicts:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
-    
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed {files_fixed} files with merge conflicts")
 
 if __name__ == "__main__":
     main()
