@@ -1,19 +1,17 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import { 
-  Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, 
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, 
-  HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Search, Filter,
-  Building, Network, Router, Monitor, Laptop, Printer, Key, Eye, AlertTriangle,
-  DollarSign, Award, Headphones, MessageSquare, Calendar, FileText, Download,
-  Upload, Refresh, RotateCcw, Maximize, Minimize, X, Plus, Minus, Activity,
-  PieChart, TrendingDown, ExternalLink, ChevronRight, Crown, Rocket, Wrench,
-  Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass,
-  Navigation as NavIcon, Home, Heart, Stethoscope, GraduationCap, Briefcase,
-  Car, Plane, Ship, Train, Factory, ShoppingCart, CreditCard, Gamepad2,
+  Server, Shield, Cloud, Code, BarChart, Users, CheckCircle, ArrowRight, Star, 
+  Settings, Database, Smartphone, Lock, Monitor, Wifi, Phone, Mail, MapPin,
+  Cpu, HardDrive, Network, Router, Globe, Target, TrendingUp, Search, Filter,
+  Building, Key, Eye, AlertTriangle, DollarSign, Award, Headphones, MessageSquare,
+  Calendar, FileText, Download, Upload, Refresh, RotateCcw, Maximize, Minimize,
+  X, Plus, Minus, Activity, PieChart, TrendingDown, ExternalLink, ChevronRight,
+  Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator,
+  Clock3, Compass, Navigation as NavIcon, Home, Heart, Stethoscope, GraduationCap,
+  Briefcase, Car, Plane, Ship, Train, Factory, ShoppingCart, CreditCard, Gamepad2,
   Music, Video, Camera, Palette, Bot, Package, Truck, Box, Archive, Folder,
   File, Image, Film, Headphones as Headphone, Mic, Speaker, Volume2, VolumeX,
   Play, Pause, Stop, SkipBack, SkipForward, Repeat, Shuffle, Radio, Tv,
@@ -40,15 +38,13 @@ import {
   Signal as SignalIcon, SignalZero as Signal0Icon, SignalLow as Signal1Icon,
   SignalMedium as Signal2Icon, SignalHigh as Signal3Icon, SignalFull as Signal4Icon,
   Wifi as WifiIcon2, WifiOff as WifiOffIcon2
-} from 'lucide-react';
+} from 'lucide-react'
 
 const ITServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
 
-  const itServices = useMemo(() => [
-    // Core IT Services
+  const itServices = [
     {
       id: 'managed-it-services',
       name: 'Managed IT Services',
@@ -361,7 +357,7 @@ const ITServicesPage: React.FC = () => {
       users: 600,
       link: 'https://ziontechgroup.com/it-audit-compliance'
     }
-  ], []);
+  ]
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
@@ -375,97 +371,15 @@ const ITServicesPage: React.FC = () => {
     { id: 'mobile', name: 'Mobile', icon: Smartphone },
     { id: 'communication', name: 'Communication', icon: Phone },
     { id: 'compliance', name: 'Compliance', icon: FileText }
-  ];
-
-  const filteredServices = useMemo(() => {
-    let filtered = itServices;
-
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
-    switch (sortBy) {
-      case 'popularity':
-        filtered.sort((a, b) => b.users - a.users);
-        break;
-      case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
-      case 'price-low':
-        filtered.sort((a, b) => a.pricing.starting - b.pricing.starting);
-        break;
-      case 'price-high':
-        filtered.sort((a, b) => b.pricing.starting - a.pricing.starting);
-        break;
-      default:
-        break;
-    }
-
-    return filtered;
-  }, [searchTerm, selectedCategory, sortBy, itServices]);
-=======
-<<<<<<< HEAD
-'use client';
-import React from 'react';
->>>>>>> origin/main
-
-const ItServicesPage: React.FC = () => {
-  return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-cyan-400">IT Services</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Complete technology infrastructure solutions for your business.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Server, Shield, Cloud, Code, CheckCircle, ArrowRight } from 'lucide-react'
-
-const ITServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: Server,
-      title: 'Infrastructure Management',
-      description: 'Comprehensive IT infrastructure solutions for modern businesses.',
-      features: ['Server Management', 'Network Configuration', 'System Monitoring', 'Backup Solutions']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protect your business with advanced security solutions.',
-      features: ['Threat Detection', 'Data Protection', 'Compliance', 'Incident Response']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable and secure cloud infrastructure for your business.',
-      features: ['Cloud Migration', 'Hybrid Solutions', 'Cost Optimization', '24/7 Support']
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions built to meet your specific requirements.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    }
   ]
+
+  const filteredServices = itServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesSearch = searchTerm === '' || 
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesCategory && matchesSearch
+  })
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -484,29 +398,115 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> origin/main
 
-      {/* Services Section */}
+      {/* Search and Filter Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-4 mb-8">
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search IT services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  <category.icon className="w-4 h-4 mr-2" />
+                  {category.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div key={service.id} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border ${
+                service.popular ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/20' : 'border-white/10'
+              }`}>
+                {service.popular && (
+                  <div className="flex items-center mb-4">
+                    <Star className="w-5 h-5 text-yellow-400 mr-2" />
+                    <span className="text-yellow-400 text-sm font-medium">Popular</span>
+                  </div>
+                )}
+                
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{service.name}</h3>
                 </div>
+                
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-cyan-400">
+                      ${service.pricing.starting}
+                      {service.pricing.perUser && '/user'}
+                      {service.pricing.perDevice && '/device'}
+                      /{service.pricing.period}
+                    </span>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                      <span className="text-sm text-gray-300">{service.rating}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-400">{service.users.toLocaleString()} users</p>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.slice(0, 3).map((benefit, index) => (
+                      <li key={index} className="flex items-center text-green-300 text-sm">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="text-xs text-gray-400">
+                    <span className="bg-gray-700 px-2 py-1 rounded">{service.category}</span>
+                  </div>
+                  <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
+                    Learn More
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -520,12 +520,17 @@ const ITServicesPage: React.FC = () => {
             Need IT Support?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Our expert team is ready to help you with all your IT needs.
+            Our expert team is ready to help you with all your IT needs. Contact us today for a free consultation.
           </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
-            <ArrowRight className="w-5 h-5 mr-2" />
-            Get Started
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Get Started
+            </button>
+            <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
         </div>
       </section>
 
