@@ -164,7 +164,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
               min="75"
               max="200"
               value={settings.textScaling}
-              onChange={(e) => toggleFeature('textScaling')}
+              onChange={() => toggleFeature('textScaling')}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
             />
           </div>

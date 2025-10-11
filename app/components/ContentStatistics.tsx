@@ -6,7 +6,7 @@ import { Users, TrendingUp, Award, CheckCircle, Zap, Shield, Cloud, BarChart3 } 
 const ContentStatistics: React.FC = () => {
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
 
-  const statistics = [
+  const statistics = React.useMemo(() => [
     {
       icon: Users,
       value: 500,
@@ -39,7 +39,7 @@ const ContentStatistics: React.FC = () => {
       description: 'Average improvement',
       color: 'text-purple-400'
     }
-  ];
+  ], []);
 
   const features = [
     {
@@ -115,7 +115,7 @@ const ContentStatistics: React.FC = () => {
     return () => {
       timers.forEach(timer => clearInterval(timer));
     };
-  }, []);
+  }, [statistics]);
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">

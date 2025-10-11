@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Calendar, Award, Star, Globe, Heart, Zap } from 'lucide-react';
+import { Users, MessageCircle, Calendar, Award, Globe, Zap } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
   const events = [

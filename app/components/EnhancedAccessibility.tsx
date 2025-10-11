@@ -14,7 +14,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     fontSize: 'normal',
     focusVisible: false
   })
-  const { trackEvent } = useAnalytics()
+  // const { trackEvent } = useAnalytics()
   useEffect(() => {
     // Add ARIA landmarks
     const addLandmarks = () => {
@@ -87,7 +87,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     addLandmarks()
     addSkipLinks()
     enhanceFocusManagement()
-    const cleanup = addKeyboardNavigation()
+    addKeyboardNavigation()
       const header = document.querySelector('header')
       if (header && !header.getAttribute('role')) {
         header.setAttribute('role', 'banner')}
@@ -124,7 +124,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
     }
-  }, [])
+  }, [settings, setupFocusManagement])
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement
@@ -224,6 +224,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       settings,
       updateSettings
     }
-    (window as any).accessibilityContext = context}, [settings])
+    (window as unknown as { accessibilityContext: unknown }).accessibilityContext = context
+  }, [settings, updateSettings])
   return <>{children}</>}
 export default EnhancedAccessibility
