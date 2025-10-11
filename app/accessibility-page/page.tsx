@@ -1,6 +1,9 @@
 'use client';
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Eye, Ear, Hand, Brain, Shield, Target, BarChart, Zap, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AccessibilityPage: React.FC = () => {
   const features = [
