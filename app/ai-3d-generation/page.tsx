@@ -69,6 +69,10 @@ export default function PagePage() {
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
-}
+};
+
+export default AI3DGenerationPage;

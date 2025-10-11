@@ -71,4 +71,6 @@ export default function PagePage() {
       </main>
     </div>
   );
-}
+};
+
+export default AiApiManagementPage;

@@ -18,6 +18,76 @@ export default function PagePage() {
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+const AccessibilityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Eye,
+      title: 'Visual Accessibility',
+      description: 'Screen reader compatibility, high contrast modes, and visual indicators for better user experience.',
+      benefits: ['Screen reader support', 'High contrast themes', 'Focus indicators', 'Text scaling']
+    },
+    {
+      icon: Ear,
+      title: 'Audio Accessibility',
+      description: 'Audio descriptions, captions, and alternative audio formats for hearing-impaired users.',
+      benefits: ['Closed captions', 'Audio descriptions', 'Sign language support', 'Visual alerts']
+    },
+    {
+      icon: Hand,
+      title: 'Motor Accessibility',
+      description: 'Keyboard navigation, voice control, and alternative input methods for users with motor disabilities.',
+      benefits: ['Keyboard navigation', 'Voice control', 'Switch navigation', 'Gesture alternatives']
+    },
+    {
+      icon: Brain,
+      title: 'Cognitive Accessibility',
+      description: 'Clear language, consistent navigation, and simplified interfaces for cognitive accessibility.',
+      benefits: ['Clear language', 'Consistent design', 'Error prevention', 'Progress indicators']
+    }
+  ];
+
+  const services = [
+    {
+      icon: Shield,
+      title: 'Accessibility Audits',
+      description: 'Comprehensive evaluation of your digital products against WCAG 2.1 AA standards.',
+      benefits: ['WCAG compliance check', 'Detailed reports', 'Remediation guidance', 'Follow-up testing']
+    },
+    {
+      icon: Target,
+      title: 'Implementation Support',
+      description: 'Hands-on assistance implementing accessibility features and best practices.',
+      benefits: ['Code implementation', 'Design consultation', 'Testing support', 'Training sessions']
+    }
+  ];
+
+  const standards = [
+    'WCAG 2.1 AA Compliance',
+    'Section 508 Compliance',
+    'ADA Compliance',
+    'EN 301 549 Compliance'
+  ];
+
+  const benefits = [
+    {
+      icon: BarChart,
+      title: 'Increased Reach',
+      description: 'Access your products to 15% of the global population with disabilities.'
+    },
+    {
+      icon: Zap,
+      title: 'Better Performance',
+      description: 'Accessible design often leads to better overall user experience and performance.'
+    },
+    {
+      icon: Shield,
+      title: 'Legal Compliance',
+      description: 'Meet legal requirements and avoid potential lawsuits and penalties.'
+    },
+    {
+      icon: Target,
+      title: 'Brand Reputation',
+      description: 'Demonstrate your commitment to inclusion and social responsibility.'
     }
   ];
 

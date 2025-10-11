@@ -2,22 +2,22 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-export default function PagePage() {
-  const features = [
+const EnterpriseSolutionsPage: React.FC = () => {
+  const enterpriseFeatures = [
     {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics and insights for enterprise decision-making.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Data Visualization',
+      description: 'Interactive dashboards and reports for better data understanding.',
+      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Performance Tracking',
+      description: 'Comprehensive tracking and optimization tools.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
   ];
 
@@ -35,7 +35,7 @@ export default function PagePage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
+            {enterpriseFeatures.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -69,6 +69,40 @@ export default function PagePage() {
           </div>
         </div>
       </main>
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const EnterpriseSolutionsPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Enterprise Solutions - Zion Tech Group</title>
+        <meta name="description" content="Professional enterprise solutions services and solutions." />
+        <meta name="keywords" content="enterprise solutions, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-16">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Enterprise Solutions</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
     </div>
   );
-}
+};
+
+export default EnterpriseSolutionsPage;

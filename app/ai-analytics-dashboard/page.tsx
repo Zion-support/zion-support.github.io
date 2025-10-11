@@ -20,7 +20,14 @@ export default function PagePage() {
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
+const AiAnalyticsDashboardPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">
