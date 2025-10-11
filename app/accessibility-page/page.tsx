@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default PagePage;
 const AccessibilityPage: React.FC = () => {
   const features = [
     {

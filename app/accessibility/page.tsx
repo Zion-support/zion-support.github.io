@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default PagePage;
+const AccessibilityPage: React.FC = () => {
   const features = [
     {
       icon: <Eye className="w-8 h-8" />,
@@ -110,81 +110,8 @@ export default PagePage;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Quality Assurance
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Fast Delivery
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  24/7 Support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Custom Solutions
-                </li>
-              </ul>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Advanced Technology</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Cutting-edge tools and technologies to deliver superior results.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Latest Tools
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Modern Methods
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Scalable Solutions
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Future-Ready
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-purple-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Proven Results</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Track record of successful projects and satisfied clients.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  High Success Rate
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Client Satisfaction
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Ongoing Support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Continuous Improvement
-                </li>
-              </ul>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

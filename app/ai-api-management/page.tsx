@@ -1,12 +1,14 @@
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-export default function PagePage() {
+const AiApiManagementPage: React.FC = () => {
   const features = [
     {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
+      title: 'AI API Management',
+      description: 'Professional AI API management services delivered by experienced professionals.',
       benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
     },
     {
@@ -23,46 +25,16 @@ export default function PagePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-const AiApiManagementPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Ai Api Management - Zion Tech Group</title>
-        <meta name="description" content="Professional ai api management services and solutions." />
-        <meta name="keywords" content="ai api management, services, solutions, technology" />
-      </Helmet>
-      
       <Navigation />
       
-      <main className="pt-16">
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Ai Api Management</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
-              Learn More
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
+              AI API Management
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+              Professional AI API management services to help your business succeed and grow.
             </p>
           </div>
           
@@ -87,7 +59,7 @@ const AiApiManagementPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
+                Contact us today to learn more about our AI API management services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -101,6 +73,8 @@ const AiApiManagementPage: React.FC = () => {
           </div>
         </div>
       </main>
+      
+      <Footer />
     </div>
   );
 };
