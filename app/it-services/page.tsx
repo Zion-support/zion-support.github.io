@@ -323,76 +323,6 @@ const ItServicesPage: React.FC = () => {
       icon: ShoppingCart
     },
     {
-<<<<<<< HEAD
-      id: '5g-implementation',
-      name: '5G Network Implementation',
-      description: 'Complete 5G network design, deployment, and optimization for enterprise environments',
-      price: '$15,000/project',
-      marketPrice: '$30000-150000/project',
-      features: [
-        '5G network architecture design',
-        'Small cell deployment',
-        'Network slicing implementation',
-        'Edge computing integration',
-        'IoT connectivity optimization',
-        'Performance monitoring',
-        'Security implementation',
-        'Compliance management'
-      ],
-      benefits: [
-        'Ultra-fast connectivity',
-        'Low latency applications',
-        'Massive IoT support',
-        'Future-proof infrastructure',
-        'Competitive advantage'
-      ],
-      category: '5G Technology',
-      popular: true,
-      icon: Wifi
-    },
-    {
-      id: 'edge-computing',
-      name: 'Edge Computing Solutions',
-      description: 'Distributed computing infrastructure for real-time processing and reduced latency',
-      price: '$8,000/month',
-      marketPrice: '$15000-50000/month',
-      features: [
-        'Edge server deployment',
-        'Real-time data processing',
-        'IoT device management',
-        'Content delivery optimization',
-        'Latency reduction',
-        'Bandwidth optimization',
-        'Security at the edge',
-        'Monitoring and analytics'
-      ],
-      benefits: [
-        'Reduced latency',
-        'Improved performance',
-        'Cost optimization',
-        'Real-time processing',
-        'Scalable infrastructure'
-      ],
-      category: 'Edge Computing',
-      popular: true,
-      icon: Cpu
-    },
-    {
-      id: 'blockchain-solutions',
-      name: 'Blockchain & Web3 Solutions',
-      description: 'Comprehensive blockchain development and Web3 integration services',
-      price: '$12,000/project',
-      marketPrice: '$25000-100000/project',
-      features: [
-        'Smart contract development',
-        'DeFi platform creation',
-        'NFT marketplace development',
-        'Cryptocurrency integration',
-        'Web3 application development',
-        'Blockchain security auditing',
-        'Token economics design',
-        'Decentralized app deployment'
-=======
       id: 'blockchain-development',
       name: 'Blockchain Development',
       description: 'Custom blockchain solutions including smart contracts, DeFi protocols, and cryptocurrency platforms',
@@ -405,182 +335,10 @@ const ItServicesPage: React.FC = () => {
         'NFT marketplace creation',
         'Blockchain integration',
         'Security auditing'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
       ],
       benefits: [
         'Decentralized solutions',
         'Enhanced security',
-<<<<<<< HEAD
-        'Transparent operations',
-        'Future-ready technology',
-        'Innovation leadership'
-      ],
-      category: 'Blockchain',
-      popular: true,
-      icon: Shield
-    },
-    {
-      id: 'quantum-ready-infrastructure',
-      name: 'Quantum-Ready Infrastructure',
-      description: 'Future-proof IT infrastructure designed for quantum computing integration',
-      price: '$25,000/project',
-      marketPrice: '$50000-200000/project',
-      features: [
-        'Quantum-safe cryptography',
-        'Post-quantum security',
-        'Quantum network preparation',
-        'Hybrid classical-quantum systems',
-        'Quantum algorithm optimization',
-        'Future-proof architecture',
-        'Advanced encryption',
-        'Quantum key distribution'
-      ],
-      benefits: [
-        'Future-proof security',
-        'Quantum advantage',
-        'Advanced cryptography',
-        'Competitive edge',
-        'Technology leadership'
-      ],
-      category: 'Quantum Technology',
-      popular: false,
-      icon: Cpu
-    },
-    {
-      id: 'ai-infrastructure',
-      name: 'AI Infrastructure & ML Ops',
-      description: 'Specialized infrastructure for AI and machine learning workloads',
-      price: '$5,000/month',
-      marketPrice: '$10000-40000/month',
-      features: [
-        'GPU cluster management',
-        'ML pipeline automation',
-        'Model deployment infrastructure',
-        'Data processing optimization',
-        'AI model monitoring',
-        'Auto-scaling capabilities',
-        'Distributed training',
-        'Model versioning'
-      ],
-      benefits: [
-        'Optimized AI performance',
-        'Scalable ML operations',
-        'Cost-effective training',
-        'Automated deployment',
-        'Production-ready AI'
-      ],
-      category: 'AI Infrastructure',
-      popular: true,
-      icon: Brain
-    },
-    {
-      id: 'iot-platform',
-      name: 'IoT Platform & Management',
-      description: 'Comprehensive IoT platform development and device management solutions',
-      price: '$3,500/month',
-      marketPrice: '$7000-25000/month',
-      features: [
-        'IoT device connectivity',
-        'Real-time data processing',
-        'Device management platform',
-        'Predictive maintenance',
-        'Edge analytics',
-        'Security management',
-        'Scalable architecture',
-        'Integration capabilities'
-      ],
-      benefits: [
-        'Connected operations',
-        'Real-time insights',
-        'Predictive maintenance',
-        'Operational efficiency',
-        'Data-driven decisions'
-      ],
-      category: 'IoT',
-      popular: true,
-      icon: Wifi
-    },
-    {
-      id: 'cyber-defense-matrix',
-      name: 'Advanced Cyber Defense Matrix',
-      description: 'Next-generation cybersecurity platform with AI-powered threat detection and response',
-      price: '$4,500/month',
-      marketPrice: '$8000-30000/month',
-      features: [
-        'AI threat detection',
-        'Behavioral analytics',
-        'Automated response',
-        'Zero-trust architecture',
-        'Threat hunting',
-        'Incident response automation',
-        'Security orchestration',
-        'Compliance monitoring'
-      ],
-      benefits: [
-        'Advanced threat protection',
-        'Automated response',
-        'Reduced security incidents',
-        'Compliance assurance',
-        'Peace of mind'
-      ],
-      category: 'Security',
-      popular: true,
-      icon: Shield
-    },
-    {
-      id: 'digital-twin-platform',
-      name: 'Digital Twin Platform',
-      description: 'Comprehensive digital twin development for physical asset monitoring and optimization',
-      price: '$6,500/month',
-      marketPrice: '$12000-50000/month',
-      features: [
-        '3D asset modeling',
-        'Real-time monitoring',
-        'Predictive analytics',
-        'Simulation capabilities',
-        'Performance optimization',
-        'Maintenance scheduling',
-        'Data integration',
-        'Visualization dashboard'
-      ],
-      benefits: [
-        'Asset optimization',
-        'Predictive maintenance',
-        'Cost reduction',
-        'Performance insights',
-        'Operational efficiency'
-      ],
-      category: 'Digital Twin',
-      popular: false,
-      icon: Monitor
-    },
-    {
-      id: 'metaverse-development',
-      name: 'Metaverse Development Platform',
-      description: 'Complete metaverse and virtual world development services',
-      price: '$20,000/project',
-      marketPrice: '$40000-200000/project',
-      features: [
-        'Virtual world creation',
-        'Avatar systems',
-        'Virtual economy',
-        'Social features',
-        'AR/VR integration',
-        '3D asset creation',
-        'Multi-platform support',
-        'Blockchain integration'
-      ],
-      benefits: [
-        'Immersive experiences',
-        'New revenue streams',
-        'Customer engagement',
-        'Innovation leadership',
-        'Future-ready platform'
-      ],
-      category: 'Metaverse',
-      popular: true,
-      icon: Globe
-=======
         'Transparent transactions',
         'Future-proof technology'
       ],
@@ -827,7 +585,6 @@ const ItServicesPage: React.FC = () => {
       category: 'Performance',
       popular: false,
       icon: Zap
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
     }
   ];
 
@@ -844,16 +601,6 @@ const ItServicesPage: React.FC = () => {
     { id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length },
     { id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length },
     { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
-<<<<<<< HEAD
-    { id: '5G Technology', name: '5G Technology', count: services.filter(s => s.category === '5G Technology').length },
-    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
-    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
-    { id: 'Quantum Technology', name: 'Quantum Technology', count: services.filter(s => s.category === 'Quantum Technology').length },
-    { id: 'AI Infrastructure', name: 'AI Infrastructure', count: services.filter(s => s.category === 'AI Infrastructure').length },
-    { id: 'IoT', name: 'IoT', count: services.filter(s => s.category === 'IoT').length },
-    { id: 'Digital Twin', name: 'Digital Twin', count: services.filter(s => s.category === 'Digital Twin').length },
-    { id: 'Metaverse', name: 'Metaverse', count: services.filter(s => s.category === 'Metaverse').length }
-=======
     { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
     { id: 'IoT', name: 'IoT', count: services.filter(s => s.category === 'IoT').length },
     { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length },
@@ -865,14 +612,12 @@ const ItServicesPage: React.FC = () => {
     { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
     { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length },
     { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
   ];
 
   const filteredServices = services.filter(service => {
     return selectedCategory === 'all' || service.category === selectedCategory;
   });
 
-const Page: React.FC = () => {
   return (
     <>
       <Helmet>

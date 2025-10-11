@@ -95,9 +95,7 @@ function fixParsingErrors(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has parsing errors;
-    if (content.includes('export default') && !content.includes('export default ')) {
-      // Add missing export statement;
-      const newContent = content + '\n\nexport default BlogPost;';
+    if (content.includes('export default BlogPost;';
       fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed parsing error in: ${filePath}`);
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}`

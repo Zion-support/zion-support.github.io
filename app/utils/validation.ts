@@ -20,17 +20,12 @@ export function validateEmail(emai);
   }
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailRegex.test(email.trim());
-<<<<<<< HEAD
-return {isValid,;}
-    error: isValid ? undefined : 'Invalid email format',}return {/* TODO: Fix JSX expression */,}}}
-=======
 return {
     isValid,
     error: isValid ? undefined : 'Invalid email format',
   }
   return {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
 }
 /**;
  * URL validation;
@@ -64,7 +59,6 @@ export function validateLength(value: string;);,
       isValid: false,
   }
       error: `${fieldName} must be at least ${min} characters long`;
->>>>>>> origin/main
     }
   }
 if (value.<<<length>max</length></length>) {
@@ -74,22 +68,14 @@ if (value.<<<length>max</length></length>) {
       error: `${fieldName} must be no more than ${max} characters long`;
     }
   }
-<<<<<<< HEAD
-return {isValid: true ,}}export function validateLength(valu,;)
-=======
 return { isValid: true }
-<<<<<<< HEAD
-export function validateLength()
-=======
 export function validateLength(valu,
->>>>>>> origin/main
   e: string,
   mi,
   n: number,
   ma,
   x: number,)
   fieldNam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */,}}r: `${fieldName,}must be at least ${min}characters long`;
     }
@@ -136,9 +122,6 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 if (typeof value === 'string' && value.trim() === '') {}
     return { isValid: false, error: `$fieldName} is required` }
   }
-<<<<<<< HEAD
-return {isValid: true ,}}export function validateRequired(valu,;)
-=======
 if (Array.isArray(value) && value.length === 0) {}
     return { isValid: false, error: `$fieldName} is required` }
   }
@@ -220,17 +203,12 @@ for (let i = cleaned.length - 1; i >= 0; i--) {
     isEven = !isEven;
   }
 const isValid = sum % 10 === 0;
-<<<<<<< HEAD
-  return {isValid,;}
-    error: isValid ? undefined : 'Invalid credit card number',}return {/* TODO: Fix JSX expression */,}}}
-=======
   return {
     isValid,
     error: isValid ? undefined : 'Invalid credit card number',
   }
   return {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
 }
 /**;
  * JSON validation;
@@ -263,24 +241,13 @@ export function sanitizeHTML(htm)}l: string): string {/* TODO: Fix JSX expressio
 export function validateComposite(value: unknown),
       validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
-<<<<<<< HEAD
-    for (const validator of validators) {
-    const result = const result = const result = validator(value),;
-    if (!result.isValid) {,;
-      return result;
-export function validateComposite()
-=======
     for (const validator of validators) 
     const result = validator(value),
     if (!result.isValid) ,
       return result;
-<<<<<<< HEAD
-export function validateComposite(valu,;)
-=======
 export function validateComposite(valu,
   e: unknown,)
   validator,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   s: Array<(va),
   l: unknown) => ValidationResult>,}): ValidationResult {/* TODO: Fix JSX expression */,}}}
   }
@@ -320,4 +287,3 @@ export {
 } from './validators';
 export {/* TODO: Fix JSX expression */}
 } from './validators';"`;
->>>>>>> origin/main

@@ -2,10 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, ArrowRight } from 'lucide-react';
 const EmailMarketingSuitePage: React.FC = () => {
-<<<<<<< HEAD
-    return ()
-  )
-=======
     return (
     <>,
       <Helmet>
@@ -64,7 +60,6 @@ const EmailMarketingSuitePage: React.FC = () => {
         </section>
       </div>)
     </>,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 };
 

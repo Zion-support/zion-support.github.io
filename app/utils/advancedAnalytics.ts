@@ -20,10 +20,6 @@ const AdvancedAnalyticsPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };
@@ -37,20 +33,10 @@ const benefits = const benefits = const benefits = [
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
     'Proven track record of success';
-<<<<<<< HEAD
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-=======
   ];
-<<<<<<< HEAD
-return ()
-    features.map((feature, index) => ()
-=======
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
->>>>>>> origin/main
         <title>AdvancedAnalytics | Zion Tech Group</title>
         <meta />
         <meta />
@@ -103,7 +89,6 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

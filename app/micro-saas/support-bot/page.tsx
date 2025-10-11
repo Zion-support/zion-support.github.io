@@ -2,10 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, ArrowRight } from 'lucide-react';
 const SmartSupportBotPage: React.FC = () => {
-<<<<<<< HEAD
-    return ()
-  )
-=======
     return (
     <>
       <Helmet>
@@ -64,7 +60,6 @@ const SmartSupportBotPage: React.FC = () => {
         </section>
       </div>)
     </>,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 };
 

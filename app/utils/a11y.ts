@@ -78,12 +78,6 @@ return () => {element.removeEventListener('click', onClick);
 /**;
  * Check color contrast ratio (WCAG 2.1);
  */;
-<<<<<<< HEAD
-export function getContrastRatio(color1: string, color2: string): number {,}
-    const getLuminance = (color: string): number => {,
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
-    const [r, g, b] = rgb.map(c => {)
-=======
 export function getContrastRatio(color1: string, color2: string): number {
     const getLuminance = (color: string): number => ;
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];

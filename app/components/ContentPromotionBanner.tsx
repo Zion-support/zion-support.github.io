@@ -1,11 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {,
-=======
 import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
@@ -28,7 +23,6 @@ const ContentPromotionBanner: React.FC = () => {
       description: '24/7 support from our team of AI and IT specialists.',
       icon: Users;
         </button>
->>>>>>> origin/main
       </div>
     </div>
   );

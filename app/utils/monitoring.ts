@@ -46,10 +46,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         })
         lcpObserver.observe({entryTypes: ['largest-contentful-paint'] ,)})
         // First Input Delay;
-<<<<<<< HEAD
-        const fidObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {,
-=======
         const fidObserver = new PerformanceObserver((list) => {;
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => 
@@ -111,9 +107,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
       })
     })
     // Unhandled promise rejection handler;
-<<<<<<< HEAD
-    window.addEventListener('unhandledrejection', (event) => {this.logError({)}message: `Unhandled Promise Rejection: ${event.reason,}`,;
-=======
     window.addEventListener('unhandledrejection', (event) => {
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
@@ -130,7 +123,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
     const thresholds = const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
     if (thresholds) {;
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
->>>>>>> origin/main
     // Keep HEAD version;
     // Send to analytics (if configured);
         value: Math.round(name === 'cls' ? value * 1000 : value),

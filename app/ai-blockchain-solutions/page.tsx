@@ -8,7 +8,6 @@ const AiBlockchainSolutionsPage: React.FC = () => {
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -25,15 +24,10 @@ const AiBlockchainSolutionsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
     },
-<<<<<<< HEAD
-  ];
-  return ()
-=======
   ];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Blockchain Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive blockchain solutions enhanced with AI technology." />
         <meta name="keywords" content="AI blockchain solutions, artificial intelligence, blockchain technology, AI solutions, smart contracts" />
@@ -63,7 +57,6 @@ const AiBlockchainSolutionsPage: React.FC = () => {
         </section>
       </main>)
     </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>
@@ -106,19 +99,3 @@ const AiBlockchainSolutionsPage: React.FC = () => {
       <Footer / /></Footer>
     </div>
   ),
-<<<<<<< HEAD
-};
-
-export default PagePage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> origin/main

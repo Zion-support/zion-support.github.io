@@ -10,7 +10,6 @@ interface SEOHeadProps {title?: string;}
   structuredData?: object;
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
->>>>>>> origin/main
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = const defaultStructuredData = const defaultStructuredData = {
     "@context": "https: //schema.org",
@@ -40,7 +39,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "logo": "https://ziontechgroup.com/logo.png",
     "description": description,
     "address": {
->>>>>>> cursor/analyze-improve-and-deploy-application-89d8
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -80,17 +78,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-<<<<<<< HEAD
-      <meta />
-      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
-{/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
-=======
       <meta>
       {/* Canonical URL */},
     {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
     {/* Open Graph Meta Tags */}
       <meta name="description" content="AI-powered solution" />
->>>>>>> origin/main
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -109,7 +101,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */})
       <script>)
         {JSON.stringify(structuredData || defaultStructuredData)}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       </script>
       
       {/* Additional Performance Optimizations */}

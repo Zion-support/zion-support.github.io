@@ -40,7 +40,6 @@ export const wait = (ms: number): Promise<void> => {};
       Promise.resolve({}
         ok: status >= 200 && status < 300,
         status,
->>>>>>> origin/main
         headers: new Headers(headers),
         json: async () => response,
         text: async () => JSON.stringify(response),}
@@ -97,7 +96,6 @@ export const mockWindow = const mockWindow = const mockWindow = (overrides: Part
     Object.defineProperty(global, 'window', {}
       value: {}
         ...global.window,
->>>>>>> origin/main
         ...overrides}
       })
       writable: true,;
@@ -134,10 +132,6 @@ export class MockStorage implements Storage {/* TODO: Fix JSX expression */,}}}
   key(inde);
   x: number): string | null {/* TODO: Fix JSX expression */,}}}
   removeItem(ke);
-<<<<<<< HEAD
-  y: string): void {/* TODO: Fix JSX expression */,}}}
-  setItem(ke,;)
-=======
   y: string): void {/* TODO: Fix JSX expression */}
   }
   y: string, valu);
@@ -152,13 +146,8 @@ export const createMockStorage = const createMockStorage = const createMockStora
  * Mock window object;
  */;
 export const mockWindow = (override);
-<<<<<<< HEAD
-  s: Partial<Window> = {,}): void => {/* TODO: Fix JSX expression */,},
-      writabl,;
-=======
   s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */},
       writabl,
->>>>>>> origin/main
   e: true,
     })
   }
@@ -180,18 +169,11 @@ export const createMockPerformance = const createMockPerformance = (): Performan
     mark: (name: string) => {}
       entries.push({}
         name,
->>>>>>> origin/main
         entryType: 'mark',
         startTime: Date.now(),
         duration: 0,}
         toJSON: () => ({,})
       } as PerformanceEntry);
-<<<<<<< HEAD
-    },;
-    measure: (name: string, startMark?: string, endMark?: string) => {entries.push({);
-        name);
-        entryType: 'measure'),}measure: (name: string, startMark?: string, endMark?: string) => {}entries.push({)}name,;
-=======
     },
     measure: (name: string, startMark?: string, endMark?: string) => {
     entries.push();
@@ -201,7 +183,6 @@ export const createMockPerformance = const createMockPerformance = (): Performan
     measure: (name: string, startMark?: string, endMark?: string) => {}
       entries.push({}
         name,
->>>>>>> origin/main
         entryType: 'measure',
         startTime: Date.now(),
         duration: 100,}
@@ -215,15 +196,6 @@ export const createMockPerformance = const createMockPerformance = (): Performan
     ,}entries.length = 0;},
     clearMeasures: () => {,
     ,
-<<<<<<< HEAD
-    getEntries: () => entries,}clearMarks: () => {,}entries.length = 0;},
-    clearMeasures: () => {,}entries.length = 0;},
-    clearResourceTimings: () => {,},;
-    setResourceTimingBufferSize: () => {,},;
-    toJSON: () => ({,}),;
-    addEventListener: () => {,},;
-    removeEventListener: () => {,},;
-=======
   }
       entries.length = 0;},
     clearMeasures: () => {
@@ -239,7 +211,6 @@ export const createMockPerformance = const createMockPerformance = (): Performan
     toJSON: () => ({}),
     addEventListener: () => {},
     removeEventListener: () => {},
->>>>>>> origin/main
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
     timeOrigin: Date.now(),
@@ -260,23 +231,6 @@ export const createMockPerformance = const createMockPerformance = const createM
   e: string) => entries.filter(e => e.entryType === type),
     getEntrie,
   s: () => entries,
-<<<<<<< HEAD
-    clearMark,;
-  s: () => {/* TODO: Fix JSX expression */,},
-    clearMeasure,;
-  s: () => {/* TODO: Fix JSX expression */,},
-    clearResourceTiming,;
-  s: () => {,},;
-    setResourceTimingBufferSiz,;
-  e: () => {,},;
-    toJSO,;
-  N: () => ({,}),;
-    addEventListene,;
-  r: () => {,},;
-    removeEventListene,;
-  r: () => {,},;
-    dispatchEven,;
-=======
     clearMark,
   s: () => {/* TODO: Fix JSX expression */},
     clearMeasure,
@@ -292,7 +246,6 @@ export const createMockPerformance = const createMockPerformance = const createM
     removeEventListene,
   r: () => {},
     dispatchEven,
->>>>>>> origin/main
   t: () => true,
     onresourcetimingbufferful,
   l: null,
@@ -347,7 +300,6 @@ export const generateTestData = const generateTestData = const generateTestData 
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */},
   arra,
->>>>>>> origin/main
   y: <T>(generato),
   r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */,}return Array.from({length)}, generator);
   }
@@ -468,12 +420,6 @@ export const retryWithBackoff = async <T>(f);
   n: () => Promise<T>,
   maxRetries = 3,
   initialDelay = 1000;
-<<<<<<< HEAD
-): Promise<T> => {let lastError: Error,
-  for (let i = 0; i < maxRetries; i++) {,;
-    try {,}}return await fn();}
-    } catch (error) {lastError = error as Error;
-=======
 ): Promise<T> => {
     let lastError: Error,
   for (let i = 0; i < maxRetries; i++) ,
@@ -510,52 +456,10 @@ export const retryWithBackoff = async <T>(f);
   const start = performance.now();
   const result = await fn();
   const duration = performance.now() - start;}
-<<<<<<< HEAD
-  return {result, duration}}}
-export default {}}wait,;
-  waitFor,;
-  mockFetch,;
-  createMockStorage,;
-  mockWindow,;
-  createMockPerformance,;
-  generateTestData,;
-  deepClone,;
-  deepEqual,;
-  ConsoleSpy,;
-  createDeferred,;
-  retryWithBackoff,;
-  measureExecutionTime}
-}
-export const measureExecutionTime = async <T>(f);
-  n: () => T | Promise<T />,
-): Promise<{/* TODO: Fix JSX expression */,}n: number ,}> => {/* TODO: Fix JSX expression */,}return {result, duration}}}
-export default {/* TODO: Fix JSX expression */,}}}
-`;
-=======
   return { result, duration }
 }
-export default {}
-  wait,
-  waitFor,
-  mockFetch,
-  createMockStorage,
-  mockWindow,
-  createMockPerformance,
-  generateTestData,
-  deepClone,
-  deepEqual,
-  ConsoleSpy,
-  createDeferred,
-  retryWithBackoff,
-  measureExecutionTime}
-}
-export const measureExecutionTime = async <T>(f);
-  n: () => T | Promise<T / /></T>
-): Promise<{/* TODO: Fix JSX expression */}
-  n: number }> => {/* TODO: Fix JSX expression */}
-  return { result, duration }
-}
+};
+
 export default {/* TODO: Fix JSX expression */}
 }
 `;
->>>>>>> origin/main

@@ -24,11 +24,7 @@ const handleInputChange = const handleInputChange = const handleInputChange = us
     const { name, value } = e.target;
     }));
   }, []);
-<<<<<<< HEAD
-const handleSubmit = async (e: React.FormEvent) => {,
-=======
 const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> origin/main
     e.preventDefault();
     setIsSubmitting(true)
     setSubmitStatus('idle')
@@ -84,74 +80,13 @@ const contactInfo = const contactInfo = const contactInfo = [
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-<<<<<<< HEAD
-      description: 'Eastern Time',}}
-  ]
-return(<>)
-      <Helmet />
-=======
       description: 'Eastern Time'
   };
     };
   ];
-<<<<<<< HEAD
-return ()
-              )},
-    {
-    submitStatus === 'error' && ()
-              )}
-<form></form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6" / /></div>
-                  <div / /></div>
-                    <label></label>
-                      Full Name *
-                    </label>
-                    <div className="relative" / /></div>
-                      <User></User>
-                      <input / /></input>
-                  </div>
-                  <div / /></div>
-                    <label></label>
-                      Email Address *
-                    </label>
-                    <div className="relative" / /></div>
-                      <Mail></Mail>
-                      <input / /></input>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
-                  <div / /></div>
-                    <label></label>
-                      Company
-                    </label>
-                    <div className="relative" / /></div>
-                      <Building></Building>
-                      <input / /></input>
-                  </div>
-                  <div / /></div>
-                    <label></label>
-                      Phone Number
-                    </label>
-                    <div className="relative" / /></div>
-                      <Phone></Phone>
-                      <input / /></input>
-                  </div>
-                </div>
-                <div / /></div>
-                  <label></label>
-                    Service Interest,
-                  </label>
-                  <div className="relative" / /></div>
-                    <Globe></Globe>
-                    <select></select>
-                      <option value="">Select a service</option>
-                      {
-    services.map((service) => ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -239,7 +174,6 @@ return (
 
                           {service})
                         </option>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                       ))}
 
                     </select>

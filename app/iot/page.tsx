@@ -128,29 +128,14 @@ const IoTPage: React.FC = () => {
       benefits: [''Gain actionable insights', 'Improve decision making', 'Optimize operations''],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-<<<<<<< HEAD
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']}}
-  ]
-const categories = [...new Set(iotServices.map(service => service.category))]
-return(<>)
-      <Helmet />
-=======
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
   }
     }
   ];
 const categories = [...new Set(iotServices.map(service => service.category))];
-<<<<<<< HEAD
-return ()
-                  Specialized {category.toLowerCase()} solutions powered by IoT technology
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -232,15 +217,10 @@ return (
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Services by Category */}{
-    categories.map(category => ()}
-=======
         {/* Services by Category */},
     {
     categories.map(category => (
   }
->>>>>>> origin/main
           <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -259,7 +239,6 @@ return (
                 </p></p></p>
               </div>
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 {
     iotServices;
                   .filter(service => service.category === category),
@@ -284,10 +263,6 @@ return (
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-        ))}
-{/* IoT Capabilities Showcase */} <section className="py-20 px-4">
-=======
         ))},
     {/* IoT Capabilities Showcase */}
                 Comprehensive IoT technologies and methodologies for connected solutions,

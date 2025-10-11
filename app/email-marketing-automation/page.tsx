@@ -44,10 +44,6 @@ const EmailMarketingAutomationPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Smart Triggers',
-<<<<<<< HEAD
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.',}}
-  ]
-=======
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   };
     };
@@ -66,13 +62,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Save time and resources';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -103,7 +95,6 @@ return (
                 </button>
                 <button>)
                   </button></button><Phone>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   Call (302) 464-0950,
                 </button>
               </div>

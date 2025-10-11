@@ -30,11 +30,6 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-<<<<<<< HEAD
-      stats: '95% Efficiency',}}
-  ]
-return(<section className="py-20 px-4">)</section>
-=======
       stats: '95% Efficiency'
                 ))}
 

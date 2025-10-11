@@ -43,10 +43,6 @@ interface ImageProps {}
     if (onError) onError();}
   }, [onError]);
   const imageStyle: React.CSSProperties = {
-<<<<<<< HEAD
-    ...style
-    ...()
-=======
     ...style;
     ...(fill && 
       position: 'absolute',
@@ -58,7 +54,6 @@ interface ImageProps {}
       width: '100%',
       height: '100%',)
       objectFit: 'cover'})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     })
   }
   if (hasError) {
@@ -71,10 +66,6 @@ interface ImageProps {}
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
   }
-<<<<<<< HEAD
-  if (hasError) {/* TODO: Fix JSX expression */,}className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}{...props})
-=======
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center $className}`}
         style={imageStyle},
@@ -85,22 +76,10 @@ interface ImageProps {}
     ),
         {...props}
       ></div>
-<<<<<<< HEAD
-        <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
-    ),
-  }
-  return()
-=======
         <span className="text-gray-500 text-sm"></span></span></span><span className="sr-only">Screen reader: </span></span></span>Failed to load image</span>
       </div>
     ),
   }
-<<<<<<< HEAD
-  return(<img;)
-  return(<img />)
-      src={src}alt={alt}width={width}height={height}className={className}style={imageStyle}sizes={sizes}loading={priority ? 'eager' : 'lazy'}onLoad={handleLoad}onError={handleError}{...props}
-=======
   return(<img;
   return (<img />
       src={src}
@@ -114,20 +93,12 @@ interface ImageProps {}
       onLoad={handleLoad}
       onError={handleError},)
     {...props})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     >)</img>
 }</img>
-export default Image</img>
-      loading={priority ? 'eager' : 'lazy'})
-      onLoad={handleLoad})
-      onError={handleError})
-      {...props})
-    />);
 };
 
-export default Image;
-    />);
 };
+
 
 export default Image;
 

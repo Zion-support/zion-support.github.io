@@ -2,23 +2,6 @@
 import React, {useState}from 'react';
 import {Helmet}}from 'react-helmet-async';
 
-<<<<<<< HEAD
-const PartnersPage: React.FC = () => {,
-  const partners = [
-import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight}}from 'lucide-react';
-
-interface Partner {id: string;,}
-  name: string;,
-  logo: string;,
-  description: string;,
-  category: string;,
-  website: string;,
-  tier: 'preferred' | 'certified' | 'strategic';,}const PartnersPage: React.FC = () => {,
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTier, setSelectedTier] = useState('all');
-
-  const partners: Partner[] = [,
-=======
 const PartnersPage: React.FC = () => {
   const partners = [;
 import  ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
@@ -40,49 +23,12 @@ const PartnersPage: React.FC = () => {
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
-<<<<<<< HEAD
-  ];
-  const benefits = [
-    {title: 'Certified Expertise',
-      description: 'Our team holds certifications from leading technology partners',
-      icon: CheckCircle;,},
-    {title: 'Priority Support',
-      description: 'Get priority access to partner resources and support channels',
-      icon: CheckCircle;,},
-    {title: 'Latest Technology',
-      description: 'Access to cutting-edge tools and early release features',
-      icon: CheckCircle;,},
-    {title: 'Cost Optimization',
-      description: 'Leverage partner pricing and volume discounts for your projects',
-      icon: CheckCircle;,}];
-  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
-
-  return(<>)
-      <Helmet />
-        <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
-        <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
-      </Helmet>
-
-      <Navigation />
-      
-=======
-
   ];
 
                 We work with leading technology companies to deliver the best solutions for our clients.
               </p></p></p>
             </div>
 
-<<<<<<< HEAD
-            <div className="flex flex-wrap justify-center gap-4 mb-12" /></div>
-              {categories.map((category) => ()
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" /></div>
-              {partners.map((partner, index) => ()
-=======
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
                 </div></div><button;
@@ -102,7 +48,6 @@ const PartnersPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3></h3></h3>)
                 </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               ))}
             </div>
 
@@ -119,15 +64,7 @@ const PartnersPage: React.FC = () => {
   const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
 
-<<<<<<< HEAD
-  const filteredPartners = const filteredPartners = partners.filter();
-  });
-
-  const getTierColor = const getTierColor = const getTierColor = (tier: string) => {;
-    switch (tier) {;
-=======
   const filteredPartners = partners.filter(partner => {;
->>>>>>> origin/main
     const matchesCategory = selectedCategory === 'all' || partner.category === selectedCategory;
     const matchesTier = selectedTier === 'all' || partner.tier === selectedTier;)
     return matchesCategory && matchesTier;)
@@ -135,7 +72,6 @@ const PartnersPage: React.FC = () => {
 
   const getTierColor = (tier: string) => {
     switch (tier) 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       case 'strategic':;
         return 'from-purple-500 to-pink-600';
       case 'preferred':
@@ -152,13 +88,6 @@ const PartnersPage: React.FC = () => {
         return <CheckCircle className="w-4 h-4" />;
       default: return <Handshake className="w-4 h-4" />;,}};
 
-<<<<<<< HEAD
-  return ()
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
-              {categories.map()
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div></div><Helmet>
@@ -236,7 +165,6 @@ const PartnersPage: React.FC = () => {
                 <option key=category} value={category}>
                   {category === 'all' ? 'All Categories' : category})
                 </option>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               ))}
             </select>
             <select;
@@ -299,10 +227,6 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
   );
 };
 

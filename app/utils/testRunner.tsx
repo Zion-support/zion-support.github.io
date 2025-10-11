@@ -860,7 +860,6 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {;
     images.forEach((img, index) => {;
     // Basic accessibility checks;
     const violations: string[] = []
->>>>>>> origin/main
     // Check for missing alt text on images,
     const images = const images = const images = container.querySelectorAll('img')
   }
@@ -1369,15 +1368,9 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {;
   }
 }
 // React hook for testing;
-<<<<<<< HEAD
-export const useTestRunner = useCallback((...args) => {const testRunner = TestRunner.getInstance();
-  const runTest = useCallback(async (;)
-// React hook for testing;}export const useTestRunner = useCallback((...args) => {}const testRunner = TestRunner.getInstance();
-=======
 export const useTestRunner = useCallback((...args) => {;
     const testRunner = TestRunner.getInstance();
   const testRunner = TestRunner.getInstance();
->>>>>>> origin/main
   const runTest = useCallback(async ();
     component: ReactElement,
     testName: string,
@@ -1421,7 +1414,6 @@ export const testUtils = const testUtils = const testUtils = {
     // Create mock data</void>;
   };
   createMockData: (type: string, count: number = 10) => {}</void>;
->>>>>>> origin/main
 // Test utilities;
 export const testUtils = const testUtils = {};
   // Create mock data;
@@ -1521,15 +1513,10 @@ export const useTestRunner = const useTestRunner = const useTestRunner = () => {
   r: 'Unknown test type' };
     };
   }, [testRunner]);
-<<<<<<< HEAD
-  return {/* TODO: Fix JSX expression */,}}// Performance testing utilities;
-export const measurePerformance = (fn: () => void): PerformanceMetrics => {,
-=======
   return {/* TODO: Fix JSX expression */}
 
 // Performance testing utilities;
 export const measurePerformance = (fn: () => void): PerformanceMetrics => {;
->>>>>>> origin/main
   const startTime = performance.now();
   const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
   
@@ -1554,24 +1541,6 @@ export const createMock = <T extends Record<string, any>>(overrides: Partial<T> 
 
 "`;
 
-<<<<<<< HEAD
-// Assertion utilities
-export const expect = const expect = const expect = (actual: unknown) => ()
-  toBe: (expected: unknown): AssertionResult => ()
-  }),
-  toEqual: (expected: unknown): AssertionResult => ()
-    passed: JSON.stringify(actual) === JSON.stringify(expected),
-    message: `Expected ${JSON.stringify(actual),}to equal ${JSON.stringify(expected)}`,
-    expected,
-    actual;
-  }),
-  toBeTruthy: (): AssertionResult => ()
-    passed: Boolean(actual),
-    message: `Expected ${actual,}to be truthy`,
-    actual;
-  }),
-  toBeFalsy: (): AssertionResult => ()
-=======
 // Assertion utilities;
 export const expect = (actual: unknown) => ({),
       toBe: (expected: unknown): AssertionResult => (,
@@ -1595,7 +1564,6 @@ export const expect = (actual: unknown) => ({),
       passed: !actual,
     message: `Expected $actual} to be falsy`,)
     actual)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   })
 });
 ;

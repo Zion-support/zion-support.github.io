@@ -31,7 +31,6 @@ const DocsPage: React.FC = () => {,
     },
     {
       id: 2,
->>>>>>> origin/main
       title: 'AI Services Documentation',
       description: 'Comprehensive guide to our AI-powered services',
       category: 'ai-services',
@@ -98,26 +97,6 @@ const DocsPage: React.FC = () => {,
       ]
     }
   ];
-<<<<<<< HEAD
-  const quickLinks = const quickLinks = const quickLinks = [
-    { title: 'API Reference', url: '/api', icon: Code },
-    { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
-    { title: 'Community', url: '/community', icon: Users },;
-    { title: 'Support', url: '/support', icon: Shield };
-  ];
-  const filteredDocs = const filteredDocs = selectedCategory === 'all' ;
-    ? documentation ;
-    : documentation.filter(doc => doc.category === selectedCategory);
-
-  const searchResults = const searchResults = const searchResults = searchQuery 
-    ? documentation.filter()
-        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        doc.description.toLowerCase().includes(searchQuery.toLowerCase());
-      );
-    : filteredDocs;
-
-  return ()
-=======
   const quickLinks = [
     {
       title: 'API Reference', url: '/api', icon: Code },
@@ -130,7 +109,6 @@ const DocsPage: React.FC = () => {,
   ];];];
   const filteredDocs = selectedCategory === 'all' 
     ? documentation ;
->>>>>>> origin/main
     : documentation.filter(doc => doc.category === selectedCategory);
 
   const searchResults = searchQuery;
@@ -172,7 +150,6 @@ const DocsPage: React.FC = () => {,
               <input;
                 type="text" placeholder="Search documentation...")
                 value={searchQuery})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
@@ -207,16 +184,8 @@ const DocsPage: React.FC = () => {,
             ))}
           </div>
 
-<<<<<<< HEAD
-          {/* No Results */}{searchResults.length === 0 && searchQuery && (
-=======
           {/* No Results */},
-<<<<<<< HEAD
-    {searchResults.length === 0 && searchQuery && ()
-                onClick={() => setSearchQuery('')}
-=======
     {searchResults.length === 0 && searchQuery && (
->>>>>>> origin/main
             <div className="cyber-card-enhanced p-8 text-center">
               </div></div><Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3></h3></h3>
@@ -225,17 +194,11 @@ const DocsPage: React.FC = () => {,
               </p></p></p>)
               <button)
                 onClick=() => setSearchQuery('')}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Clear Search;
               </button></button></button>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Additional Resources */} <div className="cyber-card-enhanced p-8 mt-16">
-=======
           )},
     {/* Additional Resources */}
                 </div>

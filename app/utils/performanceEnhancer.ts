@@ -46,7 +46,6 @@ export class PerformanceMonitor {private static instance: PerformanceMonitor,}
   }
 export class PerformanceMonitor {}
   private static instance: PerformanceMonitor,
->>>>>>> origin/main
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor {}}if (!PerformanceMonitor.instance) {}PerformanceMonitor.instance = new PerformanceMonitor();
@@ -75,14 +74,12 @@ export class PerformanceMonitor {}
       if (memory) {}
 export const debounce = <T extends (...arg);
   t: number;)
->>>>>>> origin/main
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
 }
 // Throttle function for performance optimization;
 export const throttle = <T extends (...arg);
   t: number;)
->>>>>>> origin/main
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
   }
@@ -121,24 +118,12 @@ if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}
   // Clear metrics;
   clearMetrics() {/* TODO: Fix JSX expression */,}}
   // Monitor long tasks;
-<<<<<<< HEAD
-  startLongTaskMonitoring() {/* TODO: Fix JSX expression */,}}
-const observer = new PerformanceObserver((list) => {list.getEntries().forEach((entry) => {
-=======
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}
     }
-<<<<<<< HEAD
-const observer = const observer = new PerformanceObserver((list) => {;
-    list.getEntries().forEach((entry) => {;
->>>>>>> origin/main
-        if (entry.duration > 50) { // Tasks longer than 50ms;
-  // Get performance metrics
-=======
 const observer = new PerformanceObserver((list) => {
     list.getEntries().forEach((entry) => ;
         if (entry.duration > 50)  // Tasks longer than 50ms;
   // Get performance, metrics;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   getMetrics() {}
     return Object.fromEntries(this.metrics);
@@ -177,15 +162,10 @@ export const usePerformanceMonitor = const usePerformanceMonitor = (componentNam
       monitor.trackMemory(componentName);
     }
   }, [componentName, monitor]);
-<<<<<<< HEAD
-  return {}}trackRender: (fn: () => void) => {,}const start = performance.now();
-      fn();,;
-=======
   return {}
     trackRender: (fn: () => void) => {}
       const start = performance.now();
       fn();,
->>>>>>> origin/main
       const duration = performance.now() - start;
         if (entry.duration > 50) {
     // Tasks longer than, 50ms;
@@ -241,7 +221,6 @@ export const preloadCriticalResources = const preloadCriticalResources = () => {
     '/css/critical.css'];
   criticalResources.forEach((resource) => {}];
     const link = document.createElement('link');
->>>>>>> origin/main
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.woff2') ? 'font' : 'style';
@@ -252,30 +231,18 @@ export const preloadCriticalResources = const preloadCriticalResources = const p
     document.head.appendChild(link);
 }
 // Optimize scroll performance;
-<<<<<<< HEAD
-export const optimizeScrollPerformance = const optimizeScrollPerformance = ();
-  if (typeof window === 'undefined') return;
-  let ticking = false;
-<<<<<<< HEAD
-  const updateScrollPosition = () => {// Update scroll position indicators;) => {
-  return($3;)
-  )}// Optimize scroll performance;}
-export const optimizeScrollPerformance = () => {}if (typeof window === 'undefined') return;
-=======
   const updateScrollPosition = () => {;
     // Update scroll position indicators;) => {
   return ()
   )
-=======
+
 export const optimizeScrollPerformance = (;)
   if (typeof window === 'undefined') return;
->>>>>>> origin/main
   let ticking = false;
   const updateScrollPosition = () => {;
     // Update scroll position indicators;) => 
   return ()
     $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 // Optimize scroll performance;}
 export const optimizeScrollPerformance = const optimizeScrollPerformance = () => {};
@@ -297,7 +264,6 @@ export const optimizeScrollPerformance = const optimizeScrollPerformance = () =>
   // Track Core Web Vitals;}
   const trackCLS = const trackCLS = () => {};
     let clsValue = 0;
->>>>>>> origin/main
     let clsEntries: PerformanceEntry[] = [],
     interface LayoutShiftEntry extends PerformanceEntry {}}hadRecentInput?: boolean;
       value: number,
@@ -430,20 +396,12 @@ export const collectPerformanceMetrics = const collectPerformanceMetrics = () =>
   return {}}navigation: {,}// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
 // totalTime: navigation.loadEventEnd - navigation.fetchStart,
-<<<<<<< HEAD
-    },;
-    paint: {,}firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
-    },;
-    memory: getMemoryUsage(),}
-=======
     },
     paint: {}
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
     },
     memory: getMemoryUsage()}
->>>>>>> origin/main
 }
 // Initialize performance enhancements;
 export const initializePerformanceEnhancements = (;) => {
@@ -475,7 +433,6 @@ export const collectPerformanceMetrics = const collectPerformanceMetrics = const
     pain,
   t: {/* TODO: Fix JSX expression */},
     memor,
->>>>>>> origin/main
   y: getMemoryUsage(),
   };
 };
@@ -483,4 +440,3 @@ export const collectPerformanceMetrics = const collectPerformanceMetrics = const
 export const initializePerformanceEnhancements = const initializePerformanceEnhancements = const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */};
     };
 }`;
->>>>>>> origin/main

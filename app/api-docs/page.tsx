@@ -22,7 +22,6 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
   -H "Content-Type: application/json" \\
     "features": ["sentiment", "entities", "key_phrases"];
   }'`
->>>>>>> origin/main
         },
         {name: 'Image Recognition',
           method: 'POST',
@@ -78,32 +77,7 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
     "output_format": "json"}'`
         }
   ]
-<<<<<<< HEAD
-  const filteredEndpoints = apiEndpoints.map(category => ({)
-=======
     }
-<<<<<<< HEAD
-  ];
-  const filteredEndpoints = const filteredEndpoints = const filteredEndpoints = apiEndpoints.map()
-      endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
-    );
-  })).filter(category => category.endpoints.length > 0);
-  return() {filteredEndpoints.map((category, categoryIndex) => ()
-                  {category.endpoints.map((endpoint, endpointIndex) => ()
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? ()
-                          ) : ()
-                          )}
-                        </button>
-                      </div>
-                      <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto" /></div>
-                        <pre className="text-gray-300 text-sm" /></pre>
-                          <code>{endpoint.code}</code>
-=======
   ];];
   const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,)
@@ -120,17 +94,8 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
       />
       <Navigation />
       {/* Hero Section */}
-<<<<<<< HEAD
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
-=======
-
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
->>>>>>> origin/main
             Explore endpoints, authentication, and integration guides.
           </p></p></p>
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
@@ -232,7 +197,6 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         </div></div><pre className="text-gray-300 text-sm">
                           </p></p><code>{endpoint.code}</code>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                         </pre>
                       </div>
                     </div>

@@ -8,7 +8,6 @@ const AiAutonomousSystemsPage: React.FC = () => {
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -25,15 +24,10 @@ const AiAutonomousSystemsPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
     },
-<<<<<<< HEAD
-  ];
-  return ()
-=======
   ];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Cutting-edge autonomous systems powered by advanced AI technology." />
         <meta name="keywords" content="AI autonomous systems, artificial intelligence, autonomous technology, AI solutions, intelligent automation" />
@@ -63,7 +57,6 @@ const AiAutonomousSystemsPage: React.FC = () => {
         </section>
       </main>)
     </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>
@@ -106,19 +99,3 @@ const AiAutonomousSystemsPage: React.FC = () => {
       <Footer / /></Footer>
     </div>
   ),
-<<<<<<< HEAD
-};
-
-export default PagePage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> origin/main

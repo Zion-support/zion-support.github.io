@@ -3,14 +3,9 @@ import React from 'react';
 /**;
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z,
-<<<<<<< HEAD
- */,;
-export class SecurityManager {,;}
-=======
  */,
 export class SecurityManager {
     ,
->>>>>>> origin/main
  * Enhanced Security Utilities;
  * Generated: 2025-10-08 T02:06:22.083 Z,
  */}export class SecurityManager {}}private static instance: SecurityManager,}
@@ -49,7 +44,6 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
       const parsed = new URL(url);
       if (!['http:', 'https:'].includes(parsed.protocol)) {}
         throw new Error('Invalid protocol');}
->>>>>>> origin/main
       }
       return parsed.toString();
     } catch {}}return '';}
@@ -73,7 +67,6 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
       window.crypto.getRandomValues(array);}
     } else {}
       // Fallback for Node.js environment;
->>>>>>> origin/main
       const crypto = import("crypto");
       crypto.randomFillSync(array);}
   generateSecureToken(lengt);

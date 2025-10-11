@@ -103,14 +103,6 @@ const logger = const logger = const logger = {/* TODO: Fix JSX expression */},
   e: string, erro);
   r: Error) => {/* TODO: Fix JSX expression */,}}
 }
-<<<<<<< HEAD
-interface PerformanceMetrics {/* TODO: Fix JSX expression */,}}}
-interface OptimizationConfig {/* TODO: Fix JSX expression */,}}}
-interface PerformanceConfig extends OptimizationConfig {}}class PerformanceOptimizer {/* TODO: Fix JSX expression */,}}}
-  private,;
-  config: OptimizationConfig = {/* TODO: Fix JSX expression */,}}
-  private,;
-=======
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 interface OptimizationConfig {/* TODO: Fix JSX expression */}
@@ -122,7 +114,6 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   config: OptimizationConfig = {/* TODO: Fix JSX expression */}
   }
   private,
->>>>>>> origin/main
   observers: PerformanceObserver[] = [],
   private,
   isMonitoring: boolean = false,
@@ -179,16 +170,11 @@ observer.observe({entryTypes: ['measure'] ,)})
       // PerformanceObserver may not support 'measure' entryType in some environments;
       }
   }
-<<<<<<< HEAD
-  private observeLCP() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1]
-=======
   private observeLCP() {}
     try {}
       const observer = const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
->>>>>>> origin/main
         this.metrics.lcp = lastEntry.startTime;
   private measureRenderTime(): void {/* TODO: Fix JSX expression */,}}}
         })
@@ -232,10 +218,6 @@ observer.observe({entryTypes: ['measure'] ,)})
     } catch {
     // Ignore if not, supported;
   }
-<<<<<<< HEAD
-  private observeCLS() {try {let clsValue = 0;}
-      const observer = new PerformanceObserver((list) => {
-=======
     }
   }
   private observeCLS() {
@@ -483,17 +465,11 @@ images.forEach((img) => imageObserver.observe(img));
   /**;
    * Add critical resource hints;
    */;
-<<<<<<< HEAD
-  addCriticalResourceHints(): void {/* TODO: Fix JSX expression */,}}n: 'anonymous' ,},;
-      {/* TODO: Fix JSX expression */,}s: 'style' ,}]
-    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */,)})
-=======
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
       {/* TODO: Fix JSX expression */}
   s: 'style' }]
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
->>>>>>> origin/main
     })
     logger.info('Critical resource hints added', 'PerformanceOptimizer');
   }
@@ -519,22 +495,6 @@ images.forEach((img) => imageObserver.observe(img));
   /**;
    * Generate comprehensive performance report;
    */;
-<<<<<<< HEAD
-  generateComprehensiveReport(): string {/* TODO: Fix JSX expression */,}}Score: ${score,}/100;
-Load,;
-  Time: ${metrics.loadTime.toFixed(2),}ms;
-Render,;
-  Time: ${metrics.renderTime.toFixed(2),}ms;
-Memory,;
-  Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2),}MB;
-Bundle,;
-  Size: ${metrics.bundleSize,}KB;
-Cache Hit,;
-  Rate: ${metrics.cacheHitRate,}%;
-Recommendation,;
-  s: ;,
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`;
-=======
   generateComprehensiveReport(): string {/* TODO: Fix JSX expression */}
   Score: ${score}/100;
 Load,
@@ -552,7 +512,6 @@ Recommendation,
 ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`;
->>>>>>> origin/main
     `.trim();
   }
   /**;
@@ -566,4 +525,3 @@ export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
 export { PerformanceOptimizer, type PerformanceMetrics, type, PerformanceConfig }
 `;
->>>>>>> origin/main

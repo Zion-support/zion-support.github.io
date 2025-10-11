@@ -8,13 +8,6 @@ interface SEOOptimizerProps {
   structuredData?: object;
 }
 
-<<<<<<< HEAD
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
-}) => {
-  const keywordsString = keywords.join(', ');
-
-  return ()
-=======
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
@@ -42,7 +35,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />)
     </Helmet>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 };
 

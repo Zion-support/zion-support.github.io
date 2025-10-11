@@ -301,8 +301,11 @@ $4});
   }, []);
   return null;
 }
-export default UserExperienceEnhancer;
-}
+};
+
+};
+
+
 export default UserExperienceEnhancer;`
   </UserExperienceEnhancerProps>
   </UserExperienceEnhancerProps>

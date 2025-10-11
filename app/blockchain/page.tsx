@@ -46,11 +46,6 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Services by Category */}{categories.map(category => ()
-          <section key={category}className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
-=======
         {/* Services by Category */},
                           ))}
                         </ul>
@@ -63,11 +58,6 @@ const BlockchainPage: React.FC = () => {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-        ))}
-        {/* Blockchain Capabilities Showcase */} <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
-=======
         ))},
     {/* Blockchain Capabilities Showcase */}
                 Comprehensive blockchain technologies and methodologies for modern business applications,

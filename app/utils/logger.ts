@@ -3,14 +3,6 @@
  * Advanced Logging System;
  * Provides structured logging with multiple levels and context;
  */;
-<<<<<<< HEAD
-export enum LogLevel {DEBUG = 0,;}
-  INFO = 1,;
-  WARN = 2,;
-  ERROR = 3,;
-  FATAL = 4;}}
-export interface LogContext {userId?: string;}
-=======
 export enum LogLevel {
     DEBUG = 0,
   INFO = 1,
@@ -21,7 +13,6 @@ export enum LogLevel {
 }
 export interface LogContext {
     userId?: string;
->>>>>>> origin/main
   sessionId?: string;
   component?: string;
   action?: string;
@@ -60,7 +51,6 @@ warn(message: string, context?: LogContext, metadata?: Record<string, unknown>):
   }
   }
 error(message: string,),
->>>>>>> origin/main
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>);
     contextOrMetadata?: string | Record<string, unknown>);
     metadata?: Record<string></string>
@@ -113,15 +103,10 @@ class Logger {/* TODO: Fix JSX expression */,}}}
   /**;
    * Log an error message;
    */;
-<<<<<<< HEAD
-  error()
-=======
   error(messag,
->>>>>>> origin/main
   e: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,)
     contextOrMetadata?: string | Record<string, unknown>,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     metadata?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
@@ -135,12 +120,7 @@ fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>)
     </string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
   }
   }
-<<<<<<< HEAD
-fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)}}}
-private log(level: LogLevel,),;
-=======
 private log(level: LogLevel,),
->>>>>>> origin/main
     message: string),
     context?: LogContext),
     metadata?: Record<string></string>
@@ -153,7 +133,6 @@ private log(level: LogLevel,),
       metadata,
   }
       timestamp: Date.now()}
->>>>>>> origin/main
 this.logs.push(logEntry);
     // Keep only last 1000 logs;
     if (this.logs.length > 1000) {this.logs = this.logs.slice(-1000)}}
@@ -167,10 +146,6 @@ this.logs.push(logEntry);
       case LogLevel.INFO: break,
       case LogLevel.WARN: break,
       case LogLevel.ERROR: break,
-<<<<<<< HEAD
-      case LogLevel.FATAL:,;
-        break;}}
-=======
       case LogLevel.FATAL:,
         break;
   }
@@ -190,28 +165,17 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
   /**;
    * Core logging method;
    */;
-<<<<<<< HEAD
-  private log()
-=======
   private log(leve,
->>>>>>> origin/main
   l: LogLevel,
     messag,
   e: string,)
     context?: LogContext,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     metadata?: Record<string, unknown></string>);
-<<<<<<< HEAD
-  ): void {/* TODO: Fix JSX expression */,}}}
-    const,;
-  logEntry: LogMetadata = {/* TODO: Fix JSX expression */,}}
-=======
   ): void {/* TODO: Fix JSX expression */}
     }
     const,
   logEntry: LogMetadata = {/* TODO: Fix JSX expression */}
     }
->>>>>>> origin/main
     // Format the log entry;
     const formattedMessage = this.formatLogEntry(logEntry);
     // Output to console in development;
@@ -280,14 +244,9 @@ exportLogs(): string {return JSON.stringify(this.logs, null, 2)}}}
 // Export singleton instance;
 export const logger = new Logger();
   private sendToLoggingService(entr);
-<<<<<<< HEAD
-  y: LogMetadata): void {/* TODO: Fix JSX expression */,}}s: {// 'Content-Type': 'application/json',},;
-    //   bod,;
-=======
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
     //   bod,
->>>>>>> origin/main
   y: JSON.stringify(entry),
     // }).catch(err => {/* TODO: Fix JSX expression */,)})
     //   // })

@@ -46,10 +46,6 @@ const SecurityMonitoringSuitePage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automated Response',
-<<<<<<< HEAD
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.',}}
-  ]
-=======
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
   };
     };
@@ -68,13 +64,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Expert security team support';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -105,7 +97,6 @@ return (
                 </button>
                 <button>)
                   </button></button><Phone>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   Call (302) 464-0950,
                 </button>
               </div>

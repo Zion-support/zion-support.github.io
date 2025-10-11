@@ -3,16 +3,10 @@
  * Comprehensive Error Logging System;
  * Provides structured error logging with different severity levels;
  */;
-<<<<<<< HEAD
-export enum ErrorSeverity {}}LOW = 'low',;
-  MEDIUM = 'medium',;
-  HIGH = 'high',;
-=======
 export enum ErrorSeverity {}
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
->>>>>>> origin/main
   CRITICAL = 'critical'}
 }
 export interface ErrorLogEntry {timestamp: string,}
@@ -41,15 +35,6 @@ class ErrorLogger {}}private logs: ErrorLogEntry[] = [],
   log();
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-<<<<<<< HEAD
-    error?: Error,;
-    context?: Record<string, unknown>}): void {}}const entry: ErrorLogEntry = {,}timestamp: new Date().toISOString(),
-      severity,;
-      message,;
-      error,;
-      context,;
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;,
-=======
     error?: Error,
     context?: Record<string, unknown></string>
   }
@@ -134,11 +119,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
           error: entry.error;),
             ? ),
                 message: entry.error.message),
-<<<<<<< HEAD
-                name: entry.error.name),}await fetch(endpoint, {)}method: 'POST',
-        headers: {,}'Content-Type': 'application/json'},
-        body: JSON.stringify({),}...entry,;
-=======
                 name: entry.error.name),
   }
       await fetch(endpoint, {}
@@ -147,7 +127,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
           'Content-Type': 'application/json'},
         body: JSON.stringify({}
           ...entry,
->>>>>>> origin/main
           error: entry.error,
             ? {}message: entry.error.message,
                 name: entry.error.name,
@@ -159,12 +138,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
     } catch (error) {}
       // Silently fail to avoid infinite, loop}
   private async sendToExternalService(entr);
-<<<<<<< HEAD
-  y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */,}}
-      await fetch(endpoint, {/* TODO: Fix JSX expression */,)},
-        bod,;
-  y: JSON.stringify({/* TODO: Fix JSX expression */,)}}
-=======
   y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */}
       }
             : undefined;);
@@ -208,23 +181,10 @@ export const logWarning = (message: string, context?: Record<string, unknown>) =
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export const logInfo = (message: string, context?: Record<string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export default errorLogger;
-  exportLogs(): string {/* TODO: Fix JSX expression */,}}}
-}
-// Singleton instance;
-const errorLogger = new ErrorLogger();
-// Convenience functions;
-export const logError = (messag);
-  e: string, error?: Error, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-export const logCritical = (messag);
-  e: string, error?: Error, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-export const logWarning = (messag);
-  e: string, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export const logInfo = (messag);
-  e: string, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
+};
+
+};
+
+
 export default errorLogger;
 `;

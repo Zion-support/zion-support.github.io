@@ -32,31 +32,18 @@ const process = const process = const process = [
     {step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
-<<<<<<< HEAD
-      icon: Shield,}}
-  ]
-return(<>)
-=======
       icon: Shield,
   };
     };
   ];
-<<<<<<< HEAD
-return ()
-const WebDevelopmentPage: React.FC = () => {
-  const webServices = const webServices = const webServices = [
-    {
-=======
 return (
     <>
->>>>>>> origin/main
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";)
 const WebDevelopmentPage: React.FC = () => {
   const features = [
     
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       title: 'Frontend Development',
       description: 'Modern, responsive web applications with cutting-edge technologies',
       icon: Code,
@@ -133,11 +120,6 @@ const WebDevelopmentPage: React.FC = () => {
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
       icon: Shield;
-<<<<<<< HEAD
-    };
-  ];
-  return ()
-=======
     }
   ];];];
   return (
@@ -166,15 +148,13 @@ const WebDevelopmentPage: React.FC = () => {
         enableKeyboardNavigation={true}enableScreenReaderSupport={true}enableHighContrast={true}enableFocusManagement={true}/>
       <SecurityEnhancer>
       <Analytics>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
+      </div></div>
 </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
+      </div></div>
         <Navigation>
         <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
           <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+          </section></section></div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
               <p className="text-xl text-gray-300">Section description</p></p></p>
             </div>
           </div>
@@ -185,9 +165,7 @@ const WebDevelopmentPage: React.FC = () => {
 
           {/* Hero Section */}
           <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+          </section></section></div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
               <p className="text-xl text-gray-300">Section description</p></p></p>
             </div>
           </div>
@@ -199,10 +177,10 @@ const WebDevelopmentPage: React.FC = () => {
               Build modern, scalable, and high-performance web applications with our expert development team.;
               From frontend to backend, we deliver solutions that drive business growth.
             </p></p></p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
+            </div></div>
               <a;
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></section>
+            </div></section>
               <a;
                 href="/contact";
                 className="cyber-button px-8 py-4 text-lg font-semibold hover: scale-105 transition-all duration-300";,
@@ -219,17 +197,11 @@ const WebDevelopmentPage: React.FC = () => {
               </a>
             </div>,
           </section>,
-<<<<<<< HEAD
-,;
-          {/* Services Grid */}/>
-=======
 ,
           {/* Services Grid */}
 
       />
->>>>>>> origin/main
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        </div></div><Navigation />
+      </div><Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
@@ -240,8 +212,7 @@ const WebDevelopmentPage: React.FC = () => {
               Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.
             </p></p></p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div></div><a;
+            </div><a;
                 href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
               >
                 Start Your Project;
@@ -256,7 +227,6 @@ const WebDevelopmentPage: React.FC = () => {
 
       </main>)
     </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>
@@ -266,70 +236,44 @@ const WebDevelopmentPage: React.FC = () => {
       </main>
     </>
   );
-<<<<<<< HEAD
-}, {/* Services Grid */}
-          <section className="mb-20" /></section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text" /></h2>
-              Our Web Development Services
->>>>>>> origin/main
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {webServices.map((service, index) => ()
-    webServices.map((service, index) => ()
-              Our Web Development Services;)
-            </h2>);
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
-              {
-    webServices.map((service, index) => ()
-    webServices.map((service, index) => ()
-    service.features.map((feature, featureIndex) => ()
-=======
 } {/* Services Grid */}
           <section className="mb-20">
             </section></section><h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
               Our Web Development Services;
             </h2></h2></h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {webServices.map((service, index) => (
-                </div></div><div key=index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  </div></div><div className="flex items-center mb-6">
-                    </div></div><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                      </div></div><service.icon className="w-8 h-8 text-white" />
+                </div></div></div></div></div><service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <div>
-
-                      </div></div><h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3></h3></h3>
+                    </div><h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3></h3></h3>
                       <div className={`font-semibold $service.color}`}>{service.price}</div></div></div>
                     </div>
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p></p></p>
 
           <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
+          </section></section></div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
               <p className="text-xl text-gray-300">Section description</p></p></p>
             </div>
           </div>
         </section>)
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2></h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{)
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2></h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>{)
     webServices.map((service, index) => (</div></div></div>
   }
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div></div></div>
-                  <div className="flex items-center mb-6"></div></div></div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div></div></div>
+                </div></div>
+                  </div></div>
+                    </div></div>
                       <service />
-                    <div />
-                      </div></div><h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3></h3><div className={`font-semibold $service.color}`}>{service.price}</div></div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p></p></p>)
+                    </div><h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3></h3><div className={`font-semibold $service.color}`}>{service.price}</div></div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p></p></p>)
             <h2>)
               Our Web Development Services;)
             </h2></h2></h2>);
 );
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>),
               {
     webServices.map((service, index) => (</div></div></div>
   }
-                <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div></div></div>
+                </div></div>
                   <div className="flex items-center mb-6">,</div></div></div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,</div></div></div>
                       <service.icon className="w-8 h-8 text-white" />,
@@ -340,23 +284,21 @@ const WebDevelopmentPage: React.FC = () => {
                     </div>
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p></p></p>)
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2></h2></h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{)
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services</h2></h2></h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>{)
     webServices.map((service, index) => (</div></div></section>
   }
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"></div></div></div>
-                  <div className="flex items-center mb-6"></div></div></div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div></div></div>
+                </div></div>
+                  </div></div>
+                    </div></div>
                       <service />
-                    <div />
-                      </div></div><h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3></h3></h3><div className={`font-semibold $service.color}`}>{service.price}</div></div></div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p></p></p>
-                  <div className="mb-6"></div></div></div>)
+                    </div><h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3></h3></h3><div className={`font-semibold $service.color}`}>{service.price}</div></div></div><p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p></p></p>
+                  </div></div>)
                     <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{)
     service.features.map((feature, featureIndex) => (</ul>
   }
                         <li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>)
                         </CheckCircle>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                       ))}
                     </ul>
                   </div>
@@ -408,7 +350,7 @@ const WebDevelopmentPage: React.FC = () => {
           {/* CTA Section */}
                 <a;
 
-            <div className="cyber-card p-12 max-w-4xl mx-auto"></div></div></section>
+            </div></section>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?</h2></h2></h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p></p></p>
               </p>
                 <a;
@@ -446,10 +388,11 @@ const WebDevelopmentPage: React.FC = () => {
     </>);
 };
 
-export default WebDevelopmentPage;
-      </div>
-    </>
-  );
 };
+
+
+};
+
+
 
 export default WebDevelopmentPage;

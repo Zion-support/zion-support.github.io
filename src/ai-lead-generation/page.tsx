@@ -6,5 +6,9 @@ import Footer from '../components/Footer';
         </a></div></div>)
   );
 }
-export default AiLeadGenerationPage;
+};
+
+};
+
+
 export default PagePage;

@@ -448,23 +448,6 @@ const itServices = [;
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-<<<<<<< HEAD
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits',}}
-  ]
-const categories = [
-    {id: 'all', name: 'All IT Services', icon: Grid3X3 ,},
-    {id: 'infrastructure', name: 'Infrastructure', icon: Server ,},
-    {id: 'cloud', name: 'Cloud Services', icon: Cloud ,},
-    {id: 'security', name: 'Cybersecurity', icon: Shield ,},
-    {id: 'networking', name: 'Networking', icon: Network ,},
-    {id: 'database', name: 'Database', icon: Database ,},
-    {id: 'support', name: 'IT Support', icon: Headphones ,},
-    {id: 'development', name: 'Development', icon: Code ,},
-    {id: 'consulting', name: 'Consulting', icon: Briefcase ,},
-    {id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw ,},
-    {id: 'compliance', name: 'Compliance', icon: CheckSquare ,}]
-const filteredServices = itServices.filter(service => {)
-=======
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
   }
     }
@@ -487,10 +470,6 @@ const categories = const categories = const categories = [
     return matchesCategory && matchesSearch;
   }
   })
-<<<<<<< HEAD
-return ()
-              Call (302) 464-0950
-=======
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       {/* Hero Section */}</div>
@@ -514,7 +493,6 @@ return (
             <a>)
               <Phone>)
               Call (302) 464-0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </a>
             <a></a>
               <Mail></Mail>
@@ -560,29 +538,6 @@ return (
         </div>
       </section>
       {/* Services Grid */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-            {
-    filteredServices.map((service) => ()
-    service.features.slice(0, 4).map((feature, idx) => ()
-                      ))}
-                    </ul>
-                  </div>
-                  <div / /></div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul></ul>
-                      {
-    service.benefits.slice(0, 2).map((benefit, idx) => ()
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -628,7 +583,6 @@ return (
                           <TrendingUp>
                           <span>{benefit}</span></span></span>)
                         </li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                       ))}
                     </ul>
                   </div>

@@ -797,17 +797,10 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
 });
 // Export both the class and default instance
 export { apiClient }
-export default ApiClient;
-  cacheOptions: {
-    // TODO: Add content
-  }
-}
-  ttl: 5 * 60 * 1000, // 5 minutes;
+};
 
-  }
-})
-  )
-// Export both the class and default instance;
-export { apiClient }
+};
+
+
 export default ApiClient;`
 

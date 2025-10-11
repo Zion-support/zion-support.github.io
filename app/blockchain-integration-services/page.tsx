@@ -27,9 +27,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
-  return() {features.map((feature, index) => ()
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div></div><Helmet>
@@ -38,7 +35,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration solutions. 
->>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></p></p>
       {/* Features Section */}
@@ -61,7 +57,6 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

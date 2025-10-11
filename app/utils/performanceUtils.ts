@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-  private observers: PerformanceObserver[] = [],
-constructor() {this.initializeMetrics()}}
-private initializeMetrics(): void {if (typeof window === 'undefined' || !('performance' in window)) return;}
-=======
 private observers: PerformanceObserver[] = [],
 constructor() {
     this.initializeMetrics()
@@ -10,7 +5,6 @@ constructor() {
   }
 private initializeMetrics(): void {
     if (typeof window === 'undefined' || !('performance' in window)) return;
->>>>>>> origin/main
 // Measure page load time;
     window.addEventListener('load', () => 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -45,10 +39,6 @@ try {
       this.observers.push(observer);
     } catch (error) {console.warn('PerformanceObserver not supported:', error)}}
   }
-<<<<<<< HEAD
-private observeLCP(): void {if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;}
-try {const observer = new PerformanceObserver((list) => {}
-=======
     }
   }
 private observeLCP(): void {
@@ -162,12 +152,7 @@ export const preloadImage = (src: string): Promise<void> => {;
   }
   })
 }
-<<<<<<< HEAD
-export const preloadImages = (srcs: string[]): Promise<void[]> => {,
-    return Promise.all(srcs.map(preloadImage))}}
-=======
 export const preloadImages = (srcs: string[]): Promise<void[]> => {;
     return Promise.all(srcs.map(preloadImage)
   }
 }
->>>>>>> origin/main

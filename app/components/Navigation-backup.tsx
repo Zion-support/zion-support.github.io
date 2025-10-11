@@ -32,12 +32,8 @@ const Navigation: React.FC = () => {,
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
 
-<<<<<<< HEAD
-  const closeAllMenus = () => {setServicesOpen(false);
-=======
   const closeAllMenus = () => {;
     setServicesOpen(false);
->>>>>>> origin/main
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
@@ -109,20 +105,8 @@ const Navigation: React.FC = () => {,
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile Navigation */}{isOpen && (
-=======
         {/* Mobile Navigation */},
-<<<<<<< HEAD
-    {isOpen && ()
-                    {aiServices.slice(0, 8).map((service) => ()
-                    ))}
-                    <Link to="/ai-services"
-                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      onClick={closeAllMenus} /></Link>
-=======
     {isOpen && (
->>>>>>> origin/main
 
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             </div></div><div className="pt-4 space-y-4">
@@ -158,7 +142,6 @@ const Navigation: React.FC = () => {,
                       to="/ai-services" className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                       View All AI Services →
                     </Link>
                   </div>

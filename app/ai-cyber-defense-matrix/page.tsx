@@ -16,7 +16,6 @@ const AICyberDefenseMatrix: React.FC = () => {,
     },
     {
       icon: Zap,
->>>>>>> origin/main
       title: 'Zero-Trust Architecture',
       description: 'Comprehensive zero-trust security framework with continuous verification',
       benefits: [''Continuous verification', 'Identity-based access', 'Micro-segmentation'']
@@ -103,30 +102,12 @@ const AICyberDefenseMatrix: React.FC = () => {,
     {title: 'Critical Infrastructure',
       description: 'Industrial cyber defense for power grids and utilities',
       icon: Zap,
-<<<<<<< HEAD
-      results: '100% infrastructure protection';
-    };
-  ];
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent" / /></div>
-          <div className="max-w-7xl mx-auto relative z-10" /></div>
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full px-6 py-3 mb-8 border border-red-500/30" /></div>
-                <Shield className="w-5 h-5 text-red-400" / /></Shield>
-                <span className="text-red-400 font-semibold">Cyber Defense</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent" /></h1>
-                AI Cyber Defense Matrix
-              </h1>
-=======
       results: '100% infrastructure protection'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Cyber Defense Matrix - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response for enterprise security." />
         <meta name="keywords" content="cyber defense, cybersecurity, threat detection, zero-trust, incident response, security AI, enterprise security, cyber protection" />
@@ -154,7 +135,6 @@ const AICyberDefenseMatrix: React.FC = () => {,
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
                 AI Cyber Defense Matrix;
               </h1></h1></h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed" /></p>
                 Revolutionary AI-powered cyber defense platform with 99.9% threat detection, 

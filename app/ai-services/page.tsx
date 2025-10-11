@@ -309,94 +309,6 @@ const AiServicesPage: React.FC = () => {
       icon: TrendingUp
     },
     {
-<<<<<<< HEAD
-      id: 'ai-quantum-computing',
-      name: 'AI Quantum Computing Solutions',
-      description: 'Revolutionary quantum computing services for complex optimization problems and advanced simulations',
-      price: '$5,999/month',
-      marketPrice: '$10000-50000/month',
-      features: [
-        'Quantum algorithm development',
-        'Optimization problem solving',
-        'Cryptographic security',
-        'Drug discovery simulations',
-        'Financial modeling',
-        'Climate modeling',
-        'Quantum machine learning',
-        'Custom quantum applications'
-      ],
-      benefits: [
-        'Exponential computational power',
-        'Solve impossible problems',
-        'Breakthrough discoveries',
-        'Competitive advantage',
-        'Future-proof technology'
-      ],
-      category: 'Quantum Computing',
-      popular: false,
-      icon: Cpu
-    },
-    {
-      id: 'ai-autonomous-systems',
-      name: 'AI Autonomous Systems',
-      description: 'Self-governing AI systems for autonomous vehicles, drones, and robotic operations',
-      price: '$3,999/month',
-      marketPrice: '$8000-25000/month',
-      features: [
-        'Autonomous vehicle AI',
-        'Drone navigation systems',
-        'Robotic process automation',
-        'Predictive maintenance',
-        'Real-time decision making',
-        'Sensor fusion',
-        'Path planning algorithms',
-        'Safety monitoring'
-      ],
-      benefits: [
-        '24/7 autonomous operations',
-        'Reduced human error',
-        'Increased efficiency',
-        'Cost optimization',
-        'Scalable automation'
-      ],
-      category: 'Autonomous Systems',
-      popular: true,
-      icon: Settings
-    },
-    {
-      id: 'ai-climate-solutions',
-      name: 'AI Climate Solutions',
-      description: 'Advanced AI systems for climate prediction, carbon tracking, and environmental optimization',
-      price: '$2,499/month',
-      marketPrice: '$5000-15000/month',
-      features: [
-        'Climate change modeling',
-        'Carbon footprint tracking',
-        'Renewable energy optimization',
-        'Environmental monitoring',
-        'Sustainability analytics',
-        'Green technology integration',
-        'Emission reduction strategies',
-        'Climate risk assessment'
-      ],
-      benefits: [
-        'Accurate climate predictions',
-        'Reduced carbon footprint',
-        'Sustainable operations',
-        'Regulatory compliance',
-        'Environmental impact'
-      ],
-      category: 'Climate AI',
-      popular: true,
-      icon: Heart
-    },
-    {
-      id: 'ai-drug-discovery',
-      name: 'AI Drug Discovery Platform',
-      description: 'Revolutionary AI platform for pharmaceutical research and drug development',
-      price: '$4,999/month',
-      marketPrice: '$10000-30000/month',
-=======
       id: 'ai-3d-generation',
       name: 'AI 3D Generation',
       description: 'Advanced 3D model generation and rendering using AI for gaming, architecture, and product design',
@@ -517,173 +429,24 @@ const AiServicesPage: React.FC = () => {
       description: 'Pharmaceutical research acceleration using AI for drug discovery, molecular design, and clinical trials',
       price: '$4,999/month',
       marketPrice: '$10000-50000/month',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
       features: [
         'Molecular design',
         'Drug interaction prediction',
         'Clinical trial optimization',
         'Side effect analysis',
-<<<<<<< HEAD
-        'Biomarker discovery',
-        'Personalized medicine',
-        'Drug repurposing',
-        'Regulatory compliance'
-=======
         'Patent research'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
       ],
       benefits: [
         'Faster drug development',
         'Reduced research costs',
-<<<<<<< HEAD
-        'Higher success rates',
-        'Personalized treatments',
-        'Life-saving discoveries'
-=======
         'Better success rates',
         'Improved patient outcomes'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
       ],
       category: 'Healthcare',
       popular: false,
       icon: Heart
     },
     {
-<<<<<<< HEAD
-      id: 'ai-space-technology',
-      name: 'AI Space Technology',
-      description: 'Advanced AI systems for space exploration, satellite management, and space mission optimization',
-      price: '$7,999/month',
-      marketPrice: '$15000-50000/month',
-      features: [
-        'Satellite constellation management',
-        'Space mission planning',
-        'Orbital mechanics optimization',
-        'Space debris tracking',
-        'Planetary exploration AI',
-        'Space weather prediction',
-        'Autonomous spacecraft control',
-        'Deep space communication'
-      ],
-      benefits: [
-        'Enhanced space missions',
-        'Improved satellite operations',
-        'Space debris mitigation',
-        'Scientific discoveries',
-        'Space industry advancement'
-      ],
-      category: 'Space Technology',
-      popular: false,
-      icon: Globe
-    },
-    {
-      id: 'ai-neural-interfaces',
-      name: 'AI Neural Interfaces',
-      description: 'Cutting-edge brain-computer interface technology for medical and research applications',
-      price: '$9,999/month',
-      marketPrice: '$20000-100000/month',
-      features: [
-        'Brain signal processing',
-        'Neural pattern recognition',
-        'Motor control interfaces',
-        'Cognitive enhancement',
-        'Medical diagnostics',
-        'Rehabilitation support',
-        'Research applications',
-        'Ethical AI integration'
-      ],
-      benefits: [
-        'Restore lost functions',
-        'Enhance human capabilities',
-        'Medical breakthroughs',
-        'Research advancement',
-        'Quality of life improvement'
-      ],
-      category: 'Neural Technology',
-      popular: false,
-      icon: Brain
-    },
-    {
-      id: 'ai-3d-generation',
-      name: 'AI 3D Generation & Metaverse',
-      description: 'Advanced AI for 3D content creation, virtual worlds, and metaverse development',
-      price: '$1,999/month',
-      marketPrice: '$4000-12000/month',
-      features: [
-        '3D model generation',
-        'Virtual world creation',
-        'Avatar generation',
-        'Real-time rendering',
-        'AR/VR integration',
-        'Metaverse development',
-        '3D animation AI',
-        'Spatial computing'
-      ],
-      benefits: [
-        'Rapid 3D content creation',
-        'Immersive experiences',
-        'Cost-effective development',
-        'Creative possibilities',
-        'Metaverse ready'
-      ],
-      category: '3D Technology',
-      popular: true,
-      icon: Box
-    },
-    {
-      id: 'ai-accounting-assistant',
-      name: 'AI Accounting Assistant',
-      description: 'Intelligent accounting and financial management system with automated bookkeeping',
-      price: '$299/month',
-      marketPrice: '$600-2000/month',
-      features: [
-        'Automated bookkeeping',
-        'Expense categorization',
-        'Tax preparation',
-        'Financial reporting',
-        'Audit support',
-        'Compliance monitoring',
-        'Invoice processing',
-        'Budget forecasting'
-      ],
-      benefits: [
-        'Save 90% accounting time',
-        'Reduce errors',
-        'Automated compliance',
-        'Real-time insights',
-        'Cost savings'
-      ],
-      category: 'Finance',
-      popular: true,
-      icon: DollarSign
-    },
-    {
-      id: 'ai-agricultural-intelligence',
-      name: 'AI Agricultural Intelligence',
-      description: 'Smart farming solutions with AI-powered crop monitoring and yield optimization',
-      price: '$1,499/month',
-      marketPrice: '$3000-8000/month',
-      features: [
-        'Crop monitoring',
-        'Yield prediction',
-        'Pest detection',
-        'Soil analysis',
-        'Weather integration',
-        'Irrigation optimization',
-        'Harvest planning',
-        'Supply chain management'
-      ],
-      benefits: [
-        'Increase crop yields by 30%',
-        'Reduce resource waste',
-        'Predictive farming',
-        'Sustainable agriculture',
-        'Food security'
-      ],
-      category: 'Agriculture',
-      popular: false,
-      icon: Target
-=======
       id: 'ai-energy-grid-management',
       name: 'AI Energy Grid Management',
       description: 'Smart grid optimization and energy management using AI for utilities and renewable energy integration',
@@ -774,7 +537,6 @@ const AiServicesPage: React.FC = () => {
       category: 'Telecommunications',
       popular: false,
       icon: Wifi
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
     }
   ];
 
@@ -792,29 +554,18 @@ const AiServicesPage: React.FC = () => {
     { id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length },
     { id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length },
     { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length },
-<<<<<<< HEAD
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: services.filter(s => s.category === 'Autonomous Systems').length },
-    { id: 'Climate AI', name: 'Climate AI', count: services.filter(s => s.category === 'Climate AI').length },
-    { id: 'Space Technology', name: 'Space Technology', count: services.filter(s => s.category === 'Space Technology').length },
-    { id: 'Neural Technology', name: 'Neural Technology', count: services.filter(s => s.category === 'Neural Technology').length },
-    { id: '3D Technology', name: '3D Technology', count: services.filter(s => s.category === '3D Technology').length },
-    { id: 'Agriculture', name: 'Agriculture', count: services.filter(s => s.category === 'Agriculture').length }
-=======
     { id: 'Creative AI', name: 'Creative AI', count: services.filter(s => s.category === 'Creative AI').length },
     { id: 'Agriculture', name: 'Agriculture', count: services.filter(s => s.category === 'Agriculture').length },
     { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
     { id: 'Environmental', name: 'Environmental', count: services.filter(s => s.category === 'Environmental').length },
     { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length },
     { id: 'Telecommunications', name: 'Telecommunications', count: services.filter(s => s.category === 'Telecommunications').length }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
   ];
 
   const filteredServices = services.filter(service => {
     return selectedCategory === 'all' || service.category === selectedCategory;
   });
 
-const Page: React.FC = () => {
   return (
     <>
       <Helmet>

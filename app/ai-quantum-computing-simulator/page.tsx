@@ -16,7 +16,6 @@ const AIQuantumComputingSimulator: React.FC = () => {,
     },
     {
       icon: Brain,
->>>>>>> origin/main
       title: 'AI-Powered Optimization',
       description: 'Machine learning algorithms optimize quantum circuits for maximum efficiency and accuracy',
       benefits: [''Automated circuit optimization', 'Error correction suggestions', 'Performance prediction'']
@@ -103,30 +102,12 @@ const AIQuantumComputingSimulator: React.FC = () => {,
     {title: 'Quantum Chemistry',
       description: 'Simulate molecular systems and quantum chemical reactions',
       icon: Zap,
-<<<<<<< HEAD
-      results: 'Accurate molecular modeling';
-    };
-  ];
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/20 via-transparent to-transparent" / /></div>
-          <div className="max-w-7xl mx-auto relative z-10" /></div>
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full px-6 py-3 mb-8 border border-purple-500/30" /></div>
-                <Cpu className="w-5 h-5 text-purple-400" / /></Cpu>
-                <span className="text-purple-400 font-semibold">Quantum Computing</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent" /></h1>
-                AI Quantum Computing Simulator
-              </h1>
-=======
       results: 'Accurate molecular modeling'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Quantum Computing Simulator - Advanced Quantum Simulation | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." />
         <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" />
@@ -154,7 +135,6 @@ const AIQuantumComputingSimulator: React.FC = () => {,
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                 AI Quantum Computing Simulator;
               </h1></h1></h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed" /></p>
                 Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, 

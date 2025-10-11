@@ -46,10 +46,6 @@ const PenetrationTestingPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Expert Security Analysis',
-<<<<<<< HEAD
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.',}}
-  ]
-=======
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
   };
     };
@@ -68,13 +64,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Ongoing security improvement guidance';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -105,7 +97,6 @@ return (
                 </button>
                 <button>)
                   </button></button><Phone>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   Call (302) 464-0950,
                 </button>
               </div>

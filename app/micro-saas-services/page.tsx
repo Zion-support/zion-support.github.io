@@ -1018,9 +1018,6 @@ export const contactInfo = const contactInfo = const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
-  hours: '24/7 Support Available',}timezone: 'EST (Eastern Standard Time)',}
-=======
   hours: '24/7 Support Available',
   }
   timezone: 'EST (Eastern Standard Time)'};

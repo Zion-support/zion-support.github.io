@@ -15,12 +15,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   })
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
-<<<<<<< HEAD
-  useEffect(() => {const updateMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation;
-=======
   useEffect(() => {
     const updateMetrics = () => {;
         ? navigation.loadEventEnd - navigation.fetchStart;
@@ -65,23 +59,14 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     }
     if (isMonitoring) {updateMetrics();
       const interval = setInterval(updateMetrics, 1000);
-<<<<<<< HEAD
-      return () => clearInterval(interval)}}, [isMonitoring, onMetricsUpdate]);
-  const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {,
-=======
       return () => clearInterval(interval)
   }
   }, [isMonitoring, onMetricsUpdate]);
   const checkPerformanceAlerts = (currentMetrics: PerformanceMetrics) => {;
->>>>>>> origin/main
     const newAlerts: string[] = [],
     if (currentMetrics.loadTime > 3000) 
       newAlerts.push('Load time is above 3 seconds')
   }
-<<<<<<< HEAD
-  const toggleMonitoring = () => {setIsMonitoring(!isMonitoring)}const formatBytes = (bytes: number) => {,
-    if (bytes === 0) return '0 Bytes'
-=======
     if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {
     // 50MB;
       newAlerts.push('Memory usage is high')
@@ -103,7 +88,6 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
   }
   const getPerformanceColor = (value: number, thresholds: { good: number, warning: number }) => {;
     if (value <= thresholds.good) return 'text-green-400';
->>>>>>> origin/main
     if (value <= thresholds.warning) return 'text-yellow-400';
     return 'text-red-400'
   }

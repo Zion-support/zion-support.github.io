@@ -22,16 +22,10 @@ const BlockchainWeb3Page: React.FC = () => {
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: [''24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access'']
   },
-<<<<<<< HEAD
-  ];
-return() {features.map((feature, index) => ()
-    feature.benefits.map((benefit, benefitIndex) => ()
-=======
   ];];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta />
       </Helmet>
@@ -65,7 +59,6 @@ return (
 
                       {benefit})
                     </li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   ))}
                 </ul>
               </div>

@@ -26,18 +26,12 @@ const benefits = const benefits = const benefits = [
     'Cost-effective pricing plans',;
 ;
     'Proven track record of success';
-<<<<<<< HEAD
-  ];
-return ()
-=======
   ];];];
 return (
           </div>
->>>>>>> origin/main
         </div>
       </section>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

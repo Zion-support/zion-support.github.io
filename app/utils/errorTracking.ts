@@ -3,16 +3,6 @@
  * Advanced Error Tracking and Reporting System;
  * Provides comprehensive error tracking with categorization and analytics;
  */;
-<<<<<<< HEAD
-export enum ErrorSeverity {/* TODO: Fix JSX expression */,}}}
-export enum ErrorCategory {Network = 'network',;}
-  Validation = 'validation',;
-  Authorization = 'authorization',;
-  Runtime = 'runtime',;
-  Configuration = 'configuration',;
-  ExternalService = 'external_service'}}
-export interface ErrorMetadata {category: ErrorCategory,}
-=======
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
 export enum ErrorCategory {
@@ -26,7 +16,6 @@ export enum ErrorCategory {
 }
 export interface ErrorMetadata {
     category: ErrorCategory,
->>>>>>> origin/main
   severity: ErrorSeverity,
   userId?: string;
   sessionId?: string;
@@ -34,18 +23,12 @@ export interface ErrorMetadata {
   tags?: string[]
   timestamp: number,
   stackTrace?: string;
-<<<<<<< HEAD
-  userAgent?: string;,;
-  url?: string;}}
-export interface TrackedError {id: string,}
-=======
   userAgent?: string;,
   url?: string;
   }
 }
 export interface TrackedError {
     id: string,
->>>>>>> origin/main
   message: string,
   metadata: ErrorMetadata,
   occurrences: number,
@@ -162,7 +145,6 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */,}}}
   y: ErrorSeverity })
   ): string {/* TODO: Fix JSX expression */}
     }
->>>>>>> origin/main
     const existingError = this.errors.get(errorId);
     if (existingError) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
       this.errors.set(errorId, trackedError);
@@ -231,16 +213,6 @@ private async reportToExternalService(errorId: string): Promise<void> {,
     // In a real implementation, this would send to an external service;
     // like Sentry, LogRocket, or a custom error reporting, service;
   }
-<<<<<<< HEAD
-getErrors(): TrackedError[] {return Array.from(this.errors.values())}}
-getErrorById(id: string): TrackedError | undefined {,}
-    ,}return this.errors.get(id)}
-clearErrors(): void {this.errors.clear()}}}
-getErrorStats(): {total: number,
-    byCategory: Record<ErrorCategory>,
-    bySeverity: Record<ErrorSeverity, number>}} {const errors = this.getErrors()}const byCategory: Record<ErrorCategory, number> = {}as Record<ErrorCategory>
-    const bySeverity: Record<ErrorSeverity, number> = {}as Record<ErrorSeverity>
-=======
     logger.info('Error reported to external service', { errorId })
   }
 getErrors(): TrackedError[] {
@@ -263,7 +235,6 @@ getErrorStats(): {
   };
     const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory>;
     const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity>;
->>>>>>> origin/main
     // Initialize counters;
     );
       byCategory[category] = 0;)
@@ -274,12 +245,6 @@ getErrorStats(): {
     // Count errors;
     );
       byCategory[error.metadata.category]++);
-<<<<<<< HEAD
-      bySeverity[error.metadata.severity]++)}})
-    return {total: errors.length,}
-      byCategory,;
-      bySeverity;}}
-=======
       bySeverity[error.metadata.severity]++)
   }
     })
@@ -289,7 +254,6 @@ getErrorStats(): {
       bySeverity;
   }
     }
->>>>>>> origin/main
   }
 }
 // Export singleton instance;
@@ -298,14 +262,9 @@ export const errorTracking = ErrorTrackingService.getInstance();
    * Report critical errors to external service;
    */;
   private async reportToExternalService(errorI);
-<<<<<<< HEAD
-  d: string): Promise<void> {/* TODO: Fix JSX expression */,}s: {'Content-Type': 'application/json' ,},;
-          bod,;
-=======
   d: string): Promise<void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
->>>>>>> origin/main
   y: JSON.stringify(error),
         })
       }

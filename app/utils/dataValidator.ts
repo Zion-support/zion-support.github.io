@@ -26,12 +26,8 @@ export function validateEmail(email: string): { isValid: boolean, error?: string
   if (email.length > 254) return { isValid: false, error: 'Email is too long' }
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailRegex.test(email);
-<<<<<<< HEAD
-  return {isValid,;}
-=======
   return {
     isValid,
->>>>>>> origin/main
     error: isValid ? undefined : 'Invalid email format',
 export function validateEmail(emai)
   }
@@ -60,12 +56,8 @@ try {
     const isValid = requireProtocol ?;
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :,
       true,
-<<<<<<< HEAD
-    return {,;}
-=======
     return {
     ,
->>>>>>> origin/main
       isValid;
       error: isValid ? undefined : 'Invalid URL format or protocol',}try {/* TODO: Fix JSX expression */,}}p: //${url,}`;
     const parsed = new URL(urlToValidate);
@@ -86,12 +78,8 @@ export function validatePhoneNumber(phon);
 // More flexible phone regex that handles various formats;
   const phoneRegex = /^[\+]?[1]?[\s\-\.]?[(]?[0-9]{3}[)]?[\s\-\.]?[0-9]{3}[\s\-\.]?[0-9]{4,6}$/;
   const isValid = phoneRegex.test(phone);
-<<<<<<< HEAD
-  return {isValid,;}
-=======
   return {
     isValid,
->>>>>>> origin/main
     error: isValid ? undefined : 'Invalid phone number format',
   // More flexible phone regex that handles various, formats;
   }
@@ -116,7 +104,6 @@ export function validateNumberRange(value: number, min: number, max: number): bo
   }
   x: number): boolean {/* TODO: Fix JSX expression */}
 }
->>>>>>> origin/main
 /**;
  * Validate credit card number (basic Luhn algorithm);
  */;
@@ -212,7 +199,6 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
   }
   e: FieldRule): boolean {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
 }
 /**;
  * Validate form data;
@@ -224,7 +210,6 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
   for (const field in rules) {
     const value = data[field];
     const fieldRules = rules[field] || [];
->>>>>>> origin/main
     const fieldErrors: string[] = [],
     for (const rule of fieldRules) ,
       if (!validateFieldRule(value, rule)
@@ -253,7 +238,6 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
         {/* TODO: Fix JSX expression */}
           }
->>>>>>> origin/main
         } )
     }
   }
@@ -277,56 +261,14 @@ export const ValidationRulesBuilder = const ValidationRulesBuilder = const Valid
   }
     message: `Must be between ${min} and ${max}`;
   }),
-<<<<<<< HEAD
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ()
-=======
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
->>>>>>> origin/main
     ,
     validate: validator,
     message;)
   })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   })
 }
 // Legacy class-based API for backward compatibility;
-<<<<<<< HEAD
-class DataValidator {private static instance: DataValidator,}
-    messag,;
-  e: 'This field is required',}}),;
-  emai,;
-  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */,})
-  }),;
-  ur,;
-  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */,})
-  }),;
-  minLengt,;
-  h: (mi),
-  n: number): ValidationRule<string> => ({/* TODO: Fix JSX expression */,}`;
-  e: `Must be at least ${min,}characters long`);
-  }),;
-  maxLengt,;
-  h: (ma),
-  x: number): ValidationRule<string> => ({/* TODO: Fix JSX expression */,}`;
-  e: `Must be no more than ${max,}characters long`);
-  }),;
-  patter,;
-  n: (patter,
-  n: RegExp, messag);
-  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */,})
-  }),;
-  rang,;
-  e: (mi,
-  n: number, ma);
-  x: number): ValidationRule<number> => ({/* TODO: Fix JSX expression */,}`;
-  e: `Must be between ${min,}and ${max}`);
-  }),;
-  custo,;
-  m: <T>(validato,
-  r: (valu),
-  e: T) => boolean, messag,;
-  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */,})
-=======
 class DataValidator {
     private static instance: DataValidator,
     messag,
@@ -352,7 +294,6 @@ class DataValidator {
   r: (valu),
   e: T) => boolean, messag,
   e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
->>>>>>> origin/main
   })
 }
 // Legacy class-based API for backward compatibility;
@@ -383,7 +324,6 @@ class DataValidator {/* TODO: Fix JSX expression */,}}private constructor() {}st
   }
   n: RegExp): boolean {/* TODO: Fix JSX expression */}
   }
->>>>>>> origin/main
   rules = ValidationRulesBuilder;
 }
 export const dataValidator = DataValidator.getInstance();
@@ -412,7 +352,6 @@ export default DataValidator;
   if (typeof value === 'string' && value.trim() === '') return {/* TODO: Fix JSX expression */}`;
   r: `${fieldName} is required` }
   // Not,
->>>>>>> origin/main
   e: Empty arrays are considered valid for required fields (they exist, just empty);
   return {/* TODO: Fix JSX expression */,}}d: true ,}
 }
@@ -447,15 +386,10 @@ export function validatePassword(passwor);
 }
 export function sanitizeHTML(html: string): string {,}
     if (!html || typeof html !== 'string') return '',
-<<<<<<< HEAD
-,;
-  // First escape HTML entities;}let clean = html.replace(/&/g, '&amp;');}</React.Fragment>
-=======
 ,
   // First escape HTML, entities;
   }
   let clean = html.replace(/&/g, '&amp;');}</>
->>>>>>> origin/main
   clean = clean.replace(/</g, '&lt;');
   clean = clean.replace(/>/g, '&gt;');
   clean = clean.replace(/"/g, '&quot;');
@@ -473,10 +407,6 @@ export function sanitizeInput(input: string, maxLength: number = 1000): string |
   clean = clean.trim();
   if (clean.<<<length>maxLength</length></length>) 
     clean = clean.substring(0, maxLength);
-<<<<<<< HEAD
-export function sanitizeHTML(htm)}l: string): string {/* TODO: Fix JSX expression */,}}}
-export function sanitizeInput(inpu,;)
-=======
 export function sanitizeHTML(htm)
   }
   l: string): string {/* TODO: Fix JSX expression */}
@@ -573,7 +503,6 @@ try {/* TODO: Fix JSX expression */}
   d: boolean, error?: string }> {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   r: 'Validation failed' }
->>>>>>> origin/main
   }
 }
 "`;

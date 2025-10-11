@@ -20,10 +20,6 @@ const PagePage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };
@@ -42,13 +38,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
-return() {features.map((feature, index) => ()
-=======
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
->>>>>>> origin/main
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -112,7 +104,6 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

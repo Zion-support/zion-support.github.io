@@ -6,15 +6,6 @@ import {Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Ph
 const CommunityPage: React.FC = () => {,
   const [activeTab, setActiveTab] = useState('overview');
 
-<<<<<<< HEAD
-  const communityStats = const communityStats = const communityStats = [
-    { icon: Users, value: '5,000+', label: 'Active Members' },
-    { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
-    { icon: Calendar, value: '12', label: 'Events Monthly' },;
-    { icon: Star, value: '4.9', label: 'Average Rating' };
-  ];
-  const events = const events = const events = [
-=======
   const features = [
     
       icon: Users, value: '5,000+', label: 'Active Members' },
@@ -25,9 +16,7 @@ const CommunityPage: React.FC = () => {,
     {
       icon: Star, value: '4.9', label: 'Average Rating' }
   ];];];
->>>>>>> origin/main
   const events = [
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {
       title: 'AI Development Workshop',
       date: '2024-02-15',
@@ -73,16 +62,9 @@ const CommunityPage: React.FC = () => {,
       description: 'General tech discussions and community updates',
       posts: 2100,
       members: 3000;
-<<<<<<< HEAD
-    };
-  ];
-  const benefits = const benefits = const benefits = [
-=======
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {
       icon: Users,
       title: 'Network with Peers',
@@ -98,13 +80,9 @@ const CommunityPage: React.FC = () => {,
       description: 'Showcase your projects and get community recognition';
     };
   ];
-<<<<<<< HEAD
-  return() {communityStats.map((stat, index) => ()
-=======
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
@@ -153,7 +131,6 @@ const CommunityPage: React.FC = () => {,
                 <div className="text-2xl font-bold text-white mb-2">{stat.value}</div></div></div>
                 <div className="text-gray-300">{stat.label}</div></div></div>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
 
@@ -175,19 +152,8 @@ const CommunityPage: React.FC = () => {,
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Overview Tab */}{activeTab === 'overview' && (
-=======
           {/* Overview Tab */},
-<<<<<<< HEAD
-    {activeTab === 'overview' && ()
-          )},
-    {/* Events Tab */},
-    {activeTab === 'events' && ()
-                  {events.map((event, index) => ()
-=======
     {activeTab === 'overview' && (
->>>>>>> origin/main
             <div className="space-y-12">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2></h2></h2>
@@ -246,7 +212,6 @@ const CommunityPage: React.FC = () => {,
           )},
     {/* Events Tab */},
     {activeTab === 'events' && (
->>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2></h2></h2>)
@@ -285,24 +250,13 @@ const CommunityPage: React.FC = () => {,
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>)
                     </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Forums Tab */}{activeTab === 'forums' && (
-=======
           )},
     {/* Forums Tab */},
-<<<<<<< HEAD
-    {activeTab === 'forums' && ()
-                  {forums.map((forum, index) => ()
-=======
     {activeTab === 'forums' && (
->>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2></h2></h2>)
@@ -330,24 +284,13 @@ const CommunityPage: React.FC = () => {,
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>)
                     </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Benefits Tab */}{activeTab === 'benefits' && (
-=======
           )},
     {/* Benefits Tab */},
-<<<<<<< HEAD
-    {activeTab === 'benefits' && ()
-                  {benefits.map((benefit, index) => ()
-=======
     {activeTab === 'benefits' && (
->>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2></h2></h2>)
@@ -364,16 +307,10 @@ const CommunityPage: React.FC = () => {,
                         <p className="text-gray-300">{benefit.description}</p></p></p>
                       </div>)
                     </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-          )}
-
-          {/* Join Community CTA */} <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
-=======
           )},
     {/* Join Community CTA */}
               </a>

@@ -16,7 +16,6 @@ const AISpaceMissionOptimizer: React.FC = () => {,
     },
     {
       icon: Target,
->>>>>>> origin/main
       title: 'Payload Optimization',
       description: 'Intelligent payload configuration and resource allocation for maximum mission value',
       benefits: [''Optimal payload distribution', 'Resource efficiency', 'Mission success maximization'']
@@ -103,30 +102,12 @@ const AISpaceMissionOptimizer: React.FC = () => {,
     {title: 'Deep Space Exploration',
       description: 'Mission planning for deep space exploration and scientific missions',
       icon: Eye,
-<<<<<<< HEAD
-      results: 'Enhanced mission success rates';
-    };
-  ];
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-transparent" / /></div>
-          <div className="max-w-7xl mx-auto relative z-10" /></div>
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full px-6 py-3 mb-8 border border-blue-500/30" /></div>
-                <Rocket className="w-5 h-5 text-blue-400" / /></Rocket>
-                <span className="text-blue-400 font-semibold">Space Technology</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent" /></h1>
-                AI Space Mission Optimizer
-              </h1>
-=======
       results: 'Enhanced mission success rates'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." />
         <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" />
@@ -154,7 +135,6 @@ const AISpaceMissionOptimizer: React.FC = () => {,
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 AI Space Mission Optimizer;
               </h1></h1></h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed" /></p>
                 Revolutionary AI-powered space mission optimization for trajectory planning, 

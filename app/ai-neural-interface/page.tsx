@@ -16,7 +16,6 @@ const AINeuralInterface: React.FC = () => {,
     },
     {
       icon: Eye,
->>>>>>> origin/main
       title: 'Visual Cortex Interface',
       description: 'Direct interface with visual cortex for enhanced vision and augmented reality',
       benefits: [''Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition'']
@@ -103,30 +102,12 @@ const AINeuralInterface: React.FC = () => {,
     {title: 'Communication Aid',
       description: 'Neural interfaces for communication assistance in locked-in syndrome',
       icon: MessageSquare,
-<<<<<<< HEAD
-      results: 'Restored communication ability';
-    };
-  ];
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent" / /></div>
-          <div className="max-w-7xl mx-auto relative z-10" /></div>
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 mb-8 border border-cyan-500/30" /></div>
-                <Brain className="w-5 h-5 text-cyan-400" / /></Brain>
-                <span className="text-cyan-400 font-semibold">Neural Technology</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" /></h1>
-                AI Neural Interface
-              </h1>
-=======
       results: 'Restored communication ability'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
         <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />
@@ -154,7 +135,6 @@ const AINeuralInterface: React.FC = () => {,
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Neural Interface;
               </h1></h1></h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed" /></p>
                 Revolutionary AI-powered neural interface technology for medical rehabilitation, 

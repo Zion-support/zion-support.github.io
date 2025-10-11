@@ -45,10 +45,6 @@ const ProjectManagementProPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automation',
-<<<<<<< HEAD
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.',}}
-  ]
-=======
       description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
   };
     };
@@ -67,13 +63,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Streamline project workflows';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -104,7 +96,6 @@ return (
                 </button>
                 <button>)
                   </button></button><Phone>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   Call (302) 464-0950,
                 </button>
               </div>

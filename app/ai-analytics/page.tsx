@@ -8,7 +8,6 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: [''Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive'']
     },
@@ -63,19 +62,12 @@ const AiAnalyticsPage: React.FC = () => {
       icon: '⚙️',},
     {title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
-<<<<<<< HEAD
-      icon: '🛡️';
-    };
-  ];
-  return ()
-=======
       icon: '🛡️'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       </Helmet>
@@ -104,7 +96,6 @@ const AiAnalyticsPage: React.FC = () => {
         </section>
       </main>)
     </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>

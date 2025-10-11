@@ -16,7 +16,6 @@ const AISmartContractAuditor: React.FC = () => {,
     },
     {
       icon: Code,
->>>>>>> origin/main
       title: 'Code Quality Assessment',
       description: 'Comprehensive code review with best practices compliance and optimization suggestions',
       benefits: [''Gas optimization recommendations', 'Code complexity analysis', 'Best practices compliance'']
@@ -103,30 +102,12 @@ const AISmartContractAuditor: React.FC = () => {,
     {title: 'Cross-Chain Bridge Audits',
       description: 'Security analysis for cross-chain bridge implementations',
       icon: Globe,
-<<<<<<< HEAD
-      results: 'Prevented $50M+ in potential losses';
-    };
-  ];
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent" / /></div>
-          <div className="max-w-7xl mx-auto relative z-10" /></div>
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 mb-8 border border-cyan-500/30" /></div>
-                <Shield className="w-5 h-5 text-cyan-400" / /></Shield>
-                <span className="text-cyan-400 font-semibold">AI-Powered Security</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" /></h1>
-                AI Smart Contract Auditor
-              </h1>
-=======
       results: 'Prevented $50M+ in potential losses'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
         <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />
@@ -154,7 +135,6 @@ const AISmartContractAuditor: React.FC = () => {,
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Smart Contract Auditor;
               </h1></h1></h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed" /></p>
                 Advanced AI-powered smart contract auditing with automated security analysis, 

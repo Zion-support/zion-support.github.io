@@ -10,12 +10,6 @@ interface LogEntry {}}level: LogLevel,
 }
 class ProductionLogger {}}private isDevelopment = process.env.NODE_ENV === 'development';
   private isProduction = process.env.NODE_ENV === 'production';
-<<<<<<< HEAD
-private log(level: LogLevel, message: string, data?: unknown, context?: string): void {const entry: LogEntry = {,}
-      level;}private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}}const entry: LogEntry = {,}level,;
-      message,;
-      data,;
-=======
 private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
     const entry: LogEntry = ,
       level;
@@ -25,7 +19,6 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
       level,
       message,
       data,
->>>>>>> origin/main
       timestamp: new Date().toISOString(),
       context;
     }

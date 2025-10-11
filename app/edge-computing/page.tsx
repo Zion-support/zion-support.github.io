@@ -56,10 +56,6 @@ const services = const services = const services = [
     {
       icon: '📱',
       title: 'Mobile Edge',
-<<<<<<< HEAD
-      description: 'Mobile edge computing for 5G and mobile applications',}}
-  ]
-=======
       description: 'Mobile edge computing for 5G and mobile applications'
   };
     };
@@ -105,31 +101,13 @@ const useCases = const useCases = const useCases = [
     {
       title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
-<<<<<<< HEAD
-      icon: '🎮',}}
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>)
-      <Helmet />
-=======
       icon: '🎮'
   };
     };
   ];
-<<<<<<< HEAD
-return ()
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
-        <div className="relative max-w-7xl mx-auto text-center" / /></div>
-          <h1></h1>
-            Edge Computing;
-            <span></span>
-              Solutions
-            </span>
-=======
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div></div></div>
       <Helmet>
->>>>>>> origin/main
         <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -152,7 +130,6 @@ return (
             </h1></h1><span>
               Solutions;
             </span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           </h1>
           <p></p>
             Bring computing power closer to your data and users with our advanced edge computing solutions.;

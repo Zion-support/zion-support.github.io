@@ -24,7 +24,6 @@ interface PerformanceOptimizerProps {
 
   const optimizeMemory = const optimizeMemory = useCallback(() => {;
     if ('memory' in performance) {;
->>>>>>> origin/main
       const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) 
         // Trigger garbage collection if available;
@@ -35,11 +34,6 @@ interface PerformanceOptimizerProps {
     }
   }, []);
 
-<<<<<<< HEAD
-  const runOptimizations = useCallback(async () => {setIsOptimizing(true);
-    const newOptimizations: string[] = [],
-    // Optimize images;
-=======
   const runOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     const newOptimizations: string[] = []
@@ -63,7 +57,6 @@ interface PerformanceOptimizerProps {
   }, [enableImageOptimization, optimizeImages, optimizeMemory]);
   children: React.ReactNode;
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-89d8
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
   useEffect(() => {
@@ -92,28 +85,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
       fontPreload.as = 'style'
       document.head.appendChild(fontPreload),
 
-<<<<<<< HEAD
-      // Preload critical images
-      const criticalImages = const criticalImages = const criticalImages = [;
-        '/images/hero-bg.jpg',;
-        '/images/logo.png';
-      ];
-      criticalImages.forEach()
-=======
       // Preload critical images;
       const criticalImages = [
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
-        '/images/logo.png'
-      ]
-
-      criticalImages.forEach(src => {)
-=======
         '/images/logo.png';
       ];
 
       criticalResources.forEach(resource => {
->>>>>>> cursor/analyze-improve-and-deploy-application-89d8
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;
@@ -158,7 +136,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
       images.forEach(img => imageObserver.observe(img));
     };
->>>>>>> cursor/analyze-improve-and-deploy-application-89d8
 
     // Optimize fonts
     const optimizeFonts = () => {

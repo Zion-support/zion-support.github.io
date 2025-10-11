@@ -49,10 +49,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ${title}Page: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Navigation />)
-      <div className="flex items-center justify-center min-h-screen">)
-        <div className="text-center">),
+      <div className="flex items-center justify-center min-h-screen"></div>)
+        <div className="text-center"></div>),
           <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
           <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions</p>
           <Link;
@@ -67,150 +67,10 @@ const ${title}Page: React.FC = () => {
     </div>);
 };
 
-export default ${title}Page;`;
-  }
-  
-  return null;
 };
 
-// Check if file has syntax errors by trying to parse it;
-const hasSyntaxErrors = (filePath) => {
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Check for common syntax error patterns;
-    const errorPatterns = [
-      /\/\/ TODO: Add content\s*}/,
-      /\/\/ TODO: Add parameters,\s*\)/,
-      /\/\/ TODO: Add items,\s*]/,
-      /{\s*\/\/ TODO: Add content\s*}/,
-      /{\s*\/\/ TODO: Add parameters,\s*\)/,
-      /{\s*\/\/ TODO: Add items,\s*]/,
-      /^\s*}\s*$/m,
-      /^\s*]\s*$/m,
-      /^\s*\)\s*$/m,
-      /\/\/\s*[^/]/,
-      /<[^>]*\/\/[^>]*>/,
-      /{\s*\/\/[^}]*$/m;
-    ];
-    
-    return errorPatterns.some(pattern => pattern.test(content));
-  } catch (error) {
-    return true;
-  }
-};
 
-// Fix all files;
-const fixAllFiles = () => {
-  const files = getAllFilesWithErrors();
-  let fixedCount = 0;
-  
-  for (const filePath of files) {
-    if (hasSyntaxErrors(filePath)) {
-      const newContent = createComingSoonPage(filePath);
-      if (newContent) {
-        try {
-          fs.writeFileSync(filePath, newContent);
-          console.log(`Fixed: ${path.relative(__dirname, filePath)}`);
-          fixedCount++;
-        } catch (error) {
-          console.error(`Error fixing ${filePath}:`, error.message);
-        }
-    // Fix common syntax patterns
-    const fixes = [
-      // Fix malformed object properties with missing commas
-      {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,
-    $3:'
-      },
-      // Fix malformed metadata objects
-      {
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {
-  $1: \'$2\',
-  $3:'
-      },
-      {
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {
-  $1: "$2",
-  $3:'
-      },
-      // Fix malformed function parameters
-      {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'export default function $1({
-  $2:'
-      },
-      // Fix malformed object literals
-      {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,
-    $3:'
-      },
-      // Fix missing semicolons in exports
-      {
-        pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const $1 = {
-  $2: \'$3\',
-  $4:'
-      },
-      // Fix malformed function declarations
-      {
-        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'function $1({
-  $2:'
-      },
-      // Fix missing commas in arrays
-      {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,
-    $3:'
-      },
-      // Fix malformed JSX attributes
-      {
-        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
-        replacement: '$1="$2" $3'
-      },
-      // Fix missing closing braces
-      {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,
-    $3:'
-      }
-    ];
-    
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    }
-    
-    // Additional specific fixes
-    const specificFixes = [
-      // Fix the specific pattern in about/page.tsx
-      {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,
-    $3:'
-      },
-      // Fix malformed metadata
-      {
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {
-  $1: \'$2\',
-  $3:'
-      },
-      // Fix malformed function parameters
-      {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'export default function $1({
+export default function $1({
   $2:'
       }
     ];

@@ -8,7 +8,6 @@ const AiContentGenerationPage: React.FC = () => {
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -25,15 +24,10 @@ const AiContentGenerationPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
     },
-<<<<<<< HEAD
-  ];
-  return ()
-=======
   ];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Content Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced content generation powered by AI technology." />
         <meta name="keywords" content="AI content generation, artificial intelligence, content creation, AI solutions, intelligent writing" />
@@ -63,7 +57,6 @@ const AiContentGenerationPage: React.FC = () => {
         </section>
       </main>)
     </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>
@@ -103,22 +96,3 @@ const AiContentGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiContentGenerationPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> origin/main

@@ -6,7 +6,6 @@ const AccessibilityPage: React.FC = () => {
     },
     {
       icon: MousePointer,
->>>>>>> origin/main
       title: 'Motor Accessibility',
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
       benefits: [''Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls'']
@@ -52,18 +51,9 @@ const standards = const standards = const standards = [
       status: 'Fully Compliant';
     };
   ];
-<<<<<<< HEAD
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
-          <div className="relative max-w-7xl mx-auto text-center" /></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /></h1>
-              Accessibility <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-=======
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />
@@ -77,7 +67,6 @@ const standards = const standards = const standards = [
           </div></div><div className="relative max-w-7xl mx-auto text-center">
             </div></div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Accessibility </h1></h1><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
               Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.

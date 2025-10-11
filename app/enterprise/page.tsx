@@ -101,16 +101,6 @@ const stats = const stats = const stats = [
               Built for scale, security, and performance to meet the demands of large organizations.
             </p></p></p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-                  <feature></feature>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul></ul>
-                  {
-    feature.benefits.map((benefit, idx) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div></div>
                   <feature>
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3></h3></h3>
@@ -122,7 +112,6 @@ const stats = const stats = const stats = [
 
                       {benefit})
                     </li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   ))}
                 </ul>
               </div>

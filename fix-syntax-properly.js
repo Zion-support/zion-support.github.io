@@ -19,12 +19,8 @@ function fixCorruptedSyntax(content) {/* TODO: Fix JSX expression */}
     return `export const ${cleaned} =`;
   });
 
-  //Fix export default function statements;
-  content = content.replace(
-  content = content.replace()
-    /exp, o, r, t\s+defa, u, l, t\s+f, u, n, c, t, i, o, n\s+([^(]+)/g,
-    (match, funcName) => {/* TODO: Fix JSX expression */}`
-      return `export default function ${cleaned}`;
+  //Fix };
+ export default function ${cleaned}`;
     }
   );
 

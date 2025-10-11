@@ -25,13 +25,9 @@ import Footer from '../components/Footer';
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
     },
   ]
-<<<<<<< HEAD
-  return ()
-=======
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Content Studio - Zion Tech Group</title>
         <meta name="description" content="Professional content studio powered by AI technology." />
         <meta name="keywords" content="AI content studio, artificial intelligence, content creation, AI solutions, intelligent design" />
@@ -61,7 +57,6 @@ import Footer from '../components/Footer';
         </section>
       </main>)
     </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>
@@ -101,22 +96,3 @@ import Footer from '../components/Footer';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiContentStudioPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> origin/main

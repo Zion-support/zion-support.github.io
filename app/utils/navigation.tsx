@@ -45,23 +45,7 @@ export const useSearchParams = useCallback((...args) => {};
   return params;}
 };
 
-export default { useRouter, usePathname, useSearchParams }
-export const useRouter = const useRouter = () => {/* TODO: Fix JSX expression */};
-  }, []);
-  const replace = useCallback((ur);
-  l: string) => {/* TODO: Fix JSX expression */}
-  }, []);
-  const back = const back = useCallback(() => {/* TODO: Fix JSX expression */};
-  }, []);
-  const forward = const forward = useCallback(() => {/* TODO: Fix JSX expression */};
-  }, []);
-  const refresh = const refresh = useCallback(() => {/* TODO: Fix JSX expression */};
-  }, []);
-  return {/* TODO: Fix JSX expression */}
-  }
-}
-export const usePathname = const usePathname = const usePathname = () => {/* TODO: Fix JSX expression */}
 };
-export const useSearchParams = () => {/* TODO: Fix JSX expression */};
+
 
 export default {useRouter, usePathname, useSearchParams}}

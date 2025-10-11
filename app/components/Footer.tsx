@@ -17,26 +17,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Status', url: '/status' }
   ];
 
-<<<<<<< HEAD
-  const serviceLinks = [
-    { name: 'AI Services', url: '/ai-services' },
-    { name: 'IT Services', url: '/it-services' },
-    { name: 'Micro SaaS', url: '/micro-saas' },
-    { name: 'Cloud Solutions', url: '/it-services?category=Cloud' },
-    { name: 'Cybersecurity', url: '/it-services?category=Security' },
-    { name: 'Quantum Computing', url: '/ai-services?category=Quantum Computing' },
-    { name: '5G Implementation', url: '/it-services?category=5G Technology' },
-    { name: 'Blockchain Solutions', url: '/it-services?category=Blockchain' }
-  ];
-
-  const resourcesLinks = [
-=======
   const servicesLinks = [
     { name: 'AI Services', url: '/ai-services' },
     { name: 'IT Services', url: '/it-services' },
     { name: 'Micro SAAS', url: '/micro-saas' },
     { name: 'All Services', url: '/services' },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
     { name: 'Pricing', url: '/pricing' },
     { name: 'Consultation', url: '/consultation' },
     { name: 'Demo', url: '/demo' },
@@ -58,11 +43,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Enterprise Solutions', url: '/enterprise' },
     { name: 'Digital Transformation', url: '/digital-transformation' },
     { name: 'Business Intelligence', url: '/business-intelligence' },
-<<<<<<< HEAD
-    { name: 'Edge Computing', url: '/it-services?category=Edge Computing' },
-    { name: 'Consultation', url: '/consultation' },
-    { name: 'Custom Development', url: '/custom-software' }
-=======
     { name: 'Edge Computing', url: '/edge-computing' },
     { name: 'Cloud Migration', url: '/cloud-migration' },
     { name: 'Cybersecurity', url: '/cybersecurity' },
@@ -77,7 +57,6 @@ const Footer: React.FC = memo(() => {
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
     { name: 'Sitemap', url: '/sitemap' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
   ];
 
 const Footer: React.FC = () => {

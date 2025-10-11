@@ -29,10 +29,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     {
       icon: Target,
       title: 'Goal Tracking',
-<<<<<<< HEAD
-      description: 'Monitor KPIs and business objectives with automated alerts.',}}
-  ]
-=======
       description: 'Monitor KPIs and business objectives with automated alerts.'
   };
     };
@@ -52,20 +48,12 @@ const benefits = const benefits = const benefits = [
 const metrics = const metrics = const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
-<<<<<<< HEAD
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },;
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star };
-  ];
-return ()
-    features.map((feature, index) => ()
-=======
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
   ];];];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -132,7 +120,6 @@ return (
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                   <p className="text-gray-300">{feature.description}</p></p></p>)
                 </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               ))}
             </div>
           </div>

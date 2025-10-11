@@ -30,27 +30,8 @@ async function submitByEmail(to: string;)
   });
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
-  if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method not allowed' });
-async function submitByEmail(t,
-  o: string,
-  subjec,
-  t: string,
-  tex,
-  t: string,
-  attachment,
-  s: unknown[] = [])
-) {/* TODO: Fix JSX expression */}
-  }
+};
 
-  const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}
-  h: { user, pass })
-  });
-
-  await transporter.sendMail({/* TODO: Fix JSX expression */})
-  });
-}
 
 export default async function handler(re,
   q: NextApiRequest, re)

@@ -48,7 +48,6 @@ gtag('js', new Date());
               trackEvent('web_vitals', 'CLS', (entry as any).value)
   }
             }
->>>>>>> origin/main
           }
         }
       })
@@ -140,10 +139,6 @@ declare global {
 
 export default Analytics;
 // Analytics Provider for context;
-<<<<<<< HEAD
-export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
-      <Analytics />}{children}
-=======
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 }

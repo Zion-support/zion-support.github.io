@@ -62,11 +62,7 @@ export function isValidPhone(phone: string): boolean;
  */;
 export function isValidUrl(url: string): boolean {,}
     ,
-<<<<<<< HEAD
-  try {,;}
-=======
   try {,
->>>>>>> origin/main
     const urlObj = new URL(url);
     return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:'
 export function isValidUrl(url: string): boolean 
@@ -106,7 +102,6 @@ export function isRequired(value: string | null | undefined): boolean {,}
     return, false;
   }
   }
->>>>>>> origin/main
   return value.toString().trim().length > 0;
 export function isRequired(value: string | null | undefined): boolean {,}
     return value !== null && value !== undefined && value.trim() !== ''}}
@@ -151,10 +146,6 @@ export function isStrongPassword(password: string): boolean {,}
     const hasMinLength = password.length >= 8;
   const hasUpperCase = const hasUpperCase = const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
-<<<<<<< HEAD
-  const hasNumber = /[0-9]/.test(password),,;
-  return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;}}
-=======
   const hasNumber = /[0-9]/.test(password),,
 /**;
  * Get password strength score (0-4);
@@ -164,17 +155,11 @@ export function getPasswordStrength(password: string): number {,}
   if (password.length >= 8) score++;
   if (password.length >= 12) score++
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++
-<<<<<<< HEAD
-  if (/[0-9]/.test(password)) score++,,;
-  if (/[^a-zA-Z0-9]/.test(password)) score++;,;
-  return Math.min(score, 4)}}
-=======
   if (/[0-9]/.test(password)) score++,,
   if (/[^a-zA-Z0-9]/.test(password)) score++;,
   return Math.min(score, 4)
   }
 }
->>>>>>> origin/main
 /**;
  * Validate credit card number using Luhn algorithm;
  */;
@@ -186,7 +171,6 @@ export function isValidCreditCard(cardNumber: string): boolean {,}
     return, false;
   }
   }
->>>>>>> origin/main
   let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {
@@ -221,7 +205,6 @@ export function sanitizeHtml(html: string): string {
   for (const key in schema) 
     const validator = schema[key];
       errors.push(`Invalid value for field: ${String(key)}`);
->>>>>>> origin/main
     }
   }
   return {
@@ -240,13 +223,6 @@ export interface FormField {
     message: string,}}>;
 }
 export function validateForm(fields: Record<string, FormField>);
-<<<<<<< HEAD
-): Record<string, string[]> {}const errors: Record<string, string[]> = {}for (const fieldName in fields) {const field = fields[fieldName]
-    const fieldErrors: string[] = [],
-    for (const validator of field.validators) {,;
-      if (!validator.validate(field.value)) {,;
-        fieldErrors.push(validator.message)}}
-=======
 ): Record<string, string[]> {}
   const errors: Record<string, string[]> = {}
   for (const fieldName in fields) {
@@ -261,7 +237,6 @@ export function validateForm(fields: Record<string, FormField>);
     if (fieldErrors.length > 0) {
     errors[fieldName] = fieldErrors;
   }
->>>>>>> origin/main
     }
     if (fieldErrors.length > 0) {errors[fieldName] = fieldErrors;}}
   }
@@ -281,7 +256,6 @@ export function validateForm(fields: Record<string, FormField>);
 export function hasMaxLength(value: string, maxLength: number): boolean {;
     return value && value.length <= maxLength;
   }
->>>>>>> origin/main
 }
 export function hasMaxLength(value: string, maxLength: number): boolean {,}
     return value && value.length <= maxLength;}}
@@ -289,25 +263,12 @@ export function hasMaxLength(value: string, maxLength: number): boolean {,}
  * Validate password strength;
  */;
 export function isStrongPassword(password: string): boolean {
-<<<<<<< HEAD
-    if (!password || password.length < 8) return false
-const hasUpperCase = const hasUpperCase = const hasUpperCase = /[A-Z]/.test(password)
-  const hasLowerCase = /[a-z]/.test(password),,
-  const hasNumbers = /\d/.test(password);
-  };
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}, {}]/.test(password);
-=======
     if (!password || password.length < 8) return false;
 const hasUpperCase = /[A-Z]/.test(password)
-<<<<<<< HEAD
-  const hasLowerCase = /[a-z]/.test(password),,;
-  const hasNumbers = /\d/.test(password)}const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{</React.Fragment>}</React.Fragment>{}{}]/.test(password);
-=======
   const hasLowerCase = /[a-z]/.test(password),,
   const hasNumbers = /\d/.test(password)
   }
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{} {}]/.test(password);
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
 /**;
@@ -523,16 +484,6 @@ export function isValidState(state: string): boolean {,}
 /**;
  * Validate form data with multiple fields;
  */;
-<<<<<<< HEAD
-export function validateFormData()
-  rules: Record<string, (value: unknown) => boolean>
-): ValidationResult {
-  const errors: string[] = [],
->>>>>>> origin/main
-for (const [field, validator] of Object.entries(rules)) {
-    const value = const value = const value = data[field];
-    if (!validator(value)) {};
-=======
 export function validateFormData(;)
   data: Record<string, unknown>,)
   rules: Record<string, (value: unknown) => boolean>
@@ -541,7 +492,6 @@ export function validateFormData(;)
 for (const [field, validator] of Object.entries(rules)
     const value = data[field]
     if (!validator(value)) }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       errors.push(`Invalid value for field: ${String(field)}`);
     }
   }
@@ -731,7 +681,6 @@ export function validateComposite(value: string, validators: Array<(val: string)
  */;
 ): Promise<ValidationResult> {,
   try {,
->>>>>>> origin/main
  * Validate required field with detailed result;
  */;
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult 

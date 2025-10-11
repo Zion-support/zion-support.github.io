@@ -90,7 +90,6 @@ interface SEOOptimizerProps {title?: string;}
   const _trackPerformanceMetrics = () => {;
     if (typeof window !== 'undefined' && 'performance' in window) {;
       window.addEventListener('load', () => {;
->>>>>>> origin/main
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
           })
@@ -98,29 +97,10 @@ interface SEOOptimizerProps {title?: string;}
       })
     }
   }
-<<<<<<< HEAD
-  return() {JSON.stringify(generateStructuredData())}
-=======
   return (
     <>
       <Helmet>
         <title>{title}</title>
-<<<<<<< HEAD
-        <meta name="description" content={description}/>
-        <meta name="keywords" content={keywords}/>
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
-        
-        {/* Open Graph */} <meta property="og: title" content={title,}/>
-        <meta property="og: description" content={description,}/>
-        <meta property="og: image" content={ogImage,}/>
-        <meta property="og: type" content="website" />,
-        {canonicalUrl && <meta property="og: url" content={canonicalUrl,}/>}
-        
-        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard,}/>
-        <meta name="twitter: title" content={title,}/>
-        <meta name="twitter: description" content={description,}/>
-        <meta name="twitter: image" content={ogImage,}/>
-=======
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
@@ -135,18 +115,13 @@ interface SEOOptimizerProps {title?: string;}
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
->>>>>>> origin/main
         
         {/* Structured Data */})
         <script type="application/ld+json">)
           {JSON.stringify(generateStructuredData())}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         </script>
       </Helmet>
       
-<<<<<<< HEAD
-      {children}{process.env.NODE_ENV === 'development' && (
-=======
       {children},
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
@@ -160,16 +135,6 @@ interface SEOOptimizerProps {title?: string;}
             </div>
           )}
         </div>
-<<<<<<< HEAD
-      )}
-
-      {/* Twitter Card Tags */} <meta name="twitter: card" content="summary_large_image" />,
-      <meta name="twitter: title" content={title,}/>
-      <meta name="twitter: description" content={description,}/>
-      <meta name="twitter: image" content={ogImage,}/>
-      <meta name="twitter: site" content="@ziontechgroup" />,
-      <meta name="twitter: creator" content="@ziontechgroup" />,
-=======
       )},
     {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" / /></meta>
@@ -209,7 +174,6 @@ interface SEOOptimizerProps {title?: string;}
       <script type="application/ld+json" /></script>
         {JSON.stringify(generateStructuredData())}
       </script>
->>>>>>> origin/main
     </Helmet>
     {children} </>
   );

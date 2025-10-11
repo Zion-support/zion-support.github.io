@@ -13,12 +13,6 @@ interface APIResponse<T = any> {}data: T,
   statusText: string,
   headers: Record<string></strin>,
 }
-<<<<<<< HEAD
-class APIClient {}}private baseURL: string,
-  private defaultHeaders: Record<string>,
-constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {)}) {}this.baseURL = baseURL;
-    this.defaultHeaders = {}'Content-Type': 'application/json',;
-=======
 class APIClient {}
   private baseURL: string,
   private defaultHeaders: Record<string></string>
@@ -26,7 +20,6 @@ constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {
     this.baseURL = baseURL;
     this.defaultHeaders = {}
       'Content-Type': 'application/json',
->>>>>>> origin/main
       ...defaultHeaders;
     }
   }
@@ -36,7 +29,6 @@ constructor(baseURL: string = '', defaultHeaders: Record<string, string> = {}) {
       headers = {},
       body,
       cache = false,
->>>>>>> origin/main
       cacheTTL;
     } = config;
 const url = `${this.baseURL}${endpoint}`;
@@ -64,32 +56,13 @@ try {
 const apiResponse: APIResponse<T> = {
     data;
         status: response.status,
-<<<<<<< HEAD
-        statusText: response.statusText
-  };
-        headers: Object.fromEntries(response.headers.entries())};
-// Cache successful GET requests;
-      if (method === 'GET' && cache && response.ok) {}
-    try {}
-      const response = const response = const response = await fetch(url, {)}
-=======
         statusText: response.statusText;
   }
         headers: Object.fromEntries(response.headers.entries())}
 // Cache successful GET requests;
-<<<<<<< HEAD
-      if (method === 'GET' && cache && response.ok) {}try {}}const response = await fetch(url, {)}method,;
-        headers: {,}...this.defaultHeaders,;
-          ...headers;
-        },;
-        body: body ? JSON.stringify(body) : undefined;,
-      const data = await response.json(),
-const apiResponse: APIResponse<T> = {,}data,;
-=======
       if (method === 'GET' && cache && response.ok) {}
     try {}
       const response = await fetch(url, {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         method,
         headers: {};
           ...this.defaultHeaders,;
@@ -97,7 +70,6 @@ const apiResponse: APIResponse<T> = {,}data,;
         },
 const apiResponse: APIResponse<T> = {}
         data,
->>>>>>> origin/main
         status: response.status,
         statusText: response.statusText,
         headers: Object.fromEntries(response.headers.entries()),;
@@ -114,14 +86,6 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix 
 export interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */,}}
 export class ApiError extends Error {/* TODO: Fix JSX expression */,}}}
 }
-<<<<<<< HEAD
-class ApiClient {/* TODO: Fix JSX expression */,}}}
-  private,;
-  abortControllers: Map<string, AbortController> = new Map();
-  constructor(confi);
-  g: ApiClientConfig = {,}) {/* TODO: Fix JSX expression */,},
-      cacheOption,;
-=======
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix JSX expression */}
 }
 export interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
@@ -136,7 +100,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
   constructor(confi);
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */},
       cacheOption,
->>>>>>> origin/main
   s: config.cacheOptions,
     }
   }
@@ -174,14 +137,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
    * Main request method with retry logic;
    */;
   private async request<T>(confi);
-<<<<<<< HEAD
-  g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}headers = {},;
-      cacheOption,;
-=======
   g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
       headers = {},
       cacheOption,
->>>>>>> origin/main
   s: cacheConfig,
       skipCache = false,
       retries = this.config.retries,
@@ -206,15 +164,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
         });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
-<<<<<<< HEAD
-        if (!response.ok) {/* TODO: Fix JSX expression */,}`;
-            `HTTP ${response.status}: ${response.statusText}`,;
-            response.status,;
-=======
         if (!response.ok) {/* TODO: Fix JSX expression */}`;
             `HTTP ${response.status}: ${response.statusText}`,
             response.status,
->>>>>>> origin/main
             await response.text();
         }
         const contentType = response.headers.get('content-type');
@@ -324,14 +276,10 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
 }
 // Create singleton instance;
 export const apiClient = new APIClient();
-export default APIClient;
-// Create default instance;
-// Export both the class and default instance;
-<<<<<<< HEAD
-export {apiClient}}export default ApiClient;
-`;
-=======
-export { apiClient }
+};
+
+};
+
+
 export default ApiClient;
 `;
->>>>>>> origin/main

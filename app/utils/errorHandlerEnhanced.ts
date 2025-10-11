@@ -19,11 +19,6 @@ export const errorHandler = const errorHandler = (error: AppError | Error) => {}
   const appError = error instanceof AppError ? error : new AppError(error.message);
 .toISOString();
     statusCode: appError.statusCode || 500,
-<<<<<<< HEAD
-  return {,;}
-  .toISOString(),;
-    statusCode: appError.statusCode || 500;,}return {}}message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-=======
   return {
     ,
   .toISOString(),
@@ -31,7 +26,6 @@ export const errorHandler = const errorHandler = (error: AppError | Error) => {}
   }
   return {}
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
->>>>>>> origin/main
     statusCode: appError.statusCode || 500,
   }
 }

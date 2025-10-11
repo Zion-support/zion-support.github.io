@@ -8,7 +8,6 @@ const LoadingPage: React.FC = () => {
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -25,15 +24,10 @@ const LoadingPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
     },
-<<<<<<< HEAD
-  ];
-  return ()
-=======
   ];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Loading page." />
         <meta name="keywords" content="loading, AI solutions, IT services, business transformation" />
@@ -63,7 +57,6 @@ const LoadingPage: React.FC = () => {
         </section>
       </main>)
     </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>

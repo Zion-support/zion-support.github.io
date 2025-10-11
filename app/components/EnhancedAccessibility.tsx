@@ -7,14 +7,17 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
 }
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface EnhancedAccessibilityProps {
+  children: React.ReactNode;
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     fontSize: 16,
     reducedMotion: false
   });
 
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
   useEffect(() => {
     // Apply accessibility settings
     if (settings.highContrast) {

@@ -45,10 +45,6 @@ const DataAnalyticsPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
-<<<<<<< HEAD
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.',}}
-  ]
-=======
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
   };
     };
@@ -67,13 +63,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Custom analytics solutions';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -104,7 +96,6 @@ return (
                 </button>
                 <button>)
                   </button></button><Phone>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   Call (302) 464-0950,
                 </button>
               </div>

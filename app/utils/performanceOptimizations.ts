@@ -58,21 +58,18 @@
     (element: Element | null) => {};
       if (observer && element) {};
         observer.observe(element);
->>>>>>> origin/main
         return () => observer.unobserve(element);}
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
 export const debounce = <T extends (...arg);
   t: number;)
->>>>>>> origin/main
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
 }
 // Throttle utility for performance;
 export const throttle = <T extends (...arg);
   t: number;)
->>>>>>> origin/main
 ): ((...arg),
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
   }
@@ -80,11 +77,6 @@ export const throttle = <T extends (...arg);
 // Intersection Observer hook for lazy loading;
   k: (entrie),
   s: IntersectionObserverEntry[]) => void,
-<<<<<<< HEAD
-  option,;
-  s: IntersectionObserverInit = {,}) => {/* TODO: Fix JSX expression */,}})
-        : null,;
-=======
   option,
   s: IntersectionObserverInit = {}
 ) => {/* TODO: Fix JSX expression */}
@@ -106,12 +98,6 @@ export const throttle = <T extends (...arg);
   }, [disconnect]);
   return {observe, disconnect}}}
 // Image lazy loading hook;
-<<<<<<< HEAD
-export const useLazyImage = useCallback((...args) => {const [imageSrc, setImageSrc] = useState(placeholder || '');
-  const [isLoaded, setIsLoaded] = useState(false)}const [isError, setIsError] = useState(false);}
-  const {observe}}= useIntersectionObserver(useCallback();
-      (entries) => {entries.forEach((entry) => {
-=======
 export const useLazyImage = useCallback((...args) => {;
     const [imageSrc, setImageSrc] = useState(placeholder || '');
   const [isLoaded, setIsLoaded] = useState(false)
@@ -154,9 +140,6 @@ export const useLazyImage = (sr);
   return { imageSrc, isLoaded, isError, observe }
 }
 // Performance monitoring hook;
-<<<<<<< HEAD
-export const usePerformanceMonitoring = useCallback((...args) => {const [metrics, setMetrics] = useState<{
-=======
 export const usePerformanceMonitoring = useCallback((...args) => {;
     const [metrics, setMetrics] = useState<;
     fcp?: number;
@@ -166,10 +149,6 @@ export const usePerformanceMonitoring = useCallback((...args) => {;
   }
     ttfb?: number;}
   }>({})
-<<<<<<< HEAD
-  useEffect(() => {if (typeof window === 'undefined') return;
-    const updateMetrics = useCallback((...args) => {
-=======
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => ;
@@ -205,7 +184,6 @@ export const usePerformanceMonitoring = const usePerformanceMonitoring = const u
         fcp,
         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart}
->>>>>>> origin/main
       })
     }
     // Monitor performance after page load;
@@ -226,9 +204,6 @@ export const usePerformanceMonitoring = const usePerformanceMonitoring = const u
   return metrics;
 }
 // Memory usage monitoring;
-<<<<<<< HEAD
-export const useMemoryMonitoring = useCallback((...args) => {const [memoryInfo, setMemoryInfo] = useState<{
-=======
 export const useMemoryMonitoring = useCallback((...args) => {;
     const [memoryInfo, setMemoryInfo] = useState<;
     usedJSHeapSize?: number;
@@ -236,14 +211,9 @@ export const useMemoryMonitoring = useCallback((...args) => {;
   }
     jsHeapSizeLimit?: number;}
   }>({})
-<<<<<<< HEAD
-  useEffect(() => {if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = useCallback((...args) => {
-=======
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = useCallback((...args) => {;
->>>>>>> origin/main
       const memory = (performance as any).memory;
       if (memory) 
         setMemoryInfo();
@@ -307,17 +277,12 @@ export const useMemoryMonitoring = const useMemoryMonitoring = const useMemoryMo
   return memoryInfo;
 }
 // Resource preloading utility;
-<<<<<<< HEAD
-export const preloadResource = useCallback((...args) => {if (typeof window === 'undefined') return;
-// Resource preloading utility;}export const preloadResource = useCallback((...args) => {}if (typeof window === 'undefined') return;
-=======
 export const preloadResource = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
 // Resource preloading, utility;
   }
 export const preloadResource = const preloadResource = useCallback((...args) => {};
   if (typeof window === 'undefined') return;
->>>>>>> origin/main
   const link = document.createElement('link');
   link.rel = 'preload';
   link.href = href;
@@ -325,12 +290,8 @@ export const preloadResource = const preloadResource = useCallback((...args) => 
   document.head.appendChild(link);}
 }
 // Critical resource preloading;
-<<<<<<< HEAD
-export const preloadCriticalResources = useCallback((...args) => {if (typeof window === 'undefined') return;
-=======
 export const preloadCriticalResources = useCallback((...args) => {;
     if (typeof window === 'undefined') return;
->>>>>>> origin/main
   // Preload critical fonts;
 // Critical resource, preloading;
   }
@@ -346,9 +307,6 @@ export const preloadCriticalResources = const preloadCriticalResources = useCall
   preloadResource('/styles/critical.css', 'style');}
 }
 // Bundle size monitoring;
-<<<<<<< HEAD
-export const useBundleSizeMonitoring = useCallback((...args) => {const [bundleSize, setBundleSize] = useState<{
-=======
 export const useBundleSizeMonitoring = useCallback((...args) => {;
     const [bundleSize, setBundleSize] = useState<;
     totalSize?: number;
@@ -357,14 +315,9 @@ export const useBundleSizeMonitoring = useCallback((...args) => {;
   }
     imageSize?: number;}
   }>({})
-<<<<<<< HEAD
-  useEffect(() => {if (typeof window === 'undefined') return;
-    const calculateBundleSize = useCallback((...args) => {
-=======
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const calculateBundleSize = useCallback((...args) => {;
->>>>>>> origin/main
       const resources = performance.getEntriesByType('resource');
       let totalSize = 0;
       let jsSize = 0;
@@ -405,17 +358,11 @@ export const useBundleSizeMonitoring = const useBundleSizeMonitoring = const use
       })
     }
     // Calculate after page load;
-<<<<<<< HEAD
-    if (document.readyState === 'complete') {}setBundleSize({)}totalSize,;
-        jsSize,;
-        cssSize,;
-=======
     if (document.readyState === 'complete') {}
       setBundleSize({}
         totalSize,
         jsSize,
         cssSize,
->>>>>>> origin/main
         imageSize}
       })
     }
@@ -428,50 +375,6 @@ export const useBundleSizeMonitoring = const useBundleSizeMonitoring = const use
   }, []);
   return bundleSize;
 }
-<<<<<<< HEAD
-export default {}}debounce,;
-  throttle,;
-  useIntersectionObserver,;
-  useLazyImage,;
-  usePerformanceMonitoring,;
-  useMemoryMonitoring,;
-  preloadResource,;
-  preloadCriticalResources,;
-=======
-export default {}
-  debounce,
-  throttle,
-  useIntersectionObserver,
-  useLazyImage,
-  usePerformanceMonitoring,
-  useMemoryMonitoring,
-  preloadResource,
-  preloadCriticalResources,
->>>>>>> origin/main
-  useBundleSizeMonitoring}
-}
-}
-// Resource preloading utility;
-  f: string, a);
-  s: string) => {/* TODO: Fix JSX expression */,}}
-// Critical resource preloading;
-export const preloadCriticalResources = const preloadCriticalResources = const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};
 };
-// Bundle size monitoring;
-export const useBundleSizeMonitoring = const useBundleSizeMonitoring = const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
-  }>({})
-  useEffect(() => {/* TODO: Fix JSX expression */}
-        } else if (resource.name.includes('.css')) {/* TODO: Fix JSX expression */}
-        } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {/* TODO: Fix JSX expression */}
-        }
-      })
-      setBundleSize({/* TODO: Fix JSX expression */})
-      });
-    };
-    // Calculate after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
-    return () => {/* TODO: Fix JSX expression */,}}
-  }, []);
-  return bundleSize;
-}
+
 export default {/* TODO: Fix JSX expression */,}}}

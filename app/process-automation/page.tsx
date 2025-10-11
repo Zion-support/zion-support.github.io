@@ -45,10 +45,6 @@ const ProcessAutomationPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Performance Monitoring',
-<<<<<<< HEAD
-      description: 'Track and optimize your automated processes with real-time analytics and reporting.',}}
-  ]
-=======
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
   };
     };
@@ -67,13 +63,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Custom automation solutions';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -104,7 +96,6 @@ return (
                 </button>
                 <button>)
                   </button></button><Phone>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   Call (302) 464-0950,
                 </button>
               </div>

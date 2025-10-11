@@ -8,7 +8,6 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -25,15 +24,10 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
     },
-<<<<<<< HEAD
-  ];
-  return ()
-=======
   ];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <meta name="description" content="Intelligent content delivery network powered by AI technology." />
         <meta name="keywords" content="AI CDN, artificial intelligence, content delivery, AI solutions, intelligent networking" />
       </Helmet>
@@ -62,7 +56,6 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
         </section>
       </main>)
     </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
       </main>
@@ -102,22 +95,3 @@ const AiContentDeliveryNetworkPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiContentDeliveryNetworkPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-=======
->>>>>>> origin/main

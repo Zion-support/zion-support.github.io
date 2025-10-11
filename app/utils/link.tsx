@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-
-interface LinkProps {href: string,}
-    children: React.ReactNode;,}interface LinkProps {}}href: string;,
-=======
 interface LinkProps {
     href: string,
     children: React.ReactNode;
@@ -17,13 +11,6 @@ interface LinkProps {}
   onClick?: () => void;
   'aria-label'?: string,}
 }
-<<<<<<< HEAD
-export const Link: React.FC<LinkProps>= ()
-  onClick?: () => void
-  'aria-label'?: string,}
-}
-export const Link: React.FC<LinkProps> = ()
-=======
 export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
   href,
@@ -46,7 +33,6 @@ export const Link: React.FC<LinkProps> = ({,
   'aria-label': ariaLabel,
   })
   ...props})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {}
   const handleClick = const handleClick = const handleClick = useCallback((...args) => {};
     if (onClick) {};
@@ -74,10 +60,11 @@ export const Link: React.FC<LinkProps> = ({,
     </a>);
 };
 
-export default Link;
-    >;
-      {children}
-    </a>);
 };
+
+
+};
+
+
 
 export default Link;

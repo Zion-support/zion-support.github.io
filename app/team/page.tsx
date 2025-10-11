@@ -4,10 +4,6 @@ import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const TeamPage: React.FC = () => {
-<<<<<<< HEAD
-    return ()
-  )
-=======
     return (
     <>
       <Helmet>
@@ -35,7 +31,6 @@ const TeamPage: React.FC = () => {
         </main>
         <Footer />)
     </>,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 };
 

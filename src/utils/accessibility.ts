@@ -666,30 +666,10 @@ const html = document.documentElement;
 }
 // Singleton instance
 const a11y = new AccessibilityService();
-export default a11y;
-    // Return cleanup function;
-    return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      element.removeEventListener('keydown', handleTabKey);
-    }
-  }
-  // Check if element is visible to screen readers;
-  public isAccessible(elemen)
-  t: HTMLElement): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const style = window.getComputedStyle(element);
-    return !()
-      style.display === 'none' ||
-      style.visibility === 'hidden' ||
-      style.opacity === '0' ||
-//       element.hasAttribute('hidden') ||
-      element.getAttribute('aria-hidden') === 'true'
-    )
-  }
-}
-// Singleton instance;
-const a11y = new AccessibilityService()
+};
+
+};
+
+
 export default a11y;"`
 

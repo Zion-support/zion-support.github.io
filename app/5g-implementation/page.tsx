@@ -28,24 +28,12 @@ const FiveGImplementationPage: React.FC = () => {
     {icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
-<<<<<<< HEAD
-      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations'];
-    },;
-  ];
-  return ()
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
-          <div className="relative max-w-7xl mx-auto text-center" /></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /></h1>
-              5G Network <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span>
-=======
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
     }
   ];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure" />
@@ -59,7 +47,6 @@ const FiveGImplementationPage: React.FC = () => {
           </div></div><div className="relative max-w-7xl mx-auto text-center">
             </div></div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               5G Network </h1></h1><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
               Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems.

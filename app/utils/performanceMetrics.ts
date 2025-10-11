@@ -51,20 +51,6 @@ export class PerformanceMetrics {private static instance: PerformanceMetrics,}}p
   constructor() {,;
     if (typeof window !== 'undefined') {,}export class PerformanceMetrics {}}private static instance: PerformanceMetrics;,
   private metrics: PerformanceMetric[] = [],}
-<<<<<<< HEAD
-  private webVitals: WebVitalsMetrics = {,}private observers: PerformanceObserver[] = [],
-  constructor() {}if (typeof window !== 'undefined') {}this.initializeObservers();}
-    }
-  }
-  static getInstance(): PerformanceMetrics {}}if (!PerformanceMetrics.instance) {}PerformanceMetrics.instance = new PerformanceMetrics();}
-export interface PerformanceMetric {/* TODO: Fix JSX expression */,}}}
-export interface WebVitalsMetrics {/* TODO: Fix JSX expression */,}}}
-export interface PerformanceReport {/* TODO: Fix JSX expression */,}}}
-  timestam,;
-  p: Date,
-}
-export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: WebVitalsMetrics = {,}private,;
-=======
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
   constructor() {
@@ -96,7 +82,6 @@ export interface PerformanceReport {/* TODO: Fix JSX expression */}
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   webVitals: WebVitalsMetrics = {}
   private,
->>>>>>> origin/main
   observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */,}}
   }
@@ -312,12 +297,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       unit: 'ms',
       timestamp: new Date(),
       category: 'network',
-<<<<<<< HEAD
-      metadata: {,}url,;
-        status}
-  recordNetworkRequest(ur,;)
-  l: string, duratio,;
-=======
       metadata: {}
         url,
         status}
@@ -368,24 +347,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   };
     this.recordMetric({});
       name: `function:${name}`);
->>>>>>> origin/main
       value: endTime - startTime),
       unit: 'ms'),
   measureFunction<T>(name: string, fn: () => T): T {,}}const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
-<<<<<<< HEAD
-    this.recordMetric({)})
-      name: `function:${name,}`,;
-      value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'runtime',})
-  measureFunction<T>(nam,;
-  e: string, f);
-  n: () => T): T {/* TODO: Fix JSX expression */,}}n: ${name,}`,;
-      valu,;
-=======
     this.recordMetric({})
       name: `function:${name}`,
       value: endTime - startTime,
@@ -396,7 +362,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   n: () => T): T {/* TODO: Fix JSX expression */}
   n:${name}`,
       valu,
->>>>>>> origin/main
   e: endTime - startTime,
       uni,
   t: 'ms',
@@ -418,25 +383,11 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   };
     this.recordMetric({`});
       name: `async:${name}`);
->>>>>>> origin/main
       value: endTime - startTime),
       unit: 'ms'),
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,}const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
-<<<<<<< HEAD
-    this.recordMetric({`)})
-      name: `async:${name,}`,;
-      value: endTime - startTime,
-      unit: 'ms',
-      timestamp: new Date(),
-      category: 'runtime',})
-  async measureAsyncFunction<T>(nam,;
-  e: string, f);
-  n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */,}`;
-  c: ${name,}`,;
-      valu,;
-=======
     this.recordMetric({`})
       name: `async:${name}`,
       value: endTime - startTime,
@@ -447,7 +398,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`;
   c:${name}`,
       valu,
->>>>>>> origin/main
   e: endTime - startTime,
       uni,
   t: 'ms',
@@ -529,10 +479,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**;
    * Get performance recommendations;
    */;
-<<<<<<< HEAD
-  getRecommendations(): string[] {const recommendations: string[] = [],
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {,;
-=======
   getRecommendations(): string[] {
     const recommendations: string[] = [],
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) ,
@@ -579,20 +525,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     return {}
       metrics: this.getMetrics(),
       webVitals: this.getWebVitals(),
-<<<<<<< HEAD
-      summary: {,
-        avgLoadTime;
-        totalMetrics: this.metrics.length,
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;}return {}}metrics: this.getMetrics(),
-      webVitals: this.getWebVitals(),
-      summary: {,}avgLoadTime,;
-        totalMetrics: this.metrics.length,
-        performanceScore: this.calculatePerformanceScore(),
-        recommendations: this.getRecommendations(),},
-      timestamp: new Date(),}
-  generateReport(): PerformanceReport {/* TODO: Fix JSX expression */,}},
-      timestam,;
-=======
       summary: {}
         avgLoadTime,
         totalMetrics: this.metrics.length,
@@ -601,7 +533,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       timestamp: new Date()}
   generateReport(): PerformanceReport {/* TODO: Fix JSX expression */},
       timestam,
->>>>>>> origin/main
   p: new Date(),
     };
   };
@@ -645,15 +576,10 @@ interface LayoutShift extends PerformanceEntry {}
 }
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
-export default PerformanceMetrics;
-  cleanup(): void {/* TODO: Fix JSX expression */,}}}
-}
-// Type for performance.memory;
-interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */,}}}
-}
-// Type for LayoutShift;
-interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */,}}}
-// Export singleton instance;
-export const performanceMetrics = PerformanceMetrics.getInstance();
+};
+
+};
+
+
 export default PerformanceMetrics;
 `;

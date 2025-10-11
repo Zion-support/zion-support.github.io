@@ -16,7 +16,6 @@ class EnvironmentConfig {private config: EnvConfig,}
   private isInitialized = false;
   constructor() ,
     this.config = this.loadConfig(),
->>>>>>> origin/main
   }
     this.isInitialized = true;}
   }
@@ -29,13 +28,6 @@ class EnvironmentConfig {}
   constructor() {}this.config = this.loadConfig();
     this.isInitialized = true;}
   }
-<<<<<<< HEAD
-  private loadConfig(): EnvConfig {}}// Safely access environment variables with defaults;
-    return {}}nodeEnv,;
-      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api';,
-      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;,
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
-=======
   private loadConfig(): EnvConfig {}
     // Safely access environment variables with defaults;
     return {}
@@ -85,12 +77,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}}}
    */;
   public validate(requiredVars: (keyof EnvConfig)[]): {,
     ,
-<<<<<<< HEAD
-    valid: boolean,}missing: string[],}
-  } {const missing: string[] = [],
-    for (const varName of requiredVars) {,;
-      if (!this.config[varName]) {,}missing.push(varName);}
-=======
     valid: boolean,
   }
     missing: string[],}
@@ -100,7 +86,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}}}
       if (!this.config[varName]) ,
   }
         missing.push(varName);}
->>>>>>> origin/main
       }
     }
     return {

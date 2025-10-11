@@ -36,17 +36,6 @@ useEffect(() =>
     preloadComponents();
     return () => clearTimeout(timer)}}, []);
   // Analytics tracking for phone clicks - optimized;
-<<<<<<< HEAD
-  const handlePhoneClick = const handlePhoneClick = const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag()
-      });
-    };
-  }, []);
-
-  return ()
-              📞 Call: (302) 464-0950
-=======
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) 
       (window as any).gtag('event', 'phone_click', 
@@ -125,7 +114,6 @@ useEffect(() =>
             <div className="mt-12 flex flex-col sm: flex-row gap-4 justify-center items-center"></div></div></div>)
               <a>)
               📞 Call: (302) 464-0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </a>
             <a></a>
               Get Free Consultation,

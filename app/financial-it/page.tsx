@@ -56,10 +56,6 @@ const services = const services = const services = [
     {
       icon: '🔒',
       title: 'Security Services',
-<<<<<<< HEAD
-      description: 'Cybersecurity and data protection solutions',}}
-  ]
-=======
       description: 'Cybersecurity and data protection solutions'
   };
     };
@@ -75,23 +71,10 @@ const benefits = const benefits = const benefits = [
     'Fraud Prevention',;
 ;
     'Advanced Analytics';
-<<<<<<< HEAD
-  ];
-return ()
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
-        <div className="relative max-w-7xl mx-auto text-center" / /></div>
-          <h1></h1>
-            Financial Services;
-            <span></span>
-              IT Solutions
-            </span>
-=======
   ];];];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div></div></div>
       <Helmet>
->>>>>>> origin/main
         <title>Financial IT Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -114,7 +97,6 @@ return (
             </h1></h1><span>
               IT Solutions;
             </span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           </h1>
           <p></p>
             Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements.;

@@ -16,19 +16,14 @@ const PagePage: React.FC = () => {
 ;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
           </div>
->>>>>>> origin/main
         </div>
       </section>
   }
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

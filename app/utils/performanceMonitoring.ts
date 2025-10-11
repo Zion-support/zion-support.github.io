@@ -42,27 +42,12 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
   private webVitals: WebVitals = {,}private customMetrics: CustomMetric[] = [],
   private observers: PerformanceObserver[] = [],
   private maxMetrics = 1000;
-<<<<<<< HEAD
-  private constructor() {,;
-  private customMetrics: CustomMetric[] = [],
-=======
   private constructor() {
     ,
   private customMetrics: CustomMetric[] = []
->>>>>>> origin/main
   private observers: PerformanceObserver[] = [],
   private maxMetrics = 1000;
   }
-<<<<<<< HEAD
-  static getInstance(): PerformanceMonitoringService {}}if (!PerformanceMonitoringService.instance) {}PerformanceMonitoringService.instance = new PerformanceMonitoringService();}
-export interface PerformanceMetric {/* TODO: Fix JSX expression */,}}}
-export interface WebVitals {/* TODO: Fix JSX expression */,}}}
-export interface CustomMetric {/* TODO: Fix JSX expression */,}}}
-class PerformanceMonitoringService {/* TODO: Fix JSX expression */,}}webVitals: WebVitals = {,}private,;
-  customMetrics: CustomMetric[] = [],
-  private,;
-  observers: PerformanceObserver[] = [],
-=======
   private constructor() {}
     this.initializeObservers();}
   }
@@ -81,7 +66,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   customMetrics: CustomMetric[] = [],
   private,
   observers: PerformanceObserver[] = []
->>>>>>> origin/main
   private maxMetrics = 1000,
   private constructor() {/* TODO: Fix JSX expression */,}}
   static getInstance(): PerformanceMonitoringService {/* TODO: Fix JSX expression */,}}}
@@ -114,10 +98,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       this.observers.push(lcpObserver);
       // Observe CLS;
       let clsValue = 0;
-<<<<<<< HEAD
-      const clsObserver = new PerformanceObserver((list) => {// Observe CLS;
-      let clsValue = 0;}const clsObserver = new PerformanceObserver((list) => {}list.getEntries().forEach((entry) => {}if(!(entry as PerformanceEntry & {hadRecentInput: boolean ,)}).hadRecentInput) {}clsValue += (entry as PerformanceEntry & {value: number ,}).value;
-=======
       const clsObserver = new PerformanceObserver((list) => {;
     // Observe CLS;
   }
@@ -125,7 +105,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
         list.getEntries().forEach((entry) => {};
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {};
             clsValue += (entry as PerformanceEntry & { value: number }).value;
->>>>>>> origin/main
             this.recordWebVital('CLS', clsValue);
           }
         })
@@ -216,7 +195,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       value,
       rating,
       timestamp: Date.now()}
->>>>>>> origin/main
     }
     this.webVitals[name] = metric;
     logger.info(`Web Vital: ${name,)}`, 'PerformanceMonitoring', {value, rating})
@@ -233,15 +211,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**;
    * Get rating for a Web Vital metric;
    */;
-<<<<<<< HEAD
-  private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {,}const thresholds: Record<keyof WebVitals, {good: number, poor: number ,}> = {}</keyof></<<<keyof>FCP</keyof></keyof>: {good: 1800, poor: 3000 ,},;
-      LCP: {good: 2500, poor: 4000 ,},;
-      FID: {good: 100, poor: 300 ,},;
-      CLS: {good: 0.1, poor: 0.25 ,},;
-      TTFB: {good: 800, poor: 1800 ,},;
-      INP: {good: 200, poor: 500 ,}}
-    const threshold = thresholds[name]
-=======
   private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {}
     const thresholds: Record<keyof WebVitals, { good: number, poor: number }> = {}</keyof></<<<keyof>FCP</keyof></keyof>: { good: 1800, poor: 3000 },
       LCP: { good: 2500, poor: 4000 },
@@ -251,7 +220,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       INP: { good: 200, poor: 500 }
     }
     const threshold = thresholds[name];
->>>>>>> origin/main
     if (!threshold) return 'good';
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
@@ -275,7 +243,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       IN,
   P: {/* TODO: Fix JSX expression */}
   r: 500 }
->>>>>>> origin/main
     }
     const threshold = thresholds[name];
     if (!threshold) return 'good';
@@ -297,7 +264,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       value,
       unit,
       timestamp: Date.now()}
->>>>>>> origin/main
     }
     this.customMetrics.push(metric);
     // Maintain max metrics limit;
@@ -307,11 +273,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     if (this.customMetrics.length > this.maxMetrics) {}
       this.customMetrics.shift();}
     }
-<<<<<<< HEAD
-    logger.debug(`Custom Metric: ${name,)}`, 'PerformanceMonitoring', {value, unit})
-  recordCustomMetric(nam,;)
-  e: string, valu,;
-=======
     logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit })
   e: number, uni);
   t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */,}}}
@@ -326,15 +287,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    */;
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {,
     ,
-<<<<<<< HEAD
-    try {,;}
-      if (typeof window !== 'undefined' && 'fetch' in window) {,;
-        await fetch('/api/analytics/performance', {)}method: 'POST',})
-          headers: {'Content-Type': 'application/json' ,})
-          body: JSON.stringify(metric),
-  private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {,}try {}}if (typeof window !== 'undefined' && 'fetch' in window) {}await fetch('/api/analytics/performance', {)}method: 'POST',}
-          headers: {'Content-Type': 'application/json' ,},;
-=======
     try {,
       if (typeof window !== 'undefined' && 'fetch' in window) ,
         await fetch('/api/analytics/performance', )
@@ -348,20 +300,14 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
         await fetch('/api/analytics/performance', {}
           method: 'POST'}
           headers: { 'Content-Type': 'application/json' },
->>>>>>> origin/main
           body: JSON.stringify(metric),
         })
       }
     } catch (error) {}logger.error('Failed to send metric to analytics', error as Error);}
   private async sendToAnalytics(metri);
-<<<<<<< HEAD
-  c: PerformanceMetric): Promise<void> {/* TODO: Fix JSX expression */,}s: {'Content-Type': 'application/json' ,},;
-          bod,;
-=======
   c: PerformanceMetric): Promise<void> {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
           bod,
->>>>>>> origin/main
   y: JSON.stringify(metric),
         })
       }
@@ -409,12 +355,8 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     const score = this.getPerformanceScore();
     const recommendations: string[] = [],
     // Generate recommendations based on metrics;
-<<<<<<< HEAD
-    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {,;
-=======
     if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {
     ,
->>>>>>> origin/main
     const recommendations: string[] = [],
     // Generate recommendations based on, metrics;
   }
@@ -429,10 +371,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     }
     if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {}recommendations.push('Improve Time to First Byte by optimizing server response time');}
     }
-<<<<<<< HEAD
-    return {}}score,;
-      webVitals: this.webVitals;,
-=======
     return {}
       score,
       webVitals: this.webVitals;,
@@ -450,7 +388,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   };
   measureFunction<T>(name: string, fn: () => T): T {};
     const start = performance.now();
->>>>>>> origin/main
     const result = fn();
     const duration = performance.now() - start;`}
     this.recordCustomMetric(`fn_${name)}`, duration, 'ms');
@@ -466,7 +403,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   };
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {};
     const start = performance.now();
->>>>>>> origin/main
     const result = await fn();
     const duration = performance.now() - start;`}
     this.recordCustomMetric(`async_fn_${name)}`, duration, 'ms');
@@ -562,23 +498,18 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   disconnect(): void {/* TODO: Fix JSX expression */,}}}
 }
 export const performanceMonitoring = PerformanceMonitoringService.getInstance();
+};
+
+};
+
+
 export default PerformanceMonitoringService;
-// Export convenience enums and functions;
-<<<<<<< HEAD
-export enum MetricUnit {export default PerformanceMonitoringService;}
-// Export convenience enums and functions;}export enum MetricUnit {}}Milliseconds = 'ms',;
-  Bytes = 'bytes',;
-  Count = 'count',;
-=======
-export enum MetricUnit {
-    export default PerformanceMonitoringService;
 // Export convenience enums and, functions;
   }
 export enum MetricUnit {}
   Milliseconds = 'ms',
   Bytes = 'bytes',
   Count = 'count',
->>>>>>> origin/main
   Percentage = 'percentage'}
 }
 // Simple metrics structure for testing;
@@ -624,16 +555,6 @@ const simpleMetrics = new Map<string, MetricData>();
   // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit);
 }
-<<<<<<< HEAD
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {,}const thresholds: Record<string, {good: number, poor: number ,}> = {}</strin>
-    'FCP': {good: 1800, poor: 3000 ,},;
-    'LCP': {good: 2500, poor: 4000 ,},;
-    'FID': {good: 100, poor: 300 ,},;
-    'CLS': {good: 0.1, poor: 0.25 ,},;
-    'TTFB': {good: 800, poor: 1800 ,},;
-    'INP': {good: 200, poor: 500 ,}}
-  const threshold = thresholds[name]
-=======
 function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {}
   const thresholds: Record<string, { good: number, poor: number }> = {}</strin>
     'FCP': { good: 1800, poor: 3000 },
@@ -644,7 +565,6 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
     'INP': { good: 200, poor: 500 }
   }
   const threshold = thresholds[name];
->>>>>>> origin/main
   if (!threshold) return 'good';
   if (value <= threshold.good) return 'good';
   if (value <= threshold.poor) return 'needs-improvement';
@@ -668,15 +588,9 @@ export const measureFunction = const measureFunction = const measureFunction = <
 }
 export const measureAsyncFunction = const measureAsyncFunction = const measureAsyncFunction = async <T>(name: string, fn: () => Promise<T>): Promise<T> => {
     ,
-<<<<<<< HEAD
-  const start = performance.now(),;
-  const result = await fn(),;
-  const duration = performance.now() - start;}export const measureFunction = <T>(name: string, fn: () => T): T => {,}const start = performance.now();
-=======
   const start = performance.now(),
   const result = await fn(),
   const start = performance.now();
->>>>>>> origin/main
   const result = fn();
   const duration = performance.now() - start;
   recordMetric(name, duration, MetricUnit.Milliseconds);
@@ -715,14 +629,9 @@ export const getPerformanceScore = const getPerformanceScore = (): number => {};
 export const getRecommendations = const getRecommendations = (): string[] => {};
   const metrics = getMetrics();
   const recommendations: string[] = [],
-<<<<<<< HEAD
-  if (metrics.FCP && metrics.FCP.rating !== 'good') {,;
-  const recommendations: string[] = [],}if (metrics.FCP && metrics.FCP.rating !== 'good') {}recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');}
-=======
   if (metrics.FCP && metrics.FCP.rating !== 'good') {
     ,
   const recommendations: string[] = []
->>>>>>> origin/main
   }
   if (metrics.LCP && metrics.LCP.rating !== 'good') {}recommendations.push('Improve LCP by optimizing largest images and server response time');}
   }
@@ -758,7 +667,6 @@ const simpleMetrics = new Map<string, MetricData>();
   r: 1800 },
     'INP': {/* TODO: Fix JSX expression */}
   r: 500 }
->>>>>>> origin/main
   }
   const threshold = thresholds[name];
   if (!threshold) return 'good';

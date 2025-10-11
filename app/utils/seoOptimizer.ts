@@ -100,12 +100,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   /**;
    * Generate keywords string;
    */;
-<<<<<<< HEAD
-  generateKeywords(pageKeywords?: string[]): string {}}const keywords = pageKeywords || this.currentPageData?.keywords || []
-=======
   generateKeywords(pageKeywords?: string[]): string {}
     const keywords = pageKeywords || this.currentPageData?.keywords || [];
->>>>>>> origin/main
     return keywords.join(', ');}
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */,}}}
   /**;
@@ -181,16 +177,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   /**;
    * Get robots content;
    */;
-<<<<<<< HEAD
-  private getRobotsContent(): string {}}if (!this.currentPageData) return 'index, follow';
-    const directives = []
-    if (!this.currentPageData.noindex) {}directives.push('noindex');}
-    }
-    if (!this.currentPageData.nofollow) {}directives.push('follow');}
-    } else {}}directives.push('nofollow');}
-  private getRobotsContent(): string {/* TODO: Fix JSX expression */,}}}
-    if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
-=======
   private getRobotsContent(): string {}
     if (!this.currentPageData) return 'index, follow';
     const directives = [];
@@ -211,16 +197,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   /**;
    * Setup structured data;
    */;
-<<<<<<< HEAD
-  private setupStructuredData(): void {}}this.addStructuredData(structuredData);
-  private setupStructuredData(): void {/* TODO: Fix JSX expression */,}}`;
-  t: `${this.config.siteUrl,}/search?q={search_term_string}`,;
-=======
   private setupStructuredData(): void {}
     this.addStructuredData(structuredData);
   private setupStructuredData(): void {/* TODO: Fix JSX expression */}`;
   t: `${this.config.siteUrl}/search?q={search_term_string}`,
->>>>>>> origin/main
         'query-input': 'required name=search_term_string';
       }
     }
@@ -239,17 +219,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
     const structuredData = const structuredData = const structuredData = {}
       '@context': 'https: //schema.org',
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
->>>>>>> origin/main
       headline: this.generateTitle(),
       description: this.generateDescription(),
       url: this.currentPageData.url || window.location.href,
       image: this.currentPageData.image || this.config.defaultImage,
-<<<<<<< HEAD
-      publisher: {,}'@type': 'Organization',;
-=======
       publisher: {}
         '@type': 'Organization',
->>>>>>> origin/main
         name: this.config.siteName,
         url: this.config.siteUrl}
       };
@@ -263,14 +238,10 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
         articleSection: this.currentPageData.section),
         keywords: this.generateKeywords(),
     // Add article-specific properties;
-<<<<<<< HEAD
-    if (this.currentPageData.type === 'article') {}Object.assign(structuredData, {)}author: {,}// '@type': 'Person',;
-=======
     if (this.currentPageData.type === 'article') {}
       Object.assign(structuredData, {}
         author: {}
 // '@type': 'Person',
->>>>>>> origin/main
 // name: this.currentPageData.author || this.config.siteName,
         },
         datePublished: this.currentPageData.publishedTime,
@@ -281,13 +252,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
   private updateStructuredData(): void {/* TODO: Fix JSX expression */,}}}
     }
     // Add article-specific properties;
-<<<<<<< HEAD
-    if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */,},
-        datePublishe,;
-=======
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */},
         datePublishe,
->>>>>>> origin/main
   d: this.currentPageData.publishedTime,
         dateModifie,
   d: this.currentPageData.modifiedTime,
@@ -398,17 +364,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
       {}url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
-<<<<<<< HEAD
-        priority: '1.0',}
-  generateSitemapData(): Array<{/* TODO: Fix JSX expression */,}y: number ,}> {/* TODO: Fix JSX expression */,}}
-    ]
-=======
         priority: '1.0'}
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */}
   y: number }> {/* TODO: Fix JSX expression */}
       }
   ]
->>>>>>> origin/main
   }
   /**;
    * Generate robots.txt content;
@@ -422,14 +382,9 @@ Disallow: /private/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /static/`,
-<<<<<<< HEAD
-  generateRobotsTxt(): string {/* TODO: Fix JSX expression */,}}p: ${this.config.siteUrl,}/sitemap.xml;
-# Disallow admin and private areas,;
-=======
   generateRobotsTxt(): string {/* TODO: Fix JSX expression */}
   p: ${this.config.siteUrl}/sitemap.xml;
 # Disallow admin and private areas,
->>>>>>> origin/main
   Disallow: /admin/,
 Disallo,
   w: /private/,
@@ -443,31 +398,16 @@ Disallo,`;
   /**;
    * Check for SEO issues;
    */;
-<<<<<<< HEAD
-  checkSEOIssues(): string[] {}const issues: string[] = [],
-=======
   checkSEOIssues(): string[] {}
     const issues: string[] = []
-<<<<<<< HEAD
-    // Check title length
-    const title = const title = const title = document.title,,
-    if (title.length < 30) {;
-    ,;
-    // Check title length;
-    const title = const title = const title = document.title
-  };
-    if (title.length < 30) {};
-=======
     // Check title length;
     const title = document.title,,
     if (title.length < 30) {
     ,
->>>>>>> origin/main
     // Check title length;
     const title = document.title;
   }
     if (title.length < 30) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       issues.push('Title is too short (less than 30 characters)');}
     } else if (title.length > 60) {}
       issues.push('Title is too long (more than 60 characters)');}
@@ -524,17 +464,9 @@ const defaultConfig: SEOConfig = {}
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID,}
 }
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;
-  getSEOScore(): number {/* TODO: Fix JSX expression */,}}}
-}
-// Default configuration;
-<<<<<<< HEAD
-const,;
-  defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */,}}
-=======
-const,
-  defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
-}
->>>>>>> origin/main
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
+};
+
+};
+
+
 export default seoOptimizer;"`;

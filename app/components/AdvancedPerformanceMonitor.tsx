@@ -15,7 +15,6 @@ interface PerformanceMonitorProps {
   })
   const measureWebVitals = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
->>>>>>> origin/main
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [],
     // Measure First Contentful Paint (FCP)
@@ -27,9 +26,6 @@ interface PerformanceMonitorProps {
       }
     }
     // Measure First Input Delay (FID)
-<<<<<<< HEAD
-    if ('PerformanceObserver' in window) {try {const fidObserver = new PerformanceObserver(list => {)}
-=======
     if ('PerformanceObserver' in window) {
       try {
               }));
@@ -43,10 +39,6 @@ interface PerformanceMonitorProps {
       }
     }
     // Measure Cumulative Layout Shift (CLS)
-<<<<<<< HEAD
-    if ('PerformanceObserver' in window) {try {let clsValue = 0;}
-        const clsObserver = new PerformanceObserver(list => {)
-=======
     if ('PerformanceObserver' in window) {
       try {
         let clsValue = 0;
@@ -66,24 +58,9 @@ interface PerformanceMonitorProps {
       }
     }
     // Measure Time to First Byte (TTFB)
-<<<<<<< HEAD
-    try {const navigationEntries = performance.getEntriesByType?.('navigation') || []}
-      const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry;
-=======
     try {
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
       const navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;
-<<<<<<< HEAD
-      const ttfb = const ttfb = navigationEntry;
-        ? navigationEntry.responseStart - navigationEntry.requestStart;
-        : null;
-      // Measure Memory Usage
-      const memory = const memory = const memory =;
-        (performance as Performance & { memory?: { usedJSHeapSize: number } });
-          .memory?.usedJSHeapSize || null;
-      setMetrics()
-=======
       const ttfb = navigationEntry;
         ? navigationEntry.responseStart - navigationEntry.requestStart;
         : null;
@@ -96,7 +73,6 @@ interface PerformanceMonitorProps {
         fcp,
         ttfb,)
         memory,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       }));
     } catch (error) {
       // eslint-disable-next-line no-console;
@@ -110,24 +86,11 @@ interface PerformanceMonitorProps {
       })
     }
   }, []);
-<<<<<<< HEAD
-  const measureResourceTiming = useCallback(() => {if (typeof window === 'undefined' || !('performance' in window)) return;
-=======
   const measureResourceTiming = useCallback(() => {;
     if (typeof window === 'undefined' || !('performance' in window)) return;
->>>>>>> origin/main
     const resources = performance.getEntriesByType('resource');
     }
   }, []);
-<<<<<<< HEAD
-  const measureCoreWebVitals = useCallback(() => {if (typeof window === 'undefined') return;
-    // Use web-vitals library if available;
-    try {import('web-vitals')}
-        .then(webVitals => {)
-          const {onCLS, onFCP, onLCP, onTTFB}}= webVitals;
-          if (onCLS) {onCLS((metric: { value: number ,)}) =>
-              setMetrics(prev => ({...prev, cls: metric.value ,)}))
-=======
   const measureCoreWebVitals = useCallback(() => {;
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available;
@@ -186,19 +149,6 @@ interface PerformanceMonitorProps {
   }, [metrics]);
   const _recommendations = getPerformanceRecommendations();
   if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-    return ()
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-          <div></div>
-            Memory:{' '},
-    {metrics.memory
->>>>>>> origin/main
-              ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
-=======
     return (
       <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         </div></div><h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3></h3></h3>)
@@ -211,7 +161,6 @@ interface PerformanceMonitorProps {
             Memory:{', '},
     {metrics.memory;
               ? `$(metrics.memory / 1024 / 1024).toFixed(1)}MB`
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               : 'N/A'}
           </div></div></div>
         </div>

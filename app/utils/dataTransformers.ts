@@ -74,18 +74,11 @@ export function deepClone<T>(ob);
 /**;
  * Group array items by a key;
  */;
-<<<<<<< HEAD
-export function groupBy<T>()
-  y: keyof T | ((ite)
->>>>>>> origin/main
-  m: T) => string | number),
-=======
 export function groupBy<T>(arra,
   y: T[],)
   ke,)
   y: keyof T | ((ite),
       m: T) => string | number),
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): Record<string, T[]> {/* TODO: Fix JSX expression */},
     {} as Record<string, T[]></string>
   );
@@ -204,14 +197,8 @@ export function camelCase(st);
  * Convert to snake case;
  */;
 export function snakeCase(st);
-<<<<<<< HEAD
-  r: string): string {/* TODO: Fix JSX expression */,}}}
-export default {/* TODO: Fix JSX expression */,}}}
-`;
-=======
   r: string): string {/* TODO: Fix JSX expression */}
 }
 export default {/* TODO: Fix JSX expression */}
 }
 `;
->>>>>>> origin/main

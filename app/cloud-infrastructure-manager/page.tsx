@@ -46,10 +46,6 @@ const CloudInfrastructureManagerPage: React.FC = () => {
     {
       icon: Zap,
       title: 'DevOps Integration',
-<<<<<<< HEAD
-      description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.',}}
-  ]
-=======
       description: 'Seamless integration with CI/CD pipelines and DevOps tools for streamlined operations.'
   };
     };
@@ -68,13 +64,9 @@ const benefits = const benefits = const benefits = [
 ;
     'Expert technical support';
   ];
-<<<<<<< HEAD
-return ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -105,7 +97,6 @@ return (
                 </button>
                 <button>)
                   </button></button><Phone>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   Call (302) 464-0950,
                 </button>
               </div>

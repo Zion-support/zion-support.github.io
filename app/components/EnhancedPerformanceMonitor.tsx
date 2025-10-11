@@ -17,14 +17,9 @@ const benefits = const benefits = const benefits = [
     'Cost-effective pricing plans',;
 ;
     'Proven track record of success';
-<<<<<<< HEAD
-  ];
-return() {features.map((feature, index) => ()
-=======
   ];];];
 return (
         </div>
->>>>>>> origin/main
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -52,7 +47,6 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

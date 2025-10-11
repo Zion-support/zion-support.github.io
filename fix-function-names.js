@@ -27,9 +27,8 @@ function fixFunctionNames(filePath) {
         modified = true;
       }
       
-      // Fix export default function declarations;
-      if (line.includes('export default function ') && line.includes('(')) {
-        line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`);
+      // Fix };
+ export default function ${validFunctionName}`);
         modified = true;
       }
       

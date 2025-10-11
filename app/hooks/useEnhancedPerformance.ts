@@ -21,7 +21,6 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   } = _options;const _renderCountRef = useRef<number>(0);
 useEffect(() => {
     mountTimeRef.current = performance.now();
->>>>>>> origin/main
     renderCountRef.current = 0;
 // Track component mount;
     if (trackAnalytics) 
@@ -47,7 +46,6 @@ return () => {
 if (trackPerformance && renderCountRef.current > 10) 
       // Many re-renders detected;
         })
->>>>>>> origin/main
       },
     [component, trackErrors];
   );
@@ -65,17 +63,11 @@ return duration;
       },
     [component, trackPerformance]
   );
-<<<<<<< HEAD
-return {trackError,;}
-    trackUserAction,;
-    measureOperation,}}
-=======
 return {
     trackError,
     trackUserAction,
     measureOperation,
   }
   }
->>>>>>> origin/main
 }
 export default useEnhancedPerformance;

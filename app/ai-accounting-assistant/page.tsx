@@ -3,17 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react';
 const AIAccountingAssistantPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    { icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' },
-    { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and analytics with AI insights.' },
-    { icon: FileText, title: 'Tax Preparation', description: 'Automated tax preparation and compliance management.' },
-    { icon: Shield, title: 'Audit Trail', description: 'Complete audit trail and compliance tracking for financial records.' },
-    { icon: Zap, title: 'Invoice Processing', description: 'Automated invoice processing and payment tracking.' },;
-    { icon: CheckCircle, title: 'Compliance', description: 'Ensure compliance with accounting standards and regulations.' };
-  ];
-  return() {features.map((feature, index) => ()
-=======
   const features = [
     
       icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' },
@@ -31,7 +20,6 @@ const AIAccountingAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
         <meta name="description" content="Streamline your accounting with AI-powered financial management tools. Automated bookkeeping, tax preparation, and financial analytics." />
         <meta name="keywords" content="AI accounting, financial management, bookkeeping automation, tax preparation, accounting software" />
@@ -53,7 +41,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3></h3></h3>
                   <p className="text-gray-300">{feature.description}</p></p></p>)
                 </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               ))}
             </div>
           </div>

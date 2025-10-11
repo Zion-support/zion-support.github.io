@@ -230,7 +230,6 @@ const CareersPage: React.FC = () => {
     'Stocked kitchen with snacks and beverages'
   ];
 
-const Page: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -469,4 +468,4 @@ const Page: React.FC = () => {
   );
 };
 
-export default Page;
+export default CareersPage;

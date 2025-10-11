@@ -24,29 +24,10 @@ const PageBackupPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
   },
-<<<<<<< HEAD
-  ];
-return ()
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
-          <div className="relative max-w-7xl mx-auto text-center" / /></div>
-            <h1></h1>
-              Page Backup
-            </h1>
-            <p></p>
-              Advanced page backup solutions powered by AI technology.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                Get Started
-              </button>
-              <button></button>
-=======
   ];];
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Page Backup - Zion Tech Group</title>
         <meta />
       </Helmet>
@@ -75,7 +56,6 @@ return (
                 Get Started;
               </button></button></button>
               <button>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 Learn More,
               </button></button></button>
             </div>

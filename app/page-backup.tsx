@@ -32,7 +32,6 @@ const HomePage: React.FC = () => {,
     },
     {
       icon: Cloud,
->>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       benefits: [''AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'']
@@ -72,7 +71,6 @@ const HomePage: React.FC = () => {,
     },
     {
       icon: Cloud,
->>>>>>> origin/main
       title: 'IT Services',
       description: 'Complete IT infrastructure and cloud solutions to modernize your business operations.',
       href: '/it-services',
@@ -81,21 +79,9 @@ const HomePage: React.FC = () => {,
       title: 'Micro SaaS',
       description: 'Specialized software-as-a-service solutions designed for specific business needs.',
       href: '/micro-saas',
-<<<<<<< HEAD
-      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']}]
-
-  return(<React.Fragment>)</React.Fragment>
-      <SEOOptimizer;
-=======
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
     }
   ];
-<<<<<<< HEAD
-  return ()
-                      aria-label="Call us at (302) 464-0950"></a>
-                      <Phone className="w-5 h-5" / /></Phone>
-                      <span>(302) 464-0950</span>
-=======
   return (
     <>
       <SEOOptimizer;
@@ -197,7 +183,6 @@ const HomePage: React.FC = () => {,
                       aria-label="Call us at (302) 464-0950">
                       <Phone className="w-5 h-5" />
                       <span>(302) 464-0950</span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                     </a>
                   </div>
                   
@@ -220,7 +205,6 @@ const HomePage: React.FC = memo(() => {,
     },
     {
       icon: Cloud,
->>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       benefits: [''AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'']
@@ -261,10 +245,6 @@ const HomePage: React.FC = memo(() => {,
               We help businesses leverage cutting-edge technology to drive growth, 
               improve efficiency, and stay ahead of the competition.
 
-<<<<<<< HEAD
-            {/* Services Section */} <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
-              <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
-=======
       </main>
     </>
   );

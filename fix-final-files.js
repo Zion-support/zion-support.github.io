@@ -33,7 +33,7 @@ const ${componentName}: React.FC<${componentName}Props> = ({
   return (
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
       {children || (
-        <div className="p-4 text-center text-gray-600">
+        <div className="p-4 text-center text-gray-600"></div>
 const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
@@ -45,37 +45,8 @@ const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX exp
     </div>
   );
 };
-export default ${componentName};`
-`;
-  } else if (isTs) {
-    return `//${componentName} - TypeScript definitions and utilities;
-export interface ${componentName}Config {
-  //Configuration properties;
-}
-export const default${componentName}Config: ${componentName}Config = {
-  //Default configuration;
 };
-export default {
-  default${componentName}Config;
-  } else if (isTs) {/* TODO: Fix JSX expression */}`
-    return `//${componentName} - TypeScript definitions and utilities;
-export interface ${componentName}Config {/* TODO: Fix JSX expression */}
-}
-export const default${componentName}Confi,
-  g: ${componentName}Config = {/* TODO: Fix JSX expression */}
-};
-export default {/* TODO: Fix JSX expression */}
-  default${componentName}Config;
-};`
-`;
-  } else {
-    return `//${componentName} - JavaScript module;
-export const ${componentName} = {
-  //Module implementation;
-  } else {/* TODO: Fix JSX expression */}`
-    return `//${componentName} - JavaScript module;
-export const ${componentName} = {/* TODO: Fix JSX expression */}
-};
+
 export default ${componentName};`
 `;
   }

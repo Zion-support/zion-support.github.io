@@ -24,12 +24,6 @@ interface PerformanceMetrics {}
   fmp?: number; // First Meaningful Paint;
   customMetrics: Record<string></strin>,
 }
-<<<<<<< HEAD
-class PerformanceMonitor {}}private metrics: PerformanceMetrics = {,}customMetrics: {,}interface PerformanceMetrics {/* TODO: Fix JSX expression */,}}}
-class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
-  private,;
-  observers: PerformanceObserver[] = [],
-=======
 class PerformanceMonitor {}
   private metrics: PerformanceMetrics = {}
     customMetrics: {}
@@ -40,7 +34,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
   private,
   observers: PerformanceObserver[] = []
->>>>>>> origin/main
   private isInitialized = false,
   init(): void {}}if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
@@ -83,7 +76,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
             this.recordMetric();
               'LCP',
->>>>>>> origin/main
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             );
           }
@@ -107,7 +99,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 if (clsValue > 0) {}
             this.recordMetric('CLS', clsValue);
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/main
             }
 if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
   private initializeObservers(): void {/* TODO: Fix JSX expression */,}}}
@@ -124,14 +115,6 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
     } catch (error) {}logger.error('Failed to initialize performance observers', error as Error);
     }
   }
-<<<<<<< HEAD
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {,}
-    try {,}
-      const observer = new PerformanceObserver((list) => {,;
-        for (const entry of list.getEntries()) {,;
-          if (entry.name === name) {,;
-            (this.metrics as any)[metricKey] = entry.startTime;,}private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {,}}try {}}const observer = new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (entry.name === name) {}(this.metrics as any)[metricKey] = entry.startTime;
-=======
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {,
             (this.metrics as any)[metricKey] = entry.startTime;,
@@ -142,7 +125,6 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
         for (const entry of list.getEntries()) {};
           if (entry.name === name) {};
             (this.metrics as any)[metricKey] = entry.startTime;
->>>>>>> origin/main
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
@@ -150,16 +132,11 @@ observer.observe({entryTypes: ['paint'] ,)})
       this.observers.push(observer);
     } catch (error) {}}
   }
-<<<<<<< HEAD
-  private observeLCP(): void {}}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1]
-=======
   private observeLCP(): void {}
     try {}
       const observer = const observer = new PerformanceObserver((list) => {};
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
->>>>>>> origin/main
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
 observer.observe({entryTypes: ['largest-contentful-paint'] ,)})
@@ -266,12 +243,6 @@ observer.observe({entryTypes: ['resource'] ,)})
   }
   addCustomMetric(name: string, value: number): void {,}
     ,
-<<<<<<< HEAD
-    this.metrics.customMetrics[name] = value;,;
-    this.logMetric(name, value)}}
-  private logMetric(name: string, value: number): void {,}
-    ,}if (process.env.NODE_ENV === 'development') {}ms`);
-=======
     this.metrics.customMetrics[name] = value;,
     this.logMetric(name, value)
   }
@@ -280,7 +251,6 @@ observer.observe({entryTypes: ['resource'] ,)})
     ,
   }
     if (process.env.NODE_ENV === 'development') {}ms`);
->>>>>>> origin/main
     }
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -308,16 +278,11 @@ observer.observe({entryTypes: ['resource'] ,)})
         event_category: 'performance',
 }
   }
-<<<<<<< HEAD
-  getMetrics(): PerformanceMetrics {}}return {...this.metrics}}}
-  getScore(): number {}}const scores = []
-=======
   getMetrics(): PerformanceMetrics {}
     return { ...this.metrics }
   }
   getScore(): number {}
     const scores = [];
->>>>>>> origin/main
     // FCP scoring (0-100);
     if (this.metrics.fcp) {}if (this.metrics.fcp <= 1800) scores.push(100);
       else if (this.metrics.fcp <= 4000) scores.push(50);

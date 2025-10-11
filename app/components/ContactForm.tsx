@@ -14,17 +14,6 @@ interface FormStatus {
       message: string,
 }
 
-<<<<<<< HEAD
-  const [formData, setFormData] = useState<FormData>()
-  })
-
-  const [status, setStatus] = useState<FormStatus>()
-  })
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-    const { name, value } = e.target;
-    setFormData()
-=======
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -39,25 +28,15 @@ interface FormStatus {
     message: '')
   })
 
-<<<<<<< HEAD
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
-    const {name, value}}= e.target;
-    setFormData(prev => ({)
-=======
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const  name, value } = e.target;
     setFormData(prev => ({
       ...prev,)
       [name]: value)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     }));
   }
 
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {,
-=======
   const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> origin/main
     e.preventDefault();
     setStatus( type: 'loading', message: 'Sending message...' })
 

@@ -2,10 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Share2, ArrowRight } from 'lucide-react';
 const SocialMediaManagerPage: React.FC = () => {
-<<<<<<< HEAD
-    return ()
-  )
-=======
     return (
     <>,
       <Helmet>
@@ -64,7 +60,6 @@ const SocialMediaManagerPage: React.FC = () => {
         </section>
       </div>)
     </>,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 };
 

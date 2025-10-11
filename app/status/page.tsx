@@ -51,10 +51,6 @@ const services = const services = const services = [
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-<<<<<<< HEAD
-      description: 'System monitoring and alerts',}}
-  ]
-=======
       description: 'System monitoring and alerts'
   };
     };
@@ -72,17 +68,12 @@ const incidents = const incidents = const incidents = [
   },
     {
     id: 2,
->>>>>>> origin/main
       title: 'Database Connection Issues',
       status: 'resolved',
       severity: 'major',
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
-<<<<<<< HEAD
-      affectedServices: ['Database', 'API Services']}}
-  ]
-=======
       affectedServices: ['Database', 'API Services']
   }
     }

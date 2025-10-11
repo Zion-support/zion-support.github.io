@@ -3,28 +3,16 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
 const CloudInfrastructurePage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {;
-    };
-  ];
-  const benefits = const benefits = const benefits = [
-=======
   const features = [
     
     }
   ];];];
->>>>>>> origin/main
   const benefits = [
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     '24/7 technical support',
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
-  return() {features.map((feature, index) => ()
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div></div><Helmet>
@@ -33,7 +21,6 @@ const CloudInfrastructurePage: React.FC = () => {
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions. 
->>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></p></p>
       {/* Features Section */}
@@ -54,7 +41,6 @@ const CloudInfrastructurePage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>
