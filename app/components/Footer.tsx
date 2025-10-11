@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -15,31 +14,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', description: 'Speech recognition' },
     { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' },
-    { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document analysis' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Business forecasting' },
-    { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' },
-    { name: 'AI Video Analysis', url: '/ai-video-analysis', description: 'Video content analysis' },
-    { name: 'AI Speech Synthesis', url: '/ai-speech-synthesis', description: 'Text-to-speech' },
-    { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', description: 'Personalized recommendations' },
-    { name: 'AI Sentiment Analysis', url: '/ai-sentiment-analysis', description: 'Emotion detection' },
-    { name: 'AI Enterprise Chatbot', url: '/ai-chatbot-enterprise', description: 'Enterprise-grade chatbots' },
-    { name: 'AI Content Moderation', url: '/ai-content-moderation', description: 'Automated content filtering' },
-    { name: 'AI Predictive Modeling', url: '/ai-predictive-modeling', description: 'ML forecasting' },
-    { name: 'AI Document Intelligence', url: '/ai-document-intelligence', description: 'Smart document processing' },
-    { name: 'AI Conversation Analytics', url: '/ai-conversation-analytics', description: 'Conversation insights' },
-    { name: 'AI Supply Chain Intelligence', url: '/ai-supply-chain-ai', description: 'Supply chain optimization' },
-    { name: 'AI Healthcare Diagnostics', url: '/ai-healthcare-diagnostics', description: 'Medical diagnostics' },
-    { name: 'AI Financial Forecasting', url: '/ai-financial-forecasting', description: 'Financial predictions' },
-    { name: 'AI IoT Analytics', url: '/ai-iot-analytics', description: 'IoT data analysis' },
-    { name: 'AI Conversational AI Platform', url: '/ai-conversational-ai', description: 'Advanced conversations' },
-    { name: 'AI Automated Testing', url: '/ai-automated-testing', description: 'Intelligent testing' },
-    { name: 'AI Knowledge Management', url: '/ai-knowledge-management', description: 'Smart knowledge systems' },
-    { name: 'AI Customer Churn Prediction', url: '/ai-customer-churn', description: 'Churn prevention' },
-    { name: 'AI Automated Reporting', url: '/ai-automated-reporting', description: 'Smart reporting' },
-    { name: 'AI Voice Assistant Platform', url: '/ai-voice-assistant', description: 'Enterprise voice AI' },
-    { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', description: 'Advanced content creation' }
+    { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI' }
   ]
 
   const itServices = [
@@ -50,66 +25,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
     { name: 'API Development', url: '/api-development', description: 'API solutions' },
     { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
-    { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' },
-    { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
-    { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' },
-    { name: 'Cloud-Native Development', url: '/cloud-native-development', description: 'Microservices & containers' },
-    { name: 'AI Integration Services', url: '/ai-integration-services', description: 'AI model integration' },
-    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Smart contracts & DeFi' },
-    { name: 'IoT Development', url: '/iot-development', description: 'Connected device solutions' },
-    { name: 'E-commerce Development', url: '/e-commerce-development', description: 'Online store platforms' },
-    { name: 'Advanced API Development', url: '/api-development-advanced', description: 'Enterprise-grade APIs' },
-    { name: 'Data Engineering', url: '/data-engineering', description: 'Data pipeline development' },
-    { name: 'Advanced Cybersecurity', url: '/cybersecurity-advanced', description: 'Threat hunting & response' },
-    { name: 'Cloud Migration', url: '/cloud-migration-advanced', description: 'Zero-downtime migration' },
-    { name: 'Advanced DevOps & SRE', url: '/devops-advanced', description: 'Site reliability engineering' },
-    { name: 'MLOps & AI Operations', url: '/machine-learning-ops', description: 'ML model deployment' },
-    { name: 'Enterprise Integration', url: '/enterprise-integration', description: 'System integration' },
-    { name: 'Performance Optimization', url: '/performance-optimization', description: 'App & infrastructure optimization' },
-    { name: 'Disaster Recovery', url: '/disaster-recovery-advanced', description: 'Business continuity' },
-    { name: 'Compliance Automation', url: '/compliance-automation', description: 'Regulatory compliance' },
-    { name: 'Cloud Cost Optimization', url: '/cloud-cost-optimization', description: 'Cost reduction' },
-    { name: 'Security Automation', url: '/security-automation', description: 'Automated security' },
-    { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
-    { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
-    { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
-  ]
-
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence' },
-    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
-    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
-    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation' },
-    { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice generation' },
-    { name: 'Zion Workflow Automation', url: '/zion-workflow-automation', description: 'Process automation' },
-    { name: 'Zion Social Scheduler', url: '/zion-social-scheduler', description: 'Social media management' },
-    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', description: 'AI video editing' },
-    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', description: 'Advanced translation' },
-    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', description: 'Intelligent code review' },
-    { name: 'Zion Customer Insights Pro', url: '/zion-customer-insights', description: 'Customer analytics' },
-    { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', description: 'Smart email management' },
-    { name: 'Zion AI Meeting Assistant', url: '/zion-ai-meeting-assistant', description: 'Meeting automation' },
-    { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', description: 'SEO optimization' },
-    { name: 'Zion AI Data Cleaner', url: '/zion-ai-data-cleaner', description: 'Data cleaning & validation' },
-    { name: 'Zion AI Contract Analyzer', url: '/zion-ai-contract-analyzer', description: 'Contract analysis' },
-    { name: 'Zion AI Survey Builder', url: '/zion-ai-survey-builder', description: 'Intelligent surveys' },
-    { name: 'Zion AI Accounting Assistant', url: '/zion-ai-accounting-assistant', description: 'AI accounting' },
-    { name: 'Zion AI Recruitment Pro', url: '/zion-ai-recruitment-pro', description: 'AI recruitment' },
-    { name: 'Zion AI Content Moderation', url: '/zion-ai-content-moderation', description: 'Content moderation' },
-    { name: 'Zion AI Predictive Maintenance', url: '/zion-ai-predictive-maintenance', description: 'Equipment maintenance' },
-    { name: 'Zion AI Energy Manager', url: '/zion-ai-energy-manager', description: 'Energy optimization' },
-    { name: 'Zion AI Supply Chain Optimizer', url: '/zion-ai-supply-chain-optimizer', description: 'Supply chain AI' },
-    { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', description: 'Fraud detection' },
-    { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
-    { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
+    { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' }
   ]
 
   const companyLinks = [
@@ -123,33 +39,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Status', url: '/status' }
   ]
 
-  const resourcesLinks = [
-    { name: 'Pricing', url: '/pricing' },
-    { name: 'FAQ', url: '/faq' },
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
-    { name: 'Tutorials', url: '/tutorials' },
-    { name: 'Community', url: '/community' },
-    { name: 'Demo', url: '/demo' },
-    { name: 'Compliance', url: '/compliance' }
-  ]
-
-  const enterpriseLinks = [
-    { name: 'Enterprise Solutions', url: '/enterprise' },
-    { name: 'Digital Transformation', url: '/digital-transformation' },
-    { name: 'Business Intelligence', url: '/business-intelligence' },
-    { name: 'Edge Computing', url: '/edge-computing' },
-    { name: 'Consultation', url: '/consultation' },
-    { name: 'Custom Development', url: '/custom-software' }
-  ]
-=======
-'use client'
-import React from 'react'
-import Link from 'next/link'
-import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
->>>>>>> origin/main
-
-const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -181,38 +70,39 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-cyan-400">Services</h3>
+            <h3 className="text-lg font-semibold text-cyan-400">AI Services</h3>
             <ul className="space-y-2">
+              {aiServices.map((service) => (
+                <li key={service.name}>
+                  <Link to={service.url} className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  All Services
+                <Link to="/ai-services" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  View All AI Services →
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-purple-400">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
+                <li key={service.name}>
+                  <Link to={service.url} className="text-gray-300 hover:text-purple-400 transition-colors duration-200 text-sm">
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
               <li>
-                <Link href="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link href="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link href="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Cloud Infrastructure
+                <Link to="/it-services" className="text-purple-400 hover:text-purple-300 transition-colors duration-200 text-sm font-medium">
+                  View All IT Services →
                 </Link>
               </li>
             </ul>
@@ -222,63 +112,13 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">Company</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-cyan-400">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link href="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Tutorials
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Support
-                </Link>
-              </li>
-              <li>
-                <Link href="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Demo
-                </Link>
-              </li>
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.url} className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -288,19 +128,23 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 text-sm hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <a href="tel:+13024640950" className="text-gray-300 text-sm hover:text-cyan-400 transition-colors">
+                  (302) 464-0950
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">San Francisco, CA</span>
+                <span className="text-gray-300 text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             <Link 
-              href="/consultation" 
+              to="/contact" 
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
             >
               <span>Get Started</span>
@@ -313,16 +157,16 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
+              © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
                 Cookie Policy
               </Link>
             </div>
@@ -331,6 +175,8 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+});
 
-export default Footer
+Footer.displayName = 'Footer';
+
+export default Footer;
