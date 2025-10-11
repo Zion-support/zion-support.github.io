@@ -207,13 +207,13 @@ export class APIClient {
   }
 }
 
-// Export utility functions
+// Export utility functions;
 export const createAPIClient = (baseURL: string, headers?: Record<string, string>) => 
   new APIClient(baseURL, headers);
 
-// Default API client instance
+// Default API client instance;
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 
-// Export types and classes
+// Export types and classes;
 export type { RequestConfig, APIResponse };
 export { APIError };

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Shield, Brain, BarChart, Target, TrendingUp, FileText} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -38,11 +36,9 @@ const AIAutomatedReportingPage: React.FC = () => {
       benefits: ['Automated data collection', 'Smart formatting', 'Instant delivery', 'Zero manual work']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
   const benefits = [
     {
-<<<<<<< HEAD
       icon: FileText,
       title: 'Automated Report Generation',
       description: 'Generate comprehensive reports automatically with AI-powered data analysis.',
@@ -76,8 +72,7 @@ const AIAutomatedReportingPage: React.FC = () => {
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security ensures your data remains protected and compliant.',
-      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
-=======
+      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails'],
       icon: <Shield className="w-6 h-6 text-green-500" />,
       title: 'Data Security',
       description: 'Enterprise-grade security with encrypted data transmission and storage.'
@@ -96,11 +91,9 @@ const AIAutomatedReportingPage: React.FC = () => {
       icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
       title: 'Customizable',
       description: 'Tailor reports to your specific business needs and requirements.'
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
     }
   ]
 
-<<<<<<< HEAD
   const benefits = [
     'Automated report generation saves 80% of manual effort',
     'Real-time data processing and visualization',
@@ -284,9 +277,8 @@ const AIAutomatedReportingPage: React.FC = () => {
   )
 }
 
-export default AiAutomatedReportingPage
-=======
-  const pricing = [
+export default AiAutomatedReportingPage;
+const pricing = [
     {
       name: 'Starter',
       price: '$99',
@@ -503,4 +495,3 @@ export default AiAutomatedReportingPage
 };
 
 export default AIAutomatedReportingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5

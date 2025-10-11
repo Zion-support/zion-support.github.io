@@ -1,11 +1,10 @@
 'use client'
 import React, { useEffect, useState, useCallback } from 'react'
 interface AccessibilitySettings {
-  highContrast: boolean
-  reducedMotion: boolean
+  highContrast: boolean,
+  reducedMotion: boolean,
   fontSize: 'normal' | 'large' | 'extra-large'
   focusVisible: boolean}
-
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -16,8 +15,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   })
   const { trackEvent } = useAnalytics()
   useEffect(() => {
-    // Add ARIA landmarks
-    const addLandmarks = () => {
+    // Add ARIA landmarks;
+const addLandmarks = () => {
       const main = document.querySelector('main')
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main')}
@@ -28,44 +27,44 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo')}
     }
-    // Add skip links
-    const addSkipLinks = () => {
+    // Add skip links;
+const addSkipLinks = () => {
       const skipLink = document.createElement('a')
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50'
       document.body.insertBefore(skipLink, document.body.firstChild)}
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style')
+    // Enhance focus management;
+const enhanceFocusManagement = () => {
+      // Add focus indicators;
+const style = document.createElement('style')
       style.textContent = `
         *:focus {
           outline: 2px solid #06b6d4 !important
           outline-offset: 2px !important}
         .sr-only {
-          position: absolute
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
-          clip: rect(0, 0, 0, 0)
-          white-space: nowrap
-          border: 0}
+          position: absolute,
+  width: 1px,
+  height: 1px,
+  padding: 0,
+  margin: -1px,
+  overflow: hidden,
+  clip: rect(0, 0, 0, 0)
+          white-space: nowrap,
+  border: 0}
         .sr-only.focus:not-sr-only {
-          position: static
-          width: auto
-          height: auto
-          padding: inherit
-          margin: inherit
-          overflow: visible
-          clip: auto
+          position: static,
+  width: auto,
+  height: auto,
+  padding: inherit,
+  margin: inherit,
+  overflow: visible,
+  clip: auto
           white-space: normal}
       `
       document.head.appendChild(style)}
-    // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
+    // Add keyboard navigation support;
+const addKeyboardNavigation = () => {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content with Tab
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
@@ -92,9 +91,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     if (header && !header.getAttribute('role')) {
       header.setAttribute('role', 'banner');
     }
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
+    // Check for user preferences;
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
     setSettings(prev => ({
       ...prev,
       reducedMotion: prefersReducedMotion,
@@ -106,8 +105,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast
     })
-    // Listen for preference changes
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    // Listen for preference changes;
+const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contrast: high)')
     const handleMotionChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
@@ -148,8 +147,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       root.classList.remove('focus-visible')}
   }
   const setupKeyboardNavigation = () => {
-    // Skip to main content functionality
-    const skipLink = document.querySelector('.skip-link')
+    // Skip to main content functionality;
+const skipLink = document.querySelector('.skip-link')
     if (skipLink) {
       skipLink.addEventListener('click', (e) => {
         e.preventDefault()
@@ -159,15 +158,15 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           main.scrollIntoView()}
       })}
 
-    // Trap focus in modals
-    const modals = document.querySelectorAll('[role="dialog"]')
+    // Trap focus in modals;
+const modals = document.querySelectorAll('[role="dialog"]')
     modals.forEach(modal => {
       const focusableElements = modal.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       )
-      const firstElement = focusableElements[0] as HTMLElement
-      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-      const handleKeyDown = (e: KeyboardEvent) => {
+      const firstElement = focusableElements[0] as HTMLElement;
+const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Tab') {
           if (e.shiftKey) {
             if (document.activeElement === firstElement) {
@@ -182,8 +181,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       }
       modal.addEventListener('keydown', handleKeyDown)})}
   const setupFocusManagement = useCallback(() => {
-    // Add focus indicators
-    const style = document.createElement('style')
+    // Add focus indicators;
+const style = document.createElement('style')
     style.textContent = `
       .focus-visible *:focus {
         outline: 2px solid #3b82f6

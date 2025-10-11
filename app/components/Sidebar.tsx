@@ -230,8 +230,8 @@ const Sidebar: React.FC = () => {
         <Menu className="w-6 h-6" />
       </button>
       {/* Sidebar Overlay */}
-      {isOpen && (<div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"}
+      {isOpen && (<div;
+className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"}
           onClick={() => setIsOpen(false)}
         />)}
       {/* Sidebar */}</div>
@@ -299,8 +299,8 @@ const Sidebar: React.FC = () => {
                   {(!section.key || expandedSections.has(section.key)) && (
                     <div className="ml-4 space-y-1">
                       {section.items.map((item, itemIndex) => (</div>
-                        <Link
-                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                        <Link;
+className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
                     <span>{section.title}</span>
                     {section.key && (expandedSections.has(section.key) ?
                         <ChevronDown className="w-4 h-4" /> :

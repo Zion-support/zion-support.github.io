@@ -41,9 +41,8 @@ phone: '',
     setIsSubmitting(true)
     setSubmitStatus('idle')
     try {
-      // Simulate form submission
-
-  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()
+      // Simulate form submission;
+const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle');try {// Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000))
@@ -148,8 +147,8 @@ phone: '',
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        required;
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your full name"
                       />
                     </div>
@@ -165,8 +164,8 @@ phone: '',
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        required;
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -302,8 +301,8 @@ phone: '',
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        required;
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="Your full name"
                       />
                     </div>
@@ -319,8 +318,8 @@ phone: '',
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        required;
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
                         placeholder="your@email.com"
                       />
                     </div>

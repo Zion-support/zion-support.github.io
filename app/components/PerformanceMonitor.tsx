@@ -18,8 +18,8 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-    // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
+    // Only show in development or when performance monitoring is enabled;
+const shouldMonitor = process.env.NODE_ENV === 'development' || 
                          localStorage.getItem('performance-monitoring') === 'true';
 
     if (!shouldMonitor) return;

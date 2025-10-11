@@ -53,7 +53,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 EnhancedAccessibilityEnhancer
-<<<<<<< HEAD
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -165,8 +164,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {const features = [
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 EnhancedAccessibilityEnhancer
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4fca
               </span>
               <br />
               <span className="text-white">Solutions</span>

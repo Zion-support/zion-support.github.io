@@ -72,23 +72,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         return () => container.removeEventListener('keydown', handleTabKey);
       };
 
-      // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
+      // Apply focus trap to modals and dropdowns;
+const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
       modals.forEach(modal => trapFocus(modal as HTMLElement));
     }
 
     // Screen reader support
     if (enableScreenReaderSupport && typeof window !== 'undefined') {
-      // Add live region for dynamic content updates
-      const liveRegion = document.createElement('div');
+      // Add live region for dynamic content updates;
+const liveRegion = document.createElement('div');
       liveRegion.setAttribute('aria-live', 'polite');
       liveRegion.setAttribute('aria-atomic', 'true');
       liveRegion.className = 'sr-only';
       liveRegion.id = 'live-region';
       document.body.appendChild(liveRegion);
 
-      // Announce page changes
-      const announcePageChange = (message: string) => {
+      // Announce page changes;
+const announcePageChange = (message: string) => {
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
           liveRegion.textContent = message;

@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -116,8 +115,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ? navigationEntry.responseStart - navigationEntry.requestStart
         : null;
 
-      // Measure Memory Usage
-      const memory =
+      // Measure Memory Usage;
+const memory =
         (performance as Performance & { memory?: { usedJSHeapSize: number } })
           .memory?.usedJSHeapSize || null;
 
@@ -152,7 +151,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-       
        
       console.log(
         'Slow resources detected:',
@@ -214,8 +212,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     measureResourceTiming();
     measureCoreWebVitals();
 
-    // Monitor performance every 5 seconds
-    const interval = setInterval(() => {
+    // Monitor performance every 5 seconds;
+const interval = setInterval(() => {
       measureResourceTiming();
     }, 5000);
 
@@ -236,8 +234,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [metrics, onMetricsUpdate]);
 
-  // Performance recommendations
-  const getPerformanceRecommendations = useCallback(() => {
+  // Performance recommendations;
+const getPerformanceRecommendations = useCallback(() => {
     const recommendations: string[] = [];
 
     if (metrics.fcp && metrics.fcp > 1800) {

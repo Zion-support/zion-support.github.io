@@ -20,11 +20,11 @@ export const useEnhancedPerformance = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    // Measure load time
-    const loadTime = performance.now();
+    // Measure load time;
+const loadTime = performance.now();
     
-    // Measure memory usage
-    const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
+    // Measure memory usage;
+const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
     
     // Measure render time
     requestAnimationFrame(() => {

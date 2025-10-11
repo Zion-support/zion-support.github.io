@@ -115,8 +115,8 @@ export class AdvancedAnalytics {
     this.userBehavior.pageViews++;
     this.userBehavior.userJourney.push(currentPage);
     
-    // Update top pages
-    const existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
+    // Update top pages;
+const existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
     if (existingPage) {
       existingPage.views++;
     } else {
@@ -169,10 +169,10 @@ export class AdvancedAnalytics {
         this.performanceMetrics = {
           pageLoadTime: navigation.loadEventEnd - navigation.loadEventStart,
           firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-          largestContentfulPaint: 0, // Would need to be calculated with LCP API
-          firstInputDelay: 0, // Would need to be calculated with FID API
-          cumulativeLayoutShift: 0, // Would need to be calculated with CLS API
-          timeToInteractive: 0 // Would need to be calculated
+          largestContentfulPaint: 0, // Would need to be calculated with LCP API,
+  firstInputDelay: 0, // Would need to be calculated with FID API,
+  cumulativeLayoutShift: 0, // Would need to be calculated with CLS API,
+  timeToInteractive: 0 // Would need to be calculated
         };
 
         this.trackEvent('performance_metrics', this.performanceMetrics);
@@ -192,8 +192,8 @@ export class AdvancedAnalytics {
       this.trackClick(target);
     });
 
-    // Track scroll depth
-    let maxScrollDepth = 0;
+    // Track scroll depth;
+let maxScrollDepth = 0;
     window.addEventListener('scroll', () => {
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (scrollDepth > maxScrollDepth) {
@@ -309,7 +309,7 @@ export class AdvancedAnalytics {
   }
 }
 
-// Export utility functions
+// Export utility functions;
 export const createAnalytics = (config: AnalyticsConfig) => new AdvancedAnalytics(config);
 
 export const trackEvent = (eventName: string, properties?: Record<string, any>) => {

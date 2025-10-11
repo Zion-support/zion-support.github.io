@@ -8,24 +8,24 @@ interface ImageProps {}
   src: string,
     alt: string
   width?: number
-  height?: number
-  className?: string
+  height?: number;
+className?: string
   priority?: boolean
-  _quality?: number
+  _quality?: number,
   src: string,
   alt: string,
-  src: string
+  src: string,
   alt: string
   width?: number
-  height?: number
-  className?: string
+  height?: number;
+className?: string
   priority?: boolean
-  _quality?: number
+  _quality?: number,
   src: string,
   alt: string,
   width?: number
-  height?: number
-  className?: string
+  height?: number;
+className?: string
   priority?: boolean
   _quality?: number
   _placeholder?: 'blur' | 'empty'

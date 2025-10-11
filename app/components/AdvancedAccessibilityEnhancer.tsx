@@ -144,8 +144,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
                 settings[feature.id as keyof typeof settings] ? 'bg-blue-600' : 'bg-gray-200'
               } ${!feature.enabled ? 'opacity-50 cursor-not-allowed' : ''}`}
             >
-              <span
-                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+              <span;
+className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
                   settings[feature.id as keyof typeof settings] ? 'translate-x-6' : 'translate-x-1'
                 }`}
               />

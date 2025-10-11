@@ -183,14 +183,14 @@ export class AccessibilityChecker {
   runAllChecks(): AccessibilityReport {
     this.results = [];
     
-    // Check images
-    const images = document.querySelectorAll('img');
+    // Check images;
+const images = document.querySelectorAll('img');
     images.forEach(img => {
       this.results.push(this.checkImageAltText(img));
     });
     
-    // Check form elements
-    const formElements = document.querySelectorAll('input, select, textarea');
+    // Check form elements;
+const formElements = document.querySelectorAll('input, select, textarea');
     formElements.forEach(element => {
       this.results.push(this.checkFormLabels(element as HTMLInputElement));
     });
@@ -198,14 +198,14 @@ export class AccessibilityChecker {
     // Check heading structure
     this.results.push(...this.checkHeadingStructure());
     
-    // Check color contrast for text elements
-    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
+    // Check color contrast for text elements;
+const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
     textElements.forEach(element => {
       this.results.push(this.checkColorContrast(element as HTMLElement));
     });
     
-    // Check keyboard accessibility
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    // Check keyboard accessibility;
+const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     interactiveElements.forEach(element => {
       this.results.push(this.checkKeyboardAccessibility(element as HTMLElement));
     });
@@ -240,8 +240,8 @@ export class AccessibilityChecker {
     const score = this.getAccessibilityScore();
     
     return `
-Accessibility Report
-Score: ${score}%
+Accessibility Report,
+  Score: ${score}%
 Total Checks: ${report.totalChecks}
 Passed: ${report.passedChecks}
 Failed: ${report.failedChecks}
@@ -256,10 +256,10 @@ ${report.results
   }
 }
 
-// Export a default instance
+// Export a default instance;
 export const accessibilityChecker = new AccessibilityChecker();
 
-// Export utility functions
+// Export utility functions;
 export const checkPageAccessibility = () => accessibilityChecker.runAllChecks();
 export const getAccessibilityScore = () => accessibilityChecker.getAccessibilityScore();
 export const generateAccessibilityReport = () => accessibilityChecker.generateReport();

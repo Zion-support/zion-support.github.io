@@ -24,8 +24,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
   useEffect(() => {
-    // Add structured data for breadcrumbs
-    const breadcrumbData = {
+    // Add structured data for breadcrumbs;
+const breadcrumbData = {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -43,8 +43,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     script.textContent = JSON.stringify(breadcrumbData);
     script.id = 'breadcrumb-structured-data';
     
-    // Remove existing breadcrumb data
-    const existing = document.getElementById('breadcrumb-structured-data');
+    // Remove existing breadcrumb data;
+const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {
       existing.remove();
     }

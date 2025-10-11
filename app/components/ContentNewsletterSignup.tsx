@@ -72,7 +72,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               Subscribe another email
             </button>
           </div>
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Welcome to Our Community!
           </h2>
@@ -84,8 +83,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             className="text-white underline hover:text-blue-200 transition-colors">
             Subscribe another email
           </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4fca
         </div>
       </div>
     )
@@ -112,8 +109,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={placeholder}
-                  required
-                  className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  required;
+className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
               <button

@@ -737,8 +737,8 @@ const ITConsultingPage: React.FC = () => {
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ];const filteredServices = itServices.filter(service => {const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  ];const filteredServices = itServices.filter(service => {const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch}
   })

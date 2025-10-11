@@ -19,15 +19,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     // Preload critical resources
     if (enablePreloading && typeof window !== 'undefined') {
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
+      // Preload critical fonts;
+const fontPreload = document.createElement('link');
       fontPreload.rel = 'preload';
       fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
       fontPreload.as = 'style';
       document.head.appendChild(fontPreload);
 
-      // Preload critical images
-      const criticalImages = [
+      // Preload critical images;
+const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];

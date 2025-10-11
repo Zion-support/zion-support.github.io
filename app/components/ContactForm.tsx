@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 interface FormData {
-  name: string
-  email: string
-  company: string
-  phone: string
-  service: string
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
   message: string
 }
 
@@ -29,14 +29,7 @@ const ContactForm: React.FC = () => {
     type: 'idle',
     message: ''
   })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4fca
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -44,14 +37,7 @@ const ContactForm: React.FC = () => {
       [name]: value
     }))
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4fca
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })
@@ -60,19 +46,16 @@ const ContactForm: React.FC = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
       
-<<<<<<< HEAD
       setStatus({ 
         type: 'success', 
         message: 'Thank you! Your message has been sent successfully.' 
       })
       
-=======
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
       })
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
       // Reset form
       setFormData({
         name: '',
@@ -82,33 +65,27 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       })
-<<<<<<< HEAD
     } catch {
       setStatus({ 
         type: 'error', 
         message: 'Sorry, there was an error sending your message. Please try again.' 
-=======
     } catch (error) {
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again later.'
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
       })
     }
   }
 
   const services = [
-<<<<<<< HEAD
     'AI Solutions',
     'Web Development',
     'Mobile Development',
     'Cloud Services',
     'Data Analytics',
-=======
     'AI Services',
     'IT Services',
     'Cloud Solutions',
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
     'Cybersecurity',
     '5G Implementation',
     'Data Analytics',
@@ -117,7 +94,6 @@ const ContactForm: React.FC = () => {
     'Digital Transformation',
     'Other'
   ]
-<<<<<<< HEAD
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -141,8 +117,8 @@ const ContactForm: React.FC = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required;
+className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Your full name"
               />
             </div>
@@ -157,8 +133,8 @@ const ContactForm: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                required
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required;
+className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="your.email@example.com"
               />
             </div>
@@ -219,7 +195,6 @@ const ContactForm: React.FC = () => {
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
               Message *
-=======
 
   return (
     <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -250,15 +225,14 @@ const ContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              required;
+className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               placeholder="Your full name"
             />
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
             </label>
             <input
               type="email"
@@ -267,19 +241,15 @@ const ContactForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               required
-<<<<<<< HEAD
               rows={5}
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               placeholder="Tell us about your project..."
-=======
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               placeholder="your@email.com"
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
             />
           </div>
         </div>
 
-<<<<<<< HEAD
           {status.message && (
             <div className={`flex items-center space-x-2 p-4 rounded-lg ${
               status.type === 'success' 
@@ -335,7 +305,6 @@ const ContactForm: React.FC = () => {
               <MapPin className="h-5 w-5 text-blue-400" />
               <span>New York, NY</span>
             </div>
-=======
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -426,7 +395,6 @@ const ContactForm: React.FC = () => {
           <div className="flex items-center justify-center text-gray-300">
             <MapPin className="w-4 h-4 mr-2" />
             <span className="text-sm">Innovation City, IC</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
           </div>
         </div>
       </div>

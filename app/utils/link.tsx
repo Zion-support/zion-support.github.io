@@ -3,8 +3,8 @@ interface LinkProps {
     children: React.ReactNode
 interface LinkProps {}
   href: string,
-    children: React.ReactNode
-  className?: string
+    children: React.ReactNode;
+className?: string
   target?: string
   rel?: string
   onClick?: () => void
@@ -18,9 +18,9 @@ export const Link: React.FC<LinkProps> = ({}
 interface LinkProps {href: string,
     children: React.ReactNode}
 interface LinkProps {}
-  href: string
-  children: React.ReactNode
-  className?: string
+  href: string,
+  children: React.ReactNode;
+className?: string
   target?: string
   rel?: string
   onClick?: () => void
@@ -30,8 +30,8 @@ export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
   href,
   href: string,
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode;
+className?: string
   target?: string
   rel?: string
   onClick?: () => void
@@ -59,7 +59,7 @@ export const Link: React.FC<LinkProps> = ({,
     }
   }</LinkProps>
   return (<a}
-  return(<a
+  return(<a;
 import React from 'react'
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
