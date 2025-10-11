@@ -55,15 +55,6 @@ export default function Footer() {
     { name: 'Contact', path: '/contact' }
   ];
 
-  const resources = [
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Documentation', path: '/docs' },
-    { name: 'API Reference', path: '/api' },
-    { name: 'Support', path: '/support' },
-    { name: 'Help Center', path: '/help' }
-  ];
-
   const legal = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' },
@@ -74,9 +65,13 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<<<<<<< HEAD
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
+=======
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -85,11 +80,17 @@ export default function Footer() {
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
+<<<<<<< HEAD
             <p className="text-gray-400 mb-4">
               Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.
             </p>
 <<<<<<< HEAD
 =======
+=======
+            <p className="text-gray-400 text-sm max-w-md">
+              Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services.
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
             <div className="flex space-x-4">
               <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
@@ -104,8 +105,13 @@ export default function Footer() {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
           </div>
 
+<<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
+=======
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Quick Links</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
             <ul className="space-y-2">
               <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
@@ -159,6 +165,7 @@ export default function Footer() {
             </ul>
           </div>
 
+<<<<<<< HEAD
           {/* IT Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">IT Services</h3>
@@ -169,6 +176,12 @@ export default function Footer() {
                 </Link>
               </li>
               {itServices.slice(0, 5).map((service, index) => (
+=======
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Services</h3>
+            <ul className="space-y-2">
+              {services.slice(0, 6).map((service, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
                 <li key={index}>
                   <Link to={service.path} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {service.name}
@@ -177,6 +190,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
           </div>
         </div>
 
@@ -192,43 +206,51 @@ export default function Footer() {
                 {service.name}
               </Link>
             ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
           </div>
         </div>
 
-        {/* Contact Info Section */}
-        <div className="bg-gray-800/50 rounded-lg p-6 mb-8">
+        <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
-              <div className="bg-blue-600/20 p-2 rounded-lg">
-                <Mail className="w-5 h-5 text-blue-400" />
-              </div>
+              <Mail className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Email</p>
+<<<<<<< HEAD
                 <p className="text-white font-medium">kleber@ziontechgroup.com</p>
+=======
+                <p className="text-white">contact@ziontechgroup.com</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <div className="bg-green-600/20 p-2 rounded-lg">
-                <Phone className="w-5 h-5 text-green-400" />
-              </div>
+              <Phone className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
+<<<<<<< HEAD
                 <p className="text-white font-medium">+1 302 464 0950</p>
+=======
+                <p className="text-white">+1 (555) 123-4567</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
               </div>
             </div>
             <div className="flex items-center space-x-3">
-              <div className="bg-red-600/20 p-2 rounded-lg">
-                <MapPin className="w-5 h-5 text-red-400" />
-              </div>
+              <MapPin className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Location</p>
+<<<<<<< HEAD
                 <p className="text-white font-medium">364 E Main St STE 1008<br />Middletown DE 19709</p>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
+=======
+                <p className="text-white">San Francisco, CA</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
@@ -274,10 +296,28 @@ export default function Footer() {
                 Built with ❤️ by Zion Tech Group
               </p>
             </div>
+=======
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex flex-wrap justify-center md:justify-start space-x-6">
+              {legal.map((item, index) => (
+                <Link key={index} to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm">
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+            <p className="text-gray-400 text-sm text-center md:text-right">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
           </div>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
 }

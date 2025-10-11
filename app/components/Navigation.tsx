@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+<<<<<<< HEAD
 =======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
 
@@ -13,12 +17,17 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen)
   }
@@ -106,12 +115,19 @@ export default function Navigation() {
             </Link>
           </div>
 
+<<<<<<< HEAD
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
                 to="/"
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
               >
+=======
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link to="/" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
                 Home
               </Link>
               <Link
@@ -121,6 +137,7 @@ export default function Navigation() {
                 About
               </Link>
               
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div className="relative">
                 <button
@@ -196,6 +213,27 @@ export default function Navigation() {
                     <Link to="/it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 font-semibold">All IT Services</Link>
                     {itServices.map((service, index) => (
                       <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">
+=======
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleServices}
+                  className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Services
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.path}
+                        className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
                         {service.icon}
                         <span className="ml-3">{service.name}</span>
                       </Link>
@@ -203,6 +241,7 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
 
               {/* Micro SAAS Dropdown */}
               <div className="relative">
@@ -229,6 +268,9 @@ export default function Navigation() {
               <Link to="/5g-implementation" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 5G Solutions
               </Link>
+=======
+              
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
               <Link to="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
                 Contact
@@ -236,16 +278,22 @@ export default function Navigation() {
             </div>
           </div>
 
-          <div className="lg:hidden">
+          {/* Mobile menu button */}
+          <div className="md:hidden">
             <button
               onClick={toggleMenu}
+<<<<<<< HEAD
               className="text-gray-900 hover:text-purple-600 p-2"
+=======
+              className="text-white hover:text-purple-300 inline-flex items-center justify-center p-2 rounded-md transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {isOpen && (
           <div className="lg:hidden">
@@ -350,10 +398,40 @@ export default function Navigation() {
                 {microSaasServices.slice(0, 4).map((service, index) => (
                   <Link key={index} to={service.path} className="text-gray-300 hover:text-purple-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                     {service.name}
+=======
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg rounded-lg mt-2">
+              <Link to="/" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+                Home
+              </Link>
+              <Link to="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+                About
+              </Link>
+              
+              {/* Mobile Services */}
+              <div className="space-y-1">
+                <div className="text-white px-3 py-2 text-base font-medium">Services</div>
+                {services.map((service, index) => (
+                  <Link
+                    key={index}
+                    to={service.path}
+                    className="flex items-center text-gray-300 hover:text-white pl-6 pr-3 py-2 rounded-md text-sm transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {service.icon}
+                    <span className="ml-3">{service.name}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
                   </Link>
                 ))}
               </div>
+              
+              <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+                Contact
+              </Link>
             </div>
+<<<<<<< HEAD
 
             <Link to="/5g-implementation" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
               5G Solutions
@@ -362,6 +440,8 @@ export default function Navigation() {
               Contact
             </Link>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
           </div>
         )}
       </div>

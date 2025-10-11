@@ -72,12 +72,26 @@ export default function HomePage() {
       link: '/5g-implementation'
     },
     {
+<<<<<<< HEAD
       icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
+=======
+      icon: <Zap className="w-8 h-8 text-red-500" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
       title: 'Digital Transformation',
       description: 'Transform your business for the digital age with comprehensive digital transformation services.',
       benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
       link: '/digital-transformation'
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
+=======
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-yellow-500" />,
+      title: 'Cloud Services',
+      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
+      benefits: ['Cloud Migration', 'Infrastructure Setup', 'Security Solutions', 'Cost Optimization'],
+      link: '/cloud-services'
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
     }
   ]
 
@@ -104,11 +118,19 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="text-center mb-12 sm:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
               Advanced AI & IT Solutions
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+=======
+          <div className="text-center mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Advanced AI & IT Solutions
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
               Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -129,10 +151,17 @@ export default function HomePage() {
           </div>
 
           {/* Stats Section */}
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
+=======
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-20">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center px-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -143,7 +172,11 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="text-center mb-12 sm:mb-16">
+=======
+          <div className="text-center mb-16">
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Comprehensive technology solutions designed to accelerate your digital transformation
@@ -178,9 +211,15 @@ export default function HomePage() {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
+<<<<<<< HEAD
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+=======
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
                 Let's discuss how our AI and IT solutions can drive your success.
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
               </p>
