@@ -1,34 +1,31 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Github, Linkedin, Twitter } from 'lucide-react';
-=======
-import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  const services = [
-    { name: 'AI Solutions', href: '/services/ai' },
-    { name: 'Cloud Architecture', href: '/services/cloud' },
-    { name: 'Web Development', href: '/services/web' },
-    { name: 'Mobile Apps', href: '/services/mobile' },
-    { name: 'Data Analytics', href: '/services/analytics' },
-    { name: 'DevOps', href: '/services/devops' },
-  ];
+export default function Footer() {
+  // const services = [
+  //   { name: 'AI Solutions', href: '/services/ai' },
+  //   { name: 'Cloud Architecture', href: '/services/cloud' },
+  //   { name: 'Web Development', href: '/services/web' },
+  //   { name: 'Mobile Apps', href: '/services/mobile' },
+  //   { name: 'Data Analytics', href: '/services/analytics' },
+  //   { name: 'DevOps', href: '/services/devops' },
+  // ];
 
-  const products = [
-    { name: 'AI Platform', href: '/products/ai-platform' },
-    { name: 'Cloud Suite', href: '/products/cloud-suite' },
-    { name: 'Analytics Dashboard', href: '/products/analytics' },
-    { name: 'Mobile SDK', href: '/products/mobile-sdk' },
-  ];
+  // const products = [
+  //   { name: 'AI Platform', href: '/products/ai-platform' },
+  //   { name: 'Cloud Suite', href: '/products/cloud-suite' },
+  //   { name: 'Analytics Dashboard', href: '/products/analytics' },
+  //   { name: 'Mobile SDK', href: '/products/mobile-sdk' },
+  // ];
 
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Press', href: '/press' },
-  ];
+  // const company = [
+  //   { name: 'About Us', href: '/about' },
+  //   { name: 'Careers', href: '/careers' },
+  //   { name: 'Blog', href: '/blog' },
+  //   { name: 'Press', href: '/press' },
+  // ];
 
   // Support links for future use
   // const supportLinks = [
@@ -37,9 +34,6 @@ const Footer: React.FC = () => {
   //   { name: 'API Reference', href: '/api' },
   //   { name: 'Status', href: '/status' },
   // ];
->>>>>>> cursor/fix-errors-and-merge-to-main-14e6
-
-export default function Footer() {
   return (
     <footer className="bg-white/5 backdrop-blur-lg border-t border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

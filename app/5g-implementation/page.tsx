@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
-<<<<<<< HEAD
-import {Wifi, BarChart, CheckCircle, Brain, Target, Zap, Shield} from 'lucide-react';
-=======
 // Icons will be imported as needed
->>>>>>> cursor/fix-errors-and-merge-to-main-14e6
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
