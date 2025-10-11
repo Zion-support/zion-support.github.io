@@ -7,14 +7,19 @@ const analysis = JSON.parse(fs.readFileSync('/workspace/missing-pages-analysis.j
 const missingPages = analysis.missingPagesList;
 
 // Template for AI service pages
-const aiServiceTemplate = (serviceName, route) => `'use client';
+function createAiServiceTemplate(serviceName, route) {
+  const displayName = serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const componentName = serviceName.replace(/-/g, '').replace(/^ai/, 'Ai');
+  const serviceDescription = `Advanced AI-powered solutions for ${displayName.toLowerCase()}`;
+  
+  return `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Cloud, Code, BarChart, Database, Heart, DollarSign, Eye, Mic, Globe, FileText, Workflow, Cpu, Target, MessageCircle, MessageSquare, TrendingUp, CheckSquare, Settings, Package, Calendar, Mail, Monitor, Wifi, Lock, ShoppingCart, Link as LinkIcon, Server, Box } from 'lucide-react';
 
-const ${serviceName.replace(/-/g, '').replace(/^ai/, 'Ai')}Page = () => {
-  const serviceName = "${serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}";
-  const serviceDescription = "Advanced AI-powered solutions for ${serviceName.toLowerCase()}";
+const ${componentName}Page = () => {
+  const serviceName = "${displayName}";
+  const serviceDescription = "${serviceDescription}";
   
   const features = [
     "AI-powered automation and intelligence",
@@ -37,9 +42,9 @@ const ${serviceName.replace(/-/g, '').replace(/^ai/, 'Ai')}Page = () => {
   return (
     <>
       <Helmet>
-        <title>${serviceName} | Zion Tech Group - AI & IT Solutions</title>
+        <title>${displayName} | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="${serviceDescription}" />
-        <meta name="keywords" content="AI, artificial intelligence, ${serviceName.toLowerCase()}, automation, technology solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, ${displayName.toLowerCase()}, automation, technology solutions" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -49,11 +54,11 @@ const ${serviceName.replace(/-/g, '').replace(/^ai/, 'Ai')}Page = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  ${serviceName}
+                  {serviceName}
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                ${serviceDescription}
+                {serviceDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
@@ -89,7 +94,7 @@ const ${serviceName.replace(/-/g, '').replace(/^ai/, 'Ai')}Page = () => {
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our ${serviceName}?</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our {serviceName}?</h2>
               <p className="text-gray-300">Transform your business with cutting-edge AI technology</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -107,7 +112,7 @@ const ${serviceName.replace(/-/g, '').replace(/^ai/, 'Ai')}Page = () => {
         <div className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-8">Contact us today to learn more about our ${serviceName} solutions</p>
+            <p className="text-gray-300 mb-8">Contact us today to learn more about our {serviceName} solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
                 Contact Sales
@@ -123,18 +128,24 @@ const ${serviceName.replace(/-/g, '').replace(/^ai/, 'Ai')}Page = () => {
   );
 };
 
-export default ${serviceName.replace(/-/g, '').replace(/^ai/, 'Ai')}Page;
+export default ${componentName}Page;
 `;
+}
 
 // Template for IT service pages
-const itServiceTemplate = (serviceName, route) => `'use client';
+function createItServiceTemplate(serviceName, route) {
+  const displayName = serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const componentName = serviceName.replace(/-/g, '').replace(/^it/, 'It');
+  const serviceDescription = `Professional IT solutions for ${displayName.toLowerCase()}`;
+  
+  return `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Cloud, Code, BarChart, Database, Heart, DollarSign, Eye, Mic, Globe, FileText, Workflow, Cpu, Target, MessageCircle, MessageSquare, TrendingUp, CheckSquare, Settings, Package, Calendar, Mail, Monitor, Wifi, Lock, ShoppingCart, Link as LinkIcon, Server, Box } from 'lucide-react';
 
-const ${serviceName.replace(/-/g, '').replace(/^it/, 'It')}Page = () => {
-  const serviceName = "${serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}";
-  const serviceDescription = "Professional IT solutions for ${serviceName.toLowerCase()}";
+const ${componentName}Page = () => {
+  const serviceName = "${displayName}";
+  const serviceDescription = "${serviceDescription}";
   
   const features = [
     "Enterprise-grade infrastructure",
@@ -157,9 +168,9 @@ const ${serviceName.replace(/-/g, '').replace(/^it/, 'It')}Page = () => {
   return (
     <>
       <Helmet>
-        <title>${serviceName} | Zion Tech Group - AI & IT Solutions</title>
+        <title>${displayName} | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="${serviceDescription}" />
-        <meta name="keywords" content="IT services, ${serviceName.toLowerCase()}, technology solutions, infrastructure, support" />
+        <meta name="keywords" content="IT services, ${displayName.toLowerCase()}, technology solutions, infrastructure, support" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -169,11 +180,11 @@ const ${serviceName.replace(/-/g, '').replace(/^it/, 'It')}Page = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  ${serviceName}
+                  {serviceName}
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                ${serviceDescription}
+                {serviceDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
@@ -209,7 +220,7 @@ const ${serviceName.replace(/-/g, '').replace(/^it/, 'It')}Page = () => {
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our ${serviceName}?</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our {serviceName}?</h2>
               <p className="text-gray-300">Transform your IT infrastructure with professional solutions</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -227,7 +238,7 @@ const ${serviceName.replace(/-/g, '').replace(/^it/, 'It')}Page = () => {
         <div className="py-16 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-8">Contact us today to learn more about our ${serviceName} solutions</p>
+            <p className="text-gray-300 mb-8">Contact us today to learn more about our {serviceName} solutions</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
                 Contact Sales
@@ -243,18 +254,24 @@ const ${serviceName.replace(/-/g, '').replace(/^it/, 'It')}Page = () => {
   );
 };
 
-export default ${serviceName.replace(/-/g, '').replace(/^it/, 'It')}Page;
+export default ${componentName}Page;
 `;
+}
 
 // Template for Micro SAAS pages
-const microSaasTemplate = (serviceName, route) => `'use client';
+function createMicroSaasTemplate(serviceName, route) {
+  const displayName = serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+  const componentName = serviceName.replace(/-/g, '').replace(/^zion/, 'Zion');
+  const serviceDescription = `Ready-to-use ${displayName.toLowerCase()} solution for your business`;
+  
+  return `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Cloud, Code, BarChart, Database, Heart, DollarSign, Eye, Mic, Globe, FileText, Workflow, Cpu, Target, MessageCircle, MessageSquare, TrendingUp, CheckSquare, Settings, Package, Calendar, Mail, Monitor, Wifi, Lock, ShoppingCart, Link as LinkIcon, Server, Box } from 'lucide-react';
 
-const ${serviceName.replace(/-/g, '').replace(/^zion/, 'Zion')}Page = () => {
-  const serviceName = "${serviceName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}";
-  const serviceDescription = "Ready-to-use ${serviceName.toLowerCase()} solution for your business";
+const ${componentName}Page = () => {
+  const serviceName = "${displayName}";
+  const serviceDescription = "${serviceDescription}";
   
   const features = [
     "Easy setup and configuration",
@@ -277,9 +294,9 @@ const ${serviceName.replace(/-/g, '').replace(/^zion/, 'Zion')}Page = () => {
   return (
     <>
       <Helmet>
-        <title>${serviceName} | Zion Tech Group - Micro SAAS Solutions</title>
+        <title>${displayName} | Zion Tech Group - Micro SAAS Solutions</title>
         <meta name="description" content="${serviceDescription}" />
-        <meta name="keywords" content="micro saas, ${serviceName.toLowerCase()}, business tools, automation, software as a service" />
+        <meta name="keywords" content="micro saas, ${displayName.toLowerCase()}, business tools, automation, software as a service" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -289,11 +306,11 @@ const ${serviceName.replace(/-/g, '').replace(/^zion/, 'Zion')}Page = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  ${serviceName}
+                  {serviceName}
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                ${serviceDescription}
+                {serviceDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
@@ -329,7 +346,7 @@ const ${serviceName.replace(/-/g, '').replace(/^zion/, 'Zion')}Page = () => {
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Why Choose ${serviceName}?</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Why Choose {serviceName}?</h2>
               <p className="text-gray-300">The perfect solution for modern businesses</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -443,8 +460,9 @@ const ${serviceName.replace(/-/g, '').replace(/^zion/, 'Zion')}Page = () => {
   );
 };
 
-export default ${serviceName.replace(/-/g, '').replace(/^zion/, 'Zion')}Page;
+export default ${componentName}Page;
 `;
+}
 
 // Create missing pages
 function createMissingPages() {
@@ -468,14 +486,14 @@ function createMissingPages() {
     let content = '';
     
     if (serviceName.startsWith('ai-')) {
-      content = aiServiceTemplate(serviceName, route);
+      content = createAiServiceTemplate(serviceName, route);
     } else if (serviceName.startsWith('it-') || serviceName.startsWith('api-') || serviceName.startsWith('data-') || serviceName.startsWith('cloud-') || serviceName.startsWith('cybersecurity-') || serviceName.startsWith('devops-') || serviceName.startsWith('machine-learning-') || serviceName.startsWith('enterprise-') || serviceName.startsWith('disaster-recovery-') || serviceName.startsWith('compliance-') || serviceName.startsWith('security-') || serviceName.startsWith('workflow-') || serviceName.startsWith('cloud-native-')) {
-      content = itServiceTemplate(serviceName, route);
+      content = createItServiceTemplate(serviceName, route);
     } else if (serviceName.startsWith('zion-')) {
-      content = microSaasTemplate(serviceName, route);
+      content = createMicroSaasTemplate(serviceName, route);
     } else {
       // Default template for other pages
-      content = aiServiceTemplate(serviceName, route);
+      content = createAiServiceTemplate(serviceName, route);
     }
     
     fs.writeFileSync(filePath, content);
