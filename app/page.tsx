@@ -164,7 +164,7 @@ const HomePage: React.FC = () => {
         enableFocusManagement={true}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced holographic-bg">
         <Navigation />
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
@@ -219,7 +219,7 @@ const HomePage: React.FC = () => {
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="tel:+13024640950"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center w-full sm:w-auto"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center w-full sm:w-auto cyber-button-enhanced"
                   aria-label="Call us at (302) 464-0950"
                 >
                   📞 Call: (302) 464-0950

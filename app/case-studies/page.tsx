@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react';
 
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies = const caseStudies = const caseStudies = [
+  const caseStudies = [
     {
       title: 'AI-Powered Customer Service for E-commerce',
       client: 'ShopTech Solutions',
@@ -28,65 +28,85 @@ const CaseStudiesPage: React.FC = () => {
       industry: 'Healthcare',
       image: '/api/placeholder/600/400',
       description: 'Implemented comprehensive cybersecurity solutions to protect sensitive patient data.',
-        results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%'];
+        results: ['100% compliance achieved', 'Zero security breaches', 'Reduced risk by 80%']
       };
     ];
-  return ()
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
-        <div className="relative max-w-7xl mx-auto text-center" /></div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /></h1>
-            Case Studies
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
-            Discover how we've helped businesses transform with cutting-edge AI and IT solutions.
-          </p>
-        </div>
-      </section>
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group | Success Stories</title>
+        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
+        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
+        <meta property="og:title" content="Case Studies - Zion Tech Group" />
+        <meta property="og:description" content="Explore our successful case studies and see how we've helped businesses transform" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Case Studies - Zion Tech Group" />
+        <meta name="twitter:description" content="Explore our successful case studies and see how we've helped businesses transform" />
+      </Helmet>
 
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-            {caseStudies.map((study, index) => ()
-                      {study.results.map((result, resultIndex) => ()
-                      ))}
-                    </ul>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced holographic-bg">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-enhanced text-center">
+              Case Studies
+            </h1>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {caseStudies.map((study, index) => (
+                <div key={index} className="cyber-card-enhanced group hover:shadow-neon-cyan transition-all duration-300">
+                  <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg mb-4 overflow-hidden">
+                    <img
+                      src={study.image}
+                      alt={study.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center" /></button>
-                    Read Full Case Study
-                    <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
-                  </button>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-2 text-sm text-gray-400">
+                      <Building className="w-4 h-4" />
+                      <span>{study.client}</span>
+                      <span className="text-gray-500">•</span>
+                      <span>{study.industry}</span>
+                    </div>
+                    
+                    <h2 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                      {study.title}
+                    </h2>
+                    
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {study.description}
+                    </p>
+                    
+                    <div className="space-y-2">
+                      <h3 className="text-sm font-semibold text-cyan-400">Key Results:</h3>
+                      <ul className="space-y-1">
+                        {study.results.map((result, resultIndex) => (
+                          <li key={resultIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                            <TrendingUp className="w-4 h-4 text-green-400" />
+                            <span>{result}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <button className="w-full flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors py-2 px-4 border border-cyan-400/50 rounded-lg hover:bg-cyan-400/10">
+                      <span className="text-sm font-medium">View Details</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-4 bg-white/5" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <h2 className="text-3xl font-bold text-white mb-8" /></h2>
-            Ready to Start Your Success Story?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8" /></p>
-            Let us help you achieve similar results with our AI and IT solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-            <Link to="/contact"
-              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300" /></Link>
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" / /></ArrowRight>
-            </Link>
-            <Link to="/services"
-              className="inline-flex items-center border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300" /></Link>
-              View Our Services
-              <ExternalLink className="w-5 h-5 ml-2" / /></ExternalLink>
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </main>
+        
+        <Footer />
+      </div>
+    </>
   );
 };
 
