@@ -10,6 +10,9 @@ interface PerformanceOptimizerProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,

@@ -15,15 +15,19 @@ export const useAnalytics = () => {
 <<<<<<< HEAD
     console.warn('useAnalytics must be used within an AnalyticsProvider');
     return null;
+<<<<<<< HEAD
 =======
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   }
   return context;
 };
 
 interface AnalyticsProviderProps {
   children: React.ReactNode;
+<<<<<<< HEAD
 <<<<<<< HEAD
   trackingId?: string;
 =======
@@ -34,6 +38,23 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const track = (event: string, parameters?: Record<string, any>) => {
     console.log('Analytics track:', event, parameters);
   };
+=======
+  trackingId?: string;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children,
+  trackingId = 'G-XXXXXXXXXX'
+}) => {
+  // Initialize Google Analytics
+  useEffect(() => {
+    if (typeof window !== 'undefined' && !window.gtag) {
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      document.head.appendChild(script);
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 
 <<<<<<< HEAD
       // Initialize gtag
@@ -77,6 +98,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     track,
     page,
     identify
+<<<<<<< HEAD
 =======
   const page = (pageName: string, parameters?: Record<string, any>) => {
     console.log('Analytics page:', pageName, parameters);
@@ -89,6 +111,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   return (
     <AnalyticsContext.Provider value={{ track, page, identify }}>
+=======
+  };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
       {children}
     </AnalyticsContext.Provider>
   );

@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight } from 'lucide-react';
@@ -10,24 +11,38 @@ const ConsultationPage: React.FC = () => {
 <<<<<<< HEAD
   const [formData, setFormData] = useState()
 =======
+=======
+import { Phone, Mail, Calendar, CheckCircle, ArrowRight, Clock, Users, Shield, Zap } from 'lucide-react';
+
+const ConsultationPage: React.FC = () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
     message: ''
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    timeline: '',
+    budget: '',
+    message: ''
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleInputChange = const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+=======
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     const { name, value } = e.target;
-    setFormData()
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -36,7 +51,15 @@ const ConsultationPage: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData()
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        timeline: '',
+        budget: '',
+        message: ''
       });
     } catch (error) {
       setSubmitStatus('error');
@@ -45,7 +68,7 @@ const ConsultationPage: React.FC = () => {
     }
   };
 
-  const consultationTypes = const consultationTypes = const consultationTypes = [
+  const consultationTypes = [
     {
       icon: Users,
       title: 'AI Strategy Consultation',
@@ -68,32 +91,57 @@ const ConsultationPage: React.FC = () => {
       description: 'Complete digital transformation strategy and planning',
       duration: '6-8 hours',
       price: 'Free',
-      features: ['Process analysis', 'Technology selection', 'Change management', 'Timeline planning'];
-    };
+      features: ['Process analysis', 'Technology selection', 'Change management', 'Timeline planning']
+    }
   ];
-<<<<<<< HEAD
-  const process = const process = const process = [
-    {
-      step: '1',
-    },
-    {
-      step: '2',
-      title: 'Strategy Development',
-    },
-    {
-      step: '3',
-      title: 'Implementation Plan',
-    },
-    {
-      step: '4',
-      title: 'Ongoing Support',;
-    };
-  ];
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
-  return() {consultationTypes.map((type, index) => ()
-                          {type.features.map((feature, featureIndex) => ()
+  return (
+    <>
+      <Helmet>
+        <title>Free Consultation - Zion Tech Group</title>
+        <meta name="description" content="Get a free consultation with our AI and IT experts. Transform your business with our strategic guidance." />
+      </Helmet>
+      <div className="min-h-screen py-20">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Free <span className="text-cyan-400">Consultation</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get a free consultation with our AI and IT experts. Transform your business with our strategic guidance.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Consultation Types */}
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-8">Our Consultation Services</h2>
+              <div className="space-y-6">
+                {consultationTypes.map((type, index) => (
+                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="p-3 bg-cyan-500/20 rounded-lg">
+                        <type.icon className="w-6 h-6 text-cyan-400" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2">{type.title}</h3>
+                        <p className="text-gray-300 mb-4">{type.description}</p>
+                        <div className="flex items-center space-x-4 text-sm text-gray-400 mb-4">
+                          <span className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1" />
+                            {type.duration}
+                          </span>
+                          <span className="flex items-center">
+                            <CheckCircle className="w-4 h-4 mr-1" />
+                            {type.price}
+                          </span>
+                        </div>
+                        <ul className="space-y-2">
+                          {type.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                              <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                              {feature}
+                            </li>
                           ))}
                         </ul>
                       </div>
@@ -101,15 +149,20 @@ const ConsultationPage: React.FC = () => {
                   </div>
                 ))}
               </div>
+            </div>
 
-              {/* Consultation Form */}
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Free Consultation</h2>
-                
-                {submitStatus === 'success' && ()
-                )}, {submitStatus === 'error' && ()
-                )}
+            {/* Consultation Form */}
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Free Consultation</h2>
+              
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <span className="text-green-400">Thank you! We'll contact you within 24 hours.</span>
+                </div>
+              )}
 
+<<<<<<< HEAD
                 <form onSubmit={handleSubmit} className="space-y-6" /></form>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4" /></div>
                     <div></div>
@@ -393,13 +446,48 @@ const ConsultationPage: React.FC = () => {
                       name="message"
                       value={formData.message}
 <<<<<<< HEAD
+=======
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+                  <span className="text-red-400">There was an error submitting your request. Please try again.</span>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
                       onChange={handleInputChange}
                       required
-                      rows={5}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Tell us about your project, challenges, and goals..."
-                    / /></textarea>
+                      placeholder="Your full name"
+                    />
                   </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+<<<<<<< HEAD
 
                   <button type="submit"
                     disabled={isSubmitting}
@@ -442,14 +530,143 @@ const ConsultationPage: React.FC = () => {
                     <Mail className="w-5 h-5" / /></Mail>
                     <span>Email Us</span>
                   </a>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
                 </div>
-              </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Your company name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="ai-strategy">AI Strategy Consultation</option>
+                    <option value="it-infrastructure">IT Infrastructure Review</option>
+                    <option value="digital-transformation">Digital Transformation</option>
+                    <option value="ai-services">AI Services</option>
+                    <option value="it-services">IT Services</option>
+                    <option value="micro-saas">Micro SaaS</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
+                      Project Timeline
+                    </label>
+                    <select
+                      id="timeline"
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select timeline</option>
+                      <option value="immediate">Immediate (1-2 weeks)</option>
+                      <option value="short">Short term (1-3 months)</option>
+                      <option value="medium">Medium term (3-6 months)</option>
+                      <option value="long">Long term (6+ months)</option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
+                      Budget Range
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select budget range</option>
+                      <option value="under-10k">Under $10,000</option>
+                      <option value="10k-50k">$10,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - $100,000</option>
+                      <option value="100k-500k">$100,000 - $500,000</option>
+                      <option value="over-500k">Over $500,000</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    Project Details *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Tell us about your project, challenges, and goals..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <span>Submitting...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Calendar className="w-5 h-5" />
+                      <span>Schedule Free Consultation</span>
+                    </>
+                  )}
+                </button>
+              </form>
             </div>
           </div>
-        </div>
-<<<<<<< HEAD
-      </section>
 
+<<<<<<< HEAD
       {/* Selected Consultation Details */},
     {selectedConsultation && ()
                   {selectedConsultation.features.map((feature, index) => ()
@@ -521,10 +738,28 @@ const ConsultationPage: React.FC = () => {
                   </div>
                 </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+          {/* Contact Info */}
+          <div className="mt-16 text-center">
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">Prefer to Call?</h2>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="tel:+13024640950"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  <Phone className="w-5 h-5" />
+                  <span>Call: (302) 464-0950</span>
+                </a>
+                <a href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center space-x-2 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  <Mail className="w-5 h-5" />
+                  <span>Email Us</span>
+                </a>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
   return (
     <>
@@ -554,10 +789,14 @@ const ConsultationPage: React.FC = () => {
 
       <Footer />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+      </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     </>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       )},
@@ -651,3 +890,6 @@ export default ConsultationPage;
 =======
 export default ConsultationPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+export default ConsultationPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6

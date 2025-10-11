@@ -4,23 +4,33 @@ import React from 'react';
 interface AccessibilitySettings {
   highContrast: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   reducedMotion: boolean;
   fontSize: 'small' | 'medium' | 'large';
   screenReader: boolean;
   keyboardNavigation: boolean;
+<<<<<<< HEAD
 =======
   fontSize: 'small' | 'medium' | 'large';
   reducedMotion: boolean;
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 }
 
 interface EnhancedAccessibilityProps {
   children: React.ReactNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
+<<<<<<< HEAD
 =======
   settings?: AccessibilitySettings;
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
@@ -32,6 +42,21 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     highContrast: false,
     fontSize: 'medium',
 <<<<<<< HEAD
+=======
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
+}) => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 'medium',
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     screenReader: false,
     keyboardNavigation: true
   });
@@ -117,7 +142,11 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
           event.preventDefault();
         }
       }
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
@@ -187,11 +216,14 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     };
   }, [settings]);
 
+<<<<<<< HEAD
 =======
     reducedMotion: false
   }
 }) => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   return <>{children}</>;
 };
 

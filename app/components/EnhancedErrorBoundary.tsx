@@ -22,10 +22,14 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.setState({
       error,
       errorInfo
     });
+=======
+    this.setState({ errorInfo });
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -47,6 +51,7 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return (
 <<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -57,6 +62,19 @@ class ErrorBoundary extends Component<Props, State> {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened.</p>
+=======
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="text-center p-8 max-w-md mx-auto">
+            <h1 className="text-4xl font-bold text-white mb-4">Oops! Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
             <button
               onClick={() => window.location.reload()}
               className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors"

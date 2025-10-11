@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Phone, Mail, MessageSquare, Clock, CheckCircle, ArrowRight } from 'lucide-react';
@@ -10,14 +11,22 @@ const SupportPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+import { Phone, Mail, MessageSquare, Clock, CheckCircle, ArrowRight, Search, FileText, Video, Headphones } from 'lucide-react';
+
+const SupportPage: React.FC = () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
+<<<<<<< HEAD
   const supportChannels = const supportChannels = const supportChannels = [
 =======
   const supportOptions = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  const supportChannels = [
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     {
       icon: Phone,
       title: 'Phone Support',
@@ -50,16 +59,10 @@ const SupportPage: React.FC = () => {
       responseTime: 'Within 2 hours',
       contact: 'Schedule Call',
       color: 'from-orange-500 to-red-600'
-    };
-<<<<<<< HEAD;
-  ];
-  const filteredFaqs = const filteredFaqs = const filteredFaqs = faqs.filter()
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-=======;
+    }
   ];
 
-  const faqCategories = const faqCategories = const faqCategories = [
+  const faqCategories = [
     {
       id: 'general',
       title: 'General Questions',
@@ -115,10 +118,11 @@ const SupportPage: React.FC = () => {
           question: 'How do you ensure data security?',
           answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA where applicable.'
         }
-      ];
-    };
+      ]
+    }
   ];
 
+<<<<<<< HEAD
   const resources = const resources = const resources = [
 =======
       availability: 'Business Hours',
@@ -128,6 +132,9 @@ const SupportPage: React.FC = () => {
 
   const faqs = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  const resources = [
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     {
       question: 'How do I get started with your AI solutions?',
       answer: 'Getting started is easy! Contact our sales team for a free consultation, and we\'ll help you choose the right AI solution for your business needs.'
@@ -145,28 +152,66 @@ const SupportPage: React.FC = () => {
       title: 'Status Page',
       description: 'Real-time status of all our services',
       icon: CheckCircle,
-      link: '/status';
-    };
+      link: '/status'
+    }
   ];
 
-  const filteredCategories = const filteredCategories = const filteredCategories = faqCategories.filter();
+  const filteredCategories = faqCategories.filter(category => 
+    selectedCategory === 'all' || category.id === selectedCategory
   );
 
-  const filteredQuestions = const filteredQuestions = const filteredQuestions = filteredCategories.flatMap()
+  const filteredQuestions = filteredCategories.flatMap(category => 
+    category.questions.filter(q =>
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    );
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5;
+    )
   );
 
-  return() {supportChannels.map((channel, index) => ()
-                      {channel.contact.startsWith('+') || channel.contact.includes('@') ? ()
+  return (
+    <>
+      <Helmet>
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for all Zion Tech Group services. Find answers, contact support, and access resources." />
+      </Helmet>
+      <div className="min-h-screen py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Support & <span className="text-cyan-400">Help</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get help and support for all Zion Tech Group services. Find answers, contact support, and access resources.
+            </p>
+          </div>
+
+          {/* Support Channels */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Contact Support</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {supportChannels.map((channel, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="text-center">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                      <channel.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
+                    <p className="text-gray-300 mb-4">{channel.description}</p>
+                    <div className="space-y-2 mb-4">
+                      <p className="text-sm text-gray-400">{channel.availability}</p>
+                      <p className="text-sm text-cyan-400">{channel.responseTime}</p>
+                    </div>
+                    <div className="mt-4">
+                      {channel.contact.startsWith('+') || channel.contact.includes('@') ? (
+                        <a
                           href={channel.contact.startsWith('+') ? `tel:${channel.contact}` : `mailto:${channel.contact}`}
                           className="text-cyan-400 hover:text-cyan-300 font-semibold"
-                        ></a>
+                        >
                           {channel.contact}
                         </a>
-                      ) : ()
+                      ) : (
+                        <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
+                          {channel.contact}
+                        </button>
                       )}
 =======
       question: 'Can I integrate your solutions with my existing systems?',
@@ -249,6 +294,7 @@ const SupportPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                     </div>
                   </div>
+<<<<<<< HEAD
                   
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                     Get Support
@@ -363,46 +409,70 @@ const SupportPage: React.FC = () => {
                     {faqCategories.map()
                     ))}
                   </select>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
 
-              {/* FAQ Items */}
-              <div className="space-y-6" /></div>
-                {filteredQuestions.map((faq, index) => ()
-                ))}
+          {/* FAQ Section */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
+            
+            {/* Search and Filter */}
+            <div className="mb-8">
+              <div className="flex flex-col md:flex-row gap-4 mb-6">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search FAQs..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="all">All Categories</option>
+                  {faqCategories.map(category => (
+                    <option key={category.id} value={category.id}>
+                      {category.title}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
 
-            {/* Resources */}
-            <div className="mb-16" /></div>
-              <h2 className="text-2xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
-                {resources.map((resource, index) => ()
-                ))}
-              </div>
+            {/* FAQ Items */}
+            <div className="space-y-6">
+              {filteredQuestions.map((faq, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
             </div>
+          </div>
 
-            {/* Contact CTA */}
-            <div className="text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
-                  Still Need Help?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
-                  Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                  <a href="tel:+13024640950"
-                    className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    <Phone className="w-5 h-5" / /></Phone>
-                    <span>Call: (302) 464-0950</span>
-                  </a>
-                  <a href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center justify-center space-x-2 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    <Mail className="w-5 h-5" / /></Mail>
-                    <span>Email Support</span>
+          {/* Resources */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">Additional Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {resources.map((resource, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 text-center hover:border-cyan-400/40 transition-all duration-300">
+                  <resource.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{resource.description}</p>
+                  <a href={resource.link} className="text-cyan-400 hover:text-cyan-300 font-semibold">
+                    Access Resource <ArrowRight className="w-4 h-4 inline ml-1" />
                   </a>
                 </div>
+<<<<<<< HEAD
 =======
                   
                   <div>
@@ -456,6 +526,37 @@ const SupportPage: React.FC = () => {
       
       <Footer />
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+=======
+              ))}
+            </div>
+          </div>
+
+          {/* Contact CTA */}
+          <div className="text-center">
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Still Need Help?
+              </h2>
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+13024640950"
+                  className="flex items-center justify-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  <Phone className="w-5 h-5" />
+                  <span>Call: (302) 464-0950</span>
+                </a>
+                <a href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center justify-center space-x-2 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  <Mail className="w-5 h-5" />
+                  <span>Email Support</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     </>
   );
 };

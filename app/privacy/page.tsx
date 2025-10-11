@@ -1,19 +1,27 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Database, Shield, Users, Eye } from 'lucide-react';
+=======
+import { Shield, Lock, Eye, Database, Users, Mail, Phone, Calendar } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 
 const PrivacyPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
   const lastUpdated = 'December 2024';
 
+<<<<<<< HEAD
   const sections = const sections = const sections = [
 =======
   const sections = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+  const sections = [
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     {
       icon: Database,
       title: 'Information We Collect',
@@ -50,6 +58,7 @@ const PrivacyPage: React.FC = () => {
         'We use industry-standard encryption to protect sensitive information transmitted online.',
         'We regularly review our data collection, storage, and processing practices to ensure we only collect, store, and process the minimum amount of data necessary.'
       ]
+<<<<<<< HEAD
 <<<<<<< HEAD
     };
 <<<<<<< HEAD;
@@ -274,7 +283,164 @@ const PrivacyPage: React.FC = () => {
                   <div className="text-gray-300" /></div>
                     <div>364 E Main St STE 1008</div>
                     <div>Middletown, DE 19709</div>
+=======
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Privacy Policy - Zion Tech Group</title>
+        <meta name="description" content="Learn how Zion Tech Group protects your privacy and handles your personal information." />
+      </Helmet>
+      <div className="min-h-screen py-20">
+        <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Privacy <span className="text-cyan-400">Policy</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-4">
+              Last updated: {lastUpdated}
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy and personal information. 
+              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit 
+              our website or use our services.
+            </p>
+            <p className="text-gray-300 leading-relaxed mt-4">
+              By using our website or services, you agree to the collection and use of information in accordance with this policy. 
+              If you do not agree with the terms of this Privacy Policy, please do not use our services.
+            </p>
+          </div>
+
+          {/* Policy Sections */}
+          <div className="space-y-8">
+            {sections.map((section, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-8">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-cyan-500/20 rounded-lg">
+                    <section.icon className="w-6 h-6 text-cyan-400" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
                   </div>
+                  <div className="flex-1">
+                    <h2 className="text-2xl font-bold text-white mb-4">{section.title}</h2>
+                    <ul className="space-y-3">
+                      {section.content.map((item, itemIndex) => (
+                        <li key={itemIndex} className="text-gray-300 leading-relaxed flex items-start">
+                          <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Cookies Section */}
+          <div className="bg-slate-800/50 rounded-lg p-8 mt-12">
+            <h2 className="text-2xl font-bold text-white mb-6">Cookies and Tracking Technologies</h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We use cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. 
+                Cookies are small data files stored on your device that help us remember your preferences and improve our services.
+              </p>
+              <p>
+                You can control cookie settings through your browser preferences. However, disabling cookies may affect 
+                the functionality of our website and services.
+              </p>
+            </div>
+          </div>
+
+          {/* Third-Party Services */}
+          <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Third-Party Services</h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We may use third-party services for analytics, marketing, and other business purposes. These services 
+                may collect information about your use of our website and services.
+              </p>
+              <p>
+                We carefully select our third-party partners and ensure they comply with applicable privacy laws and 
+                maintain appropriate security measures.
+              </p>
+            </div>
+          </div>
+
+          {/* Data Retention */}
+          <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Data Retention</h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We retain your personal information only for as long as necessary to fulfill the purposes outlined in this 
+                Privacy Policy, unless a longer retention period is required or permitted by law.
+              </p>
+              <p>
+                When we no longer need your personal information, we will securely delete or anonymize it in accordance 
+                with our data retention policies.
+              </p>
+            </div>
+          </div>
+
+          {/* International Transfers */}
+          <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">International Data Transfers</h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                Your information may be transferred to and processed in countries other than your country of residence. 
+                We ensure that such transfers comply with applicable data protection laws and implement appropriate safeguards.
+              </p>
+            </div>
+          </div>
+
+          {/* Children's Privacy */}
+          <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Children's Privacy</h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                Our services are not intended for children under 13 years of age. We do not knowingly collect personal 
+                information from children under 13. If we become aware that we have collected personal information from 
+                a child under 13, we will take steps to delete such information.
+              </p>
+            </div>
+          </div>
+
+          {/* Changes to Policy */}
+          <div className="bg-slate-800/50 rounded-lg p-8 mt-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Changes to This Privacy Policy</h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the 
+                new Privacy Policy on this page and updating the "Last updated" date.
+              </p>
+              <p>
+                We encourage you to review this Privacy Policy periodically for any changes. Changes to this Privacy 
+                Policy are effective when they are posted on this page.
+              </p>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8 mt-12">
+            <h2 className="text-2xl font-bold text-white mb-6">Contact Us</h2>
+            <p className="text-gray-300 mb-6">
+              If you have any questions about this Privacy Policy or our data practices, please contact us:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Calendar className="w-5 h-5 text-cyan-400 mt-1" />
+                <div className="text-gray-300">
+                  <div>364 E Main St STE 1008</div>
+                  <div>Middletown, DE 19709</div>
                 </div>
 =======
               <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -288,6 +454,7 @@ const PrivacyPage: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* CTA Section */}
@@ -335,12 +502,20 @@ const PrivacyPage: React.FC = () => {
       
       <Footer />
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+=======
+        </main>
+      </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     </>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default PrivacyPage;
 =======
 export default PrivacyPage;
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
+=======
+export default PrivacyPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6

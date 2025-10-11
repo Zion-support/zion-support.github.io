@@ -1,9 +1,32 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, Cloud, Zap } from 'lucide-react';
+=======
+import {
+  Brain,
+  Cloud,
+  Shield,
+  BarChart3,
+  Smartphone,
+  Database,
+  Zap,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
+  Eye,
+  Settings,
+  Users,
+  MessageSquare,
+  FileText,
+  Target
+} from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 
 const ServicesPage: React.FC = () => {
 <<<<<<< HEAD
@@ -72,156 +95,6 @@ const ServicesPage: React.FC = () => {
       marketPrice: '$300-1500/month',
       benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing']
     },
-    {
-      icon: Brain,
-      title: 'AI Quantum Computing Solutions',
-      description: 'Revolutionary quantum computing applications for optimization, cryptography, and complex problem solving.',
-      category: 'ai',
-      features: ['Quantum Optimization', 'Cryptographic Security', 'Complex Simulations', 'Machine Learning Acceleration', 'Quantum Algorithms'],
-      price: 'Starting at $2,999/month',
-      marketPrice: '$5000-20000/month',
-      benefits: ['Exponential processing power', 'Unbreakable encryption', 'Revolutionary problem solving', 'Future-proof technology']
-    },
-    {
-      icon: Eye,
-      title: 'AI Holographic Interface',
-      description: 'Next-generation holographic user interfaces powered by AI for immersive business applications.',
-      category: 'ai',
-      features: ['3D Holographic Displays', 'Gesture Recognition', 'Spatial Computing', 'AR/VR Integration', 'Real-time Rendering'],
-      price: 'Starting at $1,499/month',
-      marketPrice: '$2500-10000/month',
-      benefits: ['Immersive user experience', 'Enhanced productivity', 'Cutting-edge technology', 'Competitive advantage']
-    },
-    {
-      icon: Cpu,
-      title: 'AI Edge Computing Platform',
-      description: 'Distributed AI processing at the edge for real-time decision making and reduced latency.',
-      category: 'ai',
-      features: ['Edge AI Processing', 'Real-time Analytics', 'Low Latency Response', 'Offline Capability', 'Distributed Learning'],
-      price: 'Starting at $899/month',
-      marketPrice: '$1500-6000/month',
-      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Enhanced privacy', 'Real-time processing']
-    },
-    {
-      icon: Shield,
-      title: 'AI Quantum Security Suite',
-      description: 'Advanced quantum-resistant cybersecurity solutions for future-proof protection.',
-      category: 'ai',
-      features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Threat Detection', 'Advanced Encryption', 'Future-Proof Security'],
-      price: 'Starting at $1,299/month',
-      marketPrice: '$2000-8000/month',
-      benefits: ['Quantum-resistant security', 'Future-proof protection', 'Advanced threat detection', 'Military-grade encryption']
-    },
-    {
-      icon: Database,
-      title: 'AI Neural Database',
-      description: 'Revolutionary database system that learns and optimizes itself using neural networks.',
-      category: 'ai',
-      features: ['Self-Optimizing Queries', 'Predictive Indexing', 'Automatic Scaling', 'Neural Query Optimization', 'Intelligent Caching'],
-      price: 'Starting at $799/month',
-      marketPrice: '$1200-5000/month',
-      benefits: ['Self-optimizing performance', 'Reduced maintenance', 'Intelligent scaling', 'Predictive optimization']
-    },
-    {
-      icon: Users,
-      title: 'AI Customer Service',
-      description: 'Intelligent customer service solutions with automated ticket routing and sentiment analysis.',
-      category: 'ai',
-      features: ['Automated Ticket Routing', 'Sentiment Analysis', 'Multi-channel Support', 'Live Agent Handoff', 'Performance Analytics'],
-      price: 'Starting at $249/month',
-      marketPrice: '$400-1800/month',
-      benefits: ['Improved response times', 'Better customer satisfaction', 'Reduced agent workload', '24/7 availability']
-    },
-    {
-      icon: DollarSign,
-      title: 'AI Financial Analysis',
-      description: 'Advanced financial modeling and risk assessment using machine learning algorithms.',
-      category: 'ai',
-      features: ['Risk Assessment', 'Financial Modeling', 'Market Analysis', 'Credit Scoring', 'Fraud Prevention'],
-      price: 'Starting at $699/month',
-      marketPrice: '$1200-4000/month',
-      benefits: ['Improved risk management', 'Better investment decisions', 'Reduced financial losses', 'Compliance automation']
-    },
-    {
-      icon: Heart,
-      title: 'AI Healthcare Diagnostics',
-      description: 'Medical image analysis and diagnostic assistance using advanced computer vision and machine learning.',
-      category: 'ai',
-      features: ['Medical Image Analysis', 'Diagnostic Assistance', 'Patient Monitoring', 'Drug Discovery', 'Treatment Optimization'],
-      price: 'Starting at $999/month',
-      marketPrice: '$2000-8000/month',
-      benefits: ['Improved diagnostic accuracy', 'Faster diagnosis', 'Reduced medical errors', 'Cost-effective healthcare']
-    },
-    {
-      icon: Target,
-      title: 'AI Marketing Automation',
-      description: 'Intelligent marketing campaigns with personalized content and automated customer journey optimization.',
-      category: 'ai',
-      features: ['Personalized Campaigns', 'Customer Segmentation', 'A/B Testing', 'Lead Scoring', 'ROI Optimization'],
-      price: 'Starting at $399/month',
-      marketPrice: '$600-2500/month',
-      benefits: ['Higher conversion rates', 'Personalized experiences', 'Automated optimization', 'Better ROI']
-    },
-    {
-      icon: Settings,
-      title: 'AI Predictive Maintenance',
-      description: 'Predictive maintenance solutions for industrial equipment using IoT sensors and machine learning.',
-      category: 'ai',
-      features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Analytics'],
-      price: 'Starting at $599/month',
-      marketPrice: '$1000-4000/month',
-      benefits: ['Reduced downtime', 'Lower maintenance costs', 'Extended equipment life', 'Improved efficiency']
-    },
-    {
-      icon: Globe,
-      title: 'AI Language Translation',
-      description: 'Real-time language translation and localization services powered by advanced neural networks.',
-      category: 'ai',
-      features: ['Real-time Translation', 'Multi-language Support', 'Context Understanding', 'Voice Translation', 'Document Translation'],
-      price: 'Starting at $149/month',
-      marketPrice: '$250-1000/month',
-      benefits: ['Global communication', 'Reduced language barriers', 'Faster localization', 'Cost-effective translation']
-    },
-    {
-      icon: Mic,
-      title: 'AI Voice Recognition',
-      description: 'Advanced speech-to-text and voice command solutions for various business applications.',
-      category: 'ai',
-      features: ['Speech-to-Text', 'Voice Commands', 'Speaker Identification', 'Noise Cancellation', 'Multi-language Support'],
-      price: 'Starting at $299/month',
-      marketPrice: '$500-2000/month',
-      benefits: ['Hands-free operation', 'Improved accessibility', 'Faster data entry', 'Enhanced user experience']
-    },
-    {
-      icon: Database,
-      title: 'AI Data Processing',
-      description: 'Intelligent data cleaning, validation, and processing using machine learning algorithms.',
-      category: 'ai',
-      features: ['Data Cleaning', 'Validation Rules', 'Duplicate Detection', 'Data Enrichment', 'Quality Scoring'],
-      price: 'Starting at $199/month',
-      marketPrice: '$350-1500/month',
-      benefits: ['Improved data quality', 'Reduced manual work', 'Better insights', 'Cost savings']
-    },
-    {
-      icon: Lock,
-      title: 'AI Cybersecurity',
-      description: 'Advanced threat detection and security monitoring using artificial intelligence and machine learning.',
-      category: 'ai',
-      features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Vulnerability Scanning', 'Security Analytics'],
-      price: 'Starting at $799/month',
-      marketPrice: '$1500-5000/month',
-      benefits: ['Enhanced security', 'Faster threat detection', 'Reduced false positives', '24/7 monitoring']
-    },
-    {
-      icon: Calendar,
-      title: 'AI Scheduling Assistant',
-      description: 'Intelligent scheduling and calendar management with automated meeting optimization.',
-      category: 'ai',
-      features: ['Smart Scheduling', 'Meeting Optimization', 'Conflict Resolution', 'Time Zone Management', 'Resource Allocation'],
-      price: 'Starting at $99/month',
-      marketPrice: '$150-600/month',
-      benefits: ['Improved productivity', 'Reduced scheduling conflicts', 'Time optimization', 'Better resource utilization']
-    },
     
     // IT Services
     {
@@ -275,16 +148,6 @@ const ServicesPage: React.FC = () => {
       benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
     },
     {
-      icon: Code,
-      title: 'Custom Software Development',
-      description: 'Tailored software solutions built with modern technologies and best practices for optimal performance.',
-      category: 'it',
-      features: ['Custom Application Development', 'API Development', 'Integration Services', 'Performance Optimization', 'Security Implementation', 'Quality Assurance'],
-      price: 'Starting at $150/hour',
-      marketPrice: '$200-500/hour',
-      benefits: ['Tailored solutions', 'Modern technology stack', 'Scalable architecture', 'Ongoing support']
-    },
-    {
       icon: Smartphone,
       title: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications for iOS and Android with optimal user experience.',
@@ -294,6 +157,7 @@ const ServicesPage: React.FC = () => {
       marketPrice: '$15000-50000/project',
       benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement']
     },
+<<<<<<< HEAD
     {
       icon: Globe,
       title: 'Web Development',
@@ -614,6 +478,8 @@ const ServicesPage: React.FC = () => {
       marketPrice: '$150-600/month',
       benefits: ['Improved productivity', 'Reduced scheduling conflicts', 'Time optimization', 'Better resource utilization']
     },
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     
     // Micro SaaS
     {
@@ -675,6 +541,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $79/month',
       marketPrice: '$150-400/month',
       benefits: ['Data protection', 'Business continuity', 'Cost-effective storage', 'Easy recovery']
+<<<<<<< HEAD
     },
     {
       icon: FileText,
@@ -1257,12 +1124,21 @@ const ServicesPage: React.FC = () => {
       benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization'];
     };
   ];
+=======
+    }
+  ];
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -1273,6 +1149,7 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Our Services | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Comprehensive AI and IT services including chatbots, analytics, cybersecurity, cloud solutions, and custom software development." />
         <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, software development, digital transformation" />
@@ -1407,10 +1284,95 @@ const ServicesPage: React.FC = () => {
                         <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
+=======
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business." />
+      </Helmet>
+      <main className="min-h-screen py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Our <span className="text-cyan-400">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive AI and IT solutions designed to transform your business and drive growth.
+            </p>
+          </div>
+
+          {/* Search and Filter */}
+          <div className="mb-12">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+              <div className="flex items-center space-x-2">
+                <Filter className="text-gray-400 w-5 h-5" />
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  {categories.map(category => (
+                    <option key={category.id} value={category.id}>
+                      {category.name} ({category.count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-cyan-500/20 rounded-lg mr-4">
+                    <service.icon className="w-6 h-6 text-cyan-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                    <p className="text-cyan-400 text-sm font-medium">{service.price}</p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                        <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {service.benefits && (
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="text-sm text-green-400 flex items-center">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {benefit}
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
                         </li>
                       ))}
                     </ul>
                   </div>
+<<<<<<< HEAD
 
                   {service.benefits && (
                     <div className="mb-6">
@@ -1472,6 +1434,20 @@ const ServicesPage: React.FC = () => {
               <div className="bg-slate-800/50 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 group border border-gray-700 hover:border-cyan-500/50">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Brain className="w-8 h-8 text-white" />
+=======
+                )}
+                
+                <div className="flex items-center justify-between">
+                  <a href="/contact"
+                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
+                  <a href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
+                    Get Quote
+                  </a>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">AI Services</h3>
                 <p className="text-gray-300 mb-6">
@@ -1508,12 +1484,40 @@ const ServicesPage: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
                 </a>
               </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Contact our experts for a free consultation and discover how our services can transform your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  Get Free Consultation
+                </a>
+                <a href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  Call: (302) 464-0950
+                </a>
+              </div>
             </div>
+<<<<<<< HEAD
           </section>
         </main>
         
         <Footer />
       </div>
+=======
+          </div>
+        </div>
+      </main>
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     </>
   );
 };

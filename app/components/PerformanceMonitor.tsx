@@ -3,6 +3,9 @@ import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
 
@@ -79,8 +82,13 @@ const PerformanceMonitor: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-white/10 rounded-lg p-4 text-white text-sm z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
+=======
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 text-white text-sm z-50 max-w-xs">
+      <div className="flex justify-between items-center mb-2">
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
         <h3 className="font-semibold text-cyan-400">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
