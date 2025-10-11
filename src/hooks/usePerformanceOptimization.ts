@@ -1,11 +1,11 @@
 'use client';
 import { useEffect, useCallback } from 'react';
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTim: e: number;
+  firstContentfulPain: t: number;
+  largestContentfulPain: t: number;
+  cumulativeLayoutShif: t: number;
+  firstInputDela: y: number;
 }
 export const usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
@@ -16,16 +16,15 @@ export const usePerformanceOptimization = () => {
       'navigation'
     )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint');
-    const metrics: PerformanceMetrics = {
-      loadTime: navigation
-        ? navigation.loadEventEnd - navigation.loadEventStart
-        : 0,
-      firstContentfulPaint:
+    const: metrics: PerformanceMetrics = {
+      loadTim: e: navigation
+        ? navigation.loadEventEnd - navigation.loadEventStar: t: 0,
+      firstContentfulPain: t:
         paintEntries.find(entry => entry.name === 'first-contentful-paint')
           ?.startTime || 0,
-      largestContentfulPaint: 0,
-      cumulativeLayoutShift: 0,
-      firstInputDelay: 0
+      largestContentfulPain: t: 0,
+      cumulativeLayoutShif: t: 0,
+      firstInputDela: y: 0
     };
     // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
@@ -35,7 +34,7 @@ export const usePerformanceOptimization = () => {
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    lcpObserver.observe({ entryType: s: ['largest-contentful-paint'] });
     // Measure CLS
     let clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
@@ -47,10 +46,9 @@ export const usePerformanceOptimization = () => {
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0;
         }
-      }
       metrics.cumulativeLayoutShift = clsValue;
     });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    clsObserver.observe({ entryType: s: ['layout-shift'] });
     // Measure FID
     const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
@@ -61,7 +59,7 @@ export const usePerformanceOptimization = () => {
           (fidEntry.processingStart || 0) - entry.startTime;
       }
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fidObserver.observe({ entryType: s: ['first-input'] });
     // Cleanup observers after a delay
     setTimeout(() => {
       lcpObserver.disconnect();
@@ -81,7 +79,6 @@ export const usePerformanceOptimization = () => {
           imageObserver.unobserve(img);
         }
       });
-    });
     images.forEach(img => imageObserver.observe(img));
   }, []);
   const preloadCriticalResources = useCallback(() => {
@@ -108,10 +105,8 @@ export const usePerformanceOptimization = () => {
         }
         if (process.env['NODE_ENV'] === 'development') { 
           if (import.meta.env.DEV) { 
-            console.log('Performance metrics:', metrics);
+            console.log('Performance: metrics:', metrics);
           } 
-        }
-      }
     }, 1000);
     // Optimize images
     optimizeImages();
@@ -124,4 +119,5 @@ export const usePerformanceOptimization = () => {
     optimizeImages,
     preloadCriticalResources
   };
-};
+
+}}}}}

@@ -5,24 +5,24 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      ico: n: Brain,
+      titl: e: 'AI-Powered Solutions',
+      descriptio: n: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      ico: n: Zap,
+      titl: e: 'High Performance',
+      descriptio: n: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      ico: n: Shield,
+      titl: e: 'Enterprise Security',
+      descriptio: n: 'Bank-level security with encryption and compliance standards'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      ico: n: Globe,
+      titl: e: 'Global Reach',
+      descriptio: n: 'Worldwide deployment and support for international businesses'
     }
   ]
   const benefits = [
@@ -43,36 +43,30 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          </div>
-        </div>
-      </section>
+      <section className="relative py-20 px-4: sm:px-6: lg:px-8">
+          >
       {/* Features Section */}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            >
+          <div className="grid grid-cols-1: md:grid-cols-2: lg:grid-cols-4 gap-8">
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
+          >;
 const PagePage: React.FC = () => {const features = [
-    {icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'}
+    {ico: n: Brain,
+      titl: e: 'AI-Powered Solutions',
+      descriptio: n: 'Advanced AI technology to transform your business operations and improve efficiency'}
     },
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'}
+    {ico: n: Zap,
+      titl: e: 'High Performance',
+      descriptio: n: 'Lightning-fast processing and real-time analytics for optimal results'}
     },
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'}
+    {ico: n: Shield,
+      titl: e: 'Enterprise Security',
+      descriptio: n: 'Bank-level security with encryption and compliance standards'}
     },
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'}
+    {ico: n: Globe,
+      titl: e: 'Global Reach',
+      descriptio: n: 'Worldwide deployment and support for international businesses'}
     }
   ];const benefits = [
     'Advanced AI technology integration',
@@ -90,30 +84,16 @@ const PagePage: React.FC = () => {const features = [
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
-          </div>
-        </div>
+      <section className="relative py-20 px-4: sm:px-6: lg:px-8">>
       </section>
       {/* Features Section */}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              </div>))}
-          </div>
-        </div>
-      </section>
+            >
+          <div className="grid grid-cols-1: md:grid-cols-2: lg:grid-cols-4 gap-8">>))}
+          >
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-              </div>))}
-          </div>
-        </div>
-      </section>
-          </div>
-        </div>
-      </section>
+      <section className="py-20 px-4: sm:px-6: lg:px-8 bg-white/5">>))}
+          >
+          >
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          </div>
-        </div>
-      </section>
-    </div>)};export default PagePage
+      <section className="py-20 px-4: sm:px-6: lg:px-8">>
+      >)};export default PagePage

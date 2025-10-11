@@ -1,57 +1,56 @@
 // Define metadata type for compatibility
 interface Metadata {
-  title: string;
-  description: string;
-  keywords: string[];
-  authors: Array<{ name: string }>;
-  creator: string;
-  publisher: string;
-  formatDetection: {
-    email: boolean;
-    address: boolean;
-    telephone: boolean;
+  titl: e: string;
+  descriptio: n: string;
+  keyword: s: string[];
+  author: s: Array<{ name: string }>;
+  creato: r: string;
+  publishe: r: string;
+  formatDetectio: n: {
+    emai: l: boolean;
+    addres: s: boolean;
+    telephon: e: boolean;
   };
-  metadataBase: URL;
-  alternates: {
-    canonical: string;
+  metadataBas: e: URL;
+  alternate: s: {
+    canonica: l: string;
   };
-  openGraph: {
-    title: string;
-    description: string;
-    url: string;
-    siteName: string;
-    images: Array<{
-      url: string;
-      width: number;
-      height: number;
-      alt: string;
+  openGrap: h: {
+    titl: e: string;
+    descriptio: n: string;
+    ur: l: string;
+    siteNam: e: string;
+    image: s: Array<{
+      ur: l: string;
+      widt: h: number;
+      heigh: t: number;
+      al: t: string;
     }>;
-    locale: string;
-    type: string;
+    local: e: string;
+    typ: e: string;
   };
-  twitter: {
-    card: string;
-    title: string;
-    description: string;
-    images: string[];
+  twitte: r: {
+    car: d: string;
+    titl: e: string;
+    descriptio: n: string;
+    image: s: string[];
   };
-  robots: {
-    index: boolean;
-    follow: boolean;
-    googleBot: {
-      index: boolean;
-      follow: boolean;
+  robot: s: {
+    inde: x: boolean;
+    follo: w: boolean;
+    googleBo: t: {
+      inde: x: boolean;
+      follo: w: boolean;
       'max-video-preview': number;
       'max-image-preview': string;
       'max-snippet': number;
     };
-  };
 }
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
-  keywords: [
+export const: metadata: Metadata = {
+  titl: e: 'Zion Tech Group - Advanced AI and IT Solutions',
+  descriptio: n: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
+  keyword: s: [
     'AI solutions',
     'cloud architecture',
     'web development',
@@ -62,49 +61,49 @@ export const metadata: Metadata = {
     'artificial intelligence',
     'technology consulting'
   ],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
+  author: s: [{ name: 'Zion Tech Group' }],
+  creato: r: 'Zion Tech Group',
+  publishe: r: 'Zion Tech Group',
+  formatDetectio: n: {
+    emai: l: false,
+    addres: s: false,
+    telephon: e: false,
   },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
+  metadataBas: e: new URL('http: s://ziontechgroup.com'),
+  alternate: s: {
+    canonica: l: '/',
   },
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
+  openGrap: h: {
+    titl: e: 'Zion Tech Group - Advanced AI and IT Solutions',
+    descriptio: n: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
+    ur: l: 'http: s://ziontechgroup.com',
+    siteNam: e: 'Zion Tech Group',
+    image: s: [
       {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - Advanced AI and IT Solutions',
+        ur: l: '/og-image.jpg',
+        widt: h: 1200,
+        heigh: t: 630,
+        al: t: 'Zion Tech Group - Advanced AI and IT Solutions',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    local: e: 'en_US',
+    typ: e: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
-    images: ['/og-image.jpg'],
+  twitte: r: {
+    car: d: 'summary_large_image',
+    titl: e: 'Zion Tech Group - Advanced AI and IT Solutions',
+    descriptio: n: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
+    image: s: ['/og-image.jpg'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
+  robot: s: {
+    inde: x: true,
+    follo: w: true,
+    googleBo: t: {
+      inde: x: true,
+      follo: w: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
 }
+}}

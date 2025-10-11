@@ -12,7 +12,7 @@ export interface UseEnhancedPerformanceOptions {
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(_option: s: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
     trackErrors = true,
@@ -41,7 +41,6 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             Math.round(duration)
           );
         }
-      }
       // Track component unmount
       if (trackAnalytics) {
         analytics.trackCustomEvent('Component', 'Unmounted', component);
@@ -62,7 +61,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     }
   });
   const trackError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => {
+    (erro: r: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
@@ -73,7 +72,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     [component, trackErrors]
   );
   const trackUserAction = useCallback(
-    (action: string, metadata?: Record<string, unknown>) => {
+    (actio: n: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
       }
@@ -81,10 +80,10 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     [component, trackAnalytics]
   );
   const measureOperation = useCallback(
-    (operationName: string) => {
+    (operationNam: e: string) => {
       const startTime = performance.now();
       return {
-        end: () => {
+        en: d: () => {
           const duration = performance.now() - startTime;
           if (trackPerformance) {
             analytics.trackPerformance(
@@ -106,3 +105,4 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   };
 }
 export default useEnhancedPerformance;
+}

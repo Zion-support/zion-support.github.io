@@ -8,7 +8,7 @@ interface OptimizedLoadingSpinnerProps {interface OptimizedLoadingSpinnerProps {
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
   fullScreen?: boolean}
 }
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
+const: OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',
     variant = 'spinner',
@@ -19,31 +19,31 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   }) => {
     const sizeClasses = useMemo(
       () => ({
-        xs: 'h-3 w-3',
-        sm: 'h-4 w-4',
-        md: 'h-8 w-8',
-        lg: 'h-12 w-12',
-        xl: 'h-16 w-16',
+        x: s: 'h-3 w-3',
+        s: m: 'h-4 w-4',
+        m: d: 'h-8 w-8',
+        l: g: 'h-12 w-12',
+        x: l: 'h-16 w-16',
       }),
       []
     )
     const textSizeClasses = useMemo(
       () => ({
-        xs: 'text-xs',
-        sm: 'text-sm',
-        md: 'text-base',
-        lg: 'text-lg',
-        xl: 'text-xl',
+        x: s: 'text-xs',
+        s: m: 'text-sm',
+        m: d: 'text-base',
+        l: g: 'text-lg',
+        x: l: 'text-xl',
       }),
       []
     )
     const colorClasses = useMemo(
       () => ({
-        blue: 'border-blue-600 bg-blue-600',
-        gray: 'border-gray-600 bg-gray-600',
-        green: 'border-green-600 bg-green-600',
-        red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',
+        blu: e: 'border-blue-600 bg-blue-600',
+        gra: y: 'border-gray-600 bg-gray-600',
+        gree: n: 'border-green-600 bg-green-600',
+        re: d: 'border-red-600 bg-red-600',
+        purpl: e: 'border-purple-600 bg-purple-600',
       }),
       []
     )
@@ -54,38 +54,32 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               {[0, 1, 2].map(i => (</div>
                 <div
 
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({size = 'md',
+const: OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({size = 'md',
     variant = 'spinner',
     text = 'Loading...',
     className = '',
     color = 'blue',
     fullScreen = false,}
-  }) => {const sizeClasses = useMemo(() => ({xs: 'h-3 w-3',
-        sm: 'h-4 w-4',
-        md: 'h-8 w-8',
-        lg: 'h-12 w-12',
-        xl: 'h-16 w-16',}
+  }) => {const sizeClasses = useMemo(() => ({x: s: 'h-3 w-3',
+        s: m: 'h-4 w-4',
+        m: d: 'h-8 w-8',
+        l: g: 'h-12 w-12',
+        x: l: 'h-16 w-16',}
       }),
-      []);const textSizeClasses = useMemo(() => ({xs: 'text-xs',
-        sm: 'text-sm',
-        md: 'text-base',
-        lg: 'text-lg',
-        xl: 'text-xl',}
+      []);const textSizeClasses = useMemo(() => ({x: s: 'text-xs',
+        s: m: 'text-sm',
+        m: d: 'text-base',
+        l: g: 'text-lg',
+        x: l: 'text-xl',}
       }),
-      []);const colorClasses = useMemo(() => ({blue: 'border-blue-600 bg-blue-600',
-        gray: 'border-gray-600 bg-gray-600',
-        green: 'border-green-600 bg-green-600',
-        red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',}
+      []);const colorClasses = useMemo(() => ({blu: e: 'border-blue-600 bg-blue-600',
+        gra: y: 'border-gray-600 bg-gray-600',
+        gree: n: 'border-green-600 bg-green-600',
+        re: d: 'border-red-600 bg-red-600',
+        purpl: e: 'border-purple-600 bg-purple-600',}
       }),
       []);const renderSpinner = useMemo(() => {switch (variant) {case 'dots':
-          return (<div className='flex space-x-1' role='status' aria-label='Loading'></div>
-              {[0, 1, 2].map(i => (</div>
-                <div}
-                  key={i}
-                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                /></div>))}</div>)
+          return (<div className='flex space-x-1' role='status' aria-label='Loading'>>))}</div>)
         case 'pulse':
           return (
             <div
@@ -109,35 +103,23 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({s
               /></div>
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '75%' }}
+                style={ widt: h: '75%' }}
               /></div>
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '50%' }}
+                style={ widt: h: '50%' }}
               /></div>)
         case 'bars':
           return (
             <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2, 3].map(i => (</div>
-                <div
-
-        case 'bars':
-          return (<div className='flex space-x-1' role='status' aria-label='Loading'></div>
-              {[0, 1, 2, 3].map(i => (</div>
-                <div}
-                  key={i}
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{}
-                    height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,}}
-                /></div>))}</div>)
+              {[0, 1, 2, 3].map(i => (>))}</div>)
         case 'spinner':
-        default:
+        defaul: t:
           return (
             <div
 
         case 'spinner':
-        default:
+        defaul: t:
           return (<div
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
@@ -161,6 +143,5 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({s
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner
-  </OptimizedLoadingSpinnerProps>
-
+  </OptimizedLoadingSpinnerProps>;
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner

@@ -24,7 +24,7 @@ const PerformanceMonitor: React.FC = () => {
 
     if (!shouldMonitor) return;
 
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
+    const updateMetrics = (newMetric: s: Partial<PerformanceMetrics>) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     };
 
@@ -43,16 +43,15 @@ const PerformanceMonitor: React.FC = () => {
     if ('memory' in performance) {
       const memory = (performance as any).memory;
       updateMetrics({
-        memory: Math.round(memory.usedJSHeapSize / 1024 / 1024)
+        memor: y: Math.round(memory.usedJSHeapSize / 1024 / 1024)
       });
     }
 
     // Monitor load time
     window.addEventListener('load', () => {
       updateMetrics({
-        loadTime: Math.round(performance.now())
+        loadTim: e: Math.round(performance.now())
       });
-    });
 
     // Show/hide with keyboard shortcut (Ctrl+Shift+P)
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -74,70 +73,62 @@ const PerformanceMonitor: React.FC = () => {
         <h3 className="font-semibold text-cyan-400">Performance Monitor</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
+          className="text-gray-400: hover:text-white"
         >
           ×
-        </button>
-      </div>
+        >
       <div className="space-y-1">
         {metrics.lcp && (
           <div className="flex justify-between">
-            <span>LCP:</span>
+            <span>LC: P:</span>
             <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>
               {metrics.lcp.toFixed(0)}ms
-            </span>
-          </div>
+            >
         )}
         {metrics.fid && (
           <div className="flex justify-between">
-            <span>FID:</span>
+            <span>FI: D:</span>
             <span className={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>
               {metrics.fid.toFixed(0)}ms
-            </span>
-          </div>
+            >
         )}
         {metrics.cls && (
           <div className="flex justify-between">
-            <span>CLS:</span>
+            <span>CL: S:</span>
             <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
               {metrics.cls.toFixed(3)}
-            </span>
-          </div>
+            >
         )}
         {metrics.fcp && (
           <div className="flex justify-between">
-            <span>FCP:</span>
+            <span>FC: P:</span>
             <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
               {metrics.fcp.toFixed(0)}ms
-            </span>
-          </div>
+            >
         )}
         {metrics.ttfb && (
           <div className="flex justify-between">
-            <span>TTFB:</span>
+            <span>TTF: B:</span>
             <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
               {metrics.ttfb.toFixed(0)}ms
-            </span>
-          </div>
+            >
         )}
         {metrics.memory && (
           <div className="flex justify-between">
-            <span>Memory:</span>
-            <span className="text-blue-400">{metrics.memory}MB</span>
-          </div>
+            <span>Memor: y:</span>
+            <span className="text-blue-400">{metrics.memory}MB>
         )}
         {metrics.loadTime && (
           <div className="flex justify-between">
-            <span>Load Time:</span>
-            <span className="text-purple-400">{metrics.loadTime}ms</span>
-          </div>
+            <span>Load: Time:</span>
+            <span className="text-purple-400">{metrics.loadTime}ms>
         )}
-      </div>
+      >
       <div className="mt-2 pt-2 border-t border-slate-700 text-gray-400">
         Press Ctrl+Shift+P to toggle
       </div>
-    </div>
   );
 };
 
 export default PerformanceMonitor;
+}

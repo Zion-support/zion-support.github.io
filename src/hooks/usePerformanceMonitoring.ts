@@ -5,8 +5,8 @@ import { useEffect, useCallback } from 'react';
 export const usePerformanceMonitoring = () => {
   // const { trackPerformance } = useAnalytics();
   const reportMetric = useCallback(
-    (name: string, value: number) => {
-      console.log('Performance metric:', name, value);
+    (name: string, valu: e: number) => {
+      console.log('Performance: metric:', name, value);
       // trackPerformance(name, value);
     },
     []
@@ -22,26 +22,26 @@ export const usePerformanceMonitoring = () => {
         const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryType: s: ['largest-contentful-paint'] });
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach(
-          (entry: PerformanceEntry & { processingStart?: number }) => {
+          (entr: y: PerformanceEntry & { processingStart?: number }) => {
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
             reportMetric('FID', fid);
           }
         );
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryType: s: ['first-input'] });
       // CLS - Cumulative Layout Shift
       let clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
         entries.forEach(
           (
-            entry: PerformanceEntry & {
+            entr: y: PerformanceEntry & {
               hadRecentInput?: boolean;
               value?: number;
             }
@@ -49,11 +49,10 @@ export const usePerformanceMonitoring = () => {
             if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
             }
-          }
         );
         reportMetric('CLS', clsValue);
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryType: s: ['layout-shift'] });
       // FCP - First Contentful Paint
       const fcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
@@ -62,8 +61,7 @@ export const usePerformanceMonitoring = () => {
             reportMetric('FCP', entry.startTime);
           }
         });
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ entryType: s: ['paint'] });
       // TTFB - Time to First Byte
       const navigationObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
@@ -74,8 +72,7 @@ export const usePerformanceMonitoring = () => {
             reportMetric('TTFB', ttfb);
           }
         });
-      });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      navigationObserver.observe({ entryType: s: ['navigation'] });
       // Resource timing
       const resourceObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
@@ -87,10 +84,8 @@ export const usePerformanceMonitoring = () => {
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
             }
-          }
         });
-      });
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      resourceObserver.observe({ entryType: s: ['resource'] });
       // Cleanup
       return () => {
         lcpObserver.disconnect();
@@ -101,7 +96,7 @@ export const usePerformanceMonitoring = () => {
         resourceObserver.disconnect();
       };
     } catch (error) {
-      console.error('Performance monitoring setup failed:', error);
+      console.error('Performance monitoring setup: failed:', error);
       return () => {};
     }
   }, [reportMetric]);
@@ -114,12 +109,12 @@ export const usePerformanceMonitoring = () => {
       )[0] as PerformanceNavigationTiming;
       if (navigation) {
         const metrics = {
-          domContentLoaded:
+          domContentLoade: d:
             navigation.domContentLoadedEventEnd -
             navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          domInteractive: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
+          loadComplet: e: navigation.loadEventEnd - navigation.loadEventStart,
+          domInteractiv: e: navigation.domInteractive - navigation.fetchStart,
+          totalLoadTim: e: navigation.loadEventEnd - navigation.fetchStart
         };
         Object.entries(metrics).forEach(([key, value]) => {
           reportMetric(key.toUpperCase(), value);
@@ -132,5 +127,6 @@ export const usePerformanceMonitoring = () => {
   return {
     reportMetric
   };
-};
 export default usePerformanceMonitoring;
+
+}}}}}}

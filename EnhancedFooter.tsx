@@ -7,27 +7,27 @@ const EnhancedFooter: React.FC = () => {
 
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
-    {name: 'Cloud Architecture', href: '/services/cloud'},
-    {name: 'Web Development', href: '/services/web'},
-    {name: 'Mobile Apps', href: '/services/mobile'},
-    {name: 'Data Analytics', href: '/services/analytics'},
-    {name: 'DevOps', href: '/services/devops'},
+    { name: 'Cloud Architecture', href: '/services/cloud' },
+    { name: 'Web Development', href: '/services/web' },
+    { name: 'Mobile Apps', href: '/services/mobile' },
+    { name: 'Data Analytics', href: '/services/analytics' },
+    { name: 'DevOps', href: '/services/devops' },
   ]
 
   const products = [
-    {name: 'AI Platform', href: '/products/ai-platform'},
-    {name: 'Cloud Suite', href: '/products/cloud-suite'},
-    {name: 'Analytics Dashboard', href: '/products/analytics'},
-    {name: 'Mobile SDK', href: '/products/mobile-sdk'},
+    { name: 'AI Platform', href: '/products/ai-platform' },
+    { name: 'Cloud Suite', href: '/products/cloud-suite' },
+    { name: 'Analytics Dashboard', href: '/products/analytics' },
+    { name: 'Mobile SDK', href: '/products/mobile-sdk' },
   ]
 
   const quickLinks = [
-    {name: 'About Us', href: '/about'},
-    {name: 'Contact', href: '/contact'},
-    {name: 'Blog', href: '/blog'},
-    {name: 'Careers', href: '/careers'},
-    {name: 'Privacy Policy', href: '/legal/privacy'},
-    {name: 'Terms of Service', href: '/legal/terms'},
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Privacy Policy', href: '/legal/privacy' },
+    { name: 'Terms of Service', href: '/legal/terms' },
   ]
 
   return (
@@ -115,59 +115,28 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">info@ziontechgroup.com</p>
-              </div>
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
+              <MapPin className="w-4 h-4" />
+              <span>123 Tech Street, Innovation City, IC 12345</span>
             </div>
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (555) 123-4567</p>
-              </div>
+            <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
+              <Phone className="w-4 h-4" />
+              <span>+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Address</p>
-                <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
-              </div>
+            <div className="flex items-center space-x-2 text-gray-400">
+              <Mail className="w-4 h-4" />
+              <span>contact@ziontechgroup.com</span>
             </div>
           </div>
-        </div>
-
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/legal/privacy">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
-                </span>
-              </Link>
-              <Link to="/legal/terms">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
-                </span>
-              </Link>
-              <Link to="/legal/cookies">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Cookie Policy
-                </span>
-              </Link>
-            </div>
+          <div className="text-center text-gray-400 mt-4">
+            <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default EnhancedFooter;
+export default EnhancedFooter

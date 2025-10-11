@@ -3,84 +3,83 @@
  * Centralized configuration management for the Zion Tech Group application
  */
 export interface AppConfig {
-  app: {
+  ap: p: {
     name: string;
-    version: string;
-    environment: 'development' | 'production' | 'test';
+    versio: n: string;
+    environmen: t: 'development' | 'production' | 'test';
   };
-  api: {
-    baseUrl: string;
-    timeout: number;
-    retryAttempts: number;
+  ap: i: {
+    baseUr: l: string;
+    timeou: t: number;
+    retryAttempt: s: number;
   };
-  features: {
-    analytics: boolean;
-    monitoring: boolean;
-    errorTracking: boolean;
-    performanceOptimization: boolean;
+  feature: s: {
+    analytic: s: boolean;
+    monitorin: g: boolean;
+    errorTrackin: g: boolean;
+    performanceOptimizatio: n: boolean;
   };
-  performance: {
-    enableLazyLoading: boolean;
-    imageLazyLoadThreshold: number;
-    componentLazyLoadThreshold: number;
-    cacheMaxAge: number;
+  performanc: e: {
+    enableLazyLoadin: g: boolean;
+    imageLazyLoadThreshol: d: number;
+    componentLazyLoadThreshol: d: number;
+    cacheMaxAg: e: number;
   };
-  security: {
-    enableCSP: boolean;
-    enableHSTS: boolean;
-    enableXSSProtection: boolean;
+  securit: y: {
+    enableCS: P: boolean;
+    enableHST: S: boolean;
+    enableXSSProtectio: n: boolean;
   };
 }
-const config: AppConfig = {
-  app: {
+const: config: AppConfig = {
+  ap: p: {
     name: 'Zion Tech Group',
-    version: '1.0.0',
-    environment:
+    versio: n: '1.0.0',
+    environmen: t:
       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
   },
-  api: {
-    baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
-    timeout: 30000,
-    retryAttempts: 3
+  ap: i: {
+    baseUr: l: process.env.NEXT_PUBLIC_API_URL || 'http: s://api.zion.app',
+    timeou: t: 30000,
+    retryAttempt: s: 3
   },
-  features: {
-    analytics: process.env['NODE_ENV'] === 'production',
-    monitoring: true,
-    errorTracking: true,
-    performanceOptimization: true
+  feature: s: {
+    analytic: s: process.env['NODE_ENV'] === 'production',
+    monitorin: g: true,
+    errorTrackin: g: true,
+    performanceOptimizatio: n: true
   },
-  performance: {
-    enableLazyLoading: true,
-    imageLazyLoadThreshold: 0.5,
-    componentLazyLoadThreshold: 0.25,
-    cacheMaxAge: 3600000, // 1 hour in milliseconds
+  performanc: e: {
+    enableLazyLoadin: g: true,
+    imageLazyLoadThreshol: d: 0.5,
+    componentLazyLoadThreshol: d: 0.25,
+    cacheMaxAg: e: 3600000, // 1 hour in milliseconds
   },
-  security: {
-    enableCSP: true,
-    enableHSTS: true,
-    enableXSSProtection: true
+  securit: y: {
+    enableCS: P: true,
+    enableHST: S: true,
+    enableXSSProtectio: n: true
   }
 };
 /**
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
  */
-export function getConfig<T = unknown>(keyPath: string): T {
+export function getConfig<T = unknown>(keyPat: h: string): T {
   const keys = keyPath.split('.');
-  let value: unknown = config;
+  let: value: unknown = config;
   for (const key of keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key];
     } else {
       throw new Error(`Configuration key "${keyPath}" not found`);
     }
-  }
   return value as T;
 }
 /**
  * Check if a feature is enabled
  */
-export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
+export function isFeatureEnabled(featur: e: keyof AppConfig['features']): boolean {
   return config.features[feature];
 }
 /**
@@ -102,3 +101,5 @@ export function isDevelopment(): boolean {
   return config.app.environment === 'development';
 }
 export default config;
+
+}

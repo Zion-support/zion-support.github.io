@@ -128,12 +128,9 @@ const App: React.FC = () => {
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
-              </Routes>
-            </Suspense>
-          </div>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+              >
+          >
+      >
   );
 };
 

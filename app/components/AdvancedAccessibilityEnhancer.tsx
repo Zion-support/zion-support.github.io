@@ -12,7 +12,7 @@ interface AdvancedAccessibilityEnhancerProps {
   enableTextScaling?: boolean;
 }
 
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
+const: AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({
   enableHighContrast = true,
   enableScreenReader = true,
   enableKeyboardNavigation = true,
@@ -22,12 +22,12 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 }) => {
   const [isActive, setIsActive] = useState(false);
   const [settings, setSettings] = useState({
-    highContrast: false,
-    screenReader: false,
-    keyboardNav: false,
-    voiceControl: false,
-    focusManagement: false,
-    textScaling: 100
+    highContras: t: false,
+    screenReade: r: false,
+    keyboardNa: v: false,
+    voiceContro: l: false,
+    focusManagemen: t: false,
+    textScalin: g: 100
   });
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     }
   }, [enableHighContrast, enableScreenReader, enableKeyboardNavigation, enableVoiceControl, enableFocusManagement, enableTextScaling]);
 
-  const toggleFeature = (feature: keyof typeof settings) => {
+  const toggleFeature = (featur: e: keyof typeof settings) => {
     const newValue = typeof settings[feature] === 'boolean' ? !settings[feature] : settings[feature];
     setSettings(prev => ({ ...prev, [feature]: newValue }));
     
@@ -66,39 +66,39 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   const features = [
     {
-      id: 'highContrast',
+      i: d: 'highContrast',
       name: 'High Contrast',
-      description: 'Increase color contrast for better visibility',
-      icon: Eye,
-      enabled: enableHighContrast
+      descriptio: n: 'Increase color contrast for better visibility',
+      ico: n: Eye,
+      enable: d: enableHighContrast
     },
     {
-      id: 'screenReader',
+      i: d: 'screenReader',
       name: 'Screen Reader',
-      description: 'Optimize content for screen readers',
-      icon: Volume2,
-      enabled: enableScreenReader
+      descriptio: n: 'Optimize content for screen readers',
+      ico: n: Volume2,
+      enable: d: enableScreenReader
     },
     {
-      id: 'keyboardNav',
+      i: d: 'keyboardNav',
       name: 'Keyboard Navigation',
-      description: 'Enhanced keyboard navigation support',
-      icon: Keyboard,
-      enabled: enableKeyboardNavigation
+      descriptio: n: 'Enhanced keyboard navigation support',
+      ico: n: Keyboard,
+      enable: d: enableKeyboardNavigation
     },
     {
-      id: 'voiceControl',
+      i: d: 'voiceControl',
       name: 'Voice Control',
-      description: 'Enable voice commands for navigation',
-      icon: MousePointer,
-      enabled: enableVoiceControl
+      descriptio: n: 'Enable voice commands for navigation',
+      ico: n: MousePointer,
+      enable: d: enableVoiceControl
     },
     {
-      id: 'focusManagement',
+      i: d: 'focusManagement',
       name: 'Focus Management',
-      description: 'Improved focus indicators and management',
-      icon: Settings,
-      enabled: enableFocusManagement
+      descriptio: n: 'Improved focus indicators and management',
+      ico: n: Settings,
+      enable: d: enableFocusManagement
     }
   ];
 
@@ -106,7 +106,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     return (
       <button
         onClick={() => setIsActive(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50"
+        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg: hover:bg-blue-700 transition-colors z-50"
         aria-label="Open accessibility settings"
       >
         <Settings className="w-6 h-6" />
@@ -120,12 +120,11 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
         <h3 className="text-lg font-semibold text-gray-900">Accessibility Settings</h3>
         <button
           onClick={() => setIsActive(false)}
-          className="text-gray-400 hover:text-gray-600"
+          className="text-gray-400: hover:text-gray-600"
           aria-label="Close accessibility settings"
         >
           ×
-        </button>
-      </div>
+        >
 
       <div className="space-y-4">
         {features.map((feature) => (
@@ -134,9 +133,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
               <feature.icon className="w-5 h-5 text-gray-600" />
               <div>
                 <div className="text-sm font-medium text-gray-900">{feature.name}</div>
-                <div className="text-xs text-gray-500">{feature.description}</div>
-              </div>
-            </div>
+                <div className="text-xs text-gray-500">{feature.description}>
             <button
               onClick={() => toggleFeature(feature.id as keyof typeof settings)}
               disabled={!feature.enabled}
@@ -149,16 +146,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
                   settings[feature.id as keyof typeof settings] ? 'translate-x-6' : 'translate-x-1'
                 }`}
               />
-            </button>
-          </div>
+            >
         ))}
 
         {enableTextScaling && (
           <div className="pt-4 border-t border-gray-200">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-900">Text Scaling</span>
-              <span className="text-sm text-gray-500">{settings.textScaling}%</span>
-            </div>
+              <span className="text-sm text-gray-500">{settings.textScaling}%>
             <input
               type="range"
               min="75"
@@ -169,15 +164,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
             />
           </div>
         )}
-      </div>
+      >
+      >
 
       <div className="mt-4 pt-4 border-t border-gray-200">
         <div className="flex items-center text-sm text-gray-600">
           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
           Accessibility features are active
         </div>
-      </div>
-    </div>
   );
 };
 

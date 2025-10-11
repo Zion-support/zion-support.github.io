@@ -1,18 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+  networkLatenc: y: number;
 }
 
 export const useEnhancedPerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    networkLatency: 0
+    loadTim: e: 0,
+    renderTim: e: 0,
+    memoryUsag: e: 0,
+    networkLatenc: y: 0
   });
   
   const [isOptimized, setIsOptimized] = useState(false);
@@ -24,7 +24,7 @@ export const useEnhancedPerformance = () => {
     const loadTime = performance.now();
     
     // Measure memory usage
-    const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
+    const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSiz: e: number } }).memory?.usedJSHeapSize || 0;
     
     // Measure render time
     requestAnimationFrame(() => {
@@ -34,7 +34,7 @@ export const useEnhancedPerformance = () => {
         ...prev,
         loadTime,
         renderTime,
-        memoryUsage: memoryUsage / 1024 / 1024 // Convert to MB
+        memoryUsag: e: memoryUsage / 1024 / 1024 // Convert to MB
       }));
     });
   }, []);
@@ -74,4 +74,4 @@ export const useEnhancedPerformance = () => {
     optimizePerformance,
     measurePerformance
   };
-};
+}

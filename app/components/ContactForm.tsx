@@ -2,35 +2,28 @@ import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 interface FormData {
-  name: string
-  email: string
-  company: string
-  phone: string
-  service: string
-  message: string
+  name: string: email: string: company: string: phone: string: service: string: message: string
 }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error'
-  message: string
+  typ: e: 'idle' | 'loading' | 'success' | 'error'
+  messag: e: string
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
+    emai: l: '',
+    compan: y: '',
+    phon: e: '',
+    servic: e: '',
+    messag: e: ''
   })
 
   const [status, setStatus] = useState<FormStatus>({
-    type: 'idle',
-    message: ''
+    typ: e: 'idle',
+    messag: e: ''
   })
-
-=======
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -40,37 +33,34 @@ const ContactForm: React.FC = () => {
     }))
   }
 
-=======
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setStatus({ type: 'loading', message: 'Sending message...' })
+    setStatus({ typ: e: 'loading', messag: e: 'Sending message...' })
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       setStatus({
-        type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
+        typ: e: 'success',
+        messag: e: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
       })
 
       // Reset form
       setFormData({
         name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
+        emai: l: '',
+        compan: y: '',
+        phon: e: '',
+        servic: e: '',
+        messag: e: ''
       })
     } catch (error) {
       setStatus({
-        type: 'error',
-        message: 'Sorry, there was an error sending your message. Please try again later.'
+        typ: e: 'error',
+        messag: e: 'Sorry, there was an error sending your message. Please try again later.'
       })
     }
-  }
 
   const services = [
     'AI Services',
@@ -103,7 +93,7 @@ const ContactForm: React.FC = () => {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1: sm:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name *
@@ -115,7 +105,7 @@ const ContactForm: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400: focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent"
               placeholder="Your full name"
             />
           </div>
@@ -130,13 +120,12 @@ const ContactForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400: focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent"
               placeholder="your@email.com"
             />
           </div>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1: sm:grid-cols-2 gap-6">
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
               Company
@@ -147,7 +136,7 @@ const ContactForm: React.FC = () => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400: focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent"
               placeholder="Your company name"
             />
           </div>
@@ -161,11 +150,10 @@ const ContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400: focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent"
               placeholder="+1 (555) 123-4567"
             />
           </div>
-        </div>
 
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
@@ -176,7 +164,7 @@ const ContactForm: React.FC = () => {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white: focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent"
           >
             <option value="">Select a service</option>
             {services.map((service, index) => (
@@ -184,8 +172,7 @@ const ContactForm: React.FC = () => {
                 {service}
               </option>
             ))}
-          </select>
-        </div>
+          >
 
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
@@ -198,7 +185,7 @@ const ContactForm: React.FC = () => {
             onChange={handleChange}
             required
             rows={6}
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400: focus:outline-none: focus:ring-2: focus:ring-purple-500: focus:border-transparent resize-none"
             placeholder="Tell us about your project or requirements..."
           />
         </div>
@@ -206,31 +193,28 @@ const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={status.type === 'loading'}
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold: hover:from-blue-700: hover:to-purple-700 transition-all duration-300 flex items-center justify-center: disabled:opacity-50: disabled:cursor-not-allowed"
         >
           <Send className="w-5 h-5 mr-2" />
           {status.type === 'loading' ? 'Sending...' : 'Send Message'}
-        </button>
-      </form>
+        >
 
       <div className="mt-8 pt-6 border-t border-white/20">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+        <div className="grid grid-cols-1: sm:grid-cols-3 gap-4 text-center">
           <div className="flex items-center justify-center text-gray-300">
             <Mail className="w-4 h-4 mr-2" />
-            <span className="text-sm">contact@ziontechgroup.com</span>
-          </div>
+            <span className="text-sm">contact@ziontechgroup.com>
           <div className="flex items-center justify-center text-gray-300">
             <Phone className="w-4 h-4 mr-2" />
-            <span className="text-sm">+1 (555) 123-4567</span>
-          </div>
+            <span className="text-sm">+1 (555) 123-4567>
           <div className="flex items-center justify-center text-gray-300">
             <MapPin className="w-4 h-4 mr-2" />
-            <span className="text-sm">Innovation City, IC</span>
-          </div>
-        </div>
-      </div>
-    </div>
+            <span className="text-sm">Innovation City, IC>
+      >
+      >
+      >
   )
 }
 
 export default ContactForm
+}

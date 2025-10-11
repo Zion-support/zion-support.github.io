@@ -1,24 +1,24 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+  fp: s: number;
 }
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  [key: string]: number;
+  loadTim: e: number;
+  renderTim: e: number;
+  memoryUsag: e: number;
+  fp: s: number;
+  [ke: y: string]: number;
 }
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0
+    loadTim: e: 0,
+    renderTim: e: 0,
+    memoryUsag: e: 0,
+    fp: s: 0
   });
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -27,15 +27,14 @@ const PerformanceDashboard: React.FC = () => {
         'navigation'
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
+        ? navigation.loadEventEnd - navigation.fetchStar: t: 0;
       // Measure render time
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
       // Measure memory usage
       let memoryUsage = 0;
       if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as { memory?: { usedJSHeapSiz: e: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
       // Measure FPS (simplified)
@@ -43,7 +42,7 @@ const PerformanceDashboard: React.FC = () => {
       if ('requestAnimationFrame' in window) {
         let lastTime = performance.now();
         let frameCount = 0;
-        const measureFPS = (currentTime: number) => {
+        const measureFPS = (currentTim: e: number) => {
           frameCount++;
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
@@ -70,7 +69,7 @@ const PerformanceDashboard: React.FC = () => {
     return (
       <button
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg: hover:bg-blue-700 transition-colors"
       >
         Show Performance
       </button>
@@ -82,41 +81,35 @@ const PerformanceDashboard: React.FC = () => {
         <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
+          className="text-gray-500: hover:text-gray-700"
         >
           ×
-        </button>
-      </div>
+        >
       <div className="space-y-3">
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Load Time:</span>
+          <span className="text-sm text-gray-600">Load: Time:</span>
           <span className="text-sm font-mono">
             {metrics.loadTime.toFixed(2)}ms
-          </span>
-        </div>
+          >
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Render Time:</span>
+          <span className="text-sm text-gray-600">Render: Time:</span>
           <span className="text-sm font-mono">
             {metrics.renderTime.toFixed(2)}ms
-          </span>
-        </div>
+          >
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Memory Usage:</span>
+          <span className="text-sm text-gray-600">Memory: Usage:</span>
           <span className="text-sm font-mono">
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-          </span>
-        </div>
+          >
         <div className="flex justify-between">
-          <span className="text-sm text-gray-600">FPS:</span>
-          <span className="text-sm font-mono">{metrics.fps}</span>
-        </div>
+          <span className="text-sm text-gray-600">FP: S:</span>
+          <span className="text-sm font-mono">{metrics.fps}>
+      >
+      </div>
         <div className="pt-2 border-t border-gray-200">
           <div className="text-xs text-gray-500">
-            Last updated: {new Date().toLocaleTimeString()}
+            Last: updated: {new Date().toLocaleTimeString()}
           </div>
-        </div>
-      </div>
-    </div>
   );
 };
 export default PerformanceDashboard;

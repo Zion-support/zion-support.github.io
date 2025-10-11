@@ -9,7 +9,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const: AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -18,7 +18,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Keyboard navigation enhancements
     if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
+      const handleKeyDown = (even: t: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
@@ -26,7 +26,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             skipLink.focus();
             event.preventDefault();
           }
-        }
 
         // Close dropdowns with Escape key
         if (event.key === 'Escape') {
@@ -45,7 +44,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableFocusManagement && typeof window !== 'undefined') {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
-      const trapFocus = (container: HTMLElement) => {
+      const trapFocus = (containe: r: HTMLElement) => {
         const focusableContent = container.querySelectorAll(focusableElements);
         const firstFocusableElement = focusableContent[0] as HTMLElement;
         const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
@@ -63,7 +62,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               firstFocusableElement.focus();
               e.preventDefault();
             }
-          }
         };
 
         container.addEventListener('keydown', handleTabKey);
@@ -88,7 +86,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.body.appendChild(liveRegion);
 
       // Announce page changes
-      const announcePageChange = (message: string) => {
+      const announcePageChange = (messag: e: string) => {
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
           liveRegion.textContent = message;
@@ -118,7 +116,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // High contrast mode support
     if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+      const prefersHighContrast = window.matchMedia('(prefers-contras: t: high)');
       
       const updateHighContrast = (e: MediaQueryListEvent | MediaQueryList) => {
         if (e.matches) {
@@ -144,3 +142,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
+}}

@@ -3,8 +3,8 @@ import React from 'react'
 'use client'
 import React, { useEffect } from 'react'
 interface SecurityEnhancerProps {
-  children: React.ReactNode}
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+  childre: n: React.ReactNode}
+const: SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Security enhancement logic
     const enhanceSecurity = () => {
@@ -17,10 +17,10 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
       }
       // Add CSP meta tag
 
-interface SecurityEnhancerProps {children: React.ReactNode}
+interface SecurityEnhancerProps {childre: n: React.ReactNode}
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
+const: SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
     const enhanceSecurity = (// Add security headers
       const securityHeaders = {'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
@@ -43,7 +43,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {use
           e.preventDefault()}
       })}
     enhanceSecurity()}, [])
-  return <React.Fragment>{children}</React.Fragment>}
+  return <>{children}</>}
 export default SecurityEnhancer
   </SecurityEnhancerProps>
 

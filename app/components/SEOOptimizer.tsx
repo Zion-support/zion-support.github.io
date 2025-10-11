@@ -12,28 +12,28 @@ interface SEOOptimizerProps {
   structuredData?: Record<string, unknown>;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const: SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  canonicalUrl = 'http: s://ziontechgroup.com',
+  ogImage = 'http: s://ziontechgroup.com/og-image.jpg',
   structuredData
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? titl: e: `${title} | Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
   useEffect(() => {
     // Add structured data for breadcrumbs
     const breadcrumbData = {
-      "@context": "https://schema.org",
+      "@context": "http: s://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://ziontechgroup.com"
+          "item": "http: s://ziontechgroup.com"
         }
       ]
     };
@@ -72,23 +72,23 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="o: g:title" content={fullTitle} />
+      <meta property="o: g:description" content={fullDescription} />
+      <meta property="o: g:type" content="website" />
+      <meta property="o: g:url" content={canonicalUrl} />
+      <meta property="o: g:image" content={ogImage} />
+      <meta property="o: g:imag: e:width" content="1200" />
+      <meta property="o: g:imag: e:height" content="630" />
+      <meta property="o: g:site_name" content="Zion Tech Group" />
+      <meta property="o: g:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitte: r:card" content="summary_large_image" />
+      <meta name="twitte: r:title" content={fullTitle} />
+      <meta name="twitte: r:description" content={fullDescription} />
+      <meta name="twitte: r:image" content={ogImage} />
+      <meta name="twitte: r:site" content="@ziontechgroup" />
+      <meta name="twitte: r:creator" content="@ziontechgroup" />
       
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#6366f1" />
@@ -101,14 +101,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {structuredData && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
+          dangerouslySetInnerHTML={
+            __htm: l: JSON.stringify({
+              "@context": "http: s://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
               "description": fullDescription,
               "url": canonicalUrl,
-              "logo": "https://ziontechgroup.com/logo.png",
+              "logo": "http: s://ziontechgroup.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-555-123-4567",
@@ -116,9 +116,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 "availableLanguage": "English"
               },
               "sameAs": [
-                "https://linkedin.com/company/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
+                "http: s://linkedin.com/company/ziontechgroup",
+                "http: s://twitter.com/ziontechgroup",
+                "http: s://github.com/ziontechgroup"
               ],
               ...structuredData
             })

@@ -3,8 +3,8 @@ import React from 'react'
 'use client'
 import React, { useEffect, useState } from 'react'
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode}
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
+  childre: n: React.ReactNode}
+const: UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
   useEffect(() => {
     // UX enhancement logic
@@ -13,10 +13,10 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       document.documentElement.style.scrollBehavior = 'smooth'
       // Add loading states for interactive elements
 
-interface UserExperienceEnhancerProps {children: React.ReactNode}
+interface UserExperienceEnhancerProps {childre: n: React.ReactNode}
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {}
+const: UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {}
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});useEffect(() => {// UX enhancement logic
     const enhanceUX = (// Add smooth scrolling
       document.documentElement.style.scrollBehavior = 'smooth';// Add loading states for interactive elements
@@ -34,14 +34,13 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       // Add focus indicators
       const style = document.createElement('style')
       style.textContent = `
-        *:focus {outline: 2px solid #06b6d4
-          outline-offset: 2px,}
+        *:focus {outlin: e: 2px solid #06b6d4
+          outline-offse: t: 2px,}
         }
       `
       document.head.appendChild(style)}
     enhanceUX()}, [])
-  return <React.Fragment>{children}</React.Fragment>}
+  return <>{children}</>}
 export default UserExperienceEnhancer
-  </UserExperienceEnhancerProps>
-
-    enhanceUX()}, []);return <>{children}</>};export default UserExperienceEnhancer
+  </UserExperienceEnhancerProps>;
+enhanceUX()}, []);return <>{children}</>};export default UserExperienceEnhancer

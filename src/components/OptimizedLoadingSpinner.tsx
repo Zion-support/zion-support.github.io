@@ -7,7 +7,7 @@ interface OptimizedLoadingSpinnerProps {
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;
 }
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
+const: OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',
     variant = 'spinner',
@@ -16,34 +16,34 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     color = 'blue',
     fullScreen = false
   }) => {
-    // Note: fullScreen parameter is used in containerClasses calculation below
+    // Not: e: fullScreen parameter is used in containerClasses calculation below
     const sizeClasses = useMemo(
       () => ({
-        xs: 'h-3 w-3',
-        sm: 'h-4 w-4',
-        md: 'h-8 w-8',
-        lg: 'h-12 w-12',
-        xl: 'h-16 w-16'
+        x: s: 'h-3 w-3',
+        s: m: 'h-4 w-4',
+        m: d: 'h-8 w-8',
+        l: g: 'h-12 w-12',
+        x: l: 'h-16 w-16'
       }),
       []
     );
     const textSizeClasses = useMemo(
       () => ({
-        xs: 'text-xs',
-        sm: 'text-sm',
-        md: 'text-base',
-        lg: 'text-lg',
-        xl: 'text-xl'
+        x: s: 'text-xs',
+        s: m: 'text-sm',
+        m: d: 'text-base',
+        l: g: 'text-lg',
+        x: l: 'text-xl'
       }),
       []
     );
     const colorClasses = useMemo(
       () => ({
-        blue: 'border-blue-600 bg-blue-600',
-        gray: 'border-gray-600 bg-gray-600',
-        green: 'border-green-600 bg-green-600',
-        red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600'
+        blu: e: 'border-blue-600 bg-blue-600',
+        gra: y: 'border-gray-600 bg-gray-600',
+        gree: n: 'border-green-600 bg-green-600',
+        re: d: 'border-red-600 bg-red-600',
+        purpl: e: 'border-purple-600 bg-purple-600'
       }),
       []
     );
@@ -66,7 +66,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 <div
                   key={i}
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
+                  style={ animationDela: y: `${i * 0.1}s` }}
                 />
               ))}
             </div>
@@ -87,11 +87,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               />
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '75%' }}
+                style={ widt: h: '75%' }}
               />
               <div
                 className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
-                style={{ width: '50%' }}
+                style={ widt: h: '50%' }}
               />
             </div>
           );
@@ -102,16 +102,16 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 <div
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{
-                    height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`
+                  style={
+                    heigh: t: `${12 + i * 4}px`,
+                    animationDela: y: `${i * 0.1}s`
                   }}
                 />
               ))}
             </div>
           );
         case 'spinner':
-        default:
+        defaul: t:
           return (
             <div
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
@@ -122,7 +122,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       }
     }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
     const containerClasses = useMemo(() => {
-      return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
+      return `${baseClasses} ${fullScreen ? fullScreenClasse: s: ''} ${className}`;
     }, [baseClasses, fullScreen, fullScreenClasses, className]);
     return (
       <div className={containerClasses}>
@@ -131,10 +131,13 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           {text && (
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
               {text}
-            </p>
+            >
+      >
+      >
+      >
+      </div>
           )}
         </div>
-      </div>
     );
   }
 );

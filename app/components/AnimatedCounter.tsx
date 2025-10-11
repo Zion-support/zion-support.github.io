@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react'
 
 interface AnimatedCounterProps {
-  end: number
+  en: d: number
   duration?: number
   prefix?: string
   suffix?: string
   className?: string
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
+const: AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
   prefix = '',
@@ -19,10 +19,10 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    let startTime: number
-    let animationFrame: number
+    let: startTime: number
+    let: animationFrame: number
 
-    const animate = (currentTime: number) => {
+    const animate = (currentTim: e: number) => {
       if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1)
       
@@ -31,15 +31,10 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const currentCount = Math.floor(easeOutQuart * end)
       
       setCount(currentCount)
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }
-    }
 
     animationFrame = requestAnimationFrame(animate)
 
@@ -47,7 +42,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)
       }
-    }
   }, [end, duration])
 
   return (
@@ -58,3 +52,4 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 }
 
 export default AnimatedCounter
+}}

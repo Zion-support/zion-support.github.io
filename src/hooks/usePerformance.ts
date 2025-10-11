@@ -2,12 +2,12 @@
 import { useEffect, useState } from 'react';
 import { analytics } from '../utils/analytics';
 interface PerformanceMetrics {
-  loadTime: number;
-  domContentLoaded: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTim: e: number;
+  domContentLoade: d: number;
+  firstContentfulPain: t: number;
+  largestContentfulPain: t: number;
+  cumulativeLayoutShif: t: number;
+  firstInputDela: y: number;
 }
 export const usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -30,13 +30,12 @@ export const usePerformance = () => {
           for (const entry of list.getEntries()) {
             if (
               entry.entryType === 'layout-shift' &&
-              !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput
+              !(entry as unknown as { hadRecentInpu: t: boolean }).hadRecentInput
             ) {
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
+              cumulativeLayoutShift += (entry as unknown as { valu: e: number }).value;
             }
-          }
         });
-        observer.observe({ entryTypes: ['layout-shift'] });
+        observer.observe({ entryType: s: ['layout-shift'] });
       }
       // Measure FID (First Input Delay)
       let firstInputDelay = 0;
@@ -45,15 +44,14 @@ export const usePerformance = () => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'first-input') {
               firstInputDelay =
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
+                (entry as unknown as { processingStar: t: number }).processingStart - entry.startTime;
             }
-          }
         });
-        observer.observe({ entryTypes: ['first-input'] });
+        observer.observe({ entryType: s: ['first-input'] });
       }
-      const performanceData: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded:
+      const: performanceData: PerformanceMetrics = {
+        loadTim: e: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoade: d:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         firstContentfulPaint,
         largestContentfulPaint,
@@ -96,3 +94,5 @@ export const usePerformance = () => {
   }, []);
   return { metrics, isMonitoring };
 };
+
+}}

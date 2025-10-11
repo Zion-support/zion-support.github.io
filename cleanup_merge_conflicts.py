@@ -1,61 +1,80 @@
 #!/usr/bin/env python3
+"""
+Script to clean up merge conflicts in the codebase
+"""
 import os
 import re
 import glob
 
 def clean_merge_conflicts(file_path):
-    """Clean merge conflict markers from a file"""
+    """Clean merge conflicts from a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Remove merge conflict markers
-        # Pattern to match merge conflict blocks
-        pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+\n?'
-        cleaned_content = re.sub(pattern, '', content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD\n', '', content)
+        content = re.sub(r'=======\n', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
         
-        # Remove any remaining conflict markers
-        cleaned_content = re.sub(r'<<<<<<< HEAD\n?', '', cleaned_content)
-        cleaned_content = re.sub(r'=======\n?', '', cleaned_content)
-        cleaned_content = re.sub(r'>>>>>>> [^\n]+\n?', '', cleaned_content)
+        # Clean up any remaining merge conflict artifacts
+        content = re.sub(r'<<<<<<< [^\n]+\n', '', content)
+        content = re.sub(r'=======\n', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
         
-        # Clean up multiple empty lines
-        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
+        # Remove duplicate lines that might have been created
+        lines = content.split('\n')
+        cleaned_lines = []
+        prev_line = None
         
-        # Only write if content changed
-        if cleaned_content != content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(cleaned_content)
-            print(f"Cleaned: {file_path}")
-            return True
-        return False
+        for line in lines:
+            if line.strip() != prev_line or line.strip() == '':
+                cleaned_lines.append(line)
+                prev_line = line.strip()
+        
+        content = '\n'.join(cleaned_lines)
+        
+        # Write back the cleaned content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"Cleaned: {file_path}")
+        return True
+        
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error cleaning {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files in the app directory
+    """Main function to clean all files"""
+    # Get all TypeScript and JavaScript files
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
+        'src/**/*.tsx',
+        'src/**/*.ts',
         'components/**/*.tsx',
         'components/**/*.ts',
-        'utils/**/*.ts',
-        'utils/**/*.tsx'
+        '**/*.tsx',
+        '**/*.ts'
     ]
     
-    files_processed = 0
-    files_cleaned = 0
-    
+    files_to_clean = []
     for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
-                files_processed += 1
-                if clean_merge_conflicts(file_path):
-                    files_cleaned += 1
+        files_to_clean.extend(glob.glob(pattern, recursive=True))
     
-    print(f"\nProcessed {files_processed} files")
-    print(f"Cleaned {files_cleaned} files")
+    # Remove duplicates
+    files_to_clean = list(set(files_to_clean))
+    
+    print(f"Found {len(files_to_clean)} files to clean")
+    
+    cleaned_count = 0
+    for file_path in files_to_clean:
+        if os.path.exists(file_path):
+            if clean_merge_conflicts(file_path):
+                cleaned_count += 1
+    
+    print(f"Successfully cleaned {cleaned_count} files")
 
 if __name__ == "__main__":
     main()

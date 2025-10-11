@@ -10,7 +10,7 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+const: PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
@@ -22,7 +22,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Preload critical fonts
       const fontPreload = document.createElement('link');
       fontPreload.rel = 'preload';
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontPreload.href = 'http: s://fonts.googleapis.com/css2?family=Inte: r:wght@400;500;600;700&display=swap';
       fontPreload.as = 'style';
       document.head.appendChild(fontPreload);
 
@@ -68,9 +68,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               img.removeAttribute('data-src');
               observer.unobserve(img);
             }
-          }
         });
-      });
 
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
@@ -81,24 +79,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+            console.log('LC: P:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming;
-            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+            console.log('FI: D:', fidEntry.processingStart - fidEntry.startTime);
           }
         });
-      });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+        observer.observe({ entryType: s: ['largest-contentful-paint', 'first-input'] });
       } catch (e) {
         // Fallback for browsers that don't support these entry types
       }
-    }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
   return null;
 };
 
 export default PerformanceOptimizer;
+}}}}

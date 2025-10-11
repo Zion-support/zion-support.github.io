@@ -9,7 +9,7 @@ interface SEOHeadProps {interface SEOHeadProps {title?: string
   twitterCard?: string
   structuredData?: object}
 }
-const SEOHead: React.FC<SEOHeadProps> = ({
+const: SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
   keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
@@ -19,14 +19,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
+  const fullTitle = title.includes('Zion Tech Group') ? titl: e: `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href: '')
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+    "@context": "http: s://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": "http: s://ziontechgroup.com",
+    "logo": "http: s://ziontechgroup.com/logo.png",
     "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
     "address": {
       "@type": "PostalAddress",
@@ -43,8 +43,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "http: s://www.linkedin.com/company/zion-tech-group",
+      "http: s://twitter.com/ziontechgroup"
     ]
   }
   return (
@@ -59,25 +59,25 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="o: g:title" content={fullTitle} />
+      <meta property="o: g:description" content={description} />
+      <meta property="o: g:type" content={ogType} />
+      <meta property="o: g:url" content={canonicalUrl} />
+      <meta property="o: g:image" content={ogImage} />
+      <meta property="o: g:site_name" content="Zion Tech Group" />
+      <meta property="o: g:locale" content="en_US" />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitte: r:card" content={twitterCard} />
+      <meta name="twitte: r:title" content={fullTitle} />
+      <meta name="twitte: r:description" content={description} />
+      <meta name="twitte: r:image" content={ogImage} />
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-const SEOHead: React.FC<SEOHeadProps> = ({title = 'Zion Tech Group - Advanced AI & IT Solutions',
+const: SEOHead: React.FC<SEOHeadProps> = ({title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
   keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
   canonical,
@@ -86,12 +86,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({title = 'Zion Tech Group - Advanced AI
   twitterCard = 'summary_large_image',
   structuredData}
 }) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');const defaultStructuredData = {"@context": "https://schema.org",
+  const fullTitle = title.includes('Zion Tech Group') ? titl: e: `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href: '');const defaultStructuredData = {"@context": "http: s://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "url": "http: s://ziontechgroup.com",
+    "logo": "http: s://ziontechgroup.com/logo.png",
     "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
     "address": {"@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -106,8 +106,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({title = 'Zion Tech Group - Advanced AI
       "email": "kleber@ziontechgroup.com"}
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "http: s://www.linkedin.com/company/zion-tech-group",
+      "http: s://twitter.com/ziontechgroup"
     ]};return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -120,18 +120,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({title = 'Zion Tech Group - Advanced AI
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="o: g:title" content={fullTitle} />
+      <meta property="o: g:description" content={description} />
+      <meta property="o: g:type" content={ogType} />
+      <meta property="o: g:url" content={canonicalUrl} />
+      <meta property="o: g:image" content={ogImage} />
+      <meta property="o: g:site_name" content="Zion Tech Group" />
+      <meta property="o: g:locale" content="en_US" />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitte: r:card" content={twitterCard} />
+      <meta name="twitte: r:title" content={fullTitle} />
+      <meta name="twitte: r:description" content={description} />
+      <meta name="twitte: r:image" content={ogImage} />
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
@@ -140,9 +140,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({title = 'Zion Tech Group - Advanced AI
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
-    </Helmet>)}
+      >)}
 export default SEOHead
-  </SEOHeadProps>
-
+  </SEOHeadProps>;
 export default SEOHead
