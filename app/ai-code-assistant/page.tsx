@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -9,6 +10,20 @@ import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, T
 
 const AiCodeAssistantPage: React.FC = () => {
   const features = [
+=======
+import {  CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings   } from 'lucide-react';
+const AiCodeAssistantPage: React.FC = () => {
+'use client'
+import React from 'react';
+export default AiCodeAssistantPage;
+  </button&gt;
+  </h2&gt;
+  </button&gt;
+  </button&gt;
+  </h1&gt;
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     {
       icon: BarChart,
       title: 'Advanced Analytics',
@@ -47,6 +62,7 @@ const AiCodeAssistantPage: React.FC = () => {
 
 const PagePage: React.FC = () => {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -128,6 +144,24 @@ const PagePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+=======
+    <>
+      <Helmet>
+        <title>Ai Code Assistant - Zion Tech Group</title>
+        <meta name="description" content="AI-powered ai code assistant solution for intelligent automation and optimization" />
+        <meta name="keywords" content="AI, ai, code, assistant, automation, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></main></main>
+        {/* Hero Section */}
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2></h2>Powerful AI Features
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p></p>
+                Discover how our AI platform can revolutionize your business operations.
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
+              {features.map((feature, index) =&gt; (
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               ))}
             </div>
           </div>

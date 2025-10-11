@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Calendar, Clock, User, ArrowRight, Search, Filter, Tag } from 'lucide-react'
@@ -25,8 +24,11 @@ const BlogPage: React.FC = () => {
     { id: 'business', name: 'Business' }
   ]
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   const blogPosts = [
     {
       id: 1,
@@ -34,7 +36,6 @@ const BlogPage: React.FC = () => {
       excerpt: 'Explore the latest AI trends shaping enterprise technology and how businesses can leverage these innovations.',
       author: 'Dr. Sarah Chen',
       date: '2024-01-15',
-<<<<<<< HEAD
       readTime: '8 min read',
       category: 'ai',
       featured: true,
@@ -201,12 +202,15 @@ const BlogPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay ahead of the curve with expert insights on AI, cloud computing, cybersecurity, and the latest technology trends.
+<<<<<<< HEAD
 =======
               Latest <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Insights</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay ahead with expert insights on AI, IT solutions, and digital transformation trends.
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </p>
           </div>
         </section>
@@ -430,6 +434,7 @@ const BlogPage: React.FC = () => {
 }
 
 export default BlogPage
+<<<<<<< HEAD
 =======
         {/* Newsletter Signup */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -463,3 +468,5 @@ export default BlogPage
 
 export default BlogPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

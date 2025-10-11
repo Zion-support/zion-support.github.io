@@ -79,6 +79,7 @@ const ItAssetManagementPage: React.FC = () => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
     'Improved decision making',
@@ -89,6 +90,16 @@ const ItAssetManagementPage: React.FC = () => {
 
   return (
     <>
+=======
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
@@ -99,6 +110,7 @@ const ItAssetManagementPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -116,6 +128,26 @@ const ItAssetManagementPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+=======
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              It Asset Management
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              AI-powered it asset management solution for intelligent automation and optimization
+            </p>
+            </h2>
+              Ready to Get Started?
+            </h2>
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
+              <button>
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>

@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 
 const PagePage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -21,10 +22,64 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+    const features = [
+    {
+      icon: Zap,
+      title: 'Smart Contracts',
+      description: 'Automated, self-executing contracts with the terms directly written into code.',
+  },
+    {
+    icon: Shield,
+      title: 'Decentralized Security',
+      description: 'Enhanced security through decentralized architecture and cryptographic protection.',
+        <title&gt;Blockchain & Web3 Solutions - Zion Tech Group</title&gt;
+        <meta /&gt;
+      benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data'],
+  },
+    {
+    icon: Brain,
+      title: 'AI Integration',
+      description: 'AI-powered blockchain solutions for intelligent automation and optimization.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Optimized transactions', 'Intelligent contracts'],
+  },
+    {
+    icon: Globe,
+      title: 'Global Access',
+      description: 'Access blockchain services from anywhere in the world with global connectivity.',
+      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access'],
+  }
+    ]
+return (
+    <>
+      <Helmet>
+        <title>Blockchain Web3 - Zion Tech Group</title>
+        <meta name="description" content="AI-powered blockchain web3 solution for intelligent automation and optimization" />
+        <meta name="keywords" content="AI, blockchain, web3, automation, artificial intelligence, business solutions" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div></div></div>
+        <div className="container mx-auto px-4 py-16"></div></div></div>
+          <div className="text-center mb-16"></div></div></div>
+            <h1>
+              Blockchain & </h1><span className="text-cyan-400"></span></span>Web3</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              AI-powered blockchain web3 solution for intelligent automation and optimization
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -109,10 +164,14 @@ const BlockchainWeb3Page: React.FC = () => {
       
       <Footer />
     </>
+=======
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   );
 };
 
 export default PagePage;
+<<<<<<< HEAD
 =======
 
         {/* Features Section */}
@@ -138,6 +197,19 @@ export default PagePage;
                       </li>
                     ))}
                   </ul>
+=======
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>,
+            {features.map((feature, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover: bg-white/10 transition-all duration-300"></div></div></div>,
+                <div className="flex items-start space-x-4 mb-6"></div></div></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div></div></div>
+                    <feature />
+                  <div />
+                    <h3 className="text-2xl font-bold text-white mb-2"></h3></h3>{feature.title}</h3>
+                    <p className="text-gray-300 mb-4"></p></p>{feature.description</p&gt;}</p>
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
@@ -182,6 +254,7 @@ export default PagePage;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
 
       <Footer />
@@ -191,3 +264,41 @@ export default PagePage;
 
 export default BlockchainWeb3Page;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+      </div>
+    </>
+  )
+}
+export default BlockchainWeb3Page
+      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
+    }
+  ]
+  return (
+    <>
+      <Helmet>
+        <title>Blockchain & Web3 Solutions - Zion Tech Group
+        <meta name="description" content="Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more." />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div></div>
+        <div className="container mx-auto px-4 py-16"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h1 className="text-5xl font-bold text-white mb-6"></h1></h1>
+              Blockchain & <span className="text-cyan-400"></span></span>Web3
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
+              Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"></div></div>
+                <div className="flex items-start space-x-4 mb-6"></div></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div></div>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2"></h3></h3>{feature.title}
+                    <p className="text-gray-300 mb-4"></p></p>{feature.description}
+                <ul className="space-y-2"></ul>
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300"></li>
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                      {benefit}
+                  ))}
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

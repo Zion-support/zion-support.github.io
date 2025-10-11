@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Accessibility improvements for the Zion Tech Group website
 =======
 // Accessibility improvements for Zion Tech Group website
@@ -13,6 +12,9 @@ export const trapFocus = (element) => {
   const lastElement = focusableElements[focusableElements.length - 1]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   element.addEventListener('keydown', (e) => {
 =======
   const handleTabKey = (e) => {
@@ -62,7 +64,6 @@ export const enhanceFormAccessibility = (form) => {
   })
 }
 
-<<<<<<< HEAD
 // 2. Skip links
 export const addSkipLinks = () => {
   const skipLink = document.createElement('a')
@@ -256,6 +257,7 @@ export const initializeAccessibility = () => {
   respectReducedMotion()
   setupScreenReaderAnnouncements()
 }
+<<<<<<< HEAD
 const validateInput = (input) => {
   const isValid = input.checkValidity()
   const errorId = `${input.id}-error`
@@ -392,3 +394,5 @@ export const enhanceFocusIndicators = () => {
 // 10. Screen reader announcements
 // Export functions for use in other modules
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

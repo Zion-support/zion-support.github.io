@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react';
 import {  Helmet  } from 'react-helmet-async';
   );
 };
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -12,6 +12,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const AiContentGenerationProPage: React.FC = () => {
   const features = [

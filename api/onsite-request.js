@@ -1,6 +1,9 @@
 import fs from 'fs'
 import path from 'path'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 // Simple wrapper function to replace withSentry
 const withSentry = (handler) => handler
@@ -72,6 +75,7 @@ export default function handler(req, res) {
     fs.writeFileSync(file, JSON.stringify(requests, null, 2))
 
     res.statusCode = 200
+<<<<<<< HEAD
 =======
     const { name, email, company, phone, message, serviceType, preferredDate, location } = req.body
 
@@ -115,12 +119,15 @@ export default function handler(req, res) {
     // Send response
     res.statusCode = 201
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Onsite request submitted successfully',
 <<<<<<< HEAD
       requestId: newRequest.id
+<<<<<<< HEAD
       projectType,
       budget,
       timeline,
@@ -200,6 +207,8 @@ export default function handler(req, res) {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       requestId: request.id
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     }))
 
   } catch (error) {
@@ -213,6 +222,7 @@ export default function handler(req, res) {
     }))
   }
 }
+<<<<<<< HEAD
       error: 'Internal server error',
       message: 'Failed to process request'
     }))
@@ -225,3 +235,5 @@ module.exports = withSentry(handler)
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

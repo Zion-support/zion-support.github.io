@@ -1,12 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+=======
+import React, { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
+
+// Import components
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AppLoadingSpinner from './components/AppLoadingSpinner';
+
+// Import pages
+import HomePage from './page';
+import AboutPage from './about/page';
+import AccessibilityPage from './accessibility/page';
+import FiveGImplementationPage from './5g-implementation/page';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const AppPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -22,6 +41,25 @@ const AppPage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
+=======
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <div className="App">
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
+            <Suspense fallback={<AppLoadingSpinner />}>
+              <Routes>
+                {/* Main Pages */}
+                <Route path="/" element={<HomePage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/accessibility" element={<AccessibilityPage />} />
+                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                
+                {/* Add more routes as needed */}
+              </Routes>
+            </Suspense>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
 
@@ -48,6 +86,7 @@ const AppPage: React.FC = () => {
     </>
   );
 };
+<<<<<<< HEAD
 
 export default AppPage;
 =======
@@ -219,3 +258,7 @@ const App: React.FC = () => {
 App.displayName = 'App'
 export default App
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+
+export default App;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

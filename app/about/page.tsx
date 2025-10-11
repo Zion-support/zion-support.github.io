@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Target, Users, Award, ArrowRight } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -12,11 +12,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const AboutPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Target,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with AI and technology, constantly exploring new frontiers and developing cutting-edge solutions.'
@@ -30,6 +31,7 @@ const AboutPage: React.FC = () => {
       icon: Award,
       title: 'Excellence',
       description: 'We maintain the highest standards in everything we do, from code quality to customer service, ensuring exceptional results every time.'
+<<<<<<< HEAD
 =======
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -54,6 +56,8 @@ const AboutPage: React.FC = () => {
       description: 'Enterprise-grade security and reliability for mission-critical applications.',
       benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     }
   ]
 
@@ -150,6 +154,7 @@ const AboutPage: React.FC = () => {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
 =======
   const benefits = [
     'Enhanced productivity and efficiency',
@@ -190,11 +195,16 @@ const AboutPage: React.FC = () => {
                 </button>
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         {/* Values Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -220,6 +230,7 @@ const AboutPage: React.FC = () => {
                   </div>
                 )
               })}
+<<<<<<< HEAD
 =======
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -254,11 +265,16 @@ const AboutPage: React.FC = () => {
                 </div>
               ))}
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         {/* Team Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -309,6 +325,9 @@ const AboutPage: React.FC = () => {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -336,6 +355,7 @@ const AboutPage: React.FC = () => {
 }
 
 export default AboutPage
+<<<<<<< HEAD
 =======
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -366,3 +386,5 @@ export default AboutPage
 
 export default AboutPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

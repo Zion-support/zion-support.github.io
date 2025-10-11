@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+=======
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const LoadingSpinnerPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -67,6 +76,14 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ className = '', childre
       <h3 className="text-xl font-bold text-white mb-4">LoadingSpinner Title</h3>
       <p className="text-gray-300 mb-4">LoadingSpinner description goes here.</p>
       {children}
+=======
+    <div className="flex flex-col items-center justify-center space-y-2"></div></div>
+      <div className="{`animate-spin" rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} />
+      {text && (
+        <p className="{`text-sm" ${color === 'white' ? 'text-white' : 'text-gray-600'}`}></p></p>
+          {text}
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     </div>
   );
 };

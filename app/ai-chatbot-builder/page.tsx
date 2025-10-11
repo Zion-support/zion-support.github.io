@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -82,6 +83,44 @@ const AiChatbotBuilderPage: React.FC = () => {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Description of the page and its benefits for your business.
+=======
+'use client'
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */} <section className="mb-16"></section></section>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12"></h2></h2>,</h2>
+            Use Cases;
+          </h2>
+          
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div></div>,</div>
+            {useCases.map((useCase, index) => (
+              <div key={index}className="hologram-card-enhanced p-8 hover: scale-105 transition-all duration-300"></div></div>,</div>
+                <div className="flex items-start space-x-4"></div></div>
+                  <div className="text-4xl text-green-400"></div></div>
+                    <useCase.icon className="w-10 h-10" />
+                  </div>
+                  <div className="flex-1"></div></div>
+                    <h3 className="text-2xl font-bold text-white mb-3"></h3></h3>{useCase.title}</h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed"></p></p>{useCase.description</p&gt;}</p>
+                    <ul className="space-y-2"></ul>
+                      {useCase.benefits.map((benefit, idx) => (
+                        <li key={idx}className="flex items-center text-sm text-gray-400"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit} </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+              </h2>
+              <p>Proven results that drive business growth and efficiency;</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -95,6 +134,7 @@ const AiChatbotBuilderPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -120,6 +160,10 @@ const AiChatbotBuilderPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+=======
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                           {benefit}
                         </li>
                       ))}

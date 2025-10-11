@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Brain, Cloud, Shield, BarChart, Code, Smartphone, ArrowRight, CheckCircle, Star, Zap } from 'lucide-react'
@@ -161,6 +160,7 @@ const AiServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, business intelligence, AI consulting" />
       </Helmet>
 
+<<<<<<< HEAD
 =======
         <title>AI Services - Zion Tech Group | Artificial Intelligence Solutions</title>
         <meta name="description" content="Comprehensive AI services including chatbots, content generation, data analytics, automation, and computer vision. Transform your business with cutting-edge AI technology." />
@@ -168,6 +168,8 @@ const AiServicesPage: React.FC = () => {
       </Helmet>
       
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         

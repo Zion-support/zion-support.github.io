@@ -48,6 +48,7 @@ const MobileDevelopmentPage: React.FC = () => {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   return (
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -80,10 +81,55 @@ const MobileDevelopmentPage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center"></div></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+              Mobile <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span></span>Development</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
+              Create powerful mobile applications for iOS and Android platforms.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
+              Mobile Solutions
+            </h2>
+            <p className="text-xl text-gray-300"></p></p>
+              Comprehensive mobile development services for all platforms.
+            </p>
+          </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="text-center mb-16"></div></div></div>
+            <h2>Key Benefits;</h2>
+            </h2>
+            <p>Experience the power of our page solutions for your business.</p>
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -148,6 +194,23 @@ const MobileDevelopmentPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
+            Start Your Mobile App
+          </h2>
+          <p className="text-xl text-gray-300 mb-8"></p></p>
+            Let us help you build the perfect mobile application for your business.
+          </p>
+          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto"></button>
+            <ArrowRight className="w-5 h-5 mr-2" />
+            Get Started
+          </button>
+        </div>
+      </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,6 +8,9 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 =======
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 
+=======
+import {  CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings   } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 const AiCloudInfrastructurePage: React.FC = () => {
   const features = [
     {
@@ -48,6 +52,7 @@ const AiCloudInfrastructurePage: React.FC = () => {
 const PagePage: React.FC = () => {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -64,6 +69,21 @@ const PagePage: React.FC = () => {
               </p>
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+    <>
+      <Helmet>
+        <title>Ai Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered ai cloud infrastructure solution for modern businesses." />
+        <meta name="keywords" content="AI ai cloud infrastructure, artificial intelligence, ai cloud infrastructure, AI solutions, intelligent automation" />
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
+  ]
+  return(<>)</>
+      <Helmet />
+        <title>AI Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Scalable cloud infrastructure enhanced with AI capabilities." />
+        <meta name="keywords" content="AI cloud infrastructure, artificial intelligence, cloud computing, AI solutions, intelligent infrastructure" />
+      </Helmet>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <Navigation />
       
       <main className="pt-20">
@@ -88,6 +108,7 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         {/* Content Section */}
@@ -128,6 +149,19 @@ const PagePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+=======
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4"></h2></h2>,</h2>
+                Powerful AI Features,
+  </
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p></p>Discover how our AI platform can revolutionize your business operations.</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
+              {features.map((feature, index) =&gt; (
+                </div&gt;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               ))}
             </div>
           </div>
@@ -153,6 +187,7 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -175,6 +210,41 @@ const PagePage: React.FC = () => {
 <<<<<<< HEAD
       </div>
       
+=======
+          <div className="max-w-4xl mx-auto text-center"></div></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8"></p></p>
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+                <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                  Contact Us
+                </button>
+                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
+                  Learn More
+                </button>
+              ))
+            </div>
+          </div>
+        </section>
+      </div>
+        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section></section>,</section>
+          <div className="max-w-4xl mx-auto text-center"></div></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2></h2>,</h2>
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8"></p></p>Join thousands of businesses already using our AI platform.</p>
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold"></button>,</button>
+              Start Your Free Trial;
+  </
+          </div>
+</section>
+      </main>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <Footer />
     </>
   );
@@ -190,4 +260,9 @@ export default PagePage;
 };
 
 export default AiCloudInfrastructurePage;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+'use client'
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

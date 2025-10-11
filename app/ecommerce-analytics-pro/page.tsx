@@ -37,6 +37,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
     },
     {
       icon: BarChart,
+<<<<<<< HEAD
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
@@ -149,6 +150,34 @@ const EcommerceAnalyticsProPage: React.FC = () => {
                       ))}
                     </ul>
                   )}
+=======
+      title: 'Real-time Analytics',
+      description: 'Track sales, conversions, and customer behavior in real-time with advanced analytics dashboards.'},
+    {icon: TrendingUp,
+      title: 'Revenue Optimization',
+      description: 'Identify trends and opportunities to maximize revenue and improve profit margins.',},
+    {icon: Users,
+      title: 'Customer Insights',
+      description: 'Understand customer segments, preferences, and purchasing patterns for targeted marketing.'},
+    {icon: ShoppingCart,
+      title: 'Inventory Management',
+      description: 'Optimize stock levels and predict demand with AI-powered inventory analytics.',},
+    {icon: DollarSign,
+      title: 'Pricing Intelligence',
+      description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.',},
+    {icon: Target,
+      title: 'Conversion Tracking',
+        <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
+    <>
+      </React><Helmet>
+        </Helmet><title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
+        <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
+        <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
+                  <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
@@ -201,6 +230,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
@@ -214,3 +244,22 @@ export default PagePage;
 =======
 export default EcommerceAnalyticsProPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+      </div>
+    </>
+  )
+}
+export default EcommerceAnalyticsProPage
+  </h1>
+                <div></div>
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6"></div></div>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}
+                  <p className="text-gray-300"></p></p>{feature.description}
+              ))}
+  )
+}
+export default EcommerceAnalyticsProPage</div></div></div></div></div></p></p></h1></h3></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

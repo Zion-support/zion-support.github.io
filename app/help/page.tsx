@@ -95,6 +95,7 @@ const HelpPage: React.FC = () => {
         <meta name="keywords" content="relevant, keywords, for, seo" />
       </Helmet>
 
+<<<<<<< HEAD
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -153,6 +154,20 @@ const HelpPage: React.FC = () => {
                 </div>
               ))}
             </div>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+      <Helmet>
+        <title>Page | Zion Tech Group
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      {/* Hero Section */}
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
+              Why Choose Our Page?
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
+              Our page solutions deliver unmatched performance, security, and scalability.
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
 

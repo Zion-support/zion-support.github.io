@@ -62,6 +62,7 @@ const AiSmartContractAuditorPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -84,6 +85,42 @@ const AiSmartContractAuditorPage: React.FC = () => {
                 Learn More
               </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+    <>
+      <Helmet>
+        <title>Ai Smart Contract Auditor - Zion Tech Group</title>
+        <meta name="description" content="AI-powered ai smart contract auditor solution for intelligent automation and optimization" />
+        <meta name="keywords" content="AI, ai, smart, contract, auditor, automation, artificial intelligence, business solutions" />
+      </Helmet>
+
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div></div></div>
+          
+          <div className="max-w-7xl mx-auto relative z-10"></div></div>
+            </div><div className="{`text-center" transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div></div>
+              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 mb-8 border border-cyan-500/30"></div></div>
+                </div><Shield className="w-5 h-5 text-cyan-400" />
+                <span className="text-cyan-400 font-semibold"></span></span>AI-Powered Security</span>
+              </div>
+              
+                Advanced AI-powered smart contract auditing with automated security analysis, 
+                vulnerability detection, and comprehensive risk assessment for blockchain projects.
+              </p>
+              
+                  <span className="font-semibold"></span></span>99.9% Vulnerability Detection</span>
+                </div>
+                <div className="flex items-center space-x-2 text-purple-400"></div></div>
+                  </div><Clock className="w-5 h-5" />
+                  <span className="font-semibold"></span></span>80% Faster Audits</span>
+                </div>
+                <div className="flex items-center space-x-2 text-pink-400"></div></div>
+                  </div><Shield className="w-5 h-5" />
+                  <span className="font-semibold"></span></span>Zero False Positives</span>
+                </div>
+              </div>
+              
+                </a>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
@@ -110,6 +147,7 @@ const AiSmartContractAuditorPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
@@ -124,6 +162,19 @@ const AiSmartContractAuditorPage: React.FC = () => {
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
+=======
+            
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
+              {features.map((feature, index) => (
+                >
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"></div></div>
+                    </div><feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-white"></h3></h3>{feature.title}</h3>
+                  <p className="text-gray-300 mb-6"></p></p>{feature.description</p&gt;}</p>
+                  <ul className="space-y-2"></ul>
+                    {feature.benefits.map((benefit, idx) =&gt; (
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                     ))}
                   </ul>
                 </div>
@@ -139,6 +190,7 @@ const AiSmartContractAuditorPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -146,12 +198,25 @@ const AiSmartContractAuditorPage: React.FC = () => {
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
+=======
+            
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
+              {useCases.map((useCase, index) => (
+                >
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6"></div></div>
+                    </div><useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-white"></h3></h3>{useCase.title}</h3>
+                  <p className="text-gray-300 mb-4"></p></p>{useCase.description</p&gt;}</p>
+                  <div className="text-cyan-400 font-semibold text-sm"></div></div>{useCase.results</div&gt;} </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -168,6 +233,27 @@ const AiSmartContractAuditorPage: React.FC = () => {
                 Contact Sales
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               </button>
+=======
+                All plans include our advanced AI security analysis.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8"></div></div>,</div>
+              {pricingPlans.map((plan, index) => (
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8"></ul>
+                    {plan.features.map((feature, idx) => (
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+              </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>

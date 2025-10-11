@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
@@ -11,6 +12,69 @@ import Footer from '../components/Footer';
 import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 
 const SpecializedServicesPage: React.FC = () => {
+=======
+    const features = [
+    {
+            </div&gt;
+          </div&gt;
+        </div&gt;
+  }
+      {/* Features Section */}
+      <section className="py-20 px-4"></section></section>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
+            </div>
+          </div>
+        </section>
+            ))}
+      {/* Benefits Section */}
+      <section className="py-20 px-4"></section></section>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
+            </div>
+          </div>
+        </section>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div></div></div>,
+            {benefits.map((benefit, index) => (
+              </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
+        </section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>Key Benefits
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
+              Experience the power of our page solutions for your business.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div>
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3"></div></div>
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg"></p></p>{benefit}
+            ))}
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
+            </div>
+          </div>
+        </section>
+              Ready to Get Started?
+            </h2>
+            <p></p>
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
+              <button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  ),
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   const features = [
     {
       icon: Brain,
@@ -56,6 +120,7 @@ const PagePage: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -65,16 +130,38 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
+=======
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Specialized Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p></p>Advanced specialized services designed to transform your business with cutting-edge technology and expert solutions.</p>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover: bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>,</button>
+                View Demo;
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
+=======
+                Why Choose Our Services?
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 This page is under development. Please check back soon for updates.
@@ -84,6 +171,7 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
+<<<<<<< HEAD
           </div>
         </section>
       </div>
@@ -150,6 +238,13 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
+=======
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
+              {features.map((feature, index) => (
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
+                  <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
@@ -167,6 +262,7 @@ const PagePage: React.FC = () => {
                 Proven results that drive business growth
               </p>
             </div>
+<<<<<<< HEAD
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -176,6 +272,11 @@ const PagePage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
+=======
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div></div>,</div>
+              {benefits.map((benefit, index) =&gt; (
+                </div&gt;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               ))}
             </div>
           </div>
@@ -202,7 +303,26 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
+=======
+      </div>
+    </>
+  ),
+}
+export default SpecializedServicesPage
+            <p className="text-xl text-purple-100 mb-8"></p></p>
+              Contact our experts to discuss your page needs and get a customized solution.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+  )
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />

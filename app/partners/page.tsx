@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 'use client';
+=======
+
+interface Partner {
+  name: string;
+  logo: string;
+  description: string;
+  category: string;
+  website?: string;
+  tier: 'strategic' | 'preferred' | 'certified';
+}
+
+const PartnersPage: React.FC = () => {
+  const partners: Partner[] = [
+'use client'
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 import React from 'react';
 <<<<<<< HEAD
 import Navigation from '../components/Navigation';
@@ -7,6 +23,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 
 const PagePage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -17,11 +34,63 @@ const PagePage: React.FC = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
+=======
+    'Joint go-to-market opportunities',
+    'Technical support and training',
+    'Co-innovation projects',
+    'Global reach and scalability',
+    'Certified expertise and solutions'
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+        <section className="py-20 px-4"></section></section>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1></h1>,</h1>
+                Our Technology Partners;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
+<<<<<<< HEAD
+=======
+
+            <div className="flex flex-wrap justify-center gap-4 mb-12"></div></div>{categories.map((category) => (</div>
+                <button;
+                  key={category}className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover: bg-white/20 transition-all duration-300",
+                ></button>{category</button&gt;} </button>
+  ]
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+        </div><section className="py-20 px-4"></section></section>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16"></div></div>
+              </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+                Our Technology Partners
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
+                We work with leading technology companies to deliver the best solutions for our clients.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4 mb-12"></div></div>
+              {categories.map((category) => (
+                </div><div></div>
+                  key={category}
+                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div></div>,</div>
+              {partners.map((partner, index) => (
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2"></h3></h3>{partner.name}</h3>
+                </div>
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
 

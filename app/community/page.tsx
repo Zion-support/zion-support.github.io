@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
@@ -55,6 +56,54 @@ const PagePage: React.FC = () => {
     }
   ];
 
+=======
+
+const CommunityPage: React.FC = () => {,
+  const [activeTab, setActiveTab] = useState('overview');
+
+'use client'
+import React, { useState  } from 'react'
+import {  Helmet  } from 'react-helmet-async'import {  Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart   } from 'lucide-react'
+const CommunityPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview')
+  const communityStats = [
+  ]
+  const events = [
+    {title: 'AI Development Workshop',
+      date: '2024-02-15',
+      time: '2:00 PM EST',
+      type: 'Workshop',
+      attendees: 150,
+      description: 'Learn advanced AI development techniques and best practices',},
+    {title: 'Cloud Infrastructure Meetup',
+      date: '2024-02-20',
+      time: '6:00 PM EST',
+      type: 'Meetup',
+      attendees: 75,
+      description: 'Discuss cloud architecture and deployment strategies',},
+    {title: 'SaaS Business Growth Panel',
+      date: '2024-02-25',
+      time: '3:00 PM EST',
+      type: 'Panel',
+      attendees: 200,
+  const forums = [
+    {name: 'AI Services',
+      description: 'Discuss AI development, machine learning, and automation',
+      posts: 1250,
+      members: 1800;,},
+    {name: 'IT Services',
+      description: 'Cloud infrastructure, DevOps, and system administration',
+      posts: 980,
+      members: 1200;,},
+    {name: 'Micro SaaS',
+      description: 'Building and scaling micro SaaS applications',
+      posts: 750,
+      members: 900;,},
+    {name: 'General Discussion',
+      description: 'General tech discussions and community updates',
+      posts: 2100,
+  ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   const benefits = [
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
@@ -99,6 +148,7 @@ const PagePage: React.FC = () => {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -114,6 +164,10 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
+=======
+              </div&gt;
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
       </div>

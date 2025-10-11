@@ -85,6 +85,7 @@ const DigitalTransformationPage: React.FC = () => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
     'Improved decision making',
@@ -92,6 +93,27 @@ const DigitalTransformationPage: React.FC = () => {
     '24/7 availability',
     'Expert support'
   ];
+=======
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
+          </div>
+        </div>
+      </section>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
+                <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
+              </div>
+    'Proven track record of success'
+  ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
   return (
     <>

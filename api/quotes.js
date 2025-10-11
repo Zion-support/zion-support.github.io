@@ -73,7 +73,6 @@ export default async function handler(req, res) {
       message: 'Quote request received successfully',
       quoteId: `QUOTE-${Date.now()}`
     }));
-
   } catch (error) {
     console.error('Error processing quote request:', error);
     res.statusCode = 500;
@@ -81,6 +80,7 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ 
       error: 'Internal server error' 
     }));
+<<<<<<< HEAD
     const quoteData = {
 =======
     const quote = {
@@ -133,5 +133,7 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ error: 'Internal server error' }))
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   }
 }

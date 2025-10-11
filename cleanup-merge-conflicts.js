@@ -103,3 +103,7 @@ async function cleanAllMergeConflicts() {
 
 // Run the cleanup
 cleanAllMergeConflicts().catch(console.error);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

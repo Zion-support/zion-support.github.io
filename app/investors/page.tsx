@@ -30,6 +30,7 @@ import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'l
 const InvestorsPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -95,6 +96,31 @@ const InvestorsPage: React.FC = () => {
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
+=======
+      icon: Zap,
+      title: 'High Performance',
+            </h2>
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
+            </p>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
+                <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
+              </div>
+            ))}
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+      <Helmet>
+        <title>Page | Zion Tech Group
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      {/* Hero Section */}
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
+              Why Choose Our Page?
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
+              Our page solutions deliver unmatched performance, security, and scalability.
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
 

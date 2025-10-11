@@ -25,7 +25,6 @@ describe('/api/products', () => {
   beforeEach(() => {
     mockPrisma = new PrismaClient()
     jest.clearAllMocks()
-<<<<<<< HEAD
   })
 
   afterEach(() => {
@@ -39,6 +38,7 @@ describe('/api/products', () => {
     ]
 
     mockPrisma.product.findMany.mockResolvedValue(mockProducts)
+<<<<<<< HEAD
 =======
   })
 
@@ -68,6 +68,8 @@ describe('/api/products', () => {
   it('should handle errors gracefully', async () => {
     mockPrisma.product.findMany.mockRejectedValue(new Error('Database error'))
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
@@ -76,6 +78,9 @@ describe('/api/products', () => {
     await productHandler(req, res)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     expect(res._getStatusCode()).toBe(200)
     expect(res._getJSONData()).toEqual(mockProducts)
   })
@@ -85,6 +90,7 @@ describe('/api/products', () => {
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
+<<<<<<< HEAD
   })
 
   afterEach(() => {
@@ -145,6 +151,8 @@ describe('/api/products', () => {
       expect(JSON.parse(res._getData())).toEqual({
         error: 'Internal server error'
       })
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     })
 
     await productHandler(req, res)

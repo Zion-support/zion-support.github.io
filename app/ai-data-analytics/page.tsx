@@ -40,6 +40,7 @@ const AiDataAnalyticsPage: React.FC = () => {
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
+<<<<<<< HEAD
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
@@ -48,6 +49,11 @@ const AiDataAnalyticsPage: React.FC = () => {
 const PagePage: React.FC = () => {
   return (
 <<<<<<< HEAD
+=======
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -62,8 +68,149 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
+<<<<<<< HEAD
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>,
+              {features.map((feature, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div></div></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div></div></div>,
+                    <feature />
+                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
+
+                          {benefit} </li>
+                      ))}
+                    </ul>
+                  )}
+      icon: Database,
+      title: 'Data Integration',
+      description: 'Connect and analyze data from multiple sources seamlessly',
+      details: ['API Integrations', 'Database Connections', 'File Uploads', 'Cloud Storage']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with full compliance and data protection',
+      details: ['End-to-End Encryption', 'GDPR Compliance', 'SOC 2 Certified', 'Role-Based Access']
+    },
+    {
+      icon: Zap,
+      title: 'Automated Reports',
+      description: 'Generate comprehensive reports automatically on your schedule',
+      details: ['Scheduled Reports', 'Custom Templates', 'Email Delivery', 'PDF Export']
+    }
+  ]
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$199',
+      period: '/month',
+      description: 'Perfect for small teams',
+      features: [
+        'Up to 1M data points',
+        '5 data sources',
+        'Basic AI insights',
+        'Standard dashboards',
+        'Email support',
+        '1 user'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$499',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 10M data points',
+        'Unlimited data sources',
+        'Advanced AI analytics',
+        'Custom dashboards',
+        'Priority support',
+        '5 users',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,299',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited data points',
+        'Unlimited data sources',
+        'Custom AI models',
+        'White-label solution',
+        'Dedicated support',
+        'Unlimited users',
+        'Custom integrations',
+        'On-premise deployment'
+      ],
+      popular: false
+    }
+  ]
+
+  const stats = [
+    { value: '40%', label: 'Faster Decision Making', icon: <Clock className="w-8 h-8 text-green-400" /&gt; },
+    { value: '85%', label: 'Accuracy Improvement', icon: <Target className="w-8 h-8 text-blue-400" /&gt; },
+    { value: '60%', label: 'Cost Reduction', icon: <DollarSign className="w-8 h-8 text-purple-400" /&gt; },
+    { value: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-cyan-400" /&gt; }
+  ]
+
+  const useCases = [
+    {
+      title: 'Sales Analytics',
+      description: 'Track sales performance, identify top performers, and predict future revenue',
+      icon: <TrendingUp className="w-8 h-8 text-green-400" /&gt;
+    },
+    {
+      title: 'Customer Insights',
+      description: 'Understand customer behavior, preferences, and lifetime value',
+      icon: <Users className="w-8 h-8 text-blue-400" /&gt;
+    },
+    {
+      title: 'Operational Efficiency',
+      description: 'Optimize processes, reduce waste, and improve productivity',
+      icon: <Zap className="w-8 h-8 text-yellow-400" /&gt;
+    },
+    {
+      title: 'Financial Forecasting',
+      description: 'Predict cash flow, budget planning, and financial performance',
+      icon: <DollarSign className="w-8 h-8 text-purple-400" /&gt;
+    }
+  ]
+
+  const testimonials = [
+    {
+      name: 'David Kim',
+      role: 'Chief Data Officer, FinanceFlow',
+      content: 'AI Data Analytics helped us identify $2M in cost savings opportunities within the first month.',
+      rating: 5,
+      company: 'FinanceFlow'
+    },
+    {
+      name: 'Lisa Wang',
+      role: 'VP Analytics, RetailMax',
+      content: 'The predictive models are incredibly accurate. We can now forecast demand with 95% accuracy.',
+      rating: 5,
+      company: 'RetailMax'
+    },
+    {
+      name: 'James Rodriguez',
+      role: 'Head of BI, TechStart',
+      content: 'Implementation was smooth and the insights are game-changing. ROI was achieved in 3 months.',
+      rating: 5,
+      company: 'TechStart'
+    }
+  ]
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <Navigation />
       
       <main className="pt-20">
@@ -89,6 +236,7 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -127,11 +275,41 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+=======
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Advanced AI technology that drives results
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div></div>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}
+                  <p className="text-gray-300 mb-4"></p></p>{feature.description}
+                  {feature.benefits && (
+                    <ul className="space-y-2"></ul>
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -148,12 +326,29 @@ const PagePage: React.FC = () => {
                   </div>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
+=======
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Why Choose Our Solution?
+              </h2>
+              <p></p>
+                Proven results that drive business growth and efficiency
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+              {benefits.map((benefit, index) =&gt; ()
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -179,6 +374,41 @@ const PagePage: React.FC = () => {
     </>
   );
 };
+=======
+        <section className="py-20 px-4"></section></section>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
+            </div>
+          </div>
+        </section>
+      </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"></div></div>
+                <div className="flex items-center mb-4"></div></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div></div>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white"></h3></h3>{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6"></p></p>{feature.description}</p>
+                <ul className="space-y-2"></ul>
+                  {feature.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-gray-300"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 export default PagePage;
 =======
@@ -189,5 +419,9 @@ export default PagePage;
   );
 };
 
+<<<<<<< HEAD
 export default AiDataAnalyticsPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+export default AiDataAnalyticsPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

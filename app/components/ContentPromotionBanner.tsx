@@ -49,6 +49,7 @@ const ContentPromotionBanner: React.FC = () => {
           ))}
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         
         <div className="text-center">
@@ -58,6 +59,8 @@ const ContentPromotionBanner: React.FC = () => {
           </button>
         </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       </div>
     </div>
   );

@@ -52,6 +52,7 @@ const PagePage: React.FC = () => {
   return (
     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -115,6 +116,40 @@ const PagePage: React.FC = () => {
                 <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
+=======
+      <Helmet>
+        <title>Ai Climate Prediction Engine - Zion Tech Group</title>
+        <meta name="description" content="AI-powered ai climate prediction engine solution for intelligent automation and optimization" />
+        <meta name="keywords" content="AI, ai, climate, prediction, engine, automation, artificial intelligence, business solutions" />
+      </Helmet>
+
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-500/20 via-transparent to-transparent"></div></div></div>
+          
+          <div className="max-w-7xl mx-auto relative z-10"></div></div>
+            </div><div className="{`text-center" transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div></div>
+              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full px-6 py-3 mb-8 border border-green-500/30"></div></div>
+                </div><Globe className="w-5 h-5 text-green-400" />
+                <span className="text-green-400 font-semibold"></span></span>Climate Technology</span>
+              </div>
+              
+                Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, 
+                extreme weather prediction, and comprehensive climate risk assessment.
+              </p>
+              
+                  <span className="font-semibold"></span></span>95% Accuracy</span>
+                </div>
+                <div className="flex items-center space-x-2 text-cyan-400"></div></div>
+                  </div><Shield className="w-5 h-5" />
+                  <span className="font-semibold"></span></span>Early Warning</span>
+                </div>
+                <div className="flex items-center space-x-2 text-blue-400"></div></div>
+                  </div><Globe className="w-5 h-5" />
+                  <span className="font-semibold"></span></span>Global Coverage</span>
+                </div>
+              </div>
+              
+                </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </div>
             </div>
           </div>
@@ -131,6 +166,7 @@ const PagePage: React.FC = () => {
                 Advanced technology that drives results
               </p>
             </div>
+<<<<<<< HEAD
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -150,6 +186,21 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
+=======
+            
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
+              {features.map((feature, index) => (
+                >
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6"></div></div>
+                    </div><feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-white"></h3></h3>{feature.title}</h3>
+                  <p className="text-gray-300 mb-6"></p></p>{feature.description</p&gt;}</p>
+                  <ul className="space-y-2"></ul>
+                    {feature.benefits.map((benefit, idx) =&gt; (
+                    ))}
+                  </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
@@ -160,11 +211,34 @@ const PagePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
+<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Proven results that drive business growth
+=======
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Ai Climate Prediction Engine?</h2>
+              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
+              {useCases.map((useCase, index) => (
+                >
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"></div></div>
+                    </div><useCase.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-white"></h3></h3>{useCase.title}</h3>
+                  <p className="text-gray-300 mb-4"></p></p>{useCase.description</p&gt;}</p>
+                  <div className="text-green-400 font-semibold text-sm"></div></div>{useCase.results</div&gt;} </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+                All plans include our advanced AI algorithms and climate modeling tools.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </p>
             </div>
 
@@ -181,6 +255,7 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -199,6 +274,9 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+=======
+              </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>

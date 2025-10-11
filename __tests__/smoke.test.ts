@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -18,6 +17,7 @@ describe('Smoke Tests', () => {
     const result = await promise
     expect(result).toBe('test')
   })
+<<<<<<< HEAD
 import { add } from '../utils/smoke'
 
 test('add adds two numbers', () => {
@@ -47,4 +47,6 @@ describe('Smoke Tests', () => {
     expect('hello'.toUpperCase()).toBe('HELLO')
   })
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 })

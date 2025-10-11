@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
@@ -115,6 +116,56 @@ const PagePage: React.FC = () => {
                 <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
+=======
+    }
+  ]
+  const benefits = [
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+      <Helmet>
+        <title>Cloud Migration Services | Zion Tech Group</title>
+        <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16"></div></div>
+        <div className="text-center mb-16"></div></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1></h1>Cloud Migration Services;</h1>
+  </
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>Transform your business with our advanced cloud migration services.</p>
+            Powered by cutting-edge AI technology and industry expertise.
+          </p>
+              <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
+              <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
+            </div>
+          ))}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"></div></div>
+              </div>
+            ))}
+        <div className="text-center"></div></div>
+          </div><h2 className="text-3xl font-bold text-white mb-6"></h2></h2>
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
+  return() {features.map((feature, index) =&gt; ()
+          ))}
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16" /></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-8" /></h2>
+            Why Choose Our Cloud Migration Services?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6" /></div>
+            {benefits.map((benefit, index) =&gt; ()
+            ))}
+          </div>
+        </div>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div></div>,</div>
+            {benefits.map((benefit, index) => (
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </div>
             </div>
           </div>

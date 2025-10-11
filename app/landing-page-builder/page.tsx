@@ -15,11 +15,11 @@ import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'l
 const LandingPageBuilderPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
+<<<<<<< HEAD
 =======
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -65,6 +65,13 @@ const LandingPageBuilderPage: React.FC = () => {
       </Helmet>
 
 <<<<<<< HEAD
+=======
+
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     'Cost-effective pricing plans',
           </div&gt;
         </div&gt;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react'
@@ -320,6 +319,7 @@ const PricingPage: React.FC = () => {
                   <button className="w-full bg-white/10 text-white py-2 px-4 rounded-lg hover:bg-white/20 transition-colors">
                     Add to Plan
                   </button>
+<<<<<<< HEAD
 =======
       {/* Pricing Plans */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -349,9 +349,14 @@ const PricingPage: React.FC = () => {
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -535,6 +540,9 @@ const PricingPage: React.FC = () => {
 
 <<<<<<< HEAD
 export default PricingPage
+<<<<<<< HEAD
 =======
 export default PricingPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
@@ -100,11 +99,15 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', c
       <p className="text-gray-300 mb-4">EnhancedAnalytics description goes here.</p>
       {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     </AnalyticsContext.Provider>
   )
 }
 
 export default AnalyticsProvider
+<<<<<<< HEAD
 =======
     </div>
   );
@@ -116,3 +119,5 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
 export default EnhancedAnalytics;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

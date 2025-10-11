@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
@@ -10,6 +11,155 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 
+=======
+import {  Helmet  } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import {  CheckCircle, Leaf, Zap, Eye, BarChart, Globe, Shield, Users  } from 'lucide-react';
+
+const AIAgriculturalIntelligenceProPage: React.FC = () => {
+  const features = [
+    {
+      icon: Leaf,
+      title: 'Crop Monitoring',
+      description: 'Advanced AI-powered crop monitoring and health assessment using satellite imagery and IoT sensors.',
+      benefits: ['Real-time monitoring', 'Disease detection', 'Yield prediction']
+    },
+    {
+      icon: Zap,
+      title: 'Precision Agriculture',
+      description: 'Optimize farming operations with AI-driven precision agriculture techniques.',
+      benefits: ['Smart irrigation', 'Fertilizer optimization', 'Resource efficiency']
+    },
+    {
+      icon: Eye,
+      title: 'Predictive Analytics',
+      description: 'Predict crop yields, weather patterns, and market conditions using machine learning.',
+      benefits: ['Yield forecasting', 'Weather prediction', 'Market analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Data Analytics',
+      description: 'Comprehensive data analytics for informed agricultural decision making.',
+      benefits: ['Performance metrics', 'Trend analysis', 'ROI optimization']
+    },
+    {
+      icon: Globe,
+      title: 'Climate Adaptation',
+      description: 'Adapt farming practices to changing climate conditions with AI recommendations.',
+      benefits: ['Climate modeling', 'Adaptation strategies', 'Sustainability focus']
+    },
+    {
+      icon: Shield,
+      title: 'Risk Management',
+      description: 'Identify and mitigate agricultural risks using AI-powered risk assessment.',
+      benefits: ['Risk prediction', 'Insurance optimization', 'Loss prevention']
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered agricultural intelligence solutions for modern farming. Optimize crop yields, monitor health, and make data-driven decisions." />
+      </Helmet>
+
+      <Navigation />
+      <section className="relative py-20 px-4 overflow-hidden"></section></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center"></div></div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1></h1>
+            AI Agricultural
+            <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span></span>
+              Intelligence Pro
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>
+            Transform your farming operations with advanced AI-powered agricultural intelligence. 
+            Optimize yields, reduce costs, and make data-driven decisions for sustainable agriculture.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+            <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+              Get Started
+            </button>
+            <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
+              View Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>
+              Advanced Agricultural Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
+              Our AI-powered agricultural intelligence platform provides comprehensive solutions for modern farming.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"></div></div>
+                <div className="flex items-center mb-4"></div></div>
+                  <feature.icon className="w-8 h-8 text-green-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white"></h3></h3>{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4"></p></p>{feature.description}</p>
+                <ul className="space-y-2"></ul>
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-white/5"></section></section>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>
+            Ready to Revolutionize Your Farming?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8"></p></p>
+            Contact our agricultural AI experts to learn how our solutions can transform your farming operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+            <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+              Contact Us
+            </button>
+            <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
+              Download Brochure
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+};
+
+export default AIAgriculturalIntelligenceProPage;
+import { Helmet}  } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}  } from 'lucide-react';
+const AiAgriculturalIntelligenceProPage: React.FC = () => {,
+'use client'
+import React from 'react'
+import {  Helmet  } from 'react-helmet-async'import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'import {  CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings   } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 const AiAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [
     {
@@ -52,6 +202,7 @@ const PagePage: React.FC = () => {
   return (
     <>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -64,11 +215,65 @@ const PagePage: React.FC = () => {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
+=======
+      <Helmet>
+        <title>Ai Agricultural Intelligence Pro - Zion Tech Group</title>
+        <meta name="description" content="AI-powered ai agricultural intelligence pro solution for intelligent automation and optimization" />
+        <meta name="keywords" content="AI, ai, agricultural, intelligence, pro, automation, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"></div></div></div>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
+            </div>
+          </div>
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div></div></div>
+            <h1>Ai Agricultural Intelligence Pro;</h1>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              AI-powered ai agricultural intelligence pro solution for intelligent automation and optimization
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+        <section className="relative py-20 px-4 overflow-hidden"></section></section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center"></div></div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1></h1>Ai Agricultural Intelligence Pro
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>
+              Advanced AI-powered ai agricultural intelligence pro solution for modern businesses.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>Get Started
+              <button className="border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>View Demo
+        {/* Features Section */}
+        <section className="py-20 px-4"></section></section>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </p>
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -147,6 +352,9 @@ const PagePage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
+=======
+                          {benefit} </li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                       ))}
                     </ul>
                   )}
@@ -155,6 +363,7 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
@@ -175,11 +384,32 @@ const PagePage: React.FC = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
+=======
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Advanced AI technology that drives results
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div></div>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}
+                  <p className="text-gray-300 mb-4"></p></p>{feature.description}
+                  {feature.benefits && (
+                    <ul className="space-y-2"></ul>
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400"></li>
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                      ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -199,6 +429,29 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+=======
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Why Choose Our Solution?
+              </h2>
+              <p></p>
+                Proven results that drive business growth and efficiency
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+              {benefits.map((benefit, index) =&gt; ()
+              ))}
+        {/* CTA Section */}
+        <section className="py-20 px-4"></section></section>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>

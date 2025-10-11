@@ -1,9 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Shield, Cloud, Database, Code, Users, Settings, Zap, Brain, BarChart, Target, TrendingUp, Globe, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+=======
+import { 
+  Server, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Code, 
+  Settings, 
+  CheckCircle,
+  ArrowRight
+} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const ITServicesPage: React.FC = () => {
   const services = [
@@ -12,8 +29,14 @@ const ITServicesPage: React.FC = () => {
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions for your business needs.',
       icon: Cloud,
+<<<<<<< HEAD
       features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Monitoring'],
       price: 'From $500/month'
+=======
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and migration services',
+      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', '24/7 Monitoring']
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     },
     {
       id: 2,
@@ -24,6 +47,7 @@ const ITServicesPage: React.FC = () => {
       price: 'From $1,000/month'
     },
     {
+<<<<<<< HEAD
       id: 3,
       title: 'Database Management',
       description: 'Optimize and maintain your database infrastructure.',
@@ -156,11 +180,64 @@ const ItServicesPage: React.FC = () => {
       </Helmet>
       
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+      icon: Database,
+      title: 'Database Management',
+      description: 'Optimize and manage your data infrastructure',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration']
+    },
+    {
+      icon: Code,
+      title: 'Custom Development',
+      description: 'Tailored software solutions for your business needs',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+    },
+    {
+      icon: Settings,
+      title: 'IT Support',
+      description: '24/7 technical support and maintenance services',
+      features: ['Help Desk', 'Remote Support', 'System Updates', 'Troubleshooting']
+    }
+  ];
+
+  const processSteps = [
+    {
+      step: '01',
+      title: 'Assessment',
+      description: 'We analyze your current IT infrastructure and identify areas for improvement.'
+    },
+    {
+      step: '02',
+      title: 'Planning',
+      description: 'We develop a comprehensive strategy tailored to your specific requirements.'
+    },
+    {
+      step: '03',
+      title: 'Implementation',
+      description: 'Our expert team implements the solution with minimal disruption to your operations.'
+    },
+    {
+      step: '04',
+      title: 'Support',
+      description: 'We provide ongoing support and maintenance to ensure optimal performance.'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
+        <meta name="description" content="Professional IT services including infrastructure management, cloud solutions, cybersecurity, and custom development. Transform your business with our expert IT support." />
+        <meta name="keywords" content="IT services, infrastructure management, cloud solutions, cybersecurity, database management, custom development, IT support" />
+      </Helmet>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -231,6 +308,24 @@ const ItServicesPage: React.FC = () => {
                 </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               ))}
+=======
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Professional <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">IT Services</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive IT solutions designed to optimize your business operations and drive growth through technology.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                  Get Started
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                  View Services
+                </button>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
@@ -239,16 +334,24 @@ const ItServicesPage: React.FC = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our IT Services
               </h2>
               <p className="text-xl text-gray-300">
+<<<<<<< HEAD
                 Comprehensive IT solutions designed to meet your business requirements.
+=======
+                Comprehensive technology solutions for modern businesses
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
               {services.map((service) => (
                 <div
                   key={service.id}
@@ -295,15 +398,57 @@ const ItServicesPage: React.FC = () => {
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+=======
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="flex items-center mb-4">
+                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                         {feature}
                       </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
                   <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:scale-105">
                     Learn More
                     <ArrowRight className="w-4 h-4 inline ml-2" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
                   </button>
+=======
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Process
+              </h2>
+              <p className="text-xl text-gray-300">
+                How we deliver exceptional IT solutions
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">{step.step}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
@@ -312,12 +457,17 @@ const ItServicesPage: React.FC = () => {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
+<<<<<<< HEAD
               Let's discuss how our IT services can help streamline your operations and improve efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -344,11 +494,24 @@ const ItServicesPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Schedule Consultation
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+              Let's discuss how our IT services can help streamline your operations and boost productivity.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                Start Your Project
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Schedule Consultation
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </button>
             </div>
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       </div>
       
       <Footer />
@@ -356,6 +519,7 @@ const ItServicesPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ITServicesPage;
 =======
 
@@ -367,3 +531,6 @@ export default ITServicesPage;
 
 export default ItServicesPage
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+export default ItServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

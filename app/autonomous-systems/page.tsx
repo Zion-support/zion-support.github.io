@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 const PagePage: React.FC = () => {
   return (

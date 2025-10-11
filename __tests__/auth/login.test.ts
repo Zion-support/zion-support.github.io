@@ -62,6 +62,7 @@ describe('Login', () => {
 
     expect(result.success).toBe(false)
     expect(result.error).toBe('Invalid credentials')
+<<<<<<< HEAD
   it('should login user with valid credentials', async () => {
     const mockUser = {
       id: '1',
@@ -139,5 +140,7 @@ describe('/api/auth/login', () => {
 
     expect(res._getStatusCode()).toBe(401)
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   })
 })

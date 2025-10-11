@@ -87,6 +87,7 @@ describe('/api/reviews', () => {
     expect(res._getJSONData()).toHaveProperty('error')
   })
 })
+<<<<<<< HEAD
 =======
 import handler from '@/pages/api/reviews'
 import { describe, it, expect, vi } from 'vitest'
@@ -125,3 +126,5 @@ describe('/api/reviews', () => {
   })
 })
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

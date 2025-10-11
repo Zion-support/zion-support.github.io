@@ -66,6 +66,7 @@ test('DELETE soft deletes account', () => {
   
   expect(res.json).toHaveBeenCalledWith({
     success: true
+<<<<<<< HEAD
 =======
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -101,5 +102,7 @@ describe('/api/user/me', () => {
 
     expect(res._getStatusCode()).toBe(401)
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   })
 })

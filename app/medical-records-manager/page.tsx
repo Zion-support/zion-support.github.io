@@ -30,6 +30,7 @@ import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'l
 const MedicalRecordsManagerPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -149,6 +150,35 @@ const MedicalRecordsManagerPage: React.FC = () => {
                       ))}
                     </ul>
                   )}
+=======
+      icon: FileText,
+      title: 'Digital Records Management',
+      description: 'Secure, organized digital storage and management of patient medical records with easy access and search capabilities.'},
+    {icon: Shield,
+      title: 'HIPAA Compliance',
+      description: 'Fully compliant with HIPAA regulations and healthcare data security standards to protect patient privacy.',},
+    {icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'AI analysis of medical records to identify patterns, trends, and potential health risks for better patient care.'},
+    {icon: Users,
+      title: 'Multi-Provider Access',
+      description: 'Secure access for multiple healthcare providers with role-based permissions and audit trails.',},
+    {icon: BarChart,
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive analytics on patient data, treatment outcomes, and healthcare metrics for informed decision-making.'},
+    {icon: Lock,
+      title: 'Advanced Security',
+        <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
+    <>
+      </React><Helmet>
+        </Helmet><title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
+        <meta name="description" content="Secure, HIPAA-compliant medical records management system with AI-powered insights. Streamline healthcare data management and improve patient care." />
+        <meta name="keywords" content="medical records management, HIPAA compliance, healthcare data, patient records, medical software, healthcare analytics" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
+                  <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
@@ -201,6 +231,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </main>
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
@@ -214,3 +245,22 @@ export default PagePage;
 =======
 export default MedicalRecordsManagerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+      </div>
+    </>
+  )
+}
+export default MedicalRecordsManagerPage
+  </h1>
+                <div></div>
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6"></div></div>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}
+                  <p className="text-gray-300"></p></p>{feature.description}
+              ))}
+  )
+}
+export default MedicalRecordsManagerPage</div></div></div></div></div></p></p></h1></h3></section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

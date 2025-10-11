@@ -78,6 +78,7 @@ describe('validateEnv', () => {
     expect(() => checkEssentialEnvVars()).toThrow()
   })
 })
+<<<<<<< HEAD
 =======
   it('should pass with all required environment variables set', async () => {
     mockProcessEnv({
@@ -155,3 +156,5 @@ describe('validateEnv', () => {
   })
 })
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
