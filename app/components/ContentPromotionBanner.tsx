@@ -1,55 +1,55 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: Zap,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Cutting-edge artificial intelligence to automate and optimize your business processes'
     },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for modern business needs'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with advanced encryption and compliance standards'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance'
+      icon: BarChart3,
+      title: 'Analytics & Insights',
+      description: 'Real-time analytics and business intelligence to drive informed decisions'
     }
   ];
 
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Reduce operational costs by up to 40%',
+    'Increase productivity and efficiency',
+    'Enhance customer experience',
+    'Improve data security and compliance',
+    'Scale your business faster',
+    'Gain competitive advantage',
+    'Access to expert support',
+    'Future-proof your technology'
   ];
 
   const stats = [
     {
       icon: Users,
-      value: '10,000+',
-      label: 'Happy Customers',
-      description: 'Businesses trust our solutions'
+      value: '500+',
+      label: 'Happy Clients',
+      description: 'Satisfied customers worldwide'
     },
     {
       icon: TrendingUp,
       value: '99.9%',
       label: 'Uptime',
-      description: 'Reliable service guarantee'
+      description: 'Reliable service delivery'
     },
     {
       icon: Star,
@@ -60,7 +60,6 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
@@ -77,7 +76,7 @@ const ContentPromotionBanner: React.FC = () => {
               <Zap className="w-5 h-5" />
               Get Started Today
             </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <button className="inline-flex items-center gap-2 border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </button>
@@ -148,46 +147,6 @@ const ContentPromotionBanner: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 md:p-12">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Business with AI
-            </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge AI and IT solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-white/80 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-white flex-shrink-0" />
-                <span className="text-white/90">{benefit}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2 mx-auto">
-              Get Started Today
-              <ArrowRight className="w-5 h-5" />
-            </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
           </div>
         </div>
       </div>

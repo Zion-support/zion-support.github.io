@@ -1,179 +1,163 @@
 'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { CheckCircle, ArrowRight, PenTool, Brain, Zap, Globe, FileText, Users } from 'lucide-react';
 
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
-      title: 'AI Writing Assistant',
-      description: 'Generate high-quality content using advanced AI algorithms',
-      benefits: ['Automated writing', 'Content optimization', 'Multi-language support']
+      icon: Brain,
+      title: 'AI-Powered Writing',
+      description: 'Advanced AI algorithms that understand context and generate high-quality, engaging content.'
     },
     {
-      title: 'Content Templates',
-      description: 'Professional templates for various content types',
-      benefits: ['Blog posts', 'Social media', 'Marketing copy']
+      icon: PenTool,
+      title: 'Multiple Content Types',
+      description: 'Create blogs, articles, marketing copy, technical documentation, and more with ease.'
     },
     {
+      icon: Zap,
+      title: 'Fast Content Generation',
+      description: 'Generate high-quality content in minutes, not hours, with our intelligent writing assistant.'
+    },
+    {
+      icon: FileText,
       title: 'SEO Optimization',
-      description: 'Optimize content for search engines automatically',
-      benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
+      description: 'Automatically optimize content for search engines with built-in SEO best practices.'
+    },
+    {
+      icon: Users,
+      title: 'Brand Voice Consistency',
+      description: 'Maintain consistent brand voice and tone across all your content with AI training.'
+    },
+    {
+      icon: Globe,
+      title: 'Multi-Language Support',
+      description: 'Generate content in multiple languages with accurate translations and cultural adaptation.'
     }
   ];
 
   const benefits = [
-    'Increase content production by 10x',
-    'Improve engagement by 200%',
-    'Save 50+ hours per week',
-    'Reduce content costs by 70%',
-    'Enable consistent branding',
-    'Automate content workflows'
+    'Reduce content creation time by up to 80%',
+    'Improve content quality and engagement',
+    'Maintain consistent brand voice',
+    'Optimize for SEO automatically',
+    'Generate content in multiple languages',
+    'Scale content production efficiently',
+    'Reduce content creation costs',
+    'Focus on strategy, not writing'
+  ];
+
+  const contentTypes = [
+    {
+      title: 'Blog Posts & Articles',
+      description: 'Engaging blog posts and articles that drive traffic and engagement.',
+      features: ['SEO Optimized', 'Engaging Headlines', 'Proper Structure', 'Call-to-Actions']
+    },
+    {
+      title: 'Marketing Copy',
+      description: 'Compelling marketing copy for ads, emails, and promotional materials.',
+      features: ['Persuasive Language', 'A/B Testing Ready', 'Brand Aligned', 'Conversion Focused']
+    },
+    {
+      title: 'Technical Documentation',
+      description: 'Clear and comprehensive technical documentation for products and services.',
+      features: ['Technical Accuracy', 'User-Friendly', 'Well-Organized', 'Searchable']
+    },
+    {
+      title: 'Social Media Content',
+      description: 'Engaging social media posts that resonate with your audience.',
+      features: ['Platform Optimized', 'Trending Topics', 'Visual Descriptions', 'Hashtag Suggestions']
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AI Content Writer | Zion Tech Group</title>
-        <meta name="description" content="Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="ai content writer, AI solutions, IT services, Zion Tech Group" />
+        <title>AI Content Writer - Intelligent Content Creation | Zion Tech Group</title>
+        <meta name="description" content="Transform your content creation with AI-powered writing tools. Generate high-quality, SEO-optimized content at scale." />
+        <meta name="keywords" content="AI content writer, content creation, AI writing, content marketing, SEO content, automated writing" />
       </Helmet>
-      
-      <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Content Writer
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Create high-quality content with our AI Content Writer. Advanced writing tools, 
-            templates, and optimization features for better content creation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">AI Content Writer Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                AI Content Writer
+              </span>
+              <br />
+              <span className="text-white">Intelligent Creation</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your content creation process with AI-powered writing tools that generate 
+              high-quality, engaging content at scale while maintaining your brand voice.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Start Writing
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Content Writer?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your content creation with our AI Content Writer solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
+        </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our AI Content Writer?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
+                Our AI-powered writing platform combines intelligence with creativity to deliver exceptional content.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="h-8 w-8 text-purple-400 mr-3" />
+                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Content Types Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Content Types We Support
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Generate various types of content tailored to your specific needs and audience.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              {contentTypes.map((type, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
+                  <h3 className="text-2xl font-bold text-white mb-4">{type.title}</h3>
+                  <p className="text-gray-300 mb-6">{type.description}</p>
+                  <ul className="space-y-2">
+                    {type.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -181,24 +165,21 @@ const AIContentWriterPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Benefits of AI Content Writing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
+                Experience the advantages of intelligent content creation for your business.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                  <CheckCircle className="h-8 w-8 text-green-400 mx-auto mb-4" />
+                  <p className="text-gray-300">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -206,29 +187,28 @@ const AIContentWriterPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Content Creation?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your content needs and get started with AI-powered writing.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                <PenTool className="mr-2 h-5 w-5" />
+                Start Writing
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+                <FileText className="mr-2 h-5 w-5" />
+                Learn More
+              </button>
             </div>
           </div>
         </section>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 

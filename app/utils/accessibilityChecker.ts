@@ -1,154 +1,266 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+/**
+ * Accessibility Checker Utility
+ * Provides functions to check and validate accessibility features
+ */
 
-const AccessibilityCheckerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+export interface AccessibilityCheckResult {
+  passed: boolean;
+  message: string;
+  severity: 'error' | 'warning' | 'info';
+  element?: HTMLElement;
+}
+
+export interface AccessibilityReport {
+  totalChecks: number;
+  passedChecks: number;
+  failedChecks: number;
+  warnings: number;
+  results: AccessibilityCheckResult[];
+}
+
+export class AccessibilityChecker {
+  private results: AccessibilityCheckResult[] = [];
+
+  /**
+   * Check if an element has proper alt text for images
+   */
+  checkImageAltText(element: HTMLImageElement): AccessibilityCheckResult {
+    const hasAlt = element.hasAttribute('alt');
+    const altText = element.getAttribute('alt') || '';
+    
+    if (!hasAlt) {
+      return {
+        passed: false,
+        message: 'Image missing alt attribute',
+        severity: 'error',
+        element
+      };
     }
-  ];
+    
+    if (altText.trim() === '') {
+      return {
+        passed: false,
+        message: 'Image has empty alt attribute',
+        severity: 'warning',
+        element
+      };
+    }
+    
+    return {
+      passed: true,
+      message: 'Image has proper alt text',
+      severity: 'info',
+      element
+    };
+  }
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+  /**
+   * Check if form inputs have proper labels
+   */
+  checkFormLabels(element: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement): AccessibilityCheckResult {
+    const id = element.getAttribute('id');
+    const ariaLabel = element.getAttribute('aria-label');
+    const ariaLabelledBy = element.getAttribute('aria-labelledby');
+    
+    if (ariaLabel || ariaLabelledBy) {
+      return {
+        passed: true,
+        message: 'Form element has proper labeling',
+        severity: 'info',
+        element
+      };
+    }
+    
+    if (id) {
+      const label = document.querySelector(`label[for="${id}"]`);
+      if (label) {
+        return {
+          passed: true,
+          message: 'Form element has associated label',
+          severity: 'info',
+          element
+        };
+      }
+    }
+    
+    return {
+      passed: false,
+      message: 'Form element missing proper label',
+      severity: 'error',
+      element
+    };
+  }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AccessibilityChecker | Zion Tech Group</title>
-        <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
-      </Helmet>
+  /**
+   * Check if headings are properly structured
+   */
+  checkHeadingStructure(): AccessibilityCheckResult[] {
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const results: AccessibilityCheckResult[] = [];
+    let previousLevel = 0;
+    
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      
+      if (index === 0 && level !== 1) {
+        results.push({
+          passed: false,
+          message: 'Page should start with h1 heading',
+          severity: 'warning',
+          element: heading as HTMLElement
+        });
+      }
+      
+      if (level > previousLevel + 1) {
+        results.push({
+          passed: false,
+          message: `Heading level ${level} skipped from ${previousLevel}`,
+          severity: 'warning',
+          element: heading as HTMLElement
+        });
+      }
+      
+      previousLevel = level;
+    });
+    
+    return results;
+  }
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AccessibilityChecker
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced accessibilitychecker solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+  /**
+   * Check color contrast ratio
+   */
+  checkColorContrast(element: HTMLElement): AccessibilityCheckResult {
+    const styles = window.getComputedStyle(element);
+    const color = styles.color;
+    const backgroundColor = styles.backgroundColor;
+    
+    // This is a simplified check - in a real implementation,
+    // you would calculate the actual contrast ratio
+    if (color === backgroundColor) {
+      return {
+        passed: false,
+        message: 'Text and background colors are the same',
+        severity: 'error',
+        element
+      };
+    }
+    
+    return {
+      passed: true,
+      message: 'Color contrast appears adequate',
+      severity: 'info',
+      element
+    };
+  }
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AccessibilityChecker?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+  /**
+   * Check if interactive elements are keyboard accessible
+   */
+  checkKeyboardAccessibility(element: HTMLElement): AccessibilityCheckResult {
+    const tabIndex = element.getAttribute('tabindex');
+    const isInteractive = ['button', 'a', 'input', 'select', 'textarea'].includes(element.tagName.toLowerCase());
+    
+    if (isInteractive && tabIndex === '-1') {
+      return {
+        passed: false,
+        message: 'Interactive element is not keyboard accessible',
+        severity: 'error',
+        element
+      };
+    }
+    
+    return {
+      passed: true,
+      message: 'Element is keyboard accessible',
+      severity: 'info',
+      element
+    };
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  /**
+   * Run all accessibility checks on the page
+   */
+  runAllChecks(): AccessibilityReport {
+    this.results = [];
+    
+    // Check images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      this.results.push(this.checkImageAltText(img));
+    });
+    
+    // Check form elements
+    const formElements = document.querySelectorAll('input, select, textarea');
+    formElements.forEach(element => {
+      this.results.push(this.checkFormLabels(element as HTMLInputElement));
+    });
+    
+    // Check heading structure
+    this.results.push(...this.checkHeadingStructure());
+    
+    // Check color contrast for text elements
+    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
+    textElements.forEach(element => {
+      this.results.push(this.checkColorContrast(element as HTMLElement));
+    });
+    
+    // Check keyboard accessibility
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    interactiveElements.forEach(element => {
+      this.results.push(this.checkKeyboardAccessibility(element as HTMLElement));
+    });
+    
+    const totalChecks = this.results.length;
+    const passedChecks = this.results.filter(r => r.passed).length;
+    const failedChecks = this.results.filter(r => !r.passed).length;
+    const warnings = this.results.filter(r => r.severity === 'warning').length;
+    
+    return {
+      totalChecks,
+      passedChecks,
+      failedChecks,
+      warnings,
+      results: this.results
+    };
+  }
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our accessibilitychecker solutions for your business.
-            </p>
-          </div>
+  /**
+   * Get accessibility score as percentage
+   */
+  getAccessibilityScore(): number {
+    const report = this.runAllChecks();
+    return Math.round((report.passedChecks / report.totalChecks) * 100);
+  }
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  /**
+   * Generate accessibility report summary
+   */
+  generateReport(): string {
+    const report = this.runAllChecks();
+    const score = this.getAccessibilityScore();
+    
+    return `
+Accessibility Report
+===================
+Score: ${score}%
+Total Checks: ${report.totalChecks}
+Passed: ${report.passedChecks}
+Failed: ${report.failedChecks}
+Warnings: ${report.warnings}
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your accessibilitychecker needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+Issues Found:
+${report.results
+  .filter(r => !r.passed)
+  .map(r => `- ${r.severity.toUpperCase()}: ${r.message}`)
+  .join('\n')}
+    `.trim();
+  }
+}
 
-export default AccessibilityCheckerPage;
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
+// Export a default instance
+export const accessibilityChecker = new AccessibilityChecker();
+
+// Export utility functions
+export const checkPageAccessibility = () => accessibilityChecker.runAllChecks();
+export const getAccessibilityScore = () => accessibilityChecker.getAccessibilityScore();
+export const generateAccessibilityReport = () => accessibilityChecker.generateReport();
