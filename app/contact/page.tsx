@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -21,6 +22,12 @@ import React, { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageSquare, Calendar, User, Building } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+import React, { useState } from 'react';
+import { CheckCircle, ArrowRight, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -30,6 +37,7 @@ const ContactPage: React.FC = () => {
     phone: '',
     service: '',
     message: ''
+<<<<<<< HEAD
 <<<<<<< HEAD
   })
 <<<<<<< HEAD
@@ -57,11 +65,18 @@ const ContactPage: React.FC = () => {
       setStatus({ type: 'success', message: 'Message sent successfully! We\'ll get back to you soon.' })
 =======
   const [isSubmitted, setIsSubmitted] = useState(false)
+=======
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
+<<<<<<< HEAD
     })
   }
 =======
@@ -172,6 +187,46 @@ const ContactPage: React.FC = () => {
       details: 'Mon - Fri: 9:00 AM - 6:00 PM',
       description: 'EST (Emergency support 24/7)'
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+
+  const contactInfo = [
+    {
+      icon: <Mail className="w-6 h-6 text-blue-400" />,
+      title: 'Email Us',
+      details: ['contact@ziontechgroup.com', 'support@ziontechgroup.com'],
+      description: 'Send us an email and we\'ll respond within 24 hours'
+    },
+    {
+      icon: <Phone className="w-6 h-6 text-green-400" />,
+      title: 'Call Us',
+      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+      description: 'Speak directly with our team during business hours'
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-purple-400" />,
+      title: 'Visit Us',
+      details: ['123 Tech Street', 'Innovation City, IC 12345'],
+      description: 'Come visit our headquarters for a personal meeting'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-orange-400" />,
+      title: 'Business Hours',
+      details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 4:00 PM'],
+      description: 'We\'re here to help during these hours'
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
     }
   ]
 
@@ -202,6 +257,7 @@ const ContactPage: React.FC = () => {
     'AI Services',
     'IT Services',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Cloud Services',
     'Micro SAAS',
     'Digital Transformation',
@@ -219,11 +275,23 @@ const ContactPage: React.FC = () => {
     'Other'
   ];
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+    'Cloud Migration',
+    'Digital Transformation',
+    '5G Implementation',
+    'Micro SAAS Solutions',
+    'Cybersecurity',
+    'Data Analytics',
+    'Mobile Development',
+    'Other'
+  ];
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -553,10 +621,15 @@ export default ContactPage
 =======
         <meta name="description" content="Get in touch with Zion Tech Group for AI services, IT solutions, and micro SAAS applications. We're here to help transform your business." />
         <meta name="keywords" content="contact, AI services, IT solutions, micro SAAS, business consultation" />
+=======
+        <meta name="description" content="Get in touch with Zion Tech Group. Contact us for AI services, IT solutions, cloud migration, and digital transformation." />
+        <meta name="keywords" content="contact, AI services, IT solutions, cloud migration, digital transformation, Zion Tech Group" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
       </Helmet>
       
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           {/* Hero Section */}
           <div className="text-center mb-20">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -765,6 +838,87 @@ export default ContactPage
             {/* Contact Form */}
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+=======
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+              Contact Us
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+              Ready to transform your business with cutting-edge AI and IT solutions? 
+              Get in touch with our experts today for a free consultation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/ai-services" 
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Explore Our Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                Schedule a Call
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Get in Touch</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+              Multiple ways to reach us - choose what works best for you
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 group text-center">
+                <div className="mb-4 group-hover:scale-110 transition-transform duration-300 flex justify-center">
+                  {info.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">{info.title}</h3>
+                <div className="space-y-1 mb-4">
+                  {info.details.map((detail, detailIndex) => (
+                    <p key={detailIndex} className="text-gray-300 text-sm">{detail}</p>
+                  ))}
+                </div>
+                <p className="text-gray-400 text-xs">{info.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Send us a Message</h2>
+            <p className="text-lg text-gray-300">
+              Fill out the form below and we'll get back to you within 24 hours
+            </p>
+          </div>
+
+          {isSubmitted ? (
+            <div className="bg-green-500/20 border border-green-500/50 rounded-2xl p-8 text-center">
+              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
+              <p className="text-gray-300 mb-6">
+                Your message has been sent successfully. We'll get back to you within 24 hours.
+              </p>
+              <button 
+                onClick={() => setIsSubmitted(false)}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              >
+                Send Another Message
+              </button>
+            </div>
+          ) : (
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -776,9 +930,15 @@ export default ContactPage
                       id="name"
                       name="name"
                       value={formData.name}
+<<<<<<< HEAD
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                       placeholder="Your full name"
                     />
                   </div>
@@ -791,10 +951,17 @@ export default ContactPage
                       id="email"
                       name="email"
                       value={formData.email}
+<<<<<<< HEAD
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="your@email.com"
+=======
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      placeholder="your.email@example.com"
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                     />
                   </div>
                 </div>
@@ -809,8 +976,13 @@ export default ContactPage
                       id="company"
                       name="company"
                       value={formData.company}
+<<<<<<< HEAD
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                       placeholder="Your company name"
                     />
                   </div>
@@ -823,8 +995,13 @@ export default ContactPage
                       id="phone"
                       name="phone"
                       value={formData.phone}
+<<<<<<< HEAD
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+=======
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -832,18 +1009,31 @@ export default ContactPage
 
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
                     Service Interested In
+=======
+                    Service Interest
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                   </label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
+<<<<<<< HEAD
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
                       <option key={index} value={service} className="bg-gray-800 text-white">
+=======
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service} className="bg-gray-800">
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                         {service}
                       </option>
                     ))}
@@ -858,6 +1048,7 @@ export default ContactPage
                     id="message"
                     name="message"
                     value={formData.message}
+<<<<<<< HEAD
                     onChange={handleInputChange}
                     required
                     rows={6}
@@ -965,3 +1156,82 @@ export default ContactPage
 
 export default ContactPage;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+                    onChange={handleChange}
+                    required
+                    rows={6}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    placeholder="Tell us about your project or how we can help you..."
+                  />
+                </div>
+
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="w-5 h-5 ml-2" />
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-300">
+              Quick answers to common questions about our services
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-3">How quickly can you start my project?</h3>
+              <p className="text-gray-300">
+                Most projects can begin within 1-2 weeks of contract signing. We'll provide a detailed timeline during our initial consultation.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-3">Do you offer ongoing support?</h3>
+              <p className="text-gray-300">
+                Yes, we provide comprehensive support and maintenance packages for all our solutions. Our support team is available 24/7.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-3">What technologies do you work with?</h3>
+              <p className="text-gray-300">
+                We work with a wide range of technologies including AI/ML, cloud platforms (AWS, Azure, GCP), modern web frameworks, and mobile development.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-3">Do you provide free consultations?</h3>
+              <p className="text-gray-300">
+                Absolutely! We offer free initial consultations to understand your needs and provide recommendations for your project.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34

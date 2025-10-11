@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Smartphone, Cpu } from 'lucide-react'
 =======
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
@@ -52,11 +55,25 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 <<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2 space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-xl font-bold">Zion Tech Group</span>
+            </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
             <p className="text-gray-400 mb-4">
               Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
             </p>
@@ -73,6 +90,7 @@ export default function Footer() {
                   <path fillRule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clipRule="evenodd" />
                 </svg>
               </a>
+<<<<<<< HEAD
             </div>
           </div>
 
@@ -422,6 +440,14 @@ export default function Footer() {
             </div>
           </div>
 
+=======
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
           {/* AI Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">AI Services</h3>
@@ -444,6 +470,7 @@ export default function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="border-t border-gray-800 mt-8 pt-8">
@@ -496,6 +523,8 @@ export default function Footer() {
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
           {/* IT Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">IT Services</h3>
@@ -510,11 +539,15 @@ export default function Footer() {
                   <Link to={service.path} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {service.name}
                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                   </Link>
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             <div className="space-y-3">
@@ -547,6 +580,8 @@ export default function Footer() {
                 Terms of Service
               </Link>
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
           </div>
 
           {/* Micro SAAS Services */}
@@ -570,6 +605,36 @@ export default function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+        {/* Contact Information */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-center space-x-3">
+              <Mail className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Email</p>
+                <p className="text-white font-medium">contact@ziontechgroup.com</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Phone className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Phone</p>
+                <p className="text-white font-medium">+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <MapPin className="w-5 h-5 text-blue-400" />
+              <div>
+                <p className="text-sm text-gray-400">Location</p>
+                <p className="text-white font-medium">San Francisco, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
         {/* Newsletter Signup */}
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="max-w-md mx-auto text-center">
@@ -618,7 +683,10 @@ export default function Footer() {
     </footer>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
 }
 =======
 }

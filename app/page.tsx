@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 <<<<<<< HEAD
@@ -20,6 +21,12 @@ import { Link } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+import React from 'react';
+import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
 
 export default function HomePage() {
   const stats = [
@@ -27,7 +34,11 @@ export default function HomePage() {
     { number: '50+', label: 'Happy Clients' },
     { number: '99%', label: 'Success Rate' },
     { number: '24/7', label: 'Support' }
+<<<<<<< HEAD
   ]
+=======
+  ];
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
 
   const features = [
     {
@@ -36,14 +47,19 @@ export default function HomePage() {
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       benefits: ['AI Content Generation - $500/month', 'Chatbot Development - $1,200', 'Process Automation - $2,000/month', 'AI Analytics - $800/month'],
 =======
       benefits: ['AI Content Generation - $99/month', 'AI Chatbots - $199/month', 'AI Analytics - $299/month', 'AI Automation - $399/month'],
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+      benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'AI Automation - $800/month', 'AI Analytics - $400/month'],
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
       link: '/ai-services'
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       title: 'Cybersecurity',
@@ -87,6 +103,8 @@ export default function HomePage() {
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
@@ -122,6 +140,7 @@ export default function HomePage() {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Code className="w-8 h-8 text-yellow-500" />,
 =======
       icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
@@ -129,10 +148,14 @@ export default function HomePage() {
 =======
       icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+      icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
       title: 'Digital Transformation',
       description: 'Transform your business for the digital age with comprehensive digital transformation services.',
       benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
       link: '/digital-transformation'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
@@ -140,8 +163,10 @@ export default function HomePage() {
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
     }
-  ]
+  ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -156,6 +181,7 @@ export default function HomePage() {
   ]
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -175,6 +201,14 @@ export default function HomePage() {
 =======
     <div className="px-4 py-20">
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+        <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5G implementation" />
+      </Helmet>
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
       
       {/* Hero Section */}
 <<<<<<< HEAD
@@ -209,16 +243,22 @@ export default function HomePage() {
 
           {/* Stats Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -230,22 +270,31 @@ export default function HomePage() {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our Core Services</h2>
 =======
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+=======
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Comprehensive technology solutions designed to accelerate your digital transformation
             </p>
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-20">
 =======
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
             {features.map((feature, index) => (
               <a key={index} href={feature.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
@@ -273,6 +322,7 @@ export default function HomePage() {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
@@ -303,11 +353,24 @@ export default function HomePage() {
 <<<<<<< HEAD
                   className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
 =======
+=======
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Let's discuss how our AI and IT solutions can drive your success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                >
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                   Get Free Consultation
                 </Link>
                 <Link 
                   to="/ai-services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
 =======
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
@@ -349,6 +412,10 @@ export default function HomePage() {
                 >
                   Get Started
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+                >
+                  Our Services
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                 </Link>
               </div>
             </div>
@@ -530,6 +597,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* CTA Section */}
@@ -567,3 +635,10 @@ export default function HomePage() {
     </div>
   )
 }
+=======
+        </div>
+      </section>
+    </div>
+  );
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-8d34
