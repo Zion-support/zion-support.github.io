@@ -9,22 +9,22 @@ const dataTypes = [;
 }
 category: 'Personal Information'},;,
 icon: User,;,
-description: 'Name, email, phone number, and other identifying information'
+description: 'Name, email, phone number, and other identifying information',
     },
     {;,
 category: 'Contact Information',;,
 icon: Database,;,
-description: 'Name, email, phone number, and contact details'
+description: 'Name, email, phone number, and contact details',
     },
     {;,
 category: 'Usage Data',;,
 icon: Server,;,
-description: 'How you interact with our services and website'
+description: 'How you interact with our services and website',
     },
     {;,
 category: 'Technical Data',;,
 icon: Server,;,
-description: 'IP address, browser type, device information, and cookies'
+description: 'IP address, browser type, device information, and cookies',
     }
   ];
 const purposes = [;

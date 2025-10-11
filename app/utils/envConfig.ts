@@ -2,7 +2,7 @@
   apiKey?: string
   enableAnalytics: boolean,
   enableLogging: boolean,
-  logLevel: 'debug' | 'info' | 'warn' | 'error',
+  logLevel: 'debug', | 'info' | 'warn' | 'error',
   sentryDsn?: string
   gaTrackingId?: string;}
 }

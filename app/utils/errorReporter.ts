@@ -12,7 +12,7 @@ const defaultConfig: ErrorReporterConfig = {,
   timestamp: string,
     userAgent: string;,
   url: string;,
-  severity: 'low' | 'medium' | 'high' | 'critical',
+  severity: 'low', | 'medium' | 'high' | 'critical',
   context?: Record</string><string>}</strin>
 }
 export interface ErrorReporterConfig {}}enableConsoleLogging: boolean;,
@@ -157,16 +157,16 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     return styles[severity]
     if (!this.config.remoteEndpoint) return;
       await fetch(this.config.remoteEndpoint, {);
-        method: 'POST'),
+        method: 'POST',),
         headers: {,}private async sendToRemote(report: ErrorReport): Promise<void> {,}if (!this.config.remoteEndpoint) return;
     try {}}await fetch(this.config.remoteEndpoint, {)}method: 'POST',
         headers: {,}'Content-Type': 'application/json'}
         })
         body: JSON.stringify(report),})
     } catch (error) {// Silently fail to avoid infinite loop;}if (this.config.enableConsoleLogging) {}catch (error) {}// Silently fail to avoid infinite loop;
-      if (this.config.enableConsoleLogging) {}logger.warn('Failed to send error to remote endpoint:', error);}
+      if (this.config.enableConsoleLogging) {}logger.warn('Failed to send error to remote endpoint: ', error);}
   private async sendToRemote(repor);
-        method: 'POST',
+        method: ',POST',
         headers: {}
           'Content-Type': 'application/json'}
         })
@@ -175,7 +175,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
-        logger.warn('Failed to send error to remote endpoint:', error);}
+        logger.warn('Failed to send error to remote endpoint: ', error);}
   private async sendToRemote(repor)
         bod,
   y: JSON.stringify(report),
@@ -273,7 +273,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
  */
 export const reportError = (
   error: Error,
-  severity?: ErrorReport['severity'],
+  severity?: ErrorReport[',severity'],
 }
 /**;
  * React error boundary helper;

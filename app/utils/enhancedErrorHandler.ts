@@ -13,11 +13,11 @@ interface ErrorContext {}
   props?: Record</string><string, unknown></string></<<<string>state</string></string>?: Record<string>}</strin>
 }
 interface ErrorReport {}}id: string;,
-  type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
+  type: 'javascript', | 'promise' | 'resource' | 'network' | 'custom',
   message: string,
   stack?: string
   context: ErrorContext,
-  severity: 'low' | 'medium' | 'high' | 'critical'
+  severity: 'low', | 'medium' | 'high' | 'critical'
   category:
     | 'syntax'
     | 'runtime'
@@ -107,14 +107,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */;
   private setupUnhandledRejectionHandler(): void {window.addEventListener('unhandledrejection', event => {);}
       this.handleError({);
-        type: 'promise'),}private setupUnhandledRejectionHandler(): void {}}window.addEventListener('unhandledrejection', event => {)}this.handleError({)}type: 'promise',
+        type: 'promise',),}private setupUnhandledRejectionHandler(): void {}}window.addEventListener('unhandledrejection', event => {)}this.handleError({)}type: 'promise',
   /**
    * Setup unhandled promise rejection handler
    */
   private setupUnhandledRejectionHandler(): void {
     window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
-        type: 'promise'),
+        type: 'promise',),
   }
   private setupUnhandledRejectionHandler(): void {}
         type: 'promise',
@@ -683,7 +683,7 @@ if (errorReport.stack) {}
         return '❓';}
     try {,
       await fetch(this.config.remoteEndpoint, {)
-        method: 'POST'),
+        method: 'POST',),
         headers: {,
         method: 'POST',
         headers: {}
@@ -805,7 +805,7 @@ if (errorReport.stack) {}
    * Manually report error
    */
     const errorReport = this.createErrorReport({)
-      type: 'custom'),
+      type: 'custom',),
       ...context}
     })
     return errorReport.id;

@@ -3,17 +3,17 @@
     { name: 'title', content: data.title },
     { name: 'description', content: data.description },
     { name: 'keywords', content: data.keywords || '' },
-    { name: 'robots', content: 'index, follow' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'author', content: 'Zion Holdings' },
+    { name: 'robots', content: 'index, follow', },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1', },
+    { name: 'author', content: 'Zion Holdings', },
     { name: 'canonical', content: data.canonical || '' },
     { property: 'og:title', content: data.ogTitle || data.title },
     {}
       property: 'og:description',
     },
     { property: 'og:image', content: data.ogImage || '/og-image.webp' },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:site_name', content: 'Zion Holdings' },
+    { property: 'og:type', content: 'website', },
+    { property: 'og:site_name', content: 'Zion Holdings', },
     {}
       name: 'twitter:card',
       content: data.twitterCard || 'summary_large_image'},
@@ -32,11 +32,11 @@
     {/* TODO: Fix JSX expression */}
   t: data.keywords || '' },
     {/* TODO: Fix JSX expression */}
-  t: 'index, follow' },
+  t: 'index, follow', },
     {/* TODO: Fix JSX expression */}
-  t: 'width=device-width, initial-scale=1' },
+  t: 'width=device-width, initial-scale=1', },
     {/* TODO: Fix JSX expression */}
-  t: 'Zion Holdings' },
+  t: 'Zion Holdings', },
     {/* TODO: Fix JSX expression */}
   t: data.canonical || '' },
     {/* TODO: Fix JSX expression */}
@@ -44,9 +44,9 @@
     {/* TODO: Fix JSX expression */}
   t: data.ogImage || '/og-image.jpg' },
     {/* TODO: Fix JSX expression */}
-  t: 'website' },
+  t: 'website', },
     {/* TODO: Fix JSX expression */}
-  t: 'Zion Holdings' },
+  t: 'Zion Holdings', },
   return tags;
 }
 // SEO Config interface;
@@ -306,7 +306,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     ) as HTMLMetaElement
     if (!meta) {
     meta = document.createElement('meta')
-      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith(',twitter: ')) {,
   y: string, conten);
   t: string) {/* TODO: Fix JSX expression */,}`meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;
     ) as HTMLMetaElement;
@@ -314,7 +314,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
       document.head.appendChild(meta);
   // Update language
   updateLanguage(language: string) {}
-    if (typeof document !== 'undefined') {}
+    if (typeof document !== ',undefined') {}
       document.documentElement.lang = language;}
     }
   }
@@ -329,8 +329,8 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     ) as HTMLMetaElement
     if (!meta) {}
       meta = document.createElement('meta')
-      if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
-        meta.setAttribute('property', nameOrProperty);}
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith(',twitter: ')) {}
+        meta.setAttribute(',property', nameOrProperty);}
       } else {}
         meta.setAttribute('name', nameOrProperty);}
   // Update robots meta tag
@@ -642,8 +642,8 @@ export const generateBreadcrumbData = useCallback((...args) => {}
 }
 // Initialize SEO enhancements;
   // Add structured data for organization;
-    url: 'https://zion.app'),
-    logo: 'https://zion.app/logo.webp'),
+    url: 'https://zion.app',),
+    logo: 'https://zion.app/logo.webp',),
 // Initialize SEO enhancements
   }
 export const initializeSEOEnhancements = useCallback((...args) => {}

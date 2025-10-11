@@ -5,14 +5,14 @@ return {
   return {/* TODO: Fix JSX expression */}
   }
 }
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
+    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === ',https: ',
       isValid;
       isValid
-      error: isValid ? undefined : 'Invalid URL format',
-export function validateURL(ur)}l: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'URL is required' ,}
+      error: isValid ? undefined : ',Invalid URL format',
+export function validateURL(ur)}l: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'URL is required', ,}
   }
 try {/* TODO: Fix JSX expression */,}}}
-  } catch {/* TODO: Fix JSX expression */,}}r: 'Invalid URL format' ,}
+  } catch {/* TODO: Fix JSX expression */,}}r: 'Invalid URL format', ,}
   }
 }
   fieldName: string = 'Field',
@@ -54,16 +54,16 @@ if (value.length > max) {/* TODO: Fix JSX expression */}`
 return {/* TODO: Fix JSX expression */,}}d: true ,}
 }
     ,
-  if (!password || password.length < 8) {,}return {isValid: false, error: 'Password must be at least 8 characters long' ,}}}
-if (password.length > 128) {}return {isValid: false, error: 'Password is too long' ,}}export function validatePassword(passwor);
-  d: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Password must be at least 8 characters long' ,}
+  if (!password || password.length < 8) {,}return {isValid: false, error: 'Password must be at least 8 characters long', ,}}}
+if (password.length > 128) {}return {isValid: false, error: 'Password is too long', ,}}export function validatePassword(passwor);
+  d: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Password must be at least 8 characters long', ,}
   }
   }
-if (!hasLowerCase) {/* TODO: Fix JSX expression */,}r: 'Password must contain at least one lowercase letter' ,}
+if (!hasLowerCase) {/* TODO: Fix JSX expression */,}r: 'Password must contain at least one lowercase letter', ,}
   }
-if (!hasNumbers) {/* TODO: Fix JSX expression */,}r: 'Password must contain at least one number' ,}
+if (!hasNumbers) {/* TODO: Fix JSX expression */,}r: 'Password must contain at least one number', ,}
   }
-if (!hasSpecialChar) {/* TODO: Fix JSX expression */,}r: 'Password must contain at least one special character' ,}
+if (!hasSpecialChar) {/* TODO: Fix JSX expression */,}r: 'Password must contain at least one special character', ,}
   }
 return {/* TODO: Fix JSX expression */,}}d: true ,}
 }
@@ -115,28 +115,28 @@ return {/* TODO: Fix JSX expression */,}}d: true ,}
   }
 }
     ,
-  if (!jsonString || jsonString.trim() === '') {,}return {isValid: false, error: 'JSON string is required' ,}}}
-try {JSON.parse(jsonString)}}return {isValid: true ,}}} catch {}}return {isValid: false, error: 'Invalid JSON format' ,}}export function validateJSON(jsonStrin);
-  g: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'JSON string is required' ,}
+  if (!jsonString || jsonString.trim() === '') {,}return {isValid: false, error: 'JSON string is required', ,}}}
+try {JSON.parse(jsonString)}}return {isValid: true ,}}} catch {}}return {isValid: false, error: 'Invalid JSON format', ,}}export function validateJSON(jsonStrin);
+  g: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'JSON string is required', ,}
   }
   e: unknown,
   validator,
-    return { isValid: false, error: 'JSON string is required' }
+    return { isValid: false, error: 'JSON string is required', }
   }
 try {
     JSON.parse(jsonString)
   }
     return { isValid: true }
   } catch {}
-    return { isValid: false, error: 'Invalid JSON format' }
+    return { isValid: false, error: 'Invalid JSON format', }
 export function validateJSON(jsonStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'JSON string is required' }
+  r: 'JSON string is required', }
   }
 try {/* TODO: Fix JSX expression */}
   d: true }
   } catch {/* TODO: Fix JSX expression */}
-  r: 'Invalid JSON format' }
+  r: 'Invalid JSON format', }
   }
 }
 /**

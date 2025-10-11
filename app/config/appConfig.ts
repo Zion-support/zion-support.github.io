@@ -2,7 +2,7 @@ export interface AppConfig {
   app: {
     name: string;
     version: string;
-    environment: 'development' | 'production' | 'test';
+    environment: 'development', | 'production' | 'test';
   };
   api: {
     baseUrl: string;
@@ -15,7 +15,7 @@ export interface AppConfig {
     notifications: boolean;
   };
   ui: {
-    theme: 'light' | 'dark' | 'auto';
+    theme: 'light', | 'dark' | 'auto';
     language: string;
   };
 }

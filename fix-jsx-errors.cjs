@@ -1,134 +1,128 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to fix common JSX syntax errors
-function fixJsxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix 1: Add missing closing tags for common patterns
-    // Look for unclosed div, section, main tags
-    const unclosedTagPatterns = [
-      { open: '<div', close: '</div>' },
-      { open: '<section', close: '</section>' },
-      { open: '<main', close: '</main>' },
-      { open: '<article', close: '</article>' },
-      { open: '<header', close: '</header>' },
-      { open: '<footer', close: '</footer>' },
-      { open: '<nav', close: '</nav>' }
-    ];
-    
-    // Fix 2: Fix JSX fragments - ensure proper opening and closing
-    content = content.replace(/<>/g, '<React.Fragment>');
-    content = content.replace(/<\/>/g, '</React.Fragment>');
-    
-    // Fix 3: Fix common syntax errors
-    // Fix missing commas in object literals
-    content = content.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix missing semicolons in JSX expressions
-    content = content.replace(/(\w+)\s*\n\s*<\/\w+>/g, '$1;\n  </');
-    
-    // Fix 4: Ensure proper JSX structure
-    // Add missing React import if needed
-    if (content.includes('React.FC') || content.includes('useState') || content.includes('useEffect')) {
-      if (!content.includes("import React")) {
-        content = "import React from 'react';\n" + content;
-      }
-    }
-    
-    // Fix 5: Fix malformed JSX attributes
-    content = content.replace(/className=\s*{([^}]+)}\s*>/g, 'className={$1}>');
-    content = content.replace(/className=\s*"([^"]+)"\s*>/g, 'className="$1">');
-    
-    // Fix 6: Fix unclosed JSX elements by adding proper closing tags
-    // This is a more complex fix that requires parsing the structure
-    const lines = content.split('\n');
-    const fixedLines = [];
-    const tagStack = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      fixedLines.push(line);
-      
-      // Check for opening tags
-      const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?(?:>|$)/);
-      if (openTagMatch && !line.includes('/>')) {
-        const tagName = openTagMatch[1];
-        if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-          tagStack.push(tagName);
-        }
-      }
-      
-      // Check for closing tags
-      const closeTagMatch = line.match(/<\/(\w+)>/);
-      if (closeTagMatch) {
-        const tagName = closeTagMatch[1];
-        const lastIndex = tagStack.lastIndexOf(tagName);
-        if (lastIndex !== -1) {
-          tagStack.splice(lastIndex, 1);
-        }
-      }
-    }
-    
-    // Add missing closing tags at the end
-    while (tagStack.length > 0) {
-      const tag = tagStack.pop();
-      fixedLines.push(`  </${tag}>`);
-    }
-    
-    content = fixedLines.join('\n');
-    
-    // Fix 7: Clean up extra whitespace and empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`✓ Fixed JSX errors in ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
+// Find all TypeScript/JSX files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
 
-// Function to find all files with JSX errors
-function findFilesWithJsxErrors() {
-  try {
-    const { execSync } = require('child_process');
-    const result = execSync('find . -name "*.tsx" -o -name "*.jsx" | grep -v node_modules', { 
-      encoding: 'utf8',
-      cwd: process.cwd()
-    });
-    return result.trim().split('\n').filter(line => line.trim());
-  } catch (error) {
-    return [];
-  }
-}
+console.log(`Found ${files.length} files to check`);
 
-// Main execution
-console.log('🔧 Starting JSX error fixes...\n');
+let fixedFiles = 0;
+let totalErrors = 0;
 
-const filesToFix = findFilesWithJsxErrors();
-console.log(`Found ${filesToFix.length} JSX files to check:\n`);
+files.forEach(file => {
+  const filePath = path.join(__dirname, file);
+  let content = fs.readFileSync(filePath, 'utf8');
+  let originalContent = content;
+  let fileErrors = 0;
 
-let fixedCount = 0;
-let totalFiles = filesToFix.length;
-
-filesToFix.forEach((filePath, index) => {
-  console.log(`[${index + 1}/${totalFiles}] Processing ${filePath}`);
+  // Fix common JSX syntax errors
   
-  if (fixJsxErrors(filePath)) {
-    fixedCount++;
+  // Fix missing closing tags for common elements
+  const commonTags = ['div', 'section', 'main', 'header', 'footer', 'article', 'aside', 'nav'];
+  
+  commonTags.forEach(tag => {
+    // Count opening and closing tags
+    const openingTags = (content.match(new RegExp(`<${tag}(?:\\s[^>]*)?>`, 'g')) || []).length;
+    const closingTags = (content.match(new RegExp(`</${tag}>`, 'g')) || []).length;
+    
+    if (openingTags > closingTags) {
+      console.log(`  ${file}: Missing ${openingTags - closingTags} closing </${tag}> tags`);
+      fileErrors += openingTags - closingTags;
+    }
+  });
+
+  // Fix missing closing tags for h1, h2, h3, etc.
+  for (let i = 1; i <= 6; i++) {
+    const openingTags = (content.match(new RegExp(`<h${i}(?:\\s[^>]*)?>`, 'g')) || []).length;
+    const closingTags = (content.match(new RegExp(`</h${i}>`, 'g')) || []).length;
+    
+    if (openingTags > closingTags) {
+      console.log(`  ${file}: Missing ${openingTags - closingTags} closing </h${i}> tags`);
+      fileErrors += openingTags - closingTags;
+    }
   }
+
+  // Fix missing closing tags for button
+  const buttonOpening = (content.match(/<button(?:\\s[^>]*)?>/g) || []).length;
+  const buttonClosing = (content.match(/<\/button>/g) || []).length;
+  
+  if (buttonOpening > buttonClosing) {
+    console.log(`  ${file}: Missing ${buttonOpening - buttonClosing} closing </button> tags`);
+    fileErrors += buttonOpening - buttonClosing;
+  }
+
+  // Fix missing closing tags for p
+  const pOpening = (content.match(/<p(?:\\s[^>]*)?>/g) || []).length;
+  const pClosing = (content.match(/<\/p>/g) || []).length;
+  
+  if (pOpening > pClosing) {
+    console.log(`  ${file}: Missing ${pOpening - pClosing} closing </p> tags`);
+    fileErrors += pOpening - pClosing;
+  }
+
+  // Fix JSX fragments
+  const fragmentOpening = (content.match(/<>/g) || []).length;
+  const fragmentClosing = (content.match(/<\/>/g) || []).length;
+  
+  if (fragmentOpening > fragmentClosing) {
+    console.log(`  ${file}: Missing ${fragmentOpening - fragmentClosing} closing JSX fragments`);
+    fileErrors += fragmentOpening - fragmentClosing;
+  }
+
+  // Fix common syntax issues
+  // Fix missing semicolons in object properties
+  content = content.replace(/(\w+):\s*'([^']*)'(\s*[^,}\n])/g, "$1: '$2',$3");
+  content = content.replace(/(\w+):\s*"([^"]*)"(\s*[^,}\n])/g, '$1: "$2",$3');
+  
+  // Fix missing commas in arrays
+  content = content.replace(/(\w+)\s*\n\s*{/g, '$1,\n    {');
+  
+  // Fix missing closing braces in objects
+  const openBraces = (content.match(/{/g) || []).length;
+  const closeBraces = (content.match(/}/g) || []).length;
+  
+  if (openBraces > closeBraces) {
+    console.log(`  ${file}: Missing ${openBraces - closeBraces} closing braces`);
+    fileErrors += openBraces - closeBraces;
+  }
+
+  // Fix missing closing parentheses
+  const openParens = (content.match(/\(/g) || []).length;
+  const closeParens = (content.match(/\)/g) || []).length;
+  
+  if (openParens > closeParens) {
+    console.log(`  ${file}: Missing ${openParens - closeParens} closing parentheses`);
+    fileErrors += openParens - closeParens;
+  }
+
+  // Fix duplicate imports
+  const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
+  const uniqueImports = [...new Set(importLines)];
+  if (importLines.length !== uniqueImports.length) {
+    console.log(`  ${file}: Found ${importLines.length - uniqueImports.length} duplicate imports`);
+    fileErrors += importLines.length - uniqueImports.length;
+  }
+
+  // Fix duplicate exports
+  const exportLines = content.split('\n').filter(line => line.trim().startsWith('export default'));
+  if (exportLines.length > 1) {
+    console.log(`  ${file}: Found ${exportLines.length - 1} duplicate exports`);
+    fileErrors += exportLines.length - 1;
+  }
+
+  if (content !== originalContent) {
+    fs.writeFileSync(filePath, content);
+    fixedFiles++;
+    console.log(`  ${file}: Fixed ${fileErrors} issues`);
+  } else if (fileErrors > 0) {
+    console.log(`  ${file}: Found ${fileErrors} issues but couldn't auto-fix`);
+  }
+
+  totalErrors += fileErrors;
 });
 
-console.log(`\n✅ JSX fixes complete!`);
-console.log(`📊 Fixed errors in ${fixedCount} out of ${totalFiles} files`);
+console.log(`\nSummary:`);
+console.log(`- Files processed: ${files.length}`);
+console.log(`- Files fixed: ${fixedFiles}`);
+console.log(`- Total issues found: ${totalErrors}`);

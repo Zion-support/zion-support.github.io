@@ -57,8 +57,8 @@ class EnhancedAnalytics {}
     // Track initialization
     this.trackEvent()
     )
-      category: 'System'),
-      action: 'Analytics Initialized'),
+      category: 'System',),
+      action: 'Analytics Initialized',),
       metadata: {,
   }
   public setUserProperties(properties: UserProperties): void {,}
@@ -103,8 +103,8 @@ class EnhancedAnalytics {}
       })
     }
   }
-      category: 'Navigation'),
-      action: 'Page View'),
+      category: 'Navigation',),
+      action: 'Page View',),
       label: pagePath),
       metadata: {,
       action: 'Page View',
@@ -134,12 +134,12 @@ class EnhancedAnalytics {}
   }
   public trackUserInteraction(action: string, label?: string, value?: number): void {
     this.trackEvent({)
-      category: 'User Interaction'),
+      category: 'User Interaction',),
     })
   }
     this.trackEvent({)
-      category: 'Error'),
-      action: 'Error Occurred'),
+      category: 'Error',),
+      action: 'Error Occurred',),
       label: error.message),
       metadata: {,
       value}
@@ -155,7 +155,7 @@ class EnhancedAnalytics {}
   }
   public trackPerformance(metric: string, value: number, rating?: string): void {
     this.trackEvent({)
-      category: 'Performance'),
+      category: 'Performance',),
       action: metric),
       value: Math.round(value),
       action: metric,
@@ -165,7 +165,7 @@ class EnhancedAnalytics {}
     })
   }
   public trackConversion(conversionType: string, value?: number): void {this.trackEvent({);}
-      category: 'Conversion'),
+      category: 'Conversion',),
       action: conversionType),
       value),}public trackConversion(conversionType: string, value?: number): void {}}this.trackEvent({)}category: 'Conversion',
       action: conversionType,

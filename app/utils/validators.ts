@@ -3,9 +3,9 @@ export function isValidPhone(phone: string): boolean {,}
   if (!phone || typeof phone !== 'string') return false,
     ,
     const urlObj = new URL(url);
-    return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
+    return urlObj.protocol === 'http: ' || urlObj.protocol === ',https: ',
 export function isValidUrl(url: string): boolean {,}
-  if (!url || typeof url !== 'string') return false;
+  if (!url || typeof url !== ',string') return false;
   try {new URL(url),}
     return URL_REGEX.test(url)}} catch {return false;}}}
 }
@@ -13,19 +13,19 @@ export function isValidUrl(url: string): boolean {,}
  * Validate URL with detailed result;
  */;
 export function validateURL(url: string): ValidationResult {,}
-  if (!url || typeof url !== 'string') {}return {isValid: false, errors: ['URL is required'], error: 'URL is required' ,}}}
+  if (!url || typeof url !== 'string') {}return {isValid: false, errors: ['URL is required'], error: 'URL is required', ,}}}
 try {new URL(url);}
-    if (!URL_REGEX.test(url)) {}return {isValid: false, errors: ['Invalid URL format'], error: 'Invalid URL format' ,}}}
-    return {isValid: true, errors: [] ,}}} catch {}}return {isValid: false, errors: ['Invalid URL format'], error: 'Invalid URL format' ,}}}
+    if (!URL_REGEX.test(url)) {}return {isValid: false, errors: ['Invalid URL format'], error: 'Invalid URL format', ,}}}
+    return {isValid: true, errors: [] ,}}} catch {}}return {isValid: false, errors: ['Invalid URL format'], error: 'Invalid URL format', ,}}}
 }
 /**;
  * Validate required field;
  */;
 export function isRequired(value: string | null | undefined): boolean {,}
     const urlObj = new URL(url)
-    return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:'
+    return urlObj.protocol === 'http: ' || urlObj.protocol === ',https: '
 export function isValidUrl(url: string): boolean {
-  if (!url || typeof url !== 'string') return false
+  if (!url || typeof url !== ',string') return false
   try {
     new URL(url),
     return URL_REGEX.test(url)
@@ -40,16 +40,16 @@ export function isValidUrl(url: string): boolean {
  */
 export function validateURL(url: string): ValidationResult {
   if (!url || typeof url !== 'string') {}
-    return { isValid: false, errors: ['URL is required'], error: 'URL is required' }
+    return { isValid: false, errors: ['URL is required'], error: 'URL is required', }
   }
 try {
     new URL(url)
     if (!URL_REGEX.test(url)) {}
-      return { isValid: false, errors: ['Invalid URL format'], error: 'Invalid URL format' }
+      return { isValid: false, errors: ['Invalid URL format'], error: 'Invalid URL format', }
     }
     return { isValid: true, errors: [] }
   } catch {}
-    return { isValid: false, errors: ['Invalid URL format'], error: 'Invalid URL format' }
+    return { isValid: false, errors: ['Invalid URL format'], error: 'Invalid URL format', }
   }
 }
 /**
@@ -318,17 +318,17 @@ export interface ValidationResult {isValid: boolean,}
  */;
 export function validateEmail(email: string): ValidationResult {,}
     ,
-  if (!email) {,}return {isValid: false, error: 'Email is required' ,}}}
-  if (email.length > 254) {}return {isValid: false, error: 'Email is too long' ,}}}
-  if (!isValidEmail(email)) {}return {isValid: false, error: 'Invalid email format' ,}}}
+  if (!email) {,}return {isValid: false, error: 'Email is required', ,}}}
+  if (email.length > 254) {}return {isValid: false, error: 'Email is too long', ,}}}
+  if (!isValidEmail(email)) {}return {isValid: false, error: 'Invalid email format', ,}}}
   return {isValid: true ,}}}
 /**;
  * Validate URL with detailed result;
  */;
 export function validateURL(url: string): ValidationResult {,}
     ,
-  if (!url) {,}return {isValid: false, error: 'URL is required' ,}}}
-  if (!isValidUrl(url)) {}return {isValid: false, error: 'Invalid URL format' ,}}}
+  if (!url) {,}return {isValid: false, error: 'URL is required', ,}}}
+  if (!isValidUrl(url)) {}return {isValid: false, error: 'Invalid URL format', ,}}}
   return {isValid: true ,}}}
 /**;
  * Validate string length with detailed result;
@@ -368,13 +368,13 @@ export function validateEmail(email: string): ValidationResult {
     ,
   if (!email) {,
   }
-    return { isValid: false, error: 'Email is required' }
+    return { isValid: false, error: 'Email is required', }
   }
   if (email.length > 254) {}
-    return { isValid: false, error: 'Email is too long' }
+    return { isValid: false, error: 'Email is too long', }
   }
   if (!isValidEmail(email)) {}
-    return { isValid: false, error: 'Invalid email format' }
+    return { isValid: false, error: 'Invalid email format', }
   }
   return { isValid: true }
 }
@@ -385,10 +385,10 @@ export function validateURL(url: string): ValidationResult {
     ,
   if (!url) {,
   }
-    return { isValid: false, error: 'URL is required' }
+    return { isValid: false, error: 'URL is required', }
   }
   if (!isValidUrl(url)) {}
-    return { isValid: false, error: 'Invalid URL format' }
+    return { isValid: false, error: 'Invalid URL format', }
   }
   return { isValid: true }
 }
@@ -497,13 +497,13 @@ export interface ValidationResult {
  */
 export function validateEmail(email: string): ValidationResult {,
   if (!email) {,;}
-    return { isValid: false, error: 'Email is required' }
+    return { isValid: false, error: 'Email is required', }
   }
   if (email.length > 254) {;}
-    return { isValid: false, error: 'Email is too long' }
+    return { isValid: false, error: 'Email is too long', }
   }
   if (!isValidEmail(email)) {;}
-    return { isValid: false, error: 'Invalid email format' }
+    return { isValid: false, error: 'Invalid email format', }
   }
   return { isValid: true }
 }
@@ -513,10 +513,10 @@ export function validateEmail(email: string): ValidationResult {,
  */
 export function validateURL(url: string): ValidationResult {,
   if (!url) {,;}
-    return { isValid: false, error: 'URL is required' }
+    return { isValid: false, error: 'URL is required', }
   }
   if (!isValidUrl(url)) {;}
-    return { isValid: false, error: 'Invalid URL format' }
+    return { isValid: false, error: 'Invalid URL format', }
   }
   return { isValid: true }
 }
@@ -546,22 +546,22 @@ export function isValidPassword(password: string): boolean {
  */
 export function validatePassword(password: string): ValidationResult {,
   if (!password) {,;}
-    return { isValid: false, error: 'Password is required' }
+    return { isValid: false, error: 'Password is required', }
 export function validatePassword(password: string): ValidationResult {
   if (!password || typeof password !== 'string') {;}
-    return { isValid: false, errors: ['Password is required'], error: 'Password is required' }
+    return { isValid: false, errors: ['Password is required'], error: 'Password is required', }
   }
 
   if (password.length < 8) {;}
-    return { isValid: false, errors: ['Password must be at least 8 characters'], error: 'Password must be at least 8 characters' }
+    return { isValid: false, errors: ['Password must be at least 8 characters'], error: 'Password must be at least 8 characters', }
   }
 
   if (password.length > 128) {;}
-    return { isValid: false, errors: ['Password is too long'], error: 'Password is too long' }
+    return { isValid: false, errors: ['Password is too long'], error: 'Password is too long', }
   }
 
   if (!isStrongPassword(password)) {;}
-    return { isValid: false, errors: ['Password must contain uppercase, lowercase, number, and special character'], error: 'Password must contain uppercase, lowercase, number, and special character' }
+    return { isValid: false, errors: ['Password must contain uppercase, lowercase, number, and special character'], error: 'Password must contain uppercase, lowercase, number, and special character', }
   }
 
   return { isValid: true, errors: [] }
@@ -723,9 +723,9 @@ if (value.length < minLength) {}return {isValid: false, errors: [`${fieldName,}}
 if (value.length > maxLength) {}return {isValid: false, errors: [`${fieldName,}}must be no more than ${maxLength}characters`], error: `${fieldName,}must be no more than ${maxLength}characters` }
   }
     ,
-  if (!jsonString) {,}return {isValid: false, error: 'JSON is required' ,}}export function validateJSON(jsonString: string): ValidationResult {,}
-  if (!jsonString || typeof jsonString !== 'string') {}return {isValid: false, errors: ['JSON string is required'], error: 'JSON string is required' ,}}}
-try {JSON.parse(jsonString)}}return {isValid: true, errors: [] ,}}} catch {}}return {isValid: false, errors: ['Invalid JSON format'], error: 'Invalid JSON format' ,}}}
+  if (!jsonString) {,}return {isValid: false, error: 'JSON is required', ,}}export function validateJSON(jsonString: string): ValidationResult {,}
+  if (!jsonString || typeof jsonString !== 'string') {}return {isValid: false, errors: ['JSON string is required'], error: 'JSON string is required', ,}}}
+try {JSON.parse(jsonString)}}return {isValid: true, errors: [] ,}}} catch {}}return {isValid: false, errors: ['Invalid JSON format'], error: 'Invalid JSON format', ,}}}
 }
     ,
   if (value === null || value === undefined || value === '') {,}return {isValid: false, error: `${fieldName,}}is required` }
@@ -748,7 +748,7 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
  * Validate async;
  */;
 export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {,
-    try {return await validator(value)}}} catch (error) {}return {isValid: false, errors: ['Validation failed'], error: 'Validation failed' ,}}}
+    try {return await validator(value)}}} catch (error) {}return {isValid: false, errors: ['Validation failed'], error: 'Validation failed', ,}}}
 }
  * Validate required field with detailed result
  */
@@ -766,6 +766,6 @@ export async function validateAsync(validator: (val: string) => Promise</Validat
     return await validator(value)
   }
   } catch (error) {}
-    return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' }
+    return { isValid: false, errors: ['Validation failed'], error: 'Validation failed', }
   }
 }</ValidationResult>

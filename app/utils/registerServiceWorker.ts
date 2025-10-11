@@ -37,16 +37,16 @@
       })
     })
   }
-  navigator.serviceWorker.controller.postMessage({action: 'skipWaiting' ,)})
+  navigator.serviceWorker.controller.postMessage({action: 'skipWaiting', ,)})
 export function skipWaiting(): void {/* TODO: Fix JSX expression */,}}}
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */,)})
-  n: 'skipWaiting' ,})
+  n: 'skipWaiting', ,})
 }
   }
-  navigator.serviceWorker.controller.postMessage({action: 'clearCache' ,)})
+  navigator.serviceWorker.controller.postMessage({action: 'clearCache', ,)})
 export function clearCaches(): void {/* TODO: Fix JSX expression */,}}}
   navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */,)})
-  n: 'clearCache' ,})
+  n: 'clearCache', ,})
   }
   active: boolean,}
 }> {}if (!('serviceWorker' in navigator)) {}return {}}supported: false,

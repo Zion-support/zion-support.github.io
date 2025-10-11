@@ -33,10 +33,10 @@ const HomePage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+    { number: '500+', label: 'Projects Completed', },
+    { number: '100+', label: 'Happy Clients', },
+    { number: '99.9%', label: 'Uptime Guarantee', },
+    { number: '24/7', label: 'Support Available', }
   ];
 
   return (

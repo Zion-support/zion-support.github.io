@@ -64,7 +64,7 @@ const defaultConfig: LoggerConfig = {
  * @example;
  * ```typescript;
  * const logger = EnhancedLogger.getInstance();
- * logger.info('User logged in', undefined, {userId: '123' ,)})
+ * logger.info('User logged in', undefined, {userId: '123', ,)})
  * logger.error('API request failed', {error: err ,)}, err);
  * ``;
  */;
@@ -73,7 +73,7 @@ export class EnhancedLogger {private static instance: EnhancedLogger,}
   private logs: LogEntry[] = [],
   private performanceMarks: Map<string, number> = new Map()}private constructor(config: Partial<LoggerConfig> = {,)}) {}this.config = {...defaultConfig, ...config}* const logger = EnhancedLogger.getInstance();
  * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */,)})
-  d: '123' ,})
+  d: '123', ,})
  * logger.error('API request failed', {/* TODO: Fix JSX expression */,)})
   r: err ,}, err);`;
  * ```;
@@ -123,13 +123,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    * @param source - Optional source identifier;
    * @example;
    * ```typescript;
-   * logger.info('User action completed', {action: 'submit_form' ,)}, 'FormComponent');
+   * logger.info('User action completed', {action: 'submit_form', ,)}, 'FormComponent');
    * ``;
    */;
   public info(message: string, data?: Record<string, unknown>, source?: string): void {this.log(LogLevel.INFO, message, data, source);}
    * @example;`;
    * ```typescript;}* logger.info('User action completed', {/* TODO: Fix JSX expression */,)})
-  n: 'submit_form' ,}, 'FormComponent');`;
+  n: 'submit_form', ,}, 'FormComponent');`;
    * ```;
    */;
   public info(messag);
@@ -142,13 +142,13 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    * @param source - Optional source identifier;
    * @example;
    * ```typescript;
-   * logger.warn('Deprecated API used', {api: 'oldFunction' ,)}, 'LegacyModule');
+   * logger.warn('Deprecated API used', {api: 'oldFunction', ,)}, 'LegacyModule');
    * ``;
    */;
   public warn(message: string, data?: Record<string, unknown>, source?: string): void {this.log(LogLevel.WARN, message, data, source);}
    * @example;`;
    * ```typescript;}* logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */,)})
-  i: 'oldFunction' ,}, 'LegacyModule');`;
+  i: 'oldFunction', ,}, 'LegacyModule');`;
    * ```;
    */;
   public warn(messag);
@@ -163,7 +163,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    * @example;
    * ```typescript;
    * try {}}*   // some code}
-   * } catch (err) {}*   logger.error('Operation failed', {operation: 'fetchData' ,)}, err, 'DataService');
+   * } catch (err) {}*   logger.error('Operation failed', {operation: 'fetchData', ,)}, err, 'DataService');
 /**
  * Enhanced Logger class
  *
@@ -173,7 +173,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
  * @example
  * ```typescript
  * const logger = EnhancedLogger.getInstance()
- * logger.info('User logged in', undefined, { userId: '123' })
+ * logger.info('User logged in', undefined, { userId: '123', })
  * logger.error('API request failed', { error: err }, err)
  * ``
  */
@@ -187,7 +187,7 @@ export class EnhancedLogger {
     this.config = { ...defaultConfig, ...config }
  * const logger = EnhancedLogger.getInstance()
  * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */})
-  d: '123' })
+  d: '123', })
  * logger.error('API request failed', {/* TODO: Fix JSX expression */})
   r: err }, err);`
  * ```
@@ -253,7 +253,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Optional source identifier
    * @example
    * ```typescript
-   * logger.info('User action completed', { action: 'submit_form' }, 'FormComponent')
+   * logger.info('User action completed', { action: 'submit_form', }, 'FormComponent')
    * ``
    */
   public info(message: string, data?: Record</string><string, unknown>, source?: string): void {
@@ -262,7 +262,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * ```typescript
   }
    * logger.info('User action completed', {/* TODO: Fix JSX expression */})
-  n: 'submit_form' }, 'FormComponent');`
+  n: 'submit_form', }, 'FormComponent');`
    * ```
    */
   public info(messag)
@@ -276,7 +276,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Optional source identifier
    * @example
    * ```typescript
-   * logger.warn('Deprecated API used', { api: 'oldFunction' }, 'LegacyModule')
+   * logger.warn('Deprecated API used', { api: 'oldFunction', }, 'LegacyModule')
    * ``
    */
   public warn(message: string, data?: Record</string><string, unknown>, source?: string): void {
@@ -285,7 +285,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * ```typescript
   }
    * logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */})
-  i: 'oldFunction' }, 'LegacyModule');`
+  i: 'oldFunction', }, 'LegacyModule');`
    * ```
    */
   public warn(messag)
@@ -303,7 +303,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * try {}
    *   // some code}
    * } catch (err) {}
-   *   logger.error('Operation failed', { operation: 'fetchData' }, err, 'DataService')
+   *   logger.error('Operation failed', { operation: 'fetchData', }, err, 'DataService')
    * }
    * ``
    */
@@ -545,7 +545,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     ,
     if (!this.config.remoteEndpoint) return;
       await fetch(this.config.remoteEndpoint, {);
-        method: 'POST'),
+        method: 'POST',),
         headers: {),}'Content-Type': 'application/json')})
         body: JSON.stringify({,)
   R: 
@@ -567,7 +567,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (!this.config.remoteEndpoint) return
     try {,
       await fetch(this.config.remoteEndpoint, {)
-        method: 'POST'),
+        method: 'POST',),
         headers: {)
   }
           'Content-Type': 'application/json')})

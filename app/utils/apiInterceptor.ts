@@ -160,7 +160,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
     confi,
   g: Partial</T><RequestConfig> = {})
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'GET' })
+  d: 'GET', })
   }
   /**
    * POST request
@@ -192,7 +192,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
     confi,
   g: Partial</T><RequestConfig> = {})
   ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'DELETE' })
+  d: 'DELETE', })
   }
   /**
    * PATCH request

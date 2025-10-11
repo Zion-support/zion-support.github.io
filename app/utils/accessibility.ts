@@ -1,5 +1,5 @@
-  fontSize: 'small' | 'medium' | 'large',
-  colorScheme: 'light' | 'dark' | 'auto',}}
+  fontSize: 'small', | 'medium' | 'large',
+  colorScheme: 'light', | 'dark' | 'auto',}}
 export const defaultAccessibilityConfig: AccessibilityConfig = {,
     enableHighContrast: false,
   enableScreenReader: true,

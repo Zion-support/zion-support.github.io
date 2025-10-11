@@ -63,17 +63,17 @@ const FiveGImplementationPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with AI and technology.'
+      description: 'We push the boundaries of what\',s possible with AI and technology.'
     },
     {
       icon: Target,
       title: 'Excellence',
-      description: 'We maintain the highest standards in everything we do.'
+      description: 'We maintain the highest standards in everything we do.',
     },
     {
       icon: Shield,
       title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security.'
+      description: 'Your data and systems are protected with enterprise-grade security.',
     }
   ];
 
@@ -89,7 +89,7 @@ const FiveGImplementationPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s', }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               5G Network <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span>
@@ -139,11 +139,18 @@ const FiveGImplementationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our 5G Implementation?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">

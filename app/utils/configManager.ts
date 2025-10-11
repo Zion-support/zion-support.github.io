@@ -21,12 +21,12 @@
     maxRequestsPerMinute: number,}}
   ui: {,
     ,
-    theme: 'light' | 'dark' | 'auto',
+    theme: 'light', | 'dark' | 'auto',
     language: string,
     timezone: string,}}
   logging: {,
     ,
-    level: 'debug' | 'info' | 'warn' | 'error',
+    level: 'debug', | 'info' | 'warn' | 'error',
     enableConsole: boolean,
     enableNetwork: boolean,}}
 }

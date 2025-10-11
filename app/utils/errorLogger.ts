@@ -110,7 +110,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       if (!endpoint) {}
         return;}
       }
-    method: 'POST'),
+    method: 'POST',),
         headers: {),}'Content-Type': 'application/json'})
         })
     )

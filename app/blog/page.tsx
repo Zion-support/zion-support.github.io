@@ -15,7 +15,7 @@ const BlogPage: React.FC = () => {
       readTime: '8 min read',
       category: 'ai',
       featured: true,
-      image: '/blog/ai-enterprise-2024.jpg'
+      image: '/blog/ai-enterprise-2024.jpg',
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ const BlogPage: React.FC = () => {
       readTime: '6 min read',
       category: 'cloud',
       featured: false,
-      image: '/blog/cloud-infrastructure.jpg'
+      image: '/blog/cloud-infrastructure.jpg',
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const BlogPage: React.FC = () => {
       readTime: '10 min read',
       category: 'security',
       featured: false,
-      image: '/blog/cybersecurity-ai.jpg'
+      image: '/blog/cybersecurity-ai.jpg',
     },
     {
       id: 4,
@@ -48,7 +48,7 @@ const BlogPage: React.FC = () => {
       readTime: '7 min read',
       category: 'cloud',
       featured: false,
-      image: '/blog/edge-computing.jpg'
+      image: '/blog/edge-computing.jpg',
     },
     {
       id: 5,
@@ -59,7 +59,7 @@ const BlogPage: React.FC = () => {
       readTime: '12 min read',
       category: 'development',
       featured: false,
-      image: '/blog/react-nextjs.jpg'
+      image: '/blog/react-nextjs.jpg',
     },
     {
       id: 6,
@@ -70,7 +70,7 @@ const BlogPage: React.FC = () => {
       readTime: '15 min read',
       category: 'business',
       featured: false,
-      image: '/blog/digital-transformation.jpg'
+      image: '/blog/digital-transformation.jpg',
     }
   ]
 

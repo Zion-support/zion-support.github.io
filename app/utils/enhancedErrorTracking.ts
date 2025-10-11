@@ -12,7 +12,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   private setupGlobalErrorHandler(): void {if (typeof window !== 'undefined') {}
       window.addEventListener('error', event => {);
         this.trackError(event.error, {);
-          component: 'Global'),}action: 'Uncaught Error',}
+          component: 'Global',),}action: 'Uncaught Error',}
         })
       })
       window.addEventListener('unhandledrejection', event => {);
@@ -32,7 +32,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
     if (typeof window !== 'undefined') {
       window.addEventListener('error', event => {)
         this.trackError(event.error, {)
-          component: 'Global'),
+          component: 'Global',),
   }
           action: 'Uncaught Error'}
         })

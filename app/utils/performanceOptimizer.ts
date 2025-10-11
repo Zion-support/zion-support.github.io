@@ -197,9 +197,9 @@ images.forEach((img) => imageObserver.observe(img))
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
   }
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
-  n: 'anonymous' },
+  n: 'anonymous', },
       {/* TODO: Fix JSX expression */}
-  s: 'style' }]
+  s: 'style', }]
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
     })
     logger.info('Critical resource hints added', 'PerformanceOptimizer')

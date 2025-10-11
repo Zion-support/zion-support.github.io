@@ -18,18 +18,18 @@ title: 'Cybersecurity',;,
 description: 'Comprehensive security solutions to protect your digital assets.',;,
 icon: Shield,;,
 features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],;,
-price: 'From $1,000/month'
+price: 'From $1,000/month',
     },
     {
     }
   ];
 const categories = [;
-    { id: 'all', name: 'All Services' },
-    { id: 'cloud', name: 'Cloud Services' },
-    { id: 'development', name: 'Web Development' },
-    { id: 'security', name: 'Cybersecurity' },
-    { id: 'database', name: 'Database' },
-    { id: 'devops', name: 'DevOps' }
+    { id: 'all', name: 'All Services', },
+    { id: 'cloud', name: 'Cloud Services', },
+    { id: 'development', name: 'Web Development', },
+    { id: 'security', name: 'Cybersecurity', },
+    { id: 'database', name: 'Database', },
+    { id: 'devops', name: 'DevOps', }
   ];
 const filteredServices = services.filter(service =>;;
 selectedCategory === 'all' || service.category === selectedCategory

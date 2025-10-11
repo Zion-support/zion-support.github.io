@@ -15,13 +15,13 @@ const ServicesPage: React.FC = () => {
   ];
 
   const categories = [
-    { value: 'all', label: 'All Services' },
-    { value: 'ai', label: 'AI Solutions' },
-    { value: 'cloud', label: 'Cloud Services' },
-    { value: 'data', label: 'Data Analytics' },
-    { value: 'security', label: 'Cybersecurity' },
-    { value: 'mobile', label: 'Mobile Development' },
-    { value: 'web', label: 'Web Development' }
+    { value: 'all', label: 'All Services', },
+    { value: 'ai', label: 'AI Solutions', },
+    { value: 'cloud', label: 'Cloud Services', },
+    { value: 'data', label: 'Data Analytics', },
+    { value: 'security', label: 'Cybersecurity', },
+    { value: 'mobile', label: 'Mobile Development', },
+    { value: 'web', label: 'Web Development', }
   ];
 
   const filteredServices = services.filter(service => {

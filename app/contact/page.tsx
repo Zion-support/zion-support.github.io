@@ -24,34 +24,34 @@ setFormData({
 const handleSubmit = (e: React.FormEvent) => {;;
 e.preventDefault();
     // Handle form submission;
-console.log('Form submitted:', formData);
+console.log('Form submitted: ', formData);
 }
   };
 ;
 const contactInfo = [;
     {;,
 icon: Phone,;,
-title: 'Phone',;,
+title: ',Phone',;,
 value: '+1 (555) 123-4567',;,
-description: 'Mon-Fri 9AM-6PM EST'
+description: 'Mon-Fri 9AM-6PM EST',
     },
     {;,
 icon: Mail,;,
 title: 'Email',;,
 value: 'info@ziontechgroup.com',;,
-description: 'We\'ll respond within 24 hours'
+description: 'We\',ll respond within 24 hours'
     },
     {;,
 icon: MapPin,;,
 title: 'Address',;,
 value: '123 Tech Street, Silicon Valley, CA 94000',;,
-description: 'Visit our headquarters'
+description: 'Visit our headquarters',
     },
     {;,
 icon: Clock,;,
 title: 'Business Hours',;,
 value: 'Monday - Friday',;,
-description: '9:00 AM - 6:00 PM EST'
+description: '9:00 AM - 6:00 PM EST',
     }
   ];
 const services = [;

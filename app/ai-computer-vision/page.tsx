@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
+const AIComputerVisionPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -38,13 +38,21 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
+              <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
-                    <feature.icon className="h-8 w-8" />
-                  </div>
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                    <div className="text-cyan-400 mb-4">
+                      <Icon className="h-8 w-8" />
+                    </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -55,13 +63,19 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-              ))}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
+              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -94,8 +108,12 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
+      
       <Footer />
     </>
   );
 };
+
+export default AIComputerVisionPage;
 

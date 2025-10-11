@@ -174,7 +174,7 @@ export const createMockPerformance = (): Performance => {}
     mark: (name: string) => {,
       entries.push({),
         name),
-        entryType: 'mark'),
+        entryType: 'mark',),
   }
   return {}
     now: () => Date.now(),
@@ -186,7 +186,7 @@ export const createMockPerformance = (): Performance => {}
     measure: (name: string, startMark?: string, endMark?: string) => {
     entries.push({)
         name)
-        entryType: 'measure'),
+        entryType: 'measure',),
   }
     measure: (name: string, startMark?: string, endMark?: string) => {}
         name,

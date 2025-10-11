@@ -11,8 +11,8 @@ export const securityConfig = {
       ],
       styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-      imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
-      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
+      imgSrc: ["'self'", 'data: ', ',https: ', ',blob: '],
+      connectSrc: ["',self'", 'https://www.google-analytics.com', 'https://analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
     }

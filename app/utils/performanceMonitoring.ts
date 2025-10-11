@@ -15,7 +15,7 @@ export interface WebVitals {}
 export interface CustomMetric {}
   name: string
   value: number
-  unit: 'ms' | 'bytes' | 'count' | 'percentage'
+  unit: 'ms', | 'bytes' | 'count' | 'percentage'
   timestamp: number,}
 }
 class PerformanceMonitoringService {}}private static instance: PerformanceMonitoringService,}

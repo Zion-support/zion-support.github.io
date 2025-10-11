@@ -284,7 +284,7 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
     // For example: Sentry, LogRocket, DataDog, etc.;
     // Example implementation: ;,
     // fetch('/api/logs', {);
-    //   method: 'POST'),}//   headers: {// 'Content-Type': 'application/json',})
+    //   method: 'POST',),}//   headers: {// 'Content-Type': 'application/json',})
     //   body: JSON.stringify(entry),
     // }).catch(err => {)
     )}//   // })
@@ -344,7 +344,7 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
     // For example: Sentry, LogRocket, DataDog, etc.
     // Example implementation:
     // fetch('/api/logs', {)
-    //   method: 'POST'),
+    //   method: 'POST',),
   }
 exportLogs(): string {return JSON.stringify(this.logs, null, 2)}}}
 }

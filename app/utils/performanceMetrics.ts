@@ -2,7 +2,7 @@
   unit: string,
   timestamp: Date,
 }
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
+  category: 'load', | 'runtime' | 'network' | 'memory' | 'custom',
   metadata?: Record</string><string>}</strin>
 }
 export interface WebVitalsMetrics {}
@@ -77,7 +77,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             if (entry.entryType === 'navigation') {
               const navEntry = entry as PerformanceNavigationTiming;
                 value: navEntry.loadEventEnd - navEntry.fetchStart),
-                unit: 'ms'),
+                unit: 'ms',),
                 timestamp: new Date(),
                 category: 'load',
                 metadata: {,
@@ -101,9 +101,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             if (entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime
               this.recordMetric({)
-                name: 'FCP'),
+                name: 'FCP',),
                 value: entry.startTime),
-                unit: 'ms'),
+                unit: 'ms',),
                 name: 'FCP',
                 value: entry.startTime,
                 unit: 'ms',
@@ -125,9 +125,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
           if (lastEntry) {
             this.webVitals.LCP = lastEntry.startTime
             this.recordMetric({)
-              name: 'LCP'),
+              name: 'LCP',),
               value: lastEntry.startTime),
-              unit: 'ms'),
+              unit: 'ms',),
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           if (lastEntry) {}
@@ -151,9 +151,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
           this.webVitals.CLS = clsValue;
           this.recordMetric({)
     );
-            name: 'CLS'),
+            name: 'CLS',),
             value: clsValue),
-            unit: 'score'),
+            unit: 'score',),
         // Layout Shift;}const clsObserver = new PerformanceObserver(list => {)}let clsValue = 0;
           for (const entry of list.getEntries()) {}if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;}
@@ -163,9 +163,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
           this.webVitals.CLS = clsValue
           this.recordMetric()
     )
-            name: 'CLS'),
+            name: 'CLS',),
             value: clsValue),
-            unit: 'score'),
+            unit: 'score',),
         // Layout Shift
           let clsValue = 0
           for (const entry of list.getEntries()) {}
@@ -200,9 +200,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({);
-      name: 'pageLoad');,
+      name: 'pageLoad',);,
       value: pageLoadTime);,
-      unit: 'ms');,
+      unit: 'ms',);,
       timestamp: new Date();,
       category: 'load',
       metadata: {,
@@ -261,9 +261,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const perfData = window.performance.timing
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
     this.recordMetric({)
-      name: 'pageLoad')
+      name: 'pageLoad',)
       value: pageLoadTime)
-      unit: 'ms')
+      unit: 'ms',)
       timestamp: new Date()
   recordPageLoad(): void {}
     if (typeof window === 'undefined') return
@@ -285,7 +285,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
   recordNetworkRequest(url: string, duration: number, status: number): void {
     this.recordMetric({)
-      unit: 'ms'),
+      unit: 'ms',),
       timestamp: new Date(),
       category: 'network',
       metadata: {,
@@ -303,7 +303,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   recordMemoryUsage(): void {if (typeof window === 'undefined') return;}
     if (!(performance as PerformanceWithMemory).memory) return;
     const memory = (performance as PerformanceWithMemory).memory;
-      unit: 'bytes'),
+      unit: 'bytes',),
       timestamp: new Date(),
       category: 'memory',
       metadata: {,
@@ -323,7 +323,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
     ,
       value: endTime - startTime),
-      unit: 'ms'),
+      unit: 'ms',),
   measureFunction<T>(name: string, fn: () => T): T {,}}const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
@@ -352,7 +352,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */
     ,
       value: endTime - startTime),
-      unit: 'ms'),
+      unit: 'ms',),
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,}const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();

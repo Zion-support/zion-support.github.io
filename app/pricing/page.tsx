@@ -59,22 +59,22 @@ const PricingPage: React.FC = () => {
     {
       name: 'AI Chatbot',
       price: '$500/month',
-      description: 'Intelligent customer support chatbot'
+      description: 'Intelligent customer support chatbot',
     },
     {
       name: 'Data Analytics Pro',
       price: '$800/month',
-      description: 'Advanced business intelligence dashboard'
+      description: 'Advanced business intelligence dashboard',
     },
     {
       name: 'Cybersecurity Suite',
       price: '$1,200/month',
-      description: 'Comprehensive security monitoring'
+      description: 'Comprehensive security monitoring',
     },
     {
       name: 'Custom Development',
       price: '$150/hour',
-      description: 'Tailored solutions for your business'
+      description: 'Tailored solutions for your business',
     }
   ];
 
