@@ -2,7 +2,11 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+<<<<<<< HEAD
 import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react';
+=======
+import {ArrowRight, CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-14e6
 
 const HomePage: React.FC = () => {
   const features = [
