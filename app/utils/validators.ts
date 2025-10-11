@@ -769,3 +769,4 @@ export async function validateAsync(validator: (val: string) => Promise</Validat
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' }
   }
 }</ValidationResult>
+]]

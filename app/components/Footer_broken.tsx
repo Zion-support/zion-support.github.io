@@ -95,7 +95,7 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
@@ -107,7 +107,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
                   </Link>
@@ -116,7 +116,7 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link 
                   href="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-cyan-400 hover: text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
                 </Link>
@@ -134,7 +134,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
                   </Link>
@@ -143,7 +143,7 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link 
                   href="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-cyan-400 hover: text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
                 </Link>
@@ -161,7 +161,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
                   </Link>
@@ -170,7 +170,7 @@ const Footer: React.FC = memo(() => {
               <li>
                 <Link 
                   href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-cyan-400 hover: text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All Micro SAAS →
                 </Link>
@@ -188,7 +188,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
                   </Link>
@@ -207,7 +207,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -220,7 +220,7 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
                   </Link>
@@ -230,13 +230,13 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-300">
                 <Phone className="w-4 h-4 mr-2 text-cyan-400" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors font-medium">
+                <a href={`tel: ${contactInfo.phone}`} className="hover: text-cyan-400 transition-colors font-medium">
                   {contactInfo.phone}
                 </a>
               </div>
               <div className="flex items-center text-sm text-gray-300">
                 <Mail className="w-4 h-4 mr-2 text-cyan-400" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors font-medium">
+                <a href={`mailto: ${contactInfo.email}`} className="hover: text-cyan-400 transition-colors font-medium">
                   {contactInfo.email}
                 </a>
               </div>
@@ -256,12 +256,12 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
       <div className="mt-8 pt-8 border-t border-gray-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="/privacy" className="text-sm text-gray-400 hover: text-cyan-400 transition-colors">
                 Privacy Policy
               </a>
               <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">

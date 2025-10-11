@@ -35,9 +35,6 @@ const services = [
       responseTime: '5ms',
       lastIncident: 'Never',
 const incidents = [
-    {id: 1,
-  ]
-  const incidents = [
     {
     id: 1,
       title: 'API Response Time Degradation',
@@ -130,15 +127,15 @@ return (</h1>)
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                 <div className="space-y-2 text-sm" / /></div>
                   <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Uptime:</span>
+                    <span className="text-gray-400">Uptime: </span>
                     <span className="text-white">{service.uptime}</span>
                   </div>
                   <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Response Time:</span>
+                    <span className="text-gray-400">Response Time: </span>
                     <span className="text-white">{service.responseTime}</span>
                   </div>
                   <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Last Incident:</span>
+                    <span className="text-gray-400">Last Incident: </span>
                     <span className="text-white">{service.lastIncident}</span>
                   </div>
                 ))
@@ -223,7 +220,7 @@ return (</h1>)
             <$2 />
               onClick={refreshStatus}
               disabled={isRefreshing}
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
+              className="flex items-center gap-2 text-gray-400 hover: text-white transition-colors disabled:opacity-50">
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh
           <p className="text-gray-400 text-sm">
@@ -232,9 +229,9 @@ return (</h1>)
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (;}
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     {getStatusIcon(service.status)}
@@ -244,14 +241,11 @@ return (</h1>)
                 <p className="text-gray-300 text-sm mb-4">{service.description}
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Uptime:
-                    <span className="text-white">{service.uptime}
+                    <span className="text-gray-400">Uptime: <span className="text-white">{service.uptime}
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Response Time:
-                    <span className="text-white">{service.responseTime}
+                    <span className="text-gray-400">Response Time: <span className="text-white">{service.responseTime}
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Last Incident:
-                    <span className="text-white">{service.lastIncident}
+                    <span className="text-gray-400">Last Incident: <span className="text-white">{service.lastIncident}
             ))}
       {/* Recent Incidents */}
       <section className="py-16 px-4">
@@ -277,8 +271,7 @@ return (</h1>)
                       {incident.status}
                 <p className="text-gray-300 mb-4">{incident.description}
                 <div>
-                  <span className="text-gray-400 text-sm">Affected Services:
-                  <span className="text-white text-sm">{incident.affectedServices.join(', ')}
+                  <span className="text-gray-400 text-sm">Affected Services: <span className="text-white text-sm">{incident.affectedServices.join(', ')}
             ))}
               <p className="text-xl text-gray-300">Section description</p>
             </div>
@@ -331,4 +324,4 @@ return (</h1>)
       </section>
       <Footer /></Footer>
   )
-}</$1></span></span></span></span></span></span></span></span></p></p></h2></h2></h3></h3>
+}</$1></span></span></span></span></span></span></span></span></p></p></h2></h2></h3></h3>]

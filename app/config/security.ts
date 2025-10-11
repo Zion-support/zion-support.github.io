@@ -10,8 +10,8 @@
       ],
       styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
       fontSrc: ["'self'", 'https: //fonts.gstatic.com'],
-      imgSrc: ["'self'", 'data:', 'https:', 'blob: '],
-      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],
+      imgSrc: ["'self'", 'data: ', 'https: ', 'blob: '],
+      connectSrc: ["'self'", 'https: //www.google-analytics.com', 'https: //analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
   // Security Headers;
@@ -44,7 +44,7 @@ export const validationPatterns = {}
 }
     return input,
     .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol,
+    .replace(/javascript: /gi, '') // Remove javascript: protocol,
     for (let i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256)}}
   }

@@ -66,8 +66,8 @@ export default SEOHead
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
+      "https: //www.linkedin.com/company/zion-tech-group",
+      "https: //twitter.com/ziontechgroup"
     ]
   }
   return (
@@ -82,18 +82,18 @@ export default SEOHead
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og: title" content={fullTitle} />
+      <meta property="og: description" content={description} />
+      <meta property="og: type" content={ogType} />
+      <meta property="og: url" content={canonicalUrl} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: card" content={twitterCard} />
+      <meta name="twitter: title" content={fullTitle} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />

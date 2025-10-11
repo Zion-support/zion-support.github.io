@@ -56,7 +56,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           const paint = performance.getEntriesByType('paint');
           
           // Log performance metrics
-          console.log('Performance Metrics:', {
+          console.log('Performance Metrics: ', {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,

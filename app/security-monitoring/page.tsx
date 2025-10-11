@@ -35,8 +35,6 @@ const SecurityMonitoringPage: React.FC = () => {,
     {icon: Zap,
       title: 'Instant Response',
 const benefits = [
-  ]
-  const benefits = [
     '24/7 continuous security monitoring',
     'AI-powered threat detection and analysis',
     'Real-time alerts and notifications',
@@ -89,11 +87,11 @@ return (
         </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Security Monitoring Services
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">Security Monitoring Services
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Protect your business with our advanced 24/7 security monitoring solutions. 
                 Real-time threat detection, instant alerts, and expert response to keep your data safe.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Shield className="mr-2 h-5 w-5" />
                   Get Protected Now
@@ -121,7 +119,7 @@ return (
                 Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.,
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
               {features.map((feature, index) => ()
               ))}
         {/* Benefits Section */}
@@ -139,7 +137,7 @@ return (
               {benefits.map((benefit, index) => (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Benefits
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience comprehensive security protection with our advanced monitoring services.
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -170,3 +168,5 @@ return (
           ))
         </section>
       </div>
+
+}]

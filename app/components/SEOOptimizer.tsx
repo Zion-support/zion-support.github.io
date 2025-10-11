@@ -17,7 +17,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
   keywords = ['AI solutions', 'IT services', 'digital transformation', 'artificial intelligence', 'technology consulting'],
   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   structuredData
 }) => {
   const keywordsString = keywords.join(', ');
@@ -76,18 +76,20 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content="website" />
+      <meta property="og: title" content={title} />
+      <meta property="og: description" content={description} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: type" content="website" />
       <meta property="og:url" content={canonicalUrl || window.location.href} />
       
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter: card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
       
       {/* Additional SEO meta tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
+
+}

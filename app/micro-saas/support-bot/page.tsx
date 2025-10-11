@@ -46,7 +46,7 @@ export default SmartSupportBotPage;
 export default SmartSupportBotPage
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation
         <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/support-bot" />
+        <link rel="canonical" href="https: //ziontechgroup.com/micro-saas/support-bot" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">

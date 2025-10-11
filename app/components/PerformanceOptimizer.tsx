@@ -130,7 +130,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       // Preload critical fonts
       const fontPreload = document.createElement('link')
       fontPreload.rel = 'preload'
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      fontPreload.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
       fontPreload.as = 'style'
       fontPreload.onload = () => {
         fontPreload.rel = 'stylesheet'
@@ -190,7 +190,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
             LoadComplete: navigation.loadEventEnd - navigation.navigationStart
           }
           // Send metrics to analytics (replace with your analytics service)
-          console.log('Performance Metrics:', metrics)
+          console.log('Performance Metrics: ', metrics)
         }
       }
       // Measure performance after page load
@@ -235,7 +235,7 @@ export default PerformanceOptimizer</PerformanceOptimizerProps>
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
           if (perfData) {
-            console.log('Performance metrics:', {
+            console.log('Performance metrics: ', {
               domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
               loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
               totalTime: perfData.loadEventEnd - perfData.fetchStart

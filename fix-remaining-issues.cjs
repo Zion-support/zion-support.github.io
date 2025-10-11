@@ -27,13 +27,13 @@ function fixRemainingIssues(filePath) {
     let modified = false;
     
     // Fix merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       const lines = content.split('\n');
       const cleanedLines = [];
       let inConflict = false;
       
       for (const line of lines) {
-        if (line.includes('<<<<<<< HEAD') || line.includes('=======') || line.includes('>>>>>>>')) {
+        if (line.includes('') || line.includes('') || line.includes('>>>>>>>')) {
           inConflict = !inConflict;
           continue;
         }

@@ -8,6 +8,9 @@ const DynamicContentShowcase: React.FC = () => {
   const features: Feature[] = [
 'use client'
     {
+      icon: CheckCircle,
+      title: 'Feature',
+      description: 'Description',
     },
     {
       id: 2,
@@ -65,7 +68,7 @@ const DynamicContentShowcase: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -120,7 +123,7 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Features Section */}
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Why Choose Our DynamicContentShowcase?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -128,9 +131,9 @@ const DynamicContentShowcase: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
@@ -154,7 +157,7 @@ const DynamicContentShowcase: React.FC = () => {
 };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       {/* Features Showcase */}
       </div><div className="text-center mb-16">
         </div><h2 className="text-3xl font-bold text-white mb-4">
@@ -166,7 +169,7 @@ const DynamicContentShowcase: React.FC = () => {
       </div>
 
       {/* Feature Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {features.map((feature, index) => (
           </div><$2 />
             key={feature.id}
@@ -199,7 +202,7 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
             <p className="text-gray-300 text-lg">Experience the power of our AI technology firsthand</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
               Start Free Trial
             </button>

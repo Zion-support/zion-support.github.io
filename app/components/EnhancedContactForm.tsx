@@ -97,7 +97,7 @@ const EnhancedContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000))
       
       // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData)
+      console.log('Form submitted: ', formData)
       
       setIsSubmitted(true)
       setFormData({
@@ -111,7 +111,7 @@ const EnhancedContactForm: React.FC = () => {
         timeline: ''
       })
     } catch (error) {
-      console.error('Error submitting form:', error)
+      console.error('Error submitting form: ', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -137,7 +137,7 @@ const EnhancedContactForm: React.FC = () => {
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
-          className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200"
+          className="bg-cyan-500 hover: bg-cyan-600 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200"
         >
           Send Another Message
         </button>
@@ -155,7 +155,7 @@ const EnhancedContactForm: React.FC = () => {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
           {/* Name */}
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -167,7 +167,7 @@ const EnhancedContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 ${
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 ${
                 errors.name ? 'border-red-500' : 'border-gray-600'
               }`}
               placeholder="Your full name"
@@ -193,7 +193,7 @@ const EnhancedContactForm: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 ${
+              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 ${
                 errors.email ? 'border-red-500' : 'border-gray-600'
               }`}
               placeholder="your@email.com"
@@ -219,7 +219,7 @@ const EnhancedContactForm: React.FC = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
+              className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
               placeholder="+1 (555) 123-4567"
             />
           </div>
@@ -235,7 +235,7 @@ const EnhancedContactForm: React.FC = () => {
               name="company"
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
+              className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
               placeholder="Your company name"
             />
           </div>
@@ -250,7 +250,7 @@ const EnhancedContactForm: React.FC = () => {
               name="service"
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
+              className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
             >
               <option value="">Select a service</option>
               {services.map(service => (
@@ -271,7 +271,7 @@ const EnhancedContactForm: React.FC = () => {
               name="budget"
               value={formData.budget}
               onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
+              className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
             >
               <option value="">Select budget range</option>
               {budgetRanges.map(range => (
@@ -293,7 +293,7 @@ const EnhancedContactForm: React.FC = () => {
             name="timeline"
             value={formData.timeline}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
+            className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
           >
             <option value="">Select timeline</option>
             {timelines.map(timeline => (
@@ -315,7 +315,7 @@ const EnhancedContactForm: React.FC = () => {
             value={formData.message}
             onChange={handleChange}
             rows={6}
-            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 resize-vertical ${
+            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 resize-vertical ${
               errors.message ? 'border-red-500' : 'border-gray-600'
             }`}
             placeholder="Tell us about your project, goals, and any specific requirements..."
@@ -335,7 +335,7 @@ const EnhancedContactForm: React.FC = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none ${
+            className={`inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none ${
               isSubmitting ? 'animate-pulse' : ''
             }`}
           >
@@ -356,7 +356,7 @@ const EnhancedContactForm: React.FC = () => {
 
       {/* Contact Info */}
       <div className="mt-8 pt-8 border-t border-gray-700">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-6 text-center">
           <div className="flex flex-col items-center">
             <Mail className="w-6 h-6 text-cyan-400 mb-2" />
             <p className="text-gray-300 text-sm">Email</p>

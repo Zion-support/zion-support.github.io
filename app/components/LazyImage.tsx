@@ -53,7 +53,7 @@ const benefits = [
     'Proven track record of success'
   ]
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -68,7 +68,7 @@ const benefits = [
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">

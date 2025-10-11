@@ -147,7 +147,7 @@ const HomePage: React.FC = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center">
@@ -158,17 +158,17 @@ const HomePage: React.FC = () => {
                 Leading provider of AI and IT solutions for modern businesses. 
                 Transform your operations with cutting-edge technology and expert guidance.
               </p>
-              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className={`flex flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <a
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
                 >
                   Get Started
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                 </a>
                 <a
                   href="/services"
-                  className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                  className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300"
                 >
                   Our Services
                 </a>
@@ -178,7 +178,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -195,7 +195,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -210,10 +210,10 @@ const HomePage: React.FC = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 group cursor-pointer"
                   onClick={() => handleServiceClick(service)}
                 >
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 group-hover:scale-110 transition-transform">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 group-hover: scale-110 transition-transform">
                     <service.icon className="text-white" size={24} />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -228,7 +228,7 @@ const HomePage: React.FC = () => {
                   </ul>
                   <a
                     href={service.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mt-4 group-hover:translate-x-1 transition-transform"
+                    className="inline-flex items-center text-cyan-400 hover: text-cyan-300 mt-4 group-hover:translate-x-1 transition-transform"
                   >
                     Learn More
                     <ArrowRight className="ml-1" size={16} />
@@ -240,7 +240,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -276,7 +276,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 md:p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -294,7 +294,7 @@ const HomePage: React.FC = () => {
                   Get Free Consultation
                 </a>
                 <a
-                  href="tel:+13024640950"
+                  href="tel: +13024640950"
                   className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
                   onClick={handlePhoneClick}
                 >

@@ -86,7 +86,7 @@ const PageBackupPage: React.FC = () => {
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}canonicalUrl="https: //ziontechgroup.com",
         structuredData={{
-          '@context': 'https://schema.org',
+          '@context': 'https: //schema.org',
           '@type': 'TechCompany',
           name: 'Zion Tech Group',
           url: 'https://ziontechgroup.com',
@@ -176,11 +176,11 @@ const PageBackupPage: React.FC = () => {
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive technology solutions designed to accelerate your digital transformation;</p>
       <main>
         {/* Hero Section */}
-        </main></main><section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
+        </main></main><section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">
           </section></section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" />
           <div className="relative max-w-7xl mx-auto text-center">
-            </div><h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            </div><h1 id="hero-heading" className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
               Transform Your Business with
               </h1><span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
             </h1>
@@ -188,14 +188,14 @@ const PageBackupPage: React.FC = () => {
               We help businesses leverage cutting-edge technology to drive growth, 
               improve efficiency, and stay ahead of the competition.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" /></div>
             </section>
 
             {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
               </section>< className="$2 />
                 </div><div className="text-center mb-16">
-                  </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  </div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                     Our Core Services
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
@@ -304,7 +304,7 @@ export default HomePage
                 <p className="text-gray-300">{feature.description}
             ))}
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         </section>
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

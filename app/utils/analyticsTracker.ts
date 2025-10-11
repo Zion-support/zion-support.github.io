@@ -12,8 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-  ]
-  const benefits = [
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -170,7 +168,7 @@ export default AnalyticsTrackerPage
         <meta name="description" content="Professional AnalyticsTracker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analyticsTracker, AI solutions, IT services, Zion Tech Group, analyticstracker" /></$1>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -188,16 +186,16 @@ export default AnalyticsTrackerPage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More</$1></$1></$1></$1></$1>
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AnalyticsTracker?</$1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our analyticstracker solutions deliver unmatched performance, security, and scalability.</$1></$1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (;}
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" /></$1>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -205,7 +203,7 @@ export default AnalyticsTrackerPage
             ))}
           </div></$1></$1>
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -220,7 +218,7 @@ export default AnalyticsTrackerPage
             ))}
           </div></$1></$1>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -237,3 +235,4 @@ export default AnalyticsTrackerPage
   )
 }
 export default AnalyticsTrackerPage</span></button></button></button></button></p></p></p></p></h1></h2></h2></h2>
+]

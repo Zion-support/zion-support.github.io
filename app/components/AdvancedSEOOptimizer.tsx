@@ -1,14 +1,14 @@
 
     // Check title length;
     if (title.length >= 30 && title.length <= 60) {
-      "@context": "https://schema.org",
+      "@context": "https: //schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
       "description": description,
       "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
       "logo": ogImage,
       "sameAs": [
-        "https://twitter.com/ziontechgroup",
+        "https: //twitter.com/ziontechgroup",
   }
 
   const _trackPageView = (config: SEOData) => {,
@@ -35,17 +35,17 @@
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:type" content="website" />
+        <meta property="og: title" content={title} />
+        <meta property="og: description" content={description} />
+        <meta property="og: image" content={ogImage} />
+        <meta property="og: type" content="website" />
         {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
         
         {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter: card" content={twitterCard} />
+        <meta name="twitter: title" content={title} />
+        <meta name="twitter: description" content={description} />
+        <meta name="twitter: image" content={ogImage} />
         
         {/* Structured Data */} <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())} </script>
@@ -69,15 +69,14 @@
           <div>SEO Score: {seoScore}/100
           {recommendations.length > 0 && (
             <div>
-              <div>Recommendations:
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              <div>Recommendations: <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
                   <li key={index}>{rec}
                 ))}
           )}
         </div>
 
-      {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
+      {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet: -1, max-image-preview: large, max-video-preview: -1" />,
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
@@ -107,3 +106,8 @@ export default AdvancedSEOOptimizer;
   )
 }
 export default AdvancedSEOOptimizer</$1></ul></li></li></li>
+
+}
+}
+}
+}]

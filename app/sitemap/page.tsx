@@ -67,7 +67,7 @@ const SitemapPage: React.FC = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               Site Map
@@ -79,7 +79,7 @@ const SitemapPage: React.FC = () => {
         </section>
 
         {/* Sitemap Sections */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {siteSections.map((section, index) => (
@@ -93,7 +93,7 @@ const SitemapPage: React.FC = () => {
                       <li key={pageIndex}>
                         <a
                           href={page.url}
-                          className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center group"
+                          className="text-gray-300 hover: text-cyan-400 transition-colors flex items-center group"
                         >
                           <ArrowRight className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                           {page.name}
@@ -108,7 +108,7 @@ const SitemapPage: React.FC = () => {
         </section>
 
         {/* XML Sitemap */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">XML Sitemap</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -116,7 +116,7 @@ const SitemapPage: React.FC = () => {
             </p>
             <a
               href="/sitemap.xml"
-              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               <ExternalLink className="mr-2" size={20} />
               View XML Sitemap
@@ -125,13 +125,13 @@ const SitemapPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Can't Find What You're Looking For?</h2>
             <p className="text-xl text-gray-300 mb-8">
               If you can't find the page you're looking for, try our search or contact us directly.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"

@@ -325,7 +325,6 @@ Performance Report:  ,}Score: ${score,}Metrics: ${JSON.stringify(metrics, null, 
     if (this.metrics.cls) {/* TODO: Fix JSX expression */}
     }
     return `
-Performance Report:
-  }
+Performance Report:  }
 Score: ${score}
   }

@@ -2,7 +2,7 @@
 set -e
 
 echo "🚀 Strategic PR Merge Solution"
-echo "================================"
+echo "===="
 echo ""
 
 # Store current branch
@@ -38,7 +38,7 @@ git pull origin main --no-edit || echo "Already up to date"
 
 echo ""
 echo "🔄 Starting merge process..."
-echo "=============================="
+echo "=="
 
 MERGED_COUNT=0
 FAILED_COUNT=0
@@ -83,7 +83,7 @@ done
 
 echo ""
 echo "📊 Merge Summary"
-echo "================"
+echo "=="
 echo "✅ Successfully merged: $MERGED_COUNT branches"
 echo "❌ Failed to merge: $FAILED_COUNT branches"
 echo "⏭️  Skipped: $SKIPPED_COUNT branches"

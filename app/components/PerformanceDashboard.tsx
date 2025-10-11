@@ -129,7 +129,7 @@
           onClick={toggleMonitoring}
           className={`px-4 py-2 rounded-lg font-medium transition-colors ${
             isMonitoring
-              ? 'bg-red-600 text-white hover:bg-red-700'
+              ? 'bg-red-600 text-white hover: bg-red-700'
               : 'bg-green-600 text-white hover:bg-green-700'
           }`}
         >

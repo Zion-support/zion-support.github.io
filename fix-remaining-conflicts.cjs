@@ -62,7 +62,7 @@ let errorCount = 0;
 for (const file of files) {
   try {
     const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       if (fixMergeConflicts(file)) {
         fixedCount++;
       } else {

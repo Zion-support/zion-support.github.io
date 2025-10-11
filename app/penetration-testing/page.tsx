@@ -37,8 +37,6 @@ const PenetrationTestingPage: React.FC = () => {,
     {icon: Zap,
       title: 'Expert Security Analysis',
 const benefits = [
-  ]
-  const benefits = [
     'Identify security vulnerabilities before attackers do',
     'Comply with industry regulations and standards',
     'Improve your security posture and defenses',
@@ -95,7 +93,7 @@ return (
         </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Penetration Testing Services
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">Penetration Testing Services
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Identify and fix security vulnerabilities before attackers exploit them. 
                 Our expert penetration testing services help secure your systems and protect your business.
@@ -107,7 +105,7 @@ return (
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
         </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -116,7 +114,7 @@ return (
                 We use industry-standard methodologies and cutting-edge tools to thoroughly assess your security posture.
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
@@ -137,7 +135,7 @@ return (
               {benefits.map((benefit, index) => (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Benefits
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Strengthen your security defenses with our comprehensive penetration testing services.
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -168,3 +166,5 @@ return (
           ))
         </section>
       </div>
+
+}]

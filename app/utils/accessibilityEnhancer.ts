@@ -133,3 +133,4 @@ export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
 export default AccessibilityEnhancerPage;
+]

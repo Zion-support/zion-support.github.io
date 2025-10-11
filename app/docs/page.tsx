@@ -182,7 +182,7 @@
           {/* Additional Resources */}
           <div className="cyber-card-enhanced p-8 mt-16">
             </div><h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               </div><$2 />
                 href="/tutorials"
                 className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
@@ -308,19 +308,19 @@ export default function DocsPage() {
         </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {popularDocs.map((doc, index) => (;}
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300 group">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-5 h-5 text-white" />
                   <span className="text-purple-400 text-sm font-medium">{doc.category}
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover: text-purple-400 transition-colors">
                   {doc.title}
                 <p className="text-gray-300 text-sm mb-4">{doc.description}
                 <$2 />
                   href={doc.link}
-                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
+                  className="inline-flex items-center gap-2 text-purple-400 hover: text-purple-300 font-medium transition-colors text-sm">
                   Read More
                   <ArrowRight className="w-4 h-4" />
             ))}
@@ -329,7 +329,7 @@ export default function DocsPage() {
         </section>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {filteredDocs.map((category, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-6">
@@ -343,20 +343,20 @@ export default function DocsPage() {
                     <$2 />
                       key={docIndex}
                       href={doc.link}
-                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover: border-purple-500/50 transition-all duration-300 group">
                       <div className="flex items-center justify-between">
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
                             {doc.title}
                           <p className="text-gray-300 text-sm">{doc.description}
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
+                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover: text-purple-400 transition-colors" />
                   ))}
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         </section>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Need Help?
           <p className="text-xl text-purple-100 mb-8">
             Can't find what you're looking for? Our support team is here to help.
@@ -366,4 +366,4 @@ export default function DocsPage() {
       <Footer />
   )
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></p></p></p></p></h2></h2></h2></h3></h3></h4></section></section></section>
-</li></li>
+</li></li>]]]]]]]]

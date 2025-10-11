@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
+import { Helmet , Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock  } from 'lucide-react';
 
 const ZionInventorySmartPage: React.FC = () => {
   return (
@@ -14,7 +13,7 @@ const ZionInventorySmartPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
@@ -30,7 +29,7 @@ const ZionInventorySmartPage: React.FC = () => {
                 Intelligent inventory management system with AI-powered forecasting, automated reordering, and comprehensive inventory analytics.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Get Started Free
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -44,7 +43,7 @@ const ZionInventorySmartPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -136,7 +135,7 @@ const ZionInventorySmartPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -145,7 +144,7 @@ const ZionInventorySmartPage: React.FC = () => {
               Join thousands of businesses already using our AI solutions to drive 
               innovation, efficiency, and growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 inline" />

@@ -62,7 +62,7 @@ const CaseStudiesPage: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -76,11 +76,11 @@ const CaseStudiesPage: React.FC = () => {
         </section>
 
         {/* Case Studies Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {caseStudies.map((study) => (
-                <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="mb-6">
                     <div className="w-full h-48 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-lg mb-4 flex items-center justify-center">
                       <TrendingUp className="w-16 h-16 text-purple-400" />
@@ -91,15 +91,15 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Challenge:</h4>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Challenge: </h4>
                     <p className="text-gray-400 text-sm mb-4">{study.challenge}</p>
                     
-                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Solution:</h4>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-2">Solution: </h4>
                     <p className="text-gray-400 text-sm">{study.solution}</p>
                   </div>
                   
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-3">Results:</h4>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-3">Results: </h4>
                     <ul className="space-y-2">
                       {study.results.map((result, index) => (
                         <li key={index} className="flex items-center text-sm text-gray-300">
@@ -110,7 +110,7 @@ const CaseStudiesPage: React.FC = () => {
                     </ul>
                   </div>
                   
-                  <button className="mt-6 w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:scale-105">
+                  <button className="mt-6 w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:scale-105">
                     Read Full Case Study
                     <ArrowRight className="w-4 h-4 inline ml-2" />
                   </button>
@@ -123,7 +123,7 @@ const CaseStudiesPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Create Your Success Story?
             </h2>
             <p className="text-xl text-gray-300 mb-8">

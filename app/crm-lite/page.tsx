@@ -1,7 +1,5 @@
   const features = [
 const benefits = [
-  ]
-  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -31,4 +29,4 @@ return ()
         </div>
       </section>
 }
-export default PagePage
+export default PagePage]

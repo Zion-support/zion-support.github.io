@@ -422,8 +422,7 @@ try {}
       }
     } catch (error) {}}
   }
-      case CacheStorage.SessionStorage:
-        return window.sessionStorage,
+      case CacheStorage.SessionStorage: return window.sessionStorage,
       default:,
         return null
     }
@@ -460,8 +459,7 @@ export default CacheManager
     switch (this.config.storage) {
       case CacheStorage.LocalStorage: return window.localStorage;}
     switch (this.config.storage) {}
-      case CacheStorage.LocalStorage:
-        return window.localStorage
+      case CacheStorage.LocalStorage: return window.localStorage
       case CacheStorage.SessionStorage:
         return window.sessionStorage
       default:,

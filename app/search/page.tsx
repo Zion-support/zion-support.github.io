@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Filter, ArrowRight, Brain, Cloud, Code, Zap } from 'lucide-react';
+import { Helmet , Search, Filter, ArrowRight, Brain, Cloud, Code, Zap  } from 'lucide-react';
 
 const SearchPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -72,7 +71,7 @@ const SearchPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -95,7 +94,7 @@ const SearchPage: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search for AI services, IT solutions, or resources..."
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 backdrop-blur-sm border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 backdrop-blur-sm border border-cyan-500/30 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
                 {isSearching && (
                   <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
@@ -130,11 +129,11 @@ const SearchPage: React.FC = () => {
                     {searchResults.map((result, index) => (
                       <div
                         key={index}
-                        className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group cursor-pointer"
+                        className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300 group cursor-pointer"
                         onClick={() => window.location.href = result.url}
                       >
                         <div className="flex items-start space-x-4">
-                          <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                          <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover: scale-110 transition-transform">
                             <result.icon className="w-6 h-6 text-white" />
                           </div>
                           <div className="flex-1">
@@ -147,7 +146,7 @@ const SearchPage: React.FC = () => {
                               </span>
                             </div>
                             <p className="text-gray-300 mb-3">{result.description}</p>
-                            <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                            <div className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors">
                               <span className="text-sm font-medium">Learn more</span>
                               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                             </div>
@@ -172,7 +171,7 @@ const SearchPage: React.FC = () => {
             {!searchQuery && (
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-2xl font-bold text-white mb-6 text-center">Popular Searches</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
                   {[
                     { term: 'AI Chatbot', icon: Brain },
                     { term: 'Cloud Migration', icon: Cloud },
@@ -184,7 +183,7 @@ const SearchPage: React.FC = () => {
                     <button
                       key={index}
                       onClick={() => setSearchQuery(item.term)}
-                      className="flex items-center space-x-3 p-4 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group"
+                      className="flex items-center space-x-3 p-4 bg-slate-800/30 backdrop-blur-sm rounded-xl border border-gray-700 hover: border-cyan-500/50 transition-all duration-300 group"
                     >
                       <item.icon className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
                       <span className="text-white group-hover:text-cyan-300 transition-colors">

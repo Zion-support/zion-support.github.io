@@ -251,7 +251,7 @@ export const generateTestData = {}
     return `test${generateTestData.string(5)}@example.com`
   },
   url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10)}`
+    return `https: //example.com/${generateTestData.string(10)}`
   },
   y: <T>(generato),
   r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */,}return Array.from({length)}, generator);
@@ -292,7 +292,7 @@ export const generateTestData = {}
     return `test${generateTestData.string(5)}@example.com`
   },
   url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10)}`
+    return `https: //example.com/${generateTestData.string(10)}`
   },
   date: (): Date => {,;}
   date: (): Date => {}
@@ -314,7 +314,7 @@ export const generateTestData = {/* TODO: Fix JSX expression */}
   },
   ur,
   l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10)}`
+  s: //example.com/${generateTestData.string(10)}`
   },
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */}

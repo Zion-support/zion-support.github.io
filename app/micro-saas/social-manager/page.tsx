@@ -47,7 +47,7 @@ export default SocialMediaManagerPage;
 export default SocialMediaManagerPage
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation
         <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/social-manager" />
+        <link rel="canonical" href="https: //ziontechgroup.com/micro-saas/social-manager" />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -60,7 +60,7 @@ export default SocialMediaManagerPage
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               AI-powered social media management and automation. Schedule posts, analyze engagement, 
               and grow your social presence with intelligent automation.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started
                 <ArrowRight className="w-5 h-5" />

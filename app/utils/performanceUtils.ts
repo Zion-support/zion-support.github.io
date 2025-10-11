@@ -51,7 +51,7 @@ try {const observer = new PerformanceObserver((list) => {}
         this.metrics.largestContentfulPaint = lastEntry.startTime;}})
       observer.observe({entryTypes: ['largest-contentful-paint'] ,)})
       this.observers.push(observer);
-    } catch (error) {console.warn('LCP observer not supported:', error)}}
+    } catch (error) {console.warn('LCP observer not supported: ', error)}}
   }
 private observeFID(): void {if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;}
 try {const observer = new PerformanceObserver((list) => {}
@@ -64,7 +64,7 @@ try {const observer = new PerformanceObserver((list) => {}
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch (error) {
-    console.warn('LCP observer not supported:', error)
+    console.warn('LCP observer not supported: ', error)
   }
     }
   }
@@ -158,7 +158,7 @@ export const lazyLoad = (callback: () => void): void => {,
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);}
+      console.warn('PerformanceObserver not supported: ', error);}
     }
   }
 
@@ -173,7 +173,7 @@ export const lazyLoad = (callback: () => void): void => {,
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('LCP observer not supported:', error);}
+      console.warn('LCP observer not supported: ', error);}
     }
   }
 
@@ -188,7 +188,7 @@ export const lazyLoad = (callback: () => void): void => {,
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('FID observer not supported:', error);}
+      console.warn('FID observer not supported: ', error);}
     }
   }
 
@@ -207,7 +207,7 @@ export const lazyLoad = (callback: () => void): void => {,
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('CLS observer not supported:', error);}
+      console.warn('CLS observer not supported: ', error);}
     }
   }
 

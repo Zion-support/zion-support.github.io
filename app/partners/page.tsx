@@ -67,7 +67,7 @@
         </div><section className="py-20 px-4">
           </section>< className="$2 />
             </div><div className="text-center mb-16">
-              </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              </div><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
                 Our Technology Partners
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
@@ -79,7 +79,7 @@
               {categories.map((category) => (
                 </div><$2 />
                   key={category}
-                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
+                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover: bg-white/20 transition-all duration-300"
                 >
                   {category}
                 </button>

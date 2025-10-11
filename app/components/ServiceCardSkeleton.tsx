@@ -12,8 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-  ]
-  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -25,3 +23,5 @@ const benefits = [
 
     'Cost-effective pricing plans',
     'Proven track record of success'
+
+}]]

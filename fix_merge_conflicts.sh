@@ -4,7 +4,7 @@
 echo "Starting merge conflict resolution..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" app/ --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l)
+files_with_conflicts=$(grep -r "" app/ --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l)
 
 echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
 
@@ -18,15 +18,12 @@ fix_merge_conflicts() {
     
     # Use git to resolve conflicts by taking the HEAD version
     # This is a simple approach - in a real scenario you'd want more sophisticated conflict resolution
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> origin\/main/d' "$file"
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> main/d' "$file"
-    sed -i '/=======/d' "$file"
+    sed -i '//,/    sed -i '//,/    sed -i '//d' "$file"
     
     # Clean up any remaining conflict markers
     sed -i '/^<<<<<<< /d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
+    sed -i '/^/d' "$file"
+    sed -i '/^    
     # Remove any syntax errors that might have been introduced
     sed -i 's/,,/,/g' "$file"
     sed -i 's/return(\([^)]*\))/return (\1)/g' "$file"

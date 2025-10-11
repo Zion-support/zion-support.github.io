@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 
 const LayoutPage: React.FC = () => {,
   const features = [
@@ -48,7 +47,7 @@ const benefits = [
       <Helmet>
         <title>Layout | Zion Tech Group</title>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -90,7 +89,7 @@ const benefits = [
           </div>
         </div>
       </section>
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         </section>
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -110,3 +109,4 @@ const benefits = [
 
 export default LayoutPage;
 
+]

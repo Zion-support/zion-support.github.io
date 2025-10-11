@@ -13,7 +13,7 @@ export const useAnalytics = () => {
     }
 
     // Console logging for development;
-    if (process.env.NODE_ENV === 'development') {console.log('Page View:', pageName, pagePath)}}
+    if (process.env.NODE_ENV === 'development') {console.log('Page View: ', pageName, pagePath)}}
   const trackPageView = (pageName: string) => {
     if (!isInitialized) return
 
@@ -31,7 +31,7 @@ export const useAnalytics = () => {
 
       // Custom analytics tracking
       if (enableDebug) {
-        console.log('Analytics Event:', eventName, parameters);
+        console.log('Analytics Event: ', eventName, parameters);
       }
 
       // Send to custom analytics endpoint
@@ -49,13 +49,13 @@ export const useAnalytics = () => {
         })
       }).catch(error => {
         if (enableDebug) {
-          console.error('Analytics tracking error:', error);
+          console.error('Analytics tracking error: ', error);
         }
       });
 
     } catch (error) {
       if (enableDebug) {
-        console.error('Analytics error:', error);
+        console.error('Analytics error: ', error);
       }
     }
   };

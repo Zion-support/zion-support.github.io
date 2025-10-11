@@ -24,7 +24,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     this.setState({ error, errorInfo });
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ', error, errorInfo);
   }
 
   render() {
@@ -36,7 +36,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
             <button
               onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-              className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
+              className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover: bg-cyan-600 transition-colors"
             >
               Try again
             </button>

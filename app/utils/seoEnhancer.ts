@@ -329,7 +329,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     ) as HTMLMetaElement
     if (!meta) {}
       meta = document.createElement('meta')
-      if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {}
         meta.setAttribute('property', nameOrProperty);}
       } else {}
         meta.setAttribute('name', nameOrProperty);}
@@ -380,7 +380,7 @@ ${pages}.map();
     pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>
   ) {}
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages}
   .map()
   .join('\n')}
@@ -446,8 +446,7 @@ Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
   }
     return {}
       title: document.title,
-      description: 
-        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
       keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
     }
   }

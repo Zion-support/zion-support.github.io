@@ -70,7 +70,7 @@ export const NavigationSkeleton: React.FC = () => {
               <div key={i} className="h-4 bg-gray-200 rounded w-16"></div>
             ))}
           </div>
-          <div className="w-8 h-8 bg-gray-200 rounded lg:hidden"></div>
+          <div className="w-8 h-8 bg-gray-200 rounded lg: hidden"></div>
         </div>
       </div>
     </nav>

@@ -12,3 +12,5 @@
     {icon: Globe,
       title: 'Global Reach',
   ]
+
+}

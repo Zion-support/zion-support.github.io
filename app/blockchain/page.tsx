@@ -50,7 +50,7 @@
                   <Link className="w-8 h-8 text-blue-600" />
           </section>< className="$2 />
             </div><div className="text-center mb-12">
-              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              </div><h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
@@ -62,13 +62,13 @@
           <h2 className="text-3xl font-bold text-white text-center mb-8" /></h2>
             Why Choose Our Blockchain Solutions?
           </h2>
-          <div className="grid md:grid-cols-2 gap-6" /></div>
+          <div className="grid md: grid-cols-2 gap-6" /></div>
             {benefits.map((benefit, index) => ()
             ))}
           </div>
         </div>
         <section className="py-16 bg-white" /></section>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /></div>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" /></div>
             <div className="text-center mb-12" /></div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" /></h2>
                 Why Choose Our Blockchain Services?
@@ -77,7 +77,7 @@
                 Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
   
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               </div><div className="text-center">
                 </div><div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   </div><Link className="w-8 h-8 text-blue-600" />
@@ -110,7 +110,7 @@
           </div>
         </section>
           <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
               <div className="text-center mb-12">
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description</p>}</p>
@@ -130,7 +130,7 @@
   
                       </div>
                       <div className="mb-4">
-                        </div><h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        </div><h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
                             </ul><li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -195,7 +195,7 @@
         </section>
               Contact our blockchain experts for a free consultation and custom blockchain strategy development
   
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               </div><$2 />
                 href="tel:+13024640950"
                 ✉️ kleber@ziontechgroup.com,
@@ -226,7 +226,7 @@ export default BlockchainPage
   </h1>
   </div>
             <p className="text-xl mb-8 text-blue-100">Contact our blockchain experts for a free consultation and custom blockchain strategy development
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">

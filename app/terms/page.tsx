@@ -34,7 +34,7 @@ const TermsPage: React.FC = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               Terms of Service
@@ -46,7 +46,7 @@ const TermsPage: React.FC = () => {
         </section>
 
         {/* Terms Sections */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {sections.map((section, index) => (
@@ -65,7 +65,7 @@ const TermsPage: React.FC = () => {
         </section>
 
         {/* Detailed Terms */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -123,13 +123,13 @@ const TermsPage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Questions About Our Terms?</h2>
             <p className="text-xl text-gray-300 mb-8">
               If you have any questions about these terms of service, please contact us.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"

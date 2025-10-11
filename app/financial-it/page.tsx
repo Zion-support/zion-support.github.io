@@ -9,35 +9,6 @@
       title: 'Financial Data Security',
       description: 'Bank-level security for financial data with encryption, access controls, and monitoring.',
 const services = [
-    {icon: '🏦',
-      benefits: ['Data encryption', 'Access controls', 'Security monitoring'],
-  },
-    {
-    icon: Clock,
-      title: 'Real-time Processing',
-      description: 'High-frequency trading and real-time financial data processing capabilities.',
-      benefits: ['Low latency', 'High throughput', 'Real-time analytics'],
-  },
-    {
-    icon: Users,
-      title: 'Regulatory Compliance',
-      description: 'Comprehensive compliance with financial regulations including PCI DSS, GDPR, and more.',
-      benefits: ['Multi-regulation support', 'Automated compliance', 'Risk management'],
-  },
-    {
-    icon: Shield,
-      title: 'Fraud Detection',
-      description: 'Advanced AI-powered fraud detection and prevention systems for financial transactions.',
-      benefits: ['Real-time detection', 'Machine learning', 'Risk scoring'],
-  },
-    {
-    icon: BarChart,
-      title: 'Financial Analytics',
-      description: 'Comprehensive analytics and reporting for financial operations and compliance.',
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment'],
-  }
-    ]
-const services = [
     }
   ]
   const services = [
@@ -54,8 +25,6 @@ const services = [
     {icon: '🔒',
       title: 'Security Services',
 const benefits = [
-  ]
-  const benefits = [
     'SOX Compliance Ready',
     'Bank-level Security',
 
@@ -131,9 +100,9 @@ return (
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for financial services industry
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group">
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-green-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
@@ -160,7 +129,7 @@ return (
               Comprehensive IT solutions for all aspects of financial services and banking operations.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
             {
     services.map((service, index) => ()
         <div className="max-w-7xl mx-auto">
@@ -168,9 +137,9 @@ return (
             <h2 className="text-4xl font-bold text-white mb-4">Financial Services
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions for all aspects of financial services and banking operations.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300">
                 <div className="text-4xl mb-4">{service.icon}
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}
                 <p className="text-gray-300">{service.description}
@@ -209,7 +178,7 @@ return (
               Experience the benefits of modern financial technology with our proven solutions.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
             {benefits.map((benefit, index) => ()
             ))}
       {/* CTA Section */}
@@ -231,10 +200,11 @@ export default FinancialITPage
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?
           <p className="text-xl text-gray-300 mb-8">Join leading financial institutions using our specialized IT solutions for compliance and security
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
       <Footer />
   )
 }
 export default FinancialITPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></ul></li></section></section></section></section></section>
+]]

@@ -74,8 +74,7 @@ ${validation.errors.join(')}')}`;
     const env = process.env['NODE_ENV'] || 'development'
     return env as 'development' | 'production' | 'test'
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-  failed:
-${
+  failed: ${
     validation.errors.join()
 ')}`
       )

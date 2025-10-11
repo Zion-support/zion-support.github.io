@@ -38,13 +38,13 @@
             <div className="space-y-4">
               <$2 />
                 onClick={() => window.location.reload()}
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
               >
                 Refresh Page
               </button>
               <$2 />
                 onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="block w-full text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                className="block w-full text-gray-400 hover: text-cyan-400 transition-colors duration-200"
               >
                 Try Again
               </button>

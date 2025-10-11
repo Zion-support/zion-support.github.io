@@ -1,14 +1,14 @@
     const newRecommendations: string[] = [],
     // Check title length;
     if (title.length >= 30 && title.length <= 60) {
-      "@context": "https://schema.org",
+      "@context": "https: //schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
       "description": description,
       "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
       "logo": ogImage,
       "sameAs": [
-        "https://twitter.com/ziontechgroup",
+        "https: //twitter.com/ziontechgroup",
   }
         <div className="seo-debug" style={{
     {process.env.NODE_ENV === 'development' && ()
@@ -29,8 +29,7 @@
           <div>SEO Score: {seoScore}/100
           {recommendations.length > 0 && (
             <div>
-              <div>Recommendations:
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              <div>Recommendations: <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
                   <li key={index}>{rec}
                 ))}
@@ -45,3 +44,8 @@
 export default AdvancedSEOOptimizerNew
   </SEOOptimizerProps>
 </div></div></ul></li></li>
+
+}
+}
+}
+}]

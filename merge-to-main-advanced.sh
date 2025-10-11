@@ -58,7 +58,7 @@ git checkout -b temp-merge-branch origin/main 2>/dev/null || echo "Cannot create
 # If we can't merge directly, provide instructions
 echo ""
 echo "📋 MERGE INSTRUCTIONS:"
-echo "======================"
+echo "="
 echo ""
 echo "Since direct merge is restricted, here are the steps to merge manually:"
 echo ""
@@ -79,7 +79,7 @@ echo ""
 
 # Show what will be merged
 echo "📊 CHANGES TO BE MERGED:"
-echo "========================"
+echo "==="
 git log --oneline origin/main..HEAD
 echo ""
 echo "Total commits to merge: $(git rev-list --count origin/main..HEAD)"
@@ -88,7 +88,7 @@ echo ""
 
 # Show file changes summary
 echo "📁 FILES CHANGED:"
-echo "================="
+echo "==="
 git diff --name-only origin/main..HEAD | head -20
 if [ $(git diff --name-only origin/main..HEAD | wc -l) -gt 20 ]; then
     echo "... and $(($(git diff --name-only origin/main..HEAD | wc -l) - 20)) more files"
@@ -96,7 +96,7 @@ fi
 
 echo ""
 echo "🎯 READY FOR MERGE!"
-echo "==================="
+echo "====="
 echo "Branch: $CURRENT_BRANCH"
 echo "Target: main"
 echo "Status: Ready to merge (no conflicts detected)"

@@ -87,7 +87,7 @@
         <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." />
         <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" />
         <meta property="og: title" content="AI Space Mission Optimizer - Advanced Space Mission Planning" />,
-        <meta property="og:description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment." />
+        <meta property="og: description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment." />
         <meta property="og: type" content="website" />,
         <meta property="og: url" content="https://ziontechgroup.com/ai-space-mission-optimizer" />,
         <link rel="canonical" href="https: //ziontechgroup.com/ai-space-mission-optimizer" />,
@@ -192,3 +192,5 @@
   )
 }
 export default AISpaceMissionOptimizer
+}
+}]]

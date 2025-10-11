@@ -222,8 +222,7 @@ Bundle,
 Cache Hit,
   Rate: ${metrics.cacheHitRate}%
 Recommendation,
-  s:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
+  s: ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
     `.trim();
   }

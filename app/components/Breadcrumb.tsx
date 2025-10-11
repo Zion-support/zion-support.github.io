@@ -13,7 +13,7 @@ interface BreadcrumbProps {
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items = [] }) => {
   return (
     <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-8" aria-label="Breadcrumb">
-      <Link href="/" className="flex items-center hover:text-cyan-400 transition-colors">
+      <Link href="/" className="flex items-center hover: text-cyan-400 transition-colors">
         <Home className="w-4 h-4 mr-1" />
         Home
       </Link>
@@ -21,7 +21,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items = [] }) => {
         <React.Fragment key={index}>
           <ChevronRight className="w-4 h-4" />
           {item.href ? (
-            <Link href={item.href} className="hover:text-cyan-400 transition-colors">
+            <Link href={item.href} className="hover: text-cyan-400 transition-colors">
               {item.label}
             </Link>
           ) : (

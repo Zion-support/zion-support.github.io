@@ -14,11 +14,11 @@ def resolve_conflicts_in_file(file_path):
         
         original_content = content
         
-        # Pattern 1: Keep the main branch version (after =======)
+        # Pattern 1: Keep the main branch version (after )
         pattern1 = r'\n(.*?)\n
         content = re.sub(pattern1, r'\2', content, flags=re.DOTALL)
         
-        # Pattern 2: Keep everything after ======= if no HEAD content
+        # Pattern 2: Keep everything after  if no HEAD content
         pattern2 = r'\n(.*?)\n
         content = re.sub(pattern2, r'\1', content, flags=re.DOTALL)
         
@@ -66,7 +66,7 @@ def main():
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+                    if '' in content or '' in content or '>>>>>>>' in content:
                         files_with_conflicts.append(file_path)
             except:
                 continue
@@ -95,7 +95,7 @@ def main():
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+                if '' in content or '' in content or '>>>>>>>' in content:
                     remaining_conflicts.append(file_path)
         except:
             continue

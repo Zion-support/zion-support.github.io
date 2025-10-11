@@ -35,8 +35,6 @@ const EmailMarketingAutomationPage: React.FC = () => {,
     {icon: Zap,
       title: 'Smart Triggers',
 const benefits = [
-  ]
-  const benefits = [
     'Increase email engagement rates',
     'Automate repetitive marketing tasks',
     'Personalize customer experiences',
@@ -93,11 +91,11 @@ return (
         </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Email Marketing Automation
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">Email Marketing Automation
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your email marketing with our AI-powered automation platform. 
                 Create engaging campaigns, automate workflows, and drive better results.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   <Mail className="mr-2 h-5 w-5" />
                   Start Free Trial
@@ -105,7 +103,7 @@ return (
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
         </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -114,7 +112,7 @@ return (
                 Our email marketing automation platform provides everything you need to succeed.
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
@@ -135,7 +133,7 @@ return (
               {benefits.map((benefit, index) => (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">Key Benefits
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Drive better results with our comprehensive email marketing automation platform.
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -166,3 +164,5 @@ return (
           ))
         </section>
       </div>
+
+}]

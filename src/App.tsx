@@ -165,8 +165,6 @@ const NotFoundPage: React.FC = () => (
 );
 
 export default App;
-<<<<<<< HEAD
-=======
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -445,4 +443,3 @@ const App: React.FC = () => {
   )
 }
 export default App</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3f7

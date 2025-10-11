@@ -87,7 +87,7 @@
         <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." />
         <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" />
         <meta property="og: title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation" />,
-        <meta property="og:description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization." />
+        <meta property="og: description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization." />
         <meta property="og: type" content="website" />,
         <meta property="og: url" content="https://ziontechgroup.com/ai-quantum-computing-simulator" />,
         <link rel="canonical" href="https: //ziontechgroup.com/ai-quantum-computing-simulator" />,
@@ -192,3 +192,5 @@
   )
 }
 export default AIQuantumComputingSimulator
+}
+}]]

@@ -95,4 +95,4 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
   e: string }> {/* TODO: Fix JSX expression */}
   }))
 }
-export default defaultSecurityHeaders
+export default defaultSecurityHeaders]

@@ -507,7 +507,7 @@ const itServices = [
                   type="text"
                   placeholder="Search IT services..."
                   value={searchTerm}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
             {/* Category Filter */}
                 }`}
@@ -559,11 +559,11 @@ const itServices = [
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
+              <div key={service.id} className="quantum-card p-6 group hover: scale-105 transition-all duration-300 energy-pulse">
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <service.icon className="w-12 h-12" />
@@ -574,16 +574,14 @@ const itServices = [
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}
                 <div className="space-y-3 mb-6">
                   <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:
-                    <ul className="space-y-1">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features: <ul className="space-y-1">
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}
                       ))}
                   <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:
-                    <ul className="space-y-1">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits: <ul className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
@@ -591,14 +589,11 @@ const itServices = [
                       ))}
                 <div className="space-y-2 mb-6 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Setup Time:
-                    <span className="text-white">{service.setupTime}
+                    <span className="text-gray-400">Setup Time: <span className="text-white">{service.setupTime}
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Free Consultation:
-                    <span className="text-green-400">{service.freeConsultation}
+                    <span className="text-gray-400">Free Consultation: <span className="text-green-400">{service.freeConsultation}
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Target:
-                    <span className="text-white">{service.targetAudience}
+                    <span className="text-gray-400">Target: <span className="text-white">{service.targetAudience}
                 {service.caseStudy && (
                   <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg">
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"
@@ -608,7 +603,7 @@ const itServices = [
                     href={service.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                     Get Free Consultation
                   <$2 />
                     href="tel:+13024640950"
@@ -631,3 +626,4 @@ const itServices = [
         </div>
       </section>
     </div>
+]]

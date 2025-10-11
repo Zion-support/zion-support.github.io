@@ -350,7 +350,7 @@ try {
 
 // Print summary
 console.log('\n📊 Additional Improvements Summary:');
-console.log('====================================\n');
+console.log('=\n');
 
 improvements.applied.forEach(msg => console.log(msg));
 

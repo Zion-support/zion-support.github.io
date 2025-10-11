@@ -23,9 +23,8 @@ for file in $files_with_conflicts; do
     cp "$file" "$file.backup"
     
     # Remove merge conflict markers and keep HEAD version
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> .*/d' "$file"
-    
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^    
     echo "Fixed $file"
 done
 

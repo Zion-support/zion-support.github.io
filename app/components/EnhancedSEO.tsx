@@ -73,7 +73,7 @@ return (
         <meta name="description" content="Professional EnhancedSEO services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="EnhancedSEO, AI solutions, IT services, Zion Tech Group, enhancedseo" />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -89,7 +89,7 @@ return (
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -97,9 +97,9 @@ return (
               Why Choose Our EnhancedSEO?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our enhancedseo solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
@@ -114,7 +114,7 @@ return (
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
             {benefits.map((benefit, index) => (
               </div>
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -149,10 +149,12 @@ return (
 export default EnhancedSEOPage
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your enhancedseo needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
+
+}

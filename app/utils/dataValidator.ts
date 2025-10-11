@@ -32,7 +32,7 @@ export function validateURL()
 try {
     // If protocol is not required, add http: // prefix for validation
   }
-    const urlToValidate = requireProtocol ? url : `http://${url}`
+    const urlToValidate = requireProtocol ? url : `http: //${url}`
     const parsed = new URL(urlToValidate)
     const isValid = requireProtocol ?
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :

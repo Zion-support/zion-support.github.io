@@ -147,7 +147,7 @@ def remove_conflict_markers(filepath, keep_head=True):
             in_conflict = True
             in_head = True
             conflict_start = i
-        elif line.startswith('=======') and in_conflict:
+        elif line.startswith('') and in_conflict:
             in_head = False
         elif line.startswith('>>>>>>>') and in_conflict:
             in_conflict = False

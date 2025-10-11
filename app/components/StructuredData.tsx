@@ -2,12 +2,12 @@
   data;}) => {const getDefaultData = () => {
     switch (type) {
       case 'Organization':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https: //schema.org",}
           "@type": "Organization",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
+          "url": "https: //ziontechgroup.com",
+          "logo": "https: //ziontechgroup.com/logo.png",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
@@ -20,7 +20,7 @@
             "postalCode": "19709",
             "addressCountry": "US"},
           "sameAs": [
-            "https://twitter.com/ziontechgroup",
+            "https: //twitter.com/ziontechgroup",
             "https: //linkedin.com/company/ziontechgroup",
           ],
           "foundingDate": "2020",
@@ -39,10 +39,10 @@
         }
       
       case 'WebSite':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https: //schema.org",}
           "@type": "WebSite",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
+          "url": "https: //ziontechgroup.com",
           "description": "Advanced AI and IT solutions for modern businesses",
           "publisher": {
             "@type": "Organization",
@@ -54,11 +54,11 @@
         }
       
       case 'WebPage':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https: //schema.org",}
           "@type": "WebPage",
           "name": "Zion Tech Group - Advanced AI and IT Solutions",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "url": "https://ziontechgroup.com",
+          "url": "https: //ziontechgroup.com",
           "isPartOf": {
             "@type": "WebSite",
             "name": "Zion Tech Group",
@@ -75,7 +75,7 @@
         }
       
       case 'Service':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https: //schema.org",}
           "@type": "Service",
           "name": "AI and IT Solutions",
           "description": "Comprehensive AI and IT solutions including machine learning, cloud infrastructure, cybersecurity, and digital transformation services.",
@@ -97,11 +97,11 @@
             "availability": "https: //schema.org/InStock",}}
       
       case 'LocalBusiness':
-        return {"@context": "https://schema.org",}
+        return {"@context": "https: //schema.org",}
           "@type": "LocalBusiness",
           "name": "Zion Tech Group",
           "description": "Leading provider of AI-powered enterprise solutions and digital transformation services.",
-          "url": "https://ziontechgroup.com",
+          "url": "https: //ziontechgroup.com",
           "telephone": "+1-302-464-0950",
           "email": "kleber@ziontechgroup.com",
           "address": {
@@ -114,7 +114,7 @@
           "geo": {"@type": "GeoCoordinates",
             "latitude": "39.4500",
             "longitude": "-75.7167"},
-          "openingHours": "Mo-Fr 09:00-17:00",
+          "openingHours": "Mo-Fr 09: 00-17:00",
           "priceRange": "$$",
           "serviceArea": {"@type": "GeoCircle",
             "geoMidpoint": {
@@ -134,4 +134,4 @@
     </React.Fragment>
   )
 }
-export default StructuredData
+export default StructuredData]

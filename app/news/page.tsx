@@ -12,8 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-  ]
-  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -69,7 +67,7 @@ const benefits = [
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
             {benefits.map((benefit, index) => (
               </div>
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -111,7 +109,7 @@ const benefits = [
 export default PagePage
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
@@ -121,3 +119,4 @@ export default PagePage
   )
 }
 export default PagePage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></section></section></section></section>
+]

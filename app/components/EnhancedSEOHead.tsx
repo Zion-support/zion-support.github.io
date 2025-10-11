@@ -32,18 +32,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og: title" content={fullTitle} />
+      <meta property="og: description" content={description} />
+      <meta property="og: type" content={ogType} />
+      <meta property="og: image" content={ogImage} />
+      <meta property="og: url" content={canonicalUrl} />
+      <meta property="og: site_name" content="Zion Tech Group" />
       
       {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter: card" content={twitterCard} />
+      <meta name="twitter: title" content={fullTitle} />
+      <meta name="twitter: description" content={description} />
+      <meta name="twitter: image" content={ogImage} />
       
       {/* Additional SEO */}
       <meta name="robots" content="index, follow" />
@@ -53,11 +53,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
+          "@context": "https: //schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
+          "url": "https: //ziontechgroup.com",
+          "logo": "https: //ziontechgroup.com/logo.png",
           "description": description,
           "address": {
             "@type": "PostalAddress",
@@ -74,9 +74,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "email": "kleber@ziontechgroup.com"
           },
           "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https://linkedin.com/company/ziontechgroup",
-            "https://facebook.com/ziontechgroup"
+            "https: //twitter.com/ziontechgroup",
+            "https: //linkedin.com/company/ziontechgroup",
+            "https: //facebook.com/ziontechgroup"
           ]
         })}
       </script>

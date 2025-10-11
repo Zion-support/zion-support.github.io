@@ -336,7 +336,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   measureFunction<T>(nam,
   e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}
-  n:${name}`,
+  n: ${name}`,
       valu,
   e: endTime - startTime,
       uni,
@@ -362,12 +362,12 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       unit: 'ms',
       timestamp: new Date(),
       category: 'runtime'})
-  c:${name}`,
+  c: ${name}`,
       valu,
   async measureAsyncFunction<T>(nam,
   e: string, f)
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`
-  c:${name}`,
+  c: ${name}`,
       valu,
   e: endTime - startTime,
       uni,

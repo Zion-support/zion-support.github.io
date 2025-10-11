@@ -41,7 +41,7 @@ export default function NotFound() {
         <h1 className="text-2xl font-bold text-white mb-4">Page Not Found
         <p className="text-gray-300 mb-6">
           Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col sm: flex-row gap-3">
           <$2 />
             href="/"
             className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors">

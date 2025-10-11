@@ -121,8 +121,7 @@ case 'bars':
             <p>{text</p>} </p>
           )
 case 'spinner':
-        default:  
-          return (
+        default: return (
     <React.Fragment>
       <,$2 />
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
@@ -159,8 +158,7 @@ export default OptimizedLoadingSpinner/>
                   }}
                 />
         case 'spinner':
-        default:
-          return (
+        default: return (
             <$2 />
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'

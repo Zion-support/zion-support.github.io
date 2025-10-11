@@ -88,7 +88,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
@@ -99,7 +99,7 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg: flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
@@ -107,7 +107,7 @@ const Navigation: React.FC = () => {
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
-                className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center space-x-1 text-gray-300 hover: text-white transition-colors"
                 onMouseEnter={() => setAiServicesOpen(true)}
                 onMouseLeave={() => setAiServicesOpen(false)}
               >
@@ -127,7 +127,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={index}
                         href={service.href}
-                        className="block p-3 rounded-lg hover:bg-slate-700 transition-colors"
+                        className="block p-3 rounded-lg hover: bg-slate-700 transition-colors"
                         onClick={closeAllMenus}
                       >
                         <div className="font-medium text-white">{service.name}</div>
@@ -142,7 +142,7 @@ const Navigation: React.FC = () => {
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
-                className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center space-x-1 text-gray-300 hover: text-white transition-colors"
                 onMouseEnter={() => setItServicesOpen(true)}
                 onMouseLeave={() => setItServicesOpen(false)}
               >
@@ -162,7 +162,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={index}
                         href={service.href}
-                        className="block p-3 rounded-lg hover:bg-slate-700 transition-colors"
+                        className="block p-3 rounded-lg hover: bg-slate-700 transition-colors"
                         onClick={closeAllMenus}
                       >
                         <div className="font-medium text-white">{service.name}</div>
@@ -177,7 +177,7 @@ const Navigation: React.FC = () => {
             {/* Micro SaaS Dropdown */}
             <div className="relative group">
               <button
-                className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors"
+                className="flex items-center space-x-1 text-gray-300 hover: text-white transition-colors"
                 onMouseEnter={() => setMicroSaasOpen(true)}
                 onMouseLeave={() => setMicroSaasOpen(false)}
               >
@@ -197,7 +197,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={index}
                         href={service.href}
-                        className="block p-3 rounded-lg hover:bg-slate-700 transition-colors"
+                        className="block p-3 rounded-lg hover: bg-slate-700 transition-colors"
                         onClick={closeAllMenus}
                       >
                         <div className="font-medium text-white">{service.name}</div>
@@ -209,7 +209,7 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+            <Link href="/about" className="text-gray-300 hover: text-white transition-colors">
               About
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
@@ -218,7 +218,7 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg: flex items-center space-x-4">
             <a
               href="tel:+13024640950"
               className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -237,7 +237,7 @@ const Navigation: React.FC = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors"
+            className="lg: hidden p-2 text-gray-300 hover:text-white transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -247,7 +247,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden fixed inset-0 top-16 bg-slate-900/95 backdrop-blur-md z-40">
+          <div className="lg: hidden fixed inset-0 top-16 bg-slate-900/95 backdrop-blur-md z-40">
             <div className="px-4 py-6 space-y-4">
               <Link
                 href="/"
@@ -275,7 +275,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={index}
                         href={service.href}
-                        className="block text-gray-300 hover:text-white py-1"
+                        className="block text-gray-300 hover: text-white py-1"
                         onClick={closeAllMenus}
                       >
                         {service.name}
@@ -303,7 +303,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={index}
                         href={service.href}
-                        className="block text-gray-300 hover:text-white py-1"
+                        className="block text-gray-300 hover: text-white py-1"
                         onClick={closeAllMenus}
                       >
                         {service.name}
@@ -331,7 +331,7 @@ const Navigation: React.FC = () => {
                       <Link
                         key={index}
                         href={service.href}
-                        className="block text-gray-300 hover:text-white py-1"
+                        className="block text-gray-300 hover: text-white py-1"
                         onClick={closeAllMenus}
                       >
                         {service.name}
@@ -359,7 +359,7 @@ const Navigation: React.FC = () => {
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-white/10">
                 <a
-                  href="tel:+13024640950"
+                  href="tel: +13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 py-2"
                 >
                   <Phone className="w-5 h-5" />

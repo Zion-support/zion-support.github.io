@@ -91,7 +91,7 @@ const BlogPage: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Latest <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Insights</span>
@@ -103,7 +103,7 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Search and Filter */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <section className="py-8 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
               <div className="relative flex-1">
@@ -127,16 +127,16 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Blog Posts */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
-                <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group">
+                <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover: bg-white/10 transition-all duration-300 group">
                   <div className="aspect-w-16 aspect-h-9">
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 object-cover group-hover: scale-105 transition-transform duration-300"
                     />
                   </div>
                   
@@ -147,7 +147,7 @@ const BlogPage: React.FC = () => {
                       </span>
                     </div>
                     
-                    <h2 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors line-clamp-2">
+                    <h2 className="text-xl font-bold text-white mb-4 group-hover: text-cyan-400 transition-colors line-clamp-2">
                       {post.title}
                     </h2>
                     
@@ -171,7 +171,7 @@ const BlogPage: React.FC = () => {
                         <Clock className="w-4 h-4 mr-1" />
                         {post.readTime}
                       </div>
-                      <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                      <button className="flex items-center text-cyan-400 hover: text-cyan-300 transition-colors">
                         Read More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </button>
@@ -184,7 +184,7 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">

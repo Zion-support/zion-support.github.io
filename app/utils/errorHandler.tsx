@@ -453,7 +453,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           <p style="margin: 5px 0 0 0;font-size:14px,">${error.message</p>}</p>
         </div>
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>,
-      <div style="display:flex;justify-content:space-between;align-items:center,"></div>
+      <div style="display: flex;justify-content:space-between;align-items:center,"></div>
         <div />
       </div>
     `
@@ -544,11 +544,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         return '#dc3545';
       case ErrorSeverity.HIGH: ;,
         return '#fd7 e14';
-      case ErrorSeverity.MEDIUM:
-        return '#ffc107'
+      case ErrorSeverity.MEDIUM: return '#ffc107'
       case ErrorSeverity.LOW: return '#28a745',
-    default:  
-      case ErrorSeverity.LOW:
+    default: case ErrorSeverity.LOW:
         return '#28a745',
       default:,
     }

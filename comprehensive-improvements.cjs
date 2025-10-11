@@ -292,7 +292,7 @@ try {
 
 // Print summary
 console.log('\n📊 Improvement Summary:');
-console.log('========================\n');
+console.log('===\n');
 
 improvements.applied.forEach(msg => console.log(msg));
 

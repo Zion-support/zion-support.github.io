@@ -87,7 +87,7 @@
         <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
         <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />
         <meta property="og: title" content="AI Smart Contract Auditor - Automated Security Analysis" />,
-        <meta property="og:description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment." />
+        <meta property="og: description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment." />
         <meta property="og: type" content="website" />,
         <meta property="og: url" content="https://ziontechgroup.com/ai-smart-contract-auditor" />,
         <link rel="canonical" href="https: //ziontechgroup.com/ai-smart-contract-auditor" />,
@@ -192,3 +192,5 @@
   )
 }
 export default AISmartContractAuditor
+}
+}]]

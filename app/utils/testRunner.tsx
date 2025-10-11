@@ -17,8 +17,7 @@ export interface CoverageMetrics {statements: number,}
     enableCoverage: boolean,
   enablePerformance: boolean,
     enableAccessibility: boolean,
-// Test result types;}export interface PerformanceMetrics {}}import {render, RenderOptions}}from '@testing-library/react';
-import {BrowserRouter}}from 'react-router-dom';
+// Test result types;}export interface PerformanceMetrics {}}import { render, RenderOptions , BrowserRouter  } from 'lucide-react';
 
     performanceThreshold: number
   accessibilityThreshold: number

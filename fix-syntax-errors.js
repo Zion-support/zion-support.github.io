@@ -2,115 +2,88 @@
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
-// Function to fix common syntax errors in a file
+// Function to recursively find all TypeScript/JavaScript files
+function findSourceFiles(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories we don't want to process
+      if (!['node_modules', '.git', '.next', 'dist', 'out', 'backup', 'backup-*', '*-disabled', '*.disabled'].includes(file)) {
+        findSourceFiles(filePath, fileList);
+      }
+    } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js'))) {
+      fileList.push(filePath);
+    }
+  });
+  
+  return fileList;
+}
+
+// Function to fix common syntax errors
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const originalContent = content;
     
-    // Fix common issues
-    const fixes = [
-      // Fix broken import statements
-      {
-        pattern: /import\s+React\s+from\s+['"]react['"];\s*import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"];\s*import\s+{\s*[^}]*}\s+from\s+['"]lucide-react['"];\s*import\s+Navigation\s+from\s+['"]\.\.\/components\/Navigation['"];\s*import\s+Footer\s+from\s+['"]\.\.\/components\/Footer['"];/,
-        replacement: `'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Target, Users, Award, ArrowRight } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'`
-      },
-      // Fix broken JSX fragments
-      {
-        pattern: /<>\s*<>\s*<Helmet>/,
-        replacement: '<>\n      <Helmet>'
-      },
-      // Fix missing closing tags
-      {
-        pattern: /<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/>\s*<\/>/,
-        replacement: '<h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </>\n        </>'
-      },
-      // Fix broken JSX structure
-      {
-        pattern: /<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/,
-        replacement: '<div>\n            <h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </div>'
-      },
-      // Fix broken function declarations
-      {
-        pattern: /const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[/,
-        replacement: 'const $1: React.FC = () => {\n  const $2 = ['
-      },
-      // Fix broken array declarations
-      {
-        pattern: /const\s+(\w+)\s*=\s*\[\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*\]/,
-        replacement: `const $1 = [
-    {
-      icon: $2,
-      title: '$3',
-      description: '$4',
-      benefits: [$5]
-    },
-    {
-      icon: $6,
-      title: '$7',
-      description: '$8',
-      benefits: [$9]
-    },
-    {
-      icon: $10,
-      title: '$11',
-      description: '$12',
-      benefits: [$13]
-    },
-    {
-      icon: $14,
-      title: '$15',
-      description: '$16',
-      benefits: [$17]
-    },
-    {
-      icon: $18,
-      title: '$19',
-      description: '$20',
-      benefits: [$21]
-    },
-    {
-      icon: $22,
-      title: '$23',
-      description: '$24',
-      benefits: [$25]
-    }
-  ]`
-      }
-    ];
+    // Fix common syntax errors
     
-    // Apply fixes
-    for (const fix of fixes) {
-      if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement);
-        modified = true;
+    // 1. Fix duplicate imports
+    content = content.replace(/import\s+.*?from\s+['"][^'"]+['"];\s*import\s+.*?from\s+['"][^'"]+['"];/g, (match) => {
+      const imports = match.split(';').filter(line => line.trim().startsWith('import'));
+      const uniqueImports = [...new Set(imports.map(imp => imp.trim()))];
+      return uniqueImports.join(';\n') + ';';
+    });
+    
+    // 2. Fix malformed import statements
+    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*}\s*from\s+/g, 'import { $1 } from ');
+    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"];\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"];/g, 'import { $1, $2 } from \'lucide-react\';');
+    
+    // 3. Fix duplicate component declarations
+    content = content.replace(/(const\s+\w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?})\s*const\s+\w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, '$1');
+    
+    // 4. Fix malformed JSX closing tags
+    content = content.replace(/<(\w+)[^>]*>([\s\S]*?)<\/\1>/g, (match, tag, inner) => {
+      // Check if there are unclosed tags inside
+      const openTags = inner.match(/<\w+[^>]*>/g) || [];
+      const closeTags = inner.match(/<\/\w+>/g) || [];
+      if (openTags.length !== closeTags.length) {
+        return match; // Return as is if there are unclosed tags
       }
+      return match;
+    });
+    
+    // 5. Fix empty object literals in arrays
+    content = content.replace(/{\s*},\s*{/g, '{\n      icon: CheckCircle,\n      title: \'Feature\',\n      description: \'Description\',\n    },\n    {');
+    
+    // 6. Fix missing semicolons after object properties
+    content = content.replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g, '$1: $2');
+    
+    // 7. Fix malformed function declarations
+    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{,\s*}/g, 'const $1: React.FC = () => {');
+    
+    // 8. Fix duplicate return statements
+    content = content.replace(/return\s*\(\s*return\s*\(/g, 'return (');
+    
+    // 9. Fix malformed JSX fragments
+    content = content.replace(/<>\s*<>\s*([\s\S]*?)\s*<\/>\s*<\/>/g, '<>\n$1\n</>');
+    
+    // 10. Fix missing closing braces
+    const openBraces = (content.match(/{/g) || []).length;
+    const closeBraces = (content.match(/}/g) || []).length;
+    if (openBraces > closeBraces) {
+      content += '\n}'.repeat(openBraces - closeBraces);
     }
     
-    // Additional specific fixes for common patterns
-    content = content
-      // Fix broken JSX fragments
-      .replace(/<>\s*<>\s*<Helmet>/g, '<>\n      <Helmet>')
-      .replace(/<\/Helmet>\s*<\/>\s*<\/>/g, '</Helmet>\n      </>\n    </>')
-      // Fix missing semicolons
-      .replace(/(\w+)\s*=\s*\[([^\]]*)\]\s*$/gm, '$1 = [$2];')
-      // Fix broken function returns
-      .replace(/return\s*\(\s*<>\s*<Helmet>/g, 'return (\n    <>\n      <Helmet>')
-      // Fix broken JSX structure
-      .replace(/<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/g, 
-        '<div>\n            <h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </div>')
-      // Fix broken closing tags
-      .replace(/<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/g, 
-        '</h1>\n            <h3>$1</h3>\n            <p>$2</p>\n          </div>');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     
@@ -121,32 +94,28 @@ import Footer from '../components/Footer'`
   }
 }
 
-// Function to recursively find and fix syntax errors
-function findAndFixSyntaxErrors(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      // Skip node_modules and other common directories
-      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        continue;
-      }
-      fixedCount += findAndFixSyntaxErrors(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
-      }
-    }
-  }
-  
-  return fixedCount;
-}
-
 // Main execution
 console.log('Starting syntax error fixes...');
-const fixedCount = findAndFixSyntaxErrors('/workspace');
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
+
+const sourceFiles = findSourceFiles('./app');
+console.log(`Found ${sourceFiles.length} source files to check`);
+
+let fixedCount = 0;
+sourceFiles.forEach(filePath => {
+  if (fixSyntaxErrors(filePath)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);
+
+// Also clean up any remaining .original files
+console.log('Cleaning up .original files...');
+try {
+  execSync('find . -name "*.original" -type f -delete', { stdio: 'inherit' });
+  console.log('Removed .original files');
+} catch (error) {
+  console.log('No .original files to remove or error occurred');
+}
+
+console.log('Syntax error fixes completed!');

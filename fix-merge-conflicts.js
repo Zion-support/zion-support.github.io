@@ -12,13 +12,12 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
-      return false; // No conflicts to fix
+    if (!content.includes('') && !content.includes('') && !content.includes('      return false; // No conflicts to fix
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
-    // Split by conflict markers and take the newer version (after =======)
+    // Split by conflict markers and take the newer version (after )
     const lines = content.split('\n');
     const result = [];
     let inConflict = false;
@@ -27,18 +26,17 @@ function fixMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.trim().startsWith('<<<<<<< HEAD')) {
+      if (line.trim().startsWith('')) {
         inConflict = true;
         conflictStart = i;
         continue;
       }
       
-      if (line.trim().startsWith('=======')) {
+      if (line.trim().startsWith('')) {
         continue; // Skip the separator
       }
       
-      if (line.trim().startsWith('>>>>>>> ')) {
-        inConflict = false;
+      if (line.trim().startsWith('        inConflict = false;
         conflictStart = -1;
         continue;
       }

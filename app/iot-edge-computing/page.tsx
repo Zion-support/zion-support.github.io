@@ -2,8 +2,6 @@ const features = [
     {icon: Brain,
       title: 'AI-Powered Solutions',
 const benefits = [
-  ]
-  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -67,3 +65,4 @@ return (
         </div>
       </section>
     </div>
+]

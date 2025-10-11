@@ -77,7 +77,7 @@ const TutorialsPage: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Learn <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Technology</span>
@@ -85,7 +85,7 @@ const TutorialsPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Master the latest technologies with our comprehensive tutorials. From AI to cloud computing, learn from industry experts and advance your career.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                 Start Learning
               </button>
@@ -97,13 +97,13 @@ const TutorialsPage: React.FC = () => {
         </section>
 
         {/* Category Filter */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <section className="py-8 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category) => (
                 <button
                   key={category}
-                  className="px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-white/10 text-gray-300 hover:bg-white/20"
+                  className="px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-white/10 text-gray-300 hover: bg-white/20"
                 >
                   {category}
                 </button>
@@ -113,11 +113,11 @@ const TutorialsPage: React.FC = () => {
         </section>
 
         {/* Tutorials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {tutorials.map((tutorial, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
                       <BookOpen className="w-6 h-6 text-white" />
@@ -150,7 +150,7 @@ const TutorialsPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:scale-105">
+                  <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:scale-105">
                     <Play className="w-4 h-4 inline mr-2" />
                     Start Learning
                   </button>
@@ -163,7 +163,7 @@ const TutorialsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Ready to Learn?
             </h2>
             <p className="text-xl text-gray-300 mb-8">

@@ -81,7 +81,7 @@ const App: React.FC = () => {
           title="Zion Tech Group - AI & IT Solutions"
           description="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
           keywords={['AI solutions', 'IT services', 'quantum computing', 'digital transformation', 'enterprise software', 'automation', 'machine learning']}
-          canonicalUrl="https://ziontechgroup.com"
+          canonicalUrl="https: //ziontechgroup.com"
         />
         <SkipLink />
         <ServiceWorker />

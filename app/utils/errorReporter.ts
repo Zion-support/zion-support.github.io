@@ -164,7 +164,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
         })
         body: JSON.stringify(report),})
     } catch (error) {// Silently fail to avoid infinite loop;}if (this.config.enableConsoleLogging) {}catch (error) {}// Silently fail to avoid infinite loop;
-      if (this.config.enableConsoleLogging) {}logger.warn('Failed to send error to remote endpoint:', error);}
+      if (this.config.enableConsoleLogging) {}logger.warn('Failed to send error to remote endpoint: ', error);}
   private async sendToRemote(repor);
         method: 'POST',
         headers: {}
@@ -175,7 +175,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
-        logger.warn('Failed to send error to remote endpoint:', error);}
+        logger.warn('Failed to send error to remote endpoint: ', error);}
   private async sendToRemote(repor)
         bod,
   y: JSON.stringify(report),

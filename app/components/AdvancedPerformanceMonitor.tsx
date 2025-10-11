@@ -73,7 +73,7 @@
     ),
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console;
-      console.log('Slow resources detected:',)
+      console.log('Slow resources detected: ',)
         slowResources.map((r: PerformanceResourceTiming) => ({,
           name: r.name,
           duration: r.duration,
@@ -151,7 +151,7 @@
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
           <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
           <div></div>
-            Memory:{' '},
+            Memory: {' '},
     {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
@@ -174,3 +174,4 @@ export default AdvancedPerformanceMonitor;
   </PerformanceMetrics>
   </PerformanceMonitorProps>
 </h4></li>
+]

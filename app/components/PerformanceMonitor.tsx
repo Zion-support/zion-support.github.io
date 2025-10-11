@@ -19,7 +19,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation Performance:', {
+            console.log('Navigation Performance: ', {
               domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
               firstByte: navEntry.responseStart - navEntry.requestStart

@@ -334,3 +334,4 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
     }
 };`
+]

@@ -110,7 +110,7 @@ const CareersPage: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Join Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Team</span>
@@ -130,7 +130,7 @@ const CareersPage: React.FC = () => {
         </section>
 
         {/* Company Values */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Values</h2>
@@ -138,7 +138,7 @@ const CareersPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {companyValues.map((value, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
@@ -151,7 +151,7 @@ const CareersPage: React.FC = () => {
         </section>
 
         {/* Job Openings */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Open Positions</h2>
@@ -159,7 +159,7 @@ const CareersPage: React.FC = () => {
             </div>
             <div className="space-y-8">
               {jobOpenings.map((job, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">{job.title}</h3>
@@ -179,7 +179,7 @@ const CareersPage: React.FC = () => {
                         <span className="text-blue-400">{job.experience}</span>
                       </div>
                     </div>
-                    <button className="mt-4 lg:mt-0 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                    <button className="mt-4 lg: mt-0 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                       Apply Now
                       <ArrowRight className="w-4 h-4 inline ml-2" />
                     </button>
@@ -187,7 +187,7 @@ const CareersPage: React.FC = () => {
                   
                   <p className="text-gray-300 mb-6">{job.description}</p>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-4">Requirements</h4>
                       <ul className="space-y-2">
@@ -220,7 +220,7 @@ const CareersPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Don't See Your Role?
             </h2>
             <p className="text-xl text-gray-300 mb-8">

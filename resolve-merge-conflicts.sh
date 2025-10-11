@@ -6,7 +6,7 @@
 echo "Resolving merge conflicts..."
 
 # Find all files with merge conflict markers
-CONFLICT_FILES=$(grep -r "<<<<<<< HEAD" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" | cut -d: -f1 | sort -u)
+CONFLICT_FILES=$(grep -r "" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" | cut -d: -f1 | sort -u)
 
 echo "Found conflict files:"
 echo "$CONFLICT_FILES"
@@ -18,23 +18,19 @@ for file in $CONFLICT_FILES; do
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Remove merge conflict markers and keep the content after =======
-    # This is a simple strategy - in production you'd want more sophisticated conflict resolution
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
+    # Remove merge conflict markers and keep the content after     # This is a simple strategy - in production you'd want more sophisticated conflict resolution
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^    
     echo "Resolved conflicts in $file"
 done
 
 echo "Merge conflict resolution completed!"
 
 # Check if there are any remaining conflict markers
-REMAINING_CONFLICTS=$(grep -r "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" | wc -l)
-
+REMAINING_CONFLICTS=$(grep -r "\|\|
 if [ $REMAINING_CONFLICTS -gt 0 ]; then
     echo "Warning: $REMAINING_CONFLICTS conflict markers still remain"
     echo "Files with remaining conflicts:"
-    grep -r "<<<<<<< HEAD\|=======\|>>>>>>> " . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.css" --include="*.md" | cut -d: -f1 | sort -u
-else
+    grep -r "\|\|else
     echo "All merge conflicts resolved successfully!"
 fi

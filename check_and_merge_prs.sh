@@ -5,9 +5,9 @@
 
 set -e
 
-echo "================================="
+echo "====="
 echo "PR Check and Merge Script"
-echo "================================="
+echo "====="
 echo ""
 
 # Colors for output
@@ -96,9 +96,9 @@ echo "Step 7: Checking for unmerged branches..."
 git branch -r --no-merged main 2>/dev/null || echo "Could not check unmerged branches"
 echo ""
 
-echo "================================="
+echo "====="
 echo "Manual Actions Needed:"
-echo "================================="
+echo "====="
 echo "1. Review the open PRs listed above"
 echo "2. For each PR, check for conflicts"
 echo "3. Merge PRs using GitHub UI or:"
@@ -107,4 +107,4 @@ echo ""
 echo "Or to merge a specific branch:"
 echo "   git merge origin/<branch-name>"
 echo ""
-echo "================================="
+echo "====="

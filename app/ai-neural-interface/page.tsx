@@ -87,7 +87,7 @@
         <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
         <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />
         <meta property="og: title" content="AI Neural Interface - Advanced Brain-Computer Interface" />,
-        <meta property="og:description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement." />
+        <meta property="og: description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement." />
         <meta property="og: type" content="website" />,
         <meta property="og: url" content="https://ziontechgroup.com/ai-neural-interface" />,
         <link rel="canonical" href="https: //ziontechgroup.com/ai-neural-interface" />,
@@ -192,3 +192,5 @@
   )
 }
 export default AINeuralInterface
+}
+}]]

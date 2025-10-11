@@ -496,36 +496,30 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
           break
       }
         case LogLevel.INF,
-  O:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
+  O: if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
             }
           break
         case LogLevel.WAR,
-  N:
-          logger.warn(message, structuredLog)
+  N: logger.warn(message, structuredLog)
           break
         case LogLevel.ERRO,
         case LogLevel.FATA,
   L: ;,
           logger.error(message, structuredLog);
           if (entry.stack) {/* TODO: Fix JSX expression */,}k: entry.stack ,}, 'Logger');
-  R: 
-        case LogLevel.FATA,
-  L:
-          logger.error(message, structuredLog)
+  R: case LogLevel.FATA,
+  L: logger.error(message, structuredLog)
           if (entry.stack) {/* TODO: Fix JSX expression */}
   k: entry.stack }, 'Logger')
           }
           break
       }
         case LogLevel.INF,
-  O:
-          if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
+  O: if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
             }
           break
         case LogLevel.WAR,
-  N:
-          logger.warn(message, entry.data)
+  N: logger.warn(message, entry.data)
           break
         case LogLevel.ERRO,
         case LogLevel.FATA,
@@ -548,10 +542,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         method: 'POST'),
         headers: {),}'Content-Type': 'application/json')})
         body: JSON.stringify({,)
-  R: 
-        case LogLevel.FATA,
-  L:
-          logger.error(message, entry.data)
+  R: case LogLevel.FATA,
+  L: logger.error(message, entry.data)
           break
       }
     }

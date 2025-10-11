@@ -120,7 +120,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           z-index: 1000;
         }
 
-        .skip-link:focus {
+        .skip-link: focus {
           top: 6px;
         }
 

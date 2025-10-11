@@ -12,8 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-  ]
-  const benefits = [
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -155,3 +153,4 @@ return (
         ))
       </section>
     </div>
+]]

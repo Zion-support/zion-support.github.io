@@ -33,7 +33,7 @@ fail_count=0
 for branch in "${REMAINING_PR_BRANCHES[@]}"; do
     echo ""
     echo "Processing branch: $branch"
-    echo "=================================="
+    echo "======"
     
     # Fetch the branch
     echo "Fetching branch $branch..."
@@ -74,7 +74,7 @@ for branch in "${REMAINING_PR_BRANCHES[@]}"; do
 done
 
 echo ""
-echo "=================================="
+echo "======"
 echo "Remaining PRs merge completed!"
 echo "✅ Successfully merged: $success_count"
 echo "❌ Failed to merge: $fail_count"

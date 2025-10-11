@@ -72,7 +72,7 @@
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -100,7 +100,7 @@
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -158,13 +158,13 @@
     }
   }, [])
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       {/* Statistics Grid */}
-      </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      </div><div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         {statistics.map((stat, index) => (
           </div><$2 />
             key={index}
-            className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center hover:border-cyan-400/30 transition-all duration-300"
+            className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center hover: border-cyan-400/30 transition-all duration-300"
           >
             </div><div className={`w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4`}>
               </div><stat.icon className="w-8 h-8 text-white" />
@@ -180,7 +180,7 @@
       {/* Achievements Section */}
       <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
         </div><h3 className="text-2xl font-bold text-white mb-8 text-center">Our Achievements</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
             </div><div key={index} className="text-center">
               </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -200,7 +200,7 @@
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text-enhanced">
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -209,10 +209,10 @@
         </div>
 
         {/* Statistics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {statistics.map((stat, index) => (
             <div key={index} className="text-center group">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-cyan-500/20 hover: border-cyan-400/40 transition-all duration-300 hover:scale-105">
                 <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
@@ -231,7 +231,7 @@
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               </div>
             ))}
@@ -247,14 +247,14 @@
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300 group">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center hover: border-purple-400 transition-all duration-300 group">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <achievement.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
-                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                <h4 className="text-lg font-semibold text-white mb-2 group-hover: text-purple-400 transition-colors">
                   {achievement.title}
                 </h4>
                 <p className="text-gray-300 text-sm">{achievement.description}</p>
@@ -267,3 +267,4 @@
   );
 };
 
+]

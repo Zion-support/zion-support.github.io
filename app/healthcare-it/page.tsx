@@ -31,7 +31,7 @@ return (
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
             {
     services.map((service, index) => ()
             ))}
@@ -45,7 +45,7 @@ return (
               Experience the benefits of modern healthcare technology with our proven solutions.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
             {benefits.map((benefit, index) => ()
             ))}
         </section>
@@ -57,7 +57,7 @@ return (
       <Footer / /></Footer>
   )
 }
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">View Case Studies
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover: bg-white hover:text-red-600 transition-colors">View Case Studies
       <Footer />
   )
 }</div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></p></p></p></p></h1></h2></h3></h3></section></section></section></section>
