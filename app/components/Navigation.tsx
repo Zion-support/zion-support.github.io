@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,7 +11,7 @@ const Navigation: React.FC = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav className="bg-white/10 backdrop-blur-lg fixed w-full top-0 z-50 border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
@@ -19,13 +19,14 @@ const Navigation: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
+<<<<<<< HEAD
               <Link href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
               </Link>
@@ -37,21 +38,41 @@ const Navigation: React.FC = () => {
               </Link>
               <Link href="/demo" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 Demo
+=======
+              <Link href="/" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Home
+              </Link>
+              <Link href="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                About
+              </Link>
+              <Link href="/services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Services
+              </Link>
+              <Link href="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Contact
+              </Link>
+              <Link href="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                AI Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
               </Link>
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Mobile menu button */}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-900 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+              className="text-white hover:text-purple-300 focus:outline-none focus:text-purple-300"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -72,8 +93,29 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </div>
+=======
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg border-t border-white/20">
+            <Link href="/" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              Home
+            </Link>
+            <Link href="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              About
+            </Link>
+            <Link href="/services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              Services
+            </Link>
+            <Link href="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              Contact
+            </Link>
+            <Link href="/ai-services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              AI Services
+            </Link>
+          </div>
+        </div>
+      )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
     </nav>
   );
-};
-
-export default Navigation;
+}

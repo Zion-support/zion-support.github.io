@@ -2,7 +2,11 @@
 import React from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+<<<<<<< HEAD
 import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code, Wifi} from 'lucide-react';
+=======
+import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
 
 const HomePage: React.FC = () => {
   const features = [
@@ -115,6 +119,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
           <div className="max-w-4xl mx-auto text-center">
@@ -131,6 +136,46 @@ const HomePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
                 Schedule Consultation
               </button>
+=======
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver exceptional results through innovation, expertise, and dedication
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-300">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Let's discuss how we can help transform your business with cutting-edge technology solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  View Portfolio
+                </button>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
             </div>
           </div>
         </section>

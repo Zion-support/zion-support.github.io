@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -36,51 +38,42 @@ const contactInfo=
 address: '364 E Main St STE 1008, Middletown, DE 19709'} const contactInfo=
 address: '364 E Main St STE 1008, Middletown, DE 19709'} return (
     <>
+=======
+import { CheckCircle } from 'lucide-react';
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-        <title>Privacy Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions for modern businesses."
-      </Helmet>
+export default function PagePage() {
+  const features = [
+    {
+      title: 'Expert Solutions',
+      description: 'Professional page services delivered by experienced professionals.',
+      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+    },
+    {
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+    },
+    {
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
 
-      <Navigation />
-
-      {/* Hero Section */}
-      <section className=">
-    g: px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6">
-Privacy <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
-          </p>
-          <div className="flex items-center justify-center text-cyan-400">
-            <Shield className="w-6 h-6 mr-2" />
-            <span className="font-semibold">Last updated: {new Date().toLocaleDateString()}</span>
-          </div>
-
-      <Footer />
-    </>
-        </div>
-
-      <Footer />
-    </>
-      </section>
-
-      {/* Data Collection Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className=">
-    ,>
-    d: text-4xl font-bold text-white mb-4">
-Information We Collect>
-            </h2>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page
+            </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-We collect information to provide better services to our users
+              Professional page services to help your business succeed and grow.
             </p>
           </div>
+<<<<<<< HEAD
 
       <Footer />
     </>
@@ -95,12 +88,26 @@ We collect information to provide better services to our users
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
                 <p className="text-gray-300">{type.description}</p>
+=======
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
               </div>
-
-      <Footer />
-    </>
             ))}
           </div>
+<<<<<<< HEAD
 
       <Footer />
     </>
@@ -333,3 +340,27 @@ export default PrivacyPage
 </div></div></div></div></div></div></div>
 </h3></h3>
 </p></p></p>
+=======
+          
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our page services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc8d
