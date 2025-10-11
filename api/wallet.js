@@ -1,60 +1,77 @@
-const { withSentry } = require('./withSentry.cjs');
-
-async function handler(req, res) {
+const fs = require('fs')
+const path = require('path')
+const dir = path.join(process.cwd(), 'data')
+const file = path.join(dir, 'wallets.json')
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    res.statusCode = 405
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Method not allowed' }))
+    return
   }
 
-  const { action, amount, currency = 'USD' } = req.body || {};
-
-  if (!action) {
-    res.status(400).json({ error: 'Action is required' });
-    return;
+  const { address, type, name, userId } = req.body || {}
+  if (!address || !type) {
+    res.statusCode = 400
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Address and type are required' }))
+    return
   }
 
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true })
+  }
+
+  let existing = []
   try {
-    switch (action) {
-      case 'create_payment_intent': {
-        if (!amount) {
-          res.status(400).json({ error: 'Amount is required for payment intent' });
-          return;
-        }
-
-        const timestamp = Date.now();
-        const random = Math.random().toString(36).substr(2, 9);
-        const paymentIntent = {
-          id: `pi_${timestamp}_${random}`,
-          amount,
-          currency,
-          status: 'requires_payment_method'
-        };
-
-        res.statusCode = 200;
-        res.json({ success: true, paymentIntent });
-        break;
-      }
-
-      case 'get_balance': {
-        const balance = {
-          amount: 0,
-          currency: 'USD',
-          lastUpdated: new Date().toISOString()
-        };
-
-        res.statusCode = 200;
-        res.json({ success: true, balance });
-        break;
-      }
-
-      default:
-        res.statusCode = 400;
-        res.json({ error: 'Invalid action' });
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8')
+      existing = JSON.parse(data)
+      if (!Array.isArray(existing)) existing = []
     }
-  } catch (err) {
-    console.error('Error in wallet operation:', err);
-    res.status(500).json({ error: 'Wallet operation failed' });
+  } catch (error) {
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error reading existing wallets:', error)
+    }
+    existing = []
+  }
+
+  // Check if wallet address already exists
+  const existingWallet = existing.find(wallet => wallet.address === address)
+  if (existingWallet) {
+    res.statusCode = 400
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Wallet address already exists' }))
+    return
+  }
+
+  const newWallet = {
+    id: Date.now().toString(),
+    address,
+    type,
+    name: name || '',
+    userId: userId || '',
+    timestamp: new Date().toISOString(),
+    status: 'active'
+  }
+  existing.push(newWallet)
+  try {
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Wallet added successfully',
+      id: newWallet.id
+    }))
+  } catch (error) {
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error saving wallet:', error)
+    }
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Failed to save wallet' }))
   }
 }
-
-module.exports = withSentry(handler);

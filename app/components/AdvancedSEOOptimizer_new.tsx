@@ -1,171 +1,297 @@
-import React, { useEffect, useCallback, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOData {
-  title?: string;
+<<<<<<< HEAD
+'use client';
+import React, {useEffect, useState, useCallback}from 'react';
+import {Helmet}}from 'react-helmet-async';
+interface SEOOptimizerProps {title?: string;}
   description?: string;
-  keywords?: string[];
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
+  keywords?: string;
+  canonicalUrl?: string;
   ogImage?: string;
   twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-}
-
-interface AdvancedSEOOptimizerProps {
-  seoData?: SEOData;
-  children?: React.ReactNode;
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ 
-  seoData = {}, 
-  children 
+  structuredData?: object;
+  children: React.ReactNode;,}const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({,
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+  canonicalUrl,
+  ogImage = '/images/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  children;}) => {const [seoScore, setSeoScore] = useState(0);
+  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const analyzeSEO = useCallback(() => {;
+    if (typeof window === 'undefined') return;
+    let score = 0;
+=======
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+interface SEOOptimizerProps {
+    title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  twitterCard?: string
+  structuredData?: object
+  children: React.ReactNode
+  }
+const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ()
 }) => {
-  const mergedSEO = useMemo(() => {
-    const defaultSEO: SEOData = {
-      title: 'Zion Tech Group - Advanced AI and IT Solutions',
-      description: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide.',
-      keywords: ['AI solutions', 'IT consulting', 'cloud infrastructure', 'cybersecurity', 'digital transformation'],
-      canonical: 'https://ziontechgroup.com',
-      ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-      ogDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
-      ogImage: 'https://ziontechgroup.com/og-image.jpg',
-      twitterCard: 'summary_large_image',
-      twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
-      twitterDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
-      twitterImage: 'https://ziontechgroup.com/twitter-image.jpg'
-    };
-    return { ...defaultSEO, ...seoData };
-  }, [seoData]);
-
-  const generateStructuredData = useCallback(() => {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description: mergedSEO.description,
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: 'English'
-      },
-      sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup'
-      ]
-    };
-  }, [mergedSEO.description]);
-
+    const [seoScore, setSeoScore] = useState(0)
+  const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([])
+  const analyzeSEO = useCallback(() => {
+    if (typeof window === 'undefined') return
+    let score = 0
+>>>>>>> origin/main
+    const newRecommendations: string[] = [],
+    // Check title length;
+    if (title.length >= 30 && title.length <= 60) {
+<<<<<<< HEAD
+      score += 20;}else {newRecommendations.push('Title should be between 30-60 characters')}}// Check description length;
+    if (description.length >= 120 && description.length <= 160) {score += 20;}else {newRecommendations.push('Description should be between 120-160 characters')}}// Check for keywords in title;
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score += 15;}else {newRecommendations.push('Include primary keyword in title')}}// Check for keywords in description;
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score += 15;}else {newRecommendations.push('Include primary keyword in description')}}// Check for heading structure;
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    if (headings.length > 0) {score += 10;}else {newRecommendations.push('Add proper heading structure')}}// Check for images with alt text;
+    const images = document.querySelectorAll('img');
+    const imagesWithAlt = document.querySelectorAll('img[alt]');
+    if (images.length === imagesWithAlt.length && images.length > 0) {score += 10;}else {newRecommendations.push('Add alt text to all images')}}// Check for internal links;
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+    if (internalLinks.length > 0) {score += 10;}else {newRecommendations.push('Add internal links for better SEO')}}setSeoScore(score);
+    setRecommendations(newRecommendations);
+  }, [title, description, keywords]);
+  useEffect(() => {analyzeSEO()}, [analyzeSEO]);
+  const generateStructuredData = () => {const defaultStructuredData = {
+=======
+      score += 20
+  } else {
+    newRecommendations.push('Title should be between 30-60 characters')
+  }
+    // Check description length
+    if (description.length >= 120 && description.length <= 160) {
+    score += 20
+  } else {
+    newRecommendations.push('Description should be between 120-160 characters')
+  }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in title')
+  }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+    score += 15
+  } else {
+    newRecommendations.push('Include primary keyword in description')
+  }
+  title?: string
+  description?: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  twitterCard?: string
+  structuredData?: object
+  children: React.ReactNode
+}
+const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+  canonicalUrl,
+  ogImage = '/images/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  children
+}) => {
+  const [seoScore, setSeoScore] = useState(0)
+  const [recommendations, setRecommendations] = useState<string[]>([])
+  const analyzeSEO = useCallback(() => {
+    if (typeof window === 'undefined') return
+    let score = 0
+    const newRecommendations: string[] = []
+    // Check title length
+    if (title.length >= 30 && title.length <= 60) {
+      score += 20
+    } else {
+      newRecommendations.push('Title should be between 30-60 characters')
+    }
+    // Check description length
+    if (description.length >= 120 && description.length <= 160) {
+      score += 20
+    } else {
+      newRecommendations.push('Description should be between 120-160 characters')
+    }
+    // Check for keywords in title
+    if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+      score += 15
+    } else {
+      newRecommendations.push('Include primary keyword in title')
+    }
+    // Check for keywords in description
+    if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
+      score += 15
+    } else {
+      newRecommendations.push('Include primary keyword in description')
+    }
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
+    if (headings.length > 0) {
+    score += 10
+  } else {
+    newRecommendations.push('Add proper heading structure')
+  }
+    // Check for images with alt text
+    const images = document.querySelectorAll('img')
+    const imagesWithAlt = document.querySelectorAll('img[alt]')
+    if (images.length === imagesWithAlt.length && images.length > 0) {
+    score += 10
+  } else {
+    newRecommendations.push('Add alt text to all images')
+  }
+    // Check for internal links
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
+    if (internalLinks.length > 0) {
+    score += 10
+  } else {
+    newRecommendations.push('Add internal links for better SEO')
+  }
+    setSeoScore(score)
+    setRecommendations(newRecommendations)
+  }, [title, description, keywords])
   useEffect(() => {
-    // Update meta tags dynamically
-    const updateMetaTag = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.name = name;
-        document.head.appendChild(meta);
-      }
-      meta.content = content;
-    };
-
-    const updatePropertyTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        document.head.appendChild(meta);
-      }
-      meta.content = content;
-    };
-
-    if (mergedSEO.title) {
-      document.title = mergedSEO.title;
+    analyzeSEO()
+  }, [analyzeSEO])
+  const generateStructuredData = () => {
+    const defaultStructuredData = {
+>>>>>>> origin/main
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "description": description,
+      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
+      "logo": ogImage,
+      "sameAs": [
+        "https://twitter.com/ziontechgroup",
+<<<<<<< HEAD
+        "https: //linkedin.com/company/ziontechgroup",
+      ]}return structuredData || defaultStructuredData;
+=======
+        "https://linkedin.com/company/ziontechgroup"
+      ]
     }
-    if (mergedSEO.description) {
-      updateMetaTag('description', mergedSEO.description);
-    }
-    if (mergedSEO.keywords) {
-      updateMetaTag('keywords', mergedSEO.keywords.join(', '));
-    }
-    if (mergedSEO.canonical) {
-      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-      if (!link) {
-        link = document.createElement('link');
-        link.rel = 'canonical';
-        document.head.appendChild(link);
-      }
-      link.href = mergedSEO.canonical;
-    }
-
-    // Open Graph tags
-    if (mergedSEO.ogTitle) {
-      updatePropertyTag('og:title', mergedSEO.ogTitle);
-    }
-    if (mergedSEO.ogDescription) {
-      updatePropertyTag('og:description', mergedSEO.ogDescription);
-    }
-    if (mergedSEO.ogImage) {
-      updatePropertyTag('og:image', mergedSEO.ogImage);
-    }
-
-    // Twitter Card tags
-    if (mergedSEO.twitterCard) {
-      updateMetaTag('twitter:card', mergedSEO.twitterCard);
-    }
-    if (mergedSEO.twitterTitle) {
-      updateMetaTag('twitter:title', mergedSEO.twitterTitle);
-    }
-    if (mergedSEO.twitterDescription) {
-      updateMetaTag('twitter:description', mergedSEO.twitterDescription);
-    }
-    if (mergedSEO.twitterImage) {
-      updateMetaTag('twitter:image', mergedSEO.twitterImage);
-    }
-
-    // Add structured data
-    const structuredData = generateStructuredData();
-    let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
-    if (!script) {
-      script = document.createElement('script');
-      script.type = 'application/ld+json';
-      document.head.appendChild(script);
-    }
-    script.textContent = JSON.stringify(structuredData);
-  }, [mergedSEO, generateStructuredData]);
-
+    return structuredData || defaultStructuredData
+>>>>>>> origin/main
+  }
+<<<<<<< HEAD
+  return(<React.Fragment>)</React.Fragment>
+      <Helmet />
+        <title>{title}</title>
+        <meta name="description" content={description}/>
+        <meta name="keywords" content={keywords}/>
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+        {/* Open Graph */} <meta property="og: title" content={title,}/>
+        <meta property="og: description" content={description,}/>
+        <meta property="og: image" content={ogImage,}/>
+        <meta property="og: type" content="website" />,
+        {canonicalUrl && <meta property="og: url" content={canonicalUrl,}/>}
+        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard,}/>
+        <meta name="twitter: title" content={title,}/>
+        <meta name="twitter: description" content={description,}/>
+        <meta name="twitter: image" content={ogImage,}/>
+        {/* Structured Data */} <script type="application/ld+json">
+          {JSON.stringify(generateStructuredData())} </script>
+      </Helmet>
+      {children}{process.env.NODE_ENV === 'development' && (
+=======
   return (
-    <>
-      <Helmet>
-        <title>{mergedSEO.title}</title>
-        <meta name="description" content={mergedSEO.description} />
-        {mergedSEO.keywords && (
-          <meta name="keywords" content={mergedSEO.keywords.join(', ')} />
-        )}
-        {mergedSEO.canonical && (
-          <link rel="canonical" href={mergedSEO.canonical} />
-        )}
-        <meta property="og:title" content={mergedSEO.ogTitle} />
-        <meta property="og:description" content={mergedSEO.ogDescription} />
-        <meta property="og:image" content={mergedSEO.ogImage} />
+    <React.Fragment>
+      </React><Helmet>
+        </Helmet><title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content={mergedSEO.twitterCard} />
-        <meta name="twitter:title" content={mergedSEO.twitterTitle} />
-        <meta name="twitter:description" content={mergedSEO.twitterDescription} />
-        <meta name="twitter:image" content={mergedSEO.twitterImage} />
+        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+        {/* Twitter Card */}
+        <meta name="twitter:card" content={twitterCard} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())}
         </script>
       </Helmet>
+      {children},
+<<<<<<< HEAD
+    {process.env.NODE_ENV === 'development' && (
+>>>>>>> origin/main
+        <div className="seo-debug" style={{
+=======
+    {process.env.NODE_ENV === 'development' && ()
       {children}
+      {process.env.NODE_ENV === 'development' && (
+        < className="seo-debug" style={{$2 />
+>>>>>>> origin/main
+          position: 'fixed',
+          top: '10px',
+          left: '10px',
+          background: 'rgba(0,0,0,0.8)',
+          color: 'white',
+          padding: '10px',
+          borderRadius: '5px',
+          fontSize: '12px',
+          zIndex: 1000,
+<<<<<<< HEAD
+          maxWidth: '300px',}}>
+          <div>SEO Score: {seoScore,</div>}/100</div>
+          {recommendations.length > 0 && (
+            <div>
+              <div>Recommendations: </div>,
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
+=======
+          maxWidth: '300px'
+        }}>
+          </div><div>SEO Score: {seoScore}/100</div>
+          {recommendations.length > 0 && (
+            <div>
+              </div><div>Recommendations:</div>
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+>>>>>>> origin/main
+                {recommendations.map((rec, index) => (
+                  </ul><li key={index}>{rec}</li>
+          <div>SEO Score: {seoScore}/100
+          {recommendations.length > 0 && (
+            <div>
+              <div>Recommendations:
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+                {recommendations.map((rec, index) => (
+                  <li key={index}>{rec}
+                ))}
+          )}
+      )}
     </>
+<<<<<<< HEAD
   );
 };
 
-export default AdvancedSEOOptimizer;
+<<<<<<< HEAD
+export default AdvancedSEOOptimizerNew;
+  </SEOOptimizerProps>
+=======
+export default AdvancedSEOOptimizerNew
+  </SEOOptimizerProps>
+>>>>>>> origin/main
+=======
+  )
+}
+export default AdvancedSEOOptimizerNew
+  </SEOOptimizerProps>
+</div></div></ul></li></li>
+>>>>>>> origin/main

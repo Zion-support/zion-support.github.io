@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 import os
 import re
-import glob
+import subprocess
 
 def resolve_merge_conflicts(file_path):
     """Resolve merge conflicts in a file by keeping the latest version"""
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        result = subprocess.run(['git', 'grep', '-l', '<<<<<<< HEAD'], 
+                              capture_output=True, text=True, cwd='/workspace')
+        if result.returncode != 0:
+            print("No merge conflicts found")
+            return
         
         # Check if file has merge conflicts
         if '<<<<<<< HEAD' not in content:
@@ -104,4 +107,4 @@ def main():
         print("🎉 All merge conflicts have been resolved!")
 
 if __name__ == "__main__":
-    main()
+    resolve_merge_conflicts()

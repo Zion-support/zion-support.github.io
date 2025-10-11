@@ -1,558 +1,1020 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { 
-  Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, 
-  TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, 
-  Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, 
-  Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, 
-  Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, 
-  Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, 
-  Activity, DollarSign, Eye, MessageSquare, Package, Truck, PenTool, Network
-} from 'lucide-react';
 
-const AIServicesPage: React.FC = () => {
-  const aiServices = [
+const AiServicesPage: React.FC = () => {
+<<<<<<< HEAD
+=======
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const services = [
     {
-      title: 'AI-Powered Business Intelligence',
-      description: 'Transform raw data into actionable insights with advanced AI analytics and predictive modeling.',
-      icon: BarChart,
-      price: 'Starting at $299/month',
+      id: 'ai-chatbots',
+      name: 'AI-Powered Chatbots',
+      description: 'Advanced conversational AI with natural language processing and sentiment analysis',
+      price: '$299/month',
+      marketPrice: '$500-2000/month',
       features: [
-        'Real-time data processing',
-        'Predictive analytics',
-        'Automated reporting',
-        'Custom dashboards',
-        'Machine learning models',
-        'Natural language queries'
-      ],
-      benefits: [
-        'Increase decision speed by 400%',
-        'Reduce manual analysis by 90%',
-        'Improve accuracy by 95%',
-        'Generate 10x more insights'
-      ],
-      useCases: ['Enterprise Analytics', 'Financial Services', 'Healthcare', 'Manufacturing'],
-      link: '/ai-services/business-intelligence'
-    },
-    {
-      title: 'Intelligent Document Processing',
-      description: 'AI-powered document analysis, extraction, and workflow automation for maximum efficiency.',
-      icon: FileText,
-      price: 'Starting at $199/month',
-      features: [
-        'OCR text extraction',
-        'Document classification',
-        'Data validation',
-        'Workflow automation',
-        'Compliance checking',
-        'Multi-format support'
-      ],
-      benefits: [
-        'Process documents 15x faster',
-        'Reduce errors by 98%',
-        'Save 30+ hours weekly',
-        'Improve compliance by 100%'
-      ],
-      useCases: ['Legal Firms', 'Accounting', 'Insurance', 'Healthcare'],
-      link: '/ai-services/document-processing'
-    },
-    {
-      title: 'AI Customer Experience Platform',
-      description: 'Revolutionize customer interactions with AI-powered chatbots, voice assistants, and sentiment analysis.',
-      icon: MessageSquare,
-      price: 'Starting at $149/month',
-      features: [
-        'Intelligent chatbots',
-        'Voice recognition',
-        'Sentiment analysis',
+        'Natural language processing',
         'Multi-language support',
-        'Emotion detection',
-        'Personalized responses'
+        'Sentiment analysis',
+        'CRM integration',
+        'Real-time learning'
       ],
       benefits: [
-        'Improve satisfaction by 60%',
-        'Reduce response time by 85%',
-        'Increase conversion by 45%',
-        'Handle 20x more inquiries'
+        'Reduce support costs by 60%',
+        '24/7 availability',
+        'Instant responses',
+        'Scalable solutions'
       ],
-      useCases: ['E-commerce', 'SaaS Platforms', 'Healthcare', 'Financial Services'],
-      link: '/ai-services/customer-experience'
+      category: 'Customer Service',
+      popular: true,
+      icon: MessageSquare
     },
     {
-      title: 'Predictive Maintenance AI',
-      description: 'Prevent equipment failures with AI-powered predictive maintenance and anomaly detection.',
-      icon: Wrench,
-      price: 'Starting at $399/month',
+      id: 'ai-content',
+      name: 'AI Content Generation',
+      description: 'Automated content creation using advanced language models for blogs, social media, and marketing',
+      price: '$199/month',
+      marketPrice: '$300-1500/month',
       features: [
-        'Equipment monitoring',
-        'Failure prediction',
-        'Maintenance scheduling',
+        'Blog post generation',
+        'Social media content',
+        'Email marketing campaigns',
+        'SEO optimization',
+        'Brand voice customization'
+      ],
+      benefits: [
+        'Save 80% content creation time',
+        'Consistent brand voice',
+        'SEO optimization',
+        'Multi-platform publishing'
+      ],
+      category: 'Content',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'ai-analytics',
+      name: 'AI Data Analytics',
+      description: 'Advanced analytics and business intelligence powered by machine learning algorithms',
+      price: '$399/month',
+      marketPrice: '$800-3000/month',
+      features: [
+        'Predictive analytics',
+        'Real-time dashboards',
+        'Automated reporting',
         'Anomaly detection',
-        'Cost optimization',
-        'IoT integration'
+        'Custom data models'
+      ],
+      benefits: [
+        'Data-driven insights',
+        'Predictive forecasting',
+        'Automated reporting',
+        'ROI optimization'
+      ],
+      category: 'Analytics',
+      popular: false,
+      icon: BarChart
+    },
+    {
+      id: 'ai-vision',
+      name: 'AI Computer Vision',
+      description: 'Image and video analysis solutions for quality control, security, and automation',
+      price: '$599/month',
+      marketPrice: '$1000-5000/month',
+      features: [
+        'Object detection and recognition',
+        'Quality control automation',
+        'Facial recognition systems',
+        'Video analytics',
+        'Real-time processing'
+      ],
+      benefits: [
+        'Automated quality control',
+        'Enhanced security',
+        'Real-time monitoring',
+        'Cost reduction'
+      ],
+      category: 'Computer Vision',
+      popular: false,
+      icon: Eye
+    },
+    {
+      id: 'ai-voice',
+      name: 'AI Voice Processing',
+      description: 'Speech recognition, synthesis, and voice analytics for customer interactions',
+      price: '$249/month',
+      marketPrice: '$400-1800/month',
+      features: [
+        'Speech-to-text conversion',
+        'Voice synthesis',
+        'Voice biometrics',
+        'Call analytics',
+        'Multi-language support'
+      ],
+      benefits: [
+        'Improved accessibility',
+        'Voice automation',
+        'Call quality insights',
+        'Multi-language support'
+      ],
+      category: 'Voice AI',
+      popular: false,
+      icon: Mic
+    },
+    {
+      id: 'ai-automation',
+      name: 'AI Workflow Automation',
+      description: 'Intelligent process automation that learns and optimizes business workflows',
+      price: '$349/month',
+      marketPrice: '$600-2500/month',
+      features: [
+        'Process mining',
+        'Workflow optimization',
+        'Task automation',
+        'Exception handling',
+        'Performance monitoring'
+      ],
+      benefits: [
+        'Process efficiency',
+        'Error reduction',
+        'Cost savings',
+        'Scalable automation'
+      ],
+      category: 'Automation',
+      popular: true,
+      icon: Zap
+    },
+    {
+      id: 'ai-fraud-detection',
+      name: 'AI Fraud Detection',
+      description: 'Advanced machine learning algorithms to detect and prevent fraudulent activities in real-time',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
+      features: [
+        'Real-time transaction monitoring',
+        'Behavioral pattern analysis',
+        'Risk scoring algorithms',
+        'Anomaly detection',
+        'Automated alert systems'
+      ],
+      benefits: [
+        'Reduce fraud losses by 85%',
+        'Real-time protection',
+        'False positive reduction',
+        'Compliance ready'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-predictive-maintenance',
+      name: 'AI Predictive Maintenance',
+      description: 'Machine learning-powered maintenance scheduling to prevent equipment failures and optimize uptime',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'IoT sensor integration',
+        'Failure prediction models',
+        'Maintenance scheduling optimization',
+        'Cost reduction analysis',
+        'Real-time monitoring'
       ],
       benefits: [
         'Reduce downtime by 70%',
-        'Cut maintenance costs by 50%',
-        'Extend equipment life by 40%',
-        'Prevent 95% of failures'
+        'Extend equipment life',
+        'Optimize maintenance costs',
+        'Prevent catastrophic failures'
       ],
-      useCases: ['Manufacturing', 'Energy', 'Transportation', 'Healthcare'],
-      link: '/ai-services/predictive-maintenance'
+      category: 'Industrial AI',
+      popular: false,
+      icon: Settings
     },
     {
-      title: 'AI-Powered Marketing Automation',
-      description: 'Intelligent marketing campaigns with AI-driven personalization and optimization.',
-      icon: Target,
-      price: 'Starting at $179/month',
+      id: 'ai-personalization',
+      name: 'AI Personalization Engine',
+      description: 'Advanced recommendation systems and personalization algorithms for enhanced customer experience',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
       features: [
+        'Real-time recommendations',
+        'Customer segmentation',
         'Behavioral analysis',
-        'Content personalization',
-        'Campaign optimization',
         'A/B testing automation',
-        'ROI prediction',
-        'Multi-channel management'
+        'Cross-platform personalization'
       ],
       benefits: [
-        'Increase engagement by 300%',
-        'Boost conversion by 80%',
-        'Reduce costs by 60%',
-        'Improve ROI by 250%'
+        'Increase conversions by 40%',
+        'Improve customer engagement',
+        'Higher customer lifetime value',
+        'Automated optimization'
       ],
-      useCases: ['E-commerce', 'SaaS Companies', 'Agencies', 'Retail'],
-      link: '/ai-services/marketing-automation'
+      category: 'Marketing',
+      popular: true,
+      icon: Target
     },
     {
-      title: 'Intelligent Supply Chain Optimization',
-      description: 'Optimize supply chain operations with AI-powered demand forecasting and logistics management.',
-      icon: Truck,
-      price: 'Starting at $349/month',
+      id: 'ai-supply-chain',
+      name: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting and inventory optimization',
+      price: '$1,599/month',
+      marketPrice: '$3000-10000/month',
       features: [
         'Demand forecasting',
         'Inventory optimization',
         'Route optimization',
-        'Supplier management',
+        'Supplier risk assessment',
+        'Cost optimization'
+      ],
+      benefits: [
+        'Reduce inventory costs by 30%',
+        'Improve delivery times',
+        'Minimize stockouts',
+        'Optimize supplier relationships'
+      ],
+      category: 'Supply Chain',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-healthcare-diagnostics',
+      name: 'AI Healthcare Diagnostics',
+      description: 'Medical image analysis and diagnostic assistance using advanced computer vision and machine learning',
+      price: '$2,999/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Medical image analysis',
+        'Diagnostic assistance',
+        'Patient risk assessment',
+        'Treatment recommendations',
+        'HIPAA compliance'
+      ],
+      benefits: [
+        'Improve diagnostic accuracy',
+        'Reduce diagnostic time',
+        'Early disease detection',
+        'Better patient outcomes'
+      ],
+      category: 'Healthcare',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-financial-modeling',
+      name: 'AI Financial Modeling',
+      description: 'Advanced financial analysis and modeling using machine learning for investment decisions',
+      price: '$899/month',
+      marketPrice: '$2000-6000/month',
+      features: [
+        'Portfolio optimization',
         'Risk assessment',
-        'Cost analysis'
+        'Market prediction',
+        'Algorithmic trading',
+        'Compliance monitoring'
       ],
       benefits: [
-        'Reduce costs by 35%',
-        'Improve efficiency by 60%',
-        'Reduce stockouts by 90%',
-        'Optimize routes by 40%'
+        'Improve investment returns',
+        'Reduce financial risk',
+        'Automated trading strategies',
+        'Real-time market analysis'
       ],
-      useCases: ['Logistics', 'Retail', 'Manufacturing', 'E-commerce'],
-      link: '/ai-services/supply-chain'
+      category: 'Finance',
+      popular: true,
+      icon: TrendingUp
     },
     {
-      title: 'AI-Powered Fraud Detection',
-      description: 'Advanced fraud prevention with real-time AI analysis and behavioral pattern recognition.',
-      icon: Shield,
-      price: 'Starting at $249/month',
+      id: 'ai-nlp-processing',
+      name: 'AI Natural Language Processing',
+      description: 'Advanced text analysis, sentiment analysis, and language understanding for business applications',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
       features: [
-        'Real-time monitoring',
-        'Pattern recognition',
-        'Risk scoring',
-        'Anomaly detection',
-        'Machine learning models',
-        'API integration'
+        'Text classification',
+        'Sentiment analysis',
+        'Named entity recognition',
+        'Language translation',
+        'Document summarization'
       ],
       benefits: [
-        'Detect fraud 99.9% accurately',
-        'Reduce false positives by 80%',
-        'Save millions in losses',
-        'Process transactions instantly'
-      ],
-      useCases: ['Financial Services', 'E-commerce', 'Insurance', 'Gaming'],
-      link: '/ai-services/fraud-detection'
-    },
-    {
-      title: 'Intelligent Content Generation',
-      description: 'Create high-quality content at scale with AI-powered writing, design, and video generation.',
-      icon: PenTool,
-      price: 'Starting at $129/month',
-      features: [
-        'Text generation',
-        'Image creation',
-        'Video production',
-        'Voice synthesis',
-        'Brand consistency',
+        'Automate text processing',
+        'Extract business insights',
+        'Improve customer understanding',
         'Multi-language support'
       ],
-      benefits: [
-        'Create content 10x faster',
-        'Reduce costs by 70%',
-        'Improve quality by 85%',
-        'Scale content production'
-      ],
-      useCases: ['Marketing', 'Publishing', 'E-learning', 'Entertainment'],
-      link: '/ai-services/content-generation'
+      category: 'Language Processing',
+      popular: false,
+      icon: FileText
     },
     {
-      title: 'AI-Powered HR Analytics',
-      description: 'Optimize human resources with AI-driven talent acquisition, performance analysis, and retention strategies.',
-      icon: Users,
-      price: 'Starting at $199/month',
+      id: 'ai-robotic-process',
+      name: 'AI Robotic Process Automation',
+      description: 'Intelligent automation of repetitive tasks with AI-powered decision making and learning capabilities',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
       features: [
-        'Resume screening',
-        'Performance analysis',
-        'Retention prediction',
-        'Skill matching',
-        'Bias detection',
-        'Workforce planning'
-      ],
-      benefits: [
-        'Improve hiring by 60%',
-        'Reduce turnover by 40%',
-        'Save 25+ hours weekly',
-        'Increase diversity by 50%'
-      ],
-      useCases: ['HR Departments', 'Recruiting', 'Consulting', 'Enterprise'],
-      link: '/ai-services/hr-analytics'
-    },
-    {
-      title: 'Intelligent Process Automation',
-      description: 'Automate complex business processes with AI-powered workflow optimization and decision making.',
-      icon: Settings,
-      price: 'Starting at $279/month',
-      features: [
-        'Process mining',
-        'Workflow optimization',
-        'Decision automation',
+        'Process automation',
+        'Intelligent decision making',
         'Exception handling',
-        'Performance monitoring',
-        'Continuous improvement'
+        'Process optimization',
+        'Integration capabilities'
       ],
       benefits: [
-        'Automate 80% of processes',
-        'Reduce errors by 95%',
-        'Save 40+ hours weekly',
-        'Improve efficiency by 200%'
+        'Reduce manual work by 90%',
+        'Improve accuracy',
+        '24/7 operation',
+        'Scalable automation'
       ],
-      useCases: ['Finance', 'Operations', 'Compliance', 'Customer Service'],
-      link: '/ai-services/process-automation'
+      category: 'Automation',
+      popular: true,
+      icon: Cpu
     },
     {
-      title: 'AI-Powered Quality Assurance',
-      description: 'Ensure product quality with AI-driven testing, inspection, and defect detection systems.',
-      icon: Eye,
-      price: 'Starting at $229/month',
+      id: 'ai-customer-insights',
+      name: 'AI Customer Insights',
+      description: 'Advanced customer analytics and behavioral insights to improve customer experience and retention',
+      price: '$699/month',
+      marketPrice: '$1500-5000/month',
       features: [
-        'Visual inspection',
-        'Defect detection',
-        'Quality scoring',
-        'Predictive quality',
-        'Real-time monitoring',
-        'Statistical analysis'
+        'Customer journey mapping',
+        'Behavioral analysis',
+        'Churn prediction',
+        'Lifetime value calculation',
+        'Segmentation analysis'
       ],
       benefits: [
-        'Improve quality by 90%',
-        'Reduce defects by 85%',
-        'Save 20+ hours weekly',
-        'Increase customer satisfaction'
+        'Improve customer retention',
+        'Increase customer lifetime value',
+        'Predict customer behavior',
+        'Optimize marketing campaigns'
       ],
-      useCases: ['Manufacturing', 'Food & Beverage', 'Pharmaceuticals', 'Electronics'],
-      link: '/ai-services/quality-assurance'
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
     },
     {
-      title: 'Intelligent Energy Management',
-      description: 'Optimize energy consumption with AI-powered monitoring, prediction, and automated control systems.',
-      icon: Zap,
-      price: 'Starting at $179/month',
+      id: 'ai-quality-assurance',
+      name: 'AI Quality Assurance',
+      description: 'Automated testing and quality assurance using AI to improve software reliability and performance',
+      price: '$799/month',
+      marketPrice: '$1500-5000/month',
       features: [
-        'Energy monitoring',
-        'Consumption prediction',
-        'Automated control',
-        'Cost optimization',
-        'Carbon tracking',
-        'Renewable integration'
+        'Automated test generation',
+        'Performance testing',
+        'Bug detection',
+        'Code quality analysis',
+        'Regression testing'
       ],
       benefits: [
-        'Reduce energy costs by 30%',
-        'Improve efficiency by 50%',
-        'Cut carbon footprint by 40%',
-        'Optimize usage patterns'
+        'Reduce testing time by 80%',
+        'Improve software quality',
+        'Automated test maintenance',
+        'Faster release cycles'
       ],
-      useCases: ['Buildings', 'Manufacturing', 'Data Centers', 'Utilities'],
-      link: '/ai-services/energy-management'
+      category: 'Software Testing',
+      popular: false,
+      icon: CheckCircle
+    },
+    {
+      id: 'ai-energy-optimization',
+      name: 'AI Energy Optimization',
+      description: 'Smart energy management and optimization using AI to reduce costs and improve efficiency',
+      price: '$1,199/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Energy consumption analysis',
+        'Predictive energy modeling',
+        'Smart grid optimization',
+        'Renewable energy integration',
+        'Cost optimization'
+      ],
+      benefits: [
+        'Reduce energy costs by 25%',
+        'Improve energy efficiency',
+        'Optimize renewable usage',
+        'Environmental sustainability'
+      ],
+      category: 'Energy',
+      popular: false,
+      icon: Zap
+    },
+    {
+      id: 'ai-hr-analytics',
+      name: 'AI HR Analytics',
+      description: 'Human resources analytics and workforce optimization using AI and machine learning',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Employee performance analysis',
+        'Talent acquisition optimization',
+        'Retention prediction',
+        'Workforce planning',
+        'Skills gap analysis'
+      ],
+      benefits: [
+        'Improve hiring decisions',
+        'Reduce employee turnover',
+        'Optimize workforce planning',
+        'Enhance employee satisfaction'
+      ],
+      category: 'Human Resources',
+      popular: false,
+      icon: Users
+    },
+    {
+      id: 'ai-blockchain-analytics',
+      name: 'AI Blockchain Analytics',
+      description: 'Advanced blockchain data analysis and cryptocurrency market insights using AI',
+      price: '$1,499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Blockchain transaction analysis',
+        'Cryptocurrency market prediction',
+        'Smart contract auditing',
+        'DeFi protocol analysis',
+        'Risk assessment'
+      ],
+      benefits: [
+        'Better investment decisions',
+        'Risk mitigation',
+        'Market opportunity identification',
+        'Compliance monitoring'
+      ],
+      category: 'Blockchain',
+      popular: false,
+      icon: Link
+    },
+    {
+      id: 'ai-edge-computing',
+      name: 'AI Edge Computing',
+      description: 'Deploy AI models at the edge for real-time processing and reduced latency',
+      price: '$1,799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Edge model deployment',
+        'Real-time processing',
+        'Low latency inference',
+        'Offline capabilities',
+        'Distributed computing'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Improve response times',
+        'Enable offline AI',
+        'Reduce bandwidth costs'
+      ],
+      category: 'Edge Computing',
+      popular: false,
+      icon: Server
+    },
+    {
+      id: 'ai-video-analysis',
+      name: 'AI Video Analysis',
+      description: 'Advanced video content analysis with object detection, scene understanding, and automated tagging',
+      price: '$899/month',
+      marketPrice: '$1800-5000/month',
+      features: [
+        'Real-time video object detection',
+        'Scene classification and understanding',
+        'Automated video tagging and metadata',
+        'Content moderation and filtering',
+        'Video search and retrieval',
+        'Live streaming analysis',
+        'Custom model training',
+        'API integration for applications'
+      ],
+      benefits: [
+        'Automate video content processing',
+        'Improve content discoverability',
+        'Enhanced video search capabilities',
+        'Real-time content monitoring'
+      ],
+      category: 'Computer Vision',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-speech-synthesis',
+      name: 'AI Speech Synthesis',
+      description: 'Natural-sounding text-to-speech with multiple voices and emotional expression',
+      price: '$299/month',
+      marketPrice: '$600-2000/month',
+      features: [
+        'Natural-sounding voice synthesis',
+        'Multiple voice options and languages',
+        'Emotional expression and tone control',
+        'Real-time speech generation',
+        'Custom voice training',
+        'SSML support for advanced control',
+        'API integration for applications',
+        'Batch processing capabilities'
+      ],
+      benefits: [
+        'Create engaging audio content',
+        'Improve accessibility',
+        'Automate voice generation',
+        'Professional audio quality'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      icon: Mic
+    },
+    {
+      id: 'ai-recommendation-engine',
+      name: 'AI Recommendation Engine',
+      description: 'Advanced recommendation system with collaborative filtering and content-based algorithms',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Collaborative filtering algorithms',
+        'Content-based recommendations',
+        'Hybrid recommendation approaches',
+        'Real-time personalization',
+        'A/B testing for optimization',
+        'Cold start problem solutions',
+        'Scalable architecture',
+        'Integration with existing systems'
+      ],
+      benefits: [
+        'Increase user engagement by 200%',
+        'Improve conversion rates',
+        'Personalized user experience',
+        'Better content discovery'
+      ],
+      category: 'Personalization',
+      popular: true,
+      icon: Target
+    },
+    {
+      id: 'ai-sentiment-analysis',
+      name: 'AI Sentiment Analysis',
+      description: 'Advanced sentiment analysis for text, voice, and social media with emotion detection',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: [
+        'Text sentiment analysis',
+        'Voice emotion detection',
+        'Social media monitoring',
+        'Multi-language support',
+        'Real-time analysis',
+        'Custom sentiment models',
+        'API integration',
+        'Detailed analytics and reporting'
+      ],
+      benefits: [
+        'Understand customer emotions',
+        'Monitor brand sentiment',
+        'Improve customer experience',
+        'Data-driven insights'
+      ],
+      category: 'Language Processing',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-chatbot-enterprise',
+      name: 'AI Enterprise Chatbot',
+      description: 'Enterprise-grade chatbot platform with advanced NLP, integration capabilities, and analytics',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Advanced NLP and understanding',
+        'Multi-channel deployment',
+        'Integration with enterprise systems',
+        'Custom knowledge base management',
+        'Human handoff capabilities',
+        'Advanced analytics and reporting',
+        'White-label solutions',
+        '24/7 support and maintenance'
+      ],
+      benefits: [
+        'Reduce support costs by 70%',
+        'Improve customer satisfaction',
+        '24/7 availability',
+        'Scalable customer service'
+      ],
+      category: 'Customer Service',
+      popular: true,
+      icon: MessageSquare
+    },
+    {
+      id: 'ai-content-moderation',
+      name: 'AI Content Moderation',
+      description: 'Automated content moderation with image, video, and text analysis for platform safety',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Image and video content analysis',
+        'Text toxicity detection',
+        'Real-time content filtering',
+        'Custom moderation rules',
+        'Human review workflows',
+        'Multi-language support',
+        'API integration',
+        'Detailed moderation reports'
+      ],
+      benefits: [
+        'Maintain platform safety',
+        'Reduce manual moderation',
+        'Consistent policy enforcement',
+        'Real-time content protection'
+      ],
+      category: 'Content Moderation',
+      popular: false,
+      icon: Shield
+    },
+    {
+      id: 'ai-predictive-modeling',
+      name: 'AI Predictive Modeling',
+      description: 'Advanced predictive modeling platform with machine learning algorithms for business forecasting',
+      price: '$1,499/month',
+      marketPrice: '$3000-10000/month',
+      features: [
+        'Multiple ML algorithms',
+        'Automated feature engineering',
+        'Model training and validation',
+        'Real-time predictions',
+        'Custom model development',
+        'Integration with data sources',
+        'Model performance monitoring',
+        'A/B testing capabilities'
+      ],
+      benefits: [
+        'Improve business forecasting',
+        'Data-driven decision making',
+        'Automated model development',
+        'Better risk assessment'
+      ],
+      category: 'Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-document-intelligence',
+      name: 'AI Document Intelligence',
+      description: 'Intelligent document processing with OCR, data extraction, and automated classification',
+      price: '$499/month',
+      marketPrice: '$1000-3000/month',
+      features: [
+        'Advanced OCR and text extraction',
+        'Document classification and routing',
+        'Data extraction and validation',
+        'Document comparison and analysis',
+        'Integration with document management',
+        'Custom extraction templates',
+        'Batch processing capabilities',
+        'API integration for automation'
+      ],
+      benefits: [
+        'Process documents 10x faster',
+        'Automated data extraction',
+        'Reduce manual errors',
+        'Better document insights'
+      ],
+      category: 'Document Processing',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-conversation-analytics',
+      name: 'AI Conversation Analytics',
+      description: 'Advanced conversation analysis platform with insights, sentiment tracking, and optimization',
+      price: '$699/month',
+      marketPrice: '$1400-4000/month',
+      features: [
+        'Conversation sentiment analysis',
+        'Topic modeling and extraction',
+        'Customer journey mapping',
+        'Agent performance analytics',
+        'Real-time conversation monitoring',
+        'Custom analytics dashboards',
+        'Integration with CRM systems',
+        'Automated insights and alerts'
+      ],
+      benefits: [
+        'Improve conversation quality',
+        'Better customer understanding',
+        'Optimize agent performance',
+        'Data-driven insights'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-supply-chain-ai',
+      name: 'AI Supply Chain Intelligence',
+      description: 'Intelligent supply chain optimization with demand forecasting and risk management',
+      price: '$1,999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Demand forecasting algorithms',
+        'Inventory optimization',
+        'Supplier risk assessment',
+        'Route optimization',
+        'Cost optimization analysis',
+        'Real-time supply chain monitoring',
+        'Integration with ERP systems',
+        'Custom optimization models'
+      ],
+      benefits: [
+        'Reduce supply chain costs by 30%',
+        'Improve delivery efficiency',
+        'Minimize inventory waste',
+        'Better supplier management'
+      ],
+      category: 'Supply Chain',
+      popular: false,
+      icon: Box
+    },
+    {
+      id: 'ai-healthcare-diagnostics',
+      name: 'AI Healthcare Diagnostics',
+      description: 'Medical AI platform with diagnostic assistance, image analysis, and patient monitoring',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Medical image analysis',
+        'Diagnostic assistance tools',
+        'Patient risk assessment',
+        'Treatment recommendations',
+        'Drug interaction checking',
+        'HIPAA compliance',
+        'Integration with EMR systems',
+        'Clinical decision support'
+      ],
+      benefits: [
+        'Improve diagnostic accuracy',
+        'Reduce diagnostic time',
+        'Early disease detection',
+        'Better patient outcomes'
+      ],
+      category: 'Healthcare',
+      popular: false,
+      icon: Heart
+    },
+    {
+      id: 'ai-financial-forecasting',
+      name: 'AI Financial Forecasting',
+      description: 'Advanced financial forecasting platform with market analysis and investment insights',
+      price: '$1,799/month',
+      marketPrice: '$3500-12000/month',
+      features: [
+        'Market trend analysis',
+        'Investment portfolio optimization',
+        'Risk assessment and management',
+        'Real-time market monitoring',
+        'Custom financial models',
+        'Integration with trading platforms',
+        'Regulatory compliance',
+        'Advanced reporting and analytics'
+      ],
+      benefits: [
+        'Improve investment decisions',
+        'Better risk management',
+        'Automated market analysis',
+        'Enhanced portfolio performance'
+      ],
+      category: 'Finance',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-iot-analytics',
+      name: 'AI IoT Analytics',
+      description: 'Intelligent IoT data analysis platform with real-time monitoring and predictive maintenance',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: [
+        'Real-time IoT data processing',
+        'Predictive maintenance algorithms',
+        'Anomaly detection and alerting',
+        'Device health monitoring',
+        'Integration with IoT platforms',
+        'Custom analytics models',
+        'Edge computing capabilities',
+        'Comprehensive reporting'
+      ],
+      benefits: [
+        'Optimize IoT operations',
+        'Prevent equipment failures',
+        'Reduce maintenance costs',
+        'Better device insights'
+      ],
+      category: 'IoT & Analytics',
+      popular: false,
+      icon: Cpu
+    },
+    {
+      id: 'ai-conversational-ai',
+      name: 'AI Conversational AI Platform',
+      description: 'Advanced conversational AI platform with natural language understanding and generation',
+      price: '$999/month',
+      marketPrice: '$2000-6000/month',
+      features: [
+        'Natural language understanding',
+        'Context-aware conversations',
+        'Multi-turn dialogue management',
+        'Intent recognition and classification',
+        'Entity extraction and recognition',
+        'Conversation flow management',
+        'Integration with messaging platforms',
+        'Custom conversation training'
+      ],
+      benefits: [
+        'Create natural conversations',
+        'Improve user engagement',
+        'Automate customer interactions',
+        'Better conversation quality'
+      ],
+      category: 'Conversational AI',
+      popular: true,
+      icon: MessageCircle
+    },
+    {
+      id: 'ai-automated-testing',
+      name: 'AI Automated Testing',
+      description: 'Intelligent software testing platform with automated test generation and execution',
+      price: '$799/month',
+      marketPrice: '$1600-5000/month',
+      features: [
+        'Automated test case generation',
+        'Intelligent test execution',
+        'Bug detection and reporting',
+        'Performance testing automation',
+        'Regression testing automation',
+        'Integration with CI/CD pipelines',
+        'Custom testing frameworks',
+        'Detailed test analytics'
+      ],
+      benefits: [
+        'Reduce testing time by 80%',
+        'Improve test coverage',
+        'Automated bug detection',
+        'Faster release cycles'
+      ],
+      category: 'Software Testing',
+      popular: true,
+      icon: CheckCircle
+    },
+    {
+      id: 'ai-knowledge-management',
+      name: 'AI Knowledge Management',
+      description: 'Intelligent knowledge management platform with automated content organization and search',
+      price: '$599/month',
+      marketPrice: '$1200-4000/month',
+      features: [
+        'Automated content categorization',
+        'Intelligent search and retrieval',
+        'Knowledge graph construction',
+        'Content recommendation',
+        'Expert identification',
+        'Integration with existing systems',
+        'Custom knowledge models',
+        'Advanced analytics and insights'
+      ],
+      benefits: [
+        'Improve knowledge discovery',
+        'Automated content organization',
+        'Better information retrieval',
+        'Enhanced collaboration'
+      ],
+      category: 'Knowledge Management',
+      popular: false,
+      icon: FileText
+    },
+    {
+      id: 'ai-customer-churn',
+      name: 'AI Customer Churn Prediction',
+      description: 'Advanced customer churn prediction platform with retention strategies and analytics',
+      price: '$899/month',
+      marketPrice: '$1800-5000/month',
+      features: [
+        'Churn prediction algorithms',
+        'Customer segmentation analysis',
+        'Retention strategy recommendations',
+        'Real-time churn monitoring',
+        'Integration with CRM systems',
+        'Custom prediction models',
+        'A/B testing for strategies',
+        'Detailed analytics and reporting'
+      ],
+      benefits: [
+        'Reduce customer churn by 40%',
+        'Improve retention strategies',
+        'Better customer insights',
+        'Data-driven retention'
+      ],
+      category: 'Customer Analytics',
+      popular: true,
+      icon: Users
+    },
+    {
+      id: 'ai-automated-reporting',
+      name: 'AI Automated Reporting',
+      description: 'Intelligent reporting platform with automated data analysis and report generation',
+      price: '$399/month',
+      marketPrice: '$800-2500/month',
+      features: [
+        'Automated report generation',
+        'Data analysis and insights',
+        'Custom report templates',
+        'Scheduled report delivery',
+        'Interactive dashboards',
+        'Integration with data sources',
+        'Natural language queries',
+        'Advanced visualization options'
+      ],
+      benefits: [
+        'Save 90% report creation time',
+        'Automated data analysis',
+        'Consistent reporting',
+        'Better business insights'
+      ],
+      category: 'Reporting & Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'ai-voice-assistant',
+      name: 'AI Voice Assistant Platform',
+      description: 'Enterprise voice assistant platform with custom voice commands and integrations',
+      price: '$1,199/month',
+      marketPrice: '$2400-7000/month',
+      features: [
+        'Custom voice command training',
+        'Multi-language voice support',
+        'Integration with business systems',
+        'Voice analytics and insights',
+        'Custom wake word training',
+        'Offline voice processing',
+        'API integration capabilities',
+        'Advanced voice customization'
+      ],
+      benefits: [
+        'Hands-free business operations',
+        'Improve accessibility',
+        'Automate voice interactions',
+        'Enhanced user experience'
+      ],
+      category: 'Voice AI',
+      popular: true,
+      icon: Mic
+    },
+    {
     }
-  ];
+  ]
 
-  const aiTechnologies = [
-    {
-      name: 'Machine Learning',
-      description: 'Advanced algorithms that learn and improve from data',
-      icon: Brain,
-      applications: ['Predictive Analytics', 'Pattern Recognition', 'Recommendation Systems']
-    },
-    {
-      name: 'Natural Language Processing',
-      description: 'AI that understands and processes human language',
-      icon: MessageSquare,
-      applications: ['Chatbots', 'Text Analysis', 'Language Translation']
-    },
-    {
-      name: 'Computer Vision',
-      description: 'AI that interprets and analyzes visual information',
-      icon: Eye,
-      applications: ['Image Recognition', 'Quality Control', 'Medical Imaging']
-    },
-    {
-      name: 'Deep Learning',
-      description: 'Neural networks that mimic human brain functions',
-      icon: Network,
-      applications: ['Speech Recognition', 'Image Generation', 'Complex Predictions']
-    },
-    {
-      name: 'Reinforcement Learning',
-      description: 'AI that learns through trial and error',
-      icon: Target,
-      applications: ['Game AI', 'Robotics', 'Optimization Problems']
-    },
-    {
-      name: 'Generative AI',
-      description: 'AI that creates new content and solutions',
-      icon: PenTool,
-      applications: ['Content Creation', 'Design Generation', 'Code Writing']
-    }
-  ];
+  const categories = [
+    { id: 'all', name: 'All Services', count: services.length },
+    { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
+    { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
+    { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length },
+    { id: 'Computer Vision', name: 'Computer Vision', count: services.filter(s => s.category === 'Computer Vision').length },
+    { id: 'Voice AI', name: 'Voice AI', count: services.filter(s => s.category === 'Voice AI').length },
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
+    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
+    { id: 'Industrial AI', name: 'Industrial AI', count: services.filter(s => s.category === 'Industrial AI').length },
+    { id: 'Marketing', name: 'Marketing', count: services.filter(s => s.category === 'Marketing').length },
+    { id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length },
+    { id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length },
+    { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length },
+    { id: 'Language Processing', name: 'Language Processing', count: services.filter(s => s.category === 'Language Processing').length },
+    { id: 'Customer Analytics', name: 'Customer Analytics', count: services.filter(s => s.category === 'Customer Analytics').length },
+    { id: 'Software Testing', name: 'Software Testing', count: services.filter(s => s.category === 'Software Testing').length },
+    { id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length },
+    { id: 'Human Resources', name: 'Human Resources', count: services.filter(s => s.category === 'Human Resources').length },
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Personalization', name: 'Personalization', count: services.filter(s => s.category === 'Personalization').length },
+    { id: 'Content Moderation', name: 'Content Moderation', count: services.filter(s => s.category === 'Content Moderation').length },
+    { id: 'Document Processing', name: 'Document Processing', count: services.filter(s => s.category === 'Document Processing').length },
+    { id: 'IoT & Analytics', name: 'IoT & Analytics', count: services.filter(s => s.category === 'IoT & Analytics').length },
+    { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
+    { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
+    { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
+  ]
 
+  const filteredServices = services.filter(service => 
+    selectedCategory === 'all' || service.category === selectedCategory
+  );
+
+>>>>>>> origin/main
   return (
-    <>
-      <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and intelligent automation for business transformation." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, business intelligence, automation" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="pt-24">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-                AI Services
-              </h1>
-              <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
-                Harness the power of artificial intelligence to transform your business operations, 
-                automate complex processes, and unlock unprecedented insights from your data.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center justify-center"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get AI Consultation
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  View All Services
-                </a>
-              </div>
-            </div>
-          </section>
-
-          {/* AI Technologies */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">AI Technologies We Use</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We leverage cutting-edge AI technologies to deliver intelligent solutions that drive real business value.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiTechnologies.map((tech, index) => (
-                <div key={index} className="cyber-card p-6 group hover:scale-105 transition-transform duration-300">
-                  <div className="flex items-center mb-4">
-                    <tech.icon className="w-8 h-8 text-purple-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{tech.name}</h3>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{tech.description}</p>
-                  
-                  <div>
-                    <h4 className="text-sm font-semibold text-white mb-2">Applications:</h4>
-                    <ul className="space-y-1">
-                      {tech.applications.map((app, appIndex) => (
-                        <li key={appIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2" />
-                          {app}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* AI Services Grid */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Our AI Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI solutions designed to solve complex business challenges and drive innovation.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-transform duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                      <p className="text-cyan-400 font-semibold text-sm">{service.price}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                          <TrendingUp className="w-3 h-3 text-purple-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-2">Ideal for:</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {service.useCases.map((useCase, useCaseIndex) => (
-                        <span key={useCaseIndex} className="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">
-                          {useCase}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <a
-                    href={service.link}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* AI Implementation Process */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Our AI Implementation Process</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We follow a proven methodology to ensure successful AI implementation and maximum ROI.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center cyber-card p-6">
-                <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-slate-900">1</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Discovery & Analysis</h3>
-                <p className="text-gray-300">We analyze your business processes and identify AI opportunities</p>
-              </div>
-              <div className="text-center cyber-card p-6">
-                <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-slate-900">2</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Strategy & Planning</h3>
-                <p className="text-gray-300">Develop a comprehensive AI strategy tailored to your needs</p>
-              </div>
-              <div className="text-center cyber-card p-6">
-                <div className="w-16 h-16 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-slate-900">3</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Development & Testing</h3>
-                <p className="text-gray-300">Build and rigorously test AI solutions in controlled environments</p>
-              </div>
-              <div className="text-center cyber-card p-6">
-                <div className="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-slate-900">4</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Deployment & Support</h3>
-                <p className="text-gray-300">Deploy solutions and provide ongoing support and optimization</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Success Metrics */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="cyber-card text-center p-12">
-              <h2 className="text-4xl font-bold text-white mb-6">Proven AI Success Metrics</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Our AI implementations consistently deliver measurable results across all industries and use cases.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">400%</div>
-                  <div className="text-gray-300">Average Efficiency Gain</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-green-400 mb-2">95%</div>
-                  <div className="text-gray-300">Accuracy Improvement</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-400 mb-2">60%</div>
-                  <div className="text-gray-300">Cost Reduction</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-yellow-400 mb-2">300%</div>
-                  <div className="text-gray-300">ROI Achievement</div>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center justify-center"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  Get Free AI Assessment
-                </a>
-              </div>
-            </div>
-          </section>
-        </main>
-
-        <Footer />
+    <div className="min-h-screen pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-cyan-400">AI Services</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced artificial intelligence solutions to transform your business.
+          </p>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default AIServicesPage;
+export default AiServicesPage;

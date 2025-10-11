@@ -1,22 +1,35 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 
 interface Props {
+<<<<<<< HEAD
   children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
+=======
+  children: ReactNode
+  fallback?: ReactNode
 }
 
-class EnhancedErrorBoundary extends Component<Props, State> {
+interface State {
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+>>>>>>> origin/main
+}
+
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
+<<<<<<< HEAD
     super(props);
     this.state = { hasError: false };
+=======
+    super(props)
+    this.state = { hasError: false }
+>>>>>>> origin/main
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -24,115 +37,87 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-    
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+<<<<<<< HEAD
+    console.error('Error caught by boundary:', error, errorInfo);
+=======
+    this.setState({
+      error,
+      errorInfo
+    })
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
 
-    // Log error to monitoring service in production
+    // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // Send to error tracking service
-      // eslint-disable-next-line no-console
-      console.error('Error caught by boundary:', error, errorInfo);
+      // You can integrate with error reporting services like Sentry here
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
+>>>>>>> origin/main
   }
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  handleReload = () => {
-    window.location.reload();
-  };
 
   render() {
     if (this.state.hasError) {
-      // Use custom fallback if provided
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      // Default error UI
+<<<<<<< HEAD
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20">
-            <div className="mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-              </p>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-4">We apologize for the inconvenience.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
+            >
+              Reload Page
+            </button>
+=======
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="text-center p-8 max-w-md mx-auto">
+            <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <p className="text-red-300 text-sm mb-2">{this.state.error.message}</p>
-                {this.state.errorInfo && (
-                  <details className="text-red-300 text-xs">
-                    <summary className="cursor-pointer">Stack Trace</summary>
-                    <pre className="mt-2 whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
-                  </details>
-                )}
-              </div>
-            )}
-
-            <div className="space-y-3">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <div className="space-y-4">
               <button
-                onClick={this.handleRetry}
-                className="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2"
+                onClick={() => window.location.reload()}
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
               >
-                <RefreshCw className="w-4 h-4" />
+                Refresh Page
+              </button>
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="block w-full text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+              >
                 Try Again
               </button>
-              
-              <button
-                onClick={this.handleReload}
-                className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Reload Page
-              </button>
-              
-              <a
-                href="/"
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
-              >
-                <Home className="w-4 h-4" />
-                Go Home
-              </a>
-              
-              <a
-                href="mailto:support@ziontechgroup.com?subject=Error Report"
-                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
-              >
-                <Mail className="w-4 h-4" />
-                Report Issue
-              </a>
             </div>
-
-            <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem persists, please contact our support team:</p>
-              <p className="mt-1">
-                <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                  support@ziontechgroup.com
-                </a>
-              </p>
-              <p className="mt-1">
-                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-                  (302) 464-0950
-                </a>
-              </p>
-            </div>
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mt-6 text-left">
+                <summary className="text-gray-400 cursor-pointer hover:text-cyan-400">
+                  Error Details (Development)
+                </summary>
+                <pre className="mt-2 text-xs text-gray-500 bg-gray-800 p-4 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
+>>>>>>> origin/main
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default EnhancedErrorBoundary;
+export default ErrorBoundary

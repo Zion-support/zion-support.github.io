@@ -11,12 +11,39 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
 
 # Allow important pages
-Allow: /
-Allow: /about
 Allow: /services
+Allow: /about
 Allow: /contact
+Allow: /pricing
 Allow: /blog
 Allow: /case-studies
+Allow: /careers
+<<<<<<< HEAD
+Allow: /partners
+Allow: /support
+Allow: /faq
+Allow: /demo
+Allow: /consultation
+Allow: /micro-saas
+Allow: /ai-services
+Allow: /it-services
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /docs
+Allow: /community
+Allow: /tutorials
+=======
+
+# Allow AI services
+Allow: /ai-*
+Allow: /it-*
+Allow: /micro-saas
+Allow: /zion-*
+
+# Host
+Host: https://ziontechgroup.com
+>>>>>>> origin/main

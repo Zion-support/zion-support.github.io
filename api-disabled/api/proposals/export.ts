@@ -1,9 +1,9 @@
 // import type {NextApiRequest} NextApiResponse } from "next" import {PDFDocument} StandardFonts } from "pdf-lib" import crypto from "crypto" import {updateArtifacts, getProposal} savePdf;; } from "../../../utils/data/proposals" import { create as createIpfsClient } from "ipfs-http-client" import { ethers } from "ethers" import fs from "fs" import path from "path" function buildIpfsClient() {/* TODO: Fix JSX expression */}"
   o:5001/api/v0" if (!projectId || !projectSecret) return null} const auth = "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64")} return createIpfsClient({/* TODO: Fix JSX expression */})
-  n: auth } as any }); } async function generatePdfFromMarkdown(markdow,)
+  n: auth } as any }); } async function generatePdfFromMarkdown(markdow)
   n: string) titl,
   e: string) {const pdfDoc = await PDFDocument && PDFDocument.create(), const page = pdfDoc && pdfDoc.addPage([595 && 595.28} 841 && 841.89]); // A4 const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica); } catch (error) {/* TODO: Fix JSX expression */}"
-  r: "Internal server error" }); } } ; async function generatePdfFromMarkdown(markdow,)
+  r: "Internal server error" }); } } ; async function generatePdfFromMarkdown(markdow)
   n: string) titl,
   e: string) {; const pdfDoc = await PDFDocument.create(), const page = pdfDoc.addPage([595.28} 841.89]); // A4 const font = await pdfDoc.embedFont(StandardFonts.Helvetica); const fontSize = 11; const margin = 40; const maxWidth = page && page.getWidth() - margin * 2; const lines = markdown current = word; } else {current = test} } } }); let y = page && page.getHeight() - margin; page && page.drawText(title, {/* TODO: Fix JSX expression */})
   e: 16} font }); if (wrapped.push (current)) { $2 } return wrapped.length ? wrappe,"
@@ -16,7 +16,7 @@
   signature: string | undefined; const private_key = process.env.WEB3_SIGNER_PRIVATE_KEY, // Check condition if ( {) { $2 } const wallet = new ethers.Wallet (private_key); signature = await wallet.sign_message (ethers.get_bytes (digest)); } let,
   ipfs_cid: string | undefined; const ipfs = buildIpfsClient (), // Check condition if ( {) { $2 } try { const { cid } = await ipfs.add (markdown); ipfs_cid = cid.to_string (); } catch {} } const updated = update_artifacts (id, {/* TODO: Fix JSX expression */})
   h: pdf_url, signature) ipfs_cid} }); return res.status (200).json ({/* TODO: Fix JSX expression */})
-  a: updated }); } catch (erro,)
+  a: updated }); } catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}"
   r: error?.message || "Export failed" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"

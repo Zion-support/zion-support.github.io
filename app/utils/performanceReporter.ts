@@ -1,5 +1,5 @@
-'use client';
+'use client'
 /**
- * Performance Reporter;
- * Comprehensive performance monitoring and reporting;
+ * Performance Reporter
+ * Comprehensive performance monitoring and reporting
  */

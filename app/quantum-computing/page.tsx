@@ -1,99 +1,267 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+const PagePage: React.FC = () => {,
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+const PagePage: React.FC = () => {
+>>>>>>> origin/main
+    const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
+    {icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results',},
+    {icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards',},
+    {icon: Globe,
+      title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+=======
+      description: 'Worldwide deployment and support for international businesses'
+  }
+    }
+<<<<<<< HEAD
+  ];];];
+>>>>>>> origin/main
+const benefits = [
+=======
+  ]
+  const benefits = [
+>>>>>>> origin/main
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
 
-const QuantumComputingPage: React.FC = () => {
-  return (
-    <>
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
+=======
+    'Proven track record of success';
+  ];
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
-        <title>Quantum Computing Solutions - Zion Tech Group</title>
-        <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" />
+>>>>>>> origin/main
+        <title>Page | Zion Tech Group</title>
+=======
+    'Proven track record of success'
+  ]
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+        </Helmet><title>Page | Zion Tech Group</title>
+>>>>>>> origin/main
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Quantum Computing
-            </h1>
-            <p className="text-xl text-cyan-400 mb-8">
-              Next-generation computing power for complex problem solving
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Unlock Quantum Potential</h2>
-              <p className="text-gray-300 mb-6 text-lg">
-                Our quantum computing solutions leverage the principles of quantum mechanics to solve 
-                complex optimization problems that are intractable for classical computers.
-              </p>
-              <ul className="space-y-4 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-cyan-400 mr-3">✓</span>
-                  Quantum optimization algorithms
-                </li>
-                <li className="flex items-center">
-                  <span className="text-cyan-400 mr-3">✓</span>
-                  Quantum machine learning
-                </li>
-                <li className="flex items-center">
-                  <span className="text-cyan-400 mr-3">✓</span>
-                  Cryptography and security
-                </li>
-                <li className="flex items-center">
-                  <span className="text-cyan-400 mr-3">✓</span>
-                  Financial modeling
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">Quantum Applications</h3>
-              <div className="space-y-4">
-                <div className="bg-white/10 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Portfolio Optimization</h4>
-                  <p className="text-gray-300">Optimize investment portfolios with quantum algorithms</p>
-                </div>
-                <div className="bg-white/10 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Drug Discovery</h4>
-                  <p className="text-gray-300">Accelerate pharmaceutical research with quantum simulation</p>
-                </div>
-                <div className="bg-white/10 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Supply Chain</h4>
-                  <p className="text-gray-300">Optimize complex logistics and supply chain networks</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Ready for Quantum Computing?</h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300"
-              >
-                Explore Quantum Solutions
-              </a>
-              <a
-                href="/consultation"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
-                Schedule Consultation
-              </a>
             </div>
           </div>
         </div>
-      </main>
-      
-      <Footer />
-    </>
-  );
-};
-
-export default QuantumComputingPage;
+      </section>
+<<<<<<< HEAD
+      {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>Why Choose Our Page?,</h2>
+            </h2>
+            <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            {features.map((feature, index) => (
+                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                  <feature />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description</p>}</p>
+              </div>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+                <p className="text-gray-300">{feature.description}
+            ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>Key Benefits;</h2>
+            </h2>
+            <p>Experience the power of our page solutions for your business.,</p>
+=======
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
+              Key Benefits
+            </h2>
+            <p></p>
+              Experience the power of our page solutions for your business.,
+>>>>>>> origin/main
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
+            {benefits.map((benefit, index) => (
+<<<<<<< HEAD
+                <div key={index}className="flex items-start space-x-3"></div>
+                <CheckCircle />
+                <p className="text-gray-300 text-lg">{benefit</p>}</p>
+=======
+                <div key={index} className="flex items-start space-x-3"></div>
+                <CheckCircle>
+                </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
+>>>>>>> origin/main
+              </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}
+            ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+            <h2>Ready to Get Started?</h2>
+            </h2>
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
+=======
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
+            <h2></h2>
+              Ready to Get Started?
+            </h2>
+            <p></p>
+              Contact our experts to discuss your page needs and get a customized solution.
+>>>>>>> origin/main
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>
+<<<<<<< HEAD
+                <Phone>
+                Call Now;
+              </button>
+              <button>
+                <Mail>
+                Email Us;
+=======
+                </button><Phone>
+                Call Now
+              </button>
+              <button>
+                </button><Mail>
+                Email Us
+>>>>>>> origin/main
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  ),
+}
+export default PagePage
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+  )
+}
+export default PagePage</div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></h2></h2></h2></h3></section></section></section>

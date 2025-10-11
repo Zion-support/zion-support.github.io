@@ -1,4 +1,4 @@
-export default async function handler(re,)
+export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Missing WEB3_STORAGE_TOKEN' }) try {/* TODO: Fix JSX expression */}

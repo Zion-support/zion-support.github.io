@@ -1,70 +1,133 @@
+<<<<<<< HEAD
 'use client';
-import React, { memo } from 'react';
-import { LucideIcon, ArrowRight } from 'lucide-react';
-
-interface ServiceCardProps {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
+import React from 'react';
+import {ArrowRight, CheckCircle}}from 'lucide-react';
+interface ServiceCardProps {title: string;,}
+  description: string;,
+  features: string[],
+  price?: string;
   popular?: boolean;
-  onSelect: () => void;
-}
-
-const ServiceCard: React.FC<ServiceCardProps> = memo(({
-  icon: Icon,
+  onSelect?: () => void,
+  className?: string;}const ServiceCard: React.FC<ServiceCardProps> = ({,
   title,
   description,
   features,
   price,
   popular = false,
-  onSelect
+  onSelect,
+  className = ''}) => {return(<div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300 group ${className,)}${popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''}`}>{popular && (</div>
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+          <span className="text-purple-400 text-sm font-semibold">Most Popular</span>
+        </div>
+      )} <div className="mb-4">
+        <h3 className="text-xl font-bold text-white mb-2 group-hover: text-purple-400 transition-colors">,
+          {title} </h3>
+        <p className="text-gray-300 text-sm">{description</p>}</p>
+      </div>
+      <div className="space-y-2 mb-6">{features.map((feature, index) => (</div>
+          <div key={index}className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+            <span className="text-gray-300 text-sm">{feature</span>}</span>
+=======
+'use client'
+import React from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
+interface ServiceCardProps {
+    title: string
+  description: string
+  features: string[]
+  price?: string
+  popular?: boolean
+  onSelect?: () => void,
+  className?: string
+  }
+const ServiceCard: React.FC<ServiceCardProps> = ()
 }) => {
   return (
-    <div className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group ${popular ? 'ring-2 ring-cyan-400' : ''}`}>
+    </ServiceCardProps>< className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group ${className} ${$2 />
+      popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''
+    }`}>
       {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
+        </div><div className="flex items-center gap-2 mb-4">
+          </div><div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+          <span className="text-purple-400 text-sm font-semibold">Most Popular</span>
         </div>
       )}
-      
-      <div className="text-center mb-6">
-        <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-          <Icon className="w-8 h-8 text-white" />
-        </div>
-        <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-        <p className="text-gray-300 mb-4">{description}</p>
-        <div className="text-3xl font-bold text-cyan-400 mb-2">{price}</div>
-        <div className="text-sm text-gray-400">per month</div>
+      <div className="mb-4">
+        </div><h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+  return ()
+      )}
+      <div className="mb-4" /></div>
+        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors" /></h3>
+          {title}
+        </h3>
+        <p className="text-gray-300 text-sm">{description}</p>
       </div>
-
-      <ul className="space-y-3 mb-8">
+      <div className="space-y-2 mb-6">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-300">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
-            {feature}
-          </li>
+          </div><div key={index} className="flex items-center gap-2">
+            </div><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+            <span className="text-gray-300 text-sm">{feature}</span>
+>>>>>>> origin/main
+          </div>
         ))}
-      </ul>
-
-      <button
-        onClick={onSelect}
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-          popular
-            ? 'bg-gradient-to-r from-cyan-600 to-purple-600 text-white hover:from-cyan-700 hover:to-purple-700'
-            : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-        } flex items-center justify-center group`}
-      >
-        Get Started
-        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-      </button>
+      {price && (
+        <div className="mb-6">
+<<<<<<< HEAD
+          <div className="text-3xl font-bold text-white mb-1">{price</div>}</div>
+          <div className="text-gray-400 text-sm">per month</div>
+        </div>
+<<<<<<< HEAD
+      )}
+      {onSelect && (
+        <button;
+          onClick={onSelect}className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">,</button>
+          Get Started;
+          <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />,
+=======
+      )},
+    {onSelect && (
+        <button
+          onClick={onSelect}
+          className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">
+          Get Started
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+>>>>>>> origin/main
+        </button>
+      )}
     </div>
   );
-});
+};
 
-ServiceCard.displayName = 'ServiceCard';
-
+<<<<<<< HEAD
 export default ServiceCard;
+  </ServiceCardProps>
+=======
+export default ServiceCard
+  </ServiceCardProps>
+>>>>>>> origin/main
+=======
+          </div><div className="text-3xl font-bold text-white mb-1">{price}</div>
+          <div className="text-gray-400 text-sm">per month</div>
+        </div>
+      )}
+      {onSelect && (
+        <$2 />
+          onClick={onSelect}
+          className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">
+          Get Started
+          </button><ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </button>
+      )}
+    </div>
+  )
+}
+export default ServiceCard
+  </ServiceCardProps>
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+      )}
+  )
+}
+export default ServiceCard</div></div></div></div></div></div></div></div></span></span></p></h3>
+>>>>>>> origin/main

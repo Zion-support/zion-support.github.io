@@ -1,214 +1,70 @@
-#!/usr/bin/env node;
-// Sitemap URLs from the website;
-const sitemapUrls = [
-  // Main Pages;
-  '/',
-  '/about',
-  '/contact',
-  '/blog',
-  '/faq',
-  '/careers',
-  '/partners',
-  '/news',
-  '/solutions',
-  '/research-development',
-  '/request-quote',
-  '/green-it',
-  
-  // Services Pages;
-  '/services',
-  '/services/ai-analytics',
-  '/services/cybersecurity',
-  '/services/cloud-devops',
-  '/services/iot-edge',
-  '/services/quantum-computing',
-  '/services/blockchain',
-  '/services/digital-twin',
-  '/services/sustainability',
-  '/services/data-analytics',
-  '/services/infrastructure',
-  '/services/digital-transformation',
-  '/services/consulting',
-  '/services/onsite-support',
-  '/services/5g-solutions',
-  
-  // Micro SAAS Pages;
-  '/micro-saas',
-  '/micro-saas/ai-business-intelligence',
-  '/micro-saas/customer-experience',
-  '/micro-saas/quantum-computing',
-  '/micro-saas/supply-chain',
-  '/micro-saas/cybersecurity',
-  '/micro-saas/iot-edge',
-  '/micro-saas/content-creation',
-  '/micro-saas/hr-platform',
-  
-  // IT Services Pages;
-  '/it-services',
-  '/it-services/infrastructure',
-  '/it-services/digital-transformation',
-  '/it-services/consulting',
-  '/it-services/onsite-support',
-  '/it-services/green-it',
-  '/it-services/5g-solutions',
-  
-  // Marketplace Pages;
-  '/marketplace',
-  '/marketplace/products',
-  '/marketplace/talent',
-  '/marketplace/equipment',
-  '/marketplace/services',
-  '/talent',
-  '/equipment',
-  '/it-onsite-services',
-  
-  // Company Pages;
-  '/team',
-  '/help',
-  '/security',
-  '/status',
-  
-  // Legal Pages;
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/sitemap',
-  
-  // Auth Pages;
-  '/login',
-  '/signup'
-];
-
-// Existing pages from the codebase;
-const existingPages = [
-  // Main pages;
-  '/',
-  '/about',
-  '/contact',
-  '/blog',
-  '/careers',
-  '/news',
-  '/team',
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/sitemap',
-  '/status',
-  '/support',
-  '/docs',
-  '/api-docs',
-  '/demo',
-  '/consultation',
-  '/pricing',
-  '/enterprise',
-  
-  // Services;
-  '/services',
-  '/ai-services',
-  '/ai-marketing',
-  '/ai-automation',
-  '/ai-healthcare',
-  '/ai-fintech',
-  '/ai-cybersecurity',
-  '/ai-data-analytics',
-  '/ai-workflow-automation',
-  '/ai-mobile-app-development',
-  '/ai-ecommerce-solutions',
-  '/ai-customer-support',
-  '/ai-sales-automation',
-  '/ai-data-visualization',
-  '/ai-lead-generation',
-  '/ai-document-processing',
-  '/ai-content-generation',
-  '/ai-email-marketing',
-  '/ai-crm',
-  '/ai-chatbot-builder',
-  '/ai-writing-assistant',
-  '/ai-project-manager',
-  '/ai-social-media-manager',
-  '/ai-email-assistant',
-  '/ai-scheduler',
-  '/ai-3d-generation',
-  '/ai-fashion-design',
-  '/ai-fitness-coach',
-  '/ai-music-composition',
-  '/ai-video-generation',
-  '/ai-voice-cloning',
-  '/ai-code-generation',
-  '/ai-customer-support-bot',
-  '/ai-analytics-dashboard',
-  
-  // IT Services;
-  '/it-services',
-  '/it-infrastructure',
-  '/it-consulting',
-  '/cybersecurity',
-  '/cloud-migration',
-  '/cloud-services',
-  '/devops',
-  '/database',
-  '/networking',
-  '/security',
-  '/compliance',
-  '/gdpr',
-  
-  // Emerging Technologies;
-  '/quantum-computing',
-  '/autonomous-systems',
-  '/blockchain',
-  '/blockchain-web3',
-  '/iot-edge',
-  '/iot-edge-computing',
-  '/robotics',
-  '/business-intelligence',
-  '/smart-analytics',
-  '/analytics-tools',
-  '/marketing-tools',
-  '/developer-tools',
-  '/productivity',
-  '/business-apps',
-  '/expense-tracker',
-  '/task-manager-pro',
-  
-  // Micro SAAS;
-  '/micro-saas',
-  
-  // Other;
-  '/case-studies',
-  '/api',
-  '/offline',
-  '/system-status'
-];
-
-// Find missing pages;
-const missingPages = sitemapUrls.filter(url => !existingPages.includes(url));
-
-// Find extra pages (in codebase but not in sitemap)
-const extraPages = existingPages.filter(url => !sitemapUrls.includes(url));
-
-console.log('=== MISSING PAGES (in sitemap but not in codebase) ===');
-missingPages.forEach(page => console.log(page));
-
-console.log('\n=== EXTRA PAGES (in codebase but not in sitemap) ===');
-extraPages.forEach(page => console.log(page));
-
-console.log('\n=== SUMMARY ===');
-console.log(`Total sitemap,)`
-  URLs: ${sitemapUrls.length}`);`
-console.log(`Total existing,)`
-  pages: ${existingPages.length}`);`
-console.log(`Missing,)`
-  pages: ${missingPages.length}`);`
-console.log(`Extra,)`
-  pages: ${extraPages.length}`);
-
-// Categorize missing pages;
-const missingByCategory = {/* TODO: Fix JSX expression */}
-};
-
-console.log('\n=== MISSING PAGES BY CATEGORY ===');
-Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
-    console.log(`\n${category}:`);`
-    pages.forEach(page => console.log(`  ${page}`));
+#!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Read the footer component to extract all links
+const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', 'utf8')
+// Extract all href values from the footer
+const hrefMatches = footerContent.match(/href:\s*'([^']+)'/g)
+const footerLinks = hrefMatches ? hrefMatches.map(match => {
+  const result = match.match(/href:\s*'([^']+)'/)
+  return result ? result[1] : null
+}).filter(Boolean) : []
+// Read the navigation component to extract all links
+const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', 'utf8')
+const navMatches = navContent.match(/to="([^"]+)"/g)
+const navLinks = navMatches ? navMatches.map(match => {
+  const result = match.match(/to="([^"]+)"/)
+  return result ? result[1] : null
+}).filter(Boolean) : []
+// Combine all links
+const allLinks = [...new Set([...footerLinks, ...navLinks])]
+// Get all existing page files
+const appDir = '/workspace/app'
+const existingPages = []
+function scanDirectory(dir) {
+  const items = fs.readdirSync(dir)
+  for (const item of items) {
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
+    if (stat.isDirectory()) {
+      scanDirectory(fullPath)
+    } else if (item === 'page.tsx') {
+      // Extract the route from the path
+      const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/'
+      existingPages.push(route)
+    }
   }
-});`
+}
+
+scanDirectory(appDir)
+// Check for missing pages
+const missingPages = []
+const existingPagesSet = new Set(existingPages)
+for (const link of allLinks) {
+  if (!existingPagesSet.has(link)) {
+    missingPages.push(link)
+  }
+}
+
+console.log('=== MISSING PAGES ANALYSIS ===')
+console.log(`Total links found: ${allLinks.length}`)
+console.log(`Existing pages: ${existingPages.length}`)
+console.log(`Missing pages: ${missingPages.length}`)
+console.log('\n=== MISSING PAGES ===')
+missingPages.forEach(page => console.log(`- ${page}`))
+console.log('\n=== EXISTING PAGES ===')
+existingPages.sort().forEach(page => console.log(`✓ ${page}`))
+// Write missing pages to a file
+fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
+  totalLinks: allLinks.length,
+  existingPages: existingPages.length,
+  missingPages: missingPages.length,
+  missingPagesList: missingPages,
+  allLinks: allLinks,
+  existingPagesList: existingPages
+}, null, 2))
+console.log('\n=== ANALYSIS COMPLETE ===')
+console.log('Results saved to missing-pages.json')

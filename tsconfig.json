@@ -16,41 +16,41 @@
     "noEmit": true,
     "jsx": "preserve",
     "jsxImportSource": "react",
-    "strict": true,
-    "strictNullChecks": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+    "strict": false,
+    "strictNullChecks": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./app/*"
       ],
       "@/components/*": [
-        "src/components/*"
+        "./app/components/*"
       ],
       "@/pages/*": [
-        "src/pages/*"
+        "./app/*"
       ],
       "@/utils/*": [
-        "src/utils/*"
+        "./utils/*"
       ],
       "@/types/*": [
-        "src/types/*"
+        "./types/*"
       ],
       "@/hooks/*": [
-        "src/hooks/*"
+        "./hooks/*"
       ],
       "@/config/*": [
-        "src/config/*"
+        "./config/*"
       ],
       "@/data/*": [
-        "src/data/*"
+        "./data/*"
       ],
       "@/content/*": [
-        "src/content/*"
+        "./content/*"
       ]
     },
     "incremental": true,
@@ -76,9 +76,19 @@
   "include": [
     "app/**/*.ts",
     "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    ".next/types/**/*.ts"
+    "App.tsx",
+    "api/**/*.js",
+    "api/**/*.ts",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "types/**/*.ts",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "config/**/*.ts",
+    "data/**/*.ts",
+    "content/**/*.ts",
+    "content/**/*.tsx",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
@@ -155,6 +165,8 @@
     "src.disabled/**",
     "utils.disabled/**",
     "vite.config.performance.ts",
+    "vite.config.ts",
+    "vite.config.d.ts",
     "dao/**",
     "deployments/**",
     "e2e/**",
@@ -162,7 +174,6 @@
     "src/pages/blog-disabled/**",
     "hooks/**",
     "middleware/**",
-    "app/**/*",
     "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",

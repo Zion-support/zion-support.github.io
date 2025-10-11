@@ -14,6 +14,8 @@ export const metadata = {
         url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
         width: 1200,
         height: 630,
+        alt:       ,
+$4}
         alt: 'AI Cost Optimization Breakthrough 2026'
 
       }
@@ -22,8 +24,8 @@ export const metadata = {
 
   twitte,
   r: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   car,
   d: 'summary_large_image',
     titl,
@@ -37,16 +39,16 @@ export const metadata = {
   },
   robot,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   inde,
   x: true,
     follo,
   w: true,
     googleBo,
   t: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   inde,
   x: true,
       follo,
@@ -57,11 +59,13 @@ export const metadata = {
       'max-snippet': -1
     }
   },
+  alternates: {
+    canonical:   ,
+$4}
+}
 
   alternate,
   s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-
-
+  O: Add content,}
+}
 

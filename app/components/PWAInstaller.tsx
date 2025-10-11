@@ -1,113 +1,62 @@
-import React, { useEffect, useState } from 'react';
-
-interface BeforeInstallPromptEvent extends Event {
-  prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
 }
+  ]
+const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
 
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [showInstallButton, setShowInstallButton] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
+    '24/7 technical support',
 
-  useEffect(() => {
-    // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true);
-      return;
-    }
+    'Easy integration with existing systems',
 
-    // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setShowInstallButton(true);
-    };
+    'Cost-effective pricing plans',
 
-    // Listen for the appinstalled event
-    const handleAppInstalled = () => {
-      setIsInstalled(true);
-      setShowInstallButton(false);
-      setDeferredPrompt(null);
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleAppInstalled);
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleAppInstalled);
-    };
-  }, []);
-
-  const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-
-    try {
-      await deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      
-      if (outcome === 'accepted') {
-        // eslint-disable-next-line no-console
-        console.log('User accepted the install prompt');
-      } else {
-        // eslint-disable-next-line no-console
-        console.log('User dismissed the install prompt');
-      }
-      
-      setDeferredPrompt(null);
-      setShowInstallButton(false);
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error('Error installing PWA:', error);
-    }
-  };
-
-  if (isInstalled || !showInstallButton) {
-    return null;
-  }
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
+=======
+    'Proven track record of success';
+  ];];];
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+>>>>>>> origin/main
+        <title>PWAInstaller | Zion Tech Group</title>
+=======
+    'Proven track record of success'
+  ]
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+        </Helmet><title>PWAInstaller | Zion Tech Group</title>
+>>>>>>> origin/main
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+        </div>
+      </section>
+}
+export default PWAInstallerPage
   return (
-    <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-      <div className="flex items-start space-x-3">
-        <div className="flex-shrink-0">
-          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-            📱
-          </div>
-        </div>
-        
-        <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-semibold mb-1">Install App</h3>
-          <p className="text-xs text-white/90 mb-3">
-            Install Zion Tech Group app for a better experience with offline access and faster loading.
-          </p>
-          
-          <div className="flex space-x-2">
-            <button
-              onClick={handleInstallClick}
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
-            >
-              Install
-            </button>
-            
-            <button
-              onClick={() => setShowInstallButton(false)}
-              className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
-            >
-              Maybe later
-            </button>
-          </div>
-        </div>
-        
-        <button
-          onClick={() => setShowInstallButton(false)}
-          className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
-        >
-          ×
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default PWAInstaller;
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>PWAInstaller | Zion Tech Group
+        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
+}
+export default PWAInstallerPage</div>
