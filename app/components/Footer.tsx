@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
+import { Brain, Mail, Phone, MapPin, ArrowRight, Zap, Server, Code, BarChart, Users, Globe, Smartphone, Shield, Cloud, Database, Settings, TrendingUp, Star, Award, Clock, Sparkles } from 'lucide-react'
 
 const Footer: React.FC = () => {
   return (
@@ -105,15 +105,19 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 text-sm hover:text-cyan-400">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <a href="tel:+13024640950" className="text-gray-300 text-sm hover:text-cyan-400">
+                  +1 302 464 0950
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">San Francisco, CA</span>
+                <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
             <Link 
@@ -130,7 +134,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
+              © 2024 Zion Tech Group. All rights reserved. | <a href="https://ziontechgroup.com" className="hover:text-cyan-400">ziontechgroup.com</a>
             </div>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
