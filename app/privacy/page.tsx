@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle } from 'lucide-react';
 
 export default function PagePage() {
@@ -9,16 +8,6 @@ export default function PagePage() {
       title: 'Expert Solutions',
       description: 'Professional page services delivered by experienced professionals.',
       benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
-=======
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {Shield, Eye, Database, Server, Mail, Phone, MapPin, CheckCircle, User, Edit, Trash2} from 'lucide-react'
-const PrivacyPage: React.FC = () => {
-    {} category: 'Personal Information'},;,
-icon: User,;,
-description: 'Name, email, phone number, and other identifying information'
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
     },
     {
       title: 'Advanced Technology',
