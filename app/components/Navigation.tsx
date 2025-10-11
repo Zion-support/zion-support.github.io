@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+=======
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Smartphone } from 'lucide-react'
+import SearchBar from './SearchBar'
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+<<<<<<< HEAD
 =======
 import { Menu, X, ChevronDown, Zap, Cloud, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
 
@@ -13,18 +19,29 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen)
 =======
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+  }
+
+  const handleSearch = (query: string) => {
+    // Handle search functionality
+    console.log('Search query:', query);
+    // You can implement search logic here or navigate to a search results page
   }
 
   const services = [
@@ -50,6 +67,7 @@ export default function Navigation() {
       title: 'IT Services',
       href: '/it-services',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Database className="w-4 h-4" />,
       description: 'Comprehensive IT infrastructure services'
     },
@@ -68,6 +86,10 @@ export default function Navigation() {
         { title: 'Network Solutions', href: '/it-services' }
       ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-bee6
+=======
+      icon: Database,
+      description: 'Information Technology Solutions'
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
     },
     {
       title: 'Cloud Services',
@@ -113,6 +135,7 @@ export default function Navigation() {
     {
       title: '5G Implementation',
       href: '/5g-implementation',
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: <Globe className="w-4 h-4" />,
       description: 'Next-generation 5G solutions'
@@ -168,12 +191,20 @@ export default function Navigation() {
       path: '/digital-transformation',
       description: 'Transform your business digitally'
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+      icon: Shield,
+      description: '5G Network Implementation'
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
     }
   ]
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <nav className="bg-gray-900 shadow-lg">
+=======
+    <nav className="bg-white/10 backdrop-blur-lg fixed w-full top-0 z-50 border-b border-white/20">
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -189,12 +220,17 @@ export default function Navigation() {
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
+<<<<<<< HEAD
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
             </Link>
           </div>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="hidden md:flex items-center space-x-8">
             <Link
@@ -207,6 +243,13 @@ export default function Navigation() {
               to="/about"
               className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >
+=======
+          <div className="hidden md:flex items-center space-x-1">
+            <Link to="/" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
               About
             </Link>
             
@@ -214,6 +257,7 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={toggleServices}
+<<<<<<< HEAD
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
 =======
           <div className="hidden md:block">
@@ -228,11 +272,15 @@ export default function Navigation() {
                 to="/about"
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+                className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
               >
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               {isServicesOpen && (
@@ -354,6 +402,33 @@ export default function Navigation() {
               >
                 Contact
               </Link>
+=======
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
+                  {services.map((service, index) => {
+                    const IconComponent = service.icon
+                    return (
+                      <Link
+                        key={index}
+                        to={service.href}
+                        className="flex items-center px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        <IconComponent className="w-5 h-5 text-purple-600 mr-3" />
+                        <div>
+                          <div className="font-medium">{service.title}</div>
+                          <div className="text-sm text-gray-500">{service.description}</div>
+                        </div>
+                      </Link>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+            
+            <div className="hidden lg:block">
+              <SearchBar onSearch={handleSearch} className="w-64" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
             </div>
           </div>
 
@@ -373,10 +448,14 @@ export default function Navigation() {
             <button
               onClick={toggleMenu}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-gray-300 hover:text-white p-2 rounded-md"
 =======
               className="text-gray-900 hover:text-purple-600 p-2 rounded-md"
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+              className="text-white hover:text-purple-300 p-2 rounded-md transition-colors"
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -386,6 +465,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
               <Link
@@ -522,6 +602,42 @@ export default function Navigation() {
                 to="/contact"
                 className="bg-gradient-to-r from-purple-600 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center mt-4"
                 onClick={toggleMenu}
+=======
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg rounded-lg mt-2">
+              <Link to="/" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+                Home
+              </Link>
+              <Link to="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+                About
+              </Link>
+              
+              {/* Mobile Services */}
+              <div className="space-y-1">
+                <div className="text-white px-3 py-2 text-base font-medium">Services</div>
+                {services.map((service, index) => {
+                  const IconComponent = service.icon
+                  return (
+                    <Link
+                      key={index}
+                      to={service.href}
+                      className="flex items-center text-gray-300 hover:text-white pl-6 pr-3 py-2 rounded-md text-sm transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <IconComponent className="w-4 h-4 mr-3" />
+                      <span>{service.title}</span>
+                    </Link>
+                  )
+                })}
+              </div>
+              
+              <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+                Contact
+              </Link>
+              <Link 
+                to="/contact" 
+                className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
+                onClick={() => setIsOpen(false)}
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
               >
                 Get Started
               </Link>

@@ -4,9 +4,12 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
+<<<<<<< HEAD
 # Crawl-delay
 Crawl-delay: 1
 
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
@@ -15,14 +18,24 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
+<<<<<<< HEAD
+=======
+Allow: /
+Allow: /about
+Allow: /contact
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
 Allow: /ai-services
 Allow: /it-services
 Allow: /cloud-services
 Allow: /micro-saas-services
 Allow: /digital-transformation
+<<<<<<< HEAD
 Allow: /5g-implementation
 Allow: /about
 Allow: /contact
 
 # Host
 Host: https://ziontechgroup.com
+=======
+Allow: /5g-implementation
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca

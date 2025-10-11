@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import SEOHead from './components/SEOHead'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
 =======
@@ -8,13 +9,24 @@ import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, CheckCircle } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
 import { Link } from 'react-router-dom'
+=======
+import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react'
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
 
 export default function HomePage() {
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99%', label: 'Success Rate' },
+    { number: '24/7', label: 'Support' }
+  ]
+
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
+<<<<<<< HEAD
       benefits: ['AI Content Generation - $500/month', 'Chatbot Development - $1,200', 'Process Automation - $2,000/month', 'AI Analytics - $800/month'],
       link: '/ai-services'
     },
@@ -53,6 +65,13 @@ export default function HomePage() {
       content: 'Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations.',
       rating: 5
 =======
+=======
+      benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'Process Automation - $800/month', 'AI Analytics - $400/month'],
+      link: '/ai-solutions'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
@@ -86,12 +105,19 @@ export default function HomePage() {
       link: '/5g-implementation'
     },
     {
+<<<<<<< HEAD
       icon: <Code className="w-8 h-8 text-yellow-500" />,
+=======
+      icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
       title: 'Digital Transformation',
       description: 'Transform your business for the digital age with comprehensive digital transformation services.',
       benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
       link: '/digital-transformation'
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
     }
   ]
 
@@ -103,6 +129,7 @@ export default function HomePage() {
   ]
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -117,22 +144,16 @@ export default function HomePage() {
         description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
         keywords="AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation"
       />
-      
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Advanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI & IT Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence, cloud computing, and digital transformation services.
 =======
+    <div className="px-4 py-20">
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+      
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+      <section className="py-12 sm:py-16 lg:py-20">
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
@@ -142,27 +163,34 @@ export default function HomePage() {
               Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/about" 
+              <a 
+                href="/about" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Learn More
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/contact" 
+              </a>
+              <a 
+                href="/contact" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Get Started
-              </Link>
+              </a>
             </div>
           </div>
 
           {/* Stats Section */}
+<<<<<<< HEAD
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+=======
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center px-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -173,16 +201,25 @@ export default function HomePage() {
       {/* Features Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our Core Services</h2>
+=======
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Comprehensive technology solutions designed to accelerate your digital transformation
             </p>
           </div>
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-20">
+=======
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
             {features.map((feature, index) => (
-              <Link key={index} to={feature.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+              <a key={index} href={feature.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
@@ -198,7 +235,7 @@ export default function HomePage() {
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
@@ -208,6 +245,7 @@ export default function HomePage() {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
+<<<<<<< HEAD
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
@@ -218,13 +256,23 @@ export default function HomePage() {
                 <Link 
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+=======
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Let's discuss how our AI and IT solutions can drive your success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
                 >
-<<<<<<< HEAD
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  Get Free Consultation
                 </a>
                 <a
                   href="/services"
+<<<<<<< HEAD
                   className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
 =======
                   Get Free Consultation
@@ -233,12 +281,16 @@ export default function HomePage() {
                   to="/ai-services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
                 >
                   Our Services
                 </Link>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </section>
 >>>>>>> cursor/analyze-improve-and-deploy-application-da90
@@ -367,6 +419,8 @@ export default function HomePage() {
           </div>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-04ca
         </div>
       </section>
     </div>
