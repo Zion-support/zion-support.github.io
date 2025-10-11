@@ -23,7 +23,8 @@
       
       <Footer />
     </>
-  );
-};
-
-export default PagePage;
+  )
+}
+export default PagePage
+    </Footer>
+  </ArrowRight>

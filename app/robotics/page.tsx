@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
             </div>
           </div>
         </section>
@@ -15,7 +15,7 @@ import React from 'react';
       
       <Footer />
     </>
-  );
-};
-
-export default PagePage;
+  )
+}
+export default PagePage
+  </Footer>

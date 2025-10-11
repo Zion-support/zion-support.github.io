@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
@@ -28,6 +28,7 @@ import React from 'react';
       
       <Footer />
     </>
-  );
-};
-
+  )
+}
+    </Footer>
+  </ArrowRight>

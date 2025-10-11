@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-export default function RootLayout({
-  children,
-}: {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import './globals.css';
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import './globals.css'
+interface RootLayoutProps {children: React.ReactNode;}
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
-
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
   return (
-    <html lang="en">
-<<<<<<< HEAD
-      <body className={inter.className}>
-        {children}
-      </body>
-    </html>
-  );
-}
-}
-=======
+    <>
+<html lang="en">
       <head>
         <Helmet>
           <title>Zion Tech Group - AI & IT Solutions</title>
@@ -43,8 +26,9 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
         <Footer />
       </body>
     </html>
+    </>
   );
-};
-
-export default RootLayout;
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
+export default RootLayout
+      </Footer>
+    </Navigation>
+  </RootLayoutProps>

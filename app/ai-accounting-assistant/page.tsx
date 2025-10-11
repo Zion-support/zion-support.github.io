@@ -1,65 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-const AiAccountingAssistantPage: React.FC = () => {
-  const features = [
-    {
-      icon: Calculator,
-      title: 'Automated Calculations',
-    },
-    {
-      icon: FileText,
-      title: 'Document Processing',
-    },
-    {
-      icon: BarChart,
-      title: 'Financial Reporting',
-      description: 'Generate comprehensive financial reports and analytics automatically.',
-      benefits: ['P&L statements', 'Balance sheets', 'Cash flow reports', 'Custom analytics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-      description: 'AI-driven insights for financial forecasting and business planning.',
-      benefits: ['Revenue forecasting', 'Expense prediction', 'Risk analysis', 'Growth planning']
-    }
-  ];
-
-  const benefits = [
-    'Reduce accounting errors by 90%',
-    'Save 15+ hours per week on manual tasks',
-    'Improve financial accuracy and compliance',
-    'Automate invoice processing and payments',
-    'Generate real-time financial insights',
-    'Streamline tax preparation and filing'
-  ];
-
-  const useCases = [
-    {
-      title: 'Small Business',
-      description: 'Perfect for small businesses looking to automate their accounting processes.',
-      icon: Calculator
-    },
-    {
-      title: 'Enterprise',
-      description: 'Scalable solutions for large organizations with complex accounting needs.',
-      icon: BarChart
-    },
-    {
-      title: 'Freelancers',
-      description: 'Streamlined accounting for freelancers and independent contractors.',
-      icon: FileText
-    },
-    {
-      title: 'Accounting Firms',
-      description: 'Powerful tools for accounting professionals to serve more clients.',
-      icon: Target
-=======
-import { Calculator, BarChart, Shield, Zap, CheckCircle, ArrowRight, Brain, Target, TrendingUp, FileText } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Calculator, BarChart, Shield, Zap, CheckCircle, ArrowRight, Brain, Target, TrendingUp, FileText} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIAccountingAssistantPage: React.FC = () => {
   const features = [
     {
@@ -68,68 +12,47 @@ const AIAccountingAssistantPage: React.FC = () => {
       description: 'AI-powered bookkeeping that automatically categorizes transactions and maintains accurate records.',
       benefits: ['Transaction categorization', 'Receipt scanning', 'Expense tracking', 'Invoice processing']
     },
-    {
-      icon: BarChart,
+    {icon: BarChart,
       title: 'Financial Analytics',
       description: 'Advanced analytics and reporting to help you understand your financial performance.',
-      benefits: ['Profit & loss reports', 'Cash flow analysis', 'Budget tracking', 'Financial forecasting']
-    },
-    {
-      icon: Shield,
+      benefits: ['Profit & loss reports', 'Cash flow analysis', 'Budget tracking', 'Financial forecasting']},
+    {icon: Shield,
       title: 'Compliance & Security',
       description: 'Ensure compliance with accounting standards and maintain the highest security standards.',
-      benefits: ['Tax compliance', 'Audit trails', 'Data encryption', 'Regulatory reporting']
-    },
-    {
-      icon: Zap,
+      benefits: ['Tax compliance', 'Audit trails', 'Data encryption', 'Regulatory reporting']},
+    {icon: Zap,
       title: 'Real-Time Processing',
       description: 'Process financial data in real-time for up-to-date insights and decision making.',
-      benefits: ['Live updates', 'Instant reporting', 'Real-time alerts', 'Automated workflows']
-    },
-    {
-      icon: Brain,
+      benefits: ['Live updates', 'Instant reporting', 'Real-time alerts', 'Automated workflows']},
+    {icon: Brain,
       title: 'Intelligent Insights',
       description: 'AI-driven insights and recommendations to optimize your financial management.',
-      benefits: ['Spending analysis', 'Cost optimization', 'Revenue insights', 'Predictive analytics']
-    },
-    {
-      icon: Target,
+      benefits: ['Spending analysis', 'Cost optimization', 'Revenue insights', 'Predictive analytics']},
+    {icon: Target,
       title: 'Goal Tracking',
       description: 'Set and track financial goals with AI-powered monitoring and recommendations.',
-      benefits: ['Goal setting', 'Progress tracking', 'Milestone alerts', 'Achievement insights']
-    }
-  ];
-
+      benefits: ['Goal setting', 'Progress tracking', 'Milestone alerts', 'Achievement insights']}
+  ]
   const capabilities = [
-    {
-      title: 'Invoice Management',
+    {title: 'Invoice Management',
       description: 'Automated invoice processing, approval workflows, and payment tracking.',
       icon: FileText,
-      benefits: ['Invoice scanning', 'Approval workflows', 'Payment tracking', 'Vendor management']
-    },
-    {
-      title: 'Expense Management',
+      benefits: ['Invoice scanning', 'Approval workflows', 'Payment tracking', 'Vendor management']},
+    {title: 'Expense Management',
       description: 'Streamlined expense reporting and reimbursement processes.',
       icon: TrendingUp,
-      benefits: ['Expense categorization', 'Receipt capture', 'Policy compliance', 'Reimbursement processing']
-    },
-    {
-      title: 'Financial Reporting',
+      benefits: ['Expense categorization', 'Receipt capture', 'Policy compliance', 'Reimbursement processing']},
+    {title: 'Financial Reporting',
       description: 'Comprehensive financial reports and dashboards for better decision making.',
       icon: BarChart,
-      benefits: ['Custom reports', 'Interactive dashboards', 'Data visualization', 'Export capabilities']
-    },
-    {
-      title: 'Tax Preparation',
+      benefits: ['Custom reports', 'Interactive dashboards', 'Data visualization', 'Export capabilities']},
+    {title: 'Tax Preparation',
       description: 'Automated tax calculations and preparation assistance.',
       icon: Calculator,
-      benefits: ['Tax calculations', 'Deduction optimization', 'Form generation', 'Filing assistance']
-    }
-  ];
-
+      benefits: ['Tax calculations', 'Deduction optimization', 'Form generation', 'Filing assistance']}
+  ]
   const pricingTiers = [
-    {
-      name: 'Basic',
+    {name: 'Basic',
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses and freelancers',
@@ -140,10 +63,8 @@ const AIAccountingAssistantPage: React.FC = () => {
         'Mobile app access',
         'Cloud storage'
       ],
-      popular: false
-    },
-    {
-      name: 'Professional',
+      popular: false},
+    {name: 'Professional',
       price: '$79',
       period: '/month',
       description: 'Ideal for growing businesses',
@@ -155,10 +76,8 @@ const AIAccountingAssistantPage: React.FC = () => {
         'Custom reports',
         'Multi-user access'
       ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
+      popular: true},
+    {name: 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Tailored for large organizations',
@@ -170,21 +89,13 @@ const AIAccountingAssistantPage: React.FC = () => {
         'Advanced security',
         'Custom workflows'
       ],
-      popular: false
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
-    }
-  ];
-
+      popular: false}
+  ]
   return (
     <>
-      <Helmet>
+<Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Revolutionary AI-powered accounting assistant for automated financial management and reporting" />
-        <meta name="keywords" content="AI accounting, financial automation, accounting software, bookkeeping, financial reporting" />
-=======
         <meta name="description" content="Streamline your accounting with our AI-powered assistant. Automated bookkeeping, financial analytics, and compliance management." />
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
       </Helmet>
       
       <Navigation />
@@ -195,20 +106,6 @@ const AIAccountingAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Accounting Assistant</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your accounting workflow with intelligent automation, accurate calculations, and comprehensive financial insights.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  Start Free Trial
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  Schedule Demo
-=======
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">AI Accounting Assistant</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -221,7 +118,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                 </button>
                 <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                   Watch Demo
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
                 </button>
               </div>
             </div>
@@ -229,8 +125,6 @@ const AIAccountingAssistantPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -238,7 +132,6 @@ const AIAccountingAssistantPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Leverage advanced AI technology to automate and optimize your accounting processes.
               </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -253,7 +146,9 @@ const AIAccountingAssistantPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
-                    ))}
+                    )
+    </>
+  )
                   </ul>
                 </div>
               ))}
@@ -322,25 +217,6 @@ const AIAccountingAssistantPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our AI Accounting Assistant?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Transform your accounting workflow with intelligent automation
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
-                    <Zap className="h-6 w-6 text-cyan-400" />
-=======
         {/* Capabilities Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -398,7 +274,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                       <span className="text-gray-300 ml-1">{tier.period}</span>
                     </div>
                     <p className="text-gray-300 mt-2">{tier.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
                   </div>
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature, idx) => (
@@ -428,36 +303,31 @@ const AIAccountingAssistantPage: React.FC = () => {
               Ready to Transform Your Accounting?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-=======
               Join thousands of businesses already using our AI accounting assistant to streamline their financial management.
             </p>
             <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center mx-auto">
               Start Your Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
           </div>
         </section>
       </main>
 
       <Footer />
     </>
-  );
-};
-
-<<<<<<< HEAD
-export default AiAccountingAssistantPage;
-=======
-export default AIAccountingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
+  )
+}
+export default AIAccountingAssistantPage
+                          </Footer>
+                        </ArrowRight>
+                      </CheckCircle>
+                    </CheckCircle>
+                  </Icon>
+                </CheckCircle>
+              </Icon>
+            </CheckCircle>
+          </div>
+        </div>
+      </section>
+    </ArrowRight>
+  </Navigation>

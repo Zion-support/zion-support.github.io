@@ -1,10 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -13,26 +12,19 @@ const PagePage: React.FC = () => {
       description: 'Advanced artificial intelligence technology to transform your business operations.',
       benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
-    {
-      icon: BarChart,
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: TrendingUp,
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
-      icon: Target,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
+    {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-  ];
-
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
+  ]
             </div>
           </div>
         </section>
@@ -107,7 +99,10 @@ const PagePage: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
-
-export default PagePage;
+  )
+}
+export default PagePage
+        </Footer>
+      </ArrowRight>
+    </Zap>
+  </CheckCircle>

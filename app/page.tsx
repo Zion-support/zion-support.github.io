@@ -2,7 +2,7 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, CheckCircle, Brain, Cloud, Shield, Code } from 'lucide-react'
+import {ArrowRight, CheckCircle, Brain, Cloud, Shield, Code} from 'lucide-react'
 
 const HomePage: React.FC = () => {
   const features = [
@@ -12,35 +12,28 @@ const HomePage: React.FC = () => {
       description: 'Leverage cutting-edge artificial intelligence to transform your business operations.',
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
-    {
-      icon: Cloud,
+    {icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions tailored to your business needs.',
-      benefits: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions']
-    },
-    {
-      icon: Shield,
+      benefits: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions']},
+    {icon: Shield,
       title: 'Cybersecurity',
       description: 'Protect your digital assets with our comprehensive security solutions.',
-      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Risk Assessment']
-    },
-    {
-      icon: Code,
+      benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Risk Assessment']},
+    {icon: Code,
       title: 'Custom Development',
       description: 'Bespoke software solutions designed to meet your unique requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    }
-  ];
-
+      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']}
+  ]
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
-  ];
-
+    {number: '500+', label: 'Projects Completed'},
+    {number: '100+', label: 'Happy Clients'},
+    {number: '99.9%', label: 'Uptime Guarantee'},
+    {number: '24/7', label: 'Support Available'}
+  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       <main>
@@ -142,7 +135,8 @@ const HomePage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+    </>
+  )
+}
 
-export default HomePage;
+export default HomePage
