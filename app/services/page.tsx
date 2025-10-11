@@ -260,17 +260,6 @@ const ServicesPage: React.FC = () => {
       benefits: ['Enhanced security posture', 'Reduced risk exposure', 'Compliance assurance', 'Peace of mind']
     },
     {
-      icon: Cloud,
-      title: 'Zion Cloud Vault',
-      description: 'Secure cloud backup and disaster recovery solution with automated data protection.',
-      category: 'saas',
-      features: ['Automated Backups', 'Cross-platform Sync', 'Version Control', 'Disaster Recovery', 'Data Encryption', 'Compliance Support'],
-      price: 'Starting at $79/month',
-      marketPrice: '$150-400/month',
-      benefits: ['Data protection', 'Business continuity', 'Cost-effective storage', 'Easy recovery']
-<<<<<<< HEAD
-    },
-    {
       icon: FileText,
       title: 'Zion Content Studio',
       description: 'AI-powered content creation and management platform for blogs, social media, and marketing.',
@@ -799,23 +788,221 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $2,500/month',
       marketPrice: '$4000-15000/month',
       benefits: ['Complete process automation', 'Reduced manual work', 'Improved efficiency', 'Cost savings']
-    }
-  ];
-=======
+    },
+    
+    // Additional Real AI Services
+    {
+      icon: Brain,
+      title: 'AI Drug Discovery Platform',
+      description: 'Revolutionary AI-powered drug discovery and molecular design platform for pharmaceutical companies.',
+      category: 'ai',
+      features: ['Molecular Design AI', 'Drug-Target Interaction Prediction', 'Clinical Trial Optimization', 'Side Effect Prediction', 'Patent Analysis'],
+      price: 'Starting at $15,000/month',
+      marketPrice: '$25000-100000/month',
+      benefits: ['Faster drug development', 'Reduced R&D costs', 'Higher success rates', 'Competitive advantage']
+    },
+    {
+      icon: Eye,
+      title: 'AI Climate Change Predictor',
+      description: 'Advanced AI system for climate modeling, weather prediction, and environmental impact assessment.',
+      category: 'ai',
+      features: ['Climate Modeling', 'Weather Prediction', 'Carbon Footprint Analysis', 'Environmental Risk Assessment', 'Sustainability Planning'],
+      price: 'Starting at $8,000/month',
+      marketPrice: '$15000-50000/month',
+      benefits: ['Accurate climate predictions', 'Better environmental planning', 'Risk mitigation', 'Sustainability compliance']
+    },
+    {
+      icon: Heart,
+      title: 'AI Medical Diagnosis Assistant',
+      description: 'AI-powered medical diagnosis system with image analysis, symptom checking, and treatment recommendations.',
+      category: 'ai',
+      features: ['Medical Image Analysis', 'Symptom Assessment', 'Treatment Recommendations', 'Drug Interaction Check', 'Patient Monitoring'],
+      price: 'Starting at $12,000/month',
+      marketPrice: '$20000-80000/month',
+      benefits: ['Improved diagnostic accuracy', 'Faster diagnosis', 'Reduced medical errors', 'Better patient outcomes']
+    },
+    {
+      icon: Cpu,
+      title: 'AI Autonomous Vehicle Systems',
+      description: 'Complete AI system for autonomous vehicles including perception, decision making, and safety protocols.',
+      category: 'ai',
+      features: ['Computer Vision', 'Sensor Fusion', 'Path Planning', 'Collision Avoidance', 'Traffic Management'],
+      price: 'Starting at $25,000/month',
+      marketPrice: '$50000-200000/month',
+      benefits: ['Enhanced safety', 'Reduced accidents', 'Improved traffic flow', 'Future mobility solutions']
+    },
+    {
+      icon: Database,
+      title: 'AI Financial Risk Management',
+      description: 'Advanced AI system for real-time financial risk assessment, fraud detection, and market analysis.',
+      category: 'ai',
+      features: ['Real-time Risk Assessment', 'Fraud Detection', 'Market Analysis', 'Credit Scoring', 'Regulatory Compliance'],
+      price: 'Starting at $10,000/month',
+      marketPrice: '$20000-100000/month',
+      benefits: ['Reduced financial risk', 'Better fraud detection', 'Improved compliance', 'Cost savings']
+    },
+    
+    // Additional Real IT Services
+    {
+      icon: Globe,
+      title: 'IoT Infrastructure & Management',
+      description: 'Complete IoT infrastructure setup with device management, data collection, and real-time analytics.',
+      category: 'it',
+      features: ['IoT Device Management', 'Data Collection & Processing', 'Real-time Analytics', 'Edge Computing', 'Security Implementation'],
+      price: 'Starting at $3,500/month',
+      marketPrice: '$6000-25000/month',
+      benefits: ['Connected business operations', 'Real-time insights', 'Automated processes', 'Cost optimization']
+    },
+    {
+      icon: Shield,
+      title: 'Advanced Threat Intelligence',
+      description: 'Comprehensive threat intelligence platform with AI-powered threat detection and response.',
+      category: 'it',
+      features: ['Threat Intelligence Gathering', 'AI Threat Detection', 'Incident Response', 'Vulnerability Management', 'Security Training'],
+      price: 'Starting at $4,500/month',
+      marketPrice: '$8000-30000/month',
+      benefits: ['Proactive threat protection', 'Faster incident response', 'Reduced security risks', 'Compliance assurance']
+    },
+    {
+      icon: Cpu,
+      title: 'High-Performance Computing (HPC)',
+      description: 'Enterprise-grade HPC infrastructure for complex computational tasks and data processing.',
+      category: 'it',
+      features: ['HPC Cluster Setup', 'GPU Computing', 'Parallel Processing', 'Data Processing', 'Performance Optimization'],
+      price: 'Starting at $6,000/month',
+      marketPrice: '$12000-50000/month',
+      benefits: ['Massive computational power', 'Faster processing', 'Scalable infrastructure', 'Cost-effective computing']
+    },
+    {
+      icon: Database,
+      title: 'Data Lake & Analytics Platform',
+      description: 'Complete data lake infrastructure with advanced analytics and machine learning capabilities.',
+      category: 'it',
+      features: ['Data Lake Architecture', 'ETL/ELT Pipelines', 'Advanced Analytics', 'ML Model Deployment', 'Data Governance'],
+      price: 'Starting at $5,500/month',
+      marketPrice: '$10000-40000/month',
+      benefits: ['Unified data platform', 'Advanced analytics', 'Better insights', 'Scalable data processing']
+    },
+    {
+      icon: Globe,
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified management platform for multi-cloud environments with cost optimization and security.',
+      category: 'it',
+      features: ['Multi-Cloud Orchestration', 'Cost Optimization', 'Security Management', 'Performance Monitoring', 'Disaster Recovery'],
+      price: 'Starting at $4,000/month',
+      marketPrice: '$7000-25000/month',
+      benefits: ['Vendor independence', 'Cost optimization', 'Enhanced security', 'Better performance']
+    },
+    
+    // Additional Real Micro SaaS Services
+    {
+      icon: Brain,
+      title: 'Zion AI Personal Assistant Pro',
+      description: 'Advanced AI personal assistant for productivity, scheduling, and task management.',
+      category: 'saas',
+      features: ['Voice Commands', 'Smart Scheduling', 'Task Automation', 'Email Management', 'Meeting Optimization'],
+      price: 'Starting at $29/month',
+      marketPrice: '$50-150/month',
+      benefits: ['Increased productivity', 'Better time management', 'Automated tasks', 'Improved efficiency']
+    },
+    {
+      icon: Eye,
+      title: 'Zion AI Design Generator',
+      description: 'AI-powered design tool for logos, graphics, and marketing materials with brand consistency.',
+      category: 'saas',
+      features: ['Logo Generation', 'Graphic Design', 'Brand Consistency', 'Template Library', 'Export Options'],
+      price: 'Starting at $39/month',
+      marketPrice: '$80-200/month',
+      benefits: ['Professional designs', 'Brand consistency', 'Time savings', 'Cost-effective design']
+    },
+    {
+      icon: FileText,
+      title: 'Zion AI Writing Assistant Pro',
+      description: 'Advanced AI writing tool for content creation, editing, and optimization across all platforms.',
+      category: 'saas',
+      features: ['Content Generation', 'Grammar & Style Check', 'SEO Optimization', 'Plagiarism Detection', 'Tone Analysis'],
+      price: 'Starting at $49/month',
+      marketPrice: '$100-300/month',
+      benefits: ['Better writing quality', 'SEO optimization', 'Time savings', 'Consistent tone']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion AI Sales Predictor',
+      description: 'AI-powered sales forecasting and pipeline management with predictive analytics.',
+      category: 'saas',
+      features: ['Sales Forecasting', 'Pipeline Analysis', 'Lead Scoring', 'Revenue Prediction', 'Performance Tracking'],
+      price: 'Starting at $79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Better sales predictions', 'Improved pipeline management', 'Higher conversion rates', 'Data-driven decisions']
+    },
+    {
+      icon: Users,
+      title: 'Zion AI Team Performance',
+      description: 'AI-powered team performance analysis and optimization platform.',
+      category: 'saas',
+      features: ['Performance Analytics', 'Team Collaboration', 'Productivity Metrics', 'Goal Tracking', 'Feedback System'],
+      price: 'Starting at $59/month',
+      marketPrice: '$120-300/month',
+      benefits: ['Better team performance', 'Improved collaboration', 'Goal achievement', 'Enhanced productivity']
+    },
+    {
+      icon: Shield,
+      title: 'Zion AI Privacy Manager',
+      description: 'Comprehensive privacy management platform with GDPR compliance and data protection.',
+      category: 'saas',
+      features: ['GDPR Compliance', 'Data Protection', 'Privacy Audits', 'Consent Management', 'Risk Assessment'],
+      price: 'Starting at $89/month',
+      marketPrice: '$180-500/month',
+      benefits: ['Compliance assurance', 'Data protection', 'Risk reduction', 'Legal compliance']
+    },
+    {
+      icon: Globe,
+      title: 'Zion AI Language Learning',
+      description: 'AI-powered language learning platform with personalized curriculum and real-time feedback.',
+      category: 'saas',
+      features: ['Personalized Learning', 'Speech Recognition', 'Progress Tracking', 'Interactive Lessons', 'Cultural Context'],
+      price: 'Starting at $19/month',
+      marketPrice: '$40-120/month',
+      benefits: ['Faster learning', 'Personalized experience', 'Better retention', 'Cultural understanding']
+    },
+    {
+      icon: Heart,
+      title: 'Zion AI Wellness Coach',
+      description: 'AI-powered wellness and fitness platform with personalized health recommendations.',
+      category: 'saas',
+      features: ['Health Monitoring', 'Fitness Tracking', 'Nutrition Analysis', 'Stress Management', 'Goal Setting'],
+      price: 'Starting at $24/month',
+      marketPrice: '$50-150/month',
+      benefits: ['Better health outcomes', 'Personalized recommendations', 'Improved wellness', 'Goal achievement']
+    },
+    {
+      icon: Target,
+      title: 'Zion AI Investment Advisor',
+      description: 'AI-powered investment platform with portfolio management and market analysis.',
+      category: 'saas',
+      features: ['Portfolio Management', 'Market Analysis', 'Risk Assessment', 'Investment Recommendations', 'Performance Tracking'],
+      price: 'Starting at $99/month',
+      marketPrice: '$200-600/month',
+      benefits: ['Better investment decisions', 'Risk management', 'Portfolio optimization', 'Market insights']
+    },
+    {
+      icon: Settings,
+      title: 'Zion AI Home Automation',
+      description: 'Smart home automation platform with AI-powered device control and energy management.',
+      category: 'saas',
+      features: ['Device Control', 'Energy Management', 'Security Monitoring', 'Voice Commands', 'Automation Rules'],
+      price: 'Starting at $34/month',
+      marketPrice: '$70-200/month',
+      benefits: ['Smart home control', 'Energy savings', 'Enhanced security', 'Convenience']
     }
   ];
 
->>>>>>> origin/main
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
     { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
     { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -826,153 +1013,28 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Our Services - Zion Tech Group | AI, IT & Micro SaaS Solutions</title>
         <meta name="description" content="Comprehensive AI, IT, and Micro SaaS services to transform your business. Expert solutions with proven results and competitive pricing." />
         <meta name="keywords" content="AI services, IT services, micro SaaS, business solutions, technology consulting" />
-=======
-        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including chatbots, analytics, cloud migration, cybersecurity, and custom software development." />
-        <meta name="keywords" content="AI services, IT services, cloud migration, cybersecurity, software development, micro saas" />
         <meta property="og:title" content="Our Services - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive AI and IT solutions for your business" />
         <meta property="og:type" content="website" />
->>>>>>> origin/main
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
-          {/* Header Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive AI, IT, and Micro SaaS solutions designed to transform your business operations and drive growth.
-            </p>
-          </div>
-
-          {/* Search and Filter Section */}
-          <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              </div>
-              <div className="flex items-center space-x-2">
-                <Filter className="text-gray-400 w-5 h-5" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {filteredServices.map((service, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                </div>
-                
-                <p className="text-gray-300 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {service.benefits && (
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-                
-                <div className="flex items-center justify-between">
-                  <a href="/contact"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
-                  <a href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
-                    Get Quote
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="mt-16 text-center">
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Ready to Get Started?
-              </h2>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Contact our experts for a free consultation and discover how our services can transform your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                  Get Free Consultation
-                </a>
-                <a href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                  Call: (302) 464-0950
-                </a>
-              </div>
-            </div>
-          </div>
-=======
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Our Services
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-              Comprehensive AI and IT Solutions
+              Comprehensive AI, IT & Micro SaaS Solutions
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              From cutting-edge AI solutions to robust IT infrastructure, we provide end-to-end technology 
+              From cutting-edge AI solutions to robust IT infrastructure and innovative Micro SaaS tools, we provide end-to-end technology 
               services that transform businesses and drive growth. Choose from our comprehensive suite of 
               services tailored to your specific needs.
             </p>
@@ -1018,7 +1080,7 @@ const ServicesPage: React.FC = () => {
               {filteredServices.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
@@ -1108,7 +1170,6 @@ const ServicesPage: React.FC = () => {
               </div>
             </div>
           </section>
->>>>>>> origin/main
         </main>
         
         <Footer />

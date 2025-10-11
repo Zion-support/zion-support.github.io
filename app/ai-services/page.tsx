@@ -549,7 +549,6 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Agriculture',
       popular: false,
-<<<<<<< HEAD
       icon: Cpu
     },
     {
@@ -969,12 +968,6 @@ const AiServicesPage: React.FC = () => {
       icon: Zap
     }
   ];
-=======
-      icon: Target
-    }
-  ];
-
->>>>>>> origin/main
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
@@ -989,7 +982,6 @@ const AiServicesPage: React.FC = () => {
     { id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length },
     { id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length },
     { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length },
-<<<<<<< HEAD
     { id: 'Language Processing', name: 'Language Processing', count: services.filter(s => s.category === 'Language Processing').length },
     { id: 'Customer Analytics', name: 'Customer Analytics', count: services.filter(s => s.category === 'Customer Analytics').length },
     { id: 'Software Testing', name: 'Software Testing', count: services.filter(s => s.category === 'Software Testing').length },
@@ -1007,14 +999,20 @@ const AiServicesPage: React.FC = () => {
     { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
     { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
     { id: 'Holographic Technology', name: 'Holographic Technology', count: services.filter(s => s.category === 'Holographic Technology').length },
-    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
     { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
     { id: 'Database Technology', name: 'Database Technology', count: services.filter(s => s.category === 'Database Technology').length },
     { id: 'Environmental AI', name: 'Environmental AI', count: services.filter(s => s.category === 'Environmental AI').length },
     { id: 'Healthcare AI', name: 'Healthcare AI', count: services.filter(s => s.category === 'Healthcare AI').length },
     { id: 'Financial AI', name: 'Financial AI', count: services.filter(s => s.category === 'Financial AI').length },
-    { id: 'Energy AI', name: 'Energy AI', count: services.filter(s => s.category === 'Energy AI').length }
+    { id: 'Energy AI', name: 'Energy AI', count: services.filter(s => s.category === 'Energy AI').length },
+    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: services.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'Climate AI', name: 'Climate AI', count: services.filter(s => s.category === 'Climate AI').length },
+    { id: 'Space Technology', name: 'Space Technology', count: services.filter(s => s.category === 'Space Technology').length },
+    { id: 'Neural Technology', name: 'Neural Technology', count: services.filter(s => s.category === 'Neural Technology').length },
+    { id: '3D Technology', name: '3D Technology', count: services.filter(s => s.category === '3D Technology').length },
+    { id: 'Agriculture', name: 'Agriculture', count: services.filter(s => s.category === 'Agriculture').length }
   ];
+
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );
@@ -1111,135 +1109,13 @@ const AiServicesPage: React.FC = () => {
                     Get Quote
                   </a>
                 </div>
-=======
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Autonomous Systems', name: 'Autonomous Systems', count: services.filter(s => s.category === 'Autonomous Systems').length },
-    { id: 'Climate AI', name: 'Climate AI', count: services.filter(s => s.category === 'Climate AI').length },
-    { id: 'Space Technology', name: 'Space Technology', count: services.filter(s => s.category === 'Space Technology').length },
-    { id: 'Neural Technology', name: 'Neural Technology', count: services.filter(s => s.category === 'Neural Technology').length },
-    { id: '3D Technology', name: '3D Technology', count: services.filter(s => s.category === '3D Technology').length },
-    { id: 'Agriculture', name: 'Agriculture', count: services.filter(s => s.category === 'Agriculture').length }
-  ];
-
-  const filteredServices = services.filter(service => {
-    return selectedCategory === 'all' || service.category === selectedCategory;
-  });
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Services - Zion Tech Group | Artificial Intelligence Solutions</title>
-        <meta name="description" content="Comprehensive AI services including chatbots, analytics, computer vision, automation, and machine learning solutions for your business." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbots, computer vision, automation" />
-        <meta property="og:title" content="AI Services - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with cutting-edge AI solutions" />
-        <meta property="og:type" content="website" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              AI Services
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-              Transform Your Business with Artificial Intelligence
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of artificial intelligence to automate processes, gain insights, and drive innovation. 
-              Our comprehensive AI services are designed to solve complex business challenges and unlock new opportunities.
-            </p>
-          </section>
-
-          {/* Category Filter */}
-          <section className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-          </section>
-
-          {/* Services Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
-                <div
-                  key={service.id}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
-                      {service.popular && (
-                        <span className="inline-block px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
-                    </div>
-                    <span className="text-gray-400 text-sm">{service.category}</span>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <Link
-                      to="/contact"
-                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-                    >
-                      Get Quote
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+              </div>
+            ))}
+          </div>
 
           {/* CTA Section */}
-          <section className="text-center">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+          <div className="text-center">
+            <div className="bg-slate-800/50 rounded-lg p-8">
               <h2 className="text-2xl font-bold text-white mb-4">
                 Ready to Transform Your Business with AI?
               </h2>
@@ -1260,46 +1136,14 @@ const AiServicesPage: React.FC = () => {
                 >
                   Call: (302) 464-0950
                 </a>
->>>>>>> origin/main
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Section */}
-          <div className="text-center">
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Ready to Transform Your Business with AI?
-              </h2>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Let our AI experts help you choose the right solutions for your business needs. 
-                Get a free consultation and see how AI can transform your operations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                  Get Free Consultation
-                </a>
-                <a href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-                  Call: (302) 464-0950
-                </a>
               </div>
             </div>
-<<<<<<< HEAD
           </div>
-=======
-          </section>
->>>>>>> origin/main
         </main>
         
         <Footer />
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
 };
->>>>>>> origin/main
-
 export default AiServicesPage;

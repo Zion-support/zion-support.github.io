@@ -49,17 +49,18 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden cyber-grid-enhanced quantum-field">
       {/* Futuristic Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 floating-particles"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25 glow">
                 <Brain className="w-7 h-7 text-white" />
               </div>
               <div className="flex flex-col">
@@ -101,7 +102,7 @@ const Footer: React.FC = memo(() => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Services</h3>
+            <h3 className="text-lg font-semibold mb-4 neon-text-enhanced">Services</h3>
             <ul className="space-y-2">
               {serviceLinks.map((link, index) => (
                 <li key={index}>
@@ -117,7 +118,7 @@ const Footer: React.FC = memo(() => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 neon-text-enhanced">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -133,7 +134,7 @@ const Footer: React.FC = memo(() => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4 neon-text-enhanced">Resources</h3>
             <ul className="space-y-2">
               {resourcesLinks.map((link, index) => (
                 <li key={index}>
@@ -149,7 +150,7 @@ const Footer: React.FC = memo(() => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Enterprise</h3>
+            <h3 className="text-lg font-semibold mb-4 neon-text-enhanced">Enterprise</h3>
             <ul className="space-y-2">
               {enterpriseLinks.map((link, index) => (
                 <li key={index}>
