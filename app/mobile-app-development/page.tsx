@@ -42,7 +42,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
+            {mobileFeatures.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
