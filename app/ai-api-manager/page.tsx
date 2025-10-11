@@ -25,6 +25,7 @@ const PagePage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -35,6 +36,46 @@ const PagePage: React.FC = () => {
       <Navigation />
       
       <main className="pt-20 px-4 py-20">
+=======
+    <>
+      <Helmet>
+        <title>AI API Manager | Zion Tech Group</title>
+        <meta name="description" content="Professional AI API manager solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="AI API manager, AI solutions, IT services, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Page
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
+              Get Started Today
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-ace5
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -78,11 +119,18 @@ const PagePage: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </main>
       
       <Footer />
     </div>
+=======
+        </section>
+        <Footer />
+      </div>
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ace5
   );
 };
 
