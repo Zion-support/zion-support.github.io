@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-
 import { ServiceVariant } from '../types/service-variants';
-
-
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface AdvancedLogisticsSupplyChainSolution2025 {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -18,7 +11,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -39,18 +31,8 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
-
-
-
-
-
-
-
-
-
       color: 'from - blue - 600 via - indigo - 600 to - purple - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - powered - supply - chain - optimization',
@@ -77,7 +59,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
       growth_rate: '28% annual growth',
       variant: 'logistics',
       contact_info: {
-
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -92,65 +73,29 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {
       reviews: 98,
     },
     {
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
       customers: 178,
       rating: 4 && 4.8,
       reviews: 112,
-
     },;
-
-
-
-
-
-
-
-
   ];    features: [
-
-
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
-
-
   ];    features: [;
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
     ];
-
     popular: true, icon: '📦',
-
     ];
-
     popular: false, icon: '⚛️',
-
     ];
-
     popular: true, icon: '🚛',
-
     ];
-
     popular: false, icon: '⛓️',
-
     ];
-
-
-
-
     reviews: 112
-
   }
 ];
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {;
   id: string,;
@@ -193,20 +138,8 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {;
   reviews: number;
 }
 ;
-
-
-
-
-
   }
-
-
 ];
-
-
-
-
-=======
   textColor: string;
   link: string;
   marketPosition: string;
@@ -236,7 +169,6 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {;
   rating: number;
   reviews: number;
 }
-
 export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
   {
     id: 'ai-powered-supply-chain-optimization',
@@ -494,4 +426,3 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     reviews: 112
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

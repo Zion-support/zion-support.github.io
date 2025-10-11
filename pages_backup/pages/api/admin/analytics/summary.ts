@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -10,8 +9,6 @@ type EventRow = {
   properties?: Record<string, any>,
   at: string
 },
-
-
       } catch {}
     }
     return rows
@@ -19,31 +16,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     return rows;
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
   } catch {
     return [];
   }
 }
-
-
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
   const p = page.toLowerCase()
@@ -72,7 +51,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
-
     .sort((a, b) => b.value - a.value)
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
@@ -80,10 +58,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] |0 }))
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }
-
     .sort((a, b) => b.value - a.value),
-
-
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -135,32 +110,19 @@ function handler() {
 }
 ;
 };
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
-    
     if (req.method !== 'GET') {
       res.setHeader('Allow', 'GET');
       return res.status(405).end('Method Not Allowed');
     }
-
     const { start, end } = req.query;
     const events = parseLines(start as string, end as string);
-    
     res.json({ events });
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

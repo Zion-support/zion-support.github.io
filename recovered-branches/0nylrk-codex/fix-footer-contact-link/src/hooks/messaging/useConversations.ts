@@ -1,12 +1,9 @@
-
 import { UserProfile, UserDetails } from '@/types/auth';
 import { supabase } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-
 // Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null;
-
 /**
  * Hook to handle conversation operations
  */
@@ -21,23 +18,18 @@ export function useConversations(
    */
   const fetchConversations = async () => {
     if (!user) return;
-    
     setIsLoading(true);
-    
     try {
       // Fetch conversations from the database
       const { data, error } = await supabase
         .from('conversations')
         .select('*')
         .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`);
-        
       if (error) throw error;
-      
       // Format conversations
       const formattedConversations: Conversation[] = data.map(conv => {
         const isUserOne = conv.user_one_id === user.id;
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
-        
         return {
           id: conv.id,
           user_id: otherUserId,
@@ -60,9 +52,7 @@ export function useConversations(
           context_data: conv.context_data
         };
       });
-      
       setConversations(formattedConversations);
-      
       // Calculate total unread count
       const totalUnread = formattedConversations.reduce(
         (total, conv) => total + (conv.unread_count || 0), 
@@ -75,7 +65,6 @@ export function useConversations(
       setIsLoading(false);
     }
   };
-
   /**
    * Create a new conversation and send initial message
    */
@@ -87,22 +76,17 @@ export function useConversations(
     contextData?: ConversationContextData
   ) => {
     if (!user || !initialMessage.trim()) return;
-    
     try {
       // Check if conversation already exists
       const { data: existingConversations, error: fetchError } = await supabase
         .from('conversations')
         .select('id')
         .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`);
-        
       if (fetchError) throw fetchError;
-      
       let conversationId;
-      
       if (existingConversations && existingConversations.length > 0) {
         // Use existing conversation
         conversationId = existingConversations[0].id;
-        
         // Update context if provided
         if (contextType || contextId || contextData) {
           await supabase
@@ -122,9 +106,7 @@ export function useConversations(
           .select('display_name, avatar_url, user_type')
           .eq('id', recipientId)
           .single();
-          
         if (recipientError) throw recipientError;
-        
         // Create a new conversation
         const { data: newConversation, error: createError } = await supabase
           .from('conversations')
@@ -147,12 +129,9 @@ export function useConversations(
           })
           .select('id')
           .single();
-          
         if (createError) throw createError;
-        
         conversationId = newConversation.id;
       }
-      
       // Send the initial message
       await supabase
         .from('messages')
@@ -164,10 +143,8 @@ export function useConversations(
           created_at: new Date().toISOString(),
           read: false
         });
-      
       // Update conversations list
       await fetchConversations();
-      
       // Return the conversation ID
       return conversationId;
     } catch (error) {
@@ -179,13 +156,9 @@ export function useConversations(
       });
     }
   };
-
   return {
     fetchConversations,
-<<<<<<< HEAD
     createConversation};
-=======
     createConversation,
   };
->>>>>>> origin/auto/autonomy-17186719616
 }

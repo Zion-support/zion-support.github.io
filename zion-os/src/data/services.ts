@@ -167,7 +167,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // IT Services
   {
     id: 'managed-it-services',
@@ -257,7 +256,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Micro SAAS
   {
     id: 'invoice-automation',
@@ -347,7 +345,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Blockchain Services
   {
     id: 'smart-contract-audit',
@@ -393,7 +390,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // IoT & Edge Computing
   {
     id: 'iot-monitoring',
@@ -439,7 +435,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Cloud & DevOps
   {
     id: 'devops-automation',
@@ -485,7 +480,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Data & Analytics
   {
     id: 'data-warehouse',
@@ -532,19 +526,15 @@ export const services: Service[] = [
     }
   }
 ];
-
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter((service) => service.category === category);
 };
-
 export const getServiceById = (id: string) => {
   return services.find((service) => service.id === id);
 };
-
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)));
 };
-<<<<<<< HEAD
 export interface Service {
   id: string;
   name: string;
@@ -578,7 +568,6 @@ export interface Service {
     address: string;
   };
 }
-
 export const services: Service[] = [
   // AI Services
   {
@@ -715,7 +704,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // IT Services
   {
     id: 'managed-it-services',
@@ -805,7 +793,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Micro SAAS
   {
     id: 'invoice-automation',
@@ -895,7 +882,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Blockchain Services
   {
     id: 'smart-contract-audit',
@@ -941,7 +927,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // IoT & Edge Computing
   {
     id: 'iot-monitoring',
@@ -987,7 +972,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Cloud & DevOps
   {
     id: 'devops-automation',
@@ -1033,7 +1017,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Data & Analytics
   {
     id: 'data-warehouse',
@@ -1080,23 +1063,16 @@ export const services: Service[] = [
     }
   }
 ];
-
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter((service) => service.category === category);
 };
-
 export const getServiceById = (id: string) => {
   return services.find((service) => service.id === id);
 };
-
 export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)));
 };
-<<<<<<< HEAD
-
 export interface Service {id: string;
-=======
-=======
 >>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
 export interface Service {
   id: string;
@@ -1368,7 +1344,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // IT Services
   {
     id: 'managed-it-services',
@@ -1456,7 +1431,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Micro SAAS
   {
     id: 'invoice-automation',
@@ -1544,7 +1518,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Blockchain Services
   {
     id: 'smart-contract-audit',
@@ -1589,7 +1562,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // IoT & Edge Computing
   {
     id: 'iot-monitoring',
@@ -1634,7 +1606,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Cloud & DevOps
   {
     id: 'devops-automation',
@@ -1679,7 +1650,6 @@ export const services: Service[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   },
-
   // Data & Analytics
   {
     id: 'data-warehouse',
@@ -1725,15 +1695,12 @@ export const services: Service[] = [
     }
   }
 ];
-
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter(service => service.category === category);
 };
-
 export const getServiceById = (id: string) => {
   return services.find(service => service.id === id);
 };
-
 export const getCategories = () => {
   return Array.from(new Set(services.map(service => service.category)));
 };

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeITInfrastructureService {
   id: string;
@@ -303,7 +302,6 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
   }
 ];
 export default innovativeITInfrastructureServices2025;
-=======
 export const innovativeITInfrastructureServices2025 = [
   {
     id: 'quantum-edge-computing-orchestrator',
@@ -571,4 +569,3 @@ export const innovativeITInfrastructureServices2025 = [
     compliance: ['SOC2', 'ISO 27001', 'Uptime Institute', 'Energy Star', 'Industry-specific regulations']
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

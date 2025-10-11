@@ -4,7 +4,6 @@ import { quoteRequestService } from '@/services/quoteRequestService';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/components/ui/use-toast';
 import type { DateRange } from '@/types/dateRange';
-
 export const useAdminQuotes = () => {
   const { toast } = useToast();
   const queryClient = useQueryClient();
@@ -12,25 +11,19 @@ export const useAdminQuotes = () => {
   const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
   const [searchQuery, setSearchQuery] = useState('');
   const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined);
-
   // Fetch all quote requests
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotes', 'admin'],
     queryFn: () => quoteRequestService.getAll(),
-<<<<<<< HEAD
     enabled: true});
-=======
     enabled: true,
   });
->>>>>>> origin/auto/autonomy-17186719616
-
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes.filter((quote) => {
     // Status filter
     if (statusFilter !== 'all' && quote.status !== statusFilter) {
       return false;
     }
-    
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
       return false;
@@ -38,7 +31,6 @@ export const useAdminQuotes = () => {
     if (archiveFilter === 'archived' && !quote.is_archived) {
       return false;
     }
-    
     // Search filter
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
@@ -51,7 +43,6 @@ export const useAdminQuotes = () => {
         return false;
       }
     }
-    
     // Date range filter
     if (dateRange?.from) {
       const createdAt = new Date(quote.created_at);
@@ -59,7 +50,6 @@ export const useAdminQuotes = () => {
         return false;
       }
     }
-    
     if (dateRange?.to) {
       const createdAt = new Date(quote.created_at);
       const endDate = new Date(dateRange.to);
@@ -68,10 +58,8 @@ export const useAdminQuotes = () => {
         return false;
       }
     }
-    
     return true;
   });
-
   // Update quote status mutation
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string; status: QuoteStatus }) => 
@@ -91,7 +79,6 @@ export const useAdminQuotes = () => {
       });
     }
   });
-
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string; isArchived: boolean }) => 
@@ -113,7 +100,6 @@ export const useAdminQuotes = () => {
       });
     }
   });
-
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService.delete(id),
@@ -132,7 +118,6 @@ export const useAdminQuotes = () => {
       });
     }
   });
-
   return {
     quotes: filteredQuotes,
     isLoading,
@@ -149,10 +134,7 @@ export const useAdminQuotes = () => {
       updateStatusMutation.mutate({ id, status }),
     toggleArchive: (id: string, isArchived: boolean) => 
       toggleArchiveMutation.mutate({ id, isArchived }),
-<<<<<<< HEAD
     deleteQuote: (id: string) => deleteMutation.mutate(id)};
-=======
     deleteQuote: (id: string) => deleteMutation.mutate(id),
   };
->>>>>>> origin/auto/autonomy-17186719616
 };

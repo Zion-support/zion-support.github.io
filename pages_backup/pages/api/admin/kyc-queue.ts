@@ -1,11 +1,9 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import type { KycProfile } from '../../../utils/kyc',;
 import fs from 'fs',;
 import path from 'path',;
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json'),
-
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8'),
@@ -14,50 +12,25 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
-
-
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
   try {
-
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
 const FILE = path.join(DATA_DIR, 'profiles.json');
-
-
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
   } catch {
     return {};
   }
 }
-
-
-
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
-
 fs.mkdirSync(DATA_DIR, { recursive: true })
-
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
   const db = load()
   const db = load(),
-
   if (req.method === 'GET') {
     const queue = Object.values(db).filter((p) => p.status === 'submitted' |p.status === 'needs_more_info')
     return res.status(200).json({ ok: true, queue })
@@ -76,17 +49,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     db[userId] = profile
     save(db)
     return res.status(200).json({ ok: true, profile })
-
-
-
 }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 ;
   return res.status(405).json({ error: 'Method not allowed' });
 };
-
   try {
     if (req.method === 'GET') {
       const profiles = load();
@@ -110,20 +78,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 export interface EmergingTechService {
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EmergingTechService2025 {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -30,10 +26,7 @@ export interface EmergingTechService2025 {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
-=======
   variant: string;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
@@ -47,7 +40,6 @@ export interface EmergingTechService2025 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -55,16 +47,12 @@ const contact = {
   website: 'https://ziontechgroup.com'
 };
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
-=======
-
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   // Space Mining Platform
->>>>>>> origin/auto/autonomy-17186719616
   {
     id: 'space-mining-platform',
     name: 'Space Mining Platform',
     tagline: 'Revolutionary asteroid mining and space resource extraction',
-<<<<<<< HEAD
     price: '$2,999',
     period: '/month',
     description: 'A cutting-edge platform that enables organizations to identify, analyze, and plan mining operations on asteroids and other celestial bodies for valuable resources.',
@@ -79,7 +67,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Investment opportunity evaluation',
       'Space mission planning',
       'Real-time space data integration'
-=======
     price: '$5,999',
     period: '/month',
     description: 'Advanced space mining platform that enables automated asteroid mining, resource extraction, and space resource management. Provides access to rare minerals and materials from space.',
@@ -94,7 +81,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Performance analytics',
       'Integration with space agencies',
       'Global space network'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '🚀',
@@ -107,7 +93,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-4 weeks',
     category: 'Space Technology & Mining',
     realService: true,
-<<<<<<< HEAD
     technology: ['Space analytics, Orbital mechanics, AI/ML, Python, React, 3D visualization'],
     integrations: ['NASA APIs, ESA data, SpaceX data, Satellite tracking systems'],
     useCases: ['Asteroid mining planning, Space resource assessment, Investment analysis'],
@@ -144,7 +129,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Advanced visualization tools'
     ],
     popular: false,
-=======
     technology: ['Space robotics, AI algorithms, Python, React, Node.js, PostgreSQL, Satellite systems'],
     integrations: ['NASA APIs, ESA systems, Satellite networks, Space tracking systems, Mining equipment'],
     useCases: ['Asteroid mining, Resource extraction, Space logistics, Research and development, Commercial space operations'],
@@ -166,7 +150,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 5
   },
-
   // Quantum Bio-Computing Platform
   {
     id: 'quantum-bio-computing',
@@ -188,7 +171,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Global research network'
     ],
     popular: true,
->>>>>>> origin/auto/autonomy-17186719616
     icon: '🧬',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
@@ -199,7 +181,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Biology & Computing',
     realService: true,
-<<<<<<< HEAD
     technology: ['Quantum computing, Biology, DNA computing, Python, React, Node.js, Quantum hardware'],
     integrations: ['Quantum computers, Biological databases, Research platforms, Healthcare systems, Academic platforms'],
     useCases: ['Drug discovery, DNA analysis, Protein folding, Biological simulation, Medical research'],
@@ -207,7 +188,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Traditional computing, Quantum research labs'],
     marketSize: '$1.8B quantum bio market',
     growthRate: '700% annual growth',
-=======
     technology: ['Quantum algorithms, Biological computing, Python, React, Node.js, PostgreSQL, Lab systems'],
     integrations: ['Quantum computers, Laboratory equipment, Research databases, Bioinformatics tools, Cloud platforms'],
     useCases: ['Drug discovery, Genetic research, Protein folding, Biological simulation, Computational biology'],
@@ -215,7 +195,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['IBM Quantum, Google Quantum, D-Wave, Biological computing companies'],
     marketSize: '$8.5B quantum bio-computing market',
     growthRate: '600% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'quantum-bio-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -230,10 +209,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 9
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Brain-Computer Interface Platform
   {
     id: 'brain-computer-interface',
@@ -286,10 +261,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 16
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Energy Platform
   {
     id: 'quantum-energy-platform',
@@ -342,7 +313,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 12
   },
-<<<<<<< HEAD
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -366,8 +336,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     popular: true,
     icon: '🚗',
     color: 'from-blue-600 to-indigo-700',
-=======
-
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai',
@@ -391,7 +359,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     popular: true,
     icon: '🚗',
     color: 'from-blue-600 to-cyan-700',
->>>>>>> origin/auto/autonomy-17186719616
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
     marketPosition: 'Competes with Waymo ($50,000+), Tesla Autopilot ($10,000+). Our advantage: Advanced AI and affordable pricing.',
@@ -400,7 +367,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-3 weeks',
     category: 'Autonomous Vehicles & AI',
     realService: true,
-<<<<<<< HEAD
     technology: ['AI/ML, Computer vision, Robotics, Python, React, Node.js, Autonomous systems'],
     integrations: ['Vehicle systems, Traffic management, Fleet management, Insurance systems, Government databases'],
     useCases: ['Autonomous driving, Fleet management, Traffic optimization, Safety monitoring, Transportation planning'],
@@ -408,7 +374,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Tesla, Waymo, Cruise, Aurora'],
     marketSize: '$45.2B autonomous vehicle market',
     growthRate: '45% annual growth',
-=======
     technology: ['Computer vision, Machine learning, Python, React, Node.js, PostgreSQL, Vehicle systems'],
     integrations: ['Vehicle platforms, Sensor systems, GPS, Traffic systems, Fleet management platforms'],
     useCases: ['Self-driving cars, Autonomous trucks, Fleet automation, Transportation optimization, Safety improvement'],
@@ -416,7 +381,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Waymo, Tesla, Cruise, Aurora, Argo AI'],
     marketSize: '$65B autonomous vehicle market',
     growthRate: '56% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'autonomous-vehicle-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -425,7 +389,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Autonomous vehicle AI platform with intelligent driving, safety systems, and fleet management capabilities.',
     launchDate: '2024-09-15',
     customers: 8,
@@ -451,14 +414,12 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Developer tools',
       'Scalable infrastructure',
       '24/7 research support'
-=======
     implementationDetails: 'Autonomous vehicle AI platform with advanced perception, decision-making, and comprehensive safety systems.',
     launchDate: '2024-08-30',
     customers: 34,
     rating: 4.7,
     reviews: 24
   },
-
   // Quantum Materials Discovery Platform
   {
     id: 'quantum-materials-discovery',
@@ -478,7 +439,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Compliance reporting',
       'Research analytics',
       'Global materials database'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '🔬',
@@ -491,21 +451,18 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum Materials & Science',
     realService: true,
-<<<<<<< HEAD
     technology: ['Quantum computing, Materials science, AI/ML, Python, React, Node.js, Quantum algorithms'],
     integrations: ['Quantum computers, Materials databases, Research platforms, Patent databases, Academic platforms'],
     useCases: ['Materials discovery, Property prediction, Research acceleration, Patent analysis, Market intelligence'],
     roi: 'Research institutions report 1000% ROI through accelerated discoveries and breakthrough materials.',
     competitors: ['Traditional research, Materials companies'],
     marketSize: '$2.8B quantum materials market',
-=======
     technology: ['Quantum algorithms, Materials science, Python, React, Node.js, PostgreSQL, Simulation tools'],
     integrations: ['Laboratory equipment, Research databases, Simulation platforms, Cloud computing, Collaboration tools'],
     useCases: ['New materials discovery, Property prediction, Research acceleration, Collaboration, Innovation'],
     roi: 'Research institutions report 400% acceleration in materials discovery and 300% improvement in research efficiency.',
     competitors: ['Materials consulting firms, Simulation platforms, Research tools'],
     marketSize: '$18B quantum materials market',
->>>>>>> origin/auto/autonomy-17186719616
     growthRate: '500% annual growth',
     variant: 'quantum-materials-enterprise',
     contactInfo: {
@@ -521,10 +478,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 19
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Robotics Platform
   {
     id: 'quantum-robotics',
@@ -577,10 +530,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 31
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security',
@@ -633,10 +582,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 45
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Logistics Platform
   {
     id: 'quantum-logistics-optimization',
@@ -689,7 +634,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.7,
     reviews: 62
   },
-<<<<<<< HEAD
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development-platform',
@@ -709,8 +653,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Developer tools and SDK',
       'Multi-platform support',
       '24/7 metaverse operation'
-=======
-
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development',
@@ -730,7 +672,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Multi-platform support',
       'Developer tools',
       '24/7 support'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '🌍',
@@ -741,7 +682,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     targetAudience: ['Gaming companies', 'VR/AR developers', 'Technology companies', 'Educational institutions', 'Entertainment companies'],
     trialDays: 14,
     setupTime: '1-2 weeks',
-<<<<<<< HEAD
     category: 'Metaverse & Virtual Reality',
     realService: true,
     technology: ['AI/ML, Virtual reality, 3D graphics, Python, React, Node.js, Game engines'],
@@ -751,7 +691,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Roblox, Unity, Unreal Engine, Meta'],
     marketSize: '$38.5B metaverse market',
     growthRate: '52% annual growth',
-=======
     category: 'Metaverse & AI Development',
     realService: true,
     technology: ['AI/ML, VR/AR, Python, React, Node.js, PostgreSQL, Gaming engines'],
@@ -761,7 +700,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Roblox, Unity, Unreal Engine, Meta, Decentraland'],
     marketSize: '$12B metaverse AI market',
     growthRate: '280% annual growth',
->>>>>>> origin/auto/autonomy-17186719616
     variant: 'metaverse-ai-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -776,10 +714,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.6,
     reviews: 98
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Machine Learning Platform
   {
     id: 'quantum-machine-learning-platform',
@@ -832,12 +766,8 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 12
   },
-<<<<<<< HEAD
   // Quantum Energy Platform
-=======
-
   // Neuromorphic Computing Platform
->>>>>>> origin/auto/autonomy-17186719616
   {
     id: 'neuromorphic-computing-platform',
     name: 'Neuromorphic Computing Platform',
@@ -889,10 +819,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.8,
     reviews: 18
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Synthetic Biology Platform
   {
     id: 'synthetic-biology-platform',
@@ -900,7 +826,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     tagline: 'Design and engineer biological systems',
     price: '$1,199',
     period: '/month',
-<<<<<<< HEAD
     description: 'A cutting-edge platform that uses quantum computing to optimize energy generation, distribution, and consumption for maximum efficiency and sustainability.',
     features: [
       'Quantum-enhanced energy optimization',
@@ -913,7 +838,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Sustainability analytics',
       'Custom energy algorithms',
       'Integration with energy systems'
-=======
     description: 'Advanced synthetic biology platform that provides tools for designing, simulating, and engineering biological systems for various applications.',
     features: [
       'DNA sequence design',
@@ -926,7 +850,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Research collaboration',
       'Custom design tools',
       'Expert consultation'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '🧬',
@@ -939,7 +862,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     setupTime: '4-6 weeks',
     category: 'Synthetic Biology & Biotechnology',
     realService: true,
-<<<<<<< HEAD
     technology: ['Quantum computing, Energy systems, AI/ML, Python, React, Grid management'],
     integrations: ['Energy management systems, Grid infrastructure, Renewable energy systems'],
     useCases: ['Grid optimization, Energy trading, Renewable integration'],
@@ -948,7 +870,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     marketSize: '$80B+ energy management market',
     growthRate: '200%+ YoY',
     contactInfo: contact,
-=======
     technology: ['Bioinformatics, Python, R, DNA design algorithms, Biological modeling'],
     integrations: ['DNA synthesis companies, Laboratory equipment, Research databases, Analysis tools'],
     useCases: ['Drug development, Agricultural biotechnology, Biofuel production, Medical research, Industrial biotechnology'],
@@ -963,7 +884,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
->>>>>>> origin/auto/autonomy-17186719616
     realImplementation: true,
     implementationDetails: 'Synthetic biology platform with comprehensive design tools and automation capabilities.',
     launchDate: '2024-10-15',
@@ -971,7 +891,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     rating: 4.9,
     reviews: 16
   },
-<<<<<<< HEAD
   // Space Resource Mining Platform
   {
     id: 'space-resource-mining-platform',
@@ -1011,8 +930,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     marketSize: '$100B+ potential market',
     growthRate: '800%+ annual growth',
     variant: 'space-mining',
-=======
-
   // Space Resource Mining Platform
   {
     id: 'quantum-metaverse-platform',
@@ -1052,7 +969,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     marketSize: '$35.5B quantum metaverse market',
     growthRate: '85% annual growth',
     variant: 'quantum-metaverse-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1060,7 +976,6 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Advanced space resource mining platform with automated robotics, resource processing, and comprehensive space operations management.',
     launchDate: '2025-01-25',
     customers: 3,
@@ -1326,12 +1241,10 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     customers: 9,
     rating: 4.9,
     reviews: 6
-=======
     implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
     launchDate: '2024-04-30',
     customers: 18,
     rating: 4.8,
     reviews: 11
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

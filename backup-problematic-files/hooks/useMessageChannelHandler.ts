@@ -1,17 +1,10 @@
-
 import { useEffect, useCallback } from 'react';
-
-
-
-
 interface Event {
   type: string;
   target: EventTarget | null;
 }
 type EventListener = (event: Event) => void;
-
 ;
-
 interface EventTarget {
   addEventListener (type: string, listener: EventListener): void;
   removeEventListener (type: string, listener: EventListener): void;
@@ -24,9 +17,7 @@ interface MessagePort {
   start (): void;
   close (): void;
 }
-
 interface MessageEvent < T = any> extends Event {
-
   data: T;
   origin: string;
   lastEventId: string;
@@ -37,20 +28,16 @@ interface MessageChannelHandlerProps {
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
 }
-
 export /**
  * useMessageChannelHandler - Function description
  */
 function useMessageChannelHandler() {
   const handle_message = useCallback (
     (event: MessageEvent < unknown>) => {
-
-
   onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
-
       try {
         // Check condition
 if ( {) {
@@ -65,33 +52,18 @@ if ( {) {
 }
           on_error (error as Error);
         }
-
-
-
-
       }
     } catch (error) {
       if (onError) {
         onError(error as Error);
-
-
       }
     }
     [onMessage, onError]
   );
   useEffect(() => {
-
     window && window.addEventListener('message', handleMessage);
     return () => {
       window && window.removeEventListener('message', handleMessage);
     };
-
   }, [handleMessage]);
-
-
->>>>>>> origin/automation-improvements-final
-
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-

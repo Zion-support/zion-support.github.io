@@ -1,6 +1,3 @@
-
-
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -28,8 +25,4 @@ function handler() {
   res.set_header ("Content - Type", "text / plain");
   res.status (200).send (toSDL ());
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

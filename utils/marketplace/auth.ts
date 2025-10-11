@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import { NextApiRequest } from 'next';
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session;
@@ -23,39 +21,25 @@ export function assertTalentOrClientForOffer(
   offer: { clientId: string; talentSlug: string }
   req: NextApiRequest,;
   offer: { clientId: string; talentSlug: string },
-
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
-
     u && u.role === 'talent' &&
     (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
-
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
-
   err && err.statusCode = 403;
   throw err;export function requireAuth(req: any): User {
-
   const user = getUserFromRequest(req);
   if (!user) {
-
     throw new Error('Authentication required')
-
   }
   return user;
 }
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
 }
     return null;
   }
@@ -101,25 +85,9 @@ if ( {) {
   }
   return user;
 }
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-
-
-
-=======
 import { NextApiRequest } from "next";
-
 type DemoUser = { id: string; role: "client" | "talent"; talentSlug?: string };
-
 export function getDemoUser(req: NextApiRequest): DemoUser {
   // Prefer headers for server-side calls; fallback to cookies-like header or defaults
   const role = (req.headers["x-demo-user-role"] as string) || "client";
@@ -127,7 +95,6 @@ export function getDemoUser(req: NextApiRequest): DemoUser {
   const talentSlug = (req.headers["x-demo-talent-slug"] as string) || undefined;
   return { id, role: role === "talent" ? "talent" : "client", talentSlug };
 }
-
 export function assertClient(req: NextApiRequest): DemoUser {
   const u = getDemoUser(req);
   if (u.role !== "client") {
@@ -138,7 +105,6 @@ export function assertClient(req: NextApiRequest): DemoUser {
   }
   return u;
 }
-
 export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clientId: string; talentSlug: string }, talentSlugHeader?: string): DemoUser {
   const u = getDemoUser(req);
   if (u.role === "client" && u.id === offer.clientId) return u;
@@ -148,4 +114,3 @@ export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clien
   err.statusCode = 403;
   throw err;
 }
->>>>>>> origin/auto/autonomy-17186719616

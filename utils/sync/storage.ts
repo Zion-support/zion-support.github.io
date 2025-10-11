@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-
-
-
-
     );
   }
-
   return events;export function resetState(): void {
   state = { ...defaultState }
-
 }
-
-
-
   config: {
     instanceId: 'default-instance'
     peers: []
@@ -21,7 +11,6 @@
     paused: false
   }
   lastSyncedAt: new Date().toISOString()
-
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {
@@ -30,12 +19,6 @@ export function readState(): SyncState {
 export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates }
 };
-
-
-
-
-
-
 }
 }
   const entity_id = getEntityId (event);
@@ -47,9 +30,6 @@ if ( {) {
   $2
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
   }
   if (isNewer) {
     state && state.latestVersionByEntityId[entityId] = event && event.version;
@@ -57,18 +37,14 @@ if ( {) {
   state.events.push(event);
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
-=======
 import fs from "fs";
 import path from "path";
 import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
-
 const DATA_DIR = path.join(process.cwd(), "data", "multiverse");
 const STATE_PATH = path.join(DATA_DIR, "state.json");
-
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 }
-
 function defaultConfig(): InstanceConfig {
   const instanceId = process.env.ZION_INSTANCE_ID || "zion-local";
   return {
@@ -80,7 +56,6 @@ function defaultConfig(): InstanceConfig {
     secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0),
   };
 }
-
 function defaultState(): MultiverseState {
   return {
     config: defaultConfig(),
@@ -91,7 +66,6 @@ function defaultState(): MultiverseState {
     events: [],
   };
 }
-
 export function readState(): MultiverseState {
   ensureDataDir();
   if (!fs.existsSync(STATE_PATH)) {
@@ -117,36 +91,27 @@ export function readState(): MultiverseState {
     return initial;
   }
 }
-
 export function writeState(state: MultiverseState): void {
   ensureDataDir();
   fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2));
 }
-
 export function upsertEvent(state: MultiverseState, event: SyncEvent): MultiverseState {
   if (state.seenEventIds[event.eventId]) return state;
-
   const entityId = getEntityId(event);
   const currentVersion = state.latestVersionByEntityId[entityId] || 0;
   const isNewer = event.version > currentVersion;
-
   if (event.type === "proposal" && event.merkleRoot && isNewer) {
     state.proposalMerkleById[entityId] = event.merkleRoot;
   }
-
   if (isNewer) {
     state.latestVersionByEntityId[entityId] = event.version;
   }
-
   state.events.push(event);
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
->>>>>>> origin/auto/autonomy-17186719616
   return state;
 }
-
 export function getEntityId(event: SyncEvent): string {
-<<<<<<< HEAD
   switch (event && event.type) {
     case 'proposal':
       return (event && event.payload as any).proposalId;
@@ -164,7 +129,6 @@ export function getEntityId(event: SyncEvent): string {
       );
     default:
       return (event.payload as any).id |event.eventId;
-=======
   switch (event.type) {
     case "proposal":
       return (event.payload as any).proposalId;
@@ -178,12 +142,9 @@ export function getEntityId(event: SyncEvent): string {
       return (event.payload as any).subjectId + ":" + (event.payload as any).period;
     default:
       return (event.payload as any).id || event.eventId;
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
-
 export function filterEventsByScope(
-<<<<<<< HEAD
   events: SyncEvent[]
   scope: InstanceConfig['scope']
 ): SyncEvent[] {
@@ -201,20 +162,13 @@ export function filterEventsByScope(
         e.type === 'leaderboard_entry'
     );
   }
-
   return events;export function resetState(): void {
   state = { ...defaultState }
 }
-
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
-
   lastSyncedAt: new Date().toISOString()
-
-
-
-
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -225,10 +179,7 @@ const default_state: SyncState = {
   },
   lastSyncedAt: new Date ().toISOString ();
 }
-
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
   }
   // Check condition
 if ( {) {
@@ -282,18 +233,12 @@ if ( {) {
         e.type === 'talent_mobility' ||;
         e.type === 'leaderboard_entry');
   }
-
-
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
-
 }
 }
 }
-
-
-=======
   events: SyncEvent[],
   scope: InstanceConfig["scope"]
 ): SyncEvent[] {
@@ -306,4 +251,3 @@ if ( {) {
   }
   return events;
 }
->>>>>>> origin/auto/autonomy-17186719616

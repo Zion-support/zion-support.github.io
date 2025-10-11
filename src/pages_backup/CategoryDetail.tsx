@@ -188,7 +188,6 @@ function generateInnovationListing (index: number): ProductListing {
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 

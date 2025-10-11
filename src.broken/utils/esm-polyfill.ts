@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 // ESM polyfill for Next.js
 export const __esModule = true;
 export default {};
-=======
 /**
  * ESM Polyfill for Next.js 15 + React 19 build compatibility
  * Fixes "Module not found: ESM packages need to be imported" errors
  */
-
 // Force proper ESM resolution for problematic packages
 if (typeof window === 'undefined') {
   // Server-side polyfill
@@ -15,7 +12,6 @@ if (typeof window === 'undefined') {
     // Ensure lodash modules are properly resolved to lodash-es
     const Module = eval('require')('module');
     const originalResolveFilename = Module._resolveFilename;
-    
     Module._resolveFilename = function (request: string, parent: any, isMain: boolean, options: any) {
       // Map lodash imports to lodash-es
       if (request.startsWith('lodash/')) {
@@ -27,7 +23,6 @@ if (typeof window === 'undefined') {
           return originalResolveFilename.call(this, request, parent, isMain, options);
         }
       }
-      
       // Map lodash to lodash-es
       if (request === 'lodash') {
         try {
@@ -36,7 +31,6 @@ if (typeof window === 'undefined') {
           return originalResolveFilename.call(this, request, parent, isMain, options);
         }
       }
-      
       return originalResolveFilename.call(this, request, parent, isMain, options);
     };
   } catch (error: unknown) {
@@ -45,7 +39,6 @@ if (typeof window === 'undefined') {
     console.debug('ESM polyfill: Unable to patch Module._resolveFilename:', errorMessage);
   }
 }
-
 // Client-side compatibility fixes
 if (typeof window !== 'undefined') {
   // Ensure proper module resolution for dynamic imports
@@ -62,7 +55,6 @@ if (typeof window !== 'undefined') {
           return originalImport(id);
         }
       }
-      
       if (id === 'lodash') {
         try {
           return originalImport('lodash-es');
@@ -70,12 +62,9 @@ if (typeof window !== 'undefined') {
           return originalImport(id);
         }
       }
-      
       return originalImport(id);
     };
   }
 }
-
 // Export empty object to satisfy module requirements
 export {};
->>>>>>> origin/auto/autonomy-17186719616

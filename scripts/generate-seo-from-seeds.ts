@@ -1,43 +1,16 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
 import fs from 'fs';
 import path from 'path';
-
-
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
-
-
-
-
- 
-
-
 import fs from 'fs';
 import path from 'path';
-
-
 const HOST = process && process.env.SELF_HOST || 'http: //localhost:3000',
 async function post(url: string, body: any) {
   try {
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify(body) });
   return await res && res.json()
-
 }
-
-
-
-
-
-
 }
-
 async function main() {
   try {
   const seedsPath = path && path.join(process && process.cwd(), 'datapage-metadataseo-seeds && seeds.json');
@@ -51,12 +24,8 @@ async function main() {
   for (const s of seeds) {
     const gen = await post(`${HOST}/api/seo/generate`, s);
     if (gen?.slug && gen?.payload) {
-
-
-
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
       // // // console.log('Generated', gen.slug)
-
 ;
 import fs from 'fs';
 import path from 'path';
@@ -90,7 +59,6 @@ if ( {) {
 }
       fs.writeFileSync (path.join (out_dir, `${gen.slug}.json`), JSON.stringify (gen.payload, null, 2));
       console.log ('Generated', gen.slug);
-
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
       // // // console.log('Generated', gen.slug)
 ;
@@ -108,43 +76,22 @@ async function main() {;
     if (gen?.slug && gen?.payload) {;
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),;
       // // // console.log('Generated', gen.slug);
-
     }
   }
 }
 main ().catch ((e) => { console.error (e), process.exit (1) });
 ;
-
 main().catch((e) => { console.error(e), process.exit(1) });
-
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
-=======
 /* eslint-disable no-console */
 import fs from 'fs';
 import path from 'path';
-
 const HOST = process.env.SELF_HOST || 'http://localhost:3000';
-
 async function post(url: string, body: any) {
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json();
 }
-
 async function main() {
   const seedsPath = path.join(process.cwd(), 'data', 'page-metadata', 'seo-seeds.json');
   if (!fs.existsSync(seedsPath)) {
@@ -162,6 +109,4 @@ async function main() {
     }
   }
 }
-
 main().catch((e) => { console.error(e); process.exit(1); });
->>>>>>> origin/auto/autonomy-17186719616

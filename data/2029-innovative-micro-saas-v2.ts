@@ -1,7 +1,6 @@
 export interface InnovativeMicroSaasService2029V2 {
   id: string;
   name: string;
-<<<<<<< HEAD
   description: string;
   category: string[];
   price: string;
@@ -360,7 +359,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-=======
   tagline: string;
   price: string;
   description: string;
@@ -383,7 +381,6 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
   benefits: string[];
   useCases: string[];
 }
-
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [
   {
     id: "ai-powered-customer-success-platform",
@@ -648,6 +645,5 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
       "Performance management",
       "Workforce planning"
     ]
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

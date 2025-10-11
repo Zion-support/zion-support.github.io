@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {const { pathname } = request.nextUrl;
@@ -30,31 +28,16 @@ export function middleware(request: NextRequest) {;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
   return NextResponse.next ();
 }
-
-
 export const config = {
   matcher: ['/dashboard / dashboard/']}
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
-
-
-=======
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
-
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   if (pathname === '/dashboard' || pathname === '/dashboard/') {
@@ -64,8 +47,6 @@ export function middleware(request: NextRequest) {
   }
   return NextResponse.next();
 }
-
 export const config = {
   matcher: ['/dashboard', '/dashboard/'],
 };
->>>>>>> origin/auto/autonomy-17186719616

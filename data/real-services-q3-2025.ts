@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-
-
-
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface Q3Service {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -17,10 +10,7 @@ export interface Q3Service {
   popular?: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
-
   link: string;
-
 export interface Q3Service {
   id: string, name: string,
   tagline: string, price: string,
@@ -28,29 +18,16 @@ export interface Q3Service {
   features: string[], popular?: boolean,
   icon: string, color: string,
   textColor: string, link: string,
-
-
-=======
   textColor: string;
   link: string;
->>>>>>> origin/auto/autonomy-17186719616
   marketPosition?: string;
   targetAudience?: string;
   trialDays?: number;
   setupTime?: string;
-<<<<<<< HEAD
-
   category: string, realService: boolean,
-
   technology?: string[];
   integrations?: string[];
-
-
-
   useCases?: string[];
-
-
-
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -70,10 +47,7 @@ export interface Q3Service {
   variant?: ServiceVariant;
   customers?: number;
   rating?: number;
-
-
   reviews?: number;
-
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -82,17 +56,10 @@ const contact = {
 export const realServicesQ32025: Q3Service[] = [
   {  reviews?: number
 }
-
 const contact = {
-
   mobile: '+1 302 464 0950',
-
   address: '364 E Main St STE 1008 Middletown DE 19709',
-
-
-
 const contact = {;
-
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -102,14 +69,11 @@ const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
-
 export const realServicesQ32025: Q3Service[] = [
   {
     id: 'subscription-analytics-revenue-optimization'
     name: 'Subscription Analytics & Revenue Optimization'
 }
-
-=======
   category: string;
   realService: boolean;
   technology?: string[];
@@ -124,19 +88,14 @@ export const realServicesQ32025: Q3Service[] = [
   rating?: number;
   reviews?: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
->>>>>>> origin/auto/autonomy-17186719616
 };
-
 export const realServicesQ32025: Q3Service[] = [
   {
-<<<<<<< HEAD
-
     id: 'subscription-analytics-revenue-optimization',
     name: 'Subscription Analytics & Revenue Optimization',
     tagline:
@@ -158,43 +117,28 @@ export const realServicesQ32025: Q3Service[] = [
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization'
-
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
       'Revenue leakage detection',
       'Revenue forecasting models',
       'Weekly executive summaries',
-
-
-
-
-=======
     id: 'subscription-analytics-revenue-optimization',
     name: 'Subscription Analytics & Revenue Optimization',
->>>>>>> origin/auto/autonomy-17186719616
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
     price: '$599',
     period: '/month',
     description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
     features: [
-<<<<<<< HEAD
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
-
-
-
     ],
     popular: true,
     icon: '📊',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
-
-
-
-
     marketPosition:
       'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',    features: [
       'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries';
@@ -205,8 +149,6 @@ export const realServicesQ32025: Q3Service[] = [
     textColor: 'text-emerald-300';
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization';
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.'
-
-
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams';
     trialDays: 14;
     setupTime: '1–2 weeks';
@@ -237,30 +179,19 @@ export const realServicesQ32025: Q3Service[] = [
     growth_rate: '30% YoY';
     variant: 'ai - futuristic';
     customers: 24;
-
     rating: 4 && 4.9;
     reviews: 31,
-
     roi: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.';
     competitors: ['Lemon SqueezyGumroadPaddle'];
     customers: 12;
-
     rating: 4 && 4.8;
     reviews: 18,
-
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
-
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
   {
-
-
-
-
-
-
     targetAudience: 'Content sites, ecommerce, publishers on WordPress';
     trialDays: 7;
     setupTime: '2–4 days';
@@ -279,23 +210,18 @@ export const realServicesQ32025: Q3Service[] = [
     roi: '5–25% organic uplift in 8–12 weeks on content libraries.';
     competitors: ['Link WhisperInternal Link Juicer'];
     customers: 30;
-
     rating: 4 && 4.7;
     reviews: 22,
-
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_info: contact;
   }
   {
-
     id: 'reviews - ugc - activation';
-
     name: 'Ecommerce Reviews & UGC Activation';
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion';
     price: '$999';
-
     period: '/project',
     description: 'We implement reviews and UGC collection across your storefront with on - brand widgets, post - purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.';
     features: [;
@@ -315,7 +241,6 @@ export const realServicesQ32025: Q3Service[] = [
     use_cases: ['Increase trust_lift CVRCollect UGC for ads'];
     roi: '2–10% CVR lift on PDPs post - deployment.';
     competitors: ['YotpoJudge.meLooxStamped.io'];
-
     customers: 10;
     rating: 4.8;
     reviews: 12
@@ -355,7 +280,6 @@ export const realServicesQ32025: Q3Service[] = [
     description:
       'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'
     features: [
-
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
   },];    contactInfo: contact
@@ -364,14 +288,12 @@ export const realServicesQ32025: Q3Service[] = [
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
-=======
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
       'Revenue leakage detection',
       'Revenue forecasting models',
       'Weekly executive summaries'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '📊',
@@ -379,26 +301,15 @@ export const realServicesQ32025: Q3Service[] = [
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-<<<<<<< HEAD
-
     contactInfo: contact,
   },
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
     category: 'AI & Data',
     realService: true,
-<<<<<<< HEAD
-
-
     marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
@@ -406,99 +317,67 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.9,
     reviews: 31,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-
-
   },
   {
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
-
-
     ],
     icon: '🛒',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/digital-product-commerce-stack',
-
-
     targetAudience: 'Indie SaaS, creators, agencies launching digital products',
     setupTime: '5–7 days',
     category: 'Developer Tools',
     realService: true,
-
-
     customers: 12,
     rating: 4.8,
     reviews: 18,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-
-
   },
   {
     id: 'wordpress-internal-linking-automation',
     name: 'WordPress Internal Linking Automation',
-
-
     ],
     icon: '🔗',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation',
-
-
     targetAudience: 'Content sites, ecommerce, publishers on WordPress',
     trialDays: 7,
     setupTime: '2–4 days',
     category: 'Growth & Marketing',
     realService: true,
-
-
     customers: 30,
     rating: 4.7,
     reviews: 22,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-
-
   },
   {
     id: 'reviews-ugc-activation',
     name: 'Ecommerce Reviews & UGC Activation',
-
-
     ],
     icon: '⭐',
     color: 'from-amber-600 to-rose-600',
     textColor: 'text-amber-200',
     link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation',
-
-
     targetAudience: 'Shopify and custom ecommerce brands',
     setupTime: '3–6 days',
     category: 'Quality & Monitoring',
     realService: true,
-
-
     customers: 10,
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-
-
-
   }
 ];
 ;
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
     category: 'AI & Data',
     realService: true,
-
-
-
     technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'],
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
     useCases: [
@@ -508,21 +387,16 @@ export const realServicesQ32025: Q3Service[] = [
     ],
     roi: '3–10% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],
-
     technology: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'],
     integrations: ['StripePaddle', 'ChargebeeLemon Squeezy'],
     useCases: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs'],
     roi: '3–10% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell MetricsChartMogul', 'Baremetrics'],
-
-
-=======
     technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'],
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
     useCases: ['Reduce churn', 'Price optimization', 'Board-ready revenue KPIs'],
     roi: '3–10% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],
->>>>>>> origin/auto/autonomy-17186719616
     marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
@@ -530,42 +404,31 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.9,
     reviews: 31,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-<<<<<<< HEAD
-
     contactInfo: contact
     contactInfo: contact,
     contactInfo: contact
-
-=======
     contactInfo: contact
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     id: 'digital-product-commerce-stack',
     name: 'Digital Product Commerce Stack',
-<<<<<<< HEAD
-
     tagline:
       'End-to-end setup for selling downloads, licenses, and subscriptions',
     price: '$1,200',
     period: '/project',
     description:
       'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.',
-=======
     tagline: 'End-to-end setup for selling downloads, licenses, and subscriptions',
     price: '$1,200',
     period: '/project',
     description: 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.',
->>>>>>> origin/auto/autonomy-17186719616
     features: [
       'Payments, taxes, and invoicing',
       'License keys and subscriptions',
       'EU/US tax and compliance guidance',
       'Storefront templates and checkout',
       'Sales analytics and email hooks',
-<<<<<<< HEAD
       '1-week launch plan',
-
     tagline: 'End-to-end setup for selling downloads, licenses, and subscriptions',
     price: '$1,200',
     period: '/project',
@@ -574,89 +437,59 @@ export const realServicesQ32025: Q3Service[] = [
       'Payments, taxes, and invoicingLicense keys and subscriptions',
       'EU/US tax and compliance guidanceStorefront templates and checkout',
       'Sales analytics and email hooks1-week launch plan'
-
-
-=======
       '1-week launch plan'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     icon: '🛒',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/digital-product-commerce-stack',
-<<<<<<< HEAD
-
     marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.',
     marketPosition:
       'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.',
     marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.',
-
-=======
     marketPosition: 'Implementation partner alternative to Lemon Squeezy/Gumroad do-it-yourself.',
->>>>>>> origin/auto/autonomy-17186719616
     targetAudience: 'Indie SaaS, creators, agencies launching digital products',
     setupTime: '5–7 days',
     category: 'Developer Tools',
     realService: true,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
     technology: ['Next.js', 'Stripe', 'Lemon Squeezy API', 'PostgreSQL'],
     integrations: ['Stripe', 'Lemon Squeezy', 'Gumroad', 'Make/Zapier'],
     useCases: ['Course sales', 'Plugin licenses', 'Templates marketplace'],
     roi: 'Launch revenue in under 2 weeks; save 40–80 hours of setup.',
     competitors: ['Lemon Squeezy', 'Gumroad', 'Paddle'],
-<<<<<<< HEAD
-
     technology: ['Next.jsStripe', 'Lemon Squeezy APIPostgreSQL'],
     integrations: ['StripeLemon Squeezy', 'GumroadMake/Zapier'],
     useCases: ['Course salesPlugin licenses', 'Templates marketplace'],
     roi: 'Launch revenue in under 2 weeks, save 40–80 hours of setup.',
     competitors: ['Lemon SqueezyGumroad', 'Paddle'],
-
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
     customers: 12,
     rating: 4.8,
     reviews: 18,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-<<<<<<< HEAD
-
     contactInfo: contact
     contactInfo: contact,
     contactInfo: contact
-
-=======
     contactInfo: contact
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     id: 'wordpress-internal-linking-automation',
     name: 'WordPress Internal Linking Automation',
-<<<<<<< HEAD
-
     tagline:
       'AI-guided internal links that improve SEO structure and topical authority',
     price: '$299',
     period: '/month',
     description:
       'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.',
-=======
     tagline: 'AI-guided internal links that improve SEO structure and topical authority',
     price: '$299',
     period: '/month',
     description: 'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.',
->>>>>>> origin/auto/autonomy-17186719616
     features: [
       'Automatic link suggestions and anchors',
       'Orphan page and pillar clustering',
       'Click-through rate experiments',
       'Reporting and recommendations',
-<<<<<<< HEAD
       'Sitemap and crawl improvements',
-
     tagline: 'AI-guided internal links that improve SEO structure and topical authority',
     price: '$299',
     period: '/month',
@@ -665,33 +498,22 @@ export const realServicesQ32025: Q3Service[] = [
       'Automatic link suggestions and anchorsOrphan page and pillar clustering',
       'Click-through rate experimentsReporting and recommendations',
       'Sitemap and crawl improvements'
-
-
-=======
       'Sitemap and crawl improvements'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     icon: '🔗',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-200',
     link: 'https://ziontechgroup.com/services/wordpress-internal-linking-automation',
-<<<<<<< HEAD
-
     marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.',
     marketPosition:
       'Comparable to Link Whisper with managed tuning and reporting.',
     marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.',
-
-=======
     marketPosition: 'Comparable to Link Whisper with managed tuning and reporting.',
->>>>>>> origin/auto/autonomy-17186719616
     targetAudience: 'Content sites, ecommerce, publishers on WordPress',
     trialDays: 7,
     setupTime: '2–4 days',
     category: 'Growth & Marketing',
     realService: true,
-<<<<<<< HEAD
-
     technology: ['WordPress', 'GA4', 'Looker Studio'],
     integrations: ['Link Whisper', 'Yoast/RankMath', 'Search Console'],
     useCases: [
@@ -701,60 +523,44 @@ export const realServicesQ32025: Q3Service[] = [
     ],
     roi: '5–25% organic uplift in 8–12 weeks on content libraries.',
     competitors: ['Link Whisper', 'Internal Link Juicer'],
-
     technology: ['WordPressGA4', 'Looker Studio'],
     integrations: ['Link WhisperYoast/RankMath', 'Search Console'],
     useCases: ['Boost organic trafficFix site structure', 'Improve crawl and CTR'],
     roi: '5–25% organic uplift in 8–12 weeks on content libraries.',
     competitors: ['Link WhisperInternal Link Juicer'],
-
-
-=======
     technology: ['WordPress', 'GA4', 'Looker Studio'],
     integrations: ['Link Whisper', 'Yoast/RankMath', 'Search Console'],
     useCases: ['Boost organic traffic', 'Fix site structure', 'Improve crawl and CTR'],
     roi: '5–25% organic uplift in 8–12 weeks on content libraries.',
     competitors: ['Link Whisper', 'Internal Link Juicer'],
->>>>>>> origin/auto/autonomy-17186719616
     customers: 30,
     rating: 4.7,
     reviews: 22,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-<<<<<<< HEAD
-
     contactInfo: contact
     contactInfo: contact,
     contactInfo: contact
-
-=======
     contactInfo: contact
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     id: 'reviews-ugc-activation',
     name: 'Ecommerce Reviews & UGC Activation',
-<<<<<<< HEAD
-
     tagline:
       'Deploy reviews and UGC workflows that increase trust and conversion',
     price: '$999',
     period: '/project',
     description:
       'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.',
-=======
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
     price: '$999',
     period: '/project',
     description: 'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.',
->>>>>>> origin/auto/autonomy-17186719616
     features: [
       'Reviews widget integration',
       'Email/SMS post-purchase triggers',
       'Photo/video UGC capture',
       'Moderation and syndication',
-<<<<<<< HEAD
       'Conversion impact reporting',
-
     tagline: 'Deploy reviews and UGC workflows that increase trust and conversion',
     price: '$999',
     period: '/project',
@@ -763,53 +569,35 @@ export const realServicesQ32025: Q3Service[] = [
       'Reviews widget integrationEmail/SMS post-purchase triggers',
       'Photo/video UGC captureModeration and syndication',
       'Conversion impact reporting'
-
-
-=======
       'Conversion impact reporting'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     icon: '⭐',
     color: 'from-amber-600 to-rose-600',
     textColor: 'text-amber-200',
     link: 'https://ziontechgroup.com/services/ecommerce-reviews-ugc-activation',
-<<<<<<< HEAD
-
     marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.',
     marketPosition:
       'Managed alternative to do-it-yourself Yotpo/Judge.me setups.',
     marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.',
-
-=======
     marketPosition: 'Managed alternative to do-it-yourself Yotpo/Judge.me setups.',
->>>>>>> origin/auto/autonomy-17186719616
     targetAudience: 'Shopify and custom ecommerce brands',
     setupTime: '3–6 days',
     category: 'Quality & Monitoring',
     realService: true,
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
     technology: ['Shopify', 'Klaviyo', 'Next.js'],
     integrations: ['Yotpo', 'Judge.me', 'Loox', 'Stamped'],
     useCases: ['Increase trust', 'Lift CVR', 'Collect UGC for ads'],
     roi: '2–10% CVR lift on PDPs post-deployment.',
     competitors: ['Yotpo', 'Judge.me', 'Loox', 'Stamped.io'],
-<<<<<<< HEAD
-
     technology: ['ShopifyKlaviyo', 'Next.js'],
     integrations: ['YotpoJudge.me', 'LooxStamped'],
     useCases: ['Increase trustLift CVR', 'Collect UGC for ads'],
     roi: '2–10% CVR lift on PDPs post-deployment.',
     competitors: ['YotpoJudge.me', 'LooxStamped.io'],
-
-
     customers: 10,
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-
     contactInfo: contact
     contactInfo: contact,
   },];    contactInfo: contact
@@ -817,11 +605,8 @@ export const realServicesQ32025: Q3Service[] = [
   }
 ];
 ;
-
-
 }
 };
-
 export const realServicesQ32025: Q3Service[] = [
   {
     id: 'subscription-analytics-revenue-optimization',
@@ -844,21 +629,16 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact,
   },
     marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
     category: 'AI & Data',
     realService: true,
-
-
-
     technology: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'],
     integrations: ['StripePaddle', 'ChargebeeLemon Squeezy'],
     useCases: ['Reduce churnPrice optimization', 'Board-ready revenue KPIs'],
     roi: '3–10% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell MetricsChartMogul', 'Baremetrics'],
-
     marketSize: '$30B+ subscription economy tooling',
     growthRate: '30% YoY',
     variant: 'ai-futuristic',
@@ -959,8 +739,6 @@ export const realServicesQ32025: Q3Service[] = [
     useCases: ['Increase trustLift CVR', 'Collect UGC for ads'],
     roi: '2–10% CVR lift on PDPs post-deployment.',
     competitors: ['YotpoJudge.me', 'LooxStamped.io'],
-=======
->>>>>>> origin/auto/autonomy-17186719616
     customers: 10,
     rating: 4.8,
     reviews: 12,
@@ -968,7 +746,3 @@ export const realServicesQ32025: Q3Service[] = [
     contactInfo: contact
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616

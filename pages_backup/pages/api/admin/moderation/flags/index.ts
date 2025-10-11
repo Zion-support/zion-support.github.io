@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',;
@@ -6,12 +5,6 @@ import { createFlag, readAllFlags } from '../../../../../utils/moderationDb',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req),
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
-
-
-
-
-
-
   if (req.method === 'POST') {
     const init = req.body || {},
     try {
@@ -22,14 +15,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
-
-
-
-
-
   }
   if (req.method === 'POST') {
-
     const init = req.body || {};
     try {
       const flag = await createFlag(init);
@@ -38,9 +25,6 @@ import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
       return res.status(400).json({ error: e.message || 'Invalid payload' });
     }
   }
-
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const user = parseUserFromRequest(req);
@@ -49,13 +33,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) { 
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
     }
-
     }
-
   res.setHeader('AllowGET,POST'),
   return res.status(405).end('Method Not Allowed');
 };
-
     if (req.method === 'GET') {
       const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
       const flags = await readAllFlags();
@@ -75,24 +56,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
-
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-

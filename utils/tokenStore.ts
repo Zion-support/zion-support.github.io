@@ -1,22 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
 ;
-
 export interface TokenTransaction {
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -25,11 +10,8 @@ export interface TokenTransaction {
   timestamp: string;
   metadata?: Record < string, any>;
 }
-
 export interface TokenConfig {
-
 export interface TokenConfig {;
-
   name: string;
   symbol: string;
   total_supply: number;
@@ -38,13 +20,9 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
-
-
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
 const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
-
-
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -82,7 +60,6 @@ function load_transactions (): TokenTransaction[] {
     return [];
   }
 }
-
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
   fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
@@ -95,20 +72,16 @@ function loadConfig(): TokenConfig {
     }
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
-
   } catch {
     return getDefaultConfig ();
   }
 }
-
 function save_config (config: TokenConfig): void {
   ensureDataDir ();
   fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2));
 }
 function getDefaultConfig (): TokenConfig {
-
   return {
-
     name: 'ZION Token'
     symbol: 'ZION$'
     totalSupply: 1000000000
@@ -118,30 +91,20 @@ function getDefaultConfig (): TokenConfig {
     stakingRewardRate: 12.5
   }
 }
-
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
 export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
-
-
-
-
-
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
-
     ...transaction,
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     timestamp: new Date().toISOString()
   };
-  
   transactions && transactions.push(newTransaction);
-
   saveTransactions(transactions);
   return newTransaction;
 }
-
 export function getConfig(): TokenConfig {
   return loadConfig();
 }
@@ -149,26 +112,13 @@ export function setConfig(config: TokenConfig): void {
   saveConfig(config);
 }
 export function getUserBalance(userId: string): number {
-
-
 export function getConfig(): TokenConfig {;
   return loadConfig();
 }
-
 export function setConfig(config: TokenConfig): void {;
   saveConfig(config);
 }
-
 export function getUserBalance(userId: string): number {;
-
-
-
-
-
-
-
-
-
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -182,9 +132,6 @@ export function getUserBalance(userId: string): number {;
   }
   return Math.max(0, balance);
 }
-
-
-
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -192,55 +139,36 @@ export function getUserBalance(userId: string): number {;
     stakingRewardRate: 12.5;
   }
 }
-
 export function getAllTransactions(): TokenTransaction[] {;
   return loadTransactions();
 }
-
 export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
     ...transaction
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     timestamp: new Date().toISOString()
-
-
-
   }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
-
-
-
 export function get_config (): TokenConfig {
   return load_config ();
-
 }
 export function set_config (config: TokenConfig): void {
   save_config (config);
 }
-
-
 export function getUserBalance(userId: string): number {
-
-
-
 export function getConfig(): TokenConfig {;
   return loadConfig();
 }
-
 export function setConfig(config: TokenConfig): void {;
   saveConfig(config);
 }
-
 export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
-
-
-
   let balance = 0;
 ;
   for (const tx of transactions) {

@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-=======
 import { ServiceVariant } from '../types/service-variants';
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface Innovative2025Service {
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
-=======
   period: string;
   description: string;
   features: string[];
@@ -37,12 +31,10 @@ export interface Innovative2025Service {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
   };
 }
 export const innovative2025Services: Innovative2025Service[] = [
@@ -67,7 +59,6 @@ export const innovative2025Services: Innovative2025Service[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -77,7 +68,6 @@ export const innovative2025Services: Innovative2025Service[] = [
   rating: number;
   reviews: number;
 }
-
 export const innovative2025Services: Innovative2025Service[] = [
   // AI & Machine Learning Innovation Services
   {
@@ -508,6 +498,5 @@ export const innovative2025Services: Innovative2025Service[] = [
     customers: 45,
     rating: 4.8,
     reviews: 32
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

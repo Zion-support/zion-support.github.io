@@ -1,10 +1,7 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
-
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { randomUUID } from 'crypto',;
-
 type Note = {
   id: string
   targetType: string
@@ -37,17 +34,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: 'Method not allowed' })
 }
 export function getAllNotes(): Note[] {
-
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
 }
-
   return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 interface Note {
-
   id: string;
   targetType: string;
   targetId: string;
@@ -55,19 +47,11 @@ interface Note {
   authorId: string;
   createdAt: number;
 };
-
 const notesStore: Note[] = [];
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
     if (req.method === 'GET') {
       const { targetType, targetId } = req.query;
       if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' });
       if (!targetId || Array.isArray(targetId)) return res.status(400).json({ error: 'Invalid targetId' });
-      
       const notes = notesStore
         .filter((n) => n.targetType === targetType && n.targetId === targetId);
       res.json({ notes });
@@ -92,7 +76,3 @@ const notesStore: Note[] = [];
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-

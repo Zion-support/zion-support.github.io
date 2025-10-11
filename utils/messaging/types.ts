@@ -1,30 +1,13 @@
-<<<<<<< HEAD
-
-
 export type UserRole = 'admin' | 'user' | 'guest';
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-=======
 export type UserRole = 'client' | 'talent' | 'admin';
-
 export interface UserSummary {
   id: string;
   name: string;
   role: UserRole;
   avatarUrl?: string;
 }
-
 export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite';
-
 export interface ConversationContext {
   type: ConversationContextType;
   jobId?: string;
@@ -33,7 +16,6 @@ export interface ConversationContext {
   talentName?: string;
   proposalLink?: string;
 }
-
 export interface Conversation {
   id: string;
   participants: string[]; // [clientId, talentId] or any two users
@@ -41,9 +23,7 @@ export interface Conversation {
   lastMessageAt: string; // ISO
   unreadBy: string[]; // userIds who have unread messages
 }
-
 export type MessageStatus = 'sent' | 'delivered' | 'read';
-
 export interface Message {
   id: string;
   conversationId: string;
@@ -55,14 +35,12 @@ export interface Message {
   createdAt: string; // ISO
   status: MessageStatus;
 }
-
 export interface InboxItem {
   conversation: Conversation;
   otherParticipant: UserSummary;
   lastMessage?: Message;
   unreadCount: number;
 }
-
 export interface NewMessageInput {
   conversationId?: string;
   senderId: string;
@@ -73,4 +51,3 @@ export interface NewMessageInput {
   attachmentName?: string; // optional filename
   context?: ConversationContext;
 }
->>>>>>> origin/auto/autonomy-17186719616

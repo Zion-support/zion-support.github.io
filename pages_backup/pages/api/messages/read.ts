@@ -1,9 +1,3 @@
-
-
-
-
-
-
   const user = requireUser(req, res);
   if (!user) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -12,19 +6,7 @@
   const conv = getConversationById(conversationId);
   if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' });
   markAsRead(conversationId, user.id);
-
   res.status(200).json({ success: true })
 }
-
-
-
-
-
 }
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

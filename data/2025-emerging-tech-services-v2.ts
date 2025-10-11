@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-
 export interface EmergingTechService {
 export interface EmergingTechService {;
-
-=======
 export interface EmergingTechService {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -17,18 +12,10 @@ export interface EmergingTechService {
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD
-
-
-
-
-
   {
-
       'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
     realImplementation: true,
-
     implementationDetails:
       'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.'
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.'
@@ -46,7 +33,6 @@ export interface EmergingTechService {
     support:
       '24/7 research support, dedicated bio-quantum specialist, training programs, and quarterly research reviews.'
     compliance: [
-
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
@@ -55,7 +41,6 @@ export interface EmergingTechService {
     tagline: 'Quantum computing meets biological systems',
     description:;
       'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
-=======
     enterprise: number;
   };
   features: string[];
@@ -82,7 +67,6 @@ export interface EmergingTechService {
   marketSize: string;
   growthRate: string;
 }
-
 export const emergingTechServicesV2: EmergingTechService[] = [
   {
     id: 'space-mining-platform',
@@ -158,27 +142,23 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     name: 'Quantum Bio-Computing Platform',
     tagline: 'Quantum computing meets biological systems',
     description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
->>>>>>> origin/auto/autonomy-17186719616
     category: 'Quantum & Emerging Tech',
     price: {
       monthly: 599,
       yearly: 5990,
       currency: 'USD',
-<<<<<<< HEAD
       trial_days: 14,
       setup_time: '8 hours',
       enterprise: 2499,
     },
     features: [;
       'Quantum - biological hybrid processing',
-=======
       trialDays: 14,
       setupTime: '8 hours',
       enterprise: 2499
     },
     features: [
       'Quantum-biological hybrid processing',
->>>>>>> origin/auto/autonomy-17186719616
       'DNA sequence analysis',
       'Protein folding simulation',
       'Drug discovery algorithms',
@@ -187,34 +167,27 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Quantum molecular dynamics',
       'Bioinformatics tools',
       'Custom biological models',
-<<<<<<< HEAD
       'API for research',
     ],
     benefits: [;
-=======
       'API for research'
     ],
     benefits: [
->>>>>>> origin/auto/autonomy-17186719616
       'Solve biological problems 1000x faster',
       'Accelerate drug discovery',
       'Improve genetic analysis',
       'Enable new research capabilities',
-<<<<<<< HEAD
       'Reduce research costs',
     ],
     target_audience: [;
-=======
       'Reduce research costs'
     ],
     targetAudience: [
->>>>>>> origin/auto/autonomy-17186719616
       'Pharmaceutical companies',
       'Research institutions',
       'Biotechnology firms',
       'Healthcare organizations',
       'Universities',
-<<<<<<< HEAD
       'Government agencies',
     ],
     market_position:;
@@ -230,7 +203,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Advanced quantum - bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     use_cases: [;
-=======
       'Government agencies'
     ],
     marketPosition: 'Competitive with IBM Quantum ($500+), Google Quantum AI ($1000+), and specialized bio-computing platforms ($800+). Our advantage: Biological integration, quantum processing, and research optimization.',
@@ -240,13 +212,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced quantum-bio platform with hybrid processing, biological modeling, and research tools. Includes desktop application and cloud access.',
     roi: 'Average customer sees 600% ROI within 18 months through accelerated research and reduced costs.',
     useCases: [
->>>>>>> origin/auto/autonomy-17186719616
       'Drug discovery',
       'Genetic analysis',
       'Protein folding',
       'Molecular dynamics',
       'Biological optimization',
-<<<<<<< HEAD
       'Research acceleration',
     ],
     integrations: [;
@@ -258,7 +228,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
     link: 'https://ziontechgroup.com / quantum - bio - computing - platform',
-
     icon: '🧬',
     color: 'from - green - 500 to - emerald - 600',
     popular: true,
@@ -270,11 +239,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     growth_rate: '65% annually',
   },
   {
-
       'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
     realImplementation: true,
-
     implementationDetails:
       'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.'
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.'
@@ -292,7 +259,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     support:
       '24/7 BCI specialist support, dedicated neural engineer, training programs, and quarterly capability reviews.'
     compliance: [
-
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
@@ -301,7 +267,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     tagline: 'Direct neural interface for human - computer interaction',
     description:;
       'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
-=======
       'Research acceleration'
     ],
     integrations: ['Research databases, Laboratory equipment, Analysis tools, Cloud platforms, Scientific software'],
@@ -323,13 +288,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     name: 'Brain-Computer Interface Platform',
     tagline: 'Direct neural interface for human-computer interaction',
     description: 'Advanced platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
->>>>>>> origin/auto/autonomy-17186719616
     category: 'Emerging Tech',
     price: {
       monthly: 399,
       yearly: 3990,
       currency: 'USD',
-<<<<<<< HEAD
       trial_days: 21,
       setup_time: '6 hours',
       enterprise: 1599,
@@ -338,7 +301,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Neural signal processing',
       'Brain activity monitoring',
       'Thought - to - text conversion',
-=======
       trialDays: 21,
       setupTime: '6 hours',
       enterprise: 1599
@@ -347,12 +309,10 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Neural signal processing',
       'Brain activity monitoring',
       'Thought-to-text conversion',
->>>>>>> origin/auto/autonomy-17186719616
       'Mental command recognition',
       'Accessibility tools',
       'Gaming integration',
       'Medical applications',
-<<<<<<< HEAD
       'Real - time processing',
       'Custom neural models',
       'API for developers',
@@ -365,7 +325,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Enhance human capabilities',
     ],
     target_audience: [;
-=======
       'Real-time processing',
       'Custom neural models',
       'API for developers'
@@ -378,13 +337,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Enhance human capabilities'
     ],
     targetAudience: [
->>>>>>> origin/auto/autonomy-17186719616
       'Healthcare providers',
       'Gaming companies',
       'Accessibility organizations',
       'Research institutions',
       'Technology companies',
-<<<<<<< HEAD
       'Educational institutions',
     ],
     market_position:;
@@ -400,7 +357,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Advanced BCI platform with neural processing, real - time analysis, and comprehensive applications. Includes hardware integration and development tools.',
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     use_cases: [;
-=======
       'Educational institutions'
     ],
     marketPosition: 'Competitive with Neuralink ($1000+), CTRL-labs ($500+), and specialized BCI platforms ($400+). Our advantage: Advanced signal processing, comprehensive applications, and developer-friendly platform.',
@@ -410,13 +366,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced BCI platform with neural processing, real-time analysis, and comprehensive applications. Includes hardware integration and development tools.',
     roi: 'Average customer sees 400% ROI within 12 months through new capabilities and applications.',
     useCases: [
->>>>>>> origin/auto/autonomy-17186719616
       'Accessibility assistance',
       'Gaming control',
       'Medical research',
       'Communication aids',
       'Prosthetic control',
-<<<<<<< HEAD
       'Cognitive enhancement',
     ],
     integrations: [;
@@ -428,7 +382,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com / brain - computer - interface - platform',
-
     icon: '🧠',
     color: 'from - blue - 500 to - indigo - 600',
     popular: true,
@@ -440,11 +393,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     growth_rate: '55% annually',
   },
   {
-
       'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
     realImplementation: true,
-
     implementationDetails:
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.'
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.'
@@ -462,7 +413,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     support:
       '24/7 energy specialist support, dedicated quantum engineer, training programs, and quarterly optimization reviews.'
     compliance: [
-
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
@@ -471,7 +421,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     tagline: 'Quantum - enhanced energy optimization and fusion simulation',
     description:;
       'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
-=======
       'Cognitive enhancement'
     ],
     integrations: ['Neural hardware, Gaming platforms, Medical devices, Accessibility tools, Development platforms'],
@@ -493,65 +442,54 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     name: 'Quantum Energy Platform',
     tagline: 'Quantum-enhanced energy optimization and fusion simulation',
     description: 'Revolutionary platform that uses quantum computing to optimize energy systems, simulate fusion reactions, and enable breakthrough energy solutions.',
->>>>>>> origin/auto/autonomy-17186719616
     category: 'Quantum & Emerging Tech',
     price: {
       monthly: 499,
       yearly: 4990,
       currency: 'USD',
-<<<<<<< HEAD
       trial_days: 14,
       setup_time: '6 hours',
       enterprise: 1999,
     },
     features: [;
-=======
       trialDays: 14,
       setupTime: '6 hours',
       enterprise: 1999
     },
     features: [
->>>>>>> origin/auto/autonomy-17186719616
       'Quantum energy optimization',
       'Fusion reaction simulation',
       'Grid optimization algorithms',
       'Energy storage optimization',
       'Renewable energy integration',
       'Quantum thermodynamics',
-<<<<<<< HEAD
       'Real - time monitoring',
       'Predictive analytics',
       'Custom energy models',
       'API for energy systems',
     ],
     benefits: [;
-=======
       'Real-time monitoring',
       'Predictive analytics',
       'Custom energy models',
       'API for energy systems'
     ],
     benefits: [
->>>>>>> origin/auto/autonomy-17186719616
       'Optimize energy systems 100x faster',
       'Enable fusion power simulation',
       'Reduce energy costs by 30%',
       'Improve grid efficiency',
-<<<<<<< HEAD
       'Accelerate clean energy adoption',
     ],
     target_audience: [;
-=======
       'Accelerate clean energy adoption'
     ],
     targetAudience: [
->>>>>>> origin/auto/autonomy-17186719616
       'Energy companies',
       'Utility providers',
       'Research institutions',
       'Government agencies',
       'Technology companies',
-<<<<<<< HEAD
       'Environmental organizations',
     ],
     market_position:;
@@ -567,7 +505,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     use_cases: [;
-=======
       'Environmental organizations'
     ],
     marketPosition: 'Competitive with specialized energy platforms ($300+), quantum computing services ($500+), and simulation software ($400+). Our advantage: Quantum optimization, comprehensive energy modeling, and fusion simulation.',
@@ -577,13 +514,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     implementationDetails: 'Advanced quantum energy platform with optimization algorithms, fusion simulation, and comprehensive energy modeling. Includes desktop application and cloud access.',
     roi: 'Average customer sees 500% ROI within 15 months through energy optimization and cost reduction.',
     useCases: [
->>>>>>> origin/auto/autonomy-17186719616
       'Energy system optimization',
       'Fusion power simulation',
       'Grid optimization',
       'Energy storage optimization',
       'Renewable integration',
-<<<<<<< HEAD
       'Energy research',
     ],
     integrations: [;
@@ -595,7 +530,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
     link: 'https://ziontechgroup.com / quantum - energy - platform',
-
     icon: '⚡',
     color: 'from - yellow - 500 to - orange - 600',
     popular: true,
@@ -607,11 +541,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     growth_rate: '45% annually',
   },
   {
-
       'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
     realImplementation: true,
-
     implementationDetails:
       'Advanced autonomous vehicle platform with AI perception, decision-making, and safety systems. Includes vehicle integration and fleet management tools.'
     roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.'
@@ -629,7 +561,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
-
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
     ]
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
@@ -643,10 +574,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$35B autonomous vehicle market'
     growthRate: '75% annually'
   }
-
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
-=======
       'Energy research'
     ],
     integrations: ['Energy management systems, Grid infrastructure, Monitoring tools, Research platforms, Business applications'],
@@ -721,7 +650,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],
->>>>>>> origin/auto/autonomy-17186719616
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     icon: '🚗',
     color: 'from-red-500 to-pink-600',
@@ -731,14 +659,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     rating: 4.9,
     reviews: 65,
     marketSize: '$35B autonomous vehicle market',
-<<<<<<< HEAD
     growthRate: '75% annually',
   },;
-
-
-
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
-
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -839,7 +762,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',
-
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
     popular: true,
@@ -850,8 +772,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually',
   },
-
-
   id: string, name: string,
   tagline: string, description: string,
   category: string,
@@ -874,15 +794,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
   reviews: number, marketSize: string,
   growthRate: string
 }
-
-
 ];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
     ];
-
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
-
     icon: '🚗';
     color: 'from - red - 500 to - pink - 600';
     popular: true;
@@ -890,15 +806,11 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
-
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually';
-
     growthRate: '75% annually'
   }
-
 ];
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -937,9 +849,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
   growthRate: string;
 }
 ;
-
 export interface EmergingTechService {;
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -977,9 +887,7 @@ export interface EmergingTechService {;
   marketSize: string,;
   growthRate: string;
 }
-
 ;
-
 export const emergingTechServicesV2: EmergingTechService[] = [;
   {;
     id: 'space-mining-platform',;
@@ -1215,15 +1123,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     reviews: 65,;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
-
-
-
   }
 ];
-
-
-=======
     growthRate: '75% annually'
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

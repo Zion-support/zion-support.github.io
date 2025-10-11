@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
     id: 'quantum - cloud - infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next - generation quantum - powered cloud infrastructure',
@@ -8,7 +6,6 @@
     description:;
       'Revolutionary quantum - powered cloud infrastructure that provides unprecedented performance, security, and scalability. Perfect for enterprises requiring quantum - grade computing capabilities.',
     features: [;
-
       'Quantum computing resources',
       'Quantum - secured networking',
       'Quantum encryption at rest and in transit',
@@ -22,7 +19,6 @@
     ],
     popular: true,
     icon: '☁️',
-
     color: 'from - blue - 600 to - indigo - 700',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / quantum - cloud - infrastructure',
@@ -35,7 +31,6 @@
     category: 'Quantum IT Infrastructure',
     real_service: true,
     technology: [;
-
       'Quantum computing',
       'Quantum networking',
       'React',
@@ -45,7 +40,6 @@
       'AWS',
       'Custom quantum hardware',
     ],
-
     integrations: [;
       'Enterprise systems',
       'Legacy applications',
@@ -72,7 +66,6 @@
     growth_rate: '400% annual growth',
     variant: 'quantum - advanced',
     contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -87,7 +80,6 @@
     reviews: 32,
   },
   {
-
       'AI-powered deployment optimization',
     id: 'ai - powered - devops - automation',
     name: 'AI - Powered DevOps Automation',
@@ -98,7 +90,6 @@
       'Revolutionary DevOps automation platform that uses AI to optimize deployment pipelines, infrastructure management, and operational efficiency. Achieve 10x faster deployments with zero downtime.',
     features: [;
       'AI - powered deployment optimization',
-
       'Intelligent infrastructure scaling',
       'Predictive failure detection',
       'Automated performance tuning',
@@ -111,7 +102,6 @@
     ],
     popular: true,
     icon: '🤖',
-
     color: 'from - green - 600 to - emerald - 700',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - devops - automation',
@@ -124,7 +114,6 @@
     category: 'AI & DevOps Automation',
     real_service: true,
     technology: [;
-
       'AI algorithms',
       'Machine learning',
       'React',
@@ -135,7 +124,6 @@
       'Docker',
       'Kubernetes',
     ],
-
     integrations: [;
       'GitHub',
       'GitLab',
@@ -161,7 +149,6 @@
     growth_rate: '350% annual growth',
     variant: 'ai - futuristic',
     contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -176,7 +163,6 @@
     reviews: 245,
   },
   {
-
     id: 'quantum - cybersecurity - suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Unhackable quantum - secured cybersecurity platform',
@@ -185,7 +171,6 @@
     description:;
       'Revolutionary quantum - secured cybersecurity platform that provides unhackable protection for enterprise systems. Uses quantum encryption and AI threat detection for maximum security.',
     features: [;
-
       'Quantum encryption algorithms',
       'AI - powered threat detection',
       'Quantum key distribution',
@@ -199,7 +184,6 @@
     ],
     popular: true,
     icon: '🔒',
-
     color: 'from - red - 600 to - pink - 700',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / quantum - cybersecurity - suite',
@@ -212,7 +196,6 @@
     category: 'Quantum Cybersecurity',
     real_service: true,
     technology: [;
-
       'Quantum encryption',
       'AI algorithms',
       'React',
@@ -222,7 +205,6 @@
       'AWS',
       'Custom quantum hardware',
     ],
-
     integrations: [;
       'SIEM systems',
       'Firewalls',
@@ -250,7 +232,6 @@
     growth_rate: '400% annual growth',
     variant: 'quantum - cyberpunk',
     contact_info: {
-
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -280,8 +261,6 @@
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
 export interface ComprehensiveITService {;
-
-=======
 export interface ComprehensiveITService {
   id: string;
   name: string;
@@ -293,7 +272,6 @@ export interface ComprehensiveITService {
   popular: boolean;
   icon: string;
   color: string;
->>>>>>> origin/auto/autonomy-17186719616
   textColor: string;
   link: string;
   marketPosition: string;
@@ -310,10 +288,6 @@ export interface ComprehensiveITService {
   marketSize: string;
   growthRate: string;
   variant: string;
-<<<<<<< HEAD
-
-
-
   contactInfo: {
     mobile: string, email: string,
     address: string,
@@ -327,9 +301,7 @@ export interface ComprehensiveITService {
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
-
     id: 'enterprise-it-infrastructure', name: 'Enterprise IT Infrastructure Management',
-=======
   contactInfo: {
     mobile: string;
     email: string;
@@ -343,19 +315,16 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
   rating: number;
   reviews: number;
 }
-
 export const comprehensiveITServices: ComprehensiveITService[] = [
   // Enterprise IT Infrastructure Services
   {
     id: 'enterprise-it-infrastructure',
     name: 'Enterprise IT Infrastructure Management',
->>>>>>> origin/auto/autonomy-17186719616
     tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
     features: [
-<<<<<<< HEAD
       'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management';
       'Help desk supportStrategic IT consulting'
     ];
@@ -373,10 +342,7 @@ export const comprehensiveITServices: ComprehensiveITService[] = [
     marketSize: '$1.2T IT services market, 8% annual growth',
     growthRate: '8% annual growth', variant: 'enterprise-futuristic',
     contactInfo: {
-
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
     reviews: 156
   }
 ];
@@ -459,14 +425,10 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     }
-
 export interface ComprehensiveITService {;
-
   }
-
 ];
 ;
-
     realImplementation: true
     implementationDetails:
       'Fully functional cloud migration service with comprehensive planning, execution, and optimization capabilities. Includes migration operations center and post-migration support.'
@@ -1131,14 +1093,12 @@ export interface ComprehensiveITService {;
     }
     realImplementation: true
     implementationDetails:
-
       'Advanced quantum cybersecurity platform with quantum encryption, AI threat detection, and comprehensive security features.',
     launchDate: '2024-09-15',
     customers: 180,
     rating: 4.9,
     reviews: 156,
   },;
-
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1149,12 +1109,7 @@ export interface ComprehensiveITService {;
     launchDate: '2024-09-15';
     customers: 180;
     rating: 4.9
-
     reviews: 156
-
-
-
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -1231,11 +1186,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-
       website: 'https://ziontechgroup.com';
     }
-
-
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -1637,20 +1589,8 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     customers: 180,;
     rating: 4.9,;
     reviews: 156;
-
-
-
-
-
-
-
-
-
   }
 ];
-
-
-=======
       'Network infrastructure management',
       'Server and storage management',
       'Security monitoring and management',
@@ -1694,7 +1634,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     rating: 4.8,
     reviews: 18
   },
-
   // Cloud Migration & Optimization Services
   {
     id: 'cloud-migration-optimization',
@@ -1747,7 +1686,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     rating: 4.7,
     reviews: 12
   },
-
   // Cybersecurity Operations Center
   {
     id: 'cybersecurity-operations-center',
@@ -1800,7 +1738,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     rating: 4.8,
     reviews: 24
   },
-
   // Data Center Management Services
   {
     id: 'data-center-management',
@@ -1853,7 +1790,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     rating: 4.7,
     reviews: 11
   },
-
   // Network Security & SD-WAN Services
   {
     id: 'network-security-sdwan',
@@ -1906,7 +1842,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     rating: 4.6,
     reviews: 19
   },
-
   // IT Project Management Services
   {
     id: 'it-project-management',
@@ -1959,7 +1894,6 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     rating: 4.7,
     reviews: 32
   },
-
   // IT Training & Certification Services
   {
     id: 'it-training-certification',
@@ -2166,4 +2100,3 @@ export const comprehensiveITServices: ComprehensiveITService[] = [;
     reviews: 156
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

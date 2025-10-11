@@ -1,9 +1,3 @@
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
 import { tagOperatorSession } from "../../../utils/operator";
@@ -18,8 +12,6 @@ export default async function handler(
     sessionId: string;
     reason?: string;
     tag?: string;
-
-
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_json, write_json  } from '../../../utils / fs_db';
 import { tagOperatorSession  } from '../../../utils / operator';
@@ -33,8 +25,6 @@ function handler() {
 }
   const { session_id, reason, tag } = req.body as {
     session_id: string;
-
-
     reason?: string;
     tag?: string;
   }
@@ -43,7 +33,6 @@ function handler() {
 }
   const requests = read_json < any[]>("support / requests.json", []);
   const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
-
   const record = {
     id
     sessionId
@@ -54,11 +43,9 @@ function handler() {
   }
   requests.push(record);
   writeJson("support/requests.json", requests);
-
   await tagOperatorSession(sessionId, tag ?? "escalate");
   return res.status(200).json({ ok: true, id });
 }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -78,27 +65,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate');
   return res.status(200).json({ ok: true, id })
 }
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
   requests.push (record);
   write_json ("support / requests.json", requests);
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
 }
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-

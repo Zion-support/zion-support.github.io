@@ -1,4 +1,3 @@
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '[^']*';
 import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
@@ -8,7 +7,6 @@ import { store } from "../../../../../utils/data/enterpriseStore";
 import type { EnterpriseRole } from "../../../../../utils/types/enterprise";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
-
   if (!companyId |typeof companyId !== "string") {
     return res.status(400).json({ error: "companyId required" });
   }
@@ -22,7 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     if (!name |!email)
       return res.status(400).json({ error: "name and email required" });
     const r: EnterpriseRole = role |"viewer";
-
     const r: EnterpriseRole = role || "viewer";
     const member = store.add_member (company_id, name, email, r);
     return res.status (201).json (member);
@@ -31,7 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 if ( {) {
   $2
 }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
@@ -50,7 +46,6 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
     const ok = store.updateMemberRole (company_id, member_id, role);
     return res;
@@ -73,11 +68,6 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-
-
-
-
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member);
     } catch (error) {
@@ -87,7 +77,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
   if (req.method === "PATCH") {
     const { memberId, role } = req.body |{}
     if (!memberId |!role)
@@ -105,11 +94,9 @@ if ( {) {
     return res
       .status(ok ? 200 : 404)
       .json(ok ? { success: true } : { error: "member_not_found" });
-
   }
   return res.status(405).json({ error: "method_not_allowed" });
 }
-
 }
 ;
   if (req.method === 'GET') {
@@ -163,18 +150,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
 }
 }
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-

@@ -3,7 +3,6 @@
   roi: string;
   implementationTime: string;
 }
-
 export const ENHANCED_MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // Productivity & Collaboration
   {
@@ -23,7 +22,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: MicroSaasService[] = [
   price: number;
   currency: string;
   pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
-=======
 export interface EnhancedMicroSaasService {
   id: string;
   name: string;
@@ -64,7 +62,6 @@ export interface EnhancedMicroSaasService {
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$2,500 - $8,000/month",
-=======
       "AI invoice generation",
       "Expense categorization",
       "Financial reporting",
@@ -96,7 +93,6 @@ export interface EnhancedMicroSaasService {
     compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
     roi: "300% within 12 months"
   },
-
   // Sustainable Business Intelligence
   {
   technology: string[];
@@ -128,7 +124,6 @@ export interface EnhancedMicroSaasService {
   isNew?: boolean;
   isPopular?: boolean;
 }
-
 export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   {
     id: "ai-powered-customer-intelligence",
@@ -706,36 +701,29 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     isNew: true
   }
 ];
-
 export const getServiceByCategory = (category: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   );
 };
-
 export const getFeaturedServices = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isFeatured);
 };
-
 export const getNewServices = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isNew);
 };
-
 export const getPopularServices = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isPopular);
 };
-
 export const getServiceById = (id: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
-
     marketPosition: "AI-powered HR automation",
     competitors: ["BambooHR", "Workday", "Zenefits"],
     roi: "350% within 4 months",
     implementationTime: "3-4 weeks"
   }
 ];
-
 export const SERVICE_CATEGORIES = [
   {
     id: "productivity",
@@ -786,7 +774,6 @@ export const SERVICE_CATEGORIES = [
     count: 1
   }
 ];
-=======
     aiScore: 91,
     rating: 4.4,
     reviewCount: 56,
@@ -796,7 +783,6 @@ export const SERVICE_CATEGORIES = [
     roi: "200% within 8 months"
   }
 ];
-
 export const MICRO_SAAS_CATEGORIES = [
   "AI & Analytics",
   "AI & Marketing", 
@@ -809,13 +795,11 @@ export const MICRO_SAAS_CATEGORIES = [
   "AI & Legal",
   "AI & Healthcare"
 ];
-
 export const MICRO_SAAS_PRICING_TIERS = [
   { name: "Starter", price: "$99-299", features: ["Basic features", "Email support", "Up to 5 users"] },
   { name: "Professional", price: "$299-799", features: ["Advanced features", "Priority support", "Up to 25 users"] },
   { name: "Enterprise", price: "$799+", features: ["Custom features", "24/7 support", "Unlimited users"] }
 ];
-=======
 export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase();
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service =>

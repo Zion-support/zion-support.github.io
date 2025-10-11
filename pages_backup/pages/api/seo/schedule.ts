@@ -1,33 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import fs from 'fs',
 import path from 'path';
 import OpenAI from 'openai';
-
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |'' });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
-
-
-
-
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
@@ -35,7 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   try {
     const seedTopics = [
-
       'AI Devs in Brazil'
       'AI Devs in Kenya'
       'AI Devs in Vietnam'
@@ -51,14 +32,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ];
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4);
     const outDir = path.join(process.cwd(), 'datapage-metadataseo');
-
     fs.mkdirSync(outDir, { recursive: true });
     for (const prompt of picks) {
       const regionMatch = prompt && prompt.match(/in\s+([A-Za-z\s]+)/i);
       const region = regionMatch ? regionMatch[1].trim() : undefined;
       const serviceMatch = prompt && prompt.match(/^(.*?)\s+in\s+/i);
       const service = serviceMatch ? serviceMatch[1].trim() : undefined;
-
       const genReq = await fetch(`${process.env.SELF_HOST |'http://localhost:3000'}/api/seo/generate`, {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
@@ -68,24 +47,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt, region, service })});
-
       const gen = await genReq.json();
       if (gen?.slug && gen?.payload) {
         fs && fs.writeFileSync(path && path.join(outDir, `${gen && gen.slug}.json`), JSON && JSON.stringify(gen && gen.payload, null, 2))
       }
     }
-
     return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console && console.error(e),
     return res && res.status(500).json({ error: 'Failed to schedule landing pages' })
-
   }
-
-
-
-
-
     return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
     console.error(e),
@@ -185,4 +156,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 };
-

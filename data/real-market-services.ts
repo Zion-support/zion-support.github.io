@@ -1,20 +1,14 @@
-<<<<<<< HEAD
-=======
 import { ServiceVariant } from '../types/service-variants';
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface RealMarketService {
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
-=======
   period: string;
   description: string;
   features: string[];
@@ -37,12 +31,10 @@ export interface RealMarketService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
   };
 }
 export const realMarketServices: RealMarketService[] = [
@@ -67,7 +59,6 @@ export const realMarketServices: RealMarketService[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -77,14 +68,12 @@ export const realMarketServices: RealMarketService[] = [
   rating: number;
   reviews: number;
 }
-
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const realMarketServices: RealMarketService[] = [
   {
     id: 'llm-gateway-cost-control',
@@ -2075,7 +2064,6 @@ export const realMarketServices: RealMarketService[] = [
     customers: 10,
     rating: 4.4,
     reviews: 5
->>>>>>> origin/auto/autonomy-17186719616
   }
   ,
   {
@@ -2401,7 +2389,6 @@ export const realMarketServices: RealMarketService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
     launchDate: '2025-08-22',
     customers: 13,
@@ -2530,7 +2517,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$2B experimentation',
     growthRate: '18% YoY',
     variant: 'devops-futuristic' as any,
-=======
     implementationDetails: 'Ingestion workers, metrics engine, dashboard and alerts.',
     launchDate: '2025-02-09',
     customers: 44,
@@ -2571,7 +2557,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$3B privacy tech',
     growthRate: '16% YoY',
     variant: 'security-futuristic' as any,
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2579,18 +2564,15 @@ export const realMarketServices: RealMarketService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Repo scanner, config parser, pull‑request bot.',
     launchDate: '2025-02-22',
     customers: 14,
     rating: 4.5,
     reviews: 7
-=======
     implementationDetails: 'Region rules, consent logging, banner/prefs widgets.',
     launchDate: '2025-02-01',
     customers: 88,
     rating: 4.6,
     reviews: 36
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

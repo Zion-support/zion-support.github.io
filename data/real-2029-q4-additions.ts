@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -84,10 +81,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     ],
     popular: false,
     icon: '📱',
-
-
-
-
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     targetAudience: 'Growth teams, product managers, agencies',
     trialDays: 7,
@@ -96,7 +89,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     realService: true,
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
-
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -117,7 +109,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     reviews: 33
   }
   {
-
       'QR tickets and check-in app',
       'Speaker/sponsor asset management',
       'Automated reminders and WhatsApp/SMS alerts',
@@ -137,12 +128,10 @@ export const real2029Q4Additions: RealMarketService[] = [
       'Automated reminders and WhatsApp / SMS alerts',
       'Feedback / NPS post - event forms',
       'Budget tracker and P & L exports',
-
       'Embeddable agendas and live updates',
     ],
     popular: true,
     icon: '🎟️',
-
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 300',
     link: 'https://ziontechgroup.com / services / event - ops - dashboard',
@@ -154,7 +143,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     category: 'Developer Tools',
     real_service: true,
     technology: ['Next.js', 'Stripe', 'Resend', 'PostgreSQL'],
-
     integrations: ['Stripe', 'Resend', 'Mailchimp', 'Twilio'],
     use_cases: ['Meetups', 'Webinars', 'Conferences'],
     roi: 'Cut ops overhead by 50% and improve attendance by 1530%.',
@@ -172,8 +160,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     reviews: 29,
   },
   {
-
-
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
     tagline:;
@@ -183,8 +169,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     description:;
       'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.',
     features: [;
-
-
       'Flexible rotations and override rules',
       'Escalation policies and schedules',
       'Slack / Teams integration and on - call handoffs',
@@ -194,21 +178,17 @@ export const real2029Q4Additions: RealMarketService[] = [
     ],
     popular: false,
     icon: '📆',
-
     color: 'from - indigo - 600 to - blue - 700',
     text_color: 'text - indigo - 300',
     link: 'https://ziontechgroup.com / services / oncall - scheduler - pro',
     market_position:;
-
       'Lean alternative for SMBs; complements enterprise incident suites.',
     target_audience: 'SRE teams, startups, agencies',
     trial_days: 14,
     setup_time: '1 day',
     category: 'Observability',
-
     real_service: true,
     technology: ['Next.js', 'PostgreSQL', 'Twilio'],
-
     integrations: ['Slack', 'Microsoft Teams', 'Twilio'],
     use_cases: ['On - call management', 'Incident response'],
     roi: 'Reduce paging confusion and missed alerts by 3050%.',
@@ -225,8 +205,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     reviews: 19,
   },
   {
-
-
     id: 'seo-content-optimizer-pro'
     name: 'SEO Content Optimizer Pro'
     tagline:
@@ -500,7 +478,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4.3
     reviews: 12
   }
-
   {
     id: 'kpi-scorecards-studio'
     name: 'KPI Scorecards Studio'
@@ -510,7 +487,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     description:
       'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
     features: [
-
       'Goal trees and KPI ownership'
       'Weekly executive summaries'
       'Alerting on thresholds and trends'
@@ -554,12 +530,7 @@ export const real2029Q4Additions: RealMarketService[] = [
     ],
     popular: false,
     icon: '📊',
-
-
-
 ];	{
-
-
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
     link: 'https://ziontechgroup.com/services/kpi-scorecards-studio',
@@ -585,7 +556,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4.4,
     reviews: 16,
   },;
-
 ];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -599,16 +569,13 @@ export const real2029Q4Additions: RealMarketService[] = [
     price: '$99', period: '/month',
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
     features: [
-
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
 		icon: '';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',
-
 		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.';
 		targetAudience: 'Support teams, sales ops, founders';
 		trialDays: 14;
@@ -628,9 +595,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.';
 		launchDate: '2029-10-12';
 		customers: 120;
-
 		rating: 4 && 4.8,
-
 		reviews: 74
 	}
 	{
@@ -647,9 +612,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
-
 		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.';
 		targetAudience: 'Growth teams, product managers, agencies';
 		trialDays: 7;
@@ -669,9 +632,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.';
 		launchDate: '2029-11-05';
 		customers: 60;
-
 		rating: 4 && 4.6,
-
 		reviews: 33
 	}
 	{
@@ -688,10 +649,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-purple-600 to-pink-600';
 		textColor: 'text-purple-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/event-ops-dashboard';
 		marketPosition: 'Focused micro-SaaS alternative to all-in-one event platforms.',
-
 		targetAudience: 'Marketing teams, conference organizers, communities';
 		trialDays: 14;
 		setupTime: '2 days';
@@ -710,9 +669,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.';
 		launchDate: '2029-09-23';
 		customers: 48;
-
 		rating: 4 && 4.7,
-
 		reviews: 29
 	}
 	{
@@ -729,9 +686,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',
-
 		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.';
 		targetAudience: 'SRE teams, startups, agencies';
 		trialDays: 14;
@@ -751,9 +706,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Rotations engine and integrations with chat tools.';
 		launchDate: '2029-10-30';
 		customers: 32;
-
 		rating: 4 && 4.5,
-
 		reviews: 19
 	}
 	{
@@ -770,10 +723,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-amber-600 to-orange-700';
 		textColor: 'text-amber-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/seo-content-optimizer-pro';
 		marketPosition: 'Practical mid-market tool between basic plugins and enterprise suites.',
-
 		targetAudience: 'Content teams, agencies, solo founders';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -792,9 +743,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'SERP fetchers with caching and AI summarization.';
 		launchDate: '2029-09-10';
 		customers: 95;
-
 		rating: 4 && 4.6,
-
 		reviews: 54
 	}
 	{
@@ -811,10 +760,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-slate-700 to-gray-800';
 		textColor: 'text-slate-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/feature-flags-lite';
 		marketPosition: 'Minimal alternative to enterprise flag platforms for SMBs.',
-
 		targetAudience: 'Startups, agencies, indie devs';
 		trialDays: 14;
 		setupTime: 'Same day';
@@ -833,9 +780,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Rules engine with SDKs and environment isolation.';
 		launchDate: '2029-10-02';
 		customers: 70;
-
 		rating: 4 && 4.5,
-
 		reviews: 21
 	}
 	{
@@ -852,10 +797,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-sky-600 to-blue-700';
 		textColor: 'text-sky-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/sales-lead-enrichment';
 		marketPosition: 'Affordable enrichment focused on actionable signals.',
-
 		targetAudience: 'Sales teams, SDRs, growth marketers';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -874,9 +817,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Data aggregation with caching and scoring heuristics.';
 		launchDate: '2029-11-18';
 		customers: 40;
-
 		rating: 4 && 4.4,
-
 		reviews: 17
 	}
 	{
@@ -893,10 +834,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-rose-600 to-pink-700';
 		textColor: 'text-rose-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/invoice-ocr-processor';
 		marketPosition: 'Cost-effective alternative with human review for accuracy.',
-
 		targetAudience: 'Finance teams, accounting firms, SMBs';
 		trialDays: 7;
 		setupTime: '2 days';
@@ -915,9 +854,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Template-free extraction with feedback loops for edge cases.';
 		launchDate: '2029-12-01';
 		customers: 27;
-
 		rating: 4 && 4.5,
-
 		reviews: 14
 	}
 	{
@@ -934,10 +871,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-fuchsia-600 to-purple-700';
 		textColor: 'text-fuchsia-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/rpa-browser-automation';
 		marketPosition: 'Builder-focused alternative to heavyweight RPA suites.',
-
 		targetAudience: 'Ops teams, agencies, internal tools';
 		trialDays: 14;
 		setupTime: '3 days';
@@ -956,9 +891,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Playwright runners with job queues and storage integrations.';
 		launchDate: '2029-11-28';
 		customers: 38;
-
 		rating: 4 && 4.4,
-
 		reviews: 18
 	}
 	{
@@ -975,10 +908,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-teal-600 to-cyan-700';
 		textColor: 'text-teal-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/redaction-compliance-api';
 		marketPosition: 'Developer-first compliance tooling.',
-
 		targetAudience: 'Developers, compliance teams';
 		trialDays: 14;
 		setupTime: 'Same day';
@@ -997,9 +928,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Detectors with policy engine and audit export.';
 		launchDate: '2029-12-03';
 		customers: 22;
-
 		rating: 4 && 4.3,
-
 		reviews: 12
 	}
 	{
@@ -1016,10 +945,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		icon: '';
 		color: 'from-green-600 to-emerald-700';
 		textColor: 'text-green-300';
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/kpi-scorecards-studio';
 		marketPosition: 'Simple executive dashboards without BI bloat.',
-
 		targetAudience: 'Founders, execs, ops';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -1038,10 +965,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Metrics ingestion and templated reporting.';
 		launchDate: '2029-10-20';
 		customers: 36;
-
 		rating: 4.4
 		reviews: 16
-
 import { RealMarketService } from './real-market-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1456,23 +1381,15 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		customers: 36,;
 		rating: 4.4;
 		reviews: 16;
-
-
 	}
 ];
-
-
-
-=======
 import { RealMarketService } from './real-market-services';
-
 const contact = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
-
 export const real2029Q4Additions: RealMarketService[] = [
 	{
 		id: 'ai-email-triage-copilot',
@@ -1937,4 +1854,3 @@ export const real2029Q4Additions: RealMarketService[] = [
 		reviews: 16
 	}
 ];
->>>>>>> origin/auto/autonomy-17186719616

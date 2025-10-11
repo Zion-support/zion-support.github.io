@@ -1,6 +1,5 @@
 import { serve } from 'https://deno.land/std@0.208.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7';
-
 interface TenantInfo {
   id: string;
   brand_name: string;
@@ -10,59 +9,43 @@ interface TenantInfo {
   logo_url: string | null;
   theme_preset: string;
 }
-
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info',
-<<<<<<< HEAD
   'Access-Control-Max-Age': '86400'};
-=======
   'Access-Control-Max-Age': '86400',
 };
->>>>>>> origin/auto/autonomy-17186719616
-
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get('SUPABASE_URL');
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-
 if (!supabaseUrl || !supabaseServiceKey) {
   throw new Error('Required environment variables are not set');
 }
-
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
-
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, {
       status: 204,
-<<<<<<< HEAD
       headers: corsHeaders});
-=======
       headers: corsHeaders,
     });
->>>>>>> origin/auto/autonomy-17186719616
   }
-
   try {
     const url = new URL(req.url);
     const hostnameParam = url.searchParams.get('host');
     const subdomainParam = url.searchParams.get('subdomain');
-    
     // Get hostname from parameters or headers
     const forwardedHost = req.headers.get('x-forwarded-host');
     const hostname = hostnameParam || 
       (forwardedHost ? forwardedHost.split(',')[0].trim().split(':')[0] : null) ||
       url.hostname;
-
     if (!hostname && !subdomainParam) {
       throw new Error('No hostname or subdomain provided');
     }
-
     // Extract tenant info
     let tenantInfo: TenantInfo | null = null;
-
     if (subdomainParam) {
       // Direct subdomain lookup
       const { data, error } = await supabase
@@ -71,12 +54,10 @@ serve(async (req) => {
         .eq('subdomain', subdomainParam)
         .eq('is_active', true)
         .single();
-
       if (error) {
         console.error('Database error:', error);
         throw new Error(`Database error: ${error.message}`);
       }
-
       tenantInfo = data as TenantInfo;
     } else {
       // Try matching custom domain first
@@ -86,7 +67,6 @@ serve(async (req) => {
         .eq('custom_domain', hostname)
         .eq('is_active', true)
         .single();
-
       // If no match on custom domain, try subdomain
       if (!data && !error) {
         const subdomain = hostname.split('.')[0];
@@ -97,7 +77,6 @@ serve(async (req) => {
             .eq('subdomain', subdomain)
             .eq('is_active', true)
             .single();
-
           if (!subdomainResult.error) {
             tenantInfo = subdomainResult.data as TenantInfo;
           }
@@ -106,7 +85,6 @@ serve(async (req) => {
         tenantInfo = data as TenantInfo;
       }
     }
-
     return new Response(
       JSON.stringify({
         tenant: tenantInfo,
@@ -115,13 +93,10 @@ serve(async (req) => {
       {
         headers: {
           'Content-Type': 'application/json',
-<<<<<<< HEAD
           ...corsHeaders}},
-=======
           ...corsHeaders,
         },
       },
->>>>>>> origin/auto/autonomy-17186719616
     );
   } catch (error) {
     console.error('Tenant detector error:', error);
@@ -134,13 +109,10 @@ serve(async (req) => {
         status: 500,
         headers: {
           'Content-Type': 'application/json',
-<<<<<<< HEAD
           ...corsHeaders}},
-=======
           ...corsHeaders,
         },
       },
->>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

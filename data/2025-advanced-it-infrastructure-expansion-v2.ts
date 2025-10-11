@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
 export const advancedITInfrastructureExpansion2025V2 = [
   {
-
-
     name: 'Autonomous DevOps Platform',
     description: 'Self - managing DevOps automation platform',
     category: 'Cloud & FinOps',
@@ -57,7 +45,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Security protocols',
       'Scalability solutions',
     ],
-=======
 export const advancedITInfrastructureExpansion2025V2 = [
   {
     name: 'Autonomous DevOps Platform',
@@ -106,13 +93,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Security protocols',
       'Scalability solutions'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Blockchain Infrastructure',
     description: 'Scalable blockchain infrastructure services',
     category: 'Financial Services',
-<<<<<<< HEAD
     pricing: '$449 / month',
     features: [;
       'Node management',
@@ -132,7 +117,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Safety systems',
       'Performance metrics',
     ],
-=======
     pricing: '$449/month',
     features: [
       'Node management',
@@ -152,13 +136,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Safety systems',
       'Performance metrics'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Compliance Automation',
     description: 'Automated compliance management platform',
     category: 'Cybersecurity',
-<<<<<<< HEAD
     pricing: '$379 / month',
     features: [;
       'Regulatory tracking',
@@ -166,7 +148,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Audit management',
       'Compliance monitoring',
     ],
-=======
     pricing: '$379/month',
     features: [
       'Regulatory tracking',
@@ -174,13 +155,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Audit management',
       'Compliance monitoring'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Customer Intelligence Platform',
     description: 'Comprehensive customer intelligence solution',
     category: 'AI & Data',
-<<<<<<< HEAD
     pricing: '$299 / month',
     features: [;
       'Customer analytics',
@@ -188,7 +167,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Segmentation tools',
       'Insight generation',
     ],
-=======
     pricing: '$299/month',
     features: [
       'Customer analytics',
@@ -196,13 +174,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Segmentation tools',
       'Insight generation'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Data Analytics',
     description: 'Advanced data analytics platform',
     category: 'AI & Data',
-<<<<<<< HEAD
     pricing: '$249 / month',
     features: [;
       'Data processing',
@@ -210,7 +186,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Statistical analysis',
       'Reporting automation',
     ],
-=======
     pricing: '$249/month',
     features: [
       'Data processing',
@@ -218,13 +193,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Statistical analysis',
       'Reporting automation'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'DevOps Automation',
     description: 'Comprehensive DevOps automation platform',
     category: 'Cloud & FinOps',
-<<<<<<< HEAD
     pricing: '$329 / month',
     features: [;
       'CI / CD pipelines',
@@ -232,7 +205,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Automated testing',
       'Deployment management',
     ],
-=======
     pricing: '$329/month',
     features: [
       'CI/CD pipelines',
@@ -240,13 +212,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Automated testing',
       'Deployment management'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Edge Computing',
     description: 'Edge computing infrastructure platform',
     category: 'Cloud & FinOps',
-<<<<<<< HEAD
     pricing: '$279 / month',
     features: [;
       'Edge node management',
@@ -266,7 +236,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Predictive maintenance',
       'Performance optimization',
     ],
-=======
     pricing: '$279/month',
     features: [
       'Edge node management',
@@ -286,13 +255,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Predictive maintenance',
       'Performance optimization'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Interplanetary Communication',
     description: 'Advanced interplanetary communication systems',
     category: 'Space Technology',
-<<<<<<< HEAD
     pricing: '$1499 / month',
     features: [;
       'Deep space communication',
@@ -300,7 +267,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Network management',
       'Reliability monitoring',
     ],
-=======
     pricing: '$1499/month',
     features: [
       'Deep space communication',
@@ -308,13 +274,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Network management',
       'Reliability monitoring'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'IT Asset Management',
     description: 'Comprehensive IT asset management platform',
     category: 'Cloud & FinOps',
-<<<<<<< HEAD
     pricing: '$199 / month',
     features: [;
       'Asset tracking',
@@ -334,7 +298,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Performance tracking',
       'ROI optimization',
     ],
-=======
     pricing: '$199/month',
     features: [
       'Asset tracking',
@@ -354,13 +317,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Performance tracking',
       'ROI optimization'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Metaverse Development Studio Pro',
     description: 'Professional metaverse development platform',
     category: 'Metaverse',
-<<<<<<< HEAD
     pricing: '$799 / month',
     features: [;
       '3D modeling tools',
@@ -368,7 +329,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'User interaction systems',
       'Performance optimization',
     ],
-=======
     pricing: '$799/month',
     features: [
       '3D modeling tools',
@@ -376,13 +336,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'User interaction systems',
       'Performance optimization'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Metaverse Digital Reality Platform',
     description: 'Advanced metaverse platform infrastructure',
     category: 'Metaverse',
-<<<<<<< HEAD
     pricing: '$649 / month',
     features: [;
       'Virtual environment hosting',
@@ -414,7 +372,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Security management',
       'Performance monitoring',
     ],
-=======
     pricing: '$649/month',
     features: [
       'Virtual environment hosting',
@@ -446,13 +403,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Security management',
       'Performance monitoring'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Network Automation',
     description: 'Intelligent network automation platform',
     category: 'Cloud & FinOps',
-<<<<<<< HEAD
     pricing: '$299 / month',
     features: [;
       'Network provisioning',
@@ -544,7 +499,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Performance optimization',
       'Analytics tools',
     ],
-=======
     pricing: '$299/month',
     features: [
       'Network provisioning',
@@ -636,13 +590,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
       'Performance optimization',
       'Analytics tools'
     ]
->>>>>>> origin/auto/autonomy-17186719616
   },
   {
     name: 'Quantum Data Center',
     description: 'Quantum computing data center infrastructure',
     category: 'Quantum Computing',
-<<<<<<< HEAD
     pricing: '$1299 / month',
     features: [;
       'Quantum hardware',
@@ -688,8 +640,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   {
-
-
     name: 'Quantum Identity Verification'
     description: 'Quantum-powered identity verification'
     category: 'Quantum Computing'
@@ -757,12 +707,10 @@ export const advancedITInfrastructureExpansion2025V2 = [
     features: [
       'Quantum algorithms'
       'Network security'
-
       'Threat detection'
       'Performance monitoring'
     ]
   }
-
   {
     name: 'Quantum Networking'
     description: 'Quantum networking infrastructure'
@@ -937,17 +885,11 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cybersecurity'
     pricing: '$599/month'
     features: [
-
-
-
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
-
-
   }
 ];
 ;
-
 export const advancedITInfrastructureExpansion2025V2 = [;
   {;
     name: 'Autonomous DevOps Platform',;
@@ -957,7 +899,6 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Automated deploymentSelf-healing infrastructurePerformance optimizationCost management';
     ];
-
   },;
   {;
     name: 'Autonomous IT Operations',;
@@ -1417,22 +1358,12 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-
-
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;
-
-
   }
 ];
-
-
-=======
     pricing: '$1299/month',
     features: [
       'Quantum hardware',
@@ -1728,7 +1659,5 @@ export const advancedITInfrastructureExpansion2025V2 = [;
       'Threat detection',
       'Performance monitoring'
     ]
-
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 export interface InnovativeMicroSaasService {
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface EnhancedRealMicroSaasService {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -30,10 +26,7 @@ export interface EnhancedRealMicroSaasService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
-=======
   variant: ServiceVariant;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
@@ -47,7 +40,6 @@ export interface EnhancedRealMicroSaasService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -715,8 +707,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     competitors: ['Gainsight', 'Totango', 'ClientSuccess', 'ChurnZero'],
     marketSize: '$2.5B customer success market',
     growthRate: '25% annual growth',
-=======
-
 export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[] = [
   // AI & Consciousness Services
   {
@@ -757,7 +747,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     marketSize: '$29.5B BI market',
     growthRate: '15% annual growth',
     variant: 'ai-bi-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -765,18 +754,14 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Full-stack AI platform with real-time analytics, automated workflows, and comprehensive integration capabilities.',
     launchDate: '2025-01-15',
-=======
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.',
     launchDate: '2024-11-01',
->>>>>>> origin/auto/autonomy-17186719616
     customers: 45,
     rating: 4.8,
     reviews: 23
   },
-<<<<<<< HEAD
   // Intelligent Supply Chain Optimization Platform
   {
     id: 'intelligent-supply-chain-optimization',
@@ -866,8 +851,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     competitors: ['Planful', 'Adaptive Insights', 'Anaplan', 'Vena Solutions'],
     marketSize: '$3.2B financial planning market',
     growthRate: '18% annual growth',
-=======
-
   // AI Content Generation Platform
   {
     id: 'ai-content-generation-platform',
@@ -907,7 +890,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     marketSize: '$12.5B content marketing market',
     growthRate: '18% annual growth',
     variant: 'ai-content-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -915,7 +897,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Comprehensive financial planning platform with AI-powered analytics, automated reporting, and enterprise-grade security.',
     launchDate: '2025-02-01',
     customers: 52,
@@ -973,14 +954,12 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.8,
     reviews: 26
   },
-=======
     implementationDetails: 'AI-powered SaaS platform with advanced language models, SEO optimization, and comprehensive content management tools.',
     launchDate: '2024-10-15',
     customers: 78,
     rating: 4.9,
     reviews: 34
   },
-
   // AI Customer Service Automation
   {
     id: 'ai-customer-service-automation',
@@ -1033,13 +1012,10 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.7,
     reviews: 28
   },
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI Sales Intelligence Platform
   {
     id: 'ai-sales-intelligence-platform',
     name: 'AI Sales Intelligence Platform',
-<<<<<<< HEAD
     tagline: 'Intelligent sales optimization and revenue acceleration',
     price: '$2,800',
     period: '/month',
@@ -1074,7 +1050,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     competitors: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach'],
     marketSize: '$4.1B sales intelligence market',
     growthRate: '24% annual growth',
-=======
     tagline: 'Boost sales performance with AI-powered insights',
     price: '$499',
     period: '/month',
@@ -1123,7 +1098,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.8,
     reviews: 31
   },
-
   // AI Marketing Automation Suite
   {
     id: 'ai-marketing-automation-suite',
@@ -1163,7 +1137,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     marketSize: '$25.5B marketing automation market',
     growthRate: '16% annual growth',
     variant: 'ai-marketing-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1171,7 +1144,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Comprehensive sales intelligence platform with AI-powered analytics, real-time insights, and seamless CRM integration.',
     launchDate: '2025-02-15',
     customers: 67,
@@ -1216,14 +1188,12 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     competitors: ['Palantir', 'C3.ai', 'DataRobot', 'H2O.ai'],
     marketSize: '$8.5B AI decision market',
     growthRate: '35% annual growth',
-=======
     implementationDetails: 'AI-powered marketing automation platform with machine learning algorithms for campaign optimization and personalized content delivery.',
     launchDate: '2024-07-15',
     customers: 89,
     rating: 4.9,
     reviews: 42
   },
-
   // AI Project Management Platform
   {
     id: 'ai-project-management-platform',
@@ -1263,7 +1233,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     marketSize: '$20.5B project management market',
     growthRate: '13% annual growth',
     variant: 'ai-project-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1271,7 +1240,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Enterprise-grade AI decision engine with advanced algorithms, comprehensive analytics, and seamless business system integration.',
     launchDate: '2025-03-01',
     customers: 28,
@@ -1367,14 +1335,12 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     competitors: ['Salesforce Einstein', 'HubSpot AI', 'Microsoft Dynamics AI', 'Zoho CRM AI'],
     marketSize: '$6.8B AI-enhanced CRM market',
     growthRate: '26% annual growth',
-=======
     implementationDetails: 'AI-powered project management platform with machine learning algorithms for task optimization, risk prediction, and productivity enhancement.',
     launchDate: '2024-06-20',
     customers: 73,
     rating: 4.7,
     reviews: 35
   },
-
   // AI Financial Analytics Platform
   {
     id: 'ai-financial-analytics-platform',
@@ -1427,7 +1393,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.8,
     reviews: 26
   },
-
   // AI HR Management Platform
   {
     id: 'ai-hr-management-platform',
@@ -1480,7 +1445,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.7,
     reviews: 29
   },
-
   // AI Supply Chain Optimization
   {
     id: 'ai-supply-chain-optimization',
@@ -1533,7 +1497,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     rating: 4.8,
     reviews: 18
   },
-
   // AI Legal Document Analysis
   {
     id: 'ai-legal-document-analysis',
@@ -1573,7 +1536,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     marketSize: '$26.5B legal technology market',
     growthRate: '16% annual growth',
     variant: 'ai-legal-enterprise',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1581,18 +1543,15 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Enterprise-grade AI-enhanced CRM with intelligent automation, predictive analytics, and comprehensive business tool integration.',
     launchDate: '2025-03-20',
     customers: 73,
     rating: 4.8,
     reviews: 39
-=======
     implementationDetails: 'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.',
     launchDate: '2024-02-20',
     customers: 42,
     rating: 4.7,
     reviews: 20
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

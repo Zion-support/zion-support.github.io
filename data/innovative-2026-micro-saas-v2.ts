@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026MicroSaasServiceV2 {
-=======
 export interface Innovative2026MicroSaasV2 {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -31,18 +27,15 @@ export interface Innovative2026MicroSaasV2 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-=======
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -470,10 +463,8 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasServiceV2
     reviews: 40
   }
 ];
-=======
   };
 }
-
 export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
   {
     id: "2026-micro-saas-v2",
@@ -498,4 +489,3 @@ export const innovative2026MicroSaasServicesV2: Innovative2026MicroSaasV2[] = [
     }
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

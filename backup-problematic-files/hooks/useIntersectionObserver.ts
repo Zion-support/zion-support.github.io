@@ -1,18 +1,11 @@
-
-
-
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
-
-
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
   useEffect(() => {
     if (prevNode.current) {
-
-
   return [setNode, entry] as const;
 }
 import { useEffect, useRef, useState } from 'react',;
@@ -67,7 +60,3 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-

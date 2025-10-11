@@ -249,7 +249,6 @@ export function MicroSaasShowcase() {
                   </div>
                 </div>
               </CardContent>
-=======
               </div>
             </Card>
           ))}
@@ -279,7 +278,6 @@ export function MicroSaasShowcase() {
                 </Link>
               </Button>
             </div>
-=======
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-3xl p-8 border border-zion-purple/30">
@@ -304,7 +302,6 @@ export function MicroSaasShowcase() {
           </div>
         </div>
       </div>
-=======
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20 p-8 rounded-2xl border border-zion-blue/30 max-w-4xl mx-auto">
@@ -361,7 +358,6 @@ export function MicroSaasShowcase() {
           }
         }
       `}</style>
-=======
                     <Badge className="bg-zion-cyan text-zion-blue-dark">
                       {service.pricingModel === 'monthly' ? 'Monthly' : 
                        service.pricingModel === 'yearly' ? 'Yearly' :

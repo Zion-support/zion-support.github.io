@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
       req && req.body || {};
-
     if (
       !name |
       !entityType |
@@ -21,7 +18,6 @@
       });
       return res && res.status(201).json({
         partner: {
-
           id: partner && partner.id,
           name: partner && partner.name,
           status: partner && partner.status,
@@ -31,14 +27,11 @@
         },
         apiKey: apiKey && apiKey.key,
         dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
-
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
-
     return res && res.status(500).json({ error: "Failed to create partner" });
-
   }
 }
 }
@@ -68,10 +61,8 @@
       return res.status (500).json ({ error: "Failed to create partner" });
     }
     return res.status (500).json ({ error: "Failed to create partner" });
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createPartner } from "../../../utils/api/partnerAuth";
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -80,7 +71,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
   if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
     return res.status(400).json({ error: "Missing required fields" });
->>>>>>> origin/auto/autonomy-17186719616
   }
   try {
     const { partner, apiKey } = await createPartner({
@@ -88,12 +78,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       entityType,
       pointOfContact,
       useCaseType,
-<<<<<<< HEAD
       brand}),
-=======
       brand,
     });
->>>>>>> origin/auto/autonomy-17186719616
     return res.status(201).json({
       partner: {
         id: partner.id,
@@ -101,14 +88,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         status: partner.status,
         entityType: partner.entityType,
         useCaseType: partner.useCaseType,
-<<<<<<< HEAD
         createdAt: partner.createdAt},
       apiKey: apiKey.key,
       dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
   } catch (e) {
     return res.status(500).json({ error: "Failed to create partner" })
 import type {_NextApiRequest, _NextApiResponse} from "next";
-
 export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "POST") {
     res.setHeader("Allow", _"POST");
     return res.status(405).json({ error: "Method Not Allowed"});
@@ -122,20 +107,10 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       apiKey: apiKey.key,
       dashboardUrl: `/partners/dashboard?pid=${_partner.id}`});
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"});
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createPartner } from "../../../utils/api/partnerAuth";
-
-
-
-
   }
-
 }
-
-
-=======
         createdAt: partner.createdAt,
       },
       apiKey: apiKey.key,
@@ -145,4 +120,3 @@ import { createPartner } from "../../../utils/api/partnerAuth";
     return res.status(500).json({ error: "Failed to create partner" });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

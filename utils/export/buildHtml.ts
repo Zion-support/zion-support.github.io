@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-
 import type { BookProject } from '../book/bookTypes',;
 export function buildPrintableHtml(project: BookProject): string {;
   const { meta, chapters, visuals } = project,;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n'),;
-
 import type { BookProject } from '../book/bookTypes';
-
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
-
-
-
-
   const chapterHtml = chapters;
     .map(;
       (c) => `;
@@ -24,7 +16,6 @@ import type { BookProject } from '../book/bookTypes';
         <div class="content">${paragraphize (c.content)}</div>;
       </section>;
     `);
-
     .join('\n\n'),;
   const visualsHtml = [;
     ...visuals.timelineImages,;
@@ -32,7 +23,6 @@ import type { BookProject } from '../book/bookTypes';
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n'),;
-
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -40,7 +30,6 @@ import type { BookProject } from '../book/bookTypes';
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
-
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
     .join ('\n\n'),
   const visuals_html = [;
@@ -50,14 +39,12 @@ import type { BookProject } from '../book/bookTypes';
     .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join ('\n'),
   const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
-
   return `<!doctype html>;
 <html>;
 <head>;
 <meta charset="utf - 8" />;
 <title>${escape_html (meta.title)}</title>;
 <style>;
-
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
@@ -98,7 +85,6 @@ function escapeHtml(s: string): string {return s;
 ;
 function escapeHtml(s: string): string {;
   return s;
-
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -169,7 +155,6 @@ function escapeHtml(s: string): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 </style>;
 </head>;
 <body>;
@@ -218,57 +203,26 @@ function paragraphize(text: string): string {if (!text) return '';
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
-
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-
 }
-
-
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
 import type { BookProject } from '../book/bookTypes';
-
 export function buildPrintableHtml(project: BookProject): string {
   const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
     .join('\n');
-
   const chapterHtml = chapters
     .map(
       (c) => `
@@ -279,7 +233,6 @@ export function buildPrintableHtml(project: BookProject): string {
     `,
     )
     .join('\n\n');
-
   const visualsHtml = [
     ...visuals.timelineImages,
     ...visuals.daoVoteCharts,
@@ -287,9 +240,7 @@ export function buildPrintableHtml(project: BookProject): string {
   ]
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
     .join('\n');
-
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-
   return `<!doctype html>
 <html>
 <head>
@@ -326,7 +277,6 @@ export function buildPrintableHtml(project: BookProject): string {
 </body>
 </html>`;
 }
-
 function paragraphize(text: string): string {
   if (!text) return '';
   return text
@@ -334,7 +284,6 @@ function paragraphize(text: string): string {
     .map((p) => `<p>${escapeHtml(p)}</p>`)
     .join('\n');
 }
-
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, '&amp;')
@@ -343,4 +292,3 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
 }
->>>>>>> origin/auto/autonomy-17186719616

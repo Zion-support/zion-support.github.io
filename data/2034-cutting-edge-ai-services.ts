@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-
   id: string;
   name: string;
   description: string;
@@ -68,26 +64,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     category: 'AI Creativity'
     pricing: { starter: '$149/mo' }
     features: [
-
-
 ];	id: string;
-
-
-
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-
-
-
 ];	id: string;
 	id: string, name: string,
 	description: string,
-
-=======
 export type CuttingEdgeAIService = {
 	id: string;
 	name: string;
 	description: string;
->>>>>>> origin/auto/autonomy-17186719616
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -96,19 +81,15 @@ export type CuttingEdgeAIService = {
 		| 'AI Business Management'
 		| 'AI Healthcare'
 		| 'AI Neural Interfaces'
-<<<<<<< HEAD
 		| 'AI Quantum Computing'
 	pricing: { starter: string, professional?: string, enterprise?: string }
-=======
 		| 'AI Quantum Computing';
 	pricing: { starter: string; professional?: string; enterprise?: string };
->>>>>>> origin/auto/autonomy-17186719616
 	features: string[];
 	integrations?: string[];
 	useCases?: string[];
 	link: string;
 	rating?: number;
-<<<<<<< HEAD
 	launchDate?: string
 	realService?: boolean
 }
@@ -122,9 +103,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
-
 		realService: true
 	}
 	{
@@ -136,9 +115,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
-
 		realService: true
 	}
 	{
@@ -150,14 +127,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['Brand kitImage & video genReview & approvalsRights management'];
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
-
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
-
 		realService: true
-
-
-
-
 	id: string,;
 	name: string,;
 	description: string,;
@@ -215,18 +186,11 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		useCases: ['Marketing velocityCost savings'],;
 		link: 'https://ziontechgroup.com/services/ai-creative-studio',;
 		realService: true;
-
-
 	}
 ];
-
-
-
-=======
 	launchDate?: string;
 	realService?: boolean;
 };
-
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	{
 		id: 'ai-emotional-support-agent',
@@ -265,4 +229,3 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		realService: true
 	}
 ];
->>>>>>> origin/auto/autonomy-17186719616

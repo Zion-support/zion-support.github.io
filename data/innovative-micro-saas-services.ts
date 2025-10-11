@@ -3,13 +3,11 @@ export interface InnovativeMicroSaasService {
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
-=======
   period: string;
   description: string;
   features: string[];
@@ -32,12 +30,10 @@ export interface InnovativeMicroSaasService {
   marketSize: string;
   growthRate: string;
   variant: string;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
   };
 }
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
@@ -62,7 +58,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -72,7 +67,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   rating: number;
   reviews: number;
 }
-
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
   // Quantum Computing & AI Services
   {
@@ -126,7 +120,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.9,
     reviews: 8
   },
-
   // Space Technology Services
   {
     id: 'space-technology-platform',
@@ -179,7 +172,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.8,
     reviews: 12
   },
-
   // Biotech AI Services
   {
     id: 'biotech-ai-platform',
@@ -232,7 +224,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.7,
     reviews: 18
   },
-
   // Quantum Financial Trading
   {
     id: 'quantum-financial-trading',
@@ -285,7 +276,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.9,
     reviews: 15
   },
-
   // Quantum Cybersecurity
   {
     id: 'quantum-cybersecurity-suite',
@@ -338,7 +328,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.8,
     reviews: 32
   },
-
   // Quantum Internet Security
   {
     id: 'quantum-internet-security-platform',
@@ -391,7 +380,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.7,
     reviews: 22
   },
-
   // Quantum IoT Platform
   {
     id: 'quantum-iot-platform',
@@ -444,7 +432,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.6,
     reviews: 48
   },
-
   // Quantum Logistics
   {
     id: 'quantum-logistics-platform',
@@ -497,7 +484,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.7,
     reviews: 29
   },
-
   // Quantum Metaverse
   {
     id: 'quantum-metaverse-platform',
@@ -550,7 +536,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.8,
     reviews: 41
   },
-
   // Quantum Robotics
   {
     id: 'quantum-robotics-platform',
@@ -603,7 +588,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.9,
     reviews: 14
   },
-
   // Autonomous Manufacturing
   {
     id: 'autonomous-manufacturing-platform',
@@ -656,7 +640,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     rating: 4.7,
     reviews: 19
   },
-
   // Autonomous Vehicle AI
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -710,7 +693,6 @@ export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [
     reviews: 6
   }
 ];
-
 // New Innovative Micro-SaaS Services
 export const newInnovativeServices = [
   {
@@ -967,6 +949,5 @@ export const newInnovativeServices = [
     customers: 12,
     rating: 4.9,
     reviews: 6
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

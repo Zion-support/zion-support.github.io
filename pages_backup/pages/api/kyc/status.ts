@@ -1,20 +1,12 @@
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
 import fs from "fs";
 import path from "path";
-
 const DATA_DIR = path.join(process.cwd(), "data", "kyc");
 const FILE = path.join(DATA_DIR, "profiles.json");
 function load(): Record<string, KycProfile> {
   try {
-
     const raw = fs.readFileSync(FILE, "utf8");
     return JSON.parse(raw);
   } catch {
@@ -36,7 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     optionalDocuments: getOptionalDocuments(profile.role)
   });
 }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -47,13 +38,9 @@ import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
-
 function load(): Record<string, KycProfile> {
   try {
-
-
     const raw = fs.readFileSync(FILE, 'utf8');
-
     return JSON.parse(raw);
   } catch {;
     return {  } catch (error) {
@@ -98,7 +85,6 @@ function load(): Record<string, KycProfile> {
 ;
 export default function handler(req, res) {
   try {
-
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     ok: true,;
     profile;
@@ -115,13 +101,7 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
   }
 }
-
-
-
   });
-
 }
-

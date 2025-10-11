@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 export interface Application {
 export interface Application {;
   id: string;
@@ -11,37 +9,17 @@ export interface Application {;
   createdAt: string;
   updatedAt?: string;
 }
-
-
 export interface Application {;
-
   id: string;
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
   job_id: string;
   talent_slug: string;
   status: 'applied' | 'skipped' | 'pending';
   createdAtIso: string;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
-
-
-
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
-
 export type Job = {
   id: string;
   title: string;
@@ -56,9 +34,7 @@ export type Job = {
   createdAtIso: string;
   updatedAtIso: string;
 };
-
 export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn';
-
 export type Application = {
   id: string;
   jobId: string;
@@ -66,15 +42,12 @@ export type Application = {
   status: ApplicationStatus;
   createdAtIso: string;
 };
-
 export type Participant = { type: 'email' | 'talent'; id: string };
-
 export type Attachment = {
   name: string;
   url: string;
   sizeBytes?: number;
 };
-
 export type Message = {
   id: string;
   conversationId: string;
@@ -84,7 +57,6 @@ export type Message = {
   createdAtIso: string;
   readBy?: { participantId: string; readAtIso: string }[];
 };
-
 export type Conversation = {
   id: string;
   jobId?: string;
@@ -93,4 +65,3 @@ export type Conversation = {
   updatedAtIso: string;
   messages: Message[];
 };
->>>>>>> origin/auto/autonomy-17186719616

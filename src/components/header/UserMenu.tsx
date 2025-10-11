@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 import { Link } from 'react-router-dom';
 
 export function UserMenu() {
@@ -14,7 +13,6 @@ export function UserMenu() {
         <LogIn className="w-4 h-4" />
         <span className="hidden sm:inline">Login</span>
       </Link>
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
@@ -23,7 +21,6 @@ import { User, LogOut, Settings, UserPlus } from 'lucide-react';
 
 export function UserMenu() {
   const { user, logout } = useAuth();
-=======
 import React, { useState } from 'react';
 import { User, Settings, LogOut, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';

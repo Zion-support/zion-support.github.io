@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-
-
-
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
-
 import { IntegrationProviderMeta  } from './types';
 ;
 export const PROVIDERS: IntegrationProviderMeta[] = [;
 import { IntegrationProviderMeta } from "./types";
-
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
-
   {
     id: "salesforce"
     name: "Salesforce"
@@ -51,7 +44,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
     description: "Recruiting software"
   }
   {
-
     id: "bamboohr",
     name: "BambooHR",
     category: "ats",
@@ -66,17 +58,12 @@ export function getProviderById(
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
-
-
-
-
 ;
 export function getProviderById (
   id: string,
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find ((p) => p.id === id);
 }
-
     id: "bamboohr",
     name: "BambooHR",
     category: "ats",
@@ -94,12 +81,8 @@ export function getProviderById(
 }
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
-
 }
-
-=======
 import { IntegrationProviderMeta } from './types';
-
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },
   { id: 'hubspot', name: 'HubSpot', category: 'crm', description: 'Marketing & Sales CRM' },
@@ -110,8 +93,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
 ];
-
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 }
->>>>>>> origin/auto/autonomy-17186719616

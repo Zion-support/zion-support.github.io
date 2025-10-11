@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-
-
-
-=======
 import { ServiceVariant } from '../types/service-variants';
-
 export interface InnovativeBusinessSolution {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -17,7 +10,6 @@ export interface InnovativeBusinessSolution {
   popular: boolean;
   icon: string;
   color: string;
-<<<<<<< HEAD
   text_color: string;
   link: string;
   market_position: string;
@@ -38,13 +30,9 @@ export interface InnovativeBusinessSolution {
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
-
   {
-
-
 export interface InnovativeBusinessSolution {
   id: string, name: string,
   tagline: string, price: string,
@@ -72,14 +60,12 @@ export interface InnovativeBusinessSolution {
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
   {
-
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Intelligent business insights and analytics',
     price: '$3,200',
     period: '/month',
     description:
       'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
-=======
   textColor: string;
   link: string;
   marketPosition: string;
@@ -109,7 +95,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   rating: number;
   reviews: number;
 }
-
 export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
   // AI Business Intelligence Suite
   {
@@ -120,7 +105,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
     features: [
->>>>>>> origin/auto/autonomy-17186719616
       'AI-powered data analysis and insights',
       'Predictive analytics and forecasting',
       'Automated report generation',
@@ -130,7 +114,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
       'Business performance optimization',
       'Integration with business systems',
       'Advanced analytics and reporting',
-<<<<<<< HEAD
       'Custom business intelligence workflows',
     ],
     popular: true,
@@ -147,7 +130,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
       'Business intelligence teams',
       'Technology companies',
     ],
-=======
       'Custom business intelligence workflows'
     ],
     popular: true,
@@ -157,12 +139,10 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
     marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.',
     targetAudience: ['Business analysts', 'Data scientists', 'Executives', 'Business intelligence teams', 'Technology companies'],
->>>>>>> origin/auto/autonomy-17186719616
     trialDays: 30,
     setupTime: '3-4 weeks',
     category: 'AI Business Intelligence',
     realService: true,
-<<<<<<< HEAD
     technology: [
       'Artificial Intelligence',
       'Machine Learning',
@@ -193,12 +173,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     growthRate: '28% annual growth',
     variant: 'ai-business-intelligence',
     contactInfo: {
-      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-
       address: '364 E Main St STE 1008 Middletown DE 19709',
-
-
     reviews: 26
   }
 ];
@@ -282,7 +258,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
       website: 'https://ziontechgroup.com';
     }
-
 ;
     realImplementation: true
     implementationDetails:
@@ -697,8 +672,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.7,
     reviews: 26,
   },;
-
-
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -709,12 +682,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     launchDate: '2025-05-01';
     customers: 38;
     rating: 4.7
-
     reviews: 26
-
-
-
-
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeBusinessSolution {;
   id: string,;
@@ -793,7 +761,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
-=======
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
@@ -802,16 +769,10 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     customers: 38;
     rating: 4.7,
     reviews: 26;
-
   }
 ];
-
-
-=======
   }
 ];
-
-=======
     technology: ['Artificial Intelligence', 'Machine Learning', 'Business Analytics', 'Data Visualization', 'Python', 'TensorFlow', 'React'],
     integrations: ['ERP systems', 'CRM platforms', 'Databases', 'Cloud platforms', 'Business applications', 'API services'],
     useCases: ['Business analytics', 'Performance monitoring', 'Predictive insights', 'Decision support', 'Business optimization'],
@@ -833,7 +794,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.8,
     reviews: 48
   },
-
   // AI Marketing Automation Platform
   {
     id: 'ai-marketing-automation-platform',
@@ -886,7 +846,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.7,
     reviews: 62
   },
-
   // AI Sales Intelligence Platform
   {
     id: 'ai-sales-intelligence-platform-v2',
@@ -939,7 +898,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.9,
     reviews: 45
   },
-
   // AI Customer Service Platform
   {
     id: 'ai-customer-service-platform',
@@ -992,7 +950,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.7,
     reviews: 38
   },
-
   // AI HR Management Platform
   {
     id: 'ai-hr-management-platform',
@@ -1045,7 +1002,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.8,
     reviews: 29
   },
-
   // AI Financial Analytics Platform
   {
     id: 'ai-financial-analytics-platform',
@@ -1098,7 +1054,6 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.9,
     reviews: 19
   },
-
   // AI Project Management Platform
   {
     id: 'ai-project-management-platform',
@@ -1152,4 +1107,3 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     reviews: 26
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

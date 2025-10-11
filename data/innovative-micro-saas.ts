@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-
 export interface InnovativeMicroSaas {
 export interface InnovativeMicroSaas {;
-
-=======
 export interface InnovativeMicroSaas {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -36,13 +31,7 @@ export interface InnovativeMicroSaas {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-
-
-
-
   {
-
     id: 'ai-powered-invoice-processor'
     name: 'AI-Powered Invoice Processor'
     tagline: 'Automate invoice processing with AI accuracy'
@@ -455,7 +444,6 @@ export interface InnovativeMicroSaas {
     }
     realImplementation: true
     implementationDetails:
-
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.'
     launchDate: '2024-01-30'
     customers: 3200
@@ -468,7 +456,6 @@ export interface InnovativeMicroSaas {
     rating: 4.8,
     reviews: 1600,
   },;
-
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -479,9 +466,7 @@ export interface InnovativeMicroSaas {
     launchDate: '2024-01-30';
     customers: 3200;
     rating: 4.8
-
     reviews: 1600
-
   }
 ];
 export interface InnovativeMicroSaas {;
@@ -741,9 +726,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     rating: 4.8,;
     reviews: 1600;
   }
-
 ];
-
   id: string,;
   name: string,;
   tagline: string,;
@@ -999,18 +982,9 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
     customers: 3200,;
     rating: 4.8,;
     reviews: 1600;
-
-
-
-
-
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
   }
 ];
-
-
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -1020,7 +994,6 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
   rating: number;
   reviews: number;
 }
-
 export const innovativeMicroSaas: InnovativeMicroSaas[] = [
   {
     id: 'ai-powered-invoice-processor',
@@ -1278,4 +1251,3 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

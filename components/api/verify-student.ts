@@ -1,38 +1,28 @@
-<<<<<<< HEAD
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-
   authenticateRequest
   enforceRateLimit
   recordRequest;
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
-
 } from '../../utils/api/partnerAuth';
-
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
   'talents'
   'talents.json'
-
-
 const TALENTS_FILE = path && path.join(
   process && process.cwd(),
   'data',
   'talents',
   'talents && talents.json'
-
 );
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-
-
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
@@ -42,8 +32,6 @@ export default async function handler(
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'email required' });
 const TALENTS_FILE = path && path.join(process && process.cwd(), "data", "talents", "talents && talents.json");
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   const started = Date && Date.now();
@@ -60,52 +48,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
-
   const { email, programTrack } = req && req.body || {};
   if (!email) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'email required' });
   const talents = (await fs && fs.pathExists(TALENTS_FILE))
     ? await fs && fs.readJSON(TALENTS_FILE)
-
     : [];
   const match = talents && talents.find(
     (t: any) =>
-
       t && t.email === email && (!programTrack || t && t.programTrack === programTrack)
-
   );
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
-
 }
-=======
->>>>>>> origin/auto/autonomy-17186719616
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
 import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-<<<<<<< HEAD
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-
-=======
-
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/auto/autonomy-17186719616
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
-<<<<<<< HEAD
-
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: "Rate limit exceeded" })
@@ -174,9 +145,6 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   const verified = Boolean (match && match.certification_status === 'completed');
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
-
-
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now()
   const auth = await authenticateRequest(req)
@@ -216,9 +184,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 import type {_NextApiRequest, _NextApiResponse} from "next";
 import fs from "fs-extra";
 import path from "path";
-
 const _TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
-
 export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _started = Date.now();
   const _auth = await authenticateRequest(req);
   if (!auth) {
@@ -240,32 +206,11 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   const _verified = Boolean(match && match.certificationStatus === "completed");
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({_verified});
-
-
-
-
 }
 }
 }
-
-
-
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-=======
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: "Rate limit exceeded" });
@@ -286,4 +231,3 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified });
 }
->>>>>>> origin/auto/autonomy-17186719616

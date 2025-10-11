@@ -1,17 +1,10 @@
-
-
-
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
-
 import type { Config } from "jest";
 import nextJest from "next/jest ;
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
-
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
@@ -22,30 +15,19 @@ const config: Config = {
     "!src*.d && d.ts",
     "!src*.stories.{js,jsx,ts,tsx}",
   ],
-
   coverageThreshold: {
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }
 export default createJestConfig(config);
 import type { Config } from "jest";
-
-
-
-
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 ursor/fix-lint-push-and-merge-to-main-ae4e
-
-
-
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const createJestConfig = nextJest({
-
   // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 import type { Config } from './jest';
 import next_jest from "next / jest.js";
 const createJestConfig = next_jest ({ dir: "./" });
@@ -70,18 +52,11 @@ import next_jest from "next / jest.js";
 ;
 const createJestConfig = next_jest ({
   // Provide the path to your Next.js app to load next.config.js and .env files;
-
   dir: "./",
-
-
-
-
 });
-
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
-
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1"
   }
@@ -90,7 +65,6 @@ const createJestConfig = next_jest ({
     "**/*.(test|spec).(js|jsx|ts|tsx)"
   ]
   collectCoverageFrom: [
-
     "src/**/*.{js,jsx,ts,tsx}"
     "!src/**/*.d.ts"
     "!src/**/*.stories.{js,jsx,ts,tsx}"
@@ -109,7 +83,6 @@ export default createJestConfig(config);
 ursor/integrate-build-improve-and-re-verify-8f7d
 export default createJestConfig(config);
 origin/automation-improvements-final
-
 import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
@@ -122,7 +95,6 @@ import nextJest from "next/jest.js";
 const createJestConfig = nextJest({ dir: "./" });
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const config: Config = {
-
   coverageProvider: "v8"
   testEnvironment: "jsdom"
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]
@@ -143,14 +115,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 import type { Config } from 'jest'; import nextJest from 'next/jest.js'; const createJestConfig = nextJest({ dir: './',}); const config: Config = { coverageProvider: 'v8',testEnvironment: 'jsdom',setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],moduleNameMapping: { '^@/(.*)$': '<rootDir>/src/$1',},testMatch: [ '**/__tests__*.(js|jsx|ts|tsx)','***.{js,jsx,ts,tsx}','!src*.d.ts','!src*.stories.{js,jsx,ts,tsx}',],coverageThreshold: { global: { branches: 70,functions: 70,lines: 70,statements: 70,},},}; export default createJestConfig(config);
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
-
-
     global: { branches: 70, functions: 70, lines: 70, statements: 70 }
   }
 }
 export default createJestConfig(config);
-
-
 }
 ;
 // createJestConfig is exported this way to ensure that next / jest can load the Next.js config which is async;
@@ -175,7 +143,3 @@ const config: Config = {
 }
 export default createJestConfig (config);
 ;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-

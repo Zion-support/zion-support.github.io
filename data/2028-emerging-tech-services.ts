@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2028Service {
-=======
 export interface EmergingTechService2028 {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -31,18 +27,15 @@ export interface EmergingTechService2028 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-=======
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -468,10 +461,8 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
     customers: 110,
     rating: 4.8,
     reviews: 89
-=======
   };
 }
-
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {
     id: "2028-emerging-tech-service",
@@ -494,6 +485,5 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

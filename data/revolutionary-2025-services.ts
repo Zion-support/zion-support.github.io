@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
-=======
->>>>>>> origin/auto/autonomy-17186719616
 export interface Revolutionary2025Service {
   id: string;
   name: string;
   tagline: string;
   price: string;
-<<<<<<< HEAD
   period: string;
   description: string;
   features: string[];
@@ -30,18 +26,15 @@ export interface Revolutionary2025Service {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-=======
   description: string;
   features: string[];
   link: string;
   category: string;
   realImplementation: boolean;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
     website: string;
   };
   realImplementation: boolean;
@@ -514,10 +507,8 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     customers: 95,
     rating: 4.9,
     reviews: 67
-=======
   };
 }
-
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   {
     id: "revolutionary-ai-platform",
@@ -540,6 +531,5 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

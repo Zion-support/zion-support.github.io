@@ -1,19 +1,24 @@
 #!/bin/bash
 
-echo "Fixing merge conflicts in all files..."
+# Script to fix merge conflicts in TypeScript files
+echo "Fixing merge conflicts in TypeScript files..."
 
-# Find all files with merge conflict markers and fix them
-find src -name "*.jsx" -o -name "*.tsx" -o -name "*.js" -o -name "*.ts" | while read -r file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Fixing merge conflicts in: $file"
+# Find all .ts files with merge conflicts
+find /workspace -name "*.ts" -type f -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> origin" {} \; | while read file; do
+    echo "Processing: $file"
     
-    # Remove merge conflict markers and keep content between HEAD and ======
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> main/d' "$file"
+    # Create a backup
+    cp "$file" "$file.original"
     
-    # Clean up any remaining empty lines
+    # Fix common merge conflict patterns
+    sed -i '/^<<<<<<< HEAD$/d' "$file"
+    sed -i '/^=======$/d' "$file"
+    sed -i '/^>>>>>>> origin.*$/d' "$file"
+    
+    # Remove empty lines that might be left
     sed -i '/^[[:space:]]*$/d' "$file"
-  fi
+    
+    echo "Fixed: $file"
 done
 
-echo "Merge conflicts fixed!"
+echo "Merge conflict fixing completed!"

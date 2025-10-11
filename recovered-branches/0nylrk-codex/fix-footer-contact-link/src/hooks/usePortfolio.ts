@@ -1,58 +1,44 @@
-
 import { useState, useCallback } from 'react';
 import { PortfolioProject } from '@/types/resume';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
-
 export function usePortfolio() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [projects, setProjects] = useState<PortfolioProject[]>([]);
-  
   const fetchProjects = useCallback(async () => {
     if (!user) {
       setError('You must be logged in to access portfolio projects');
       return [];
     }
-    
     setIsLoading(true);
     setError(null);
-    
     try {
       const { data, error } = await supabase
         .from('portfolio_projects')
         .select('*')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false });
-      
       if (error) throw error;
-      
       setProjects(data || []);
       return data || [];
     } catch (e: any) {
       console.error('Error fetching portfolio projects:', e);
       setError(e.message);
       return [];
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
     } finally {
       setIsLoading(false);
     }
   }, [user]);
-  
   const addProject = async (project: PortfolioProject): Promise<string | null> => {
     if (!user) {
       setError('You must be logged in to add a portfolio project');
       return null;
     }
-    
     setIsLoading(true);
     setError(null);
-    
     try {
       const { data, error } = await supabase
         .from('portfolio_projects')
@@ -68,14 +54,11 @@ export function usePortfolio() {
         })
         .select('id')
         .single();
-      
       if (error) throw error;
-      
       toast({
         title: "Project added",
         description: "Your project has been added to your portfolio"
       });
-      
       await fetchProjects();
       return data.id;
     } catch (e: any) {
@@ -91,16 +74,13 @@ export function usePortfolio() {
       setIsLoading(false);
     }
   };
-  
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a portfolio project');
       return false;
     }
-    
     setIsLoading(true);
     setError(null);
-    
     try {
       const { error } = await supabase
         .from('portfolio_projects')
@@ -115,14 +95,11 @@ export function usePortfolio() {
         })
         .eq('id', projectId)
         .eq('user_id', user.id);
-      
       if (error) throw error;
-      
       toast({
         title: "Project updated",
         description: "Your portfolio project has been updated"
       });
-      
       await fetchProjects();
       return true;
     } catch (e: any) {
@@ -138,30 +115,24 @@ export function usePortfolio() {
       setIsLoading(false);
     }
   };
-  
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete a portfolio project');
       return false;
     }
-    
     setIsLoading(true);
     setError(null);
-    
     try {
       const { error } = await supabase
         .from('portfolio_projects')
         .delete()
         .eq('id', projectId)
         .eq('user_id', user.id);
-      
       if (error) throw error;
-      
       toast({
         title: "Project deleted",
         description: "Your portfolio project has been deleted"
       });
-      
       setProjects(projects.filter(p => p.id !== projectId));
       return true;
     } catch (e: any) {
@@ -177,7 +148,6 @@ export function usePortfolio() {
       setIsLoading(false);
     }
   };
-  
   return {
     isLoading,
     error,

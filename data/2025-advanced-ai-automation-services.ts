@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface AdvancedAIAutomationService {
   id: string;
   name: string;
@@ -29,10 +25,7 @@ export interface AdvancedAIAutomationService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
-=======
   variant: string;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
@@ -46,7 +39,6 @@ export interface AdvancedAIAutomationService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -72,8 +64,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       'Voice and text support',
       'Integration with CRM systems',
       'Performance optimization'
-=======
-
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   // AI-Powered Code Generation & Review
   {
@@ -127,7 +117,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.7,
     reviews: 34
   },
-
   // AI-Powered DevOps Automation
   {
     id: 'ai-devops-automation',
@@ -180,7 +169,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.8,
     reviews: 28
   },
-
   // AI-Powered Customer Support Automation
   {
     id: 'ai-customer-support-automation',
@@ -200,13 +188,11 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       'Customer satisfaction tracking',
       'Knowledge base automation',
       'Escalation management'
->>>>>>> origin/auto/autonomy-17186719616
     ],
     popular: true,
     icon: '🤖',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
-<<<<<<< HEAD
     link: 'https://ziontechgroup.com/ai-autonomous-customer-service',
     marketPosition: 'Competes with Intercom ($74/month), Zendesk ($49/month). Our advantage: 90% automation rate with 95% customer satisfaction.',
     targetAudience: ['E-commerce businesses', 'SaaS companies', 'Customer support teams', 'Retail chains', 'Service providers'],
@@ -411,7 +397,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   }
 ];
 export default advancedAIAutomationServices2025;
-=======
     link: 'https://ziontechgroup.com/ai-customer-support-automation',
     marketPosition: 'Competes with Intercom ($39/month), Zendesk ($25/month), Freshdesk ($15/month). Our advantage: AI-powered automation, predictive analytics, and multi-language support.',
     targetAudience: 'Customer support teams, E-commerce businesses, SaaS companies, B2B services, Enterprise companies',
@@ -440,7 +425,6 @@ export default advancedAIAutomationServices2025;
     rating: 4.6,
     reviews: 41
   },
-
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation',
@@ -493,7 +477,6 @@ export default advancedAIAutomationServices2025;
     rating: 4.7,
     reviews: 67
   },
-
   // AI-Powered Sales Intelligence
   {
     id: 'ai-sales-intelligence',
@@ -547,4 +530,3 @@ export default advancedAIAutomationServices2025;
     reviews: 38
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

@@ -1,5 +1,4 @@
 import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Rocket, Lock, Key, Brain as BrainIcon, Palette, Code, Server, Wifi, Smartphone, Tablet, Monitor, Printer, Scanner, Microphone, Headphones, Gamepad2, Watch, Thermometer, Lightbulb, Battery, Leaf as LeafIcon, Globe as GlobeIcon, Shield as ShieldIcon2, Zap as ZapIcon3, Database as DatabaseIcon2, Cloud as CloudIcon, Server as ServerIcon, Network as NetworkIcon, Lock as LockIcon, Key as KeyIcon, Brain as BrainIcon2, Palette as PaletteIcon, Code as CodeIcon, Server as ServerIcon2, Wifi as WifiIcon, Smartphone as SmartphoneIcon, Tablet as TabletIcon, Monitor as MonitorIcon, Printer as PrinterIcon, Scanner as ScannerIcon, Microphone as MicrophoneIcon, Headphones as HeadphonesIcon, Gamepad2 as Gamepad2Icon, Watch as WatchIcon, Thermometer as ThermometerIcon, Lightbulb as LightbulbIcon, Battery as BatteryIcon, Leaf as LeafIcon2, Globe as GlobeIcon2, Glasses, ArrowRight } from 'lucide-react';
-=======
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Star, TrendingUp, Zap, Shield, Brain, Code, BarChart3, Settings, Globe, Smartphone } from 'lucide-react';
@@ -11,21 +10,16 @@ import { Input } from '../components/ui/input';
 import { Select } from '../components/ui/select';
 import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground';
 import FuturisticNeonButton from '../components/ui/FuturisticNeonButton';
-=======
-=======
 import React, { useState, useMemo } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { MICRO_SAAS_SERVICES, MicroSaasService, getServiceByCategory, getServiceBySubcategory } from '@/data/microSaasServices';
-=======
-=======
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-=======
 import React, { useState, useMemo } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -505,7 +499,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       benefits: ["Enhanced security", "Real-time protection", "Compliance", "Peace of mind"],
       targetAudience: ["Financial services", "Healthcare", "Government", "Enterprise"],
       tags: ["Cybersecurity", "AI Security", "Threat Detection", "Compliance", "Enterprise"],
-=======
       name: "CloudOrchestra",
       category: "Cloud Computing",
       pricing: "Premium",
@@ -536,7 +529,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       benefits: ["Environmental impact", "Regulatory compliance", "Brand reputation", "Cost savings"],
       targetAudience: ["Manufacturing", "Retail", "Service businesses", "ESG-focused companies"],
       tags: ["Sustainability", "ESG", "Carbon Tracking", "Green Tech", "Compliance"],
-=======
       name: "DevOps Accelerator",
       category: "DevOps",
       pricing: "Premium",
@@ -567,7 +559,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       benefits: ["Hands-free operation", "Increased efficiency", "Better accessibility", "Modern interface"],
       targetAudience: ["Customer service", "Sales teams", "Administrative staff", "Accessibility needs"],
       tags: ["Voice AI", "Automation", "Accessibility", "Customer Service", "AI Assistant"],
-=======
       name: "AR/VR Creator Studio",
       category: "AR/VR",
       pricing: "Premium",
@@ -598,7 +589,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       benefits: ["Superior accuracy", "Competitive advantage", "Risk reduction", "Future-proof technology"],
       targetAudience: ["Investment firms", "Banks", "Hedge funds", "Financial advisors"],
       tags: ["Quantum Finance", "Risk Assessment", "Portfolio Management", "Financial Modeling", "AI"],
-=======
       name: "GreenTech Monitor",
       category: "Sustainability",
       pricing: "Premium",
@@ -724,7 +714,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       benefits: ["Reduced latency", "Better performance", "Cost efficiency", "Scalability"],
       targetAudience: ["IoT applications", "Gaming", "Real-time systems", "Distributed computing"],
       tags: ["Edge Computing", "Real-time Processing", "IoT", "Performance", "Infrastructure"],
-=======
       name: "NeuroTech Platform",
       category: "Neurotechnology",
       pricing: "Enterprise",
@@ -745,24 +734,19 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
   ];
 
   const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & Marketing', 'Customer Success', 'Human Resources'];
-=======
   const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
-=======
   const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & ML', 'Blockchain', 'IoT', 'Cybersecurity', 'Data Science', 'Cloud Computing', 'DevOps', 'AR/VR', 'FinTech', 'Smart Cities', 'Biotechnology', 'Quantum Security', 'Space Technology', 'Neurotechnology'];
   const pricingModels = ['all', 'Freemium', 'Premium', 'Enterprise'];
 
   const filteredServices = microSaasServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-=======
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-=======
 import { 
   Search, 
   Filter, 
@@ -784,7 +768,6 @@ import {
   Link as LinkIcon
 } from 'lucide-react';
 import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeaturedServices, getPopularServices, getNewServices } from '@/data/microSaasServices';
-=======
   ExternalLink, 
   Phone, 
   Mail, 
@@ -852,7 +835,6 @@ export default function MicroSaasServices() {
       case 'Premium': return 'text-blue-400';
       case 'Enterprise': return 'text-purple-400';
       default: return 'text-gray-400';
-=======
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
   const [priceRange, setPriceRange] = useState<number>(1000);
 
@@ -867,7 +849,6 @@ export default function MicroSaasServices() {
       
       return matchesSearch && matchesCategory && matchesPrice;
     });
-=======
   const [sortBy, setSortBy] = useState<string>('rating');
 
   const categories = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(service => service.category)))];
@@ -987,7 +968,6 @@ export default function MicroSaasServices() {
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse delay-1000"></div>
               <span>24/7 Support</span>
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-zion-blue-dark to-black relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1110,7 +1090,6 @@ export default function MicroSaasServices() {
                         {service.pricing}
                       </span>
                       <span className="px-3 py-1 text-xs font-semibold rounded-full text-zion-purple bg-zion-purple/20 border border-zion-purple/30">
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
             <div key={service.id} className="group bg-black/40 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:bg-black/60 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 hover:-translate-y-2">
@@ -1228,7 +1207,6 @@ export default function MicroSaasServices() {
                 <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
                 <p className="text-white font-semibold">Address</p>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-=======
         <div className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8 relative overflow-hidden">
             {/* Background decoration */}
@@ -1262,7 +1240,6 @@ export default function MicroSaasServices() {
                   <p className="text-white font-semibold text-lg mb-2">Address</p>
                   <p className="text-gray-300 group-hover:text-purple-300 transition-colors">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
-=======
         <div className="mt-20 text-center">
           <div className="relative bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10 backdrop-blur-sm border border-zion-cyan/30 rounded-3xl p-12 overflow-hidden">
             {/* Background Elements */}
@@ -1274,7 +1251,6 @@ export default function MicroSaasServices() {
                   <Rocket className="w-4 h-4" />
                   Ready to Transform Your Business?
                 </div>
-=======
         <div className="mt-20 text-center">
           <div className="relative bg-gradient-to-r from-black/60 via-zion-blue-dark/60 to-black/60 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-12 overflow-hidden">
             {/* Background decoration */}
@@ -1374,7 +1350,6 @@ export default function MicroSaasServices() {
                     <MapPin className="w-8 h-8 text-zion-cyan" />
                   </div>
                   <p className="text-white font-semibold text-lg mb-2">Address</p>
-=======
     <>
       <SEO 
         title="Micro SAAS Services - Zion Tech Group" 
@@ -1474,7 +1449,6 @@ export default function MicroSaasServices() {
                   ))}
                 </SelectContent>
               </Select>
-=======
     const icons: { [key: string]: React.ReactNode } = {
       'AI Services': <Zap className="h-5 w-5" />,
       'IT Services': <Cloud className="h-5 w-5" />,
@@ -1486,7 +1460,6 @@ export default function MicroSaasServices() {
       'Integration': <LinkIcon className="h-5 w-5" />
     };
     return icons[category] || <Code className="h-5 w-5" />;
-=======
   }, [searchQuery, selectedCategory, selectedPricing, sortBy]);
 
   const getCategoryIcon = (category: string) => {
@@ -1689,7 +1662,6 @@ export default function MicroSaasServices() {
                   </SelectTrigger>
                   <SelectContent>
                     {categories.map((category) => (
-=======
         {/* Stats Section */}
         <section className="py-16 bg-zion-blue-dark/50">
           <div className="container mx-auto px-4">
@@ -2071,7 +2043,6 @@ export default function MicroSaasServices() {
 };
 
 export default MicroSaasServices;
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   size="lg" 
@@ -2089,7 +2060,6 @@ export default MicroSaasServices;
                   Request Demo
                 </Button>
               </div>
-=======
         <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-blue-dark">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -2362,7 +2332,6 @@ export default function MicroSaasServices() {
     return matchesCategory && matchesSearch;
   });
 
-=======
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -2546,7 +2515,6 @@ export default function MicroSaasServices() {
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue">
               <Phone className="h-5 w-5 mr-2" />
-=======
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple via-zion-blue to-zion-cyan py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -2835,7 +2803,6 @@ export default function MicroSaasServices() {
                         <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark">
                           Learn More
                         </Button>
-=======
         {/* Services Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -3054,7 +3021,6 @@ export default function MicroSaasServices() {
     </div>
   );
 }
-=======
     </div>
   );
 }
@@ -3075,7 +3041,6 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
               <Badge variant="outline" className="border-zion-purple text-zion-purple">
                 <Zap className="h-3 w-3 mr-1" />
                 White Label
-=======
 
 function ServiceCard({ service }: { service: MicroSaasService }) {
   const getPricingDisplay = (service: MicroSaasService) => {
@@ -3163,7 +3128,6 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
     </Card>
   );
 }
-=======
             )}
           </div>
         </section>

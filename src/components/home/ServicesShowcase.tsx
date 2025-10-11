@@ -166,7 +166,6 @@ export function ServicesShowcase() {
           <div className="mt-6 text-zion-slate-light">
             <p>Visit us: 364 E Main St STE 1008, Middletown DE 19709</p>
             <p className="mt-2">Website: <a href="https://ziontechgroup.com" className="text-zion-cyan hover:underline">https://ziontechgroup.com</a></p>
-=======
 
         {/* CTA Section */}
         <div className="text-center">

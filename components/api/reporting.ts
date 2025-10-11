@@ -1,31 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-
     {
       funnel: { stage: string; count: number }[];
       timeToHireDays: number;
       costPerHireUsd?: number;
       updated_at: string;
     }
-
-
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
     updatedAt: string
   }>
 }
-
-
-
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
   const method = (req.method |'GET').toUpperCase()
   const method = (req.method || 'GET').toUpperCase(),;
-
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
@@ -40,39 +30,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
-
-
-
-
     funnel: { stage: string, count: number }[]
     timeToHireDays: number
     costPerHireUsd?: number,
     updated_at: string;
   }>;
 }
-
-
   }
   if (method === 'POST') {
-
-
-
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
-
         const next = curr && curr.byTenant || {};
-
         next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
           timeToHireDays:
@@ -91,11 +61,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     );
     return res && res.status(200).json(updated && updated.byTenant[tenantId]);
   }
-
-
   return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr && curr.byTenant || {};
-
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -103,13 +70,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         updatedAt: new Date().toISOString()}
       return { byTenant: next }
     }, FALLBACK);
-
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
-
 return res.status(405).json({ error: 'Method not allowed' });
 }
-
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { by_tenant: {} }
 ;
@@ -182,11 +146,8 @@ if ( {) {
 return res.status (405).json ({ error: 'Method not allowed' });
 }
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
-
-=======
 import { authenticateRequest } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
-
 interface ReportingData {
   byTenant: Record<string, {
     funnel: { stage: string; count: number }[];
@@ -195,22 +156,18 @@ interface ReportingData {
     updatedAt: string;
   }>;
 }
-
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} };
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase();
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
-
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK);
     const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() };
     return res.status(200).json(entry);
   }
-
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
     const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
@@ -225,7 +182,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }, FALLBACK);
     return res.status(200).json(updated.byTenant[tenantId]);
   }
-
   return res.status(405).json({ error: 'Method not allowed' });
 }
->>>>>>> origin/auto/autonomy-17186719616

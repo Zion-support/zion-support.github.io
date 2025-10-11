@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface EnterpriseIT2026ServiceV4 {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface EnterpriseIT2026ServiceV4 {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
   // Zero-Trust Network Architecture Platform
   {
@@ -100,10 +92,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     rating: 4.8,
     reviews: 48
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered IT Operations Center
   {
     id: 'ai-powered-it-operations-center',
@@ -156,10 +144,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     rating: 4.7,
     reviews: 95
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum-Resistant Cryptography Platform
   {
     id: 'quantum-resistant-cryptography-platform',
@@ -212,10 +196,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     rating: 4.9,
     reviews: 28
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Cloud Migration Platform
   {
     id: 'autonomous-cloud-migration-platform',
@@ -268,10 +248,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     rating: 4.8,
     reviews: 72
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform-2026',
@@ -324,10 +300,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     rating: 4.7,
     reviews: 38
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Data Governance Platform
   {
     id: 'ai-powered-data-governance-platform',
@@ -380,10 +352,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     rating: 4.8,
     reviews: 78
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous DevOps Platform
   {
     id: 'autonomous-devops-platform',
@@ -436,10 +404,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
     rating: 4.7,
     reviews: 125
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum-Safe Cloud Storage Platform
   {
     id: 'quantum-safe-cloud-storage-platform',

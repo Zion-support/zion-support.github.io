@@ -38,7 +38,6 @@ export interface InnovativeITService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 export const innovativeITServices: InnovativeITService[] = [
   {
     id: 'quantum-cloud-orchestrator',
@@ -231,8 +230,6 @@ export const innovativeITServices: InnovativeITService[] = [
     marketSize: '$200B cybersecurity market',
     growthRate: '180% annual growth',
     variant: 'ai-security-advanced',
-=======
-
 export const innovativeITServices: InnovativeITService[] = [
   {
     id: 'zero-trust-security-platform',
@@ -272,7 +269,6 @@ export const innovativeITServices: InnovativeITService[] = [
     marketSize: '$45B cybersecurity market',
     growthRate: '110% annual growth',
     variant: 'cyberpunk',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -280,7 +276,6 @@ export const innovativeITServices: InnovativeITService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully functional AI-powered network security platform with intelligent threat detection, autonomous response, comprehensive monitoring, and regulatory compliance.',
     launchDate: '2024-02-15',
     customers: 280,
@@ -376,7 +371,6 @@ export const innovativeITServices: InnovativeITService[] = [
     marketSize: '$50B disaster recovery market',
     growthRate: '150% annual growth',
     variant: 'ai-recovery-advanced',
-=======
     implementationDetails: 'Enterprise-grade zero trust platform with advanced AI, real-time monitoring, and comprehensive security controls.',
     launchDate: '2024-01-01',
     customers: 800,
@@ -421,7 +415,6 @@ export const innovativeITServices: InnovativeITService[] = [
     marketSize: '$15B edge computing market',
     growthRate: '180% annual growth',
     variant: 'quantum',
->>>>>>> origin/auto/autonomy-17186719616
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -429,13 +422,11 @@ export const innovativeITServices: InnovativeITService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-<<<<<<< HEAD
     implementationDetails: 'Fully functional AI-powered disaster recovery platform with intelligent automation, predictive analytics, comprehensive testing, and regulatory compliance.',
     launchDate: '2024-01-15',
     customers: 180,
     rating: 4.8,
     reviews: 234
-=======
     implementationDetails: 'Complete edge computing platform with distributed nodes, real-time processing, and IoT integration capabilities.',
     launchDate: '2024-01-10',
     customers: 1500,
@@ -594,6 +585,5 @@ export const innovativeITServices: InnovativeITService[] = [
     customers: 2500,
     rating: 4.7,
     reviews: 1250
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface Innovative2026MicroSaasService {
   id: string;
   name: string;
@@ -43,10 +39,6 @@ export interface Innovative2026MicroSaasService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] = [
   // AI-Powered Business Intelligence
   {
@@ -100,10 +92,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.9,
     reviews: 850
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum-Secure Communication Platform
   {
     id: 'quantum-secure-communication-2026',
@@ -156,10 +144,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.8,
     reviews: 450
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous AI Marketing Suite
   {
     id: 'autonomous-ai-marketing-suite-2026',
@@ -212,10 +196,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.7,
     reviews: 1200
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Financial Trading Platform
   {
     id: 'quantum-financial-trading-2026',
@@ -268,10 +248,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.9,
     reviews: 300
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Healthcare Companion
   {
     id: 'ai-healthcare-companion-2026',
@@ -324,10 +300,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.8,
     reviews: 950
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-2026',
@@ -380,10 +352,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.9,
     reviews: 400
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Autonomous Manufacturing AI Platform
   {
     id: 'autonomous-manufacturing-ai-2026',
@@ -436,10 +404,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.8,
     reviews: 250
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Space Technology Platform
   {
     id: 'quantum-space-technology-2026',
@@ -492,10 +456,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.9,
     reviews: 150
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // AI-Powered Legal Automation Suite
   {
     id: 'ai-legal-automation-suite-2026',
@@ -548,10 +508,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     rating: 4.7,
     reviews: 700
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
   // Quantum Blockchain Infrastructure
   {
     id: 'quantum-blockchain-infrastructure-2026',

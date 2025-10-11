@@ -12,7 +12,6 @@ import {
   Rocket,
   Star,
   CheckCircle
-=======
 import { Link } from 'react-router-dom';
 import { 
   Linkedin, 
@@ -150,7 +149,6 @@ export default function Team() {
       color: 'from-orange-500 to-yellow-500',
       description: 'Ensuring client success and project delivery',
       memberCount: 8
-=======
       id: 1,
       name: "Dr. Sarah Chen",
       role: "Chief Executive Officer & Chief AI Officer",
@@ -369,7 +367,6 @@ export default function Team() {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Meet the visionary leaders driving innovation and growth at Zion Tech Group.
-=======
       name: "Executive Leadership",
       icon: Building,
       description: "Strategic vision and company direction",
@@ -915,7 +912,6 @@ export default function Team() {
                   <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">{member.bio}</p>
                   <div className="flex justify-center space-x-3">
-=======
                 {/* Social Links */}
                 <div className="flex justify-center space-x-3">
                   {member.linkedin && (
@@ -938,7 +934,6 @@ export default function Team() {
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-medium">{dept.memberCount} members</span>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
-=======
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                     >
                       <Linkedin className="w-4 h-4" />
@@ -963,7 +958,6 @@ export default function Team() {
         </div>
       </div>
 
-=======
 
         {/* Join Our Team */}
         <div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 md:p-12 mb-16 border border-cyan-500/20">
@@ -984,7 +978,6 @@ export default function Team() {
               <Link 
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-medium text-lg"
-=======
       {/* Join Our Team CTA */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">

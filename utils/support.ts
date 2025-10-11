@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 // Support utilities
 export const support = {
   // Add support functionality here
@@ -7,59 +5,43 @@ export const support = {
   getArticles: () => []
   getArticleById: (id: string) => null
 }
-
   logEvent: (event: any) => null,
   getArticles: () => [],
   getArticleById: (id: string) => null;
 };
-
-
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
   return null;
-
-
 export interface IntentMatch {
   intentMatched: boolean;
   matchedArticleIds: string[];
   confidence: number;
 }
-
 export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch {
   const queryLower = query && query.toLowerCase();
   const matchedArticles: string[] = [];
   let confidence = 0;
-
-
-
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles && matchedArticles.push(article && article.id);
       confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0;
     }
   }
-
   return {
     intentMatched: matchedArticles && matchedArticles.length > 0,
     matchedArticleIds: matchedArticles,
     confidence: Math && Math.min(confidence, 1)
   };
 }
-
-
 }
   // Add support functionality here;
   log_event: (event: any) => null,
   get_articles: () => [],
   getArticleById: (id: string) => null;
 };
-
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
-
 }
-
-=======
 export type HelpArticle = {
   id: string;
   slug: string;
@@ -69,16 +51,13 @@ export type HelpArticle = {
   updatedAt: string;
   keywords?: string[];
 };
-
 export type IntentResult = {
   intentMatched: boolean;
   matchedArticleIds: string[];
 };
-
 export function matchIntent(query: string, articles: HelpArticle[]): IntentResult {
   const q = query.toLowerCase();
   const matched = new Set<string>();
-
   const keywordToArticle = new Map<string, string[]>();
   for (const art of articles) {
     for (const kw of art.keywords ?? []) {
@@ -87,7 +66,6 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
       keywordToArticle.set(kw, list);
     }
   }
-
   // Simple heuristics
   const heuristics: Array<[RegExp, string[]]> = [
     [/login|log in|sign in|password|2fa|otp|cannot.*sign/i, []],
@@ -97,7 +75,6 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
     [/dispute|issue|complaint|chargeback/i, []],
     [/profile|setup|verification|kyc|tax/i, []],
   ];
-
   let heuristicHit = false;
   for (const [re] of heuristics) {
     if (re.test(q)) {
@@ -107,13 +84,10 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentResul
       }
     }
   }
-
   // Keyword fallback
   for (const [kw, ids] of keywordToArticle.entries()) {
     if (q.includes(kw)) ids.forEach((id) => matched.add(id));
   }
-
   const matchedIds = Array.from(matched);
   return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) };
 }
->>>>>>> origin/auto/autonomy-17186719616

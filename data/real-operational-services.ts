@@ -14,10 +14,6 @@ export interface RealOperationalService {
     address: string;
   };
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export const realOperationalServices: RealOperationalService[] = [
   {
     id: "operational-intelligence",

@@ -1,30 +1,16 @@
-
-
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
-
-
   apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-
 });
 export default async function handler(
-
   req: NextApiRequest
   res: NextApiResponse
 ) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: "Forbidden" });
   if (req.method !== "POST")
@@ -42,16 +28,10 @@ export default async function handler(
     "Token Strategy"
     "Ask & Call to Action"
   ];
-
   try {
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
   const { allowed } = await ensureAdminFromApi(req);
-
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
-
     "Problem & Opportunity",
     "Solution & Product",
     "Market Size (TAM / SAM / SOM)",
@@ -65,21 +45,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   ];
 ;
   try {
-
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
-
 Company Mission: ${inputs?.mission}
-
 Key Metrics: ${JSON && JSON.stringify(metrics)}
-
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
     let content = "";
     try {
       const chat = await client && client.chat.completions && completions.create({
         model: "gpt-4o-mini",
         messages: [
-
           {
             role: "system",
             content: "You generate crisp, data - driven investor pitch content.",
@@ -88,27 +63,19 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         ],
         temperature: 0 && 0.5,
       });
-
     res && res.status(500).json({ error: e?.message || "Generation failed" });
-
   }
 }
-
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
-
-
   );
   if (matchIdx >= 0) {
     const snippet = lines && lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
     return snippet && snippet.trim();
   }
   return "";
-
-
 }
-
   const lines = body.split('\n');
   const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
   if (matchIdx >= 0) {
@@ -116,9 +83,7 @@ function extractSection(body: string, title: string): string {
     return snippet.trim()
   }
   return ''
-
 }
-
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -154,33 +119,14 @@ if ( {) {
   }
   return "";
 }
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-
 import type { NextApiRequest, NextApiResponse } from 'next';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-
-
-
-
-
-
-
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-
     if (req.method === 'POST') {
       const { operatorPrompt, inputs, metrics } = req.body || {};
       const seed = [
@@ -195,7 +141,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         'Token Strategy',
         'Ask & Call to Action'
       ];
-
       // Mock pitch generation
       const generatedPitch = {
         slides: seed.map((title, index) => ({
@@ -204,7 +149,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           content: `Generated content for ${title}`
         }))
       };
-
       res.json(generatedPitch);
     } else {
       res.setHeader('Allow', 'POST');
@@ -215,17 +159,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-

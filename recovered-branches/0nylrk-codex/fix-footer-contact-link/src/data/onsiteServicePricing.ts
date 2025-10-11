@@ -1,13 +1,7 @@
-
 export interface CountryPricing {
   country: string;
   pricePerIncident: number;
 }
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 export const onsiteServicePricing: CountryPricing[] = [
   { country: "Afghanistan", pricePerIncident: 131.04 },
   { country: "Albania", pricePerIncident: 110.41 },

@@ -4,40 +4,31 @@ import { quoteRequestService } from '@/services/quoteRequestService';
 import { useAuth } from '@/hooks/useAuth';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { useToast } from '@/hooks/use-toast';
-
 export const useTalentQuotes = () => {
   const { user } = useAuth();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
   const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');
-
   // Get the talent's ID (user's ID)
   const talentId = user?.id || '';
-
   // Fetch quotes for this talent
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotes', 'talent', talentId],
     queryFn: () => quoteRequestService.getByTalentId(talentId),
-<<<<<<< HEAD
     enabled: !!talentId});
-=======
     enabled: !!talentId,
   });
->>>>>>> origin/auto/autonomy-17186719616
-
   // Count unread quotes
   const unreadCount = allQuotes.filter(
     quote => quote.status === 'new' && !quote.viewed_at
   ).length;
-
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes.filter((quote) => {
     // Status filter
     if (statusFilter !== 'all' && quote.status !== statusFilter) {
       return false;
     }
-    
     // Archive filter
     if (archiveFilter === 'active' && quote.is_archived) {
       return false;
@@ -45,10 +36,8 @@ export const useTalentQuotes = () => {
     if (archiveFilter === 'archived' && !quote.is_archived) {
       return false;
     }
-    
     return true;
   });
-
   // Mark as viewed/responded mutation
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string; status: QuoteStatus }) => 
@@ -60,7 +49,6 @@ export const useTalentQuotes = () => {
       } else if (variables.status === 'responded') {
         message = "Quote marked as responded";
       }
-      
       toast({
         title: message,
         description: "The quote request status has been updated"
@@ -75,7 +63,6 @@ export const useTalentQuotes = () => {
       });
     }
   });
-
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string; isArchived: boolean }) => 
@@ -97,7 +84,6 @@ export const useTalentQuotes = () => {
       });
     }
   });
-
   return {
     quotes: filteredQuotes,
     unreadCount,
@@ -112,10 +98,7 @@ export const useTalentQuotes = () => {
     markAsResponded: (id: string) => 
       updateStatusMutation.mutate({ id, status: 'responded' }),
     toggleArchive: (id: string, isArchived: boolean) => 
-<<<<<<< HEAD
       toggleArchiveMutation.mutate({ id, isArchived })};
-=======
       toggleArchiveMutation.mutate({ id, isArchived }),
   };
->>>>>>> origin/auto/autonomy-17186719616
 };

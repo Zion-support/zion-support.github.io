@@ -1,8 +1,4 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/auto/autonomy-17186719616
 export interface AdvancedCybersecurityService {
   id: string;
   name: string;
@@ -17,11 +13,8 @@ export interface AdvancedCybersecurityService {
   textColor: string;
   link: string;
   marketPosition: string;
-<<<<<<< HEAD
   targetAudience: string[];
-=======
   targetAudience: string;
->>>>>>> origin/auto/autonomy-17186719616
   trialDays: number;
   setupTime: string;
   category: string;
@@ -33,10 +26,7 @@ export interface AdvancedCybersecurityService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-<<<<<<< HEAD
-=======
   variant: string;
->>>>>>> origin/auto/autonomy-17186719616
   contactInfo: {
     mobile: string;
     email: string;
@@ -50,7 +40,6 @@ export interface AdvancedCybersecurityService {
   rating: number;
   reviews: number;
 }
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -327,8 +316,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 52,
     rating: 4.5,
     reviews: 96
-=======
-
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   // Zero Trust Security Platform
   {
@@ -382,7 +369,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.9,
     reviews: 19
   },
-
   // AI-Powered Threat Intelligence
   {
     id: 'ai-threat-intelligence',
@@ -435,7 +421,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.8,
     reviews: 31
   },
-
   // Cloud Security Posture Management
   {
     id: 'cloud-security-posture',
@@ -488,7 +473,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.7,
     reviews: 42
   },
-
   // DevSecOps Security Platform
   {
     id: 'devsecops-security-platform',
@@ -541,7 +525,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     rating: 4.8,
     reviews: 28
   },
-
   // IoT Security Platform
   {
     id: 'iot-security-platform',
@@ -593,6 +576,5 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43,
     rating: 4.7,
     reviews: 21
->>>>>>> origin/auto/autonomy-17186719616
   }
 ];

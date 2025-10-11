@@ -1,14 +1,6 @@
-
-
-
-
-
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
-
   ensureDisputeUploadDir,
   getDisputeById,
   upsertDispute,;
@@ -20,34 +12,19 @@ import {
 export const config = {
   api: { bodyParser: { sizeLimit: "20mb" } },;
 };
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
   const { id } = req.query;
-
   if (typeof id !== "string")
-
-
     return res && res.status(400).json({ error: "Invalid id" });
-
-
   const user = parseUserFromRequest(req);
-
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
-
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
-
     }
     const { files } =
-
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -89,25 +66,14 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
-
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[];
       });
-
-
     }
-
-
 }
-
-
-
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
-
-
-
     dispute.updated_at = now;
     await upsert_dispute (dispute);
     return res.status (201).json ({ dispute });
@@ -127,14 +93,11 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
 }
         fs.write_file (file_path, data, (err2: any) =>;
           err2 ? reject (err2) : resolve (),
-
         );
       }
     );
   });
-
 }
-
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -159,15 +122,8 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 }
-
-
-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -259,14 +215,3 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
-

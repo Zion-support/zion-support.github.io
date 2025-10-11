@@ -55,7 +55,6 @@ export default function News() {
     'Last Month',
     'Last 3 Months',
     'Last Year'
-=======
   const [selectedYear, setSelectedYear] = useState('all');
 
   const categories = [
@@ -199,7 +198,6 @@ export default function News() {
 
   const filteredNews = newsArticles.filter(article => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-=======
   const categories = [
     "All News",
     "Product Launch",
@@ -235,7 +233,6 @@ export default function News() {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-=======
 import { motion } from 'framer-motion';
 import { 
   Search, 
@@ -304,7 +301,6 @@ const News = () => {
       image: "/api/placeholder/600/400",
       views: "12.8k",
       type: "announcement",
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -318,7 +314,6 @@ export default function News() {
       date: '2024-08-25',
       readTime: '5 min read',
       image: '🚀',
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
@@ -548,7 +543,6 @@ export default function News() {
           </div>
         </div>
       </section>
-=======
       {/* Press Contact CTA */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -570,7 +564,6 @@ export default function News() {
               </button>
               <button className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">
                 Media Kit
-=======
       {/* Recent News Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -713,7 +706,6 @@ export default function News() {
           </motion.div>
         </div>
       </section>
-=======
       title: 'AI-Powered Business Intelligence Suite Update',
       excerpt: 'Enhanced analytics capabilities with real-time insights and predictive modeling.',
       category: 'Product Update',
@@ -798,7 +790,6 @@ export default function News() {
             <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300">
               RSS Feed
             </button>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -1156,7 +1147,6 @@ export default function News() {
 };
 
 export default News;
-=======
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',
       excerpt: 'Recognition for our groundbreaking work in autonomous AI systems and machine learning solutions that are transforming industries worldwide.',
       date: '2025-01-10',
@@ -1350,7 +1340,6 @@ export default News;
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium">
                 Subscribe
-=======
       {/* Regular News */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -8,28 +6,13 @@ export function getConfig() {
     totalSupply: 1000000
   };
 export interface TokenTransaction {;
-
   id: string;
   userId: string;
-
-
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
-
-
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
 }
-
-
   id: string;
   user_id: string;
   amount: number;
@@ -39,7 +22,6 @@ export interface TokenTransaction {;
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
-
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -49,7 +31,6 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason
     timestamp: Date.now()
   }
-
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -57,16 +38,6 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason,
     timestamp: Date.now();
   };
-  
-
-
-
-
-
-
-
-
-
   transactions.push(transaction);
   return transaction;
 }
@@ -75,10 +46,6 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
-
-
-
-
 ;
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
@@ -104,17 +71,10 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   }
 ;
   transactions.push (transaction);
-
-
   return transaction;
-
-
-
   transactions.push(transaction);
   return transaction;
 }
-
-
 export function getConfig() {
   return {
     enabled: true,
@@ -129,27 +89,21 @@ export function setConfig(
   // Update the configuration
   Object.assign(current, partial);
 }
-
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
 }
-
-
-=======
 import { randomUUID } from "crypto";
 import { tokenStore } from "./storage";
 import { TokenTransaction, WalletSummary } from "./types";
-
 export function getWalletSummary(userId: string): WalletSummary {
   const wallet = tokenStore.getWallet(userId);
   const transactions = tokenStore.getTransactions(userId);
   const config = tokenStore.getConfig();
   return { wallet, transactions, config };
 }
-
 export function earnTokens(
   userId: string,
   amount: number,
@@ -172,7 +126,6 @@ export function earnTokens(
   tokenStore.addTransaction(tx);
   return tx;
 }
-
 export function burnTokens(
   userId: string,
   amount: number,
@@ -196,7 +149,6 @@ export function burnTokens(
   tokenStore.addTransaction(tx);
   return tx;
 }
-
 export function issueTokens(
   userId: string,
   amount: number,
@@ -206,7 +158,6 @@ export function issueTokens(
   tx.type = "issue";
   return tx;
 }
-
 export function revokeTokens(
   userId: string,
   amount: number,
@@ -216,21 +167,18 @@ export function revokeTokens(
   tx.type = "revoke";
   return tx;
 }
-
 export function handleAction(userId: string, action: string, metadata?: Record<string, any>): TokenTransaction {
   const { earnRules } = tokenStore.getConfig();
   const amount = earnRules[action];
   if (!amount) throw new Error("Unknown action");
   return earnTokens(userId, amount, action, metadata);
 }
-
 export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {
   const { burnRules } = tokenStore.getConfig();
   const amount = burnRules[feature];
   if (!amount) throw new Error("Unknown feature");
   return burnTokens(userId, amount, feature, metadata);
 }
-
 export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction; usd: number } {
   const { usdPerToken } = tokenStore.getConfig();
   const tx = burnTokens(userId, amount, "redeem_credits");
@@ -238,17 +186,13 @@ export function redeemToCredits(userId: string, amount: number): { tx: TokenTran
   const usd = parseFloat((amount * usdPerToken).toFixed(2));
   return { tx, usd };
 }
-
 export function getAllTransactions() {
   return tokenStore.getTransactions();
 }
-
 export function getConfig() {
   return tokenStore.getConfig();
 }
-
 export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 }
->>>>>>> origin/auto/autonomy-17186719616
