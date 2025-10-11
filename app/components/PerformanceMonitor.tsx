@@ -17,14 +17,14 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window === 'undefined') return;
 
     // Only show in development or when performance monitoring is enabled
-      const shouldMonitor = const shouldMonitor = process.env.NODE_ENV === 'development' ||;
+    const shouldMonitor = process.env.NODE_ENV === 'development' ||
                          localStorage.getItem('performance-monitoring') === 'true';
 
     if (!shouldMonitor) return;
 
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {;
+    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
-    }
+    };
 
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
@@ -39,7 +39,7 @@ const PerformanceMonitor: React.FC = () => {
 
     // Monitor performance with Performance Observer
     if ('PerformanceObserver' in window) {
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
             updateMetrics({ lcp: entry.startTime })
@@ -85,7 +85,11 @@ const PerformanceMonitor: React.FC = () => {
     return 'Poor';
   }
 
-  return ()
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+      <div className="flex justify-between items-center mb-2">
+        <h3 className="text-sm font-semibold">Performance</h3>
+        <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
         >
@@ -93,33 +97,47 @@ const PerformanceMonitor: React.FC = () => {
         </button>
       </div>
       
-      <div className="space-y-1" /></div>
-        {metrics.lcp && ()
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })} /></span>
+      <div className="space-y-1">
+        {metrics.lcp && (
+          <div className="text-xs">
+            <span className="text-gray-400">LCP: </span>
+            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
               {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
             </span>
           </div>
-        )},
-    {metrics.fid && ()
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })} /></span>
+        )}
+        
+        {metrics.fid && (
+          <div className="text-xs">
+            <span className="text-gray-400">FID: </span>
+            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
               {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
             </span>
           </div>
-        )},
-    {metrics.cls && ()
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })} /></span>
+        )}
+        
+        {metrics.cls && (
+          <div className="text-xs">
+            <span className="text-gray-400">CLS: </span>
+            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
               {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
             </span>
           </div>
-        )},
-    {metrics.fcp && ()
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })} /></span>
+        )}
+        
+        {metrics.fcp && (
+          <div className="text-xs">
+            <span className="text-gray-400">FCP: </span>
+            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
               {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
             </span>
           </div>
-        )},
-    {metrics.ttfb && ()
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })} /></span>
+        )}
+        
+        {metrics.ttfb && (
+          <div className="text-xs">
+            <span className="text-gray-400">TTFB: </span>
+            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>
           </div>
