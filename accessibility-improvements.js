@@ -1,9 +1,11 @@
 // Accessibility improvements to implement
+
 // 1. Add ARIA labels to interactive elements
 // Example JSX:
-// <button aria-label="Close dialog">×
+// <button aria-label="Close dialog">×</button>
 // <input aria-describedby="email-help" type="email" />
-// <div id="email-help">Enter your email address
+// <div id="email-help">Enter your email address</div>
+
 // 2. Implement focus management
 const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
@@ -11,6 +13,7 @@ const trapFocus = (element) => {
   )
   const firstElement = focusableElements[0]
   const lastElement = focusableElements[focusableElements.length - 1]
+  
   element.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -27,21 +30,25 @@ const trapFocus = (element) => {
     }
   })
 }
+
 // 3. Add live regions for dynamic content
 // Example JSX:
 // <div aria-live="polite" aria-atomic="true" className="sr-only">
 //   {announcement}
-//
+// </div>
+
 // 4. Ensure proper heading hierarchy
 // Example JSX:
-// <h1>Main Page Title
-// <h2>Section Title
-// <h3>Subsection Title
+// <h1>Main Page Title</h1>
+// <h2>Section Title</h2>
+// <h3>Subsection Title</h3>
+
 // 5. Add skip links
 // Example JSX:
 // <a href="#main-content" className="skip-link">
 //   Skip to main content
-//
+// </a>
+
 // 6. Use semantic HTML
 // Example JSX:
 // <main>
@@ -58,7 +65,8 @@ const trapFocus = (element) => {
 //   </section>
 // </main>
 
-// 7. Form accessibility;
+// 7. Form accessibility
+// Example JSX:
 // <form>
 //   <fieldset>
 //     <legend>Contact Information</legend>
@@ -75,81 +83,49 @@ const trapFocus = (element) => {
 //   </fieldset>
 // </form>
 
-// 8. Image accessibility;
+// 8. Image accessibility
+// Example JSX:
 // <img
 //   src="chart.png" 
 //   alt="Sales chart showing 25% increase in Q3 2024"
 //   role="img"
 // />
-// 9. Color contrast considerations;
-// Ensure sufficient contrast ratios: // - Normal text: 4.5:1;
-// - Large text: 3:1;
-// - UI components: 3:1;
-// 10. Keyboard navigation;
+
+// 9. Color contrast considerations
+// Ensure sufficient contrast ratios:
+// - Normal text: 4.5:1
+// - Large text: 3:1
+// - UI components: 3:1
+
+// 10. Keyboard navigation
 // All interactive elements should be:
-// - Focusable with Tab key;
-// - Activable with Enter/Space;
-// - Have visible focus indicators;
-// - Follow logical tab order;
+// - Focusable with Tab key
+// - Activable with Enter/Space
+// - Have visible focus indicators
+// - Follow logical tab order
+
 // Accessibility improvements
 // Add ARIA labels
 export const addARIALabels = () => {
   // TODO: Implement ARIA labels
-};
+}
 
 // Improve keyboard navigation
 export const improveKeyboardNavigation = () => {
   // TODO: Implement keyboard navigation
-};
+}
 
 // Add alt text
 export const addAltText = () => {
   // TODO: Implement alt text
-};
+}
 
 // Run accessibility improvements
 export const runAccessibilityImprovements = () => {
-  console.log('Running accessibility improvements...');
-  addARIALabels();
-  improveKeyboardNavigation();
-  addAltText();
-};
-//       <li><a href="/">Home</a>
-//
-//
-//   <section>
-//     <h2>Section Title
-//     <article>
-//       <h3>Article Title
-//
-//
-//
-// 7. Form accessibility
-// Example JSX:
-// <form>
-//   <fieldset>
-//     <legend>Contact Information
-//     <label htmlFor="email">Email:
-//     <input id="email" type="email" required />
-//     <label htmlFor="phone">Phone:
-//     <input id="phone" type="tel" />
-//
-//
-// 8. Color contrast and visual indicators
-// Example CSS:
-// .focus-visible:focus {
-//   outline: 2px solid #0066cc
-//   outline-offset: 2px
-// }
+  console.log('Running accessibility improvements...')
+  addARIALabels()
+  improveKeyboardNavigation()
+  addAltText()
+}
 
-// 9. Keyboard navigation
-// Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
-//   Clickable div
-//
-// 10. Screen reader announcements
-// Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
-//   {errorMessage}
-//
-export { trapFocus }</div></div></div></div></button></a></a></h1></h2></h2></h3></h3></ul></li></main></section></article></nav>
+export { trapFocus }

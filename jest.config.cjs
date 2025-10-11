@@ -1,4 +1,3 @@
-export default {
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
@@ -20,15 +19,6 @@ module.exports = {
       useESM: true
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
-
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
-      presets: [
-        ['@babel/preset-env', { targets: { node: 'current' } }],
-        ['@babel/preset-react', { runtime: 'automatic' }],
-        '@babel/preset-typescript'
-      ]
-    }]
-
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
@@ -58,6 +48,4 @@ module.exports = {
       useESM: true
     }
   }
-};
-  ]
 }
