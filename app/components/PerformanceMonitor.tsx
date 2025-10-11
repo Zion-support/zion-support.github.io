@@ -1,150 +1,93 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+'use client'
+import React, { useEffect, useState } from 'react'
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+  loadTime: number
+  domContentLoaded: number
+  firstContentfulPaint: number
+  largestContentfulPaint: number
+  cumulativeLayoutShift: number
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
-  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    const measurePerformance = () => {
+      if (typeof window === 'undefined' || !('performance' in window)) return
 
-    // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
-                         localStorage.getItem('performance-monitoring') === 'true';
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (!perfData) return
 
-    if (!shouldMonitor) return;
-
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
-    }
-
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => updateMetrics({ cls: metric.value }));
-        getFID((metric) => updateMetrics({ fid: metric.value }));
-        getFCP((metric) => updateMetrics({ fcp: metric.value }));
-        getLCP((metric) => updateMetrics({ lcp: metric.value }));
-        getTTFB((metric) => updateMetrics({ ttfb: metric.value }));
-      })
-    }
-
-    // Monitor performance with Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics({ lcp: entry.startTime })
-          }
-          if (entry.entryType === 'first-input') {
-            updateMetrics({ fid: entry.processingStart - entry.startTime })
-          }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime })
-            }
-          }
-        })
-      })
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] })
-      } catch (e) {
-        console.warn('Performance Observer not supported:', e);
+      const newMetrics: PerformanceMetrics = {
+        loadTime: perfData.loadEventEnd - perfData.fetchStart,
+        domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        cumulativeLayoutShift: 0
       }
 
-      return () => observer.disconnect();
+      // Get FCP if available
+      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0]
+      if (fcpEntry) {
+        newMetrics.firstContentfulPaint = fcpEntry.startTime
+      }
+
+      // Get LCP if available
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint')
+      if (lcpEntries.length > 0) {
+        newMetrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime
+      }
+
+      // Get CLS if available
+      const clsEntries = performance.getEntriesByType('layout-shift')
+      if (clsEntries.length > 0) {
+        newMetrics.cumulativeLayoutShift = clsEntries.reduce((sum, entry) => {
+          return sum + (entry as any).value
+        }, 0)
+      }
+
+      setMetrics(newMetrics)
+
+      // Log metrics in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', newMetrics)
+      }
     }
 
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {
+      window.addEventListener('load', measurePerformance)
+    }
 
-  if (!isVisible || Object.keys(metrics).length === 0) {
-    return null;
-  }
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [])
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  }
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null
   }
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-1">
-        {metrics.lcp && (
-          <div className="flex justify-between">
-            <span>LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.fid && (
-          <div className="flex justify-between">
-            <span>FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.cls && (
-          <div className="flex justify-between">
-            <span>CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.fcp && (
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.ttfb && (
-          <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
-            </span>
-          </div>
-        )}
-      </div>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      {metrics ? (
+        <div className="space-y-1">
+          <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
+          <div>DOM Ready: {metrics.domContentLoaded.toFixed(2)}ms</div>
+          <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
+          <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
+          <div>CLS: {metrics.cumulativeLayoutShift.toFixed(4)}</div>
+        </div>
+      ) : (
+        <div>Measuring...</div>
+      )}
     </div>
-  );
-};
+  )
+}
 
-export default PerformanceMonitor;
+export default PerformanceMonitor

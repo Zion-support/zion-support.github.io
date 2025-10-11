@@ -1,5 +1,5 @@
-// Revolutionary AI 2027 Breakthrough Content;
-// Latest cutting-edge AI technologies and enterprise transformations;
+// Revolutionary AI 2027 Breakthrough Content
+// Latest cutting-edge AI technologies and enterprise transformations
 export const breakthroughContent2027 = [
   {
     id: 'ai-2027-ultimate-consciousness-breakthrough',
@@ -42,7 +42,7 @@ export const breakthroughContent2027 = [
     category: 'Synthetic Consciousness',
     tags: ['consciousness', 'synthetic', 'AI 2027', 'emotional intelligence', 'creativity'],
     featured: true,
-    readTime: '11 min read'}];
+    readTime: '11 min read'}]
 export const caseStudies2027 = [
   {
     id: 'ai-2027-ultimate-consciousness-847-billion-success'
@@ -75,9 +75,9 @@ export const caseStudies2027 = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]
 export const caseStudies2027 = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
-  }];
+  }]

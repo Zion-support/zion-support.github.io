@@ -1,8 +1,8 @@
 
 'use client'
 /**
- * Environment Variables Validator;
- * Ensures all required environment variables are present and valid;
+ * Environment Variables Validator
+ * Ensures all required environment variables are present and valid
  */
 
 export interface EnvConfig {
@@ -11,7 +11,7 @@ export interface EnvConfig {
 
 }
   NODE_EN,
-  V: 'development' | 'production' | 'test';
+  V: 'development' | 'production' | 'test'
   NEXT_PUBLIC_API_URL?: string
   NEXT_PUBLIC_GA_ID?: string
   NEXT_PUBLIC_SITE_URL?: string,
@@ -32,9 +32,9 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 }
     this.errors = []
     this.warnings = []
-    // Validate NODE_ENV;
+    // Validate NODE_ENV
 //     this.validateNodeEnv()
-    // Validate optional but recommended variables;
+    // Validate optional but recommended variables
 //     this.validateOptionalVars()
 
     return {
@@ -51,7 +51,7 @@ class EnvValidator {/* TODO: Fix JSX expression */}
     }
   }
   /**
-   * Get validated environment configuration;
+   * Get validated environment configuration
    */
   getConfig(): EnvConfig {if (!validation.isValid) {}
   // TOD,
@@ -67,12 +67,12 @@ ${validation.errors.join('
     if (validation.warnings.length > 0) {
     const nodeEnv = process.env['NODE_ENV']
   }
-    const validEnvs = ['development', 'production', 'test'];
+    const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //       this.errors.push('NODE_ENV is not set')
-//       return;
+//       return
     }
 
     if (!validEnvs.includes(nodeEnv)) {
@@ -90,7 +90,7 @@ ${validation.errors.join('
 
 }
     const nodeEnv = this.getNodeEnv()
-    // In production, these should be set;
+    // In production, these should be set
     if (nodeEnv === 'production') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -123,9 +123,9 @@ ${validation.errors.join('
     return env as 'development' | 'production' | 'test'
   }
 }
-// Export singleton instance;
+// Export singleton instance
 export const envValidator = new EnvValidator()
-// Export convenience function;
+// Export convenience function
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

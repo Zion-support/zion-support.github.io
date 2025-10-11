@@ -427,7 +427,6 @@ button:focus-visible {
   border-color: rgba(102, 126, 234, 0.3);
 }
 
-<<<<<<< HEAD
 /* Futuristic backgrounds */
 .bg-cyber-grid {
   background-image: 
@@ -446,7 +445,9 @@ button:focus-visible {
   .neon-text {
     animation: none;
     text-shadow: 0 0 5px currentColor;
-=======
+  }
+}
+
 /* Advanced Futuristic Effects */
 .cyber-nav {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
@@ -739,7 +740,6 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
   }
   
   .pulse-glow {
@@ -1078,6 +1078,76 @@ button:focus-visible {
   .cyber-card-enhanced {
     backdrop-filter: blur(10px);
   }
+}
+
+/* Additional Futuristic Styles for Micro SaaS Page */
+.futuristic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 119, 198, 0.1) 0%, transparent 50%);
+  background-size: 400% 400%;
+  animation: neural-network 20s ease infinite;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.neon-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.neon-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.neon-button:hover::before {
+  left: 100%;
+}
+
+.neon-button:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
 /* Print styles */

@@ -1,21 +1,21 @@
-// Expanded Innovative Services 2027 - Zion Tech Group;
-// Additional Micro SAAS, IT Infrastructure, and AI Services;
+// Expanded Innovative Services 2027 - Zion Tech Group
+// Additional Micro SAAS, IT Infrastructure, and AI Services
 export type ExpandedService2027 =
-  id: string;
-  name: string;
-  category: string;
-  subcategory: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  pricing: unknown;
-    model: string;
-    basePrice: number;
-    currency: string;
-    pricingTiers: unknown;
-      starter: number;
+  id: string
+  name: string
+  category: string
+  subcategory: string
+  description: string
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  targetAudience: string[]
+  pricing: unknown
+    model: string
+    basePrice: number
+    currency: string
+    pricingTiers: unknown
+      starter: number
       professional: number
       enterprise: number
       custom: string,
@@ -23,34 +23,34 @@ export type ExpandedService2027 =
     freeTier: boolean
     trialPeriod: string,
   }
-  marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
-  technology: string[];
-  innovationLevel: string;
-  marketSize: string;
-  growthRate: string;
-  contactInfo: unknown;
-    phone: string;
+  marketPrice: string
+  competitors: string[]
+  roi: string
+  setupTime: string
+  integrations: string[]
+  technology: string[]
+  innovationLevel: string
+  marketSize: string
+  growthRate: string
+  contactInfo: unknown
+    phone: string
     email: string
     website: string
     address: string,
   }
-  technicalSpecs: unknown;
-    uptime: string;
-    security: string[];
+  technicalSpecs: unknown
+    uptime: string
+    security: string[]
     compliance: string[]
     apiEndpoints: number
     scalability: string,
   }
-  support: string;
+  support: string
   rating: number
   reviews: number
   launchDate: string,
   status: 'active' | 'beta' | 'coming-soon'}
-// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
+// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
 export const advancedCybersecurityServices: ExpandedService2027[] = [
     id: 'quantum-threat-hunter'
     name: 'Quantum Threat Hunter',
@@ -149,7 +149,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
   statu,
   s: 'active' | 'beta' | 'coming-soon'
 }
-// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE;
+// 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
 export const,
   advancedCybersecurityServices: ExpandedService2027[] = [,
     i,
@@ -200,11 +200,11 @@ export const,
       'Large enterprises',
       'Critical infrastructure operators'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Tiered Subscription'
-      basePrice: 2500;
+      basePrice: 2500
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2500
         professional: 5000
         enterprise: 10000,
@@ -368,11 +368,11 @@ export const,
       'Compliance officers',
       'Risk management teams'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Per-User + Base'
-      basePrice: 1500;
+      basePrice: 1500
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 1500
         professional: 3000
         enterprise: 6000,
@@ -404,8 +404,8 @@ export const,
     reviews: 189,
     launchDate: '2027-02-01',
     status: 'active'}
-];
-// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
+]
+// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     id: 'predictive-insights-engine'
     name: 'Predictive Insights Engine',
@@ -491,8 +491,8 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     statu,
   s: 'active'
   }
-];
-// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE;
+]
+// 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
 export const,
   advancedDataAnalyticsServices: ExpandedService2027[] = [,
     i,
@@ -543,11 +543,11 @@ export const,
       'E-commerce platforms',
       'Consulting firms'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Usage-based + Base'
-      basePrice: 1800;
+      basePrice: 1800
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 1800
         professional: 3500
         enterprise: 7000,
@@ -711,11 +711,11 @@ export const,
       'Manufacturing firms',
       'Telecommunications'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Per-Stream + Processing'
-      basePrice: 2200;
+      basePrice: 2200
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2200
         professional: 4500
         enterprise: 9000,
@@ -747,8 +747,8 @@ export const,
     reviews: 198,
     launchDate: '2027-02-15',
     status: 'active'}
-];
-// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
+]
+// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     id: 'multi-cloud-orchestrator'
     name: 'Multi-Cloud Orchestrator',
@@ -834,8 +834,8 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     statu,
   s: 'active'
   }
-];
-// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS;
+]
+// 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
 export const,
   advancedCloudDevOpsServices: ExpandedService2027[] = [,
     i,
@@ -886,11 +886,11 @@ export const,
       'Government agencies',
       'E-commerce platforms'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Percentage of Cloud Spend'
-      basePrice: 2000;
+      basePrice: 2000
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2000
         professional: 4000
         enterprise: 8000,
@@ -1048,11 +1048,11 @@ export const,
       'Quality assurance teams',
       'Release managers'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Per-Developer + Base'
-      basePrice: 1200;
+      basePrice: 1200
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 1200
         professional: 2500
         enterprise: 5000,
@@ -1084,8 +1084,8 @@ export const,
     reviews: 245,
     launchDate: '2027-02-05',
     status: 'active'}
-];
-// 4. ADVANCED IOT & EDGE COMPUTING;
+]
+// 4. ADVANCED IOT & EDGE COMPUTING
 export const advancedIoTServices: ExpandedService2027[] = [,
     id: 'industrial-iot-intelligence',
     name: 'Industrial IoT Intelligence Platform',
@@ -1171,8 +1171,8 @@ export const advancedIoTServices: ExpandedService2027[] = [,
     statu,
   s: 'active'
   }
-];
-// 4. ADVANCED IOT & EDGE COMPUTING;
+]
+// 4. ADVANCED IOT & EDGE COMPUTING
 export const,
   advancedIoTServices: ExpandedService2027[] = [,
     i,
@@ -1223,11 +1223,11 @@ export const,
       'Chemical plants',
       'Mining operations'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Per-Smartphone + Data Processing'
-      basePrice: 2800;
+      basePrice: 2800
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2800
         professional: 5500
         enterprise: 11000,
@@ -1385,11 +1385,11 @@ export const,
       'Utility companies',
       'Public safety agencies'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'City Size + Services'
-      basePrice: 5000;
+      basePrice: 5000
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 5000
         professional: 10000
         enterprise: 20000,
@@ -1421,8 +1421,8 @@ export const,
     reviews: 156,
     launchDate: '2027-02-10',
     status: 'active'}
-];
-// 5. ADVANCED FINANCIAL TECHNOLOGY;
+]
+// 5. ADVANCED FINANCIAL TECHNOLOGY
 export const advancedFinTechServices: ExpandedService2027[] = [
     id: 'quantum-financial-modeling'
     name: 'Quantum Financial Modeling Platform',
@@ -1508,8 +1508,8 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     statu,
   s: 'active'
   }
-];
-// 5. ADVANCED FINANCIAL TECHNOLOGY;
+]
+// 5. ADVANCED FINANCIAL TECHNOLOGY
 export const,
   advancedFinTechServices: ExpandedService2027[] = [,
     i,
@@ -1560,11 +1560,11 @@ export const,
       'Trading firms',
       'Financial advisors'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Usage-based + Base'
-      basePrice: 8000;
+      basePrice: 8000
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 8000
         professional: 15000
         enterprise: 30000,
@@ -1722,11 +1722,11 @@ export const,
       'Startups and developers',
       'Global users'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Transaction Fees + Governance'
-      basePrice: 0;
+      basePrice: 0
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 0
         professional: 0
         enterprise: 0,
@@ -1758,8 +1758,8 @@ export const,
     reviews: 423,
     launchDate: '2027-01-01',
     status: 'active'}
-];
-// 6. ADVANCED HEALTHCARE TECHNOLOGY;
+]
+// 6. ADVANCED HEALTHCARE TECHNOLOGY
 export const advancedHealthcareServices: ExpandedService2027[] = [
     id: 'ai-diagnostic-assistant'
     name: 'AI Diagnostic Assistant',
@@ -1845,8 +1845,8 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     statu,
   s: 'active'
   }
-];
-// 6. ADVANCED HEALTHCARE TECHNOLOGY;
+]
+// 6. ADVANCED HEALTHCARE TECHNOLOGY
 export const,
   advancedHealthcareServices: ExpandedService2027[] = [,
     i,
@@ -1897,11 +1897,11 @@ export const,
       'Pharmaceutical companies',
       'Medical device companies'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Per-Provider + Usage'
-      basePrice: 3500;
+      basePrice: 3500
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 3500
         professional: 7000
         enterprise: 14000,
@@ -2059,11 +2059,11 @@ export const,
       'Patients',
       'Healthcare startups'
     ],
-    pricing: unknown;
+    pricing: unknown
       model: 'Per-Provider + Transaction'
-      basePrice: 2500;
+      basePrice: 2500
       currency: 'USD'
-      pricingTiers: unknown;
+      pricingTiers: unknown
         starter: 2500
         professional: 5000
         enterprise: 10000,
@@ -2173,17 +2173,17 @@ export const,
     statu,
   s: 'active'
   }
-];
-// Export all expanded services;
+]
+// Export all expanded services
 export const ALL_EXPANDED_SERVICES_2027 = [
   ...advancedCybersecurityServices,
   ...advancedDataAnalyticsServices,
   ...advancedCloudDevOpsServices,
   ...advancedIoTServices,
   ...advancedFinTechServices,
-  ...advancedHealthcareServices;
-];
-// Service categories for filtering;
+  ...advancedHealthcareServices
+]
+// Service categories for filtering
 export const EXPANDED_SERVICE_CATEGORIES = [
   'All',
   'Cybersecurity',
@@ -2192,8 +2192,8 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   'IoT & Edge Computing',
   'Financial Technology',
   'Healthcare Technology'
-];
-// Helper function to get services by category;
+]
+// Helper function to get services by category
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] =>,
   if (category === 'All'),
 export const getExpandedServicesByCategory = (categor)
@@ -2201,18 +2201,18 @@ export const getExpandedServicesByCategory = (categor)
   if (category === 'All')
     return ALL_EXPANDED_SERVICES_2027,
   }
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
+  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)
 }
-// Helper function to get services by subcategory;
+// Helper function to get services by subcategory
 export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] =>
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),}
-// Helper function to search services;
+// Helper function to search services
 export const searchExpandedServices = (query: string): ExpandedService2027[] =>
 export const getExpandedServicesBySubcategory = (subcategor)
   y: string): ExpandedService2027[] =>
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory),
 }
-// Helper function to search services;
+// Helper function to search services
 export const searchExpandedServices = (quer)
   y: string): ExpandedService2027[] =>
 //   const lowercaseQuery = query.toLowerCase(),
@@ -2222,7 +2222,7 @@ export const searchExpandedServices = (quer)
     service.category.toLowerCase().includes(lowercaseQuery) ||
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
     service.category.toLowerCase().includes(lowercaseQuery) ||,
-    service.subcategory.toLowerCase().includes(lowercaseQuery));
+    service.subcategory.toLowerCase().includes(lowercaseQuery))
 }
 // Expanded Innovative Services 2027 - Zion Tech Group // Additional Micro SAAS, IT Infrastructure, and AI Services export type ExpandedService2027 = i,
   d: string, nam,

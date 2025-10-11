@@ -1,6 +1,6 @@
-'use client';
-import React, { Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
+'use client'
+import React, { Suspense, lazy } from 'react'
+import { Link } from 'react-router-dom'
 import {
     Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
@@ -73,19 +73,19 @@ import {
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
   Webcam as WebcamIcon, Speaker as SpeakerIcon
   }
-} from 'lucide-react';
+} from 'lucide-react'
 const ITConsultingPage: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
 const itServices = [
-    // IT Infrastructure Services;
+    // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
       category: 'infrastructure',
       icon: Server,
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5,000',
       features: [,
         'Network architecture design',
         'Server deployment and configuration',
@@ -125,7 +125,7 @@ const itServices = [
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',
       category: 'cloud',
       icon: Cloud,
-      price: 'Starting at $3,000',;
+      price: 'Starting at $3,000',
       features: [,
         'Cloud readiness assessment',
         'Migration strategy development',
@@ -165,7 +165,7 @@ const itServices = [
       description: 'Comprehensive security assessment, implementation, and ongoing protection',
       category: 'security',
       icon: Shield,
-      price: 'Starting at $2,500',;
+      price: 'Starting at $2,500',
       features: [,
         'Security risk assessment',
         'Penetration testing',
@@ -205,7 +205,7 @@ const itServices = [
       description: 'High-performance network infrastructure design and optimization for reliability',
       category: 'networking',
       icon: Network,
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2,000',
       features: [,
         'Network architecture design',
         'Bandwidth optimization',
@@ -245,7 +245,7 @@ const itServices = [
       description: 'Database design, implementation, optimization, and ongoing management',
       category: 'database',
       icon: Database,
-      price: 'Starting at $1,500',;
+      price: 'Starting at $1,500',
       features: [,
         'Database design and architecture',
         'Performance optimization',
@@ -325,7 +325,7 @@ const itServices = [
       description: 'Tailored software solutions built to meet specific business requirements',
       category: 'development',
       icon: Code,
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5,000',
       features: [,
         'Requirements analysis',
         'Custom application development',
@@ -405,7 +405,7 @@ const itServices = [
       description: 'Comprehensive disaster recovery planning and implementation',
       category: 'recovery',
       icon: RefreshCw,
-      price: 'Starting at $3,500',;
+      price: 'Starting at $3,500',
       features: [,
         'Business impact analysis',
         'Recovery time objective planning',
@@ -445,7 +445,7 @@ const itServices = [
       description: 'Compliance assessment and implementation for various industry standards',
       category: 'compliance',
       icon: CheckSquare,
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2,000',
       features: [,
         'Compliance gap analysis',
         'Policy and procedure development',
@@ -494,10 +494,10 @@ const categories = [
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ]
-const filteredServices = itServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredServices = itServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch
   }
   })
@@ -505,9 +505,9 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -523,11 +523,11 @@ return (
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
             <a>
-              <Phone>
+              </a><Phone>
               Call (302) 464-0950
             </a>
             <a>
-              <Mail>
+              </a><Mail>
               Get IT Consultation,
             </a>
           </div>
@@ -536,22 +536,22 @@ return (
 
       {/* Search and Filter Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="flex flex-col lg:flex-row gap-6 mb-8" / /></div>
             {/* Search */}</div>
             <div className="flex-1"></div>
               <div className="relative"></div>
                 <Search>
-                <input;
-                  type="text";
-                  placeholder="Search IT services...";
+                </Search><input
+                  type="text"
+                  placeholder="Search IT services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
 
@@ -561,7 +561,7 @@ return (
             </div>
 
             {/* Category Filter */}
-            <div className="lg: w-64"></div>
+            <div className="lg: w-64" / /></div>
               <select,
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
@@ -571,7 +571,7 @@ return (
                 {
     categories.map((category) => (
   }
-                  <option>
+                  </select><option>
 
                     {category.name}
                   </option>
@@ -582,21 +582,80 @@ return (
           </div>
 
           {/* Category Pills */}
-          <div className="flex flex-wrap gap-2 mb-8"></div>
+          <div className="flex flex-wrap gap-2 mb-8" / /></div>
             {
-    categories.map((category) => (</div>
-              <button
-  }
-                key={category.id}
+    categories.map((category) => ()
                 onClick={() => setSelectedCategory(category.id)}
                 className={
     `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category.id;
-                    ? 'bg-cyan-500 text-white';
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
   }
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesCategory && matchesSearch;}
+  })
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true">
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse">
+            Professional <span className="holographic-text">IT Services
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
+            Comprehensive IT solutions designed to optimize your technology infrastructure, 
+            enhance security, and drive business growth. Expert consulting and implementation.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <$2 />
+              href="tel:+13024640950"
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
+              <Phone className="w-5 h-5 inline mr-2" />
+              Call (302) 464-0950
+            <$2 />
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
+              <Mail className="w-5 h-5 inline mr-2" />
+              Get IT Consultation
+      {/* Search and Filter Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 mb-8">
+            {/* Search */}
+            <div className="flex-1">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search IT services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                />
+            {/* Category Filter */}
+            <div className="lg:w-64">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+                {categories.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.name}
+                ))}
+          {/* Category Pills */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {categories.map((category) => (
+              <;}$2 />
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400';}
                 }`}
-              >;
+              >
                 {category.name}
               </button>
             ))}
@@ -606,15 +665,15 @@ return (
       </section>
       {/* Services Grid */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
             {
     filteredServices.map((service) => (</div>
   }
@@ -636,86 +695,137 @@ return (
                       {
     service.features.slice(0, 4).map((feature, idx) => (
   }
-                        <li>
-                          <CheckCircle>
-                          <span>{feature}</span>
+                        </ul><li>
+                          </li><CheckCircle>
+                          </CheckCircle><span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div />
+                  <div / /></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul>
+                    <ul></ul>
                       {
     service.benefits.slice(0, 2).map((benefit, idx) => (
   }
-                        <li>
-                          <TrendingUp>
-                          <span>{benefit}</span>
+                        </ul><li>
+                          </li><TrendingUp>
+                          </TrendingUp><span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-                <div className="space-y-2 mb-6 text-sm"></div>
-                  <div className="flex justify-between"></div>
+                <div className="space-y-2 mb-6 text-sm" / /></div>
+                  <div className="flex justify-between" / /></div>
                     <span className="text-gray-400">Setup Time:</span>
                     <span className="text-white">{service.setupTime}</span>
                   </div>
-                  <div className="flex justify-between"></div>
+                  <div className="flex justify-between" / /></div>
                     <span className="text-gray-400">Free Consultation:</span>
                     <span className="text-green-400">{service.freeConsultation}</span>
                   </div>
-                  <div className="flex justify-between"></div>
+                  <div className="flex justify-between" / /></div>
                     <span className="text-gray-400">Target:</span>
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
                 </div>
                 {
-    service.caseStudy && (;
-                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
-  }
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
-                  </div>
+    service.caseStudy && ()
                 )}
-<div className="space-y-3"></div>
-                  <a>
+<div className="space-y-3" / /></div>
+                  <a></a>
                     Get Free Consultation
                   </a>
                   <a>
-                    <Phone>
+                    </a><Phone>
                     Call for Quote
                   </a>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+      {/* Services Grid */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <service.icon className="w-12 h-12" />
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">{service.price}
+                    <div className="text-sm text-gray-400">starting price
+                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}
+                <div className="space-y-3 mb-6">
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          <span>{feature}
+                      ))}
+                  <div>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:
+                    <ul className="space-y-1">
+                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span>{benefit}
+                      ))}
+                <div className="space-y-2 mb-6 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Setup Time:
+                    <span className="text-white">{service.setupTime}
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Free Consultation:
+                    <span className="text-green-400">{service.freeConsultation}
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Target:
+                    <span className="text-white">{service.targetAudience}
+                {service.caseStudy && (
+                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg">
+                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"
+                )}
+                <div className="space-y-3">
+                  <$2 />
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                    Get Free Consultation
+                  <$2 />
+                    href="tel:+13024640950"
+                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                    <Phone className="w-4 h-4 inline mr-2" />
+                    Call for Quote
+            ))}
       {/* CTA Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <h2></h2>
             Ready to Optimize Your IT Infrastructure?,
           </h2>
-          <p>
-            Our certified IT professionals deliver reliable, secure, and scalable solutions.;
+          <p></p>
+            Our certified IT professionals deliver reliable, secure, and scalable solutions.
             All services include free consultations and ongoing support.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a>
-              <Phone>
+              </a><Phone>
               Call (302) 464-0950
             </a>
             <a>
-              <Mail>
+              </a><Mail>
               Get Custom IT Strategy
             </a>
           </div>
@@ -723,7 +833,26 @@ return (
       </section>
     </div>
   ),
-};
-
-export default ITConsultingPage;
-
+}
+export default ITConsultingPage
+      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+            Ready to Optimize Your IT Infrastructure?
+          <p className="text-xl text-cyan-400 mb-8 neon-glow">
+            Our certified IT professionals deliver reliable, secure, and scalable solutions. 
+            All services include free consultations and ongoing support.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <$2 />
+              href="tel:+13024640950"
+              className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
+              <Phone className="w-5 h-5" />
+              Call (302) 464-0950
+            <$2 />
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
+              <Mail className="w-5 h-5" />
+              Get Custom IT Strategy
+  )
+}
+export default ITConsultingPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></h1></h2></h3></h4></h4></ul></ul></li></li></section></section></section></section>

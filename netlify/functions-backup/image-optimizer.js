@@ -1,15 +1,15 @@
 exports.handler = async function () {/* TODO: Fix JSX expression */}
-  const { execSync } = require('child_process');
+  const { execSync } = require('child_process')
   try {execSync('node automation/image-optimizer.cjs || true', {)
       stdio: inherit),
         shell: true}
-    });
+    })
     execSync('node automation/git-sync.cjs || true', {stdio: inherit),
         shell: true}
-    });
+    })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'image-optimizer' });
+        task: 'image-optimizer' })
     }
   } catch (e) {return {
       statusCode: 200,
@@ -17,15 +17,15 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         error: String(e,),
   try {/* TODO: Fix JSX expression */}
   l: true}
-    });
+    })
     execSync('node automation/git-sync.cjs || true', {/* TODO: Fix JSX expression */}
   l: true})
-    });
+    })
     return {/* TODO: Fix JSX expression */}
-  k: 'image-optimizer' });
+  k: 'image-optimizer' })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

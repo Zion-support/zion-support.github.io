@@ -1,5 +1,5 @@
 export const revolutionary2049UltimateServices = [
-  // Universal Consciousness Network Platform 2049;
+  // Universal Consciousness Network Platform 2049
     id: 'universal-consciousness-network-2049',
     name: 'Universal Consciousness Network Platform 2049',
     tagline: 'Revolutionary universal consciousness network and collective intelligence platform',
@@ -79,7 +79,7 @@ export const revolutionary2049UltimateServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/universal-consciousness-network-2049'},
-  // Reality Fabrication Engine 2049;
+  // Reality Fabrication Engine 2049
     id: 'reality-fabrication-engine-2049',
     name: 'Reality Fabrication Engine 2049',
     tagline: 'Revolutionary reality fabrication and universe creation engine',
@@ -177,7 +177,7 @@ export const revolutionary2049UltimateServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/reality-fabrication-engine-2049'},
-  // Temporal Engineering Platform 2049;
+  // Temporal Engineering Platform 2049
     id: 'temporal-engineering-platform-2049',
     name: 'Temporal Engineering Platform 2049',
     tagline: 'Revolutionary temporal engineering and time manipulation platform',
@@ -275,7 +275,7 @@ export const revolutionary2049UltimateServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/temporal-engineering-platform-2049'},
-  // Universal Physics Manipulation Platform 2049;
+  // Universal Physics Manipulation Platform 2049
     id: 'universal-physics-manipulation-2049',
     name: 'Universal Physics Manipulation Platform 2049',
     tagline: 'Revolutionary universal physics manipulation and fundamental force engineering platform',
@@ -373,7 +373,7 @@ export const revolutionary2049UltimateServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/universal-physics-manipulation-2049'},
-  // Universal Matter Engineering Platform 2049;
+  // Universal Matter Engineering Platform 2049
     id: 'universal-matter-engineering-2049',
     name: 'Universal Matter Engineering Platform 2049',
     tagline: 'Revolutionary universal matter engineering and material creation platform',
@@ -471,7 +471,7 @@ export const revolutionary2049UltimateServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/universal-matter-engineering-2049'},
-  // Universal Energy Creation Platform 2049;
+  // Universal Energy Creation Platform 2049
     id: 'universal-energy-creation-2049',
     name: 'Universal Energy Creation Platform 2049',
     tagline: 'Revolutionary universal energy creation and energy engineering platform',
@@ -569,7 +569,7 @@ export const revolutionary2049UltimateServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/universal-energy-creation-2049'},
-  // Universal Space Engineering Platform 2049;
+  // Universal Space Engineering Platform 2049
     id: 'universal-space-engineering-2049',
     name: 'Universal Space Engineering Platform 2049',
     tagline: 'Revolutionary universal space engineering and dimensional manipulation platform',
@@ -667,7 +667,7 @@ export const revolutionary2049UltimateServices = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/universal-space-engineering-2049'},
-  // Universal Information Engineering Platform 2049;
+  // Universal Information Engineering Platform 2049
     id: 'universal-information-engineering-2049',
     name: 'Universal Information Engineering Platform 2049',
     tagline: 'Revolutionary universal information engineering and data creation platform',
@@ -783,7 +783,7 @@ export const revolutionary2049UltimateServices = [
     slu,
   g: '/universal-information-engineering-2049'
   }
-];
+]
 export const revolutionary2049UltimateServices = [ // Universal Consciousness Network Platform 2049,
   id: 'universal-consciousness-network-2049',' nam,
   e: 'Universal Consciousness Network Platform 2049',' taglin,

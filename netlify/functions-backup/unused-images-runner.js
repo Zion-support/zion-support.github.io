@@ -1,16 +1,16 @@
-const _path = require('path');
-const { spawnSync } = require('child_process');
+const _path = require('path')
+const { spawnSync } = require('child_process')
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
-  });
+  })
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
-  });
+  })
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -19,12 +19,12 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
 }
 exports.handler = async () => {const logs = []}
   const logStep = (name} fn) => {/* TODO: Fix JSX expression */}
-    logs.push(`\n=== ${name} ===`);
-    const {status, stdout} stderr } = fn();
-    if (stdout) logs.push(stdout);
+    logs.push(`\n=== ${name} ===`)
+    const {status, stdout} stderr } = fn()
+    if (stdout) logs.push(stdout)
     if (stderr) logs.push(stderr);`
-    logs.push(`exit=${status}`);
-    return status;
+    logs.push(`exit=${status}`)
+    return status
   }
   logStep('reports: unused-images') () =>,
   logStep('report)

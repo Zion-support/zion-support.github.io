@@ -1,23 +1,23 @@
-'use client';
+'use client'
 /**
  * Enhanced API Client with retry logic, caching, and error handling
  */
 export interface ApiClientConfig {
     'use client'
 /**
- * Enhanced API Client with retry logic, caching, and error handling;
+ * Enhanced API Client with retry logic, caching, and error handling
  */
 
 export interface ApiClientConfig {// TODO: Add content
   }
 
 }
-  baseURL?: string;
-  timeout?: number;
-  retries?: number;
-  retryDelay?: number;
+  baseURL?: string
+  timeout?: number
+  retries?: number
+  retryDelay?: number
   headers?: Record<string>
-  cacheOptions?: CacheOptions;
+  cacheOptions?: CacheOptions
 }
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {
     url: string
@@ -29,8 +29,8 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix 
   O: Add content,}
 }
   ur,
-  l: string;
-  cacheOptions?: CacheOptions;
+  l: string
+  cacheOptions?: CacheOptions
   retries?: number
   timeout?: number
   skipCache?: boolean,
@@ -47,7 +47,7 @@ export class ApiError extends Error {
     public status: number,
     public response?: unknown
   ) {
-export interface ApiResponse;
+export interface ApiResponse
           <T = unknown> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -62,7 +62,7 @@ export class ApiError extends Error {
   }
 
 }
-//   constructor();
+//   constructor()
   messag,
   e: string,
     public,
@@ -70,8 +70,8 @@ export class ApiError extends Error {
     public response?: unknown) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    super(message);
-    this.name = 'ApiError';
+    super(message)
+    this.name = 'ApiError'
   }
 }
 class ApiClient {
@@ -79,7 +79,7 @@ class ApiClient {
     baseURL: string,
     cacheOptions?: CacheOptions
   }
-  private abortControllers: Map<string, AbortController> = new Map();
+  private abortControllers: Map<string, AbortController> = new Map()
   constructor(_config: ApiClientConfig = {}) {
     this.config = {
       baseURL: config.baseURL || '',
@@ -103,7 +103,7 @@ class ApiClient {
       ...config,
       url,
       method:     ,
-$4});
+$4})
   }
   /**
    * POST request
@@ -118,7 +118,7 @@ $4});
       url,
       method: 'POST',
       body: JSON.stringify(data)
-    });
+    })
   }
   /**
    * PUT request
@@ -133,7 +133,7 @@ $4});
       url,
       method: 'PUT',
       body: JSON.stringify(data)
-    });
+    })
   }
   /**
    * DELETE request
@@ -146,7 +146,7 @@ $4});
       ...config,
       url,
       method:     ,
-$4});
+$4})
   }
   /**
    * PATCH request
@@ -161,7 +161,7 @@ $4});
       url,
       method: 'PATCH',
       body: JSON.stringify(data)
-    });
+    })
   }
   /**
    * Main request method with retry logic
@@ -176,11 +176,11 @@ $4});
       retries = this.config.retries,
       timeout = this.config.timeout,
       ...fetchConfig
-    } = config;
-    const cacheKey = `${method}:${fullUrl}`;
+    } = config
+    const cacheKey = `${method}:${fullUrl}`
     // Check cache for GET requests
     if (method === 'GET' && !skipCache) {
-      const cached = cacheManager.get<T>(cacheKey);
+      const cached = cacheManager.get<T>(cacheKey)
       if (cached !== undefined) {
         return {
           data: cached,
@@ -191,11 +191,11 @@ $4});
       }
     }
     // Create abort controller for timeout
-    const controller = new AbortController();
-    this.abortControllers.set(cacheKey, controller);
+    const controller = new AbortController()
+    this.abortControllers.set(cacheKey, controller)
     const timeoutId = setTimeout(() => {
     controller.abort()
-  }, timeout);
+  }, timeout)
     let lastError: Error | null = null,
     while (attempt < retries) {
       try {
@@ -207,17 +207,17 @@ $4});
             ...headers
           },
           signal: controller.signal
-        });
-        clearTimeout(timeoutId);
-        this.abortControllers.delete(cacheKey);
+        })
+        clearTimeout(timeoutId)
+        this.abortControllers.delete(cacheKey)
         if (!response.ok) {
           throw new ApiError(
             `HTTP ${response.status}: ${response.statusText}`,
             response.status,
             await response.text()
-          );
+          )
         }
-        const contentType = response.headers.get('content-type');
+        const contentType = response.headers.get('content-type')
         let data: T,
         if (contentType?.includes('application/json')) {
     data = await response.json()
@@ -226,7 +226,7 @@ $4});
   }
         // Cache successful GET requests
         if (method === 'GET' && !skipCache) {
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
+          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {})
         }
         return {
           data,
@@ -235,8 +235,8 @@ $4});
           headers: response.headers
         }
       } catch (error) {
-        lastError = error as Error;
-        attempt++;
+        lastError = error as Error
+        attempt++
         // Log error
         if (attempt === retries) {
           if (error instanceof ApiError && error.status >= 500) {
@@ -244,13 +244,13 @@ $4});
               url: fullUrl,
               method,
               attempt
-            });
+            })
           } else {
             logError(`API request failed`, error as Error, {
               url: fullUrl,
               method,
               attempt
-            });
+            })
           }
         }
         // Don't retry on certain errors
@@ -273,7 +273,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
   private,
   abortControllers: Map,
-          <string, AbortController> = new Map();
+          <string, AbortController> = new Map()
   constructor(_confi)
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -298,9 +298,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
     }
   }
   /**
-   * GET request;
+   * GET request
    */
-  async get;
+  async get
           <T = unknown>()
     ur,
   l: string,
@@ -313,7 +313,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
 
 }
-    return this.request;
+    return this.request
           <T>({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -325,9 +325,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
   )
   }
   /**
-   * POST request;
+   * POST request
    */
-  async post;
+  async post
           <T = unknown>()
     ur,
   l: string,
@@ -341,7 +341,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
 
 }
-    return this.request;
+    return this.request
           <T>({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -355,9 +355,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
   )
   }
   /**
-   * PUT request;
+   * PUT request
    */
-  async put;
+  async put
           <T = unknown>()
     ur,
   l: string,
@@ -371,7 +371,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
 
 }
-    return this.request;
+    return this.request
           <T>({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -385,9 +385,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
   )
   }
   /**
-   * DELETE request;
+   * DELETE request
    */
-  async delete;
+  async delete
           <T = unknown>()
     ur,
   l: string,
@@ -400,7 +400,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
 
 }
-    return this.request;
+    return this.request
           <T>({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -412,9 +412,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
   )
   }
   /**
-   * PATCH request;
+   * PATCH request
    */
-  async patch;
+  async patch
           <T = unknown>()
     ur,
   l: string,
@@ -428,7 +428,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   }
 
 }
-    return this.request;
+    return this.request
           <T>({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -442,9 +442,9 @@ class ApiClient {/* TODO: Fix JSX expression */}
   )
   }
   /**
-   * Main request method with retry logic;
+   * Main request method with retry logic
    */
-  private async request;
+  private async request
           <T>(confi)
   g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -460,15 +460,15 @@ class ApiClient {/* TODO: Fix JSX expression */}
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
-//       ...fetchConfig;
-    } = config;
-    const cacheKey = `${method}:${fullUrl}`;
-    // Check cache for GET requests;
+//       ...fetchConfig
+    } = config
+    const cacheKey = `${method}:${fullUrl}`
+    // Check cache for GET requests
     if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      const cached = cacheManager.get;
-          <T>(cacheKey);
+      const cached = cacheManager.get
+          <T>(cacheKey)
       if (cached !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -484,14 +484,14 @@ class ApiClient {/* TODO: Fix JSX expression */}
         }
       }
     }
-    // Create abort controller for timeout;
-const controller = new AbortController();
-    this.abortControllers.set(cacheKey, controller);
+    // Create abort controller for timeout
+const controller = new AbortController()
+    this.abortControllers.set(cacheKey, controller)
     const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      controller.abort();
-    }, timeout);
+      controller.abort()
+    }, timeout)
     let,
   lastError: Error | null = null
     while (attempt,)
@@ -511,14 +511,14 @@ const controller = new AbortController();
   O: Add content,}
 }
 //             ...this.config.headers,
-//             ...headers;
+//             ...headers
           },
 
           signal: controller.signal,
 
-        });
-        clearTimeout(timeoutId);
-        this.abortControllers.delete(cacheKey);
+        })
+        clearTimeout(timeoutId)
+        this.abortControllers.delete(cacheKey)
         if (!response.ok) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -530,23 +530,23 @@ const controller = new AbortController();
 //             await response.text()
           )
         }
-        const contentType = response.headers.get('content-type');
+        const contentType = response.headers.get('content-type')
         let,
   data: T,
         if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          data = await response.json();
+          data = await response.json()
         } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          data = (await response.text()) as T;
+          data = (await response.text()) as T
         }
-        // Cache successful GET requests;
+        // Cache successful GET requests
         if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
+          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {})
         }
         return {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -562,9 +562,9 @@ const controller = new AbortController();
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        lastError = error as Error;
-        attempt++;
-        // Log error;
+        lastError = error as Error
+        attempt++
+        // Log error
         if (attempt === retries) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -578,7 +578,7 @@ const controller = new AbortController();
   l: fullUrl,
 //               method,
 //               attempt;)
-            });
+            })
           } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }`
@@ -589,42 +589,42 @@ const controller = new AbortController();
   l: fullUrl,
 //               method,
 //               attempt;)
-            });
+            })
           }
         }
-        // Don't retry on certain errors;
+        // Don't retry on certain errors
         if (error instanceof ApiError && error.status;)
           < 500) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          throw error;
+          throw error
         }
-        // Wait before retrying;
+        // Wait before retrying
         if (attempt;)
           < retries) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          await this.delay(this.config.retryDelay * attempt);
+          await this.delay(this.config.retryDelay * attempt)
         }
       }
     }
-    clearTimeout(timeoutId);
-    this.abortControllers.delete(cacheKey);
-    throw lastError || new Error('Request failed');
+    clearTimeout(timeoutId)
+    this.abortControllers.delete(cacheKey)
+    throw lastError || new Error('Request failed')
   }
   /**
    * Cancel a pending request
    */
   cancel(url: string, method: string = 'GET'): void {
-    const cacheKey = `${method}:${url}`;
-    const controller = this.abortControllers.get(cacheKey);
+    const cacheKey = `${method}:${url}`
+    const controller = this.abortControllers.get(cacheKey)
     if (controller) {
     clearTimeout(timeoutId)
     this.abortControllers.delete(cacheKey)
     throw lastError || new Error('Request failed')
   }
   /**
-   * Cancel a pending request;
+   * Cancel a pending request
    */
 
   cancel(url: string, method: string = 'GET'): void {
@@ -632,13 +632,13 @@ const controller = new AbortController();
   }
 }
 
-    const cacheKey = `${method}:${url}`;
-    const controller = this.abortControllers.get(cacheKey);
+    const cacheKey = `${method}:${url}`
+    const controller = this.abortControllers.get(cacheKey)
     if (controller) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      controller.abort();
-      this.abortControllers.delete(cacheKey);
+      controller.abort()
+      this.abortControllers.delete(cacheKey)
     }
   }
   /**
@@ -646,7 +646,7 @@ const controller = new AbortController();
    */
   cancelAll(): void {
     this.abortControllers.forEach(controller => {
-   * Cancel all pending requests;
+   * Cancel all pending requests
    */
 
   cancelAll(): void {// TODO: Add content
@@ -660,9 +660,9 @@ const controller = new AbortController();
     this.abortControllers.forEach(controller => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
-      controller.abort();
-    });
-    this.abortControllers.clear();
+      controller.abort()
+    })
+    this.abortControllers.clear()
   }
   /**
    * Update default config
@@ -681,7 +681,7 @@ const controller = new AbortController();
    * Set authorization header
    */
   setAuthToken(token: string): void {
-    this.config.headers['Authorization'] = `Bearer ${token}`;
+    this.config.headers['Authorization'] = `Bearer ${token}`
   }
   /**
    * Remove authorization header
@@ -700,10 +700,10 @@ const controller = new AbortController();
    */
   async healthCheck(endpoint: string = '/health'): Promise<boolean> {
     try {
-      const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
-      return response.status === 200;
+      const response = await this.get(endpoint, { timeout: 5000, retries: 1 })
+      return response.status === 200
     } catch {
-    * Update default config;
+    * Update default config
    */
 
   setConfig(config: Partial,
@@ -727,7 +727,7 @@ const controller = new AbortController();
     }
   }
   /**
-   * Set authorization header;
+   * Set authorization header
    */
 
   setAuthToken(token: string): void {
@@ -735,10 +735,10 @@ const controller = new AbortController();
   }
 }
 
-    this.config.headers['Authorization'] = `Bearer ${token}`;
+    this.config.headers['Authorization'] = `Bearer ${token}`
   }
   /**
-   * Remove authorization header;
+   * Remove authorization header
    */
 
   removeAuthToken(): void {
@@ -746,10 +746,10 @@ const controller = new AbortController();
   }
 
 }
-    delete this.config.headers['Authorization'];
+    delete this.config.headers['Authorization']
   }
   /**
-   * Delay helper;
+   * Delay helper
    */
 
   private delay(ms: number): Promise,
@@ -758,10 +758,10 @@ const controller = new AbortController();
   }
 
 }
-    return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms))
   }
   /**
-   * Health check;
+   * Health check
    */
 
   async healthCheck(endpoint: string = '/health'): Promise,
@@ -771,18 +771,18 @@ const controller = new AbortController();
 
 }
       const response = await this.get(endpoint, {/* TODO: Fix JSX expression */})
-  s: 1 });
-      return response.status === 200;
+  s: 1 })
+      return response.status === 200
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return false;
+      return false
     }
   }
 }
 // Create default instance
 const apiClient = new ApiClient({
-// Create default instance;
+// Create default instance
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -794,20 +794,19 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
   cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
   }
-});
+})
 // Export both the class and default instance
 export { apiClient }
-export default ApiClient;
+export default ApiClient
   cacheOptions: {
     // TODO: Add content
   }
 }
-  ttl: 5 * 60 * 1000, // 5 minutes;
-
+  ttl: 5 * 60 * 1000, // 5 minutes
   }
 })
   )
-// Export both the class and default instance;
+// Export both the class and default instance
 export { apiClient }
 export default ApiClient;`
 

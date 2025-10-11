@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('docs-index-runner function triggered')}
-    // Documentation index simulation;
+    // Documentation index simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   x: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in docs-index-runner: ') error
   }
@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'docs-index-runner'})
-      });
+      })
     }
   }
 }

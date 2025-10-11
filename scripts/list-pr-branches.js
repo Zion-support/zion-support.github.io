@@ -2,3 +2,4 @@
   form: <pr_number>|<head_branch>|<head_full_repo> */ import fs from 'fs' function main() {
     ' const path = 'current_prs.json' if (!fs.existsSync(path)) { process.exit(1)
   }' const raw = fs.readFileSync(path) 'utf8'); let prs = []; try {prs = JSON.parse(raw)} } catch (e) {' process.exit(1)} } for (const pr of prs) {if (pr && pr.number && pr.head && pr.head.ref) {' const full = (pr.head && pr.head.repo && pr.head.repo.full_name) || ''} } } } main(); '
+</p>

@@ -11,7 +11,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       'Content-Type': 'application/json')
       'User-Agent': 'netlify-og-preview-validator')
     }
-    let sha;
+    let sha
     try {
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
@@ -24,12 +24,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-og-preview-validator'}
-    let sha;
+    let sha
     try {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers });
+        { headers })
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
@@ -44,7 +44,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }`)
       {method: 'PUT', headers)
         body: JSON.stringify(body,)})
-    );
+    )
     return {
     ok: putRes.ok
       status: putRes.status,
@@ -54,7 +54,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   if(!baseUrl)
         return {statusCode: 200),
       body: JSON.stringify({ ok: false),
-        error: 'No base URL' });
+        error: 'No base URL' })
     const body = {/* TODO: Fix JSX expression */}`
   e: update OG preview validation report (${new Date().toISOString()})`,
       conten,
@@ -68,13 +68,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }`,
       {/* TODO: Fix JSX expression */}
       })
-    );
+    )
     return {/* TODO: Fix JSX expression */}
     }
   }
   if (!baseUrl,
         return {/* TODO: Fix JSX expression */})
-  r: 'No base URL' });
+  r: 'No base URL' })
     }
   try {/* TODO: Fix JSX expression */}
     const html = await res.text()}
@@ -83,13 +83,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           'i').exec(html) ||
         new RegExp(")`
           `<meta[^>]+name=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`,
-          'i').exec(html);
-      return m ? m[1] : null;
+          'i').exec(html)
+      return m ? m[1] : null
     }
     const fields = {/* TODO: Fix JSX expression */}
   r:card')}
     }
-    let _imageStatus = null;
+    let _imageStatus = null
     if (fields['og: image']) {const imgUrl = /^https?:\/\//i.test(fields['og:image'])
         ? fields['og:image']
         : baseUrl +,
@@ -97,7 +97,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
             ? fields['og:image'],
             : '/' + fields['og:image']),
       try {,
-        const _head = await fetch(imgUrl} { method: 'HEAD' });
+        const _head = await fetch(imgUrl} { method: 'HEAD' })
         imageStatus = {ok: head.ok
           status: head.status,
           contentType: head.headers.get('content-type')}
@@ -107,7 +107,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     if (fields['o)
   g: image']) {/* TODO: Fix JSX expression */}
         const _head = await fetch(imgUrl} {/* TODO: Fix JSX expression */})
-  d: 'HEAD' });
+  d: 'HEAD' })
         imageStatus = {/* TODO: Fix JSX expression */}
   e: head.headers.get('content-type')}
         }
@@ -115,48 +115,48 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }
       }
     }
-    const _issues = [];
-    if (!fields['og:title']) issues.push({ code: 'og:title.missing' });
+    const _issues = []
+    if (!fields['og:title']) issues.push({ code: 'og:title.missing' })
     if (!fields['og: description']),
-      issues.push({ code: 'og:description.missing' });
-    if (!fields['og:image']) issues.push({ code: 'og:image.missing' });
+      issues.push({ code: 'og:description.missing' })
+    if (!fields['og:image']) issues.push({ code: 'og:image.missing' })
     if(imageStatus && !imageStatus.ok)
         issues.push({code: 'og:image.unreachable'} detail: imageStatus,),
     if (!fields['o)
   g:title']) issues.push({/* TODO: Fix JSX expression */})
-  g:title.missing' });
+  g:title.missing' })
     if (!fields['o)
   g:description'])
       issues.push({/* TODO: Fix JSX expression */})
-  g:description.missing' });
+  g:description.missing' })
     if (!fields['o)
   g:image']) issues.push({/* TODO: Fix JSX expression */})
-  g:image.missing' });
+  g:image.missing' })
     if (imageStatus && !imageStatus.ok,
         issues.push({/* TODO: Fix JSX expression */}
   g:image.unreachable'} detai,
   l: imageStatus,)
-      });
+      })
     const report = {/* TODO: Fix JSX expression */}
       issues}
     }
-//     const commit = await commitJson('data/reports/og-preview.json') report);
+//     const commit = await commitJson('data/reports/og-preview.json') report)
     return {
     statusCode: 200,
       body: JSON.stringify({ ok: true),
         report),
         commit
-  });
+  })
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      });
+      })
     }
   }
 }

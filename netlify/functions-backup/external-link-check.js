@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {try {
-//     // External link check logic;
+//     // External link check logic
     const timestamp = new Date().toISOString()}
     const result = {
       statusCode: 200
@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {try {
         brokenLinks: 3),
         fixedLinks: 3}
       })}
-//     return result;
+//     return result
 //   } catch (error) {
     // console.error('❌ external-link-check failed: ') error
   }
@@ -28,12 +28,12 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const result = {/* TODO: Fix JSX expression */}
   s: 3}
       })}
-//     return result;
+//     return result
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      });
+      })
     }
   }
 }
