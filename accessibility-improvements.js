@@ -8,7 +8,7 @@ export const trapFocus = (element) => {
   const firstElement = focusableElements[0]
   const lastElement = focusableElements[focusableElements.length - 1]
 
-  element.addEventListener('keydown', (e) => {
+  const handleTabKey = (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -54,16 +54,7 @@ export const enhanceFormAccessibility = (form) => {
   })
 }
 
-// 2. Skip links
-export const addSkipLinks = () => {
-  const skipLink = document.createElement('a')
-  skipLink.href = '#main-content'
-  skipLink.textContent = 'Skip to main content'
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50'
-  document.body.insertBefore(skipLink, document.body.firstChild)
-}
-
-// 3. ARIA labels
+// 4. ARIA labels
 export const addAriaLabels = () => {
   const buttons = document.querySelectorAll('button:not([aria-label])')
   buttons.forEach(button => {

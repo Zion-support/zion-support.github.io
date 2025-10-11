@@ -1,266 +1,244 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// List of all remaining files to fix
+const filesToFix = [
+  './app/intelligent-database-migration/page.tsx',
+  './app/intelligent-email-infrastructure/page.tsx',
+  './app/investors/page.tsx',
+  './app/iot-edge-computing/page.tsx',
+  './app/legal/page.tsx',
+  './app/legal/cookies/page.tsx',
+  './app/legal/privacy/page.tsx',
+  './app/legal/terms/page.tsx',
+  './app/machine-learning/page.tsx',
+  './app/mobile-app-development/page.tsx',
+  './app/network-security/page.tsx',
+  './app/partners/page.tsx',
+  './app/pricing/page.tsx',
+  './app/privacy/page.tsx',
+  './app/robotic-process-automation/page.tsx',
+  './app/security/page.tsx',
+  './app/services/page.tsx',
+  './app/sitemap/page.tsx',
+  './app/solutions/page.tsx',
+  './app/support/page.tsx',
+  './app/team/page.tsx',
+  './app/terms/page.tsx',
+  './app/testimonials/page.tsx',
+  './app/use-cases/page.tsx',
+  './app/web-development/page.tsx'
+];
 
-// Get all tsx files in the app directory
-function getAllTsxFiles(dir) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      // Skip certain directories
-      if (!['node_modules', '.next', 'dist', 'build'].includes(file)) {
-        results = results.concat(getAllTsxFiles(filePath));
-      }
-    } else if (file.endsWith('.tsx')) {
-      results.push(filePath);
-    }
-  });
-  
-  return results;
-}
-
-const allTsxFiles = getAllTsxFiles(path.join(__dirname, 'app'));
-
-// Filter out files that are likely already fixed or are components
-const filesToFix = allTsxFiles.filter(file => {
-  const relativePath = path.relative(__dirname, file);
-  return relativePath.includes('/page.tsx') || 
-         relativePath.includes('/layout.tsx') ||
-         relativePath.includes('/error.tsx') ||
-         relativePath.includes('/loading.tsx') ||
-         relativePath.includes('/not-found.tsx') ||
-         relativePath.includes('/global-error.tsx');
-});
-
-console.log(`Found ${filesToFix.length} files to potentially fix`);
-
-const baseTemplate = `'use client';
+// Template for a basic page
+const basicPageTemplate = (title, description, componentName) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 
-const PageComponent: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
-    },
-    {
-      icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and reliability for mission-critical applications.',
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
-    }
-  ];
-
-  const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
-  ];
-
+const ${componentName}: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits." />
-        <meta name="keywords" content="relevant, keywords, for, seo" />
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
       </Helmet>
-
+      
       <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page Title
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Description of the page and its benefits for your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">${title}</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              ${description}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                View Services
+              </a>
             </div>
           </div>
         </section>
       </main>
-
+      
       <Footer />
     </>
   );
 };
 
-export default PageComponent;`;
+export default ${componentName};`;
 
-let fixedCount = 0;
-let skippedCount = 0;
+// Page configurations
+const pageConfigs = {
+  './app/intelligent-database-migration/page.tsx': {
+    title: 'Intelligent Database Migration',
+    description: 'AI-powered database migration services to seamlessly move your data to modern platforms.',
+    componentName: 'IntelligentDatabaseMigrationPage'
+  },
+  './app/intelligent-email-infrastructure/page.tsx': {
+    title: 'Intelligent Email Infrastructure',
+    description: 'Advanced email infrastructure solutions with AI-powered optimization and security.',
+    componentName: 'IntelligentEmailInfrastructurePage'
+  },
+  './app/investors/page.tsx': {
+    title: 'Investors',
+    description: 'Information for investors about Zion Tech Group\'s growth, financials, and investment opportunities.',
+    componentName: 'InvestorsPage'
+  },
+  './app/iot-edge-computing/page.tsx': {
+    title: 'IoT & Edge Computing',
+    description: 'Comprehensive IoT and edge computing solutions for connected devices and real-time processing.',
+    componentName: 'IoTEdgeComputingPage'
+  },
+  './app/legal/page.tsx': {
+    title: 'Legal',
+    description: 'Legal information, terms of service, privacy policy, and other legal documents.',
+    componentName: 'LegalPage'
+  },
+  './app/legal/cookies/page.tsx': {
+    title: 'Cookie Policy',
+    description: 'Information about how we use cookies and similar technologies on our website.',
+    componentName: 'CookiePolicyPage'
+  },
+  './app/legal/privacy/page.tsx': {
+    title: 'Privacy Policy',
+    description: 'Our privacy policy explaining how we collect, use, and protect your personal information.',
+    componentName: 'PrivacyPolicyPage'
+  },
+  './app/legal/terms/page.tsx': {
+    title: 'Terms of Service',
+    description: 'Terms and conditions governing the use of our website and services.',
+    componentName: 'TermsOfServicePage'
+  },
+  './app/machine-learning/page.tsx': {
+    title: 'Machine Learning',
+    description: 'Advanced machine learning solutions to extract insights and automate processes.',
+    componentName: 'MachineLearningPage'
+  },
+  './app/mobile-app-development/page.tsx': {
+    title: 'Mobile App Development',
+    description: 'Custom mobile applications for iOS and Android platforms with modern technologies.',
+    componentName: 'MobileAppDevelopmentPage'
+  },
+  './app/network-security/page.tsx': {
+    title: 'Network Security',
+    description: 'Comprehensive network security solutions to protect your infrastructure from threats.',
+    componentName: 'NetworkSecurityPage'
+  },
+  './app/partners/page.tsx': {
+    title: 'Partners',
+    description: 'Information about our technology partners and partnership opportunities.',
+    componentName: 'PartnersPage'
+  },
+  './app/pricing/page.tsx': {
+    title: 'Pricing',
+    description: 'Transparent pricing for our AI and IT services. Choose the plan that fits your needs.',
+    componentName: 'PricingPage'
+  },
+  './app/privacy/page.tsx': {
+    title: 'Privacy',
+    description: 'Learn about our commitment to privacy and how we protect your data.',
+    componentName: 'PrivacyPage'
+  },
+  './app/robotic-process-automation/page.tsx': {
+    title: 'Robotic Process Automation',
+    description: 'Automate repetitive tasks and processes with our RPA solutions.',
+    componentName: 'RoboticProcessAutomationPage'
+  },
+  './app/security/page.tsx': {
+    title: 'Security',
+    description: 'Comprehensive security solutions to protect your business from cyber threats.',
+    componentName: 'SecurityPage'
+  },
+  './app/services/page.tsx': {
+    title: 'Services',
+    description: 'Comprehensive AI and IT services to transform your business operations.',
+    componentName: 'ServicesPage'
+  },
+  './app/sitemap/page.tsx': {
+    title: 'Sitemap',
+    description: 'Complete sitemap of our website to help you find the information you need.',
+    componentName: 'SitemapPage'
+  },
+  './app/solutions/page.tsx': {
+    title: 'Solutions',
+    description: 'Tailored solutions for your specific business needs and challenges.',
+    componentName: 'SolutionsPage'
+  },
+  './app/support/page.tsx': {
+    title: 'Support',
+    description: 'Get help and support for our services. Contact our technical support team.',
+    componentName: 'SupportPage'
+  },
+  './app/team/page.tsx': {
+    title: 'Our Team',
+    description: 'Meet the talented individuals behind Zion Tech Group\'s success.',
+    componentName: 'TeamPage'
+  },
+  './app/terms/page.tsx': {
+    title: 'Terms of Service',
+    description: 'Terms and conditions for using our website and services.',
+    componentName: 'TermsPage'
+  },
+  './app/testimonials/page.tsx': {
+    title: 'Testimonials',
+    description: 'Read what our clients say about our services and solutions.',
+    componentName: 'TestimonialsPage'
+  },
+  './app/use-cases/page.tsx': {
+    title: 'Use Cases',
+    description: 'Explore real-world applications of our AI and IT solutions across different industries.',
+    componentName: 'UseCasesPage'
+  },
+  './app/web-development/page.tsx': {
+    title: 'Web Development',
+    description: 'Modern web development services using cutting-edge technologies and best practices.',
+    componentName: 'WebDevelopmentPage'
+  }
+};
 
-filesToFix.forEach(filePath => {
+function fixFile(filePath) {
   try {
-    // Read the current file to check if it's already properly formatted
-    const currentContent = fs.readFileSync(filePath, 'utf8');
+    console.log(`Fixing ${filePath}...`);
     
-    // Skip if file already looks good (has proper imports and structure)
-    if (currentContent.includes("'use client'") && 
-        currentContent.includes('import React') && 
-        currentContent.includes('export default') &&
-        !currentContent.includes('Parsing error') &&
-        !currentContent.includes('Unexpected token')) {
-      skippedCount++;
+    if (!fs.existsSync(filePath)) {
+      console.log(`File ${filePath} does not exist, skipping...`);
       return;
     }
     
-    const relativePath = path.relative(__dirname, filePath);
-    const dir = path.dirname(filePath);
-    
-    // Ensure directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    const config = pageConfigs[filePath];
+    if (!config) {
+      console.log(`No config found for ${filePath}, skipping...`);
+      return;
     }
     
-    // Generate component name from file path
-    const componentName = relativePath
-      .replace('app/', '')
-      .replace('/page.tsx', '')
-      .replace('/layout.tsx', 'Layout')
-      .replace('/error.tsx', 'Error')
-      .replace('/loading.tsx', 'Loading')
-      .replace('/not-found.tsx', 'NotFound')
-      .replace('/global-error.tsx', 'GlobalError')
-      .split('-')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join('') + 'Page';
+    const content = basicPageTemplate(config.title, config.description, config.componentName);
     
-    // Replace PageComponent with actual component name
-    const content = baseTemplate.replace(/PageComponent/g, componentName);
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`✓ Fixed ${filePath}`);
     
-    // Write the file
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${relativePath}`);
-    fixedCount++;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
-});
+}
 
-console.log(`\nFixed: ${fixedCount} files`);
-console.log(`Skipped: ${skippedCount} files`);
-console.log('All files have been processed!');
+// Fix all files
+console.log('Starting final cleanup of all remaining files...');
+filesToFix.forEach(fixFile);
+console.log('All remaining files fixed!');

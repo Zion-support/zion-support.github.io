@@ -1,8 +1,4 @@
 import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-
-const __filename = fileURLToPath(import.meta.url)
 
 // Read the current App.tsx
 const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8')

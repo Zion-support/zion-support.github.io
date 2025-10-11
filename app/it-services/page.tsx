@@ -1,94 +1,51 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
-  const services = [
-    {
-      id: 1,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for your business needs.',
-      icon: Cloud,
-    },
-    {
-      id: 2,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      icon: Shield,
-      features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      price: 'From $1,000/month'
-    },
-    {
-    }
-  ]
-
-  const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'cloud', name: 'Cloud Services' },
-    { id: 'development', name: 'Web Development' },
-    { id: 'security', name: 'Cybersecurity' },
-    { id: 'database', name: 'Database' },
-    { id: 'devops', name: 'DevOps' }
-  ]
-
-  const filteredServices = services.filter(service => 
-    selectedCategory === 'all' || service.category === selectedCategory
-  )
-
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services to support your business operations." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">IT Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Comprehensive IT services to support your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                View Services
+              </a>
             </div>
           </div>
         </section>
-
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our IT Services
-              </h2>
-              <p className="text-xl text-gray-300">
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
+      </main>
       
       <Footer />
     </>
   );
 };
 
+export default ITServicesPage;

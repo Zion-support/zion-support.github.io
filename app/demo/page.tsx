@@ -1,49 +1,47 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const DemoPage: React.FC = () => {
-  const [selectedDemo, setSelectedDemo] = useState(0);
-
-  const demos = [
-    {
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              See It in
-              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Action
-              </span>
+  return (
+    <>
+      <Helmet>
+        <title>Demo - Zion Tech Group</title>
+        <meta name="description" content="Experience our solutions firsthand with interactive demos and proof-of-concepts." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="pt-20 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Demo</span>
             </h1>
-                Schedule Live Demo
-              </button>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Experience our solutions firsthand with interactive demos and proof-of-concepts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                View Services
+              </a>
             </div>
           </div>
         </section>
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-          </div>
-        </section>
-
-        {/* CTA Section */}
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to See More?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
+      </main>
       
       <Footer />
     </>
