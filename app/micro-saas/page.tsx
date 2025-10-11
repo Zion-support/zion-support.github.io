@@ -307,6 +307,7 @@ const MicroSaasPage: React.FC = () => {
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap } from 'lucide-react'
 
 <<<<<<< HEAD
@@ -319,6 +320,9 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
 <<<<<<< HEAD
 =======
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
+=======
+import { CheckCircle, ArrowRight, Zap, Star, Users, Shield, Cloud, BarChart3 } from 'lucide-react'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
 interface MicroSaasProduct {
   id: string;
@@ -1228,6 +1232,7 @@ const MicroSaasPage: React.FC = () => {
 >>>>>>> origin/main
   );
 };
+<<<<<<< HEAD
 =======
 const MicroSaaSPage: React.FC = () => {
   const features = [
@@ -1309,6 +1314,8 @@ export default MicroSaasPage;
   )
 }
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
 export default MicroSaaSPage
 >>>>>>> origin/main

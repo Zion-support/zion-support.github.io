@@ -129,6 +129,7 @@ const PricingPage: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <>
   </>
 =======
@@ -317,6 +318,8 @@ export default PricingPage;
 
 export default PricingPage;
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -343,6 +346,7 @@ export default PricingPage;
               <div
                 key={index}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className={`relative bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular
                     ? 'border-cyan-500 bg-cyan-500/10 scale-105'
@@ -351,10 +355,15 @@ export default PricingPage;
                 className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 ${
                   plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''
 >>>>>>> origin/main
+=======
+                className={`relative cyber-card ${
+                  plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
                       <Star className="w-4 h-4" />
@@ -368,6 +377,9 @@ export default PricingPage;
                   <div className="flex items-baseline justify-center mb-2">
 =======
                     <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
+=======
+                    <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
@@ -482,11 +494,11 @@ export default PricingPage;
                 <button
                   className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white'
-                      : 'bg-white/20 hover:bg-white/30 text-white border border-white/30'
+                      ? 'cyber-button'
+                      : 'cyber-button-secondary'
                   }`}
                 >
-                  Get Started
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                 </button>
               </div>
             ))}
@@ -507,7 +519,7 @@ export default PricingPage;
           <p className="text-xl text-gray-300 mb-8">
             We understand that every business is unique. Contact us to discuss your specific requirements and get a tailored quote.
           </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
+          <button className="cyber-button">
             <Zap className="w-5 h-5 mr-2" />
             Contact Sales
           </button>
@@ -520,6 +532,9 @@ export default PricingPage;
 }
 
 export default PricingPage
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 >>>>>>> origin/main
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9

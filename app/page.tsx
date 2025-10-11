@@ -118,6 +118,7 @@ const HomePage: React.FC = () => {
   const aiServices = [
     {
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI-Powered Chatbots',
       description: 'Advanced conversational AI with natural language processing and sentiment analysis',
       price: '$299/month',
@@ -1492,6 +1493,53 @@ description: 'Custom API development, third-party integrations, and microservice
       category: 'Social Media',
       popular: true,
       users: 'Up to 5 users'
+=======
+      title: 'AI Solutions',
+      description: 'Advanced artificial intelligence solutions for business automation and optimization.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      price: 'From $199/month',
+      link: '/ai-services'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for modern businesses.',
+      features: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions'],
+      price: 'From $299/month',
+      link: '/cloud-infrastructure'
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      features: ['Threat Detection', 'Data Protection', 'Compliance', 'Incident Response'],
+      price: 'From $399/month',
+      link: '/cybersecurity'
+    },
+    {
+      icon: Code,
+      title: 'Custom Development',
+      description: 'Tailored software solutions built to meet your specific requirements.',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
+      price: 'From $2,999/project',
+      link: '/web-development'
+    },
+    {
+      icon: BarChart,
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights and business intelligence.',
+      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Reporting'],
+      price: 'From $149/month',
+      link: '/data-analytics'
+    },
+    {
+      icon: Zap,
+      title: 'Micro SAAS',
+      description: 'Ready-to-use business tools and applications for immediate deployment.',
+      features: ['AI Content Generator', 'Customer Support Bot', 'Workflow Automation', 'Analytics Dashboard'],
+      price: 'From $29/month',
+      link: '/micro-saas'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     }
   ]
 
@@ -1503,6 +1551,7 @@ description: 'Custom API development, third-party integrations, and microservice
   ]
 
   return (
+<<<<<<< HEAD
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -2001,14 +2050,122 @@ description: 'Custom API development, third-party integrations, and microservice
               <p className="text-gray-300 text-sm">
                 ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
               </p>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="inline-block mb-4">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                🚀 Now Available: AI-Powered Solutions
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Transform Your Business with
+              <span className="block neon-text">
+                AI & IT Solutions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Leading provider of cutting-edge artificial intelligence and information technology solutions 
+              that drive innovation and accelerate digital transformation. From micro SAAS to enterprise solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <button className="cyber-button">
+                <Rocket className="w-5 h-5" />
+                Get Started
+              </button>
+              <button className="cyber-button-secondary">
+                <Calendar className="w-5 h-5" />
+                Schedule Demo
+              </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-400 mb-1">500+</div>
+                <div className="text-gray-400 text-sm">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-400 mb-1">99.9%</div>
+                <div className="text-gray-400 text-sm">Uptime Guarantee</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-400 mb-1">24/7</div>
+                <div className="text-gray-400 text-sm">Support Available</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-400 mb-1">50+</div>
+                <div className="text-gray-400 text-sm">Expert Team</div>
+              </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
         </section>
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
             Our Services
+=======
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive solutions designed to accelerate your digital transformation and drive business growth.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="cyber-card hover:bg-white/20 transition-all duration-300 group">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a 
+                  href={service.link}
+                  className="cyber-button-secondary w-full text-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations

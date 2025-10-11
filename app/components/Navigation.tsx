@@ -97,6 +97,7 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
@@ -317,6 +318,57 @@ const Navigation: React.FC = () => {
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-white neon-text-enhanced group-hover:glow">Zion Tech Group</span>
                 <span className="text-xs text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
+=======
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Home
+            </Link>
+            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              About
+            </Link>
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-2">
+                  <Link href="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    All Services
+                  </Link>
+                  <div className="border-t border-gray-700 my-2"></div>
+                  <div className="px-4 py-2 text-cyan-400 text-sm font-semibold">AI Services</div>
+                  <Link href="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Services Overview
+                  </Link>
+                  <Link href="/ai-customer-support" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Customer Support
+                  </Link>
+                  <Link href="/ai-data-analytics" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Data Analytics
+                  </Link>
+                  <Link href="/ai-workflow-automation" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Workflow Automation
+                  </Link>
+                  <Link href="/ai-content-generator" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    AI Content Generator
+                  </Link>
+                  <div className="border-t border-gray-700 my-2"></div>
+                  <div className="px-4 py-2 text-cyan-400 text-sm font-semibold">IT Services</div>
+                  <Link href="/it-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    IT Services Overview
+                  </Link>
+                  <Link href="/cloud-migration" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Cloud Migration
+                  </Link>
+                  <Link href="/cybersecurity" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Cybersecurity
+                  </Link>
+                  <Link href="/data-analytics" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Data Analytics
+                  </Link>
+                </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
               </div>
             </Link>
           </div>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -51,23 +52,28 @@ interface JobPosition {
 const CareersPage: React.FC = () => {
   const openPositions: JobPosition[] = [
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Users, MapPin, Clock, ArrowRight, CheckCircle } from 'lucide-react'
+import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart, Zap } from 'lucide-react'
 
 const CareersPage: React.FC = () => {
   const jobOpenings = [
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     {
       title: 'Senior AI Engineer',
-<<<<<<< HEAD
       department: 'AI Solutions',
-      location: 'Remote',
+      location: 'Remote / Delaware',
       type: 'Full-time',
       experience: '5+ years',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'Lead development of cutting-edge AI solutions and machine learning models.'
 =======
@@ -77,28 +83,36 @@ const CareersPage: React.FC = () => {
     {
 =======
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
+=======
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
       requirements: [
+        'Master\'s degree in Computer Science or related field',
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong understanding of deep learning algorithms',
-        'Previous experience in production AI systems'
+        'Strong problem-solving and communication skills'
       ],
       benefits: [
-        'Competitive salary: $120,000 - $180,000',
-        'Equity participation',
-        'Flexible remote work',
-        'Professional development budget'
-      ],
-      posted: '2 days ago',
-      featured: true
+        'Competitive salary and equity',
+        'Health, dental, and vision insurance',
+        'Flexible work arrangements',
+        'Professional development budget',
+        'Unlimited PTO'
+      ]
     },
     {
+<<<<<<< HEAD
       id: '2',
 >>>>>>> origin/main
       title: 'Cloud Architect',
       department: 'Cloud Services',
       location: 'New York, NY',
+=======
+      title: 'Cloud Solutions Architect',
+      department: 'IT Services',
+      location: 'Remote / Delaware',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
       type: 'Full-time',
       experience: '7+ years',
 <<<<<<< HEAD
@@ -119,92 +133,56 @@ const CareersPage: React.FC = () => {
     {
 =======
       requirements: [
+        'Bachelor\'s degree in Computer Science or related field',
         '7+ years experience in cloud architecture',
-        'Expertise in AWS, Azure, or GCP',
-        'Experience with containerization (Docker, Kubernetes)',
-        'Strong understanding of microservices architecture',
-        'Certifications in cloud platforms preferred'
+        'Expertise in AWS, Azure, and Google Cloud',
+        'Experience with DevOps and CI/CD pipelines',
+        'Strong leadership and client-facing skills'
       ],
       benefits: [
-        'Competitive salary: $140,000 - $200,000',
+        'Competitive salary and equity',
         'Health, dental, and vision insurance',
+<<<<<<< HEAD
         '401(k) with company matching',
         'Flexible PTO policy'
       ],
       posted: '1 week ago',
       featured: true
 >>>>>>> origin/main
+=======
+        'Flexible work arrangements',
+        'Professional development budget',
+        'Unlimited PTO'
+      ]
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     },
     {
-      id: '3',
       title: 'Cybersecurity Specialist',
       department: 'Security',
-      location: 'San Francisco, CA',
+      location: 'Remote / Delaware',
       type: 'Full-time',
       experience: '4+ years',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'Automate deployment pipelines and manage infrastructure at scale.'
 =======
       description: 'Protect our clients\' digital assets and infrastructure from cyber threats.',
+=======
+      description: 'Protect our clients\' digital assets with advanced cybersecurity solutions.',
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
       requirements: [
+        'Bachelor\'s degree in Cybersecurity or related field',
         '4+ years experience in cybersecurity',
-        'Knowledge of security frameworks (NIST, ISO 27001)',
-        'Experience with penetration testing',
-        'Certifications (CISSP, CISM, CEH) preferred',
+        'Certifications: CISSP, CISM, or equivalent',
+        'Experience with security tools and frameworks',
         'Strong analytical and problem-solving skills'
       ],
       benefits: [
-        'Competitive salary: $100,000 - $150,000',
-        'Professional development opportunities',
-        'Remote work options',
-        'Health and wellness benefits'
-      ],
-      posted: '3 days ago',
-      featured: false
-    },
-    {
-      id: '4',
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Austin, TX',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Streamline development processes and improve deployment efficiency.',
-      requirements: [
-        '3+ years experience in DevOps practices',
-        'Experience with CI/CD pipelines',
-        'Knowledge of infrastructure as code',
-        'Experience with monitoring and logging tools',
-        'Strong scripting skills (Bash, Python)'
-      ],
-      benefits: [
-        'Competitive salary: $90,000 - $130,000',
-        'Stock options',
+        'Competitive salary and equity',
+        'Health, dental, and vision insurance',
         'Flexible work arrangements',
-        'Learning and development budget'
-      ],
-      posted: '5 days ago',
-      featured: false
-    },
-    {
-      id: '5',
-      title: 'Data Scientist',
-      department: 'Analytics',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Extract insights from complex data sets to drive business decisions.',
-      requirements: [
-        '4+ years experience in data science',
-        'Proficiency in Python, R, SQL',
-        'Experience with machine learning libraries',
-        'Strong statistical knowledge',
-        'Experience with data visualization tools'
-      ],
-      benefits: [
-        'Competitive salary: $110,000 - $160,000',
-        'Remote work flexibility',
         'Professional development budget',
+<<<<<<< HEAD
         'Health and dental insurance'
       ],
       posted: '1 week ago',
@@ -327,10 +305,15 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       description: 'Build beautiful and responsive user interfaces for our applications.',
       requirements: ['React, TypeScript', '2+ years frontend experience', 'UI/UX design skills']
+=======
+        'Unlimited PTO'
+      ]
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     }
   ]
 
   const benefits = [
+<<<<<<< HEAD
 >>>>>>> origin/main
     'Competitive salary and equity',
     'Health, dental, and vision insurance',
@@ -362,6 +345,36 @@ const CareersPage: React.FC = () => {
     '401(k) matching',
     'Gym membership',
     'Team building events'
+=======
+    {
+      icon: Heart,
+      title: 'Health & Wellness',
+      description: 'Comprehensive health, dental, and vision insurance for you and your family.'
+    },
+    {
+      icon: Zap,
+      title: 'Flexible Work',
+      description: 'Remote work options and flexible hours to support work-life balance.'
+    },
+    {
+      icon: Star,
+      title: 'Growth Opportunities',
+      description: 'Professional development budget and opportunities for career advancement.'
+    },
+    {
+      icon: Users,
+      title: 'Great Team',
+      description: 'Work with talented, passionate professionals in a collaborative environment.'
+    }
+  ]
+
+  const values = [
+    'Innovation and continuous learning',
+    'Collaboration and teamwork',
+    'Client success and satisfaction',
+    'Integrity and transparency',
+    'Diversity and inclusion'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
   ]
 
   return (
@@ -381,9 +394,73 @@ const CareersPage: React.FC = () => {
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
 =======
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
               Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
 >>>>>>> origin/main
+=======
+              Be part of a team that's shaping the future of AI and IT solutions. 
+              We're looking for passionate professionals to join our mission.
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button">
+                <ArrowRight className="w-5 h-5 mr-2" />
+                View Open Positions
+              </button>
+              <button className="cyber-button-secondary">
+                <Users className="w-5 h-5 mr-2" />
+                Learn About Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Join Us Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Join Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300">
+              We offer more than just a job - we offer a career with purpose and growth.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="cyber-card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Values Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="cyber-card">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Our Values</h2>
+              <p className="text-gray-300">
+                These core values guide everything we do and shape our company culture.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {values.map((value, index) => (
+                <div key={index} className="flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -465,8 +542,9 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="space-y-8">
             {jobOpenings.map((job, index) => (
+<<<<<<< HEAD
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
                 <div className="flex items-center text-gray-300 mb-4">
@@ -677,21 +755,49 @@ const CareersPage: React.FC = () => {
                         <Briefcase className="w-4 h-4 mr-1" />
                         <span className="mr-4">{position.type}</span>
                         <span>{position.experience}</span>
-                      </div>
-                      <p className="text-gray-600 mb-4">{position.description}</p>
+=======
+              <div key={index} className="cyber-card">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                  <div className="lg:col-span-2">
+                    <div className="flex items-center mb-4">
+                      <h3 className="text-2xl font-bold text-white mr-4">{job.title}</h3>
+                      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        {job.department}
+                      </span>
                     </div>
-                    <div className="flex items-center space-x-4">
-                      <span className="text-sm text-gray-500">Posted {position.posted}</span>
-                      <Link
-                        to={`/careers/${position.id}`}
-                        className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
-                      >
-                        Apply Now
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                    
+                    <div className="flex items-center space-x-6 mb-4 text-gray-400">
+                      <div className="flex items-center">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        <span>{job.location}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-2" />
+                        <span>{job.type}</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Users className="w-4 h-4 mr-2" />
+                        <span>{job.experience}</span>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-6">{job.description}</p>
+                    
+                    <div className="mb-6">
+                      <h4 className="text-lg font-semibold text-white mb-3">Requirements</h4>
+                      <ul className="space-y-2">
+                        {job.requirements.map((req, reqIndex) => (
+                          <li key={reqIndex} className="flex items-center text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                            {req}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 >>>>>>> origin/main
                   </div>
+<<<<<<< HEAD
 
                 </div>
               ))}
@@ -708,11 +814,34 @@ const CareersPage: React.FC = () => {
 
 export default CareersPage;
 =======
+=======
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
+                    <ul className="space-y-2 mb-6">
+                      {job.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <button className="cyber-button w-full">
+                      <ArrowRight className="w-5 h-5 mr-2" />
+                      Apply Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
       </section>
 >>>>>>> origin/main
 
+<<<<<<< HEAD
       {/* Culture & Values */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -811,17 +940,20 @@ export default CareersPage;
 <<<<<<< HEAD
 export default CareersPage;
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Don't See Your Role?
+            Don't See the Right Role?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
           </p>
-          <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-            Send Resume
+          <button className="cyber-button-secondary">
+            <ArrowRight className="w-5 h-5 mr-2" />
+            Send Your Resume
           </button>
         </div>
       </section>

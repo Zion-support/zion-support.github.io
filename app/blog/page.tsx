@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -776,11 +777,13 @@ const BlogPage: React.FC = () => {
   );
 };
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Calendar, User, ArrowRight } from 'lucide-react'
+import { Calendar, User, ArrowRight, Tag } from 'lucide-react'
 
 const BlogPage: React.FC = () => {
   const blogPosts = [
@@ -789,21 +792,48 @@ const BlogPage: React.FC = () => {
       excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',
       author: 'Sarah Johnson',
       date: '2024-01-15',
-      category: 'AI'
+      category: 'AI',
+      readTime: '5 min read'
     },
     {
-      title: 'Cloud Computing Best Practices',
-      excerpt: 'Essential strategies for implementing and managing cloud infrastructure.',
+      title: 'Cybersecurity Best Practices',
+      excerpt: 'Essential security measures every organization should implement.',
       author: 'Michael Chen',
       date: '2024-01-10',
-      category: 'Cloud'
+      category: 'Security',
+      readTime: '7 min read'
     },
     {
-      title: 'Cybersecurity Trends 2024',
-      excerpt: 'Latest developments in cybersecurity and how to protect your business.',
+      title: 'Cloud Migration Strategies',
+      excerpt: 'A comprehensive guide to successful cloud migration.',
       author: 'Emily Rodriguez',
       date: '2024-01-05',
-      category: 'Security'
+      category: 'Cloud',
+      readTime: '6 min read'
+    },
+    {
+      title: 'Data Analytics Trends 2024',
+      excerpt: 'Latest trends in data analytics and business intelligence.',
+      author: 'David Kim',
+      date: '2024-01-01',
+      category: 'Analytics',
+      readTime: '4 min read'
+    },
+    {
+      title: 'Micro SAAS Development',
+      excerpt: 'Building successful micro SAAS applications for modern businesses.',
+      author: 'Lisa Wang',
+      date: '2023-12-28',
+      category: 'Development',
+      readTime: '8 min read'
+    },
+    {
+      title: 'AI Customer Support Solutions',
+      excerpt: 'How AI is revolutionizing customer service and support.',
+      author: 'James Rodriguez',
+      date: '2023-12-25',
+      category: 'AI',
+      readTime: '5 min read'
     }
   ]
 
@@ -824,20 +854,19 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
       {/* Blog Posts Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
-              <article key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+              <article key={index} className="cyber-card hover:bg-white/20 transition-all duration-300 group">
                 <div className="mb-4">
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {post.category}
                   </span>
                 </div>
-                <h2 className="text-xl font-bold text-white mb-4">{post.title}</h2>
+                <h2 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{post.title}</h2>
                 <p className="text-gray-300 mb-6">{post.excerpt}</p>
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <div className="flex items-center">
@@ -849,10 +878,13 @@ const BlogPage: React.FC = () => {
                     <span>{post.date}</span>
                   </div>
                 </div>
-                <button className="text-cyan-400 hover:text-cyan-300 font-medium flex items-center">
-                  Read More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">{post.readTime}</span>
+                  <button className="text-cyan-400 hover:text-cyan-300 font-medium flex items-center group-hover:translate-x-1 transition-transform">
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </div>
               </article>
             ))}
           </div>
@@ -874,7 +906,7 @@ const BlogPage: React.FC = () => {
               placeholder="Enter your email"
               className="px-4 py-3 rounded-lg bg-white/10 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 flex-1 max-w-md"
             />
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+            <button className="cyber-button">
               Subscribe
             </button>
           </div>

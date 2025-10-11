@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
@@ -233,6 +234,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 export default AccessibilityEnhancer;
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 'use client'
 import React, { useEffect } from 'react'
 
@@ -301,4 +304,3 @@ const AccessibilityEnhancer: React.FC = () => {
 }
 
 export default AccessibilityEnhancer
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
