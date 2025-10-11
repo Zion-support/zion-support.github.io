@@ -1,21 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, PenTool, FileText, Sparkles, Target } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const AicontentWriterPage: React.FC = () => {
-  const features = [
-    {
-      title: 'AI Content Writer',
-      description: 'Professional AI content writing solutions for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
 =======
 const AIContentWriterPage: React.FC = () => {
   const features = [
@@ -24,7 +12,6 @@ const AIContentWriterPage: React.FC = () => {
       description: 'Advanced AI-powered content generation and writing assistance.',
       benefits: ['Content Generation', 'Grammar Check', 'Style Optimization', 'Tone Adjustment'],
       icon: <PenTool className="w-8 h-8 text-blue-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
     },
     {
       title: 'Content Templates',
@@ -75,32 +62,14 @@ const AIContentWriterPage: React.FC = () => {
       title: 'Customization',
       description: 'Fully customizable AI models trained on your specific industry and brand guidelines.',
       benefits: ['Brand Training', 'Industry Expertise', 'Custom Templates', 'Style Guidelines']
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
+
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Content Writer - Zion Tech Group</title>
-        <meta name="description" content="Professional AI content writing services and solutions." />
-        <meta name="keywords" content="AI content writer, content writing, AI solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Content Writer
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional AI content writing services to help your business succeed and grow.
+<>
 =======
-    <>
+<>
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -123,9 +92,7 @@ const AIContentWriterPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
-=======
-    <>
+<>
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Professional AI content writing solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -148,7 +115,8 @@ const AIContentWriterPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional AI content writing solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
+=======
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -166,82 +134,7 @@ const AIContentWriterPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced AI Content Creation
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI content writing platform designed for modern businesses.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Contact us today to learn more about our AI content writing services.
-=======
-                Contact us today to learn more about our AI content writer solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-<<<<<<< HEAD
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
-
-export default AicontentWriterPage;
-=======
-        </section>
-
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export default AIContentWriterPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-371b
-=======
-              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Comprehensive AI Content Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -292,4 +185,5 @@ export default AIContentWriterPage;
 };
 
 export default AIContentWriterPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-d296
+=======
+
