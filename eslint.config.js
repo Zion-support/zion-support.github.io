@@ -34,8 +34,7 @@ export default [
       'fix-*.js',
       '*.cjs',
       '*.js.broken',
-      'jest.setup.js'
-    ],
+      'jest.setup.js',
       'components.disabled_full/**',
       'backup/**',
       'backup-merge-conflicts/**',
@@ -92,7 +91,7 @@ export default [
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-...reactHooks.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
 
       'react-refresh/only-export-components': [
         'warn',
