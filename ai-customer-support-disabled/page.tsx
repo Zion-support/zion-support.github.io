@@ -7,19 +7,19 @@ import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, Ch
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
-      icon: MessageCircle
+      icon: MessageCircle,
       title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
       benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
     },
     {
-      icon: Users
+      icon: Users,
       title: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
       benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
     },
     {
-      icon: Clock
+      icon: Clock,
       title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
       benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']

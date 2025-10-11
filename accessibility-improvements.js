@@ -84,5 +84,6 @@ const trapFocus = (element) => {
 // Example JSX:
 // <div aria-live="assertive" aria-atomic="true">
 //   {errorMessage}
-//
-export { trapFocus }</div></div></div></div></button></a></a></h1></h2></h2></h3></h3></ul></li></main></section></article></nav>
+// </div>
+
+export { trapFocus }

@@ -121,9 +121,10 @@ describe('checkEssentialEnvVars', () => {
         expect(errorMessage).toMatch(/VITE_REOWN_PROJECT_ID is not defined or is empty/)
         expect(errorMessage).toMatch(/VITE_SUPABASE_URL is set to a placeholder value: "your_supabase_url_here"/)
         expect(errorMessage).toMatch(/VITE_SUPABASE_ANON_KEY is not defined or is empty/)
-// NOTE: DO NOT add a static import for checkEssentialEnvVars here.;// It needs to be dynamically imported within each test after mocks are applied.
+// NOTE: DO NOT add a static import for checkEssentialEnvVars here.
+// It needs to be dynamically imported within each test after mocks are applied.
 
-import { describe, it, expect, beforeEach, afterEach, vi } from vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 // Store original process.env
 const ORIGINAL_ENV = process.env
 // Helper to set and reset process.env for Vitest tests
@@ -134,10 +135,12 @@ const mockProcessEnv = (envValues: Record<string, string | boolean | undefined>)
     if (envValues[key] !== undefined) {
       process.env[key] = String(envValues[key])
     } else {
-      delete process.env[key]; // Ensure it's treated as undefined by the code'    }
+      delete process.env[key] // Ensure it's treated as undefined by the code
+    }
   }
 }
-describe('checkEssentialEnvVars', () => {'  beforeEach(() => {
+describe('checkEssentialEnvVars', () => {
+  beforeEach(() => {
     vi.resetModules(); // Clears the cache for modules, useful when env vars change
     // process.env will be set by mockProcessEnv in each test
   })
@@ -145,14 +148,22 @@ describe('checkEssentialEnvVars', () => {'  beforeEach(() => {
     process.env = ORIGINAL_ENV; // Restore original environment
     vi.restoreAllMocks()
   })
-  it('should not throw an error when all essential environment variables are set correctly', () => {'    mockProcessEnv({
-      NODE_ENV: development', // checkEssentialEnvVars is for non-production'      NEXT_PUBLIC_REOWN_PROJECT_ID: valid_project_id',      NEXT_PUBLIC_SUPABASE_URL: https://valid.supabase.co',      NEXT_PUBLIC_SUPABASE_ANON_KEY: valid_supabase_key',    })
+  it('should not throw an error when all essential environment variables are set correctly', () => {
+    mockProcessEnv({
+      NODE_ENV: 'development', // checkEssentialEnvVars is for non-production
+      NEXT_PUBLIC_REOWN_PROJECT_ID: 'valid_project_id',
+      NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key',
+    })
     // Dynamically import after mocking;    return import('@/utils/validateEnv').then(module => {'      expect(() => module.checkEssentialEnvVars()).not.toThrow()
     })
   })
-  it('should throw an error if NEXT_PUBLIC_REOWN_PROJECT_ID is missing', () => {'    mockProcessEnv({
-      NODE_ENV: development',      // NEXT_PUBLIC_REOWN_PROJECT_ID is missing
-      NEXT_PUBLIC_SUPABASE_URL: https://valid.supabase.co',      NEXT_PUBLIC_SUPABASE_ANON_KEY: valid_supabase_key',    })
+  it('should throw an error if NEXT_PUBLIC_REOWN_PROJECT_ID is missing', () => {
+    mockProcessEnv({
+      NODE_ENV: 'development',      // NEXT_PUBLIC_REOWN_PROJECT_ID is missing
+      NEXT_PUBLIC_SUPABASE_URL: 'https://valid.supabase.co',
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: 'valid_supabase_key',
+    })
     return import('@/utils/validateEnv').then(module => {'      expect(() => module.checkEssentialEnvVars()).toThrowError(/NEXT_PUBLIC_REOWN_PROJECT_ID is not defined or is empty/)
     })
   })
