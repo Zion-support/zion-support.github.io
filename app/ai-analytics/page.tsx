@@ -2,12 +2,12 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-export default function PagePage() {
+const AiAnalyticsPage: React.FC = () => {
   const features = [
     {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+      title: 'AI Analytics',
+      description: 'Advanced analytics and insights powered by artificial intelligence.',
+      benefits: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Data Visualization']
     },
     {
       title: 'Advanced Technology',
@@ -20,7 +20,6 @@ export default function PagePage() {
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
-const AiAnalyticsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">
@@ -71,4 +70,6 @@ const AiAnalyticsPage: React.FC = () => {
       </main>
     </div>
   );
-}
+};
+
+export default AiAnalyticsPage;
