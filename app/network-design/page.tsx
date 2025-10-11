@@ -1,28 +1,37 @@
 'use client'
 import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const NetworkDesignPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits."
-        <meta name="keywords" content="relevant, keywords, for, seo"
-
+        <title>Network Design - Zion Tech Group</title>
+        <meta name="description" content="Professional network design services and solutions." />
+        <meta name="keywords" content="network design, services, solutions, technology" />
+      </Helmet>
+      
       <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
->
-        {/* Hero Section */}
-            </div>
-
-      <Footer />
-    </>
+      
+      <main className="pt-16">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Network Design</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
-
+        </div>
+      </main>
+      
       <Footer />
-    </>
-        </section>
+    </div>
+  );
+};
 
-      <Footer />
-    </>
-  )
-}
-    </Helmet>
-</main>
+export default NetworkDesignPage;

@@ -1,51 +1,37 @@
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
-const SitemapXMLPage: React.FC = () => 
-        <meta name="robots" content="noindex, nofollow"}
-      </Helmet&gt
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l, g:px-8 py-20">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              Sitemap
-            </h1&gt
-            <p className="text-xl text-gray-300">
-              Complete directory of all pages and services
-            </p&gt
-          </div&gt
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
-            <div className="text-center">
-              <p className="text-gray-300 mb-4">
-                This page provides a comprehensive sitemap of all available pages and services.
-              </p&gt;
-              <p className="text-sm text-gray-400"&gt;</p&gt;>
-                For the XML sitemap, please visit: <a href="/sitemap.xml" className="text-cyan-400 hover:text-cyan-300"&gt;</a&gt;/sitemap.xml</a&gt;>
-              </p&gt;
-            </div&gt;
-          </div&gt;
-        </div&gt;
-      </div&gt;
-    </&gt;
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const SitemapPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Site map and navigation for Zion Tech Group services and solutions." />
+        <meta name="keywords" content="sitemap, navigation, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-16">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Sitemap</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
   );
 };
->
-export default SitemapXMLPage>
-      </div>
-      <Footer /></>)
-      </div>
 
-      <Footer /></>)
-      </div>
-
-      <Footer /></>)
-      </div>
-
-      <Footer /></>)
-      </div>
-
-      <Footer /></>);
-
-</Helmet>
-</h1>
-</p></p></p>
+export default SitemapPage;

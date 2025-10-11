@@ -1,127 +1,37 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-const ITServicesPage: React.FC = () => 
-    {} id: 1,
-    };,
-title: 'Cloud Infrastructure',;,
-description: 'Scalable and secure cloud solutions for your business needs.',;,
-icon: Cloud,,
-    }
-    
-price: 'From $1,000/month'} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
-const categories = [
-    {id: 'all', name: 'All Services'} ,
-    {id: 'cloud', name: 'Cloud Services'} ,
-    {id: 'development', name: 'Web Development'} ,
-    {id: 'security', name: 'Cybersecurity'} ,
-    {id: 'database', name: 'Database'} ,
-    {id: 'devops', name: 'DevOps'} ]
-const filteredServices = services.filter(service =>;
-selectedCategory === 'all' || service.category === selectedCategory
-  )
-return (
-    <>
+const ItServicesPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <title>It Services - Zion Tech Group</title>
+        <meta name="description" content="Professional it services services and solutions." />
+        <meta name="keywords" content="it services, services, solutions, technology" />
       </Helmet>
+      
       <Navigation />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 l, g:px-8">
-            </div>
-
-      <Footer />
-    </>
+      
+      <main className="pt-16">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">It Services</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
-
+        </div>
+      </main>
+      
       <Footer />
-    </>
-        </section>
-
-              )
-    </>
-  )
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-Our IT Services>
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
-              </p>
-            </div>
-
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  </button>
-                </div>
-
-      <Footer />
-    </>
-              ))}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* CTA Section */}
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-Ready to Optimize Your IT Infrastructure?>
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
-              </p>
-              </button>
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-      </div>
-
-      <Footer />
-    </>
-      <Footer />
-    </>
+    </div>
   );
 };
+
+export default ItServicesPage;

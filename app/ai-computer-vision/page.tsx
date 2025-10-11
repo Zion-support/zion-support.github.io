@@ -1,172 +1,37 @@
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
-  const benefits = [
-    'Increase efficiency by up to 80%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-    'Seamless integration with existing systems'
-  ]
+
+const AiComputerVisionPage: React.FC = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <title>Ai Computer Vision - Zion Tech Group</title>
+        <meta name="description" content="Professional ai computer vision services and solutions." />
+        <meta name="keywords" content="ai computer vision, services, solutions, technology" />
+      </Helmet>
+      
       <Navigation />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page Page
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
-              </p>
-            </div>
-
+      
+      <main className="pt-16">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Ai Computer Vision</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+          </div>
+        </div>
+      </main>
+      
       <Footer />
-    </>
+    </div>
+  );
+};
 
-      <Footer />
-    </>
-
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3">
-                    <h3 className="text-xl font-semibold text-gray-900">
-</div>
-      <Footer />
-    </>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                    )
-    </>
-  )
-
-      <Footer />
-    </>
-              ))}
-
-      <Footer />
-    </>
-
-      <Footer />
-    </>
-
-        {/* Benefits Section */}
-
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                  <div className="flex items-center">
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3">
-                    <span className="text-lg font-medium text-gray-900">
-</div>
-    </>
-                  <p className="text-gray-300">{benefit}</p>
-
-      <Footer />
-    </>
-              ))}
-
-      <Footer />
-    </>
-
-      <Footer />
-    </>
-
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Contact us today to learn how our solutions can transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                Contact Us
-              </button>
-              <button className=">
-    ,>
-    r: bg-blue-600 hove, r:text-white transition-colors">
-                Schedule Demo
-            </div>
-
-      <Footer />
-    </>
-
-      <Footer />
-    </>
-      <Footer />
-    </>
-  )
-}
-</Footer>
-</Footer>
-</Footer>
-</div>
-</section>
-</Footer>
-</Footer>
-</Footer>
-</p>
-</Footer>
-</span>
-</CheckCircle>
-</div>
-</div>
-</div>
-</Footer>
-</Footer>
-</Footer>
-</Footer>
-</CheckCircle>
-</li>
-</ul>
-</p>
-</h3>
-</Footer>
-</h3>
-</feature>
-</div>
-</div>
-</div>
-</Footer>
-</Footer>
-</Footer>
-</div>
-</section>
-</div>
-</div>
-</Navigation>
-</title>
-</Helmet>
-</button>
+export default AiComputerVisionPage;

@@ -1,126 +1,79 @@
-trackAnalytics?: boolean
-  }
-}
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) 
-  }
-  } = _options;const _renderCountRef = useRef<number>(0)
-useEffect(() => 
-      analytics.trackCustomEvent('Component', 'Mounted', component)}}
-return () => 
-  }
-    }
-return (
-    <>
-      ) => 
-          )}}
-      }
-// Track component unmount;
-      if (trackAnalytics) {analytics.trackCustomEvent('Component', 'Unmounted', component)}}
-    }
-  }, [component, trackAnalytics, trackPerformance]);
-// Track render performance;
-  useEffect(() => 
-      )}}
-  });
-    if (trackErrors) 
-        });
-      },
-    [component, trackErrors]
-              duration > 1000 ? 'slow' : 'fast';
-            );
-  )
-const trackUserAction = useCallback(
-    (action: string, metadata?: Record</string><string, unknown>) => 
-  }
-      },
-    [component, trackAnalytics]
-  )
-const measureOperation = useCallback()
-    (operationName: string) => {}
-      const _markName = `${component}-${operationName}`
-      const _startTime = performance.now()
-return 
-          }
-return duration
-        },
-      },
-    [component, trackPerformance]
-return 
-  }
-  }
-}
-export default useEnhancedPerformance</string>
-/**
- * Enhanced Performance Hook
- * Combines performance monitoring, error tracking, and analytics
- */
-import {  useEffect, useCallback, useRef  } from 'react'
-import {  errorTracker  } from '../utils/enhancedErrorTracking'import {  analytics   } from '../utils/enhancedAnalytics'
-export interface UseEnhancedPerformanceOptions 
-  trackAnalytics?: boolean;}
+'use client'
+import { useState, useEffect, useCallback } from 'react'
+
+interface PerformanceMetrics {
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  networkLatency: number
 }
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) 
-    trackAnalytics = true,;}
-  } = _options;const _renderCountRef = useRef<number>(0)
-  useEffect(() => 
-      analytics.trackCustomEvent('Component', 'Mounted', component);}
-    }
+export const useEnhancedPerformance = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkLatency: 0
+  })
 
-    return () => 
-          );}
-        }
-      }
+  const [isOptimized, setIsOptimized] = useState(false)
 
-      // Track component unmount
-      if (trackAnalytics) 
-        analytics.trackCustomEvent('Component', 'Unmounted', component);}
-      }
-    }
-  }, [component, trackAnalytics, trackPerformance])
-  // Track render performance
-  useEffect(() => 
-      );}
-    }
-  });
-  const trackError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => 
-          ...context,;}
-        });
-      }
-    },
-    [component, trackErrors]
-  )
-  const trackUserAction = useCallback(
-    (action: string, metadata?: Record<string, unknown>) => 
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
-      }
-    },
-    [component, trackAnalytics]
-  )
-  const measureOperation = useCallback(
-    (operationName: string) => {}
-      const _markName = `${component}-${operationName}`
-      const _startTime = performance.now()
-      return 
-            analytics.trackPerformance(;}
-              `${component}-${operationName}`,
-              duration,
-              duration > 1000 ? 'slow' : 'fast'
-            )
-          }
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return
 
-          return duration
-        },
-      }
-    },
-    [component, trackPerformance]
-  )
-  return 
-    measureOperation,;}
+    // Measure load time
+    const loadTime = performance.now()
+    
+    // Measure memory usage
+    const memoryUsage = (performance as unknown as { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0
+    
+    // Measure render time
+    const renderStart = performance.now()
+    requestAnimationFrame(() => {
+      const renderTime = performance.now() - renderStart
+      
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        renderTime,
+        memoryUsage: memoryUsage / 1024 / 1024 // Convert to MB
+      }))
+    })
+  }, [])
+
+  const optimizePerformance = useCallback(() => {
+    // Enable performance optimizations
+    setIsOptimized(true)
+    
+    // Preload critical resources
+    if (typeof window !== 'undefined') {
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/images/hero-bg.webp'
+      ]
+      
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.href = resource
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+        document.head.appendChild(link)
+      })
+    }
+  }, [])
+
+  useEffect(() => {
+    measurePerformance()
+    
+    const interval = setInterval(measurePerformance, 5000)
+    
+    return () => clearInterval(interval)
+  }, [measurePerformance])
+
+  return {
+    metrics,
+    isOptimized,
+    optimizePerformance,
+    measurePerformance
   }
 }
-
-export default useEnhancedPerformance
-
-</>

@@ -1,84 +1,36 @@
-'use client';
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-const ItProjectManagementPage: React.FC = () => 
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']} ,
-    
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
-  const benefits = [
-    'Increase efficiency by up to 80%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-    'Seamless integration with existing systems'
-  ]
+const ItProjectManagementPage: React.FC = () => {
   return (
-    <>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>It Project Management - Zion Tech Group</title>
+        <meta name="description" content="Professional it project management services and solutions." />
+        <meta name="keywords" content="it project management, services, solutions, technology" />
+      </Helmet>
+      
       <Navigation />
-
-            </div>
-
-      <Footer />
-    </>
+      
+      <main className="pt-16">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">It Project Management</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
-
+        </div>
+      </main>
+      
       <Footer />
-    </>
-        </section>
-
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-                </div>
-
-      <Footer />
-    </>
-              ))}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Benefits Section */}
-                </div>
-
-      <Footer />
-    </>
-              ))}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* CTA Section */}
-              </button>
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
+    </div>
   );
 };
 
