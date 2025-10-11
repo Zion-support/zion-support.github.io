@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Discover our comprehensive solutions designed to transform your business.
-              </p>
-            </div>
-          </div>
-        </section>
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
+              </section>
 
               <p>
                 Discover our comprehensive solutions designed to transform your business.
@@ -29,7 +22,7 @@ import React from 'react';
 
               <button>
                 Learn More</button>
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2"
 
 
 
@@ -39,5 +32,4 @@ import React from 'react';
     </>
   )
 }
-    </Footer>
-  </ArrowRight>
+    </h2>

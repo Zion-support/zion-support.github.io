@@ -12,7 +12,6 @@ const HomePage: React.FC = () => {
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
     },
-<<<<<<< HEAD
     {icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions tailored to your business needs.',
@@ -35,38 +34,6 @@ const HomePage: React.FC = () => {
   return (
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    {
-      icon: BarChart,
-      title: 'Feature 2', 
-      description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    },
-    {
-      icon: CheckCircle,
-      title: 'Feature 3',
-      description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 80%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-    'Seamless integration with existing systems'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Home Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
-      </Helmet>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
       <Navigation />
       
       <main className="pt-16">
@@ -174,8 +141,4 @@ const HomePage: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
 export default HomePage
-=======
-export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

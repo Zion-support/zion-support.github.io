@@ -1,20 +1,5 @@
 
-<<<<<<< HEAD
-              </button>
-            </div>
-          </div>
-        </section>
+              </section>
   )
 }
 export default UseintersectionobserverPage
-=======
-
-
-
-
-
-  );
-};
-
-export default UseintersectionobserverPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5

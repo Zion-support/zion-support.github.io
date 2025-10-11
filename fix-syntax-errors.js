@@ -1,252 +1,190 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-<<<<<<< HEAD
-import { glob } from 'glob';
-
-// Function to fix common syntax errors in React/JSX files
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix missing closing tags by adding them at the end of the component
-  const lines = fixed.split('\n');
-  const fixedLines = [];
-  let openTags = [];
-  let inJSX = false;
-  let braceCount = 0;
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const trimmed = line.trim();
-    
-    // Track JSX state
-    if (trimmed.includes('<') && !trimmed.includes('//')) {
-      inJSX = true;
-    }
-    if (trimmed.includes('{') && inJSX) {
-      braceCount += (line.match(/\{/g) || []).length;
-    }
-    if (trimmed.includes('}') && inJSX) {
-      braceCount -= (line.match(/\}/g) || []).length;
-    }
-    
-    // Track opening tags
-    const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?>(?!\s*<\/\1>)/g);
-    if (openTagMatch) {
-      openTagMatch.forEach(tag => {
-        const tagName = tag.match(/<(\w+)/)[1];
-        if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-          openTags.push(tagName);
-        }
-      });
-    }
-    
-    // Track closing tags
-    const closeTagMatch = line.match(/<\/(\w+)>/g);
-    if (closeTagMatch) {
-      closeTagMatch.forEach(tag => {
-        const tagName = tag.match(/<\/(\w+)>/)[1];
-        const index = openTags.lastIndexOf(tagName);
-        if (index !== -1) {
-          openTags.splice(index, 1);
-        }
-      });
-    }
-    
-    fixedLines.push(line);
-    
-    // If we're at the end of the component and there are unclosed tags, add them
-    if (i === lines.length - 1 && openTags.length > 0 && inJSX && braceCount === 0) {
-      // Add missing closing tags in reverse order
-      for (let j = openTags.length - 1; j >= 0; j--) {
-        fixedLines.push('  '.repeat(j + 1) + `</${openTags[j]}>`);
-      }
-    }
-  }
-  
-  fixed = fixedLines.join('\n');
-  
-  // Fix JSX fragment issues
-  fixed = fixed.replace(/<>([^<]*?)(?!<\/>)/g, '<React.Fragment>$1</React.Fragment>');
-  
-  // Fix missing React import
-  if (fixed.includes('React.Fragment') && !fixed.includes("import React")) {
-    fixed = "import React from 'react';\n" + fixed;
-  }
-  
-  // Fix missing closing parentheses in JSX
-  fixed = fixed.replace(/(\s*<[^>]+>\s*)([^<]*?)(\s*<\/[^>]+>\s*)(?!\s*[<>])/g, (match, openTag, content, closeTag) => {
-    if (content.trim() && !content.includes('<') && !content.includes('>')) {
-      return openTag + content + closeTag;
-    }
-    return match;
-  });
-  
-  // Fix malformed JSX expressions
-  fixed = fixed.replace(/\{\s*([^}]*?)\s*\}/g, (match, content) => {
-    if (content.trim() && !content.includes('{') && !content.includes('}')) {
-      return `{${content.trim()}}`;
-    }
-    return match;
-  });
-  
-  // Fix missing semicolons
-  fixed = fixed.replace(/(\w+)\s*$/gm, (match, word) => {
-    if (['return', 'const', 'let', 'var', 'function'].includes(word)) {
-      return match;
-    }
-    if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}')) {
-      return match + ';';
-    }
-    return match;
-  });
-  
-  // Fix import statements
-  if (fixed.includes('Lightbulb') && !fixed.includes("import { Lightbulb }")) {
-    fixed = fixed.replace(
-      /import { ([^}]+) } from 'lucide-react'/,
-      (match, imports) => {
-        if (!imports.includes('Lightbulb')) {
-          return `import { ${imports}, Lightbulb } from 'lucide-react'`;
-        }
-        return match;
-      }
-    );
-  }
-  
-  // Fix component structure - ensure single parent element
-  const componentMatch = fixed.match(/const\s+\w+\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{([\s\S]*?)\}/);
-  if (componentMatch) {
-    const componentBody = componentMatch[1];
-    const jsxMatch = componentBody.match(/return\s*\(([\s\S]*?)\)\s*;?\s*}/);
-    if (jsxMatch) {
-      const jsxContent = jsxMatch[1].trim();
-      if (!jsxContent.startsWith('<') || jsxContent.split('<').length > 2) {
-        // Wrap in a single parent element
-        const wrappedJSX = `<div className="min-h-screen">\n${jsxContent}\n</div>`;
-        fixed = fixed.replace(jsxMatch[1], wrappedJSX);
-      }
-    }
-  }
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    console.log(`Processing: ${filePath}`);
-    
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Skip if not a React component file
-    if (!filePath.endsWith('.tsx') && !filePath.endsWith('.jsx')) {
-      return;
-=======
 import path from 'path';
-import { glob } from 'glob';
+import { execSync } from 'child_process';
 
-// Function to fix syntax errors
-function fixSyntaxErrors(content) {
-  let fixed = content;
-
-  // Fix double semicolons
-  fixed = fixed.replace(/;;/g, ';');
-  
-  // Fix semicolons in import statements
-  fixed = fixed.replace(/import\s+([^;]+);;/g, 'import $1;');
-  
-  // Fix semicolons in destructuring
-  fixed = fixed.replace(/{\s*([^}]+);\s*}/g, '{$1}');
-  
-  // Fix semicolons in function parameters
-  fixed = fixed.replace(/\(\s*([^)]+);\s*\)/g, '($1)');
-
-  return fixed;
+// Function to fix common syntax errors in TypeScript/JSX files
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common patterns that cause syntax errors
+    const fixes = [
+      // Fix malformed JSX attributes
+      {
+        pattern: /(\w+)\s*=\s*{\s*['"`]([^'"`]*?)['"`]\s*}\s*([^>]*?)(\w+)\s*=\s*{\s*['"`]([^'"`]*?)['"`]\s*}/g,
+        replacement: '$1={"$2"} $4={"$5"}'
+      },
+      // Fix missing commas in object literals
+      {
+        pattern: /(\w+)\s*:\s*([^,}]+)\s*(\w+)\s*:/g,
+        replacement: '$1: $2, $3:'
+      },
+      // Fix unclosed JSX tags
+      {
+        pattern: /<(\w+)([^>]*?)(?<!\/)>/g,
+        replacement: (match, tagName, attributes) => {
+          if (match.endsWith('/>')) return match;
+          return `<${tagName}${attributes}>`;
+        }
+      },
+      // Fix malformed JSX expressions
+      {
+        pattern: /\{\s*([^}]*?)\s*\}\s*([^<>\s])/g,
+        replacement: '{$1} $2'
+      },
+      // Fix missing closing tags
+      {
+        pattern: /<(\w+)([^>]*?)>\s*([^<]*?)\s*$/g,
+        replacement: '<$1$2>$3</$1>'
+      },
+      // Fix malformed object properties
+      {
+        pattern: /(\w+)\s*:\s*([^,}]+)\s*(\w+)\s*:\s*([^,}]+)/g,
+        replacement: '$1: $2,\n    $3: $4'
+      }
+    ];
+    
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    // Additional specific fixes for common patterns
+    const specificFixes = [
+      // Fix malformed JSX with missing closing tags
+      {
+        pattern: /<div([^>]*)>\s*([^<]*?)\s*$/g,
+        replacement: '<div$1>$2</div>'
+      },
+      // Fix malformed section tags
+      {
+        pattern: /<section([^>]*)>\s*([^<]*?)\s*$/g,
+        replacement: '<section$1>$2</section>'
+      },
+      // Fix malformed main tags
+      {
+        pattern: /<main([^>]*)>\s*([^<]*?)\s*$/g,
+        replacement: '<main$1>$2</main>'
+      },
+      // Fix malformed Helmet tags
+      {
+        pattern: /<Helmet([^>]*)>\s*([^<]*?)\s*$/g,
+        replacement: '<Helmet$1>$2</Helmet>'
+      }
+    ];
+    
+    for (const fix of specificFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    // Try to fix malformed JSX by ensuring proper closing
+    const lines = content.split('\n');
+    const fixedLines = [];
+    const openTags = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check for opening tags
+      const openTagMatch = line.match(/<(\w+)([^>]*?)(?<!\/)>/g);
+      if (openTagMatch) {
+        for (const tag of openTagMatch) {
+          const tagName = tag.match(/<(\w+)/)[1];
+          if (tagName && !tag.endsWith('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
+            openTags.push(tagName);
+          }
+        }
+      }
+      
+      // Check for closing tags
+      const closeTagMatch = line.match(/<\/(\w+)>/g);
+      if (closeTagMatch) {
+        for (const tag of closeTagMatch) {
+          const tagName = tag.match(/<\/(\w+)>/)[1];
+          const index = openTags.lastIndexOf(tagName);
+          if (index !== -1) {
+            openTags.splice(index, 1);
+          }
+        }
+      }
+      
+      fixedLines.push(line);
+    }
+    
+    // Add missing closing tags at the end
+    if (openTags.length > 0) {
+      for (let i = openTags.length - 1; i >= 0; i--) {
+        fixedLines.push(`</${openTags[i]}>`);
+      }
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing syntax in ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-// Main function to process files
-async function main() {
-  const appDir = path.join(process.cwd(), 'app');
-  const pattern = path.join(appDir, '**/*.tsx');
-  
-  console.log('Fixing syntax errors in TSX files...');
-  const files = await glob(pattern);
-  
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    try {
-      const content = fs.readFileSync(file, 'utf8');
-      const fixed = fixSyntaxErrors(content);
-      
-      if (fixed !== content) {
-        fs.writeFileSync(file, fixed, 'utf8');
-        console.log(`Fixed: ${path.relative(process.cwd(), file)}`);
-        fixedCount++;
-      }
-    } catch (error) {
-      console.error(`Error processing ${file}:`, error.message);
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
-    }
-    
-    // Skip if no obvious syntax errors
-    if (!content.includes('JSX') && !content.includes('React') && !content.includes('<div')) {
-      return;
-    }
-    
-    // Fix syntax errors
-    const fixed = fixSyntaxErrors(content);
-    
-    // Only write if content changed
-    if (fixed !== content) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`✓ Fixed: ${filePath}`);
-    }
+// Function to find files with syntax errors
+function findFilesWithErrors() {
+  try {
+    const result = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
+    return [];
   } catch (error) {
-    console.error(`✗ Error processing ${filePath}:`, error.message);
+    const output = error.stdout || error.stderr || '';
+    const files = new Set();
+    
+    // Extract file paths from TypeScript errors
+    const fileMatches = output.match(/app\/[^:]+\.tsx/g);
+    if (fileMatches) {
+      fileMatches.forEach(file => files.add(`/workspace/${file}`));
+    }
+    
+    return Array.from(files);
   }
-<<<<<<< HEAD
 }
 
 // Main execution
-async function main() {
-  console.log('Starting syntax error fixes...');
+function main() {
+  console.log('Finding files with syntax errors...');
   
-  // Get all TypeScript/JavaScript files in the app directory
-  const patterns = [
-    'app/**/*.tsx',
-    'components/**/*.tsx',
-    '*.tsx'
-  ];
+  const errorFiles = findFilesWithErrors();
+  console.log(`Found ${errorFiles.length} files with syntax errors`);
   
-  let allFiles = [];
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    allFiles = allFiles.concat(files);
+  let fixedCount = 0;
+  for (const file of errorFiles) {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++;
+      console.log(`Fixed syntax errors in: ${file}`);
+    }
   }
   
-  // Remove duplicates
-  allFiles = [...new Set(allFiles)];
+  console.log(`Fixed syntax errors in ${fixedCount} files`);
   
-  console.log(`Found ${allFiles.length} files to process`);
-  
-  // Process each file
-  allFiles.forEach(processFile);
-  
-  console.log('Syntax error fixes completed!');
+  // Run type check again
+  try {
+    console.log('Running type check...');
+    execSync('pnpm run type-check', { stdio: 'inherit' });
+    console.log('Type check passed!');
+  } catch (error) {
+    console.log('Type check still has errors, but some fixes were applied.');
+  }
 }
 
-// Run the main function
-main().catch(console.error);
-
-export { fixSyntaxErrors, processFile };
-=======
-  
-  console.log(`\nFixed ${fixedCount} files`);
-}
-
-// Run the script
-main().catch(console.error);
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
+main();

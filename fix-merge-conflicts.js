@@ -2,160 +2,117 @@
 
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import { execSync } from 'child_process';
 
-// Function to resolve merge conflicts by choosing the appropriate version
-function resolveMergeConflicts(content) {
-  // Split content into lines
-  const lines = content.split('\n');
-  const resolvedLines = [];
-  let inConflict = false;
-  let conflictBuffer = [];
-  let conflictType = '';
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.startsWith('<<<<<<<')) {
-      inConflict = true;
-      conflictBuffer = [];
-      conflictType = 'head';
-      continue;
-    }
-    
-    if (line.startsWith('=======')) {
-      conflictType = 'separator';
-      continue;
-    }
-    
-    if (line.startsWith('>>>>>>>')) {
-      inConflict = false;
-      
-      // Choose the version after ======= (usually the newer version)
-      if (conflictBuffer.length > 0) {
-        resolvedLines.push(...conflictBuffer);
-      }
-      
-      conflictBuffer = [];
-      conflictType = '';
-      continue;
-    }
-    
-    if (inConflict) {
-      if (conflictType === 'separator') {
-        // This is the version we want to keep (after =======)
-        conflictBuffer.push(line);
-      }
-      // Skip lines before ======= (HEAD version)
-    } else {
-      resolvedLines.push(line);
-    }
-  }
-  
-  return resolvedLines.join('\n');
-}
-
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix missing closing tags
-  fixed = fixed.replace(/<div([^>]*)>(?!.*<\/div>)/g, (match, attrs) => {
-    // Check if this div has a closing tag
-    const openTag = match;
-    const afterOpen = fixed.substring(fixed.indexOf(openTag) + openTag.length);
-    const hasClosing = afterOpen.includes('</div>');
-    
-    if (!hasClosing) {
-      return match + '</div>';
-    }
-    return match;
-  });
-  
-  // Fix JSX fragment issues
-  fixed = fixed.replace(/<>([^<]*?)(?!<\/>)/g, '<React.Fragment>$1</React.Fragment>');
-  
-  // Fix missing imports
-  if (fixed.includes('Lightbulb') && !fixed.includes("import { Lightbulb }")) {
-    fixed = fixed.replace(
-      /import { ([^}]+) } from 'lucide-react'/,
-      (match, imports) => {
-        if (!imports.includes('Lightbulb')) {
-          return `import { ${imports}, Lightbulb } from 'lucide-react'`;
-        }
-        return match;
-      }
-    );
-  }
-  
-  // Fix missing React import
-  if (fixed.includes('React.Fragment') && !fixed.includes("import React")) {
-    fixed = "import React from 'react';\n" + fixed;
-  }
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to resolve merge conflicts by keeping HEAD version
+function resolveMergeConflicts(filePath) {
   try {
-    console.log(`Processing: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Skip if no merge conflicts
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return;
+    // Check if file has merge conflict markers
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+      return false; // No conflicts to resolve
     }
     
-    // Resolve merge conflicts
-    let resolved = resolveMergeConflicts(content);
+    console.log(`Resolving merge conflicts in: ${filePath}`);
     
-    // Fix syntax errors
-    resolved = fixSyntaxErrors(resolved);
+    // Split content by conflict markers and keep HEAD version
+    const lines = content.split('\n');
+    const resolvedLines = [];
+    let inConflict = false;
+    let keepHead = false;
     
-    // Write back to file
-    fs.writeFileSync(filePath, resolved, 'utf8');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.startsWith('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepHead = true;
+        continue;
+      } else if (line.startsWith('=======')) {
+        keepHead = false;
+        continue;
+      } else if (line.startsWith('>>>>>>>')) {
+        inConflict = false;
+        keepHead = false;
+        continue;
+      }
+      
+      if (!inConflict || keepHead) {
+        resolvedLines.push(line);
+      }
+    }
     
-    console.log(`✓ Fixed: ${filePath}`);
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    return true;
   } catch (error) {
-    console.error(`✗ Error processing ${filePath}:`, error.message);
+    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
   }
+}
+
+// Function to find all TypeScript/JavaScript files with merge conflicts
+function findFilesWithConflicts(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules, .git, and other common directories
+        if (!['node_modules', '.git', 'dist', 'build', '.next', 'coverage'].includes(item)) {
+          scanDirectory(fullPath);
+        }
+      } else if (stat.isFile()) {
+        // Check for TypeScript/JavaScript files
+        if (item.match(/\.(ts|tsx|js|jsx)$/) && !item.includes('.original')) {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');
+            if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+              files.push(fullPath);
+            }
+          } catch (error) {
+            // Skip files that can't be read
+          }
+        }
+      }
+    }
+  }
+  
+  scanDirectory(dir);
+  return files;
 }
 
 // Main execution
-async function main() {
-  console.log('Starting merge conflict resolution...');
+function main() {
+  const workspaceDir = process.cwd();
+  console.log('Scanning for files with merge conflicts...');
   
-  // Get all TypeScript/JavaScript files in the app directory
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts',
-    '*.tsx',
-    '*.ts'
-  ];
+  const conflictedFiles = findFilesWithConflicts(workspaceDir);
+  console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
   
-  let allFiles = [];
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    allFiles = allFiles.concat(files);
+  let resolvedCount = 0;
+  for (const file of conflictedFiles) {
+    if (resolveMergeConflicts(file)) {
+      resolvedCount++;
+    }
   }
   
-  // Remove duplicates
-  allFiles = [...new Set(allFiles)];
+  console.log(`Resolved merge conflicts in ${resolvedCount} files`);
   
-  console.log(`Found ${allFiles.length} files to process`);
-  
-  // Process each file
-  allFiles.forEach(processFile);
-  
-  console.log('Merge conflict resolution completed!');
+  // Run type check to see if there are still errors
+  try {
+    console.log('Running type check...');
+    execSync('pnpm run type-check', { stdio: 'inherit' });
+    console.log('Type check passed!');
+  } catch (error) {
+    console.log('Type check failed, but merge conflicts have been resolved.');
+  }
 }
 
-// Run the main function
-main().catch(console.error);
-
-export { resolveMergeConflicts, fixSyntaxErrors, processFile };
+main();

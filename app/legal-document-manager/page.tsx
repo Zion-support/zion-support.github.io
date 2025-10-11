@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
-            </div>
-          </div>
-        </section>
-=======
-'use client';
-import React from 'react';
-))}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f1f5
+            </section>
 
 
         {/* Benefits Section */}
@@ -26,7 +17,7 @@ import React from 'react';
               {benefits.map((benefit, index) => (</div>
                 <div></div>
                   <div></div>
-                    <CheckCircle className="w-8 h-8 text-white" />
+                    <CheckCircle className="w-8 h-8 text-white"
 
                   <p>{benefit}</p>
               ))}
@@ -54,5 +45,4 @@ import React from 'react';
     </>
   )
 }
-    </Footer>
-  </CheckCircle>
+    </h2>
