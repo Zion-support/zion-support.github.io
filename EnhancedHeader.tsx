@@ -21,10 +21,14 @@ const EnhancedHeader: React.FC = () => {
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
@@ -41,22 +45,31 @@ const EnhancedHeader: React.FC = () => {
             </Link>
           </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
+            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
+          >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-cyan-500/20">

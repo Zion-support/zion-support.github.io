@@ -1,6 +1,9 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
     res.statusCode = 405
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ error: 'Method not allowed' }))
@@ -10,6 +13,7 @@ export default async function handler(req, res) {
   try {
     const { name, email, phone, details, country, service } = req.body || {}
     
+<<<<<<< HEAD
     if (!name || !email || !phone || !details) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')
@@ -66,6 +70,13 @@ export default async function handler(req, res) {
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
       return;
+=======
+    if (!name || !email || !phone || !details) {
+      res.statusCode = 400
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }))
+      return
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
     }
 
     // Process quote submission logic here
@@ -75,6 +86,7 @@ export default async function handler(req, res) {
     // 3. Send confirmation email to the customer
     // 4. Integrate with your CRM
 
+<<<<<<< HEAD
     // For now, just return a success response
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -92,5 +104,40 @@ export default async function handler(req, res) {
       error: 'Internal server error' 
     }));
 >>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+=======
+    const quoteData = {
+      name,
+      email,
+      phone,
+      details,
+      country: country || 'Not specified',
+      service: service || 'General inquiry',
+      timestamp: new Date().toISOString(),
+      status: 'pending'
+    }
+
+    // Log quote request for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Quote request received:', quoteData)
+    }
+
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Quote request submitted successfully',
+      quoteId: `quote_${Date.now()}`,
+      data: quoteData
+    }))
+
+  } catch (error) {
+    console.error('Quote submission error:', error)
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ 
+      error: 'Failed to submit quote request',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }))
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
   }
 }

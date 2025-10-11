@@ -47,26 +47,34 @@ const EnhancedFooter: React.FC = () => {
             </p>
             <div className="flex space-x-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
               <a
                 href="https://linkedin.com/company/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="https://facebook.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Facebook className="w-5 h-5" />
               </a>
+<<<<<<< HEAD
 =======
               <Link
                 to="https://linkedin.com/company/ziontechgroup"
@@ -89,6 +97,8 @@ const EnhancedFooter: React.FC = () => {
                 <Facebook className="w-5 h-5" />
               </Link>
 >>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
             </div>
           </div>
           
@@ -159,6 +169,7 @@ const EnhancedFooter: React.FC = () => {
               <div>
                 <p className="text-sm text-gray-400">Address</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
               </div>
             </div>
@@ -169,6 +180,8 @@ const EnhancedFooter: React.FC = () => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
                 <p className="text-white">123 Tech Street, Innovation City</p>
               </div>
             </div>
@@ -197,7 +210,10 @@ const EnhancedFooter: React.FC = () => {
                 </span>
               </Link>
             </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f401
           </div>
         </div>
       </div>
