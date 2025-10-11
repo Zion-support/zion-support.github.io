@@ -406,7 +406,6 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
   return updateProposalMeta(id, (meta) => ({
     ...meta
     artifacts: { ...meta.artifacts, ...artifacts }}))
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 }
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {

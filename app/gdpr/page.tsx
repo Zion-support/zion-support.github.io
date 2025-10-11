@@ -12,7 +12,6 @@ const benefits = [
 
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]</div>
         </div>
       </section>
               <p className="text-xl text-gray-300">Section description</p>
@@ -23,5 +22,3 @@ const benefits = [
           </div>
         </div>
       </section>
-};]
-export default PagePage</$1></p></h3>

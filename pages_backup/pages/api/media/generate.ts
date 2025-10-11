@@ -44,7 +44,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' })
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { buildPressRelease } from '../../../utils/mediaKit'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const apiKey = process.env.OPENAI_API_KEY
     if (apiKey) {
       try {

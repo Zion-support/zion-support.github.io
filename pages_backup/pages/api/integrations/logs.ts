@@ -29,7 +29,6 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { provider_id } = req.query as { provider_id?: string }
   const state = read_state ()
   const logs = provider_id

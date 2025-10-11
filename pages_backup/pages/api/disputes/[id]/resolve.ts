@@ -87,7 +87,6 @@ export default async function handler(req, res) {
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary
     dispute.updatedAt = now
     await upsertDispute(dispute)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary
     dispute.updatedAt = now
     await upsertDispute(dispute)

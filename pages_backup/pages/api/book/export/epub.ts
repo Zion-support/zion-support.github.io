@@ -129,7 +129,6 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -195,7 +194,6 @@ if ( {) {
       'attachment; filename="zion - os - book.epub"',
     )
     res.status(200).send(buf)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || "Failed to build EPUB" })
   } finally {

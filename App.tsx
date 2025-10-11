@@ -21,7 +21,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor'
 import ServiceWorker from './app/components/ServiceWorker'
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
 import FuturisticBackground from './app/components/FuturisticBackground'
-// Lazy load pages for better performance
+// Lazy load pages for better performance with error boundaries
 const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))
 const ServicesPage = React.lazy(() => import('./app/services/page'))
@@ -45,11 +45,16 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'))
+const AiCustomerSupportPage = React.lazy(() => import('./app/ai-customer-support/page'))
+const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'))
+const AiWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'))
+const AiContentGeneratorPage = React.lazy(() => import('./app/ai-content-generator/page'))
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'))
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'))
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'))
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'))
 // Additional Service Pages
@@ -117,12 +122,17 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                            <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                            <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                            <Route path="/ai-content-generator" element={<AiContentGeneratorPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                             <Route path="/web-development" element={<WebDevelopmentPage />} />
                             <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                             
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />

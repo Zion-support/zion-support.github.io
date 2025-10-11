@@ -32,5 +32,3 @@ export default PWAInstallerPage
         <title>PWAInstaller | Zion Tech Group
         <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
-}
-export default PWAInstallerPage</div>

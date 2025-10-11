@@ -68,6 +68,3 @@ export default FuturisticHeroPage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-  )
-}
-export default FuturisticHeroPage</div></div></div></div></div></button></button></p></p></h2></section>

@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
  import type { NextApiRequest, NextApiResponse } from 'next'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface EmailValidationResult {
   email: string
   is_valid: boolean

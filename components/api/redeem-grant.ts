@@ -242,7 +242,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   const { studentEmail, grantCode, courseId } = req.body || {}
   if (!studentEmail || !grantCode || !courseId) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     redeemedAt: now,
   }
   records.push(record)

@@ -1,6 +1,3 @@
-}
-  ]
-const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -127,6 +124,3 @@ export default GlobalErrorBoundaryPage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-  )
-}
-export default GlobalErrorBoundaryPage</div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></h2></h2></h2></h3></section></section></section>
