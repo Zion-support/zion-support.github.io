@@ -2,7 +2,6 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
 export default function PagePage() {
   const features = [
     {
@@ -19,14 +18,6 @@ export default function PagePage() {
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-=======
-const ITServicesPage: React.FC = () => {
-    {} id: 1,
-    };,
-title: 'Cloud Infrastructure',;,
-description: 'Scalable and secure cloud solutions for your business needs.',;,
-icon: Cloud,,
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
     }
   ];
 
@@ -76,38 +67,8 @@ icon: Cloud,,
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </main>
     </div>
-=======
-
-      <Footer />
-    </>
-        </section>
-
-        {/* CTA Section */}
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-Ready to Optimize Your IT Infrastructure?>
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
-              </p>
-              </button>
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-      </div>
-
-      <Footer />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
   );
 }
