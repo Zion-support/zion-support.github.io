@@ -1,11 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Star, Users, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,224 +46,210 @@ const DynamicContentShowcase: React.FC = () => {
       name: 'Michael Chen',
       role: 'CTO',
       company: 'InnovateLabs',
-      content: 'Their cloud migration services were exceptional. We achieved 99.9% uptime and our applications now run 5x faster than before.',
+      content: 'The micro SAAS applications they developed for us are game-changers. Each tool solves a specific problem and integrates seamlessly with our existing systems.',
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
       role: 'Operations Director',
       company: 'Global Enterprises',
-      content: 'The security enhancements they implemented gave us peace of mind. Our data is now more secure than ever, and we passed all compliance audits.',
+      content: 'Their 5G implementation services helped us stay ahead of the competition. The network performance improvements have been remarkable.',
       rating: 5
     }
   ];
 
-  const benefits = [
-    'Reduce operational costs by up to 40%',
-    'Increase productivity and efficiency',
-    'Enhance customer experience',
-    'Improve data security and compliance',
-    'Scale your business faster',
-    'Gain competitive advantage',
-    'Access to expert support',
-    'Future-proof your technology'
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
-  const currentTestimonial = testimonials[currentIndex];
-
   useEffect(() => {
-    if (isPlaying) {
-      const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-      }, 5000);
-      return () => clearInterval(interval);
-    }
+    let interval: NodeJS.Timeout;
     
-    return () => {
-      // No cleanup needed when not playing
-    };
-  }, [isPlaying, testimonials.length]);
+    if (isPlaying) {
+      interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % features.length);
+      }, 3000);
+    }
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isPlaying, features.length]);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % features.length);
   };
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + features.length) % features.length);
   };
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
+  const currentFeature = features[currentIndex];
+  const IconComponent = currentFeature.icon;
+
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Experience the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Future</span> of Technology
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Discover how our cutting-edge AI and IT solutions can transform your business and drive unprecedented growth.
+    <div className="py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Why Choose <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Zion Tech Group</span>?
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Experience the power of cutting-edge technology solutions designed to transform your business
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              <Zap className="w-5 h-5 mr-2" />
-              Get Started
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Learn More
-            </button>
+        </div>
+
+        {/* Dynamic Feature Showcase */}
+        <div className="mb-20">
+          <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-slate-900 rounded-3xl p-8 sm:p-12 relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+            
+            <div className="relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {/* Content */}
+                <div className="text-white">
+                  <div className="flex items-center mb-6">
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${currentFeature.color} flex items-center justify-center mr-4`}>
+                      <IconComponent className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl sm:text-3xl font-bold">{currentFeature.title}</h3>
+                      <p className="text-gray-300 text-sm">Feature {currentIndex + 1} of {features.length}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
+                    {currentFeature.description}
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                      Learn More
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </button>
+                    <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                      Get Started
+                    </button>
+                  </div>
+                </div>
+
+                {/* Visual */}
+                <div className="relative">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                    <div className="grid grid-cols-2 gap-4">
+                      {stats.map((stat, index) => (
+                        <div key={index} className="text-center">
+                          <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.number}</div>
+                          <div className="text-gray-300 text-sm">{stat.label}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Floating Elements */}
+                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse"></div>
+                  <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                </div>
+              </div>
+
+              {/* Controls */}
+              <div className="flex items-center justify-center mt-8 space-x-4">
+                <button
+                  onClick={prevSlide}
+                  className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                >
+                  <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+                
+                <button
+                  onClick={togglePlayPause}
+                  className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                >
+                  {isPlaying ? (
+                    <Pause className="w-6 h-6 text-white" />
+                  ) : (
+                    <Play className="w-6 h-6 text-white" />
+                  )}
+                </button>
+                
+                <button
+                  onClick={nextSlide}
+                  className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+                >
+                  <ChevronRight className="w-6 h-6 text-white" />
+                </button>
+              </div>
+
+              {/* Dots Indicator */}
+              <div className="flex justify-center mt-6 space-x-2">
+                {features.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === currentIndex ? 'bg-white' : 'bg-white/30'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Powerful Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive suite of AI and IT solutions provides everything you need to succeed in the digital age.
-            </p>
+        {/* Testimonials */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h3>
+            <p className="text-lg text-gray-600">Trusted by industry leaders worldwide</p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">{feature.title}</h3>
-                <p className="text-gray-300 text-center">{feature.description}</p>
+                <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                  <div className="text-sm text-gray-500">{testimonial.role}, {testimonial.company}</div>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  "{currentTestimonial.content}"
-                </blockquote>
-                
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div>
-                    <div className="text-gray-400">{currentTestimonial.role}</div>
-                    <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              
-              <button
-                onClick={togglePlayPause}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
-              </button>
-              
-              <button
-                onClick={nextTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions provide a complete package of benefits designed to accelerate your business growth.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-8 sm:p-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
+              Join hundreds of companies already benefiting from our innovative technology solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Your Project
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                Schedule Consultation
               </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
