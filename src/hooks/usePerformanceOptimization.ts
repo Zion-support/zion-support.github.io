@@ -108,6 +108,7 @@ export const usePerformanceOptimization = () => {
         }
         if (process.env['NODE_ENV'] === 'development') { 
           if (import.meta.env.DEV) { 
+            console.log('Performance optimization running in development mode');
           } 
         }
       }
