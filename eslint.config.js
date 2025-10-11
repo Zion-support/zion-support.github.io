@@ -4,6 +4,7 @@ import tseslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+
 export default [
   // Global ignores
   {
@@ -34,8 +35,7 @@ export default [
       'fix-*.js',
       '*.cjs',
       '*.js.broken',
-      'jest.setup.js'
-    ],
+      'jest.setup.js',
       'components.disabled_full/**',
       'backup/**',
       'backup-merge-conflicts/**',
@@ -92,8 +92,7 @@ export default [
     },
     rules: {
       ...tseslint.configs.recommended.rules,
-...reactHooks.configs.recommended.rules,
-
+      ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }

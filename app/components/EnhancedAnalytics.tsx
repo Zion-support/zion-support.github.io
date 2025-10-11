@@ -1,17 +1,3 @@
-};
-
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const track = useCallback((event: string, parameters?: Record<string, any>) => {
-    console.log('Analytics Event:', event, parameters);
-  }, []);
-
-  const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
-    console.log('Analytics Page:', pageName, parameters);
-  }, []);
-
-  const identify = useCallback((userId: string, traits?: Record<string, any>) => {
-    console.log('Analytics Identify:', userId, traits);
-  }, []);
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
@@ -97,6 +83,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }
 
   return (
-    <AnalyticsContext.Provider value={{ track, page, identify }}>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+  )
+}
