@@ -1,8 +1,11 @@
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-export default function PagePage() {
+const PagePage: React.FC = () => {
   const features = [
     {
       title: 'Expert Solutions',
@@ -18,81 +21,19 @@ export default function PagePage() {
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-const AccessibilityPage: React.FC = () => {
-  const features = [
-    {
-      icon: Eye,
-      title: 'Visual Accessibility',
-      description: 'Screen reader compatibility, high contrast modes, and visual indicators for better user experience.',
-      benefits: ['Screen reader support', 'High contrast themes', 'Focus indicators', 'Text scaling']
-    },
-    {
-      icon: Ear,
-      title: 'Audio Accessibility',
-      description: 'Audio descriptions, captions, and alternative audio formats for hearing-impaired users.',
-      benefits: ['Closed captions', 'Audio descriptions', 'Sign language support', 'Visual alerts']
-    },
-    {
-      icon: Hand,
-      title: 'Motor Accessibility',
-      description: 'Keyboard navigation, voice control, and alternative input methods for users with motor disabilities.',
-      benefits: ['Keyboard navigation', 'Voice control', 'Switch navigation', 'Gesture alternatives']
-    },
-    {
-      icon: Brain,
-      title: 'Cognitive Accessibility',
-      description: 'Clear language, consistent navigation, and simplified interfaces for cognitive accessibility.',
-      benefits: ['Clear language', 'Consistent design', 'Error prevention', 'Progress indicators']
-    }
-  ];
-
-  const services = [
-    {
-      icon: Shield,
-      title: 'Accessibility Audits',
-      description: 'Comprehensive evaluation of your digital products against WCAG 2.1 AA standards.',
-      benefits: ['WCAG compliance check', 'Detailed reports', 'Remediation guidance', 'Follow-up testing']
-    },
-    {
-      icon: Target,
-      title: 'Implementation Support',
-      description: 'Hands-on assistance implementing accessibility features and best practices.',
-      benefits: ['Code implementation', 'Design consultation', 'Testing support', 'Training sessions']
-    }
-  ];
-
-  const standards = [
-    'WCAG 2.1 AA Compliance',
-    'Section 508 Compliance',
-    'ADA Compliance',
-    'EN 301 549 Compliance'
-  ];
-
-  const benefits = [
-    {
-      icon: BarChart,
-      title: 'Increased Reach',
-      description: 'Access your products to 15% of the global population with disabilities.'
-    },
-    {
-      icon: Zap,
-      title: 'Better Performance',
-      description: 'Accessible design often leads to better overall user experience and performance.'
-    },
-    {
-      icon: Shield,
-      title: 'Legal Compliance',
-      description: 'Meet legal requirements and avoid potential lawsuits and penalties.'
-    },
-    {
-      icon: Target,
-      title: 'Brand Reputation',
-      description: 'Demonstrate your commitment to inclusion and social responsibility.'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions for your business needs." />
+        <meta name="keywords" content="page, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -100,19 +41,22 @@ const AccessibilityPage: React.FC = () => {
               Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+              Professional page services and solutions for your business needs.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="h-8 w-8 text-green-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
                   ))}
@@ -120,25 +64,46 @@ const AccessibilityPage: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
+            <h2 className="text-3xl font-bold text-white mb-8">Why Choose Our Page Services?</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
+                <p className="text-gray-300">Professional developers with years of experience</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality Assurance</h3>
+                <p className="text-gray-300">Rigorous testing and quality control processes</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-purple-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
+                <p className="text-gray-300">Round-the-clock support and maintenance</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Custom Solutions</h3>
+                <p className="text-gray-300">Tailored solutions for your specific needs</p>
               </div>
             </div>
           </div>
         </div>
       </main>
+      
+      <Footer />
     </div>
   );
-}
+};
+
+export default PagePage;

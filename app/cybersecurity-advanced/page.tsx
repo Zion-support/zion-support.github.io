@@ -1,8 +1,11 @@
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-export default function PagePage() {
+const PagePage: React.FC = () => {
   const features = [
     {
       title: 'Expert Solutions',
@@ -20,16 +23,17 @@ export default function PagePage() {
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
 
-const CybersecurityAdvancedPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions for your business needs." />
+        <meta name="keywords" content="page, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -37,19 +41,22 @@ const CybersecurityAdvancedPage: React.FC = () => {
               Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+              Professional page services and solutions for your business needs.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="h-8 w-8 text-green-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
                   ))}
@@ -57,45 +64,39 @@ const CybersecurityAdvancedPage: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
+            <h2 className="text-3xl font-bold text-white mb-8">Why Choose Our Page Services?</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Expert Team</h3>
+                <p className="text-gray-300">Professional developers with years of experience</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-green-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Quality Assurance</h3>
+                <p className="text-gray-300">Rigorous testing and quality control processes</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-purple-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">24/7 Support</h3>
+                <p className="text-gray-300">Round-the-clock support and maintenance</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Custom Solutions</h3>
+                <p className="text-gray-300">Tailored solutions for your specific needs</p>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
-      <Helmet>
-        <title>Cybersecurity Advanced - Zion Tech Group</title>
-        <meta name="description" content="Professional cybersecurity advanced services and solutions." />
-        <meta name="keywords" content="cybersecurity advanced, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-16">
-        <div className="flex items-center justify-center min-h-screen">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Cybersecurity Advanced</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
-              Learn More
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
           </div>
         </div>
       </main>
@@ -105,4 +106,4 @@ const CybersecurityAdvancedPage: React.FC = () => {
   );
 };
 
-export default CybersecurityAdvancedPage;
+export default PagePage;
