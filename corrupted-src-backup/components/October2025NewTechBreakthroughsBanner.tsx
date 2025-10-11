@@ -399,8 +399,8 @@ export, default, function October2025NewTechBreakthroughsBann, e, r(): vo, i, d 
               <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e
               Learn, Green, AI
               <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e
-              Learn, Green, AI;"
-              <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e,"
+              Learn, Green, AI;">
+              <ArrowRight, className="ml-2 w-5 h-5, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
         {/* Call, to, Action */}
         <div, className="te, x, t-cent, e, r">"

@@ -40,8 +40,7 @@ const EnhancedHeader: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
-          >
+            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -64,18 +63,10 @@ const EnhancedHeader: React.FC = () => {
               </Link>
             </nav>
           </div>
-<<<<<<< HEAD
         )}
       </div>
     </header>
   );
 };
-=======
-        </div>
-      </header>
-    </>
-  )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
 
 export default EnhancedHeader;

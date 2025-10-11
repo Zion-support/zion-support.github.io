@@ -93,7 +93,7 @@ if (!id) return
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
 
-              className="object-cover rounded-md"
+              className="object-cover rounded-md">
               fill
             />
           </div>

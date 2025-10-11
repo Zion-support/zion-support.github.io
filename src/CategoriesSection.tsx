@@ -325,7 +325,7 @@ export function CategoriesSection(): any ({
               key = {category.id,}
               href = {category.link |'#',}
 
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
                 <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -349,7 +349,7 @@ export function CategoriesSection(): any ({
                 key = {service.title,}
                 href = {service.link,}
 
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">
               >
                 {service.title}
               </Link>            ))}
@@ -359,7 +359,7 @@ export function CategoriesSection(): any ({
               <$2 />
                 key={service.title}
                 href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">
               >
                 {service.title}
               </Link>            ))}
@@ -511,7 +511,7 @@ if ( {) {
             <;$2 />
               key = {category.id, }
               href = {category.link || '#', }
-              className="group block rounded - lg focus:outline - none focus:ring - 2 focus:ring - zion - cyan"
+              className="group block rounded - lg focus:outline - none focus:ring - 2 focus:ring - zion - cyan">
             >
               <div className="rounded - lg overflow - hidden h - full border border - zion - blue - light bg - zion - blue - dark p - 6 transition - all duration - 300 group - hover:border - zion - purple / 50 group - focus:border - zion - purple / 50 hover:translate - y-[-5px] group - hover:shadow - lg">
                 <div className={`rounded - full w - 16 h - 16 bg - gradient - to - br ${category.color} flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>
@@ -529,7 +529,7 @@ if ( {) {
               <;$2 />
                 key = {service.title, }
                 href = {service.link, }
-                className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300"
+                className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300">
               >
                 {service.title}
               </Link>            ))}
@@ -537,7 +537,7 @@ if ( {) {
         <div className="mt - 12 flex justify - center">
           <;$2 />
             href="/categories / all"
-            className="text - zion - cyan border - b border - zion - cyan hover:border - zion - cyan - dark transition - colors"
+            className="text - zion - cyan border - b border - zion - cyan hover:border - zion - cyan - dark transition - colors">
           >
             {t ('home.view_all_categories')}
           </Link></$1></$1></$1>)

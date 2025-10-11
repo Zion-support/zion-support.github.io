@@ -229,7 +229,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 Join, 100, K+ subscribers, who, never miss, a, breakthrough.
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
                 <input, typ, e="ema, i, l"
-                  placehold, e, r="Enter, your, email"
+                  placehold, e, r="Enter, your, email">
                   className="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0" />
                 <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
                   <sp, a, n>Subscri, b, e
@@ -246,7 +246,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
               </p>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
                 <input, typ, e="ema, i, l""
-                  placehold, e, r="Enter, your, email""
+                  placehold, e, r="Enter, your, email"">
                   className="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0" /></input>"
                 <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
                   <sp, a, n>Subscri, b, e</sp, a, n>"

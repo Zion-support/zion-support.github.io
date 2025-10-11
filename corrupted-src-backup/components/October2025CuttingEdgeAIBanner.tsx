@@ -126,7 +126,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm">"
                 <sp, a, n>18, min, read
               </d, i, v>"
-              <ArrowRight, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-ho, v, e,"
+              <ArrowRight, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
               <Link, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Articl, e, 2 - Neur, a, l-Symbolic, Fusio, n */}
@@ -177,7 +177,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-300, tex, t-sm">"
                 <sp, a, n>22, min, read
               </d, i, v>"
-              <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-ho, v, e,"
+              <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
               <Link, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Articl, e, 3 - Continuous, Learnin, g */}
@@ -228,7 +228,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm">"
                 <sp, a, n>20, min, read
               </d, i, v>"
-              <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-ho, v, e,"
+              <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
               <Link, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Articl, e, 4 - Distributed, Inferenc, e */}

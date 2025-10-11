@@ -603,7 +603,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 <div></div>"
                   to="/contact""
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg,
-  hover:from-purple-600,"
+  hover:from-purple-600,">
   hover:to-cyan-600 transition-all""
                   >""
                     Schedule AI Assessment""
@@ -612,7 +612,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                     <Rocket className="w-5 h-5" />
                   </Link>"
                   <Link to="/services"></Link>"
-  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30,"
+  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30,">
   hover:bg-white/20 transition-all>""
               <section className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50"></section>"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"></h2>"
@@ -624,7 +624,7 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                 <div></div>"
                   to="/contact""
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg,
-  hover:from-purple-600,"
+  hover:from-purple-600,">
   hover: to-cyan-600 transition-all""
                   >""
                     Schedule AI Assessment""

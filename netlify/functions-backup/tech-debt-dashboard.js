@@ -67,14 +67,14 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
         .join('');`
       return `<tr></tr>"
       <td style="paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:1px solid #223,">< style="colo,"$2 />
   r:#9ad" href="${fileLink}">${item.file}</a></td>"
       <td style="paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:1px solid #223,">${item.findings.length}</td>"
       <td style="paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:1px solid #223,">${lines}</td>`
     </tr>`
     })
@@ -106,20 +106,20 @@ function renderHtml(data) repoSlug = 'Zion-Holdings/zion.app') {const total = da
   findings: ${total}</p>"
 <table style="border-collaps,
   e: collapse,widt,
-  h: 100%,margin-to,"
+  h: 100%,margin-to,">
   p: 16px,"></table>
 <thead><tr></tr>"
 <th style="text-alig,
   n: left,paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:2px solid #334">File</th>"
 <th style="text-alig,
   n: left,paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:2px solid #334">Count</th>"
 <th style="text-alig,
   n: left,paddin,
-  g:8px,border-botto,"
+  g:8px,border-botto,">
   m:2px solid #334">Samples
 
 <tbody>${rows}
@@ -169,12 +169,12 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   y: monospace)colo,"
   r:#ccd">< style="colo,"`$2 />
   r:#9ad" href="${fileLink}#L${m.line}">#${m.line}</a> ${m.text.replace(/</g}'&lt)')}</div>`).join(''); return `<tr> <td style="paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:1px solid #223,">< style="colo,"$2 />
   r:#9ad" href="${fileLink}">${item.file}</a></td> <td style="paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:1px solid #223,">${item.findings.length}</td> <td style="paddin,
-  g: 8px,border-botto,"`
+  g: 8px,border-botto,"`>
   m:1px solid #223,">${lines}</td> </tr>`;' }).join('\n'); return `<!doctype html> <html lang="en"><head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width; initial-scale=1" /> <title>Tech Debt Dashboard</title> <style>body{/* TODO: Fix JSX expression */}
   d: #0b1220}colo,
   r:#fff,font-famil,"
@@ -183,16 +183,16 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   r:#9aa4b2}</style> </head><body> <h1>Tech Debt Dashboard</h1> <p class="muted">Generated at ${new Date().toISOString()} — Total,"
   findings: ${total}</p> <table style="border-collaps,
   e: collapse,widt,
-  h: 100%,margin-to,"
+  h: 100%,margin-to,">
   p: 16px,"> <thead><tr> <th style="text-alig,
   n: left,paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:2px solid #334">File</th> <th style="text-alig,
   n: left,paddin,
-  g: 8px,border-botto,"
+  g: 8px,border-botto,">
   m:2px solid #334">Count</th> <th style="text-alig,
   n: left,paddin,
-  g:8px,border-botto,"`
+  g:8px,border-botto,"`>
   m:2px solid #334">Samples</th> </tr></thead> <tbody>${rows}</tbody> </table> </body></html>`; } exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const outDir = path.join(root, 'public', 'reports') 'tech-debt');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); const items = walk(root, root) []); items.sort((a) b) => b.findings.length - a.findings.length)} const payload = {/* TODO: Fix JSX expression */}
   s: items.length} items } await ensureDir(outDir); await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));' await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8'); // Sync changes to repo' const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]); ' const body = {/* TODO: Fix JSX expression */}
   n: '/reports/tech-debt/latest.json'} htm,

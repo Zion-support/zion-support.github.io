@@ -94,7 +94,7 @@ ZION
             </div>
             <$2 />;
 onClick={onClose}
-              className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
+              className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md">
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -151,7 +151,7 @@ return (;
 }
 key={contact.text}
                     href={contact.href}
-                    className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"
+                    className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors">
                   >
                     <IconComponent className="w-3 h-3 mr-2" />
                     {contact.text}

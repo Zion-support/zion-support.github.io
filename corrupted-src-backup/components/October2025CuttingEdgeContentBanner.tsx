@@ -145,11 +145,11 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
                   Read, Full, Article
                   <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
-                  Read, Full, Article;"
+                  Read, Full, Article;">
                   <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <div, className="flex, item, s-center, tex, t-sm, fon, t-semibold, tex, t-purp, l, e-400, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
                   Read, Full, Article;"
-                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
+                  <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           ))}
         {/* CTA, Sectio, n */}

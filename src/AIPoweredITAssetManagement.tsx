@@ -96,7 +96,7 @@ const AIPoweredITAssetManagement = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center max-w-4xl mx-auto"
+                        className="text-center max-w-4xl mx-auto">
                     >
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">
                             AI-Powered IT Asset Management
@@ -108,13 +108,13 @@ const AIPoweredITAssetManagement = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <$2 />
                                 to="/contact"
-                                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                             >
                                 Get Started Today
                             </Link>
                             <$2 />
                                 to="/pages/InnovativeServicesShowcase2025"
-                                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                             >
                                 Learn More
                             </Link>
@@ -130,7 +130,7 @@ const AIPoweredITAssetManagement = () => {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center mb-16"
+                        className="text-center mb-16">
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
                             Revolutionary AI Features
@@ -148,7 +148,7 @@ const AIPoweredITAssetManagement = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                             >
                                 <div className="text-blue-600 mb-4">
                                     <feature.icon className="w-12 h-12" />
@@ -168,7 +168,7 @@ const AIPoweredITAssetManagement = () => {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center mb-16"
+                        className="text-center mb-16">
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
                             Advanced Capabilities
@@ -185,7 +185,7 @@ const AIPoweredITAssetManagement = () => {
                                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                                className="bg-white p-8 rounded-xl shadow-lg"
+                                className="bg-white p-8 rounded-xl shadow-lg">
                             >
                                 <div className="flex items-start space-x-4">
                                     <div className="text-blue-600 flex-shrink-0">
@@ -209,7 +209,7 @@ const AIPoweredITAssetManagement = () => {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-center mb-16"
+                        className="text-center mb-16">
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
                             Measurable Benefits
@@ -226,7 +226,7 @@ const AIPoweredITAssetManagement = () => {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                                className="text-center"
+                                className="text-center">
                             >
                                 <div className="text-green-600 mb-4 flex justify-center">
                                     <benefit.icon className="w-12 h-12" />
@@ -246,7 +246,7 @@ const AIPoweredITAssetManagement = () => {
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="max-w-4xl mx-auto"
+                        className="max-w-4xl mx-auto">
                     >
                         <h2 className="text-4xl font-bold mb-6">
                             Ready to Transform Your IT Asset Management?
@@ -258,13 +258,13 @@ const AIPoweredITAssetManagement = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <$2 />
                                 to="/contact"
-                                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                             >
                                 Schedule Demo
                             </Link>
                             <$2 />
                                 to="/pages/InnovativeServicesShowcase2025"
-                                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                             >
                                 View All Services
                             </Link>

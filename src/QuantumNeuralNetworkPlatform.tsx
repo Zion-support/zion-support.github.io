@@ -110,14 +110,14 @@ unprecedented computational capabilities.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
                 >
                   <span>Get Started</span>
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <$2 />;
 to="/services/quantum-technology";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 >;
 Learn More
                 </Link>
@@ -378,14 +378,14 @@ Experience unprecedented computational power and breakthrough AI performance.
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
               >;
 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
               >;
 View All Services
               </Link>
@@ -395,7 +395,7 @@ View All Services
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center"
+            className="text-center">
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
 Quantum Neural Network Platform
@@ -424,7 +424,7 @@ return (;
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center"
+            className="text-center">
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
 Quantum Neural Network
@@ -442,14 +442,14 @@ Get Started
               <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">;
 Learn More
               </button>;
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
               >;
 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/services/quantum-technology";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
               >;
 Learn More
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -477,14 +477,14 @@ Combining the power of quantum mechanics with advanced artificial intelligence f
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
             >;
 Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <$2 />;
 to="/services/quantum-technology";
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
             >;
 Learn More
             </Link>
@@ -546,14 +546,14 @@ Experience unprecedented computational power and unlock new possibilities in mac
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
               >;
 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/services/quantum-technology";
-className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"
+className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
               >;
 Learn More
               </Link>
@@ -569,7 +569,7 @@ Learn More
 initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -589,7 +589,7 @@ Harness the power of quantum computing to revolutionize your AI applications
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Quantum-Powered Features
             </h2>;
-className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -682,7 +682,7 @@ Our platform combines cutting-edge quantum computing with advanced neural networ
 initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >;
 import { Brain;, Zap, Shield, TrendingUp, Users, Globe } from 'lucide-react';
 export default function QuantumNeuralNetworkPlatform() {;
@@ -702,13 +702,13 @@ Revolutionizing AI with quantum computing and neural networks for unprecedented 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30"
+className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30">
             >;
 Get Started
             </Link>
             <$2 />;
 to="/demo";
-className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
             >;
 Request Demo
             </Link>
@@ -735,14 +735,14 @@ Combining cutting-edge quantum computing with advanced consciousness integration
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105">
             >;
 Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <$2 />;
 to="/services/quantum-technology";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-200">
             >;
 Learn More
             </Link>
@@ -1175,7 +1175,7 @@ key={index}
                 initial={{ opacity: 0}}, scale: 0.8 }}
                 whileInView={{ opacity: 1}}, scale: 1 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:border-purple-400/50 transition-all duration-300">
               >
                 <span className="text-white font-semibold text-lg">{tech}</span>
               </motion.div>
@@ -1271,14 +1271,14 @@ Transform medical diagnosis and treatment planning with quantum-enhanced medical
                   </p>
                 </div>
               </div>;
-className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
+className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2">
               >;
 Get Started
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <$2 />;
 to="/services";
-className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2"
+className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2">
               >;
 View All Services
               </Link>
@@ -1541,7 +1541,7 @@ Most Popular
             {useCases.map((useCase), index) => (
               <$2 />;
 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
@@ -1765,14 +1765,14 @@ Our team of experts is ready to help you get started.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
             >;
 Schedule a Demo
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <$2 />;
 to="/pricing";
-className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
             >;
 View Pricing
             </Link>
@@ -1837,43 +1837,43 @@ neural network platform ever created.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
             >;
 Start Your Quantum Journey
             </Link>
             <$2 />;
 to="/pricing";
-className="border-2 border-white text-white hover:bg-white hover:text-zion-purple px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+className="border-2 border-white text-white hover:bg-white hover:text-zion-purple px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
             >;
 View Success Stories;
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
             >;
 Schedule Consultation
               <ArrowRight className="ml-2 w-5 h-5" />;
-className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
+className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2">
             >;
 Schedule a Demo
               <ArrowRight className="w-5 h-5" />;
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
             >;
 Schedule a Demo
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <$2 />;
 to="/services/quantum-technology";
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
             >;
 Explore Quantum Services
             </Link>
             <$2 />;
 to="/services";
-className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2"
+className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2">
             >;
 Explore All Services
             </Link>
             <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
             >;
 Explore All Services
             </Link>
@@ -1890,14 +1890,14 @@ Quantum Neural Network Platform.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
               >;
 Schedule a Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/pricing";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
               >;
 View Pricing
               </Link>
@@ -1945,14 +1945,14 @@ Schedule Demo
         </div>
       </section>
     </div>;
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
               >
                 <span>Schedule a Demo</span>
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/pricing";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
               >;
 View Pricing
               </Link>
@@ -2005,13 +2005,13 @@ Contact Support →
     </>
   )
 }
-              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
             >;
 Schedule a Demo
             </Link>
             <$2 />;
 to="/pricing";
-className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"
+className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
@@ -2025,14 +2025,14 @@ neural network platform ever created.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105">
             >;
 Schedule a Demo
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <$2 />;
 to="/pricing";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-200">
             >;
 View Pricing
             </Link>

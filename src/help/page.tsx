@@ -160,10 +160,10 @@ We're here to help you succeed.
               <input;
 type="text";
 placeholder="Search help articles...";
-value={searchTerm}
+value={searchTerm}>
                 onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg"
+                className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg">
               />
           {/* Categories */}
           <div className="mb-12">
@@ -244,15 +244,15 @@ with any questions or issues you might have.
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <$2 />;
 href="/contact";
-className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <MessageSquare className="w-5 h-5 mr-2" />;
 Contact Support;
 href="tel:+13024640950";
-className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
 href="mailto:kleber@ziontechgroup.com";
-className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />;
 Email Us
       <Footer />;
@@ -355,10 +355,10 @@ responseTim,;,
 e: 'Community driven'
           <MessageSquare className="w-5 h-5 mr-2" />
 // Contact Support;
-href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950;
-href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />;
 Email Us
       <Footer /></Footer>

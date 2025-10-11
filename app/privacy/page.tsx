@@ -78,13 +78,13 @@ address: '364 E Main St STE 1008, Middletown, DE 19709'} return (
       <Navigation />
       
       {/* Hero Section */}
-      <section className="
+      <section className=">
     g: px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6">
 Privacy <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
           </p>
           <div className="flex items-center justify-center text-cyan-400">
@@ -101,15 +101,15 @@ Your privacy is important to us. This policy explains how we collect, use, and p
       </section>
 
       {/* Data Collection Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8"
-        <div className="max-w-7xl mx-auto"
-          <div className="text-center mb-16"
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className=">
     ,>
     d: text-4xl font-bold text-white mb-4">
 Information We Collect>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 We collect information to provide better services to our users
             </p>
           </div>
@@ -118,14 +118,10 @@ We collect information to provide better services to our users
     </>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {dataTypes.map((type), index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <type.icon className="w-8 h-8 text-white">
                 </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
@@ -146,14 +142,14 @@ We collect information to provide better services to our users
       </section>
 
       {/* Purposes Section */}
-      <section className="
-    g: px-8"
+      <section className=">
+    g: px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-4">
 How We Use Your Information>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 We use your information for specific, legitimate purposes
             </p>
           </div>
@@ -162,8 +158,8 @@ We use your information for specific, legitimate purposes
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {purposes.map((purpose), index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
-                <div className="flex items-start"
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-start">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <purpose.icon className="w-6 h-6 text-white">
   </purpose>
@@ -172,8 +168,8 @@ We use your information for specific, legitimate purposes
       <Footer />
     </>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2"
-                    <p className="text-gray-300"
+                    <h3 className="text-xl font-bold text-white mb-2">
+                    <p className="text-gray-300">
                   </div>
       
       <Footer />
@@ -198,13 +194,13 @@ We use your information for specific, legitimate purposes
       </section>
 
       {/* Rights Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8"
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 Your Privacy Rights>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 You have control over your personal data
             </p>
           </div>
@@ -213,14 +209,10 @@ You have control over your personal data
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {rights.map((right), index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center"
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                   <right.icon className="w-8 h-8 text-white">
                 </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{right.title}</h3>
@@ -241,27 +233,23 @@ You have control over your personal data
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8"
-        <div className="max-w-4xl mx-auto"
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 text-center"
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 text-center">
             <h2 className=">
     ,>
     d: text-4xl font-bold text-white mb-6">
 Questions About Privacy?>
             </h2>
-            <p className="text-xl text-gray-300 mb-8"
+            <p className="text-xl text-gray-300 mb-8">
 Contact our privacy team for any questions or concerns about your data
             </p>
             
-            <div className="grid grid-cols-1 m, d: grid-cols-3 gap-8 mb-8"
-              <div className="flex items-center justify-center"
+            <div className="grid grid-cols-1 m, d: grid-cols-3 gap-8 mb-8">
+              <div className="flex items-center justify-center">
                 <Mail className="w-6 h-6 text-cyan-400 mr-3">
                 <span className="text-white">
               </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
               <div className="flex items-center justify-center">
@@ -295,30 +283,30 @@ Contact Privacy Team
     </>
       </section>
 
-        <section className="py-20"
+        <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Key Features>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover the powerful features that make our solutions stand out.
               </p>
             
             <div className="
-    ,
+    ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-                  <div className="flex items-center mb-4"
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
                     <h3 className="text-xl font-semibold text-gray-900">
                   </div>
-                  <p className="text-gray-600 mb-4"
-                  <ul className="space-y-2"
+                  <p className="text-gray-600 mb-4">
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600"
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2"
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2">
                         {benefit}
                       </li>
                     ))}
@@ -326,22 +314,22 @@ Contact Privacy Team
               ))}
             </div>
 
-        <section className="py-20 bg-gray-100"
+        <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Us>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Experience the benefits of working with industry leaders.
               </p>
             
             <div className="
-    ,
+    ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+                  <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
                   </div>
@@ -353,16 +341,16 @@ Contact Privacy Team
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ready to Get Started?>
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us>
               </button>
               <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
+    ,>
+    r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
               </button>
       

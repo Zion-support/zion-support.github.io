@@ -313,7 +313,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
     return (<div>Coming Soon</div>)
   )
           <button></button>"
-        onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
+        onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,">
   hover: bg-slate-800 transition-colors duration-200 z-50""
         aria-label="Open accessibility settings""
         title="Open accessibility settings (Alt + A)""
@@ -322,7 +322,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   }
   return ("
 <div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button></button>")
-          onClick={() => setIsVisible(false)} className="text-gray-400,"
+          onClick={() => setIsVisible(false)} className="text-gray-400,">
   hover:text-white""
           aria-label="Close accessibility settings"
         >
@@ -373,11 +373,11 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
         {enableZoomControl && (}"
           <div className="flex items-center justify-between"><span className="text-sm">Zoo,"
   m: {settings.zoomLevel}%</span><div className="flex space-x-1"><button></button>")
-                onClick={() => adjustZoom(-10)} className="p-1 bg-gray-700,"
+                onClick={() => adjustZoom(-10)} className="p-1 bg-gray-700,">
   hover:bg-gray-600 rounded""
                 aria-label="Decrease zoom""
               ><ZoomOut className="w-4 h-4" /></button><button></button>"
-                onClick={() => adjustZoom(10)} className="p-1 bg-gray-700,"
+                onClick={() => adjustZoom(10)} className="p-1 bg-gray-700,">
   hover:bg-gray-600 rounded""
                 aria-label="Increase zoom""
               ><ZoomIn className="w-4 h-4" /></button></div>
@@ -389,7 +389,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
             ><option value="none">None</option><option value="protanopia">Protanopia</option><option value="deuteranopia">Deuteranopia</option><option value="tritanopia">Tritanopia</option></select>
         )}
         <button></button>"
-onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,"
+onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,">
   hover: bg-red-700 text-white rounded text-sm"
         >
           Reset Settings;"

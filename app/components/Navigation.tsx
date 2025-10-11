@@ -71,8 +71,7 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('services')}
-                className="flex items-center text-gray-300 hover:text-white transition-colors"
-              >
+                className="flex items-center text-gray-300 hover:text-white transition-colors">
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
@@ -109,16 +108,14 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('it-services')}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-              >
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
                 IT Services
               </button>
             </div>
             <div className="relative">
               <button
                 onClick={toggleMenu}
-                className="text-gray-300 hover:text-white p-2 rounded-md"
-              >
+                className="text-gray-300 hover:text-white p-2 rounded-md">
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
               {activeDropdown === 'solutions' && (
@@ -146,8 +143,7 @@ const Navigation: React.FC = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-white transition-colors"
-            >
+              className="text-gray-300 hover:text-white transition-colors">
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div></div>{/* Mobile Navigation */}

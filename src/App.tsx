@@ -155,8 +155,8 @@ const NotFoundPage: React.FC = () => (
       <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
       <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
       <a
-        href="/"
-        className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
+        href="/">
+        className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold">
       >
         Go Home
       </a>

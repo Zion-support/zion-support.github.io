@@ -23,9 +23,9 @@ e:, // console.error() Form submission,;,
 error:  } error)} finall,;,
 y: { setIsSubmitting(false)} } return} } i,;,
 f: (currentStep < totalSteps) { setCurrentStep(currentStep + 1)} } if (currentStep > 1) {setCurrentStep(currentStep - 1})} }, {errors.lastName} </p> )} </div> {errors.email} </p> )} </div> value={formData.company} onChange={/* TODO: Fix JSX expression */}
-  n: handleInputChange,(} company) {errors.company} </p> )} </div> </div> </label> <select value={formData.service} onChange={(e handleInputChange() service} {/* TODO: Fix JSX expression */}
+  n: handleInputChange,(} company) {errors.company} </p> )} </div> </div> </label> <select value={formData.service} onChange={(e handleInputChange() service} {/* TODO: Fix JSX expression */}>
   n: key={servic}e} value={service}> {service} </option> ))</$1> {budget} </option> ))</$1> </div> {timeline} </option> ))</$1> </div> </div> return <label key={method.value;} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${ formData.preferredContact === method.value}} ?} border-cyan-500 bg-cyan-500/10`' ': 'border-gray-600,`;,
-hover:border-gray-500}`} > <input`' type='radio'' name='preferredContact' value={method.value} checked={/* TODO: Fix JSX expression */}
+hover:border-gray-500}`} > <input`' type='radio'' name='preferredContact' value={method.value} checked={/* TODO: Fix JSX expression */}>
   t: === method.value}' onChange={(e handleInputChange('preferredContact)}'' '} e.target.value)}'' className='sr-only'/>
   </input>'' <Ico,;,
 n: className='w-5 h-5 mr-3 text-cyan-400' />'' <spa,;,

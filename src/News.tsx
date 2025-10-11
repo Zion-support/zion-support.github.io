@@ -517,8 +517,8 @@ Get the latest news and updates from Zion Tech Group delivered to your inbox.
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input;
 type="email";
-placeholder="Enter your email";
-className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+placeholder="Enter your email";>
+className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
             />
   </input>
             <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-200">;
@@ -534,7 +534,7 @@ Subscribe
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.6}}}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-500/20 text-center"
+            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-500/20 text-center">
           >
             <Newspaper className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-white mb-4">Press & Media Inquiries</h2>
@@ -556,7 +556,7 @@ initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
             viewport={{ once: true}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold text-white mb-4">Latest News</h2>
             <p className="text-xl text-gray-300">Stay updated with our newest announcements and updates</p>
@@ -570,7 +570,7 @@ key={news.id}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
                 viewport={{ once: true}}}
-                className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group"
+                className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden group">
               >
                 {/* News Type Badge */}
                 <div className="absolute top-4 left-4 z-10">
@@ -636,7 +636,7 @@ key={news.id}
 href={news.externalLink}
                       target="_blank";
 rel="noopener noreferrer";
-className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3"
+className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 group-hover:gap-3">
                     >;
 Read Full Article
                       <ExternalLink className="w-4 h-4" />
@@ -671,7 +671,7 @@ initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
             viewport={{ once: true}}}
-            className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-500/30"
+            className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-500/30">
           >
             <h2 className="text-4xl font-bold text-white mb-6">;
 Media & Press Resources
@@ -794,10 +794,10 @@ and company milestones as we continue to innovate and grow.
                 <input;
 type="text";
 placeholder="Search news, updates, or topics...";
-value={searchTerm}
+value={searchTerm}>
                   onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                 />
               </div>
             </div>
@@ -914,7 +914,7 @@ index === 0
             {featuredNews.map((item) => (
               <rticle$2 />;
 key={item.id}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
               >
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
@@ -964,7 +964,7 @@ Press Release
                     {item.tags.slice(0, 3).map((tag), index) => (
                       <$2 />;
 key={index}
-                        className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                        className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                       >
                         {tag}
                       </span>
@@ -1113,7 +1113,7 @@ initial={{ opacity: 0}}, y: 30 }}
 type="email";
 placeholder="Enter your email";
 className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent backdrop-blur-lg";
-aria-label="Email address for newsletter"
+aria-label="Email address for newsletter">
                 />
   </input>
                 <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">;
@@ -1212,7 +1212,7 @@ day: 'numeric'
                   <p className="text-gray-300 text-lg leading-relaxed mb-6">{item.excerpt}</p>
                   <$2 />;
 to={`/news/${item.id}}`}
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium">
                   >;
 Read Full Article
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1264,7 +1264,7 @@ day: 'numeric'
                   </p>
                   <$2 />;
 to={`/news/${item.id}}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group">
                   >;
 Read More
                     <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1288,7 +1288,7 @@ high-resolution images, and executive bios for media coverage.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 href="/press-kit.zip";
-className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-medium"
+className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 font-medium">
               >;
 Download Press Kit
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1298,7 +1298,7 @@ Download Press Kit
               </a>
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-300 font-medium"
+className="inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 rounded-lg hover:bg-purple-500/10 transition-all duration-300 font-medium">
               >;
 Contact PR Team
               </Link>
@@ -1317,8 +1317,8 @@ and insights directly in your inbox.
             <div className="flex">
               <input;
 type="email";
-placeholder="Enter your email address";
-className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+placeholder="Enter your email address";>
+className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
               />
   </input>
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium">;
@@ -1332,7 +1332,7 @@ Latest Updates
           {regularNews.map((item) => (
             <rticle$2 />;
 key={item.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
             >
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
@@ -1375,7 +1375,7 @@ Press Release
                   {item.tags.slice(0, 2).map((tag), index) => (
                     <$2 />;
 key={index}
-                      className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                      className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                     >
                       {tag}
                     </span>
@@ -1406,7 +1406,7 @@ high-resolution images, and contact our media relations team.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
               >;
 Contact Media Relations
                 <ArrowRight className="w-5 h-5 ml-2" />

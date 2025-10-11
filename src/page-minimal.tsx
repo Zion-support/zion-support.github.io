@@ -43,7 +43,7 @@ Home
           </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
-                href="/services" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+                href="/services" className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold">
 // >
 //                 Explore Our Services
           <Link className="w-5 h-5 ml-2" />

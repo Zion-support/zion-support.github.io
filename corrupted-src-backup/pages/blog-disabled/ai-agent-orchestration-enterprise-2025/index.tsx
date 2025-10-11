@@ -320,7 +320,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
         <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16"></div>"
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10"></div>"
             <Link to="/blog"></Link>"
-  className="inline-flex items-center text-white/90,"
+  className="inline-flex items-center text-white/90,">
   hover: text-white mb-8 transition-colors""
             >""
               <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>"
@@ -355,7 +355,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
         <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16"></div>"
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10"></div>"
             <Link to="/blog"></Link>"
-  className="inline-flex items-center text-white/90,"
+  className="inline-flex items-center text-white/90,">
   hover: text-white mb-8 transition-colors""
             >""
               <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>"
@@ -882,7 +882,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-lg">
                 </p>"
                 to="/contact""
-  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg,"
+  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg,">
   hover:bg-gray-100 transition-colors""
                 >""
                   Schedule Architecture Review""
@@ -903,7 +903,7 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />,
                 </p>"
                 to="/contact""
-  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg,"
+  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg,">
   hover: bg-gray-100 transition-colors""
                 >""
                   Schedule Architecture Review""

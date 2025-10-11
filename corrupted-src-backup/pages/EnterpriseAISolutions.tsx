@@ -77,7 +77,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
   lg:grid-cols-3 gap-8">
           {/* TODO: Fix JSX expression */}
               key={index}"
-              className="bg-white rounded-lg shadow-lg p-6,"
+              className="bg-white rounded-lg shadow-lg p-6,">
   hover:shadow-xl transition-shadow"
             >"
               <div className="flex items-center mb-4"></div>"

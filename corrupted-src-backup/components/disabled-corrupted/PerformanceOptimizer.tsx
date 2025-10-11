@@ -96,7 +96,7 @@ opti}, o, n.enabl, e, d  ? 'te, x, t-gre, e, n-6, 0, 0'  : 'te, x, t-gr, a, y-4,
                   <h3, className='te, x, t-sm, fon, t-medium, tex, t-gr, a, y-9, 0, 0'>
                     {opti, o, n.lab, e, l}
                   <label, className='relative, inlin, e-flex, item, s-center, curso, r-point, e, r'>
-                    <input, typ, e='checkb, o, x');
+                    <input, typ, e='checkb, o, x');>
 check, e, d={opti, o, n.enab, l, e, d}, onChan, g, e={() = >
   </input> handleOptimizationTogg, l, e(opti, o, n.k, e, y)} classNa, m, e = 'sr-only, pee, r'
                     />

@@ -10,7 +10,7 @@ const,
   const bgColorClasses = {/* TODO: Fix JSX expression */}
   }
   return (<article></article>
-      className="quantum-card p-4,"
+      className="quantum-card p-4,">
   sm:p-6 energy-pulse group relative""
       role="article")
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
@@ -25,7 +25,7 @@ const,
       <h3></h3>`
         id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
         className="text-xl,
-  sm:text-2xl font-bold text-white mb-3,"
+  sm:text-2xl font-bold text-white mb-3,">
   sm:mb-4 text-center neon-text"
       >
         {title}

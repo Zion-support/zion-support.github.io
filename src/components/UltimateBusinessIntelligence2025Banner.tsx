@@ -55,10 +55,10 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
         <$2 />
-          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
+          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse">
           style={{ animationDelay: '2s' }}
         >
-          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse">
           style={{ animationDelay: '1s' }}
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
@@ -86,14 +86,14 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               to="/contact"
-              className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300"
+              className="inline-flex items-center px-10 py-5 border-2 border-indigo-400 text-indigo-300 font-bold text-lg rounded-xl hover:bg-indigo-400/10 transition-all duration-300">
               Schedule Consultation
           {/* Key Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-8 h-8 text-white">
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -111,18 +111,18 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
               {currentContent.tags.map((tag) => (
                 <$2 />
                   key={tag}
-                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20"
+                  className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20">
                   {tag}
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 href={currentContent.url}
-                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
+                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25">
                 <span className="text-xl">📖
                 <span>Read {currentContent.type}
                 <span className="group-hover:translate-x-1 transition-transform">→
               <$2 />
                 href="tel:+13024640950"
-                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
+                className="flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10">
                 <span className="text-xl">📞
                 <span>Call +1 302 464 0950
           {/* Slide Indicators */}
@@ -219,7 +219,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   hover:from-cyan-600,
   hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform,
   hover:-translate-y-1,
-  hover:shadow-2xl,"
+  hover:shadow-2xl,">
   hover:shadow-cyan-500/25"
         {/* Stats Section */}"
         < className="mt-16 grid grid-cols-2,"$2 />

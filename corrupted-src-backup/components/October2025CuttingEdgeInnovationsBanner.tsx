@@ -114,7 +114,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                 </d, i, v>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs"></div>"
                   <span, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d">Hybrid, Intelligenc, e</sp, a, n>"
-                  <ArrowRight, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-ho, v, e,"
+                  <ArrowRight, className="w-4 h-4, tex, t-bl, u, e-400, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";"
                   <span, className="te, x, t-bl, u, e-400, fon, t-semibo, l, d">Hybrid, Intelligenc, e</sp, a, n>";"
@@ -157,7 +157,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                 </d, i, v>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs"></div>"
                   <span, className="te, x, t-cy, a, n-400, fon, t-semibo, l, d">Immersive, Intelligenc, e</sp, a, n>"
-                  <ArrowRight, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-ho, v, e,"
+                  <ArrowRight, className="w-4 h-4, tex, t-cy, a, n-400, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";"
                   <span, className="te, x, t-cy, a, n-400, fon, t-semibo, l, d">Immersive, Intelligenc, e</sp, a, n>";"
@@ -186,7 +186,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d">Autonomous, Operation, s</sp, a, n>"</$1>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs"></div>"
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d">Autonomous, Operation, s</sp, a, n>"
-                  <ArrowRight, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-ho, v, e,"
+                  <ArrowRight, className="w-4 h-4, tex, t-oran, g, e-400, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <div, className="flex, item, s-center, justif, y-between, tex, t-xs">";"
                   <span, className="te, x, t-oran, g, e-400, fon, t-semibo, l, d">Autonomous, Operation, s</sp, a, n>";"

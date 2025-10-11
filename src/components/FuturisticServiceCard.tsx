@@ -82,7 +82,7 @@ const,
           } flex items-center justify-center group`}
         >
           Get Started;"
-          <ArrowRight className="w-4 h-4 ml-2 group-hove,"
+          <ArrowRight className="w-4 h-4 ml-2 group-hove,">
   r:translate-x-1 transition-transform" />
         {/* Hover Effect Overlay */}
         <div></div>`

@@ -210,7 +210,7 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e
               Discover, Platfor, m</div> <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e
-        {/* Feature, Card, s */}"
+        {/* Feature, Card, s */}">
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
           {/* TODO: Fix JSX expression */}
@@ -316,7 +316,7 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
   r: g, a, p-3, transitio, n-a, l, l">""
               Discover, Platfor, m <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";"
-              Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e,"
+              Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
         {/* CTA, Butto, n */}
         <div, className="te, x, t-cent, e, r">"

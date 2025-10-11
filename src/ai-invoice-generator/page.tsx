@@ -139,7 +139,7 @@ namename: 'Emily Rodriguez',
                   <Calculator className="w-5 h-5 mr-2" />
                   Start Free Trial
                   href="#demo"
-                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
+                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center">
                   <Eye className="w-5 h-5 mr-2" />
                   Watch Demo
               {/* Key Stats */}

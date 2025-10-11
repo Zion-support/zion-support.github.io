@@ -119,7 +119,7 @@ $4}
   
             <$2 />
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
               Start Free Trial,
   
         {/* Key Benefits */}
@@ -254,7 +254,7 @@ Transform your expense management with AI-powered receipt scanning, automated ca
             over your business finances.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <$2 />
-              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
 // >
           "
           <Phone className="w-5 h-5 mr-2" />,
@@ -262,7 +262,7 @@ Transform your expense management with AI-powered receipt scanning, automated ca
   l: (302) 464-0950
             </a>
             <$2 />
-              href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
 Start Free Trial,
             </Link>
         {/* Key Benefits */}"

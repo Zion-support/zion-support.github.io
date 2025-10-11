@@ -106,7 +106,7 @@ export default function EnhancedServicesShowcase() {
           <Button
             variant={selectedCategory === 'all' ? 'default' : 'outline'}
             onClick={() => setSelectedCategory('all')}
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white">
           >
             All Services
           </Button>
@@ -116,7 +116,7 @@ export default function EnhancedServicesShowcase() {
               key={category.id}
               variant={selectedCategory === category.id ? 'default' : 'outline'}
               onClick={() => setSelectedCategory(category.id)}
-              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
             >
               <span className="mr-2">{category.icon}</span>
               {category.name}
@@ -327,7 +327,7 @@ function ServiceCard({ service }: { service: any }) {
             <div className="flex items-center gap-2">
               <div className="w-16 bg-zion-blue-light rounded-full h-2">
                 <$2 />
-                  className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
+                  className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" >
                   style={{ width: `${service.aiScore}%` }}
                 ></div>
               </div>
@@ -353,7 +353,7 @@ function ServiceCard({ service }: { service: any }) {
           {/* Action Buttons */}
           <div className="flex gap-2">
             <Button 
-              className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
+              className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white">
               onClick={() => setShowDetails(!showDetails)}
             >
               {showDetails ? 'Hide Details' : 'View Details'}

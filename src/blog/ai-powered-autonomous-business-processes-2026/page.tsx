@@ -40,11 +40,11 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
             </p><div className="bg-blue-50 p-6 rounded-lg text-center"><h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Autonomous Transformation</h3><p className="text-gray-700 mb-4"></p>
                 Join leading enterprises achieving autonomous operations with AI-powered business processes,"
               </p><div className="space-x-4"><a></a>"
-                  href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg,"
+                  href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg,">
   hover: bg-blue-700 transition-colors">
                   Get Autonomous Assessment,
                 </a><a></a>"
-                  href="/services" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600,"
+                  href="/services" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600,">
   hover: bg-blue-50 transition-colors">
                   Explore AI Services
                 </a></div></div></div></div></div></div>

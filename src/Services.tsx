@@ -250,13 +250,13 @@ and drive sustainable growth in the digital age.
             <div className="flex flex-wrap justify-center gap-4">
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors">
               >;
 Get Started
               </Link>
               <$2 />;
 to="/request-quote";
-className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
+className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors">
               >;
 Request Quote
               </Link>
@@ -288,7 +288,7 @@ Smartphone,
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-3 mb-8"
+            className="flex flex-wrap justify-center gap-3 mb-8">
           >
             <$2 />;
 onClick={() => handleCategorySelect('all')}
@@ -301,7 +301,7 @@ Get Started
             </Link>
             <$2 />;
 to="/pricing";
-className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             >;
 View Pricing
             </Link>
@@ -350,7 +350,7 @@ every aspect of your digital transformation journey.
         {/* Hero Section */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
           <motion.div;
-className="text-center"
+className="text-center">
     <div className="min-h-screen bg-zion-blue-dark text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple overflow-hidden">
@@ -367,7 +367,7 @@ initial={{ opacity: 0}}, y: 30 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
           >;
-className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 backdrop-blur-sm"
+className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 backdrop-blur-sm">
               />
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-6 h-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
@@ -381,10 +381,10 @@ Comprehensive AI-powered technology solutions designed to transform your busines
               <input;
 type="text";
 placeholder="Search services...";
-value={searchQuery}
+value={searchQuery}>
                 onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
               />
             </div>
           </div>;
@@ -458,17 +458,17 @@ Competitive Pricing
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.6}}}
-            className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-2xl"
+            className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-2xl">
           >
             <div className="grid md:grid-cols-4 gap-6">
               {/* Category Filter */}
               <div>
                 <label className="block text-sm font-medium text-zion-slate-light mb-2">Category</label>
                 <select;
-value={selectedCategory}
+value={selectedCategory}>
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300";
-className="mb-12"
+className="mb-12">
         >
           <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
             {/* Search Bar */}
@@ -477,10 +477,10 @@ className="mb-12"
               <input;
 type="text";
 placeholder="Search services, features, or use cases...";
-value={searchTerm}
+value={searchTerm}>
                 onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+                className="w-full pl-12 pr-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20">
               />
             </div>
 
@@ -490,9 +490,9 @@ value={searchTerm}
               <div className="flex-1 min-w-48">
                 <label className="block text-zion-slate-light text-sm font-medium mb-2">Category</label>
                 <select;
-value={selectedCategory}
+value={selectedCategory}>
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+                  className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan">
                 >
                   {categories.map(category => ()
                     <option key={category} value={category}>{category}</option>
@@ -504,9 +504,9 @@ value={selectedCategory}
               <div className="flex-1 min-w-48">
                 <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
                 <select;
-value={selectedPricing}
+value={selectedPricing}>
                   onChange={(e) => setSelectedPricing(e.target.value)}
-                  className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+                  className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan">
                 >
                   {pricingModels.map(model => ()
                     <option key={model} value={model}>{model.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</option>
@@ -519,13 +519,13 @@ value={selectedPricing}
 variants={containerVariants}
             initial="hidden";
 animate="visible";
-className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           >
             {filteredServices.map((service) => (
               <motion.div;
 key={service.id}
                 variants={itemVariants}
-                className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 transform hover:-translate-y-2"
+                className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 transform hover:-translate-y-2">
               >
                 {/* Service Header */}
                 <div className="mb-6">
@@ -585,7 +585,7 @@ key={service.id}
                 initial={{ opacity: 0}}, y: 20 }}
                 animate={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
+                className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20">
               >
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
@@ -642,7 +642,7 @@ Key Benefits:
                     {service.tags.slice(0, 4).map((tag), idx) => (
                       <$2 />;
 key={idx}
-                        className="px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light text-xs rounded border border-zion-blue-light/30"
+                        className="px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light text-xs rounded border border-zion-blue-light/30">
                       >
                         {tag}
                       </span>
@@ -650,7 +650,7 @@ key={idx}
           initial={{ opacity: 0}}}
           animate={{ opacity: 1}}}
           transition={{ duration: 0.8}}, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         >
           {filteredServices.map((service), index) => {;
 const IconComponent = service.icon;;
@@ -661,7 +661,7 @@ key={service.id}
                 initial={{ opacity: 0}}, y: 20 }}
                 animate={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: 0.4 + index * 0.1 }}
-                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20"
+                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20">
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="w-8 h-8" />
@@ -682,7 +682,7 @@ key={service.id}
                 </ul>
                 <$2 />;
 to={service.link}
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300">
                 >;
 Learn More
                   <ArrowRight className="w-4 h-4" />
@@ -695,7 +695,7 @@ Learn More
           {filteredServices.map((service), idx) => (
             <$2 />;
 key={idx}
-              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group">
             >
               {/* Service Header */}
               <div className="flex items-start space-x-4 mb-4">
@@ -736,7 +736,7 @@ key={idx}
               {/* CTA Button */}
               <$2 />;
 to={service.path}
-                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
+                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105">
               >
                 <span>Learn More</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
@@ -771,19 +771,19 @@ Let our AI experts help you implement the right technology solutions to drive gr
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 to="/contact";
-className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
                 >;
 Get Started Today
                 </Link>
                 <$2 />;
 to="/innovative-services-showcase";
-className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105">
                 >;
 View All Innovative Services
                 </Link>
                 <$2 />;
 to="/request-quote";
-className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
+className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200">
                 >;
 Request Custom Quote
                 </Link>
@@ -802,7 +802,7 @@ Discover our comprehensive portfolio of innovative micro SAAS and specialized IT
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
               <$2 />;
 to="/services/comprehensive";
-className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
+className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <h3 className="text-xl font-bold text-white mb-3">Comprehensive Services</h3>
                 <p className="text-zion-slate-light mb-4">;
@@ -815,7 +815,7 @@ View All Services <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 
               
               <$2 />;
 to="/services/innovative-showcase";
-className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
+className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <h3 className="text-xl font-bold text-white mb-3">Innovative Showcase</h3>
                 <p className="text-zion-slate-light mb-4">;
@@ -842,13 +842,13 @@ give you a competitive edge in the market.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
               >;
 Get Started Today
               </Link>
               <$2 />;
 to="/comprehensive-services-showcase";
-className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
+className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200">
     { name: "Healthcare", icon: "🏥", description: "HIPAA compliant solutions for healthcare providers" },
     { name: "Finance", icon: "🏦", description: "Secure financial technology solutions" },
     { name: "Retail", icon: "🛍️", description: "E-commerce and retail technology platforms" },
@@ -919,10 +919,10 @@ From AI to cybersecurity, we deliver the expertise you need to succeed.
                 <input;
 type="text";
 placeholder="Search services...";
-value={searchTerm}
+value={searchTerm}>
                   onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none transition-colors">
                 />
               </div>
               
@@ -1098,7 +1098,7 @@ className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-cur
                   {service.tags.map((tag), idx) => (
                     <$2 />;
 key={idx} ;
-className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600/50"
+className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600/50">
                     >
                       {tag}
                     </span>
@@ -1108,7 +1108,7 @@ className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border bo
                 {/* CTA */}
                 <$2 />;
 to={`/services/${service.category.toLowerCase()}}`}
-                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                  className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 group-hover:shadow-lg group-hover:shadow-cyan-500/25">
                 >;
 Learn More 
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -1128,12 +1128,12 @@ Learn More
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}, delay: 0.6 }}
-            className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8"
+            className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
           >
             <div className="flex items-center gap-4">
               <$2 />;
 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-zion-slate-light rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-zion-slate-light rounded-lg transition-colors">
               >
                 <Filter className="w-4 h-4" />;
 Filters
@@ -1142,7 +1142,7 @@ Filters
               {Object.keys(filters).length > 0 && (
                 <$2 />;
 onClick={clearFilters}
-                  className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm hover:bg-red-500/30 transition-colors"
+                  className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm hover:bg-red-500/30 transition-colors">
                 >;
 Clear Filters
                 </button>
@@ -1180,15 +1180,15 @@ sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4
 initial={{ opacity: 0}}, height: 0 }}
               animate={{ opacity: 1}}, height: 'auto' }}
               exit={{ opacity: 0}}, height: 0 }}
-              className="bg-white/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6 mb-8"
+              className="bg-white/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6 mb-8">
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
                   <select;
-value={filters.pricingModel || ''}
+value={filters.pricingModel || ''}>
                     onChange={(e) => setFilter('pricingModel', e.target.value || '')}
-                    className="w-full px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    className="w-full px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   >
                     <option value="">All Models</option>
                     <option value="monthly">Monthly</option>
@@ -1200,9 +1200,9 @@ value={filters.pricingModel || ''}
                 <div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Support Level</label>
                   <select;
-value={filters.supportLevel || ''}
+value={filters.supportLevel || ''}>
                     onChange={(e) => setFilter('supportLevel', e.target.value || '')}
-                    className="w-full px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                    className="w-full px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   >
                     <option value="">All Levels</option>
                     <option value="basic">Basic</option>
@@ -1217,18 +1217,18 @@ value={filters.supportLevel || ''}
                     <input;
 type="number";
 placeholder="Min";
-value={filters.minPrice || ''}
+value={filters.minPrice || ''}>
                       onChange={(e) =>
   </input> setFilter('minPrice', e.target.value ? Number(e.target.value) : '')}
-                      className="flex-1 px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                      className="flex-1 px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                     />
                     <input;
 type="number";
 placeholder="Max";
-value={filters.maxPrice || ''}
+value={filters.maxPrice || ''}>
                       onChange={(e) =>
   </input> setFilter('maxPrice', e.target.value ? Number(e.target.value) : '')}
-                      className="flex-1 px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                      className="flex-1 px-3 py-2 bg-white/10 border border-zion-cyan/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                     />
                   </div>
                 </div>
@@ -1435,7 +1435,7 @@ const stats = [;
           <motion.div;
 initial={{ opacity: 0}}}
             animate={{ opacity: 1}}}
-            className="text-center py-16"
+            className="text-center py-16">
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -1446,7 +1446,7 @@ setSearchTerm('');
 setSelectedCategory('all');
 }
 setSelectedSubcategory('all')}}
-              className="futuristic-btn neon-glow neon-cyan"
+              className="futuristic-btn neon-glow neon-cyan">
             >;
 Clear Filters
             </button>
@@ -1524,13 +1524,13 @@ AI Score: {service.aiScore}%
                 <div className="flex space-x-3">
                   <$2 />;
 to={service.link}
-                    className="flex-1 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
                   >;
 Learn More
                   </Link>
                   <$2 />;
 to="/contact";
-className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
+className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   >;
 Get Quote
                   </Link>
@@ -1544,7 +1544,7 @@ Get Quote
             <motion.div;
 initial={{ opacity: 0}}, y: 20 }}
               animate={{ opacity: 1}}, y: 0 }}
-              className="text-center py-20"
+              className="text-center py-20">
             >
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -1556,7 +1556,7 @@ onClick={() => {};
 setSearchTerm('');
 }
 setSelectedCategory('all')}}
-                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
                 {/* Technology Stack */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
@@ -1577,7 +1577,7 @@ Technology:
 href={service.link}
                   target="_blank";
 rel="noopener noreferrer";
-className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold py-3 px-4 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105 transform"
+className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold py-3 px-4 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105 transform">
                 >
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -1590,7 +1590,7 @@ className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white font
             <motion.div;
 initial={{ opacity: 0}}}
               animate={{ opacity: 1}}}
-              className="text-center py-16"
+              className="text-center py-16">
             >
               <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
               <$2 />;
@@ -1599,7 +1599,7 @@ setSelectedCategory('All');
 setSearchTerm('');
 }
 setPriceRange('all')}}
-                className="bg-zion-cyan text-white px-6 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors"
+                className="bg-zion-cyan text-white px-6 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors">
               >;
 Clear Filters
               </button>
@@ -1685,7 +1685,7 @@ From AI and cloud infrastructure to cybersecurity and digital transformation.
 variants={containerVariants}
             initial="hidden";
 animate="visible";
-className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           >
             {paginatedResults.results.map((service) => (
               <motion.div key={service.id} variants={itemVariants}>
@@ -1695,7 +1695,7 @@ className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
                     <OptimizedImage;
 src={`https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute top-4 right-4">
@@ -1765,7 +1765,7 @@ Get Quote
                 <div className="text-center">
                   <$2 />;
 to={service.link}
-                    className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+                    className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors">
                   >
                     {service.cta}
                   </Link>
@@ -1780,7 +1780,7 @@ to={service.link}
               <$2 />;
 onClick={() => setCurrentPage(currentPage - 1)}
                 disabled={!paginatedResults.hasPrevPage}
-                className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
+                className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors">
               >;
 Previous
               </button>
@@ -1792,7 +1792,7 @@ Page {currentPage} of {paginatedResults.totalPages}
               <$2 />;
 onClick={() => setCurrentPage(currentPage + 1)}
                 disabled={!paginatedResults.hasNextPage}
-                className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
+                className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors">
               >;
 Next
               </button>
@@ -1805,7 +1805,7 @@ Next
 }
 export default Services;
 transition={{ duration: 0.8}}, delay: 0.8 }}
-          className="text-center mt-20"
+          className="text-center mt-20">
         >
           <div className="bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 border border-blue-400/30 rounded-2xl p-12 backdrop-blur-md">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">;
@@ -1817,14 +1817,14 @@ Let's discuss how our services can transform your business and drive growth.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 justify-center"
+className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 justify-center">
               >;
 Get Free Consultation
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <$2 />;
 to="/request-quote";
-className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
+className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">
               >;
 Request Quote
               </Link>
@@ -1844,7 +1844,7 @@ export default Services
                 </ul>
                 <$2 />;
 to={category.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light font-semibold text-sm transition-colors"
+                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light font-semibold text-sm transition-colors">
                 >;
 Learn More
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1931,13 +1931,13 @@ Let's discuss your project requirements and create a custom solution that drives
               <div className="space-y-4">
                 <$2 />;
 to="/contact";
-className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block"
+className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block">
                 >;
 Schedule a Consultation
                 </Link>
                 <$2 />;
 to="/request-quote";
-className="w-full border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block"
+className="w-full border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block">
                 >;
 Get a Free Quote
                 </Link>
@@ -1957,13 +1957,13 @@ Join hundreds of companies already leveraging our technology solutions to achiev
           <div className="flex flex-wrap justify-center gap-4">
             <$2 />;
 to="/contact";
-className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             >;
 Start Your Project
             </Link>
             <$2 />;
 to="/about";
-className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             >;,
 Call: +1 302 464 0950
             </a>
@@ -1971,7 +1971,7 @@ Call: +1 302 464 0950
           <div className="mb-6">
             <$2 />;
 to="/enhanced-services";
-className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
+className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300">
             >;
 View Complete Services Portfolio →
             </Link>
@@ -1993,7 +1993,7 @@ key={stat.label}
                   initial={{ opacity: 0}}, y: 20 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
                   transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="text-center"
+                  className="text-center">
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2014,7 +2014,7 @@ key={stat.label}
 initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.6}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Our Technology Services
@@ -2034,7 +2034,7 @@ key={service.title}
                   initial={{ opacity: 0}}, y: 20 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
                   transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+                  className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300">
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color}} rounded-xl flex items-center justify-center mb-6`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2058,7 +2058,7 @@ key={service.title}
                     <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                     <$2 />;
 to={service.link}
-                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
                     >;
 Learn More
                       <ArrowRight className="ml-2 w-4 h-4" />
@@ -2078,7 +2078,7 @@ Learn More
 initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.6}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Industries We Serve
@@ -2095,7 +2095,7 @@ key={industry.name}
                 initial={{ opacity: 0}}, scale: 0.8 }}
                 whileInView={{ opacity: 1}}, scale: 1 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
+                className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300">
               >
                 <div className="text-4xl mb-3">{industry.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
@@ -2113,7 +2113,7 @@ key={industry.name}
 initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.6}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
 Why Choose Our Services?
@@ -2133,7 +2133,7 @@ key={benefit.title}
                   initial={{ opacity: 0}}, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1}}, x: 0 }}
                   transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="flex items-start gap-6"
+                  className="flex items-start gap-6">
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2166,14 +2166,14 @@ Let's discuss how our technology services can drive innovation and growth for yo
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-white text-zion-blue-dark font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
+className="inline-flex items-center px-8 py-4 bg-white text-zion-blue-dark font-semibold rounded-xl hover:shadow-lg transition-all duration-300">
               >;
 Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/request-quote";
-className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white hover:text-zion-blue-dark transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white hover:text-zion-blue-dark transition-all duration-300">
               >;
 Get Free Quote
               </Link>
@@ -2203,14 +2203,14 @@ Our team of experts is ready to guide you through the digital transformation jou
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 href="mailto:kleber@ziontechgroup.com";
-className="bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover:bg-zion-slate-light transition-all duration-300 flex items-center justify-center space-x-2 group"
+className="bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover:bg-zion-slate-light transition-all duration-300 flex items-center justify-center space-x-2 group">
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <$2 />;
 href="tel:+13024640950";
-className="bg-transparent text-white font-semibold py-4 px-8 rounded-lg border-2 border-white hover:bg-white hover:text-zion-purple transition-all duration-300 flex items-center justify-center space-x-2 group"
+className="bg-transparent text-white font-semibold py-4 px-8 rounded-lg border-2 border-white hover:bg-white hover:text-zion-purple transition-all duration-300 flex items-center justify-center space-x-2 group">
               >
                 <span>Call Now</span>
                 <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -2237,7 +2237,7 @@ className="bg-transparent text-white font-semibold py-4 px-8 rounded-lg border-2
                 </ul>
                 <$2 />;
 to={category.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
+                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium">
                 >;
 Learn More
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2408,13 +2408,13 @@ solutions can drive your success.
           <div className="flex flex-wrap justify-center gap-4">
             <$2 />;
 to="/contact";
-className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             >;
 Start Your Project
             </Link>
             <$2 />;
 to="/request-quote";
-className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             >;
 Get Free Quote
             </Link>
@@ -2442,7 +2442,7 @@ export default Services
 initial={{ opacity: 0}}, y: 20 }}
           animate={{ opacity: 1}}, y: 0 }}
           transition={{ duration: 0.8}}, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         >
           {filteredServices.map((service), index) => (
             <motion.div;
@@ -2450,7 +2450,7 @@ key={service.id}
               initial={{ opacity: 0}}, y: 20 }}
               animate={{ opacity: 1}}, y: 0 }}
               transition={{ duration: 0.6}}, delay: index * 0.1 }}
-              className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
+              className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
             >
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
@@ -2519,7 +2519,7 @@ Key Features
                 {service.tags.slice(0, 3).map((tag), idx) => (
                   <$2 />;
 key={idx}
-                    className="px-2 py-1 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-xs text-zion-cyan"
+                    className="px-2 py-1 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-xs text-zion-cyan">
                   >
                     {tag}
                   </span>
@@ -2536,7 +2536,7 @@ key={idx}
                   <motion.button;
 whileHover={{ scale: 1.05}}}
                     whileTap={{ scale: 0.95}}}
-                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
+                    className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2">
                   >;
 Get Quote
                     <ArrowRight className="w-4 h-4" />
@@ -2552,7 +2552,7 @@ Get Quote
 initial={{ opacity: 0}}, y: 20 }}
           animate={{ opacity: 1}}, y: 0 }}
           transition={{ duration: 0.8}}, delay: 0.6 }}
-          className="mt-20 text-center"
+          className="mt-20 text-center">
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">;
@@ -2565,14 +2565,14 @@ Let's discuss how our cutting-edge solutions can drive innovation and growth for
               <motion.button;
 whileHover={{ scale: 1.05}}}
                 whileTap={{ scale: 0.95}}}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300">
               >;
 Schedule Consultation
               </motion.button>
               <motion.button;
 whileHover={{ scale: 1.05}}}
                 whileTap={{ scale: 0.95}}}
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
               >;
 View Case Studies
               </motion.button>

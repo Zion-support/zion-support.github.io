@@ -21,13 +21,13 @@ const,
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float">
         <div></div>"
-          className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float">
           style={/* TODO: Fix JSX expression */}
   y: '2s' }}
         >
         <$2 />
         <div></div>"
-          className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
+          className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float">
           style={/* TODO: Fix JSX expression */}
   y: '4s' }}
         >
@@ -38,7 +38,7 @@ const,
         {/* Header Section */}
         <div className="text-center mb-8">
           <$2 />
-            className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in"
+            className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in">
             role="status"
             aria-label="New product launch announcement"
           >
@@ -99,14 +99,14 @@ const,
           <div  className="inline-flex flex-col sm:flex-row gap-4">
             <$2 />
               to="/contact"
-               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2 xl transform hover:scale-105"
+               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2 xl transform hover:scale-105">
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
               Schedule Free Consultation
             </Link>
             <$2 />
               to="/blog"
-               className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300"
+               className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
               aria-label="Learn more about Cognitive Mesh technology"
             >
               <Network  className="w-5 h-5" aria-hidden="true" />
@@ -123,7 +123,7 @@ const,
               to="/contact""
                className="inline-flex items-center justify-center gap-2 bg-white,
   hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg,
-  hover:shadow-2xl transform,"
+  hover:shadow-2xl transform,">
   hover: scale-105""
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
@@ -131,7 +131,7 @@ const,
             </Link>
             <Link></Link>"
               to="/blog""
-               className="inline-flex items-center justify-center gap-2 bg-transparent,"
+               className="inline-flex items-center justify-center gap-2 bg-transparent,">
   hover: bg-white/10 text-white border-2 border-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300""
               aria-label="Learn more about Cognitive Mesh technology"
             >"

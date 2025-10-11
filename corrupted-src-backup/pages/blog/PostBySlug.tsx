@@ -221,7 +221,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
   md:grid-cols-3 gap-8">
               {/* TODO: Fix JSX expression */}
                   key={index}"
-                  className="bg-gray-50 rounded-lg p-6,"
+                  className="bg-gray-50 rounded-lg p-6,">
   hover:shadow-lg transition-shadow"
                 >"
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>"
@@ -233,7 +233,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                     <span>{post.readTime}
                   <a>
                     href={`/blog/${post.slug}`}"
-                    className="text-blue-600 font-semibold,"
+                    className="text-blue-600 font-semibold,">
   hover:text-blue-800 transition-colors"
                   >
                     Read More →

@@ -100,8 +100,8 @@ export default function InstantMessaging() {
 
             <img
               src="https://placehold && placehold.co/800x400"
-              alt="Screenshot of chat interface"
-              className="object-cover"
+              alt="Screenshot of chat interface">
+              className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -140,8 +140,8 @@ export default function InstantMessaging() {
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https://placehold.co/800x400"
-              alt="Screenshot of chat interface"
-              className="object-cover"
+              alt="Screenshot of chat interface">
+              className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -212,6 +212,6 @@ export default function InstantMessaging() {
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of chat interface"
               className="object-cover"
-
-
+>
+>
             </Button></$1></$1></$1></$1></div></main>

@@ -167,7 +167,7 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                     <Link, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                   <div, className="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";"
                     <span, className="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>";"
-                    <ArrowRight, className="w-4 h-4, grou, p-ho, v, e,"
+                    <ArrowRight, className="w-4 h-4, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
               </Li, n, k>)
             )

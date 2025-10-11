@@ -1495,7 +1495,7 @@ required
 Use Cases:</$1>
             <textarea;
 id='use_cases';
-value={use_cases}
+value={use_cases}>
               on_change={e =>
   </textarea> setUseCases (e.target.value)}
               required;
@@ -1661,7 +1661,7 @@ onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
                 variant="default";
 size="lg";
-className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white">
             >
                 <Send className="mr-2 h-4 w-4" />
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
@@ -1674,7 +1674,7 @@ onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
                 variant="default";
 size="lg";
-className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white">
             >
                 <Send className="mr-2 h-4 w-4" />
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
@@ -1728,7 +1728,7 @@ onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
                 variant="default";
 size="lg";
-className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white">
             >
                 <Send className="mr-2 h-4 w-4" />
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}

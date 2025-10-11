@@ -603,8 +603,8 @@ Explore Green IT Solutions
                 <div className="rounded-lg overflow-hidden">
                   <img loading="lazy";
 src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600";
-alt="Green IT sustainability";
-className="object-cover w-full h-full"
+alt="Green IT sustainability";>
+className="object-cover w-full h-full">
                   />
                 </div>
               </div>
@@ -770,13 +770,13 @@ lower costs, and improve your technology infrastructure's sustainability.
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <$2 />;
 href="/contact";
-className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg"
+className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg">
                   >;
 Start Green IT Journey
                   </a>
                   <$2 />;
 href="/request-quote";
-className="border border-green-500/50 hover:bg-green-500/20 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg"
+className="border border-green-500/50 hover:bg-green-500/20 text-white px-8 py-4 rounded-lg font-medium transition-colors duration-200 text-lg">
                   >;
 Get Green IT Quote
                   </a>

@@ -197,25 +197,25 @@ return null;
         <label className="flex items-center space-x-2">
           <input;
 type="checkbox";
-checked={settings.highContrast}
+checked={settings.highContrast}>
             onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, highContrast: e.target.checked }))}
-            className="rounded"
+            className="rounded">
           />
           <span>High Contrast
         <label className="flex items-center space-x-2">
           <input;
 type="checkbox";
-checked={settings.reducedMotion}
+checked={settings.reducedMotion}>
             onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, reducedMotion: e.target.checked }))}
-            className="rounded"
+            className="rounded">
           />
           <span>Reduced Motion
         <div>
           <label className="block mb-1">Font Size:
           <select;
-value={settings.fontSize}
+value={settings.fontSize}>
             onChange={(e) =>
   </select> setSettings(prev => ({ ...prev)}, fontSize: e.target.value as any }))}
             className="bg-gray-700 text-white rounded px-2 py-1">
@@ -225,10 +225,10 @@ value={settings.fontSize}
         <label className="flex items-center space-x-2">
           <input;
 type="checkbox";
-checked={settings.focusVisible}
+checked={settings.focusVisible}>
             onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, focusVisible: e.target.checked }))}
-            className="rounded"
+            className="rounded">
           />
           <span>Focus Visible</span>
         </label>

@@ -1491,10 +1491,10 @@ Visual Adjustments
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.highContrast}
+checked={settings.highContrast}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, highContrast: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">High Contrast</span>
                   </label>
@@ -1502,10 +1502,10 @@ checked={settings.highContrast}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.highContrastText}
+checked={settings.highContrastText}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, highContrastText: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">High Contrast Text</span>
                   </label>
@@ -1513,10 +1513,10 @@ checked={settings.highContrastText}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.largeCursor}
+checked={settings.largeCursor}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, largeCursor: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Large Cursor</span>
                   </label>
@@ -1525,7 +1525,7 @@ checked={settings.largeCursor}
                     <span className="text-sm text-gray-600 dark:text-gray-400">Font Size:</span>
                     <$2 />;
 onClick={() => setSettings(prev => ({ ...prev)}}, fontSize: Math.max(prev.fontSize - 2, 12) }))}
-                      className="p-1 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+                      className="p-1 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
                     >
                       <ZoomOut className="w-3 h-3" />
                     </button>
@@ -1534,7 +1534,7 @@ onClick={() => setSettings(prev => ({ ...prev)}}, fontSize: Math.max(prev.fontSi
                     </span>
                     <$2 />;
 onClick={() => setSettings(prev => ({ ...prev)}}, fontSize: Math.min(prev.fontSize + 2, 24) }))}
-                      className="p-1 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700"
+                      className="p-1 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700">
                     >
                       <ZoomIn className="w-3 h-3" />
                     </button>
@@ -1769,9 +1769,9 @@ settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'}`}
 Color Blindness Support
               </label>
               <select;
-value={settings.colorBlindness}
+value={settings.colorBlindness}>
                 onChange={(e) => updateSetting('colorBlindness', e.target.value)}
-                className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
               >
                 <option value="none">None</option>
                 <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -1827,10 +1827,10 @@ Motion & Interaction
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.reducedMotion}
+checked={settings.reducedMotion}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, reducedMotion: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Reduced Motion</span>
                   </label>
@@ -1838,10 +1838,10 @@ checked={settings.reducedMotion}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.soundEffects}
+checked={settings.soundEffects}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, soundEffects: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Sound Effects</span>
                   </label>
@@ -1849,10 +1849,10 @@ checked={settings.soundEffects}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.autoPlay}
+checked={settings.autoPlay}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, autoPlay: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Prevent Auto-play</span>
                   </label>
@@ -1869,10 +1869,10 @@ Accessibility Features
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.screenReader}
+checked={settings.screenReader}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, screenReader: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Screen Reader Mode</span>
                   </label>
@@ -1880,10 +1880,10 @@ checked={settings.screenReader}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.keyboardNavigation}
+checked={settings.keyboardNavigation}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, keyboardNavigation: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Enhanced Keyboard Navigation</span>
                   </label>
@@ -1891,10 +1891,10 @@ checked={settings.keyboardNavigation}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.focusIndicator}
+checked={settings.focusIndicator}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, focusIndicator: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Show Focus Indicator</span>
                   </label>
@@ -1902,10 +1902,10 @@ checked={settings.focusIndicator}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.showFocusRings}
+checked={settings.showFocusRings}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, showFocusRings: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Show Focus Rings</span>
                   </label>
@@ -1922,9 +1922,9 @@ Specialized Support
                   <div>
                     <label className="text-sm text-gray-600 dark:text-gray-400">Color Blindness:</label>
                     <select;
-value={settings.colorBlindness}
+value={settings.colorBlindness}>
                       onChange={(e) => setSettings(prev => ({ ...prev)}}, colorBlindness: e.target.value as any }))}
-                      className="w-full mt-1 p-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300"
+                      className="w-full mt-1 p-2 text-sm border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300">
                     >
                       <option value="none">None</option>
                       <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -1936,10 +1936,10 @@ value={settings.colorBlindness}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.dyslexia}
+checked={settings.dyslexia}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, dyslexia: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Dyslexia Support</span>
                   </label>
@@ -1956,10 +1956,10 @@ Information Display
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.showKeyboardShortcuts}
+checked={settings.showKeyboardShortcuts}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, showKeyboardShortcuts: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Show Keyboard Shortcuts</span>
                   </label>
@@ -1967,10 +1967,10 @@ checked={settings.showKeyboardShortcuts}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.showScreenReaderHints}
+checked={settings.showScreenReaderHints}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, showScreenReaderHints: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Show Screen Reader Hints</span>
                   </label>
@@ -1978,10 +1978,10 @@ checked={settings.showScreenReaderHints}
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
-checked={settings.showAccessibilityInfo}
+checked={settings.showAccessibilityInfo}>
                       onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, showAccessibilityInfo: e.target.checked }))}
-                      className="rounded"
+                      className="rounded">
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Show Accessibility Info</span>
                   </label>
@@ -1993,7 +1993,7 @@ checked={settings.showAccessibilityInfo}
                 <div className="flex space-x-2">
                   <$2 />;
 onClick={resetSettings}
-                    className="flex-1 px-3 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                    className="flex-1 px-3 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
                   >
                     <RotateCcw className="w-4 h-4 inline mr-1" />;
 Reset
@@ -2001,7 +2001,7 @@ Reset
                   
                   <$2 />;
 onClick={() => setIsExpanded(!isExpanded)}
-                    className="px-3 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                    className="px-3 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
                   >
                     {isExpanded ? 'Less' : 'More'}
                   </button>
@@ -2035,7 +2035,7 @@ aria-label="Close accessibility panel"
             <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
               <$2 />;
 onClick={resetSettings}
-                className="w-full p-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="w-full p-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
               >;
 Reset to Defaults
               </button>
@@ -2098,7 +2098,7 @@ aria-atomic="true"
             </div>
             <$2 />;
 onClick={() => setSettings(prev => ({ ...prev)}}, showKeyboardShortcuts: false }))}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors">
             >;
 Close
             </button>
@@ -2418,7 +2418,7 @@ return (;
 initial={{ opacity: 0}}, x: -100, scale: 0.9 }}
         animate={{ opacity: 1}}, x: 0, scale: 1 }}
         exit={{ opacity: 0}}, x: -100, scale: 0.9 }}
-        className="fixed bottom-4 left-4 z-50 w-96 max-h-[80vh] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
+        className="fixed bottom-4 left-4 z-50 w-96 max-h-[80vh] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
@@ -2546,7 +2546,7 @@ className={`inline-block h-4 w-4 transform rounded-full bg-white transition-tran
 
               <$2 />;
 onClick={resetAllSettings}
-                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
               >
                 <RotateCcw className="w-4 h-4" />
                 <span>Reset All Settings</span>
@@ -2601,10 +2601,10 @@ type="range";
 min="50";
 max="200";
 step="10";
-value={settings.fontSize}
+value={settings.fontSize}>
                     onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, fontSize: parseInt(e.target.value) }))}
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>50%</span>
@@ -2622,10 +2622,10 @@ type="range";
 min="1.0";
 max="2.0";
 step="0.1";
-value={settings.lineSpacing}
+value={settings.lineSpacing}>
                     onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, lineSpacing: parseFloat(e.target.value) }))}
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
                   />
                 </label>
               </div>
@@ -2636,9 +2636,9 @@ value={settings.lineSpacing}
 Color Blindness Support
                   </span>
                   <select;
-value={settings.colorBlindness}
+value={settings.colorBlindness}>
                     onChange={(e) => setSettings(prev => ({ ...prev)}}, colorBlindness: e.target.value as any }))}
-                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                    className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
                   >
                     <option value="none">None</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -2846,10 +2846,10 @@ type="range";
 min="0.5";
 max="2.0";
 step="0.1";
-value={settings.wordSpacing}
+value={settings.wordSpacing}>
                         onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, wordSpacing: parseFloat(e.target.value) }))}
-                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
                       />
                     </label>
 
@@ -2862,10 +2862,10 @@ type="range";
 min="-0.5";
 max="2.0";
 step="0.1";
-value={settings.letterSpacing}
+value={settings.letterSpacing}>
                         onChange={(e) =>
   </input> setSettings(prev => ({ ...prev)}, letterSpacing: parseFloat(e.target.value) }))}
-                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                        className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider">
                       />
                     </label>
                   </div>
@@ -2892,7 +2892,7 @@ value={settings.letterSpacing}
         <div className="bg-gray-50 dark:bg-gray-800 p-3 flex items-center justify-between">
           <$2 />;
 onClick={() => setShowKeyboardShortcuts(!showKeyboardShortcuts)}
-            className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
           >
             <HelpCircle className="w-4 h-4" />
             <span>Keyboard Shortcuts</span>
@@ -2910,13 +2910,13 @@ Score: {accessibilityScore}/100
 initial={{ opacity: 0}}}
               animate={{ opacity: 1}}}
               exit={{ opacity: 0}}}
-              className="absolute inset-0 bg-black/50 flex items-center justify-center z-10"
+              className="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
             >
               <motion.div;
 initial={{ scale: 0.9}}, opacity: 0 }}
                 animate={{ scale: 1}}, opacity: 1 }}
                 exit={{ scale: 0.9}}, opacity: 0 }}
-                className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4"
+                className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4">
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white">;
@@ -2924,7 +2924,7 @@ Keyboard Shortcuts
                   </h3>
                   <$2 />;
 onClick={() => setShowKeyboardShortcuts(false)}
-                    className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                    className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300">
                   >
                     <X className="w-5 h-5" />
                   </button>

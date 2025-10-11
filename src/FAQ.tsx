@@ -16,10 +16,10 @@ Can't find what you're looking for? Our team is here to help.
                 <input;
 type="text";
 placeholder="Search questions, topics, or keywords...";
-value={searchQuery}
+value={searchQuery}>
                   onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 />
               </div>
             </div>
@@ -27,9 +27,9 @@ value={searchQuery}
             {/* Category Filter */}
             <div className="lg:w-64">
               <select;
-value={activeCategory}
+value={activeCategory}>
                 onChange={(e) => setActiveCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
               >
                 {categories.map(category => ()
                   <option key={category} value={category}>
@@ -46,11 +46,11 @@ value={activeCategory}
           {filteredFAQs.map((item), index) => (
             <$2 />;
 key={index}
-              className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden"
+              className="bg-gray-800/50 border border-gray-700 rounded-lg overflow-hidden">
             >
               <$2 />;
 onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200"
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200">
               >
                 <div className="flex items-start">
                   <HelpCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -60,7 +60,7 @@ onClick={() => toggleItem(index)}
                       {item.tags.map((tag), tagIndex) => (
                         <$2 />;
 key={tagIndex}
-                          className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full"
+                          className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full">
                         >
                           {tag}
                         </span>
@@ -97,7 +97,7 @@ onClick={() => {};
 setSearchQuery('');
 }
 setActiveCategory('all')}}
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200">
             >;
 Clear Filters
             </button>
@@ -217,7 +217,7 @@ Find answers to common questions about our services, processes, and how we can h
               <div key={index} className="bg-slate-800/50 rounded-lg border border-white/10 overflow-hidden">
                 <$2 />;
 onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between text-white hover:bg-slate-700/50 transition-colors duration-300"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between text-white hover:bg-slate-700/50 transition-colors duration-300">
                 >
                   <span className="text-lg font-medium">{item.question}</span>
                   <svg;
@@ -255,7 +255,7 @@ Contact us for personalized assistance.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 href="mailto:contact@ziontechgroup.com";
-className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center justify-center"
+className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center justify-center">
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -265,7 +265,7 @@ Email Us
             </a>
             <$2 />;
 href="tel:+13024640950";
-className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
+className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center">
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -619,10 +619,10 @@ Find answers to the most common questions about Zion Tech Group and our AI marke
               <input;
 type="text";
 placeholder="Search for answers...";
-value={searchTerm}
+value={searchTerm}>
                 onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                className="w-full pl-12 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent">
               />
             </div>
           </div>
@@ -790,25 +790,25 @@ Our support team is here to help you get the most out of Zion Tech Group
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 href="mailto:support@ziontechgroup.com";
-className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-light text-white font-medium rounded-lg transition-colors"
+className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-light text-white font-medium rounded-lg transition-colors">
                 >
                   <MessageCircle className="h-4 w-4 mr-2" />;
 Email Support
                 </a>
                 <$2 />;
 href="/contact";
-className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-medium rounded-lg transition-colors"
+className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-medium rounded-lg transition-colors">
                 >
           {/* FAQ Items */}
           <div className="max-w-4xl mx-auto space-y-4">
             {filteredFAQs.map((faq), index) => (
               <$2 />;
 key={index}
-                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden"
+                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
               >
                 <$2 />;
 onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-blue-light/20 transition-colors"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-blue-light/20 transition-colors">
                 >
                   <span className="text-white font-medium text-lg">{faq.question}</span>
                   {openItems.has(index) ? (
@@ -835,7 +835,7 @@ Can't find what you're looking for? Our support team is here to help.
               </p>
               <$2 />;
 href="/contact";
-className="inline-flex items-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
+className="inline-flex items-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors">
               >;
 Contact Support
               </a>
@@ -921,7 +921,7 @@ activeCategory === category.category
                       <AccordionItem;
 key={index}
                         value={`item-${category.category}}-${index}`}
-                        className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg px-6"
+                        className="bg-zion-blue-light/10 border border-zion-purple/20 rounded-lg px-6">
                       >
                         <AccordionTrigger className="text-left text-white hover:text-zion-cyan py-4">
                           {faq.question}
@@ -954,13 +954,13 @@ Can't find the answer you're looking for? Our support team is here to help.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 href="/contact";
-className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
+className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors">
                 >;
 Contact Support
                 </a>
                 <$2 />;
 href="/blog";
-className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple font-medium rounded-lg hover:bg-zion-purple/10 transition-colors"
+className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple font-medium rounded-lg hover:bg-zion-purple/10 transition-colors">
                 >;
 Visit Our Blog
                 </a>

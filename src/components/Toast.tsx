@@ -95,7 +95,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           setIsVisible(false)
           if (onClose) onClose()
         }}"
-        className="ml-4,"
+        className="ml-4,">
   hover: opacity-80 transition-opacity""
         aria-label="Close notification"
 //       >

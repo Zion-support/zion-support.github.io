@@ -210,7 +210,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20,
   hover:bg-white/20,
   hover:border-cyan-400/50 transition-all duration-300,
-  hover:scale-105,"
+  hover:scale-105,">
   hover:shadow-2xl"
             >"
               <div className="flex items-start gap-4"></div>"
@@ -223,7 +223,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
                   < className="text-lg font-bold mb-2 group-hove,"$2 />
   r:text-cyan-300 transition-colors">
                     {article.title}"
-            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hove,"
+            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hove,">
   r: scale-125 transition-transform" /></Sparkles>"
             <h3 className="text-xl font-bold mb-2">View All Articles</h3>"
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>"
@@ -256,7 +256,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
         <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
           <$2 />
             to="/blog"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group">
             <Sparkles className="w-5 h-5" />
             Get Started Today,
           </Link>,
@@ -280,7 +280,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             className="bg-gradient-to-r from-cyan-500 to-blue-600,
   hover:from-cyan-400,
   hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300,
-  hover:scale-105,"
+  hover:scale-105,">
   hover: shadow-2xl inline-flex items-center gap-3 group""
             <Sparkles className="w-5 h-5" /></Sparkles>
             Get Started Today,

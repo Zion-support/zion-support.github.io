@@ -193,7 +193,7 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
                   <sp, a, n>{ artic, l, e.date  ? new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sh, o, r, t', d, a, y: 'nume, r, i, c', ye, a, r : 'nume, r, i, c'  }) : 'Rece, n, t'}
                 {/* CTA, Butto, n */}
                 <, hre, f = {`/bl, o, g/${artic, l, e.slug}`}"$2 />
-                  className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transform, hove,"
+                  className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transform, hove,">
   r:-transla, t, e-y-1"
                 >
                   <sp, a, n>Read, Full, Article</sp, a, n>"

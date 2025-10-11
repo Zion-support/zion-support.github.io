@@ -135,7 +135,7 @@ const,
                 <a></a>"
                   href="mailt,"
   o:kleber@ziontechgroup.com""
-                  className="cyber-button flex items-center space-x-2"
+                  className="cyber-button flex items-center space-x-2">
                   style={/* TODO: Fix JSX expression */}
   d: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >"

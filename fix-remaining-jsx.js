@@ -33,7 +33,7 @@ function fixMalformedJSX(content) {
   }
 
   // Fix component structure
-  if (fixed.includes('return (') && !fixed.includes('<div className=')) {
+  if (fixed.includes('return (') && !fixed.includes('<div className=')) {>
     fixed = fixed.replace(/return\s*\(\s*/, 'return (\n    <div className="min-h-screen bg-gray-50">\n      ');
     fixed = fixed.replace(/(\s*)\s*\)\s*;?\s*$/, '\n    </div>\n  );');
   }

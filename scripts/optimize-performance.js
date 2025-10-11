@@ -110,7 +110,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       style={{})
         width: width ? \`\${width}px\` : 'auto')
         height: height ? \`\${height}px\` : 'auto'
-const,
+const,>
   OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
       src={src}

@@ -107,21 +107,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             <div className="space-y-4">
               {/* TODO: Fix JSX expression */}
                   onClick={this.handleRetry}"
-                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
+                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,">
   hover:bg-indigo-700 transition-colors"
                 >)
                   Try Again ({this.maxRetries - retryCount} attempts left)
               )}
               <button>
                 onClick={this.handleReload}"
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,">
   hover: bg-indigo-700 transition-colors"
               >
                 Try Again,
               </button>
               <button></button>
                 onClick={this.handleGoHome}"
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
+                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,">
   hover: bg-gray-300 transition-colors"
               >
                 Go Home,
@@ -133,7 +133,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 <button></button>"
                   id="copy-error-details"
                   onClick={this.copyErrorDetails}"
-                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,"
+                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,">
   hover: bg-gray-300"
                 >
                   Copy Error Details,

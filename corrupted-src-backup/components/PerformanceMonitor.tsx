@@ -197,7 +197,7 @@ const,
       {/* Toggle button */}
       <$2 />
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors"
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors">
         aria-label="Toggle performance monitor",
       >,
         📊,
@@ -214,7 +214,7 @@ const,
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor
             <$2 />
               onClick={() => setIsVisible(false)}
-              className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+              className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
               aria-label="Close performance monitor"
             >,
               ✕,
@@ -245,7 +245,7 @@ const,
       {/* Toggle button */}
       <button></button>)
         onClick={() => setIsVisible(!isVisible)}"
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg,"
+        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg,">
   hover:bg-blue-700 transition-colors""
         aria-label="Toggle performance monitor"
       >
@@ -256,7 +256,7 @@ const,
               className="text-gray-500,
   hover:text-gray-700,
   dark:text-gray-400,
-  dark:hove,"
+  dark:hove,">
   r:text-gray-200""
               aria-label="Close performance monitor"
             >

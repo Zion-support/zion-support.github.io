@@ -152,7 +152,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-3, 0, 0">"
               Read, Full, Guide;"
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Articl, e, 2 */}
           <Li, n, k
@@ -219,7 +219,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-r, e, d-3, 0, 0">"
               Read, Security, Guide;"
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Articl, e, 3 */}
           <Li, n, k
@@ -286,7 +286,7 @@ const, October2025NewAIContentMegaBanne, r = () => {/* TODO: Fix JSX expression 
               <Link, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-cy, a, n-3, 0, 0">"
               Read, Implementation, Guide;"
-              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,"
+              <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
         {/* Total, Value, Banner */}
         <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6">

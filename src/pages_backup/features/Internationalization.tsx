@@ -98,8 +98,8 @@ export default function Internationalization() {
 
             <img
               src="https://placehold && placehold.co/800x400"
-              alt="Screenshot of language options"
-              className="object-cover"
+              alt="Screenshot of language options">
+              className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -138,8 +138,8 @@ export default function Internationalization() {
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https://placehold.co/800x400"
-              alt="Screenshot of language options"
-              className="object-cover"
+              alt="Screenshot of language options">
+              className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -210,6 +210,6 @@ export default function Internationalization() {
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of language options"
               className="object-cover"
-
-
+>
+>
               <Link href="/">Explore Zion</Link></$1></$1></$1></$1></$1></div></main>

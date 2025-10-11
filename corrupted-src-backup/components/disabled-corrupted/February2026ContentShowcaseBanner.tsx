@@ -220,7 +220,7 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
                 <input, typ, e="ema, i, l"
                     placehold, e, r="Enter, your, email"
-        {/* Newsletter, Sig, n, u, p */}"
+        {/* Newsletter, Sig, n, u, p */}">
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, vi, a-bl, u, e-500, t, o-purp, l, e-5, 0, 0"></div>"
             <div, className="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10"></div>"
@@ -232,8 +232,8 @@ const February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression *
               </p>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
                 <input, typ, e="ema, i, l""
-                    placehold, e, r="Enter, your, email""
-                    className="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-emera, l, d-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
+                    placehold, e, r="Enter, your, email"">
+                    className="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-emera, l, d-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0">
                   /></input>"
                 <button, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
                   <sp, a, n>Subscri, b, e</sp, a, n>"

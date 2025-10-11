@@ -197,19 +197,19 @@ onClick={() => handleContact(ENHANCED_SERVICES[0])}
               <input;
 type="text";
 placeholder="Search services...";
-value={searchTerm}
+value={searchTerm}>
                 onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20">
               />
             </div>
 
             {/* Category Filter */}
             <div>
               <select;
-value={selectedCategory}
+value={selectedCategory}>
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20">
               >
                 <option value="all">All Categories</option>
                 {categories.map(category => ()
@@ -221,14 +221,14 @@ value={selectedCategory}
             {/* Sort */}
             <div>
               <select;
-value={`${sortBy}}-${sortOrder}`}
+value={`${sortBy}}-${sortOrder}`}>
                 onChange={(e) => {};
 }
 const [newSortBy}, newSortOrder] = e.target.value.split('-');
 setSortBy(newSortBy as any);
 setSortOrder(newSortOrder as any)
                 }}
-                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
+                className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20">
               >
                 <option value="name-asc">Name A-Z</option>
                 <option value="name-desc">Name Z-A</option>
@@ -306,7 +306,7 @@ Featured
                 {service.tags.slice(0, 4).map((tag), index) => (
                   <$2 />;
 key={index}
-                    className="px-2 py-1 bg-gray-800/50 text-xs text-cyan-400 rounded-full border border-cyan-400/30"
+                    className="px-2 py-1 bg-gray-800/50 text-xs text-cyan-400 rounded-full border border-cyan-400/30">
                   >
                     {tag}
                   </span>
@@ -763,7 +763,7 @@ Custom
 placeholder="Search by name, description, or tags...";
 value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      className="bg-zion-blue-dark/50 border-zion-purple/30 text-white placeholder:text-zion-slate-light"
+                      className="bg-zion-blue-dark/50 border-zion-purple/30 text-white placeholder:text-zion-slate-light">
                     />
                   </div>
                   
@@ -842,7 +842,7 @@ setSelectedPricing('all');
 }
 setSortBy('popularity')}}
                     variant="outline";
-className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50"
+className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50">
                   >;
 Clear Filters
                   </Button>
@@ -928,7 +928,7 @@ default: return <Zap className="h-5 w-5 text-gray-400" />;
 placeholder="Search services...";
 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder-zion-slate-light"
+                className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder-zion-slate-light">
               />
             </div>
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>
@@ -1030,17 +1030,17 @@ Clear Filters
               <input;
 type="text";
 placeholder="Search services...";
-value={searchTerm}
+value={searchTerm}>
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
               />
             </div>
 
             {/* Category Filter */}
             <select;
-value={selectedCategory}
+value={selectedCategory}>
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
             >
               <option value="all">All Categories</option>
               {SERVICE_CATEGORIES.map(category => ()
@@ -1050,9 +1050,9 @@ value={selectedCategory}
 
             {/* Pricing Filter */}
             <select;
-value={selectedPricing}
+value={selectedPricing}>
               onChange={(e) => setSelectedPricing(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
             >
               <option value="all">All Pricing</option>
               <option value="budget">Budget ($0-$999)</option>
@@ -1062,9 +1062,9 @@ value={selectedPricing}
 
             {/* Support Level Filter */}
             <select;
-value={selectedSupport}
+value={selectedSupport}>
               onChange={(e) => setSelectedSupport(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
             >
               <option value="all">All Support Levels</option>
               <option value="basic">Basic</option>
@@ -1077,9 +1077,9 @@ value={selectedSupport}
           <div className="mt-4 flex items-center gap-4">
             <span className="text-gray-600">Sort by:</span>
             <select;
-value={sortBy}
+value={sortBy}>
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-3 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-3 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent">
             >
               <option value="name">Name</option>
               <option value="price-low">Price: Low to High</option>
@@ -1211,7 +1211,7 @@ Key Benefits
                     <div className="flex gap-3">
                       <$2 />;
 href={`mailto:${service.contactInfo.email}}?subject=Inquiry about ${service.title}`}
-                        className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+                        className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
                       >
                         <Mail className="w-4 h-4" />;
 Get Quote
@@ -1220,7 +1220,7 @@ Get Quote
 href={service.contactInfo.website}
                         target="_blank";
 rel="noopener noreferrer";
-className="flex-1 bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
+className="flex-1 bg-gray-100 text-gray-700 text-center py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
                       >
                         <Globe className="w-4 h-4" />;
 Learn More
@@ -1300,14 +1300,14 @@ Connect with Zion Tech Group today and discover how our innovative micro SAAS se
 href="https://ziontechgroup.com";
 target="_blank";
 rel="noopener noreferrer";
-className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
+className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
               >
                 <Globe className="w-5 h-5" />;
 Visit Our Website
               </a>
               <$2 />;
 href="mailto:kleber@ziontechgroup.com?subject=Business Consultation Request";
-className="bg-gray-700 text-white px-8 py-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center justify-center gap-2"
+className="bg-gray-700 text-white px-8 py-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center justify-center gap-2">
               >
                 <Mail className="w-5 h-5" />;
 Schedule Consultation
@@ -1327,8 +1327,8 @@ export default EnhancedServicesPage
       <div className="relative">
         <img;
 src={service.image} ;
-alt={service.title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+alt={service.title}>
+          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
         />
         <div className="absolute top-4 left-4 flex gap-2">
           {service.isPopular && (

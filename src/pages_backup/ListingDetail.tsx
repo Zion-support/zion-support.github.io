@@ -238,7 +238,7 @@ index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
 src={image,}
                           alt={`${listing.title}} - image ${index + 1}`}
                           className='object-cover';
-fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
+fallbackSrc='/placeholder.svg'                        />                          className="object-cover">
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",;
 index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
@@ -898,7 +898,7 @@ amount={listing.price}
 onClick={handleContact}
 ;
 disabled={isLoading}
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
                     >
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>
@@ -908,7 +908,7 @@ disabled={isLoading}
 variant="outline";
 onClick={handleContact}
                     disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />;
 Contact Publisher
@@ -973,7 +973,7 @@ roomId={listing.id,}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
 
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>;
-className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
                     >
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>
@@ -983,7 +983,7 @@ className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:fr
 variant="outline";
 onClick={handleContact}
                     disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />;
 Contact Publisher</$1></$1>
@@ -1044,7 +1044,7 @@ on_click={handle_contact}
 variant="outline";
 onClick={handleContact}
                     disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                   >
                     <MessageSquare className="h-4 w-4 mr-2" />;
 Contact Publisher</$1></$1>

@@ -45,7 +45,6 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
 return (
     <>
       <Helmet>
@@ -56,78 +55,6 @@ return (
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  const services = [
-    {
-      title: 'Crop Intelligence',
-      description: 'AI-powered crop monitoring and analysis for optimal growth and yield.',
-      icon: Leaf,
-      benefits: ['Crop health monitoring', 'Growth analysis', 'Yield optimization', 'Quality assessment']
-    },
-    {
-      title: 'Weather Analytics',
-      description: 'Advanced weather prediction and climate analysis for agricultural planning.',
-      icon: BarChart,
-      benefits: ['Weather forecasting', 'Climate analysis', 'Risk assessment', 'Planning optimization']
-    },
-    {
-      title: 'Soil Management',
-      description: 'Comprehensive soil analysis and management recommendations.',
-      icon: Shield,
-      benefits: ['Soil testing', 'Nutrient analysis', 'pH monitoring', 'Fertilization plans']
-    },
-    {
-      title: 'Market Intelligence',
-      description: 'AI-driven market analysis and pricing optimization for agricultural products.',
-      icon: Target,
-      benefits: ['Price forecasting', 'Market trends', 'Demand analysis', 'Profit optimization']
-    }
-  ]
-
-  const pricingTiers = [
-    {
-      name: 'Basic',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small farms and individual farmers',
-      features: [
-        'Basic crop monitoring',
-        'Weather alerts',
-        'Email support',
-        'Mobile app access'
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for medium to large farms',
-      features: [
-        'Advanced analytics',
-        'Precision agriculture tools',
-        'Priority support',
-        'API access',
-        'Custom integrations'
-      ]
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for agricultural corporations',
-      features: [
-        'Full AI suite',
-        'Custom development',
-        'Dedicated support',
-        'White-label options',
-        'On-premise deployment'
-      ]
-    }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Helmet>
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered agricultural intelligence platform for precision farming, crop monitoring, and yield optimization." />
@@ -247,7 +174,7 @@ return (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
                   tier.name === 'Professional' 
                     ? 'border-green-400/50 scale-105' 
-                    : 'border-white/20 hover:border-green-400/50'
+                    : 'border-white/20 hover:border-green-400/50'>
                 }`}>
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
@@ -270,7 +197,7 @@ return (
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     tier.name === 'Professional'
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
-                      : 'border border-white text-white hover:bg-white hover:text-green-600'
+                      : 'border border-white text-white hover:bg-white hover:text-green-600'>
                   }`}>
                     {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   </button>

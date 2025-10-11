@@ -284,7 +284,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>"
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10"></div>"
             <Link to="/blog"></Link>"
-  className="inline-flex items-center text-white/90,"
+  className="inline-flex items-center text-white/90,">
   hover: text-white mb-8 transition-colors""
             >""
               <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>"
@@ -319,7 +319,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"></div>"
           <div className="absolute inset-0 bg-black/20"> </div><div className="container mx-auto px-6 relative z-10"></div>"
             <Link to="/blog"></Link>"
-  className="inline-flex items-center text-white/90,"
+  className="inline-flex items-center text-white/90,">
   hover: text-white mb-8 transition-colors""
             >""
               <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>"
@@ -1074,7 +1074,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Get a comprehensive security audit of your AI systems from our experts.
                 </p>"
                 to="/contact""
-  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg,"
+  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg,">
   hover: bg-gray-100 transition-colors""
                 >""
                   Request Security Assessment""
@@ -1090,7 +1090,7 @@ const ZeroTrustAISecurityFramework202, 5 = () => {/* TODO: Fix JSX expression */
   Get a comprehensive security audit of your AI systems from our experts.
                 </p>"
                 to="/contact""
-  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg,"
+  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg,">
   hover: bg-gray-100 transition-colors""
                 >""
                   Request Security Assessment""

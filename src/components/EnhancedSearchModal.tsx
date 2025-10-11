@@ -203,8 +203,8 @@ ref={inputRef}
             type="text";
 placeholder="Search services, pages, documentation...";
 value={query}
-            onChange={handleInputChange}
-            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
+            onChange={handleInputChange}>
+            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg">
           />
   </input>
           <$2 />;

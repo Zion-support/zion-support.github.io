@@ -50,10 +50,10 @@ const AIEdgeComputingPage: React.FC = () => {
             and reduce latency with intelligent edge AI solutions.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <$2 />
-              href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+              href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
 // >
 //               Get Started
-              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
 <Cpu className="w-5 h-5" />
               +1 302 464 0950
         </section>"

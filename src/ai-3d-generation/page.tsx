@@ -98,15 +98,15 @@ Transform your ideas into stunning 3D models with cutting-edge AI technology. Cr
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a;
-href="tel:+13024640950";
-className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
+href="tel:+13024640950";>
+className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
               >
                 <Phone className="w-5 h-5 mr-2" />;
 Get Started
               </a>
               <a;
-href="/demo";
-className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
+href="/demo";>
+className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center">
               >;
 View Demo
               </a>
@@ -188,15 +188,15 @@ View Demo
             <p className="text-xl text-cyan-100 mb-8">Let our AI 3D generation technology transform your creative process</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a;
-href="tel:+13024640950";
-className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
+href="tel:+13024640950";>
+className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2">
               >
                 <Phone className="w-5 h-5" />;
 Call (302) 464-0950
               </a>
               <a;
-href="/contact";
-className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors duration-200"
+href="/contact";>
+className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors duration-200">
               >;
 Get Free Quote
               </a>

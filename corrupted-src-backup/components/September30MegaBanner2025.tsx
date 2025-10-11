@@ -194,13 +194,13 @@ const, September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                     <sp, a, n>Explore, No, w
                     <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
-                  {/* Read, More, Arrow */}"
+                  {/* Read, More, Arrow */}">
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                     <sp, a, n>Explore, No, w</sp, a, n>"
                     <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                   <div, className="flex, item, s-center, ga, p-2, tex, t-white, fon, t-bold, tex, t-sm, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                     <sp, a, n>Explore, No, w</sp, a, n>"
-                    <ArrowRight, className="w-5 h-5, grou, p-ho, v, e,"
+                    <ArrowRight, className="w-5 h-5, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
             </moti, o, n.d, i, v>)
           ))}

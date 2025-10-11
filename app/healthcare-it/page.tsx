@@ -17,15 +17,11 @@ import React from 'react'
         <Navigation />
         
         {/* Hero Section */}
-        <section className="
-    g: px-8"
+        <section className=">
+    g: px-8">
   </section>
-          <div className="max-w-7xl mx-auto"
+          <div className="max-w-7xl mx-auto">
   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
             <div className="text-center">
@@ -36,7 +32,7 @@ import React from 'react'
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
 Page
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Discover our comprehensive solutions designed to transform your business.
 
       <Footer />

@@ -600,7 +600,7 @@ key={title}
       initial={{ opacity: 0}}, y: 20 }}
       animate={{ opacity: 1}}, y: 0 }}
       transition={{ duration: 0.5}}}
-      className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6"
+      className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-6">
     >
       <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
         <IconComponent className="w-6 h-6 text-zion-cyan mr-3" />
@@ -611,7 +611,7 @@ key={title}
           <li key={page.href}>
             <$2 />;
 to={page.href} ;
-className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group"
+className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
             >
               <span className="w-2 h-2 bg-zion-cyan rounded-full mr-3 group-hover:bg-zion-cyan transition-colors"></span>
               <span className="font-medium">{page.name}</span>
@@ -683,7 +683,7 @@ key={index}
                       <div key={linkIndex} className="border-l-2 border-gray-200 pl-4">
                         <$2 />;
 to={link.path}
-                          className="block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors"
+                          className="block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors">
                         >
                           {link.name}
                         </Link>
@@ -737,13 +737,13 @@ Can't find what you're looking for? Our support team is here to help.
                 <div className="space-y-2">
                   <$2 />;
 to="/contact";
-className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium"
+className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium">
                   >;
 Contact Support →
                   </Link>
                   <$2 />;
 to="/help-center";
-className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium"
+className="block text-zion-blue hover:text-zion-blue-dark text-sm font-medium">
                   >;
 Visit Help Center →
                   </Link>
@@ -770,7 +770,7 @@ const renderPageSection = (title: string;, pages: any[], IconComponent: any) => 
           <$2 />;
 key={page.path}
             to={page.path}
-            className="block p-4 bg-gray-800/30 border border-gray-700 rounded-lg hover:border-cyan-500/50 transition-all duration-200 group"
+            className="block p-4 bg-gray-800/30 border border-gray-700 rounded-lg hover:border-cyan-500/50 transition-all duration-200 group">
           >
             <h4 className="font-medium text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
               {page.title}
@@ -833,7 +833,7 @@ Popular destinations and frequently accessed pages
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <$2 />;
 to="/services";
-className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
+className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200">
             >
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Briefcase className="w-6 h-6 text-white" />
@@ -844,7 +844,7 @@ className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:bord
 
             <$2 />;
 to="/pricing";
-className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
+className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200">
             >
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <DollarSign className="w-6 h-6 text-white" />
@@ -855,7 +855,7 @@ className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:bord
 
             <$2 />;
 to="/contact";
-className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
+className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200">
             >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Mail className="w-6 h-6 text-white" />
@@ -866,7 +866,7 @@ className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:bord
 
             <$2 />;
 to="/careers";
-className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
+className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200">
             >
               <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6 text-white" />
@@ -891,14 +891,14 @@ our website and find the information you need.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
             >
               <span>Contact Support</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <$2 />;
 to="/help";
-className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200"
+className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200">
             >
               <span>Visit Help Center</span>
               <ArrowRight className="w-5 h-5" />
@@ -913,7 +913,7 @@ className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 t
         <motion.div;
 initial={{ opacity: 0}}, y: 20 }}
           animate={{ opacity: 1}}, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-12">
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">;
 Zion Tech Group Sitemap

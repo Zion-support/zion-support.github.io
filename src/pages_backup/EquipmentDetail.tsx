@@ -622,14 +622,14 @@ onClick={() => router.push('/equipment')}
                 <Button;
 onClick={() => router.back()} ;
 variant="outline";
-className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
+className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
                 >
                   <ArrowLeft className="h-4 w-4 mr-2" />;
 Go Back
                 </Button>
                 <Button;
 onClick={() => router.push('/equipment')}
-                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
+                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue">
                 >;
 Browse Equipment
                 </Button>
@@ -722,13 +722,13 @@ initial={{ opacity: 0}}, y: 20 }}
                 <Button;
 onClick={() => router.back()}
                   variant="outline";
-className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
+className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
                 >
                   <ArrowLeft className="h-4 w-4 mr-2" />;
 Go Back</$1>
                 <Button;
 onClick={() => router.push('/equipment')}
-                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
+                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue">
                 >;
 Browse Equipment</$1></$1></$1></$1></$1>
       </>
@@ -764,7 +764,7 @@ initial={{ opacity: 0}}, y: -20 }}
           >
             <;$2 />;
 onClick={() => router.push('/equipment')}
-              className="text-zion-cyan hover:text-white transition-colors"
+              className="text-zion-cyan hover:text-white transition-colors">
             >;
 Equipment
             </button>

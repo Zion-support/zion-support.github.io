@@ -90,8 +90,8 @@ export default function TalentMarketplace() {
 
             <img
               src="https: //placehold && placehold.co/800x400"
-              alt="Screenshot of talent directory"
-              className="object-cover"
+              alt="Screenshot of talent directory">
+              className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -130,8 +130,8 @@ export default function TalentMarketplace() {
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https: //placehold.co/800x400"
-              alt="Screenshot of talent directory"
-              className="object-cover"
+              alt="Screenshot of talent directory">
+              className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -202,6 +202,6 @@ export default function TalentMarketplace() {
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
-
-
+>
+>
               <Link href="/talent">Browse Talent</Link></$1></$1></$1></$1></$1>

@@ -79,7 +79,7 @@ export function MicroSaasShowcase() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16">
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Featured Micro SAAS & AI Services
@@ -148,7 +148,7 @@ export function MicroSaasShowcase() {
           {featuredServices.map((service, index) => (
             <Card 
               key={service.id} 
-              className="group hover:shadow-2xl transition-all duration-500 border-zion-purple/20 hover:border-zion-purple/40 overflow-hidden bg-gradient-to-br from-card to-card/50 backdrop-blur-sm"
+              className="group hover:shadow-2xl transition-all duration-500 border-zion-purple/20 hover:border-zion-purple/40 overflow-hidden bg-gradient-to-br from-card to-card/50 backdrop-blur-sm">
               style={{
                 animationDelay: `${index * 100}ms`,
                 animation: 'fadeInUp 0.6s ease-out forwards'
@@ -157,8 +157,8 @@ export function MicroSaasShowcase() {
               <div className="relative">
                 <img 
                   src={service.image} 
-                  alt={service.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                  alt={service.title}>
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
                 />
                 <div className="absolute top-3 left-3">
                   {categoryIcons[service.category as keyof typeof categoryIcons]}
@@ -425,7 +425,7 @@ export function MicroSaasShowcase() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="text-center">
         >
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
@@ -439,7 +439,7 @@ export function MicroSaasShowcase() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
-                className="bg-zion-purple hover:bg-zion-purple-light text-white"
+                className="bg-zion-purple hover:bg-zion-purple-light text-white">
                 asChild
               >
                 <Link to="/micro-saas-services">
@@ -450,7 +450,7 @@ export function MicroSaasShowcase() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark"
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark">
                 onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Business Consultation Request`)}
               >
                 Get Free Consultation

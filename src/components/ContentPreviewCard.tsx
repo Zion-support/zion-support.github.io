@@ -141,7 +141,7 @@ const,
           <span className="text-sm text-gray-500">{date}
           <Link>
             href={path}"
-            className="inline-flex items-center text-indigo-600,"
+            className="inline-flex items-center text-indigo-600,">
   hover: text-indigo-700 font-medium text-sm"
 // >
 //             Read Article,"

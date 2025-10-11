@@ -77,8 +77,8 @@ Visualize user activity, manage orders and keep your marketplace running smoothl
             <img;
 src="https: //placehold.co/800x400";
 alt="Screenshot of admin dashboard";
-className="object-cover"
-
+className="object-cover">
+>
             />
           </div>
 
@@ -152,8 +152,8 @@ Visualize user activity, manage orders and keep your marketplace running smoothl
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img;
 src="https: //placehold.co/800x400";
-alt="Screenshot of admin dashboard";
-className="object-cover"
+alt="Screenshot of admin dashboard";>
+className="object-cover">
             /></$1>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
@@ -188,7 +188,7 @@ running smoothly.</$1>
             <img;
 src='https://placehold.co / 800x400';
 alt='Screenshot of admin dashboard';
-className='object - cover'
+className='object - cover'>
             /></$1>
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>
@@ -209,8 +209,8 @@ Visualize user activity, manage orders and keep your marketplace running smoothl
           <div className="relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden">
             <img;
 src="https: //placehold.co / 800x400";
-alt="Screenshot of admin dashboard";
-className="object - cover"
+alt="Screenshot of admin dashboard";>
+className="object - cover">
             /></$1>
           <h2 className="text - 2xl font - bold mb - 4">Benefits &amp, Use Cases</h2>
           <ul className="list - disc list - inside space - y-2 mb - 8 text - zion - slate - light">

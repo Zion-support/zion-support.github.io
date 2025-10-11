@@ -25,7 +25,7 @@ const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useS
   if (process.env['NODE_ENV'] !== 'development') {return null}
   return ()
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
         aria-label="Toggle performance dashboard"
       >
         Perf</span>

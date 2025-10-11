@@ -46,7 +46,7 @@ Try again;)
           </button>)
           <;),$2 />;
 onClick={() => window?.location.reload()}
-            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
           </div>"
           <div className="ml-3"></div>"
             <h3 className="text-lg font-medium text-gray-900">Something went wrong

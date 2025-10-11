@@ -55,7 +55,7 @@ const AppHeader = () => {
                 <$2 />
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                  className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
                 >
                   {item.name}
                 </Link>
@@ -90,7 +90,7 @@ const AppHeader = () => {
               ) : (
                 <$2 />
                   onClick={() => openLoginModal()}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 >
                   Login
                 </button>
@@ -99,7 +99,7 @@ const AppHeader = () => {
               {/* Mobile menu button */}
               <$2 />
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
+                className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors">
               >
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
@@ -114,7 +114,7 @@ const AppHeader = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-border bg-background"
+              className="md:hidden border-t border-border bg-background">
             >
               <div className="container mx-auto px-4 py-4">
                 <nav className="flex flex-col space-y-4">
@@ -122,7 +122,7 @@ const AppHeader = () => {
                     <$2 />
                       key={item.name}
                       href={item.href}
-                      className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors py-2"
+                      className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors py-2">
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}

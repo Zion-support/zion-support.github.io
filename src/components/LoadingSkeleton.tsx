@@ -82,7 +82,7 @@ export const,
       ))}
     {/* TODO: Fix JSX expression */}
   h: rows }).map((_, rowIndex) => (<div></div>"
-        key={rowIndex} className="grid gap-4 mb-2"
+        key={rowIndex} className="grid gap-4 mb-2">
         style={/* TODO: Fix JSX expression */})`
   s: `repeat(${columns}, 1fr)` }}
 // >

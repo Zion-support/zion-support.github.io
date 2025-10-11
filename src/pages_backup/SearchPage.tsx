@@ -309,7 +309,7 @@ Blog ({blog_results.length})</$1></$1>
                 .map ((r), ) => (
                   <;$2 />;
 key={`${r.type}}-${r.id}`}
-                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4"
+                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4">
                   >
                     <h3 className="text - lg font - bold text - white">
                       {highlight (r.title, query)}
@@ -324,7 +324,7 @@ key={`${r.type}}-${r.id}`}
                 .map ((r), ) => (
                   <;$2 />;
 key={`talent-${r.id}}`}
-                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4"
+                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4">
                   >
                     <h3 className="text - lg font - bold text - white">
                       {highlight (r.title, query)}
@@ -339,7 +339,7 @@ key={`talent-${r.id}}`}
                 .map ((r), ) => (
                   <;$2 />;
 key={`doc-${r.id}}`}
-                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4"
+                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4">
                   >
                     <h3 className="text - lg font - bold text - white">
                       {highlight (r.title, query)}
@@ -354,7 +354,7 @@ key={`doc-${r.id}}`}
                 .map ((r), ) => (
                   <;$2 />;
 key={`blog-${r.id}}`}
-                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4"
+                    className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4">
                   >
                     <h3 className="text - lg font - bold text - white">
                       {highlight (r.title, query)}
@@ -438,7 +438,7 @@ r.id}` "
               <div  className="mb - 6">
                 <label className="block text - sm font - medium text - gray - 700 mb - 2">Sort By</label>
                 <select;
-value={sort_by}
+value={sort_by}>
                   on_change={(e) =>
   </select> setSortBy (e.target.value as any)}
                   className="w - full px - 3 py - 2 border border - gray - 300 rounded - lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - blue -500">

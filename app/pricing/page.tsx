@@ -57,23 +57,23 @@ const PricingPage: React.FC = () => {const features = [
               <span className={`text-lg font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'} `}>
                 Monthly
               </span>
-              <button
+              <button>
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly'
     </>
   )
                 className="
-    s: ring-offset-2 focu, s:ring-offset-slate-900"
+    s: ring-offset-2 focu, s:ring-offset-slate-900">
               >
                 <span
                   className={`${
-                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
+                    billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'} inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}>
                 />
               </button>
               <span className={`text-lg font-medium ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'} `}>
                 Yearly
               </span>
               {billingCycle === 'yearly' && (
-                <span className="ml-2 bg-green-500 text-white text-sm px-2 py-1 rounded-full"
+                <span className="ml-2 bg-green-500 text-white text-sm px-2 py-1 rounded-full">
                   Save 20%
                 </span>
               )}
@@ -102,7 +102,7 @@ const PricingPage: React.FC = () => {const features = [
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover the powerful features that make our solutions stand out.
               </p>
             </div>
@@ -164,22 +164,22 @@ const PricingPage: React.FC = () => {const features = [
     </>
         </section>
 
-        <section className="py-20 bg-gray-100"
+        <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Us>
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Experience the benefits of working with industry leaders.
               </p>
             
             <div className="
-    ,
+    ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+                  <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
                   </div>
@@ -191,16 +191,16 @@ const PricingPage: React.FC = () => {const features = [
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ready to Get Started?>
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us>
               </button>
               <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
+    ,>
+    r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
               </button>
             </div>

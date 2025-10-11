@@ -62,7 +62,7 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
     }
     {/* TODO: Fix JSX expression */}
 key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden,"
+              className="bg-white rounded-2xl shadow-xl overflow-hidden,">
   hover:scale-105 transition-all duration-300"
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}></div>"

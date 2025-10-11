@@ -198,7 +198,7 @@ export default function ComprehensiveServicesPage() {
             href={service.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-zion-cyan hover:text-zion-cyan-light text-sm flex items-center group"
+            className="text-zion-cyan hover:text-zion-cyan-light text-sm flex items-center group">
           >
             Learn More <ExternalLink className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
           </a>
@@ -206,7 +206,7 @@ export default function ComprehensiveServicesPage() {
           <div className="flex gap-2">
             <$2 />
               href={`mailto:${service.contactInfo.email}`}
-              className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-3 py-1 rounded text-xs font-medium transition-colors"
+              className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-3 py-1 rounded text-xs font-medium transition-colors">
             >
               Get Quote
             </a>
@@ -230,7 +230,7 @@ export default function ComprehensiveServicesPage() {
                 placeholder="Search for services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border-zion-blue-light text-white placeholder-zion-slate-light"
+                className="pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border-zion-blue-light text-white placeholder-zion-slate-light">
               />
             </div>
           </div>
@@ -238,9 +238,9 @@ export default function ComprehensiveServicesPage() {
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-4">
             <select
-              value={selectedCategory}
+              value={selectedCategory}>
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-zion-blue-light rounded-lg text-white"
+              className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-zion-blue-light rounded-lg text-white">
             >
               <option value="all">All Categories</option>
               {SERVICE_CATEGORIES.map(category => (
@@ -249,9 +249,9 @@ export default function ComprehensiveServicesPage() {
             </select>
             
             <select
-              value={priceRange}
+              value={priceRange}>
               onChange={(e) => setPriceRange(e.target.value)}
-              className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-zion-blue-light rounded-lg text-white"
+              className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-zion-blue-light rounded-lg text-white">
             >
               <option value="all">All Prices</option>
               <option value="low">Under $5,000</option>
@@ -536,7 +536,7 @@ const ComprehensiveServicesPage = () => {
                 href="https://ziontechgroup.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-zion-purple hover:underline font-medium"
+                className="text-zion-purple hover:underline font-medium">
               >
                 ziontechgroup.com
               </a>
@@ -923,7 +923,7 @@ export default function ComprehensiveServicesPage() {
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"
+                  className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light">
                 />
               </div>
             </div>
@@ -1057,7 +1057,7 @@ export default function ComprehensiveServicesPage() {
 
                       {/* CTA Button */}
                       <Button 
-                        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 group-hover:shadow-lg transition-all duration-300"
+                        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 group-hover:shadow-lg transition-all duration-300">
                         asChild
                       >
                         <a href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}>
@@ -1103,16 +1103,16 @@ export default function ComprehensiveServicesPage() {
                   setSearchQuery('')
                   setPriceRange('all')
                 }}
-                className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-6 py-2 rounded-lg font-medium transition-colors">
               >
                 Clear Filters
               </button>
             </div>
               {/* Pricing Tier Filter */}
               <select
-                value={selectedPricingTier}
+                value={selectedPricingTier}>
                 onChange={(e) => setSelectedPricingTier(e.target.value)}
-                className="px-4 py-2 border border-zion-blue-light rounded-md focus:border-zion-blue focus:outline-none"
+                className="px-4 py-2 border border-zion-blue-light rounded-md focus:border-zion-blue focus:outline-none">
               >
                 <option value="all">All Pricing Tiers</option>
                 {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier]) => (
@@ -1124,9 +1124,9 @@ export default function ComprehensiveServicesPage() {
 
               {/* Sort */}
               <select
-                value={sortBy}
+                value={sortBy}>
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-zion-blue-light rounded-md focus:border-zion-blue focus:outline-none"
+                className="px-4 py-2 border border-zion-blue-light rounded-md focus:border-zion-blue focus:outline-none">
               >
                 <option value="rating">Sort by Rating</option>
                 <option value="price">Sort by Price</option>
@@ -1148,8 +1148,8 @@ export default function ComprehensiveServicesPage() {
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={service.images[0]}
-                    alt={service.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    alt={service.title}>
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
                   />
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-zion-cyan text-white">
@@ -1207,8 +1207,8 @@ export default function ComprehensiveServicesPage() {
                 <div className="relative">
                   <img 
                     src={service.images[0]} 
-                    alt={service.title}
-                    className="w-full h-48 object-cover rounded-t-lg"
+                    alt={service.title}>
+                    className="w-full h-48 object-cover rounded-t-lg">
                   />
                   {service.featured && (
                     <Badge className="absolute top-4 right-4 bg-zion-purple text-white">
@@ -1278,7 +1278,7 @@ export default function ComprehensiveServicesPage() {
                   setSelectedSubcategory('all')
                   setPriceRange('all')
                 }}
-                className="mt-4"
+                className="mt-4">
               >
                 Clear Filters
               </Button>

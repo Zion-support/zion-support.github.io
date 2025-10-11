@@ -39,7 +39,7 @@ export default function PaymentSuccess() {
 
 
             onClick={() => router.push('/dashboard')} // Changed to router.push
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white">
           >
             {t('errors.go_to_dashboard')}
           </Button>
@@ -120,7 +120,7 @@ export default function PaymentSuccess() {
 
 
             onClick={() => router.push('/dashboard')} // Changed to router.push
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white">
           >
             {t('errors.go_to_dashboard')}
           </Button>
@@ -196,7 +196,7 @@ export default function PaymentSuccess() {
 
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
-            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
           >
             {t('errors.return_home')}
           </Button>
@@ -218,7 +218,7 @@ export default function PaymentSuccess() {
         <div className="flex flex-col space-y-3">
           <Button
             onClick={() => router && router.push('/dashboard')} // Changed to router && router.push
-            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white">
           >
             {t('errors && errors.go_to_dashboard')}
           </Button>
@@ -229,7 +229,7 @@ export default function PaymentSuccess() {
             variant="outline"
 
             onClick={() => router.push('/')} // Changed to router.push
-            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
           >
             {t('errors.return_home')}
           </Button></$1></$1></$1>
@@ -285,14 +285,14 @@ function PaymentSuccess() {
         <div className="flex flex - col space - y-3">
           <Button
             on_click={() => router.push ('/dashboard')} // Changed to router.push
-            className="bg - zion - purple hover:bg - zion - purple - dark text - white"
+            className="bg - zion - purple hover:bg - zion - purple - dark text - white">
           >
             {t ('errors.go_to_dashboard')}
           </Button>
           <Button
             variant="outline"
             on_click={() => router.push ('/')} // Changed to router.push
-            className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white"
+            className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white">
           >
             {t ('errors.return_home')}
           </Button></$1></$1></$1>)

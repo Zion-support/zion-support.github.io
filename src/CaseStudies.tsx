@@ -1562,14 +1562,14 @@ to achieve breakthrough results and competitive advantages.
             <div className="flex flex-wrap justify-center gap-4">
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               >;
 Start Your Success Story
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
               >;
 Explore Our Services
               </Link>
@@ -2099,7 +2099,7 @@ return (;
             initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center"
+            className="text-center">
           >;
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
@@ -2126,7 +2126,7 @@ return (;
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.6}}}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
+            className="text-4xl md:text-6xl font-bold text-white mb-6">
           >;
 Success Stories That
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"> Transform Industries</span>
@@ -2135,7 +2135,7 @@ Success Stories That
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.6}}, delay: 0.2 }}
-            className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8"
+            className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
           >;
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
@@ -2179,14 +2179,14 @@ Start Your Success Story
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">;
 Download Case Studies
               </button>;
-className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
               >;
 Start Your Success Story
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <$2 />;
 to="/demo";
-className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300">
               >;
 Request Demo
               </Link>
@@ -2638,7 +2638,7 @@ All Case Studies
             {caseStudies.filter(cs => !cs.featured).map((caseStudy) => (
               <$2 />;
 key={caseStudy.id}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group">
               >
                 {/* Case Study Image */}
                 <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">
@@ -2731,7 +2731,7 @@ Our solutions have delivered measurable results across diverse sectors
             {industries.map((industry) => (
               <$2 />;
 key={industry.name}
-                className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
+                className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70">
               >
                 <CardContent className="p-6 flex-1 flex flex-col gap-4">
                   <img loading="lazy" src={study.companyLogo} alt={`${study.company}} logo`} className="h-10 w-auto" />
@@ -2764,7 +2764,7 @@ measurable results for organizations like yours.
             {caseStudies.map((study), index) => (
               <$2 />;
 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${study.color}} rounded-lg flex items-center justify-center mr-3`}>
@@ -2840,7 +2840,7 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rou
 initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold text-white mb-4">;
 Real Results, Real Impact
@@ -2866,7 +2866,7 @@ key={study.id}
                 initial={{ opacity: 0}}, y: 30 }}
                 animate={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
@@ -2886,7 +2886,7 @@ key={study.id}
           {categories.map((category) => (
             <$2 />;
 key={category.name}
-              className="flex items-center space-x-2 px-6 py-3 rounded-full bg-zion-slate-dark hover:bg-zion-cyan/20 border border-zion-cyan/30 text-white hover:text-zion-cyan transition-all duration-300 group"
+              className="flex items-center space-x-2 px-6 py-3 rounded-full bg-zion-slate-dark hover:bg-zion-cyan/20 border border-zion-cyan/30 text-white hover:text-zion-cyan transition-all duration-300 group">
             >
               <category.icon className="h-4 w-4" />
               <span>{category.name}</span>
@@ -2902,7 +2902,7 @@ key={category.name}
           {caseStudies.map((study) => (
             <$2 />;
 key={study.id}
-              className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/10 transition-all duration-300 group"
+              className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/10 transition-all duration-300 group">
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-6">
@@ -2942,7 +2942,7 @@ key={study.id}
                       {study.technologies.map((tech) => (
                         <$2 />;
 key={tech}
-                          className="px-3 py-1 bg-gray-700/50 text-cyan-400 text-sm rounded-full border border-gray-600"
+                          className="px-3 py-1 bg-gray-700/50 text-cyan-400 text-sm rounded-full border border-gray-600">
                         >
                           {tech}
                         </span>
@@ -2952,7 +2952,7 @@ key={tech}
 
                   <$2 />;
 to="/contact";
-className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300"
+className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300">
                   >;
 Learn More About This Solution
                     <ArrowRight className="ml-2 w-4 h-4" />
@@ -2976,7 +2976,7 @@ Explore our most impactful client transformations and the technologies that made
             {caseStudies.filter(cs => cs.featured).map((caseStudy) => (
               <$2 />;
 key={caseStudy.id}
-                className="p-8 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="p-8 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <div className="flex items-start justify-between mb-6">
                   <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${caseStudy.color}} flex items-center justify-center`}>
@@ -3018,7 +3018,7 @@ key={caseStudy.id}
                     {caseStudy.technologies.map((tech), index) => (
                       <$2 />;
 key={index}
-                        className="px-3 py-1 rounded-full bg-gray-700/50 text-gray-300 text-sm border border-gray-600"
+                        className="px-3 py-1 rounded-full bg-gray-700/50 text-gray-300 text-sm border border-gray-600">
                       >
                         {tech}
                       </span>
@@ -3028,7 +3028,7 @@ key={index}
                 
                 <$2 />;
 to={`/case-studies/${caseStudy.id}}`}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300">
                 >;
 Read Full Case Study
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -3036,7 +3036,7 @@ Read Full Case Study
               </div>;
 animate={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${study.color}} p-3 mb-4`}>
                   <study.icon className="w-full h-full text-white" />
@@ -3107,7 +3107,7 @@ initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
             viewport={{ once: true}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold text-white mb-4">Featured Case Studies</h2>
             <p className="text-xl text-gray-300">Real results from real clients across various industries</p>
@@ -3121,7 +3121,7 @@ key={study.id}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
                 viewport={{ once: true}}}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -3209,7 +3209,7 @@ key={study.id}
               <div className="mt-6 pt-4 border-t border-gray-700/50">
                 <$2 />;
 to={`/case-studies/${study.id}}`}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                 >;
 Read Full Case Study
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -3236,7 +3236,7 @@ Browse our complete collection of client success stories across all industries a
             {caseStudies.map((caseStudy) => (
               <$2 />;
 key={caseStudy.id}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color}} flex items-center justify-center`}>
@@ -3269,7 +3269,7 @@ key={caseStudy.id}
                 
                 <$2 />;
 to={`/case-studies/${caseStudy.id}}`}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm">
                 >;
 Read More
                   <ArrowRight className="w-3 h-3 ml-1" />
@@ -3296,7 +3296,7 @@ Our AI solutions have delivered measurable results across diverse industry secto
             {industries.map((industry), index) => (
               <$2 />;
 key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
               >
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
                   <industry.icon className="w-6 h-6 text-white" />
@@ -3325,7 +3325,7 @@ Hear directly from the leaders who have experienced our AI transformation firsth
             {testimonials.map((testimonial), index) => (
               <$2 />;
 key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
+                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_), i) => (
@@ -3370,7 +3370,7 @@ key={index}
                 initial={{ opacity: 0}}, y: 20 }}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center">
               >
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </motion.div>
@@ -3386,7 +3386,7 @@ key={index}
 initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold text-white mb-4">;
 Technologies We Deploy
@@ -3404,7 +3404,7 @@ key={index}
                 initial={{ opacity: 0}}, y: 20 }}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center">
               >
                 <h3 className="text-lg font-semibold text-white">{tech}</h3>
               </motion.div>
@@ -3456,45 +3456,45 @@ Schedule a consultation with our experts today.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
             >
               <Zap className="w-5 h-5 mr-2" />;
 Start Your Transformation
             </Link>
             <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
             >
               <Rocket className="w-5 h-5 mr-2" />;
 Explore Our Services;
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
             >;
 Start Your Journey
               <ArrowRight className="ml-2 w-5 h-5" />;
-className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
             >;
 Start Your Transformation
               <ArrowRight className="w-5 h-5 ml-2" />;
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
             >;
 Schedule a Consultation
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
             >;
 Explore Solutions
             </Link>
             <$2 />;
 to="/demo";
-className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300">
             >;
 Schedule Demo
             </Link>
             <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
             >;
 Explore Our Solutions
             </Link>
@@ -3520,7 +3520,7 @@ results and drive your business forward.
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
+className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
@@ -3535,7 +3535,7 @@ initial={{ opacity: 0}}, y: 20 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
             viewport={{ once: true}}}
-            className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-500/30"
+            className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-500/30">
           >
             <h2 className="text-4xl font-bold text-white mb-6">;
 Ready to Write Your Success Story?
@@ -3581,7 +3581,7 @@ initial={{ opacity: 0}}, y: 20 }}
                     {study.technologies.map((tech), index) => (
                       <$2 />;
 key={index}
-                        className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
+                        className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                       >
                         {tech}
                       </span>
@@ -3612,7 +3612,7 @@ key={index}
               <div className="flex items-center justify-between">
                 <$2 />;
 to={`/case-studies/${study.id}}`}
-                  className="text-zion-cyan hover:text-white transition-colors font-medium group-hover:underline"
+                  className="text-zion-cyan hover:text-white transition-colors font-medium group-hover:underline">
                 >;
 Read Full Case Study
                 </Link>
@@ -3634,14 +3634,14 @@ Let's discuss how Zion Tech Group can transform your business with cutting-edge 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30 flex items-center justify-center space-x-2"
+className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30 flex items-center justify-center space-x-2">
               >
                 <span>Start Your Project</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <$2 />;
 to="/services";
-className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2">
               >
                 <span>Explore Services</span>
                 <ArrowRight className="h-5 w-5" />
@@ -3666,7 +3666,7 @@ keywords="case studies, client success stories, digital transformation, AI solut
 initial={{ opacity: 0}}}
           animate={{ opacity: 1}}}
           transition={{ duration: 1}}}
-          className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8"
+          className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -3674,7 +3674,7 @@ initial={{ opacity: 0}}}
 initial={{ y: 20}}, opacity: 0 }}
                 animate={{ y: 0}}, opacity: 1 }}
                 transition={{ delay: 0.2}}}
-                className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8"
+                className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
               >
                 <Award className="w-4 h-4 mr-2" />;
 Proven Results & Success Stories
@@ -3684,7 +3684,7 @@ Proven Results & Success Stories
 initial={{ y: 20}}, opacity: 0 }}
                 animate={{ y: 0}}, opacity: 1 }}
                 transition={{ delay: 0.3}}}
-                className="text-4xl md:text-6xl font-bold text-white mb-6"
+                className="text-4xl md:text-6xl font-bold text-white mb-6">
               >;
 Client
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">;
@@ -3696,7 +3696,7 @@ Success Stories
 initial={{ y: 20}}, opacity: 0 }}
                 animate={{ y: 0}}, opacity: 1 }}
                 transition={{ delay: 0.4}}}
-                className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto"
+                className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
               >;
 Discover how we've helped businesses across industries achieve remarkable results through innovative technology solutions and strategic digital transformation.
               </motion.p>
@@ -3718,7 +3718,7 @@ key={metric.label}
                     whileInView={{ y: 0}}, opacity: 1 }}
                     transition={{ delay: index * 0.1}}, duration: 0.8 }}
                     viewport={{ once: true}}}
-                    className="text-center"
+                    className="text-center">
                   >
                     <div className="inline-flex p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
                       <Icon className="w-6 h-6 text-white" />
@@ -3740,7 +3740,7 @@ initial={{ y: 20}}, opacity: 0 }}
               whileInView={{ y: 0}}, opacity: 1 }}
               transition={{ duration: 0.8}}}
               viewport={{ once: true}}}
-              className="text-center mb-16"
+              className="text-center mb-16">
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
 Featured Case Studies
@@ -3761,7 +3761,7 @@ key={study.id}
                     whileInView={{ y: 0}}, opacity: 1 }}
                     transition={{ delay: index * 0.1}}, duration: 0.8 }}
                     viewport={{ once: true}}}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
+                    className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300">
                   >
                     <div className="flex items-center mb-6">
                       <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${study.color}} mr-4`}>
@@ -3833,7 +3833,7 @@ initial={{ y: 20}}, opacity: 0 }}
               whileInView={{ y: 0}}, opacity: 1 }}
               transition={{ duration: 0.8}}}
               viewport={{ once: true}}}
-              className="text-center mb-16"
+              className="text-center mb-16">
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
 What Our Clients Say
@@ -3851,7 +3851,7 @@ key={index}
                   whileInView={{ y: 0}}, opacity: 1 }}
                   transition={{ delay: index * 0.1}}, duration: 0.8 }}
                   viewport={{ once: true}}}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10"
+                  className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
                 >
                   <div className="flex mb-4">
                     {[...Array(5)].map((_), i) => (
@@ -3867,7 +3867,7 @@ key={index}
                     <div className="text-sm text-blue-300">{testimonial.company}</div>
                   </div>
                 </motion.div>;
-className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
                 >
                   {category}
                 </button>
@@ -3894,14 +3894,14 @@ Let's discuss how we can help transform your business with innovative technology
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105">
                 >;
 Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
+className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200">
                 >;
 Explore Services
                 </Link>
@@ -3911,7 +3911,7 @@ Explore Services
         </section>
       </div>
     </>;
-className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-500/20"
+className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-500/20">
           >
             <Award className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -3930,13 +3930,13 @@ View More Case Studies
               </button>
             </div>
           </motion.div>;
-className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
             >;
 Get Started
             </Link>
             <$2 />;
 to="/services";
-className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">
             >;
 Explore Services
             </Link>
@@ -3986,13 +3986,13 @@ with our AI-powered solutions. Real results, measurable impact, proven success.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 to="/contact";
-className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
                 >;
 Start Your Success Story
                 </Link>
                 <$2 />;
 to="/demo";
-className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300"
+className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300">
                 >;
 Request Demo
                 </Link>
@@ -4061,14 +4061,14 @@ Discover how our AI-powered solutions have transformed businesses across industr
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 >;
 Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
                 >;
 Explore Services
                 </Link>
@@ -4514,7 +4514,7 @@ with our cutting-edge AI and technology solutions.
             {categories.map((category) => (
               <$2 />;
 key={category}
-                className="px-6 py-3 rounded-xl border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/20 transition-all duration-300 font-medium"
+                className="px-6 py-3 rounded-xl border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/20 transition-all duration-300 font-medium">
               >
                 {category}
               </button>
@@ -4526,7 +4526,7 @@ key={category}
       {/* Case Studies Grid */}
                   <$2 />;
 to={`/case-studies/${study.id}}`}
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium">
                   >;
 Read Full Case Study
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4573,7 +4573,7 @@ Read Full Case Study
                   </p>
                   <$2 />;
 to={`/case-studies/${study.id}}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group">
                   >;
 Read Case Study
                     <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4597,26 +4597,26 @@ Join the ranks of successful organizations that have transformed their operation
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
+className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200">
               >;
 Get Started
               </Link>
               <$2 />;
 to="/services";
-className="px-8 py-4 bg-transparent border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-colors duration-200"
+className="px-8 py-4 bg-transparent border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-colors duration-200">
               >;
 Explore Services
               </Link>
             </div>
           </div>;
-className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 inline-flex items-center"
+className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 inline-flex items-center">
               >;
 Start Your Transformation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/services";
-className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300"
+className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300">
               >;
 Explore Our Solutions
               </Link>
@@ -4660,7 +4660,7 @@ export default CaseStudies
           {caseStudies.map((study) => (
             <$2 />;
 key={study.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
             >
               {/* Category Badge */}
               <div className="mb-4">
@@ -4717,7 +4717,7 @@ key={study.id}
                   {study.technologies.map((tech), index) => (
                     <$2 />;
 key={index}
-                      className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                      className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                     >
                       {tech}
                     </span>
@@ -4749,14 +4749,14 @@ measurable results like the ones you see above.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
               >;
 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <$2 />;
 to="/services";
-className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
+className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
               >;
 Explore Our Services
               </Link>

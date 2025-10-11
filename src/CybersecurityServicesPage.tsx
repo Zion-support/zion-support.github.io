@@ -667,7 +667,7 @@ function SecurityServiceCard({ service }: { service: any }) {
             <div className="flex items-center gap-2">
               <div className="w-16 bg-zion-blue-light rounded-full h-2">
                 <$2 />
-                  className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
+                  className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" >
                   style={{ width: `${service.aiScore}%` }}
                 ></div>
               </div>
@@ -1110,8 +1110,8 @@ export default function CybersecurityServicesPage() {
       <div className="relative">
         <img
           src={service.images[0]}
-          alt={service.title}
-          className="w-full h-48 object-cover rounded-t-lg"
+          alt={service.title}>
+          className="w-full h-48 object-cover rounded-t-lg">
         />
         {service.featured && (
           <Badge className="absolute top-3 left-3 bg-red-600">
@@ -1216,7 +1216,7 @@ export default function CybersecurityServicesPage() {
                 placeholder="Search security services, compliance, or threats..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"
+                className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light">
               />
             </div>
             
@@ -1377,7 +1377,7 @@ export default function CybersecurityServicesPage() {
                           href={service.website} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="flex-1"
+                          className="flex-1">
                         >
                           <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
                             <ExternalLink className="w-4 h-4 mr-2" />
@@ -1504,7 +1504,7 @@ const CybersecurityServicesPage = () => {
                 href="https://ziontechgroup.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-red-600 hover:underline font-medium"
+                className="text-red-600 hover:underline font-medium">
               >
                 ziontechgroup.com
               </a>
@@ -1579,8 +1579,8 @@ const CybersecurityServicesPage = () => {
                 <div className="relative">
                   <img 
                     src={service.images[0]} 
-                    alt={service.title}
-                    className="w-full h-64 object-cover rounded-t-lg"
+                    alt={service.title}>
+                    className="w-full h-64 object-cover rounded-t-lg">
                   />
                   {service.featured && (
                     <Badge className="absolute top-4 right-4 bg-red-600 text-white">
