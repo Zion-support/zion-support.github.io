@@ -9,11 +9,12 @@ interface PerformanceMetrics {
 }
 
 export const useEnhancedPerformance = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     networkLatency: 0
-  })
+  });
 
     if (typeof window === 'undefined') return
 
