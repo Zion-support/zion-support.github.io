@@ -1,194 +1,263 @@
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Cloud, BarChart, Globe, Zap, Shield } from 'lucide-react'
+
+const AIClimatePredictionEnginePage: React.FC = () => {
   const features = [
-    {icon: Globe,
-      title: 'Global Climate Modeling',
-      description: 'Advanced AI models for global climate prediction with high-resolution forecasting',
+    {
+      icon: Cloud,
+      title: 'Weather Prediction',
+      description: 'Advanced weather forecasting using AI and machine learning algorithms.',
+      benefits: ['Accurate forecasts', 'Long-term predictions', 'Real-time updates', 'Localized data']
     },
     {
       icon: BarChart,
-      title: 'Extreme Weather Prediction',
-      description: 'AI-powered prediction of extreme weather events and natural disasters',
-      benefits: ['Early warning systems', 'Disaster preparedness', 'Risk assessment'],
+      title: 'Climate Analytics',
+      description: 'Comprehensive climate data analysis and trend identification.',
+      benefits: ['Trend analysis', 'Pattern recognition', 'Historical data', 'Statistical modeling']
     },
     {
-      icon: Brain,
-      title: 'Machine Learning Algorithms',
-      description: 'Advanced ML algorithms trained on decades of climate data for accurate predictions',
-      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive accuracy'],
+      icon: Globe,
+      title: 'Global Monitoring',
+      description: 'Monitor climate conditions and changes across the globe.',
+      benefits: ['Global coverage', 'Satellite data', 'Real-time monitoring', 'Multi-scale analysis']
+    },
+    {
+      icon: Zap,
+      title: 'Rapid Processing',
+      description: 'High-speed processing of large climate datasets for quick insights.',
+      benefits: ['Fast computation', 'Parallel processing', 'Real-time analysis', 'Scalable infrastructure']
     },
     {
       icon: Shield,
-      title: 'Climate Risk Assessment',
-      description: 'Comprehensive climate risk assessment for businesses and governments',
-      benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations'],
+      title: 'Risk Assessment',
+      description: 'Assess climate-related risks and provide early warning systems.',
+      benefits: ['Risk modeling', 'Early warnings', 'Impact assessment', 'Mitigation strategies']
     }
   ]
+
   const pricingPlans = [
-    {name: 'Basic',
+    {
+      name: 'Basic',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small organizations and researchers',
+      features: [
+        'Basic weather forecasts',
+        'Limited historical data',
+        'Email support',
+        'Basic analytics'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
       price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses and research institutions',
-      features: [,
-        'Basic climate predictions',
-        '7-day weather forecasts',
-        'Email alerts',
-        'Standard support',
-        'Basic analytics',
+      description: 'Ideal for medium-sized organizations and research institutions',
+      features: [
+        'Advanced climate modeling',
+        'Full historical data access',
+        'Priority support',
+        'Advanced analytics',
         'API access'
       ],
-      popular: false;,},
-    {name: 'Professional',
+      popular: true
+    },
+    {
+      name: 'Enterprise',
       price: '$799',
       period: '/month',
       description: 'Ideal for government agencies and large organizations',
-      features: [,
-        'Advanced climate modeling',
-        '30-day predictions',
-        'Real-time monitoring',
-        'Priority support',
-        'Advanced analytics',
-        'Custom integrations',
-        'Risk assessment tools',
-        'Multi-location support'
-      ],
-      popular: true;,},
-    {name: 'Enterprise',
-      price: '$2,499',
-      period: '/month',
-      description: 'For large-scale climate research and policy making',
-      features: [,
-        'Full climate prediction suite',
-        'Long-term projections',
-        '24/7 dedicated support',
+      features: [
         'Custom climate models',
-        'White-label solutions',
-        'On-premise deployment',
-        'Research collaboration',
-        'Policy analysis tools',
-        'Training programs'
+        'Unlimited data access',
+        'Dedicated support',
+        'Custom integrations',
+        'White-label options'
       ],
-  const useCases = [
-    {title: 'Agricultural Planning',
-      description: 'Climate predictions for crop planning and agricultural optimization',
-      icon: Globe,
-      results: '25% increase in crop yields',},
-    {title: 'Disaster Preparedness',
-      description: 'Early warning systems for natural disasters and extreme weather events',
-      icon: Shield,
-      results: '60% reduction in disaster impact',},
-    {title: 'Energy Management',
-      description: 'Climate predictions for renewable energy planning and grid management',
-      icon: Zap,
-      results: '30% improvement in energy efficiency',},
-    {title: 'Urban Planning',
-      description: 'Climate data for sustainable urban development and infrastructure planning',
-      icon: Target,
-        <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
-        </Helmet><title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />
-        <meta property="og: title" content="AI Climate Prediction Engine - Advanced Climate Forecasting" />,
-        <meta property="og:description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-climate-prediction-engine" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-climate-prediction-engine" />,
-      </Helmet>
+      popular: false
+    }
+  ]
 
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-500/20 via-transparent to-transparent"></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full px-6 py-3 mb-8 border border-green-500/30">
-                </div><Globe className="w-5 h-5 text-green-400" />
-                <span className="text-green-400 font-semibold">Climate Technology</span>
-              </div>
-              
-                Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, 
-                extreme weather prediction, and comprehensive climate risk assessment.
-              </p>
-              
-                  <span className="font-semibold">95% Accuracy</span>
-                </div>
-                <div className="flex items-center space-x-2 text-cyan-400">
-                  </div><Shield className="w-5 h-5" />
-                  <span className="font-semibold">Early Warning</span>
-                </div>
-                <div className="flex items-center space-x-2 text-blue-400">
-                  </div><Globe className="w-5 h-5" />
-                  <span className="font-semibold">Global Coverage</span>
-                </div>
-              </div>
-              
-                </a>
-              </div>
+  const benefits = [
+    'Improve weather forecast accuracy by 25%',
+    'Reduce climate-related risks and losses',
+    'Enable better resource planning and management',
+    'Support environmental research and policy making',
+    'Provide early warning for extreme weather events',
+    'Help organizations adapt to climate change'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Climate Prediction Engine - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered climate prediction engine for accurate weather forecasting, climate analysis, and environmental monitoring." />
+        <meta name="keywords" content="AI climate prediction, weather forecasting, climate analytics, environmental monitoring, climate modeling" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(20,184,166,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Climate
+              <span className="block bg-gradient-to-r from-teal-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Prediction Engine
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered climate prediction for accurate weather forecasting and environmental monitoring. 
+              Make informed decisions with intelligent climate insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                View Demo
+              </button>
             </div>
           </div>
         </section>
 
-                for weather forecasting, extreme weather prediction, and climate risk assessment.
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Advanced Climate Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful tools to predict and analyze climate conditions
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {features.map((feature, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><feature.icon className="w-8 h-8 text-white" />
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-teal-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-sm text-gray-400 flex items-center">
+                          <CheckCircle className="w-4 h-4 text-teal-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Choose Your Plan
+              </h2>
+              <p className="text-xl text-gray-300">
+                Flexible pricing options for every organization
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-white/5 backdrop-blur-sm border rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300 ${
+                  plan.popular ? 'border-teal-400 ring-2 ring-teal-400/50' : 'border-white/10'
+                }`}>
+                  {plan.popular && (
+                    <div className="bg-teal-400 text-teal-900 text-sm font-bold py-1 px-3 rounded-full mb-4 inline-block">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {plan.price}
+                    <span className="text-lg text-gray-400">{plan.period}</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="text-gray-300 flex items-center">
+                        <CheckCircle className="w-5 h-5 text-teal-400 mr-3" />
+                        {feature}
+                      </li>
                     ))}
                   </ul>
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-teal-500 to-blue-600 text-white hover:from-teal-600 hover:to-blue-700'
+                      : 'border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white'
+                  }`}>
+                    Choose Plan
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-                and research institutions worldwide for critical climate decision-making.
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Climate Engine?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Proven results that drive environmental success
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {useCases.map((useCase, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description</p>}</p>
-                  <div className="text-green-400 font-semibold text-sm">{useCase.results</div>} </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                  <CheckCircle className="w-8 h-8 text-teal-400 mx-auto mb-4" />
+                  <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-                All plans include our advanced AI algorithms and climate modeling tools.
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Predict Climate?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your climate prediction needs and get started today
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-              {pricingPlans.map((plan, index) => (
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">
+                  Contact Us
+                </button>
+                <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
         </section>
       </div>
+
+      <Footer />
     </>
   )
 }
-export default AIClimatePredictionEngine
+
+export default AIClimatePredictionEnginePage
