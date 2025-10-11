@@ -287,8 +287,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
 export const generateTestData = {
     string: (length = 10): string => {,
     return Math.random(),
-    .toString(36),;
-  }
+    .toString(36)}
 export const generateTestData = {}
   string: (length = 10): string => {}
     return Math.random()
@@ -298,7 +297,7 @@ export const generateTestData = {}
   number: (min = 0, max = 100): number => {}
     return Math.floor(Math.random() * (max - min + 1)) + min;}
   },
-  boolean: (): boolean => {,;}
+  boolean: (): boolean => {}
   boolean: (): boolean => {}
     return Math.random() > 0.5;}
   },
@@ -308,7 +307,7 @@ export const generateTestData = {}
   url: (): string => {`}
     return `https: //example.com/${generateTestData.string(10)}`
   },
-  date: (): Date => {,;}
+  date: (): Date => {}
   date: (): Date => {}
     return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);}
   },
@@ -459,8 +458,7 @@ export const retryWithBackoff = async <T>(f)
 ): Promise<T> => {
     let lastError: Error,
     for (let i = 0; i < maxRetries; i++) {,
-    try {,;
-  }
+    try {}
       return await fn();}
     } catch (error) {
       lastError = error as Error

@@ -97,10 +97,13 @@ const BlogPage: React.FC = () => {
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-  </h1>
-            </p>
+          <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI Agricultural Intelligence Pro
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Advanced AI-powered agricultural intelligence solutions for modern farming
+              </p>
           </div>
         </section>
 

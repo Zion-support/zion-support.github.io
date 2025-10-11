@@ -4,7 +4,7 @@ import {  apiCache   } from './apiCache';
 
 interface RequestConfig {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string&gt;;
+  headers?: Record<string, string&gt;
   body?: any;
   cache?: boolean;
   cacheTTL?: number;

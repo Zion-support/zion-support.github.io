@@ -5,12 +5,12 @@ import {
     Mail,
     MapPin, Clock, Send
   } from 'lucide-react';
-import Navigation from '../components/Navigation';;
-import Footer from '../components/Footer';;
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const ContactPage: React.FC = () => {
     ;
 const [formData,
-    setFormData] = useState({;,
+    setFormData] = useState({
     name: '',;,
 email: '',;,
 company: '',;,
@@ -19,7 +19,7 @@ service: '',;,
 message: ''
   }
   });
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
+const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 setFormData({
 }
       ...formData},
@@ -27,7 +27,7 @@ setFormData({
     })
   }
 ;
-const handleSubmit = (e: React.FormEvent) => {;;
+const handleSubmit = (e: React.FormEvent) => {;
 e.preventDefault();
     // Handle form submission;
 console.log('Form submitted:', formData);
@@ -36,7 +36,6 @@ console.log('Form submitted:', formData);
 ;
 const contactInfo = [;
     {
-    ;,
     icon: Phone,
     ;,
 title: 'Phone',;,
@@ -44,7 +43,6 @@ value: '+1 (555) 123-4567',;,
 description: 'Mon-Fri 9AM-6PM EST'
   },
     {
-    ;,
     icon: Mail,
     ;,
 title: 'Email',;,
@@ -52,7 +50,6 @@ value: 'info@ziontechgroup.com',;,
 description: 'We\'ll respond within 24 hours'
   },
     {
-    ;,
     icon: MapPin,
     ;,
 title: 'Address',;,
@@ -60,7 +57,6 @@ value: '123 Tech Street, Silicon Valley, CA 94000',;,
 description: 'Visit our headquarters'
   },
     {
-    ;,
     icon: Clock,
     ;,
 title: 'Business Hours',;,
@@ -78,7 +74,7 @@ const services = [;
     'IT Consulting',
     'Other'
   ];
-return (;
+return (
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
@@ -108,8 +104,9 @@ Ready to transform your business? Let's discuss how our AI and IT solutions can 
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {contactInfo.map((info), index) => {;
-const Icon = info.icon;;
-return (;
+const Icon = info.icon;
+return (
+    <>
 }
                   <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">

@@ -89,8 +89,7 @@ const AccessibilityPage: React.FC = () => {
   },
     {
     title: 'Better UX',
-    description: 'Improved user experience for all users,
-    not just those with disabilities.',
+    description: 'Improved user experience for all users, not just those with disabilities.',
       icon: CheckCircle
   },
     {

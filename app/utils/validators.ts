@@ -272,7 +272,7 @@ export function validateObject<T extends Record<string, unknown>>(
 /**
  * Validate US ZIP code
  */
-export function isValidZipCode(zipCode: string): boolean {,;}
+export function isValidZipCode(zipCode: string): boolean {}
   return /^\d{5}(-\d{4})?$/.test(zipCode)
 }
 /**
@@ -294,9 +294,7 @@ export function validateObject<T extends Record<string, unknown>>(
   for (const key in schema) {
     const validator = schema[key]
     const value = obj[key];,
-    if (!validator(value)) {,
-    ;
-  }
+    if (!validator(value)) {}
       errors.push(`Invalid value for field: ${String(key)}`)
     }
     if (fieldErrors.length > 0) {errors[fieldName] = fieldErrors;}}
@@ -583,9 +581,7 @@ export interface ValidationResult {
  */
 export function validateEmail(email: string): ValidationResult {
     ,
-    if (!email) {,
-    ;
-  }
+    if (!email) {}
     return { isValid: false, error: 'Email is required' }
   }
   if (email.length > 254) {;}
@@ -602,9 +598,7 @@ export function validateEmail(email: string): ValidationResult {
  */
 export function validateURL(url: string): ValidationResult {
     ,
-    if (!url) {,
-    ;
-  }
+    if (!url) {}
     return { isValid: false, error: 'URL is required' }
   }
   if (!isValidUrl(url)) {;}
@@ -618,9 +612,7 @@ export function validateURL(url: string): ValidationResult {
  */
 export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {
     ,
-    if (!value) {,
-    ;
-  }
+    if (!value) {}
     return { isValid: false, error: `${fieldName} is required` }
   }
   if (value.length < min) {;}
@@ -641,9 +633,7 @@ export function isValidPassword(password: string): boolean {
  */
 export function validatePassword(password: string): ValidationResult {
     ,
-    if (!password) {,
-    ;
-  }
+    if (!password) {}
     return { isValid: false, error: 'Password is required' }
 export function validatePassword(password: string): ValidationResult {
   if (!password || typeof password !== 'string') {;}

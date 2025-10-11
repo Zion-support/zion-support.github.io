@@ -52,8 +52,7 @@ const AIAccountingAssistantPage: React.FC = () => {
   const capabilities = [
     {
     title: 'Invoice Management',
-    description: 'Automated invoice processing,
-    approval workflows, and payment tracking.',
+    description: 'Automated invoice processing, approval workflows, and payment tracking.',
       icon: FileText,
       benefits: ['Invoice scanning', 'Approval workflows', 'Payment tracking', 'Vendor management']
   },
@@ -350,4 +349,3 @@ const AIAccountingAssistantPage: React.FC = () => {
 };
 
 export default AIAccountingAssistantPage;
-</div></div></section>

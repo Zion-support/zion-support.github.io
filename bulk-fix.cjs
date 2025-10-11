@@ -9,12 +9,16 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
+    // Get the original content length
+    const originalLength = content.length;
+    
     // Fix common patterns
     const fixes = [
       // Fix missing closing div tags at the end
       { pattern: /<\/div><\/div><\/section>$/g, replacement: '' },
       { pattern: /<\/div><\/section>$/g, replacement: '' },
       { pattern: /<\/div><\/div><\/div><\/section>$/g, replacement: '' },
+      { pattern: /<\/div><\/div><\/div><\/div><\/section>$/g, replacement: '' },
       
       // Fix malformed string literals
       { pattern: /description:\s*'([^']*)\n\s*([^']*),/g, replacement: "description: '$1 $2'," },
@@ -22,6 +26,7 @@ function fixFile(filePath) {
       // Fix malformed object properties
       { pattern: /{\s*;\s*,/g, replacement: '{' },
       { pattern: /,\s*;\s*}/g, replacement: '}' },
+      { pattern: /title:\s*'([^']*);\s*'/g, replacement: "title: '$1'" },
       
       // Fix malformed JSX fragments
       { pattern: /<>\s*<>\s*<Helmet>/g, replacement: '<>\n      <Helmet>' },
@@ -42,7 +47,16 @@ function fixFile(filePath) {
       { pattern: /return\s*\(\s*;\s*<div/g, replacement: 'return (\n    <div' },
       
       // Fix missing closing tags for specific patterns
-      { pattern: /<div\s+className="[^"]*">\s*<h1[^>]*>\s*<\/h1>\s*<\/p>\s*<div[^>]*>\s*<button[^>]*>;\s*([^<]*)\s*<\/button>/g, replacement: '<div className="text-center">\n              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">\n                Page Title\n              </h1>\n              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">\n                Page description\n              </p>\n              <div className="flex flex-col sm:flex-row gap-4 justify-center">\n                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">\n                  $1\n                  <ArrowRight className="ml-2 h-5 w-5" />\n                </button>' }
+      { pattern: /<div\s+className="[^"]*">\s*<h1[^>]*>\s*<\/h1>\s*<\/p>\s*<div[^>]*>\s*<button[^>]*>;\s*([^<]*)\s*<\/button>/g, replacement: '<div className="text-center">\n              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">\n                Page Title\n              </h1>\n              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">\n                Page description\n              </p>\n              <div className="flex flex-col sm:flex-row gap-4 justify-center">\n                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">\n                  $1\n                  <ArrowRight className="ml-2 h-5 w-5" />\n                </button>' },
+      
+      // Fix double semicolons
+      { pattern: /;;/g, replacement: ';' },
+      
+      // Fix malformed imports
+      { pattern: /import\s+{\s*Helmet;\s*}\s+from\s+'react-helmet-async';/g, replacement: "import { Helmet } from 'react-helmet-async';" },
+      
+      // Fix missing closing tags in JSX
+      { pattern: /<div\s+className="[^"]*">\s*<h1[^>]*>\s*<\/h1>\s*<\/p>\s*<div[^>]*>\s*<button[^>]*>;\s*([^<]*)\s*<\/button>\s*<button[^>]*>\s*<\/button>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/section>/g, replacement: '<div className="text-center">\n              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">\n                Page Title\n              </h1>\n              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">\n                Page description\n              </p>\n              <div className="flex flex-col sm:flex-row gap-4 justify-center">\n                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">\n                  $1\n                  <ArrowRight className="ml-2 h-5 w-5" />\n                </button>\n                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">\n                  Learn More\n                </button>\n              </div>\n            </div>\n          </div>\n        </section>' }
     ];
     
     fixes.forEach(fix => {
@@ -72,6 +86,16 @@ function fixFile(filePath) {
     
     if (content.match(/<\/div><\/section>$/)) {
       content = content.replace(/<\/div><\/section>$/g, '');
+      modified = true;
+    }
+    
+    if (content.match(/<\/div><\/div><\/div><\/section>$/)) {
+      content = content.replace(/<\/div><\/div><\/div><\/section>$/g, '');
+      modified = true;
+    }
+    
+    if (content.match(/<\/div><\/div><\/div><\/div><\/section>$/)) {
+      content = content.replace(/<\/div><\/div><\/div><\/div><\/section>$/g, '');
       modified = true;
     }
     

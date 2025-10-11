@@ -188,8 +188,7 @@ this.logs.push(logEntry)
       level,
     message,
     context,
-      metadata,;
-  }
+      metadata}
       timestamp: Date.now()}
 
     this.logs.push(logEntry)

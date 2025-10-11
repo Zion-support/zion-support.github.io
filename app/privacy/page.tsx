@@ -1,7 +1,7 @@
-import React from 'react';;
+import React from 'react';
 import { Helmet;  } from "react-helmet-async";
-import Navigation from '../components/Navigation';;
-import Footer from '../components/Footer';;
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import {
     Shield;,
     Eye,
@@ -9,28 +9,25 @@ import {
   } from 'lucide-react';
 const PrivacyPage: React.FC = () => {;
 const dataTypes = [;
-    {;,
+    {
 }
 category: 'Personal Information'},;,
 icon: User,;,
 description: 'Name, email, phone number, and other identifying information'
     },
     {
-    ;,
     category: 'Contact Information',
     ;,
 icon: Database,;,
 description: 'Name, email, phone number, and contact details'
   },
     {
-    ;,
     category: 'Usage Data',
     ;,
 icon: Server,;,
 description: 'How you interact with our services and website'
   },
     {
-    ;,
     category: 'Technical Data',
     ;,
 icon: Server,;,
@@ -39,28 +36,24 @@ description: 'IP address, browser type, device information, and cookies'
   ];
 const purposes = [;
     {
-    ;,
     title: 'Service Provision',
     ;,
 description: 'To provide and maintain our AI and IT services',;,
 icon: CheckCircle
   },
     {
-    ;,
     title: 'Communication',
     ;,
 description: 'To respond to inquiries and provide customer support',;,
 icon: CheckCircle
   },
     {
-    ;,
     title: 'Improvement',
     ;,
 description: 'To analyze usage patterns and improve our services',;,
 icon: CheckCircle
   },
     {
-    ;,
     title: 'Legal Compliance',
     ;,
 description: 'To comply with applicable laws and regulations',;,
@@ -69,28 +62,24 @@ icon: CheckCircle
   ];
 const rights = [;
     {
-    ;,
     title: 'Access',
     ;,
 description: 'Request access to your personal data',;,
 icon: Eye
   },
     {
-    ;,
     title: 'Rectification',
     ;,
 description: 'Correct inaccurate or incomplete data',;,
 icon: Edit
   },
     {
-    ;,
     title: 'Erasure',
     ;,
 description: 'Request deletion of your personal data',;,
 icon: Trash2
   },
     {
-    ;,
     title: 'Portability',
     ;,
 description: 'Receive your data in a structured format',;,
@@ -98,7 +87,6 @@ icon: Database
   }
   ];
 const contactInfo={
-    ;;,
     email: 'privacy@ziontechgroup.com',
     ;,
 phone: '+1 (302) 464-0950',;,
@@ -106,14 +94,13 @@ address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
 ;
 const contactInfo={
-    ;;,
     email: 'privacy@ziontechgroup.com',
     ;,
 phone: '+1 (302) 464-0950',;,
 address: '364 E Main St STE 1008, Middletown, DE 19709'
   }
 ;
-return (;
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
@@ -248,9 +235,11 @@ Contact our privacy team for any questions or concerns about your data
               </div>
             </div>
             
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
-Contact Privacy Team
-            </button>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                  Contact Privacy Team
+            
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
           </div>
         </div>
       </section>
