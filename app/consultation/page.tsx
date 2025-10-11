@@ -1,23 +1,119 @@
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, Calendar, CheckCircle, ArrowRight, Clock, Users, Shield, Zap } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, Cloud, Shield, BarChart3, MessageSquare, Eye, Zap, Target, Users, Settings, Code, Database, Smartphone, Globe, Headphones, Mail, Phone, MapPin, Calendar, Clock, Star, Award, TrendingUp, Heart, FileText, Cpu, Package, Monitor, Wifi, Lock, DollarSign, BookOpen, Lightbulb, Rocket, ThumbsUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState()
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    industry: '',
+    companySize: '',
+    currentChallenges: '',
+    goals: '',
+    timeline: '',
+    budget: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+  const consultationTypes = [
+    {
+      id: 'ai-strategy',
+      name: 'AI Strategy Consultation',
+      description: 'Develop a comprehensive AI strategy tailored to your business needs and goals.',
+      duration: '60-90 minutes',
+      icon: Brain,
+      color: 'from-blue-500 to-cyan-600',
+      features: [
+        'AI Readiness Assessment',
+        'Technology Roadmap',
+        'ROI Analysis',
+        'Implementation Plan',
+        'Risk Assessment'
+      ]
+    },
+    {
+      id: 'it-infrastructure',
+      name: 'IT Infrastructure Review',
+      description: 'Evaluate your current IT setup and recommend improvements for better performance and security.',
+      duration: '45-75 minutes',
+      icon: Cloud,
+      color: 'from-green-500 to-emerald-600',
+      features: [
+        'Infrastructure Audit',
+        'Security Assessment',
+        'Performance Analysis',
+        'Cost Optimization',
+        'Migration Planning'
+      ]
+    },
+    {
+      id: 'digital-transformation',
+      name: 'Digital Transformation',
+      description: 'Plan your digital transformation journey with expert guidance and strategic recommendations.',
+      duration: '90-120 minutes',
+      icon: Rocket,
+      color: 'from-purple-500 to-pink-600',
+      features: [
+        'Current State Analysis',
+        'Future Vision Planning',
+        'Technology Selection',
+        'Change Management',
+        'Success Metrics'
+      ]
+    },
+    {
+      id: 'cybersecurity-audit',
+      name: 'Cybersecurity Audit',
+      description: 'Comprehensive security assessment to identify vulnerabilities and strengthen your defenses.',
+      duration: '60-90 minutes',
+      icon: Shield,
+      color: 'from-red-500 to-orange-600',
+      features: [
+        'Security Assessment',
+        'Vulnerability Analysis',
+        'Compliance Review',
+        'Incident Response Plan',
+        'Security Training'
+      ]
+    }
+  ];
+
+  const industries = [
+    'Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education',
+    'Real Estate', 'Consulting', 'Non-profit', 'Government', 'Other'
+  ];
+
+  const companySizes = [
+    '1-10 employees', '11-50 employees', '51-200 employees', 
+    '201-1000 employees', '1000+ employees'
+  ];
+
+  const timelines = [
+    'Immediate (within 1 month)', 'Short-term (1-3 months)', 
+    'Medium-term (3-6 months)', 'Long-term (6+ months)'
+  ];
+
+  const budgets = [
+    'Under $10,000', '$10,000 - $50,000', '$50,000 - $100,000',
+    '$100,000 - $500,000', '$500,000+', 'Not sure'
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData()
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
     }));
   };
 
-  const handleSubmit = const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -26,7 +122,18 @@ const ConsultationPage: React.FC = () => {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
-      setFormData()
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        industry: '',
+        companySize: '',
+        currentChallenges: '',
+        goals: '',
+        timeline: '',
+        budget: '',
+        message: ''
       });
     } catch (error) {
       setSubmitStatus('error');
@@ -35,366 +142,363 @@ const ConsultationPage: React.FC = () => {
     }
   };
 
-  const consultationTypes = const consultationTypes = const consultationTypes = [
-    {
-      icon: Users,
-      title: 'AI Strategy Consultation',
-      description: 'Strategic planning for AI implementation in your business',
-      duration: '2-4 hours',
-      price: 'Free',
-      features: ['AI readiness assessment', 'Technology roadmap', 'ROI analysis', 'Implementation plan']
-    },
-    {
-      icon: Shield,
-      title: 'IT Infrastructure Review',
-      description: 'Comprehensive analysis of your current IT infrastructure',
-      duration: '4-6 hours',
-      price: 'Free',
-      features: ['Security audit', 'Performance analysis', 'Scalability assessment', 'Cost optimization']
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategy and planning',
-      duration: '6-8 hours',
-      price: 'Free',
-      features: ['Process analysis', 'Technology selection', 'Change management', 'Timeline planning'];
-    };
-  ];
-<<<<<<< HEAD
-  const process = const process = const process = [
-    {
-      step: '1',
-    },
-    {
-      step: '2',
-      title: 'Strategy Development',
-    },
-    {
-      step: '3',
-      title: 'Implementation Plan',
-    },
-    {
-      step: '4',
-      title: 'Ongoing Support',;
-    };
-  ];
-=======
+  return (
+    <>
+      <Helmet>
+        <title>Free Consultation - Zion Tech Group | Expert AI & IT Guidance</title>
+        <meta name="description" content="Get a free consultation with our AI and IT experts. Discuss your business challenges and discover how our solutions can help you succeed." />
+        <meta name="keywords" content="free consultation, AI consultation, IT consultation, business strategy, technology planning, expert advice" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-16">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold text-white mb-6">
+                Free <span className="text-cyan-400">Consultation</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Get expert guidance on your AI and IT challenges. Our specialists will help you 
+                identify opportunities and create a roadmap for success.
+              </p>
+            </div>
+          </div>
+        </section>
 
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
-  return() {consultationTypes.map((type, index) => ()
-                          {type.features.map((feature, featureIndex) => ()
-                          ))}
-                        </ul>
+        {/* Consultation Types */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-12 text-center">Choose Your Consultation Type</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                {consultationTypes.map((type) => (
+                  <div key={type.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                    <div className="flex items-center mb-4">
+                      <div className={`w-12 h-12 bg-gradient-to-r ${type.color} rounded-lg flex items-center justify-center mr-4`}>
+                        <type.icon className="w-6 h-6 text-white" />
                       </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">{type.name}</h3>
+                        <span className="text-sm text-cyan-400">{type.duration}</span>
+                      </div>
+                    </div>
+                    <p className="text-gray-300 mb-4">{type.description}</p>
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-white mb-2">Includes:</h4>
+                      <ul className="space-y-1">
+                        {type.features.slice(0, 3).map((feature, index) => (
+                          <li key={index} className="flex items-center text-gray-300">
+                            <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 ))}
               </div>
-
-              {/* Consultation Form */}
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-6">Schedule Your Free Consultation</h2>
-                
-                {submitStatus === 'success' && ()
-                )}, {submitStatus === 'error' && ()
-                )}
-
-                <form onSubmit={handleSubmit} className="space-y-6" /></form>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4" /></div>
-                    <div></div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Name *
-                      </label>
-                      <input type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Your full name"
-                      / /></input>
-                    </div>
-                    
-                    <div></div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Email *
-                      </label>
-                      <input type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="your@email.com"
-                      / /></input>
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4" /></div>
-                    <div></div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Company
-                      </label>
-                      <input type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Your company name"
-                      / /></input>
-                    </div>
-                    
-                    <div></div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Phone
-                      </label>
-                      <input type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="+1 (555) 123-4567"
-                      / /></input>
-                    </div>
-                  </div>
-
-                  <div></div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                      Service Interest
-                    </label>
-                    <select id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" /></select>
-                      <option value="">Select a service</option>
-                      <option value="ai-strategy">AI Strategy Consultation</option>
-                      <option value="it-infrastructure">IT Infrastructure Review</option>
-                      <option value="digital-transformation">Digital Transformation</option>
-                      <option value="ai-services">AI Services</option>
-                      <option value="it-services">IT Services</option>
-                      <option value="micro-saas">Micro SaaS</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4" /></div>
-                    <div></div>
-                      <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Project Timeline
-                      </label>
-                      <select id="timeline"
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" /></select>
-                        <option value="">Select timeline</option>
-                        <option value="immediate">Immediate (1-2 weeks)</option>
-                        <option value="short">Short term (1-3 months)</option>
-                        <option value="medium">Medium term (3-6 months)</option>
-                        <option value="long">Long term (6+ months)</option>
-                      </select>
-                    </div>
-                    
-                    <div></div>
-                      <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                        Budget Range
-                      </label>
-                      <select id="budget"
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent" /></select>
-                        <option value="">Select budget range</option>
-                        <option value="under-10k">Under $10,000</option>
-                        <option value="10k-50k">$10,000 - $50,000</option>
-                        <option value="50k-100k">$50,000 - $100,000</option>
-                        <option value="100k-500k">$100,000 - $500,000</option>
-                        <option value="over-500k">Over $500,000</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div></div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2" /></label>
-                      Project Details *
-                    </label>
-                    <textarea id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      placeholder="Tell us about your project, challenges, and goals..."
-                    / /></textarea>
-                  </div>
-
-                  <button type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2" /></button>
-                    {isSubmitting ? ()
-                    ) : ()
-                    )}
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            {/* Contact Info */}
-            <div className="mt-16 text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-6">Prefer to Call?</h2>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" /></div>
-                  <a href="tel:+13024640950"
-                    className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    <Phone className="w-5 h-5" / /></Phone>
-                    <span>Call: (302) 464-0950</span>
-                  </a>
-                  <a href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center space-x-2 border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    <Mail className="w-5 h-5" / /></Mail>
-                    <span>Email Us</span>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
-<<<<<<< HEAD
-      </section>
+        </section>
 
-      {/* Selected Consultation Details */},
-    {selectedConsultation && ()
-                  {selectedConsultation.features.map((feature, index) => ()
-                  ))}
-                </ul>
+        {/* Consultation Form */}
+        <section className="py-16 bg-slate-800/50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white mb-4">Schedule Your Free Consultation</h2>
+                <p className="text-gray-300 max-w-2xl mx-auto">
+                  Tell us about your business challenges and goals. We'll provide personalized 
+                  recommendations and help you plan your next steps.
+                </p>
               </div>
 
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8" /></div>
-                <h3 className="text-2xl font-bold text-white mb-6">Schedule Your Consultation</h3>
-                <div className="space-y-4" /></div>
-                  <div className="flex items-center gap-3 text-gray-300" /></div>
-                    <Calendar className="w-5 h-5 text-blue-400" / /></Calendar>
-                    <span>Duration: {selectedConsultation.duration}</span>
+              {submitStatus === 'success' && (
+                <div className="mb-8 p-6 bg-green-500/20 border border-green-500/50 rounded-lg text-center">
+                  <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-2">Thank You!</h3>
+                  <p className="text-green-400">We'll contact you within 24 hours to schedule your consultation.</p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mb-8 p-6 bg-red-500/20 border border-red-500/50 rounded-lg text-center">
+                  <h3 className="text-xl font-semibold text-white mb-2">Error</h3>
+                  <p className="text-red-400">Sorry, there was an error submitting your request. Please try again.</p>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Your full name"
+                    />
                   </div>
-                  <div className="flex items-center gap-3 text-gray-300" /></div>
-                    <Clock className="w-5 h-5 text-blue-400" / /></Clock>
-                    <span>Investment: {selectedConsultation.price}</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-300" /></div>
-                    <Users className="w-5 h-5 text-blue-400" / /></Users>
-                    <span>Team of 2-3 experts</span>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="your@email.com"
+                    />
                   </div>
                 </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300" /></button>
-                  Book Now
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="Your company name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="industry" className="block text-sm font-medium text-gray-300 mb-2">
+                      Industry *
+                    </label>
+                    <select
+                      id="industry"
+                      name="industry"
+                      value={formData.industry}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select your industry</option>
+                      {industries.map(industry => (
+                        <option key={industry} value={industry}>{industry}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="companySize" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company Size *
+                    </label>
+                    <select
+                      id="companySize"
+                      name="companySize"
+                      value={formData.companySize}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select company size</option>
+                      {companySizes.map(size => (
+                        <option key={size} value={size}>{size}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="currentChallenges" className="block text-sm font-medium text-gray-300 mb-2">
+                    Current Challenges *
+                  </label>
+                  <textarea
+                    id="currentChallenges"
+                    name="currentChallenges"
+                    value={formData.currentChallenges}
+                    onChange={handleInputChange}
+                    required
+                    rows={3}
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Describe your current business challenges and pain points..."
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="goals" className="block text-sm font-medium text-gray-300 mb-2">
+                    Goals & Objectives *
+                  </label>
+                  <textarea
+                    id="goals"
+                    name="goals"
+                    value={formData.goals}
+                    onChange={handleInputChange}
+                    required
+                    rows={3}
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="What are you trying to achieve? What are your main objectives?"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
+                      Timeline
+                    </label>
+                    <select
+                      id="timeline"
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select timeline</option>
+                      {timelines.map(timeline => (
+                        <option key={timeline} value={timeline}>{timeline}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
+                      Budget Range
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select budget range</option>
+                      {budgets.map(budget => (
+                        <option key={budget} value={budget}>{budget}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    Additional Information
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Any additional information you'd like to share..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      Submitting...
+                    </>
+                  ) : (
+                    <>
+                      <Calendar className="w-5 h-5" />
+                      Schedule Free Consultation
+                    </>
+                  )}
                 </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Our Consultation */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Consultation?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Lightbulb className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Expert Insights</h3>
+                  <p className="text-gray-300 text-sm">Get advice from experienced AI and IT professionals</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Personalized Approach</h3>
+                  <p className="text-gray-300 text-sm">Solutions tailored to your specific business needs</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <ThumbsUp className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">No Obligation</h3>
+                  <p className="text-gray-300 text-sm">Free consultation with no pressure to purchase</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <BookOpen className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Actionable Plan</h3>
+                  <p className="text-gray-300 text-sm">Receive a detailed roadmap for implementation</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Clock className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Flexible Scheduling</h3>
+                  <p className="text-gray-300 text-sm">Schedule at a time that works for you</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Proven Results</h3>
+                  <p className="text-gray-300 text-sm">Track record of successful implementations</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
-=======
       </main>
       
-      <Footer / /></Footer>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+      <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-      )},
-    {/* Process Section */}
-      <section className="py-16 px-4" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-16" /></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Our Process</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-              A structured approach to delivering exceptional consultation services
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-            {process.map((step, index) => ()
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 bg-white/5" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-12" /></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-300">Contact our consultation team today</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" /></div>
-            <div className="text-center" /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" /></div>
-                <Phone className="w-6 h-6 text-white" / /></Phone>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300">+1 (555) 123-4567</p>
-              <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
-            </div>
-
-            <div className="text-center" /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4" /></div>
-                <Mail className="w-6 h-6 text-white" / /></Mail>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300">consultation@ziontechgroup.com</p>
-              <p className="text-sm text-gray-400">24/7 Response</p>
-            </div>
-
-            <div className="text-center" /></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4" /></div>
-                <MapPin className="w-6 h-6 text-white" / /></MapPin>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-300">San Francisco, CA</p>
-              <p className="text-sm text-gray-400">By Appointment</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" /></h2>
-              Transform Your Business Today
-            </h2>
-            <p className="text-xl text-gray-300 mb-8" /></p>
-              Let our expert consultants help you navigate the complex world of AI and technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /></button>
-                Schedule Free Consultation
-                <ArrowRight className="inline-block ml-2 w-5 h-5" / /></ArrowRight>
-              </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
-                View Case Studies
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
 export default ConsultationPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
-=======
-export default ConsultationPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
