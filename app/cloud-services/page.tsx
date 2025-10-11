@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Cloud, Shield, Zap, Globe, CheckCircle, Server, Database } from 'lucide-react';
+=======
+import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -7,6 +11,7 @@ import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with our expert guidance.',
@@ -22,6 +27,8 @@ const CloudServicesPage: React.FC = () => {
       description: 'Optimize your cloud resources for maximum efficiency and cost savings.',
       benefits: ['Cost optimization', 'Performance tuning', 'Resource management', 'Automated scaling']
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration to cloud infrastructure with zero downtime',
@@ -42,6 +49,7 @@ const CloudServicesPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide cloud infrastructure for global businesses',
       benefits: ['Multi-Region', 'Edge Computing', 'Low Latency', 'High Availability']
     },
@@ -56,12 +64,29 @@ const CloudServicesPage: React.FC = () => {
       title: 'Database Services',
       description: 'Managed database solutions for all your data needs',
       benefits: ['PostgreSQL', 'MongoDB', 'Redis', 'Backup & Recovery']
+=======
+      description: 'Worldwide cloud infrastructure for global business operations',
+      benefits: ['Multi-Region', 'Edge Computing', 'Low Latency', 'High Availability']
+    },
+    {
+      icon: CheckCircle,
+      title: 'Managed Services',
+      description: 'Complete cloud management and monitoring services',
+      benefits: ['24/7 Support', 'Proactive Monitoring', 'Backup & Recovery', 'Updates']
+    },
+    {
+      icon: ArrowRight,
+      title: 'DevOps Integration',
+      description: 'Seamless integration with CI/CD pipelines and development workflows',
+      benefits: ['CI/CD Pipelines', 'Infrastructure as Code', 'Automation', 'Monitoring']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
     }
   ];
 
   const cloudProviders = [
     {
       name: 'Amazon Web Services',
+<<<<<<< HEAD
       description: 'Comprehensive AWS cloud solutions and services',
       features: ['EC2', 'S3', 'RDS', 'Lambda', 'CloudFront']
     },
@@ -75,10 +100,25 @@ const CloudServicesPage: React.FC = () => {
       description: 'Advanced GCP cloud computing and AI services',
       features: ['Compute Engine', 'Cloud Storage', 'BigQuery', 'AI Platform', 'Kubernetes']
 >>>>>>> cursor/fix-errors-and-merge-to-main-371b
+=======
+      description: 'Comprehensive AWS solutions including EC2, S3, Lambda, and more',
+      features: ['EC2', 'S3', 'Lambda', 'RDS', 'CloudFront']
+    },
+    {
+      name: 'Microsoft Azure',
+      description: 'Enterprise-grade Azure cloud services and hybrid solutions',
+      features: ['Virtual Machines', 'Azure SQL', 'Functions', 'App Service', 'Cosmos DB']
+    },
+    {
+      name: 'Google Cloud Platform',
+      description: 'Advanced GCP services with AI and machine learning capabilities',
+      features: ['Compute Engine', 'Cloud Storage', 'BigQuery', 'AI Platform', 'Kubernetes']
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -105,6 +145,15 @@ const CloudServicesPage: React.FC = () => {
         <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, Zion Tech Group" />
       </Helmet>
       
+=======
+    <>
+      <Helmet>
+        <title>Cloud Services | Zion Tech Group</title>
+        <meta name="description" content="Professional cloud services and solutions by Zion Tech Group. Advanced cloud infrastructure and migration services." />
+        <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud solutions, Zion Tech Group" />
+      </Helmet>
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <Navigation />
 
@@ -121,7 +170,10 @@ const CloudServicesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional cloud services and solutions by Zion Tech Group. Advanced cloud infrastructure and migration services.
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-371b
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -139,20 +191,32 @@ const CloudServicesPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
+<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Cloud Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive cloud services designed to meet your business needs.
+=======
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Comprehensive Cloud Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Professional cloud services to help your business succeed and grow.
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+<<<<<<< HEAD
                   <div className="mb-4">
                     <feature.icon className="w-8 h-8 text-blue-400" />
                   </div>
+=======
+                  <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -173,11 +237,19 @@ const CloudServicesPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
+<<<<<<< HEAD
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Cloud Providers
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We work with all major cloud providers to deliver the best solutions.
+=======
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Cloud Providers
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We work with all major cloud providers to deliver the best solutions for your needs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
               </p>
             </div>
             
@@ -203,6 +275,7 @@ const CloudServicesPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Move to the Cloud?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
@@ -211,6 +284,12 @@ const CloudServicesPage: React.FC = () => {
 =======
                 Contact us today to learn more about our cloud services and migration solutions.
 >>>>>>> cursor/fix-errors-and-merge-to-main-371b
+=======
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Move to the Cloud?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our cloud services and migration solutions.
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -222,6 +301,7 @@ const CloudServicesPage: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </div>
       </main>
@@ -235,6 +315,13 @@ const CloudServicesPage: React.FC = () => {
       </div>
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-371b
+=======
+        </section>
+        
+        <Footer />
+      </div>
+    </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   );
 };
 

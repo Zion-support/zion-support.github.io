@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
@@ -9,6 +10,12 @@ import Footer from '../components/Footer';
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+'use client';
+
+import React, { useState, useEffect, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-371b
 
@@ -74,7 +81,10 @@ const BlogPage: React.FC = () => {
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: '1',

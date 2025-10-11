@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Accessibility enhancement utilities
 
 export const enhanceAccessibility = () => {
@@ -159,6 +160,148 @@ export class AccessibilityEnhancer {
     event.preventDefault();
   }
 
+=======
+'use client';
+
+/**
+ * Accessibility Enhancer Utility
+ * Provides comprehensive accessibility features for the application
+ */
+
+export interface AccessibilityOptions {
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+  enableARIALabels?: boolean;
+  enableSkipLinks?: boolean;
+}
+
+export class AccessibilityEnhancer {
+  private options: AccessibilityOptions;
+  private focusableElements: HTMLElement[] = [];
+  private currentFocusIndex = 0;
+
+  constructor(options: AccessibilityOptions = {}) {
+    this.options = {
+      enableKeyboardNavigation: true,
+      enableScreenReader: true,
+      enableHighContrast: false,
+      enableFocusManagement: true,
+      enableARIALabels: true,
+      enableSkipLinks: true,
+      ...options
+    };
+
+    this.init();
+  }
+
+  /**
+   * Initialize accessibility features
+   */
+  private init(): void {
+    if (typeof window === 'undefined') return;
+
+    this.setupKeyboardNavigation();
+    this.setupScreenReaderSupport();
+    this.setupHighContrastMode();
+    this.setupFocusManagement();
+    this.setupARIALabels();
+    this.setupSkipLinks();
+  }
+
+  /**
+   * Setup keyboard navigation
+   */
+  private setupKeyboardNavigation(): void {
+    if (!this.options.enableKeyboardNavigation) return;
+
+    document.addEventListener('keydown', (event) => {
+      this.handleKeyboardNavigation(event);
+    });
+  }
+
+  /**
+   * Handle keyboard navigation
+   */
+  private handleKeyboardNavigation(event: KeyboardEvent): void {
+    const { key } = event;
+
+    // Tab navigation
+    if (key === 'Tab') {
+      this.handleTabNavigation(event);
+      return;
+    }
+
+    // Arrow key navigation
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(key)) {
+      this.handleArrowNavigation(event);
+      return;
+    }
+
+    // Escape key
+    if (key === 'Escape') {
+      this.handleEscapeKey(event);
+      return;
+    }
+
+    // Enter key
+    if (key === 'Enter') {
+      this.handleEnterKey(event);
+      return;
+    }
+
+    // Space key
+    if (key === ' ') {
+      this.handleSpaceKey(event);
+      return;
+    }
+  }
+
+  /**
+   * Handle tab navigation
+   */
+  private handleTabNavigation(event: KeyboardEvent): void {
+    this.updateFocusableElementsInternal();
+    
+    if (this.focusableElements.length === 0) return;
+
+    if (event.shiftKey) {
+      // Shift + Tab - move backwards
+      this.currentFocusIndex = this.currentFocusIndex > 0 
+        ? this.currentFocusIndex - 1 
+        : this.focusableElements.length - 1;
+    } else {
+      // Tab - move forwards
+      this.currentFocusIndex = this.currentFocusIndex < this.focusableElements.length - 1 
+        ? this.currentFocusIndex + 1 
+        : 0;
+    }
+
+    this.focusableElements[this.currentFocusIndex]?.focus();
+  }
+
+  /**
+   * Handle arrow key navigation
+   */
+  private handleArrowNavigation(event: KeyboardEvent): void {
+    const { key } = event;
+    const currentElement = document.activeElement as HTMLElement;
+    
+    if (!currentElement) return;
+
+    // Find the next focusable element based on arrow direction
+    const direction = key === 'ArrowUp' || key === 'ArrowLeft' ? -1 : 1;
+    const nextIndex = this.currentFocusIndex + direction;
+    
+    if (nextIndex >= 0 && nextIndex < this.focusableElements.length) {
+      this.currentFocusIndex = nextIndex;
+      this.focusableElements[nextIndex]?.focus();
+      event.preventDefault();
+    }
+  }
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   /**
    * Handle escape key
    */
@@ -179,8 +322,9 @@ export class AccessibilityEnhancer {
   }
 
   /**
-   * Handle arrow key navigation
+   * Handle enter key
    */
+<<<<<<< HEAD
   private handleArrowNavigation(event: KeyboardEvent): void {
     const currentElement = document.activeElement as HTMLElement;
     if (!currentElement) return;
@@ -193,12 +337,20 @@ export class AccessibilityEnhancer {
     // Handle menu navigation
     if (currentElement.getAttribute('role') === 'menuitem') {
       this.handleMenuNavigation(event, currentElement);
+=======
+  private handleEnterKey(event: KeyboardEvent): void {
+    const target = event.target as HTMLElement;
+    
+    if (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button') {
+      target.click();
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
     }
   }
 
   /**
-   * Handle radio group navigation
+   * Handle space key
    */
+<<<<<<< HEAD
   private handleRadioGroupNavigation(event: KeyboardEvent, currentElement: HTMLInputElement): void {
     const name = currentElement.name;
     if (!name) return;
@@ -216,11 +368,21 @@ export class AccessibilityEnhancer {
     radioButtons[nextIndex]?.focus();
     radioButtons[nextIndex]?.click();
     event.preventDefault();
+=======
+  private handleSpaceKey(event: KeyboardEvent): void {
+    const target = event.target as HTMLElement;
+    
+    if (target.tagName === 'BUTTON' || target.getAttribute('role') === 'button') {
+      event.preventDefault();
+      target.click();
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   }
 
   /**
-   * Handle menu navigation
+   * Update focusable elements list
    */
+<<<<<<< HEAD
   private handleMenuNavigation(event: KeyboardEvent, currentElement: HTMLElement): void {
     const menu = currentElement.closest('[role="menu"]');
     if (!menu) return;
@@ -239,42 +401,179 @@ export class AccessibilityEnhancer {
 
     menuItems[nextIndex]?.focus();
     event.preventDefault();
+=======
+  private updateFocusableElementsInternal(): void {
+    const selectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])',
+      '[role="button"]:not([disabled])',
+      '[role="link"]',
+      '[role="menuitem"]',
+      '[role="option"]'
+    ];
+
+    this.focusableElements = Array.from(
+      document.querySelectorAll(selectors.join(', '))
+    ) as HTMLElement[];
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   }
 
   /**
    * Setup screen reader support
    */
   private setupScreenReaderSupport(): void {
+<<<<<<< HEAD
     if (!this.config.enableScreenReaderSupport) return;
 
     this.addSkipLinks();
     this.enhanceFormLabels();
     this.addAriaLandmarks();
+=======
+    if (!this.options.enableScreenReader) return;
+
+    // Add screen reader only text for important elements
+    this.addScreenReaderText();
+    
+    // Setup live regions for dynamic content
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
     this.setupLiveRegions();
   }
 
   /**
-   * Add skip links
+   * Add screen reader only text
    */
-  private addSkipLinks(): void {
-    const skipLinks = document.createElement('div');
-    skipLinks.className = 'skip-links';
-    skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
-      <a href="#footer" class="skip-link">Skip to footer</a>
+  private addScreenReaderText(): void {
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only';
+    skipLink.style.cssText = `
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 1000;
     `;
+<<<<<<< HEAD
 
     // Add styles
+=======
+    
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }
+
+  /**
+   * Setup live regions for dynamic content
+   */
+  private setupLiveRegions(): void {
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'live-region';
+    
+    document.body.appendChild(liveRegion);
+  }
+
+  /**
+   * Setup high contrast mode
+   */
+  private setupHighContrastMode(): void {
+    if (!this.options.enableHighContrast) return;
+
+    // Add high contrast toggle
+    const toggle = document.createElement('button');
+    toggle.textContent = 'Toggle High Contrast';
+    toggle.className = 'high-contrast-toggle';
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('high-contrast');
+    });
+
+    // Add high contrast styles
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
     const style = document.createElement('style');
     style.textContent = `
-      .skip-links {
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        z-index: 1000;
+      .high-contrast {
+        filter: contrast(150%) brightness(120%);
       }
-      .skip-link {
+      .high-contrast button,
+      .high-contrast input,
+      .high-contrast select,
+      .high-contrast textarea {
+        border: 2px solid #000;
+      }
+    `;
+    
+    document.head.appendChild(style);
+  }
+
+  /**
+   * Setup focus management
+   */
+  private setupFocusManagement(): void {
+    if (!this.options.enableFocusManagement) return;
+
+    // Track focus changes
+    document.addEventListener('focusin', (event) => {
+      const target = event.target as HTMLElement;
+      this.currentFocusIndex = this.focusableElements.indexOf(target);
+    });
+
+    // Ensure focus is visible
+    document.addEventListener('focusin', (event) => {
+      const target = event.target as HTMLElement;
+      target.style.outline = '2px solid #0066cc';
+    });
+
+    document.addEventListener('focusout', (event) => {
+      const target = event.target as HTMLElement;
+      target.style.outline = '';
+    });
+  }
+
+  /**
+   * Setup ARIA labels
+   */
+  private setupARIALabels(): void {
+    if (!this.options.enableARIALabels) return;
+
+    // Add ARIA labels to interactive elements without labels
+    const interactiveElements = document.querySelectorAll('button, input, select, textarea');
+    
+    interactiveElements.forEach(element => {
+      if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {
+        const text = element.textContent || element.getAttribute('placeholder') || 'Interactive element';
+        element.setAttribute('aria-label', text);
+      }
+    });
+  }
+
+  /**
+   * Setup skip links
+   */
+  private setupSkipLinks(): void {
+    if (!this.options.enableSkipLinks) return;
+
+    // Add skip links for main content areas
+    const skipLinks = [
+      { href: '#main-content', text: 'Skip to main content' },
+      { href: '#navigation', text: 'Skip to navigation' },
+      { href: '#footer', text: 'Skip to footer' }
+    ];
+
+    skipLinks.forEach(link => {
+      const skipLink = document.createElement('a');
+      skipLink.href = link.href;
+      skipLink.textContent = link.text;
+      skipLink.className = 'skip-link';
+      skipLink.style.cssText = `
         position: absolute;
         top: -40px;
         left: 6px;
@@ -282,9 +581,9 @@ export class AccessibilityEnhancer {
         color: #fff;
         padding: 8px;
         text-decoration: none;
-        border-radius: 4px;
         z-index: 1000;
         transition: top 0.3s;
+<<<<<<< HEAD
       }
       .skip-link:focus {
         top: 6px;
@@ -574,8 +873,21 @@ export default enhanceAccessibility;
             }
           });
         }
+=======
+      `;
+      
+      skipLink.addEventListener('focus', () => {
+        skipLink.style.top = '6px';
       });
+      
+      skipLink.addEventListener('blur', () => {
+        skipLink.style.top = '-40px';
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
+      });
+      
+      document.body.insertBefore(skipLink, document.body.firstChild);
     });
+<<<<<<< HEAD
 
     observer.observe(document.body, {
       childList: true,
@@ -583,43 +895,55 @@ export default enhanceAccessibility;
     });
 
     this.observers.push(observer);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   }
 
   /**
-   * Setup metrics collection
+   * Announce message to screen readers
    */
+<<<<<<< HEAD
   private setupMetricsCollection(): void {
     setInterval(() => {
       this.scanAccessibility();
     }, 5000);
+=======
+  public announce(message: string): void {
+    const liveRegion = document.getElementById('live-region');
+    if (liveRegion) {
+      liveRegion.textContent = message;
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   }
 
   /**
-   * Scan accessibility issues
+   * Update focusable elements
    */
-  private scanAccessibility(): void {
-    this.metrics.focusableElements = this.getFocusableElements().length;
-    this.metrics.imagesWithoutAlt = document.querySelectorAll('img:not([alt])').length;
-    this.metrics.linksWithoutText = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby]):empty').length;
-    this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length - 
-      Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h => h.textContent?.trim()).length;
-    this.calculateScores();
+  public updateFocusableElements(): void {
+    this.updateFocusableElementsInternal();
   }
 
   /**
-   * Calculate accessibility scores
+   * Focus on specific element
    */
+<<<<<<< HEAD
   private calculateScores(): void {
     this.metrics.keyboardNavigationScore = this.calculateKeyboardScore();
     this.metrics.screenReaderScore = this.calculateScreenReaderScore();
     this.metrics.overallScore = Math.round(
       (this.metrics.keyboardNavigationScore + this.metrics.screenReaderScore) / 2
     );
+=======
+  public focusElement(element: HTMLElement): void {
+    element.focus();
+    this.currentFocusIndex = this.focusableElements.indexOf(element);
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   }
 
   /**
-   * Calculate keyboard navigation score
+   * Get current focus index
    */
+<<<<<<< HEAD
   private calculateKeyboardScore(): number {
     const focusableElements = this.getFocusableElements();
     const totalElements = document.querySelectorAll('*').length;
@@ -637,11 +961,16 @@ export default enhanceAccessibility;
     score -= this.metrics.linksWithoutText * 3;
     score -= this.metrics.headingsWithoutContent * 2;
     return Math.max(0, score);
+=======
+  public getCurrentFocusIndex(): number {
+    return this.currentFocusIndex;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   }
 
   /**
    * Get focusable elements
    */
+<<<<<<< HEAD
   private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
       'a[href]',
@@ -696,6 +1025,10 @@ Recommendations:
 - Implement proper ARIA labels and roles
 - Test with screen readers regularly
 `;
+=======
+  public getFocusableElements(): HTMLElement[] {
+    return this.focusableElements;
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
   }
 
   /**
@@ -709,4 +1042,20 @@ Recommendations:
 
 // Export default instance
 export const accessibilityEnhancer = new AccessibilityEnhancer();
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-371b
+=======
+
+// Export utility functions
+export const announceToScreenReader = (message: string) => {
+  accessibilityEnhancer.announce(message);
+};
+
+export const focusElement = (element: HTMLElement) => {
+  accessibilityEnhancer.focusElement(element);
+};
+
+export const updateFocusableElements = () => {
+  accessibilityEnhancer.updateFocusableElements();
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-d296
