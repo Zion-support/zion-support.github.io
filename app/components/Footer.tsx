@@ -20,10 +20,8 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 max-w-md">
+              </div><span className="text-xl font-bold">Zion Tech Group</span>
+            </div><p className="text-gray-300 mb-6 max-w-md">
               Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.
             </p>
             <div className="flex space-x-4">
@@ -36,10 +34,7 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Code className="w-5 h-5" />
               </a>
-            </div>
-          </div>
-
-          {/* Services */}
+            </div></div>{/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -49,9 +44,7 @@ const Footer: React.FC = () => {
               <li><Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity</Link></li>
               <li><Link to="/consultation" className="text-gray-300 hover:text-cyan-400 transition-colors">Consultation</Link></li>
             </ul>
-          </div>
-
-          {/* Solutions */}
+          </div>{/* Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
@@ -61,29 +54,20 @@ const Footer: React.FC = () => {
               <li><Link to="/iot" className="text-gray-300 hover:text-cyan-400 transition-colors">IoT</Link></li>
               <li><Link to="/robotics" className="text-gray-300 hover:text-cyan-400 transition-colors">Robotics</Link></li>
             </ul>
-          </div>
-
-          {/* Contact */}
+          </div>{/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-cyan-400" />
                 <span className="text-gray-300">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-2">
+              </div><div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-cyan-400" />
                 <span className="text-gray-300">info@ziontech.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
+              </div><div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span className="text-gray-300">123 Tech Street, Innovation City</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Section */}
+              </div></div></div></div>{/* Bottom Section */}
         <div className="border-t border-gray-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
@@ -99,11 +83,7 @@ const Footer: React.FC = () => {
               <Link to="/sla" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 SLA
               </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+            </div></div></div></div></footer>
   );
 };
 

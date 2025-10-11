@@ -22,16 +22,34 @@ Action
 Schedule Live Demo
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
@@ -39,14 +57,23 @@ Schedule Live Demo
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Ready to See More?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-  </p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your data into actionable insights with our advanced AI analytics platform
+              </p>
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </div>
       
+      <Footer />
+    </>
       <Footer />
     </>
   );

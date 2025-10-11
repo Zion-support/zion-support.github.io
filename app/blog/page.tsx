@@ -87,6 +87,14 @@ const BlogPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -98,11 +106,20 @@ const BlogPage: React.FC = () => {
   </h1>
             </p>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Search and Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 

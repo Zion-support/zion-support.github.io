@@ -80,6 +80,14 @@ const FiveGImplementationPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network infrastructure, ultra-low latency, high-speed connectivity, IoT, smart cities, edge computing" />
@@ -106,7 +114,13 @@ const FiveGImplementationPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Features Section */}
@@ -120,7 +134,9 @@ const FiveGImplementationPage: React.FC = () => {
                 Cutting-edge 5G technology for the next generation of connectivity
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -129,6 +145,9 @@ const FiveGImplementationPage: React.FC = () => {
                     <div className="text-blue-400 mb-4">
                       <Icon className="h-8 w-8" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
@@ -139,8 +158,20 @@ const FiveGImplementationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+      
+      <Footer />
+    </>
+                );
+              })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Benefits Section */}
@@ -154,16 +185,27 @@ const FiveGImplementationPage: React.FC = () => {
                 Experience the power of next-generation connectivity
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Values Section */}
@@ -177,7 +219,9 @@ const FiveGImplementationPage: React.FC = () => {
                 The principles that guide everything we do
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => {
                 const Icon = value.icon
@@ -186,13 +230,25 @@ const FiveGImplementationPage: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
                     <p className="text-gray-300">{value.description}</p>
                   </div>
+      
+      <Footer />
+    </>
                 );
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
@@ -208,14 +264,21 @@ const FiveGImplementationPage: React.FC = () => {
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </div>
       
       <Footer />
     </>
+      <Footer />
+    </>
   );
 };
 
-export default FiveGImplementationPage;
 export default FiveGImplementationPage;

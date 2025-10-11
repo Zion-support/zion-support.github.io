@@ -47,6 +47,14 @@ const AnalyticsDashboardPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics dashboard for comprehensive business intelligence and data visualization." />
       </Helmet>
@@ -64,6 +72,9 @@ const AnalyticsDashboardPage: React.FC = () => {
               Transform your data into actionable insights with our advanced AI-powered analytics dashboard.
             </p>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Features Section */}
@@ -75,7 +86,9 @@ const AnalyticsDashboardPage: React.FC = () => {
                 Comprehensive analytics tools for modern businesses
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon
@@ -84,6 +97,9 @@ const AnalyticsDashboardPage: React.FC = () => {
                     <div className="text-purple-400 mb-4">
                       <Icon className="w-8 h-8" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
@@ -95,10 +111,19 @@ const AnalyticsDashboardPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+      
+      <Footer />
+    </>
                 );
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Benefits Section */}
@@ -110,16 +135,27 @@ const AnalyticsDashboardPage: React.FC = () => {
                 Powerful analytics capabilities for better business decisions
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
@@ -138,7 +174,13 @@ const AnalyticsDashboardPage: React.FC = () => {
                 View Demo
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </main>
       

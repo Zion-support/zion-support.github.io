@@ -1,5 +1,11 @@
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Content Section */}
@@ -17,10 +23,18 @@
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </div>
       
+      <Footer />
+    </>
       <Footer />
     </>
   );

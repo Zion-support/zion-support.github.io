@@ -7,8 +7,17 @@ const PagePage: React.FC = () => {
   return (
               </p>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </div>
+      
+      <Footer />
+    </>
       </section>
 
       

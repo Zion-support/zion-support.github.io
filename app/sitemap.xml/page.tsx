@@ -38,4 +38,34 @@ const SitemapXMLPage: React.FC = () => {
   );
 };
 
-export default SitemapXMLPage;
+export default SitemapXMLPage
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  )
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  )
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  )
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  )
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  );

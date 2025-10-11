@@ -47,6 +47,9 @@ const CookiesPage: React.FC = () => {
               Learn about how we use cookies and similar technologies to improve your experience on our website.
             </p>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Cookie Types */}
@@ -59,6 +62,9 @@ const CookiesPage: React.FC = () => {
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4">
                     <type.icon className="text-white" size={32} />
                   </div>
+      
+      <Footer />
+    </>
                   <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
                   <ul className="text-sm text-gray-400 space-y-1">
@@ -67,9 +73,18 @@ const CookiesPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Cookie Management */}
@@ -88,15 +103,26 @@ const CookiesPage: React.FC = () => {
                       Most web browsers allow you to control cookies through their settings preferences. You can set your browser to refuse cookies or delete certain cookies.
                     </p>
                   </div>
+      
+      <Footer />
+    </>
                   <div>
                     <h4 className="text-lg font-semibold text-cyan-400 mb-2">Cookie Consent</h4>
                     <p className="text-gray-300">
                       When you first visit our website, you'll see a cookie consent banner where you can choose which types of cookies to accept.
                     </p>
                   </div>
+      
+      <Footer />
+    </>
                 </div>
+      
+      <Footer />
+    </>
               </div>
-
+      
+      <Footer />
+    </>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-4">Third-Party Cookies</h3>
                 <p className="text-gray-300 mb-4">
@@ -108,15 +134,26 @@ const CookiesPage: React.FC = () => {
                   <li>• Advertising networks - for targeted advertising</li>
                 </ul>
               </div>
-
+      
+      <Footer />
+    </>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-4">Updates to This Policy</h3>
                 <p className="text-gray-300">
                   We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We will notify you of any material changes by posting the updated policy on our website.
                 </p>
               </div>
+        </section>
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Contact Section */}
@@ -140,12 +177,21 @@ const CookiesPage: React.FC = () => {
                 privacy@ziontechgroup.com
               </a>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </main>
       
       <Footer />
     </div>
+      
+      <Footer />
+    </>
   );
 };
 

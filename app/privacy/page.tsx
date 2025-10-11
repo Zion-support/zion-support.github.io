@@ -104,7 +104,13 @@ Your privacy is important to us. This policy explains how we collect, use, and p
             <Shield className="w-6 h-6 mr-2" />
             <span className="font-semibold">Last updated: {new Date().toLocaleDateString()}</span>
           </div>
+      
+      <Footer />
+    </>
         </div>
+      
+      <Footer />
+    </>
       </section>
 
       {/* Data Collection Section */}
@@ -118,19 +124,33 @@ Information We Collect
 We collect information to provide better services to our users
             </p>
           </div>
-          
+      
+      <Footer />
+    </>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {dataTypes.map((type), index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <type.icon className="w-8 h-8 text-white" />
                 </div>
+      
+      <Footer />
+    </>
                 <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
                 <p className="text-gray-300">{type.description}</p>
               </div>
+      
+      <Footer />
+    </>
             ))}
           </div>
+      
+      <Footer />
+    </>
         </div>
+      
+      <Footer />
+    </>
       </section>
 
       {/* Purposes Section */}
@@ -144,7 +164,9 @@ How We Use Your Information
 We use your information for specific, legitimate purposes
             </p>
           </div>
-          
+      
+      <Footer />
+    </>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {purposes.map((purpose), index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
@@ -153,15 +175,33 @@ We use your information for specific, legitimate purposes
                     <purpose.icon className="w-6 h-6 text-white" />
   </purpose>
                   </div>
+      
+      <Footer />
+    </>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">{purpose.title}</h3>
                     <p className="text-gray-300">{purpose.description}</p>
                   </div>
+      
+      <Footer />
+    </>
                 </div>
+      
+      <Footer />
+    </>
               </div>
+      
+      <Footer />
+    </>
             ))}
           </div>
+      
+      <Footer />
+    </>
         </div>
+      
+      <Footer />
+    </>
       </section>
 
       {/* Rights Section */}
@@ -175,19 +215,33 @@ Your Privacy Rights
 You have control over your personal data
             </p>
           </div>
-          
+      
+      <Footer />
+    </>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {rights.map((right), index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                   <right.icon className="w-8 h-8 text-white" />
                 </div>
+      
+      <Footer />
+    </>
                 <h3 className="text-xl font-bold text-white mb-4">{right.title}</h3>
                 <p className="text-gray-300">{right.description}</p>
               </div>
+      
+      <Footer />
+    </>
             ))}
           </div>
+      
+      <Footer />
+    </>
         </div>
+      
+      <Footer />
+    </>
       </section>
 
       {/* Contact Section */}
@@ -206,25 +260,45 @@ Contact our privacy team for any questions or concerns about your data
                 <Mail className="w-6 h-6 text-cyan-400 mr-3" />
                 <span className="text-white">{contactInfo.email}</span>
               </div>
+      
+      <Footer />
+    </>
               <div className="flex items-center justify-center">
                 <Phone className="w-6 h-6 text-cyan-400 mr-3" />
                 <span className="text-white">{contactInfo.phone}</span>
               </div>
+      
+      <Footer />
+    </>
               <div className="flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-cyan-400 mr-3" />
                 <span className="text-white text-sm">{contactInfo.address}</span>
               </div>
+      
+      <Footer />
+    </>
             </div>
-            
+      
+      <Footer />
+    </>
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
 Contact Privacy Team
             </button>
           </div>
+      
+      <Footer />
+    </>
         </div>
+      
+      <Footer />
+    </>
       </section>
 
       <Footer />
     </div>
+      
+      <Footer />
+    </>
   )
 }
 ;

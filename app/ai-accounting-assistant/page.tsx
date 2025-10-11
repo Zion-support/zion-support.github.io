@@ -60,6 +60,14 @@ const AiAccountingAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered accounting assistant for automated financial management and reporting" />
         <meta name="keywords" content="AI accounting, financial automation, accounting software, bookkeeping, financial reporting" />
@@ -86,18 +94,33 @@ const AiAccountingAssistantPage: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
+      
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Features Section */}
             </div>
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
                   </div>
+      
+      <Footer />
+    </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -109,6 +132,9 @@ const AiAccountingAssistantPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+      
+      <Footer />
+    </>
               ))}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -120,7 +146,9 @@ const AiAccountingAssistantPage: React.FC = () => {
                 Advanced AI technology for modern accounting needs
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon
@@ -129,6 +157,9 @@ const AiAccountingAssistantPage: React.FC = () => {
                     <div className="text-cyan-400 mb-4">
                       <Icon className="h-8 w-8" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
@@ -140,10 +171,19 @@ const AiAccountingAssistantPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+      
+      <Footer />
+    </>
                 )
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Use Cases Section */}
@@ -157,7 +197,9 @@ const AiAccountingAssistantPage: React.FC = () => {
                 Tailored solutions for different business types
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon
@@ -166,13 +208,25 @@ const AiAccountingAssistantPage: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                     <p className="text-gray-300">{useCase.description}</p>
                   </div>
+      
+      <Footer />
+    </>
                 )
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Benefits Section */}
@@ -186,26 +240,41 @@ const AiAccountingAssistantPage: React.FC = () => {
                 Transform your accounting workflow with intelligent automation
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
+      
+      <Footer />
+    </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Accounting?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-            </p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your data into actionable insights with our advanced AI analytics platform
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
@@ -215,10 +284,18 @@ const AiAccountingAssistantPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </div>
       
+      <Footer />
+    </>
       <Footer />
     </>
   );

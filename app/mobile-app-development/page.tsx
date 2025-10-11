@@ -41,7 +41,13 @@ const MobileAppDevelopmentPage: React.FC = () => {
       <Navigation />
       
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
               </h2>
@@ -49,22 +55,46 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 This page is under development. Please check back soon for updates.
               </p>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Benefits Section */}
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
   );
 };

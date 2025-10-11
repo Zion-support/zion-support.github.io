@@ -69,7 +69,6 @@ const Navigation: React.FC = () => {
               <span className="text-xl font-bold text-white">Zion Tech</span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-white transition-colors">
@@ -95,11 +94,8 @@ const Navigation: React.FC = () => {
                   <Link to="/it-services" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
                     IT Services
                   </Link>
-                </div>
-              )}
-            </div>
-
-            <div className="relative">
+                </div>)}
+            </div><div className="relative">
               <button
                 onClick={() => toggleDropdown('solutions')}
                 className="flex items-center text-gray-300 hover:text-white transition-colors"
@@ -118,11 +114,8 @@ const Navigation: React.FC = () => {
                   <Link to="/enterprise-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
                     Enterprise Solutions
                   </Link>
-                </div>
-              )}
-            </div>
-
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                </div>)}
+            </div><Link to="/about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
@@ -131,9 +124,7 @@ const Navigation: React.FC = () => {
             <Link to="/demo" className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors">
               Demo
             </Link>
-          </div>
-
-          {/* Mobile menu button */}
+          </div>{/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
@@ -141,10 +132,7 @@ const Navigation: React.FC = () => {
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
+          </div></div>{/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
@@ -166,11 +154,8 @@ const Navigation: React.FC = () => {
               <Link to="/demo" className="block px-3 py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-600">
                 Demo
               </Link>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
+            </div></div>)}
+      </div></nav>
   );
 };
 

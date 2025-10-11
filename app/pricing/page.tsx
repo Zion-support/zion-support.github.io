@@ -105,12 +105,23 @@ const PricingPage: React.FC = () => {
                 </span>
               )}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </div>
+      
+      <Footer />
+    </>
       </section>
 
                 </div>
-
+      
+      <Footer />
+    </>
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -122,7 +133,9 @@ const PricingPage: React.FC = () => {
                 Everything you need to know about our pricing and services
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -132,7 +145,9 @@ const PricingPage: React.FC = () => {
                   Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.
                 </p>
               </div>
-              
+      
+      <Footer />
+    </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Do you offer custom pricing for large enterprises?
@@ -141,7 +156,9 @@ const PricingPage: React.FC = () => {
                   Absolutely! We offer custom pricing and solutions for large enterprises with specific requirements. Contact us to discuss your needs.
                 </p>
               </div>
-              
+      
+      <Footer />
+    </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   What's included in the support?
@@ -150,7 +167,9 @@ const PricingPage: React.FC = () => {
                   Support includes email support, documentation, and access to our knowledge base. Higher tiers include priority support and dedicated account managers.
                 </p>
               </div>
-              
+      
+      <Footer />
+    </>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Is there a free trial available?
@@ -159,8 +178,17 @@ const PricingPage: React.FC = () => {
                   Yes, we offer a 14-day free trial for all our plans. No credit card required to get started.
                 </p>
               </div>
+      
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
@@ -180,10 +208,18 @@ const PricingPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </div>
       
+      <Footer />
+    </>
       <Footer />
     </>
   )

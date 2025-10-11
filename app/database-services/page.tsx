@@ -6,7 +6,13 @@ import React from 'react';
         <meta name="keywords" content="relevant, keywords, for, seo" />
       </Helmet>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
       <Footer />

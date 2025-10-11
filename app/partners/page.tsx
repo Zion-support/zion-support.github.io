@@ -4,7 +4,13 @@ import React from 'react';
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Content Section */}
@@ -22,10 +28,18 @@ import React from 'react';
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </div>
       
+      <Footer />
+    </>
       <Footer />
     </>
   );

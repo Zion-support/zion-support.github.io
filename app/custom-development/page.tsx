@@ -12,7 +12,13 @@ import React from 'react';
   </main>
         {/* Hero Section */}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
       <Footer />

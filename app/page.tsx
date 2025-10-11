@@ -81,9 +81,7 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
+            </div></div></section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -95,16 +93,13 @@ const HomePage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to drive your business forward.
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <feature.icon className="w-8 h-8 text-cyan-400 mr-3" />
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  </div><p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-gray-300">
@@ -139,7 +134,7 @@ const HomePage: React.FC = () => {
           </div>
         </section>
       </main>
-
+      
       <Footer />
     </div>
   );

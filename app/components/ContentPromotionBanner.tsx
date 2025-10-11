@@ -1,5 +1,11 @@
       </div>
+      
+      <Footer />
+    </>
     </div>
+      
+      <Footer />
+    </>
   )
 }
 

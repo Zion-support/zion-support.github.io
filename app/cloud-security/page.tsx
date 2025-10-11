@@ -45,6 +45,14 @@ const PagePage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
@@ -71,8 +79,17 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+      
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
       <Footer />
@@ -80,4 +97,10 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default PagePage
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  );

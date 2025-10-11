@@ -45,6 +45,14 @@ const PerformanceOptimizationPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
         <meta name="keywords" content="relevant, keywords, for, seo" />
@@ -71,8 +79,17 @@ const PerformanceOptimizationPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+      
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Features Section */}
@@ -86,13 +103,18 @@ const PerformanceOptimizationPage: React.FC = () => {
                 Advanced technology that drives results
               </p>
             </div>
-
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
+      
+      <Footer />
+    </>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
@@ -106,9 +128,18 @@ const PerformanceOptimizationPage: React.FC = () => {
                     </ul>
                   )}
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Benefits Section */}
@@ -122,18 +153,32 @@ const PerformanceOptimizationPage: React.FC = () => {
                 Proven results that drive business growth
               </p>
             </div>
-
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
+      
+      <Footer />
+    </>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
@@ -154,8 +199,17 @@ const PerformanceOptimizationPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
+      
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </main>
 

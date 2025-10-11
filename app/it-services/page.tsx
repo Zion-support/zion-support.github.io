@@ -36,18 +36,38 @@ selectedCategory === 'all' || service.category === selectedCategory
   );
 return (;
     <>
+      <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Services Grid */}
@@ -57,10 +77,13 @@ return (;
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
 Our IT Services
               </h2>
-              <p className="text-xl text-gray-300">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your data into actionable insights with our advanced AI analytics platform
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {feature}
                       </li>
@@ -68,9 +91,18 @@ Our IT Services
                   </ul>
                   </button>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
@@ -78,14 +110,23 @@ Our IT Services
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
 Ready to Optimize Your IT Infrastructure?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-  </p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your data into actionable insights with our advanced AI analytics platform
+              </p>
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </div>
       
+      <Footer />
+    </>
       <Footer />
     </>
   );

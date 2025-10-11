@@ -62,6 +62,14 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts in AI and technology solutions." />
       </Helmet>
@@ -79,6 +87,9 @@ const AboutPage: React.FC = () => {
               We are a team of passionate technologists dedicated to transforming businesses through innovative AI and technology solutions.
             </p>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Features Section */}
@@ -90,7 +101,9 @@ const AboutPage: React.FC = () => {
                 Our core principles guide everything we do
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon
@@ -99,13 +112,25 @@ const AboutPage: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
+      
+      <Footer />
+    </>
                 );
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Values Section */}
@@ -117,7 +142,9 @@ const AboutPage: React.FC = () => {
                 The principles that guide our work
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, index) => {
                 const Icon = value.icon
@@ -126,13 +153,25 @@ const AboutPage: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
                     <p className="text-gray-300">{value.description}</p>
                   </div>
+      
+      <Footer />
+    </>
                 );
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Mission Section */}
@@ -143,6 +182,9 @@ const AboutPage: React.FC = () => {
               We focus on creating solutions that make a positive difference in the world and our clients' businesses.
             </p>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Team Section */}
@@ -154,7 +196,9 @@ const AboutPage: React.FC = () => {
                 The experts behind our innovative solutions
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {team.map((member, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
@@ -162,9 +206,18 @@ const AboutPage: React.FC = () => {
                   <p className="text-purple-400 mb-4">{member.role}</p>
                   <p className="text-gray-300">{member.bio}</p>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </main>
       

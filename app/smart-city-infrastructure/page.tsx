@@ -2,6 +2,14 @@
 import React from 'react';
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
         <meta name="keywords" content="relevant, keywords, for, seo" />
@@ -20,8 +28,17 @@ import React from 'react';
                   Learn More
                 </button>
               </div>
+      
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
               </h2>
@@ -33,10 +50,22 @@ import React from 'react';
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
+      
+      <Footer />
+    </>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Benefits Section */}
@@ -45,7 +74,13 @@ import React from 'react';
             <div className="text-center mb-16">
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
@@ -66,8 +101,17 @@ import React from 'react';
                   Learn More
                 </button>
               </div>
+      
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       <Footer />
     </>

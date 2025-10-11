@@ -90,6 +90,14 @@ const PagePage: React.FC = () => {
   return (
     <>
       <Helmet>
+        <title>AI Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered 3D model generation and design automation solutions" />
         <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, design automation, 3D assets" />
@@ -105,6 +113,10 @@ const PagePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">3D Generation</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Revolutionary AI-powered 3D model generation and design automation solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -112,34 +124,36 @@ const PagePage: React.FC = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">3D Generation</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                View Gallery
-              </button>
                   View Gallery
                 </button>
               </div>
+      
+      <Footer />
+    </>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Features Section */}
             </div>
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
                   </div>
+      
+      <Footer />
+    </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -151,6 +165,9 @@ const PagePage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
+      
+      <Footer />
+    </>
               ))}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -162,7 +179,9 @@ const PagePage: React.FC = () => {
                 Advanced AI technology for creating professional 3D content
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon
@@ -171,6 +190,9 @@ const PagePage: React.FC = () => {
                     <div className="text-cyan-400 mb-4">
                       <Icon className="h-8 w-8" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
@@ -182,13 +204,25 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+      
+      <Footer />
+    </>
                 )
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
             </div>
+      
+      <Footer />
+    </>
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -200,7 +234,9 @@ const PagePage: React.FC = () => {
                 Discover how AI 3D generation can transform your industry
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon
@@ -209,13 +245,25 @@ const PagePage: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                     <p className="text-gray-300">{useCase.description}</p>
                   </div>
+      
+      <Footer />
+    </>
                 )
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Benefits Section */}
@@ -229,13 +277,35 @@ const PagePage: React.FC = () => {
                 Transform your 3D workflow with intelligent automation
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
+                    <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
+      
+      <Footer />
+    </>
                   <p className="text-gray-300">{benefit}</p>
+                </div>
+      
+      <Footer />
+    </>
+              ))}
+            </div>
+      
+      <Footer />
+    </>
+          </div>
+      
+      <Footer />
+    </>
+        </section>
+
+        {/* Features Section */}
         <section className="py-20 px-4">
           <div className="container mx-auto">
             <div className="text-center mb-16">
@@ -246,7 +316,9 @@ const PagePage: React.FC = () => {
                 Powerful tools for creating professional 3D content
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon;
@@ -255,6 +327,9 @@ const PagePage: React.FC = () => {
                     <div className="text-cyan-400 mb-4">
                       <Icon className="h-8 w-8" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
@@ -266,10 +341,19 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+      
+      <Footer />
+    </>
                 );
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* Benefits Section */}
@@ -283,16 +367,27 @@ const PagePage: React.FC = () => {
                 Revolutionize your 3D workflow with artificial intelligence
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
+      
+      <Footer />
+    </>
               ))}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
             </p>
@@ -324,7 +419,9 @@ const PagePage: React.FC = () => {
                 Perfect for a wide range of creative and professional applications
               </p>
             </div>
-            
+      
+      <Footer />
+    </>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => {
                 const Icon = useCase.icon
@@ -333,13 +430,25 @@ const PagePage: React.FC = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
+      
+      <Footer />
+    </>
                     <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                     <p className="text-gray-300">{useCase.description}</p>
                   </div>
+      
+      <Footer />
+    </>
                 );
               })}
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
 
         {/* CTA Section */}
@@ -360,14 +469,45 @@ const PagePage: React.FC = () => {
                 Contact Us
               </button>
             </div>
+      
+      <Footer />
+    </>
           </div>
+      
+      <Footer />
+    </>
         </section>
       </div>
       
       <Footer />
     </>
+      <Footer />
+    </>
   );
 };
 
-export default Ai3dGenerationPage;
-export default Ai3dGenerationPage;
+export default Ai3dGenerationPage
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  )
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  )
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  )
+      </div>
+      
+      <Footer />
+    </>
+    </>
+  );
