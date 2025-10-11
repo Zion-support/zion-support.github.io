@@ -2,7 +2,7 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 
 const SitemapPage: React.FC = () => {
   const pages = [

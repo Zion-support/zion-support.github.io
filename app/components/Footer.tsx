@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
 
 const Footer: React.FC = () => {
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link href="/cybersecurity-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Cybersecurity
                 </Link>
               </li>

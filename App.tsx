@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './app/styles/futuristic.css'
 import './app/styles/futuristic-enhanced.css'
-import Navigation from './app/components/Navigation'
+import Navigation from './app/components/EnhancedNavigation'
 import Footer from './app/components/Footer'
 import HomePage from './app/page'
 import { PageLoader } from './app/components/LoadingStates'
@@ -52,6 +52,11 @@ const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page')
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'))
+// Additional Service Pages
+const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+// 404 Page
+const NotFoundPage = React.lazy(() => import('./app/not-found'))
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor()
@@ -113,6 +118,13 @@ const App: React.FC = () => {
                             
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />
+                            
+                            {/* Additional Service Pages */}
+                            <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                            
+                            {/* 404 Route */}
+                            <Route path="*" element={<NotFoundPage />} />
                           </Routes>
                         </Suspense>
                       </main>
