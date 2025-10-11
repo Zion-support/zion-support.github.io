@@ -16,6 +16,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     color = 'blue',
     fullScreen = false
   }) => {
+    // Note: fullScreen parameter is used in containerClasses calculation below
     const sizeClasses = useMemo(
       () => ({
         xs: 'h-3 w-3',
@@ -57,7 +58,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     );
 
     const renderSpinner = useMemo(() => {
-      const _baseClasses = `${sizeClasses[size]} ${colorClasses[color]}`;
       switch (variant) {
         case 'dots':
           return (
@@ -120,12 +120,10 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
             />
           );
       }
-    }, [size, variant, color, sizeClasses, colorClasses]);
+    }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
     const containerClasses = useMemo(() => {
-      const _baseClasses = 'flex items-center justify-center';
-      const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
-      return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
+      return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
+    }, [baseClasses, fullScreen, fullScreenClasses, className]);
     return (
       <div className={containerClasses}>
         <div className='text-center'>

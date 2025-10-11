@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Globe, Users, Server, HardDrive, Monitor, Printer, Router, ArrowRight, CheckCircle, Star, Phone, Award, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -223,70 +223,9 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { name: 'All', count: itServices.length },
-    { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-    { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
-    { name: 'Data', count: itServices.filter(s => s.category === 'Data').length },
-    { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
-    { name: 'Support', count: itServices.filter(s => s.category === 'Support').length },
-    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length },
-    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length },
-    { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
-    { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
-    { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration & Management',
-      description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
-      features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
-      price: 'Starting at $1,299/month',
-      color: 'text-blue-400'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity Suite',
-      description: 'Comprehensive security solutions with threat detection and automated response.',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Automated Response', 'Compliance Reporting'],
-      price: 'Starting at $799/month',
-      color: 'text-red-400'
-    },
-    {
-      icon: Settings,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
-      features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Performance Monitoring'],
-      price: 'Starting at $599/month',
-      color: 'text-green-400'
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
-      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
-      price: 'Starting at $399/month',
-      color: 'text-teal-400'
-    },
-    {
-      icon: Globe,
-      title: 'Network Solutions',
-      description: 'Enterprise networking with high-speed connectivity and advanced security features.',
-      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Support'],
-      price: 'Starting at $699/month',
-      color: 'text-purple-400'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications with modern UI/UX design.',
-      features: ['iOS & Android Apps', 'Cross-Platform Development', 'UI/UX Design', 'App Store Optimization'],
-      price: 'Starting at $2,500/project',
-      color: 'text-orange-400'
-    }
-  ];
+  // Removed unused categories and services variables
+
+  // Removed unused benefits array
 
   const additionalServices = [
     {
@@ -327,28 +266,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    {
-      icon: Star,
-      title: 'Proven Expertise',
-      description: '10+ years of experience with 100+ successful projects'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Support',
-      description: 'Round-the-clock technical support and monitoring'
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for all solutions'
-    },
-    {
-      icon: Award,
-      title: 'Certified Professionals',
-      description: 'Microsoft, AWS, and Google certified engineers'
-    }
-  ];
+  // Removed unused benefits variable
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

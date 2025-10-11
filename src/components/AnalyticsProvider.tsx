@@ -13,9 +13,9 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
       document.head.appendChild(script);
       // Initialize gtag
-      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as { dataLayer: unknown[] }).dataLayer = (window as { dataLayer: unknown[] }).dataLayer || [];
       function gtag(...args: unknown[]) {
-        (window as any).dataLayer.push(args);
+        (window as { dataLayer: unknown[] }).dataLayer.push(args);
       }
       (window as { gtag: typeof gtag }).gtag = gtag;
       gtag('js', new Date());
@@ -95,7 +95,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     return () => {
       window.removeEventListener('popstate', handleRouteChange);
     };
-  }, []);
+  }, [GA_TRACKING_ID]);
   return <>{children}</>;
 };
 export default AnalyticsProvider;
