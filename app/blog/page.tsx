@@ -7,7 +7,7 @@ import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const blogPosts = const blogPosts = const blogPosts = [
+  const blogPosts = [
     {
       id: 1,
       title: 'The Future of AI in Business',
@@ -46,14 +46,15 @@ const BlogPage: React.FC = () => {
       date: '2024-01-01',
       readTime: '8 min read',
       category: 'Development',
-        image: '/images/blog/micro-saas.jpg';
+        image: '/images/blog/micro-saas.jpg'
       };
     ];
   const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development'];
-  const filteredPosts = const filteredPosts = const filteredPosts = blogPosts.filter()
+  const filteredPosts = blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-    post.category.toLowerCase().includes(searchQuery.toLowerCase());
+    post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    post.category.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return ()
                   onChange={(e) => setSearchQuery(e.target.value)}
