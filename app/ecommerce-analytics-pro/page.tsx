@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ecommerce-analytics-proPage: React.FC = () => {
+const EcommerceAnalyticsProPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ecommerce-analytics-proPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default EcommerceAnalyticsProPage

@@ -1,107 +1,106 @@
+'use client'
 import React from 'react'
-const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const services = [
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ServicesPage: React.FC = () => {
+  const features = [
     {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {id: 2,
-      title: 'Cloud Services',} ]
-  const categories = [
-    {value: 'all', label: 'All Services'} ,
-    {value: 'ai', label: 'AI Solutions'} ,
-    {value: 'cloud', label: 'Cloud Services'} ,
-    {value: 'data', label: 'Data Analytics'} ,
-    {value: 'security', label: 'Cybersecurity'} ,
-    {value: 'mobile', label: 'Mobile Development'} ,
-    {value: 'web', label: 'Web Development'} ]
-  const filteredServices = services.filter(service => {const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    return matchesSearch && matchesCategory;} )
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
   return (
     <>
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our services solutions and how they can transform your business." />
+        <meta name="keywords" content="services, solutions, technology, business" />
       </Helmet>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Services - Zion Tech Group | AI and IT Solutions</title>
-        <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics."
-        <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group"
-      </Helmet />
       
       <Navigation />
       
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-                Services Page
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-                Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
               </p>
-              </div>
-      
-      <Footer />
-    </>
             </div>
-      
-      <Footer />
-    </>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
-        {/* Services Grid */}
-          </div>
-      
-      <Footer />
-    </>
-        </section>
-
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
-              Contact us today to learn how our solutions can transform your business.
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                Contact Us
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
               </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
-                Schedule Demo
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
               </button>
             </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
         </section>
-      </div>
+      </main>
       
       <Footer />
     </>
-      <Footer />
-    </>
-  );
+  )
+}
+
 export default ServicesPage
-    </Footer>

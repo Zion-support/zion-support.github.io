@@ -103,4 +103,4 @@ const EnterprisePage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default EnterprisePage

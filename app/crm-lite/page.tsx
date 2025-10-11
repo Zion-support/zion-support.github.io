@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Crm-litePage: React.FC = () => {
+const CrmLitePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Crm-litePage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default CrmLitePage

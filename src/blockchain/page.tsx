@@ -103,4 +103,4 @@ const BlockchainPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default BlockchainPage

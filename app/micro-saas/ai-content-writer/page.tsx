@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-content-writerPage: React.FC = () => {
+const AiContentWriterPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-content-writerPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default AiContentWriterPage

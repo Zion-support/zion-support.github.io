@@ -1,112 +1,106 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
+
+const ItConsultingPage: React.FC = () => {
+  const features = [
     {
-      title: 'Digital Transformation',
-      description: 'Comprehensive digital transformation strategies to modernize your business operations.',
       icon: Brain,
-      features: ['Technology Assessment', 'Digital Strategy Planning', 'Process Optimization', 'Change Management'],
-      benefits: ['Increased Efficiency', 'Cost Reduction', 'Better Customer Experience', 'Competitive Advantage'],
-      price: 'Starting at $5,000/month'
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
     {
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud platforms with minimal downtime and maximum security.',
-      icon: Cloud,
-      features: ['Cloud Architecture Design', 'Data Migration', 'Security Implementation', 'Performance Optimization'],
-      benefits: ['Scalability', 'Cost Savings', 'Enhanced Security', 'Improved Performance'],
-      price: 'Starting at $3,500/month'
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
   ]
-  return (<React.Fragment>
+
+  return (
+    <>
       <Helmet>
-        <title>IT Consulting Services - Zion Tech Group
-        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
-        <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" />
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation /></Navigation>"
-        <main className="pt-24 pb-16 px-4"></main>"
-          <div className="max-w-7xl mx-auto"></div>"
-            <div className="text-center mb-16"></div>"
-              < className="text-4xl,"$2 />
-  md: text-6xl font-bold text-gray-900 mb-6"></h1>
-                IT Consulting Services,
-              </h1>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
-                Transform your business with expert IT consulting. We provide strategic guidance, 
-                digital transformation, and technology solutions that drive growth and efficiency.
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-              {consultingServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 bg-blue-100 rounded-xl mr-4">
-                      <service.icon className="w-8 h-8 text-blue-600" />
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{service.title}
-                      <p className="text-gray-600">{service.description}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          {feature}
-                        </li>)
-                      ))}
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                      ))}
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                      ))}
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
-                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
-                        Get Started,
-  
-                    </div>
-                  </div>
-                </div>
-              ))}
-          {/* CTA Section */}
-          <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?
-              <p className="text-xl text-gray-600 mb-8">
-                Contact our experts for a free consultation and discover how we can help your business.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
-                  <Phone className="w-5 h-5 inline mr-2" />
-                  Call Us
-  
-                <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
-                  <Mail className="w-5 h-5 inline mr-2" />
-                  Email Us
-  
-              </div>
+        <title>It Consulting - Zion Tech Group</title>
+        <meta name="description" content="Learn about our it consulting solutions and how they can transform your business." />
+        <meta name="keywords" content="it-consulting, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
             </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </React.Fragment>
-  ),
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  )
 }
-export default ITConsultingPage</button>
-  </button>
-  </button>
-</div></div></div></div></p></p></h2></h3></h4></h4></h4></ul></ul></ul></li></li>
+
+export default ItConsultingPage

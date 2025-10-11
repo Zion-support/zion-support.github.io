@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Quantum-edge-ai-revolution-october-2025Page: React.FC = () => {
+const QuantumEdgeAiRevolutionOctober2025Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Quantum-edge-ai-revolution-october-2025Page: React.FC = () => {
   )
 }
 
-export default PagePage
+export default QuantumEdgeAiRevolutionOctober2025Page

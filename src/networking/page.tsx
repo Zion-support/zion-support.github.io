@@ -103,4 +103,4 @@ const NetworkingPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default NetworkingPage

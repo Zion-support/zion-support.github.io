@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Supply-chain-optimizerPage: React.FC = () => {
+const SupplyChainOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Supply-chain-optimizerPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default SupplyChainOptimizerPage

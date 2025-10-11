@@ -103,4 +103,4 @@ const NlpPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default NlpPage

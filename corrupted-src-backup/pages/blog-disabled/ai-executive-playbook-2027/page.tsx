@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-executive-playbook-2027Page: React.FC = () => {
+const AiExecutivePlaybook2027Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-executive-playbook-2027Page: React.FC = () => {
   )
 }
 
-export default PagePage
+export default AiExecutivePlaybook2027Page

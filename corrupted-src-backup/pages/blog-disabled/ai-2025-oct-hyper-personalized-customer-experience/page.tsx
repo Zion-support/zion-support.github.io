@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-2025-oct-hyper-personalized-customer-experiencePage: React.FC = () => {
+const Ai2025OctHyperPersonalizedCustomerExperiencePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-2025-oct-hyper-personalized-customer-experiencePage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Ai2025OctHyperPersonalizedCustomerExperiencePage

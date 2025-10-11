@@ -1,173 +1,106 @@
-import React from 'react'
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react'
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react'
-import { Link } from 'react-router-dom'
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AIMLPlatformPage: React.FC = () => {
+
+const AiMlPlatformPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Complete ML Platform',
-      description: 'End-to-end machine learning platform with model development, training, and deployment',
-      benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
-      icon: TrendingUp,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics and monitoring for machine learning models',
-      benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
+    {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for your machine learning infrastructure',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails']
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Collaborative tools for data scientists and ML engineers',
-      benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
-    }
-  ]
-  const pricingPlans = [
-      name: 'Developer',
-      price: '$999',
-      period: '/month',
-      description: 'Perfect for individual developers',
-      features: [
-        'Up to 5 models',
-        'Basic ML tools',
-        'Email support',
-        'Standard compute',
-        'Basic analytics'
-      ],
-      popular: false,
-    name: 'Team',
-      price: '$2,499',
-      description: 'Ideal for development teams',
-  const features = []
-  return (
-    {
-    // TODO: Add content
-  }
-}
-  ico,
-  n: Brain,
-      titl,
-  e: 'Complete ML Platform',
-      descriptio,
-  n: 'End-to-end machine learning platform with model development, training, and deployment',
-      benefit,
-  s: ['Rapid model development', 'Automated training', 'Seamless deployment']
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
-      ico,
-  n: TrendingUp,
-      titl,
-  e: 'Advanced Analytics',
-      descriptio,
-  n: 'Comprehensive analytics and monitoring for machine learning models',
-      benefit,
-  s: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
-      ico,
-  n: Users,
-      titl,
-  e: 'Team Collaboration',
-      descriptio,
-  n: 'Collaborative tools for data scientists and ML engineers',
-      benefit,
-  s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
   ]
-  const pricingPlans = [
-      nam,
-  e: 'Team',
-      pric,
-  e: '$2,499',
-      descriptio,
-  n: 'Ideal for development teams',
-        'Up to 25 models',
-        'Advanced ML tools',
-        'Priority support',
-        'High-performance compute',
-        'Advanced analytics',
-        'Team collaboration'
-      popular: true,
-    name: 'Enterprise',
-      price: '$4,999',
-      description: 'For large organizations',
-        'Unlimited models',
-      popula,
-  r: true,
-      nam,
-  e: 'Enterprise',
-      pric,
-  e: '$4,999',
-      descriptio,
-  n: 'For large organizations',
-'Unlimited models',
-        'Premium ML features',
-        '24/7 support',
-        'Custom compute',
-        'Custom analytics',
-        'White-label options',
-        'API access'
-  const stats = [
-  const stats = [
-  // TOD,
-  O: Add items
-],
-    { icon: Users, value: '500+', label: 'Data Scientists' },
-    { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
-    { icon: Clock, value: '70%', label: 'Faster Development' },
-    { icon: Star, value: '4.9/5', label: 'User Rating' }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AI ML Platform | Zion Tech Group
-        <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
+        <title>Ai Ml Platform - Zion Tech Group</title>
+        <meta name="description" content="Learn about our ai ml platform solutions and how they can transform your business." />
+        <meta name="keywords" content="ai-ml-platform, solutions, technology, business" />
+      </Helmet>
+      
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI ML platform solutions that will transform your business.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
-      <Footer />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-  
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-  
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us,
-          </button>"
-            < className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,$2 />
-  hover:bg-cyan-400,"
-  hover: text-slate-900 transition-colors"></button>
-Learn More
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
           </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
       <Footer />
-    </div>
-  ),
+    </>
+  )
 }
-export default $1
-export default AiMlPlatformPage</p>
-  </h1>
-  </section>
-  </main>
-  </button>
-  </button>
-  </div>
-  </div>
-  </div>
-</h1>
+
+export default AiMlPlatformPage

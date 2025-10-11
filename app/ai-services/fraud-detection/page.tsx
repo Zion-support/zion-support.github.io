@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Fraud-detectionPage: React.FC = () => {
+const FraudDetectionPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Fraud-detectionPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default FraudDetectionPage

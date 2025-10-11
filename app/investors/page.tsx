@@ -103,4 +103,4 @@ const InvestorsPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default InvestorsPage

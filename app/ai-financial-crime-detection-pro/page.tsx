@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-financial-crime-detection-proPage: React.FC = () => {
+const AiFinancialCrimeDetectionProPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-financial-crime-detection-proPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default AiFinancialCrimeDetectionProPage

@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Seo-optimizerPage: React.FC = () => {
+const SeoOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Seo-optimizerPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default SeoOptimizerPage

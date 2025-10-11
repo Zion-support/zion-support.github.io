@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-neural-memory-assistantPage: React.FC = () => {
+const AiNeuralMemoryAssistantPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-neural-memory-assistantPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default AiNeuralMemoryAssistantPage

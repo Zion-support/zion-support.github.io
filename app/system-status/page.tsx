@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const System-statusPage: React.FC = () => {
+const SystemStatusPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const System-statusPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default SystemStatusPage

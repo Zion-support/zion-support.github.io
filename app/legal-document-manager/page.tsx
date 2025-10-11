@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Legal-document-managerPage: React.FC = () => {
+const LegalDocumentManagerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Legal-document-managerPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default LegalDocumentManagerPage

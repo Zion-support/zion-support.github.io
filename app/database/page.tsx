@@ -103,4 +103,4 @@ const DatabasePage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default DatabasePage

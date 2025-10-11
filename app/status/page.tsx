@@ -103,4 +103,4 @@ const StatusPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default StatusPage

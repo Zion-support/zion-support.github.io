@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-2027-implementation-roadmapPage: React.FC = () => {
+const Ai2027ImplementationRoadmapPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-2027-implementation-roadmapPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Ai2027ImplementationRoadmapPage

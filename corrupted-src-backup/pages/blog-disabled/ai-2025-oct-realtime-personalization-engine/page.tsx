@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-2025-oct-realtime-personalization-enginePage: React.FC = () => {
+const Ai2025OctRealtimePersonalizationEnginePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-2025-oct-realtime-personalization-enginePage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Ai2025OctRealtimePersonalizationEnginePage

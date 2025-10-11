@@ -103,4 +103,4 @@ const HealthPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default HealthPage

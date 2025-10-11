@@ -103,4 +103,4 @@ const ServicesPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default ServicesPage

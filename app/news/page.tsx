@@ -103,4 +103,4 @@ const NewsPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default NewsPage

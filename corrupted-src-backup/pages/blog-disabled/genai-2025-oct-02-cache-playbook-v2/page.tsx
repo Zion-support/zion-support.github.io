@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Genai-2025-oct-02-cache-playbook-v2Page: React.FC = () => {
+const Genai2025Oct02CachePlaybookV2Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Genai-2025-oct-02-cache-playbook-v2Page: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Genai2025Oct02CachePlaybookV2Page

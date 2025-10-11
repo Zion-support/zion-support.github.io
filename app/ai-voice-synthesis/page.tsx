@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-voice-synthesisPage: React.FC = () => {
+const AiVoiceSynthesisPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-voice-synthesisPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default AiVoiceSynthesisPage

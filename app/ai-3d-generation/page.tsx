@@ -9,8 +9,8 @@ const Ai3dGenerationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered 3D Generation',
-      description: 'Advanced artificial intelligence solutions that create stunning 3D models and environments.'
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
     {
       icon: Shield,
@@ -27,8 +27,8 @@ const Ai3dGenerationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="Learn about our AI 3D generation solutions and how they can transform your business." />
+        <title>Ai 3d Generation - Zion Tech Group</title>
+        <meta name="description" content="Learn about our ai 3d generation solutions and how they can transform your business." />
         <meta name="keywords" content="ai-3d-generation, solutions, technology, business" />
       </Helmet>
       
@@ -39,10 +39,10 @@ const Ai3dGenerationPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI 3D Generation
+              Page Title
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Learn about our AI 3D generation solutions and how they can transform your business.
+              Description of the page and its benefits for your business.
             </p>
           </div>
         </section>

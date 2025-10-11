@@ -1,88 +1,106 @@
+'use client'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Star } from 'lucide-react'
+
 const ProductivityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Productivity - Zion Tech Group</title>
+        <meta name="description" content="Learn about our productivity solutions and how they can transform your business." />
+        <meta name="keywords" content="productivity, solutions, technology, business" />
+      </Helmet>
+      
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-  
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
-  
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-        {/* Key Benefits */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-// Why Choose Our Productivity Tools?
-          </h2>"
-<div className="text-4xl mb-4">⚡</div>"
-              <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>"
-              <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>"
-              <div className="text-4xl mb-4">🎯</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Focused Efficiency</h3>"
-              <p className="text-gray-300 text-sm">Tools designed to eliminate distractions and boost focus</p>"
-              <div className="text-4xl mb-4">📈</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Measurable Results</h3>"
-              <p className="text-gray-300 text-sm">Track and measure your productivity improvements</p>"
-              <div className="text-4xl mb-4">🔗</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>"
-              <p className="text-gray-300 text-sm">Works with your existing tools and workflows
-        {/* Tools by Category */})
-        {categories.map(category => ()}"
-          <section key={category} className="mb-16"></section>"
-            <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
-            <div>{
-    productivityTools
-  }
-                .filter(tool => tool.category === category)
-                .map((tool, index) => ("
-<div className="text-4xl mb-4 text-center">{tool.icon}</div>"
-                    <h4 className="text-xl font-bold text-white mb-3 text-center">{tool.title}</h4>"
-                    <p className="text-gray-300 mb-4 text-sm text-center">{tool.description}</p>"
-                        <span className="text-2xl font-bold text-cyan-400">{tool.price}</span>"
-                        <span className="text-sm text-gray-400">Marke,
-  t: {tool.marketPrice}
-                      <div>Save up to 50% vs market rates</div>"
-                      <h5 className="font-semibold text-white mb-2 text-sm">Key,
-  Features:</h5>"
-                      <ul className="space-y-1"></ul>)
-                        {tool.features.slice(0, 3).map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>"
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
-                        ))}
-                        {tool.features.length > 3 && (}"
-<li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>)
-                        )}
-                      </ul>"
-                      <h5 className="font-semibold text-white mb-2 text-sm">Benefit,
-  s:
-                        {tool.benefits.map((benefit, benefitIndex) => ()}"
-          <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
-                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
-                            {benefit}"
-className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold,
-  hover:from-cyan-600,"
-  hover:to-blue-700 transition-all text-sm inline-block"
-                      >Get This Tool
-        {/* CTA Section */}"
-        <section className="text-center"></section>"
-          <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-            Ready to Boost Your Productivity?"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get started with our productivity tools and transform how you work
-            >Get Started Today</a>"
-              href="te,"
-  l: +13024640950"
-            >Call (302) 464-0950</a>
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
-      <Footer /></Footer>
-</div>),
+      
+      <Footer />
+    </>
+  )
 }
-export default ProductivityPage</div></span></p></p></p></p></h1></h2></h3></h5></main></section></section>
+
+export default ProductivityPage

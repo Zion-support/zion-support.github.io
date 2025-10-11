@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Genai-2025-oct-01-e2e-eval-pipelinesPage: React.FC = () => {
+const Genai2025Oct01E2eEvalPipelinesPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Genai-2025-oct-01-e2e-eval-pipelinesPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Genai2025Oct01E2eEvalPipelinesPage

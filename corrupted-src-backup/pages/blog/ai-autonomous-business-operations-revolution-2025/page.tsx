@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-autonomous-business-operations-revolution-2025Page: React.FC = () => {
+const AiAutonomousBusinessOperationsRevolution2025Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-autonomous-business-operations-revolution-2025Page: React.FC = () => {
   )
 }
 
-export default PagePage
+export default AiAutonomousBusinessOperationsRevolution2025Page

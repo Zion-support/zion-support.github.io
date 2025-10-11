@@ -103,4 +103,4 @@ const SlaPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default SlaPage

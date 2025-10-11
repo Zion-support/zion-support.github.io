@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Genai-2027-cost-tiers-v3Page: React.FC = () => {
+const Genai2027CostTiersV3Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Genai-2027-cost-tiers-v3Page: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Genai2027CostTiersV3Page

@@ -103,4 +103,4 @@ const FaqPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default FaqPage

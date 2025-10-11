@@ -103,4 +103,4 @@ const CommunityPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default CommunityPage

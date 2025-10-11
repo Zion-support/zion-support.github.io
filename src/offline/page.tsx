@@ -1,59 +1,106 @@
-'use client';
-import React from 'react';;
-import { WifiOff;, RefreshCw, Home, Wifi } from 'lucide-react';
-import { Link; } from 'react-router-dom';
-import Navigation from '../components/Navigation';;
-import Footer from '../components/Footer';
 'use client'
-/**
- * Offline Page
- * Displayed when the user is offline and tries to access a page
- */;
-const,;,
-OfflinePage: React.FC = () => {const handleRetry = () => {};}
-    window.location.reload()
-  }
-  const handleGoHome = () => {/* TODO: Fix JSX expression */;}
-  O: Add content,}
-}
-    window.location.href = '/';
-return (<div>Coming Soon</div>);
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const OfflinePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Offline - Zion Tech Group</title>
+        <meta name="description" content="Learn about our offline solutions and how they can transform your business." />
+        <meta name="keywords" content="offline, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
-      <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>"
-        <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center"></div>"
-          <WifiOff className="w-8 h-8 text-orange-400" />
-        </div>"
-        <h1 className="text-2xl font-bold text-white mb-4">
-// You're Offline</$1>"
-        <p className="text-gray-300 mb-6">;
-It looks like you're not connected to the internet. Please check your connection and try again.
-        </p>"
-        <div className="space-y-3">
-          <button>;
-onClick={handleRetry}";
-className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500,";,
-hover: bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"
-// >
-          "
-          <RefreshCw className="w-4 h-4" /></RefreshCw>
-// Try Again,
-          </button>;
-onClick={handleGoHome}";
-className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,";,
-hover: bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
-            <Home className="w-4 h-4" /></Home>;
-Go Home;"
-        <div className="mt-6 text-sm text-gray-400"></div>"
-          <p className="flex items-center justify-center gap-2"></p>"
-            <Wifi className="w-4 h-4" />;
-Check your internet connection;"
-        <div className="mt-8 p-4 bg-black/20 rounded-lg"></div>"
-          <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>"
-          <p className="text-xs text-gray-400">
-  </p>;
-Some content may be available offline thanks to our service worker.;
-Try refreshing the page once you're back online.
-  ),
 }
-export default OfflinePage</$1></h1>
+
+export default OfflinePage

@@ -103,4 +103,4 @@ const TermsPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default TermsPage

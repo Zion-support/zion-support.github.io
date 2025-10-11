@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Social-managerPage: React.FC = () => {
+const SocialManagerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Social-managerPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default SocialManagerPage

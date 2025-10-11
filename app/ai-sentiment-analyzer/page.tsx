@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-sentiment-analyzerPage: React.FC = () => {
+const AiSentimentAnalyzerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-sentiment-analyzerPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default AiSentimentAnalyzerPage

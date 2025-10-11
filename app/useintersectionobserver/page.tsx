@@ -103,4 +103,4 @@ const UseintersectionobserverPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default UseintersectionobserverPage

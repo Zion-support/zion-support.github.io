@@ -103,4 +103,4 @@ const DemoPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default DemoPage

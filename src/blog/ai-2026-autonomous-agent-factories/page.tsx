@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-2026-autonomous-agent-factoriesPage: React.FC = () => {
+const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-2026-autonomous-agent-factoriesPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Ai2026AutonomousAgentFactoriesPage

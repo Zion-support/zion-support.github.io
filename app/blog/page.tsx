@@ -103,4 +103,4 @@ const BlogPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default BlogPage

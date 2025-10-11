@@ -103,4 +103,4 @@ const GuidesPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default GuidesPage

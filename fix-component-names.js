@@ -1,68 +1,73 @@
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Get all files with errors
-const getAllFilesWithErrors = () => {
-  const srcDir = path.join(__dirname, 'src')
-  const files = []
-  const scanDirectory = (dir) => {
-    const items = fs.readdirSync(dir)
-    for (const item of items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
-        scanDirectory(fullPath)
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        files.push(fullPath)
-      }
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function fixComponentName(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Extract page name from path
+    const pathParts = filePath.split('/');
+    const pageName = pathParts[pathParts.length - 2] || 'Page';
+    const componentName = pageName.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page';
+    
+    // Fix the component name in the file
+    let fixedContent = content.replace(/const PagePage: React.FC = \(\) => \{/, `const ${componentName}: React.FC = () => {`);
+    fixedContent = fixedContent.replace(/export default PagePage/, `export default ${componentName}`);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent);
+      console.log(`Fixed component name in: ${filePath}`);
+      return true;
     }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  scanDirectory(srcDir)
-  return files
 }
-// Fix component names in files
-const fixComponentNames = () => {
-  const files = getAllFilesWithErrors()
-  let fixedCount = 0
-  for (const filePath of files) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8')
-      let modified = false
-      // Fix component names with spaces
-      const componentNameMatch = content.match(/const\s+([A-Za-z\s]+)Page: \s*React\.FC/)
-      if (componentNameMatch) {,
-        const oldName = componentNameMatch[1];,
-        const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) => letter.toUpperCase())
-        if (oldName !== newName) {
-          content = content.replace(new RegExp(`const\\s+${oldName.replace(/\s+/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`)
-          content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/\s+/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`)
-          modified = true
-        }
-      }
+
+function findPageFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
       
-      // Fix title in JSX
-      const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/)
-      if (titleMatch) {
-        const oldTitle = titleMatch[1]
-        const newTitle = oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUpperCase())
-        if (oldTitle !== newTitle) {
-          content = content.replace(oldTitle, newTitle)
-          modified = true
-        }
+      if (stat.isDirectory() && !item.startsWith('.') && !item.includes('node_modules') && !item.includes('dist') && !item.includes('build')) {
+        traverse(fullPath);
+      } else if (stat.isFile() && item === 'page.tsx') {
+        files.push(fullPath);
       }
-      
-      if (modified) {
-        fs.writeFileSync(filePath, content)
-        console.log(`Fixed: ${path.relative(__dirname, filePath)}`)
-        fixedCount++
-      }
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message)
     }
   }
   
-  console.log(`Fixed ${fixedCount} files!`)
+  traverse(dir);
+  return files;
 }
-fixComponentNames()</h1>
+
+// Main execution
+const workspaceDir = process.argv[2] || '/workspace';
+const pageFiles = findPageFiles(workspaceDir);
+
+console.log(`Found ${pageFiles.length} page files to fix`);
+
+let fixedCount = 0;
+for (const file of pageFiles) {
+  if (fixComponentName(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} page files`);

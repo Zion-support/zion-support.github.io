@@ -103,4 +103,4 @@ const DevopsPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default DevopsPage

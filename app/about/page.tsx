@@ -9,27 +9,27 @@ const AboutPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Innovation',
-      description: 'Cutting-edge technology solutions that drive business growth and efficiency.'
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
     {
       icon: Shield,
-      title: 'Security',
-      description: 'Enterprise-grade security measures to protect your data and systems.'
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
     {
       icon: Users,
-      title: 'Expertise',
-      description: 'Experienced team of professionals dedicated to your success.'
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
     }
   ]
 
   return (
     <>
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering exceptional AI and IT solutions." />
-        <meta name="keywords" content="about, company, mission, values, team, expertise" />
+        <title>About - Zion Tech Group</title>
+        <meta name="description" content="Learn about our about solutions and how they can transform your business." />
+        <meta name="keywords" content="about, solutions, technology, business" />
       </Helmet>
       
       <Navigation />
@@ -39,10 +39,10 @@ const AboutPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Zion Tech Group
+              Page Title
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
+              Description of the page and its benefits for your business.
             </p>
           </div>
         </section>
@@ -52,10 +52,10 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our Core Values
+                Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our core principles guide everything we do
+                Discover the powerful features that make our solutions stand out
               </p>
             </div>
             
@@ -80,10 +80,10 @@ const AboutPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's work together to create innovative solutions that drive your success.
+              Contact us today to learn more about our solutions and how they can benefit your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">

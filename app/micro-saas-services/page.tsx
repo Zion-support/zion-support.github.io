@@ -1,225 +1,106 @@
 'use client'
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react'
-const MicroSaasServicesPage: React.FC = () => {const features = [
+
+const MicroSaasServicesPage: React.FC = () => {
+  const features = [
     {
-      icon: Wifi,
-      title: 'Feature 1',
-      description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} , {icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']} ,
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']} , {icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and reliability for mission-critical applications.',
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']} ]
-  const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
   ]
+
   return (
     <>
       <Helmet>
-        </Helmet><title></titl>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <title>Micro Saas Services - Zion Tech Group</title>
+        <meta name="description" content="Learn about our micro saas services solutions and how they can transform your business." />
+        <meta name="keywords" content="micro-saas-services, solutions, technology, business" />
       </Helmet>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div><Helmet>
-        </Helmet><title></titl>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits."
-        <meta name="keywords" content="relevant, keywords, for, seo"
-      </Helmet />
       
       <Navigation />
       
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-                Micro Saas Services Page
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-                Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                  Learn More
-                </button>
-              </div>
-      
-      <Footer />
-    </>
-            </div>
-      
-      <Footer />
-    </>
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Key Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
-                Discover the powerful features that make our solutions stand out.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
               </p>
             </div>
-      
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              </div>{features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-                  <div className="flex items-center mb-4"
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3"
-                    <h3 className="text-xl font-semibold text-gray-900"
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
                   </div>
-
-      <Footer />
-    </>
-                  <h3 className="text-xl font-bold text-white mb-4"></h>{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2"
-                      {feature.benefits.map((benefit, idx) => </ul>(
-                        <li key={idx} className="flex items-center text-sm text-gray-400"
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2"
-                          {benefit}
-                        </li>
-                      )
-    </>
-  )
-                    </ul>
-                  )}
-                </div>
-      
-      <Footer />
-    </>
-              ))}
+                );
+              })}
             </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
-        </section>
-
-        <section className="py-20 bg-gray-100"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-                Why Choose Us
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
-                Experience the benefits of working with industry leaders.
-              </p>
-            </div>
-      
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              </div>{benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
-                    <span className="text-lg font-medium text-gray-900"
-                  </div>
-      <Footer />
-    </>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-      
-      <Footer />
-    </>
-              ))}
-            </div>
-      
-      <Footer />
-    </>
-          </div>
-      
-      <Footer />
-    </>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          </section><div className="max-w-4xl mx-auto text-center">
-            </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                </h>Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                </div><button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  </butto>Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  </butto>Learn More
-                </button>
-              </div>
-      
-      <Footer />
-    </>
-            </div>
-      
-      <Footer />
-    </>
-          </div>
-      
-      <Footer />
-    </>
-        </section>
-      </main>
-
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
-              Contact us today to learn how our solutions can transform your business.
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                Contact Us
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
               </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
-                Schedule Demo
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
               </button>
+            </div>
+          </div>
+        </section>
+      </main>
       
       <Footer />
     </>
   )
 }
+
 export default MicroSaasServicesPage
-        </Navigation>

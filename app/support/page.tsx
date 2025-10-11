@@ -103,4 +103,4 @@ const SupportPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default SupportPage

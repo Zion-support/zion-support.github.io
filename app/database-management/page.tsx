@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Database-managementPage: React.FC = () => {
+const DatabaseManagementPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Database-managementPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default DatabaseManagementPage

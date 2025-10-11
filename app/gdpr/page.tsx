@@ -103,4 +103,4 @@ const GdprPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default GdprPage

@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Edge-2025-sept-30-zero-pii-experiments-v2Page: React.FC = () => {
+const Edge2025Sept30ZeroPiiExperimentsV2Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Edge-2025-sept-30-zero-pii-experiments-v2Page: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Edge2025Sept30ZeroPiiExperimentsV2Page

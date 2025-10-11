@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Digital-transformationPage: React.FC = () => {
+const DigitalTransformationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Digital-transformationPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default DigitalTransformationPage

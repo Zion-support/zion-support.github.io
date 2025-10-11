@@ -103,4 +103,4 @@ const RoboticsPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default RoboticsPage

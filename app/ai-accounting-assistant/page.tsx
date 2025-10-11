@@ -9,13 +9,13 @@ const AiAccountingAssistantPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Accounting',
-      description: 'Advanced artificial intelligence solutions that automate and optimize your accounting processes.'
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Comprehensive security measures to protect your financial data and ensure compliance.'
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
     },
     {
       icon: Users,
@@ -27,8 +27,8 @@ const AiAccountingAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Accounting Assistant - Zion Tech Group</title>
-        <meta name="description" content="Learn about our AI accounting assistant solutions and how they can transform your business." />
+        <title>Ai Accounting Assistant - Zion Tech Group</title>
+        <meta name="description" content="Learn about our ai accounting assistant solutions and how they can transform your business." />
         <meta name="keywords" content="ai-accounting-assistant, solutions, technology, business" />
       </Helmet>
       
@@ -39,10 +39,10 @@ const AiAccountingAssistantPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Accounting Assistant
+              Page Title
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Learn about our AI accounting assistant solutions and how they can transform your business.
+              Description of the page and its benefits for your business.
             </p>
           </div>
         </section>

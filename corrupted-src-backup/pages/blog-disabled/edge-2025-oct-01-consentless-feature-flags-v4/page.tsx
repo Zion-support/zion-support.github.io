@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Edge-2025-oct-01-consentless-feature-flags-v4Page: React.FC = () => {
+const Edge2025Oct01ConsentlessFeatureFlagsV4Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Edge-2025-oct-01-consentless-feature-flags-v4Page: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Edge2025Oct01ConsentlessFeatureFlagsV4Page

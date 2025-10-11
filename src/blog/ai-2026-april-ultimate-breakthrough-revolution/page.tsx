@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-2026-april-ultimate-breakthrough-revolutionPage: React.FC = () => {
+const Ai2026AprilUltimateBreakthroughRevolutionPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-2026-april-ultimate-breakthrough-revolutionPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default Ai2026AprilUltimateBreakthroughRevolutionPage

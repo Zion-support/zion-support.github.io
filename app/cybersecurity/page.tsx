@@ -103,4 +103,4 @@ const CybersecurityPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default CybersecurityPage

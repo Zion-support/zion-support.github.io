@@ -5,7 +5,7 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const Ai-code-generationPage: React.FC = () => {
+const AiCodeGenerationPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -103,4 +103,4 @@ const Ai-code-generationPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default AiCodeGenerationPage

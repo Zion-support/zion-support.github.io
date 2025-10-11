@@ -1,395 +1,106 @@
-import {Eye;, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react'
-'use client';
-import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
-import Navigation from '../components/Navigation';;
-import Footer from '../components/Footer';;
-const SignupPage: React.FC = () => {;
-const [formData, setFormData] = useState({;,
-firstName: '',;,
-lastName: '',;,
-email: '',;,
-company: '',;,
-phone: '',;,
-password: '',;,
-confirmPassword: '',;,
-agreeToTerms: false,;,
-subscribeNewsletter: false
-}
-  });
-const [showPassword, setShowPassword] = useState(false);
-const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;;
-}
-const { name}, value, type, checked } = e.target;
-setFormData(prev => ({)
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }))
-  }
-  const handleSubmit = async (e: React.FormEvent) => {;;
-e.preventDefault();
-if (formData.password !== formData.confirmPassword) {;
-}
-alert('Passwords do not match')},;
-return
-  ;}
-    if (!formData.agreeToTerms) {;
-alert('Please agree to the terms and conditions');
-setIsLoading(true)
-    // Simulate signup process;
-await new Promise(resolve => setTimeout(resolve), 2000));
-setIsLoading(false)
-    // Redirect to dashboard or home page;
-window.location.href = '/';
-const features = [;
-    {;,
-icon: Shield,;,
-title: 'Enterprise Security',;,
-description:     ,;
-$4},;,
-icon: Award,;,
-title: 'Proven Results',;,
-description:       ,;,
-icon$5: Globe,;,
-title: 'Global Support',;,
-description:   ,;
-$4];
-const benefits = [;
-    'Free 14-day trial',
-    'No setup fees',
-    '24/7 expert support',
-    'Custom integrations',
-    'Scalable solutions',
-    'Regular updates';
-return (;
-    <React.Fragment>
-    <div>Coming Soon</div>
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const SignupPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence solutions that automate and optimize your business processes.'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security measures to protect your data and ensure compliance.'
+    },
+    {
+      icon: Users,
+      title: 'Expert Support',
+      description: 'Dedicated team of professionals providing ongoing support and maintenance.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Signup - Zion Tech Group</title>
+        <meta name="description" content="Learn about our signup solutions and how they can transform your business." />
+        <meta name="keywords" content="signup, solutions, technology, business" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Page Title
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Description of the page and its benefits for your business.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Discover the powerful features that make our solutions stand out
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our solutions and how they can benefit your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5 inline" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
   )
 }
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  firstNam,;,
-e: '',;
-lastNam,;,
-e: '',;
-emai,;,
-l: '',;
-compan,;,
-y: '',;
-phon,;,
-e: '',;
-passwor,;,
-d: '',;
-confirmPasswor,;,
-d: '',;
-agreeToTerm,;,
-s: false,;
-subscribeNewslette,;,
-r: false,)
-  });
-const [showPassword, setShowPassword] = useState(false);
-const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent;,)
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-    const { name, value, type, checked } = e.target;
-setFormData(prev => ({/* TODO: Fix JSX expression */)}
-  O: Add content,}
-}
-//       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
-    }))
-  }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */;}
-  O: Add content,}
-}
-    e.preventDefault();
-if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      alert('Passwords do not match');
-return
-    ;}
-    if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      alert('Please agree to the terms and conditions');
-setIsLoading(true)
-    // Simulate signup process;
-await new Promise(resolve => setTimeout(resolve), 2000));
-setIsLoading(false)
-    // Redirect to dashboard or home page;
-window.location.href = '/';
-const features = [;
-  // TOD,;,
-O: Add items
-],
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,;,
-n: Shield,;
-titl,;,
-e: 'Enterprise Security',;
-descriptio,;,
-n: 'Bank-level security with advanced encryption and compliance'
-    },;,
-icon: Award,;,
-title: 'Proven Results',;,
-description: '300% average ROI and 95% process automation for our clients',;
-const PagePage: React.FC = () => {;
-return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-}
-            {/* Left Side - Signup Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
-              <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text">Create Your Account
-                <p className="text-gray-300">Join thousands of businesses transforming with AI and IT solutions
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">;
-First Name,
-  
-                    <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input;
-type="text";
-name="firstName";
-value={formData.firstName}
-                        onChange={handleInputChange}
-                        required;
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your first name"
-                      />
-  </input>;
-Last Name;
-name="lastName";
-value={formData.lastName}
-                        placeholder="Enter your last name";
-Email Address
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-type="email";
-name="email";
-value={formData.email}
-                      placeholder="Enter your email";
-Company Name
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-name="company";
-value={formData.company}
-                      placeholder="Enter your company name";
-Phone Number
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-type="tel";
-name="phone";
-value={formData.phone}
-                      placeholder="Enter your phone number";
-Password
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-type={showPassword ? 'text' : 'password'}
-                      name="password";
-value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Create a password"
-                    <$2 />;
-type="button";
-onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
-                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    Confirm Password;
-type={showConfirmPassword ? 'text' : 'password'}
-                      name="confirmPassword";
-value={formData.confirmPassword}
-                      placeholder="Confirm your password";
-onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="space-y-4">
-                  <label className="flex items-start">;
-type="checkbox";
-name="agreeToTerms"
-            {/* Left Side - Signup Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
-              <div className="text-center mb-8"></div>"
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-// Create Your Account</$1>"
-                <p className="text-gray-300">
-// Join thousands of businesses transforming with AI and IT solutions
-              </div>"
-              <form onSubmit={handleSubmit} className="space-y-6"></form>"
-                < className="grid grid-cols-1,"$2 />;,
-md: grid-cols-2 gap-4"></div>
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// First Name,
-          </label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input;
-type="text" name="firstName";
-value={formData.firstName}
-                        onChange={handleInputChange}
-// required;
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
-/>
-  </input>;
-Last Name,;
-name="lastName" value={formData.lastName}
-                        placeholder="Enter your last name" Email Address
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-type="email" name="email";
-value={formData.email}
-                      placeholder="Enter your email" Company Name
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-name="company" value={formData.company}
-                      placeholder="Enter your company name" Phone Number
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-type="tel" name="phone";
-value={formData.phone}
-                      placeholder="Enter your phone number" Password
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
-type={showPassword ? 'text' : 'password'}
-                      name="password" value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
-                    <$2 />;
-type="button" onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-// >
-                      {showPassword ?}"
-          <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-Confirm Password;
-type={showConfirmPassword ? 'text' : 'password'}
-                      name="confirmPassword" value={formData.confirmPassword}
-                      placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="space-y-4">
-                  <label className="flex items-start">;
-type="checkbox" name="agreeToTerms";
-checked={formData.agreeToTerms}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
-                    <span className="ml-2 text-sm text-gray-300">;
-I agree to the{' '}
-                      <a href="/terms" className="text-cyan-400 hover: text-cyan-300">;
-Terms of Service,
-  </{' '}
-                      and{' '}
-                      <a href="/privacy" className="text-cyan-400 hover: text-cyan-300">;
-Privacy Policy,
-  
-                    </span>;
-name="subscribeNewsletter";
-checked={formData.subscribeNewsletter}
-                      Subscribe to our newsletter for updates and tips;
-type="submit";
-disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                  {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">;
-Creating Account...
-                  ) : (
-                    'Create Account'
-                  )}
-              <div className="mt-8 text-center">;
-Already have an account?{' '}
-                  <$2 />;
-href="/login";
-className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors";
-Sign in here
-            {/* Right Side - Features and Benefits */}
-            <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">Transform Your Business Today
-                <p className="text-xl text-gray-300 mb-8">;
-Join thousands of businesses already using our AI and IT solutions;
-to achieve unprecedented growth and efficiency.
-              <div className="space-y-6">
-                {features.map((feature), index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <feature.icon className="w-6 h-6 text-cyan-400" />
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}
-                      <p className="text-gray-300">{feature.description}
-                ))}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-white mb-4">;
-What You Get:
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {benefits.map((benefit), index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-              <div className="text-center">
-                <p className="text-gray-400 text-sm mb-4">;
-Trusted by 1000+ companies worldwide
-                <div className="flex justify-center items-center space-x-6 opacity-60">
-                  <div className="text-2xl font-bold text-white">Microsoft
-                  <div className="text-2xl font-bold text-white">Google
-                  <div className="text-2xl font-bold text-white">Amazon
-      <Footer />
-// Terms of Service</$1>{' '}
-                      and{' '}"
-                      < href="/privacy" className="text-cyan-400,"$2 />;,
-hover: text-cyan-300"></a>
-// Privacy Policy,
-          </a>
-                    </span>;
-name="subscribeNewsletter" checked={formData.subscribeNewsletter}
-                      Subscribe to our newsletter for updates and tips;
-type="submit" disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                  {isLoading ? ()}
-          <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">;
-Creating Account...
-                  ) : ()
-// 'Create Account'
-                  )}
-          </form>"
-              <div className="mt-8 text-center">;
-Already have an account?{' '}
-                  <$2 />;
-href="/login" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors";
-Sign in here,
-            {/* Right Side - Features and Benefits */}"
-            <div className="space-y-8"></div>"
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-// Transform Your Business Today</$1>"
-                <p className="text-xl text-gray-300 mb-8">;
-Join thousands of businesses already using our AI and IT solutions;
-to achieve unprecedented growth and efficiency."
-              <div className="space-y-6">
-                {features.map((feature), index) => ()}"
-          <div key={index} className="flex items-start"></div>"
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>"
-                      <feature.icon className="w-6 h-6 text-cyan-400" /></feature>"
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
-                      <p className="text-gray-300">{feature.description}
-                ))}"
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
-                <h3 className="text-lg font-semibold text-white mb-4">;
-What You,;,
-Get:
-                </h3>"
-                < className="grid grid-cols-1,"$2 />;,
-md:grid-cols-2 gap-2">
-                  {benefits.map((benefit), index) => ()}"
-          <div key={index} className="flex items-center text-sm text-gray-300"></div>"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}"
-<div className="text-center"></div>"
-                <p className="text-gray-400 text-sm mb-4">;
-Trusted by 1000+ companies worldwide;"
-                <div className="flex justify-center items-center space-x-6 opacity-60"></div>"
-                  <div className="text-2xl font-bold text-white">Microsoft</div>"
-                  <div className="text-2xl font-bold text-white">Google</div>"
-                  <div className="text-2xl font-bold text-white">Amazon
-      <Footer />
-  );
-export default SignupPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>
+
+export default SignupPage

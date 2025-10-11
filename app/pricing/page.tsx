@@ -103,4 +103,4 @@ const PricingPage: React.FC = () => {
   )
 }
 
-export default PagePage
+export default PricingPage
