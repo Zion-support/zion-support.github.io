@@ -19,37 +19,37 @@ export default function Navigation() {
       title: 'AI Services',
       href: '/ai-services',
       icon: Zap,
-      description: 'Artificial Intelligence Solutions'
+      description: 'AI Content Generation, Computer Vision, Predictive Analytics'
     },
     {
       title: 'IT Services',
       href: '/it-services',
       icon: Code,
-      description: 'Information Technology Solutions'
+      description: 'Infrastructure Management, Cybersecurity, Network Solutions'
     },
     {
       title: 'Cloud Services',
       href: '/cloud-services',
       icon: Cloud,
-      description: 'Cloud Computing Solutions'
+      description: 'Cloud Migration, AWS, Azure, Google Cloud'
     },
     {
       title: 'Micro SAAS',
       href: '/micro-saas-services',
       icon: Smartphone,
-      description: 'Micro Software as a Service'
+      description: 'AI Tools, Content Creation, Task Management'
     },
     {
       title: 'Digital Transformation',
       href: '/digital-transformation',
       icon: Globe,
-      description: 'Digital Business Transformation'
+      description: 'Business Process Automation, Digital Strategy'
     },
     {
       title: '5G Implementation',
       href: '/5g-implementation',
       icon: Database,
-      description: '5G Network Implementation'
+      description: '5G Network Setup, IoT Solutions, Edge Computing'
     }
   ]
 
