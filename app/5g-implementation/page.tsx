@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import {Helmet} from 'react-helmet-async';
-import {Wifi, BarChart, CheckCircle, Brain, Target, Zap, Shield} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Wifi, BarChart, CheckCircle, Brain, Target, Zap, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -22,130 +22,79 @@ export default function FiveGImplementationPage() {
     {
       icon: <Brain className="w-8 h-8" />,
       title: 'AI Integration',
-      description: 'Seamless integration with AI and machine learning capabilities.',
-      benefits: ['Edge Computing', 'AI Processing', 'Smart Automation', 'Intelligent Networks']
+      description: 'Seamless integration with AI technologies for intelligent network management.',
+      benefits: ['Smart Routing', 'Predictive Maintenance', 'Automated Optimization', 'Intelligent Monitoring']
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: 'Precision Implementation',
-      description: 'Targeted 5G deployment strategies for maximum efficiency and coverage.',
-      benefits: ['Strategic Planning', 'Coverage Optimization', 'Cost Efficiency', 'Scalable Solutions']
+      title: 'Precision Targeting',
+      description: 'Targeted solutions for specific industry needs and use cases.',
+      benefits: ['Industry-Specific Solutions', 'Custom Implementation', 'Scalable Architecture', 'Future-Proof Design']
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: 'Performance Boost',
-      description: 'Significant performance improvements across all connected applications.',
-      benefits: ['Enhanced Performance', 'Faster Response Times', 'Improved User Experience', 'Optimized Workflows']
+      title: 'Lightning Performance',
+      description: 'Optimized performance for mission-critical applications and services.',
+      benefits: ['High Performance', 'Low Latency', 'Reliable Connectivity', 'Scalable Solutions']
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Secure Infrastructure',
-      description: 'Enterprise-grade security and compliance for 5G networks.',
-      benefits: ['Advanced Security', 'Compliance Ready', 'Data Protection', 'Network Security']
+      title: 'Enterprise Security',
+      description: 'Advanced security features to protect your 5G infrastructure and data.',
+      benefits: ['End-to-End Encryption', 'Network Security', 'Data Protection', 'Compliance Standards']
     }
   ];
 
-const FiveGImplementationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
+      <Helmet>
+        <title>5G Implementation - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G implementation services and solutions." />
+        <meta name="keywords" content="5g implementation, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-20">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              5g Implementation
+            <h1 className="text-5xl font-bold text-white mb-6">
+              5G Implementation
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional 5g implementation services delivered by experienced professionals.
+              Transform your business with cutting-edge 5G technology implementation services.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-green-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Expert Solutions</h3>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-purple-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-gray-300 mb-4">
-                Professional 5g implementation services delivered by experienced professionals.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Quality Assurance
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Fast Delivery
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  24/7 Support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                  Custom Solutions
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-blue-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Advanced Technology</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Cutting-edge tools and technologies to deliver superior results.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Latest Tools
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Modern Methods
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Scalable Solutions
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-blue-400 mr-2" />
-                  Future-Ready
-                </li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-purple-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Proven Results</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Track record of successful projects and satisfied clients.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  High Success Rate
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Client Satisfaction
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Ongoing Support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-4 w-4 text-purple-400 mr-2" />
-                  Continuous Improvement
-                </li>
-              </ul>
-            </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 flex items-center mx-auto">
+              Get Started
+            </button>
           </div>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
-};
+}
