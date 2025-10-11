@@ -1,15 +1,18 @@
-'use client'
-import React from 'react'
-import Navigation from './Navigation'
-const Header: React.FC = () => {
+import React from 'react';
+
+interface HeaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const Header: React.FC<HeaderProps> = ({ className = '', children }) => {
   return (
-    <React.Fragment>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
-    </React.Fragment>
-  )};const Header: React.FC = () => {return (<></>
-      <Navigation />}
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" /></div>
-    </>)};export default Header
+    <div className={`p-4 ${className}`}>
+      <h2 className="text-xl font-semibold mb-2">Header</h2>
+      <p className="text-gray-600 mb-4">This component is being rebuilt.</p>
+      {children}
+    </div>
+  );
+};
+
+export default Header;

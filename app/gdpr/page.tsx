@@ -1,68 +1,49 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page services and solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+              Page
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              This page is being rebuilt with enhanced functionality.
             </p>
-          </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-}}
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];</div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                Coming Soon
+              </h2>
+              <p className="text-gray-600 mb-6">
+                We are working on bringing you the best page solutions. 
+                Please check back soon for updates.
+              </p>
+              <a 
+                href="/contact" 
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
-      </section>};export default PagePage
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default page;

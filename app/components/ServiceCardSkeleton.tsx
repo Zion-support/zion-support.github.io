@@ -1,30 +1,18 @@
-'use client'
-import React from 'react'
+import React from 'react';
 
-const ServiceCardSkeleton: React.FC = () => {
-  return (
-    <div className="cyber-card p-6 animate-pulse">
-      <div className="flex items-center mb-4">
-        <div className="w-8 h-8 bg-slate-700 rounded mr-3"></div>
-        <div className="h-4 bg-slate-700 rounded w-20"></div>
-      </div>
-      
-      <div className="h-6 bg-slate-700 rounded mb-3"></div>
-      <div className="h-4 bg-slate-700 rounded mb-4"></div>
-      <div className="h-4 bg-slate-700 rounded mb-4 w-3/4"></div>
-      
-      <div className="space-y-2 mb-6">
-        <div className="h-4 bg-slate-700 rounded"></div>
-        <div className="h-4 bg-slate-700 rounded"></div>
-        <div className="h-4 bg-slate-700 rounded w-2/3"></div>
-      </div>
-      
-      <div className="flex items-center justify-between">
-        <div className="h-6 bg-slate-700 rounded w-24"></div>
-        <div className="h-8 bg-slate-700 rounded w-20"></div>
-      </div>
-    </div>
-  )
+interface ServiceCardSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default ServiceCardSkeleton
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '', children }) => {
+  return (
+    <div className={`p-4 ${className}`}>
+      <h2 className="text-xl font-semibold mb-2">ServiceCardSkeleton</h2>
+      <p className="text-gray-600 mb-4">This component is being rebuilt.</p>
+      {children}
+    </div>
+  );
+};
+
+export default ServiceCardSkeleton;

@@ -1,42 +1,18 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+import React from 'react';
+
+interface PWAInstallerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '', children }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>PWAInstaller | Zion Tech Group</title>
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
-      </Helmet>
-        </div>
-      </section>
-}}
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>PWAInstaller | Zion Tech Group</title>
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
-      </Helmet>
-        </div>
-      </section>};export default PWAInstallerPage
+    <div className={`p-4 ${className}`}>
+      <h2 className="text-xl font-semibold mb-2">PWAInstaller</h2>
+      <p className="text-gray-600 mb-4">This component is being rebuilt.</p>
+      {children}
+    </div>
+  );
+};
+
+export default PWAInstaller;

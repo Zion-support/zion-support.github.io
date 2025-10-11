@@ -1,47 +1,18 @@
-'use client'
-import React from 'react'
-'use client'
-import React, { useEffect, useState } from 'react'
-interface UserExperienceEnhancerProps {
-  children: React.ReactNode}
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
-  useEffect(() => {
-    // UX enhancement logic
-    const enhanceUX = () => {
-      // Add smooth scrolling
-      document.documentElement.style.scrollBehavior = 'smooth'
-      // Add loading states for interactive elements
+import React from 'react';
 
-interface UserExperienceEnhancerProps {children: React.ReactNode}
+interface UserExperienceEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});useEffect(() => {// UX enhancement logic
-    const enhanceUX = (// Add smooth scrolling
-      document.documentElement.style.scrollBehavior = 'smooth';// Add loading states for interactive elements
-      const interactiveElements = document.querySelectorAll('button, a, input')
-      interactiveElements.forEach((element, index) => {) => {
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ className = '', children }) => {
   return (
-    $3
-  )}
-        element.addEventListener('click', () => {}
-          setLoadingStates(prev => ({ ...prev, [index]: true }))
-          setTimeout(() => {}
-            setLoadingStates(prev => ({ ...prev, [index]: false }))}, 1000)})})
-      // Add focus indicators
+    <div className={`p-4 ${className}`}>
+      <h2 className="text-xl font-semibold mb-2">UserExperienceEnhancer</h2>
+      <p className="text-gray-600 mb-4">This component is being rebuilt.</p>
+      {children}
+    </div>
+  );
+};
 
-      // Add focus indicators
-      const style = document.createElement('style')
-      style.textContent = `
-        *:focus {outline: 2px solid #06b6d4
-          outline-offset: 2px,}
-        }
-      `
-      document.head.appendChild(style)}
-    enhanceUX()}, [])
-  return <React.Fragment>{children}</React.Fragment>}
-export default UserExperienceEnhancer
-  </UserExperienceEnhancerProps>
-
-    enhanceUX()}, []);return <>{children}</>};export default UserExperienceEnhancer
+export default UserExperienceEnhancer;
