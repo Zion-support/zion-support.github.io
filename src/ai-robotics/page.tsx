@@ -6,7 +6,7 @@ import { Bot, Cpu, Settings, Shield, CheckCircle, Star,  Bot,  Cpu,  Shield } fr
 const AIRoboticsPage: React.FC = () => {
     const features = [],
   return (
-    {// TODO: Add content
+    {// TODO: Add content;
   }
 }
   ico,
@@ -39,10 +39,10 @@ const AIRoboticsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      </div><main className="container mx-auto px-4 py-16 pt-24">
+        </main><section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// AI Robotics Platform
+// AI Robotics Platform;
           </h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
             Intelligent Robotics Solutions for Modern Industry,
@@ -50,11 +50,12 @@ const AIRoboticsPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             Build the future with our AI-powered robotics platform. From autonomous manufacturing to intelligent service robots,
             we provide the technology to create robots that think, learn, and adapt.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          </section>
+<div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Start Building
+//               Start Building;
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Bot className="w-5 h-5" />
@@ -83,12 +84,11 @@ const AIRoboticsPage: React.FC = () => {
                   {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                  ))}
+                      {benefit})
                 </ul>
       </main>
       <Footer /></Footer>
     </div>
   )
 }
-export default AiRoboticsPage
+export default AiRoboticsPage;

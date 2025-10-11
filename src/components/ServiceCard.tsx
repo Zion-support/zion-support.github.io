@@ -4,8 +4,7 @@ import { LucideIcon, ArrowRight } from 'lucide-react'
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,
-  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
   }
   const bgColorClasses = {/* TODO: Fix JSX expression */}
   }
@@ -15,8 +14,7 @@ const,
       role="article")
       aria-labelledby={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}
     >
-      {/* TODO: Fix JSX expression */}
-      )}
+      {/* TODO: Fix JSX expression */})
       "
       < className="text-4xl,$2 />
   sm:text-5xl mb-4,"
@@ -42,13 +40,13 @@ const,
           {/* TODO: Fix JSX expression */}"
             <li key={idx} className="flex items-center"></li>"
               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0" />
-              {feature}
-          ))}
+              {feature})
           {/* TODO: Fix JSX expression */}
-              +{features.length - 3} more features
+              +{features.length - 3} more features;
           )}
       "
-      <div className="mb-4"></div>"
+      </div>
+<div className="mb-4"></div>"
         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologie,
   s:</h4>"
         <div className="flex flex-wrap gap-1">
@@ -56,13 +54,12 @@ const,
               key={idx} `
               className={`px-2 py-1 ${bgColorClasses[color as keyof typeof bgColorClasses]} text-cyan-300 text-xs rounded`}
             >
-              {tech}
-          ))}
+              {tech})
           {/* TODO: Fix JSX expression */}
-              +{technologies.length - 4}
-          )}
+              +{technologies.length - 4})
       "
-      <div className="text-center mb-4"></div>"
+      </div>
+<div className="text-center mb-4"></div>"
         < className="text-lg,"$2 />
   sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price">
           {price}

@@ -106,8 +106,5 @@ export default [
       'no-unused-vars': 'off'
     }
   }
-<<<<<<< HEAD
 ]
-=======
-]
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+

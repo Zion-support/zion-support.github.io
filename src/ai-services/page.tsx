@@ -40,33 +40,34 @@ $4}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Services | Zion Tech Group
+        <title>AI Services | Zion Tech Group;
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI Services
+      </div>
+<div className="container mx-auto px-4 py-16">
+        </div>
+<div className="text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">AI Services;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
-  
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
-  
+              Contact Us;
+            </button><button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+              Learn More;
       <Footer />
   ),
 }
-export default $1
+export default $1;
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { 
   Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
-  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
+  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare;
 } from 'lucide-react'
 export default function AIServicesPage() {
     const [activeTab, setActiveTab] = useState('overview')
@@ -94,7 +95,7 @@ export default function AIServicesPage() {
       },
       icon: Zap,
       color: 'from-cyan-500 to-blue-600',
-      popular: true
+      popular: true;
     },
     {
       id: 'ai-analytics',
@@ -115,7 +116,7 @@ export default function AIServicesPage() {
       },
       icon: BarChart,
       color: 'from-purple-500 to-pink-600',
-      popular: false
+      popular: false;
     },
     {
       id: 'ai-customer-support',
@@ -136,7 +137,7 @@ export default function AIServicesPage() {
       },
       icon: MessageSquare,
       color: 'from-green-500 to-emerald-600',
-      popular: true
+      popular: true;
     },
     {
       id: 'ai-content-generation',
@@ -157,7 +158,7 @@ export default function AIServicesPage() {
       },
       icon: Code,
       color: 'from-orange-500 to-red-600',
-      popular: false
+      popular: false;
     },
     {
       id: 'ai-cybersecurity',
@@ -178,7 +179,7 @@ export default function AIServicesPage() {
       },
       icon: Shield,
       color: 'from-red-500 to-pink-600',
-      popular: true
+      popular: true;
     },
     {
       id: 'ai-ml-platform',
@@ -199,7 +200,7 @@ export default function AIServicesPage() {
       },
       icon: Cpu,
       color: 'from-indigo-500 to-purple-600',
-      popular: false
+      popular: false;
     }
   ]
   const stats = [
@@ -211,31 +212,33 @@ export default function AIServicesPage() {
   return (
     <React.Fragment>
       <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing
+        <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing;
         <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" />
         <meta property="og:title" content="AI Services - Zion Tech Group" />
         <meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
-      <div className="min-h-screen bg-slate-900 cyber-grid">
+      </div></button><div className="min-h-screen bg-slate-900 cyber-grid">
         {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="container mx-auto px-4">
-            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        </div><section className="relative py-20 lg:py-32 overflow-hidden">
+          </section>
+<div className="container mx-auto px-4">
+            </div>
+<div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
               <h1 className="text-5xl lg:text-7xl font-bold mb-6">
-                <span className="holographic-text cyber-text">AI Services
+                <span className="holographic-text cyber-text">AI Services;
               <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Transform your business with cutting-edge AI solutions. Achieve 300% ROI, 70% cost reduction, 
                 and 90% efficiency gains with our comprehensive AI services.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <$2 />
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Phone className="w-5 h-5 mr-2" />
-                  (302) 464-0950
-  
+                  (302) 464-0950;
                 <$2 />
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
@@ -248,59 +251,78 @@ export default function AIServicesPage() {
         </section>
         {/* Stats Section */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          </section>
+<div className="container mx-auto px-4">
+            </div>
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center`}>
+                </div>
+<div key={index} className="text-center">
+                  </div>
+<div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center`}>
                     <stat.icon className="w-8 h-8" />
-                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}
-                  <div className="text-gray-300">{stat.label}
-              ))}
+                  </div>
+<div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}
+                  </div>
+<div className="text-gray-300">{stat.label})
         {/* Services Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+        </div><section className="py-20">
+          </section>
+<div className="container mx-auto px-4">
+            </div>
+<div className="text-center mb-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                <span className="neon-text">Our AI Services
+                <span className="neon-text">Our AI Services;
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI solutions designed to transform your business operations and drive unprecedented growth.
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {aiServices.map((service, index) => (
-                <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>
-                  <div className="flex items-start justify-between mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
+                </div>
+<div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : ''}`}>
+                  </div>
+<div className="flex items-start justify-between mb-6">
+                    </div>
+<div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
                       <service.icon className="w-8 h-8 text-white" />
                     {service.popular && (
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">Most Popular
+                      </div>
+<div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">Most Popular;
                     )}
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}
                   <p className="text-gray-300 mb-6">{service.description}
-                  <div className="mb-6">
+                  </div>
+<div className="mb-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                          {feature}
-                      ))}
-                  <div className="border-t border-gray-700 pt-6">
+                          {feature})
+                  </div>
+<div className="border-t border-gray-700 pt-6">
                     <h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:
-                    <div className="space-y-3">
+                    </div>
+<div className="space-y-3">
                       {Object.entries(service.pricing).map(([tier, details]) => (
-                        <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
-                          <div>
-                            <div className="text-white font-semibold capitalize">{tier}
-                            <div className="text-sm text-gray-400">{details.features[0]}
-                          <div className="text-right">
-                            <div className="text-cyan-400 font-bold">{details.price}{details.period}
-                      ))}
-                  <div className="mt-6 flex gap-3">
+                        </div>
+<div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">
+                          </div>
+<div>
+                            </div>
+<div className="text-white font-semibold capitalize">{tier}
+                            </div>
+<div className="text-sm text-gray-400">{details.features[0]}
+                          </div>
+<div className="text-right">
+                            </div>
+<div className="text-cyan-400 font-bold">{details.price}{details.period})
+                  </div>
+<div className="mt-6 flex gap-3">
                     <$2 />
                       href="tel: +13024640950"
                       className="flex-1 cyber-button text-center py-3">
-                      Get Started
-  
+                      Get Started;
                     <$2 />
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">
@@ -311,24 +333,24 @@ export default function AIServicesPage() {
               ))}
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          <div className="container mx-auto px-4 text-center">
+          </section>
+<div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join 500+ companies already using our AI solutions to achieve unprecedented growth and efficiency.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950
-  
+                Call (302) 464-0950;
               <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Mail className="w-5 h-5 mr-2" />
-                Email Us
-  
+                Email Us;
             </div>
           </div>
         </section>

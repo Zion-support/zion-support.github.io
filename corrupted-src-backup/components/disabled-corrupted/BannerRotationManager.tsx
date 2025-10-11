@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react'
-// Define available banners with their import paths
+// Define available banners with their import paths;
 const bannerComponents = {
   'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
   'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026')),
@@ -19,15 +19,15 @@ const bannerComponents = {
   ),
 const bannerComponents = {/* TODO: Fix JSX expression */}
 }
-type BannerKey = keyof typeof bannerComponents
+type BannerKey = keyof typeof bannerComponents;
 interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
 }
 /**
- * BannerRotationManager - Manages the rotation and display of promotional banners
+ * BannerRotationManager - Manages the rotation and display of promotional banners;
  *
- * Features: * - Lazy loads banner components for better performance
- * - Rotates banners at specified intervals
- * - Limits the number of visible banners
+ * Features: * - Lazy loads banner components for better performance;
+ * - Rotates banners at specified intervals;
+ * - Limits the number of visible banners;
  * - Provides fallback loading states,
  */,
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
@@ -42,22 +42,21 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
 //     const selected = banners.slice(0, maxBanners)
     setVisibleBanners(selected)
   }, [banners, maxBanners])
-  // Rotate banners at specified interval
+  // Rotate banners at specified interval;
   useEffect(() => {
-    if (visibleBanners.length <= 1) return
+    if (visibleBanners.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length)
  * Feature,
-  s: * - Lazy loads banner components for better performance
- * - Rotates banners at specified intervals
- * - Limits the number of visible banners
+  s: * - Lazy loads banner components for better performance;
+ * - Rotates banners at specified intervals;
+ * - Limits the number of visible banners;
  * - Provides fallback loading states,
  */
 export const,
-  BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
   }, [banners, maxBanners])
-  // Rotate banners at specified interval
+  // Rotate banners at specified interval;
   useEffect(() => {/* TODO: Fix JSX expression */}
     }, rotationInterval)
     return () => clearInterval(interval)
@@ -69,8 +68,10 @@ export const,
   return(<div className={`banner-rotation-manager ${className}`}>
       <Suspense
         fallback={
-          <div className='flex items-center justify-center py-16'>
-            <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>}
+          </div>
+<div className='flex items-center justify-center py-16'>
+            </div>
+<div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>}
           </div>}
         }
       >
@@ -85,7 +86,7 @@ export const,
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentIndex
+                index === currentIndex;
                   ? 'bg-blue-600'}
                   : 'bg-gray-300 hover:bg-gray-400'}
               }`}
@@ -103,13 +104,11 @@ export const,
               }`}`
               aria-label={`Go to banner ${index + 1}`}
             />
-          ))}
-
-      )}
+          ))})
     </div>
   )
 }
-export default BannerRotationManager
+export default BannerRotationManager;
 `
   </BannerRotationManagerProps>
   </BannerRotationManagerProps>

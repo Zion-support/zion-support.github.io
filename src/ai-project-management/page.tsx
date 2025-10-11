@@ -3,20 +3,21 @@ import { Helmet } from 'react-helmet-async'
 export default function AIProjectManagementPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet>
-        <title>AI Project Management Solutions - Zion Tech Group
+        <title>AI Project Management Solutions - Zion Tech Group;
         <meta name="description" content="Intelligent AI-powered project management with predictive analytics, resource optimization, and automated task allocation. Starting at $199/month." /></meta>"
         <meta name="keywords" content="AI project management, project automation, resource optimization, predictive analytics, task management" /></meta>"
         <nk rel="canonical" href="http,"$2 />
   s://ziontechgroup.com/ai-project-management" />
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      </div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation /></Navigation>"
-        <main className="container mx-auto px-4 py-16 pt-24">
+        </div><main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}"
-          <section className="text-center mb-16"></section>"
+          </main><section className="text-center mb-16"></section>"
             < className="text-4xl,"$2 />
   md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Project Management
+              AI Project Management;
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
               Intelligent project management powered by AI,
@@ -73,39 +74,39 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
                 <h3 className="text-2xl font-bold text-white mb-4">Team</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 10 team members
-                  <li>5 active projects
-                  <li>Basic AI insights
-                  <li>Standard integrations
-                  <li>Email support
+                  <li>Up to 10 team members;
+                  <li>5 active projects;
+                  <li>Basic AI insights;
+                  <li>Standard integrations;
+                  <li>Email support;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Get Started
+                <a href="/contact" className="cyber-button w-full">Get Started;
               "
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$499<span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 50 team members
-                  <li>Unlimited projects
-                  <li>Advanced AI analytics
-                  <li>Custom integrations
-                  <li>Priority support
-                  <li>Resource optimization
+                  <li>Up to 50 team members;
+                  <li>Unlimited projects;
+                  <li>Advanced AI analytics;
+                  <li>Custom integrations;
+                  <li>Priority support;
+                  <li>Resource optimization;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Get Started
+                <a href="/contact" className="cyber-button w-full">Get Started;
               "
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Unlimited team members
-                  <li>Unlimited projects
-                  <li>Full AI suite
-                  <li>White-label solution
-                  <li>24/7 dedicated support
-                  <li>Custom AI training
+                  <li>Unlimited team members;
+                  <li>Unlimited projects;
+                  <li>Full AI suite;
+                  <li>White-label solution;
+                  <li>24/7 dedicated support;
+                  <li>Custom AI training;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Contact Sales
+                <a href="/contact" className="cyber-button w-full">Contact Sales;
           {/* Benefits Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Proven Results</h2>"
@@ -115,22 +116,22 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 text-center"></div>"
                 <div className="text-4xl font-bold text-cyan-400 mb-4">40%</div>"
                 <h3 className="text-xl font-bold text-white mb-2">Faster Delivery</h3>"
-                <p className="text-gray-300">Projects completed 40% faster with AI optimization
+                <p className="text-gray-300">Projects completed 40% faster with AI optimization;
               "
               <div className="cyber-card p-6 text-center"></div>"
                 <div className="text-4xl font-bold text-green-400 mb-4">30%</div>"
                 <h3 className="text-xl font-bold text-white mb-2">Cost Reduction</h3>"
-                <p className="text-gray-300">Average 30% reduction in project costs
+                <p className="text-gray-300">Average 30% reduction in project costs;
               "
               <div className="cyber-card p-6 text-center"></div>"
                 <div className="text-4xl font-bold text-pink-400 mb-4">95%</div>"
                 <h3 className="text-xl font-bold text-white mb-2">On-Time Delivery</h3>"
-                <p className="text-gray-300">95% of projects delivered on time
+                <p className="text-gray-300">95% of projects delivered on time;
               "
               <div className="cyber-card p-6 text-center"></div>"
                 <div className="text-4xl font-bold text-yellow-400 mb-4">85%</div>"
                 <h3 className="text-xl font-bold text-white mb-2">Team Productivity</h3>"
-                <p className="text-gray-300">85% increase in team productivity
+                <p className="text-gray-300">85% increase in team productivity;
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Transform Your Project Management Today</h2>"
@@ -147,7 +148,7 @@ export default function AIProjectManagementPage() {/* TODO: Fix JSX expression *
               < href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,$2 />
   hover:bg-white,"
   hover: text-indigo-600 transition-all duration-300"></a>
-                Get Free Trial
+                Get Free Trial;
               </a>
             </div>
           </section>

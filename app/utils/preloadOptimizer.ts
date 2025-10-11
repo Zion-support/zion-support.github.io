@@ -1,27 +1,26 @@
   // Preload critical fonts
   }
 export const preloadCriticalResources = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
+  if (typeof window === 'undefined') return // Preload critical fonts
   const fontPreloads = [
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
-    link.rel = 'preload';
+    'https: // fonts.googleapis.com/css2 ? family=Inter : wght@400500600700&display=swap'
+    'https:// fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400500600 & display=swap'
+    link.rel = 'preload'
   fontPreloads.forEach(href => {)}]
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style',
     link.href = href
     link.crossOrigin = 'anonymous',
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = src
     document.head.appendChild(link)}
   })
 }
-  // Preload route-specific resources;
-  const routeResources = {}export const preloadRoute = useCallback((...args) => {}if (typeof window === 'undefined') return;
-  // Preload route-specific resources;
+  // Preload route-specific resources
+  const routeResources = {}export const preloadRoute = useCallback((...args) => {}if (typeof window === 'undefined') return
+  // Preload route-specific resources
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   })
   // Preload critical images
@@ -33,8 +32,7 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   })
 }
 export const preloadRoute = useCallback((...args) => {
-  if (typeof window === 'undefined') return
-  // Preload route-specific resources
+  if (typeof window === 'undefined') return // Preload route-specific resources
   const routeResources = {}
 export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return
@@ -49,24 +47,23 @@ export const preloadRoute = useCallback((...args) => {}
     })
   }
 }
-  // Add loading="lazy" to images below the fold;
+  // Add loading="lazy" to images below the fold
   })
-  // Add intersection observer for lazy loading;
-      entries.forEach(entry => {);
+  // Add intersection observer for lazy loading
+      entries.forEach(entry => {)
         if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          if (img.dataset['src']) {}export const optimizeImages = useCallback((...args) => {}if (typeof window === 'undefined') return;
-  // Add loading="lazy" to images below the fold;
-  const images = document.querySelectorAll('img[data-lazy]');
+          const img = entry.target as HTMLImageElement
+          if (img.dataset['src']) {}export const optimizeImages = useCallback((...args) => {}if (typeof window === 'undefined') return
+  // Add loading="lazy" to images below the fold
+  const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {)}img.setAttribute('loading', 'lazy')}
   })
-  // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {}const imageObserver = new IntersectionObserver((entries) => {}entries.forEach(entry => {)}if (entry.isIntersecting) {}const img = entry.target as HTMLImageElement;
+  // Add intersection observer for lazy loading
+  if ('IntersectionObserver' in window) {}const imageObserver = new IntersectionObserver((entries) => {}entries.forEach(entry => {)}if (entry.isIntersecting) {}const img = entry.target as HTMLImageElement
           if (img.dataset['src']) {}img['src'] = img.dataset['src']
-            img.removeAttribute('data-src');
+            img.removeAttribute('data-src')
 export const optimizeImages = useCallback((...args) => {
-    if (typeof window === 'undefined') return
-  // Add loading="lazy" to images below the fold
+    if (typeof window === 'undefined') return // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {)
   }
@@ -83,9 +80,8 @@ export const optimizeImages = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img => {</div&gt;
-    img.setAttribute('loading', 'lazy'</div&gt;
-  })
+  images.forEach(img => {</div&gt
+    img.setAttribute('loading', 'lazy'</div&gt})
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {}
     const imageObserver = new IntersectionObserver((entries) => {}
@@ -111,19 +107,18 @@ export const optimizeImages = useCallback((...args) => {}
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
-  // Defer non-critical scripts;
+  // Defer non-critical scripts
   })
-  // Load analytics after page load;
-  if (document.readyState === 'loading') {document.addEventListener('DOMContentLoaded', () => {}export const optimizeThirdPartyScripts = useCallback((...args) => {}if (typeof window === 'undefined') return;
-  // Defer non-critical scripts;
-  const scripts = document.querySelectorAll('script[data-defer]');
+  // Load analytics after page load
+  if (document.readyState === 'loading') {document.addEventListener('DOMContentLoaded', () => {}export const optimizeThirdPartyScripts = useCallback((...args) => {}if (typeof window === 'undefined') return
+  // Defer non-critical scripts
+  const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)}script.setAttribute('defer', '')}
   })
-  // Load analytics after page load;
+  // Load analytics after page load
   if (document.readyState === 'loading') {}document.addEventListener('DOMContentLoaded', () => {}loadAnalytics()}
 export const optimizeThirdPartyScripts = useCallback((...args) => {
-    if (typeof window === 'undefined') return
-  // Defer non-critical scripts
+    if (typeof window === 'undefined') return // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {)
   }
@@ -136,9 +131,8 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script => {</div&gt;
-    script.setAttribute('defer', ''</div&gt;
-  })
+  scripts.forEach(script => {</div&gt
+    script.setAttribute('defer', ''</div&gt})
   // Load analytics after page load
   if (document.readyState === 'loading') {}
     document.addEventListener('DOMContentLoaded', () => {}

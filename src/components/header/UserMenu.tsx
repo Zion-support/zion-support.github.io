@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 export function UserMenu() {
-  // For now, we'll show a simple login button
-  // In a real app, this would check authentication state
+  // For now, we'll show a simple login button;
+  // In a real app, this would check authentication state;
   return (
     <div className="flex items-center gap-2">
       <$2 />
@@ -41,12 +41,13 @@ export const UserMenu: React.FC = () => {
   }
   if (!user) {
     return (
-      <div className="flex items-center space-x-4">
+      </div>
+<div className="flex items-center space-x-4">
         <Button variant="outline" size="sm">
-          Sign In
+          Sign In;
         </Button>
         <Button size="sm">
-          Sign Up
+          Sign Up;
         </Button>
       </div>
     )
@@ -69,10 +70,13 @@ export const UserMenu: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-          <div className="px-4 py-2 text-sm text-gray-700 border-b border-gray-200">
-            <div className="font-medium">{user?.name || 'User'}</div>
-            <div className="text-gray-500">{user?.email}</div>
+        </div>
+<div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+          </div>
+<div className="px-4 py-2 text-sm text-gray-700 border-b border-gray-200">
+            </div>
+<div className="font-medium">{user?.name || 'User'}</div>
+<div className="text-gray-500">{user?.email}</div>
           </div>
           
           <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2">
@@ -90,14 +94,14 @@ export const UserMenu: React.FC = () => {
             className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2"
           >
             <Settings className="w-4 h-4 mr-3" />
-            Dashboard
+            Dashboard;
           </Link>
           <$2 />
             onClick={handleLogout}
             className="flex items-center w-full px-4 py-2 text-zion-slate-light hover:bg-zion-blue hover:text-white transition-colors"
           >
             <LogOut className="w-4 h-4 mr-3" />
-            Sign Out
+            Sign Out;
           </button>
         </div>
       )}

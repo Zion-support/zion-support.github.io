@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Calendar, Clock, User, ArrowRight, Search, Filter, Tag } from 'lucide-react'
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Calendar, User, ArrowRight, Search, Filter, Clock, Tag } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 const BlogPage: React.FC = () => {
-<<<<<<< HEAD
-  const [searchTerm, setSearchTerm] = useState('')
+const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
 
   const categories = [
@@ -24,12 +21,7 @@ const BlogPage: React.FC = () => {
     { id: 'business', name: 'Business' }
   ]
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-  const blogPosts = [
+const blogPosts = [
     {
       id: 1,
       title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
@@ -98,17 +90,14 @@ const BlogPage: React.FC = () => {
     }
   ]
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredPosts = blogPosts.filter(post => {const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
-    return matchesSearch && matchesCategory
-  })
+    return matchesSearch && matchesCategory})
 
   const featuredPost = blogPosts.find(post => post.featured)
   const regularPosts = filteredPosts.filter(post => !post.featured)
-=======
-      readTime: '5 min read',
+readTime: '5 min read',
       category: 'AI & Machine Learning',
       image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=400&fit=crop'
     },
@@ -173,54 +162,37 @@ const BlogPage: React.FC = () => {
     'Cloud Computing',
     'Edge Computing'
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
-  return (
-    <>
-      <Helmet>
+return (
+    <></><Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
-<<<<<<< HEAD
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from our expert team." />
+<meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends from our expert team." />
         <meta name="keywords" content="AI blog, technology insights, cloud computing, cybersecurity, development, business technology" />
       </Helmet>
 
-=======
-        <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and digital transformation from Zion Tech Group experts." />
-        <meta name="keywords" content="blog, AI insights, IT trends, digital transformation, technology news" />
-      </Helmet>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-              Technology <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Insights</span>
+Technology <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Insights</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay ahead of the curve with expert insights on AI, cloud computing, cybersecurity, and the latest technology trends.
-<<<<<<< HEAD
-=======
-              Latest <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Insights</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay ahead with expert insights on AI, IT solutions, and digital transformation trends.
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-            </p>
+</p>
           </div>
         </section>
 
         {/* Search and Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
+</section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="flex flex-col md:flex-row gap-4 mb-8">
+              </div>
+<div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -230,7 +202,7 @@ const BlogPage: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
-              <div className="flex flex-wrap gap-2">
+<div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
                   <button
                     key={category.id}
@@ -245,94 +217,20 @@ const BlogPage: React.FC = () => {
                   </button>
                 ))}
               </div>
-=======
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                />
-              </div>
-              <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                <select className="pl-10 pr-8 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
-                  {categories.map((category) => (
-                    <option key={category} value={category}>{category}</option>
-                  ))}
-                </select>
-              </div>
+
             </div>
           </div>
         </section>
 
-        {/* Blog Posts */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.map((post) => (
-                <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group">
-                  <div className="aspect-w-16 aspect-h-9">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="mb-4">
-                      <span className="inline-block bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-semibold">
-                        {post.category}
-                      </span>
-                    </div>
-                    
-                    <h2 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors line-clamp-2">
-                      {post.title}
-                    </h2>
-                    
-                    <p className="text-gray-300 mb-6 leading-relaxed line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-6">
-                      <div className="flex items-center">
-                        <User className="w-4 h-4 mr-2" />
-                        {post.author}
-                      </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {new Date(post.date).toLocaleDateString()}
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center text-sm text-gray-400">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {post.readTime}
-                      </div>
-                      <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </button>
-                    </div>
-                  </div>
-                </article>
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Featured Post */}
+{/* Featured Post */}
         {featuredPost && (
           <section className="py-8 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <div className="flex items-center mb-4">
+            </section>
+<div className="max-w-7xl mx-auto">
+              </div>
+<div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                </div>
+<div className="flex items-center mb-4">
                   <Tag className="w-5 h-5 text-cyan-400 mr-2" />
                   <span className="text-cyan-400 font-semibold">Featured Article</span>
                 </div>
@@ -350,7 +248,7 @@ const BlogPage: React.FC = () => {
                   <Clock className="w-5 h-5 mr-2" />
                   <span>{featuredPost.readTime}</span>
                 </div>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                   Read More
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </button>
@@ -361,11 +259,14 @@ const BlogPage: React.FC = () => {
 
         {/* Blog Posts Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {regularPosts.map((post) => (
                 <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="flex items-center mb-4">
+                  </div>
+<div className="flex items-center mb-4">
                     <Tag className="w-4 h-4 text-cyan-400 mr-2" />
                     <span className="text-cyan-400 text-sm font-semibold">
                       {categories.find(cat => cat.id === post.category)?.name}
@@ -389,7 +290,7 @@ const BlogPage: React.FC = () => {
                     <span>{post.readTime}</span>
                   </div>
                   
-                  <button className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center">
+                  <button className="text-cyan-400 hover: text-cyan-300 font-semibold flex items-center">
                     Read More
                     <ArrowRight className="ml-1 w-4 h-4" />
                   </button>
@@ -406,15 +307,17 @@ const BlogPage: React.FC = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-4xl mx-auto text-center">
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
+          </section>
+<div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Stay Updated
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Get the latest insights and updates delivered directly to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -434,39 +337,3 @@ const BlogPage: React.FC = () => {
 }
 
 export default BlogPage
-<<<<<<< HEAD
-=======
-        {/* Newsletter Signup */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Stay Updated
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Get the latest insights delivered directly to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                />
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export default BlogPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

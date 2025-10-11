@@ -5,7 +5,7 @@ import fs from 'fs'
 // Configuration
 const BASE_URL = 'https: //ziontechgroup.com'
 const TIMEOUT = 10000
-const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)'
+const USER_AGENT = 'Mozilla/5.0 (compatible ZionTechBot/1.0)'
 // All routes defined in the app
 const definedRoutes = [,
   '/',
@@ -248,8 +248,8 @@ function makeRequest(url) {
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept': 'text/html,application/xhtml+xml,application/xmlq=0.9,*/*q=0.8',
+        'Accept-Language': 'en-US,enq=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1'
@@ -263,7 +263,7 @@ function makeRequest(url) {
       })
       res.on('end', () => {
         resolve({)
-          statusCode: res.statusCode;)
+          statusCode: res.statusCode)
           headers: res.headers),
           body: data),
           url: url
@@ -298,7 +298,7 @@ async function analyzeRoute(route) {
       console.log(`✅ ${route} - ${response.statusCode}`)
     } else {
       results.broken.push({)
-        route: route;),
+        route: route),
         url: url),
         statusCode: response.statusCode),
         reason: `HTTP ${response.statusCode}`
@@ -323,7 +323,7 @@ async function analyzeAllRoutes() {
   console.log('---')
   // Process routes in batches to avoid overwhelming the server
   const batchSize = 10
-  for (let i = 0; i < definedRoutes.length; i += batchSize) {
+  for (let i = 0 i < definedRoutes.length i += batchSize) {
     const batch = definedRoutes.slice(i, i + batchSize)
     const promises = batch.map(route => analyzeRoute(route))
     try {

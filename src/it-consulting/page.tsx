@@ -25,13 +25,13 @@ const ITConsultingPage: React.FC = () => {
   ]
   return (<React.Fragment>
       <Helmet>
-        <title>IT Consulting Services - Zion Tech Group
+        <title>IT Consulting Services - Zion Tech Group;
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" />
       "
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation /></Navigation>"
-        <main className="pt-24 pb-16 px-4"></main>"
+        </div><main className="pt-24 pb-16 px-4"></main>"
           <div className="max-w-7xl mx-auto"></div>"
             <div className="text-center mb-16"></div>"
               < className="text-4xl,"$2 />
@@ -43,14 +43,19 @@ const ITConsultingPage: React.FC = () => {
                 digital transformation, and technology solutions that drive growth and efficiency.
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
               {consultingServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 bg-blue-100 rounded-xl mr-4">
+                </div>
+<div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                  </div>
+<div className="flex items-center mb-6">
+                    </div>
+<div className="p-3 bg-blue-100 rounded-xl mr-4">
                       <service.icon className="w-8 h-8 text-blue-600" />
-                    <div>
+                    </div>
+<div>
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}
                       <p className="text-gray-600">{service.description}
-                  <div className="mb-6">
+                  </div>
+<div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
@@ -64,17 +69,17 @@ const ITConsultingPage: React.FC = () => {
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
                           <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                      ))}
+                          {benefit})
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center">
                           <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                      ))}
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
+                          {benefit})
+                    </div>
+<div className="text-center">
+                      </div>
+<div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
                         Get Started,
   
@@ -83,20 +88,20 @@ const ITConsultingPage: React.FC = () => {
                 </div>
               ))}
           {/* CTA Section */}
-          <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
-            <div className="max-w-4xl mx-auto text-center">
+          </button><section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
+            </section>
+<div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?
               <p className="text-xl text-gray-600 mb-8">
                 Contact our experts for a free consultation and discover how we can help your business.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
                   <Phone className="w-5 h-5 inline mr-2" />
-                  Call Us
-  
-                <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
+                  Call Us;
+                </button><button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
                   <Mail className="w-5 h-5 inline mr-2" />
-                  Email Us
-  
+                  Email Us;
               </div>
             </div>
           </section>

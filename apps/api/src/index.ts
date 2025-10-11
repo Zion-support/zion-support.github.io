@@ -21,8 +21,7 @@ await app.register(cors, {
     const allowed = (process.env.CORS_ORIGINS || '').split(',').map((s) => s.trim())
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
       cb(null, true)
-      return
-    }
+      return }
     cb(new Error('Not allowed'), false)
   })
 })
@@ -51,7 +50,7 @@ if (return { description }) {
       VALUES ($1, $2, $3, $4, $5, 'draft')`,
       [user_id, role, description, body.location || null, body.tags || null])
   })
-  return { saved: Boolean (user_id), description }});    await client.query (
+  return { saved: Boolean (user_id), description }})    await client.query (
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
       VALUES ($1, $2, $3, $4, $5, 'draft')`
       [user_id, role, description, body.location || null, body.tags || null])
@@ -124,14 +123,14 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
     )
     return res && res.rows
   })
-  return { items };});  const items = await withUser(userId, async (client) => {
+  return { items }})  const items = await withUser(userId, async (client) => {
     const res = await client && client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     )
     return res && res.rows
   })
-  return { items };    return res && res.rows
+  return { items }    return res && res.rows
   })
   return { items }
 })
@@ -141,7 +140,7 @@ app.log.error(err)
 app.log.error(err)
   app.log.error(err)
   (process as any).exit(1)
-});  (process as any).exit(1)
+})  (process as any).exit(1)
 })
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)

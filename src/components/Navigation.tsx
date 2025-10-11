@@ -38,7 +38,7 @@ const Navigation: React.FC = () => {
 
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
+              About;
             </Link>
 
               </button>
@@ -56,7 +56,7 @@ const Navigation: React.FC = () => {
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link 
+            <Link
               to="/case-studies" 
             </Link>
 
@@ -65,7 +65,7 @@ const Navigation: React.FC = () => {
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Blog
+              Blog;
             </Link>
 
             <Link
@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Contact
+              Contact;
             </Link>
 
             {/* CTA Button */}
@@ -83,7 +83,7 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
+              (302) 464-0950;
             </a>
           </div>
 
@@ -99,7 +99,7 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                About
+                About;
               </Link>
 
               {/* Mobile Services */}
@@ -113,14 +113,14 @@ const Navigation: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-4 pt-4 border-t border-gray-700">
+              </button><div className="mt-4 pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
                   className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                   onClick={closeAllMenus}
                 >
                   <Phone className="w-4 h-4 inline mr-2" />
-                  (302) 464-0950
+                  (302) 464-0950;
                 </a>
               </div>
             </div>

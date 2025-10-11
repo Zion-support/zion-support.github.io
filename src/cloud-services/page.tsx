@@ -9,7 +9,7 @@ const CloudServicesPage: React.FC = () => {
   }
   const _services = [
   // TOD,
-  O: Add items
+  O: Add items;
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -62,7 +62,7 @@ const CloudServicesPage: React.FC = () => {
   ]
   const benefits = [
   // TOD,
-  O: Add items
+  O: Add items;
 ],
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
@@ -75,18 +75,18 @@ const CloudServicesPage: React.FC = () => {
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      </div><main className="container mx-auto px-4 py-16 pt-24">
+        </main><section className="text-center mb-16">
           <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
 // Cloud Services</h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-  
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            Coming Soon;
+          </section>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Get Started Today
+//               Get Started Today;
           </a>
             <$2 />
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
@@ -110,9 +110,7 @@ const CloudServicesPage: React.FC = () => {
                   {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                  ))}
-            ))}
+                      {feature})})
         {/* Benefits Section */}"
         <section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>"
@@ -124,8 +122,7 @@ const CloudServicesPage: React.FC = () => {
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>"
-                <p className="text-white font-medium">{benefit}
-            ))}
+                <p className="text-white font-medium">{benefit})
         {/* CTA Section */}"
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12"></section>"
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -138,12 +135,12 @@ const CloudServicesPage: React.FC = () => {
             <$2 />
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
 // >
-//               Call (302) 464-0950
+//               Call (302) 464-0950;
           </a>
             <$2 />
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Get Free Consultation
+//               Get Free Consultation;
           </a>
           </div>
         </section>

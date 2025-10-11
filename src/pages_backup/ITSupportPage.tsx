@@ -71,7 +71,7 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>
     }
     
-    return this.props.children
+    return this.props.children;
   }
 }
 import React from 'react'

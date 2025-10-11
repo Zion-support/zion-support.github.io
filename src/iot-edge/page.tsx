@@ -149,7 +149,7 @@ titl,
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}"
-        <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
+        </div><section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
           <div className="absolute inset-0 bg-black opacity-20"></div>"
           < className="relative max-w-7xl mx-auto px-4,$2 />
   sm:px-6,"
@@ -204,24 +204,25 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                   <Target className="w-8 h-8 text-orange-600" /></Target>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>"
-                <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries
+                <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries;
         {/* Services by Category */}
         {categories.map(category => ()}"
           <section key={category} className="py-16 bg-gray-50">
-                  {category} Solutions
+                  {category} Solutions;
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
               < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
                 {
-    iotServices
+    iotServices;
   }
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                     "
           < key={index} className="bg-white rounded-lg shadow-lg p-6,"$2 />
   hover:shadow-xl transition-shadow"></div>"
-                      <div className="text-4xl mb-4">{service.icon}</div>"
+                      </section>
+<div className="text-4xl mb-4">{service.icon}</div>"
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>"
                       <p className="text-gray-600 mb-4">{service.description}</p>"
                       <div className="mb-4"></div>"
@@ -237,17 +238,18 @@ Save up to 40% vs market rates;"
                           {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
-                          ))}
+                              {feature})
                         </ul>"
                         <h4 className="font-semibold text-gray-900 mb-2">Technologie,
   s:</h4>"
-                        <div className="flex flex-wrap gap-2">
+                        </div>
+<div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>"
-                      <div className="mb-6"></div>"
+                      </div>
+<div className="mb-6"></div>"
                         <h4 className="font-semibold text-gray-900 mb-2">Business,
   Benefits:
                           {service.benefits.map((benefit, benefitIndex) => ()}"
@@ -258,7 +260,7 @@ Save up to 40% vs market rates;"
   hover: bg-cyan-700 transition-colors"></button>
                         Get IoT Consultation,
         {/* IoT Capabilities Showcase */}
-                Our IoT & Edge Capabilities
+                Our IoT & Edge Capabilities;
                 Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics;"
               <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg"></div>"
                 <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" /></Wifi>"
@@ -283,7 +285,7 @@ Save up to 40% vs market rates;"
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>"
                 <Globe className="w-12 h-12 text-pink-600 mx-auto mb-4" /></Globe>"
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>"
-                <p className="text-gray-600">Comprehensive smart city infrastructure and services
+                <p className="text-gray-600">Comprehensive smart city infrastructure and services;
         {/* Contact Section */}"
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white"></section>"
           < className="max-w-7xl mx-auto px-4,$2 />
@@ -293,11 +295,11 @@ Save up to 40% vs market rates;"
   md: text-4xl font-bold mb-4"></h2>
 Ready to Connect Your World?"
             <p className="text-xl mb-8 text-cyan-100"></p>
-              Contact our IoT experts for a free consultation and custom connected solution strategy
+              Contact our IoT experts for a free consultation and custom connected solution strategy;
               <$2 />
                 href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
-//                  +1 302 464 0950
+//                  +1 302 464 0950;
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com,

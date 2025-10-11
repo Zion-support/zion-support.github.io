@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>
     }
     
-    return this.props.children
+    return this.props.children;
   }
 }
 import React from 'react'
@@ -55,22 +55,23 @@ export default function SearchFeature() {
 
   }
   return (
-    <>
-            <li>
+    <></><li>
               Sort by rating, price, or recency to surface the best options.</$1></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
             Frequently Asked Questions</$1>
           <div className='space - y-4 mb - 12'>
-            <div>
+            </div>
+<div>
               <p className='font - semibold'>
                 Can I search in multiple languages?</$1>
               <p className='text - zion - slate - light'>
-                Yes, the search engine supports queries in all interface
+                Yes, the search engine supports queries in all interface;
                 languages.</$1></$1>
-            <div>
+            </div>
+<div>
               <p className='font - semibold'>How are results ranked?</p>
               <p className='text - zion - slate - light'>
-                A combination of relevance scoring and community ratings
+                A combination of relevance scoring and community ratings;
                 determines the order.</$1></$1></$1>
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
@@ -89,13 +90,15 @@ export default function SearchFeature() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      </div><main className="bg-background text-white py-12">
+        </main>
+<div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
             <img
               src="https: //placehold && placehold.co/800x400"
@@ -111,17 +114,17 @@ export default function SearchFeature() {
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
-            <div>
+            </div>
+<div>
               <p className="font-semibold">Can I search in multiple languages?</p>
               <p className="text-zion-slate-light">Yes, the search engine supports queries in all interface languages.</p>
             </div>
-            <div>
+<div>
               <p className="font-semibold">How are results ranked?</p>
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
-
-          <div className='text-center'>
+<div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -130,13 +133,15 @@ export default function SearchFeature() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      </div><main className="bg-background text-white py-12">
+        </main>
+<div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https: //placehold.co/800x400"
               alt="Screenshot of search results"
@@ -151,17 +156,17 @@ export default function SearchFeature() {
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
-            <div>
+            </div>
+<div>
               <p className="font-semibold">Can I search in multiple languages?</p>
               <p className="text-zion-slate-light">Yes, the search engine supports queries in all interface languages.</p>
             </div>
-            <div>
+<div>
               <p className="font-semibold">How are results ranked?</p>
               <p className="text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p>
             </div>
           </div>
-
-          <div className="text-center">
+<div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/search">Try Search</Link>
             </Button>
@@ -188,8 +193,7 @@ export default function SearchFeature() {
     "url": "https://app.ziontechgroup.com/features/search"
   }
   return (
-    <>
-      <SEO
+    <></><SEO
         title="Advanced Search"
         description="Find exactly what you need with fast, filterable search powered by Elasticsearch."
         keywords="search engine, filtering, tech marketplace search"
@@ -202,11 +206,13 @@ export default function SearchFeature() {
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        </main>
+<div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">Advanced Search</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of search results"

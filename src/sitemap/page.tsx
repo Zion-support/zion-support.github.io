@@ -75,12 +75,11 @@ const SitemapPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">
+        </div><main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          </main><section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              Site Map
-  
+              Site Map;
             <p className="text-xl text-cyan-400 mb-8">
               Navigate through all our pages and services,
   
@@ -88,114 +87,120 @@ const SitemapPage: React.FC = () => {
               Find everything you need on our website. From AI services to IT solutions, 
               case studies to technical resources - everything is organized for easy navigation.
           {/* Main Pages */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Main Pages
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </section><section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Main Pages;
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {mainPages.map((page, index) => (
                 <$2 />
                   key={index}
                   to={page.path}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
+                  </div>
+<div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                       {page.name}
                     <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                  <p className="text-gray-300 text-sm">{page.description}
-              ))}
+                  <p className="text-gray-300 text-sm">{page.description})
           {/* Micro SAAS Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Micro SAAS Services
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div><section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Micro SAAS Services;
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {microSaasServices.map((service, index) => (
                 <$2 />
                   key={index}
                   to={service.path}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
+                  </div>
+<div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
                       {service.name}
                     <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                  <p className="text-gray-300 text-sm">{service.description}
-              ))}
+                  <p className="text-gray-300 text-sm">{service.description})
           {/* AI Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">AI Services
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div><section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">AI Services;
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {aiServices.map((service, index) => (
                 <$2 />
                   key={index}
                   to={service.path}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
+                  </div>
+<div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">
                       {service.name}
                     <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
-                  <p className="text-gray-300 text-sm">{service.description}
-              ))}
+                  <p className="text-gray-300 text-sm">{service.description})
           {/* IT Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">IT Services
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div><section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">IT Services;
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {itServices.map((service, index) => (
                 <$2 />
                   key={index}
                   to={service.path}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
+                  </div>
+<div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                       {service.name}
                     <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                  <p className="text-gray-300 text-sm">{service.description}
-              ))}
+                  <p className="text-gray-300 text-sm">{service.description})
           {/* Specialized Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Specialized Solutions
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div><section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Specialized Solutions;
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {specializedServices.map((service, index) => (
                 <$2 />
                   key={index}
                   to={service.path}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
+                  </div>
+<div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors">
                       {service.name}
                     <ArrowRight className="w-4 h-4 text-green-400 group-hover:translate-x-1 transition-transform" />
-                  <p className="text-gray-300 text-sm">{service.description}
-              ))}
+                  <p className="text-gray-300 text-sm">{service.description})
           {/* Blog Categories */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Blog Categories
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div><section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Blog Categories;
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {blogCategories.map((category, index) => (
                 <$2 />
                   key={index}
                   to={category.path}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
+                  </div>
+<div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">
                       {category.name}
                     <ArrowRight className="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" />
-                  <p className="text-gray-300 text-sm">{category.description}
-              ))}
+                  <p className="text-gray-300 text-sm">{category.description})
           {/* Contact CTA */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          </div><section className="text-center">
+            </section>
+<div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
                 Can't Find What You're Looking For?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact our team for personalized assistance and recommendations
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                Contact our team for personalized assistance and recommendations;
+              </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <$2 />
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold">
-                  Contact Us
-  
+                  Contact Us;
                 <$2 />
                   to="/demo"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                  Request Demo
-  
+                  Request Demo;
               </div>
             </div>
           </section>

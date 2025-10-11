@@ -64,26 +64,25 @@ import { use_translation } from 'react - i18next'
 import { CartDrawer } from '@/components / cart / CartDrawer'
 import { LoginModal } from '@/components / auth / LoginModal'
 export /**
- * PrimaryNav - Function description
+ * PrimaryNav - Function description;
  */
 function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState (false)
   const [login_open, setLoginOpen] = useState (false)
   const { user } = use_auth ()
-  const isLoggedIn = !!user
+  const isLoggedIn = !!user;
   const is_mobile = useIsMobile ()
   const { t } = use_translation ()
   const router = use_router ()
   const [query, set_query] = useState ('')
   const suggestions = generateSearchSuggestions ()
-  let unread_count = 0
+  let unread_count = 0;
   try {
     const messaging = use_messaging ()
-    unread_count = messaging.unread_count
+    unread_count = messaging.unread_count;
   } catch {
 
-    // context not available
-
+    // context not available;
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -93,30 +92,29 @@ function PrimaryNav() {
     e.preventDefault()
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
-      router
+      router;
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
         .then(() => setQuery(''))
         .catch(err =>
           logErrorToProduction('Search navigation failed', err, {
-            query: trimmed
+            query: trimmed;
             component: 'PrimaryNav'
           })
-        ) }
   const handle_submit = (e: React.FormEvent) =>: any {
     e.prevent_default ()
-    const trimmed = query.trim ();    // Check condition
+    const trimmed = query.trim ();    // Check condition;
 if ( {) {
-  $2
+  $2;
 }
       log_debug ('PrimaryNav search submit:', { query: trimmed })
-      router
+      router;
         .push (`/search?q=${encodeURIComponent (trimmed)}`)
         .then (() => set_query (''))
         .catch (err =>
           logErrorToProduction ('Search navigation failed', err, {
             query: trimmed,
             component: 'PrimaryNav',
-          })) }
+          })
   }
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
@@ -131,9 +129,9 @@ export function PrimaryNav() {
   let unreadCount = 0,
   try {
     const messaging = useMessaging(),
-    unreadCount = messaging.unreadCount
+    unreadCount = messaging.unreadCount;
   } catch {
-    // context not available
+    // context not available;
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -141,11 +139,10 @@ export function PrimaryNav() {
     const trimmed = query.trim(),
     if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed }),
-      router
+      router;
         .push(`/search?q=${encodeURIComponent(trimmed)}`)
         .then(() => setQuery(''))
-        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' }))
-    }
+        .catch((err) => logErrorToProduction('Search navigation failed', err, { query: trimmed, component: 'PrimaryNav' })
   },
 
 
@@ -154,15 +151,15 @@ export function PrimaryNav() {
           <Logo />
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
 
-          <div className='hidden lg:block order-1 flex-shrink-0'>
+          </div>
+<div className='hidden lg:block order-1 flex-shrink-0'>
 
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
 
             />          </div>
   return (
-    <>
-      <$2 />
+    <></><$2 />
         className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
         role="navigation"
         aria-label="Primary"
@@ -171,7 +168,8 @@ export function PrimaryNav() {
         <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className='hidden lg:block order-1 flex-shrink-0'>
+          </div>
+<div className='hidden lg:block order-1 flex-shrink-0'>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
             />          </div>
@@ -194,67 +192,66 @@ export function PrimaryNav() {
 
                   log_debug ('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
-                  });                  // Handle different suggestion types with proper navigation
-                  // Check condition
+                  });                  // Handle different suggestion types with proper navigation;
+                  // Check condition;
 if ( {) {
-  $2
+  $2;
 }
-                    // Product listings with IDs go to product detail page
+                    // Product listings with IDs go to product detail page;
                     router.push (`/marketplace / listing/${sugg.id}`)
-                  } else // Check condition
+                  } else // Check condition;
 if (
                   ) {) {
-  $2
+  $2;
 }
-                    // Documentation suggestions navigate directly to their path
+                    // Documentation suggestions navigate directly to their path;
                     router.push (sugg.slug)
-                  } else // Check condition
+                  } else // Check condition;
 if ( {) {
-  $2
+  $2;
 }
-                    // Blog posts navigate to blog detail page
+                    // Blog posts navigate to blog detail page;
                     router.push (`/blog/${sugg.slug}`)
                   } else {
-                    // Default: search results page with query parameter
+                    // Default: search results page with query parameter;
                     router.push (`/search?q=${encodeURIComponent (sugg.text)}`)
                   }
 
                 onSelectSuggestion={sugg => {
                   logDebug('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
-                  });                  // Handle different suggestion types with proper navigation
+                  });                  // Handle different suggestion types with proper navigation;
                   if (sugg && sugg.id) {
                 onSelectSuggestion={(sugg) => {
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),
-                  // Handle different suggestion types with proper navigation
+                  // Handle different suggestion types with proper navigation;
                   if (sugg.id) {
-                    // Product listings with IDs go to product detail page
+                    // Product listings with IDs go to product detail page;
                     router.push(`/marketplace/listing/${sugg.id}`)
                   } else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
-                    // Documentation suggestions navigate directly to their path
+                    // Documentation suggestions navigate directly to their path;
                     router.push(sugg.slug)
                   } else if (sugg.type === 'blog' && sugg.slug) {
-                    // Blog posts navigate to blog detail page
+                    // Blog posts navigate to blog detail page;
                     router.push(`/blog/${sugg.slug}`)
                   } else {
-                    // Default: search results page with query parameter
+                    // Default: search results page with query parameter;
                     router.push(`/search?q=${encodeURIComponent(sugg.text)}`)
                   }
                   setQuery(''),
-                  // Track analytics event
+                  // Track analytics event;
                   if (typeof window !== 'undefined' && window && window.gtag) {
                     window && window.gtag('event', 'search_suggestion_click', {
                       search_term: sugg && sugg.text,
                       suggestion_type: sugg && sugg.type,
                       suggestion_id: sugg && sugg.id || sugg && sugg.slug,
                     })
-                  }
                   // // // // // console && console.log('PrimaryNav search suggestion selected:',
   sugg)
-                  // Handle different suggestion types with proper navigation
+                  // Handle different suggestion types with proper navigation;
                   if(sugg && sugg.id) {
                     // Product listings with IDs go to product detail page`
-                    router && router.push(`/marketplace/listing/${sugg && sugg.id
+                    router && router.push(`/marketplace/listing/${sugg && sugg.id;
 '`
 }`)} else if(sugg && sugg.type = == 'doc' && sugg && sugg.slug && sugg && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path'
@@ -269,46 +266,47 @@ if ( {) {
                     window && window.gtag('event',search_suggestion_click', {
                       search_term: sugg && sugg.text,
                       suggestion_type: sugg && sugg.type,
-                      suggestion_id: sugg && sugg.id || sugg && sugg.slug
-})}
+                      suggestion_id: sugg && sugg.id || sugg && sugg.slug;
+})
                 }}
                 searchSuggestions = {suggestions,}
               /></$1>
             {/* Compact actions group */}
-            <div className='flex items-center gap-1'>
+            </div>
+<div className='flex items-center gap-1'>
               <PointsBadge />
               <CartDrawer /></$1>
             {/* Compact controls group */}
-            <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>
+            </div>
+<div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>
                   set_query ('')
-                  // Track analytics event
-                  // Check condition
+                  // Track analytics event;
+                  // Check condition;
 if ( {) {
-  $2
+  $2;
 }
                     window.gtag ('event', 'search_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug,
                     })
-                  }
                   // // // // // console.log ('PrimaryNav search suggestion selected:',
   sugg)
-                  // Handle different suggestion types with proper navigation
-                  // Check condition
+                  // Handle different suggestion types with proper navigation;
+                  // Check condition;
 if ( {) {
-  $2
+  $2;
 }
                     // Product listings with IDs go to product detail page`
-                    router.push (`/marketplace / listing/${sugg.id
+                    router.push (`/marketplace / listing/${sugg.id;
 '`
 }`)} else if () {) {
-  $2
+  $2;
 }
                     // Documentation suggestions navigate directly to their path'
-                    router.push (sugg.slug)} else // Check condition
+                    router.push (sugg.slug)} else // Check condition;
 if ( {) {
-  $2
+  $2;
 }
                     // Blog posts navigate to blog detail page`
                     router.push (`/blog/${sugg.slug}`)} else {
@@ -316,22 +314,22 @@ if ( {) {
                     router.push (`/search/${sugg.slug || slugify (sugg.text)}`)}
                   set_query ('')
                   // Track analytics event'
-                  // Check condition
+                  // Check condition;
 if ( {) {
-  $2
+  $2;
 }
                     window.gtag ('event', search_suggestion_click', {
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
-                      suggestion_id: sugg.id || sugg.slug
+                      suggestion_id: sugg.id || sugg.slug;
                     })
-                  }
                 }}
                 searchSuggestions={suggestions}
               /></$1>
             {/* Compact actions group */}
 
-            <div className="flex items-center gap-1">
+            </div>
+<div className="flex items-center gap-1">
               <PointsBadge />
               <CartDrawer />
             </div>
@@ -351,8 +349,7 @@ if ( {) {
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
-                <>
-                  <$2 />
+                <></><$2 />
                     href='/auth/login'
                     className='text-sm hover:text-primary whitespace-nowrap'
                     data-testid='login-link'
@@ -366,11 +363,13 @@ if ( {) {
                     onClick={(e) => {
                       e.preventDefault(),
                       setLoginOpen(true)
-            <div className="flex items-center gap-1">
+            </div>
+<div className="flex items-center gap-1">
               <PointsBadge />
               <CartDrawer /></$1>
             {/* Compact controls group */}
-            <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>
+            </div>
+<div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>
               <ModeToggle />
               <LanguageSelector /></$1>
             {/* Auth links - flex wrap for very small screens */}
@@ -430,7 +429,8 @@ if ( {) {
                 onClick={(e) => {
                   e.preventDefault(),
                   setLoginOpen(true)
-          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+          </div>
+<div className="hidden md: flex lg:hidden items-center gap-2 order-2">
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
@@ -458,10 +458,9 @@ if ( {) {
             {isLoggedIn && <UserMenu />}
 
           </div>
-            <div className='flex items - center gap - 1 flex - wrap'>
+<div className='flex items - center gap - 1 flex - wrap'>
               {!isLoggedIn && (
-                <>
-                  <;$2 />
+                <></><;$2 />
                     href='/auth / login'
                     className='text - sm hover:text - primary whitespace - nowrap'
                     data - testid='login - link'
@@ -534,7 +533,8 @@ if ( {) {
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden='true'          />
-          <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
+          </div>
+<div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
@@ -548,11 +548,11 @@ if ( {) {
   )
 }
 
-return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
+return (<></><header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
-//Track analytics event
+//Track analytics event;
 }searchSuggestions= {
-  suggestions
+  suggestions;
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> < onClick={$2 />
   (e) => {
   > {'
@@ -578,7 +578,7 @@ setLoginOpen (true)
 }</button> </div> </header> < className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={$2 />
   () => setMobileMenuOpen (false) "
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
-  unreadCount
+  unreadCount;
 }onClose= {
   () => setMobileMenuOpen (false)
 }openLoginModal= {
@@ -592,21 +592,20 @@ setLoginOpen (true)
 
 }/>
 }<LoginModal isOpen= {
-  loginOpen
+  loginOpen;
 }onOpenChange= {
-  setLoginOpen
+  setLoginOpen;
 }/> </>)
-}'"  { opacity: 0
-  height: 0
+}'"  { opacity: 0;
+  height: 0;
 }}
               animate = {
-  { opacity: 1
+  { opacity: 1;
   height: 'auto'
 }}
               exit = {
-  { opacity: 0
-  height: 0
-
+  { opacity: 0;
+  height: 0;
           <;$2 />
             className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0'
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
@@ -621,12 +620,14 @@ setLoginOpen (true)
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
               <div className="px-4 py-6 space-y-4">
                 {services.map((category, index) => (
-                  <div key={index}>"
+                  </div>
+<div key={index}>"
                     <h3 className="text-sm font-semibold text-cyan-400 mb-2">
                       {category.category}
                     </h3>"
-                    <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown
+                    </div>
+<div className="space-y-2 ml-4">
+                      {category.items.map((service: unknown, serviceIndex: unknown;
                         <$2 />
                           key={serviceIndex}
                           to={service.path}"
@@ -644,25 +645,25 @@ setLoginOpen (true)
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
-                    Solutions
+                    Solutions;
                   </Link>
                   <                    to="/about"$2 />
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
-                    About
+                    About;
                   </Link>
                   <                    to="/blog"$2 />
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
-                    Blog
+                    Blog;
                   </Link>
                   <                    to="/contact"$2 />
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
-                    Contact
+                    Contact;
                   </Link>
                 </div>
               </div>
@@ -686,12 +687,14 @@ setLoginOpen (true)
               openLoginModal={(returnToPath) => setLoginOpen(true)}
             /></$1></$1></$1>
       {mobileMenuOpen && (
-        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>
+        </div>
+<div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>
           <;$2 />
             className='absolute inset - 0 bg - black / 50 backdrop - blur - sm'
             on_click={() => setMobileMenuOpen (false)}
             aria - hidden='true'          />
-          <div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'>
+          </div>
+<div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'>
             <MobileMenu
               unread_count={unread_count}
               on_close={() => setMobileMenuOpen (false)}
@@ -702,11 +705,12 @@ setLoginOpen (true)
 }
 
 
-return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />
+return (<></><header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > </div>
+<div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />
 }set_query ('')
-//Track analytics event
+//Track analytics event;
 }search_suggestions= {
-  suggestions
+  suggestions;
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> < on_click={$2 />
   (e) => {
   > {'
@@ -732,7 +736,7 @@ setLoginOpen (true)
 }</button> </div> </header> < className="absolute inset - 0 bg - black / 50 backdrop - blur - sm" on_click={$2 />
   () => setMobileMenuOpen (false) "
 }aria - hidden="true" /> <div className="relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem) ] overflow - y-auto" > <MobileMenu unread_count= {
-  unread_count
+  unread_count;
 }on_close= {
   () => setMobileMenuOpen (false)
 }openLoginModal= {
@@ -740,15 +744,15 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   is_mobile && <MobileBottomNav unread_count= {
-  unread_count
+  unread_count;
 }/>
 }<LoginModal is_open= {
-  login_open
+  login_open;
 }onOpenChange= {
-  setLoginOpen
+  setLoginOpen;
 }/> </>)
 }'"  { opacity: 0,
-  height: 0
+  height: 0;
 }}
               animate = {
   { opacity: 1,
@@ -756,13 +760,14 @@ setLoginOpen (true)
 }}
               exit = {
   { opacity: 0,
-  height: 0
+  height: 0;
 }}
               transition={{ duration: 0.3 }}"
               className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">"
               <div className="px - 4 py - 6 space - y-4">
                 {services.map ((category, index) => (
-                  <div key={index}>"
+                  </div>
+<div key={index}>"
                     <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">
                       {category.category}
 
@@ -770,8 +775,9 @@ setLoginOpen (true)
 
 
 </$1>"
-                    <div className="space - y-2 ml - 4">
-                      {category.items.map ((service: unknown, service_index: unknown
+                    </div>
+<div className="space - y-2 ml - 4">
+                      {category.items.map ((service: unknown, service_index: unknown;
                         <;$2 />
                           key={service_index}
                           to={service.path}"
@@ -805,3 +811,4 @@ setLoginOpen (true)
         </AnimatePresence></$1></$1>)}
 '"`
 }
+</div>

@@ -34,19 +34,19 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../co
 import { Badge } from '../components/ui/badge.js'
 import { Phone, Mail } from 'lucide-react'
 interface SitemapSection {
-  id: string
-  title: string
-  description: string
-  icon: React.ReactNode
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
   links: SitemapLink[]
 }
 
 interface SitemapLink {
-  title: string
-  href: string
-  description?: string
-  isExternal?: boolean
-  badge?: string
+  title: string;
+  href: string;
+  description?: string;
+  isExternal?: boolean;
+  badge?: string;
 }
 
 const sitemapSections: SitemapSection[] = [
@@ -146,7 +146,7 @@ const sitemapSections: SitemapSection[] = [
         title: 'Careers',
         href: '/careers',
         description: 'Join our team',
-        isExternal: true
+        isExternal: true;
       },
       {
         title: 'News & Updates',
@@ -309,7 +309,7 @@ export default function Sitemap() {
   Code,
   MessageSquare,
   Star,
-  Play
+  Play;
 } from 'lucide-react'
 export default function Sitemap() {
   const sitemapSections = [
@@ -434,7 +434,7 @@ import {
   Shield,
   Mail,
   Phone,
-  MapPin
+  MapPin;
 } from "lucide-react"
 export default function Sitemap() {
   const sitemapSections = [
@@ -542,7 +542,7 @@ import {
   Factory,
   Award,
   Mail,
-  ArrowRight
+  ArrowRight;
 } from 'lucide-react'
 export default function Sitemap() {
   const mainPages = [
@@ -591,7 +591,7 @@ export default function Sitemap() {
     { path: '/accessibility', title: 'Accessibility', description: 'Accessibility commitment', icon: Users }
   ]
   const renderPageSection = (title: string, pages: any[], IconComponent: any) => (
-    <motion.div
+    <motion.div;
       key={title}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -624,8 +624,7 @@ export default function Sitemap() {
     { name: 'Support', path: '/support', icon: HelpCircle, color: 'bg-orange-100 text-orange-700' },
   ]
   return (
-    <>
-      <SEO
+    <></><SEO
         title="Sitemap | Zion AI Marketplace"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
@@ -635,11 +634,13 @@ export default function Sitemap() {
       <Header />
       
       <main className="pt-32 pb-20">
-        <div className="container mx-auto px-4">
+        </main>
+<div className="container mx-auto px-4">
           {/* Header Section */}
-          <div className="text-center mb-16">
+          </div>
+<div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Site Navigation Guide
+              Site Navigation Guide;
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore our comprehensive website structure. Find all pages, services, and resources organized by category for easy navigation.
@@ -655,7 +656,8 @@ export default function Sitemap() {
                 className={`${link.color} p-4 rounded-lg text-center hover:scale-105 transition-transform duration-200`}
               >
                 <link.icon className="h-8 w-8 mx-auto mb-2" />
-                <div className="font-semibold text-sm">{link.name}</div>
+                </div>
+<div className="font-semibold text-sm">{link.name}</div>
               </Link>
             ))}
           </div>
@@ -665,17 +667,21 @@ export default function Sitemap() {
             {sitemapSections.map((section, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-zion-blue/10 rounded-lg flex items-center justify-center">
-                      <section.icon className="h-5 w-5 text-zion-blue" />
+                  </div>
+<div className="flex items-center space-x-3 mb-4">
+                    </div>
+<div className="w-10 h-10 bg-zion-blue/10 rounded-lg flex items-center justify-center">
+                      </div><section.icon className="h-5 w-5 text-zion-blue" />
                     </div>
                     <CardTitle className="text-xl">{section.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3">
+                  </section>
+<div className="space-y-3">
                     {section.links.map((link, linkIndex) => (
-                      <div key={linkIndex} className="border-l-2 border-gray-200 pl-4">
+                      </div>
+<div key={linkIndex} className="border-l-2 border-gray-200 pl-4">
                         <$2 />
                           to={link.path}
                           className="block text-zion-blue hover:text-zion-blue-dark font-medium mb-1 transition-colors"
@@ -701,16 +707,18 @@ export default function Sitemap() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-3 text-sm text-gray-600">
-                  <div className="flex justify-between">
+                </div>
+<div className="space-y-3 text-sm text-gray-600">
+                  </div>
+<div className="flex justify-between">
                     <span>Total Pages:</span>
                     <span className="font-medium">50+</span>
                   </div>
-                  <div className="flex justify-between">
+<div className="flex justify-between">
                     <span>Last Updated:</span>
                     <span className="font-medium">{new Date().toLocaleDateString()}</span>
                   </div>
-                  <div className="flex justify-between">
+<div className="flex justify-between">
                     <span>Site Version:</span>
                     <span className="font-medium">2.0.0</span>
                   </div>
@@ -760,7 +768,8 @@ export default function Sitemap() {
         <IconComponent className="w-5 h-5 mr-2 text-cyan-400" />
         {title}
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {pages.map((page) => (
           <$2 />
             key={page.path}
@@ -779,14 +788,15 @@ export default function Sitemap() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
+      </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+<div className="relative z-10 max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Sitemap
+            Sitemap;
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Navigate through all the pages and sections of our website to find exactly 
+            Navigate through all the pages and sections of our website to find exactly;
             what you're looking for.
           </p>
         </div>
@@ -794,10 +804,13 @@ export default function Sitemap() {
 
       {/* Sitemap Content */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left Column */}
-            <div>
+            </div>
+<div>
               {renderPageSection('Main Pages', mainPages, Home)}
               {renderPageSection('Services', servicePages, Briefcase)}
               {renderPageSection('Solutions', solutionPages, Building)}
@@ -815,22 +828,24 @@ export default function Sitemap() {
 
       {/* Quick Navigation */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Quick Navigation
+              Quick Navigation;
             </h2>
             <p className="text-gray-400">
-              Popular destinations and frequently accessed pages
+              Popular destinations and frequently accessed pages;
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <$2 />
               to="/services"
               className="group p-6 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
             >
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+              </div>
+<div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Briefcase className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Our Services</h3>
@@ -875,15 +890,17 @@ export default function Sitemap() {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        </section>
+<div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Need Help Finding Something?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Can't find what you're looking for? Our team is here to help you navigate 
+            Can't find what you're looking for? Our team is here to help you navigate;
             our website and find the information you need.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               to="/contact"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
@@ -902,16 +919,17 @@ export default function Sitemap() {
         </div>
       </section>
     </div>
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <div className="max-w-6xl mx-auto px-4 py-12">
+<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      </div>
+<div className="max-w-6xl mx-auto px-4 py-12">
         {/* Header */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Zion Tech Group Sitemap
+            Zion Tech Group Sitemap;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Navigate through our comprehensive range of services, solutions, and resources. 
@@ -954,7 +972,7 @@ import {
   Shield as SecurityIcon,
   Server,
   RefreshCw,
-  MessageSquare
+  MessageSquare;
 } from 'lucide-react'
 const Sitemap = () => {
   const siteStructure = [
@@ -1040,12 +1058,15 @@ const Sitemap = () => {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    </div>
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      </div>
+<div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        </div>
+<div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-            Site Map
+            Site Map;
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore all the pages and resources available on the Zion Tech Group website. 

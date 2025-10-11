@@ -1,13 +1,13 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
-    children: ReactNode
+    children: ReactNode;
   fallback?: ReactNode,
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
   }
 interface State {
-    hasError: boolean
+    hasError: boolean;
   error?: Error,
-  errorInfo?: ErrorInfo
+  errorInfo?: ErrorInfo;
   }
 class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -19,32 +19,32 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo })
-    // Log error to console in development
+    // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-    // Call onError callback if provided
+    // Call onError callback if provided;
     if (this.props.onError) {
     this.props.onError(error, errorInfo)
   }
-    // In production, you might want to send this to an error reporting service
+    // In production, you might want to send this to an error reporting service;
     if (process.env.NODE_ENV === 'production') {
-      // Example: Send to error reporting service
+      // Example: Send to error reporting service;
       // errorReportingService.captureException(error, { extra: errorInfo })
-    }
-  }
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
+      // Custom fallback UI;
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
   }
-      // Default error UI
+      // Default error UI;
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
-            <div className="text-6xl mb-4">⚠️
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong
+          </div>
+<div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
+            </div>
+<div className="text-6xl mb-4">⚠️
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong;
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -53,15 +53,15 @@ class GlobalErrorBoundary extends Component<Props, State> {
                   Error Details (Development Only)
                 <pre className="text-xs text-red-400 overflow-auto">
                   {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-            )}
-            <div className="space-y-3">
+                  {this.state.errorInfo?.componentStack})
+            </div>
+<div className="space-y-3">
               <$2 />
                 onClick={() => window.location.reload()}
                 className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
-                Refresh Page
+                Refresh Page;
               <$2 />
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })
                 className="w-full bg-purple-600 hover: bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
                 Try Again</span>
               <$2 />
@@ -73,7 +73,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
         </div>
       ),
     }
-    return this.props.children
+    return this.props.children;
   }
 }
 export { GlobalErrorBoundary }</div></div></div></div></p></p></h1>

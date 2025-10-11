@@ -34,7 +34,7 @@ import {
   Lock,
   Database,
   Code,
-  GraduationCap
+  GraduationCap;
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { Brain, Users, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp, UserCheck } from 'lucide-react'
@@ -65,7 +65,7 @@ import {
   GraduationCap,
   Heart,
   DollarSign,
-  Graph
+  Graph;
 } from 'lucide-react'
 const AIHRRecruitment: React.FC = () => {
   const features = [
@@ -163,7 +163,7 @@ const AIHRRecruitment: React.FC = () => {
   Briefcase,
   Award,
   Shield,
-  TrendingUp
+  TrendingUp;
 } from 'lucide-react'
 export default function AIHRRecruitment() {
   const services = [
@@ -284,7 +284,7 @@ export default function AIHRRecruitment() {
   Clock,
   DollarSign,
   TrendingUp,
-  UserCheck
+  UserCheck;
 import { SEO } from '../../components/SEO'
 import { 
   Users, 
@@ -301,7 +301,7 @@ import {
   MessageSquare,
   CheckCircle,
   BarChart3,
-  Award
+  Award;
 } from 'lucide-react'
 export default function AIHRRecruitment() {
   const features = [
@@ -404,7 +404,7 @@ export default function AIHRRecruitment() {
         "Mobile app access"
       ],
       cta: "Start Free Trial",
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -421,7 +421,7 @@ export default function AIHRRecruitment() {
         "Integration support"
       ],
       cta: "Start Free Trial",
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -440,7 +440,7 @@ export default function AIHRRecruitment() {
         "Compliance consulting"
       ],
       cta: "Contact Sales",
-      popular: false
+      popular: false;
     }
   ]
   const successMetrics = [
@@ -508,7 +508,7 @@ export default function AIHRRecruitment() {
         "Standard reporting",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -523,7 +523,7 @@ export default function AIHRRecruitment() {
         "Performance management",
         "Priority support"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -551,7 +551,7 @@ import {
   PieChart,
   LineChart,
   Building,
-  GraduationCap
+  GraduationCap;
 import { Link } from 'react-router-dom'
 import { 
   Users, 
@@ -567,7 +567,7 @@ import {
   MessageSquare,
   FileText,
   Clock,
-  Award
+  Award;
 } from 'lucide-react'
 const AIHRRecruitment = () => {
   const features = [
@@ -625,7 +625,7 @@ const AIHRRecruitment = () => {
         "Custom training & onboarding",
         "24/7 phone support"
       ],
-      popular: false
+      popular: false;
     {
       name: "Technology",
       description: "AI-powered technical assessment and skills matching",
@@ -653,14 +653,17 @@ const AIHRRecruitment = () => {
   ]
   return (
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+        </section>
+<div className="max-w-7xl mx-auto text-center">
+          </div>
+<div className="mb-8">
+            </div>
+<div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
-              AI-Powered HR & Recruitment
+              AI-Powered HR & Recruitment;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Revolutionize Your
+              Revolutionize Your;
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> HR & Recruitment</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -669,22 +672,22 @@ const AIHRRecruitment = () => {
     {
       title: 'Faster Hiring',
       description: 'Reduce time-to-hire by up to 60% with AI-powered automation',
-      icon: Zap
+      icon: Zap;
     },
     {
       title: 'Better Quality Hires',
       description: 'Improve candidate quality and retention with predictive analytics',
-      icon: Star
+      icon: Star;
     },
     {
       title: 'Cost Reduction',
       description: 'Lower recruitment costs through automation and efficiency gains',
-      icon: TrendingUp
+      icon: TrendingUp;
     },
     {
       title: 'Improved Diversity',
       description: 'Enhance diversity and inclusion with unbiased AI algorithms',
-      icon: Users
+      icon: Users;
       industry: "Technology",
       title: "Technical Talent Acquisition",
       description: "AI-powered screening for technical roles with skill assessment and cultural fit analysis",
@@ -713,32 +716,32 @@ const AIHRRecruitment = () => {
     {
       name: "Machine Learning",
       description: "Advanced ML algorithms for candidate assessment and prediction",
-      icon: Brain
+      icon: Brain;
     },
     {
       name: "Natural Language Processing",
       description: "AI-powered text analysis for resume parsing and communication",
-      icon: Eye
+      icon: Eye;
     },
     {
       name: "Predictive Analytics",
       description: "Data-driven forecasting for hiring success and retention",
-      icon: LineChart
+      icon: LineChart;
     },
     {
       name: "Automation Engine",
       description: "Intelligent workflow automation for recruitment processes",
-      icon: Zap
+      icon: Zap;
     },
     {
       name: "Talent Analytics",
       description: "Comprehensive workforce analytics and insights",
-      icon: BarChart3
+      icon: BarChart3;
     },
     {
       name: "Compliance Engine",
       description: "Built-in compliance and bias detection features",
-      icon: Shield
+      icon: Shield;
     }
   ]
   const pricingTiers = [
@@ -754,7 +757,7 @@ const AIHRRecruitment = () => {
         "Standard reporting",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -816,7 +819,7 @@ const AIHRRecruitment = () => {
         "Priority support",
         "Custom integrations"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -853,19 +856,21 @@ const AIHRRecruitment = () => {
   ]
   return (
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
+<div className="relative z-10 container mx-auto px-4 py-24">
+          </div>
+<div className="text-center max-w-4xl mx-auto">
+            </div>
+<div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
-              AI-Powered HR & Recruitment
+              AI-Powered HR & Recruitment;
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Transform Your
+              Transform Your;
               <br />
-              Talent Acquisition
+              Talent Acquisition;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Leverage artificial intelligence to find, screen, and hire the best talent 
+              Leverage artificial intelligence to find, screen, and hire the best talent;
               faster and more efficiently than ever before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -873,39 +878,44 @@ const AIHRRecruitment = () => {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </div>
           
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
-              <div className="text-gray-400">Faster Hiring</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
-              <div className="text-gray-400">Better Hires</div>
+<div className="text-center">
+              </div>
+<div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
+<div className="text-gray-400">Faster Hiring</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">35%</div>
-              <div className="text-gray-400">Cost Reduction</div>
+<div className="text-center">
+              </div>
+<div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
+<div className="text-gray-400">Better Hires</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
-              <div className="text-gray-400">Higher Retention</div>
+<div className="text-center">
+              </div>
+<div className="text-3xl font-bold text-green-400 mb-2">35%</div>
+<div className="text-gray-400">Cost Reduction</div>
+            </div>
+<div className="text-center">
+              </div>
+<div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+<div className="text-gray-400">Higher Retention</div>
             </div>
           </div>
-    <div className="min-h-screen bg-gradient-to-br from-black via-green-900 to-blue-900">
-      <SEO 
+<div className="min-h-screen bg-gradient-to-br from-black via-green-900 to-blue-900">
+      <SEO
         title="AI HR & Recruitment Platform - Zion Tech Group" 
         description="Revolutionize your hiring process with AI-powered recruitment. Faster hiring, better candidates, and improved retention."
         keywords="AI recruitment, HR automation, AI hiring, candidate screening, recruitment software, HR technology"
@@ -913,82 +923,90 @@ const AIHRRecruitment = () => {
       />
 
       {/* Hero Section with Futuristic Background */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-600/20 to-cyan-500/20"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)]"></div>
+      </div><section className="relative overflow-hidden">
+        </section>
+<div className="absolute inset-0">
+          </div>
+<div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-600/20 to-cyan-500/20"></div>
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)]"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 py-24 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-full text-green-400 text-sm font-medium mb-6">
+<div className="relative z-10 container mx-auto px-4 py-24 text-center">
+          </div>
+<div className="mb-8">
+            </div>
+<div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-full text-green-400 text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
-              AI-Powered HR & Recruitment
+              AI-Powered HR & Recruitment;
             </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              AI HR & Recruitment
+              AI HR & Recruitment;
             </span>
             <span className="block text-3xl md:text-4xl text-gray-300 mt-4">
-              Transform Hiring with Intelligent Automation
+              Transform Hiring with Intelligent Automation;
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Revolutionize your recruitment process with AI-powered tools that screen candidates, 
-            predict success, and automate hiring workflows. Find the best talent faster while 
+            predict success, and automate hiring workflows. Find the best talent faster while;
             reducing bias and improving retention.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
               <span className="relative z-10">Start Free Trial</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div></button><div className="absolute inset-0 bg-gradient-to-r from-green-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
             <button className="px-8 py-4 border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-              Schedule Demo
+              Schedule Demo;
             </button>
           </div>
 
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
-              <div className="text-gray-400 text-sm">Faster Hiring</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">45%</div>
-              <div className="text-gray-400 text-sm">Cost Reduction</div>
+<div className="text-center">
+              </div>
+<div className="text-3xl font-bold text-green-400 mb-2">60%</div>
+<div className="text-gray-400 text-sm">Faster Hiring</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">3.2x</div>
-              <div className="text-gray-400 text-sm">Better Candidates</div>
+<div className="text-center">
+              </div>
+<div className="text-3xl font-bold text-blue-400 mb-2">45%</div>
+<div className="text-gray-400 text-sm">Cost Reduction</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">85%</div>
-              <div className="text-gray-400 text-sm">Retention Rate</div>
+<div className="text-center">
+              </div>
+<div className="text-3xl font-bold text-cyan-400 mb-2">3.2x</div>
+<div className="text-gray-400 text-sm">Better Candidates</div>
+            </div>
+<div className="text-center">
+              </div>
+<div className="text-3xl font-bold text-emerald-400 mb-2">85%</div>
+<div className="text-gray-400 text-sm">Retention Rate</div>
             </div>
           </div>
       title: "High-Volume Recruitment",
       description: "Handle thousands of applications efficiently with AI-powered screening and ranking.",
-      icon: Users
+      icon: Users;
     },
     {
       title: "Technical Hiring",
       description: "Assess technical skills through AI-powered coding challenges and technical interviews.",
-      icon: Briefcase
+      icon: Briefcase;
     },
     {
       title: "Cultural Fit Assessment",
       description: "Evaluate candidate alignment with company values and team dynamics.",
-      icon: Target
+      icon: Target;
     },
     {
       title: "Employee Retention",
       description: "Predict turnover risk and identify factors that contribute to employee satisfaction.",
-      icon: TrendingUp
+      icon: TrendingUp;
     }
   ]
   const benefits = [
@@ -1002,26 +1020,30 @@ const AIHRRecruitment = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl flex items-center justify-center mr-4">
+      </div><section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center">
+            </div>
+<div className="flex items-center justify-center mb-6">
+              </div>
+<div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-2xl flex items-center justify-center mr-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent">
-                AI HR & Recruitment
+                AI HR & Recruitment;
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Revolutionize your talent acquisition with AI-powered recruitment that finds the perfect candidates faster
+              Revolutionize your talent acquisition with AI-powered recruitment that finds the perfect candidates faster;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-lg hover:bg-green-400/20 transition-all duration-300">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </div>
@@ -1029,14 +1051,15 @@ const AIHRRecruitment = () => {
         
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
-          <div className="absolute top-40 right-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
+          </div>
+<div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+<div className="absolute top-40 right-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
+<div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
         </div>
       </section>
 
       {/* Features Section */}
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1044,7 +1067,7 @@ const AIHRRecruitment = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              AI-Powered HR Solutions
+              AI-Powered HR Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our comprehensive AI HR platform streamlines every aspect of the recruitment process, 
@@ -1054,7 +1077,7 @@ const AIHRRecruitment = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <motion.div;
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1062,7 +1085,8 @@ const AIHRRecruitment = () => {
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                </div>
+<div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
@@ -1070,55 +1094,59 @@ const AIHRRecruitment = () => {
               </motion.div>
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Powerful AI Features for Modern HR
+              Powerful AI Features for Modern HR;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI recruitment platform combines cutting-edge technology with proven HR practices 
+              Our AI recruitment platform combines cutting-edge technology with proven HR practices;
               to deliver exceptional hiring results.
-      <section className="py-20 bg-black/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      </div><section className="py-20 bg-black/50">
+        </section>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              AI-Powered Recruitment Features
+              AI-Powered Recruitment Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our comprehensive AI platform covers every aspect of the recruitment process, 
               from sourcing to onboarding.
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      </div><section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Intelligent HR & Recruitment Features
+              Intelligent HR & Recruitment Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform streamlines every aspect of the hiring process while ensuring quality and fairness
+              Our AI platform streamlines every aspect of the hiring process while ensuring quality and fairness;
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="text-center mb-16">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI-Powered Features That Transform HR
+              AI-Powered Features That Transform HR;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI HR platform combines cutting-edge technology with human expertise to deliver 
+              Our AI HR platform combines cutting-edge technology with human expertise to deliver;
               exceptional results in talent acquisition and management.
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
-                Schedule a Demo
+                Schedule a Demo;
               </Link>
               <$2 />
                 to="/case-studies"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
-                View Success Stories
+                View Success Stories;
               </Link>
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
-                Get Started
+                Get Started;
               </Link>
               <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                Watch Demo
+                Watch Demo;
               </button>
             </div>
           </div>
@@ -1127,22 +1155,24 @@ const AIHRRecruitment = () => {
 
       {/* Key Benefits */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+        </div>
+<div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Why Choose AI HR & Recruitment?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our AI-powered platform revolutionizes talent acquisition with intelligent 
+            Our AI-powered platform revolutionizes talent acquisition with intelligent;
             automation and data-driven insights.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
-            const Icon = feature.icon
+            const Icon = feature.icon;
             return (
-              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
+              </div>
+<div key={index} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
@@ -1152,7 +1182,8 @@ const AIHRRecruitment = () => {
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
               <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -1177,20 +1208,23 @@ const AIHRRecruitment = () => {
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive HR Solutions
+              Comprehensive HR Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               From talent acquisition to employee retention, our AI platform covers every aspect of modern HR management.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 text-center">
-                <div className="p-4 rounded-lg bg-blue-500/20 inline-block mb-4">
+              </div>
+<div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 text-center">
+                </div>
+<div className="p-4 rounded-lg bg-blue-500/20 inline-block mb-4">
                   <service.icon className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
@@ -1201,21 +1235,25 @@ const AIHRRecruitment = () => {
                       • {feature}
       {/* Recruitment Stages Section */}
       <section className="py-20 bg-green-900/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+        </section>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              End-to-End Recruitment Process
+              End-to-End Recruitment Process;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI platform streamlines every stage of the recruitment process for maximum efficiency.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {recruitmentStages.map((stage, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              </div>
+<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
+                </div>
+<div className="text-center mb-4">
+                  </div>
+<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold text-white">{index + 1}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{stage.stage}</h3>
@@ -1236,8 +1274,9 @@ const AIHRRecruitment = () => {
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
+        </section>
+<div className="max-w-7xl mx-auto">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1245,24 +1284,27 @@ const AIHRRecruitment = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Transform Your HR Operations
+              Transform Your HR Operations;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience unprecedented efficiency and effectiveness in your recruitment and HR processes.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
-              <div className="space-y-4">
+              </div>
+<div className="space-y-4">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                  </div>
+<div key={index} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </div>
@@ -1270,7 +1312,7 @@ const AIHRRecruitment = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -1279,7 +1321,8 @@ const AIHRRecruitment = () => {
               <h3 className="text-2xl font-semibold mb-6">Solutions</h3>
               <div className="space-y-4">
                 {solutions.map((solution, index) => (
-                  <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
+                  </div>
+<div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
                     <h4 className="font-semibold text-cyan-400 mb-2">{solution.title}</h4>
                     <p className="text-gray-300 text-sm">{solution.description}</p>
                   </div>
@@ -1287,30 +1330,36 @@ const AIHRRecruitment = () => {
               </div>
             </motion.div>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Why Choose AI HR & Recruitment?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience unprecedented efficiency and success in your hiring process.
       {/* Industry Solutions Section */}
-      <section className="py-20 bg-black/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      </div><section className="py-20 bg-black/50">
+        </section>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Industry-Specific Solutions
+              Industry-Specific Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Tailored AI recruitment solutions designed for the unique needs of different industries.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {industries.map((industry, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+              </div>
+<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
+                </div>
+<div className="flex items-center mb-4">
+                  </div>
+<div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
                     <industry.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{industry.name}</h3>
@@ -1332,8 +1381,9 @@ const AIHRRecruitment = () => {
 
       {/* Industries Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
+        </section>
+<div className="max-w-7xl mx-auto">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1341,16 +1391,17 @@ const AIHRRecruitment = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Industry Solutions
+              Industry Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI HR solutions are tailored to meet the unique challenges and requirements of various industries.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          </div>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <motion.div
+              <motion.div;
                 key={industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1362,63 +1413,71 @@ const AIHRRecruitment = () => {
                 <h3 className="font-semibold">{industry}</h3>
               </motion.div>
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      </div><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Perfect For Every Hiring Need
+              Perfect For Every Hiring Need;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI recruitment platform adapts to your specific hiring requirements and industry needs.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
+                </div>
+<div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Measurable Results
+              Measurable Results;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               See the real impact of AI-powered HR on your organization's bottom line and team performance.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">{benefit.value}</div>
+              </div>
+<div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 text-center">
+                </div>
+<div className="text-4xl font-bold text-blue-400 mb-2">{benefit.value}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
       {/* Success Metrics Section */}
       <section className="py-20 bg-green-900/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+        </section>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Proven Results
+              Proven Results;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See the measurable impact our AI recruitment platform delivers for businesses.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
-              <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
-                <div className="text-4xl font-bold text-green-400 mb-2">{metric.metric}</div>
-                <div className="text-white font-semibold mb-2">{metric.description}</div>
-                <div className="text-gray-400 text-sm">{metric.detail}</div>
+              </div>
+<div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
+                </div>
+<div className="text-4xl font-bold text-green-400 mb-2">{metric.metric}</div>
+<div className="text-white font-semibold mb-2">{metric.description}</div>
+<div className="text-gray-400 text-sm">{metric.detail}</div>
               </div>
             ))}
           </div>
@@ -1427,48 +1486,52 @@ const AIHRRecruitment = () => {
 
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
+              Choose Your Plan;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Flexible pricing options designed to scale with your organization's HR needs and growth.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
-                plan.popular 
+                plan.popular;
                   ? 'border-blue-500/50 scale-105' 
                   : 'border-gray-700 hover:border-gray-600'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  </div>
+<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-      <section className="py-20 bg-black/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      </div><section className="py-20 bg-black/50">
+        </section>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Transparent Pricing Plans
+              Transparent Pricing Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your recruitment needs. All plans include a 14-day free trial.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
-                plan.popular 
+                plan.popular;
                   ? 'border-green-500/50 shadow-2xl shadow-green-500/25' 
                   : 'border-gray-700/50 hover:border-green-500/50'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  </div>
+<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -1479,7 +1542,8 @@ const AIHRRecruitment = () => {
                       {feature}
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
+                  </div>
+<div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
                 
@@ -1493,17 +1557,17 @@ const AIHRRecruitment = () => {
                 </ul>
                 
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
                       : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
                 < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
-                  plan.popular
+                  plan.popular;
                     ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:scale-105'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
                 }`}>
@@ -1517,8 +1581,9 @@ const AIHRRecruitment = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+        </section>
+<div className="max-w-4xl mx-auto text-center">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1530,25 +1595,28 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of companies already using AI to transform their recruitment processes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </motion.div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-4xl mx-auto text-center">
+        </section>
+<div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Hiring?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of companies that have already revolutionized their recruitment with AI automation.
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
-        <div className="max-w-4xl mx-auto text-center">
+      </div><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
+        </section>
+<div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your HR?
           </h2>
@@ -1556,14 +1624,17 @@ const AIHRRecruitment = () => {
             Join forward-thinking organizations that have already revolutionized their HR processes with AI. 
             Start building better teams today with intelligent recruitment and management.
             {services.map((service, index) => {
-              const Icon = service.icon
+              const Icon = service.icon;
               return (
-                <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                </div>
+<div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  </div>
+<div className="flex items-center mb-6">
+                    </div>
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                       <p className="text-gray-400">{service.price}</p>
                     </div>
@@ -1584,35 +1655,39 @@ const AIHRRecruitment = () => {
                     to="/contact"
                     className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
                   >
-                    Learn More
+                    Learn More;
                   </Link>
                 </div>
               )
-            })}
+            })
           </div>
         </div>
       </div>
 
       {/* Recruitment Features Section */}
       <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        </div>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Intelligent Recruitment Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI capabilities that streamline every aspect of the recruitment process
+              Advanced AI capabilities that streamline every aspect of the recruitment process;
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {recruitmentFeatures.map((feature, index) => {
-              const Icon = feature.icon
+              const Icon = feature.icon;
               return (
-                <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                </div>
+<div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                  </div>
+<div className="flex items-center mb-6">
+                    </div>
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <div>
+<div>
                       <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
                     </div>
@@ -1627,40 +1702,43 @@ const AIHRRecruitment = () => {
                     ))}
                   </ul>
             {features.map((feature, index) => {
-              const Icon = feature.icon
+              const Icon = feature.icon;
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-6">
+                  </div>
+<div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-green-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               )
-            })}
+            })
           </div>
         </div>
               </div>
             )
-          })}
+          })
         </div>
       </div>
 
       {/* Use Cases */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+        </div>
+<div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Industry Applications
+            Industry Applications;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             See how AI HR & Recruitment is transforming talent acquisition across different industries.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (
-            <div key={index} className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50">
-              <div className="flex items-center mb-4">
+            </div>
+<div key={index} className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50">
+              </div>
+<div className="flex items-center mb-4">
                 <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
                   {useCase.industry}
                 </span>
@@ -1669,7 +1747,8 @@ const AIHRRecruitment = () => {
               <p className="text-gray-300 mb-4">{useCase.description}</p>
               <div className="space-y-2">
                 {useCase.metrics.map((metric, idx) => (
-                  <div key={idx} className="flex items-center text-sm">
+                  </div>
+<div key={idx} className="flex items-center text-sm">
                     <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                     <span className="text-cyan-400 font-medium">{metric}</span>
                   </div>
@@ -1682,60 +1761,64 @@ const AIHRRecruitment = () => {
 
       {/* Technologies */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+        </div>
+<div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Powered by Cutting-Edge Technology
+            Powered by Cutting-Edge Technology;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Built on the latest AI and HR technology for maximum efficiency and accuracy.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => {
-            const Icon = tech.icon
+            const Icon = tech.icon;
             return (
-              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              </div>
+<div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">{tech.name}</h3>
                 <p className="text-gray-300">{tech.description}</p>
               </div>
             )
-          })}
+          })
         </div>
       </div>
 
       {/* Pricing */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+        </div>
+<div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Choose Your Plan
+            Choose Your Plan;
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Flexible pricing options designed to scale with your recruitment needs.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
             < key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${$2 />
-              tier.popular 
+              tier.popular;
                 ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                 : 'border-gray-700/50'
             }`}>
               {tier.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                </div>
+<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-full">
-                    Most Popular
+                    Most Popular;
                   </span>
                 </div>
               )}
               
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2 text-white">{tier.name}</h3>
-                <div className="mb-4">
+                </div>
+<div className="mb-4">
                   <span className="text-4xl font-bold text-white">{tier.price}</span>
                   <span className="text-gray-400">{tier.period}</span>
                 </div>
@@ -1754,12 +1837,12 @@ const AIHRRecruitment = () => {
               <$2 />
                 to="/contact"
                 className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-all duration-300 ${
-                  tier.popular
+                  tier.popular;
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                     : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
                 }`}
               >
-                Get Started
+                Get Started;
               </Link>
             </div>
           ))}
@@ -1768,40 +1851,49 @@ const AIHRRecruitment = () => {
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
+        </div>
+<div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Recruitment?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join leading organizations that are already leveraging AI-powered recruitment 
+            Join leading organizations that are already leveraging AI-powered recruitment;
             to find and hire the best talent faster.
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center">
+      </div>
+<div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        </div>
+<div className="max-w-7xl mx-auto text-center">
+          </div>
+<div className="flex justify-center mb-6">
+            </div>
+<div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center">
               <UserCheck className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-            AI HR & Recruitment
+            AI HR & Recruitment;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your HR processes with AI-powered recruitment, talent management, and employee development. 
             Find the best talent faster and build stronger teams with intelligent automation.
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      <div className="container mx-auto px-4 py-12">
+      </div>
+<div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+        </div>
+<div className="text-center mb-16">
+          </div>
+<div className="flex justify-center mb-6">
+            </div>
+<div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Users className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI HR & Recruitment
+            AI HR & Recruitment;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Revolutionize your hiring process with intelligent AI that finds, screens, and matches 
+            Revolutionize your hiring process with intelligent AI that finds, screens, and matches;
             the best candidates while eliminating bias and reducing time-to-hire.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1809,36 +1901,37 @@ const AIHRRecruitment = () => {
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
             >
-              Get Started
+              Get Started;
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <$2 />
               to="/demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
             >
-              Schedule Demo
+              Schedule Demo;
             </Link>
           </div>
       <section className="py-20 bg-gradient-to-r from-green-900/50 via-blue-900/50 to-cyan-900/50">
-        <div className="container mx-auto px-4 text-center">
+        </section>
+<div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Recruitment?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have already revolutionized their hiring process 
+            Join thousands of businesses that have already revolutionized their hiring process;
             with AI-powered recruitment.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          </div>
+<div className="flex flex-wrap justify-center gap-4">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25">
               <span className="relative z-10">Start Free Trial</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div></button><div className="absolute inset-0 bg-gradient-to-r from-green-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
             <button className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-              Schedule Demo
+              Schedule Demo;
             </button>
           </div>
-          
-          <div className="mt-8 text-center">
+<div className="mt-8 text-center">
             <p className="text-gray-400 text-sm">
               Need enterprise pricing? <a href="/contact" className="text-green-400 hover:text-green-300 underline">Contact our sales team</a>
             </p>
@@ -1848,42 +1941,42 @@ const AIHRRecruitment = () => {
     </div>
   )
 }
-export default AIHRRecruitment
+export default AIHRRecruitment;
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
-              Get Started Today
+              Get Started Today;
             </Link>
             <$2 />
               to="/pricing"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
-              View Pricing Plans
+              View Pricing Plans;
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              Start Your Free Trial
+              Start Your Free Trial;
             </Link>
             <$2 />
               to="/case-studies"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
-              View Case Studies
+              View Case Studies;
             </Link>
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg"
             >
-              Get Started
+              Get Started;
             </Link>
             <$2 />
               to="/demo"
               className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold text-lg"
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              Start Free Trial
+              Start Free Trial;
             </Link>
             <$2 />
               to="/request-quote"
               className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
-              Request Demo
+              Request Demo;
             </Link>
           </div>
         </div>
@@ -1891,52 +1984,58 @@ export default AIHRRecruitment
 
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              HR & Recruitment Use Cases
+              HR & Recruitment Use Cases;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI is transforming talent acquisition across industries and company sizes
+              Discover how AI is transforming talent acquisition across industries and company sizes;
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
-              const Icon = useCase.icon
+              const Icon = useCase.icon;
               return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                </div>
+<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
+                  </div>
+<div className="flex items-start space-x-4">
+                    </div>
+<div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Icon className="w-6 h-6 text-green-400" />
                     </div>
-                    <div>
+<div>
                       <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                       <p className="text-gray-300">{useCase.description}</p>
                     </div>
                   </div>
                 </div>
               )
-            })}
+            })
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI HR & Recruitment?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your hiring process from manual and time-consuming to intelligent and efficient
+              Transform your hiring process from manual and time-consuming to intelligent and efficient;
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4">
+              </div>
+<div key={index} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300 text-lg">{benefit}</span>
               </div>
@@ -1947,33 +2046,39 @@ export default AIHRRecruitment
         {/* Features Grid */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Advanced HR & Recruitment Features
+            Advanced HR & Recruitment Features;
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon
+              const Icon = feature.icon;
               return (
-                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
+                </div>
+<div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                  </div>
+<div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light">{feature.description}</p>
                 </div>
               )
-            })}
+            })
           </div>
         </div>
 
         {/* Benefits Section */}
         <div className="mb-20">
-          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
+          </div>
+<div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white text-center mb-8">
-              Proven Recruitment Results
+              Proven Recruitment Results;
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
+                </div>
+<div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
                   <span className="text-zion-slate-light">{benefit}</span>
                 </div>
@@ -1985,18 +2090,23 @@ export default AIHRRecruitment
         {/* Use Cases */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Industry Applications
+            Industry Applications;
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
+              </div>
+<div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
                 <p className="text-zion-slate-light mb-4">{useCase.description}</p>
-                <div className="space-y-2">
+                </div>
+<div className="space-y-2">
                   <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
                   {useCase.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                    </div>
+<div key={metricIndex} className="flex items-center space-x-2">
+                      </div>
+<div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       <span className="text-zion-slate-light text-sm">{metric}</span>
                     </div>
                   ))}
@@ -2009,23 +2119,26 @@ export default AIHRRecruitment
         {/* Pricing */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Transparent Pricing
+            Transparent Pricing;
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
                 plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  </div>
+<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
+                  </div>
+<div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
                     <span className="text-zion-slate-light ml-1">{plan.period}</span>
                   </div>
@@ -2042,12 +2155,12 @@ export default AIHRRecruitment
                 <$2 />
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
                       : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             ))}
@@ -2056,26 +2169,28 @@ export default AIHRRecruitment
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
+          </div>
+<div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Hiring?
             </h2>
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies already using our AI-powered recruitment platform 
+              Join hundreds of companies already using our AI-powered recruitment platform;
               to find and hire the best talent faster and more efficiently.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
-                Start Free Trial
+                Start Free Trial;
               </Link>
               <$2 />
                 to="/request-quote"
                 className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </Link>
             </div>
           </div>
@@ -2084,7 +2199,7 @@ export default AIHRRecruitment
     </div>
   )
 }
-export default AIHRRecruitment
+export default AIHRRecruitment;
 }
 }
 }
@@ -2092,19 +2207,21 @@ export default AIHRRecruitment
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-teal-500/10">
-        <div className="max-w-4xl mx-auto text-center">
+        </section>
+<div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Hiring Process?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join innovative companies using AI to build better teams and find exceptional talent faster.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
+              Start Free Trial;
             </button>
             <button className="px-8 py-4 border border-green-400/50 text-green-400 font-semibold rounded-lg hover:bg-green-400/20 transition-all duration-300">
-              Schedule Demo
+              Schedule Demo;
             </button>
           </div>
         </div>
@@ -2112,17 +2229,21 @@ export default AIHRRecruitment
 
       {/* Navigation Links */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
             <p className="text-gray-300">Discover our complete range of AI and technology solutions</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link to="/services/ai-business-intelligence" className="group">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
+              </div>
+<div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
+                </div>
+<div className="flex items-center justify-between">
+                  </div>
+<div>
                     <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">AI Business Intelligence</h4>
                     <p className="text-gray-300 text-sm">Transform data into actionable insights</p>
                   </div>
@@ -2133,8 +2254,10 @@ export default AIHRRecruitment
             
             <Link to="/services/ai-marketing-automation" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
+                </div>
+<div className="flex items-center justify-between">
+                  </div>
+<div>
                     <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">AI Marketing Automation</h4>
                     <p className="text-gray-300 text-sm">Automate marketing with AI intelligence</p>
                   </div>
@@ -2145,8 +2268,10 @@ export default AIHRRecruitment
             
             <Link to="/services/ai-legal-tech" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
+                </div>
+<div className="flex items-center justify-between">
+                  </div>
+<div>
                     <h4 className="text-lg font-semibold text-white group-hover:text-green-400 transition-colors">AI Legal Tech</h4>
                     <p className="text-gray-300 text-sm">Streamline legal processes with AI</p>
                   </div>
@@ -2160,6 +2285,6 @@ export default AIHRRecruitment
     </div>
   )
 }
-export default AIHRRecruitment
+export default AIHRRecruitment;
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></p></p></ul></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>

@@ -6,7 +6,7 @@ return {
   }
 }
     const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
-      isValid;
+      isValid
       isValid
       error: isValid ? undefined : 'Invalid URL format',
 export function validateURL(ur)}l: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'URL is required' ,}
@@ -18,7 +18,7 @@ try {/* TODO: Fix JSX expression */,}}}
   fieldName: string = 'Field',
     }
   }
-if (value.<<<length>max</length></length>) {return {isValid: false,}}error: `${fieldName,}must be no more than ${max}characters long`;
+if (value.<<<length>max</length></length>) {return {isValid: false,}}error: `${fieldName,}must be no more than ${max}characters long`
       error: `${fieldName} must be at least ${min} characters long`
     }
   }
@@ -36,11 +36,11 @@ if (value.<<<length>max</length></length>) {
   x: number,
   fieldNam,
   e: string = 'Field'),
-): ValidationResult {/* TODO: Fix JSX expression */,}}r: `${fieldName,}must be at least ${min}characters long`;
+): ValidationResult {/* TODO: Fix JSX expression */,}}r: `${fieldName,}must be at least ${min}characters long`
     }
   }
-if (value.length > max) {/* TODO: Fix JSX expression */,}`;
-  r: `${fieldName,}must be no more than ${max}characters long`;
+if (value.length > max) {/* TODO: Fix JSX expression */,}`
+  r: `${fieldName,}must be no more than ${max}characters long`
 export function validateLength()
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */}
@@ -55,7 +55,7 @@ return {/* TODO: Fix JSX expression */,}}d: true ,}
 }
     ,
   if (!password || password.length < 8) {,}return {isValid: false, error: 'Password must be at least 8 characters long' ,}}}
-if (password.length > 128) {}return {isValid: false, error: 'Password is too long' ,}}export function validatePassword(passwor);
+if (password.length > 128) {}return {isValid: false, error: 'Password is too long' ,}}export function validatePassword(passwor)
   d: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Password must be at least 8 characters long' ,}
   }
   }
@@ -74,14 +74,14 @@ if (typeof value === 'string' && value.trim() === '') {}return {isValid: false, 
   }
 if (Array.isArray(value) && value.length === 0) {}return {isValid: false, error: `${fieldName,}}is required` }
   }
-  e: unknown, fieldNam);
-  e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */,}}`;
+  e: unknown, fieldNam)
+  e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */,}}`
   r: `${fieldName,}is required` }
   }
-if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expression */,}`;
+if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expression */,}`
   r: `${fieldName,}is required` }
   }
-if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */,}`;
+if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */,}`
   r: `${fieldName,}is required` }
 export function validateRequired()
   e: unknown, fieldNam)
@@ -99,10 +99,9 @@ return {/* TODO: Fix JSX expression */,}}d: true ,}
   }
 return {/* TODO: Fix JSX expression */,}}d: true ,}
 }
-    if (isEven) {
-      digit *= 2
+    if (isEven) {digit *= 2
       if (digit > 9) {
-        digit -= 9;}for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */,}}
+        digit -= 9}for (let i = cleaned.length - 1 i >= 0 i--) {/* TODO: Fix JSX expression */,}}
     }
     sum += digit
     isEven = !isEven
@@ -116,7 +115,7 @@ return {/* TODO: Fix JSX expression */,}}d: true ,}
 }
     ,
   if (!jsonString || jsonString.trim() === '') {,}return {isValid: false, error: 'JSON string is required' ,}}}
-try {JSON.parse(jsonString)}}return {isValid: true ,}}} catch {}}return {isValid: false, error: 'Invalid JSON format' ,}}export function validateJSON(jsonStrin);
+try {JSON.parse(jsonString)}}return {isValid: true ,}}} catch {}}return {isValid: false, error: 'Invalid JSON format' ,}}export function validateJSON(jsonStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'JSON string is required' ,}
   }
   e: unknown,
@@ -146,12 +145,12 @@ export function sanitizeHTML(html: string): string {
     if (!html) return '',
 ,
   return html
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/&gt;/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#x27;')
-    .replace(/\//g, '&#x2F;')
+    .replace(/&/g, '&amp')
+    .replace(/</g, '&lt')
+    .replace(/&gt/g, '&gt')
+    .replace(/"/g, '&quot')
+    .replace(/'/g, '&#x27')
+    .replace(/\//g, '&#x2F')
 export function sanitizeHTML(htm)
   }
   l: string): string {/* TODO: Fix JSX expression */}
@@ -185,7 +184,7 @@ export async function validateAsync(
   value: unknown,
 ): Promise<ValidationResult> {,
   try {,
-    return await validator(value);}
+    return await validator(value)}
   } catch (error) {
     return {
       isValid: false,
@@ -201,7 +200,7 @@ export async function validateAsync(validato,
   r: (va)
   l: unknown) => Promise<ValidationResult>,
   valu,
-  e: unknown,;}
+  e: unknown,}
 ): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
     }
@@ -218,8 +217,8 @@ export {
   }
  } from './validators'
 export {/* TODO: Fix JSX expression */}
- } from './validators';"`</ValidationResult>
-  sanitizeInput;}
+ } from './validators'"`</ValidationResult>
+  sanitizeInput}
  } from './validators'
 export {/* TODO: Fix JSX expression */}
- } from './validators';"`
+ } from './validators'"`

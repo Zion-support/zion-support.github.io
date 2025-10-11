@@ -3,8 +3,7 @@ export default async function handler(req, res) {
     res.statusCode = 405
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
-  }
+    return }
 
   try {
     const { name, email, phone, details, country, service } = req.body || {}
@@ -12,19 +11,15 @@ export default async function handler(req, res) {
     if (!name || !email || !phone || !details) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')
-<<<<<<< HEAD
-      res.end(JSON.stringify({ 
+res.end(JSON.stringify({ 
         error: 'Name, email, phone, and details are required' 
       }))
-=======
-      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }))
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+
       return
     }
 
     // Process quote submission logic here
-<<<<<<< HEAD
-    const quoteData = {
+const quoteData = {
       id: Date.now().toString(),
       name,
       email,
@@ -66,44 +61,36 @@ export default async function handler(req, res) {
     // 4. Integrate with your CRM
 
     // For now, just return a success response
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Quote request received successfully',
       quoteId: `QUOTE-${Date.now()}`
-    }));
+    }))
   } catch (error) {
-    console.error('Error processing quote request:', error);
+    console.error('Error processing quote request: ', error)
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Internal server error' 
-    }));
-<<<<<<< HEAD
-    const quoteData = {
-=======
-    const quote = {
-      id: Date.now().toString(),
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+    }))
+const quoteData = {
+
       name,
       email,
       phone,
       details,
       country: country || 'Not specified',
       service: service || 'General inquiry',
-<<<<<<< HEAD
-      timestamp: new Date().toISOString(),
+timestamp: new Date().toISOString(),
       status: 'pending'
     }
 
     // Log quote request for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Quote request received:', quoteData)
-=======
-      status: 'pending',
-      createdAt: new Date().toISOString()
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+
     }
 
     // Here you would typically save to a database
@@ -119,21 +106,13 @@ export default async function handler(req, res) {
     }))
 
   } catch (error) {
-<<<<<<< HEAD
-    console.error('Quote submission error:', error)
+console.error('Quote submission error:', error)
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       error: 'Failed to submit quote request',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }))
-=======
-    console.error('Error processing quote request:', error)
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Internal server error' }))
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-  }
+
+}
 }

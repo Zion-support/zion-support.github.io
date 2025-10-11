@@ -1,14 +1,14 @@
 import React from 'react'
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 interface SEOHeadProp, s {
-    title?: string
-  description?: string
+    title?: string;
+  description?: string;
   keywor, d, s?: string | string[]
-  canonic, a, l?: string
-  image?: string
-  u, r, l?: string
-  ty, p, e?: string
-  author ?  : string
+  canonic, a, l?: string;
+  image?: string;
+  u, r, l?: string;
+  ty, p, e?: string;
+  author ?  : string;
   }
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s',
   description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.",
@@ -47,8 +47,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     servic, e, s: [,
 interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
  }
-const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
      },
     addre, s, s: {/* TODO: Fix JSX expression */}
     },

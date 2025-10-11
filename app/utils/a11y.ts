@@ -5,9 +5,9 @@
   onClick: (e: Event) => void,
   options: {,
     role?: string,
-      c = c / 255;
+      c = c / 255
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)}})
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
     tabindex?: number
   }
   } = {}
@@ -17,11 +17,11 @@ element.setAttribute('role', role)
   element.setAttribute('tabindex', tabindex.toString())
 const handleKeyDown = ()
     if (e.key === 'Enter' || e.key === ' ') {
-    e.preventDefault();) => {
+    e.preventDefault()) => {
   return ()
   )
   }
-      onClick(e);}
+      onClick(e)}
     }
   }
 element.addEventListener('click', onClick)

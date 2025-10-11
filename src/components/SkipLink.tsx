@@ -1,7 +1,7 @@
 import React from 'react'
 interface SkipLinkProps {
     to: string,
-  children: React.ReactNode
+  children: React.ReactNode;
   }
 const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps>return</SkipLinkProps> (
     <$2 />
@@ -34,4 +34,4 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps
     </a>
   )
 }
-export default SkipLink
+export default SkipLink;

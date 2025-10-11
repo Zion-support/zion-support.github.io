@@ -4,12 +4,12 @@
   enableLogging: boolean,
   logLevel: 'debug' | 'info' | 'warn' | 'error',
   sentryDsn?: string
-  gaTrackingId?: string;}
+  gaTrackingId?: string}
 }
   constructor() {,
     this.config = this.loadConfig(),
   }
-    this.isInitialized = true;}
+    this.isInitialized = true}
   }
       enableLogging: nodeEnv !== 'test',
       logLevel: ()
@@ -24,7 +24,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}}}
     ,
       }
     }
-    return {valid: missing.length === 0;,}}public validate(requiredVars: (keyof EnvConfig)[]): {,}valid: boolean;,
+    return {valid: missing.length === 0,}}public validate(requiredVars: (keyof EnvConfig)[]): {,}valid: boolean,
     missing: string[],}
       }
     }

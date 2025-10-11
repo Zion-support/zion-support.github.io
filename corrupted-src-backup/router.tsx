@@ -1,2 +1,2 @@
 import React from 'react'
-export default AppRouter
+export default AppRouter;

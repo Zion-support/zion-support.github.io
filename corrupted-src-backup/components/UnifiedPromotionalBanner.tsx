@@ -1,52 +1,52 @@
 export, interface, FeaturedItem {
-    tit, l, e: stri, n, g
-catego, r, y: stri, n, g
-l, i, n
-  k: stri, n, g
-metri, c, s?: stri, n, g
+    tit, l, e: stri, n, g;
+catego, r, y: stri, n, g;
+l, i, n;
+  k: stri, n, g;
+metri, c, s?: stri, n, g;
   }
 export, interface, UnifiedPromotionalBannerProps {
     varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a'
-tit, l, e: stri, n, g
-descripti, o, n: stri, n, g
-ctaTe, x, t: stri, n, g
-ctaL, i, n
-  k: stri, n, g
+tit, l, e: stri, n, g;
+descripti, o, n: stri, n, g;
+ctaTe, x, t: stri, n, g;
+ctaL, i, n;
+  k: stri, n, g;
 the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n'
 featuredIte, m, s?: FeaturedIt, e, m[]
-showCou, n, t?: numb, e, r
-classNa, m, e?: stri, n, g
+showCou, n, t?: numb, e, r;
+classNa, m, e?: stri, n, g;
 ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e'
-animat, e, d?: boole, a, n
-bad, g, e?: stri, n, g
-da, t, e?: stri, n, g
+animat, e, d?: boole, a, n;
+bad, g, e?: stri, n, g;
+da, t, e?: stri, n, g;
   }
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
     varia, n, t = 'defau, l, t'
-  tit, l, e
-  descripti, o, n
-  ctaTe, x, t
-  ctaLi, n, k
+  tit, l, e;
+  descripti, o, n;
+  ctaTe, x, t;
+  ctaLi, n, k;
   the, m, e = 'gradie, n, t'
   featuredIte, m, s = []
-  showCou, n, t = 3
+  showCou, n, t = 3;
   classNa, m, e = ''
   ic, o, n = 'sparkl, e, s'
-  animat, e, d = tr, u, e
+  animat, e, d = tr, u, e;
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
   varia, n, t = 'defau, l, t','
-  tit, l, e
-  descripti, o, n
-  ctaTe, x, t
-  ctaLi, n, k
+  tit, l, e;
+  descripti, o, n;
+  ctaTe, x, t;
+  ctaLi, n, k;
   the, m, e = 'gradie, n, t','
   featuredIte, m, s = []
-  showCou, n, t = 3
+  showCou, n, t = 3;
   classNa, m, e = '','
   ic, o, n = 'sparkl, e, s','
-  animat, e, d = tr, u, e
-  bad, g, e
-  da, t, e
+  animat, e, d = tr, u, e;
+  bad, g, e;
+  da, t, e;
   }) => {
   // Theme configurations const themeClass e s = {
     bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/, 3, 0',
@@ -69,13 +69,13 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
     he, r, o: 'py-16, p, x-1, 0',
     compa, c, t: 'py-6, p, x-, 4',
     me, g, a: 'py-20, p, x-1, 2'} const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<, classNam, e = { `$2 />
-        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl
+        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
               <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>
                 {IconCompone, n, t  &&</div> <IconComponent, classNam, e='w-4 h-4' / >   }
         <, classNam, e = { `$2 />
-          fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t
+          fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t;
           ${
             varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
               ? 'te, x, t-4 xl, m, d: te, x, t-5, x, l'
@@ -88,11 +88,10 @@ export, interface, FeaturedItem {/* TODO: Fix JSX expression */}
 }
 export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
 }
-const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
   } const, buttonTheme, s = {/* TODO: Fix JSX expression */}
   } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
-        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl
+        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl;
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
               <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>
@@ -126,7 +125,8 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
             { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (
               <, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'$2 />
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
-                    <div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
+                    </div>
+<div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
                       {it, e, m.category}
                   <Link, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
         {/* TODO: Fix JSX expression */}
@@ -135,10 +135,12 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
           >
             {/* TODO: Fix JSX expression */}
               <, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'$2 />
-                  <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
-                    <div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
+                  </div>
+<div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
+                    </div>
+<div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
                       {it, e, m.category}
                   <Link, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
-              +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h
+              +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h;
               { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  : '' }
 }}}}}})`</div></div></div></span></span></Link></Link>

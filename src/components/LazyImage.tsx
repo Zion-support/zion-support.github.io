@@ -6,8 +6,8 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
   sr,
   c: string,,
     al,
-  t: string
-  className?: string
+  t: string;
+  className?: string;
   children?: React.ReactNode,
 }
 const,
@@ -34,7 +34,7 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (priority) return
+    if (priority) return;
     const observer = new IntersectionObserver()
       ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -97,9 +97,10 @@ const,
             decoding="async"
 // />
           {!isLoaded && !hasError && (}"
-          <div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"><div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>)
-          )}
-      )}
+          </div>
+<div className="absolute inset-0 bg-gray-100 animate-pulse flex items-center justify-center"></div>
+<div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin" /></div>)
+          )})
     </div>
   )
 }

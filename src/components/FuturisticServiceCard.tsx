@@ -4,8 +4,7 @@ import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react'
 interface FuturisticServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,
-  FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
     },
     cya,
   n: {/* TODO: Fix JSX expression */}
@@ -31,8 +30,7 @@ const,
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Popular Badge */}
-      {/* TODO: Fix JSX expression */}
-      )}
+      {/* TODO: Fix JSX expression */})
       {/* Card */}
       <div>
         className={/* TODO: Fix JSX expression */}
@@ -41,8 +39,10 @@ const,
         }`}
       >
         {/* Icon */}
-        <div className="relative mb-6">
-          <div></div>`
+        </div>
+<div className="relative mb-6">
+          </div>
+<div></div>`
             className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hove,
   r:scale-110 transition-transform duration-300 ${/* TODO: Fix JSX expression */}`
             }`}
@@ -63,16 +63,15 @@ const,
           <div className={`text-3xl font-bold ${currentColor.text} mb-2`}>
             {price}
           </div>"
-          <div className="text-sm text-gray-400">per month
+          <div className="text-sm text-gray-400">per month;
         {/* Features */}"
         <ul className="space-y-3 mb-8">
           {/* TODO: Fix JSX expression */}"
             <li key={index} className="flex items-center text-sm text-gray-300"></li>"
               <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-              {feature}
-          ))}
+              {feature})
           {/* TODO: Fix JSX expression */}
-              +{features.length - 4} more features
+              +{features.length - 4} more features;
           )}
         {/* CTA Button */}
         <button>
@@ -85,7 +84,7 @@ const,
           <ArrowRight className="w-4 h-4 ml-2 group-hove,"
   r:translate-x-1 transition-transform" />
         {/* Hover Effect Overlay */}
-        <div></div>`
+        </div></button><div></div>`
           className={`absolute inset-0 bg-gradient-to-r ${currentColor.gradient} opacity-0 group-hove,`
   r:opacity-5 rounded-2xl transition-opacity duration-500`}
         >

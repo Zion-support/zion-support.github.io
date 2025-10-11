@@ -1,6 +1,6 @@
 const [activeTab, setActiveTab] = useState<string>("documentation"),
   
-  // Define the tabs
+  // Define the tabs;
   const tabs: TabDefinition[] = [
 
     { id: 'documentation', label: 'Documentation', icon: BookOpen },
@@ -20,12 +20,13 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
   return (
 
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
-      <div className="mb-8">
+      </div>
+<div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
           <Terminal className="mr-3" size={32} />
 
 
-          Developer Portal
+          Developer Portal;
         </h1>
         <p className="text-zinc-400 mt-2">
           Access the Zion API, manage your API keys, and set up webhooks.
@@ -45,14 +46,14 @@ import { ApiLogs } from "@/components/developers/ApiLogs"
 interface TabDefinition {
   id: string,
   label: string,
-  icon: LucideIcon
+  icon: LucideIcon;
 }
 
 export function DeveloperPortal() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
-  // Define the tabs
+  // Define the tabs;
   const tabs: TabDefinition[] = [
     { id: 'documentation', label: 'Documentation', icon: BookOpen }
     { id: 'api-keys', label: 'API Keys', icon: Key }
@@ -62,7 +63,8 @@ export function DeveloperPortal() {
   return (
 
     <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
-      <div className='mb-8'>
+      </div>
+<div className='mb-8'>
         <h1 className='text-3xl font-bold text-white flex items-center'>
           <Terminal className='mr-3' size={32} />
     { id: "documentation", label: "Documentation", icon: BookOpen },
@@ -79,11 +81,13 @@ export function DeveloperPortal() {
 
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
-      <div className="mb-8">
+    </div>
+<div className="w-full max-w-7xl mx-auto p-4 md:p-8">
+      </div>
+<div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
           <Terminal className="mr-3" size={32} />
-          Developer Portal
+          Developer Portal;
         </h1>
         <p className="text-zinc-400 mt-2">
           Access the Zion API, manage your API keys, and set up webhooks.
@@ -91,7 +95,7 @@ export function DeveloperPortal() {
       </div>
 
 
-                  activeTab === tab.id
+                  activeTab === tab.id;
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
@@ -101,7 +105,7 @@ export function DeveloperPortal() {
                 {tab.label}
               </button>
             )
-          })}
+          })
         </div>
       </div>
       {/* Tab content */}
@@ -119,22 +123,24 @@ export function DeveloperPortal() {
                 {tab.label}
               </button>
             )
-          })}
+          })
         </div>
       </div>
       {/* Tab content */}
       <div>
       
       {/* Tabs */}
-      <div className="border-b border-zinc-800 mb-8">
-        <div className="flex flex-wrap -mb-px">
+      </div>
+<div className="border-b border-zinc-800 mb-8">
+        </div>
+<div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
             const Icon = tab.icon,
             return (
               <$2 />
                 key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
-                  activeTab === tab.id
+                  activeTab === tab.id;
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
 import { useState } from 'react'
@@ -154,16 +160,16 @@ import { WebhooksManager } from '@/components / developers / WebhooksManager'
 import { ApiDocumentation } from '@/components / developers / ApiDocumentation'
 import { ApiLogs } from '@/components / developers / ApiLogs'
 interface TabDefinition {
-  id: string
-  label: string
-  icon: LucideIcon
+  id: string;
+  label: string;
+  icon: LucideIcon;
 export /**
- * DeveloperPortal - Function description
+ * DeveloperPortal - Function description;
  */
 function DeveloperPortal() {
   const { user } = use_auth ()
   const [active_tab, setActiveTab] = useState < string>('documentation')
-  // Define the tabs
+  // Define the tabs;
   const tabs: TabDefinition[] = [
     { id: 'documentation', label: 'Documentation', icon: BookOpen },
     { id: 'api - keys', label: 'API Keys', icon: Key },
@@ -171,20 +177,24 @@ function DeveloperPortal() {
     { id: 'logs', label: 'Logs', icon: List },
   ]
   return (
-    <div className='w - full max - w-7xl mx - auto p - 4 md:p - 8'>
-      <div className='mb - 8'>
+    </div>
+<div className='w - full max - w-7xl mx - auto p - 4 md:p - 8'>
+      </div>
+<div className='mb - 8'>
         <h1 className='text - 3xl font - bold text - white flex items - center'>
           <Terminal className='mr - 3' size={32} />
           Developer Portal</$1>
         <p className='text - zinc - 400 mt - 2'>
           Access the Zion API, manage your API keys, and set up webhooks.</$1></$1>
       {/* Tabs */}
-      <div className='border - b border - zinc - 800 mb - 8'>
-        <div className='flex flex - wrap -mb - px'>
+      </div>
+<div className='border - b border - zinc - 800 mb - 8'>
+        </div>
+<div className='flex flex - wrap -mb - px'>
           {tabs.map (tab => {
-            const Icon = tab.icon
+            const Icon = tab.icon;
                 on_click={() => setActiveTab (tab.id)}                className={`inline - flex items - center px - 4 py - 3 border - b-2 text - sm font - medium ${
-                  active_tab === tab.id
+                  active_tab === tab.id;
                     ? "text - white border - zion - purple"
                     : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700"
                 }`}
@@ -193,7 +203,7 @@ function DeveloperPortal() {
                 <Icon size={16} className='mr - 2' />
                 {tab.label}
               </button>)
-          })}
+          })
 
 
 import { useState } from 'react'
@@ -213,13 +223,13 @@ import { WebhooksManager } from '@/components/developers/WebhooksManager'
 import { ApiDocumentation } from '@/components/developers/ApiDocumentation'
 import { ApiLogs } from '@/components/developers/ApiLogs'
 interface TabDefinition {
-  id: string
-  label: string
-  icon: LucideIcon
+  id: string;
+  label: string;
+  icon: LucideIcon;
 export function DeveloperPortal() {
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState<string>('documentation')
-  // Define the tabs
+  // Define the tabs;
   const tabs: TabDefinition[] = [
     { id: 'documentation', label: 'Documentation', icon: BookOpen },
     { id: 'api-keys', label: 'API Keys', icon: Key },
@@ -227,20 +237,24 @@ export function DeveloperPortal() {
     { id: 'logs', label: 'Logs', icon: List },
   ]
   return (
-    <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
-      <div className='mb-8'>
+    </div>
+<div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
+      </div>
+<div className='mb-8'>
         <h1 className='text-3xl font-bold text-white flex items-center'>
           <Terminal className='mr-3' size={32} />
           Developer Portal</$1>
         <p className='text-zinc-400 mt-2'>
           Access the Zion API, manage your API keys, and set up webhooks.</$1></$1>
       {/* Tabs */}
-      <div className='border-b border-zinc-800 mb-8'>
-        <div className='flex flex-wrap -mb-px'>
+      </div>
+<div className='border-b border-zinc-800 mb-8'>
+        </div>
+<div className='flex flex-wrap -mb-px'>
           {tabs && tabs.map(tab => {
-            const Icon = tab && tab.icon
+            const Icon = tab && tab.icon;
                 onClick={() => setActiveTab(tab && tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
-                  activeTab === tab && tab.id
+                  activeTab === tab && tab.id;
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
@@ -251,7 +265,7 @@ export function DeveloperPortal() {
                 {tab && tab.label}
               </button>
             )
-          })}
+          })
         </div></$1>
       {/* Tab content */}
 
@@ -271,7 +285,7 @@ export function DeveloperPortal() {
                 <Icon size={16} className="mr - 2" />
                 {tab.label}
               </button>)
-          })}
+          })
 
       </div></$1>
   )
@@ -282,18 +296,20 @@ export function DeveloperPortal() {
                 {tab && tab.label}
               </button>
             )
-          })}
+          })
         </div></$1>
       {/* Tab content */}
       <div>
-      <div>
+      </div>
+<div>
 
 
 
 
 
 
-      <div>
+      </div>
+<div>
 
 
 
@@ -333,11 +349,5 @@ export default function ProtectedDeveloperPortal() {
 
       </div></$1>
   )
-}
-
-  )
-
-}
-}
-  )
-}</$1>
+})
+})</$1>

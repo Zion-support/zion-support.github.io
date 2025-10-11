@@ -14,15 +14,13 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     if (typeof window === 'undefined') return
-
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       const paintEntries = performance.getEntriesByType('paint')
       
       const loadTime = navigation.loadEventEnd - navigation.loadEventStart
-      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-      const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0
-
+      const firstContentfulPaint = paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+      const largestContentfulPaint = paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -62,7 +60,6 @@ const PerformanceMonitor: React.FC = () => {
         firstInputDelay: 0, // Will be updated by observer
         cumulativeLayoutShift: 0 // Will be updated by observer
       })
-    }
 
     // Wait for page to load
     if (document.readyState === 'complete') {

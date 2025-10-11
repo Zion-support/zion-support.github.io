@@ -11,8 +11,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
     md: 'h-8 w-8',
     lg: 'h-12 w-12',
 export const,
-  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
   }
   const colorClasses = {/* TODO: Fix JSX expression */}
   }
@@ -28,13 +27,15 @@ export const,
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
       >
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
-  return (<div className={`flex items-center justify-center ${className}`}>
-      <div></div>`
+  return (</div>
+<div className={`flex items-center justify-center ${className}`}>
+      </div>
+<div></div>`
         className={`animate-spin rounded-full border-2 ${colorClasses[color]} ${sizeClasses[size]}`}
       >
       {text && <span className="ml-2 text-sm text-gray-600">{text}</span>}
     </div>)
   )
 }
-export default LoadingSpinner
+export default LoadingSpinner;
 "`

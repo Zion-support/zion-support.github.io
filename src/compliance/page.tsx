@@ -16,7 +16,7 @@ const CompliancePage: React.FC = () => {
   ]
   const complianceAreas = [
   // TOD,
-  O: Add items
+  O: Add items;
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -52,9 +52,11 @@ const CompliancePage: React.FC = () => {
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         {/* Header */}
-        <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
-            <div className="flex items-center">
+        </div><section className="bg-white shadow-sm border-b">
+          </section>
+<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
+            </div>
+<div className="flex items-center">
               <$2 />
                 to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
 // >
@@ -75,7 +77,7 @@ const CompliancePage: React.FC = () => {
 // Our Commitment to Compliance</$1>"
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
 // At Zion Tech Group, we maintain the highest standards of compliance and security.
-                Our certifications and adherence to industry standards ensure your data is protected
+                Our certifications and adherence to industry standards ensure your data is protected;
 //                 and our services meet the most stringent requirements.
             {/* Certifications Grid */}"
             < className="grid grid-cols-1,$2 />
@@ -87,8 +89,7 @@ const CompliancePage: React.FC = () => {
                     <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>"
                     <div className="flex items-center text-green-600"></div>"
                       <CheckCircle className="w-5 h-5 mr-2" /></CheckCircle>"
-                      <span className="text-sm font-medium">{cert.status}
-              ))}
+                      <span className="text-sm font-medium">{cert.status})
           {/* Compliance Areas */}"
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
 Compliance Areas;"

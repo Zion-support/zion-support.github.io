@@ -4,4 +4,4 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-export default AIDataAnalyticsPage
+export default AIDataAnalyticsPage;

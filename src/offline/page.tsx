@@ -6,8 +6,8 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
 /**
- * Offline Page
- * Displayed when the user is offline and tries to access a page
+ * Offline Page;
+ * Displayed when the user is offline and tries to access a page;
  */
 const,
   OfflinePage: React.FC = () => {const handleRetry = () => {}
@@ -44,7 +44,8 @@ onClick={handleGoHome}"
   hover: bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
             <Home className="w-4 h-4" /></Home>
             Go Home;"
-        <div className="mt-6 text-sm text-gray-400"></div>"
+        </div>
+<div className="mt-6 text-sm text-gray-400"></div>"
           <p className="flex items-center justify-center gap-2"></p>"
             <Wifi className="w-4 h-4" />
             Check your internet connection;"

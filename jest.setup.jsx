@@ -1,4 +1,4 @@
-// Mock Next.js router
+// Mock Next.js router;
 jest.mock('next/router', () => ({
   useRouter() {
     return {
@@ -16,29 +16,29 @@ jest.mock('next/router', () => ({
         on: jest.fn(),
         off: jest.fn(),
         emit: jest.fn()}}
-  }}))
-// Mock files that use import.meta.env
+  }})
+// Mock files that use import.meta.env;
 jest.mock('./src/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
     warn: jest.fn(),
-    error: jest.fn()}}))
-// Mock analytics
+    error: jest.fn()}})
+// Mock analytics;
 jest.mock('./src/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
-  initAnalytics: jest.fn()}))
-// Mock error tracking
+  initAnalytics: jest.fn()})
+// Mock error tracking;
 jest.mock('./src/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
-  initErrorReporting: jest.fn()}))
-// Mock performance hook
+  initErrorReporting: jest.fn()})
+// Mock performance hook;
 jest.mock('./src/hooks/usePerformance.ts', () => ({
   usePerformance: jest.fn(() => ({
     metrics: {},
-    optimize: jest.fn()}))}))
-// Mock Vite environment
+    optimize: jest.fn()})})
+// Mock Vite environment;
 Object.defineProperty(import.meta, 'env', {
   value: {
     VITE_APP_TITLE: 'Test App',
@@ -46,7 +46,7 @@ Object.defineProperty(import.meta, 'env', {
     DEV: false,
     PROD: true},
   writable: true})
-// Mock window.matchMedia
+// Mock window.matchMedia;
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -57,17 +57,17 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()}))})
-// Mock IntersectionObserver
+    dispatchEvent: jest.fn()})})
+// Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn()}))
-// Mock ResizeObserver
+  disconnect: jest.fn()})
+// Mock ResizeObserver;
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn()}))
+  disconnect: jest.fn()})
 ursor/automate-test-fix-improve-and-merge-code-48f3; //Mock: Next.js router.mock('next/router') () => ({' useRouter() { ',
 }}
 ursor/automate-test-fix-improve-and-merge-code-48f3; //Moc,

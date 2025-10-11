@@ -15,7 +15,7 @@ import {
   ArrowRight,
   Star,
   Users,
-  Globe
+  Globe;
 } from "lucide-react"
 import { getFeaturedServices } from "@/data/microSaasServices"
 export function MicroSaasShowcase() {
@@ -67,22 +67,23 @@ export function MicroSaasShowcase() {
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light relative overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-purple/10 via-transparent to-zion-cyan/10"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple/5 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan/5 rounded-full filter blur-3xl"></div>
+      </section>
+<div className="absolute inset-0">
+        </div>
+<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-purple/10 via-transparent to-zion-cyan/10"></div>
+<div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple/5 rounded-full filter blur-3xl"></div>
+<div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan/5 rounded-full filter blur-3xl"></div>
       </div>
-
-      <div className="container relative z-10 mx-auto px-4">
+<div className="container relative z-10 mx-auto px-4">
         {/* Header */}
-        <motion.div 
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Featured Micro SAAS & AI Services
+            Featured Micro SAAS & AI Services;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Discover innovative solutions that transform businesses. From AI-powered chatbots to comprehensive IT consulting, 
@@ -90,24 +91,30 @@ export function MicroSaasShowcase() {
           </p>
           
           {/* Contact Info */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-2">
+          </div>
+<div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto border border-white/20">
+            </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+              </div>
+<div className="flex flex-col items-center">
+                </div>
+<div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-2">
                   <Globe className="w-5 h-5 text-zion-cyan" />
                 </div>
                 <span className="text-zion-slate-light text-sm">Website</span>
                 <span className="text-white font-semibold">ziontechgroup.com</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center mb-2">
+<div className="flex flex-col items-center">
+                </div>
+<div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center mb-2">
                   <Users className="w-5 h-5 text-zion-purple" />
                 </div>
                 <span className="text-zion-slate-light text-sm">Phone</span>
                 <span className="text-white font-semibold">+1 302 464 0950</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-2">
+<div className="flex flex-col items-center">
+                </div>
+<div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-2">
                   <Star className="w-5 h-5 text-zion-cyan" />
                 </div>
                 <span className="text-zion-slate-light text-sm">Email</span>
@@ -120,7 +127,7 @@ export function MicroSaasShowcase() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredServices.map((service, index) => (
-            <motion.div
+            <motion.div;
               key={service.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -128,8 +135,10 @@ export function MicroSaasShowcase() {
             >
               <Card className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group cursor-pointer">
                 <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)}`}>
+                  </div>
+<div className="flex items-center justify-between mb-4">
+                    </div>
+<div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)}`}>
                       {getCategoryIcon(service.category)}
                     </div>
                         className={`w-4 h-4 ${
@@ -144,9 +153,9 @@ export function MicroSaasShowcase() {
                     {service.rating} ({service.reviewCount} reviews)
                   </span>
                 </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service, index) => (
-            <Card 
+            <Card
               key={service.id} 
               className="group hover:shadow-2xl transition-all duration-500 border-zion-purple/20 hover:border-zion-purple/40 overflow-hidden bg-gradient-to-br from-card to-card/50 backdrop-blur-sm"
               style={{
@@ -154,16 +163,18 @@ export function MicroSaasShowcase() {
                 animation: 'fadeInUp 0.6s ease-out forwards'
               }}
             >
-              <div className="relative">
-                <img 
+              </div>
+<div className="relative">
+                <img
                   src={service.image} 
                   alt={service.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3">
+                </div>
+<div className="absolute top-3 left-3">
                   {categoryIcons[service.category as keyof typeof categoryIcons]}
                 </div>
-                <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-md">
+<div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-md">
                   <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                   <span className="text-xs font-medium">{service.rating}</span>
                 </div>
@@ -191,7 +202,7 @@ export function MicroSaasShowcase() {
                 <div>
                   <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-zion-cyan">
                     <TrendingUp className="h-4 w-4" />
-                    Key Benefits
+                    Key Benefits;
                   </h4>
                   <ul className="space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
@@ -206,18 +217,20 @@ export function MicroSaasShowcase() {
                 {/* Pricing */}
                 <div className="bg-gradient-to-r from-zion-blue-dark/10 to-zion-purple/10 p-3 rounded-lg border border-zion-blue/20">
                   {service.pricing.custom ? (
-                    <div className="text-center">
+                    </div>
+<div className="text-center">
                       <p className="text-sm font-medium text-zion-cyan">{service.pricing.custom}</p>
                     </div>
                   ) : (
                     <div className="text-center">
-                      <div className="flex items-center justify-center gap-1 mb-1">
+                      </div>
+<div className="flex items-center justify-center gap-1 mb-1">
                         <span className="text-xl font-bold text-primary">{service.pricing.currency}</span>
                         <span className="text-xl font-bold">{service.pricing.monthly}</span>
                         <span className="text-sm text-muted-foreground">/mo</span>
                       </div>
                       <p className="text-xs text-muted-foreground">
-                        {service.pricing.currency}{service.pricing.yearly}/year
+                        {service.pricing.currency}{service.pricing.yearly}/year;
                       </p>
                     </div>
                   )}
@@ -233,11 +246,14 @@ export function MicroSaasShowcase() {
                 </Button>
 
                 {/* Key Benefits */}
-                <div>
+                </div>
+<div>
                   <h4 className="text-white font-semibold mb-2">Key Benefits</h4>
-                  <div className="space-y-1">
+                  </div>
+<div className="space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                      </div>
+<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan" />
                         {benefit}
                       </div>
@@ -252,7 +268,8 @@ export function MicroSaasShowcase() {
 
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-purple-dark/50 via-zion-purple/50 to-zion-cyan/50 rounded-2xl p-8 md:p-12 border border-zion-purple/30">
+          </div>
+<div className="bg-gradient-to-r from-zion-purple-dark/50 via-zion-purple/50 to-zion-cyan/50 rounded-2xl p-8 md:p-12 border border-zion-purple/30">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
@@ -260,23 +277,25 @@ export function MicroSaasShowcase() {
               Join thousands of businesses already using our micro SAAS services to drive growth, 
               improve efficiency, and stay ahead of the competition.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            </div>
+<div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-black font-semibold px-8 py-3">
                 <Link to="/micro-saas-services">
                   <TrendingUp className="h-5 w-5 mr-2" />
-                  Explore All Services
+                  Explore All Services;
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple font-semibold px-8 py-3">
                 <Link to="/contact">
                   <Users className="h-5 w-5 mr-2" />
-                  Get Consultation
+                  Get Consultation;
                 </Link>
               </Button>
             </div>
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-3xl p-8 border border-zion-purple/30">
+          </div>
+<div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-3xl p-8 border border-zion-purple/30">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Get Started?
             </h3>
@@ -284,15 +303,16 @@ export function MicroSaasShowcase() {
               Join thousands of businesses already using our micro SAAS solutions to drive growth, 
               improve efficiency, and stay ahead of the competition.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            </div>
+<div className="flex flex-wrap justify-center gap-4">
               <Link to="/micro-saas-services">
                 <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                  View All Services
+                  View All Services;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                Contact Sales
+                Contact Sales;
               </Button>
             </div>
           </div>
@@ -300,16 +320,18 @@ export function MicroSaasShowcase() {
       </div>
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20 p-8 rounded-2xl border border-zion-blue/30 max-w-4xl mx-auto">
+          </div>
+<div className="bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20 p-8 rounded-2xl border border-zion-blue/30 max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Accelerate Your Business?
             </h3>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have transformed their operations with our 
+              Join thousands of businesses that have transformed their operations with our;
               innovative solutions. Get started today with a free consultation.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light">
                 <Link to="/micro-saas-services">
                   <span>Explore All Services</span>
@@ -323,17 +345,17 @@ export function MicroSaasShowcase() {
                 </Link>
               </Button>
             </div>
-
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
+<div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
+              </div>
+<div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-zion-cyan" />
                 <span>Free Consultation</span>
               </div>
-              <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-zion-cyan" />
                 <span>24/7 Support</span>
               </div>
-              <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-zion-cyan" />
                 <span>Enterprise Security</span>
               </div>
@@ -345,11 +367,11 @@ export function MicroSaasShowcase() {
       <style>{`
         @keyframes fadeInUp {
           from {
-            opacity: 0
+            opacity: 0;
             transform: translateY(30px)
           }
           to {
-            opacity: 1
+            opacity: 1;
             transform: translateY(0)
           }
         }
@@ -374,7 +396,8 @@ export function MicroSaasShowcase() {
                 <CardContent className="space-y-4">
                   {/* Price and Rating */}
                   <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-white">
+                    </div>
+<div className="text-2xl font-bold text-white">
                       {service.currency}{service.price}
                       <span className="text-sm text-zion-slate-light ml-1">
                         {service.pricingModel === 'monthly' ? '/mo' : 
@@ -382,7 +405,7 @@ export function MicroSaasShowcase() {
                          service.pricingModel === 'hourly' ? '/hr' : ''}
                       </span>
                     </div>
-                    <div className="flex items-center gap-1">
+<div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
                       <span className="text-white">{service.rating}</span>
                     </div>
@@ -392,7 +415,7 @@ export function MicroSaasShowcase() {
                   <div className="flex items-center justify-between">
                     <span className="text-zion-slate-light">AI Score:</span>
                     <Badge className="bg-zion-purple text-white">
-                      {service.aiScore}/100
+                      {service.aiScore}/100;
                     </Badge>
                   </div>
                   
@@ -402,7 +425,8 @@ export function MicroSaasShowcase() {
                     <ul className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
                         <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
+                          </div>
+<div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                           {benefit}
                         </li>
                       ))}
@@ -421,7 +445,7 @@ export function MicroSaasShowcase() {
         </div>
 
         {/* CTA Section */}
-        <motion.div 
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -436,24 +460,25 @@ export function MicroSaasShowcase() {
               Get in touch today for a free consultation and competitive quote.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
                 size="lg" 
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
-                asChild
+                asChild;
               >
                 <Link to="/micro-saas-services">
-                  View All Services
+                  View All Services;
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button 
+              <Button
                 size="lg" 
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark"
                 onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Business Consultation Request`)}
               >
-                Get Free Consultation
+                Get Free Consultation;
               </Button>
             </div>
           </div>

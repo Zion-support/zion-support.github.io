@@ -34,11 +34,11 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
             </div>
           </div>
 
-                  <Link 
+                  <Link
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
-                <Link 
+                <Link
                   to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -48,11 +48,11 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
             </ul>
           </div>
 
-                  <Link 
+                  <Link
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
-                <Link 
+                <Link
                   to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
@@ -60,7 +60,7 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
                 to="/micro-saas"
                 className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
               >
-                View All Solutions
+                View All Solutions;
                 <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
               </li>
@@ -73,19 +73,18 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
             </div>
           </div>
         </div>
-
-                <div className="text-white font-medium">{contactInfo.hours}</div>
-                <div className="text-gray-400 text-sm">Business hours</div>
+<div className="text-white font-medium">{contactInfo.hours}</div>
+<div className="text-gray-400 text-sm">Business hours</div>
               </div>
             </div>
           </div>
         </div>
 
-                  <Link 
+                  <Link
                     to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-                  <Link 
+                  <Link
                     to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
@@ -102,13 +101,13 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
       </div>
 
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
+                Privacy Policy;
               </Link>
               <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
+                Terms of Service;
               </Link>
               <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
+                Cookie Policy;
               </Link>
             </div>
   );

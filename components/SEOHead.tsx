@@ -1,14 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
 }
 
 export default function SEOHead({
@@ -72,7 +72,7 @@ export default function SEOHead({
       ]
     }
   }
-  const finalStructuredData = structuredData || defaultStructuredData
+  const finalStructuredData = structuredData || defaultStructuredData;
   return (
     <Head>
       {/* Basic Meta Tags */}

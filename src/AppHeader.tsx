@@ -29,20 +29,21 @@ const AppHeader = () => {
     { name: 'Contact', href: '/contact' },
   ]
   return (
-    <>
-      <$2 />
+    <></><$2 />
         style={{ "--nav-height": "64px" } as React.CSSProperties}
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen }
-        )}
+          { "bg-red-500": mobileMenuOpen })
       >
         <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+          </div>
+<div className="flex h-16 items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center">
+            </div>
+<div className="flex items-center">
               <Link href="/" className="flex items-center space-x-2">
-                <div className="h-8 w-8 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
+                </div>
+<div className="h-8 w-8 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">Z</span>
                 </div>
                 <span className="text-xl font-bold">Zion Tech Group</span>
@@ -81,8 +82,10 @@ const AppHeader = () => {
 
               {/* User Menu */}
               {isLoggedIn ? (
-                <div className="flex items-center space-x-2">
-                  <div className="h-8 w-8 rounded-full bg-gray-300 flex items-center justify-center">
+                </div>
+<div className="flex items-center space-x-2">
+                  </div>
+<div className="h-8 w-8 rounded-full bg-gray-300 flex items-center justify-center">
                     <User className="h-5 w-5" />
                   </div>
                   <span className="text-sm font-medium">{user?.name || 'User'}</span>
@@ -92,7 +95,7 @@ const AppHeader = () => {
                   onClick={() => openLoginModal()}
                   className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  Login
+                  Login;
                 </button>
               )}
 
@@ -110,7 +113,7 @@ const AppHeader = () => {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {mobileMenuOpen && (
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -139,11 +142,11 @@ const AppHeader = () => {
       {showTagline && (
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2">
           <p className="text-sm">
-            Leading the future of technology with AI, blockchain, and innovative solutions
+            Leading the future of technology with AI, blockchain, and innovative solutions;
           </p>
         </div>
       )}
     </>
   )
 }
-export default AppHeader
+export default AppHeader;

@@ -90,7 +90,7 @@ import {
   CheckCircle,
   Code,
   Settings,
-  Eye
+  Eye;
 } from 'lucide-react'
 export default function Careers() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -138,7 +138,7 @@ import {
   CheckCircle,
   Globe,
   Heart,
-  Zap
+  Zap;
 } from 'lucide-react'
 export default function Careers() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -186,7 +186,7 @@ export default function Careers() {
         "Health, dental, and vision insurance",
         "Professional development budget"
       ],
-      urgent: true
+      urgent: true;
     },
     {
       id: 2,
@@ -209,7 +209,7 @@ export default function Careers() {
         "Training and certification support",
         "Career growth opportunities"
       ],
-      urgent: false
+      urgent: false;
     },
     {
   Award, 
@@ -221,7 +221,7 @@ export default function Careers() {
   ArrowRight,
   Send,
   Star,
-  TrendingUp
+  TrendingUp;
 } from 'lucide-react'
 import { Badge } from '../components/ui/badge'
 import { Card } from '../components/ui/card'
@@ -257,7 +257,7 @@ import {
   Linkedin,
   ExternalLink,
   Filter,
-  Search
+  Search;
 } from 'lucide-react'
 export default function Careers() {
   const [searchTerm, setSearchTerm] = useState('')
@@ -488,7 +488,7 @@ export default function Careers() {
         "Health benefits",
         "Professional development"
       ],
-      urgent: false
+      urgent: false;
     },
     {
       id: 4,
@@ -511,29 +511,29 @@ export default function Careers() {
         "Health benefits",
         "Learning and development"
       ],
-      urgent: false
+      urgent: false;
     }
   ]
   const companyValues = [
     {
       title: "Innovation First",
       description: "We push boundaries and embrace cutting-edge technologies",
-      icon: Zap
+      icon: Zap;
     },
     {
       title: "People Matter",
       description: "Our team is our greatest asset and we invest in their growth",
-      icon: Heart
+      icon: Heart;
     },
     {
       title: "Global Impact",
       description: "We solve problems that affect businesses worldwide",
-      icon: Globe
+      icon: Globe;
     },
     {
       title: "Continuous Learning",
       description: "We foster a culture of curiosity and skill development",
-      icon: BookOpen
+      icon: BookOpen;
     }
   ]
       id: 1,
@@ -886,45 +886,50 @@ export default function Careers() {
     }
   ]
   const filteredPositions = openPositions.filter(position => {
-    const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment
-    const matchesLocation = selectedLocation === 'all' || position.location === selectedLocation
-    const matchesType = selectedType === 'all' || position.type === selectedType
+    const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment;
+    const matchesLocation = selectedLocation === 'all' || position.location === selectedLocation;
+    const matchesType = selectedType === 'all' || position.type === selectedType;
     const matchesSearch = searchQuery === '' || 
       position.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       position.description.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesDepartment && matchesLocation && matchesType && matchesSearch
+    return matchesDepartment && matchesLocation && matchesType && matchesSearch;
   })
   const featuredPositions = filteredPositions.filter(position => position.featured)
   const regularPositions = filteredPositions.filter(position => !position.featured)
   const filteredJobs = jobOpenings.filter(job => {
-    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment
-    const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation
-    return matchesDepartment && matchesLocation
+    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;
+    const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;
+    return matchesDepartment && matchesLocation;
   })
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20"></div>
-        <div className="relative container mx-auto px-4 py-24">
-          <div className="text-center max-w-4xl mx-auto">
+      </div>
+<div className="relative overflow-hidden">
+        </div>
+<div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20"></div>
+<div className="relative container mx-auto px-4 py-24">
+          </div>
+<div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Join Our Mission to
+              Join Our Mission to;
               <span className="text-gradient block">Transform the Future</span>
             </h1>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Be part of a team that's pushing the boundaries of AI, quantum computing, and emerging technologies. 
               Help us build solutions that transform businesses and shape the future of technology.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 text-zion-cyan">
+            </div>
+<div className="flex flex-wrap justify-center gap-4">
+              </div>
+<div className="flex items-center space-x-2 text-zion-cyan">
                 <Users className="h-5 w-5" />
                 <span className="text-white">24 Open Positions</span>
               </div>
-              <div className="flex items-center space-x-2 text-zion-cyan">
+<div className="flex items-center space-x-2 text-zion-cyan">
                 <Globe className="h-5 w-5" />
                 <span className="text-white">Remote & Hybrid Options</span>
               </div>
-              <div className="flex items-center space-x-2 text-zion-cyan">
+<div className="flex items-center space-x-2 text-zion-cyan">
                 <Star className="h-5 w-5" />
                 <span className="text-white">Competitive Benefits</span>
               </div>
@@ -932,18 +937,22 @@ export default function Careers() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      </div><section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto text-center">
+    </div>
+<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
+      </div><section className="relative pt-32 pb-20 overflow-hidden">
+        </section>
+<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+<div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Join Our Mission to
+              Join Our Mission to;
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                {" "}Transform the Future
+                {" "}Transform the Future;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -952,7 +961,8 @@ export default function Careers() {
             </p>
             
             {/* Search Bar */}
-            <div className="relative max-w-2xl mx-auto mb-8">
+            </div>
+<div className="relative max-w-2xl mx-auto mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
               <input
                 type="text"
@@ -962,33 +972,32 @@ export default function Careers() {
                 className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
+<div className="flex flex-wrap justify-center gap-4">
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Apply Now
+                Apply Now;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />
                 to="/about"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
-                Learn About Us
+                Learn About Us;
               </Link>
             </div>
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4 mr-2" />
-              Join Our Team
+              Join Our Team;
             </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-              Build the Future with Us
+              Build the Future with Us;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Join our team of innovators, researchers, and technology leaders who are shaping the future of AI, quantum computing, and enterprise technology.
@@ -996,7 +1005,8 @@ export default function Careers() {
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
-              <div className="relative">
+              </div>
+<div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -1013,16 +1023,19 @@ export default function Careers() {
 
       {/* Filters Section */}
       <section className="pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
             {/* Departments */}
-            <div className="flex flex-wrap gap-3">
+            </div>
+<div className="flex flex-wrap gap-3">
               {departments.map((dept) => (
                 <$2 />
                   key={dept.id}
                   onClick={() => setSelectedDepartment(dept.id)}
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${
-                    selectedDepartment === dept.id
+                    selectedDepartment === dept.id;
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
                       : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
                   }`}
@@ -1042,7 +1055,7 @@ export default function Careers() {
                   key={location.id}
                   onClick={() => setSelectedLocation(location.id)}
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${
-                    selectedLocation === location.id
+                    selectedLocation === location.id;
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
                       : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
                   }`}
@@ -1056,7 +1069,7 @@ export default function Careers() {
                   key={type.id}
                   onClick={() => setSelectedType(type.id)}
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${
-                    selectedType === type.id
+                    selectedType === type.id;
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
                       : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
                   }`}
@@ -1080,7 +1093,7 @@ import {
   DollarSign,
   Send,
   CheckCircle,
-  AlertCircle
+  AlertCircle;
 } from 'lucide-react'
 const Careers = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
@@ -1218,11 +1231,11 @@ const Careers = () => {
     }
   ]
   const filteredJobs = jobListings.filter(job => {
-    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment
+    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.department.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesDepartment && matchesSearch
+    return matchesDepartment && matchesSearch;
   })
   const companyValues = [
     {
@@ -1240,7 +1253,7 @@ const Careers = () => {
       title: 'Customer Focus',
       description: 'Everything we do is driven by our commitment to customer success.'
   const filteredJobs = selectedDepartment === 'all' 
-    ? jobOpenings 
+    ? jobOpenings;
     : jobOpenings.filter(job => job.department === selectedDepartment)
   const companyValues = [
     {
@@ -1494,9 +1507,9 @@ const Careers = () => {
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.department.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment
-    const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation
-    return matchesSearch && matchesDepartment && matchesLocation
+    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;
+    const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;
+    return matchesSearch && matchesDepartment && matchesLocation;
   })
   const featuredJobs = filteredJobs.filter(job => job.featured)
   const regularJobs = filteredJobs.filter(job => !job.featured)
@@ -1507,27 +1520,26 @@ const Careers = () => {
       month: 'long', 
       day: 'numeric' 
     })
-  }
   const companyValues = [
     {
       title: "Innovation First",
       description: "We push the boundaries of what's possible with cutting-edge technology",
-      icon: Rocket
+      icon: Rocket;
     },
     {
       title: "Excellence",
       description: "We deliver the highest quality solutions and exceptional service",
-      icon: Award
+      icon: Award;
     },
     {
       title: "Collaboration",
       description: "We work together to achieve extraordinary results for our clients",
-      icon: Users
+      icon: Users;
     },
     {
       title: "Integrity",
       description: "We maintain the highest ethical standards in all our interactions",
-      icon: Shield
+      icon: Shield;
     }
   ]
   const benefits = [
@@ -1576,7 +1588,7 @@ import {
   Target,
   TrendingUp,
   Award,
-  Lightbulb
+  Lightbulb;
 } from 'lucide-react'
 const Careers = () => {
   const openPositions = [
@@ -1684,58 +1696,60 @@ const Careers = () => {
       description: "We strive for quality in everything we do"
       title: "Competitive Compensation",
       description: "Attractive salary packages with equity options",
-      icon: Award
+      icon: Award;
     },
     {
       title: "Flexible Work",
       description: "Remote and hybrid work options for work-life balance",
-      icon: Globe
+      icon: Globe;
     },
     {
       title: "Professional Growth",
       description: "Continuous learning and career development opportunities",
-      icon: Brain
+      icon: Brain;
     },
     {
       title: "Health & Wellness",
       description: "Comprehensive health, dental, and vision coverage",
-      icon: Shield
+      icon: Shield;
     }
   ]
   return (
-    <>
-      <SEO
+    <></><SEO
         title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
     
-      <SEO 
+      <SEO
         title="Careers at Zion - Join Our Team" 
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." 
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
         canonical="https://ziontechgroup.com/careers"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        </main>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Join Our Team
+              Join Our Team;
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
               Build the future of technology with us. Join a team of innovators, 
               problem-solvers, and visionaries transforming businesses worldwide.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            </div>
+<div className="flex flex-wrap justify-center gap-4">
               <$2 />
                 href="#open-positions"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
               >
-                View Open Positions
+                View Open Positions;
               </a>
               <$2 />
                 to="/contact" 
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
               >
-                Contact Us
+                Contact Us;
               </Link>
             </div>
           </div>
@@ -1744,32 +1758,36 @@ const Careers = () => {
 
       {/* Company Values */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our Values
+              Our Values;
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               These core principles guide everything we do and shape our company culture.
             </p>
           </div>
-          
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      </div>
+<div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        </div>
+<div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-            Join Our Team
+            Join Our Team;
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Help us build the future of AI and technology. Join a team of innovators, problem-solvers, and visionaries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-              View Open Positions
+              View Open Positions;
             </button>
             <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300">
-              Submit Application
+              Submit Application;
             </button>
           </div>
         </div>
@@ -1777,19 +1795,21 @@ const Careers = () => {
 
       {/* Values Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+        </div>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Values
+              Our Values;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              The principles that guide everything we do
+              The principles that guide everything we do;
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
+              </div>
+<div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">{value.title}</h3>
                 <p className="text-gray-300">{value.description}</p>
               </div>
@@ -1798,20 +1818,23 @@ const Careers = () => {
         </div>
       {/* Benefits Section */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
+        </div>
+<div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Why Work With Us</h2>
           <p className="text-zion-slate-light text-lg">
-            We invest in our people because they're our greatest asset
+            We invest in our people because they're our greatest asset;
           </p>
         </div>
       </section>
 
       {/* Job Openings */}
       <section id="openings" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Open Positions
+              Open Positions;
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Find the perfect role for your skills and career goals.
@@ -1825,7 +1848,7 @@ const Careers = () => {
                 key={dept.id}
                 onClick={() => setSelectedDepartment(dept.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
-                  selectedDepartment === dept.id
+                  selectedDepartment === dept.id;
                     ? 'border-purple-500 bg-purple-500/20 text-purple-400'
                     : 'border-gray-700 text-gray-300 hover:border-purple-500/50 hover:text-purple-400'
                 }`}
@@ -1837,16 +1860,18 @@ const Careers = () => {
                 </span>
               </button>
             ))}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-            <div>
+          </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            </div>
+<div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
               <p className="text-zion-slate-light text-lg mb-6">
-                At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and 
+                At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and;
                 technology are accessed, shared, and implemented globally.
               </p>
               <p className="text-zion-slate-light text-lg mb-6">
-                Our team is passionate about democratizing access to cutting-edge technology and connecting 
-                talented individuals with meaningful opportunities. We value innovation, collaboration, and 
+                Our team is passionate about democratizing access to cutting-edge technology and connecting;
+                talented individuals with meaningful opportunities. We value innovation, collaboration, and;
                 impact in everything we do.
               </p>
               <p className="text-zion-slate-light text-lg">
@@ -1854,7 +1879,7 @@ const Careers = () => {
                 remote-first environment with a mission-driven team, we'd love to meet you.
               </p>
             </div>
-            <div className="rounded-lg overflow-hidden">
+<div className="rounded-lg overflow-hidden">
               <img loading="lazy" 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600" 
                 alt="Team collaboration" 
@@ -1862,38 +1887,42 @@ const Careers = () => {
               />
             </div>
           </div>
-          
-          <div className="space-y-6">
+<div className="space-y-6">
             {filteredJobs.map((job) => (
-              <div key={job.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                  <div className="mb-4 lg:mb-0">
-                    <div className="flex items-center space-x-3 mb-2">
+              </div>
+<div key={job.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300">
+                </div>
+<div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                  </div>
+<div className="mb-4 lg:mb-0">
+                    </div>
+<div className="flex items-center space-x-3 mb-2">
                       <h3 className="text-2xl font-bold">{job.title}</h3>
                       {job.urgent && (
                         <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full border border-red-500/30">
-                          Urgent
+                          Urgent;
                         </span>
                       )}
                     </div>
-                    <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
-                      <div className="flex items-center space-x-1">
+<div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
+                      </div>
+<div className="flex items-center space-x-1">
                         <Building className="w-4 h-4" />
                         <span>{departments.find(d => d.id === job.department)?.name}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
+<div className="flex items-center space-x-1">
                         <MapPin className="w-4 h-4" />
                         <span>{job.location}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
+<div className="flex items-center space-x-1">
                         <Clock className="w-4 h-4" />
                         <span>{job.type}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
+<div className="flex items-center space-x-1">
                         <Briefcase className="w-4 h-4" />
                         <span>{job.experience}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
+<div className="flex items-center space-x-1">
                         <DollarSign className="w-4 h-4" />
                         <span>{job.salary}</span>
                       </div>
@@ -1911,7 +1940,8 @@ const Careers = () => {
                 <p className="text-gray-300 mb-4">{job.description}</p>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div>
+                  </div>
+<div>
                     <h4 className="font-semibold mb-3 text-purple-400">Requirements</h4>
                     <ul className="space-y-2">
                       {job.requirements.map((req, idx) => (
@@ -1921,24 +1951,26 @@ const Careers = () => {
                         </li>
                       ))}
                     </ul>
-      <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      </div><section className="py-20 bg-black/20">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Our Values
+              Our Values;
             </h2>
             <p className="text-xl text-gray-300">
-              The principles that guide everything we do
+              The principles that guide everything we do;
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {companyValues.map((value, index) => (
               <$2 />
                 key={index}
                 className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                </div>
+<div className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{value.title}</h3>
@@ -1951,26 +1983,29 @@ const Careers = () => {
 
       {/* Benefits Section */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Work With Us?
             </h2>
             <p className="text-xl text-gray-300">
-              We invest in our people because they're our greatest asset
+              We invest in our people because they're our greatest asset;
             </p>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {benefits.map((category, index) => (
               <$2 />
                 key={index}
                 className="bg-gray-800/50 rounded-xl border border-gray-700 p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                <div className="space-y-3">
+                </div>
+<div className="space-y-3">
                   {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-center gap-3">
+                    </div>
+<div key={itemIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       <span className="text-gray-300">{item.name}</span>
                     </div>
@@ -1978,20 +2013,24 @@ const Careers = () => {
                 </div>
       {/* Company Culture */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Why Work at Zion Tech Group?
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              We're building more than just technology - we're building a culture 
+              We're building more than just technology - we're building a culture;
               of innovation, collaboration, and continuous growth.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
+              </div>
+<div key={index} className="text-center">
+                </div>
+<div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
                   <value.icon className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
@@ -2009,29 +2048,31 @@ const Careers = () => {
       {/* Featured Positions */}
       {featuredPositions.length > 0 && (
         <section className="pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Featured Positions</h2>
               <p className="text-gray-300">High-priority roles with immediate openings</p>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredPositions.map((position, index) => (
-                <motion.div
+                <motion.div;
                   key={position.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
-                  <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                  </div>
+<div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <Briefcase className="w-16 h-16 text-cyan-400" />
                   </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
+<div className="p-6">
+                    </div>
+<div className="flex items-center gap-4 mb-4">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30">
-                        Featured
+                        Featured;
                       </span>
                       <span className="text-gray-400 text-sm capitalize">{position.department}</span>
                     </div>
@@ -2045,44 +2086,49 @@ const Careers = () => {
                     </p>
                     
                     <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-4 text-sm text-gray-400">
-                        <div className="flex items-center gap-2">
+                      </div>
+<div className="flex items-center gap-4 text-sm text-gray-400">
+                        </div>
+<div className="flex items-center gap-2">
                           <MapPin className="w-4 h-4" />
                           {locations.find(l => l.id === position.location)?.name}
                         </div>
-                        <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
                           <Clock className="w-4 h-4" />
                           {position.experience}
                         </div>
-                        <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
                           <Users className="w-4 h-4" />
-                          {position.applications} applications
+                          {position.applications} applications;
                         </div>
                       </div>
                     </div>
-                    
-                    <div className="mb-4">
+<div className="mb-4">
                       <h4 className="font-semibold text-gray-300 mb-2">Key Requirements:</h4>
                       <ul className="space-y-1">
                         {position.requirements.slice(0, 3).map((req, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
       {/* Benefits */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      </div><section className="py-20 bg-white">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Benefits & Perks
+              Benefits & Perks;
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              We believe in taking care of our team. Here's what we offer to support 
+              We believe in taking care of our team. Here's what we offer to support;
               your professional and personal growth.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-zinc-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-4 flex items-center justify-center">
+              </div>
+<div key={index} className="bg-zinc-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-4 flex items-center justify-center">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
@@ -2095,32 +2141,36 @@ const Careers = () => {
 
       {/* Benefits Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+        </div>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Work With Us
+              Why Work With Us;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We offer more than just a job - we offer a career with purpose
+              We offer more than just a job - we offer a career with purpose;
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
+              </div>
+<div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
+                </div>
+<div className="text-4xl mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
-                    <div>
+<div>
                       <h4 className="font-semibold text-zion-blue-dark mb-2">Benefits:</h4>
                       <ul className="space-y-1">
                         {job.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start text-sm text-zion-slate">
-                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                            </div>
+<div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 mt-2 flex-shrink-0"></div>
                             {benefit}
                           </li>
                         ))}
@@ -2131,7 +2181,7 @@ const Careers = () => {
               ))
             )}
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Careers - Join Zion Tech Group" 
         description="Join our team and help build the future of technology. Explore career opportunities at Zion Tech Group."
         keywords="careers, jobs, Zion Tech Group, employment, tech jobs, AI jobs"
@@ -2139,8 +2189,9 @@ const Careers = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      </div><section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Join Our <span className="text-zion-cyan">Team</span>
           </h1>
@@ -2156,13 +2207,16 @@ const Careers = () => {
 
       {/* Why Work With Us */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Why Work With Us?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
                 <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  </div>
+<div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     {benefit.icon}
                   </div>
                   <CardTitle className="text-zion-cyan">{benefit.title}</CardTitle>
@@ -2182,17 +2236,18 @@ const Careers = () => {
 
       {/* Open Positions */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+        </div>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Open Positions
+              Open Positions;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Find your next opportunity to make a difference
+              Find your next opportunity to make a difference;
             </p>
           </div>
-
-          <div className="space-y-6">
+<div className="space-y-6">
     "Innovation at the core of everything we do",
     "Customer success drives our decisions",
     "Continuous learning and improvement",
@@ -2201,17 +2256,22 @@ const Careers = () => {
     "Collaboration and teamwork excellence"
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    </div>
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mr-4">
+      </div><section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center">
+            </div>
+<div className="flex items-center justify-center mb-6">
+              </div>
+<div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mr-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Join Our Team
+                Join Our Team;
               </h1>
             </div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
@@ -2219,10 +2279,10 @@ const Careers = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105">
-                View Open Positions
+                View Open Positions;
               </button>
               <button className="px-8 py-4 border border-blue-400/50 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/20 transition-all duration-300">
-                Learn About Culture
+                Learn About Culture;
               </button>
             </div>
           </div>
@@ -2230,27 +2290,30 @@ const Careers = () => {
         
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
-          <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-          <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-bounce"></div>
+          </div>
+<div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
+<div className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+<div className="absolute bottom-20 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-bounce"></div>
         </div>
       </section>
 
       {/* Values Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Values & Culture
+              Our Values & Culture;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're building more than technology - we're building a culture of innovation, collaboration, and growth
+              We're building more than technology - we're building a culture of innovation, collaboration, and growth;
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {values.map((value, index) => (
-              <div key={index} className="flex items-center space-x-4">
+              </div>
+<div key={index} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300 text-lg">{value}</span>
               </div>
@@ -2261,66 +2324,73 @@ const Careers = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Work With Us?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer competitive benefits and a supportive environment where you can thrive and grow
+              We offer competitive benefits and a supportive environment where you can thrive and grow;
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
-              const Icon = benefit.icon
+              const Icon = benefit.icon;
               return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                </div>
+<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
+                  </div>
+<div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-blue-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
               )
-            })}
+            })
           </div>
         </div>
       </section>
 
       {/* Open Positions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Open Positions
+              Open Positions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join our team and help shape the future of AI and technology
+              Join our team and help shape the future of AI and technology;
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {openPositions.map((position, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
-                <div className="flex items-start justify-between mb-4">
+              </div>
+<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
+                </div>
+<div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-semibold text-white">{position.title}</h3>
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
                     {position.type}
                   </span>
                 </div>
-                
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-300">
-                    <div className="flex items-center space-x-2">
+<div className="space-y-3 mb-6">
+                  </div>
+<div className="flex items-center space-x-4 text-sm text-gray-300">
+                    </div>
+<div className="flex items-center space-x-2">
                       <Briefcase className="w-4 h-4 text-blue-400" />
                       <span>{position.department}</span>
                     </div>
-                    <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-2">
                       <MapPin className="w-4 h-4 text-blue-400" />
                       <span>{position.location}</span>
                     </div>
-                    <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-2">
                       <Clock className="w-4 h-4 text-blue-400" />
                       <span>{position.experience}</span>
                     </div>
@@ -2334,7 +2404,7 @@ const Careers = () => {
                           <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                           <span className="text-gray-300 text-sm">{benefit}</span>
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
+      <SEO
         title="Careers - Join Zion Tech Group" 
         description="Join our team of innovators and technology experts. Explore career opportunities at Zion Tech Group."
         keywords="careers, jobs, employment, Zion Tech Group, technology careers, remote jobs"
@@ -2342,37 +2412,39 @@ const Careers = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+      </div><section className="relative pt-32 pb-20 overflow-hidden">
+        </section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Join Our
+              Join Our;
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Team
+                Team;
               </span>
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Be part of a team that's shaping the future of technology. Work on cutting-edge projects, 
               learn from experts, and grow your career with us.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 href="#open-positions"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
-                View Open Positions
+                View Open Positions;
                 <ArrowRight className="w-5 h-5" />
               </a>
               <$2 />
                 to="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
-                Contact Us
+                Contact Us;
                 <Mail className="w-5 h-5" />
               </Link>
             </div>
@@ -2386,8 +2458,7 @@ const Careers = () => {
     }
   ]
   return (
-    <>
-      <SEO 
+    <></><SEO
         title="Careers at Zion Tech Group - Join Our Team"
         description="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore exciting career opportunities in AI, cloud computing, cybersecurity, and more."
         keywords="careers, jobs, employment, Zion Tech Group, technology jobs, AI jobs, remote work"
@@ -2395,31 +2466,33 @@ const Careers = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        </div><section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          </section>
+<div className="absolute inset-0 overflow-hidden">
+            </div>
+<div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
           </div>
           
-          <motion.div 
+          <motion.div;
             className="max-w-7xl mx-auto text-center relative z-10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.h1 
+            <motion.h1;
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Join Our
+              Join Our;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Innovation Team
+                {" "}Innovation Team;
               </span>
             </motion.h1>
             
-            <motion.p 
+            <motion.p;
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -2429,7 +2502,7 @@ const Careers = () => {
               We're looking for passionate individuals who want to make a real impact.
             </motion.p>
             
-            <motion.div 
+            <motion.div;
               className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -2439,7 +2512,7 @@ const Careers = () => {
                 href="#open-positions"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
-                View Open Positions
+                View Open Positions;
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -2448,7 +2521,7 @@ const Careers = () => {
                 href="mailto:careers@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 transform hover:scale-105"
               >
-                Contact HR
+                Contact HR;
               </a>
             </motion.div>
           </motion.div>
@@ -2456,8 +2529,9 @@ const Careers = () => {
 
         {/* Why Work With Us */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
+          </section>
+<div className="max-w-7xl mx-auto">
+            <motion.div;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2472,7 +2546,7 @@ const Careers = () => {
               </p>
             </motion.div>
             
-            <motion.div 
+            <motion.div;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={staggerContainer}
               initial="initial"
@@ -2480,13 +2554,14 @@ const Careers = () => {
               viewport={{ once: true }}
             >
               {values.map((value, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="text-5xl mb-4">{value.icon}</div>
+                  </div>
+<div className="text-5xl mb-4">{value.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{value.description}</p>
                 </motion.div>
@@ -2497,8 +2572,9 @@ const Careers = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
+          </section>
+<div className="max-w-7xl mx-auto">
+            <motion.div;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2506,14 +2582,14 @@ const Careers = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                Benefits & Perks
+                Benefits & Perks;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We take care of our team so you can focus on doing your best work
+                We take care of our team so you can focus on doing your best work;
               </p>
             </motion.div>
             
-            <motion.div 
+            <motion.div;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={staggerContainer}
               initial="initial"
@@ -2521,13 +2597,14 @@ const Careers = () => {
               viewport={{ once: true }}
             >
               {benefits.map((benefit, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="text-5xl mb-4">{benefit.icon}</div>
+                  </div>
+<div className="text-5xl mb-4">{benefit.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
                 </motion.div>
@@ -2538,8 +2615,9 @@ const Careers = () => {
 
         {/* Open Positions */}
         <section id="open-positions" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <motion.div 
+          </section>
+<div className="max-w-7xl mx-auto">
+            <motion.div;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2547,14 +2625,14 @@ const Careers = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                Open Positions
+                Open Positions;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ready to join our team? Check out our current openings and find your perfect fit
+                Ready to join our team? Check out our current openings and find your perfect fit;
               </p>
             </motion.div>
             
-            <motion.div 
+            <motion.div;
               className="grid grid-cols-1 lg:grid-cols-2 gap-8"
               variants={staggerContainer}
               initial="initial"
@@ -2562,20 +2640,20 @@ const Careers = () => {
               viewport={{ once: true }}
             >
               {openPositions.map((position, index) => (
-                <motion.div
+                <motion.div;
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <div className="flex justify-between items-start mb-4">
+                  </div>
+<div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-semibold text-white">{position.title}</h3>
                     <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
                       {position.type}
                     </span>
                   </div>
-                  
-                  <div className="flex items-center text-gray-400 text-sm mb-4 space-x-4">
+<div className="flex items-center text-gray-400 text-sm mb-4 space-x-4">
                     <span className="flex items-center">
                       <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -2601,7 +2679,8 @@ const Careers = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Required Skills:</h4>
-                    <div className="flex flex-wrap gap-2">
+                    </div>
+<div className="flex flex-wrap gap-2">
                       {position.skills.map((skill, skillIndex) => (
                         <$2 />
                           key={skillIndex}
@@ -2617,7 +2696,7 @@ const Careers = () => {
                     href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                   >
-                    Apply Now
+                    Apply Now;
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
@@ -2630,8 +2709,9 @@ const Careers = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-          <div className="max-w-4xl mx-auto text-center px-4">
-            <motion.h2 
+          </section>
+<div className="max-w-4xl mx-auto text-center px-4">
+            <motion.h2;
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2640,7 +2720,7 @@ const Careers = () => {
             >
               Don't See Your Perfect Role?
             </motion.h2>
-            <motion.p 
+            <motion.p;
               className="text-xl text-gray-300 mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -2650,7 +2730,7 @@ const Careers = () => {
               We're always looking for talented individuals to join our team. 
               Send us your resume and let's discuss how you can contribute to our mission.
             </motion.p>
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -2660,7 +2740,7 @@ const Careers = () => {
                 href="mailto:careers@ziontechgroup.com?subject=General Application"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
-                Send Your Resume
+                Send Your Resume;
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
@@ -2674,10 +2754,13 @@ const Careers = () => {
 }
             {openPositions.map((position, index) => (
               <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                  <div>
+                </div>
+<div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                  </div>
+<div>
                     <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
-                    <div className="flex flex-wrap gap-2 mb-3">
+                    </div>
+<div className="flex flex-wrap gap-2 mb-3">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">
                         {position.department}
                       </span>
@@ -2693,7 +2776,7 @@ const Careers = () => {
                     </div>
                   </div>
                   <button className="lg:ml-4 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300">
-                    Apply Now
+                    Apply Now;
                   </button>
                 </div>
                 
@@ -2701,31 +2784,37 @@ const Careers = () => {
                 
                 <div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Required Skills:</h4>
-                  <div className="flex flex-wrap gap-2">
+                  </div>
+<div className="flex flex-wrap gap-2">
                     {position.skills.map((skill, skillIndex) => (
                       <span key={skillIndex} className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-sm">
                         {skill}
                       </span>
                     ))}
                   </div>
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="text-center">
+      </div>
+<div className="relative overflow-hidden">
+        </div>
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+<div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          </div>
+<div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join Our Team
+              Join Our Team;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Help us shape the future of technology. Join a team of innovators, 
-              researchers, and industry experts committed to transforming businesses 
+              researchers, and industry experts committed to transforming businesses;
               through cutting-edge AI solutions.
             </p>
             
             {/* Search and Filter */}
-            <div className="max-w-4xl mx-auto mb-8">
-              <div className="relative mb-6">
+            </div>
+<div className="max-w-4xl mx-auto mb-8">
+              </div>
+<div className="relative mb-6">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -2735,9 +2824,9 @@ const Careers = () => {
                   className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
-              
-              <div className="flex flex-wrap gap-4 justify-center">
-                <div className="flex items-center gap-2">
+<div className="flex flex-wrap gap-4 justify-center">
+                </div>
+<div className="flex items-center gap-2">
                   <Filter className="w-4 h-4 text-gray-400" />
                   <select
                     value={selectedDepartment}
@@ -2749,8 +2838,7 @@ const Careers = () => {
                     ))}
                   </select>
                 </div>
-                
-                <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-gray-400" />
                   <select
                     value={selectedLocation}
@@ -2764,17 +2852,17 @@ const Careers = () => {
                 </div>
               </div>
             </div>
-
-            <div className="flex items-center justify-center space-x-8 text-gray-400">
-              <div className="flex items-center">
+<div className="flex items-center justify-center space-x-8 text-gray-400">
+              </div>
+<div className="flex items-center">
                 <Building className="w-5 h-5 mr-2" />
                 <span>{jobOpenings.length} Open Positions</span>
               </div>
-              <div className="flex items-center">
+<div className="flex items-center">
                 <Globe className="w-5 h-5 mr-2" />
                 <span>Multiple Locations</span>
               </div>
-              <div className="flex items-center">
+<div className="flex items-center">
                 <Users className="w-5 h-5 mr-2" />
                 <span>Growing Team</span>
               </div>
@@ -2787,16 +2875,19 @@ const Careers = () => {
       {featuredJobs.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Positions</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredJobs.map((job) => (
               <$2 />
                 key={job.id}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-4">
+                </div>
+<div className="p-6">
+                  </div>
+<div className="flex items-center gap-2 mb-4">
                     <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full">
-                      Featured
+                      Featured;
                     </span>
                     <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
                       {job.department}
@@ -2812,26 +2903,27 @@ const Careers = () => {
                   </p>
                   
                   <div className="flex items-center space-x-6 mb-6 text-sm text-gray-400">
-                    <div className="flex items-center">
+                    </div>
+<div className="flex items-center">
                       <MapPin className="w-4 h-4 mr-2" />
                       {job.location}
                     </div>
-                    <div className="flex items-center">
+<div className="flex items-center">
                       <Clock className="w-4 h-4 mr-2" />
                       {job.type}
                     </div>
-                    <div className="flex items-center">
+<div className="flex items-center">
                       <Users className="w-4 h-4 mr-2" />
                       {job.experience}
                     </div>
                   </div>
-                  
-                  <div className="mb-6">
+<div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Requirements</h4>
                     <ul className="space-y-1">
                       {job.requirements.slice(0, 3).map((req, index) => (
                         <li key={index} className="text-gray-300 text-sm flex items-start">
-                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0" />
+                          </div>
+<div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0" />
                           {req}
                         </li>
                       ))}
@@ -2839,7 +2931,7 @@ const Careers = () => {
                   </div>
                   
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
-                    Apply Now
+                    Apply Now;
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>
@@ -2852,16 +2944,19 @@ const Careers = () => {
       {/* All Job Openings */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
-          All Open Positions
+          All Open Positions;
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {regularJobs.map((job) => (
             <$2 />
               key={job.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
+              </div>
+<div className="p-6">
+                </div>
+<div className="flex items-center gap-2 mb-4">
                   <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
                     {job.department}
                   </span>
@@ -2876,19 +2971,20 @@ const Careers = () => {
                 </p>
                 
                 <div className="flex items-center space-x-4 mb-6 text-sm text-gray-400">
-                  <div className="flex items-center">
+                  </div>
+<div className="flex items-center">
                     <MapPin className="w-4 h-4 mr-2" />
                     {job.location}
                   </div>
-                  <div className="flex items-center">
+<div className="flex items-center">
                     <Clock className="w-4 h-4 mr-2" />
                     {job.type}
                   </div>
                 </div>
-                
-                <div className="mb-6">
+<div className="mb-6">
                   <h4 className="text-xs font-semibold text-cyan-400 mb-2">Requirements</h4>
-                  <div className="flex flex-wrap gap-1">
+                  </div>
+<div className="flex flex-wrap gap-1">
                     {job.requirements.slice(0, 2).map((req, index) => (
                       <$2 />
                         key={index}
@@ -2901,7 +2997,7 @@ const Careers = () => {
                 </div>
                 
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
-                  Apply Now
+                  Apply Now;
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
               </div>
@@ -2912,24 +3008,27 @@ const Careers = () => {
 
       {/* Company Values */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        </div>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value, index) => {
-              const Icon = value.icon
+              const Icon = value.icon;
               return (
                 <$2 />
                   key={index}
                   className="text-center"
                 >
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  </div>
+<div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
                 </div>
               )
-            })}
+            })
           </div>
         </div>
       </div>
@@ -2937,15 +3036,17 @@ const Careers = () => {
       {/* Benefits */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => {
-            const Icon = benefit.icon
+            const Icon = benefit.icon;
             return (
               <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
@@ -2953,45 +3054,49 @@ const Careers = () => {
               </div>
       {/* Application Process */}
       <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">Application Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Our hiring process is designed to be transparent, efficient, and focused on finding 
+              Our hiring process is designed to be transparent, efficient, and focused on finding;
               the right fit for both you and our team.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             )
-          })}
+          })
         </div>
       </div>
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
+        </div>
+<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          </div>
+<div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Don't See the Right Fit?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals. Send us your resume and 
+              We're always looking for talented individuals. Send us your resume and;
               let's discuss how you can contribute to our mission.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 href="mailto:careers@ziontechgroup.com"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
               >
-                Send Your Resume
+                Send Your Resume;
                 <Mail className="w-5 h-5 ml-2" />
               </a>
               <$2 />
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
               >
-                Contact Us
+                Contact Us;
               </Link>
             </div>
           </div>
@@ -2999,21 +3104,26 @@ const Careers = () => {
       </div>
       {/* Open Positions */}
       <section id="open-positions" className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Open Positions</h2>
-          <div className="grid gap-6">
+          </div>
+<div className="grid gap-6">
             {openPositions.map((position) => (
               <Card key={position.id} className={`bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors ${position.featured ? 'ring-2 ring-zion-cyan' : ''}`}>
                 <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
+                  </div>
+<div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    </div>
+<div>
+                      </div>
+<div className="flex items-center gap-3 mb-2">
                         <CardTitle className="text-xl text-white">{position.title}</CardTitle>
                         {position.featured && (
                           <Badge className="bg-zion-cyan text-zion-blue-dark">Featured</Badge>
                         )}
                       </div>
-                      <div className="flex flex-wrap gap-2 text-sm text-zion-slate-light">
+<div className="flex flex-wrap gap-2 text-sm text-zion-slate-light">
                         <span className="flex items-center gap-1">
                           <Briefcase className="w-4 h-4" />
                           {position.department}
@@ -3038,7 +3148,7 @@ const Careers = () => {
                     </div>
                     <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
                       <a href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}>
-                        Apply Now
+                        Apply Now;
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </Button>
@@ -3062,39 +3172,46 @@ const Careers = () => {
 
       {/* Application Process */}
       <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-white text-center mb-16">Application Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
-                1
+          </div>
+<div className="grid md:grid-cols-4 gap-8">
+            </div>
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
+                1;
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Apply</h3>
               <p className="text-zion-slate-light">
-                Submit your application with resume and cover letter
+                Submit your application with resume and cover letter;
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
-                2
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
+                2;
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Review</h3>
               <p className="text-zion-slate-light">
-                Our team reviews your application within 48 hours
+                Our team reviews your application within 48 hours;
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
-                3
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
+                3;
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Interview</h3>
               <p className="text-zion-slate-light">
-                Technical and cultural fit interviews
+                Technical and cultural fit interviews;
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
-                4
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
+                4;
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Offer</h3>
               <p className="text-zion-slate-light">
@@ -3107,7 +3224,8 @@ const Careers = () => {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Don't See the Right Role?
           </h2>
@@ -3115,10 +3233,11 @@ const Careers = () => {
             We're always looking for talented individuals to join our team. 
             Send us your resume and we'll keep you in mind for future opportunities.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          </div>
+<div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
               <a href="mailto:careers@ziontechgroup.com?subject=General Application">
-                Send General Application
+                Send General Application;
               </a>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue-dark">
@@ -3126,35 +3245,36 @@ const Careers = () => {
             </Button>
           </div>
         </div>
-export default Careers
-export default Careers
-export default Careers
+export default Careers;
+export default Careers;
+export default Careers;
             <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Application</h3>
               <p className="text-zion-slate-light">Submit your resume and cover letter through our portal</p>
             </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Screening</h3>
               <p className="text-zion-slate-light">Initial review and phone screening with our team</p>
             </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Interview</h3>
               <p className="text-zion-slate-light">Technical assessment and team interviews</p>
             </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
               <h3 className="text-xl font-semibold mb-3">Offer</h3>
@@ -3166,20 +3286,22 @@ export default Careers
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-zion-purple-dark via-zion-blue to-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Make History?</h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Join us in building the future of technology. Your next adventure starts here.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="#open-positions">
               <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
-                Browse Openings
+                Browse Openings;
               </button>
             </Link>
             <Link to="/about">
               <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                Learn More About Us
+                Learn More About Us;
               </button>
             </Link>
           </div>

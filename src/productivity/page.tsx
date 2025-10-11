@@ -7,21 +7,21 @@ const ProductivityPage: React.FC = () => {
   return (
     <div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      </div><main className="container mx-auto px-4 py-16 pt-24">
+        </main><section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-  
+            Page;
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
   
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
         {/* Key Benefits */}
-        <section className="mb-16">
+        </section><section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 // Why Choose Our Productivity Tools?
           </h2>"
+</section>
 <div className="text-4xl mb-4">⚡</div>"
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>"
               <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>"
@@ -33,16 +33,17 @@ const ProductivityPage: React.FC = () => {
               <p className="text-gray-300 text-sm">Track and measure your productivity improvements</p>"
               <div className="text-4xl mb-4">🔗</div>"
               <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>"
-              <p className="text-gray-300 text-sm">Works with your existing tools and workflows
+              <p className="text-gray-300 text-sm">Works with your existing tools and workflows;
         {/* Tools by Category */})
         {categories.map(category => ()}"
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
             <div>{
-    productivityTools
+    productivityTools;
   }
                 .filter(tool => tool.category === category)
                 .map((tool, index) => ("
+</div>
 <div className="text-4xl mb-4 text-center">{tool.icon}</div>"
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{tool.title}</h4>"
                     <p className="text-gray-300 mb-4 text-sm text-center">{tool.description}</p>"
@@ -56,8 +57,7 @@ const ProductivityPage: React.FC = () => {
                         {tool.features.slice(0, 3).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>"
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
-                        ))}
+                            {feature})
                         {tool.features.length > 3 && (}"
 <li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>)
                         )}
@@ -71,12 +71,12 @@ const ProductivityPage: React.FC = () => {
 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold,
   hover:from-cyan-600,"
   hover:to-blue-700 transition-all text-sm inline-block"
-                      >Get This Tool
+                      >Get This Tool;
         {/* CTA Section */}"
         <section className="text-center"></section>"
           <h2 className="text-3xl font-bold text-white mb-6 neon-text">
             Ready to Boost Your Productivity?"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get started with our productivity tools and transform how you work
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get started with our productivity tools and transform how you work;
             >Get Started Today</a>"
               href="te,"
   l: +13024640950"

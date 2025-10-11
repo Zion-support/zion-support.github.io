@@ -3,19 +3,19 @@
 class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   private maxErrors = 100,
   private sessionId: string,
-  private maxErrors = 100;
-  private sessionId: string;,}constructor() {}this.sessionId = this.generateSessionId();
+  private maxErrors = 100
+  private sessionId: string,}constructor() {}this.sessionId = this.generateSessionId()
     this.setupGlobalErrorHandler();}
   }
-  private generateSessionId(): string {}}return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
+  private generateSessionId(): string {}}return `${Date.now()}-${Math.random().toString(36).substring(7)}`
   }
   private setupGlobalErrorHandler(): void {if (typeof window !== 'undefined') {}
-      window.addEventListener('error', event => {);
-        this.trackError(event.error, {);
+      window.addEventListener('error', event => {)
+        this.trackError(event.error, {)
           component: 'Global'),}action: 'Uncaught Error',}
         })
       })
-      window.addEventListener('unhandledrejection', event => {);
+      window.addEventListener('unhandledrejection', event => {)
         this.trackError(new Error(event.reason), {}private setupGlobalErrorHandler(): void {}}if (typeof window !== 'undefined') {}window.addEventListener('error', event => {)}this.trackError(event.error, {)}component: 'Global',
           action: 'Uncaught Error',}
   private maxErrors = 100
@@ -23,7 +23,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   }
   constructor() {}
     this.sessionId = this.generateSessionId()
-    this.setupGlobalErrorHandler();}
+    this.setupGlobalErrorHandler()}
   }
   private generateSessionId(): string {}
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`
@@ -53,7 +53,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   }
       stack: error.stack,
       timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent;,
+      userAgent: navigator.userAgent,
       url: window.location.href,
     }
   }
@@ -69,10 +69,10 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   }
   public clearErrors(): void {}}this.errors = []}
   }
-      byComponent[component] = (byComponent[component] || 0) + 1;}
+      byComponent[component] = (byComponent[component] || 0) + 1}
     })
       const component = error.context.component || 'Unknown'
-      byComponent[component] = (byComponent[component] || 0) + 1;}
+      byComponent[component] = (byComponent[component] || 0) + 1}
     })
     return {}
       total: this.errors.length,

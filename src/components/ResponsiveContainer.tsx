@@ -1,21 +1,21 @@
 import React from 'react'
 interface ResponsiveContainerProps {
-    // TODO: Add content
+    // TODO: Add content;
   }
 }
   childre,
-  n: React.ReactNode
+  n: React.ReactNode;
   className?: string,
   breakpoints?: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    sm?: string
-    md?: string
-    lg?: string
-    xl?: string
-    '2xl'?: string
+    sm?: string;
+    md?: string;
+    lg?: string;
+    xl?: string;
+    '2xl'?: string;
   }
-  fallback?: React.ReactNode
+  fallback?: React.ReactNode;
 }
 const,
   ResponsiveContainer: React.FC,
@@ -30,7 +30,7 @@ const,
   O: Add content,}
 }
   const [isClient, setIsClient] = useState(false)
-  const [screenSize, setScreenSize] = useState
+  const [screenSize, setScreenSize] = useState;
           <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg')
   const isTablet = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 1023 })
@@ -46,7 +46,7 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (!isClient) return
+    if (!isClient) return;
     if (isLargeDesktop) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -74,7 +74,7 @@ const,
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const baseClasses = className
+    const baseClasses = className;
     const responsiveClasses = breakpoints[screenSize] || ''
     return `${baseClasses} ${responsiveClasses}`.trim()
   }
@@ -84,16 +84,16 @@ const,
     </div>)
   )
 }
-// Hook for responsive values
+// Hook for responsive values;
 export const useResponsiveValue = {}
           <T,>(value,
   s: {
-    // sm?: T
+    // sm?: T;
   }
-// md?: T
-// lg?: T
-// xl?: T
-// '2xl'?: T
+// md?: T;
+// lg?: T;
+// xl?: T;
+// '2xl'?: T;
 // default?: T;)
 }): T => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -114,21 +114,21 @@ export const useResponsiveValue = {}
   if (isDesktop && values.xl !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return values.xl
+    return values.xl;
   }
   if (isTablet && values.md !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return values.md
+    return values.md;
   }
   if (isMobile && values.sm !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return values.sm
+    return values.sm;
   }
   return values.default || values.lg || values.md || values.sm || ({} as T)
 }
-// Hook for responsive breakpoints
+// Hook for responsive breakpoints;
 export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

@@ -10,15 +10,17 @@ const Terms: React.FC = () => {
       />
       
       <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="text-center mb-8">
+        </div>
+<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="bg-white rounded-lg shadow-lg p-8">
+            </div>
+<div className="text-center mb-8">
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
               <p className="text-lg text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
             </div>
-
-            <div className="prose prose-lg max-w-none">
-              <section className="mb-8">
+<div className="prose prose-lg max-w-none">
+              </div><section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
                 <p className="text-gray-700 mb-4">
                   By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
@@ -196,7 +198,8 @@ const Terms: React.FC = () => {
                 <p className="text-gray-700 mb-4">
                   If you have any questions about these Terms of Service, please contact us:
                 </p>
-                <div className="bg-gray-50 p-4 rounded-lg">
+                </section>
+<div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-gray-700 mb-2">
                     <strong>Zion Tech Group</strong>
                   </p>
@@ -207,7 +210,7 @@ const Terms: React.FC = () => {
                     Phone: <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-800">+1 (302) 464-0950</a>
                   </p>
                   <p className="text-gray-700">
-                    Address: Delaware, United States
+                    Address: Delaware, United States;
                   </p>
                 </div>
               </section>
@@ -219,8 +222,7 @@ const Terms: React.FC = () => {
                 </p>
               </section>
             </div>
-
-            <div className="mt-12 pt-8 border-t border-gray-200 text-center">
+<div className="mt-12 pt-8 border-t border-gray-200 text-center">
               <p className="text-gray-600">
                 By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
               </p>
@@ -231,4 +233,4 @@ const Terms: React.FC = () => {
     
   )
 }
-export default Terms
+export default Terms;

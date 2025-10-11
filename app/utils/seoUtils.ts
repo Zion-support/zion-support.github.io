@@ -14,26 +14,25 @@
 }
 export class SEOManager {private config: SEOConfig,}
 constructor(config: SEOConfig) {,
-    this.config = config;}}
-public updateConfig(newConfig: Partial<SEOConfig>): void {,}}this.config = {...this.config, ...newConfig}this.applyConfig();
+    this.config = config}}
+public updateConfig(newConfig: Partial<SEOConfig>): void {,}}this.config = {...this.config, ...newConfig}this.applyConfig()
   }
   }
     }
   }
     }
 const meta = document.createElement('meta')
-    meta.name = name;
+    meta.name = name
     meta.content = content,
     document.head.appendChild(meta)}}
 }
-    const cleanContent = content.replace(/<[^>]*>/g, '').trim();
-  if (cleanContent.length <= maxLength) {
-    return cleanContent;}}
-  return cleanContent.substring(0, maxLength - 3) + '...';
+    const cleanContent = content.replace(/<[^>]*>/g, '').trim()
+  if (cleanContent.length <= maxLength) {return cleanContent}}
+  return cleanContent.substring(0, maxLength - 3) + '...'
 }
 })
 }
-    if (typeof document === 'undefined') return;
+    if (typeof document === 'undefined') return
 // Utility functions
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
     const cleanContent = content.replace(/<[^>]*>/g, '').trim()

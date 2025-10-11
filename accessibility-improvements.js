@@ -1,8 +1,5 @@
 // Accessibility improvements for the Zion Tech Group website
-=======
 // Accessibility improvements for Zion Tech Group website
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
 // 1. Focus management
 export const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
@@ -11,15 +8,9 @@ export const trapFocus = (element) => {
   const firstElement = focusableElements[0]
   const lastElement = focusableElements[focusableElements.length - 1]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-  element.addEventListener('keydown', (e) => {
-=======
-  const handleTabKey = (e) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-    if (e.key === 'Tab') {
+element.addEventListener('keydown', (e) => {
+const handleTabKey = (e) => {
+if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus()
@@ -79,7 +70,6 @@ export const addAriaLabels = () => {
   buttons.forEach(button => {
     if (!button.textContent.trim()) {
       button.setAttribute('aria-label', 'Button')
-=======
 // 4. Color contrast checker
 export const checkColorContrast = (element) => {
   const style = window.getComputedStyle(element)
@@ -101,12 +91,10 @@ export const enhanceKeyboardNavigation = () => {
         modal.style.display = 'none'
         modal.setAttribute('aria-hidden', 'true')
       })
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-    }
+}
   })
 }
 
-<<<<<<< HEAD
 // 4. Color contrast checker
 export const checkColorContrast = (foreground, background) => {
   const getLuminance = (color) => {
@@ -257,7 +245,6 @@ export const initializeAccessibility = () => {
   respectReducedMotion()
   setupScreenReaderAnnouncements()
 }
-<<<<<<< HEAD
 const validateInput = (input) => {
   const isValid = input.checkValidity()
   const errorId = `${input.id}-error`
@@ -287,11 +274,11 @@ const addFocusIndicators = () => {
   const style = document.createElement('style')
   style.textContent = `
     *:focus {
-      outline: 2px solid #4A90E2;
-      outline-offset: 2px;
+      outline: 2px solid #4A90E2
+      outline-offset: 2px
     }
-    .skip-link:focus {
-      outline: 2px solid #fff;
+    .skip-link: focus {
+      outline: 2px solid #fff
     }
   `
   document.head.appendChild(style)
@@ -347,52 +334,4 @@ export {
   announceToScreenReader, 
   initAccessibility 
 }
-=======
-// 6. Screen reader announcements
-export const announceToScreenReader = (message) => {
-  const announcement = document.createElement('div')
-  announcement.setAttribute('aria-live', 'assertive')
-  announcement.setAttribute('aria-atomic', 'true')
-  announcement.className = 'sr-only'
-  announcement.textContent = message
-  
-  document.body.appendChild(announcement)
-  
-  setTimeout(() => {
-    document.body.removeChild(announcement)
-  }, 1000)
-}
 
-// 7. High contrast mode detection
-export const detectHighContrastMode = () => {
-  const mediaQuery = window.matchMedia('(prefers-contrast: high)')
-  return mediaQuery.matches
-}
-
-// 8. Reduced motion detection
-export const detectReducedMotion = () => {
-  const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-  return mediaQuery.matches
-}
-
-// 9. Focus indicators
-export const enhanceFocusIndicators = () => {
-  const style = document.createElement('style')
-  style.textContent = `
-    *:focus {
-      outline: 2px solid #3b82f6;
-      outline-offset: 2px;
-    }
-    
-    .focus-visible:focus:not(:focus-visible) {
-      outline: none;
-    }
-  `
-  document.head.appendChild(style)
-}
-
-// 10. Screen reader announcements
-// Export functions for use in other modules
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

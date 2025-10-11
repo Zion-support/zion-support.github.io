@@ -3,7 +3,7 @@ export default function EnhancedContactForm(): React.JSX.Element {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  return(<form;)
+  return(<form)
       aria-label="Contact form")
       onSubmit={e => e.preventDefault()}
       className="grid gap-4 max-w-xl mx-auto">
@@ -39,8 +39,8 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
       />
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
       />"
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
-        Send
+      </button><button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
+        Send;
   )
 }
 "</button></button>

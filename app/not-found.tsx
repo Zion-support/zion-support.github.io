@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -7,14 +6,16 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 
 const NotFoundPage: React.FC = () => {
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <></>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Not Found
               </h1>
@@ -26,9 +27,11 @@ const NotFoundPage: React.FC = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
               </h2>
@@ -46,27 +49,8 @@ const NotFoundPage: React.FC = () => {
       
       <Footer />
     </>
-  );
+  )
 };
 
 export default NotFoundPage;
-=======
-import Link from 'next/link';
 
-export default function NotFound() {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <div className="text-center">
-        <h2 className="text-4xl font-bold text-white mb-4">Not Found</h2>
-        <p className="text-gray-300 mb-8">Could not find the requested resource.</p>
-        <Link
-          href="/"
-          className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-        >
-          Return Home
-        </Link>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

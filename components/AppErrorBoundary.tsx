@@ -1,7 +1,7 @@
 import React, { Component, type ErrorInfo, type ReactNode  } from 'react'
 interface ErrorFallbackProps {
     error: Error,
-  resetError: () => void
+  resetError: () => void;
   }
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   return ()
@@ -14,11 +14,11 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   ),
 }
 interface AppErrorBoundaryProps {
-    children: ReactNode
+    children: ReactNode;
   }
 interface AppErrorBoundaryState {
     hasError: boolean,
-  error: Error | undefined
+  error: Error | undefined;
   }
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {
@@ -32,15 +32,14 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     if (process.env['NODE_ENV'] === 'development') {
       console.error('Error caught by boundary:', error, errorInfo)
   }
-    // Here you could send error to monitoring service
+    // Here you could send error to monitoring service;
   }
   resetError = () => {
     this.setState({ hasError: false, error: undefined })
-  }
   render() {
     if (this.state.hasError && this.state.error) {
       return <ErrorFallback></ErrorFallback>
     }
-    return this.props.children
+    return this.props.children;
   }
 }</div></div></div></div></div></div></div></p></p></h3>

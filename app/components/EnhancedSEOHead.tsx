@@ -2,16 +2,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOHeadProps {
-  title?: string
+interface SEOHeadProps {title?: string
   description?: string
   keywords?: string
   image?: string
   url?: string
   type?: string
   siteName?: string
-  structuredData?: object
-}
+  structuredData?: object}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',

@@ -3,14 +3,14 @@ import React from 'react'
 interface OptimizedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
   color?: 'primary' | 'secondary' | 'white'
-  className?: string
+  className?: string;
 'use client'
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   size?: 'sm' | 'md' | 'lg'
   color?: 'primary' | 'secondary' | 'white'
-  className?: string
+  className?: string;
 }
 const,
   OptimizedLoadingSpinner: React.FC,
@@ -65,7 +65,7 @@ className="opacity-75""
   }
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-export default OptimizedLoadingSpinner
+export default OptimizedLoadingSpinner;
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {
       sm: 'w-4 h-4',

@@ -49,7 +49,7 @@ const AIMLPlatformPage: React.FC = () => {
   const features = []
   return (
     {
-    // TODO: Add content
+    // TODO: Add content;
   }
 }
   ico,
@@ -115,7 +115,7 @@ const AIMLPlatformPage: React.FC = () => {
   const stats = [
   const stats = [
   // TOD,
-  O: Add items
+  O: Add items;
 ],
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
@@ -124,43 +124,45 @@ const AIMLPlatformPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI ML Platform | Zion Tech Group
+        <title>AI ML Platform | Zion Tech Group;
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform
+      </div>
+<div className="container mx-auto px-4 py-16">
+        </div>
+<div className="text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI ML platform solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
+              Contact Us;
+            </button><button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+              Learn More;
       <Footer />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      </div></button><main className="container mx-auto px-4 py-16 pt-24">
+        </main><section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-  
+            Page;
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-  
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            Coming Soon;
+          </section>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
 // Contact Us,
           </button>"
             < className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,$2 />
   hover:bg-cyan-400,"
   hover: text-slate-900 transition-colors"></button>
-Learn More
+Learn More;
           </div>
       <Footer />
     </div>
   ),
 }
-export default $1
+export default $1;
 export default AiMlPlatformPage</p>
   </h1>
   </section>

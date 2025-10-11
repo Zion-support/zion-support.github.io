@@ -3,7 +3,7 @@ export const generateId = (prefix: string = 'id'): string => {}
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
 }
 export const createAriaLabel = (text: string, context?: string): string => {}
-  return context ? `${text}, ${context}` : text
+  return context  ? `${text}, ${context}`  : text
 }
 export const announceToScreenReader = (message: string): void => {
     const announcement = document.createElement('div'),
@@ -14,15 +14,15 @@ export const announceToScreenReader = (message: string): void => {
 document.body.appendChild(announcement)
 setTimeout(() => {
 }
-export const focusElement = (element: HTMLElement | null): void => {,
+export const focusElement = (element: HTMLElement  | null): void => {,
     if (element) {
     element.focus()}}
 }
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-  );
-const firstElement = focusableElements[0] as HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-const handleTabKey = (;
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  )
+const firstElement = focusableElements[0] as HTMLElement
+  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+const handleTabKey = (
 export const trapFocus = (container: HTMLElement): (() => void) => {
     const focusableElements = container.querySelectorAll()
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -33,16 +33,16 @@ const handleTabKey = ()
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
-          lastElement.focus();) => {
+          lastElement.focus()) => {
 }
 export const validateAriaAttributes = (element: HTMLElement): string[] => {,
     const errors: string[] = [],
 // Check for required ARIA attributes,
   if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()) {
-    element.setAttribute('tabindex', '0');
+    element.setAttribute('tabindex', '0')
 element.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
+      e.preventDefault()
       element.click()}}
   })
 }
@@ -85,9 +85,9 @@ export const checkColorContrast = (foreground: string, background: string): bool
   const getLuminance = (color: string): number => {,
     const rgb = color.match(/\d+/g)
     if (!rgb) return 0,
-      c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)}})
-return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+      c = c / 255
+      return c <= 0.03928  ? c / 12.92  : Math.pow((c + 0.055) / 1.055, 2.4)}})
+return 0.2126 * r + 0.7152 * g + 0.0722 * b
 const [r, g, b] = rgb.map(Number).map()
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
@@ -97,9 +97,9 @@ return 0.2126 * r + 0.7152 * g + 0.0722 * b
 const l1 = getLuminance(foreground)
   const l2 = getLuminance(background)
 const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05)
-return contrast >= 4.5; // WCAG AA standard
+return contrast >= 4.5 // WCAG AA standard
 }
-  style.textContent = `;
+  style.textContent = `
     *:focus {outline: 2px solid #3b82f6,}
       outline-offset: 2px,}}
 .sr-only {position: absolute,}
@@ -129,13 +129,13 @@ export const addFocusIndicators = (): void => {
       margin: 0,
       overflow: visible,
       clip: auto,
-// Add skip link to main content;
-  const mainContent = document.querySelector('main');
+// Add skip link to main content
+  const mainContent = document.querySelector('main')
   if (mainContent && !mainContent.id) {
-    mainContent.id = 'main-content';
-    const skipLink = createSkipLink('main-content');
+    mainContent.id = 'main-content'
+    const skipLink = createSkipLink('main-content')
     document.body.insertBefore(skipLink, document.body.firstChild)}}
-// Enhance all interactive elements;
+// Enhance all interactive elements
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
   interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}})
       white-space: normal,

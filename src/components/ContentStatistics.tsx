@@ -1,2 +1,2 @@
 import React from 'react'
-export default ContentStatistics
+export default ContentStatistics;

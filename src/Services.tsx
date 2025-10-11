@@ -25,7 +25,7 @@ import {
   Globe,
   Settings,
   Database,
-  Network
+  Network;
 } from 'lucide-react'
 export default function Services() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -215,7 +215,7 @@ export default function Services() {
     }
   ]
   const filteredCategories = selectedCategory === 'all' 
-    ? serviceCategories 
+    ? serviceCategories;
     : serviceCategories.filter(cat => cat.id === selectedCategory)
   const filteredServices = filteredCategories.flatMap(cat => 
     cat.services.filter(service =>
@@ -226,44 +226,50 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       {/* Hero Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      </div><section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Comprehensive
+            Comprehensive;
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              {" "}Micro SAAS Services
+              {" "}Micro SAAS Services;
             </span>
           </h1>
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+    </div>
+<div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+      </div><section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our Services
+              Our Services;
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Comprehensive technology solutions designed to transform your business 
+              Comprehensive technology solutions designed to transform your business;
               and drive sustainable growth in the digital age.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            </div>
+<div className="flex flex-wrap justify-center gap-4">
               <$2 />
                 to="/contact" 
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
               >
-                Get Started
+                Get Started;
               </Link>
               <$2 />
                 to="/request-quote" 
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
               >
-                Request Quote
+                Request Quote;
               </Link>
             </div>
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">Services</span>
           </h1>
@@ -283,7 +289,7 @@ import {
   Database, 
   Smartphone, 
           {/* Category Pills */}
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -297,13 +303,13 @@ import {
                   : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-zion-cyan/30'
               }`}
             >
-              Get Started
+              Get Started;
             </Link>
             <$2 />
               to="/pricing" 
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
@@ -311,20 +317,24 @@ import {
 
       {/* Service Categories */}
       <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Service Categories
+              Service Categories;
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Explore our comprehensive range of technology services designed to meet 
+              Explore our comprehensive range of technology services designed to meet;
               every aspect of your digital transformation journey.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
-                <div className="flex justify-center mb-4">
+              </div>
+<div key={index} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
+                </div>
+<div className="flex justify-center mb-4">
                   <category.icon className="w-16 h-16 text-zion-cyan" />
                 </div>
                 <h3 className="text-2xl font-bold text-zion-blue-dark mb-3 text-center">
@@ -333,36 +343,42 @@ import {
                 <p className="text-zion-slate mb-6 text-center leading-relaxed">
       {/* Service Categories */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        </section>
+<div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core Service Categories</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index) => (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white">
+    </div>
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white">
       {/* Animated Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-zion-cyan/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s' }}></div>
       </div>
-
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <motion.div
-            className="text-center"
-    <div className="min-h-screen bg-zion-blue-dark text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+<div className="fixed inset-0 overflow-hidden pointer-events-none">
         </div>
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <motion.div
+<div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl animate-float"></div>
+<div className="absolute top-40 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+<div className="absolute bottom-20 left-1/3 w-80 h-80 bg-zion-cyan/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+<div className="absolute top-1/2 left-1/2 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s' }}></div>
+      </div>
+<div className="relative z-10">
+        {/* Hero Section */}
+        </div><section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <motion.div;
+            className="text-center"
+    </section>
+<div className="min-h-screen bg-zion-blue-dark text-white">
+      {/* Hero Section */}
+      </div><section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple overflow-hidden">
+        {/* Animated Background */}
+        </section>
+<div className="absolute inset-0 overflow-hidden">
+          </div>
+<div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
+<div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+<div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+<div className="max-w-7xl mx-auto text-center relative z-10">
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -375,8 +391,10 @@ import {
           </p>
           
           {/* Search and Filter */}
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="relative">
+          </div>
+<div className="max-w-2xl mx-auto mb-8">
+            </div>
+<div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -390,7 +408,7 @@ import {
                 key={category}
                 onClick={() => handleCategorySelect(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all ${
-                  selectedCategory === category
+                  selectedCategory === category;
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/30'
                     : 'bg-white/10 text-zion-slate-light hover:bg-white/20 border border-zion-cyan/30'
                 }`}
@@ -405,14 +423,14 @@ import {
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
             >
-              All Services
+              All Services;
             </button>
             {serviceCategories.map((category) => (
               <$2 />
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
-                  selectedCategory === category.id
+                  selectedCategory === category.id;
                     ? 'bg-cyan-500 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
@@ -425,7 +443,7 @@ import {
         </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
-              Revolutionary Technology Services
+              Revolutionary Technology Services;
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">
               Discover our cutting-edge portfolio of innovative technology solutions designed to transform your business. 
@@ -434,19 +452,19 @@ import {
             <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-zion-slate-light">
               <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Zap className="w-4 h-4 text-zion-cyan" />
-                {services.length}+ Revolutionary Services
+                {services.length}+ Revolutionary Services;
               </span>
               <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Shield className="w-4 h-4 text-zion-cyan" />
-                99.9% Uptime Guarantee
+                99.9% Uptime Guarantee;
               </span>
               <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Brain className="w-4 h-4 text-zion-cyan" />
-                AI-Powered Solutions
+                AI-Powered Solutions;
               </span>
               <span className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Star className="w-4 h-4 text-zion-cyan" />
-                Competitive Pricing
+                Competitive Pricing;
               </span>
             </div>
           </motion.div>
@@ -455,16 +473,19 @@ import {
 
       {/* Filters and Search */}
       <section className="py-16 px-6 bg-zion-blue-dark/50">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
+        </section>
+<div className="max-w-6xl mx-auto">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 shadow-2xl"
           >
-            <div className="grid md:grid-cols-4 gap-6">
+            </div>
+<div className="grid md:grid-cols-4 gap-6">
               {/* Category Filter */}
-              <div>
+              </div>
+<div>
                 <label className="block text-sm font-medium text-zion-slate-light mb-2">Category</label>
                 <select
                   value={selectedCategory}
@@ -472,9 +493,11 @@ import {
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
           className="mb-12"
         >
-          <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
+          </div>
+<div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
             {/* Search Bar */}
-            <div className="relative mb-6">
+            </div>
+<div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <input
                 type="text"
@@ -488,7 +511,8 @@ import {
             {/* Filters */}
             <div className="flex flex-wrap gap-4">
               {/* Category Filter */}
-              <div className="flex-1 min-w-48">
+              </div>
+<div className="flex-1 min-w-48">
                 <label className="block text-zion-slate-light text-sm font-medium mb-2">Category</label>
                 <select
                   value={selectedCategory}
@@ -516,21 +540,23 @@ import {
               </div>
 
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <motion.div
+          <motion.div;
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
           >
             {filteredServices.map((service) => (
-              <motion.div
+              <motion.div;
                 key={service.id}
                 variants={itemVariants}
                 className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 transform hover:-translate-y-2"
               >
                 {/* Service Header */}
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
+                </section>
+<div className="mb-6">
+                  </div>
+<div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full border border-zion-cyan/30">
                       {service.category}
                     </span>
@@ -556,7 +582,8 @@ import {
 
                 {/* Pricing */}
                 <div className="mb-6">
-                  <div className="flex items-center justify-between mb-2">
+                  </div>
+<div className="flex items-center justify-between mb-2">
                     <span className="text-2xl font-bold text-zion-cyan">
                       {service.price.currency}{service.price.monthly.toLocaleString()}
                     </span>
@@ -575,14 +602,15 @@ import {
                   <ul className="space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="text-xs text-zion-slate-light flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
+                        </div>
+<div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-              <motion.div
+              <motion.div;
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -591,10 +619,11 @@ import {
               >
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  </div>
+<div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="flex gap-2">
+<div className="flex gap-2">
                     {service.popular && (
                       <span className="bg-zion-cyan text-white text-xs px-2 py-1 rounded-full font-medium">Popular</span>
                     )}
@@ -614,10 +643,11 @@ import {
 
                 {/* Price Comparison */}
                 <div className="mb-4">
-                  <div className="text-2xl font-bold text-zion-cyan">
+                  </div>
+<div className="text-2xl font-bold text-zion-cyan">
                     {service.price}
                   </div>
-                  <div className="text-sm text-zion-slate-light">
+<div className="text-sm text-zion-slate-light">
                     Market: {service.marketPrice}
                   </div>
                 </div>
@@ -640,7 +670,8 @@ import {
 
                 {/* Tags */}
                 <div className="mb-4">
-                  <div className="flex flex-wrap gap-2">
+                  </div>
+<div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, idx) => (
                       <$2 />
                         key={idx}
@@ -655,16 +686,17 @@ import {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => {
-            const IconComponent = service.icon
+            const IconComponent = service.icon;
             return (
-              <motion.div
+              <motion.div;
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 hover:border-blue-400/50 hover:bg-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/20"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                   <IconComponent className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
@@ -685,12 +717,12 @@ import {
                   to={service.link}
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
             )
-          })}
+          })
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, idx) => (
@@ -699,11 +731,13 @@ import {
               className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
             >
               {/* Service Header */}
-              <div className="flex items-start space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              </div>
+<div className="flex items-start space-x-4 mb-4">
+                </div>
+<div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="flex-1">
+<div className="flex-1">
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
                     {service.name}
                   </h3>
@@ -728,7 +762,8 @@ import {
 
               {/* Pricing */}
               <div className="mb-4 p-3 bg-gray-700/50 rounded-lg">
-                <div className="flex items-center space-x-2 text-sm text-gray-300">
+                </div>
+<div className="flex items-center space-x-2 text-sm text-gray-300">
                   <DollarSign className="w-4 h-4 text-green-400" />
                   <span>{service.pricing}</span>
                 </div>
@@ -757,9 +792,12 @@ import {
 
         {/* Enhanced Services Section */}
         <div className="mt-16 mb-16">
-          <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-4">
+          </div>
+<div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8">
+            </div>
+<div className="text-center mb-8">
+              </div>
+<div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-4">
                 <Sparkles className="h-5 w-5 text-purple-400" />
                 <span className="text-purple-400 font-medium">New & Enhanced</span>
               </div>
@@ -774,19 +812,19 @@ import {
                   to="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  Get Started Today
+                  Get Started Today;
                 </Link>
                 <$2 />
                   to="/innovative-services-showcase"
                   className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  View All Innovative Services
+                  View All Innovative Services;
                 </Link>
                 <$2 />
                   to="/request-quote"
                   className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
                 >
-                  Request Custom Quote
+                  Request Custom Quote;
                 </Link>
               </div>
             </div>
@@ -795,12 +833,14 @@ import {
 
         {/* Additional Services Links */}
         <section className="py-16 px-4">
-          <div className="container mx-auto text-center">
+          </section>
+<div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Explore More Services</h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Discover our comprehensive portfolio of innovative micro SAAS and specialized IT solutions.
             </p>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
+            </div>
+<div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
               <$2 />
                 to="/services/comprehensive"
                 className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -809,7 +849,8 @@ import {
                 <p className="text-zion-slate-light mb-4">
                   Explore our complete portfolio of micro SAAS and IT solutions with transparent pricing and detailed features.
                 </p>
-                <div className="text-zion-cyan hover:text-zion-cyan-light flex items-center justify-center group">
+                </div>
+<div className="text-zion-cyan hover:text-zion-cyan-light flex items-center justify-center group">
                   View All Services <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
@@ -832,20 +873,22 @@ import {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
+          </div>
+<div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how our technology solutions can accelerate your growth and 
+              Let's discuss how our technology solutions can accelerate your growth and;
               give you a competitive edge in the market.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
               <$2 />
                 to="/comprehensive-services-showcase"
@@ -865,8 +908,8 @@ import {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    return matchesSearch && matchesCategory
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
   })
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -880,8 +923,9 @@ import {
     return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
   }
   return (
-    <div className="min-h-screen relative">
-      <SEO 
+    </div>
+<div className="min-h-screen relative">
+      <SEO
         title="Comprehensive Technology Services - Zion Tech Group"
         description="Transform your business with our comprehensive technology services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, Digital Transformation, IT Consulting, and Global Solutions. Expert consulting and implementation services."
         url="https://ziontechgroup.com/services"
@@ -891,19 +935,23 @@ import {
       />
 
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-1000"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-2000"></div>
+      </div>
+<div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        </div>
+<div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float"></div>
+<div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-1000"></div>
+<div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-2000"></div>
       </div>
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 overflow-hidden">
-        <div className="relative z-10 container mx-auto text-center">
-          <div className={`animate-fade-in-up transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        </section>
+<div className="relative z-10 container mx-auto text-center">
+          </div>
+<div className={`animate-fade-in-up transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="neon-text">
-                Our Services
+                Our Services;
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -912,8 +960,10 @@ import {
             </p>
             
             {/* Search and Filter */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
+            </div>
+<div className="max-w-2xl mx-auto mb-8">
+              </div>
+<div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -931,7 +981,7 @@ import {
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      selectedCategory === category
+                      selectedCategory === category;
                         ? 'bg-cyan-500 text-black'
                         : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
                     }`}
@@ -947,17 +997,18 @@ import {
 
       {/* Services Grid */}
       <section className="relative py-16 px-4">
-        <div className="relative z-10 container mx-auto">
-          <div className="text-center mb-12">
+        </section>
+<div className="relative z-10 container mx-auto">
+          </div>
+<div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What We <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Offer</span>
             </h2>
             <p className="text-gray-300">
-              Showing {filteredServices.length} of {allServices.length} total services
+              Showing {filteredServices.length} of {allServices.length} total services;
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <$2 />
                 key={index} 
@@ -965,9 +1016,11 @@ import {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Service Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-3xl">{getCategoryIcon(service.category)}</div>
-                  <div className="text-right">
+                </div>
+<div className="flex items-start justify-between mb-4">
+                  </div>
+<div className="text-3xl">{getCategoryIcon(service.category)}</div>
+<div className="text-right">
                     < className={`px-3 py-1 rounded-full text-xs font-medium ${$2 />
                       service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
                       service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
@@ -988,13 +1041,14 @@ import {
 
                 {/* Pricing */}
                 <div className="mb-4">
-                  <div className="text-2xl font-bold text-blue-400">
+                  </div>
+<div className="text-2xl font-bold text-blue-400">
                     {service.serviceType === 'IT Service' 
                       ? `$${(service as any).hourlyRate}/hour or $${(service as any).projectRate.toLocaleString()} project`
                       : formatPrice((service as any).price, (service as any).pricingModel)
                     }
                   </div>
-                  <div className="text-sm text-gray-400">
+<div className="text-sm text-gray-400">
                     Market Price: {service.marketPrice}
                   </div>
                   {service.serviceType !== 'Micro SAAS' && (
@@ -1006,9 +1060,10 @@ import {
                 
                 {/* Rating */}
                 <div className="flex items-center mb-4">
-                  <div className="flex items-center">
+                  </div>
+<div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
-                      <Star 
+                      <Star
                         key={i} 
                         className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} 
                       />
@@ -1033,9 +1088,11 @@ import {
                 {/* Benefits */}
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Benefits:</h4>
-                  <div className="space-y-1">
+                  </div>
+<div className="space-y-1">
                     {service.benefits.slice(0, 3).map((benefit, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
+                      </div>
+<div key={idx} className="flex items-center text-sm text-gray-300">
                         <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
                         {benefit}
                       </div>
@@ -1047,45 +1104,46 @@ import {
                 <div className="mb-6 space-y-2 text-sm">
                   {service.serviceType === 'Micro SAAS' ? (
                     <>
-                      <div className="flex justify-between">
+                      </div></>
+<div className="flex justify-between">
                         <span className="text-gray-400">Setup Time:</span>
                         <span className="text-white">{(service as any).setupTime}</span>
                       </div>
-                      <div className="flex justify-between">
+<div className="flex justify-between">
                         <span className="text-gray-400">ROI:</span>
                         <span className="text-green-400">{(service as any).roi}</span>
                       </div>
-                      <div className="flex justify-between">
+<div className="flex justify-between">
                         <span className="text-gray-400">Users:</span>
                         <span className="text-white">{(service as any).userLimit}</span>
                       </div>
                     </>
                   ) : service.serviceType === 'IT Service' ? (
-                    <>
-                      <div className="flex justify-between">
+                    <></>
+<div className="flex justify-between">
                         <span className="text-gray-400">Response Time:</span>
                         <span className="text-white">{(service as any).responseTime}</span>
                       </div>
-                      <div className="flex justify-between">
+<div className="flex justify-between">
                         <span className="text-gray-400">SLA:</span>
                         <span className="text-green-400">{(service as any).sla}</span>
                       </div>
-                      <div className="flex justify-between">
+<div className="flex justify-between">
                         <span className="text-gray-400">Delivery:</span>
                         <span className="text-white">{(service as any).deliveryTime}</span>
                       </div>
                     </>
                   ) : (
-                    <>
-                      <div className="flex justify-between">
+                    <></>
+<div className="flex justify-between">
                         <span className="text-gray-400">AI Score:</span>
                         <span className="text-green-400">{(service as any).aiScore}/100</span>
                       </div>
-                      <div className="flex justify-between">
+<div className="flex justify-between">
                         <span className="text-gray-400">Accuracy:</span>
                         <span className="text-white">{(service as any).accuracy}</span>
                       </div>
-                      <div className="flex justify-between">
+<div className="flex justify-between">
                         <span className="text-gray-400">Models:</span>
                         <span className="text-white">{(service as any).aiModels?.length || 0}</span>
                       </div>
@@ -1110,7 +1168,7 @@ import {
                   to={`/services/${service.category.toLowerCase()}`}
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                 >
-                  Learn More 
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
@@ -1119,12 +1177,13 @@ import {
           
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
-              <div className="text-6xl mb-4">🔍</div>
+              </div>
+<div className="text-6xl mb-4">🔍</div>
               <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search terms or category filter</p>
             </div>
           {/* Filters and Sort Controls */}
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -1136,7 +1195,7 @@ import {
                 className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-zion-slate-light rounded-lg transition-colors"
               >
                 <Filter className="w-4 h-4" />
-                Filters
+                Filters;
               </button>
               
               {Object.keys(filters).length > 0 && (
@@ -1144,12 +1203,11 @@ import {
                   onClick={clearFilters}
                   className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm hover:bg-red-500/30 transition-colors"
                 >
-                  Clear Filters
+                  Clear Filters;
                 </button>
               )}
             </div>
-
-            <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
               <span className="text-zion-slate-light text-sm">Sort by:</span>
               <$2 />
                 onClick={() => handleSort('title')}
@@ -1157,7 +1215,7 @@ import {
                   sortBy === 'title' ? 'bg-zion-cyan/20 text-zion-cyan' : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                 }`}
               >
-                Name
+                Name;
                 {sortBy === 'title' && (
                   sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />
                 )}
@@ -1168,7 +1226,7 @@ import {
                   sortBy === 'price' ? 'bg-zion-cyan/20 text-zion-cyan' : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                 }`}
               >
-                Price
+                Price;
                 {sortBy === 'price' && (
                   sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />
                 )}
@@ -1178,14 +1236,15 @@ import {
 
           {/* Filters Panel */}
           {showFilters && (
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className="bg-white/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl p-6 mb-8"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div>
+                </div>
+<div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
                   <select
                     value={filters.pricingModel || ''}
@@ -1198,8 +1257,7 @@ import {
                     <option value="custom">Custom</option>
                   </select>
                 </div>
-                
-                <div>
+<div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Support Level</label>
                   <select
                     value={filters.supportLevel || ''}
@@ -1212,10 +1270,10 @@ import {
                     <option value="enterprise">Enterprise</option>
                   </select>
                 </div>
-                
-                <div>
+<div>
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">Price Range</label>
-                  <div className="flex gap-2">
+                  </div>
+<div className="flex gap-2">
                     <input
                       type="number"
                       placeholder="Min"
@@ -1321,7 +1379,7 @@ const Services = () => {
   Star,
   Users,
   Clock,
-  Award
+  Award;
 } from 'lucide-react'
 export default function Services() {
   const services = [
@@ -1431,7 +1489,7 @@ export default function Services() {
   const stats = [
         {/* No Results */}
         {sortedServices.length === 0 && (
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-16"
@@ -1447,7 +1505,7 @@ export default function Services() {
               }}
               className="futuristic-btn neon-glow neon-cyan"
             >
-              Clear Filters
+              Clear Filters;
             </button>
           </motion.div>
         )}
@@ -1455,7 +1513,8 @@ export default function Services() {
               {/* Contact Info */}
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
-                <div className="space-y-2 text-zion-slate-light">
+                </div>
+<div className="space-y-2 text-zion-slate-light">
                   <p>📱 +1 (302) 464-0950</p>
                   <p>✉️ kleber@ziontechgroup.com</p>
                   <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -1463,23 +1522,24 @@ export default function Services() {
                 <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
                 <p className="text-gray-300">Cutting-edge AI and quantum technologies that keep you ahead of the competition</p>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Proven Excellence</h3>
                 <p className="text-gray-300">Trusted by enterprises worldwide with a track record of successful implementations</p>
               </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Expert Support</h3>
                 <p className="text-gray-300">24/7 expert support and dedicated success managers for your business</p>
               </div>
             </div>
-            
-            <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
+<div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
               <p className="text-zion-slate-light text-sm">
                 © 2024 Zion Tech Group. All rights reserved. | 
                 <a href="/contact" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
@@ -1495,7 +1555,8 @@ export default function Services() {
 
                 {/* Rating and Reviews */}
                 <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center space-x-1">
+                  </div>
+<div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
@@ -1508,7 +1569,7 @@ export default function Services() {
                       {service.rating} ({service.reviewCount} reviews)
                     </span>
                   </div>
-                  <div className="text-zion-cyan text-sm font-medium">
+<div className="text-zion-cyan text-sm font-medium">
                     AI Score: {service.aiScore}%
                   </div>
                 </div>
@@ -1526,13 +1587,13 @@ export default function Services() {
                     to={service.link}
                     className="flex-1 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
                   >
-                    Learn More
+                    Learn More;
                   </Link>
                   <$2 />
                     to="/contact"
                     className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
                   >
-                    Get Quote
+                    Get Quote;
                   </Link>
                 </div>
               </motion.div>
@@ -1541,7 +1602,7 @@ export default function Services() {
 
           {/* No Results Message */}
           {filteredServices.length === 0 && (
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="text-center py-20"
@@ -1549,7 +1610,7 @@ export default function Services() {
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-zion-slate-light mb-6">
-                Try adjusting your search terms or category filter
+                Try adjusting your search terms or category filter;
               </p>
               <$2 />
                 onClick={() => {
@@ -1563,7 +1624,8 @@ export default function Services() {
                     <Code className="w-4 h-4 text-zion-cyan" />
                     Technology:
                   </h4>
-                  <div className="flex flex-wrap gap-2">
+                  </div>
+<div className="flex flex-wrap gap-2">
                     {service.technology.slice(0, 3).map((tech, idx) => (
                       <span key={idx} className="bg-white/10 text-zion-slate-light text-xs px-2 py-1 rounded-full">
                         {tech}
@@ -1587,7 +1649,7 @@ export default function Services() {
           </div>
 
           {filteredServices.length === 0 && (
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-16"
@@ -1601,16 +1663,18 @@ export default function Services() {
                 }}
                 className="bg-zion-cyan text-white px-6 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors"
               >
-                Clear Filters
+                Clear Filters;
               </button>
             </motion.div>
           )}
       {/* Featured Services */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Featured Services
+              Featured Services;
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
               Our most popular and impactful solutions that are transforming businesses worldwide.
@@ -1624,55 +1688,61 @@ export default function Services() {
       step: '01',
       title: 'Discovery & Analysis',
       description: 'We analyze your requirements and business objectives to understand your needs.',
-      icon: Globe
+      icon: Globe;
     },
     {
       step: '02',
       title: 'Solution Design',
       description: 'Our experts design a tailored solution that aligns with your goals and budget.',
-      icon: Brain
+      icon: Brain;
     },
     {
       step: '03',
       title: 'Development & Testing',
       description: 'We build and thoroughly test your solution using industry best practices.',
-      icon: Zap
+      icon: Zap;
     },
     {
       step: '04',
       title: 'Deployment & Support',
       description: 'Smooth deployment followed by ongoing support and maintenance.',
-      icon: Cloud
+      icon: Cloud;
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    </div>
+<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+      </div><section className="pt-32 pb-20 px-6">
+        </section>
+<div className="max-w-7xl mx-auto text-center">
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Our Services
+              Our Services;
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business and drive innovation. 
               From AI and cloud infrastructure to cybersecurity and digital transformation.
             </p>
           </div>
-          <div className="grid lg:grid-cols-3 gap-8">
+<div className="grid lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-zion-blue-dark to-zion-blue text-white rounded-xl p-8 hover:shadow-xl transition-shadow">
-                <div className="flex justify-center mb-6">
+              </div>
+<div key={index} className="bg-gradient-to-br from-zion-blue-dark to-zion-blue text-white rounded-xl p-8 hover:shadow-xl transition-shadow">
+                </div>
+<div className="flex justify-center mb-6">
                   <service.icon className="w-16 h-16 text-zion-cyan" />
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      </div><section className="py-20">
+        </section>
+<div className="container mx-auto px-4">
           {/* Results Summary */}
-          <div className="text-center mb-12">
+          </div>
+<div className="text-center mb-12">
             <p className="text-zion-slate-light">
               {isLoading ? 'Searching...' : `Showing ${totalResults} services`}
               {query && ` for "${query}"`}
@@ -1681,7 +1751,7 @@ export default function Services() {
           </div>
 
           {/* Services Grid */}
-          <motion.div
+          <motion.div;
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -1691,14 +1761,17 @@ export default function Services() {
               <motion.div key={service.id} variants={itemVariants}>
                 <div className="group bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-500 hover:transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-cyan/20">
                   {/* Service Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  </div>
+<div className="relative h-48 overflow-hidden">
                     <OptimizedImage
                       src={`https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute top-4 right-4">
+                    </div>
+<div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    </div>
+<div className="absolute top-4 right-4">
                       <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full">
                         {service.category}
                       </span>
@@ -1716,7 +1789,8 @@ export default function Services() {
                     </p>
                     
                     {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    </div>
+<div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, index) => (
                         <span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs">
                           {tag}
@@ -1726,11 +1800,12 @@ export default function Services() {
                     
                     {/* Service Details */}
                     <div className="space-y-2 mb-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-2">
+                      </div>
+<div className="flex items-center gap-2">
                         <Clock className="w-4 h-4 text-zion-cyan" />
                         <span>Delivery: {service.estimatedDelivery}</span>
                       </div>
-                      <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
                         <Shield className="w-4 h-4 text-zion-cyan" />
                         <span>Support: {service.supportLevel}</span>
                       </div>
@@ -1738,12 +1813,13 @@ export default function Services() {
                     
                     {/* Price and CTA */}
                     <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-zion-cyan">
+                      </div>
+<div className="text-2xl font-bold text-zion-cyan">
                         {service.currency}{service.price.toLocaleString()}
                         <span className="text-sm text-zion-slate-light font-normal">/{service.pricingModel}</span>
                       </div>
                       <button className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 transform hover:scale-105">
-                        Get Quote
+                        Get Quote;
                       </button>
                     </div>
                   </div>
@@ -1782,7 +1858,7 @@ export default function Services() {
                 disabled={!paginatedResults.hasPrevPage}
                 className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
               >
-                Previous
+                Previous;
               </button>
               
               <span className="px-4 py-2 text-zion-slate-light">
@@ -1794,7 +1870,7 @@ export default function Services() {
                 disabled={!paginatedResults.hasNextPage}
                 className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
               >
-                Next
+                Next;
               </button>
             </div>
           )}
@@ -1803,7 +1879,7 @@ export default function Services() {
     </div>
   )
 }
-export default Services
+export default Services;
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-20"
         >
@@ -1814,19 +1890,20 @@ export default Services
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Let's discuss how our services can transform your business and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
-                Get Free Consultation
+                Get Free Consultation;
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <$2 />
                 to="/request-quote"
                 className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
-                Request Quote
+                Request Quote;
               </Link>
             </div>
           </div>
@@ -1835,7 +1912,7 @@ export default Services
     </div>
   )
 }
-export default Services
+export default Services;
                     <li key={serviceIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       {service}
@@ -1846,7 +1923,7 @@ export default Services
                   to={category.link}
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light font-semibold text-sm transition-colors"
                 >
-                  Learn More
+                  Learn More;
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -1859,12 +1936,16 @@ export default Services
 
       {/* Emerging Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        </section>
+<div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Emerging Technologies</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          </div>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {emergingTech.map((tech, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover:border-zion-cyan/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center text-zion-cyan mx-auto mb-4">
+              </div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover:border-zion-cyan/50 transition-all duration-300">
+                </div>
+<div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center text-zion-cyan mx-auto mb-4">
                   {tech.icon}
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">{tech.title}</h3>
@@ -1879,66 +1960,76 @@ export default Services
 
       {/* Why Choose Us */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="grid lg:grid-cols-2 gap-12 items-center">
+            </div>
+<div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+              </div>
+<div className="space-y-4">
+                </div>
+<div className="flex items-start gap-4">
+                  </div>
+<div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <div>
+<div>
                     <h3 className="text-lg font-semibold text-white mb-1">Expert Team</h3>
                     <p className="text-zion-slate-light">15+ years of experience in cutting-edge technologies</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+<div className="flex items-start gap-4">
+                  </div>
+<div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <div>
+<div>
                     <h3 className="text-lg font-semibold text-white mb-1">Proven Results</h3>
                     <p className="text-zion-slate-light">500+ successful projects delivered worldwide</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+<div className="flex items-start gap-4">
+                  </div>
+<div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <div>
+<div>
                     <h3 className="text-lg font-semibold text-white mb-1">24/7 Support</h3>
                     <p className="text-zion-slate-light">Round-the-clock technical support and maintenance</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
+<div className="flex items-start gap-4">
+                  </div>
+<div className="w-8 h-8 bg-zion-cyan rounded-lg flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
-                  <div>
+<div>
                     <h3 className="text-lg font-semibold text-white mb-1">Scalable Solutions</h3>
                     <p className="text-zion-slate-light">Built to grow with your business needs</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Ready to Get Started?</h3>
               <p className="text-zion-slate-light mb-6">
                 Let's discuss your project requirements and create a custom solution that drives results.
               </p>
-              <div className="space-y-4">
+              </div>
+<div className="space-y-4">
                 <$2 />
                   to="/contact"
                   className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block"
                 >
-                  Schedule a Consultation
+                  Schedule a Consultation;
                 </Link>
                 <$2 />
                   to="/request-quote"
                   className="w-full border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block"
                 >
-                  Get a Free Quote
+                  Get a Free Quote;
                 </Link>
               </div>
             </div>
@@ -1948,26 +2039,28 @@ export default Services
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        </section>
+<div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Transform Your Business Today</h2>
           <p className="text-lg text-zion-slate-light mb-8">
             Join hundreds of companies already leveraging our technology solutions to achieve unprecedented growth.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          </div>
+<div className="flex flex-wrap justify-center gap-4">
             <$2 />
               to="/contact" 
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Start Your Project
+              Start Your Project;
             </Link>
             <$2 />
               to="/about" 
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Call: +1 302 464 0950
+              Call: +1 302 464 0950;
             </a>
           </div>
-          <div className="mb-6">
+<div className="mb-6">
             <$2 />
               to="/enhanced-services"
               className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
@@ -1981,59 +2074,65 @@ export default Services
   )
       {/* Stats Section */}
       <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
-              const IconComponent = stat.icon
+              const IconComponent = stat.icon;
               return (
-                <motion.div
+                <motion.div;
                   key={stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                  </div>
+<div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-zion-slate-light">{stat.label}</div>
+<div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+<div className="text-zion-slate-light">{stat.label}</div>
                 </motion.div>
               )
-            })}
+            })
           </div>
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Technology Services
+              Our Technology Services;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive solutions designed to drive innovation and transform your business
+              Comprehensive solutions designed to drive innovation and transform your business;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
-              const IconComponent = service.icon
+              const IconComponent = service.icon;
               return (
-                <motion.div
+                <motion.div;
                   key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6`}>
+                  </div>
+<div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
@@ -2050,51 +2149,54 @@ export default Services
                       ))}
                     </ul>
                   </div>
-                  
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
+<div className="text-center">
+                    </div>
+<div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                     <$2 />
                       to={service.link}
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
                     >
-                      Learn More
+                      Learn More;
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </div>
                 </motion.div>
               )
-            })}
+            })
           </div>
         </div>
       </section>
 
       {/* Industries Section */}
       <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industries We Serve
+              Industries We Serve;
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Proven expertise across diverse industries and business sectors
+              Proven expertise across diverse industries and business sectors;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {industries.map((industry, index) => (
-              <motion.div
+              <motion.div;
                 key={industry.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
-                <div className="text-4xl mb-3">{industry.icon}</div>
+                </div>
+<div className="text-4xl mb-3">{industry.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
                 <p className="text-zion-slate-light">{industry.description}</p>
               </motion.div>
@@ -2105,8 +2207,9 @@ export default Services
 
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -2116,39 +2219,42 @@ export default Services
               Why Choose Our Services?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the benefits of professional technology services
+              Experience the benefits of professional technology services;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon
+              const IconComponent = benefit.icon;
               return (
-                <motion.div
+                <motion.div;
                   key={benefit.title}
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start gap-6"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                  </div>
+<div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <div>
+<div>
                     <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                     <p className="text-zion-slate-light">{benefit.description}</p>
                   </div>
                 </motion.div>
               )
-            })}
+            })
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+        </section>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -2157,21 +2263,22 @@ export default Services
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Let's discuss how our technology services can drive innovation and growth for your organization
+              Let's discuss how our technology services can drive innovation and growth for your organization;
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-zion-blue-dark font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
               >
-                Schedule Consultation
+                Schedule Consultation;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white hover:text-zion-blue-dark transition-all duration-300"
               >
-                Get Free Quote
+                Get Free Quote;
               </Link>
         </div>
       </section>
@@ -2179,14 +2286,15 @@ export default Services
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </section>
+<div className="absolute inset-0 overflow-hidden">
+          </div>
+<div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>
+<div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+<div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <motion.div
+<div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
@@ -2196,7 +2304,8 @@ export default Services
               Let's discuss how our technology services can help you achieve your goals and stay ahead of the competition. 
               Our team of experts is ready to guide you through the digital transformation journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover:bg-zion-slate-light transition-all duration-300 flex items-center justify-center space-x-2 group"
@@ -2218,7 +2327,8 @@ export default Services
     </div>
   )
               <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-zion-cyan rounded-lg flex items-center justify-center mb-4 text-white">
+                </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-lg flex items-center justify-center mb-4 text-white">
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
@@ -2235,7 +2345,7 @@ export default Services
                   to={category.link}
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
                 >
-                  Learn More
+                  Learn More;
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -2248,15 +2358,19 @@ export default Services
 
       {/* Emerging Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
+        </section>
+<div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Emerging Technologies</h2>
           <p className="text-lg text-zion-slate-light text-center max-w-3xl mx-auto mb-12">
             Stay ahead of the curve with our cutting-edge technology solutions that are shaping the future.
           </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          </div>
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {emergingTechServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 text-center">
-                <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+              </div>
+<div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 text-center">
+                </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white">
                   {service.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
@@ -2269,22 +2383,26 @@ export default Services
 
       {/* Why Choose Us */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        </section>
+<div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Zion Tech Group?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+          </div>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Expert Team</h3>
               <p className="text-zion-slate-light">
-                Our team of experienced professionals brings 15+ years of expertise 
+                Our team of experienced professionals brings 15+ years of expertise;
                 in cutting-edge technologies and industry best practices.
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <BarChart3 className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
@@ -2293,47 +2411,47 @@ export default Services
                 consistently exceeding client expectations and driving measurable results.
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Lock className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Security First</h3>
               <p className="text-zion-slate-light">
-                Enterprise-grade security and compliance standards ensure your data 
+                Enterprise-grade security and compliance standards ensure your data;
                 and systems remain protected at all times.
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Rocket className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovation Driven</h3>
               <p className="text-zion-slate-light">
-                We stay at the forefront of technology trends, continuously innovating 
+                We stay at the forefront of technology trends, continuously innovating;
                 to deliver cutting-edge solutions that give you a competitive advantage.
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
               <p className="text-zion-slate-light">
-                Serving clients worldwide with 24/7 support and localized expertise 
+                Serving clients worldwide with 24/7 support and localized expertise;
                 to ensure your success regardless of your location.
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Fast Delivery</h3>
               <p className="text-zion-slate-light">
-                Agile development methodologies and efficient processes ensure 
+                Agile development methodologies and efficient processes ensure;
                 rapid delivery without compromising quality or security.
               </p>
             </div>
@@ -2343,12 +2461,16 @@ export default Services
 
       {/* Service Process */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto">
+        </section>
+<div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Service Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                1
+          </div>
+<div className="grid md:grid-cols-4 gap-8">
+            </div>
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                1;
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Discovery</h3>
               <p className="text-zion-slate-light">
@@ -2356,36 +2478,36 @@ export default Services
                 and design a tailored solution strategy.
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                2
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                2;
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Planning</h3>
               <p className="text-zion-slate-light">
-                Detailed project planning, architecture design, and timeline 
+                Detailed project planning, architecture design, and timeline;
                 development to ensure successful execution.
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                3
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                3;
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Development</h3>
               <p className="text-zion-slate-light">
-                Agile development with regular updates, testing, and quality 
+                Agile development with regular updates, testing, and quality;
                 assurance to deliver exceptional results.
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
-                4
+<div className="text-center">
+              </div>
+<div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+                4;
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Launch & Support</h3>
               <p className="text-zion-slate-light">
-                Smooth deployment, comprehensive training, and ongoing support 
+                Smooth deployment, comprehensive training, and ongoing support;
                 to ensure long-term success.
               </p>
             </div>
@@ -2395,24 +2517,26 @@ export default Services
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        </section>
+<div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
           <p className="text-lg text-zion-slate-light mb-8">
-            Let's discuss your project requirements and explore how our innovative 
+            Let's discuss your project requirements and explore how our innovative;
             solutions can drive your success.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          </div>
+<div className="flex flex-wrap justify-center gap-4">
             <$2 />
               to="/contact" 
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Start Your Project
+              Start Your Project;
             </Link>
             <$2 />
               to="/request-quote" 
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Get Free Quote
+              Get Free Quote;
             </Link>
           </div>
         </div>
@@ -2420,13 +2544,13 @@ export default Services
     </div>
   )
 }
-export default Services
+export default Services;
 }
 }
               {/* Results Count */}
               <div className="flex items-end">
                 <span className="text-zion-slate-light">
-                  {filteredServices.length} services found
+                  {filteredServices.length} services found;
                 </span>
               </div>
             </div>
@@ -2434,14 +2558,14 @@ export default Services
         </motion.div>
 
         {/* Services Grid */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
-            <motion.div
+            <motion.div;
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -2450,22 +2574,25 @@ export default Services
             >
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-zion-purple/20 rounded-lg text-zion-cyan">
+                </div>
+<div className="flex items-center gap-3">
+                  </div>
+<div className="p-2 bg-zion-purple/20 rounded-lg text-zion-cyan">
                     {getCategoryIcon(service.category)}
                   </div>
-                  <div>
+<div>
                     <h3 className="font-semibold text-lg text-white group-hover:text-zion-cyan transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-zion-slate-light text-sm">{service.category}</p>
                   </div>
                 </div>
-                <div className="text-right">
-                  <div className="text-2xl font-bold text-zion-cyan">
+<div className="text-right">
+                  </div>
+<div className="text-2xl font-bold text-zion-cyan">
                     {getPricingDisplay(service)}
                   </div>
-                  <div className="text-xs text-zion-slate-light capitalize">
+<div className="text-xs text-zion-slate-light capitalize">
                     {service.pricingModel.replace('-', ' ')}
                   </div>
                 </div>
@@ -2480,11 +2607,13 @@ export default Services
               <div className="mb-4">
                 <h4 className="text-white font-medium mb-2 flex items-center gap-2">
                   <Star className="w-4 h-4 text-zion-cyan" />
-                  Key Features
+                  Key Features;
                 </h4>
-                <div className="space-y-1">
+                </div>
+<div className="space-y-1">
                   {service.features.slice(0, 3).map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                    </div>
+<div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <CheckCircle className="w-3 h-3 text-zion-cyan flex-shrink-0" />
                       <span className="line-clamp-1">{feature}</span>
                     </div>
@@ -2494,11 +2623,12 @@ export default Services
 
               {/* Service Details */}
               <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
-                <div className="flex items-center gap-2 text-zion-slate-light">
+                </div>
+<div className="flex items-center gap-2 text-zion-slate-light">
                   <Clock className="w-4 h-4 text-zion-cyan" />
                   <span>{service.estimatedDelivery}</span>
                 </div>
-                <div className="flex items-center gap-2 text-zion-slate-light">
+<div className="flex items-center gap-2 text-zion-slate-light">
                   <Shield className="w-4 h-4 text-zion-cyan" />
                   <span className="capitalize">{service.supportLevel}</span>
                 </div>
@@ -2506,8 +2636,9 @@ export default Services
 
               {/* Market Price */}
               <div className="mb-4 p-3 bg-zion-blue-dark/30 rounded-lg">
-                <div className="text-xs text-zion-slate-light mb-1">Market Price Range</div>
-                <div className="text-zion-cyan font-medium">{service.marketPrice}</div>
+                </div>
+<div className="text-xs text-zion-slate-light mb-1">Market Price Range</div>
+<div className="text-zion-cyan font-medium">{service.marketPrice}</div>
               </div>
 
               {/* Tags */}
@@ -2524,17 +2655,20 @@ export default Services
 
               {/* Contact Info */}
               <div className="border-t border-zion-purple/20 pt-4">
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-zion-slate-light">
-                    <div>📧 {service.contactInfo.email}</div>
-                    <div>📱 {service.contactInfo.phone}</div>
+                </div>
+<div className="flex items-center justify-between">
                   </div>
-                  <motion.button
+<div className="text-sm text-zion-slate-light">
+                    </div>
+<div>📧 {service.contactInfo.email}</div>
+<div>📱 {service.contactInfo.phone}</div>
+                  </div>
+                  <motion.button;
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-sm font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
                   >
-                    Get Quote
+                    Get Quote;
                     <ArrowRight className="w-4 h-4" />
                   </motion.button>
                 </div>
@@ -2544,7 +2678,7 @@ export default Services
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -2557,20 +2691,21 @@ export default Services
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Let's discuss how our cutting-edge solutions can drive innovation and growth for your organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </motion.button>
-              <motion.button
+              <motion.button;
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
-                View Case Studies
+                View Case Studies;
               </motion.button>
             </div>
           </div>

@@ -2,20 +2,20 @@
 import React, { useState, useCallback } from 'react'
 const Image: React.FC = () => {
     interface ImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  _quality?: number;
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string
-  fill?: boolean
-  sizes?: string
-  style?: React.CSSProperties
+  _blurDataURL?: string;
+  fill?: boolean;
+  sizes?: string;
+  style?: React.CSSProperties;
   onLoad?: () => void,
-  onError?: () => void
+  onError?: () => void;
   }
 export const Image: React.FC<ImageProps> = ({
   src,
@@ -32,7 +32,7 @@ export const Image: React.FC<ImageProps> = ({
   style,
   onLoad,
   onError,
-  ...props
+  ...props;
 }) => {
     const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
@@ -54,7 +54,6 @@ export const Image: React.FC<ImageProps> = ({
       height: '100%',
       objectFit:     ,
 $4})
-  }
   if (hasError) {
     return (
       <$2 />
@@ -62,7 +61,7 @@ $4})
         style={imageStyle}
         {...props}
       >
-        <span className="text-gray-500 text-sm">Failed to load image
+        <span className="text-gray-500 text-sm">Failed to load image;
     )
   }
   return (
@@ -81,7 +80,7 @@ $4})
     />
   )
 }
-export default Image
+export default Image;
 'use client'
 import React, { useState, useCallback } from 'react'
 const,
@@ -90,23 +89,23 @@ const,
   O: Add content,
 }
   src: string,,
-    alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
+    alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  _quality?: number;
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string
-  fill?: boolean
-  sizes?: string
-  style?: React.CSSProperties
-  onLoad?: () => void
+  _blurDataURL?: string;
+  fill?: boolean;
+  sizes?: string;
+  style?: React.CSSProperties;
+  onLoad?: () => void;
   onError?: () => void,
 }
 export const Image: React.FC,
           <ImageProps> = ({
-    // TODO: Add content
+    // TODO: Add content;
   }
 }
 //   src,
@@ -123,9 +122,9 @@ quality = 75,
 //   style,
 //   onLoad,
 //   onError,
-//   ...props
+//   ...props;
 }) => {
-    // TODO: Add content
+    // TODO: Add content;
   }
 }
   const [, setIsLoaded] = useState(false)
@@ -157,22 +156,23 @@ quality = 75,
       height: '100%',
       objectFit: 'cover'
     })
-  }
   if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     return (
-          <div>Coming Soon
+          <div>Coming Soon;
   )
-          <div>
+          </div>
+<div>
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
 // >
-          <span className="text-gray-500 text-sm">Failed to load image
+          <span className="text-gray-500 text-sm">Failed to load image;
     )
   }
-  return (<div>Coming Soon</div>)
+  return (</div>
+<div>Coming Soon</div>)
   )
           <img>
       src={src}

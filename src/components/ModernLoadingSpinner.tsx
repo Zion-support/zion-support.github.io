@@ -3,14 +3,14 @@ import React from 'react'
 interface ModernLoadingSpinnerProps {
     size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'accent'
-  text?: string
-  fullScreen?: boolean
+  text?: string;
+  fullScreen?: boolean;
   }
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
   text = 'Loading...',
-  fullScreen = false
+  fullScreen = false;
 }) => {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -25,32 +25,35 @@ $4}
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
-    animate-spin
-    border-2
-    border-current
-    border-t-transparent
-    rounded-full
+    animate-spin;
+    border-2;
+    border-current;
+    border-t-transparent;
+    rounded-full;
   `
-  const containerClasses = fullScreen
+  const containerClasses = fullScreen;
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
   return (
     <div className={containerClasses} role="status" aria-label="Loading">
-      <div className="flex flex-col items-center space-y-4">
-        <div className="relative">
-          <div className={spinnerClasses}>
-          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20">
+      </div>
+<div className="flex flex-col items-center space-y-4">
+        </div>
+<div className="relative">
+          </div>
+<div className={spinnerClasses}>
+          </div>
+<div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20">
         {text && (
-          <p className="text-sm text-gray-300 animate-pulse">{text}
-        )}
+          <p className="text-sm text-gray-300 animate-pulse">{text})
 'use client'
 interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'accent'
-  text?: string
-  fullScreen?: boolean
+  text?: string;
+  fullScreen?: boolean;
 }
 const,
   ModernLoadingSpinner: React.FC,
@@ -83,31 +86,32 @@ const,
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
-//     animate-spin
-//     border-2
-//     border-current
-//     border-t-transparent
+//     animate-spin;
+//     border-2;
+//     border-current;
+//     border-t-transparent;
 //     rounded-full;`
   `
-  const containerClasses = fullScreen
+  const containerClasses = fullScreen;
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
-  return (<div>Coming Soon</div>)
+  return (</div>
+<div>Coming Soon</div>)
   )
           <div className={containerClasses} role="status" aria-label="Loading"></div>"
       <div className="flex flex-col items-center space-y-4"></div>"
         <div className="relative">
-          <div className={spinnerClasses}></div>"
+          </div>
+<div className={spinnerClasses}></div>"
           <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20">
         {text && ()}"
-          <p className="text-sm text-gray-300 animate-pulse">{text}
-        )}
+          <p className="text-sm text-gray-300 animate-pulse">{text})
       </div>"
       <span className="sr-only">Loading content, please wait...</span>
     </div>
   )
 }
-export default ModernLoadingSpinner
+export default ModernLoadingSpinner;
 export default ModernLoadingSpinner;"`
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>

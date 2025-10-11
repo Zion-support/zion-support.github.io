@@ -10,13 +10,13 @@ function cleanMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts to clean
     }
     
     console.log(`Cleaning merge conflicts in: ${filePath}`);
     
-    // Split by conflict markers and take the main branch content (after =======)
+    // Split by conflict markers and take the main branch content (after )
     const lines = content.split('\n');
     const cleanedLines = [];
     let inConflict = false;
@@ -31,7 +31,7 @@ function cleanMergeConflicts(filePath) {
         continue;
       }
       
-      if (line.trim().startsWith('=======')) {
+      if (line.trim().startsWith('')) {
         conflictType = 'theirs';
         continue;
       }
@@ -103,7 +103,4 @@ async function cleanAllMergeConflicts() {
 
 // Run the cleanup
 cleanAllMergeConflicts().catch(console.error);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+

@@ -51,12 +51,14 @@ readingTimereadingTime: '45 min read',
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
   const filteredContent = selectedCategory === 'all' 
-    ? content 
+    ? content;
     : content.filter(item => item.category === selectedCategory)
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
-      <div>
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
+      </section>
+<div>
+        </div>
+<div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
         <$2 />
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
@@ -69,7 +71,7 @@ readingTimereadingTime: '45 min read',
             <span className="text-2xl">⚡</span>
           <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence;
             content that&apos,s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
@@ -77,17 +79,17 @@ readingTimereadingTime: '45 min read',
               key={category.id}
               onClick={() =>setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                selectedCategory === category.id
+                selectedCategory === category.id;
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
                   : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
             >
-              {category.name}
-          ))}
+              {category.name})
         {/* Content Grid */}
           {filteredContent.map((item) => (
               {/* Badge */}
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse">
+                </div>
+<div className="w-3 h-3 bg-green-400 rounded-full animate-pulse">
                 <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
                 <span className="text-gray-400 text-sm">{item.type}
@@ -99,9 +101,11 @@ readingTimereadingTime: '45 min read',
                 {item.description}
               {/* Metrics */}
                     {item.metrics.roi}
-                  <div className="text-gray-400 text-xs">ROI
+                  </div>
+<div className="text-gray-400 text-xs">ROI;
                     {item.metrics.timeline}
-                  <div className="text-gray-400 text-xs">Timeline
+                  </div>
+<div className="text-gray-400 text-xs">Timeline;
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => (
                   <$2 />
@@ -117,7 +121,7 @@ readingTimereadingTime: '45 min read',
         {/* Call to Action */}
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions
+            <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions;
                 to="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <ath$2 />
@@ -129,7 +133,7 @@ readingTimereadingTime: '45 min read',
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover: bg-blue-400/10 transition-all duration-300">Learn More</Link>
     </section>)
-export default UltimateBusinessIntelligenceShowcase2025
+export default UltimateBusinessIntelligenceShowcase2025;
 'use client',
 import React, { useState } from 'react'
         return (import { Link } from 'react-router-dom';)
@@ -139,7 +143,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   const [selectedCategory, setSelectedCategory] = useState('all')
   const content = [
   // TOD,
-  O: Add items
+  O: Add items;
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -201,7 +205,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       categor,
   y: 'resource',
               {/* Badge */}
-          <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
+          </div>
+<div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
                 <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
                 </span>"
@@ -215,9 +220,10 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                 {item.description}
               {/* Metrics */}
                     {item.metrics.roi}"
-                  <div className="text-gray-400 text-xs">ROI
+                  <div className="text-gray-400 text-xs">ROI;
                     {item.metrics.timeline}"
-                  <div className="text-gray-400 text-xs">Timeline
+                  </div>
+<div className="text-gray-400 text-xs">Timeline;
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => ()}
           <span>

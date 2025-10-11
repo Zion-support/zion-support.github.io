@@ -6,13 +6,11 @@ const FuturisticBackground: React.FC = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current
-    if (!canvas) return
-
+    if (!canvas) return;
     const ctx = canvas.getContext('2d')
-    if (!ctx) return
-
+    if (!ctx) return;
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth
+      canvas.width = window.innerWidth;
       canvas.height = window.innerHeight
     }
 
@@ -24,12 +22,11 @@ const FuturisticBackground: React.FC = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       
       // Draw animated particles
-      const time = Date.now() * 0.001
+      const time = Date.now() * 0.001;
       for (let i = 0; i < 50; i++) {
-        const x = (Math.sin(time + i) * canvas.width / 2) + canvas.width / 2
-        const y = (Math.cos(time + i * 0.5) * canvas.height / 2) + canvas.height / 2
-        const size = Math.sin(time + i) * 3 + 2
-        
+        const x = (Math.sin(time + i) * canvas.width / 2) + canvas.width / 2;
+        const y = (Math.cos(time + i * 0.5) * canvas.height / 2) + canvas.height / 2;
+        const size = Math.sin(time + i) * 3 + 2;
         ctx.beginPath()
         ctx.arc(x, y, size, 0, Math.PI * 2)
         ctx.fillStyle = `rgba(6, 182, 212, ${Math.sin(time + i) * 0.3 + 0.3})`

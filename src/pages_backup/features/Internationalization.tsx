@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>
     }
     
-    return this.props.children
+    return this.props.children;
   }
 }
 import React from 'react'
@@ -55,21 +55,22 @@ export default function Internationalization() {
 
   }
   return (
-    <>
-            <li>
+    <></><li>
               Automatic language detection ensures a localized experience.</$1></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
             Frequently Asked Questions</$1>
           <div className='space - y-4 mb - 12'>
-            <div>
+            </div>
+<div>
               <p className='font - semibold'>Which languages are supported?</p>
               <p className='text - zion - slate - light'>
-                The platform currently supports English, Spanish, Portuguese and
+                The platform currently supports English, Spanish, Portuguese and;
                 more.</$1></$1>
-            <div>
+            </div>
+<div>
               <p className='font - semibold'>Can I suggest new translations?</p>
               <p className='text - zion - slate - light'>
-                Yes, community contributions help us continually add new
+                Yes, community contributions help us continually add new;
                 languages.</$1></$1></$1>
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
@@ -88,13 +89,15 @@ export default function Internationalization() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+      </div><main className="bg-background text-white py-12">
+        </main>
+<div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Our interface and search support multiple languages so you can collaborate without barriers.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
             <img
               src="https://placehold && placehold.co/800x400"
@@ -110,17 +113,17 @@ export default function Internationalization() {
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
-            <div>
+            </div>
+<div>
               <p className="font-semibold">Which languages are supported?</p>
               <p className="text-zion-slate-light">The platform currently supports English, Spanish, Portuguese and more.</p>
             </div>
-            <div>
+<div>
               <p className="font-semibold">Can I suggest new translations?</p>
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
-
-          <div className='text-center'>
+<div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/'>Explore Zion</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -129,13 +132,15 @@ export default function Internationalization() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+      </div><main className="bg-background text-white py-12">
+        </main>
+<div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Our interface and search support multiple languages so you can collaborate without barriers.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https://placehold.co/800x400"
               alt="Screenshot of language options"
@@ -150,17 +155,17 @@ export default function Internationalization() {
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
-            <div>
+            </div>
+<div>
               <p className="font-semibold">Which languages are supported?</p>
               <p className="text-zion-slate-light">The platform currently supports English, Spanish, Portuguese and more.</p>
             </div>
-            <div>
+<div>
               <p className="font-semibold">Can I suggest new translations?</p>
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
-
-          <div className="text-center">
+<div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
             </Button>
@@ -187,8 +192,7 @@ export default function Internationalization() {
     "url": "https://app.ziontechgroup.com/features/internationalization"
   }
   return (
-    <>
-      <SEO
+    <></><SEO
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
@@ -201,11 +205,13 @@ export default function Internationalization() {
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        </main>
+<div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Our interface and search support multiple languages so you can collaborate without barriers.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of language options"

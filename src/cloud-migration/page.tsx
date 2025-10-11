@@ -182,7 +182,8 @@ const,
   e: 'Unlimited'
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}"
-      <div className="relative overflow-hidden"></div>"
+      </div>
+<div className="relative overflow-hidden"></div>"
         <div className="cyber-grid"></div>"
         <div className="container mx-auto px-4 py-20 relative z-10"></div>"
           <div className="text-center max-w-4xl mx-auto"></div>"
@@ -233,7 +234,7 @@ const,
       <main className="pt-24 pb-16 px-4"></main>"
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}"
-          <section className="text-center mb-16"></section>"
+          </div><section className="text-center mb-16"></section>"
             < className="text-4xl,$2 />
   sm:text-5xl,"
   md: text-6xl font-bold text-white mb-6"></h1>
@@ -248,7 +249,7 @@ const,
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
   hover: text-white transition-all duration-300 inline-flex items-center"
-                View Demo
+                View Demo;
           </section>
 "
           <section className="mb-16"></section>"
@@ -285,7 +286,7 @@ const,
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>"
                   <p className="text-gray-300">{step.description}
           {/* CTA Section */}"
-          <section className="text-center"></section>"
+          </div><section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Migrate to the Cloud?"
             <p className="text-xl text-gray-300 mb-8">
@@ -301,7 +302,7 @@ const,
       {/* Migration Process Section */}"
       <section className="py-16 px-4 bg-slate-800/50"></section>"
             <h2 className="text-4xl font-bold text-white mb-4">Our Migration Process</h2>"
-            <p className="text-xl text-gray-300">A proven methodology for successful cloud migrations
+            <p className="text-xl text-gray-300">A proven methodology for successful cloud migrations;
 "
               <div key={index} className="cyber-card p-6"></div>"
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4"></div>"
@@ -315,7 +316,7 @@ const,
       {/* Benefits Section */}"
           < className="grid grid-cols-1,"$2 />
   lg: grid-cols-2 gap-12 items-center"></div>
-            <div></div>"
+<div></div>"
               <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Cloud Migration?</h2>"
               <div className="space-y-6"></div>"
                 <div className="flex items-start"></div>"
@@ -351,7 +352,7 @@ const,
               Start Your Migration;"
       <section className="py-16 px-4"></section>"
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Cloud Migration?</h2>"
-            <p className="text-xl text-gray-300">Proven benefits that drive business value
+            <p className="text-xl text-gray-300">Proven benefits that drive business value;
             {/* TODO: Fix JSX expression */}"
               <div key={index} className="cyber-card p-6 text-center"></div>"
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
@@ -361,12 +362,13 @@ const,
                 <div className="text-3xl font-bold text-cyan-400">{benefit.percentage}
       {/* Pricing Section */}"
             <h2 className="text-4xl font-bold text-white mb-4">Transparent Migration Pricing</h2>"
-            <p className="text-xl text-gray-300">Choose the migration package that fits your needs
+            <p className="text-xl text-gray-300">Choose the migration package that fits your needs;
             {/* TODO: Fix JSX expression */}
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
-                {/* TODO: Fix JSX expression */}
-                )}"
-                <div className="text-center mb-6"></div>"
+              </div>
+<div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
+                {/* TODO: Fix JSX expression */})"
+                </div>
+<div className="text-center mb-6"></div>"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     {plan.price}"
@@ -376,23 +378,23 @@ const,
                   {/* TODO: Fix JSX expression */}`
                 }`}>
 "
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></section>"
+      </div><section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></section>"
         <div className="max-w-4xl mx-auto text-center"></div>"
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?
             Join hundreds of businesses that have successfully migrated to the cloud with our expert team."
             <button className="cyber-button px-8 py-4 text-lg"></button>"
             <button className="cyber-button-outline px-8 py-4 text-lg">
-              Contact Our Experts
+              Contact Our Experts;
       <Footer /></Footer>"
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+    </button><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
       <div className="text-center"></div>"
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
         < href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"$2 />
   hover: bg-cyan-600 transition-colors"></a>
-          Contact Us
+          Contact Us;
   ),
 }
-export default CloudMigrationPage
+export default CloudMigrationPage;
 "`
 </div></div></button></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></ul></li>

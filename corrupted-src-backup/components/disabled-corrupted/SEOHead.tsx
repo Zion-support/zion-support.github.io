@@ -13,7 +13,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   structuredData}) => {
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
-    ? canonicalUrl
+    ? canonicalUrl;
     : `https://zion.app${canonicalUrl}`
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
@@ -54,8 +54,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       {/* Structured Data */}
       <script type="application/ld+json">
 const,
-  SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;`
@@ -108,7 +107,7 @@ const,
     </Helmet>
   )
 }
-export default SEOHead
+export default SEOHead;
 "`
   </SEOHeadProps>
   </SEOHeadProps>

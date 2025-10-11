@@ -6,20 +6,21 @@ import Footer from '../components/Footer'
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet>
-        <title>AI Data Visualization Solutions - Zion Tech Group
+        <title>AI Data Visualization Solutions - Zion Tech Group;
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" /></meta>"
         <nk rel="canonical" href="http,"$2 />
   s://ziontechgroup.com/ai-data-visualization" />
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      </div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation /></Navigation>"
-        <main className="container mx-auto px-4 py-16 pt-24">
+        </div><main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}"
-          <section className="text-center mb-16"></section>"
+          </main><section className="text-center mb-16"></section>"
             < className="text-4xl,"$2 />
   md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Data Visualization
+              AI Data Visualization;
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
               Transform data into actionable insights with AI,
@@ -76,39 +77,39 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$149<span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 5 data sources
-                  <li>10 dashboards
-                  <li>Basic AI insights
-                  <li>Standard chart types
-                  <li>Email support
+                  <li>Up to 5 data sources;
+                  <li>10 dashboards;
+                  <li>Basic AI insights;
+                  <li>Standard chart types;
+                  <li>Email support;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Get Started
+                <a href="/contact" className="cyber-button w-full">Get Started;
               "
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 25 data sources
-                  <li>Unlimited dashboards
-                  <li>Advanced AI insights
-                  <li>All chart types
-                  <li>Priority support
-                  <li>Custom visualizations
+                  <li>Up to 25 data sources;
+                  <li>Unlimited dashboards;
+                  <li>Advanced AI insights;
+                  <li>All chart types;
+                  <li>Priority support;
+                  <li>Custom visualizations;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Get Started
+                <a href="/contact" className="cyber-button w-full">Get Started;
               "
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Unlimited data sources
-                  <li>Unlimited dashboards
-                  <li>Full AI suite
-                  <li>White-label solution
-                  <li>24/7 dedicated support
-                  <li>Custom AI training
+                  <li>Unlimited data sources;
+                  <li>Unlimited dashboards;
+                  <li>Full AI suite;
+                  <li>White-label solution;
+                  <li>24/7 dedicated support;
+                  <li>Custom AI training;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Contact Sales
+                <a href="/contact" className="cyber-button w-full">Contact Sales;
           {/* Use Cases Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>"
@@ -150,7 +151,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               < href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,$2 />
   hover:bg-white,"
   hover: text-indigo-600 transition-all duration-300"></a>
-                Get Free Demo
+                Get Free Demo;
               </a>
             </div>
           </section>

@@ -1,17 +1,14 @@
-<<<<<<< HEAD
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData = {"@context": "https: //schema.org",
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'interface SEOHeadProps {
-    title?: string
+import {  Helmet  } from 'react-helmet-async'interface SEOHeadProps {title?: string
   description?: string
   keywords?: string
   canonical?: string
   ogImage?: string
   ogType?: string
   twitterCard?: string
-  structuredData?: object
-  }
+  structuredData?: object}
 }
 const SEOHead: React.FC<SEOHeadProps> = ()
 }) => {}
@@ -56,21 +53,13 @@ const defaultStructuredData = {
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-=======
-'use client';
-import React from 'react';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
-interface SEOHeadProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+interface SEOHeadProps {className?: string
+  children?: React.ReactNode}
 
 const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
   return (
-<<<<<<< HEAD
-    <Helmet>
+<Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}
       <meta name="description" content={description} />
@@ -100,17 +89,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       {/* Structured Data */}
       <script type="application/ld+json">
-=======
-    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
-      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-        <Brain className="w-8 h-8 text-white" />
-      </div>
-      <h3 className="text-xl font-bold text-white mb-4">SEOHead Title</h3>
-      <p className="text-gray-300 mb-4">SEOHead description goes here.</p>
-      {children}
-    </div>
-  );
-};
 
-export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

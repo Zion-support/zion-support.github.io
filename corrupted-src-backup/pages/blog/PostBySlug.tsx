@@ -1,7 +1,7 @@
 import React from 'react'
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams()
-  // Mock data - in a real app, this would come from an API or CMS
+  // Mock data - in a real app, this would come from an API or CMS;
   const latestArticles = [
     {
       slug: 'ai-autonomous-workflows-2026',
@@ -82,16 +82,18 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     },
     {/* TODO: Fix JSX expression */}
     }]
-  // Find the current post
+  // Find the current post;
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   )
   if (!currentPost) {
     return(<div className="min-h-screen bg-gray-50">
     return (
-      <div className="min-h-screen bg-gray-50">
+      </div>
+<div className="min-h-screen bg-gray-50">
         <Header />
-        <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found
+        </div>
+<div className="container mx-auto px-4 py-16 text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found;
           <p className="text-lg text-gray-600 mb-8">
             The blog post you're looking for doesn't exist.
           <$2 />
@@ -105,24 +107,32 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
   }
   return(<div className="min-h-screen bg-gray-50">
   return (
-    <div className="min-h-screen bg-gray-50">
+    </div>
+<div className="min-h-screen bg-gray-50">
       <Header />
       {/* Article Header */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}
+      </div>
+<div className="bg-white border-b">
+        </div>
+<div className="container mx-auto px-4 py-12">
+          </div>
+<div className="max-w-4xl mx-auto">
+            </div>
+<div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}
             <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-4">,
               {currentPost.title}
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}
-            <div className="flex items-center text-sm text-gray-500">
+            </div>
+<div className="flex items-center text-sm text-gray-500">
               <span>{currentPost.author}
   if (!currentPost) {/* TODO: Fix JSX expression */}
   }
-  return (<div className="min-h-screen bg-gray-50">
+  return (</div>
+<div className="min-h-screen bg-gray-50">
       <Header />
       {/* Article Header */}"
-      <div className="bg-white border-b"></div>"
+      </div>
+<div className="bg-white border-b"></div>"
         <div className="container mx-auto px-4 py-12"></div>"
           <div className="max-w-4xl mx-auto"></div>"
             <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}</div>"
@@ -138,70 +148,85 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
               <span className="mx-2">•
               <span>{currentPost.readTime}
       {/* Article Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="prose prose-lg max-w-none">
-              <h2>Introduction
+      </div>
+<div className="container mx-auto px-4 py-12">
+        </div>
+<div className="max-w-4xl mx-auto">
+          </div>
+<div className="bg-white rounded-lg shadow-lg p-8">
+            </div>
+<div className="prose prose-lg max-w-none">
+              <h2>Introduction;
               <p>
       {/* Article Content */}"
-      <div className="container mx-auto px-4 py-12"></div>"
+      </div>
+<div className="container mx-auto px-4 py-12"></div>"
         <div className="max-w-4xl mx-auto"></div>"
           <div className="bg-white rounded-lg shadow-lg p-8"></div>"
             <div className="prose prose-lg max-w-none">
-              <h2>Introduction
+              <h2>Introduction;
               <p>
-                Welcome to our comprehensive guide on {currentPost.title}. This article will provide
-                you with detailed insights, practical implementation strategies, and real-world
+                Welcome to our comprehensive guide on {currentPost.title}. This article will provide;
+                you with detailed insights, practical implementation strategies, and real-world;
                 examples to help you understand and leverage this cutting-edge technology.
-              <h2>Key Benefits
+              <h2>Key Benefits;
               <ul>
-                <li>Significant performance improvements
-                <li>Enhanced operational efficiency
-                <li>Reduced costs and increased ROI
-                <li>Scalable and future-proof solutions
-              <h2>Implementation Strategy
+                <li>Significant performance improvements;
+                <li>Enhanced operational efficiency;
+                <li>Reduced costs and increased ROI;
+                <li>Scalable and future-proof solutions;
+              <h2>Implementation Strategy;
               <p>
               <p>
-                Implementing {currentPost.title} requires careful planning and execution. Our team
-                of experts has developed proven methodologies that ensure successful deployment and
+                Implementing {currentPost.title} requires careful planning and execution. Our team;
+                of experts has developed proven methodologies that ensure successful deployment and;
                 maximum value extraction.
-              <h2>Real-World Applications
+              <h2>Real-World Applications;
               <p>
               <p>
-                Many leading organizations have already implemented {currentPost.title} with
-                remarkable results. Case studies show consistent improvements in efficiency, cost
+                Many leading organizations have already implemented {currentPost.title} with;
+                remarkable results. Case studies show consistent improvements in efficiency, cost;
                 reduction, and competitive advantage.
-              <h2>Conclusion
+              <h2>Conclusion;
               <p>
               <p>
-                {currentPost.title} represents a significant opportunity for organizations looking
-                to stay ahead in today's competitive landscape. With proper implementation and
+                {currentPost.title} represents a significant opportunity for organizations looking;
+                to stay ahead in today's competitive landscape. With proper implementation and;
                 expert guidance, the benefits can be transformative.
       {/* Related Posts */}
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4">)
-          <div className="max-w-6xl mx-auto">)
+      </div>
+<div className="bg-white py-16">
+        </div>
+<div className="container mx-auto px-4">)
+          </div>
+<div className="max-w-6xl mx-auto">)
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>)
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">),
+            </div>
+<div className="grid grid-cols-1 md: grid-cols-3 gap-8">),
               {featuredPosts.slice(0, 3).map((post, index) => (
                 <$2 />
                   key={index}
                   className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
                 >,
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      </div>
+<div className="bg-white py-16">
+        </div>
+<div className="container mx-auto px-4">
+          </div>
+<div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles;
+            </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {featuredPosts.slice(0, 3).map((post, index) => (
                 <$2 />
                   key={index}
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}
+                  </div>
+<div className="text-sm text-blue-600 font-semibold mb-2">{post.category}
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}
                   <p className="text-gray-600 mb-4">{post.description}
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
+                  </div>
+<div className="flex items-center text-sm text-gray-500 mb-4">
                     <span>{post.author}
                     <span className="mx-2">•
                     <span>{post.readTime}
@@ -238,7 +263,5 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                   >
                     Read More →
                 </div>)
-              ))}
-  )
-}
+              ))})
 "`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h2></h3></ul></li></li></li></li>

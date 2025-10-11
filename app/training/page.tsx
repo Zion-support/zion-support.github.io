@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -6,47 +5,18 @@ import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-=======
-        <title>Page | Zion Tech Group</title>
-'use client'
-import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
-]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
-      <Helmet>
-        </Helmet><title>Page | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
 
-                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
-                <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-            </p>
-    </div>
-  )
-}
-export default PagePage
-'use client'
-import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <></>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
               </h1>
@@ -58,9 +28,11 @@ import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, 
         </section>
 
         {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
               </h2>
@@ -78,7 +50,7 @@ import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, 
       
       <Footer />
     </>
-  );
+  )
 };
 
 export default PagePage;

@@ -2,18 +2,18 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import ContentPreviewCard from '../components/ContentPreviewCard'
 interface BlogPost {
-    id: string
-  title: string
-  description: string
-  category: string
-  readTime: string
-  date: string
-  path: string
-  image: string
-  featured: boolean
+    id: string;
+  title: string;
+  description: string;
+  category: string;
+  readTime: string;
+  date: string;
+  path: string;
+  image: string;
+  featured: boolean;
   stats?: {
     views: number,
-    engagement: number
+    engagement: number;
   }
 }
 export default function BlogPage() {
@@ -127,64 +127,75 @@ export default function BlogPage() {
   }, [blogPosts])
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))]
   const filteredPosts = selectedCategory === 'all' 
-    ? posts 
+    ? posts;
     : posts.filter(post => post.category === selectedCategory)
   const featuredPosts = posts.filter(post => post.featured)
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse">
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
+<div className="container mx-auto px-4 py-8">
+          </div>
+<div className="text-center mb-12">
+            </div>
+<div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse">
+            </div>
+<div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4">
-                <div className="h-6 bg-gray-200 rounded mb-2">
-                <div className="h-4 bg-gray-200 rounded mb-2">
-                <div className="h-4 bg-gray-200 rounded w-3/4">
-            ))}
-    )
-  }
+              </div>
+<div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
+                </div>
+<div className="h-48 bg-gray-200 rounded-lg mb-4">
+                </div>
+<div className="h-6 bg-gray-200 rounded mb-2">
+                </div>
+<div className="h-4 bg-gray-200 rounded mb-2">
+                </div>
+<div className="h-4 bg-gray-200 rounded w-3/4">
+            ))})
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+    </div>
+<div className="min-h-screen bg-gray-50">
+      </div>
+<div className="container mx-auto px-4 py-8">
         {/* Header */}
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Latest insights on AI, enterprise automation, and digital transformation from our expert team
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Latest insights on AI, enterprise automation, and digital transformation from our expert team;
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        </div>
+<div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
             <$2 />
               key={category}
               onClick={() => setSelectedCategory(category)}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === category
+                selectedCategory === category;
                   ? 'bg-indigo-600 text-white'
                   : 'bg-white text-gray-600 hover:bg-gray-100'
               }`}
             >
-              {category === 'all' ? 'All Articles' : category}
-          ))}
+              {category === 'all' ? 'All Articles' : category})
         {/* Featured Posts */}
         {selectedCategory === 'all' && (
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🌟 Featured Articles
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          </div><section className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🌟 Featured Articles;
+            </section>
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredPosts.map((post) => (
                 <ContentPreviewCard
                   key={post.id}
                   {...post}
                 />
-              ))}
-        )}
+              ))})
         {/* All Posts */}
-        <section>
+        </div><section>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
               <ContentPreviewCard
                 key={post.id}
@@ -192,17 +203,18 @@ export default function BlogPage() {
               />
             ))}
         {/* Newsletter CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Never Miss an Update
+        </div>
+<div className="mt-16 text-center">
+          </div>
+<div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Never Miss an Update;
             <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
               and breakthrough content delivered directly to your inbox.
             <$2 />
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
-              Subscribe to Newsletter
-  
+              Subscribe to Newsletter;
           </div>
         </div>
       </div>

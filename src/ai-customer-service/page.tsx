@@ -3,20 +3,21 @@ import { Helmet } from 'react-helmet-async'
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
   return (<div><Helmet>
-        <title>AI Customer Service Solutions - Zion Tech Group
+        <title>AI Customer Service Solutions - Zion Tech Group;
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /></meta>"
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" /></meta>"
         <nk rel="canonical" href="http,"$2 />
   s://ziontechgroup.com/ai-customer-service" />
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      </div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation /></Navigation>"
-        <main className="container mx-auto px-4 py-16 pt-24">
+        </div><main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}"
-          <section className="text-center mb-16"></section>"
+          </main><section className="text-center mb-16"></section>"
             < className="text-4xl,"$2 />
   md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
-              AI Customer Service Solutions
+              AI Customer Service Solutions;
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
               Revolutionary 24/7 AI-powered customer support,
@@ -73,39 +74,39 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$299<span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 1,000 conversations/month
-                  <li>5 languages supported
-                  <li>Basic analytics
-                  <li>Email support
-                  <li>Standard integrations
+                  <li>Up to 1,000 conversations/month;
+                  <li>5 languages supported;
+                  <li>Basic analytics;
+                  <li>Email support;
+                  <li>Standard integrations;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Get Started
+                <a href="/contact" className="cyber-button w-full">Get Started;
               "
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$799<span className="text-lg">/month</span></div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Up to 10,000 conversations/month
-                  <li>25 languages supported
-                  <li>Advanced analytics
-                  <li>Priority support
-                  <li>Custom integrations
-                  <li>Voice support
+                  <li>Up to 10,000 conversations/month;
+                  <li>25 languages supported;
+                  <li>Advanced analytics;
+                  <li>Priority support;
+                  <li>Custom integrations;
+                  <li>Voice support;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Get Started
+                <a href="/contact" className="cyber-button w-full">Get Started;
               "
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>"
                 <ul className="text-gray-300 space-y-3 mb-8">
-                  <li>Unlimited conversations
-                  <li>50+ languages supported
-                  <li>Real-time analytics
-                  <li>24/7 dedicated support
-                  <li>White-label solution
-                  <li>Custom AI training
+                  <li>Unlimited conversations;
+                  <li>50+ languages supported;
+                  <li>Real-time analytics;
+                  <li>24/7 dedicated support;
+                  <li>White-label solution;
+                  <li>Custom AI training;
                 </ul>"
-                <a href="/contact" className="cyber-button w-full">Contact Sales
+                <a href="/contact" className="cyber-button w-full">Contact Sales;
           {/* Benefits Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our AI Customer Service?</h2>"
@@ -146,7 +147,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               < href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,$2 />
   hover:bg-white,"
   hover: text-indigo-600 transition-all duration-300"></a>
-                Get Free Demo
+                Get Free Demo;
               </a>
             </div>
           </section>

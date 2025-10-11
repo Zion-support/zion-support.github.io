@@ -7,10 +7,10 @@ interface DashboardData {/* TODO: Fix JSX expression */}
   performance: {
     ,
     loadTime: number,
-    responseTime: number
+    responseTime: number;
   }
   security: {,
-    threatsBlocked: number
+    threatsBlocked: number;
     vulnerabilities: number,
   performanc,
   e: {/* TODO: Fix JSX expression */}
@@ -19,5 +19,5 @@ interface DashboardData {/* TODO: Fix JSX expression */}
   y: {/* TODO: Fix JSX expression */}
   }
 }
-export default AdvancedDashboard
+export default AdvancedDashboard;
 }"

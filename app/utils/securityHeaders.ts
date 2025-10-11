@@ -11,7 +11,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {,
     "frame-ancestors 'none'",
     "base-uri 'self'",
     "form-action 'self'",
-    'upgrade-insecure-requests'].join('; '),
+    'upgrade-insecure-requests'].join(' '),
   referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy),
   permissionsPolicy: [,
@@ -31,9 +31,9 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>
 export function getSecurityHeaders()
     'X-DNS-Prefetch-Control': 'on'}
   }
-  if (config.contentSecurityPolicy) {}headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
+  if (config.contentSecurityPolicy) {}headers['Content-Security-Policy'] = config.contentSecurityPolicy}
   }
-  if (config.strictTransportSecurity) {}headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
+  if (config.strictTransportSecurity) {}headers['Strict-Transport-Security'] = config.strictTransportSecurity}
   }
   if (config.xFrameOptions) {}headers['X-Frame-Options'] = config.xFrameOptions;}
   }
@@ -47,10 +47,10 @@ export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
 export const,
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
-/**;
+/**
  * Get security headers as key-value pairs;
  */;
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
+export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
 ): Record<string, string> {/* TODO: Fix JSX expression */}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const,
@@ -68,25 +68,23 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
   }
   if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
   }
-  return headers;
+  return headers
 }
-/**;
- * Get security headers in Next.js format;
+/**
+ * Get security headers in Next.js format
  */;
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 }
 /**
  * Get security headers in Next.js format
  */
-): Array<{ key: string, value: string }> {
-    export function getNextSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig&gt;</SecurityHeadersConfig&gt;
-  }
+): Array<{ key: string, value: string }> {export function getNextSecurityHeaders()
+  customConfig?: Partial<SecurityHeadersConfig&gt</SecurityHeadersConfig&gt}
 ): Array<{ key: string, value: string }> {}
     value}
-  }));
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}}));
+  }))
+export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />)
+): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}}))
   const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ()
   }))

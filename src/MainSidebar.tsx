@@ -16,11 +16,11 @@ import {
   Building,
   Mail,
   Phone,
-  MapPin
+  MapPin;
 } from 'lucide-react'
 interface MainSidebarProps {
-  isOpen: boolean
-  onClose: () => void
+  isOpen: boolean;
+  onClose: () => void;
 }
 
 export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
@@ -73,7 +73,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
     <>
       {/* Overlay */}
       {isOpen && (
-        <$2 />
+        </><$2 />
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
@@ -86,10 +86,12 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
       )}>
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-zion-blue-light">
-            <div className="flex items-center space-x-2">
+          </div>
+<div className="flex items-center justify-between p-4 border-b border-zion-blue-light">
+            </div>
+<div className="flex items-center space-x-2">
               <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-                ZION
+                ZION;
               </span>
             </div>
             <$2 />
@@ -111,8 +113,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                 </h3>
                 <ul className="space-y-1">
                   {section.items.map((item) => {
-                    const IconComponent = item.icon
-                    const isActive = location.pathname === item.href
+                    const IconComponent = item.icon;
+                    const isActive = location.pathname === item.href;
                     return (
                       <li key={item.name}>
                         <$2 />
@@ -120,7 +122,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                           onClick={onClose}
                           className={cn(
                             "flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                            isActive
+                            isActive;
                               ? "bg-zion-purple/20 text-zion-cyan"
                               : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10"
                           )}
@@ -130,7 +132,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                         </Link>
                       </li>
                     )
-                  })}
+                  })
                 </ul>
               </div>
             ))}
@@ -139,11 +141,12 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
           {/* Contact Info */}
           <div className="p-4 border-t border-zion-blue-light">
             <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
-              Contact Info
+              Contact Info;
             </h3>
-            <div className="space-y-2">
+            </div>
+<div className="space-y-2">
               {contactInfo.map((contact) => {
-                const IconComponent = contact.icon
+                const IconComponent = contact.icon;
                 return (
                   <$2 />
                     key={contact.text}
@@ -154,7 +157,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                     {contact.text}
                   </a>
                 )
-              })}
+              })
             </div>
           </div>
         </div>

@@ -25,8 +25,7 @@ export default async function handler(re,
   //   const version = nextVersionFor(state, txId)
   const event = {
     eventId: uuidv4()
-    type: 'token_transfer' as const
-    payload: {,
+    type: 'token_transfer' as constpayload: {,
       id: txId
       txId,
       token,
@@ -50,7 +49,7 @@ export default async function handler(re,
   headers: Record<string, string> = {}
   //   const sig = signPayload(body)
   if (sig) headers['x-zion-signature'] = sig
-  await Promise.all(state.config.peers;)
+  await Promise.all(state.config.peers)
       .filter(p => !p.paused)
       .map(async peer => {)
         //         const url = new URL('/api/sync/publish', peer.baseUrl).toString()

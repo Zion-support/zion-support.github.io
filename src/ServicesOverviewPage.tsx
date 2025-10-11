@@ -26,7 +26,7 @@ import {
   Smartphone,
   Network,
   DollarSign as Coins,
-  Wallet
+  Wallet;
 } from "lucide-react"
 import { TrustedBySection } from "@/components/TrustedBySection"
 const serviceCategories = [
@@ -264,18 +264,23 @@ import {
   Brain, 
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+        </section>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-zion-slate-light text-lg">
-              Comprehensive solutions backed by expertise and innovation
+              Comprehensive solutions backed by expertise and innovation;
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan rounded-full mb-4">
-                  <div className="text-white">
+              </div>
+<div key={index} className="text-center p-6">
+                </div>
+<div className="inline-flex items-center justify-center w-16 h-16 bg-zion-cyan rounded-full mb-4">
+                  </div>
+<div className="text-white">
                     {benefit.icon}
                   </div>
                 </div>
@@ -289,27 +294,31 @@ import {
 
       {/* Service Categories */}
       <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+        </section>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Service Categories</h2>
             <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-              Explore our comprehensive range of technology services designed to meet your business needs
+              Explore our comprehensive range of technology services designed to meet your business needs;
             </p>
           </div>
           
           {serviceCategories.map((category) => (
             <div key={category.id} className="mb-16">
-              <div className="text-center mb-8">
-                <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br ${category.color} rounded-full mb-4`}>
-                  <div className="text-white">
+              </div>
+<div className="text-center mb-8">
+                </div>
+<div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br ${category.color} rounded-full mb-4`}>
+                  </div>
+<div className="text-white">
                     {category.icon}
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
                 <p className="text-muted-foreground">{category.description}</p>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {category.services.map((service, index) => (
                   <Card key={index} className="hover:shadow-lg transition-all duration-300">
                     <CardHeader className="pb-3">
@@ -319,7 +328,8 @@ import {
                       </CardDescription>
                     </CardHeader>
                     <CardContent className="pb-4">
-                      <div className="mb-4">
+                      </div>
+<div className="mb-4">
                         <span className="text-2xl font-bold text-zion-purple">
                           ${service.price}
                         </span>
@@ -335,7 +345,7 @@ import {
                       </ul>
                       <Button asChild className="w-full">
                         <Link to={service.link}>
-                          Learn More
+                          Learn More;
                           <ArrowRight className="h-4 w-4 ml-2" />
                         </Link>
                       </Button>
@@ -350,27 +360,30 @@ import {
 
       {/* CTA Section */}
       <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
+        </section>
+<div className="container mx-auto px-4 text-center">
+          </div>
+<div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8">
-              Choose from our comprehensive portfolio of technology services and start your digital transformation journey
+              Choose from our comprehensive portfolio of technology services and start your digital transformation journey;
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            </div>
+<div className="flex flex-wrap justify-center gap-4">
               <Link to="/request-quote">
                 <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
-                  Get Started Today
+                  Get Started Today;
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-                  Contact Our Experts
+                  Contact Our Experts;
                 </Button>
               </Link>
             </div>
-            <div className="mt-8 text-zion-slate-light">
+<div className="mt-8 text-zion-slate-light">
               <p>📞 <strong>Mobile:</strong> +1 302 464 0950</p>
               <p>📧 <strong>Email:</strong> kleber@ziontechgroup.com</p>
               <p>📍 <strong>Address:</strong> 364 E Main St STE 1008 Middletown DE 19709</p>
@@ -406,7 +419,7 @@ import {
   Globe,
   Database,
   Code,
-  Lock
+  Lock;
 } from "lucide-react"
 import { SERVICE_CATEGORIES, PRICING_TIERS } from "@/data/comprehensiveServices"
 export default function ServicesOverviewPage() {
@@ -417,8 +430,7 @@ export default function ServicesOverviewPage() {
     return `bg-gradient-to-br ${color}`
   }
   return (
-    <>
-      <SEO 
+    <></><SEO
         title="Services Overview - Zion Tech Group" 
         description="Explore our comprehensive range of AI, cybersecurity, cloud, and digital transformation services. Expert solutions for every business need."
         keywords="AI services, cybersecurity, cloud solutions, digital transformation, IT services overview"
@@ -429,35 +441,37 @@ export default function ServicesOverviewPage() {
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-zion-blue to-zion-blue-dark">
-          <div className="container mx-auto px-4 text-center">
+        </main><section className="py-20 bg-gradient-to-br from-zion-blue to-zion-blue-dark">
+          </section>
+<div className="container mx-auto px-4 text-center">
             <GradientHeading className="text-5xl md:text-6xl mb-6">
-              Complete Service Portfolio
+              Complete Service Portfolio;
             </GradientHeading>
             <p className="text-zion-slate-light text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-              From AI-powered automation to enterprise cybersecurity, discover our comprehensive suite of 
+              From AI-powered automation to enterprise cybersecurity, discover our comprehensive suite of;
               technology services designed to transform your business and drive innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
                 size="lg"
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg px-8 py-4"
-                asChild
+                asChild;
               >
                 <a href="mailto:kleber@ziontechgroup.com">
                   <Mail className="mr-2 h-5 w-5" />
-                  Get Free Consultation
+                  Get Free Consultation;
                 </a>
               </Button>
-              <Button 
+              <Button
                 size="lg"
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 text-lg px-8 py-4"
-                asChild
+                asChild;
               >
                 <a href="tel:+13024640950">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call +1 302 464 0950
+                  Call +1 302 464 0950;
                 </a>
               </Button>
             </div>
@@ -466,31 +480,37 @@ export default function ServicesOverviewPage() {
 
         {/* Contact Info Banner */}
         <section className="py-8 bg-zion-blue-light border-b border-zion-blue-light">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-              <div className="flex items-center gap-4">
-                <div className="bg-zion-purple/20 p-2 rounded-full">
+          </section>
+<div className="container mx-auto px-4">
+            </div>
+<div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+              </div>
+<div className="flex items-center gap-4">
+                </div>
+<div className="bg-zion-purple/20 p-2 rounded-full">
                   <MapPin className="h-5 w-5 text-zion-purple" />
                 </div>
-                <div>
+<div>
                   <p className="text-zion-slate-light text-sm">Headquarters</p>
                   <p className="text-white font-medium">364 E Main St STE 1008, Middletown DE 19709</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="bg-zion-cyan/20 p-2 rounded-full">
+<div className="flex items-center gap-4">
+                </div>
+<div className="bg-zion-cyan/20 p-2 rounded-full">
                   <Phone className="h-5 w-5 text-zion-cyan" />
                 </div>
-                <div>
+<div>
                   <p className="text-zion-slate-light text-sm">Contact</p>
                   <p className="text-white font-medium">+1 302 464 0950</p>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="bg-zion-purple/20 p-2 rounded-full">
+<div className="flex items-center gap-4">
+                </div>
+<div className="bg-zion-purple/20 p-2 rounded-full">
                   <Mail className="h-5 w-5 text-zion-purple" />
                 </div>
-                <div>
+<div>
                   <p className="text-zion-slate-light text-sm">Email</p>
                   <p className="text-white font-medium">kleber@ziontechgroup.com</p>
                 </div>
@@ -501,22 +521,23 @@ export default function ServicesOverviewPage() {
 
         {/* Service Categories Overview */}
         <section className="py-20 bg-zion-blue">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          </section>
+<div className="container mx-auto px-4">
+            </div>
+<div className="text-center mb-16">
               <GradientHeading>Service Categories</GradientHeading>
               <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
-                Explore our comprehensive range of technology services across multiple domains
+                Explore our comprehensive range of technology services across multiple domains;
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {SERVICE_CATEGORIES.map((category) => (
                 <Card key={category.id} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-xl hover:shadow-zion-purple/20 group">
-                  <div className={`${getCategoryColor(category.color)} p-8 rounded-t-lg flex items-center justify-center`}>
+                  </div>
+<div className={`${getCategoryColor(category.color)} p-8 rounded-t-lg flex items-center justify-center`}>
                     {getCategoryIcon(category.icon)}
                   </div>
-                  
-                  <div className="p-6">
+<div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {category.name}
                     </h3>
@@ -525,11 +546,13 @@ export default function ServicesOverviewPage() {
                       {category.description}
                     </p>
                     
-                    <div className="mb-6">
+                    </div>
+<div className="mb-6">
                       <p className="text-zion-cyan font-medium mb-2">
-                        {category.services.length} Services Available
+                        {category.services.length} Services Available;
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      </div>
+<div className="flex flex-wrap gap-2">
                         {category.services.slice(0, 3).map((service) => (
                           <Badge key={service.id} variant="secondary" className="bg-zion-blue-light text-zion-slate-light text-xs">
                             {service.title.split(' ').slice(0, 2).join(' ')}
@@ -537,18 +560,18 @@ export default function ServicesOverviewPage() {
                         ))}
                         {category.services.length > 3 && (
                           <Badge variant="outline" className="border-zion-purple/30 text-zion-purple text-xs">
-                            +{category.services.length - 3} more
+                            +{category.services.length - 3} more;
                           </Badge>
                         )}
                       </div>
                     </div>
                     
-                    <Button 
+                    <Button
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                      asChild
+                      asChild;
                     >
                       <a href={`/comprehensive-services?category=${category.id}`}>
-                        Explore Services
+                        Explore Services;
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
@@ -561,41 +584,44 @@ export default function ServicesOverviewPage() {
 
         {/* Key Benefits */}
         <section className="py-20 bg-zion-blue-dark">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          </section>
+<div className="container mx-auto px-4">
+            </div>
+<div className="text-center mb-16">
               <GradientHeading>Why Choose Our Services?</GradientHeading>
               <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
-                We deliver exceptional value through innovation, expertise, and proven results
+                We deliver exceptional value through innovation, expertise, and proven results;
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-zion-purple/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              </div>
+<div className="text-center">
+                </div>
+<div className="bg-zion-purple/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <Brain className="h-10 w-10 text-zion-purple" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">AI-Powered</h3>
                 <p className="text-zion-slate-light">Leverage cutting-edge AI technologies for competitive advantage</p>
               </div>
-              
-              <div className="text-center">
-                <div className="bg-zion-cyan/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+<div className="text-center">
+                </div>
+<div className="bg-zion-cyan/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <Shield className="h-10 w-10 text-zion-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
                 <p className="text-zion-slate-light">Bank-grade security and compliance for critical systems</p>
               </div>
-              
-              <div className="text-center">
-                <div className="bg-zion-purple/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+<div className="text-center">
+                </div>
+<div className="bg-zion-purple/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <Zap className="h-10 w-10 text-zion-purple" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Rapid Deployment</h3>
                 <p className="text-zion-slate-light">Quick implementation with minimal business disruption</p>
               </div>
-              
-              <div className="text-center">
-                <div className="bg-zion-cyan/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+<div className="text-center">
+                </div>
+<div className="bg-zion-cyan/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-10 w-10 text-zion-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Expert Support</h3>
@@ -607,27 +633,29 @@ export default function ServicesOverviewPage() {
 
         {/* Pricing Tiers */}
         <section className="py-20 bg-zion-blue">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          </section>
+<div className="container mx-auto px-4">
+            </div>
+<div className="text-center mb-16">
               <GradientHeading>Flexible Pricing Options</GradientHeading>
               <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
-                Choose the service level that best fits your business needs and budget
+                Choose the service level that best fits your business needs and budget;
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {PRICING_TIERS.map((tier, index) => (
                 <Card key={tier.name} className={`bg-zion-blue-dark border p-8 text-center relative ${
                   index === 1 ? 'border-zion-purple scale-105 shadow-xl shadow-zion-purple/20' : 'border-zion-blue-light'
                 }`}>
                   {index === 1 && (
                     <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-zion-purple text-white px-4 py-1">
-                      Most Popular
+                      Most Popular;
                     </Badge>
                   )}
                   
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <div className="text-4xl font-bold text-zion-cyan mb-2">{tier.price}</div>
+                  </div>
+<div className="text-4xl font-bold text-zion-cyan mb-2">{tier.price}</div>
                   <p className="text-zion-slate-light mb-6">{tier.description}</p>
                   
                   <ul className="space-y-3 mb-8 text-left">
@@ -639,12 +667,12 @@ export default function ServicesOverviewPage() {
                     ))}
                   </ul>
                   
-                  <Button 
+                  <Button
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                    asChild
+                    asChild;
                   >
                     <a href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry">
-                      Get Started
+                      Get Started;
                     </a>
                   </Button>
                 </Card>
@@ -655,57 +683,60 @@ export default function ServicesOverviewPage() {
 
         {/* Service Highlights */}
         <section className="py-20 bg-zion-blue-dark">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          </section>
+<div className="container mx-auto px-4">
+            </div>
+<div className="text-center mb-16">
               <GradientHeading>Service Highlights</GradientHeading>
               <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
-                Key features and capabilities that set our services apart
+                Key features and capabilities that set our services apart;
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
-                <div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              </div>
+<div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
+                </div>
+<div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <TrendingUp className="h-8 w-8 text-zion-purple" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Scalable Solutions</h3>
                 <p className="text-zion-slate-light">Our services grow with your business, from startup to enterprise scale</p>
               </div>
-              
-              <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
-                <div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
+<div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
+                </div>
+<div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Globe className="h-8 w-8 text-zion-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Global Reach</h3>
                 <p className="text-zion-slate-light">Services available worldwide with local compliance and support</p>
               </div>
-              
-              <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
-                <div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
+<div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
+                </div>
+<div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Database className="h-8 w-8 text-zion-purple" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Data-Driven</h3>
                 <p className="text-zion-slate-light">Analytics and insights to optimize performance and ROI</p>
               </div>
-              
-              <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
-                <div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
+<div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
+                </div>
+<div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Code className="h-8 w-8 text-zion-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Custom Development</h3>
                 <p className="text-zion-slate-light">Tailored solutions designed specifically for your business needs</p>
               </div>
-              
-              <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
-                <div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
+<div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
+                </div>
+<div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Lock className="h-8 w-8 text-zion-purple" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Security First</h3>
                 <p className="text-zion-slate-light">Enterprise-grade security built into every solution</p>
               </div>
-              
-              <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
-                <div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
+<div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
+                </div>
+<div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Zap className="h-8 w-8 text-zion-cyan" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Future-Ready</h3>
@@ -717,48 +748,49 @@ export default function ServicesOverviewPage() {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue">
-          <div className="container mx-auto px-4 text-center">
+          </section>
+<div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-3xl mx-auto">
-              Contact our team today for a free consultation and discover how our comprehensive services 
+              Contact our team today for a free consultation and discover how our comprehensive services;
               can transform your business and drive innovation.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button 
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Button
                 size="lg"
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg px-8 py-4"
-                asChild
+                asChild;
               >
                 <a href="mailto:kleber@ziontechgroup.com">
                   <Mail className="mr-2 h-5 w-5" />
-                  Schedule Free Consultation
+                  Schedule Free Consultation;
                 </a>
               </Button>
-              <Button 
+              <Button
                 size="lg"
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 text-lg px-8 py-4"
-                asChild
+                asChild;
               >
                 <a href="tel:+13024640950">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call +1 302 464 0950
+                  Call +1 302 464 0950;
                 </a>
               </Button>
             </div>
-            
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-2xl mx-auto">
+<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-2xl mx-auto">
               <h3 className="text-xl font-bold text-white mb-4">Visit Our Office</h3>
               <p className="text-zion-slate-light mb-2">
                 <MapPin className="inline h-4 w-4 mr-2" />
-                364 E Main St STE 1008, Middletown DE 19709
+                364 E Main St STE 1008, Middletown DE 19709;
               </p>
               <p className="text-zion-slate-light">
                 <Clock className="inline h-4 w-4 mr-2" />
-                Monday - Friday: 9:00 AM - 6:00 PM EST
+                Monday - Friday: 9:00 AM - 6:00 PM EST;
               </p>
             </div>
           </div>
@@ -767,26 +799,29 @@ export default function ServicesOverviewPage() {
       
       <Footer />
     </>
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
+<div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
+      </div>
+<div className="relative overflow-hidden bg-gradient-to-r from-zion-purple-dark via-zion-purple to-zion-cyan py-20">
+        </div>
+<div className="absolute inset-0 bg-black/20"></div>
+<div className="relative container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our Services & Solutions
+            Our Services & Solutions;
           </h1>
           <p className="text-xl text-zion-cyan-light max-w-4xl mx-auto mb-8">
             Comprehensive technology services to transform your business. From AI development to IT infrastructure, 
             digital marketing to business consulting - we provide end-to-end solutions for the modern enterprise.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          </div>
+<div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate font-semibold">
               <Search className="h-5 w-5 mr-2" />
-              Explore All Services
+              Explore All Services;
             </Button>
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <MessageSquare className="h-5 w-5 mr-2" />
-              Get Free Consultation
+              Get Free Consultation;
   Cloud, 
   Shield, 
   Server, 
@@ -805,7 +840,7 @@ export default function ServicesOverviewPage() {
   CheckCircle,
   Star,
   Clock,
-  DollarSign
+  DollarSign;
 } from 'lucide-react'
 import Wifi from 'lucide-react/dist/esm/icons/wifi'
 import Target from 'lucide-react/dist/esm/icons/target'
@@ -818,7 +853,7 @@ const categoryIcons = {
   "Data & Analytics": BarChart3,
   "Digital Transformation": RefreshCw,
   "IoT & Smart Solutions": Wifi,
-  "Blockchain & Web3": Link
+  "Blockchain & Web3": Link;
 }
 const categoryColors = {
   "AI & Machine Learning": "from-purple-500 to-pink-500",
@@ -840,7 +875,8 @@ export default function ServicesOverviewPage() {
     return `$${price}`
   }
   return (
-    <div className="min-h-screen bg-background">
+    </div>
+<div className="min-h-screen bg-background">
       <SEO
         title="Complete IT & AI Services Overview - Zion Tech Group"
         description="Explore our comprehensive suite of AI, cybersecurity, cloud, and digital transformation services. Expert solutions for every business need."
@@ -849,23 +885,26 @@ export default function ServicesOverviewPage() {
       />
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark text-white py-24">
-        <div className="container mx-auto px-4 text-center">
+      </div>
+<div className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark text-white py-24">
+        </div>
+<div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
-            Complete Technology Solutions
+            Complete Technology Solutions;
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-            From AI-powered automation to enterprise cybersecurity, we provide comprehensive technology services
+            From AI-powered automation to enterprise cybersecurity, we provide comprehensive technology services;
             that transform businesses and drive innovation across all industries.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
+          </div>
+<div className="flex flex-wrap justify-center gap-6">
             <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light text-lg px-8 py-6">
               <Phone className="mr-3 h-6 w-6" />
-              Call +1 302 464 0950
+              Call +1 302 464 0950;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue text-lg px-8 py-6">
               <Mail className="mr-3 h-6 w-6" />
-              Email kleber@ziontechgroup.com
+              Email kleber@ziontechgroup.com;
             </Button>
           </div>
         </div>
@@ -873,21 +912,24 @@ export default function ServicesOverviewPage() {
 
       {/* Contact Banner */}
       <div className="bg-zion-blue-dark py-6 px-4 md:px-8 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white">
-          <div className="flex items-center gap-4">
+        </div>
+<div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-white">
+          </div>
+<div className="flex items-center gap-4">
             <Globe className="h-6 w-6 text-zion-cyan" />
             <span className="text-lg font-medium">Global IT Services • 24/7 Support • Enterprise Solutions</span>
           </div>
-          <div className="flex flex-wrap items-center gap-6 text-sm">
-            <div className="flex items-center gap-2">
+<div className="flex flex-wrap items-center gap-6 text-sm">
+            </div>
+<div className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-zion-cyan" />
               <span>+1 302 464 0950</span>
             </div>
-            <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-zion-cyan" />
               <span>kleber@ziontechgroup.com</span>
             </div>
-            <div className="flex items-center gap-2">
+<div className="flex items-center gap-2">
               <Target className="h-4 w-4 text-zion-cyan" />
               <span>Middletown, DE 19709</span>
             </div>
@@ -897,13 +939,15 @@ export default function ServicesOverviewPage() {
 
       {/* Services Overview Tabs */}
       <div className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+        </div>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our Service Categories
+              Our Service Categories;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our comprehensive range of technology services designed to meet every business need
+              Explore our comprehensive range of technology services designed to meet every business need;
             </p>
           </div>
 
@@ -921,7 +965,7 @@ export default function ServicesOverviewPage() {
                     <span className="text-xs text-center">{category}</span>
                   </TabsTrigger>
                 )
-              })}
+              })
             </TabsList>
 
             {SERVICE_CATEGORIES.map((category) => {
@@ -936,8 +980,10 @@ export default function ServicesOverviewPage() {
                 >
                   {/* Category Header */}
                   <div className={`bg-gradient-to-r ${gradient} text-white rounded-2xl p-8 text-center`}>
-                    <div className="flex justify-center mb-4">
-                      <div className="bg-white/20 rounded-full p-4">
+                    </div>
+<div className="flex justify-center mb-4">
+                      </div>
+<div className="bg-white/20 rounded-full p-4">
                         <Icon className="h-12 w-12 text-white" />
                       </div>
                     </div>
@@ -958,7 +1004,8 @@ export default function ServicesOverviewPage() {
                     {services.map((service) => (
                       <Card key={service.id} className="h-full hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
                         <CardHeader className="pb-4">
-                          <div className="flex items-start justify-between mb-3">
+                          </div>
+<div className="flex items-start justify-between mb-3">
                             <Badge variant="secondary" className="text-xs">
                               {service.subcategory}
                             </Badge>
@@ -977,7 +1024,7 @@ export default function ServicesOverviewPage() {
                           <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
                               <TrendingUp className="h-4 w-4 text-green-500" />
-                              Key Benefits
+                              Key Benefits;
                             </h4>
                             <ul className="text-sm text-gray-600 space-y-1">
                               {service.benefits.slice(0, 3).map((benefit, index) => (
@@ -993,9 +1040,10 @@ export default function ServicesOverviewPage() {
                           <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
                               <Lightbulb className="h-4 w-4 text-yellow-500" />
-                              Use Cases
+                              Use Cases;
                             </h4>
-                            <div className="flex flex-wrap gap-1">
+                            </div>
+<div className="flex flex-wrap gap-1">
                               {service.useCases.slice(0, 3).map((useCase, index) => (
                                 <Badge key={index} variant="outline" className="text-xs">
                                   {useCase}
@@ -1008,9 +1056,10 @@ export default function ServicesOverviewPage() {
                           <div className="mb-4">
                             <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-gray-700">
                               <Users className="h-4 w-4 text-blue-500" />
-                              Target Audience
+                              Target Audience;
                             </h4>
-                            <div className="flex flex-wrap gap-1">
+                            </div>
+<div className="flex flex-wrap gap-1">
                               {service.targetAudience.slice(0, 2).map((audience, index) => (
                                 <Badge key={index} variant="secondary" className="text-xs">
                                   {audience}
@@ -1023,35 +1072,39 @@ export default function ServicesOverviewPage() {
                         <CardContent className="pt-0">
                           {/* Pricing & Metrics */}
                           <div className="bg-gray-50 rounded-lg p-4 mb-4">
-                            <div className="flex items-center justify-between mb-3">
-                              <div className="text-center">
-                                <div className="text-2xl font-bold text-zion-blue">
+                            </div>
+<div className="flex items-center justify-between mb-3">
+                              </div>
+<div className="text-center">
+                                </div>
+<div className="text-2xl font-bold text-zion-blue">
                                   {formatPrice(service.price)}
                                 </div>
-                                <div className="text-sm text-gray-500">
+<div className="text-sm text-gray-500">
                                   {service.pricingModel === 'subscription' ? '/month' : 'one-time'}
                                 </div>
                               </div>
-                              <div className="text-right">
-                                <div className="text-sm text-gray-500 line-through">
+<div className="text-right">
+                                </div>
+<div className="text-sm text-gray-500 line-through">
                                   {formatPrice(service.marketPrice)}
                                 </div>
-                                <div className="text-sm font-semibold text-green-600">
+<div className="text-sm font-semibold text-green-600">
                                   Save {service.savings}%
                                 </div>
                               </div>
                             </div>
-
-                            <div className="grid grid-cols-3 gap-2 text-center text-xs">
-                              <div className="flex items-center gap-1 justify-center">
+<div className="grid grid-cols-3 gap-2 text-center text-xs">
+                              </div>
+<div className="flex items-center gap-1 justify-center">
                                 <Star className="h-3 w-3 text-yellow-500" />
                                 <span>{service.rating}</span>
                               </div>
-                              <div className="flex items-center gap-1 justify-center">
+<div className="flex items-center gap-1 justify-center">
                                 <Zap className="h-3 w-3 text-blue-500" />
                                 <span>{service.aiScore}</span>
                               </div>
-                              <div className="flex items-center gap-1 justify-center">
+<div className="flex items-center gap-1 justify-center">
                                 <Clock className="h-3 w-3 text-green-500" />
                                 <span>{service.deliveryTime}</span>
                               </div>
@@ -1062,11 +1115,11 @@ export default function ServicesOverviewPage() {
                           <div className="grid grid-cols-2 gap-3">
                             <Button className="w-full" size="sm">
                               <Phone className="mr-2 h-4 w-4" />
-                              Contact
+                              Contact;
                             </Button>
                             <Button variant="outline" className="w-full" size="sm">
                               <ArrowRight className="mr-2 h-4 w-4" />
-                              Learn More
+                              Learn More;
                             </Button>
                           </div>
                         </CardContent>
@@ -1083,61 +1136,64 @@ export default function ServicesOverviewPage() {
                   </div>
                 </TabsContent>
               )
-            })}
+            })
           </Tabs>
         </div>
       </div>
 
       {/* Why Choose Zion Tech Section */}
       <div className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+        </div>
+<div className="container mx-auto px-4">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven expertise to deliver exceptional results
+              We combine cutting-edge technology with proven expertise to deliver exceptional results;
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+<div className="text-center">
+              </div>
+<div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                 <Award className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Proven Expertise</h3>
               <p className="text-gray-600">
-                Over 15 years of experience in delivering enterprise technology solutions across industries
+                Over 15 years of experience in delivering enterprise technology solutions across industries;
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+<div className="text-center">
+              </div>
+<div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                 <Zap className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">AI-Powered Solutions</h3>
               <p className="text-gray-600">
-                Cutting-edge AI and machine learning technologies that deliver measurable business impact
+                Cutting-edge AI and machine learning technologies that deliver measurable business impact;
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+<div className="text-center">
+              </div>
+<div className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                 <Globe className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Global Reach</h3>
               <p className="text-gray-600">
-                Worldwide IT services with local expertise and 24/7 support across all time zones
+                Worldwide IT services with local expertise and 24/7 support across all time zones;
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
+<div className="text-center">
+              </div>
+<div className="bg-gradient-to-br from-orange-500 to-red-500 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6">
                 <Heart className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Customer Success</h3>
               <p className="text-gray-600">
-                Dedicated support teams and proven methodologies that ensure project success
+                Dedicated support teams and proven methodologies that ensure project success;
               </p>
             </div>
           </div>
@@ -1146,7 +1202,8 @@ export default function ServicesOverviewPage() {
 
       {/* Contact CTA Section */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple py-20 text-white">
-        <div className="container mx-auto px-4 text-center">
+        </div>
+<div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Ready to Transform Your Business?
           </h2>
@@ -1155,37 +1212,39 @@ export default function ServicesOverviewPage() {
             efficiency, and competitive advantage.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
-            <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+            </div>
+<div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Phone className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Call Us</h3>
               <p className="text-zion-slate-light mb-4">Speak directly with our experts</p>
-              <div className="text-2xl font-bold">+1 302 464 0950</div>
+              </div>
+<div className="text-2xl font-bold">+1 302 464 0950</div>
             </div>
-
-            <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+<div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Mail className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
               <p className="text-zion-slate-light mb-4">Get detailed information</p>
-              <div className="text-lg font-semibold">kleber@ziontechgroup.com</div>
+              </div>
+<div className="text-lg font-semibold">kleber@ziontechgroup.com</div>
             </div>
-
-            <div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
+<div className="bg-white/10 rounded-lg p-6 backdrop-blur-sm">
               <Target className="h-12 w-12 text-zion-cyan mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Visit Us</h3>
               <p className="text-zion-slate-light mb-4">Meet our team in person</p>
-              <div className="text-sm font-semibold">364 E Main St STE 1008<br />Middletown, DE 19709</div>
+              </div>
+<div className="text-sm font-semibold">364 E Main St STE 1008<br />Middletown, DE 19709</div>
             </div>
           </div>
-
-          <div className="flex flex-wrap justify-center gap-6">
+<div className="flex flex-wrap justify-center gap-6">
             <Button size="lg" className="bg-white text-zion-blue hover:bg-zion-slate-light text-lg px-8 py-6">
               <Rocket className="mr-3 h-6 w-6" />
-              Start Your Project
+              Start Your Project;
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue text-lg px-8 py-6">
               <Phone className="mr-3 h-6 w-6" />
-              Schedule Consultation
+              Schedule Consultation;
             </Button>
           </div>
         </div>

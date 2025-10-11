@@ -3,16 +3,9 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
-<<<<<<< HEAD
-<<<<<<< HEAD
 const __dirname = path.dirname(__filename)
-=======
-// const __dirname = path.dirname(__filename) // Unused for now
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-// const __dirname = path.dirname(__filename) // Currently unused
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
+// const __dirname = path.dirname(__filename) // Currently unused
 // Read the current App.tsx
 const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8')
 
@@ -47,7 +40,6 @@ fs.writeFileSync('/workspace/src/App.tsx', updatedContent)
 console.log('Successfully added missing routes to App.tsx')
 console.log(`Added ${missingPages.length} routes:`)
 missingPages.forEach(page => console.log(`  - /${page}`))
-<<<<<<< HEAD
 // Generate import statements for missing pages (currently unused)
 // const generateImports = (pages) => {
 //   return pages.map(page => {
@@ -75,29 +67,4 @@ fs.writeFileSync('/workspace/src/App.tsx', updatedAppContent)
 
 console.log('Added missing routes to App.tsx')
 console.log('Missing pages:', missingPages)
-=======
-const importStatements = missingPages.map(page => {
-  const componentName = page.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '')
-  return `import ${componentName} from './pages/${page}'`
-}).join('\n')
 
-// Generate route definitions
-const routeDefinitions = missingPages.map(page => {
-  const componentName = page.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '')
-  return `        <Route path="/${page}" element={<${componentName} />} />`
-}).join('\n')
-
-// Create the updated App.tsx content
-const updatedAppContent = appContent.replace(
-  '// Add missing routes here',
-  `${importStatements}\n\n// Add missing routes here\n${routeDefinitions}`
-)
-
-// Write the updated content back
-fs.writeFileSync('/workspace/src/App.tsx', updatedAppContent, 'utf8')
-
-console.log('Added missing routes to App.tsx')
-console.log('Added pages:', missingPages)
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

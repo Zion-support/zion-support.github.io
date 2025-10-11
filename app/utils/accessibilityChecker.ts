@@ -104,7 +104,7 @@ const AccessibilityCheckerPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
@@ -127,4 +127,4 @@ const AccessibilityCheckerPage: React.FC = () => {
         ))
       </section>
     </div>
-  );
+  )

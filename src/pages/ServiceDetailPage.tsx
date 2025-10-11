@@ -6,7 +6,7 @@ interface ServiceDetailPageProps {}
 
 const ServiceDetailPage: React.FC<ServiceDetailPageProps> = () => {
   const params = useParams()
-  const id = params.id
+  const id = params.id;
   const [service, setService] = useState<any>(null)
   const [selectedTier, setSelectedTier] = useState<string>('basic')
   useEffect(() => {
@@ -31,7 +31,7 @@ import {
   Calendar,
   Shield,
   Zap,
-  TrendingUp
+  TrendingUp;
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -91,11 +91,15 @@ export default function ServiceDetailPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-blue/80 z-10"></div>
-        <div className="relative z-20 container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-zion-gold/20 text-zion-gold px-4 py-2 rounded-full mb-6">
+      </div>
+<div className="relative overflow-hidden">
+        </div>
+<div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-blue/80 z-10"></div>
+<div className="relative z-20 container mx-auto px-4 py-16">
+          </div>
+<div className="max-w-4xl mx-auto text-center">
+            </div>
+<div className="inline-flex items-center gap-2 bg-zion-gold/20 text-zion-gold px-4 py-2 rounded-full mb-6">
               <span className="text-sm font-medium">{service.category}</span>
               <span className="text-zion-gold">•</span>
               <span className="text-sm">{service.subcategory}</span>
@@ -109,26 +113,31 @@ export default function ServiceDetailPage() {
             
             {/* Service Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-gold mb-2">{service.rating}</div>
-                <div className="flex justify-center mb-2">
+              </div>
+<div className="text-center">
+                </div>
+<div className="text-2xl font-bold text-zion-gold mb-2">{service.rating}</div>
+<div className="flex justify-center mb-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-zion-gold fill-current' : 'text-zion-slate-light'}`} />
                   ))}
                 </div>
-                <div className="text-sm text-zion-slate-light">Rating</div>
+<div className="text-sm text-zion-slate-light">Rating</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-gold mb-2">{service.aiScore}</div>
-                <div className="text-sm text-zion-slate-light">AI Score</div>
+<div className="text-center">
+                </div>
+<div className="text-2xl font-bold text-zion-gold mb-2">{service.aiScore}</div>
+<div className="text-sm text-zion-slate-light">AI Score</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-gold mb-2">{service.availability}</div>
-                <div className="text-sm text-zion-slate-light">Availability</div>
+<div className="text-center">
+                </div>
+<div className="text-2xl font-bold text-zion-gold mb-2">{service.availability}</div>
+<div className="text-sm text-zion-slate-light">Availability</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-zion-gold mb-2">{service.location}</div>
-                <div className="text-sm text-zion-slate-light">Location</div>
+<div className="text-center">
+                </div>
+<div className="text-2xl font-bold text-zion-gold mb-2">{service.location}</div>
+<div className="text-sm text-zion-slate-light">Location</div>
               </div>
             </div>
 
@@ -139,14 +148,14 @@ export default function ServiceDetailPage() {
                 className="inline-flex items-center gap-2 bg-zion-gold text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold-light transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <$2 />
                 to="/pricing"
                 className="inline-flex items-center gap-2 border-2 border-zion-gold text-zion-gold px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold hover:text-zion-blue-dark transition-colors"
               >
-                View Pricing
+                View Pricing;
               </Link>
             </div>
           </div>
@@ -155,17 +164,23 @@ export default function ServiceDetailPage() {
 
       {/* Service Details */}
       <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-3 gap-12">
+        </div>
+<div className="container mx-auto px-4">
+          </div>
+<div className="max-w-6xl mx-auto">
+            </div>
+<div className="grid lg:grid-cols-3 gap-12">
               {/* Main Content */}
-              <div className="lg:col-span-2 space-y-12">
+              </div>
+<div className="lg:col-span-2 space-y-12">
                 {/* Features */}
-                <section>
+                </div><section>
                   <h2 className="text-3xl font-bold text-white mb-8">Key Features</h2>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  </section>
+<div className="grid md:grid-cols-2 gap-6">
                     {service.features.map((feature: string, index: number) => (
-                      <div key={index} className="flex items-start gap-3">
+                      </div>
+<div key={index} className="flex items-start gap-3">
                         <CheckCircle className="w-6 h-6 text-zion-gold flex-shrink-0 mt-1" />
                         <span className="text-zion-slate-light">{feature}</span>
                       </div>
@@ -176,7 +191,8 @@ export default function ServiceDetailPage() {
                 {/* Detailed Description */}
                 <section>
                   <h2 className="text-3xl font-bold text-white mb-8">About This Service</h2>
-                  <div className="prose prose-invert max-w-none">
+                  </section>
+<div className="prose prose-invert max-w-none">
                     <p className="text-zion-slate-light leading-relaxed mb-6">
                       {service.detailedDescription}
                     </p>
@@ -186,10 +202,13 @@ export default function ServiceDetailPage() {
                 {/* Service Guarantees */}
                 <section>
                   <h2 className="text-3xl font-bold text-white mb-8">Our Guarantees</h2>
-                  <div className="grid md:grid-cols-2 gap-6">
+                  </section>
+<div className="grid md:grid-cols-2 gap-6">
                     {SERVICE_GUARANTEES.map((guarantee, index) => (
-                      <div key={index} className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
-                        <div className="flex items-center gap-3 mb-3">
+                      </div>
+<div key={index} className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
+                        </div>
+<div className="flex items-center gap-3 mb-3">
                           <Shield className="w-6 h-6 text-zion-gold" />
                           <h3 className="text-xl font-semibold text-white">{guarantee.title}</h3>
                         </div>
@@ -203,13 +222,15 @@ export default function ServiceDetailPage() {
               {/* Sidebar */}
               <div className="space-y-8">
                 {/* Pricing Card */}
-                <div className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
+                </div>
+<div className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
                   <h3 className="text-xl font-bold text-white mb-4">Pricing</h3>
                   
                   {/* Tier Selector */}
-                  <div className="mb-6">
+                  </div>
+<div className="mb-6">
                     <label className="block text-sm font-medium text-zion-slate-light mb-2">
-                      Select Tier
+                      Select Tier;
                     </label>
                     <select
                       value={selectedTier}
@@ -226,10 +247,11 @@ export default function ServiceDetailPage() {
 
                   {/* Price Display */}
                   <div className="text-center mb-6">
-                    <div className="text-3xl font-bold text-zion-gold mb-2">
+                    </div>
+<div className="text-3xl font-bold text-zion-gold mb-2">
                       ${servicePricing.price}
                     </div>
-                    <div className="text-zion-slate-light">
+<div className="text-zion-slate-light">
                       per {pricingTier?.billingCycle || 'month'}
                     </div>
                   </div>
@@ -237,7 +259,8 @@ export default function ServiceDetailPage() {
                   {/* Tier Features */}
                   <div className="space-y-3 mb-6">
                     {pricingTier?.features.map((feature: string, index: number) => (
-                      <div key={index} className="flex items-center gap-2">
+                      </div>
+<div key={index} className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-zion-gold" />
                         <span className="text-sm text-zion-slate-light">{feature}</span>
                       </div>
@@ -248,27 +271,29 @@ export default function ServiceDetailPage() {
                     to="/contact"
                     className="w-full bg-zion-gold text-zion-blue-dark py-3 rounded-lg font-semibold text-center block hover:bg-zion-gold-light transition-colors"
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
 
                 {/* Contact Info */}
                 <div className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
                   <h3 className="text-xl font-bold text-white mb-4">Contact Us</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
+                  </div>
+<div className="space-y-4">
+                    </div>
+<div className="flex items-center gap-3">
                       <Phone className="w-5 h-5 text-zion-gold" />
                       <a href={`tel:${CONTACT_INFO.mobile}`} className="text-zion-slate-light hover:text-zion-gold">
                         {CONTACT_INFO.mobile}
                       </a>
                     </div>
-                    <div className="flex items-center gap-3">
+<div className="flex items-center gap-3">
                       <Mail className="w-5 h-5 text-zion-gold" />
                       <a href={`mailto:${CONTACT_INFO.email}`} className="text-zion-slate-light hover:text-zion-gold">
                         {CONTACT_INFO.email}
                       </a>
                     </div>
-                    <div className="flex items-start gap-3">
+<div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-zion-gold flex-shrink-0 mt-1" />
                       <span className="text-zion-slate-light text-sm">
                         {CONTACT_INFO.address}
@@ -280,7 +305,8 @@ export default function ServiceDetailPage() {
                 {/* Service Tags */}
                 <div className="bg-zion-blue/20 rounded-lg p-6 border border-zion-blue/30">
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
-                  <div className="flex flex-wrap gap-2">
+                  </div>
+<div className="flex flex-wrap gap-2">
                     {service.tags.map((tag: string, index: number) => (
                       <$2 />
                         key={index}
@@ -296,7 +322,7 @@ export default function ServiceDetailPage() {
     if (pricingTier) {
       return price * (1 - pricingTier.discount)
     }
-    return price
+    return price;
   }
   const formatPrice = (price: number) => {
     if (price >= 1000) {
@@ -307,17 +333,16 @@ export default function ServiceDetailPage() {
   const getOriginalPrice = (price: number, tier: string) => {
     const pricingTier = SERVICE_PRICING_TIERS[tier as keyof typeof SERVICE_PRICING_TIERS]
     if (pricingTier && pricingTier.discount > 0) {
-      return price
+      return price;
     }
-    return null
+    return null;
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
-      <SEO 
+      <SEO
         title={`${service.title} - Zion Tech Group`}
   return (
-    <>
-      <SEO 
+    <></><SEO
         title={`${service.title} | Zion Tech Group`}
         description={service.description}
         keywords={service.tags.join(', ')}
@@ -325,8 +350,9 @@ export default function ServiceDetailPage() {
       />
 
       {/* Breadcrumb */}
-      <section className="py-4 bg-gray-50 border-b">
-        <div className="container mx-auto px-4">
+      </div><section className="py-4 bg-gray-50 border-b">
+        </section>
+<div className="container mx-auto px-4">
           <nav className="flex items-center space-x-2 text-sm">
             <Link to="/" className="text-gray-500 hover:text-gray-700">Home</Link>
             <span className="text-gray-400">/</span>

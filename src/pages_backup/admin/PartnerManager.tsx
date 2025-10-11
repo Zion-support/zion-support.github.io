@@ -1,8 +1,4 @@
-onViewDetails, }
-
-
-  )
-}
+onViewDetails, })
 
 
 
@@ -33,16 +29,16 @@ interface PartnerProfile {
   audience_size: string,
 
   social_media?: Record<string, string>
-  website?: string
-  bio?: string
-  payout_method?: string
-  fraud_flags?: number
+  website?: string;
+  bio?: string;
+  payout_method?: string;
+  fraud_flags?: number;
   social_media?: Record<string string>,
   website?: string,
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
-  commission_rate?: number
+  commission_rate?: number;
 }
 export default function PartnerManager() {
 
@@ -60,15 +56,15 @@ export default function PartnerManager() {
   useEffect((,) => {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'))
-      return
+      return;
     }
     fetchPartners()
   }, [isAuthenticated, router])
   const fetchPartners = async () => {
     try {
       setIsLoading(true)
-      // In a real application, check admin permissions here
-      const { data, error } = await supabase
+      // In a real application, check admin permissions here;
+      const { data, error } = await supabase;
         .from('partner_profiles')
         .select('*')
         .order('created_at', { ascending: false })
@@ -76,17 +72,14 @@ export default function PartnerManager() {
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
-  partners
-  isLoading
+  partners;
+  isLoading;
   onViewDetails, }
 
   )
   partners, 
   isLoading, 
-  onViewDetails, }
-  )
-}
-}
+  onViewDetails, })
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -102,7 +95,7 @@ export default function PartnerManager() {
   useEffect(() => {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),
-      return
+      return;
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useRouter } from 'next/router',
@@ -132,10 +125,10 @@ interface PartnerProfile {
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
-  commission_rate?: number
+  commission_rate?: number;
 }
 export default /**
- * PartnerManager - Function description
+ * PartnerManager - Function description;
  */
 function PartnerManager() {
   const [partners, set_partners] = useState < PartnerProfile[]>([])
@@ -150,19 +143,19 @@ function PartnerManager() {
   const { user, is_authenticated } = use_auth ()
   const router = use_router ()
   useEffect ((, ) => {
-    // Check condition
+    // Check condition;
 if ( {) {
-  $2
+  $2;
 }
       router.push ('/auth / login?return_to=' + encodeURIComponent ('/admin / partners'))
-      return
+      return;
     }
   },
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners,
     
-    // Filter by status
+    // Filter by status;
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
     } catch (error) {
@@ -170,19 +163,18 @@ if ( {) {
       toast({
         title: "Error",
         description: "Failed to load partner data",
-        variant: "destructive"})
-    } finally {
+        variant: "destructive"}) finally {
       setIsLoading(false)
     }
   },
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
     let filtered = partners,
-    // Filter by status
+    // Filter by status;
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
     }
 
-    // Filter by search query
+    // Filter by search query;
     if (query) {
       const lowerQuery = query.toLowerCase(),
       filtered = filtered.filter(p =>
@@ -219,15 +211,15 @@ if ( {) {
 
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
-      // In a real app, this would update the database
+      // In a real app, this would update the database;
       setPartners(partners.map(p => 
-        p.id === partnerId ? { ...p, status } : p
+        p.id === partnerId ? { ...p, status } : p;
       )),
       
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
-        searchQuery
+        searchQuery;
       ),
       
       toast({
@@ -235,7 +227,7 @@ if ( {) {
         description: `The partner has been ${status}.`,
         variant: status === 'approved' ? "default" : "destructive"}),
       
-      // Close the dialog if open
+      // Close the dialog if open;
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
         setIsDetailsOpen(false)
       }
@@ -245,22 +237,21 @@ if ( {) {
         title: "Error",
         description: "Failed to update partner status",
         variant: "destructive"})
-    }
   },
 
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     
     try {
-      // Update commission rate
+      // Update commission rate;
       setPartners(partners.map(p => 
-        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
+        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p;
       )),
       
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
         activeTab,
-        searchQuery
+        searchQuery;
       ),
       
       toast({
@@ -297,20 +288,20 @@ if ( {) {
   },
   const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
     try {
-      // In a real app, this would update the database
+      // In a real app, this would update the database;
       setPartners(partners.map(p =>
-        p.id === partnerId ? { ...p, status } : p
+        p.id === partnerId ? { ...p, status } : p;
       )),
       filterPartners(
         partners.map(p => p.id === partnerId ? { ...p, status } : p),
         activeTab,
-        searchQuery
+        searchQuery;
       ),
       toast({
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,
         variant: status === 'approved' ? "default" : "destructive"}),
-      // Close the dialog if open
+      // Close the dialog if open;
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
         setIsDetailsOpen(false)
       }
@@ -320,19 +311,18 @@ if ( {) {
         title: "Error",
         description: "Failed to update partner status",
         variant: "destructive"})
-    }
   },
   const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     try {
-      // Update commission rate
+      // Update commission rate;
       setPartners(partners.map(p =>
-        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p
+        p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p;
       )),
       filterPartners(
         partners.map(p => p.id === selectedPartner.id ? { ...p, commission_rate: commissionRate } : p),
         activeTab,
-        searchQuery
+        searchQuery;
       ),
       toast({
         title: "Settings Updated",
@@ -345,7 +335,6 @@ if ( {) {
         title: "Error",
         description: "Failed to update partner settings",
         variant: "destructive"})
-    }
   },
   const getAudienceSizeLabel = (size: string) => {
     switch (size) {
@@ -354,7 +343,7 @@ if ( {) {
       case '10k-50k': return '10,000 - 50,000',
       case '50k-100k': return '50,000 - 100,000',
       case 'over100k': return 'Over 100,000',
-      default: return size
+      default: return size;
     }
   },
 
@@ -401,20 +390,24 @@ if ( {) {
   },
   return (
     <div className="container max-w-7xl py-10">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>
+      </div>
+<div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+        </div>
+<div>
           <h1 className="text-3xl font-bold tracking-tight text-white">Partner Management</h1>
           <p className="text-zion-slate-light">Approve and manage affiliate partners</p></$1></$1>
       <Card className="bg-zion-blue-dark border-zion-blue-light mb-8">
         <CardHeader className="pb-3">
           <CardTitle>Overview</CardTitle></$1>
         <CardContent>
-          <div className="grid gap-4 md:grid-cols-3">
+          </div>
+<div className="grid gap-4 md:grid-cols-3">
             <Card className="bg-zion-blue border-zion-blue-light">
               <CardHeader className="pb-2">
                 <CardTitle className="text-sm font-medium text-zion-slate-light">
                   Pending Applications</$1>
-                <div className="text-2xl font-bold text-white">
+                </div>
+<div className="text-2xl font-bold text-white">
                   {partners.filter(p => p.status === 'pending').length}
                 </div></$1>
               <CardContent className="pt-0">
@@ -440,7 +433,7 @@ if ( {) {
               </CardHeader>
               <CardContent className="pt-0">
                 <p className="text-xs text-zion-slate-light">
-                  Total potential fraud flags detected
+                  Total potential fraud flags detected;
                 </p>
               </CardContent>
             </Card>
@@ -454,8 +447,9 @@ if ( {) {
             <CardTitle>Partners</CardTitle>
             <CardDescription>Manage partnership applications and settings</CardDescription>
           </div>
-          <div className="w-full md:w-80">
-            <div className="relative">
+<div className="w-full md:w-80">
+            </div>
+<div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
               <Input
                 placeholder="Search partners..."
@@ -476,7 +470,7 @@ if ( {) {
             </TabsList>
             
             <TabsContent value="pending" className="space-y-4">
-              <PartnerTable 
+              <PartnerTable
                 partners={filteredPartners} 
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
@@ -488,7 +482,7 @@ if ( {) {
             </TabsContent>
             
             <TabsContent value="approved" className="space-y-4">
-              <PartnerTable 
+              <PartnerTable
                 partners={filteredPartners} 
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
@@ -500,7 +494,7 @@ if ( {) {
             </TabsContent>
             
             <TabsContent value="rejected" className="space-y-4">
-              <PartnerTable 
+              <PartnerTable
                 partners={filteredPartners} 
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
@@ -512,7 +506,7 @@ if ( {) {
             </TabsContent>
             
             <TabsContent value="all" className="space-y-4">
-              <PartnerTable 
+              <PartnerTable
                 partners={filteredPartners} 
                 isLoading={isLoading}
                 onViewDetails={handleViewDetails}
@@ -527,34 +521,36 @@ if ( {) {
           <DialogHeader>
             <DialogTitle>Partner Details</DialogTitle>
             <DialogDescription>
-              Review the details of the partner application
+              Review the details of the partner application;
             </DialogDescription>
           </DialogHeader>
           
           {selectedPartner && (
             <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-2">
-                <div>
+              </div>
+<div className="grid grid-cols-2 gap-2">
+                </div>
+<div>
                   <p className="text-xs text-zion-slate-light">Name</p>
                   <p className="font-medium text-white">{selectedPartner.name}</p>
                 </div>
-                <div>
+<div>
                   <p className="text-xs text-zion-slate-light">Status</p>
-                  <div>{getStatusBadge(selectedPartner.status)}</div>
+                  </div>
+<div>{getStatusBadge(selectedPartner.status)}</div>
                 </div>
               </div>
-              
-              <div>
+<div>
                 <p className="text-xs text-zion-slate-light">Bio</p>
                 <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
               </div>
-              
-              <div className="grid grid-cols-2 gap-2">
-                <div>
+<div className="grid grid-cols-2 gap-2">
+                </div>
+<div>
                   <p className="text-xs text-zion-slate-light">Niche</p>
                   <p className="text-white">{selectedPartner.niche}</p>
                 </div>
-                <div>
+<div>
                   <p className="text-xs text-zion-slate-light">Audience Size</p>
                   <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>
                 </div>
@@ -570,7 +566,8 @@ if ( {) {
               {selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (
                 <div>
                   <p className="text-xs text-zion-slate-light">Social Media</p>
-                  <div className="grid grid-cols-2 gap-2">
+                  </div>
+<div className="grid grid-cols-2 gap-2">
                     {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
                       <p key={platform} className="text-white">
                         <span className="font-medium">{platform}: </span>
@@ -581,11 +578,12 @@ if ( {) {
               )}
               
               <div className="grid grid-cols-2 gap-2">
-                <div>
+                </div>
+<div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
                   <p className="text-white capitalize">{selectedPartner.payout_method || "Not specified"}</p>
                 </div>
-                <div>
+<div>
                   <p className="text-xs text-zion-slate-light">Commission Rate</p>
                   <p className="text-white">{selectedPartner.commission_rate || 25}%</p>
                 </div>
@@ -605,7 +603,7 @@ if ( {) {
               
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
-                  <Button 
+                  <Button
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
                   >
@@ -627,18 +625,18 @@ if ( {) {
           <DialogHeader>
             <DialogTitle>Partner Settings</DialogTitle>
             <DialogDescription>
-              Configure commission rates and other settings
+              Configure commission rates and other settings;
             </DialogDescription>
           </DialogHeader>
           
           {selectedPartner && (
             <div className="space-y-4">
-              <div>
+              </div>
+<div>
                 <label className="text-sm font-medium text-white">Partner Name</label>
                 <p className="text-zion-slate-light">{selectedPartner.name}</p>
               </div>
-              
-              <div>
+<div>
                 <label className="text-sm font-medium text-white" htmlFor="commission-rate">
                   Commission Rate (%)
                 </label>
@@ -651,16 +649,16 @@ if ( {) {
                   onChange={(e) => setCommissionRate(parseInt(e.target.value))}
                 />
                 <p className="text-xs text-zion-slate-light mt-1">
-                  Percentage of reward granted to this partner for successful referrals
+                  Percentage of reward granted to this partner for successful referrals;
                 </p>
               </div>
               
               <DialogFooter>
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
-                  Cancel
+                  Cancel;
                 </Button>
                 <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">
-                  Save Changes
+                  Save Changes;
                 </Button>
               </DialogFooter>
             </div>
@@ -676,7 +674,7 @@ interface PartnerTableProps {
   onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,
   onOpenSettings: (partner: PartnerProfile) => void,
   getStatusBadge: (status: string) => JSX.Element,
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null
+  getFraudFlagBadge: (flags?: number) => JSX.Element | null;
 }
 
 function PartnerTable({
@@ -684,9 +682,9 @@ function PartnerTable({
   isLoading,
   onViewDetails,
   onUpdateStatus,
-  onOpenSettings
-  getStatusBadge
-  getFraudFlagBadge
+  onOpenSettings;
+  getStatusBadge;
+  getFraudFlagBadge;
 }: PartnerTableProps) {
   if (isLoading) {
     return (
@@ -697,7 +695,8 @@ function PartnerTable({
   
   if (partners.length === 0) {
     return (
-      <div className="py-8">
+      </div>
+<div className="py-8">
         <EmptyState
           icon={<Users className="h-8 w-8" />}
           title="No Partners Found"
@@ -737,8 +736,7 @@ function PartnerTable({
             <TableCell className="text-right">
               <div className="flex justify-end gap-2">
                 {partner.status === 'pending' && (
-                  <>
-                    <Button 
+                  <></><Button
                       variant="ghost"
                       size="sm"
                       onClick={() => onUpdateStatus(partner.id, 'rejected')}
@@ -747,7 +745,7 @@ function PartnerTable({
                       <X className="h-4 w-4" />
                       <span className="sr-only">Reject</span>
                     </Button>
-                    <Button 
+                    <Button
                       variant="ghost"
                       size="sm"
                       onClick={() => onUpdateStatus(partner.id, 'approved')}
@@ -759,7 +757,7 @@ function PartnerTable({
                   </>
                 )}
                 
-                <Button 
+                <Button
                   variant="ghost" 
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
@@ -769,7 +767,7 @@ function PartnerTable({
                   <span className="sr-only">Settings</span>
                 </Button>
                 
-                <Button 
+                <Button
                   variant="outline" 
                   size="sm"
                   onClick={() => onViewDetails(partner)}
@@ -779,3 +777,4 @@ function PartnerTable({
       </TableBody></$1>
   )
 }
+</div>

@@ -14,15 +14,15 @@
       connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],
       frameSrc: ["'self'"],
       objectSrc: ["'none'"],
-  // Security Headers;
+  // Security Headers
   headers: {,
   // Security Headers
   headers: {
     'X-DNS-Prefetch-Control': 'on',
 }
-  max: 100, // Limit each IP to 100 requests per windowMs;
+  max: 100, // Limit each IP to 100 requests per windowMs
   message: 'Too many requests from this IP, please try again later.',}}
-/**;
+/**
  * CORS configuration;
  */;
 export const corsConfig = {
@@ -38,14 +38,14 @@ export const corsConfig = {
 export const validationPatterns = {}
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
   phone: /^\+?[1-9]\d{1,14}$/,
-  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
+  url: /^https?: \/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/,
 }
     return input,
     .replace(/[<>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol,
-    for (let i = 0; i < length; i++) {
+    for (let i = 0 i < length i++) {
       array[i] = Math.floor(Math.random() * 256)}}
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')

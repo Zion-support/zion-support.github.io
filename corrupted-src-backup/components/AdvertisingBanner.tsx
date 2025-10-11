@@ -2,7 +2,7 @@ import React from 'react'
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
-  title
+  title;
   description,
   ctaText,
   ctaUrl,
@@ -26,7 +26,8 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
         <div className="banner-image">
           <img
       {imageUrl && (
-        <div className="banner-image">
+        </div>
+<div className="banner-image">
           <img
             src={imageUrl}
             alt={title}
@@ -35,8 +36,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
               height: 'auto')}
               borderRadius: '0.25rem')}
 const,
-  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
       }}
     >
       {/* TODO: Fix JSX expression */}
@@ -46,7 +46,8 @@ const,
             }}
           />
       )}
-      <div className="banner-content" style={{ flex: 1 }}>
+      </div>
+<div className="banner-content" style={{ flex: 1 }}>
         <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}
         <$2 />
@@ -87,7 +88,7 @@ const,
     </div>
   )
 }
-export default AdvertisingBanner
+export default AdvertisingBanner;
 "
   </AdvertisingBannerProps>
   </AdvertisingBannerProps>

@@ -84,12 +84,11 @@ const NewsPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">
+        </div><main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          </main><section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              News & Updates
-  
+              News & Updates;
             <p className="text-xl text-cyan-400 mb-8">
               Stay informed with our latest innovations and success stories,
   
@@ -97,34 +96,43 @@ const NewsPage: React.FC = () => {
               Discover the latest developments in AI technology, product launches, 
               client success stories, and industry insights from Zion Tech Group.
           {/* Stats Section */}
-          <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          </section><section className="mb-16">
+            </section>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {stats.map((stat, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                </div>
+<div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}
-                  <div className="text-gray-300">{stat.label}
-              ))}
+                  </div>
+<div className="text-3xl font-bold text-white mb-2">{stat.number}
+                  </div>
+<div className="text-gray-300">{stat.label})
           {/* Featured Articles */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Featured News
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          </div><section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Featured News;
+            </section>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {newsArticles.filter(article => article.featured).map((article) => (
                 <article key={article.id} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="text-4xl mr-4">{article.image}
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+                  </div>
+<div className="flex items-center mb-4">
+                    </div>
+<div className="text-4xl mr-4">{article.image}
+                    </div>
+<div className="flex-1">
+                      </div>
+<div className="flex items-center gap-2 mb-2">
                         <span className="bg-cyan-500 text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
                           {article.category}
                         <span className="text-gray-400 text-sm">{article.readTime}
-                      <div className="flex items-center text-gray-400 text-sm">
+                      </div>
+<div className="flex items-center text-gray-400 text-sm">
                         <Calendar className="w-4 h-4 mr-2" />
                         {new Date(article.date).toLocaleDateString('en-US', { 
                           year: 'numeric', 
                           month: 'long', 
                           day: 'numeric' 
-                        })}
+                        })
                   <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
                     {article.title}
                   <p className="text-gray-300 mb-6 leading-relaxed">
@@ -132,29 +140,35 @@ const NewsPage: React.FC = () => {
                   <$2 />
                     to={`/blog/${article.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-white transition-colors">
-                    Read More
+                    Read More;
                     <ArrowRight className="w-4 h-4 ml-2" />
               ))}
           {/* All Articles */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Latest Updates
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div><section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Latest Updates;
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {newsArticles.map((article) => (
                 <article key={article.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <div className="text-3xl mr-3">{article.image}
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+                  </div>
+<div className="flex items-center mb-4">
+                    </div>
+<div className="text-3xl mr-3">{article.image}
+                    </div>
+<div className="flex-1">
+                      </div>
+<div className="flex items-center gap-2 mb-2">
                         <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">
                           {article.category}
                         <span className="text-gray-400 text-xs">{article.readTime}
-                      <div className="flex items-center text-gray-400 text-xs">
+                      </div>
+<div className="flex items-center text-gray-400 text-xs">
                         <Calendar className="w-3 h-3 mr-1" />
                         {new Date(article.date).toLocaleDateString('en-US', { 
                           month: 'short', 
                           day: 'numeric',
                           year: 'numeric'
-                        })}
+                        })
                   <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
                     {article.title}
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -162,17 +176,19 @@ const NewsPage: React.FC = () => {
                   <$2 />
                     to={`/blog/${article.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-white transition-colors text-sm">
-                    Read More
+                    Read More;
                     <ArrowRight className="w-3 h-3 ml-1" />
               ))}
           {/* Newsletter Signup */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          </div><section className="text-center">
+            </section>
+<div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Stay Updated
+                Stay Updated;
               <p className="text-xl text-gray-300 mb-8">
-                Subscribe to our newsletter for the latest AI insights and company updates
-              <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
+                Subscribe to our newsletter for the latest AI insights and company updates;
+              </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
                   placeholder="Enter your email"

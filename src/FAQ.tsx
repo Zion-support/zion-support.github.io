@@ -4,14 +4,17 @@
           </p>
         </div>
       </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search and Filter */}
-        <div className="mb-12">
-          <div className="flex flex-col lg:flex-row gap-6">
+        </div>
+<div className="mb-12">
+          </div>
+<div className="flex flex-col lg:flex-row gap-6">
             {/* Search */}
-            <div className="flex-1">
-              <div className="relative">
+            </div>
+<div className="flex-1">
+              </div>
+<div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -51,11 +54,14 @@
                 onClick={() => toggleItem(index)}
                 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200"
               >
-                <div className="flex items-start">
+                </div>
+<div className="flex items-start">
                   <HelpCircle className="w-5 h-5 text-blue-400 mr-3 mt-0.5 flex-shrink-0" />
-                  <div>
+                  </div>
+<div>
                     <h3 className="text-lg font-medium text-white">{item.question}</h3>
-                    <div className="flex flex-wrap gap-2 mt-2">
+                    </div>
+<div className="flex flex-wrap gap-2 mt-2">
                       {item.tags.map((tag, tagIndex) => (
                         <$2 />
                           key={tagIndex}
@@ -98,7 +104,7 @@
               }}
               className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
             >
-              Clear Filters
+              Clear Filters;
             </button>
           </div>
         )}
@@ -117,11 +123,11 @@
               </Accordion>
             ))}
           </div>
-
-          <div className="text-center mt-16">
+<div className="text-center mt-16">
             <h2 className="text-3xl font-bold mb-6 text-white">Still Have Questions?</h2>
             <p className="text-xl text-gray-300 mb-8">Can't find the answer you're looking for? Our team is here to help.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">Contact Us</a>
               <a href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">Call Now</a>
             </div>
@@ -187,31 +193,34 @@ const FAQ: React.FC = () => {
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <SEO 
+      <SEO
         title="FAQ - Zion Tech Group" 
         description="Frequently asked questions about Zion's AI marketplace, IT services, and equipment solutions."
         keywords="FAQ, frequently asked questions, Zion, AI marketplace, IT services, support"
         canonical="https://ziontechgroup.com/faq"
       />
       
-      <main className="pt-16">
+      </div><main className="pt-16">
         {/* Hero Section */}
-        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+        </main><section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-            Frequently Asked Questions
+            Frequently Asked Questions;
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Find answers to common questions about our services, processes, and how we can help transform your business
+            Find answers to common questions about our services, processes, and how we can help transform your business;
           </p>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="pb-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-4">
+        </section>
+<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="space-y-4">
             {faqData.map((item, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg border border-white/10 overflow-hidden">
+              </div>
+<div key={index} className="bg-slate-800/50 rounded-lg border border-white/10 overflow-hidden">
                 <$2 />
                   onClick={() => toggleItem(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between text-white hover:bg-slate-700/50 transition-colors duration-300"
@@ -229,7 +238,8 @@ const FAQ: React.FC = () => {
                   </svg>
                 </button>
                 {openItems.includes(index) && (
-                  <div className="px-6 pb-4">
+                  </div>
+<div className="px-6 pb-4">
                     <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   </div>
                 )}
@@ -241,7 +251,8 @@ const FAQ: React.FC = () => {
 
       {/* Contact CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        </section>
+<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Still Have Questions?
           </h2>
@@ -249,7 +260,8 @@ const FAQ: React.FC = () => {
             Can't find the answer you're looking for? Our team is here to help. 
             Contact us for personalized assistance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               href="mailto:contact@ziontechgroup.com"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center justify-center"
@@ -257,7 +269,7 @@ const FAQ: React.FC = () => {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Email Us
+              Email Us;
             </a>
             <$2 />
               href="tel:+13024640950"
@@ -266,7 +278,7 @@ const FAQ: React.FC = () => {
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              Call Us
+              Call Us;
             </a>
           </div>
         </div>
@@ -274,7 +286,7 @@ const FAQ: React.FC = () => {
     </div>
   )
 }
-export default FAQ
+export default FAQ;
 import React from 'react'
 import { SEO } from '@/components/SEO'
 import { GradientHeading } from '@/components/GradientHeading'
@@ -385,7 +397,7 @@ export default function FAQ() {
     setOpenItems(newOpenItems)
   }
   const filteredFAQs = selectedCategory === "All" 
-    ? faqData 
+    ? faqData;
     : faqData.filter(faq => faq.category === selectedCategory)
       category: "General",
       questions: [
@@ -558,8 +570,7 @@ export default function FAQ() {
     }
   ]
   return (
-    <>
-      <SEO
+    <></><SEO
         title="FAQ - Frequently Asked Questions | Zion Tech Group"
         description="Find answers to common questions about Zion Tech Group's AI and technology marketplace. Learn how our platform works, pricing, and how to get started."
         keywords="FAQ, frequently asked questions, Zion Tech Group, AI marketplace, tech services, support"
@@ -571,17 +582,20 @@ export default function FAQ() {
         canonical="https://ziontechgroup.com/faq"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        </main>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <GradientHeading>Frequently Asked Questions</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Find answers to the most common questions about Zion Tech Group and our marketplace
+              Find answers to the most common questions about Zion Tech Group and our marketplace;
             </p>
           </div>
 
           {/* Category Filter */}
           <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-3">
+            </div>
+<div className="flex flex-wrap justify-center gap-3">
               <$2 />
                 onClick={() => setSelectedCategory("All")}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
@@ -593,19 +607,22 @@ export default function FAQ() {
         canonical="https://ziontechgroup.com/faq"
       />
       
-      <div className="min-h-screen bg-zion-blue-dark">
+      </div>
+<div className="min-h-screen bg-zion-blue-dark">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
-          <div className="container mx-auto px-4 text-center">
+        </div><section className="pt-20 pb-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
+          </section>
+<div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Frequently Asked Questions
+              Frequently Asked Questions;
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
               Find answers to the most common questions about Zion Tech Group and our AI marketplace platform.
             </p>
             
             {/* Search Bar */}
-            <div className="max-w-2xl mx-auto relative">
+            </div>
+<div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <input
                 type="text"
@@ -620,9 +637,11 @@ export default function FAQ() {
 
         {/* FAQ Content */}
         <section className="py-16">
-          <div className="container mx-auto px-4">
+          </section>
+<div className="container mx-auto px-4">
             {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
+            </div>
+<div className="flex flex-wrap justify-center gap-3 mb-12">
               <$2 />
                 onClick={() => setActiveCategory('all')}
                 className={`px-6 py-2 rounded-full transition-colors ${
@@ -631,7 +650,7 @@ export default function FAQ() {
                     : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
                 }`}
               >
-                All Categories
+                All Categories;
               </button>
       question: "What is Zion Tech Group?",
       answer: "Zion Tech Group is the world's first free marketplace dedicated to high-tech and artificial intelligence. We connect talented professionals with businesses and individuals seeking AI and tech services, equipment, and expertise."
@@ -682,35 +701,36 @@ export default function FAQ() {
     }
   ]
   return (
-    <div className="min-h-screen bg-zion-blue-dark">
-      <SEO 
+    </div>
+<div className="min-h-screen bg-zion-blue-dark">
+      <SEO
         title="FAQ - Zion Tech Group" 
         description="Find answers to frequently asked questions about Zion Tech Group, the world's first free AI and tech marketplace."
         keywords="FAQ, Zion Tech Group, AI marketplace, tech services, help, support"
         canonical="https://ziontechgroup.com/faq"
       />
       
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+      </div><main className="container mx-auto px-4 py-12">
+        </main>
+<div className="max-w-4xl mx-auto">
+          </div>
+<div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
+              Frequently Asked Questions;
             </h1>
             <p className="text-xl text-zion-slate-light">
-              Everything you need to know about Zion Tech Group
+              Everything you need to know about Zion Tech Group;
             </p>
           </div>
-
-          <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
+<div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
                   <AccordionTrigger className="text-left text-white hover:text-zion-cyan transition-colors">
-              Find answers to the most common questions about Zion's AI and technology marketplace
+              Find answers to the most common questions about Zion's AI and technology marketplace;
             </p>
           </div>
-          
-          <div className="max-w-4xl mx-auto mb-16">
+<div className="max-w-4xl mx-auto mb-16">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-zion-blue-light">
@@ -725,8 +745,7 @@ export default function FAQ() {
             </Accordion>
           </div>
   return (
-    <>
-      <SEO
+    <></><SEO
         title="Frequently Asked Questions | Zion Tech Group"
         description="Find answers to common questions about Zion Tech Group, the world's first free AI and tech marketplace."
         keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
@@ -734,12 +753,14 @@ export default function FAQ() {
       />
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        </main>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-16">
+          </div>
+<div className="text-center mb-16">
             <GradientHeading>Frequently Asked Questions</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Everything you need to know about Zion Tech Group, the world's premier AI and tech marketplace
+              Everything you need to know about Zion Tech Group, the world's premier AI and tech marketplace;
             </p>
           </div>
 
@@ -773,25 +794,28 @@ export default function FAQ() {
 
           {/* Contact Support */}
           <div className="mt-16 text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
+            </div>
+<div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
               <h2 className="text-2xl font-bold text-white mb-4">Still have questions?</h2>
               <p className="text-zion-slate-light mb-6">
-                Our support team is here to help you get the most out of Zion Tech Group
+                Our support team is here to help you get the most out of Zion Tech Group;
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />
                   href="mailto:support@ziontechgroup.com"
                   className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple hover:bg-zion-purple-light text-white font-medium rounded-lg transition-colors"
                 >
                   <MessageCircle className="h-4 w-4 mr-2" />
-                  Email Support
+                  Email Support;
                 </a>
                 <$2 />
                   href="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple hover:bg-zion-purple/10 font-medium rounded-lg transition-colors"
                 >
           {/* FAQ Items */}
-          <div className="max-w-4xl mx-auto space-y-4">
+          </div>
+<div className="max-w-4xl mx-auto space-y-4">
             {filteredFAQs.map((faq, index) => (
               <$2 />
                 key={index}
@@ -809,7 +833,8 @@ export default function FAQ() {
                   )}
                 </button>
                 {openItems.has(index) && (
-                  <div className="px-6 pb-4">
+                  </div>
+<div className="px-6 pb-4">
                     <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
@@ -819,7 +844,8 @@ export default function FAQ() {
 
           {/* Contact Section */}
           <div className="mt-16 text-center">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 max-w-2xl mx-auto">
+            </div>
+<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">Still have questions?</h3>
               <p className="text-zion-slate-light mb-6">
                 Can't find what you're looking for? Our support team is here to help.
@@ -828,22 +854,24 @@ export default function FAQ() {
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
               >
-                Contact Support
+                Contact Support;
               </a>
           
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
+          </div>
+<div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Still have questions?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
               Can't find what you're looking for? Our support team is here to help you get the answers you need.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
                 <Link to="/contact">Contact Support</Link>
               </Button>
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white" asChild>
                 <Link to="/help">Help Center</Link>
               </Button>
-                  Contact Us
+                  Contact Us;
                 </a>
               </div>
             </div>
@@ -861,17 +889,19 @@ import { Footer } from "@/components/Footer"
 export default function FAQ() {
   return (
     <div className="min-h-screen bg-background">
-      <SEO 
+      <SEO
         title="Frequently Asked Questions - Zion Tech Group" 
         description="Find answers to common questions about Zion Tech Group's AI and tech marketplace services."
         keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services"
         canonical="https://ziontechgroup.com/faq"
       />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center mb-12">
+      </div>
+<div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        </div>
+<div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">
-            Frequently Asked Questions
+            Frequently Asked Questions;
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Find answers to the most common questions about Zion Tech Group's marketplace, services, and platform.
@@ -890,7 +920,7 @@ export default function FAQ() {
                   key={category.category}
                   onClick={() => setActiveCategory(category.category)}
                   className={`px-6 py-2 rounded-full transition-colors ${
-                    activeCategory === category.category
+                    activeCategory === category.category;
                       ? 'bg-zion-purple text-white'
                       : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
                   }`}
@@ -903,7 +933,8 @@ export default function FAQ() {
             {/* FAQ Accordion */}
             <div className="max-w-4xl mx-auto">
               {filteredFaqs.map((category) => (
-                <div key={category.category} className="mb-12">
+                </div>
+<div key={category.category} className="mb-12">
                   <h2 className="text-2xl font-bold text-zion-cyan mb-6 text-center">
                     {category.category}
                   </h2>
@@ -934,26 +965,29 @@ export default function FAQ() {
               </h3>
               <p className="text-zion-slate-light mb-6">
                 Can't find what you're looking for? Our support team is here to help.
-          <div className="mt-12 text-center">
-            <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8">
+          </div>
+<div className="mt-12 text-center">
+            </div>
+<div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8">
               <h2 className="text-2xl font-bold text-white mb-4">
                 Still have questions?
               </h2>
               <p className="text-zion-slate-light mb-6">
                 Can't find the answer you're looking for? Our support team is here to help.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />
                   href="/contact"
                   className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple-light transition-colors"
                 >
-                  Contact Support
+                  Contact Support;
                 </a>
                 <$2 />
                   href="/blog"
                   className="inline-flex items-center justify-center px-6 py-3 border border-zion-purple text-zion-purple font-medium rounded-lg hover:bg-zion-purple/10 transition-colors"
                 >
-                  Visit Our Blog
+                  Visit Our Blog;
                 </a>
               </div>
             </div>

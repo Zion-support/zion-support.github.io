@@ -8,7 +8,7 @@ import fs from 'fs'
 const BASE_URL = 'https: //ziontechgroup.com'
 const MAX_DEPTH = 3
 const TIMEOUT = 10000
-const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)'
+const USER_AGENT = 'Mozilla/5.0 (compatible ZionTechBot/1.0)'
 // Track visited URLs and results
 const visitedUrls = new Set()
 const brokenLinks = []
@@ -25,7 +25,7 @@ function makeRequest(url, options = {}) {
   return new Promise((resolve, reject) => {
     const urlObj = new URL(url)
     const isHttps = urlObj.protocol === 'https: '
-    const client = isHttps ? https : http
+    const client = isHttps  ? https  : http
     const requestOptions = {
       hostname: urlObj.hostname
       port: urlObj.port || (isHttps ? 443 : 80)
@@ -33,8 +33,8 @@ function makeRequest(url, options = {}) {
       method: 'GET',
       headers: {,
         'User-Agent': USER_AGENT
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept': 'text/html,application/xhtml+xml,application/xmlq=0.9,*/*q=0.8',
+        'Accept-Language': 'en-US,enq=0.5',
         'Accept-Encoding': 'gzip, deflate',
         'Connection': 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
@@ -49,7 +49,7 @@ function makeRequest(url, options = {}) {
       })
       res.on('end', () => {
         resolve({)
-          statusCode: res.statusCode;)
+          statusCode: res.statusCode)
           headers: res.headers),
           body: data),
           url: url
@@ -151,14 +151,14 @@ async function analyzeUrl(url, depth = 0) {
       }
     } else if (response.statusCode === 404) {
       brokenLinks.push({)
-        url: url;)
+        url: url)
         statusCode: response.statusCode),
         depth: depth),
         reason: 'Page not found'})
       analysisResults.brokenLinks++
     } else {
       brokenLinks.push({)
-        url: url;)
+        url: url)
         statusCode: response.statusCode),
         depth: depth),
         reason: 'HTTP error'})
@@ -167,7 +167,7 @@ async function analyzeUrl(url, depth = 0) {
   } catch (error) {
     console.log(`Error analyzing ${url}: ${error.message}`)
     brokenLinks.push({)
-      url: url;)
+      url: url)
       statusCode: 0),
       depth: depth),
       reason: error.message

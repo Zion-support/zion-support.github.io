@@ -57,22 +57,26 @@ export default function ServicesSection() {
   ]
   return (
     <section id="services" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      </section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        </div>
+<div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            <span className="holographic-text">Our Services
+            <span className="holographic-text">Our Services;
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your business growth 
+            Comprehensive technology solutions designed to accelerate your business growth;
             and digital transformation journey.
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <$2 />
               key={index}
               className="cyber-card-advanced p-8 group hover:scale-105 transition-all duration-300">
               {/* Icon */}
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300">
+              </div>
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mb-6 text-black group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               {/* Content */}
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
@@ -85,36 +89,37 @@ export default function ServicesSection() {
                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                     <svg className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    {feature}
-                ))}
+                    {feature})
               {/* Learn More Button */}
-              <div className="mt-6">
+              </div>
+<div className="mt-6">
                 <$2 />
                   href="#contact"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300">
-                  Learn More
+                  Learn More;
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           ))}
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="cyber-card-advanced p-8 max-w-4xl mx-auto">
+        </div>
+<div className="text-center mt-16">
+          </div>
+<div className="cyber-card-advanced p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             <p className="text-gray-300 mb-8 text-lg">
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="#contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                Get Free Consultation
-  
+                Get Free Consultation;
               <$2 />
                 href="tel:+1234567890"
                 className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-                Call Now
-  
+                Call Now;
             </div>
           </div>
         </div>

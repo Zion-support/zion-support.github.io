@@ -35,46 +35,42 @@ const Next.dPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
+  openGraph?: {title?: string
+    description?: string
+    url?: string
+    siteName?: string
     images?: Array<{
       url: string,
-      width?: number;
-      height?: number;
-      alt?: string;
-    }>;
-    locale?: string;
-    type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[]
-    publishedTime?: string;
+      width?: number
+      height?: number
+      alt?: string}>
+    locale?: string
+    type?: string
+    authors?: Array<{ name: string url?: string }> | string[]
+    publishedTime?: string
   }
   twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player'
+    site?: string
+    creator?: string
+    title?: string
+    description?: string
     images?: string[]
   }
-  robots?: {
-    index?: boolean;
-    follow?: boolean;
+  robots?: {index?: boolean
+    follow?: boolean
     googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
-    }
+      index?: boolean
+      follow?: boolean
+      'max-video-preview'?: number
+      'max-image-preview'?: 'none' | 'standard'  | 'large'
+      'max-snippet'?: number}
   }
   verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
-    other?: Record<string, string>;
+    google?: string
+    yandex?: string
+    yahoo?: string
+    other?: Record<string, string>
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet>
@@ -82,7 +78,7 @@ const Next.dPage: React.FC = () => {
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
@@ -118,7 +114,7 @@ export interface Metadata {
   title?: string
   description?: string
   keywords?: string[]
-  authors?: Array<{ name: string; url?: string }> | string[]
+  authors?: Array<{ name: string url?: string }> | string[]
   creator?: string
   publisher?: string
   formatDetection?: {
@@ -127,10 +123,8 @@ export interface Metadata {
     telephone?: boolean
   }
   metadataBase?: URL
-  alternates?: {
-    canonical?: string
-    languages?: Record<string, string&gt;
-  }
+  alternates?: {canonical?: string
+    languages?: Record<string, string&gt}
   openGraph?: {
     title?: string
     description?: string
@@ -144,7 +138,7 @@ export interface Metadata {
     }>
     locale?: string
     type?: string
-    authors?: Array<{ name: string; url?: string }> | string[]
+    authors?: Array<{ name: string url?: string }> | string[]
     publishedTime?: string
   }
   twitter?: {
@@ -166,12 +160,10 @@ export interface Metadata {
       'max-snippet'?: number
     }
   }
-  verification?: {
-    google?: string
+  verification?: {google?: string
     yandex?: string
     yahoo?: string
-    other?: Record<string, string&gt;
-  }
+    other?: Record<string, string&gt}
 }
 
 export interface MetadataRoute {
@@ -194,11 +186,11 @@ export interface NextPageProps {
 
 // Route handlers
 export interface RouteHandler {
-  GET?: (req: Request) =&gt; Promise<Response&gt;
-  POST?: (req: Request) =&gt; Promise<Response&gt;
-  PUT?: (req: Request) =&gt; Promise<Response&gt;
-  DELETE?: (req: Request) =&gt; Promise<Response&gt;
-  PATCH?: (req: Request) =&gt; Promise<Response&gt;
+  GET?: (req: Request) =&gt Promise<Response&gt
+  POST?: (req: Request) =&gt Promise<Response&gt
+  PUT?: (req: Request) =&gt Promise<Response&gt
+  DELETE?: (req: Request) =&gt Promise<Response&gt
+  PATCH?: (req: Request) =&gt Promise<Response&gt
 }
 
 // Dynamic route types

@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>
     }
     
-    return this.props.children
+    return this.props.children;
   }
 }
 import React from 'react'
@@ -55,23 +55,24 @@ export default function InstantMessaging() {
 
   }
   return (
-    <>
-            <li>
-              Chat rooms scoped to each order or project for focused
+    <></><li>
+              Chat rooms scoped to each order or project for focused;
               discussions.</$1>
             <li > Share files and links directly within the conversation.</li></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
             Frequently Asked Questions</$1>
           <div className='space - y-4 mb - 12'>
-            <div>
+            </div>
+<div>
               <p className='font - semibold'>Is chat history saved?</p>
               <p className='text - zion - slate - light'>
-                Yes, messages are stored securely so you can review past
+                Yes, messages are stored securely so you can review past;
                 discussions.</$1></$1>
-            <div>
+            </div>
+<div>
               <p className='font - semibold'>Can I disable notifications?</p>
               <p className='text - zion - slate - light'>
-                You can mute rooms or disable notifications in your account
+                You can mute rooms or disable notifications in your account;
                 settings.</$1></$1></$1>
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
@@ -90,13 +91,15 @@ export default function InstantMessaging() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+      </div><main className="bg-background text-white py-12">
+        </main>
+<div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Instant Messaging</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Communicate with partners and support staff instantly from any device.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
             <img
               src="https://placehold && placehold.co/800x400"
@@ -112,17 +115,17 @@ export default function InstantMessaging() {
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
-            <div>
+            </div>
+<div>
               <p className="font-semibold">Is chat history saved?</p>
               <p className="text-zion-slate-light">Yes, messages are stored securely so you can review past discussions.</p>
             </div>
-            <div>
+<div>
               <p className="font-semibold">Can I disable notifications?</p>
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
-
-          <div className='text-center'>
+<div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -131,13 +134,15 @@ export default function InstantMessaging() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+      </div><main className="bg-background text-white py-12">
+        </main>
+<div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Instant Messaging</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Communicate with partners and support staff instantly from any device.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https://placehold.co/800x400"
               alt="Screenshot of chat interface"
@@ -152,17 +157,17 @@ export default function InstantMessaging() {
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
           <div className="space-y-4 mb-12">
-            <div>
+            </div>
+<div>
               <p className="font-semibold">Is chat history saved?</p>
               <p className="text-zion-slate-light">Yes, messages are stored securely so you can review past discussions.</p>
             </div>
-            <div>
+<div>
               <p className="font-semibold">Can I disable notifications?</p>
               <p className="text-zion-slate-light">You can mute rooms or disable notifications in your account settings.</p>
             </div>
           </div>
-
-          <div className="text-center">
+<div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
             </Button>
@@ -189,8 +194,7 @@ export default function InstantMessaging() {
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
   }
   return (
-    <>
-      <SEO
+    <></><SEO
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
@@ -203,11 +207,13 @@ export default function InstantMessaging() {
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        </main>
+<div className="container mx-auto px-4 md: px-6">
           <GradientHeading className="mb-4 text-center">Instant Messaging</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Communicate with partners and support staff instantly from any device.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of chat interface"

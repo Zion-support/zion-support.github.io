@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react'
 interface ImageOptimizerProps {
-    src: string
-  alt: string
-  className?: string
-  width?: number
-  height?: number
-  priority?: boolean
-  placeholder?: string
+    src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  placeholder?: string;
   onLoad?: () => void,
-  onError?: () => void
+  onError?: () => void;
   }
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     ,
-  src
+  src;
   alt,
   className = '',
   width,
@@ -20,13 +20,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   priority = false,
   placeholder,
   onLoad,
-  onError
+  onError;
   }) => {
     const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(priority)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)</HTMLImageElement>useEffect</HTMLImageElement>(() => {
-    if (priority) return
+    if (priority) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -36,7 +36,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       },
       {
     rootMargin: '50px 0px',
-        threshold: 0.01
+        threshold: 0.01;
   }
     )
     if (imgRef.current) {
@@ -53,7 +53,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     onError?.()
   }
   const generatePlaceholder = () => {
-    if (placeholder) return placeholder
+    if (placeholder) return placeholder;
     const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <rect width="100%" height="100%" fill="#1e293b"/>
@@ -75,8 +75,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         style={{ width, height }}
       >
         <div className="text-gray-400 text-center">
-          <div className="text-4xl mb-2">⚠️
-          <div className="text-sm">Image failed to load</div>)
+          </div>
+<div className="text-4xl mb-2">⚠️
+          </div>
+<div className="text-sm">Image failed to load</div>)
         </div>)
       </div>)
     )
@@ -88,7 +90,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     >
       {/* Placeholder */})
       {!isLoaded && ()
-        <img;)
+        <img)
       {/* Placeholder */}
       {!isLoaded && (
         <img

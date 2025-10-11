@@ -14,18 +14,13 @@ const ContactPage: React.FC = () => {
     message: ''
   })
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value})
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {e.preventDefault()
     // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+    console.log('Form submitted: ', formData)}
 
   const contactInfo = [
     {
@@ -66,8 +61,7 @@ const ContactPage: React.FC = () => {
   ]
 
   return (
-    <>
-      <Helmet>
+    <></><Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our team for consultations, support, and project inquiries." />
         <meta name="keywords" content="contact, support, consultation, AI solutions, IT services, get in touch" />
@@ -77,9 +71,11 @@ const ContactPage: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Touch</span>
               </h1>
@@ -92,13 +88,17 @@ const ContactPage: React.FC = () => {
 
         {/* Contact Info Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon
                 return (
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  </div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                    </div>
+<div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
@@ -106,16 +106,19 @@ const ContactPage: React.FC = () => {
                     <p className="text-gray-300 text-sm">{info.description}</p>
                   </div>
                 )
-              })}
+              })
             </div>
           </div>
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              </div>
+<div>
                 <h2 className="text-3xl font-bold text-white mb-6">
                   Send us a Message
                 </h2>
@@ -124,8 +127,10 @@ const ContactPage: React.FC = () => {
                 </p>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  </div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    </div>
+<div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
                       </label>
@@ -140,7 +145,7 @@ const ContactPage: React.FC = () => {
                         placeholder="Your full name"
                       />
                     </div>
-                    <div>
+<div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                         Email Address *
                       </label>
@@ -151,14 +156,14 @@ const ContactPage: React.FC = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="your@email.com"
                       />
                     </div>
                   </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    </div>
+<div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
                         Company
                       </label>
@@ -168,11 +173,11 @@ const ContactPage: React.FC = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
                     </div>
-                    <div>
+<div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                         Phone Number
                       </label>
@@ -182,13 +187,12 @@ const ContactPage: React.FC = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
                   </div>
-                  
-                  <div>
+<div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
                     </label>
@@ -205,8 +209,7 @@ const ContactPage: React.FC = () => {
                       ))}
                     </select>
                   </div>
-                  
-                  <div>
+<div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
                     </label>
@@ -217,7 +220,7 @@ const ContactPage: React.FC = () => {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Tell us about your project or requirements..."
                     />
                   </div>
@@ -231,47 +234,49 @@ const ContactPage: React.FC = () => {
                   </button>
                 </form>
               </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+<div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6">
                   Why Choose Us?
                 </h3>
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                </div>
+<div className="space-y-6">
+                  </div>
+<div className="flex items-start">
+                    </div>
+<div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">1</span>
                     </div>
-                    <div>
+<div>
                       <h4 className="text-lg font-semibold text-white mb-2">Expert Team</h4>
                       <p className="text-gray-300">Our team consists of experienced AI researchers, software engineers, and IT specialists.</p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+<div className="flex items-start">
+                    </div>
+<div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">2</span>
                     </div>
-                    <div>
+<div>
                       <h4 className="text-lg font-semibold text-white mb-2">Proven Results</h4>
                       <p className="text-gray-300">We've successfully delivered 500+ projects with measurable business impact.</p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+<div className="flex items-start">
+                    </div>
+<div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">3</span>
                     </div>
-                    <div>
+<div>
                       <h4 className="text-lg font-semibold text-white mb-2">24/7 Support</h4>
                       <p className="text-gray-300">We provide ongoing support and maintenance for all our solutions.</p>
                     </div>
                   </div>
-                  
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+<div className="flex items-start">
+                    </div>
+<div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">4</span>
                     </div>
-                    <div>
+<div>
                       <h4 className="text-lg font-semibold text-white mb-2">Custom Solutions</h4>
                       <p className="text-gray-300">Every solution is tailored to your specific business needs and requirements.</p>
                     </div>

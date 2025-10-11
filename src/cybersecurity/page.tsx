@@ -6,14 +6,17 @@ import Footer from '../components/Footer'
 export default function CybersecurityPage() {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
+      </div>
+<div className="container mx-auto px-4 py-20">
+        </div>
+<div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
-            Cybersecurity
+            Cybersecurity;
           <p className="text-xl text-gray-300 mb-8">
             Advanced security solutions to protect your business from cyber threats.
-          <div className="bg-slate-800/50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Cybersecurity Solutions
+          </div>
+<div className="bg-slate-800/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Cybersecurity Solutions;
             <p className="text-gray-300 mb-6">
               Protect your business with comprehensive cybersecurity services and monitoring.
             <$2 />

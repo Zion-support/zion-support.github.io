@@ -16,7 +16,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords,
   noIndex = false,
   structuredData,
-  children
+  children;
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -35,8 +35,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
-    <>
-      <Helmet>
+    <></><Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -78,13 +77,12 @@ import { Helmet } from 'react-helmet-async'
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
     },
     addres,
   s: {/* TODO: Fix JSX expression */}
     }}
-  const finalStructuredData = structuredData || defaultStructuredData
+  const finalStructuredData = structuredData || defaultStructuredData;
   return (<React.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
@@ -155,7 +153,7 @@ const,
     </React.Fragment>
   )
 }
-export default SEOEnhancer
+export default SEOEnhancer;
 "
   </SEOEnhancerProps>
 </li></li></li></li>

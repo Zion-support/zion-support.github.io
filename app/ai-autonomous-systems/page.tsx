@@ -1,21 +1,8 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Brain, Factory, Stethoscope, Building, CheckCircle, ArrowRight, Zap, Shield } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Brain, Factory, Stethoscope, Building, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const AiAutonomousSystemsPage: React.FC = () => {
   const features = [
@@ -40,13 +27,9 @@ const AiAutonomousSystemsPage: React.FC = () => {
     {
       icon: Building,
       title: 'Transportation',
-<<<<<<< HEAD
-      description: 'Self-driving vehicles and autonomous transportation systems.',
+description: 'Self-driving vehicles and autonomous transportation systems.',
       benefits: ['Autonomous vehicles', 'Fleet management', 'Route optimization', 'Safety systems']
-=======
-      description: 'Autonomous vehicles and transportation systems for safer, efficient mobility.',
-      benefits: ['Self-driving vehicles', 'Fleet management', 'Route optimization', 'Safety systems']
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
+
     }
   ]
 
@@ -66,10 +49,9 @@ const AiAutonomousSystemsPage: React.FC = () => {
     'Real-time decision making and adaptation',
     'Seamless integration with existing systems',
     'Scalable solutions for any industry'
-  ];
+  ]
 
-<<<<<<< HEAD
-  const benefits = [
+const benefits = [
     'Increased efficiency and productivity',
     'Reduced operational costs',
     'Enhanced safety and reliability',
@@ -77,31 +59,19 @@ const AiAutonomousSystemsPage: React.FC = () => {
     'Scalable solutions',
     'Real-time monitoring and control'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<></>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-=======
-        <title>AI Autonomous Systems - Zion Tech Group</title>
-    <>
-      </React><Helmet>
-        </Helmet><title>AI Autonomous Systems - Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge autonomous systems powered by advanced AI technology." />
-        <meta name="keywords" content="AI autonomous systems, artificial intelligence, autonomous technology, AI solutions, intelligent automation" />
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
               </h1>
@@ -113,9 +83,11 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
               </h2>
@@ -131,8 +103,7 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       
-=======
-      <Helmet>
+<Helmet>
         <title>AI Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Build intelligent autonomous systems with our AI solutions. Self-driving vehicles, smart manufacturing, and autonomous infrastructure for the future." />
         <meta name="keywords" content="AI autonomous systems, artificial intelligence, autonomous technology, AI solutions, intelligent automation" />
@@ -142,25 +113,27 @@ const PagePage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Autonomous Systems
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your business with intelligent solutions powered by cutting-edge AI technology.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Get Started
                 </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-green-400 text-green-400 hover: bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
               </div>
-=======
-  return (
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Autonomous Systems - Zion Tech Group</title>
@@ -170,94 +143,67 @@ const PagePage: React.FC = () => {
 
       <Navigation />
       
-      <main className="pt-20">
+      </div><main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        </main><section className="py-20 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               AI Autonomous Systems
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Build intelligent autonomous systems that operate independently and adapt to changing conditions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-            </div>
+</div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
-        <section className="py-20 px-4"></section></section>
-        </section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+<section className="py-20 px-4">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center mb-16">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Advanced AI technology that drives results
               </p>
             </div>
-
-<<<<<<< HEAD
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Advanced AI technology that drives autonomous operations</p>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
+                </div>
+<div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  </div>
+<div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-<<<<<<< HEAD
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div></div>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
-                  <p className="text-gray-300 mb-4"></p></p>{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-<<<<<<< HEAD
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-=======
-                        <li key={idx} className="flex items-center text-sm text-gray-400"></li>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+<li key={idx} className="flex items-center text-sm text-gray-400">
+
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   )}
-=======
-                  <ul className="space-y-2">
+<ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
@@ -265,104 +211,73 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-                </div>
+</div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
-        <section className="py-20 px-4"></section></section>
-        </section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-                Why Choose Our Solution?
-              </h2>
+<section className="py-20 px-4">
+          </section>
+<div className="max-w-7xl mx-auto">
+            </div>
+<div className="text-center mb-16">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+
+                Why Choose Our Solution ? </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-
-<<<<<<< HEAD
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Autonomous Systems?</h2>
-              <p className="text-xl text-gray-300">Transform your operations with intelligent automation</p>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
+                </div>
+<div key={index} className="flex items-start space-x-3">
+                  </div>
+<div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
-<<<<<<< HEAD
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div></div>
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium"></p></p>{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
-                  <p className="text-gray-300">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-                </div>
+<p className="text-lg text-white font-medium">{benefit}</p>
+
+<p className="text-gray-300">{benefit}</p>
+</div>
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
-        <section className="py-20 px-4"></section></section>
-        </section>
-          <div className="max-w-4xl mx-auto text-center"></div></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+<section className="py-20 px-4">
+          </section>
+<div className="max-w-4xl mx-auto text-center">
+            </div>
+<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-green-400 text-green-400 hover: bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
               </div>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+<section className="py-20 px-4 sm: px-6 lg:px-8">
+          </section>
+<div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Build Autonomous Systems?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join the future of autonomous technology with our AI-powered solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -370,27 +285,18 @@ const PagePage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Contact Sales
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-            </div>
+</div>
           </div>
         </section>
       </main>
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-      <Footer />
+<Footer />
     </>
-  );
-};
+  )
+}
 
-<<<<<<< HEAD
 export default PagePage;
-<<<<<<< HEAD
-=======
-export default AiAutonomousSystemsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-  </button>
+</button>
   </button>
   </p>
   </p>
@@ -404,22 +310,18 @@ export default AiAutonomousSystemsPage;
 export default PagePage;
 
         <div className="max-w-4xl mx-auto text-center"></div></div>
-          <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started?
-          <p className="text-xl text-gray-300 mb-8"></p></p>Transform your business with our page solutions today
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+          <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started ? <p className="text-xl text-gray-300 mb-8"></p></p>Transform your business with our page solutions today;
+          <div className="flex flex-col sm : flex-row gap-4 justify-center"></div></div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>Start Free Trial
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>Contact Sales
+            <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>Contact Sales
       <Footer />
   )
 }
 
 export default AiAutonomousSystemsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
-      <Footer />
+<Footer />
     </div>
-  );
+  )
 };
 
 export default AiAutonomousSystemsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

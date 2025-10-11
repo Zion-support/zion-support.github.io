@@ -60,18 +60,18 @@
     enableNetwork: false,}}
 }
 class ConfigManager {private config: AppConfig,}
-  constructor() {,}this.config = {...defaultConfig}this.loadEnvironmentConfig();
+  constructor() {,}this.config = {...defaultConfig}this.loadEnvironmentConfig()
   }
   }
 public getConfig(): AppConfig {}}return {...this.config}}}
 public updateConfig(updates: Partial<AppConfig>): void {,}
     ,}this.config = {...this.config, ...updates}}
-public getApiConfig() {return this.config.api;}}
-public getFeatureConfig() {return this.config.features;}}
-public getPerformanceConfig() {return this.config.performance;}}
-public getSecurityConfig() {return this.config.security;}}
-public getUIConfig() {return this.config.ui;}}
-public getLoggingConfig() {return this.config.logging;}}
+public getApiConfig() {return this.config.api}}
+public getFeatureConfig() {return this.config.features}}
+public getPerformanceConfig() {return this.config.performance}}
+public getSecurityConfig() {return this.config.security}}
+public getUIConfig() {return this.config.ui}}
+public getLoggingConfig() {return this.config.logging}}
 public isDevelopment(): boolean {return this.config.environment === 'development'}}}
 public isProduction(): boolean {return this.config.environment === 'production'}}}
 public isStaging(): boolean {return this.config.environment === 'staging'}}}
@@ -172,10 +172,10 @@ const,
     }
     return 'development'
   }
-  e: AppConfig, overrid);
-  e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */,}}const result = {...base}as AppConfig;
-    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke);
-  y: K) => {/* TODO: Fix JSX expression */,}result[key] = Object.assign({)}, baseValue, value) as typeof baseValue;
+  e: AppConfig, overrid)
+  e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */,}}const result = {...base}as AppConfig
+    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke)
+  y: K) => {/* TODO: Fix JSX expression */,}result[key] = Object.assign({)}, baseValue, value) as typeof baseValue
           } else {/* TODO: Fix JSX expression */,}}}
   /**
    * Load configuration based on environment
@@ -244,11 +244,11 @@ const,
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKe,
-  y: NK;)
+  y: NK)
   ): AppConfig[K][NK]
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
-    nestedKey?: NK;)
+    nestedKey?: NK)
   ): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
     }
     return this.config[key]

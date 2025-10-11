@@ -8,9 +8,7 @@ const ServiceWorker: React.FC = () => {
         .then((registration) => {
           console.log('Service Worker registered successfully:', registration)
         })
-        .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
+        .catch((error) => {console.log('Service Worker registration failed:', error)})
     }
   }, [])
 

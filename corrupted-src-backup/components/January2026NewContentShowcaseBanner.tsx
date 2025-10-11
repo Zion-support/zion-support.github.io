@@ -1,2 +1,2 @@
 import React from 'react'
-export default January2026 NewContentShowcaseBanner
+export default January2026 NewContentShowcaseBanner;

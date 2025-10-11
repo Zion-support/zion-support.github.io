@@ -45,7 +45,7 @@ const AIAutomationPage: React.FC = () => {
         'Standard integrations',
         'Basic analytics'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -60,7 +60,7 @@ const AIAutomationPage: React.FC = () => {
         'Advanced analytics',
         'Workflow optimization'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -76,7 +76,7 @@ const AIAutomationPage: React.FC = () => {
         'API access',
         'Dedicated support'
       ],
-      popular: false
+      popular: false;
     }
   ]
   const stats = [
@@ -88,15 +88,17 @@ const AIAutomationPage: React.FC = () => {
 export default function AIAutomationPage() {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
+      </div>
+<div className="container mx-auto px-4 py-20">
+        </div>
+<div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
-            AI Automation
-  
+            AI Automation;
           <p className="text-xl text-gray-300 mb-8">
             Intelligent process automation with AI-powered decision making and exception handling.
-          <div className="bg-slate-800/50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">AI-Powered Automation
+          </div>
+<div className="bg-slate-800/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">AI-Powered Automation;
             <p className="text-gray-300 mb-6">
               Transform your business processes with intelligent automation that learns and adapts to your needs.
             <$2 />

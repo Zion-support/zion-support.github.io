@@ -97,15 +97,17 @@ const PrivacyPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      </div><section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Privacy <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Policy</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
           </p>
-          <div className="flex items-center justify-center text-cyan-400">
+          </div>
+<div className="flex items-center justify-center text-cyan-400">
             <Shield className="w-6 h-6 mr-2" />
             <span className="font-semibold">Last updated: {new Date().toLocaleDateString()}</span>
           </div>
@@ -113,9 +115,11 @@ const PrivacyPage: React.FC = () => {
       </section>
 
       {/* Data Collection Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Information We Collect
             </h2>
@@ -123,11 +127,12 @@ const PrivacyPage: React.FC = () => {
               We collect information to provide better services to our users
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {dataTypes.map((type, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              </div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <type.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
@@ -139,9 +144,11 @@ const PrivacyPage: React.FC = () => {
       </section>
 
       {/* Purposes Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               How We Use Your Information
             </h2>
@@ -149,15 +156,17 @@ const PrivacyPage: React.FC = () => {
               We use your information for specific, legitimate purposes
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {purposes.map((purpose, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              </div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
+                </div>
+<div className="flex items-start">
+                  </div>
+<div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                     <purpose.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div>
+<div>
                     <h3 className="text-xl font-bold text-white mb-2">{purpose.title}</h3>
                     <p className="text-gray-300">{purpose.description}</p>
                   </div>
@@ -169,9 +178,11 @@ const PrivacyPage: React.FC = () => {
       </section>
 
       {/* Rights Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
+        </section>
+<div className="max-w-7xl mx-auto">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Your Privacy Rights
             </h2>
@@ -179,11 +190,12 @@ const PrivacyPage: React.FC = () => {
               You have control over your personal data
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {rights.map((right, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+              </div>
+<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center">
+                </div>
+<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                   <right.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{right.title}</h3>
@@ -195,9 +207,11 @@ const PrivacyPage: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 text-center">
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
+        </section>
+<div className="max-w-4xl mx-auto">
+          </div>
+<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Questions About Privacy?
             </h2>
@@ -205,22 +219,24 @@ const PrivacyPage: React.FC = () => {
               Contact our privacy team for any questions or concerns about your data
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="flex items-center justify-center">
+            </div>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              </div>
+<div className="flex items-center justify-center">
                 <Mail className="w-6 h-6 text-cyan-400 mr-3" />
                 <span className="text-white">{contactInfo.email}</span>
               </div>
-              <div className="flex items-center justify-center">
+<div className="flex items-center justify-center">
                 <Phone className="w-6 h-6 text-cyan-400 mr-3" />
                 <span className="text-white">{contactInfo.phone}</span>
               </div>
-              <div className="flex items-center justify-center">
+<div className="flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-cyan-400 mr-3" />
                 <span className="text-white text-sm">{contactInfo.address}</span>
               </div>
             </div>
             
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Contact Privacy Team
             </button>
           </div>

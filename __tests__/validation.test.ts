@@ -27,7 +27,7 @@ describe('validation', () => {
   test('rejects invalid URLs', () => {
     expect(isValidUrl('')).toBe(false)
     expect(isValidUrl('not a url')).toBe(false)
-    expect(isValidUrl('ftp://example.com')).toBe(false)
+    expect(isValidUrl('ftp: //example.com')).toBe(false)
   })
   test('rejects invalid URL formats', () => {
     expect(validateURL('').isValid).toBe(false)
@@ -68,8 +68,7 @@ describe('Password Validation', () => {
 })
 describe('HTML Sanitization', () => {
   test('sanitizes HTML special characters', () => {
-    expect(sanitizeHTML('<script>alert("xss")</script>')).toBe(
-      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
+    expect(sanitizeHTML('<script>alert("xss")</script>')).toBe('&ltscript&gtalert( & quotxss&quot) & lt&#x2F;script&gt'
     )
   })
   test('handles empty and non-string inputs', () => {

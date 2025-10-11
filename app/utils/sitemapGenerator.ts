@@ -64,9 +64,9 @@ Disallow: /private/`,}
   ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  ${staticPages.map(page =&gt;),
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;}
-  ${staticPages.map(page =&gt;)}
+  ${staticPages.map(page =&gt),
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"&gt}
+  ${staticPages.map(page =&gt)}
   <url>}
     <loc>${baseUrl}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
@@ -76,7 +76,7 @@ Crawl-delay: 1,
 Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
-Disallow: /private/`;}
+Disallow: /private/`}
 }
   d: currentDate,
       changefre,

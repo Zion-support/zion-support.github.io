@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>
     }
     
-    return this.props.children
+    return this.props.children;
   }
 }
 import React from 'react'
@@ -68,12 +68,14 @@ export default function AdminDashboard() {
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        </main>
+<div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">Admin Dashboard</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Visualize user activity, manage orders and keep your marketplace running smoothly.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
@@ -89,33 +91,35 @@ export default function AdminDashboard() {
             <li>Assign roles and permissions to your team.</li>
           </ul>
           <h2 className='text-2xl font-bold mb-4'>
-            Frequently Asked Questions
+            Frequently Asked Questions;
           </h2>
           <div className='space-y-4 mb-12'>
-            <div>
+            </div>
+<div>
               <p className='font-semibold'>Who can access the dashboard?</p>
               <p className='text-zion-slate-light'>
                 Only authorized admins and moderators with the proper roles.
               </p>
             </div>
-            <div>
+<div>
               <p className='font-semibold'>Can I export reports?</p>
               <p className='text-zion-slate-light'>
                 Yes, you can export data to CSV for further analysis.
               </p>
             </div>
           </div>
-          <div className='text-center'>
+<div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/admin'>View Dashboard</Link>            </Button>            <div>
+              <Link href='/admin'>View Dashboard</Link>            </Button>            </div>
+<div>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          </div>
+<div className="space-y-4 mb-12">
+            </div>
+<div>
 
   )
-}
-  )
-}
+})
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -131,8 +135,7 @@ export default function AdminDashboard() {
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
   }
   return (
-    <>
-      <SEO
+    <></><SEO
         title="Admin Dashboard"
         description="Gain insight into your marketplace with powerful administration tools."
         keywords="admin dashboard, analytics, manage listings"
@@ -144,12 +147,14 @@ export default function AdminDashboard() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      </div><main className="bg-background text-white py-12">
+        </main>
+<div className="container mx-auto px-4 md:px-6">
           <GradientHeading className="mb-4 text-center">Admin Dashboard</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Visualize user activity, manage orders and keep your marketplace running smoothly.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          </div>
+<div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
@@ -161,8 +166,10 @@ export default function AdminDashboard() {
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li></$1>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          </div>
+<div className="space-y-4 mb-12">
+            </div>
+<div>
               <p className='font-semibold'>Who can access the dashboard?</p>
               <p className='text-zion-slate-light'>
       <SEO
@@ -177,14 +184,16 @@ export default function AdminDashboard() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
       ></script>
       <Header />
-      <main className='bg - background text - white py - 12'>
-        <div className='container mx - auto px - 4 md:px - 6'>
+      </div><main className='bg - background text - white py - 12'>
+        </main>
+<div className='container mx - auto px - 4 md:px - 6'>
           <GradientHeading className='mb - 4 text - center'>
             Admin Dashboard</$1>
           <p className='text - center text - zion - slate - light max - w-3xl mx - auto mb - 8'>
-            Visualize user activity, manage orders and keep your marketplace
+            Visualize user activity, manage orders and keep your marketplace;
             running smoothly.</$1>
-          <div className='relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden'>
+          </div>
+<div className='relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden'>
             <img
               src='https://placehold.co / 800x400'
               alt='Screenshot of admin dashboard'
@@ -200,12 +209,14 @@ export default function AdminDashboard() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
       ></script>
       <Header />
-      <main className="bg - background text - white py - 12">
-        <div className="container mx - auto px - 4 md:px - 6">
+      </div><main className="bg - background text - white py - 12">
+        </main>
+<div className="container mx - auto px - 4 md:px - 6">
           <GradientHeading className="mb - 4 text - center">Admin Dashboard</GradientHeading>
           <p className="text - center text - zion - slate - light max - w-3xl mx - auto mb - 8">
             Visualize user activity, manage orders and keep your marketplace running smoothly.</$1>
-          <div className="relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden">
+          </div>
+<div className="relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden">
             <img
               src="https: //placehold.co / 800x400"
               alt="Screenshot of admin dashboard"
@@ -218,12 +229,15 @@ export default function AdminDashboard() {
             <li > Assign roles and permissions to your team.</li></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
             Frequently Asked Questions</$1>
-          <div className='space - y-4 mb - 12'>
-            <div>
+          </div>
+<div className='space - y-4 mb - 12'>
+            </div>
+<div>
               <p className='font - semibold'>Who can access the dashboard?</p>
               <p className='text - zion - slate - light'>
                 Only authorized admins and moderators with the proper roles.</$1></$1>
-            <div>
+            </div>
+<div>
                 Yes, you can export data to CSV for further analysis.</$1></$1></$1>
               <Link href="/admin">View Dashboard</Link></$1></$1></$1></$1>
   )

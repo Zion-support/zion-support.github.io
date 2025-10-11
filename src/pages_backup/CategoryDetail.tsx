@@ -22,10 +22,10 @@ const AUTO_SERVICE_TITLES = [
 ]
 function generateInnovationListing (index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service'
-  const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000
-  const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars
+  const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000;
+  const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars;
   const params = router.query as { slug?: string }
-  const slug = slugProp ?? params.slug
+  const slug = slugProp ?? params.slug;
       icon: <Briefcase className="w-6 h-6" />
     }
     'talents': {
@@ -43,8 +43,8 @@ function generateInnovationListing (index: number): ProductListing {
 
 function generateInnovationListing(index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
-  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
-  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000;
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars;
   const reviewCount = Math.floor(Math.random() * 50) + 10,
 
   return {
@@ -65,7 +65,7 @@ function generateInnovationListing(index: number): ProductListing {
     reviewCount,
     location: "Global",
     availability: "Immediate",
-    aiScore: Math.floor(Math.random() * 20) + 80
+    aiScore: Math.floor(Math.random() * 20) + 80;
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { useState, useEffect, useRef, Suspense } from "react",
@@ -91,10 +91,10 @@ const AUTO_SERVICE_TITLES = [
 ]
 function generateInnovationListing (index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service'
-  const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000
-  const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars
+  const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000;
+  const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars;
   const params = router.query as { slug?: string }
-  const slug = slug_prop ?? params.slug
+  const slug = slug_prop ?? params.slug;
       icon: <Briefcase className="w - 6 h - 6" />
     }
     'talents': {
@@ -201,9 +201,9 @@ function generateInnovationListing (index: number): ProductListing {
     async function load() {
       setIsLoading(true),
       try {
-        // Find the category data based on slug
+        // Find the category data based on slug;
         const currentCategory = categoryData[slug as keyof typeof categoryData] || {
-          title: slug
+          title: slug;
             ?.split('-')
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ') || 'Category',
@@ -213,16 +213,16 @@ function generateInnovationListing (index: number): ProductListing {
         setCategory(currentCategory),
         innovationCounterRef.current = 0,
 
-        // Filter listings by category
+        // Filter listings by category;
         const categoryTitle = currentCategory.title,
         const filteredListings = MARKETPLACE_LISTINGS.filter(
           (listing) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
         ),
 
-        // If we don't have real listings for this category, generate placeholder listings
+        // If we don't have real listings for this category, generate placeholder listings;
         const listingsToShow =
-          filteredListings.length > 0
-            ? filteredListings
+          filteredListings.length > 0;
+            ? filteredListings;
             : Array(4)
                 .fill(null)
                 .map((_, index) => ({
@@ -240,13 +240,12 @@ function generateInnovationListing (index: number): ProductListing {
                   images: [`/placeholder.svg`],
                   createdAt: new Date().toISOString(),
                   rating: Math.floor(Math.random() * 5) + 1,
-                  reviewCount: Math.floor(Math.random() * 100)})),
+                  reviewCount: Math.floor(Math.random() * 100)}),
 
         setListings(listingsToShow)
       } catch (err) {
         logErrorToProduction('Category load error:', { data: err }),
-        toast({ title: 'Error', description: 'Failed to load category' })
-      } finally {
+        toast({ title: 'Error', description: 'Failed to load category' }) finally {
         setIsLoading(false)
       }
     }
@@ -262,12 +261,11 @@ function generateInnovationListing (index: number): ProductListing {
       setListings((prev) => [
         generateInnovationListing(innovationCounterRef.current),
         ...prev])
-    }, 120000), // every 2 minutes
-
+    }, 120000), // every 2 minutes;
     return () => clearInterval(interval)
   }, [slug]),
 
-  // Handle requesting a quote
+  // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId),
     
@@ -277,20 +275,19 @@ function generateInnovationListing (index: number): ProductListing {
         description: `Your quote request for ${listing.title} has been sent.`
       }),
       
-      // Navigate to the quote request page with the listing information
+      // Navigate to the quote request page with the listing information;
       const queryParams = new URLSearchParams({
         serviceType: listing.category,
         itemId: listing.id,
         itemTitle: listing.title,
         itemCategory: listing.category,
-        ...(listing.images?.[0] && { itemImage: listing.images[0] })
-      }),
+        ...(listing.images?.[0] && { itemImage: listing.images[0] }),
       
       router.push(`/request-quote?${queryParams.toString()}`)
     }
   },
 
-  const seoTitle = category.title
+  const seoTitle = category.title;
     ? `${category.title} | Zion Marketplace`
     : 'Category | Zion Marketplace',
   const seoDescription =
@@ -300,26 +297,25 @@ function generateInnovationListing (index: number): ProductListing {
 
 
   return (
-    <>
-      <NextSeo title={seoTitle} description={seoDescription} />
+    <></><NextSeo title={seoTitle} description={seoDescription} />
       <Header />
       <Suspense fallback={<ListingGridSkeleton />}>
 
       <Suspense fallback={<ListingGridSkeleton />}> 
         <div className="min-h-screen bg-zion-blue">
-          <div className="container mx-auto px-4 py-12">
-          <div className="mb-4">
+          </div>
+<div className="container mx-auto px-4 py-12">
+          </div>
+<div className="mb-4">
             <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
-               Back to Categories
+               Back to Categories;
             </Link>
           </div>
-          
-
-
-
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
+<div className="text-center mb-12">
+            </div>
+<div className="flex justify-center mb-6">
+              </div>
+<div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists"
       icon: <Brain className="w - 6 h - 6" />
@@ -370,23 +366,28 @@ function generateInnovationListing (index: number): ProductListing {
       icon: <Code className="w - 6 h - 6" />
     }          icon: <Bot className="w - 6 h - 6" />},
         set_category (current_category)
-        innovationCounterRef.current = 0
+        innovationCounterRef.current = 0;
     : 'Category | Zion Marketplace'
   const seo_description =
     category.description || 'Explore listings in this category.'
   return (
-    <>
-      <NextSeo title={seo_title} description={seo_description} />
+    <></><NextSeo title={seo_title} description={seo_description} />
       <Header />
       <Suspense fallback={<ListingGridSkeleton />}>
-        <div className="min - h-screen bg - zion - blue">
-          <div className="container mx - auto px - 4 py - 12">
-          <div className="mb - 4">
+        </div>
+<div className="min - h-screen bg - zion - blue">
+          </div>
+<div className="container mx - auto px - 4 py - 12">
+          </div>
+<div className="mb - 4">
             <Link href="/categories" className="text - zion - cyan hover:text - zion - cyan - light transition - colors inline - flex items - center">
               ← Back to Categories</$1></$1>
-          <div className="text - center mb - 12">
-            <div className="flex justify - center mb - 6">
-              <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">
+          </div>
+<div className="text - center mb - 12">
+            </div>
+<div className="flex justify - center mb - 6">
+              </div>
+<div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">
                 {category.icon}
               </div>
             </div>
@@ -417,10 +418,10 @@ const AUTO_SERVICE_TITLES = [
 ]
 function generateInnovationListing(): any (index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES && AUTO_SERVICE_TITLES.length] || 'AI Service'
-  const price = Math && Math.floor(Math && Math.random() * 9500) + 500, // $500 - $10,000
-  const rating = Math && Math.floor(Math && Math.random() * 2) + 4, // 4-5 stars
+  const price = Math && Math.floor(Math && Math.random() * 9500) + 500, // $500 - $10,000;
+  const rating = Math && Math.floor(Math && Math.random() * 2) + 4, // 4-5 stars;
   const params = router && router.query as { slug?: string }
-  const slug = slugProp ?? params && params.slug
+  const slug = slugProp ?? params && params.slug;
               {listings.map((listing) => (
                 <ProductListingCard
                   key={listing.id}
@@ -436,7 +437,7 @@ function generateInnovationListing(): any (index: number): ProductListing {
     icon: <Bot className="w-6 h-6" />
   }),
   const innovationCounterRef = useRef(0),
-  // Map of category slugs to their display data
+  // Map of category slugs to their display data;
   const categoryData = {
     'services': {
       title: "Services",
@@ -503,9 +504,9 @@ function generateInnovationListing(): any (index: number): ProductListing {
     async function load() {
       setIsLoading(true),
       try {
-        // Find the category data based on slug
+        // Find the category data based on slug;
         const currentCategory = categoryData[slug as keyof typeof categoryData] || {
-          title: slug
+          title: slug;
             ?.split('-')
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ') || 'Category',
@@ -513,15 +514,15 @@ function generateInnovationListing(): any (index: number): ProductListing {
           icon: <Bot className="w-6 h-6" />},
         setCategory(currentCategory),
         innovationCounterRef.current = 0,
-        // Filter listings by category
+        // Filter listings by category;
         const categoryTitle = currentCategory.title,
         const filteredListings = MARKETPLACE_LISTINGS.filter(
           (listing) => listing.category.toLowerCase() === categoryTitle.toLowerCase()
         ),
-        // If we don't have real listings for this category, generate placeholder listings
+        // If we don't have real listings for this category, generate placeholder listings;
         const listingsToShow =
-          filteredListings.length > 0
-            ? filteredListings
+          filteredListings.length > 0;
+            ? filteredListings;
             : Array(4)
                 .fill(null)
                 .map((_, index) => ({
@@ -539,12 +540,11 @@ function generateInnovationListing(): any (index: number): ProductListing {
                   images: [`/placeholder.svg`],
                   createdAt: new Date().toISOString(),
                   rating: Math.floor(Math.random() * 5) + 1,
-                  reviewCount: Math.floor(Math.random() * 100)})),
+                  reviewCount: Math.floor(Math.random() * 100)}),
         setListings(listingsToShow)
       } catch (err) {
         logErrorToProduction('Category load error:', { data: err }),
-        toast({ title: 'Error', description: 'Failed to load category' })
-      } finally {
+        toast({ title: 'Error', description: 'Failed to load category' }) finally {
         setIsLoading(false)
       }
     }
@@ -558,10 +558,10 @@ function generateInnovationListing(): any (index: number): ProductListing {
       setListings((prev) => [
         generateInnovationListing(innovationCounterRef.current),
         ...prev])
-    }, 120000), // every 2 minutes
+    }, 120000), // every 2 minutes;
     return () => clearInterval(interval)
   }, [slug]),
-  // Handle requesting a quote
+  // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId),
     if (listing) {
@@ -569,35 +569,38 @@ function generateInnovationListing(): any (index: number): ProductListing {
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
       }),
-      // Navigate to the quote request page with the listing information
+      // Navigate to the quote request page with the listing information;
       const queryParams = new URLSearchParams({
         serviceType: listing.category,
         itemId: listing.id,
         itemTitle: listing.title,
         itemCategory: listing.category,
-        ...(listing.images?.[0] && { itemImage: listing.images[0] })
-      }),
+        ...(listing.images?.[0] && { itemImage: listing.images[0] }),
       router.push(`/request-quote?${queryParams.toString()}`)
     }
   },
-  const seoTitle = category.title
+  const seoTitle = category.title;
     ? `${category.title} | Zion Marketplace`
     : 'Category | Zion Marketplace'
   const seoDescription =
     category.description || 'Explore listings in this category.'
   return (
-    <>
-      <NextSeo title={seoTitle} description={seoDescription} />
+    <></><NextSeo title={seoTitle} description={seoDescription} />
       <Header />
       <Suspense fallback={<ListingGridSkeleton />}>
         <div className="min-h-screen bg-zion-blue">
-          <div className="container mx-auto px-4 py-12">
-          <div className="mb-4">
+          </div>
+<div className="container mx-auto px-4 py-12">
+          </div>
+<div className="mb-4">
             <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
               ← Back to Categories</$1></$1>
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
+          </div>
+<div className="text-center mb-12">
+            </div>
+<div className="flex justify-center mb-6">
+              </div>
+<div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
                 {category.icon}
               </div></$1>
             <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">

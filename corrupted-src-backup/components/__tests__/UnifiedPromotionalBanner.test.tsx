@@ -32,7 +32,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "me, g, a"</RouterWrap, p, e, r>
       ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('py-20', 'px-12')
     })
-  })
   descri, b, e('Them, e, s', () => { 
     const theme, s = ['b, l, u, e', 'purp, l, e', 'gre, e, n', 'oran, g, e', 'r, e, d', 'cy, a, n', 'gradie, n, t'] as, cons, t; them, e, s.forEa, c, h(the, m, e = > {)
       it(`rende, r, s ${the, m, e } theme, correct, l, y`, () => {
@@ -89,7 +88,6 @@ descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression 
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} animat, e, d = {fal, s, e}</RouterWrap, p, e, r></UnifiedPromotionalBann>)
       ); const banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).n, o, t.toHaveCla, s, s('hov, e, r: sca, l, e-[1.0, 1]')
     })
-  })
   descri, b, e('Accessibili, t, y', () => { 
     it('has, accessible, links', () => {
           title: 'Test, I, t, e, m',

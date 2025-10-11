@@ -7,8 +7,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const _scopedEvents = filterEventsByScope(state.events, scope)
     return res.status(200).json({)
       status: 'ok')
-      instanceId: state.config.instanceId;)
-      config: state.config;)
+      instanceId: state.config.instanceId)
+      config: state.config)
       lastSyncedAt: state.lastSyncedAt)
       counts: {
         totalEvents: scopedEvents.length)

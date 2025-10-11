@@ -2,9 +2,9 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ChevronRight, Home } from 'lucide-react'
 interface BreadcrumbItem {
-    name: string
+    name: string;
   href: string,
-  current?: boolean
+  current?: boolean;
   }
 const Breadcrumb: React.FC = () => {
   const location = useLocation(),
@@ -16,9 +16,9 @@ const Breadcrumb: React.FC = () => {
     let currentPath = ''
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment}`
-      const isLast = index === pathSegments.length - 1
-      // Convert segment to readable name
-      const name = segment
+      const isLast = index === pathSegments.length - 1;
+      // Convert segment to readable name;
+      const name = segment;
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ')
@@ -26,15 +26,14 @@ const Breadcrumb: React.FC = () => {
     )
         name)
         href: currentPath),
-        current: isLast
+        current: isLast;
   })
-    })
-    return breadcrumbs
+    return breadcrumbs;
   }
   const breadcrumbs = generateBreadcrumbs()
-  // Don't show breadcrumb on home page
+  // Don't show breadcrumb on home page;
   if (location.pathname === '/') {
-    return null
+    return null;
   }
   const structuredData = {
     "@context": "https: //schema.org",
@@ -44,8 +43,7 @@ const Breadcrumb: React.FC = () => {
       "position": index + 1,
       "name": item.name,
       "item": `https://ziontechgroup.com${item.href}`
-    }))
-  }
+    })
   return(<React.Fragment>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
@@ -53,7 +51,8 @@ const Breadcrumb: React.FC = () => {
   return (
     <React.Fragment>
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        </div>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ol className="flex items-center space-x-2 text-sm">
             {breadcrumbs.map((item, index) => (
               <li key={item.href} className="flex items-center">
@@ -69,9 +68,7 @@ const Breadcrumb: React.FC = () => {
                     className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center",
                   >,
                     {index === 0 && <Home className="w-4 h-4 mr-1" />}
-                    {item.name}
-                )}
-            ))}
+                    {item.name})
       {/* Structured Data */}
       <script
         type="application/ld+json"

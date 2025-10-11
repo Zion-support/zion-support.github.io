@@ -1,17 +1,17 @@
 }
-// Build sample data from the shared equipment listings
+// Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipment_listings.reduce (
     (acc, item) => {
 
       acc[item.id] = convertProductListingToEquipmentDetails (item)
-      return acc
+      return acc;
     },
 
     {} as { [key: string]: EquipmentDetails }
   )
 export default /**
- * EquipmentDetail - Function description
+ * EquipmentDetail - Function description;
  */
 function EquipmentDetail() {
   const router = use_router ()
@@ -30,34 +30,34 @@ function EquipmentDetail() {
       if (!id) {
         setLoading(false)
         setError('No equipment ID provided')
-        return
+        return;
       }
       try {
         setLoading(true)
         setError(null)
-        // Try to find in static data first
+        // Try to find in static data first;
         const equipmentFromSample = SAMPLE_EQUIPMENT[id]
         if (equipmentFromSample) {
           setEquipment(equipmentFromSample)
           setLoading(false)
-          return
+          return;
         }
 
         // Try to get from session_storage (for dynamically generated equipment)
-        // Check condition
+        // Check condition;
 if ( {) {
-  $2
+  $2;
 }
 
           try {
             const stored = sessionStorage.getItem(`equipment:${id}`)
             if (stored) {
               const storedData = JSON.parse(stored)
-              // Check if it's already in EquipmentDetails format or needs conversion
-              let equipmentData: EquipmentDetails
+              // Check if it's already in EquipmentDetails format or needs conversion;
+              let equipmentData: EquipmentDetails;
               if (storedData.name) {
-                // Already in EquipmentDetails format
-                equipmentData = storedData
+                // Already in EquipmentDetails format;
+                equipmentData = storedData;
               } else {
 
 
@@ -98,36 +98,36 @@ import { motion } from 'framer-motion'
 import { useCurrency } from '@/hooks/useCurrency'
 import { logErrorToProduction } from '@/utils/productionLogger'
 interface EquipmentSpecification {
-  name: string
-value: string 
+  name: string;
+value: string;
 }interface EquipmentDetails {
-  id: string
-name: string
-description: string
-brand: string
-category: string
-subcategory?: string
+  id: string;
+name: string;
+description: string;
+brand: string;
+category: string;
+subcategory?: string;
 images: string[]
-price: number
-currency: string
-rating?: number
-reviewCount?: number
-inStock: boolean
-expectedShipping?: string
+price: number;
+currency: string;
+rating?: number;
+reviewCount?: number;
+inStock: boolean;
+expectedShipping?: string;
 specifications: EquipmentSpecification[]
 features: string[]
-warranty?: string
-returnPolicy?: string 
+warranty?: string;
+returnPolicy?: string;
 }return {
   id: item && item.id, name: item && item.title, description: item && item.description, brand: item && item.brand || 'Unknown', category: item && item.category, subcategory: item && item.subcategory, images: item && item.images || ['https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item && item.price || 0, currency: item && item.currency || '$', rating: item && item.rating, reviewCount: item && item.reviewCount, inStock: item && item.availability === 'In Stock' || !item && item.availability, expectedShipping: item && item.availability || 'In Stock',  specifications: (item && item.specifications || []) .map ( (spec) => ({'
   name: spec, value: '' 
-}) )
+})
 features: item && item.tags || [];'
 warranty: '1 Year Manufacturer Warranty';'
 returnPolicy: '30-day return policy' 
-// Convert ProductListing to EquipmentDetails format
+// Convert ProductListing to EquipmentDetails format;
 function convertProductListingToEquipmentDetails(): any (
-  item: ProductListing
+  item: ProductListing;
 ): EquipmentDetails {
   return {
     id: item && item.id,
@@ -147,17 +147,17 @@ function convertProductListingToEquipmentDetails(): any (
     expectedShipping: item && item.availability || 'In Stock',
     specifications: (item && item.specifications || []).map(spec => ({
       name: spec,
-      value: '',    })),
+      value: '',    }),
     features: item && item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy',
   }
-// Build sample data from the shared equipment listings
+// Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings && equipmentListings.reduce(
     (acc, item) => {
       acc[item && item.id] = convertProductListingToEquipmentDetails(item)
-      return acc
+      return acc;
     },
     {} as { [key: string]: EquipmentDetails }
   )
@@ -178,18 +178,18 @@ export default function EquipmentDetail() {
       if (!id) {
         setLoading(false)
         setError('No equipment ID provided')
-        return
+        return;
       }
 
       try {
         setLoading(true)
         setError(null)
-        // Try to find in static data first
+        // Try to find in static data first;
         const equipmentFromSample = SAMPLE_EQUIPMENT[id]
         if (equipmentFromSample) {
           setEquipment(equipmentFromSample)
           setLoading(false)
-          return
+          return;
         }
 
         // Try to get from sessionStorage (for dynamically generated equipment)
@@ -198,38 +198,36 @@ export default function EquipmentDetail() {
             const stored = sessionStorage && sessionStorage.getItem(`equipment:${id}`)
             if (stored) {
               const storedData = JSON && JSON.parse(stored)
-              // Check if it's already in EquipmentDetails format or needs conversion
-              let equipmentData: EquipmentDetails
+              // Check if it's already in EquipmentDetails format or needs conversion;
+              let equipmentData: EquipmentDetails;
               if (storedData && storedData.name) {
-                // Already in EquipmentDetails format
-                equipmentData = storedData
+                // Already in EquipmentDetails format;
+                equipmentData = storedData;
               } else {
-                // It's a ProductListing, convert it
+                // It's a ProductListing, convert it;
                 equipmentData = convertProductListingToEquipmentDetails(
-                  storedData as ProductListing
+                  storedData as ProductListing;
                 )
               }
               setEquipment(equipmentData)
               setLoading(false)
-              return
+              return;
             }
 
 
-                // It's a ProductListing, convert it
+                // It's a ProductListing, convert it;
                 equipment_data = convertProductListingToEquipmentDetails (
                   stored_data as ProductListing)
               }
               set_equipment (equipment_data)
               set_loading (false)
-              return
+              return;
             }
           } catch (storage_error) {
             logErrorToProduction ('Error reading from session_storage:', {
               data: storage_error,
             })
-          }
-        }
-        // If not found anywhere, set error
+        // If not found anywhere, set error;
         set_error ('Equipment not found')
         set_loading (false)
       } catch (error) {
@@ -263,7 +261,7 @@ import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface EquipmentSpecification {
   name: string,
-  value: string
+  value: string;
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { NextSeo } from '@/components/NextSeo',
@@ -284,7 +282,7 @@ import { useCurrency } from '@/hooks/useCurrency',
 import {logErrorToProduction} from '@/utils/productionLogger',
 interface EquipmentSpecification {
   name: string,
-  value: string
+  value: string;
 }
 
 interface EquipmentDetails {
@@ -304,10 +302,10 @@ interface EquipmentDetails {
   specifications: EquipmentSpecification[],
   features: string[],
   warranty?: string,
-  returnPolicy?: string
+  returnPolicy?: string;
 }
 
-// Convert ProductListing to EquipmentDetails format
+// Convert ProductListing to EquipmentDetails format;
 function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {
   return {
     id: item.id,
@@ -326,18 +324,18 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     specifications: (item.specifications || []).map((spec) => ({
       name: spec,
       value: ''
-    })),
+    }),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy'
   }
 }
 
-// Build sample data from the shared equipment listings
+// Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce((acc, item) => {
     acc[item.id] = convertProductListingToEquipmentDetails(item),
-    return acc
+    return acc;
   }, {} as { [key: string]: EquipmentDetails }),
 export default function EquipmentDetail() {
   const router = useRouter(),
@@ -356,18 +354,18 @@ export default function EquipmentDetail() {
       if (!id) {
         setLoading(false),
         setError('No equipment ID provided'),
-        return
+        return;
       }
 
       try {
         setLoading(true),
         setError(null),
-        // Try to find in static data first
+        // Try to find in static data first;
         const equipmentFromSample = SAMPLE_EQUIPMENT[id],
         if (equipmentFromSample) {
           setEquipment(equipmentFromSample),
           setLoading(false),
-          return
+          return;
         }
 
         // Try to get from sessionStorage (for dynamically generated equipment)
@@ -376,27 +374,25 @@ export default function EquipmentDetail() {
             const stored = sessionStorage.getItem(`equipment:${id}`),
             if (stored) {
               const storedData = JSON.parse(stored),
-              // Check if it's already in EquipmentDetails format or needs conversion
+              // Check if it's already in EquipmentDetails format or needs conversion;
               let equipmentData: EquipmentDetails,
               if (storedData.name) {
-                // Already in EquipmentDetails format
-                equipmentData = storedData
+                // Already in EquipmentDetails format;
+                equipmentData = storedData;
               } else {
-                // It's a ProductListing, convert it
+                // It's a ProductListing, convert it;
                 equipment_data = convertProductListingToEquipmentDetails (
                   stored_data as ProductListing)
               }
               set_equipment (equipment_data)
               set_loading (false)
-              return
+              return;
             }
           } catch (storage_error) {
             logErrorToProduction ('Error reading from session_storage:', {
               data: storage_error,
             })
-          }
-        }
-        // If not found anywhere, set error
+        // If not found anywhere, set error;
         set_error ('Equipment not found')
         set_loading (false)
       } catch (error) {
@@ -425,7 +421,7 @@ export default function EquipmentDetail() {
 
 
       })
-      return
+      return;
     }
 
 
@@ -442,13 +438,11 @@ export default function EquipmentDetail() {
 
       toast({
         title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`})
-    } catch (error) {
+        description: `${equipment.name} has been added to your cart.`}) catch (error) {
       toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
-        variant: "destructive"})
-    } finally {
+        variant: "destructive"}) finally {
       setIsAdding(false)
     }
   },
@@ -467,15 +461,17 @@ export default function EquipmentDetail() {
 
 
 
-  // Loading state
+  // Loading state;
   if (loading) {
     return (
-      <>
-        <NextSeo title="Loading Equipment..." />
+      <></><NextSeo title="Loading Equipment..." />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+          </div>
+<div className="container mx-auto">
+            </div>
+<div className="text-center py-20">
+              </div>
+<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
               <p className="text-zion-slate-light">Loading equipment details...</p>
             </div>
           </div>
@@ -484,19 +480,21 @@ export default function EquipmentDetail() {
     )
   }
   const in_cart = items.some (item => item.id === equipment?.id)
-  // Loading state
-  // Check condition
+  // Loading state;
+  // Check condition;
 if ( {) {
-  $2
+  $2;
 }
 
     return (
-      <>
-        <NextSeo title='Loading Equipment...' />
+      <></><NextSeo title='Loading Equipment...' />
         <div className='min - h-screen bg - zion - blue py - 12 px - 4'>
-          <div className='container mx - auto'>
-            <div className='text - center py - 20'>
-              <div className='animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - cyan mx - auto mb - 4'></div>
+          </div>
+<div className='container mx - auto'>
+            </div>
+<div className='text - center py - 20'>
+              </div>
+<div className='animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - cyan mx - auto mb - 4'></div>
               <p className='text - zion - slate - light'>
                 Loading equipment details...</$1></$1></$1></$1>
       </>)
@@ -506,10 +504,7 @@ if ( {) {
             logErrorToProduction('Error reading from sessionStorage:', {
               data: storageError,
             })
-          }
-        }
-
-        // If not found anywhere, set error
+        // If not found anywhere, set error;
         setError('Equipment not found')
         setLoading(false)
       } catch (error) {
@@ -528,7 +523,7 @@ if ( {) {
         description: 'Please log in to add items to cart',
         variant: 'destructive',
       })
-      return
+      return;
     }
 
     setIsAdding(true)
@@ -545,44 +540,44 @@ if ( {) {
       toast({
         title: 'Added to Cart',
         description: `${equipment && equipment.name} has been added to your cart.`,
-      })
-    } catch (error) {
+      }) catch (error) {
       toast({
         title: 'Error',
         description: 'Failed to add item to cart. Please try again.',
         variant: 'destructive',
-      })
-    } finally {
+      }) finally {
       setIsAdding(false)
     }
   }
   const inCart = items && items.some(item => item && item.id === equipment?.id)
-  // Loading state
+  // Loading state;
   if (loading) {
     return (
-      <>
-        <NextSeo title='Loading Equipment...' />
+      <></><NextSeo title='Loading Equipment...' />
         <div className='min-h-screen bg-zion-blue py-12 px-4'>
-          <div className='container mx-auto'>
-            <div className='text-center py-20'>
-              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>
+          </div>
+<div className='container mx-auto'>
+            </div>
+<div className='text-center py-20'>
+              </div>
+<div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>
               <p className='text-zion-slate-light'>
                 Loading equipment details...</$1></$1></$1></$1>
       </>
     )
   }
 
-  // Error state
+  // Error state;
   if (error || !equipment) {
     return (
-      <>
-        <NextSeo
+      <></><NextSeo
           title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
         />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <motion.div 
+          </div>
+<div className="container mx-auto">
+            <motion.div;
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
 
@@ -599,7 +594,8 @@ if ( {) {
 
                     "We couldn't load the equipment details. Please try again."}
               </p>
-              <div className='space-x-4'>
+              </div>
+<div className='space-x-4'>
                 <Button
                   onClick={() => router && router.back()}
                   variant='outline'
@@ -607,7 +603,6 @@ if ( {) {
                   <ArrowLeft className='h-4 w-4 mr-2' />
                   Go Back</$1>
                 <Button
-
               animate={{ opacity: 1, y: 0 }}
             >
               <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
@@ -621,7 +616,8 @@ if ( {) {
                   : error |
                     "We couldn't load the equipment details. Please try again."}
               </p>
-              <div className='space-x-4'>
+              </div>
+<div className='space-x-4'>
                 <Button
                   onClick={() => router && router.back()}
                   variant='outline'
@@ -637,21 +633,22 @@ if ( {) {
                   : error || "We couldn't load the equipment details. Please try again."
                 }
               </p>
-              <div className="space-x-4">
-                <Button 
+              </div>
+<div className="space-x-4">
+                <Button
                   onClick={() => router.back()} 
                   variant="outline"
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
                 >
                   <ArrowLeft className="h-4 w-4 mr-2" />
-                  Go Back
+                  Go Back;
                 </Button>
-                <Button 
+                <Button
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
 
-                  Browse Equipment
+                  Browse Equipment;
                 </Button>
               </div>
             </motion.div>
@@ -661,8 +658,7 @@ if ( {) {
     )
   }
   return (
-    <>
-      <NextSeo
+    <></><NextSeo
         title={`${equipment && equipment.name} - Zion Marketplace`}
         description = {equipment && equipment.description,}
         openGraph={{
@@ -675,7 +671,7 @@ if ( {) {
         title: "Authentication Required",
         description: "Please log in to add items to cart",
         variant: "destructive"}),
-      return
+      return;
     }
 
     setIsAdding(true),
@@ -689,42 +685,42 @@ if ( {) {
           quantity}}),
       toast({
         title: "Added to Cart",
-        description: `${equipment.name} has been added to your cart.`})
-    } catch (error) {
+        description: `${equipment.name} has been added to your cart.`}) catch (error) {
       toast({
         title: "Error",
         description: "Failed to add item to cart. Please try again.",
-        variant: "destructive"})
-    } finally {
+        variant: "destructive"}) finally {
       setIsAdding(false)
     }
   },
   const inCart = items.some(item => item.id === equipment?.id),
-  // Loading state
+  // Loading state;
   if (loading) {
     return (
-      <>
-        <NextSeo title="Loading Equipment..." />
+      <></><NextSeo title="Loading Equipment..." />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+          </div>
+<div className="container mx-auto">
+            </div>
+<div className="text-center py-20">
+              </div>
+<div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
               <p className="text-zion-slate-light">Loading equipment details...</p></$1></$1></$1>
       </>
     )
   }
 
-  // Error state
+  // Error state;
   if (error || !equipment) {
     return (
-      <>
-        <NextSeo
+      <></><NextSeo
           title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
         />
         <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <motion.div
+          </div>
+<div className="container mx-auto">
+            <motion.div;
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -739,7 +735,8 @@ if ( {) {
                   : error || "We couldn't load the equipment details. Please try again."
                 }
               </p>
-              <div className="space-x-4">
+              </div>
+<div className="space-x-4">
                 <Button
                   onClick={() => router.back()}
                   variant="outline"
@@ -757,28 +754,29 @@ if ( {) {
   }
 
   return (
-    <>
-      <NextSeo
+    <></><NextSeo
         title={`${equipment.name} - Zion Marketplace`}
         description={equipment.description}
         openGraph={{
           title: `${equipment.name} - Zion Marketplace`
-          description: equipment.description
-          images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
+          description: equipment.description;
+          images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
         }}
       />
-      <div className="min-h-screen bg-zion-blue py-8 px-4">
-        <div className="container mx-auto">
+      </div>
+<div className="min-h-screen bg-zion-blue py-8 px-4">
+        </div>
+<div className="container mx-auto">
           {/* Breadcrumb */}
 
-          <motion.nav
+          <motion.nav;
             className='flex mb-8'
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}>
             <$2 />
               onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
-          <motion.nav 
+          <motion.nav;
             className="flex mb-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -790,7 +788,7 @@ if ( {) {
 
 
 
-              Equipment
+              Equipment;
             </button>
             <span className="mx-2 text-zion-slate-light">/</span>
             <span className="text-zion-slate-light">{equipment.name}</span>
@@ -801,8 +799,10 @@ if ( {) {
               Equipment</$1>
             <span className='mx-2 text-zion-slate-light'>/</span>
             <span className='text-zion-slate-light'>{equipment && equipment.name}</span></$1>
-          <div className='grid lg:grid-cols-2 gap-12'>
-          <div className="grid lg:grid-cols-2 gap-12">
+          </div>
+<div className='grid lg:grid-cols-2 gap-12'>
+          </div>
+<div className="grid lg:grid-cols-2 gap-12">
 
 
 
@@ -816,9 +816,9 @@ if ( {) {
 
             </motion && motion.div>
             {/* Product Details */}
-            <motion.div
+            <motion.div;
               className='space-y-6'
-            <motion.div 
+            <motion.div;
               className="space-y-6"
 
 
@@ -838,7 +838,8 @@ if ( {) {
                 </h1>
                 {equipment && equipment.rating && (
                   <div className='flex items-center gap-2'>
-                    <div className='flex items-center'>
+                    </div>
+<div className='flex items-center'>
                       {[...Array(5)].map((_, i) => (                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
@@ -847,8 +848,10 @@ if ( {) {
                               : 'text-zion-slate-light'
 
 
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 mb-2">
+              </div>
+<div className="space-y-2">
+                </div>
+<div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
 
 
@@ -870,7 +873,8 @@ if ( {) {
 
                   <div className="flex gap-3 text-zion-slate-light">
                     <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                    <div>
+                    </div>
+<div>
                       <p className="text-white text-sm font-medium">Warranty</p>
                       <p className="text-xs">{equipment.warranty}</p>
                     </div>
@@ -881,15 +885,18 @@ if ( {) {
                 {equipment && equipment.warranty && (
                   <div className='flex gap-3 text-zion-slate-light'>
                     <Shield className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                    <div>
+                    </div>
+<div>
                       <p className='text-white text-sm font-medium'>Warranty</p>
                       <p className='text-xs'>{equipment && equipment.warranty}</p></$1></$1>
                 )}
                 {/* Return Policy */}
                 {equipment && equipment.returnPolicy && (
-                  <div className='flex gap-3 text-zion-slate-light'>
+                  </div>
+<div className='flex gap-3 text-zion-slate-light'>
                     <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                    <div>
+                    </div>
+<div>
                       <p className='text-white text-sm font-medium'>Returns</p>
                       <p className='text-xs'>{equipment && equipment.returnPolicy}</p></$1></$1>
                 )}
@@ -897,7 +904,7 @@ if ( {) {
 
 
 
-  equipment.returnPolicy 
+  equipment.returnPolicy;
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"}
@@ -908,14 +915,17 @@ if ( {) {
                 {equipment.warranty && (
                   <div className='flex gap - 3 text - zion - slate - light'>
                     <Shield className='h - 5 w - 5 text - zion - cyan flex - shrink - 0' />
-                    <div>
+                    </div>
+<div>
                       <p className='text - white text - sm font - medium'>Warranty</p>
                       <p className='text - xs'>{equipment.warranty}</p></$1></$1>)}
                 {/* Return Policy */}
                 {equipment.return_policy && (
-                  <div className='flex gap - 3 text - zion - slate - light'>
+                  </div>
+<div className='flex gap - 3 text - zion - slate - light'>
                     <RotateCcw className='h - 5 w - 5 text - zion - cyan flex - shrink - 0' />
-                    <div>
+                    </div>
+<div>
                       <p className='text - white text - sm font - medium'>Returns</p>
                       <p className='text - xs'>{equipment.return_policy}</p></$1></$1>)}
               </div></$1></$1></$1></$1>

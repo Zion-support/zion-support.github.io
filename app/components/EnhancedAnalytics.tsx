@@ -1,11 +1,8 @@
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void
-  trackPageView: (pageName: string) => void
-  trackUser: (userId: string, traits?: Record<string, any>) => void
-}
+interface AnalyticsContextType {trackEvent: (eventName: string, properties?: Record<string, any>) => void
+  trackPageView: (pageName: string) => void trackUser: (userId: string, traits?: Record<string, any>) => void}
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 
@@ -32,7 +29,6 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     if (!isLoaded) return
-
     // Track event with analytics service
     console.log('Analytics Event:', eventName, properties)
     
@@ -44,7 +40,6 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
   const trackPageView = (pageName: string) => {
     if (!isLoaded) return
-
     // Track page view
     console.log('Analytics Page View:', pageName)
     
@@ -54,12 +49,8 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         page_title: pageName,
         page_location: window.location.href
       })
-    }
-  }
-
   const trackUser = (userId: string, traits?: Record<string, any>) => {
     if (!isLoaded) return
-
     // Track user identification
     console.log('Analytics User:', userId, traits)
     
@@ -69,55 +60,29 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         user_id: userId,
         custom_map: traits
       })
-    }
-  }
-
-  const value: AnalyticsContextType = {
-    trackEvent,
+  const value: AnalyticsContextType = {trackEvent,
     trackPageView,
-    trackUser
-  }
+    trackUser}
 
-=======
-'use client';
-import React from 'react';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
+'use client'
+import React from 'react'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react'
 
-interface EnhancedAnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+interface EnhancedAnalyticsProps {className?: string
+  children?: React.ReactNode}
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-  return (
+return (
     <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
-      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+      </div>
+<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
         <Brain className="w-8 h-8 text-white" />
       </div>
       <h3 className="text-xl font-bold text-white mb-4">EnhancedAnalytics Title</h3>
       <p className="text-gray-300 mb-4">EnhancedAnalytics description goes here.</p>
       {children}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-    </AnalyticsContext.Provider>
+</AnalyticsContext.Provider>
   )
 }
 
 export default AnalyticsProvider
-<<<<<<< HEAD
-=======
-    </div>
-  );
-};
-
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <div>{children}</div>;
-};
-
-export default EnhancedAnalytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

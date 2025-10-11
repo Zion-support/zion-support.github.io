@@ -10,7 +10,7 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)}})
         })
-    const entries = list.getEntries();
+    const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {,
         fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift
@@ -19,14 +19,14 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
     const entries = list.getEntries()
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-    // Keep HEAD version;
+    // Keep HEAD version
               this.metrics.cls = clsValue,
               this.reportMetric('cls', clsValue)}}
           })
         })
-    const entries = list.getEntries();
+    const entries = list.getEntries()
           entries.forEach(entry => {)
-            this.metrics.fcp = entry.startTime;
+            this.metrics.fcp = entry.startTime
             this.reportMetric('fcp', entry.startTime)}})
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint
@@ -38,18 +38,17 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
           })
         })
         fcpObserver.observe({entryTypes: ['paint'] ,)})
-      } catch (error) {// Keep HEAD version;}}
+      } catch (error) {// Keep HEAD version}}
   }
   private monitorLongTasks(): void {if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {}
       try {const longTaskObserver = new PerformanceObserver((list) => {}
-          for (const entry of list.getEntries()) {
-    // Keep HEAD version;}})
+          for (const entry of list.getEntries()) {// Keep HEAD version}})
         longTaskObserver.observe({entryTypes: ['longtask'] ,)})
-      } catch (error) {// Long task API might not be available;}}
+      } catch (error) {// Long task API might not be available}}
     }
   }
-          const entries = list.getEntries();
-    // Keep HEAD version;}})
+          const entries = list.getEntries()
+    // Keep HEAD version}})
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
@@ -58,11 +57,11 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
           })
         })
         resourceObserver.observe({entryTypes: ['resource'] ,)})
-      } catch (_error) {// Keep HEAD version;}}
+      } catch (_error) {// Keep HEAD version}}
   }
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
-        url: window.location.href;,}})
+        url: window.location.href,}})
     })
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
@@ -75,11 +74,10 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   }
   private reportMetric(name: string, value: number): void {,}
     // Sample rate,
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return;}}
+    if (Math.random() > performanceConfig.monitoring.sampleRate) {return}}
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    // Keep HEAD version;
-    // Send to analytics (if configured);
+    // Keep HEAD version
+    // Send to analytics (if configured)
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {)
     if (thresholds) {
@@ -95,9 +93,8 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   public logError(error: ErrorReport): void {,}
     this.errors.push(error)
     // Keep only last 50 errors,
-    if (this.errors.length > 50) {
-      if (navigation) {
-    // Keep HEAD version;}}
+    if (this.errors.length > 50) {if (navigation) {
+    // Keep HEAD version}}
     }
   }
 }

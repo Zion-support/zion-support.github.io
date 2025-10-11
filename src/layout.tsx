@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import Analytics from './components/Analytics'
 export default function RootLayout({
   children}: {
-    children: React.ReactNode
+    children: React.ReactNode;
   }) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -54,7 +54,7 @@ export default function RootLayout({
     addressCountry: 'US',
     offers: [
   // TODO: Add items]
-      {// TODO: Add content
+      {// TODO: Add content;
   }
 }
         '@type': 'Offer',
@@ -169,16 +169,16 @@ $4]
       </body>
     </html>
   )
-export default RootLayout
+export default RootLayout;
         priceSpecification: {
-    // TODO: Add content
+    // TODO: Add content;
   }
 }
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
         }
   itemOffered: {
-    // TODO: Add content
+    // TODO: Add content;
   }
 }
             '@type': 'Service',

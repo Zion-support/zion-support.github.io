@@ -80,20 +80,23 @@ $4]
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
-  })).filter(category => category.questions.length > 0)
+  }).filter(category => category.questions.length > 0)
   return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+        </div>
+<div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
-          <div className="text-center mb-12">
+          </div>
+<div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Frequently Asked Questions
+              Frequently Asked Questions;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers to common questions about our AI and IT services, pricing, and support.
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">
+            </div>
+<div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -103,16 +106,20 @@ $4]
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
           {/* FAQ Content */}
-          <div className="max-w-4xl mx-auto">
+          </div>
+<div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-12">
+              </div>
+<div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
-                <div className="space-y-4">
+                </div>
+<div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
-                    const globalIndex = categoryIndex * 100 + itemIndex
+                    const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex)
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
+                      </div>
+<div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <$2 />
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors">
@@ -123,30 +130,32 @@ $4]
                             <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           )}
                         {isOpen && (
-                          <div className="px-6 pb-4">
+                          </div>
+<div className="px-6 pb-4">
                             <p className="text-gray-300 leading-relaxed">{item.answer}
-                  })}
-            ))}
+                  })
           {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+          </div>
+<div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Have Questions?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <$2 />
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950
+                Call (302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+                Email Us;
                 href="/contact"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" />
-                Contact Form
+                Contact Form;
       <Footer />
     </React.Fragment>
 export default FAQPage,
@@ -155,7 +164,8 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const FAQPage: React.FC = () => {
     return (
-    <div>Coming Soon</div>
+    </div>
+<div>Coming Soon</div>
   )
   }
   const [searchTerm, setSearchTerm] = useState('')
@@ -169,7 +179,7 @@ const toggleItem = (inde)
   }
   const faqData = [
   // TOD,
-  O: Add items
+  O: Add items;
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -297,7 +307,7 @@ const toggleItem = (inde)
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
-  })).filter(category => category.questions.length > 0)
+  }).filter(category => category.questions.length > 0)
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
@@ -305,7 +315,8 @@ const toggleItem = (inde)
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
-          <div className="text-center mb-12"></div>"
+          </div>
+<div className="text-center mb-12"></div>"
             < className="text-4xl,"$2 />
   md:text-5xl font-bold text-white mb-6 neon-text">
 // Frequently Asked Questions</h1>"
@@ -325,9 +336,11 @@ type="text" placeholder="Search FAQs..."
   focus:ring-cyan-400/20"
 // />
           {/* FAQ Content */}"
-          <div className="max-w-4xl mx-auto">
+          </div>
+<div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => ()}"
-          <div key={categoryIndex} className="mb-12"></div>"
+          </div>
+<div key={categoryIndex} className="mb-12"></div>"
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
                 </h2>"
@@ -336,10 +349,11 @@ type="text" placeholder="Search FAQs..."
   // TOD,
   O: Add content,
 }
-                    const globalIndex = categoryIndex * 100 + itemIndex
+                    const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex)
           "
-          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
+          </div>
+<div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button>
                           onClick={() => toggleItem(globalIndex)}"
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
@@ -354,27 +368,27 @@ type="text" placeholder="Search FAQs..."
           <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           )}
                         {isOpen && ()}"
-          <div className="px-6 pb-4"></div>"
+          </div></button><div className="px-6 pb-4"></div>"
                             <p className="text-gray-300 leading-relaxed">{item.answer}
-                  })}
-            ))}
+                  })
 {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
               Still Have Questions?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <$2 />
                 href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />
-// Call (302) 464-0950
+// Call (302) 464-0950;
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+                Email Us;
                 href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <MessageSquare className="w-4 h-4 mr-2" />
-                Contact Form
+                Contact Form;
       <Footer /></Footer>
     </React.Fragment>
 export default FAQPage,

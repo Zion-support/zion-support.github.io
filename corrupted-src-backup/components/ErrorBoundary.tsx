@@ -18,9 +18,9 @@ class ErrorBoundary extends Component<Props, State> {
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     ,
-//     // Report error to analytics/monitoring service
+//     // Report error to analytics/monitoring service;
     this.reportError(error, errorInfo)
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
   }
@@ -52,30 +52,29 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
         }
       })
-    }
-  }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
   d: undefined })
-  }
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   }
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8 max-w-md">
+          </div>
+<div className="text-center p-8 max-w-md">
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong;
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified.
-:src/components/ErrorBoundary.tsx
+:src/components/ErrorBoundary.tsx;
             {this.state.errorId && (
               <p className="text-gray-400 mb-4 text-sm">
-                Error ID: {this.state.errorId}
-            )}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+                Error ID: {this.state.errorId})
+            </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <$2 />
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
@@ -96,8 +95,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
   render() {/* TODO: Fix JSX expression */}
-  ID: {this.state.errorId}
-            )}
+  ID: {this.state.errorId})
             < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center">
               <button>
@@ -131,7 +129,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
           </div>,
         </div>)
     }
-    return this.props.children
+    return this.props.children;
   }
 }
 export default ErrorBoundary;"`</div></button></button></button></button></p></p></h1>

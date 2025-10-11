@@ -1,2 +1,2 @@
 import React from 'react'
-export default SiteHeader
+export default SiteHeader;

@@ -3,14 +3,13 @@ import React from 'react'
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
     }
-    // Add breadcrumb structured data
+    // Add breadcrumb structured data;
     addBreadcrumbStructuredData()
-    // Add FAQ structured data
+    // Add FAQ structured data;
     addFAQStructuredData()
-    // Add organization structured data
+    // Add organization structured data;
     addOrganizationStructuredData()
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData])
   const updateMetaTag = (nam,
@@ -40,7 +39,7 @@ const,
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(breadcrumbData)
     script.id = 'breadcrumb-structured-data'
-    // Remove existing breadcrumb data
+    // Remove existing breadcrumb data;
     const existing = document.getElementById('breadcrumb-structured-data')
     if (existing) {/* TODO: Fix JSX expression */}
     }
@@ -61,7 +60,7 @@ const,
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(faqData)
     script.id = 'faq-structured-data'
-    // Remove existing FAQ data
+    // Remove existing FAQ data;
     const existing = document.getElementById('faq-structured-data')
     if (existing) {/* TODO: Fix JSX expression */}
     }
@@ -82,29 +81,28 @@ const,
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(organizationData)
     script.id = 'organization-structured-data'
-    // Remove existing organization data
+    // Remove existing organization data;
     const existing = document.getElementById('organization-structured-data')
     if (existing) {/* TODO: Fix JSX expression */}
     }
   }
   const mergedSEOData = { ...defaultSEOData, ...seoData }
   useEffect(() => {
-    // Log SEO optimization
+    // Log SEO optimization;
     logger.info('SEO optimization applied', { 
       page, 
       title: mergedSEOData.title,
-      description: mergedSEOData.description 
+      description: mergedSEOData.description;
     })
-    // Track page view for analytics
+    // Track page view for analytics;
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
         custom_map: {
-          page_type: page
+          page_type: page;
         }
       })
-    }
   }, [mergedSEOData, page])
   return (
     <Helmet>
@@ -203,7 +201,7 @@ const,
               }
             ]
           }
-        })}
+        })
       </script>
     </Helmet>
   )

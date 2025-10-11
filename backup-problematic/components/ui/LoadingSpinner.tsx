@@ -14,12 +14,14 @@ const,
       <$2 />
         className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}
       >
-  return (<div className={`flex items-center justify-center ${className}`}>
-      <div></div>`
+  return (</div>
+<div className={`flex items-center justify-center ${className}`}>
+      </div>
+<div></div>`
         className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`}
       >
     </div>)
   )
 }
-export default LoadingSpinner
+export default LoadingSpinner;
 `

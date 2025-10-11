@@ -19,7 +19,7 @@ interface AdvancedSEOOptimizerProps {
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
-  children
+  children;
 }) => {
   const {
     title,
@@ -28,7 +28,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     canonicalUrl,
     ogImage,
     noIndex = false,
-    structuredData
+    structuredData;
   } = seoData;
 
   const baseStructuredData = {
@@ -48,8 +48,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const finalStructuredData = structuredData || baseStructuredData;
 
   return (
-    <>
-      <Helmet>
+    <></><Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -92,8 +91,7 @@ interface SEOData {/* TODO: Fix JSX expression */}
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
     }
     const baseStructuredData = {/* TODO: Fix JSX expression */}
       },
@@ -112,34 +110,32 @@ const,
     }
     if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-    return baseStructuredData
+    return baseStructuredData;
   }, [seoData, enableStructuredData])
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
-      }))
-    }
+      })
   }, [seoData, enableStructuredData])
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
-      }))
-    }
+      })
   }, [seoData, enableStructuredData])
-  // Generate Open Graph data
+  // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
     }
   }, [seoData, enableOpenGraph])
-  // Generate Twitter Card data
+  // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {}
     return {/* TODO: Fix JSX expression */}
     }
   }, [seoData, enableTwitterCards])
-  // Generate meta tags
+  // Generate meta tags;
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
@@ -156,20 +152,18 @@ const,
   t: '#3B82F6' },
       {/* TODO: Fix JSX expression */}
   t: '/browserconfig.xml' }]
-    return metaTags
+    return metaTags;
   }, [seoData])
   const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
-      }))
-    }
+      })
   }, [seoData.breadcrumbs])
   const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
-      }))
-    }
+      })
   }, [seoData.faqs])
   const structuredData = generateStructuredData()
   const openGraphData = generateOpenGraphData()
@@ -178,7 +172,7 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', seoData.description)
-      // Update canonical URL
+      // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]')
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
       }
@@ -192,15 +186,13 @@ const,
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
     document.head.appendChild(script)
-    structuredDataRef.current = script
+    structuredDataRef.current = script;
   }
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [structuredData])
   useEffect(() => {/* TODO: Fix JSX expression */}
           })
-        }
-      }
     }
   }, [])
   return (<Helmet>
@@ -249,7 +241,7 @@ const,
     </Helmet>
   )
 }
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimizer;
 }"
   </AdvancedSEOOptimizerProps>
 </li></li></li></li></li></li></li></li></li>

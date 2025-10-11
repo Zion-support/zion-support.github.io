@@ -1,18 +1,18 @@
 
-  children: React.ReactNode;,
-  className?: string;
-  target?: string;
-  rel?: string;
-  onClick?: () => void;
+  children: React.ReactNode,
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps>= ({,}export const Link: React.FC<LinkProps> = ({,}href,
   href: string,
-  children: React.ReactNode;,
-  className?: string;
-  target?: string;
-  rel?: string;
-  onClick?: () => void;
+  children: React.ReactNode,
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps> = ({,
@@ -21,8 +21,7 @@ export const Link: React.FC<LinkProps> = ({,
   className?: string
   target?: string
   rel?: string
-  onClick?: () =&gt; void
-  'aria-label'?: string,}
+  onClick?: () =&gt void 'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC</LinkProps><LinkProps> = ({}
@@ -32,8 +31,7 @@ export const Link: React.FC</LinkProps><LinkProps> = ({}
   className?: string
   target?: string
   rel?: string
-  onClick?: () => void
-  'aria-label'?: string,}
+  onClick?: () => void 'aria-label'?: string,}
 }
 export const Link: React.FC</LinkProps><LinkProps> = ({
     ,

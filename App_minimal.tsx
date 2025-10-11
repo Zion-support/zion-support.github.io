@@ -11,7 +11,7 @@ const App: React.FC = () => {
       <Router>
         <div className="min-h-screen bg-white">
           <Navigation />
-          <main>
+          </div><main>
             <Routes>
               <Route path="/" element={<HomePage />} />
             </Routes>

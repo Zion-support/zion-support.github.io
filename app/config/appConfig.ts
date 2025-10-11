@@ -1,23 +1,23 @@
 export interface AppConfig {
   app: {
-    name: string;
-    version: string;
-    environment: 'development' | 'production' | 'test';
-  };
+    name: string
+    version: string
+    environment: 'development' | 'production' | 'test'
+  }
   api: {
-    baseUrl: string;
-    timeout: number;
-    retryAttempts: number;
-  };
+    baseUrl: string
+    timeout: number
+    retryAttempts: number
+  }
   features: {
-    analytics: boolean;
-    monitoring: boolean;
-    notifications: boolean;
-  };
+    analytics: boolean
+    monitoring: boolean
+    notifications: boolean
+  }
   ui: {
-    theme: 'light' | 'dark' | 'auto';
-    language: string;
-  };
+    theme: 'light' | 'dark' | 'auto'
+    language: string
+  }
 }
 
 export const config: AppConfig = {
@@ -40,4 +40,4 @@ export const config: AppConfig = {
     theme: 'dark',
     language: 'en',
   },
-};
+}

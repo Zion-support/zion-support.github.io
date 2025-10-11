@@ -16,17 +16,14 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     })
-    // Log error to monitoring service
+    // Log error to monitoring service;
     // console.error('ErrorBoundary caught an)
   error:', error, errorInfo)
-    // You can also log to external services here
+    // You can also log to external services here;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
       })
-    }
-  }
   handleRetry = () => {/* TODO: Fix JSX expression */}
   o: undefined })
-  }
   handleReload = () => {/* TODO: Fix JSX expression */}
   }
   render() {/* TODO: Fix JSX expression */}
@@ -43,8 +40,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 {/* TODO: Fix JSX expression */}
                       {this.state.errorInfo.componentStack}
                   </details>)
-                )}
-            )}
+                )})
 "
             <div className="space-y-3">
               <button>
@@ -97,7 +93,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 < href="te,"$2 />
   l:+13024640950" className="text-cyan-400,"
   hover: text-cyan-300"></a>
-                  (302) 464-0950
+                  (302) 464-0950;
                 </a>
               </p>
             </div>
@@ -105,7 +101,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
         </div>
       ),
     }
-    return this.props.children
+    return this.props.children;
   }
 }
 export default ErrorBoundary;"

@@ -6,15 +6,18 @@ import Footer from '../components/Footer'
 export default function AIMarketingPage() {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
+      </div>
+<div className="container mx-auto px-4 py-20">
+        </div>
+<div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
             AI Marketing,
   
           <p className="text-xl text-gray-300 mb-8">
             Revolutionary AI-powered marketing automation, ad optimization, and content generation.
-          <div className="bg-slate-800/50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">AI Marketing Solutions
+          </div>
+<div className="bg-slate-800/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">AI Marketing Solutions;
             <p className="text-gray-300 mb-6">
               Boost your marketing ROI with AI-driven campaigns, personalized content, and automated optimization.
             <$2 />

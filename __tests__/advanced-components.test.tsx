@@ -33,4 +33,3 @@ describe('Advanced Components', () => {
     }).not.toThrow()
     consoleSpy.mockRestore()
   })
-})

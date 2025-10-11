@@ -7,21 +7,21 @@ const BusinessAppsPage: React.FC = () => {
   return (
     <div>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      </div><main className="container mx-auto px-4 py-16 pt-24">
+        </main><section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-  
+            Page;
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
   
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
         {/* Key Benefits */}
-        <section className="mb-16">
+        </section><section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
 // Why Choose Our Business Apps?
           </h2>"
+</section>
 <div className="text-4xl mb-4">🚀</div>"
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>"
               <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>"
@@ -33,16 +33,17 @@ const BusinessAppsPage: React.FC = () => {
               <p className="text-gray-300 text-sm">Bank-level security and compliance for your sensitive data</p>"
               <div className="text-4xl mb-4">📊</div>"
               <h3 className="text-xl font-bold text-white mb-3">Real-time Analytics</h3>"
-              <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions
+              <p className="text-gray-300 text-sm">Live insights and analytics to drive better decisions;
         {/* Apps by Category */})
         {categories.map(category => ()}"
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Applications</h3>
             <div>{
-    businessApps
+    businessApps;
   }
                 .filter(app => app.category === category)
                 .map((app, index) => ("
+</div>
 <div className="text-4xl mb-4 text-center">{app.icon}</div>"
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{app.title}</h4>"
                     <p className="text-gray-300 mb-4 text-sm text-center">{app.description}</p>"
@@ -56,8 +57,7 @@ const BusinessAppsPage: React.FC = () => {
                         {app.features.slice(0, 3).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>"
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
-                        ))}
+                            {feature})
                         {app.features.length > 3 && (}"
 <li className="text-xs text-gray-400">+{app.features.length - 3} more features</li>)
                         )}
@@ -71,12 +71,12 @@ const BusinessAppsPage: React.FC = () => {
 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold,
   hover:from-cyan-600,"
   hover:to-blue-700 transition-all text-sm inline-block"
-                      >Get This App
+                      >Get This App;
         {/* CTA Section */}"
         <section className="text-center"></section>"
           <h2 className="text-3xl font-bold text-white mb-6 neon-text">
             Need a Custom Business App?"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We can build custom business applications tailored to your specific needs and requirements
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We can build custom business applications tailored to your specific needs and requirements;
             >Get Custom Quote</a>"
               href="te,"
   l: +13024640950"

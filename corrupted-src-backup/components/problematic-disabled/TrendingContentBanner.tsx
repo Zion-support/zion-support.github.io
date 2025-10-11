@@ -35,10 +35,10 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
     }
   }
   const Ico, n = currentIt, e, m.ic, o, n; return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>
-      <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
-        <div, className="fl, e, x-1"></div>
-          <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
-            <div, className="flex, item, s-center, ga, p-2"></div>
+<div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
+<div, className="fl, e, x-1"></div>
+<div, className="flex, item, s-center, ga, p-3, m, b-3"></div>
+<div, className="flex, item, s-center, ga, p-2"></div>
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />)
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>)
   const Ico, n = currentIt, e, m.ic, o, n; return (<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p"></div>"
@@ -47,7 +47,7 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="flex, item, s-center, ga, p-3, m, b-3"></div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" /></TrendingUp>"
-              <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W
+              <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W;
             </div>)
             <div, classNam, e = { `px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.b, a, d, g, e) }, anima, t, e-boun, c, e`}>
               {currentIt, e, m.bad, g, e}
@@ -69,21 +69,21 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
               <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t"></div>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
                   <Eye, className="w-3 h-3" />
-                  <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s
+                  <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s;
                 </div>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
                   <Clock, className="w-3 h-3" />
-                  <sp, a, n>{currentIt, e, m.readTime} re, a, d
+                  <sp, a, n>{currentIt, e, m.readTime} re, a, d;
                 </div>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0" />
-                  <sp, a, n>4.9/5
+                  <sp, a, n>4.9/5;
         </div>"
         <div, className="flex, fle, x-col, item, s-end, ga, p-3"></div>"
           <, t, o = { currentIt, e, m.l, i, n, k }, classNa, m, e = "bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2, grou, p/b, t, n"$2 />
           >
             <BookOpen, className="w-4 h-4" />
-            Read, No, w
+            Read, No, w;
             <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transfo, r, m" />
           ></Link>"
             <BookOpen, className="w-4 h-4" />
@@ -93,16 +93,14 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
           <div, classNam, e = "flex, ga, p-2">
             { trendingIte, m, s.m, a, p((, _, ind, e, x) = > (
               <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${
-                  ind, e, x === currentInd, e, x
+                  ind, e, x === currentInd, e, x;
                      ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'
             {/* TODO: Fix JSX expression */}
-              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = {/* TODO: Fix JSX expression */}`
-                 }`}
-            ))}
-
+              </button><button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = {/* TODO: Fix JSX expression */}`
+                 }`})
       {/* Progress, ba, r */}"
-      <div, classNam, e = "mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1"></div>"
+      </div></button><div, classNam, e = "mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1"></div>"
         <d, i, v > className="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"`
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
       </div>

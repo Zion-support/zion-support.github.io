@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react'
 const MicroSAASPage: React.FC = () => {
   const _microSAASServices = [
-    // AI-Powered Developer Tools
+    // AI-Powered Developer Tools;
     {
       title: 'AI Code Review Assistant Pro',
       description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
@@ -16,7 +16,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
       link: 'https://ziontechgroup.com/ai-code-review',
-      popular: true
+      popular: true;
     },
     {
       title: 'AI Test Generation Suite',
@@ -42,7 +42,7 @@ $4},
       technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
       contactInfo:     ,
 $4},
-    // AI Marketing & SEO Tools
+    // AI Marketing & SEO Tools;
     {
       title: 'AI SEO Optimizer Pro',
       description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
@@ -91,7 +91,7 @@ $4},
       technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
       contactInfo:     ,
 $4},
-    // AI Business Intelligence & Analytics
+    // AI Business Intelligence & Analytics;
     {
       title: 'AI Analytics Dashboard Pro',
       description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
@@ -128,7 +128,7 @@ $4},
       technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Finance & Accounting Tools
+    // AI Finance & Accounting Tools;
     {
       title: 'AI Invoice Generator Pro',
       description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
@@ -165,7 +165,7 @@ $4},
       technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Healthcare & Wellness
+    // AI Healthcare & Wellness;
     {
       title: 'AI Health Monitoring Platform',
       description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
@@ -202,7 +202,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInfo:     ,
 $4},
-    // AI Education & Learning
+    // AI Education & Learning;
     {
       title: 'AI Language Learning Platform',
       description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
@@ -239,7 +239,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
       contactInfo:     ,
 $4},
-    // AI E-commerce & Retail
+    // AI E-commerce & Retail;
     {
       title: 'AI Inventory Optimizer Pro',
       description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
@@ -276,7 +276,7 @@ $4},
       technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Legal & Compliance
+    // AI Legal & Compliance;
     {
       title: 'AI Legal Document Analyzer',
       description: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
@@ -289,7 +289,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Real Estate & Property Management
+    // AI Real Estate & Property Management;
     {
       title: 'AI Property Valuation Engine',
       description: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
@@ -302,7 +302,7 @@ $4},
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
       contactInfo:     ,
 $4},
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {
       title: 'AI Resume Parser & Matcher',
       description: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
@@ -339,7 +339,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo:     ,
 $4},
-    // AI Finance & Accounting
+    // AI Finance & Accounting;
     {
       title: 'AI Expense Tracker & Categorizer',
       description: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
@@ -376,7 +376,7 @@ $4},
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
       contactInfo:     ,
 $4},
-    // AI Project Management
+    // AI Project Management;
     {
       title: 'AI Project Manager Assistant',
       description: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
@@ -401,7 +401,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
       contactInfo:     ,
 $4},
-    // AI Customer Service
+    // AI Customer Service;
     {
       title: 'AI Live Chat Assistant',
       description: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
@@ -426,7 +426,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Sales & CRM
+    // AI Sales & CRM;
     {
       title: 'AI Lead Scoring Engine',
       description: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
@@ -451,7 +451,7 @@ $4},
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
       contactInfo:     ,
 $4},
-    // AI Healthcare & Wellness
+    // AI Healthcare & Wellness;
     {
       title: 'AI Symptom Checker Pro',
       description: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
@@ -476,7 +476,7 @@ $4},
       technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
       contactInfo:     ,
 $4},
-    // AI Security & Compliance
+    // AI Security & Compliance;
     {
       title: 'AI Security Monitoring System',
       description: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
@@ -501,7 +501,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Productivity & Automation
+    // AI Productivity & Automation;
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
@@ -538,7 +538,7 @@ $4},
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInfo:     ,
 $4},
-    // AI Analytics & Reporting
+    // AI Analytics & Reporting;
     {
       title: 'AI Business Intelligence Suite',
       description: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
@@ -563,7 +563,7 @@ $4},
       technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
       contactInfo:     ,
 $4},
-    // AI Development & DevOps
+    // AI Development & DevOps;
     {
       title: 'AI Code Quality Monitor',
       description: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
@@ -588,7 +588,7 @@ $4},
       technologies: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
       contactInfo:     ,
 $4},
-    // AI Communication & Collaboration
+    // AI Communication & Collaboration;
     {
       title: 'AI Team Collaboration Hub',
       description: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
@@ -613,7 +613,7 @@ $4},
       technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
       contactInfo:     ,
 $4},
-    // AI Marketing & Advertising
+    // AI Marketing & Advertising;
     {
       title: 'AI Ad Campaign Optimizer',
       description: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.',
@@ -638,7 +638,7 @@ $4},
       technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI E-commerce & Retail
+    // AI E-commerce & Retail;
     {
       title: 'AI Customer Behavior Analyzer',
       description: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
@@ -663,7 +663,7 @@ $4},
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
       contactInfo:     ,
 $4},
-    // AI Education & Training
+    // AI Education & Training;
     {
       title: 'AI Corporate Training Platform',
       description: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
@@ -688,7 +688,7 @@ $4},
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
       contactInfo:     ,
 $4},
-    // AI Legal & Compliance
+    // AI Legal & Compliance;
     {
       title: 'AI Contract Management System',
       description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
@@ -713,7 +713,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
       contactInfo:     ,
 $4},
-    // AI Real Estate & Property
+    // AI Real Estate & Property;
     {
       title: 'AI Property Management Suite',
       description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
@@ -738,7 +738,7 @@ $4},
       technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Agriculture & Environment
+    // AI Agriculture & Environment;
     {
       title: 'AI Crop Monitoring System',
       description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
@@ -763,7 +763,7 @@ $4},
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Transportation & Logistics
+    // AI Transportation & Logistics;
     {
       title: 'AI Fleet Management System',
       description: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
@@ -788,7 +788,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
       contactInfo:     ,
 $4},
-    // AI Entertainment & Media
+    // AI Entertainment & Media;
     {
       title: 'AI Content Moderation Platform',
       description: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
@@ -813,7 +813,7 @@ $4},
       technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
       contactInfo:     ,
 $4},
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {
       title: 'AI Game Development Platform',
       description: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
@@ -838,7 +838,7 @@ $4},
       technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Research & Development
+    // AI Research & Development;
     {
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
@@ -863,7 +863,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInfo:     ,
 $4},
-    // AI Energy & Utilities
+    // AI Energy & Utilities;
     {
       title: 'AI Energy Management System',
       description: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
@@ -888,7 +888,7 @@ $4},
       technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Manufacturing & Industrial
+    // AI Manufacturing & Industrial;
     {
       title: 'AI Quality Control System',
       description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
@@ -913,7 +913,7 @@ $4},
       technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Insurance & Risk Management
+    // AI Insurance & Risk Management;
     {
       title: 'AI Risk Assessment Platform',
       description: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
@@ -938,7 +938,7 @@ $4},
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
       contactInfo:     ,
 $4},
-    // AI Government & Public Sector
+    // AI Government & Public Sector;
     {
       title: 'AI Citizen Services Platform',
       description: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
@@ -963,7 +963,7 @@ $4},
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Non-Profit & Social Impact
+    // AI Non-Profit & Social Impact;
     {
       title: 'AI Donor Management System',
       description: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
@@ -988,7 +988,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
       contactInfo:     ,
 $4},
-    // AI Travel & Hospitality
+    // AI Travel & Hospitality;
     {
       title: 'AI Travel Planning Assistant',
       description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
@@ -1013,7 +1013,7 @@ $4},
       technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Sports & Fitness
+    // AI Sports & Fitness;
     {
       title: 'AI Sports Performance Analyzer',
       description: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
@@ -1038,7 +1038,7 @@ $4},
       technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Beauty & Fashion
+    // AI Beauty & Fashion;
     {
       title: 'AI Virtual Try-On Platform',
       description: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
@@ -1063,7 +1063,7 @@ $4},
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Home & Lifestyle
+    // AI Home & Lifestyle;
     {
       title: 'AI Smart Home Controller',
       description: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
@@ -1088,7 +1088,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
       contactInfo:     ,
 $4},
-    // AI Pets & Animals
+    // AI Pets & Animals;
     {
       title: 'AI Pet Health Monitor',
       description: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
@@ -1113,7 +1113,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
       contactInfo:     ,
 $4},
-    // AI Education & Learning
+    // AI Education & Learning;
     {
       title: 'AI Tutoring Platform',
       description: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
@@ -1138,7 +1138,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Music & Audio
+    // AI Music & Audio;
     {
       title: 'AI Music Composition Tool',
       description: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
@@ -1163,7 +1163,7 @@ $4},
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
       contactInfo:     ,
 $4},
-    // AI Art & Design
+    // AI Art & Design;
     {
       title: 'AI Design Assistant Pro',
       description: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
@@ -1188,7 +1188,7 @@ $4},
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
       contactInfo:     ,
 $4},
-    // AI Dating & Relationships
+    // AI Dating & Relationships;
     {
       title: 'AI Dating Assistant',
       description: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
@@ -1213,7 +1213,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Parenting & Family
+    // AI Parenting & Family;
     {
       title: 'AI Parenting Assistant',
       description: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
@@ -1238,7 +1238,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
       contactInfo:     ,
 $4},
-    // AI Senior Care & Aging
+    // AI Senior Care & Aging;
     {
       title: 'AI Senior Care Monitor',
       description: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
@@ -1263,7 +1263,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
       contactInfo:     ,
 $4},
-    // AI Accessibility & Inclusion
+    // AI Accessibility & Inclusion;
     {
       title: 'AI Accessibility Assistant',
       description: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
@@ -1288,7 +1288,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
       contactInfo:     ,
 $4},
-    // AI Emergency & Crisis Management
+    // AI Emergency & Crisis Management;
     {
       title: 'AI Emergency Response System',
       description: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
@@ -1313,7 +1313,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
       contactInfo:     ,
 $4},
-    // AI Space & Astronomy
+    // AI Space & Astronomy;
     {
       title: 'AI Space Mission Planner',
       description: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
@@ -1338,7 +1338,7 @@ $4},
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Ocean & Marine
+    // AI Ocean & Marine;
     {
       title: 'AI Marine Life Tracker',
       description: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
@@ -1363,7 +1363,7 @@ $4},
       technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Archaeology & History
+    // AI Archaeology & History;
     {
       title: 'AI Archaeological Site Analyzer',
       description: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
@@ -1388,7 +1388,7 @@ $4},
       technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Psychology & Mental Health
+    // AI Psychology & Mental Health;
     {
       title: 'AI Mental Health Tracker',
       description: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
@@ -1413,7 +1413,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Philosophy & Ethics
+    // AI Philosophy & Ethics;
     {
       title: 'AI Ethical Decision Maker',
       description: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
@@ -1438,7 +1438,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Spirituality & Religion
+    // AI Spirituality & Religion;
     {
       title: 'AI Spiritual Guidance Platform',
       description: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
@@ -1463,7 +1463,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Future & Innovation
+    // AI Future & Innovation;
     {
       title: 'AI Innovation Predictor',
       description: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
@@ -1488,7 +1488,7 @@ $4},
       technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Consciousness & AI Ethics
+    // AI Consciousness & AI Ethics;
     {
       title: 'AI Consciousness Monitor',
       description: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
@@ -1513,7 +1513,7 @@ $4},
       technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Time & Space
+    // AI Time & Space;
     {
       title: 'AI Time Management Master',
       description: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
@@ -1538,7 +1538,7 @@ $4},
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Quantum & Advanced Physics
+    // AI Quantum & Advanced Physics;
     {
       title: 'AI Quantum Simulator Pro',
       description: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
@@ -1563,7 +1563,7 @@ $4},
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Multiverse & Parallel Realities
+    // AI Multiverse & Parallel Realities;
     {
       title: 'AI Multiverse Explorer',
       description: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
@@ -1588,7 +1588,7 @@ $4},
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Transcendence & Enlightenment
+    // AI Transcendence & Enlightenment;
     {
       title: 'AI Enlightenment Assistant',
       description: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
@@ -1613,7 +1613,7 @@ $4},
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Universal Consciousness
+    // AI Universal Consciousness;
     {
       title: 'AI Universal Consciousness Connector',
       description: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
@@ -1638,7 +1638,7 @@ $4},
       technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Infinite Possibilities
+    // AI Infinite Possibilities;
     {
       title: 'AI Infinite Possibility Generator',
       description: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
@@ -1689,7 +1689,7 @@ $4},
       technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Agriculture & Food Tech
+    // AI Agriculture & Food Tech;
     {
       title: 'AI Crop Monitoring System',
       description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
@@ -1714,7 +1714,7 @@ $4},
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Transportation & Logistics
+    // AI Transportation & Logistics;
     {
       title: 'AI Route Optimization Pro',
       description: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
@@ -1739,7 +1739,7 @@ $4},
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Energy & Sustainability
+    // AI Energy & Sustainability;
     {
       title: 'AI Energy Management System',
       description: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
@@ -1764,7 +1764,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
       contactInfo:     ,
 $4},
-    // AI Entertainment & Media
+    // AI Entertainment & Media;
     {
       title: 'AI Content Moderation Suite',
       description: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
@@ -1789,7 +1789,7 @@ $4},
       technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
       contactInfo:     ,
 $4},
-    // AI Security & Surveillance
+    // AI Security & Surveillance;
     {
       title: 'AI Security Camera System',
       description: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
@@ -1814,7 +1814,7 @@ $4},
       technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Research & Development
+    // AI Research & Development;
     {
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
@@ -1851,7 +1851,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Real Estate & Property
+    // AI Real Estate & Property;
     {
       title: 'AI Real Estate Analyzer Pro',
       description: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
@@ -1876,7 +1876,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
       contactInfo:     ,
 $4},
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {
       title: 'AI HR Recruitment Suite',
       description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
@@ -1901,7 +1901,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo:     ,
 $4},
-    // AI Project Management
+    // AI Project Management;
     {
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
@@ -1926,7 +1926,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
       contactInfo:     ,
 $4},
-    // AI Supply Chain & Logistics
+    // AI Supply Chain & Logistics;
     {
       title: 'AI Supply Chain Optimizer',
       description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
@@ -1951,7 +1951,7 @@ $4},
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInfo:     ,
 $4},
-    // AI Agriculture & Food Tech
+    // AI Agriculture & Food Tech;
     {
       title: 'AI Precision Agriculture Platform',
       description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
@@ -1976,7 +1976,7 @@ $4},
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
       contactInfo:     ,
 $4},
-    // AI Energy & Sustainability
+    // AI Energy & Sustainability;
     {
       title: 'AI Energy Management System',
       description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
@@ -2001,7 +2001,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
       contactInfo:     ,
 $4},
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {
       title: 'AI Game Development Suite',
       description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
@@ -2026,7 +2026,7 @@ $4},
       technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
       contactInfo:     ,
 $4},
-    // AI Transportation & Mobility
+    // AI Transportation & Mobility;
     {
       title: 'AI Fleet Management System',
       description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
@@ -2051,7 +2051,7 @@ $4},
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
       contactInfo:     ,
 $4},
-    // AI Research & Development
+    // AI Research & Development;
     {
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
@@ -2076,7 +2076,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
       contactInfo:     ,
 $4},
-    // AI Personal Productivity
+    // AI Personal Productivity;
     {
       title: 'AI Personal Assistant Pro',
       description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
@@ -2288,7 +2288,7 @@ $4},
       category: 'Customer Intelligence',
       technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    // NEW INNOVATIVE MICRO SAAS SERVICES
+    // NEW INNOVATIVE MICRO SAAS SERVICES;
     {
       title: 'AI-Powered Meeting Transcriber',
       description: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
@@ -2960,8 +2960,8 @@ $4},
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
     },
-    // NEW COMPREHENSIVE MICRO SAAS SERVICES
-    // AI Productivity & Time Management
+    // NEW COMPREHENSIVE MICRO SAAS SERVICES;
+    // AI Productivity & Time Management;
     {
       title: 'AI Time Tracking & Productivity Analyzer',
       description: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
@@ -2998,7 +2998,7 @@ $4},
       technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
       contactInfo:     ,
 $4},
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {
       title: 'AI Resume Parser & Candidate Matcher',
       description: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
@@ -3035,7 +3035,7 @@ $4},
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Customer Service & Support
+    // AI Customer Service & Support;
     {
       title: 'AI Customer Support Ticket Router',
       description: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
@@ -3072,7 +3072,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
       contactInfo:     ,
 $4},
-    // AI Sales & CRM
+    // AI Sales & CRM;
     {
       title: 'AI Sales Pipeline Optimizer',
       description: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
@@ -3109,7 +3109,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Project Management
+    // AI Project Management;
     {
       title: 'AI Project Risk Predictor',
       description: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
@@ -3146,7 +3146,7 @@ $4},
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
       contactInfo:     ,
 $4},
-    // AI Security & Compliance
+    // AI Security & Compliance;
     {
       title: 'AI Security Threat Detector',
       description: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
@@ -3183,7 +3183,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Quality Assurance & Testing
+    // AI Quality Assurance & Testing;
     {
       title: 'AI Automated Testing Suite',
       description: 'Comprehensive automated testing with test generation, execution, and maintenance.',
@@ -3220,7 +3220,7 @@ $4},
       technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Content & Media
+    // AI Content & Media;
     {
       title: 'AI Video Content Generator',
       description: 'Intelligent video creation with script generation, editing, and optimization for social media.',
@@ -3257,7 +3257,7 @@ $4},
       technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Research & Development
+    // AI Research & Development;
     {
       title: 'AI Research Assistant Pro',
       description: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
@@ -3294,7 +3294,7 @@ $4},
       technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
       contactInfo:     ,
 $4},
-    // AI Personal & Lifestyle
+    // AI Personal & Lifestyle;
     {
       title: 'AI Personal Finance Manager',
       description: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
@@ -3331,7 +3331,7 @@ $4},
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo:     ,
 $4},
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {
       title: 'AI Game Development Assistant',
       description: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
@@ -3400,12 +3400,13 @@ $4}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group
+        <title>Micro SAAS Solutions - Zion Tech Group;
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      </div><section className="pt-24 pb-16 px-4">
+        </section>
+<div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
             Micro SAAS Solutions,
   
@@ -3414,12 +3415,13 @@ $4}
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react'
 const MicroSAASPage: React.FC = () => {
     return (
-    <div>Coming Soon</div>
+    </div>
+<div>Coming Soon</div>
   )
   }
   const _microSAASServices = [
   // TOD,
-  O: Add items
+  O: Add items;
 ]
     // AI-Powered Developer Tools,
     {/* TODO: Fix JSX expression */}
@@ -3502,7 +3504,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Marketing & SEO Tools
+    // AI Marketing & SEO Tools;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3603,7 +3605,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Business Intelligence & Analytics
+    // AI Business Intelligence & Analytics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3679,7 +3681,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Finance & Accounting Tools
+    // AI Finance & Accounting Tools;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3755,7 +3757,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Healthcare & Wellness
+    // AI Healthcare & Wellness;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3831,7 +3833,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Education & Learning
+    // AI Education & Learning;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3907,7 +3909,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI E-commerce & Retail
+    // AI E-commerce & Retail;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -3983,7 +3985,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Legal & Compliance
+    // AI Legal & Compliance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4009,7 +4011,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Real Estate & Property Management
+    // AI Real Estate & Property Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4035,7 +4037,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4111,7 +4113,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Finance & Accounting
+    // AI Finance & Accounting;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4187,7 +4189,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Project Management
+    // AI Project Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4238,7 +4240,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Customer Service
+    // AI Customer Service;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4289,7 +4291,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Sales & CRM
+    // AI Sales & CRM;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4340,7 +4342,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Healthcare & Wellness
+    // AI Healthcare & Wellness;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4391,7 +4393,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Security & Compliance
+    // AI Security & Compliance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4442,7 +4444,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Productivity & Automation
+    // AI Productivity & Automation;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4518,7 +4520,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Analytics & Reporting
+    // AI Analytics & Reporting;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4569,7 +4571,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Development & DevOps
+    // AI Development & DevOps;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4620,7 +4622,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Communication & Collaboration
+    // AI Communication & Collaboration;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4671,7 +4673,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Marketing & Advertising
+    // AI Marketing & Advertising;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4722,7 +4724,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI E-commerce & Retail
+    // AI E-commerce & Retail;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4773,7 +4775,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Education & Training
+    // AI Education & Training;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4824,7 +4826,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Legal & Compliance
+    // AI Legal & Compliance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4875,7 +4877,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Real Estate & Property
+    // AI Real Estate & Property;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4926,7 +4928,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Agriculture & Environment
+    // AI Agriculture & Environment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -4977,7 +4979,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Transportation & Logistics
+    // AI Transportation & Logistics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5028,7 +5030,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Entertainment & Media
+    // AI Entertainment & Media;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5079,7 +5081,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5130,7 +5132,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Research & Development
+    // AI Research & Development;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5181,7 +5183,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Energy & Utilities
+    // AI Energy & Utilities;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5232,7 +5234,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Manufacturing & Industrial
+    // AI Manufacturing & Industrial;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5283,7 +5285,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Insurance & Risk Management
+    // AI Insurance & Risk Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5334,7 +5336,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Government & Public Sector
+    // AI Government & Public Sector;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5385,7 +5387,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Non-Profit & Social Impact
+    // AI Non-Profit & Social Impact;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5436,7 +5438,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Travel & Hospitality
+    // AI Travel & Hospitality;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5487,7 +5489,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Sports & Fitness
+    // AI Sports & Fitness;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5538,7 +5540,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Beauty & Fashion
+    // AI Beauty & Fashion;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5589,7 +5591,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Home & Lifestyle
+    // AI Home & Lifestyle;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5640,7 +5642,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Pets & Animals
+    // AI Pets & Animals;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5691,7 +5693,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Education & Learning
+    // AI Education & Learning;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5742,7 +5744,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Music & Audio
+    // AI Music & Audio;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5793,7 +5795,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Art & Design
+    // AI Art & Design;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5844,7 +5846,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Dating & Relationships
+    // AI Dating & Relationships;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5895,7 +5897,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Parenting & Family
+    // AI Parenting & Family;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5946,7 +5948,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Senior Care & Aging
+    // AI Senior Care & Aging;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -5997,7 +5999,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Accessibility & Inclusion
+    // AI Accessibility & Inclusion;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6048,7 +6050,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Emergency & Crisis Management
+    // AI Emergency & Crisis Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6099,7 +6101,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Space & Astronomy
+    // AI Space & Astronomy;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6150,7 +6152,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Ocean & Marine
+    // AI Ocean & Marine;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6201,7 +6203,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Archaeology & History
+    // AI Archaeology & History;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6252,7 +6254,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Psychology & Mental Health
+    // AI Psychology & Mental Health;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6303,7 +6305,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Philosophy & Ethics
+    // AI Philosophy & Ethics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6354,7 +6356,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Spirituality & Religion
+    // AI Spirituality & Religion;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6405,7 +6407,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Future & Innovation
+    // AI Future & Innovation;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6456,7 +6458,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Consciousness & AI Ethics
+    // AI Consciousness & AI Ethics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6507,7 +6509,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Time & Space
+    // AI Time & Space;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6558,7 +6560,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Quantum & Advanced Physics
+    // AI Quantum & Advanced Physics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6609,7 +6611,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Multiverse & Parallel Realities
+    // AI Multiverse & Parallel Realities;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6660,7 +6662,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Transcendence & Enlightenment
+    // AI Transcendence & Enlightenment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6711,7 +6713,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Universal Consciousness
+    // AI Universal Consciousness;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6762,7 +6764,7 @@ const MicroSAASPage: React.FC = () => {
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Infinite Possibilities
+    // AI Infinite Possibilities;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6865,7 +6867,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Agriculture & Food Tech
+    // AI Agriculture & Food Tech;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6916,7 +6918,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Transportation & Logistics
+    // AI Transportation & Logistics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -6967,7 +6969,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Energy & Sustainability
+    // AI Energy & Sustainability;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7018,7 +7020,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Entertainment & Media
+    // AI Entertainment & Media;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7069,7 +7071,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Security & Surveillance
+    // AI Security & Surveillance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7120,7 +7122,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Research & Development
+    // AI Research & Development;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7196,7 +7198,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Real Estate & Property
+    // AI Real Estate & Property;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7247,7 +7249,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7298,7 +7300,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Project Management
+    // AI Project Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7349,7 +7351,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Supply Chain & Logistics
+    // AI Supply Chain & Logistics;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7400,7 +7402,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Agriculture & Food Tech
+    // AI Agriculture & Food Tech;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7451,7 +7453,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Energy & Sustainability
+    // AI Energy & Sustainability;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7502,7 +7504,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7553,7 +7555,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Transportation & Mobility
+    // AI Transportation & Mobility;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7604,7 +7606,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Research & Development
+    // AI Research & Development;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -7655,7 +7657,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Personal Productivity
+    // AI Personal Productivity;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -8080,7 +8082,7 @@ const realEstateSaaS = [
       technologie,
   s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
     },
-    // NEW INNOVATIVE MICRO SAAS SERVICES
+    // NEW INNOVATIVE MICRO SAAS SERVICES;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9423,8 +9425,8 @@ const realEstateSaaS = [
       technologie,
   s: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
     },
-    // NEW COMPREHENSIVE MICRO SAAS SERVICES
-    // AI Productivity & Time Management
+    // NEW COMPREHENSIVE MICRO SAAS SERVICES;
+    // AI Productivity & Time Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9500,7 +9502,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI HR & Recruitment
+    // AI HR & Recruitment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9576,7 +9578,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Customer Service & Support
+    // AI Customer Service & Support;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9652,7 +9654,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Sales & CRM
+    // AI Sales & CRM;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9728,7 +9730,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Project Management
+    // AI Project Management;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9804,7 +9806,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Security & Compliance
+    // AI Security & Compliance;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9880,7 +9882,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Quality Assurance & Testing
+    // AI Quality Assurance & Testing;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -9956,7 +9958,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Content & Media
+    // AI Content & Media;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10032,7 +10034,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Research & Development
+    // AI Research & Development;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10108,7 +10110,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Personal & Lifestyle
+    // AI Personal & Lifestyle;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10184,7 +10186,7 @@ const realEstateSaaS = [
   o: 'Contac,
   t: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    // AI Gaming & Entertainment
+    // AI Gaming & Entertainment;
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -10315,106 +10317,133 @@ const categories = [
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." /></meta>"
         <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
       {/* Hero Section */}"
-      <section className="pt-24 pb-16 px-4"></section>"
+      </div><section className="pt-24 pb-16 px-4"></section>"
         <div className="max-w-7xl mx-auto text-center"></div>"
           < className="text-4xl,$2 />
   sm:text-5xl,"
   md: text-6xl font-bold text-white mb-6"></h1>
-// Micro SAAS Solutions
+// Micro SAAS Solutions;
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon,
   
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+
-              <div className="text-gray-300">Applications
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$49
-              <div className="text-gray-300">Starting Price
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7
-              <div className="text-gray-300">Support
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%
-              <div className="text-gray-300">Uptime
+            </div>
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              </div>
+<div className="text-3xl font-bold text-cyan-400 mb-2">50+
+              </div>
+<div className="text-gray-300">Applications;
+            </div>
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              </div>
+<div className="text-3xl font-bold text-green-400 mb-2">$49;
+              </div>
+<div className="text-gray-300">Starting Price;
+            </div>
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              </div>
+<div className="text-3xl font-bold text-purple-400 mb-2">24/7;
+              </div>
+<div className="text-gray-300">Support;
+            </div>
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              </div>
+<div className="text-3xl font-bold text-orange-400 mb-2">99.9%
+              </div>
+<div className="text-gray-300">Uptime;
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
+          </div>
+<div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+            </div>
+<div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              </div>
+<div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950
-              <div className="flex items-center space-x-2">
+                <span className="text-white font-medium">+1 302 464 0950;
+              </div>
+<div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com
-              <div className="flex items-center space-x-2">
+                <span className="text-white font-medium">kleber@ziontechgroup.com;
+              </div>
+<div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$49</div>"
-              <div className="text-gray-300">Starting Price
+              <div className="text-gray-300">Starting Price;
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>"
-              <div className="text-gray-300">Support
+              <div className="text-gray-300">Support;
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>"
-              <div className="text-gray-300">Uptime
+              <div className="text-gray-300">Uptime;
           {/* Contact Info */}"
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
+          </div>
+<div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
             < className="flex flex-col,$2 />
   md:flex-row items-center justify-center space-y-4,
   md:space-y-0,"
   md:space-x-8"></div>"
               <div className="flex items-center space-x-2"></div>"
                 <Phone className="w-5 h-5" /></Phone>"
-                <span className="text-white font-medium">+1 302 464 0950
+                <span className="text-white font-medium">+1 302 464 0950;
               </div>"
               <div className="flex items-center space-x-2"></div>"
                 <Mail className="w-5 h-5" /></Mail>"
-                <span className="text-white font-medium">kleber@ziontechgroup.com
+                <span className="text-white font-medium">kleber@ziontechgroup.com;
               </div>"
               <div className="flex items-center space-x-2"></div>"
                 <MapPin className="w-5 h-5" /></MapPin>"
-                <span className="text-white font-medium">Middletown, DE
+                <span className="text-white font-medium">Middletown, DE;
       {/* Services Grid */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Choose Your Perfect AI Tools
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </section>
+<div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Choose Your Perfect AI Tools;
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAASServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}
+              </div>
+<div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                </div>
+<div className="text-center mb-6">
+                  </div>
+<div className="text-5xl mb-4">{service.icon}
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}
                   <p className="text-gray-600 text-sm">{service.description}
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
+                </div>
+<div className="mb-6">
+                  </div>
+<div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-green-600">{service.price}
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
+                  </div>
+<div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
                     {service.category}
-                <div className="mb-6">
+                </div>
+<div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Key Features:
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                    ))}
+                        {feature})
                     {service.features.length > 4 && (
-                      <li className="text-sm text-gray-500">+{service.features.length - 4} more features
+                      <li className="text-sm text-gray-500">+{service.features.length - 4} more features;
                     )}
-                <div className="mb-6">
+                </div>
+<div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
       {/* Services Grid */}"
-      <section className="py-16 px-4"></section>"
+      </div><section className="py-16 px-4"></section>"
         <div className="max-w-7xl mx-auto"></div>"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
 // Choose Your Perfect AI Tools</$1>"
@@ -10446,11 +10475,10 @@ const categories = [
                     {service.features.slice(0, 4).map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                    ))}
+                        {feature})
                     {service.features.length > 4 && ()}"
           <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features;
                     )}
                 </div>"
                 <div className="mb-6"></div>"
@@ -10460,11 +10488,11 @@ const categories = [
                     {service.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>"
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-                        {benefit}
-                    ))}
+                        {benefit})
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Technologies:
-                  <div className="flex flex-wrap gap-2">
+                  </div>
+<div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
                 </div>"
@@ -10474,9 +10502,9 @@ const categories = [
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {tech}
-                    ))}
-                <div className="text-center">
+                        {tech})
+                </div>
+<div className="text-center">
                   <$2 />
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
@@ -10495,29 +10523,29 @@ const categories = [
 //                     Get Started Now,
           </a>"
                   <p className="text-xs text-gray-500 mt-2"></p>
-                    {service.contactInfo}
-            ))}
+                    {service.contactInfo})
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+      </div><section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        </section>
+<div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
             <$2 />
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
-              Call (302) 464-0950
-  
+              Call (302) 464-0950;
             <$2 />
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
               Email Us,
   
       {/* CTA Section */}"
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
+      </div><section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
         <div className="max-w-4xl mx-auto text-center"></div>"
           <h2 className="text-3xl font-bold text-white mb-6">
 // Ready to Transform Your Business?
@@ -10529,12 +10557,12 @@ const categories = [
             <$2 />
               href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
-//               Call (302) 464-0950
+//               Call (302) 464-0950;
           </a>
             <$2 />
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
-//               Email Us
+//               Email Us;
           </a>
           </div>
         </div>

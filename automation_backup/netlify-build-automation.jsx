@@ -6,7 +6,7 @@
   t: logMessage = `[${timestamp}] ${message}`; // ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
-  e: true })} } return} this.isRunnin,
+  e: true }) } return} this.isRunnin,
   g: = true; this.log('Startin)
   g: Netlify Build Automation...)'' ');' // Initia,
   l: status check; awai,
@@ -22,14 +22,14 @@
   t: this.monitorExistingBuilds()} catch (error) { this.error( } async getCurrentBuild() { try { const builds = await this.getBuilds(1)} async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Analyzing build error for build ${build.id}...`); // Ge,
   t: build logs; cons,
   t: logs = await this.getBuildLogs(build.id); i,`
-  f: (logs) {// Analyze error patterns} req.end()})} async getSiteInfo() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}`)} catch (error) {/* TODO: Fix JSX expression */}
+  f: (logs) {// Analyze error patterns} req.end()}) async getSiteInfo() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}`)} catch (error) {/* TODO: Fix JSX expression */}
   t: tsErrors = logs.match( /Type.*is not assignable|Cannot find name|Property.*does not exist/g); /Build failed|Compilation failed|Module not found/g)} i,
   f: (buildErrors) {/* TODO: Fix JSX expression */}
-  s: buildErrors.slice()0} 3)})} // Dependenc,
+  s: buildErrors.slice()0} 3)}) // Dependenc,
   y: errors; cons,
   t: depErrors = logs.match( /Cannot resolve module|Peer dependency conflict|Version conflict/g); i,
   f: (depErrors) {/* TODO: Fix JSX expression */}
-  s: depErrors.slice()0} 3)})} retur,
+  s: depErrors.slice()0} 3)}) retur,
   n: errors} async applyTimeoutFixes(causes) {/* TODO: Fix JSX expression */}
   n: }' awai,
   t: this.fixDependencyResolution(), brea}k} } this.log(} asyn)
@@ -41,7 +41,7 @@
   f: (durations.length > 0) { const avgDuration =} `/sites/${this.config.netlifySiteId}/deploys`); i,`
   f: (deployments && deployments.length > 0) {const latestDeploy = deployments[0]} `/deploys/${deployment.id}/log`); i,
   f: (logs) {/* TODO: Fix JSX expression */}
-  d: timeout during deployment}' '})}' retur,
+  d: timeout during deployment}' '})' retur,
   n: errors} async applyDeploymentFixes(errors) {/* TODO: Fix JSX expression */}
   t: }' awai,
   t: this.fixDeploymentTimeout(), brea}k} } this.log(, this.error(, Failed to fix missing files)' ') error)}'} } asyn,
@@ -49,6 +49,6 @@
   n: ,?}' ***': 'No,
   t: set}}'} } // Mai,
   n: execution; i,
-  f: (require.main === module) {const automation = new NetlifyBuildAutomation()} process.exit(1)})} module.export,
+  f: (require.main === module) {const automation = new NetlifyBuildAutomation()} process.exit(1)}) module.export,
   s: = NetlifyBuildAutomation} } } } '
 `

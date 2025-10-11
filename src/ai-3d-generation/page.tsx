@@ -84,29 +84,31 @@ const AI3DGenerationPage: React.FC = () => {
       
       <Navigation />
       
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      </div><main className="pt-24 pb-16 px-4">
+        </main>
+<div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          <section className="text-center mb-16">
+          </div><section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">3D Generation</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your ideas into stunning 3D models with cutting-edge AI technology. Create professional 3D content 80% faster than traditional methods.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </section>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Get Started
+                Get Started;
               </a>
               <a
                 href="/demo"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
               >
-                View Demo
+                View Demo;
               </a>
             </div>
           </section>
@@ -114,9 +116,11 @@ const AI3DGenerationPage: React.FC = () => {
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                </div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -136,9 +140,11 @@ const AI3DGenerationPage: React.FC = () => {
           {/* Industries Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Industries We Serve</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {industries.map((industry, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                </div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <industry.icon className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{industry.title}</h3>
                   <p className="text-gray-300 mb-4">{industry.description}</p>
@@ -158,10 +164,13 @@ const AI3DGenerationPage: React.FC = () => {
           {/* Benefits Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Key Benefits</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            </section>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
-                  <div className="text-2xl mb-3">🚀</div>
+                </div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
+                  </div>
+<div className="text-2xl mb-3">🚀</div>
                   <h3 className="text-lg font-semibold text-white">{benefit}</h3>
                 </div>
               ))}
@@ -171,9 +180,11 @@ const AI3DGenerationPage: React.FC = () => {
           {/* Technologies Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Technologies Used</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            </section>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {technologies.map((tech, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
+                </div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 text-center">
                   <span className="text-white font-medium">{tech}</span>
                 </div>
               ))}
@@ -184,19 +195,20 @@ const AI3DGenerationPage: React.FC = () => {
           <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing 3D Content?</h2>
             <p className="text-xl text-cyan-100 mb-8">Let our AI 3D generation technology transform your creative process</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </section>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
-                Call (302) 464-0950
+                Call (302) 464-0950;
               </a>
               <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors duration-200"
               >
-                Get Free Quote
+                Get Free Quote;
               </a>
             </div>
           </section>

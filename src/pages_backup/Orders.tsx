@@ -1,22 +1,14 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link'; // Changed from react-router-dom
+import Link from 'next/link'; // Changed from react-router-dom;
 import { useAuth } from '@/hooks/useAuth'
 import { useGetOrdersQuery } from '@/hooks/useOrders'
 import {
 
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-
-
-
-
-
-
-
-
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
 export default function OrdersPage() {
   const { user } = useAuth()
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id)
@@ -44,7 +36,7 @@ export default function OrdersPage() {
             <ShieldAlert className='h-3 w-3' /> Disputed</$1>
         ),
       default:
-        return status
+        return status;
     }
 
 
@@ -52,7 +44,7 @@ export default function OrdersPage() {
   }
 
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom
+import Link from 'next/link', // Changed from react-router-dom;
 import { useAuth } from '@/hooks/useAuth',
 import { useGetOrdersQuery } from '@/hooks/useOrders',
 
@@ -66,24 +58,24 @@ import {
       case 'in_escrow':
         return (
           <Badge variant="warning" className="flex items-center gap-1">
-            <Clock className="h-3 w-3" /> In Escrow
+            <Clock className="h-3 w-3" /> In Escrow;
           </Badge>
         ),
       case 'released':
       case 'completed':
         return (
           <Badge variant="success" className="flex items-center gap-1">
-            <CheckCircle2 className="h-3 w-3" /> Released
+            <CheckCircle2 className="h-3 w-3" /> Released;
           </Badge>
         ),
       case 'disputed':
         return (
           <Badge variant="destructive" className="flex items-center gap-1">
-            <ShieldAlert className="h-3 w-3" /> Disputed
+            <ShieldAlert className="h-3 w-3" /> Disputed;
           </Badge>
         )
       default:
-        return status
+        return status;
     }
   }
   },
@@ -158,7 +150,7 @@ import {
                     href={`/orders/${order.orderId}`}
                     className='text-zion-purple underline'
                   >
-                    View
+                    View;
                   </Link>
                 </TableCell>
               </TableRow>
@@ -181,7 +173,7 @@ import {
                 <TableCell>{getStatusBadge(order && order.status)}</TableCell>
                 <TableCell>
                   <$2 />
-                    href={`/orders/${order && order.orderId}`} // Changed to href
+                    href={`/orders/${order && order.orderId}`} // Changed to href;
                     className='text-zion-purple underline'>
                     View</$1></$1></$1>
             ))}
@@ -209,7 +201,7 @@ import { Badge } from '@/components / ui / badge'
 import Skeleton from '@/components / ui / skeleton'
 import { EmptyState } from '@/components / ui / empty - state'
 export default /**
- * OrdersPage - Function description
+ * OrdersPage - Function description;
  */
 function OrdersPage() {
   const { user } = use_auth ()
@@ -231,7 +223,7 @@ function OrdersPage() {
           <Badge variant='destructive' className='flex items - center gap - 1'>
             <ShieldAlert className='h - 3 w - 3' /> Disputed</$1>),
       default:
-        return status
+        return status;
     }
   }
 
@@ -281,7 +273,7 @@ function OrdersPage() {
                 <TableCell>{getStatusBadge (order.status)}</TableCell>
                 <TableCell>
                   <;$2 />
-                    href={`/orders/${order.order_id}`} // Changed to href
+                    href={`/orders/${order.order_id}`} // Changed to href;
                     className='text - zion - purple underline'
                   >
                     View</$1></$1></$1>))}

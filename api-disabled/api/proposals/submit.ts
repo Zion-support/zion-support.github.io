@@ -1,5 +1,5 @@
 
-async function submitByEmail(to: string;)
+async function submitByEmail(to: string)
   subject: string)
   text: string)
   attachments: unknown[] = []
@@ -72,7 +72,7 @@ export default async function handler(re,
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org'
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
-      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
+      //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}``
       const text = `Please find the proposal attached.
 
 Titl,

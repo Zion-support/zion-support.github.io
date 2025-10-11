@@ -1,22 +1,22 @@
 'use client'
 /**
- * Improved Error Boundary
- * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
+ * Improved Error Boundary;
+ * Enhanced error handling with recovery mechanisms and user-friendly fallbacks;
  */
 interface Props {
-    children: ReactNode
+    children: ReactNode;
   fallback?: ReactNode,
   onError?: (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => void
+  o: ErrorInfo) => void;
   resetKeys?: Array,
           <string | number>
   }
 interface State {
-    hasError: boolean
-  error: Error | null
+    hasError: boolean;
+  error: Error | null;
   errorInfo: ErrorInfo | null,
-  errorCount: number
+  errorCount: number;
   }
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -25,42 +25,42 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorCount: 0
+      errorCount: 0;
     }
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error
+      error;
     }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error to console for debugging
+    // Log error to console for debugging;
     console.error('Error caught by ImprovedErrorBoundary:', {
       message: error.message,
       stack: error.stack,
       component: errorInfo.componentStack ?? undefined,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href;
     })
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
     this.props.onError(error, errorInfo)
   }
-    // Update state with error details
+    // Update state with error details;
     this.setState((prevState) => ({
       errorInfo,
-      errorCount: prevState.errorCount + 1
-    }))
-    // Log to console in development
+      errorCount: prevState.errorCount + 1;
+    })
+    // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {}
     // Send to external error tracking (if available)
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
-            componentStack: errorInfo.componentStack
+            componentStack: errorInfo.componentStack;
 interface State {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -73,18 +73,18 @@ interface State {/* TODO: Fix JSX expression */}
     errorCoun,
   t: number,
 }
-class ImprovedErrorBoundary extends Component
+class ImprovedErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   constructor(props: Props) {
-    // TODO: Add content
+    // TODO: Add content;
   }
 }
 class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     constructor(props: ErrorBoundaryProps) {
     super(props),
-    this.state = {// TODO: Add content
+    this.state = {// TODO: Add content;
   }
 }
   hasErro,
@@ -107,7 +107,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 }
   hasErro,
   r: true,
-//       error
+//       error;
     }
   }
   componentDidCatch(erro,
@@ -115,7 +115,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   o: ErrorInfo): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    // Log error to console for debugging
+    // Log error to console for debugging;
     console.error('Error caught by,
   ImprovedErrorBoundary:', {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -133,21 +133,21 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       ur,
   l: window.location.href,
     })
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       this.props.onError(error, errorInfo)
     }
-    // Update state with error details
+    // Update state with error details;
     this.setState((prevState) => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //       errorInfo,
       errorCoun,
   t: prevState.errorCount + 1,)
-    }))
-    // Log to console in development
+    })
+    // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -174,15 +174,13 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   k: errorInfo.componentStack,
           }
         })
-      })
-    }
   }
   componentDidUpdate(prevProps: Props): void {
   componentDidUpdate(prevProp)
   s: Props): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    // Reset error state if resetKeys changed
+    // Reset error state if resetKeys changed;
     if (this.props.resetKeys && prevProps.resetKeys) {
         (key, index) => key !== prevProps.resetKeys![index]
       )
@@ -198,9 +196,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: null;
     })
-  }
   handleReload = (): void => {
     window.location.reload()
   }
@@ -209,16 +206,18 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
   render(): ReactNode {
     if (this.state.hasError) {
-      // Use custom fallback if provided
+      // Use custom fallback if provided;
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
   }
-      // Default error UI
+      // Default error UI;
       return (
         <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>⚠️
-            <h1 style={styles.title}>Oops! Something went wrong
+          </div>
+<div style={styles.content}>
+            </div>
+<div style={styles.icon}>⚠️
+            <h1 style={styles.title}>Oops! Something went wrong;
             <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
@@ -236,7 +235,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       errorInf,
   o: null,)
     })
-  }
   handleReload = (): void => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -253,77 +251,76 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     if (this.state.hasError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      // Use custom fallback if provided
+      // Use custom fallback if provided;
       if (this.props.fallback) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        return this.props.fallback
+        return this.props.fallback;
       }
-      // Default error UI
-      return (<div>Coming Soon</div>)
+      // Default error UI;
+      return (</div>
+<div>Coming Soon</div>)
   )
           <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>
-            <h1 style={styles.title}>Oops! Something went wrong
+          </div>
+<div style={styles.content}>
+            </div>
+<div style={styles.icon}>
+            <h1 style={styles.title}>Oops! Something went wrong;
             <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
           <details style={styles.details}>
                 <summary style={styles.summary}>Error Details (Development Only)
-                <div style={styles.errorDetails}>
+                </div>
+<div style={styles.errorDetails}>
                   <p style={styles.errorMessage}>
                     <strong>Erro,
   r:</strong> {this.state.error.message}
                   {this.state.error.stack && (
                     <pre style={styles.stack}>
-                      {this.state.error.stack}
-                  )}
+                      {this.state.error.stack})
                   {this.state.errorInfo?.componentStack && (
                     <pre style={styles.stack}>
                       <strong>Component Stack:
                   {this.state.error.stack && ()}
           <pre style={styles.stack}>
-                      {this.state.error.stack}
-                  )}
+                      {this.state.error.stack})
                   {this.state.errorInfo?.componentStack && ()}
           <pre style={styles.stack}>
                       <strong>Component,
   Stack:
-                      {this.state.errorInfo.componentStack}
-                  )}
-            )}
-            <div style={styles.actions}>
+                      {this.state.errorInfo.componentStack})
+            </div>
+<div style={styles.actions}>
               <button>
                 onClick={this.resetErrorBoundary}
                 style={styles.button}"
                 aria-label="Try Again"
               >
-                Try Again
-//                 Try Again
-              <button>
+                Try Again;
+//                 Try Again;
+              </button><button>
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Reload Page"
               >
-                Reload Page
-//                 Reload Page
-              <button>
+                Reload Page;
+//                 Reload Page;
+              </button><button>
                 onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Go to Homepage"
               >
-                Go Home
+                Go Home;
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
+                This error has occurred {this.state.errorCount} times;
             {this.state.errorCount > 1 && ()}
           <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
-            )}
-      )
-    }
-    return this.props.children
+                This error has occurred {this.state.errorCount} times;
+            )})
+    return this.props.children;
   }
 }
 const styles = {
@@ -343,7 +340,7 @@ const styles = {
     borderRadius: '8px',
     padding: '40px',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center' as const
+    textAlign: 'center' as const;
   },
   icon: {
     fontSize: '48px',
@@ -373,7 +370,7 @@ $4},
     cursor: 'pointer',
     fontWeight: 'bold',
     marginBottom: '12px',
-    userSelect: 'none' as const
+    userSelect: 'none' as const;
   },
   errorDetails: {
     fontSize:   ,
@@ -390,13 +387,13 @@ $4},
     overflowX: 'auto' as const,
     fontFamily: 'monospace',
     whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const
+    wordBreak: 'break-all' as const;
   },
   actions: {
     display: 'flex',
     gap: '12px',
     justifyContent: 'center',
-    flexWrap: 'wrap' as const
+    flexWrap: 'wrap' as const;
   },
   button: {
     padding: '12px 24px',
@@ -417,14 +414,12 @@ $4},
     fontSize: '14px',
     color:   ,
 $4}
-}
-      )
-    }
-    return this.props.children
+})
+    return this.props.children;
   }
 }
 const styles = {
-    // TODO: Add content
+    // TODO: Add content;
   }
 }
   containe,

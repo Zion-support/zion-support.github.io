@@ -5,9 +5,9 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   messag,
-  e: string
-  type?: ToastType
-  duration?: number
+  e: string;
+  type?: ToastType;
+  duration?: number;
   onClose?: () => void,,
     sho,
   w: boolean,
@@ -38,9 +38,9 @@ const,
       }, duration)
       return () => clearTimeout(timer)
     }
-    return undefined
+    return undefined;
   }, [show, duration, onClose])
-  if (!isVisible) return null
+  if (!isVisible) return null;
   const getToastStyles = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

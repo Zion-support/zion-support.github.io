@@ -285,29 +285,31 @@ export default function MicroSaasPage() {
   ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
+      <SEOOptimizer
         title="Micro SAAS Solutions - Zion Tech Group"
         description="50+ AI-powered micro SAAS applications for modern businesses. Affordable tools starting from $14/month. Analytics, e-commerce, productivity, marketing, and more."
         keywords="micro SAAS, AI tools, business applications, productivity software, marketing automation, analytics dashboard"
       />
       <Navigation />
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
+      </div><section className="pt-24 pb-16">
+        </section>
+<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          </div>
+<div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro SAAS Solutions,
   
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950
-  
+                Call (302) 464-0950;
               <$2 />
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -319,38 +321,49 @@ export default function MicroSaasPage() {
       </section>
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        </section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+              </div>
+<div key={index} className="text-center">
+                </div>
+<div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {stat.value}
-                <div className="text-gray-300 text-sm md:text-base">
-                  {stat.label}
-            ))}
+                </div>
+<div className="text-gray-300 text-sm md:text-base">
+                  {stat.label})
       {/* Category Filter */}
-      <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2">
+      </div><section className="py-8">
+        </section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="flex flex-wrap justify-center gap-2">
             {categories.map((category, index) => (
               <$2 />
                 key={index}
                 className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300">
                 {category.name} ({category.count})
-            ))}
       {/* Services Grid */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      </div><section className="py-24">
+        </section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {microSaasServices.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              </div>
+<div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
-                  <div className="flex items-center justify-center mb-4">
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular
+                  </div>
+<div className="flex items-center justify-center mb-4">
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular;
                 )}
-                <div className="flex items-center mb-4">
+                </div>
+<div className="flex items-center mb-4">
                   <service.icon className="h-8 w-8 text-purple-400 mr-3" />
-                  <div>
+                  </div>
+<div>
                     <h3 className="text-lg font-semibold text-white">{service.title}
                     <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}
                 <p className="text-gray-300 mb-4 text-sm">{service.description}
@@ -358,14 +371,16 @@ export default function MicroSaasPage() {
                   {service.features.slice(0, 3).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
-                      {feature}
-                  ))}
+                      {feature})
                   {service.features.length > 3 && (
-                    <li className="text-xs text-gray-400">+{service.features.length - 3} more features
+                    <li className="text-xs text-gray-400">+{service.features.length - 3} more features;
                   )}
-                <div className="text-center">
-                  <div className="text-xl font-bold text-purple-400 mb-2">{service.price}
-                  <div className="text-xs text-gray-400 mb-3">
+                </div>
+<div className="text-center">
+                  </div>
+<div className="text-xl font-bold text-purple-400 mb-2">{service.price}
+                  </div>
+<div className="text-xs text-gray-400 mb-3">
                     {service.benefits[0]}
                   <$2 />
                     to={service.link}
@@ -377,85 +392,96 @@ export default function MicroSaasPage() {
             ))}
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        </section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Micro SAAS Solutions?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We deliver powerful, affordable tools that help businesses grow and succeed
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">We deliver powerful, affordable tools that help businesses grow and succeed;
+          </div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-purple-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              </div>
+<div key={index} className="text-center">
+                </div>
+<div className="bg-purple-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="h-8 w-8 text-purple-400" />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}
-                <p className="text-gray-300">{benefit.description}
-            ))}
+                <p className="text-gray-300">{benefit.description})
       {/* Pricing Tiers */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing
+      </div><section className="py-24">
+        </section>
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          </div>
+<div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include 24/7 support and regular updates.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">Starter
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$19<span className="text-lg text-gray-400">/month</span>
+<div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            </div>
+<div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-white mb-4">Starter;
+              </div>
+<div className="text-4xl font-bold text-cyan-400 mb-4">$19<span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  5 Micro SAAS Apps
+                  5 Micro SAAS Apps;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Basic Support
+                  Basic Support;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Standard Features
+                  Standard Features;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Email Support
+                  Email Support;
               <$2 />
                 to="/contact"
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Get Started
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 p-8 rounded-xl shadow-lg ring-2 ring-cyan-400">
-              <div className="flex items-center justify-center mb-4">
-                <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular
-              <h3 className="text-2xl font-bold text-white mb-4">Professional
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$49<span className="text-lg text-gray-400">/month</span>
+                Get Started;
+            </div>
+<div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 p-8 rounded-xl shadow-lg ring-2 ring-cyan-400">
+              </div>
+<div className="flex items-center justify-center mb-4">
+                <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular;
+              <h3 className="text-2xl font-bold text-white mb-4">Professional;
+              </div>
+<div className="text-4xl font-bold text-cyan-400 mb-4">$49<span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  15 Micro SAAS Apps
+                  15 Micro SAAS Apps;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Priority Support
+                  Priority Support;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Advanced Features
+                  Advanced Features;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Phone & Email Support
+                  Phone & Email Support;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  API Access
+                  API Access;
               <$2 />
                 to="/contact"
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Get Started
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise
-              <div className="text-4xl font-bold text-cyan-400 mb-4">$99<span className="text-lg text-gray-400">/month</span>
+                Get Started;
+            </div>
+<div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise;
+              </div>
+<div className="text-4xl font-bold text-cyan-400 mb-4">$99<span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  All 50+ Apps
+                  All 50+ Apps;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  24/7 Premium Support
+                  24/7 Premium Support;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Custom Features
+                  Custom Features;
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  Dedicated Manager
-  
+                  Dedicated Manager;
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-                  White-label Options
-  
+                  White-label Options;
               </ul>
               <$2 />
                 to="/contact"
@@ -468,24 +494,25 @@ export default function MicroSaasPage() {
       </section>
       {/* CTA Section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
+        </section>
+<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+          </div>
+<div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Start your free trial today and experience the power of AI-driven micro SAAS solutions.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
-                Call (302) 464-0950
-  
+                Call (302) 464-0950;
               <$2 />
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Start Free Trial
-  
+                Start Free Trial;
             </div>
           </div>
         </div>

@@ -19,48 +19,41 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
     <>
       {/* Overlay */}
       {isOpen && (
-        <div
+        </>
+<div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={onClose}
         />
       )}
       
       {/* Sidebar */}
-      <div
+      </div>
+<div
         className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h2 className="text-xl font-bold text-white">Navigation</h2>
-=======
-          <h2 className="text-white font-bold text-xl">Navigation</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+        </div>
+<div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
+<h2 className="text-xl font-bold text-white">Navigation</h2>
+
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white transition-colors">
           <h2 className="text-white font-bold text-xl">Navigation</h2>
-          <button
+          </button><button
             onClick={onClose}
             className="text-gray-300 hover:text-cyan-400 transition-colors"
           >
-=======
-          <h2 className="text-xl font-bold text-white">Navigation</h2>
-          <button
+<h2 className="text-xl font-bold text-white">Navigation</h2>
+          </button><button
             onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-            <X className="w-6 h-6" />
+            className="text-gray-400 hover: text-white transition-colors">
+<X className="w-6 h-6" />
           </button>
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-        <nav className="p-4">
+<nav className="p-4">
           <ul className="space-y-2">
             {navigationItems.map((item) => {
               const Icon = item.icon
@@ -76,17 +69,13 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
                   </Link>
                 </li>
               )
-            })}
+            })
           </ul>
         </nav>
       </div>
     </>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-        <nav className="mt-8">
+
+<nav className="mt-8">
           {navigationItems.map((item) => (
             <Link
               key={item.name}
@@ -100,11 +89,8 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           ))}
         </nav>
       </div>
-<<<<<<< HEAD
-    </React.Fragment>
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+</React.Fragment>
+
   )
 }
 

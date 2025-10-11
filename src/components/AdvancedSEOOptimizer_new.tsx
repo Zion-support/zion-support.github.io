@@ -6,8 +6,7 @@ interface SEOData {/* TODO: Fix JSX expression */}
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
     }
     const baseStructuredData = {/* TODO: Fix JSX expression */}
       },
@@ -26,15 +25,15 @@ const,
     }
     if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
     }
-    return baseStructuredData
+    return baseStructuredData;
   }, [seoData, enableStructuredData])
-  // Generate Open Graph data
+  // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
     }
   }, [seoData, enableOpenGraph])
-  // Generate Twitter Card data
+  // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {}
     const faqData = {/* TODO: Fix JSX expression */}
@@ -44,7 +43,7 @@ const,
         {/* TODO: Fix JSX expression */}
           }}]}
   }, [seoData, enableTwitterCards])
-  // Generate meta tags
+  // Generate meta tags;
   const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
@@ -61,7 +60,7 @@ const,
   t: '#3B82F6' },
       {/* TODO: Fix JSX expression */}
   t: '/browserconfig.xml' }]
-    return metaTags
+    return metaTags;
   }, [seoData])
   const structuredData = generateStructuredData()
   const openGraphData = generateOpenGraphData()
@@ -70,7 +69,7 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', seoData.description)
-      // Update canonical URL
+      // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]')
       if (!canonicalLink) {/* TODO: Fix JSX expression */}
       }
@@ -84,15 +83,13 @@ const,
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(structuredData)
     document.head.appendChild(script)
-    structuredDataRef.current = script
+    structuredDataRef.current = script;
   }
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [structuredData])
   useEffect(() => {/* TODO: Fix JSX expression */}
           })
-        }
-      }
     }
   }, [])
   return (<Helmet>
@@ -141,7 +138,7 @@ const,
     </Helmet>
   )
 }
-export default AdvancedSEOOptimizer
+export default AdvancedSEOOptimizer;
 "
   </AdvancedSEOOptimizerProps>
 </li></li></li></li></li></li></li></li></li>
