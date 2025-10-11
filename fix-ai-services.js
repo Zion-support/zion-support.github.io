@@ -1,11 +1,19 @@
-'use client'
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Common template for AI service pages
+const createAIServicePageTemplate = (serviceName, description, keywords) => `'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const FraudDetectionPage: React.FC = () => {
+const ${serviceName.replace(/\s+/g, '')}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -39,9 +47,9 @@ const FraudDetectionPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Fraud Detection - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered fraud detection solution for modern businesses. Transform your operations with cutting-edge artificial intelligence technology." />
-        <meta name="keywords" content="AI, fraud detection, artificial intelligence, business solutions, automation" />
+        <title>${serviceName} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
       <Navigation />
       <section className="relative py-20 px-4 overflow-hidden">
@@ -49,10 +57,10 @@ const FraudDetectionPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Fraud Detection
+            ${serviceName}
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Advanced AI-powered fraud detection solution for modern businesses. Transform your operations with cutting-edge artificial intelligence technology.
+            ${description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
@@ -95,7 +103,7 @@ const FraudDetectionPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Fraud Detection?
+              Why Choose Our ${serviceName}?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your business with intelligent automation and insights.
@@ -148,4 +156,48 @@ const FraudDetectionPage: React.FC = () => {
   )
 }
 
-export default FraudDetectionPage
+export default ${serviceName.replace(/\s+/g, '')}Page`;
+
+// Function to fix a single AI service page
+function fixAIServicePage(filePath) {
+  try {
+    const pathParts = filePath.split('/');
+    const serviceDir = pathParts[pathParts.length - 2];
+    const serviceName = serviceDir.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    const description = `Advanced AI-powered ${serviceName.toLowerCase()} solution for modern businesses. Transform your operations with cutting-edge artificial intelligence technology.`;
+    const keywords = `AI, ${serviceName.toLowerCase()}, artificial intelligence, business solutions, automation`;
+    
+    const newContent = createAIServicePageTemplate(serviceName, description, keywords);
+    
+    fs.writeFileSync(filePath, newContent);
+    console.log(`Fixed: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Get all AI service pages that need fixing
+const aiServicesDir = path.join(__dirname, 'app', 'ai-services');
+const files = fs.readdirSync(aiServicesDir, { withFileTypes: true });
+
+let fixedCount = 0;
+let totalCount = 0;
+
+files.forEach(file => {
+  if (file.isDirectory()) {
+    const pagePath = path.join(aiServicesDir, file.name, 'page.tsx');
+    if (fs.existsSync(pagePath)) {
+      totalCount++;
+      if (fixAIServicePage(pagePath)) {
+        fixedCount++;
+      }
+    }
+  }
+});
+
+console.log(`\nFixed ${fixedCount} out of ${totalCount} AI service pages.`);

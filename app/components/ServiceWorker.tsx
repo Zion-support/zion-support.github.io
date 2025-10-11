@@ -1,14 +1,12 @@
 'use client'
-import React, { useEffect } from 'react'
+import React from 'react'
+
 const ServiceWorker: React.FC = () => {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-        })
-        .catch((error) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('Service Worker registration failed:', error)
-          }
-        })
-    }
+  return (
+    <div className="serviceworker">
+      {/* ServiceWorker component */}
+    </div>
+  )
+}
+
+export default ServiceWorker

@@ -1,56 +1,67 @@
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-
-// Read the current App.tsx;
-const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
-
-// Read the missing pages from the analysis;
-const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
-const missingPages = analysisData.missingPagesList;
-
-// Generate import statements for missing pages;
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-// const __dirname = path.dirname(__filename)
-// Read the current App.tsx
-const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8')
-// Read the missing pages from the analysis
-const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'))
-const missingPages = analysisData.missingPagesList
-// Generate import statements for missing pages
-const generateImportStatement = (route) => {
-  const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
-  return `const ${componentName} = lazy(() => import('.${route}/page'));`
+
+// Function to add missing routes
+const addMissingRoutes = () => {
+  const routes = [
+    '/about',
+    '/services',
+    '/contact',
+    '/blog',
+    '/careers',
+    '/legal/privacy',
+    '/legal/terms'
+  ]
+
+  const appDir = path.join(process.cwd(), 'app')
+  
+  routes.forEach(route => {
+    const routePath = path.join(appDir, route, 'page.tsx')
+    const routeDir = path.dirname(routePath)
+    
+    // Create directory if it doesn't exist
+    if (!fs.existsSync(routeDir)) {
+      fs.mkdirSync(routeDir, { recursive: true })
+    }
+    
+    // Create page.tsx if it doesn't exist
+    if (!fs.existsSync(routePath)) {
+      const pageContent = `'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ${route.split('/').pop().charAt(0).toUpperCase() + route.split('/').pop().slice(1)}Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>${route.charAt(1).toUpperCase() + route.slice(2)} - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - ${route.charAt(1).toUpperCase() + route.slice(2)}" />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-white mb-8">
+            ${route.charAt(1).toUpperCase() + route.slice(2)}
+          </h1>
+          <p className="text-xl text-gray-300">
+            This page is under construction.
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
 }
 
-// Generate route statements
-const generateRouteStatement = (route) => {
-  const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
-  return `            <Route path="${route}" element={<${componentName} />} />`
+export default ${route.split('/').pop().charAt(0).toUpperCase() + route.split('/').pop().slice(1)}Page`
+      
+      fs.writeFileSync(routePath, pageContent)
+      console.log(`Created route: ${route}`)
+    }
+  })
 }
 
-// Generate all import statements
-const importStatements = missingPages.map(generateImportStatement).join('\n')
-// Generate all route statements
-const routeStatements = missingPages.map(generateRouteStatement).join('\n')
-// Find the position to insert the imports (after the existing imports)
-const importInsertionPoint = appContent.lastIndexOf('// Blog Pages')
-const beforeImports = appContent.substring(0, importInsertionPoint)
-const afterImports = appContent.substring(importInsertionPoint)
-// Insert the new imports
-const newImports = beforeImports + '\n// Missing Pages\n' + importStatements + '\n\n' + afterImports
-// Find the position to insert the routes (before the 404 route)
-const routeInsertionPoint = newImports.lastIndexOf('            {/* 404 Page */}')
-const beforeRoutes = newImports.substring(0, routeInsertionPoint)
-const afterRoutes = newImports.substring(routeInsertionPoint)
-// Insert the new routes
-const newAppContent = beforeRoutes + '\n            {/* Missing Pages */}\n' + routeStatements + '\n            \n' + afterRoutes
-// Write the updated App.tsx
-fs.writeFileSync('/workspace/src/App.tsx', newAppContent)
-// Log success for debugging in development
-if (process.env.NODE_ENV === 'development') {
-  console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`)
-  console.log('All navigation links should now work properly!')
-}
+// Run the function
+addMissingRoutes()

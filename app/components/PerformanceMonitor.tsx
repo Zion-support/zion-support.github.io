@@ -1,10 +1,12 @@
-      }
-    });
+'use client'
+import React from 'react'
 
-    };
-  }, []);
-
-  return null;
-};
+const PerformanceMonitor: React.FC = () => {
+  return (
+    <div className="performancemonitor">
+      {/* PerformanceMonitor component */}
+    </div>
+  )
+}
 
 export default PerformanceMonitor

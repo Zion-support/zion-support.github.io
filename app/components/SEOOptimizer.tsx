@@ -1,10 +1,12 @@
-    </Helmet>
+'use client'
+import React from 'react'
+
+const SEOOptimizer: React.FC = () => {
+  return (
+    <div className="seooptimizer">
+      {/* SEOOptimizer component */}
+    </div>
   )
 }
+
 export default SEOOptimizer
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />

@@ -1,194 +1,151 @@
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+
+const PagePage: React.FC = () => {
   const features = [
-    {icon: Globe,
-      title: 'Global Climate Modeling',
-      description: 'Advanced AI models for global climate prediction with high-resolution forecasting',
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     },
     {
       icon: BarChart,
-      title: 'Extreme Weather Prediction',
-      description: 'AI-powered prediction of extreme weather events and natural disasters',
-      benefits: ['Early warning systems', 'Disaster preparedness', 'Risk assessment'],
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
     },
     {
-      icon: Brain,
-      title: 'Machine Learning Algorithms',
-      description: 'Advanced ML algorithms trained on decades of climate data for accurate predictions',
-      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive accuracy'],
+      icon: Zap,
+      title: 'Real-time Processing',
+      description: 'Lightning-fast processing with real-time capabilities.',
     },
     {
       icon: Shield,
-      title: 'Climate Risk Assessment',
-      description: 'Comprehensive climate risk assessment for businesses and governments',
-      benefits: ['Risk mitigation', 'Adaptation strategies', 'Policy recommendations'],
+      title: 'Enterprise Security',
+      description: 'Bank-grade security with end-to-end encryption and compliance standards.',
     }
   ]
-  const pricingPlans = [
-    {name: 'Basic',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses and research institutions',
-      features: [,
-        'Basic climate predictions',
-        '7-day weather forecasts',
-        'Email alerts',
-        'Standard support',
-        'Basic analytics',
-        'API access'
-      ],
-      popular: false;,},
-    {name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for government agencies and large organizations',
-      features: [,
-        'Advanced climate modeling',
-        '30-day predictions',
-        'Real-time monitoring',
-        'Priority support',
-        'Advanced analytics',
-        'Custom integrations',
-        'Risk assessment tools',
-        'Multi-location support'
-      ],
-      popular: true;,},
-    {name: 'Enterprise',
-      price: '$2,499',
-      period: '/month',
-      description: 'For large-scale climate research and policy making',
-      features: [,
-        'Full climate prediction suite',
-        'Long-term projections',
-        '24/7 dedicated support',
-        'Custom climate models',
-        'White-label solutions',
-        'On-premise deployment',
-        'Research collaboration',
-        'Policy analysis tools',
-        'Training programs'
-      ],
-  const useCases = [
-    {title: 'Agricultural Planning',
-      description: 'Climate predictions for crop planning and agricultural optimization',
-      icon: Globe,
-      results: '25% increase in crop yields',},
-    {title: 'Disaster Preparedness',
-      description: 'Early warning systems for natural disasters and extreme weather events',
-      icon: Shield,
-      results: '60% reduction in disaster impact',},
-    {title: 'Energy Management',
-      description: 'Climate predictions for renewable energy planning and grid management',
-      icon: Zap,
-      results: '30% improvement in energy efficiency',},
-    {title: 'Urban Planning',
-      description: 'Climate data for sustainable urban development and infrastructure planning',
-      icon: Target,
-        <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
-        </Helmet><title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />
-        <meta property="og: title" content="AI Climate Prediction Engine - Advanced Climate Forecasting" />,
-        <meta property="og:description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-climate-prediction-engine" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-climate-prediction-engine" />,
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered page solution for modern businesses. Transform your operations with cutting-edge artificial intelligence technology." />
+        <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
       </Helmet>
-
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-500/20 via-transparent to-transparent"></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full px-6 py-3 mb-8 border border-green-500/30">
-                </div><Globe className="w-5 h-5 text-green-400" />
-                <span className="text-green-400 font-semibold">Climate Technology</span>
-              </div>
-              
-                Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, 
-                extreme weather prediction, and comprehensive climate risk assessment.
-              </p>
-              
-                  <span className="font-semibold">95% Accuracy</span>
-                </div>
-                <div className="flex items-center space-x-2 text-cyan-400">
-                  </div><Shield className="w-5 h-5" />
-                  <span className="font-semibold">Early Warning</span>
-                </div>
-                <div className="flex items-center space-x-2 text-blue-400">
-                  </div><Globe className="w-5 h-5" />
-                  <span className="font-semibold">Global Coverage</span>
-                </div>
-              </div>
-              
-                </a>
-              </div>
-            </div>
+      <Navigation />
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Page
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Advanced AI-powered page solution for modern businesses. Transform your operations with cutting-edge artificial intelligence technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              View Demo
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-                for weather forecasting, extreme weather prediction, and climate risk assessment.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {features.map((feature, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                    ))}
-                  </ul>
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered platform delivers professional-grade solutions with unprecedented speed and accuracy.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-gray-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with intelligent automation and insights.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-                and research institutions worldwide for critical climate decision-making.
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Get Started Today</h3>
+              <p className="text-gray-300 mb-6">
+                Join thousands of businesses already using our AI solutions.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {useCases.map((useCase, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description</p>}</p>
-                  <div className="text-green-400 font-semibold text-sm">{useCase.results</div>} </div>
-                </div>
-              ))}
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                Start Free Trial
+              </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-                All plans include our advanced AI algorithms and climate modeling tools.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-              {pricingPlans.map((plan, index) => (
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                  </a>
-                </div>
-              ))}
-            </div>
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Experience the future of AI-powered solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+              Get Started
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">
+              View Demo
+            </button>
           </div>
-        </section>
+        </div>
+      </section>
 
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
+      <Footer />
     </>
   )
 }
-export default AIClimatePredictionEngine
+
+export default PagePage
