@@ -7,7 +7,7 @@ import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
-  const blogPosts = const blogPosts = const blogPosts = [
+  const blogPosts = [
     {
       id: 1,
       title: 'The Future of AI in Business',
@@ -46,39 +46,37 @@ const BlogPage: React.FC = () => {
       date: '2024-01-01',
       readTime: '8 min read',
       category: 'Development',
-        image: '/images/blog/micro-saas.jpg';
-      };
+        image: '/images/blog/micro-saas.jpg'
+      }
     ];
   const categories = ['All', 'AI & Technology', 'Cloud Computing', 'Security', 'Development'];
-  const filteredPosts = const filteredPosts = const filteredPosts = blogPosts.filter()
+  const filteredPosts = blogPosts.filter(post =>
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-    post.category.toLowerCase().includes(searchQuery.toLowerCase());
-
-  return ()
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20"
-                />
-              </div>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4 mb-12" /></div>
-              {categories.map((category) => ()
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {filteredPosts.map((post) => ()
-              ))}
-            </div>
-            
-            {filteredPosts.length === 0 && ()
-            )}
-          </div>
-        </section>
-      </div>
-    </>
+    post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    post.category.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  return (
+    <>
+      <Helmet>
+        <title>Blog - Zion Tech Group</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, IT, and Micro SaaS solutions from Zion Tech Group." />
+      </Helmet>
+      
+      <main className="min-h-screen">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Blog</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              Stay updated with the latest insights on AI, IT, and Micro SaaS solutions.
+            </p>
+          </div>
+        </div>
+      </main>
+      </>
+    );
 };
 
 export default BlogPage;

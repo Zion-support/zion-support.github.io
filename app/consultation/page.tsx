@@ -6,7 +6,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState()
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
