@@ -22,7 +22,7 @@ const PerformanceMonitor: React.FC = () => {
 
     if (!shouldMonitor) return;
 
-    const updateMetrics = (newMetrics: Partial</PerformanceMetrics><PerformanceMetrics>) => {
+    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     };
 

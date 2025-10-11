@@ -1,569 +1,726 @@
+// Comprehensive Services Data for Zion Tech Group
+// Real micro SAAS, IT, and AI services with market pricing and features
+
 export interface Service {
   id: string;
-  title: string;
+  name: string;
   description: string;
-  icon: string;
-  category: string;
+  category: 'ai' | 'it' | 'saas' | 'emerging';
+  subcategory: string;
+  price: string;
+  marketPrice: string;
   features: string[];
   benefits: string[];
-  pricing: {
-    starting: string;
-    popular?: string;
-    enterprise?: string;
-  };
-  marketPrice: string;
-  link: string;
+  icon: string;
   popular: boolean;
-  tags: string[];
+  url: string;
+  pricing: {
+    basic: { price: string; features: string[] };
+    pro: { price: string; features: string[] };
+    enterprise: { price: string; features: string[] };
+  };
+  integrations: string[];
+  support: string[];
+  compliance: string[];
+  sla: string;
+  setupTime: string;
+  freeTrial: boolean;
+  demoAvailable: boolean;
 }
 
 export const aiServices: Service[] = [
   {
-    id: 'ai-chatbot-builder',
-    title: 'AI Chatbot Builder',
-    description: 'Create intelligent chatbots with natural language processing and machine learning capabilities.',
+    id: 'ai-chatbot-enterprise',
+    name: 'AI Enterprise Chatbot Platform',
+    description: 'Advanced conversational AI with multi-language support, sentiment analysis, and seamless CRM integration for enterprise customer service.',
+    category: 'ai',
+    subcategory: 'Customer Service',
+    price: '$2,499/month',
+    marketPrice: '$5,000-15,000/month',
+    features: [
+      'GPT-4 powered conversations',
+      'Multi-language support (50+ languages)',
+      'Sentiment analysis & emotion detection',
+      'CRM integration (Salesforce, HubSpot, Pipedrive)',
+      'Voice & text channels',
+      'Custom knowledge base training',
+      'Analytics & performance metrics',
+      'A/B testing capabilities',
+      'White-label solutions',
+      'API access & webhooks'
+    ],
+    benefits: [
+      'Reduce support costs by 70%',
+      '24/7 multilingual customer support',
+      'Improve customer satisfaction by 40%',
+      'Handle 10,000+ conversations simultaneously',
+      'Seamless human agent handoff',
+      'Real-time conversation analytics'
+    ],
     icon: '🤖',
-    category: 'AI',
-    features: [
-      'Natural Language Processing',
-      'Multi-language Support',
-      'Integration with CRM Systems',
-      'Analytics Dashboard',
-      'Custom Training Models',
-      'Voice Recognition'
-    ],
-    benefits: [
-      '24/7 Customer Support',
-      'Reduce Support Costs by 60%',
-      'Instant Response Time',
-      'Scalable Solutions'
-    ],
-    pricing: {
-      starting: '$299/month',
-      popular: '$599/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$500-2000/month',
-    link: '/ai-chatbot-builder',
     popular: true,
-    tags: ['NLP', 'Customer Service', 'Automation']
+    url: '/ai-chatbot-enterprise',
+    pricing: {
+      basic: { price: '$499/month', features: ['Up to 1,000 conversations', 'Basic integrations', 'Email support'] },
+      pro: { price: '$1,499/month', features: ['Up to 10,000 conversations', 'Advanced integrations', 'Priority support', 'Analytics dashboard'] },
+      enterprise: { price: '$2,499/month', features: ['Unlimited conversations', 'Custom integrations', 'Dedicated support', 'White-label options', 'SLA guarantee'] }
+    },
+    integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Slack', 'Microsoft Teams', 'WhatsApp', 'Facebook Messenger'],
+    support: ['24/7 Technical Support', 'Dedicated Account Manager', 'Training & Onboarding', 'Custom Development'],
+    compliance: ['SOC 2 Type II', 'GDPR', 'HIPAA', 'CCPA', 'ISO 27001'],
+    sla: '99.9% uptime guarantee',
+    setupTime: '2-4 weeks',
+    freeTrial: true,
+    demoAvailable: true
   },
   {
-    id: 'ai-content-generator',
-    title: 'AI Content Generator',
-    description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
+    id: 'ai-content-generation-pro',
+    name: 'AI Content Generation Pro',
+    description: 'Advanced AI-powered content creation platform with brand voice training, SEO optimization, and multi-platform publishing capabilities.',
+    category: 'ai',
+    subcategory: 'Content Creation',
+    price: '$799/month',
+    marketPrice: '$1,500-4,000/month',
+    features: [
+      'GPT-4 & Claude integration',
+      'Brand voice training & consistency',
+      'SEO optimization & keyword research',
+      'Multi-platform content adaptation',
+      'Image generation (DALL-E, Midjourney)',
+      'Video script generation',
+      'Content calendar automation',
+      'Plagiarism detection',
+      'Tone & style customization',
+      'Bulk content generation'
+    ],
+    benefits: [
+      'Save 80% content creation time',
+      'Increase content output by 500%',
+      'Improve SEO rankings by 60%',
+      'Maintain consistent brand voice',
+      'Generate 100+ pieces daily',
+      'Multi-language content support'
+    ],
     icon: '✍️',
-    category: 'AI',
-    features: [
-      'Blog Post Generation',
-      'Social Media Content',
-      'Email Marketing Copy',
-      'SEO Optimization',
-      'Multiple Content Formats',
-      'Brand Voice Training'
-    ],
-    benefits: [
-      'Save 80% Content Creation Time',
-      'Consistent Brand Voice',
-      'SEO-Optimized Content',
-      'Scalable Content Production'
-    ],
-    pricing: {
-      starting: '$199/month',
-      popular: '$399/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$300-1500/month',
-    link: '/ai-content-generator',
     popular: true,
-    tags: ['Content Marketing', 'SEO', 'Automation']
+    url: '/ai-content-generation-pro',
+    pricing: {
+      basic: { price: '$199/month', features: ['10,000 words/month', 'Basic templates', 'Email support'] },
+      pro: { price: '$499/month', features: ['50,000 words/month', 'Advanced templates', 'Priority support', 'SEO tools'] },
+      enterprise: { price: '$799/month', features: ['Unlimited words', 'Custom templates', 'Dedicated support', 'API access', 'White-label'] }
+    },
+    integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer', 'Google Docs', 'Notion'],
+    support: ['Email Support', 'Live Chat', 'Video Training', 'Content Strategy Consultation'],
+    compliance: ['GDPR', 'CCPA', 'SOC 2'],
+    sla: '99.5% uptime guarantee',
+    setupTime: '1-2 weeks',
+    freeTrial: true,
+    demoAvailable: true
   },
   {
-    id: 'ai-data-analytics',
-    title: 'AI Data Analytics Platform',
-    description: 'Advanced data analytics with AI-powered insights and predictive modeling.',
+    id: 'ai-data-analytics-advanced',
+    name: 'AI Advanced Data Analytics',
+    description: 'Enterprise-grade AI analytics platform with predictive modeling, real-time insights, and automated business intelligence reporting.',
+    category: 'ai',
+    subcategory: 'Analytics',
+    price: '$3,999/month',
+    marketPrice: '$8,000-25,000/month',
+    features: [
+      'Machine learning predictive models',
+      'Real-time data processing',
+      'Custom dashboard builder',
+      'Automated report generation',
+      'Anomaly detection & alerts',
+      'Data visualization (100+ chart types)',
+      'Multi-source data integration',
+      'Natural language queries',
+      'Advanced statistical analysis',
+      'Custom ML model training'
+    ],
+    benefits: [
+      'Increase data-driven decisions by 90%',
+      'Reduce analysis time by 85%',
+      'Predict trends with 95% accuracy',
+      'Automate 100+ reports monthly',
+      'Real-time business insights',
+      'Custom ML model deployment'
+    ],
     icon: '📊',
-    category: 'AI',
-    features: [
-      'Predictive Analytics',
-      'Real-time Dashboards',
-      'Custom Report Generation',
-      'Data Visualization',
-      'Machine Learning Models',
-      'API Integration'
-    ],
-    benefits: [
-      'Data-Driven Decision Making',
-      'Predict Future Trends',
-      'Automated Reporting',
-      'ROI Optimization'
-    ],
-    pricing: {
-      starting: '$499/month',
-      popular: '$999/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$800-3000/month',
-    link: '/ai-data-analytics',
     popular: true,
-    tags: ['Analytics', 'Machine Learning', 'Business Intelligence']
+    url: '/ai-data-analytics-advanced',
+    pricing: {
+      basic: { price: '$999/month', features: ['Up to 1M data points', 'Basic dashboards', 'Email support'] },
+      pro: { price: '$2,499/month', features: ['Up to 10M data points', 'Advanced dashboards', 'Priority support', 'Custom reports'] },
+      enterprise: { price: '$3,999/month', features: ['Unlimited data points', 'Custom dashboards', 'Dedicated support', 'ML model training', 'API access'] }
+    },
+    integrations: ['Salesforce', 'Google Analytics', 'HubSpot', 'MySQL', 'PostgreSQL', 'MongoDB', 'Snowflake', 'BigQuery'],
+    support: ['24/7 Support', 'Data Scientist Consultation', 'Custom Model Development', 'Training & Onboarding'],
+    compliance: ['SOC 2 Type II', 'GDPR', 'HIPAA', 'ISO 27001', 'FedRAMP'],
+    sla: '99.9% uptime guarantee',
+    setupTime: '3-6 weeks',
+    freeTrial: true,
+    demoAvailable: true
   },
   {
-    id: 'ai-customer-support',
-    title: 'AI Customer Support Suite',
-    description: 'Comprehensive AI-powered customer support with ticket management and automated responses.',
-    icon: '🎧',
-    category: 'AI',
+    id: 'ai-computer-vision-pro',
+    name: 'AI Computer Vision Pro',
+    description: 'Advanced computer vision platform with object detection, facial recognition, quality control automation, and real-time video analysis.',
+    category: 'ai',
+    subcategory: 'Computer Vision',
+    price: '$4,999/month',
+    marketPrice: '$10,000-30,000/month',
     features: [
-      'Automated Ticket Routing',
-      'Sentiment Analysis',
-      'Knowledge Base Integration',
-      'Multi-channel Support',
-      'Performance Analytics',
-      'Custom AI Training'
+      'Real-time object detection & tracking',
+      'Facial recognition & verification',
+      'Quality control automation',
+      'Video content analysis',
+      'Custom model training',
+      'Edge computing deployment',
+      'Multi-camera support',
+      'API & SDK access',
+      'Cloud & on-premise deployment',
+      'Advanced analytics dashboard'
     ],
     benefits: [
-      'Reduce Response Time by 90%',
-      'Improve Customer Satisfaction',
-      '24/7 Availability',
-      'Cost Reduction'
+      'Automate quality control 100%',
+      'Reduce inspection time by 90%',
+      'Improve accuracy by 95%',
+      'Real-time processing capabilities',
+      'Custom model development',
+      'Edge deployment options'
     ],
-    pricing: {
-      starting: '$399/month',
-      popular: '$799/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$600-2500/month',
-    link: '/ai-customer-support',
+    icon: '👁️',
     popular: false,
-    tags: ['Customer Service', 'Automation', 'AI']
+    url: '/ai-computer-vision-pro',
+    pricing: {
+      basic: { price: '$1,999/month', features: ['Up to 1M images/month', 'Basic models', 'Email support'] },
+      pro: { price: '$3,499/month', features: ['Up to 10M images/month', 'Advanced models', 'Priority support', 'Custom training'] },
+      enterprise: { price: '$4,999/month', features: ['Unlimited images', 'Custom models', 'Dedicated support', 'Edge deployment', 'SLA guarantee'] }
+    },
+    integrations: ['AWS', 'Azure', 'GCP', 'NVIDIA Jetson', 'Intel OpenVINO', 'TensorRT', 'ONNX'],
+    support: ['24/7 Support', 'Computer Vision Expert', 'Custom Model Development', 'Hardware Integration'],
+    compliance: ['SOC 2 Type II', 'GDPR', 'ISO 27001', 'FCC'],
+    sla: '99.9% uptime guarantee',
+    setupTime: '4-8 weeks',
+    freeTrial: true,
+    demoAvailable: true
   },
   {
-    id: 'ai-cybersecurity',
-    title: 'AI Cybersecurity Monitor',
-    description: 'Advanced AI-powered cybersecurity monitoring and threat detection system.',
-    icon: '🔒',
-    category: 'AI',
+    id: 'ai-workflow-automation-enterprise',
+    name: 'AI Workflow Automation Enterprise',
+    description: 'Intelligent process automation platform that learns, adapts, and optimizes business workflows with advanced AI decision-making capabilities.',
+    category: 'ai',
+    subcategory: 'Automation',
+    price: '$2,999/month',
+    marketPrice: '$6,000-20,000/month',
     features: [
-      'Real-time Threat Detection',
-      'Behavioral Analysis',
-      'Automated Incident Response',
-      'Compliance Monitoring',
-      'Security Dashboards',
-      'Machine Learning Models'
+      'Process mining & discovery',
+      'Intelligent workflow optimization',
+      'RPA + AI integration',
+      'Exception handling & learning',
+      '500+ pre-built connectors',
+      'Custom workflow builder',
+      'Performance monitoring',
+      'Compliance automation',
+      'Multi-tenant architecture',
+      'Advanced analytics & reporting'
     ],
     benefits: [
-      'Proactive Threat Detection',
-      'Reduce Security Incidents',
-      'Compliance Assurance',
-      'Cost-Effective Security'
+      'Automate 90% of repetitive tasks',
+      'Reduce process time by 75%',
+      'Improve accuracy by 95%',
+      'Scale automation across departments',
+      'Self-learning capabilities',
+      'ROI within 3 months'
     ],
-    pricing: {
-      starting: '$599/month',
-      popular: '$1199/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$1000-4000/month',
-    link: '/ai-cybersecurity',
-    popular: false,
-    tags: ['Cybersecurity', 'AI', 'Monitoring']
-  },
-  {
-    id: 'ai-ecommerce-optimizer',
-    title: 'AI E-commerce Optimizer',
-    description: 'Optimize e-commerce operations with AI-powered recommendations and automation.',
-    icon: '🛒',
-    category: 'AI',
-    features: [
-      'Product Recommendation Engine',
-      'Price Optimization',
-      'Inventory Management',
-      'Customer Segmentation',
-      'Sales Forecasting',
-      'A/B Testing Automation'
-    ],
-    benefits: [
-      'Increase Sales by 25%',
-      'Optimize Inventory Levels',
-      'Personalized Shopping Experience',
-      'Automated Operations'
-    ],
-    pricing: {
-      starting: '$299/month',
-      popular: '$599/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$500-2000/month',
-    link: '/ai-ecommerce-optimizer',
+    icon: '⚡',
     popular: true,
-    tags: ['E-commerce', 'Optimization', 'AI']
+    url: '/ai-workflow-automation-enterprise',
+    pricing: {
+      basic: { price: '$799/month', features: ['Up to 10 workflows', 'Basic connectors', 'Email support'] },
+      pro: { price: '$1,999/month', features: ['Up to 50 workflows', 'Advanced connectors', 'Priority support', 'Analytics'] },
+      enterprise: { price: '$2,999/month', features: ['Unlimited workflows', 'Custom connectors', 'Dedicated support', 'AI training', 'SLA guarantee'] }
+    },
+    integrations: ['Salesforce', 'SAP', 'Oracle', 'Microsoft 365', 'Google Workspace', 'Slack', 'ServiceNow', 'Workday'],
+    support: ['24/7 Support', 'Process Automation Expert', 'Custom Development', 'Training & Onboarding'],
+    compliance: ['SOC 2 Type II', 'GDPR', 'SOX', 'ISO 27001'],
+    sla: '99.9% uptime guarantee',
+    setupTime: '2-4 weeks',
+    freeTrial: true,
+    demoAvailable: true
   }
 ];
 
 export const itServices: Service[] = [
   {
-    id: 'cloud-migration',
-    title: 'Cloud Migration Services',
-    description: 'Seamless migration to cloud platforms with zero downtime and optimized performance.',
+    id: 'cloud-infrastructure-enterprise',
+    name: 'Enterprise Cloud Infrastructure',
+    description: 'Complete cloud infrastructure solutions with AWS, Azure, and GCP expertise, including migration, optimization, and 24/7 management.',
+    category: 'it',
+    subcategory: 'Cloud Computing',
+    price: '$15,000/month',
+    marketPrice: '$25,000-75,000/month',
+    features: [
+      'Multi-cloud architecture design',
+      'Zero-downtime migration',
+      'Auto-scaling & load balancing',
+      'Disaster recovery & backup',
+      'Security & compliance setup',
+      'Cost optimization (40% savings)',
+      '24/7 monitoring & management',
+      'Performance optimization',
+      'DevOps & CI/CD pipelines',
+      'Dedicated cloud engineers'
+    ],
+    benefits: [
+      '99.99% uptime guarantee',
+      'Reduce cloud costs by 40%',
+      'Faster deployment times',
+      'Enhanced security posture',
+      'Scalable infrastructure',
+      'Expert cloud management'
+    ],
     icon: '☁️',
-    category: 'IT',
-    features: [
-      'AWS/Azure/GCP Migration',
-      'Zero Downtime Migration',
-      'Performance Optimization',
-      'Security Configuration',
-      'Cost Optimization',
-      '24/7 Support'
-    ],
-    benefits: [
-      'Reduce Infrastructure Costs',
-      'Improved Scalability',
-      'Enhanced Security',
-      'Better Performance'
-    ],
-    pricing: {
-      starting: '$2,000/project',
-      popular: '$5,000/project',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$3000-15000/project',
-    link: '/cloud-migration',
     popular: true,
-    tags: ['Cloud', 'Migration', 'Infrastructure']
+    url: '/cloud-infrastructure-enterprise',
+    pricing: {
+      basic: { price: '$5,000/month', features: ['Single cloud provider', 'Basic monitoring', 'Email support'] },
+      pro: { price: '$10,000/month', features: ['Multi-cloud setup', 'Advanced monitoring', 'Priority support', 'Cost optimization'] },
+      enterprise: { price: '$15,000/month', features: ['Hybrid cloud', '24/7 management', 'Dedicated team', 'SLA guarantee', 'Custom solutions'] }
+    },
+    integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Jenkins'],
+    support: ['24/7 Support', 'Dedicated Cloud Architect', 'Migration Planning', 'Training & Documentation'],
+    compliance: ['SOC 2 Type II', 'ISO 27001', 'FedRAMP', 'HIPAA', 'PCI DSS'],
+    sla: '99.99% uptime guarantee',
+    setupTime: '4-12 weeks',
+    freeTrial: false,
+    demoAvailable: true
   },
   {
-    id: 'devops-ci-cd',
-    title: 'DevOps & CI/CD Pipeline',
-    description: 'Complete DevOps solutions with automated CI/CD pipelines and infrastructure management.',
+    id: 'cybersecurity-advanced',
+    name: 'Advanced Cybersecurity Suite',
+    description: 'Comprehensive cybersecurity solutions with threat hunting, incident response, compliance management, and 24/7 security operations center.',
+    category: 'it',
+    subcategory: 'Cybersecurity',
+    price: '$8,999/month',
+    marketPrice: '$15,000-50,000/month',
+    features: [
+      '24/7 Security Operations Center',
+      'Advanced threat hunting',
+      'Incident response & forensics',
+      'Vulnerability assessment & management',
+      'Penetration testing',
+      'Compliance automation (SOC 2, ISO 27001)',
+      'Security awareness training',
+      'Managed detection & response',
+      'Zero-trust architecture',
+      'Custom security policies'
+    ],
+    benefits: [
+      'Reduce security incidents by 95%',
+      '24/7 threat monitoring',
+      'Faster incident response',
+      'Compliance automation',
+      'Proactive threat hunting',
+      'Custom security strategies'
+    ],
+    icon: '🔒',
+    popular: true,
+    url: '/cybersecurity-advanced',
+    pricing: {
+      basic: { price: '$2,999/month', features: ['Basic monitoring', 'Email support', 'Monthly reports'] },
+      pro: { price: '$5,999/month', features: ['Advanced monitoring', 'Priority support', 'Weekly reports', 'Incident response'] },
+      enterprise: { price: '$8,999/month', features: ['24/7 SOC', 'Dedicated team', 'Real-time alerts', 'Custom policies', 'SLA guarantee'] }
+    },
+    integrations: ['SIEM', 'EDR', 'XDR', 'Firewalls', 'IDS/IPS', 'Email Security', 'Web Security', 'Identity Management'],
+    support: ['24/7 SOC', 'Security Expert Consultation', 'Incident Response', 'Compliance Support'],
+    compliance: ['SOC 2 Type II', 'ISO 27001', 'NIST', 'CIS Controls', 'GDPR', 'HIPAA'],
+    sla: '15-minute response time',
+    setupTime: '2-6 weeks',
+    freeTrial: false,
+    demoAvailable: true
+  },
+  {
+    id: 'devops-enterprise',
+    name: 'Enterprise DevOps & SRE',
+    description: 'Complete DevOps transformation with Site Reliability Engineering, automated CI/CD pipelines, and infrastructure as code implementation.',
+    category: 'it',
+    subcategory: 'DevOps',
+    price: '$12,000/month',
+    marketPrice: '$20,000-60,000/month',
+    features: [
+      'CI/CD pipeline automation',
+      'Infrastructure as Code (Terraform)',
+      'Container orchestration (Kubernetes)',
+      'Monitoring & observability',
+      'Site Reliability Engineering',
+      'Automated testing & deployment',
+      'Disaster recovery automation',
+      'Performance optimization',
+      'Security integration',
+      'Team training & mentoring'
+    ],
+    benefits: [
+      'Deploy 10x faster',
+      'Reduce deployment failures by 90%',
+      'Improve system reliability',
+      'Automate infrastructure management',
+      'Scale development teams',
+      'Reduce operational costs'
+    ],
     icon: '⚙️',
-    category: 'IT',
-    features: [
-      'Automated CI/CD Pipelines',
-      'Infrastructure as Code',
-      'Container Orchestration',
-      'Monitoring & Logging',
-      'Security Scanning',
-      'Performance Testing'
-    ],
-    benefits: [
-      'Faster Deployment',
-      'Reduced Errors',
-      'Improved Collaboration',
-      'Cost Efficiency'
-    ],
-    pricing: {
-      starting: '$1,500/month',
-      popular: '$3,000/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$2000-8000/month',
-    link: '/devops-ci-cd',
     popular: true,
-    tags: ['DevOps', 'CI/CD', 'Automation']
-  },
-  {
-    id: 'cybersecurity-audit',
-    title: 'Cybersecurity Audit & Assessment',
-    description: 'Comprehensive security assessment and vulnerability testing for your IT infrastructure.',
-    icon: '🛡️',
-    category: 'IT',
-    features: [
-      'Penetration Testing',
-      'Vulnerability Assessment',
-      'Compliance Auditing',
-      'Security Policy Review',
-      'Incident Response Planning',
-      'Security Training'
-    ],
-    benefits: [
-      'Identify Security Gaps',
-      'Compliance Assurance',
-      'Risk Mitigation',
-      'Security Best Practices'
-    ],
+    url: '/devops-enterprise',
     pricing: {
-      starting: '$2,500/audit',
-      popular: '$5,000/audit',
-      enterprise: 'Custom'
+      basic: { price: '$4,000/month', features: ['Basic CI/CD', 'Email support', 'Monthly reviews'] },
+      pro: { price: '$8,000/month', features: ['Advanced CI/CD', 'Priority support', 'Weekly reviews', 'Monitoring setup'] },
+      enterprise: { price: '$12,000/month', features: ['Full SRE', 'Dedicated team', '24/7 support', 'Custom solutions', 'SLA guarantee'] }
     },
-    marketPrice: '$3000-12000/audit',
-    link: '/cybersecurity-audit',
-    popular: false,
-    tags: ['Cybersecurity', 'Audit', 'Compliance']
-  },
-  {
-    id: 'managed-it-services',
-    title: 'Managed IT Services',
-    description: 'Complete IT management with 24/7 monitoring, support, and maintenance.',
-    icon: '💻',
-    category: 'IT',
-    features: [
-      '24/7 IT Support',
-      'Network Monitoring',
-      'Backup & Recovery',
-      'Software Updates',
-      'Security Management',
-      'Help Desk Services'
-    ],
-    benefits: [
-      'Reduced IT Costs',
-      'Proactive Maintenance',
-      'Expert Support',
-      'Business Continuity'
-    ],
-    pricing: {
-      starting: '$500/month',
-      popular: '$1,200/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$800-3000/month',
-    link: '/managed-it-services',
-    popular: true,
-    tags: ['IT Support', 'Managed Services', 'Monitoring']
-  },
-  {
-    id: 'database-optimization',
-    title: 'Database Optimization Services',
-    description: 'Optimize database performance, security, and scalability for better application performance.',
-    icon: '🗄️',
-    category: 'IT',
-    features: [
-      'Performance Tuning',
-      'Query Optimization',
-      'Index Management',
-      'Backup Strategies',
-      'Security Hardening',
-      'Scalability Planning'
-    ],
-    benefits: [
-      'Improved Performance',
-      'Reduced Costs',
-      'Better Security',
-      'Enhanced Scalability'
-    ],
-    pricing: {
-      starting: '$1,000/month',
-      popular: '$2,500/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$1500-5000/month',
-    link: '/database-optimization',
-    popular: false,
-    tags: ['Database', 'Optimization', 'Performance']
-  },
-  {
-    id: 'network-security',
-    title: 'Network Security Solutions',
-    description: 'Comprehensive network security with firewalls, monitoring, and threat protection.',
-    icon: '🌐',
-    category: 'IT',
-    features: [
-      'Firewall Configuration',
-      'Intrusion Detection',
-      'VPN Setup',
-      'Network Monitoring',
-      'Threat Prevention',
-      'Compliance Management'
-    ],
-    benefits: [
-      'Enhanced Security',
-      'Threat Prevention',
-      'Compliance Assurance',
-      'Network Performance'
-    ],
-    pricing: {
-      starting: '$800/month',
-      popular: '$1,800/month',
-      enterprise: 'Custom'
-    },
-    marketPrice: '$1200-4000/month',
-    link: '/network-security',
-    popular: true,
-    tags: ['Network', 'Security', 'Firewall']
+    integrations: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Kubernetes', 'Docker', 'Terraform', 'Ansible', 'Prometheus'],
+    support: ['24/7 Support', 'DevOps Expert', 'SRE Consultation', 'Team Training'],
+    compliance: ['SOC 2 Type II', 'ISO 27001', 'PCI DSS'],
+    sla: '99.9% uptime guarantee',
+    setupTime: '3-8 weeks',
+    freeTrial: false,
+    demoAvailable: true
   }
 ];
 
 export const microSaasServices: Service[] = [
   {
-    id: 'analytics-dashboard',
-    title: 'Analytics Dashboard Pro',
-    description: 'Real-time business analytics dashboard with customizable widgets and automated reporting.',
-    icon: '📈',
-    category: 'Micro SaaS',
+    id: 'zion-analytics-pro',
+    name: 'Zion Analytics Pro',
+    description: 'Advanced business intelligence platform with AI-powered insights, real-time dashboards, and automated reporting for data-driven decision making.',
+    category: 'saas',
+    subcategory: 'Analytics',
+    price: '$199/month',
+    marketPrice: '$400-1,200/month',
     features: [
-      'Real-time Data Visualization',
-      'Custom Widgets',
-      'Automated Reports',
-      'Multi-source Integration',
-      'Mobile Responsive',
-      'Export Capabilities'
+      'Real-time data visualization',
+      'AI-powered insights & predictions',
+      'Custom dashboard builder',
+      '100+ data connectors',
+      'Automated report generation',
+      'Advanced filtering & segmentation',
+      'Collaborative dashboards',
+      'Mobile app access',
+      'API & webhook integration',
+      'White-label options'
     ],
     benefits: [
-      'Data-Driven Decisions',
-      'Time Savings',
-      'Better Insights',
-      'Easy Setup'
+      'Make data-driven decisions 5x faster',
+      'Reduce report creation time by 90%',
+      'Identify trends & opportunities',
+      'Improve business performance',
+      'Real-time monitoring',
+      'Custom insights & alerts'
     ],
-    pricing: {
-      starting: '$29/month',
-      popular: '$59/month',
-      enterprise: '$99/month'
-    },
-    marketPrice: '$50-200/month',
-    link: '/analytics-dashboard',
+    icon: '📊',
     popular: true,
-    tags: ['Analytics', 'Dashboard', 'Reporting']
+    url: '/zion-analytics-pro',
+    pricing: {
+      basic: { price: '$49/month', features: ['Up to 5 dashboards', 'Basic connectors', 'Email support'] },
+      pro: { price: '$199/month', features: ['Unlimited dashboards', 'Advanced connectors', 'Priority support', 'AI insights'] },
+      enterprise: { price: '$499/month', features: ['Custom dashboards', 'White-label', 'Dedicated support', 'API access', 'SLA guarantee'] }
+    },
+    integrations: ['Google Analytics', 'Salesforce', 'HubSpot', 'MySQL', 'PostgreSQL', 'MongoDB', 'REST APIs'],
+    support: ['Email Support', 'Live Chat', 'Video Training', 'Custom Dashboard Design'],
+    compliance: ['SOC 2', 'GDPR', 'CCPA'],
+    sla: '99.5% uptime guarantee',
+    setupTime: '1-3 days',
+    freeTrial: true,
+    demoAvailable: true
   },
   {
-    id: 'email-marketing-automation',
-    title: 'Email Marketing Automation',
-    description: 'Advanced email marketing platform with AI-powered personalization and automation workflows.',
-    icon: '📧',
-    category: 'Micro SaaS',
+    id: 'zion-crm-intelligence',
+    name: 'Zion CRM Intelligence',
+    description: 'AI-enhanced CRM platform with intelligent lead scoring, automated follow-ups, and predictive analytics for sales optimization.',
+    category: 'saas',
+    subcategory: 'CRM',
+    price: '$299/month',
+    marketPrice: '$600-1,800/month',
     features: [
-      'AI-Powered Personalization',
-      'Automated Workflows',
-      'A/B Testing',
-      'Segmentation Tools',
-      'Analytics & Reporting',
-      'Template Library'
+      'AI-powered lead scoring',
+      'Automated follow-up sequences',
+      'Predictive sales analytics',
+      'Contact & deal management',
+      'Email & phone integration',
+      'Custom pipeline stages',
+      'Team collaboration tools',
+      'Mobile app access',
+      'API & webhook integration',
+      'Advanced reporting & insights'
     ],
     benefits: [
-      'Increase Open Rates by 40%',
-      'Automated Campaigns',
-      'Better Targeting',
-      'ROI Tracking'
+      'Increase sales by 40%',
+      'Improve lead conversion by 60%',
+      'Automate follow-up processes',
+      'Predict deal closure probability',
+      'Optimize sales strategies',
+      'Reduce manual data entry'
     ],
-    pricing: {
-      starting: '$39/month',
-      popular: '$79/month',
-      enterprise: '$149/month'
-    },
-    marketPrice: '$60-300/month',
-    link: '/email-marketing-automation',
+    icon: '👥',
     popular: true,
-    tags: ['Email Marketing', 'Automation', 'AI']
+    url: '/zion-crm-intelligence',
+    pricing: {
+      basic: { price: '$99/month', features: ['Up to 1,000 contacts', 'Basic AI features', 'Email support'] },
+      pro: { price: '$299/month', features: ['Up to 10,000 contacts', 'Advanced AI', 'Priority support', 'Custom fields'] },
+      enterprise: { price: '$599/month', features: ['Unlimited contacts', 'Custom AI models', 'Dedicated support', 'API access', 'White-label'] }
+    },
+    integrations: ['Gmail', 'Outlook', 'Slack', 'Zapier', 'Mailchimp', 'HubSpot', 'Salesforce', 'Pipedrive'],
+    support: ['Email Support', 'Live Chat', 'Video Training', 'Sales Process Optimization'],
+    compliance: ['SOC 2', 'GDPR', 'CCPA'],
+    sla: '99.5% uptime guarantee',
+    setupTime: '1-2 days',
+    freeTrial: true,
+    demoAvailable: true
   },
   {
-    id: 'social-media-scheduler',
-    title: 'Social Media Scheduler',
-    description: 'Schedule and manage social media posts across multiple platforms with analytics.',
-    icon: '📱',
-    category: 'Micro SaaS',
+    id: 'zion-content-studio',
+    name: 'Zion Content Studio',
+    description: 'Complete AI-powered content creation suite with writing, design, video editing, and social media automation for modern marketing teams.',
+    category: 'saas',
+    subcategory: 'Content Creation',
+    price: '$399/month',
+    marketPrice: '$800-2,400/month',
     features: [
-      'Multi-platform Scheduling',
-      'Content Calendar',
-      'Analytics Dashboard',
-      'Hashtag Suggestions',
-      'Team Collaboration',
-      'Auto-posting'
+      'AI writing assistant (GPT-4)',
+      'Image generation & editing',
+      'Video creation & editing',
+      'Social media automation',
+      'Content calendar management',
+      'SEO optimization tools',
+      'Brand voice training',
+      'Multi-language support',
+      'Team collaboration',
+      'Analytics & performance tracking'
     ],
     benefits: [
-      'Save Time',
-      'Consistent Posting',
-      'Better Engagement',
-      'Analytics Insights'
+      'Create content 10x faster',
+      'Maintain consistent brand voice',
+      'Automate social media posting',
+      'Improve SEO performance',
+      'Scale content production',
+      'Reduce design costs'
     ],
-    pricing: {
-      starting: '$19/month',
-      popular: '$39/month',
-      enterprise: '$79/month'
-    },
-    marketPrice: '$30-150/month',
-    link: '/social-media-scheduler',
+    icon: '🎨',
     popular: true,
-    tags: ['Social Media', 'Scheduling', 'Analytics']
+    url: '/zion-content-studio',
+    pricing: {
+      basic: { price: '$99/month', features: ['Basic AI writing', 'Limited designs', 'Email support'] },
+      pro: { price: '$399/month', features: ['Advanced AI', 'Unlimited designs', 'Priority support', 'Video editing'] },
+      enterprise: { price: '$799/month', features: ['Custom AI models', 'White-label', 'Dedicated support', 'API access', 'SLA guarantee'] }
+    },
+    integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer', 'Canva', 'Figma', 'Slack'],
+    support: ['Email Support', 'Live Chat', 'Content Strategy Consultation', 'Design Training'],
+    compliance: ['SOC 2', 'GDPR', 'CCPA'],
+    sla: '99.5% uptime guarantee',
+    setupTime: '1-2 days',
+    freeTrial: true,
+    demoAvailable: true
   },
   {
-    id: 'expense-tracker',
-    title: 'Smart Expense Tracker',
-    description: 'AI-powered expense tracking with receipt scanning and automated categorization.',
-    icon: '💰',
-    category: 'Micro SaaS',
+    id: 'zion-security-shield',
+    name: 'Zion Security Shield',
+    description: 'Comprehensive cybersecurity monitoring platform with threat detection, vulnerability scanning, and automated incident response for small to medium businesses.',
+    category: 'saas',
+    subcategory: 'Security',
+    price: '$499/month',
+    marketPrice: '$1,000-3,000/month',
     features: [
-      'Receipt Scanning',
-      'AI Categorization',
-      'Expense Reports',
-      'Budget Tracking',
-      'Tax Preparation',
-      'Mobile App'
+      '24/7 threat monitoring',
+      'Vulnerability scanning',
+      'Automated incident response',
+      'Security awareness training',
+      'Compliance reporting',
+      'Dark web monitoring',
+      'Email security scanning',
+      'Network security assessment',
+      'Mobile device management',
+      'Security dashboard & alerts'
     ],
     benefits: [
-      'Automated Tracking',
-      'Tax Compliance',
-      'Budget Control',
-      'Time Savings'
+      'Protect against 99.9% of threats',
+      'Reduce security incidents by 90%',
+      'Automate security responses',
+      'Maintain compliance easily',
+      'Educate employees on security',
+      'Monitor dark web exposure'
     ],
+    icon: '🛡️',
+    popular: true,
+    url: '/zion-security-shield',
     pricing: {
-      starting: '$15/month',
-      popular: '$29/month',
-      enterprise: '$49/month'
+      basic: { price: '$199/month', features: ['Basic monitoring', 'Email support', 'Monthly reports'] },
+      pro: { price: '$499/month', features: ['Advanced monitoring', 'Priority support', 'Weekly reports', 'Training'] },
+      enterprise: { price: '$999/month', features: ['24/7 monitoring', 'Dedicated support', 'Real-time alerts', 'Custom policies', 'SLA guarantee'] }
     },
-    marketPrice: '$25-100/month',
-    link: '/expense-tracker',
-    popular: false,
-    tags: ['Finance', 'Expense Tracking', 'AI']
+    integrations: ['Active Directory', 'Office 365', 'Google Workspace', 'Slack', 'Teams', 'SIEM', 'EDR'],
+    support: ['Email Support', 'Live Chat', 'Security Consultation', 'Incident Response'],
+    compliance: ['SOC 2', 'ISO 27001', 'NIST', 'CIS Controls'],
+    sla: '99.9% uptime guarantee',
+    setupTime: '1-3 days',
+    freeTrial: true,
+    demoAvailable: true
   },
   {
-    id: 'project-management',
-    title: 'Project Management Suite',
-    description: 'Comprehensive project management with task tracking, team collaboration, and reporting.',
+    id: 'zion-project-master',
+    name: 'Zion Project Master',
+    description: 'AI-powered project management platform with intelligent task allocation, resource optimization, and predictive project analytics.',
+    category: 'saas',
+    subcategory: 'Project Management',
+    price: '$249/month',
+    marketPrice: '$500-1,500/month',
+    features: [
+      'AI task prioritization',
+      'Resource optimization',
+      'Predictive project analytics',
+      'Team collaboration tools',
+      'Time tracking & reporting',
+      'Gantt charts & Kanban boards',
+      'Budget tracking & forecasting',
+      'Risk assessment & mitigation',
+      'Mobile app access',
+      'Integration with 100+ tools'
+    ],
+    benefits: [
+      'Complete projects 30% faster',
+      'Improve resource utilization by 40%',
+      'Predict project risks early',
+      'Optimize team productivity',
+      'Reduce project overruns',
+      'Better budget management'
+    ],
     icon: '📋',
-    category: 'Micro SaaS',
-    features: [
-      'Task Management',
-      'Team Collaboration',
-      'Time Tracking',
-      'Gantt Charts',
-      'File Sharing',
-      'Progress Reporting'
-    ],
-    benefits: [
-      'Better Organization',
-      'Team Productivity',
-      'Project Visibility',
-      'Deadline Management'
-    ],
-    pricing: {
-      starting: '$25/month',
-      popular: '$49/month',
-      enterprise: '$99/month'
-    },
-    marketPrice: '$40-200/month',
-    link: '/project-management',
     popular: true,
-    tags: ['Project Management', 'Collaboration', 'Productivity']
-  },
-  {
-    id: 'inventory-manager',
-    title: 'Inventory Management System',
-    description: 'Smart inventory management with automated reordering and real-time tracking.',
-    icon: '📦',
-    category: 'Micro SaaS',
-    features: [
-      'Real-time Tracking',
-      'Automated Reordering',
-      'Barcode Scanning',
-      'Multi-location Support',
-      'Analytics Dashboard',
-      'Integration APIs'
-    ],
-    benefits: [
-      'Reduce Stockouts',
-      'Optimize Inventory',
-      'Cost Savings',
-      'Better Control'
-    ],
+    url: '/zion-project-master',
     pricing: {
-      starting: '$35/month',
-      popular: '$69/month',
-      enterprise: '$129/month'
+      basic: { price: '$79/month', features: ['Up to 10 projects', 'Basic AI features', 'Email support'] },
+      pro: { price: '$249/month', features: ['Unlimited projects', 'Advanced AI', 'Priority support', 'Custom fields'] },
+      enterprise: { price: '$499/month', features: ['Custom AI models', 'White-label', 'Dedicated support', 'API access', 'SLA guarantee'] }
     },
-    marketPrice: '$50-250/month',
-    link: '/inventory-manager',
-    popular: false,
-    tags: ['Inventory', 'Management', 'Automation']
+    integrations: ['Slack', 'Teams', 'Jira', 'Asana', 'Trello', 'Monday.com', 'Google Workspace', 'Microsoft 365'],
+    support: ['Email Support', 'Live Chat', 'Project Management Training', 'Custom Workflow Design'],
+    compliance: ['SOC 2', 'GDPR', 'CCPA'],
+    sla: '99.5% uptime guarantee',
+    setupTime: '1-2 days',
+    freeTrial: true,
+    demoAvailable: true
   }
 ];
 
-export const allServices = [...aiServices, ...itServices, ...microSaasServices];
+export const emergingTechServices: Service[] = [
+  {
+    id: 'quantum-computing-solutions',
+    name: 'Quantum Computing Solutions',
+    description: 'Cutting-edge quantum computing services for complex optimization problems, cryptography, and advanced scientific simulations.',
+    category: 'emerging',
+    subcategory: 'Quantum Computing',
+    price: 'Custom Pricing',
+    marketPrice: '$50,000-500,000/month',
+    features: [
+      'Quantum algorithm development',
+      'Optimization problem solving',
+      'Quantum cryptography',
+      'Quantum machine learning',
+      'Quantum simulation services',
+      'Hybrid classical-quantum systems',
+      'Quantum software development',
+      'Quantum hardware access',
+      'Research collaboration',
+      'Custom quantum solutions'
+    ],
+    benefits: [
+      'Solve impossible classical problems',
+      'Exponential speed improvements',
+      'Advanced cryptography',
+      'Breakthrough research capabilities',
+      'Competitive advantage',
+      'Future-proof technology'
+    ],
+    icon: '⚛️',
+    popular: false,
+    url: '/quantum-computing-solutions',
+    pricing: {
+      basic: { price: 'Starting at $10,000/month', features: ['Basic quantum access', 'Consultation', 'Email support'] },
+      pro: { price: 'Starting at $50,000/month', features: ['Advanced quantum access', 'Priority support', 'Custom algorithms'] },
+      enterprise: { price: 'Custom Pricing', features: ['Dedicated quantum resources', 'Custom development', 'Research partnership', 'SLA guarantee'] }
+    },
+    integrations: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'Rigetti', 'IonQ'],
+    support: ['Quantum Expert Consultation', 'Research Collaboration', 'Custom Development', 'Training & Education'],
+    compliance: ['Custom Security Requirements', 'Research Ethics', 'Export Controls'],
+    sla: 'Custom SLA',
+    setupTime: '3-12 months',
+    freeTrial: false,
+    demoAvailable: true
+  },
+  {
+    id: 'ai-holographic-workspace',
+    name: 'AI Holographic Workspace',
+    description: 'Revolutionary holographic workspace platform with AI-powered virtual collaboration, 3D data visualization, and immersive meeting experiences.',
+    category: 'emerging',
+    subcategory: 'Holographic Technology',
+    price: '$9,999/month',
+    marketPrice: '$20,000-100,000/month',
+    features: [
+      '3D holographic displays',
+      'AI-powered virtual collaboration',
+      'Immersive meeting experiences',
+      '3D data visualization',
+      'Virtual whiteboarding',
+      'Spatial computing interface',
+      'Multi-user holographic sessions',
+      'AR/VR integration',
+      'Custom holographic applications',
+      'Enterprise security & compliance'
+    ],
+    benefits: [
+      'Revolutionary collaboration experience',
+      'Immersive data visualization',
+      'Enhanced remote work capabilities',
+      'Next-generation meetings',
+      'Competitive advantage',
+      'Future-ready workspace'
+    ],
+    icon: '🌐',
+    popular: false,
+    url: '/ai-holographic-workspace',
+    pricing: {
+      basic: { price: '$2,999/month', features: ['Basic holographic setup', 'Email support', 'Standard applications'] },
+      pro: { price: '$6,999/month', features: ['Advanced holographic setup', 'Priority support', 'Custom applications'] },
+      enterprise: { price: '$9,999/month', features: ['Full holographic suite', 'Dedicated support', 'Custom development', 'SLA guarantee'] }
+    },
+    integrations: ['Microsoft HoloLens', 'Magic Leap', 'Oculus', 'HTC Vive', 'WebRTC', 'Unity', 'Unreal Engine'],
+    support: ['Holographic Expert', 'Custom Development', 'Training & Onboarding', 'Technical Support'],
+    compliance: ['Custom Security Requirements', 'Data Privacy', 'Export Controls'],
+    sla: '99.5% uptime guarantee',
+    setupTime: '2-6 months',
+    freeTrial: false,
+    demoAvailable: true
+  }
+];
+
+export const allServices = [...aiServices, ...itServices, ...microSaasServices, ...emergingTechServices];
+
+export const serviceCategories = {
+  ai: 'AI Services',
+  it: 'IT Services', 
+  saas: 'Micro SAAS',
+  emerging: 'Emerging Technologies'
+};
+
+export const serviceSubcategories = {
+  'Customer Service': 'Customer Service',
+  'Content Creation': 'Content Creation',
+  'Analytics': 'Analytics',
+  'Computer Vision': 'Computer Vision',
+  'Automation': 'Automation',
+  'Cloud Computing': 'Cloud Computing',
+  'Cybersecurity': 'Cybersecurity',
+  'DevOps': 'DevOps',
+  'CRM': 'CRM',
+  'Security': 'Security',
+  'Project Management': 'Project Management',
+  'Quantum Computing': 'Quantum Computing',
+  'Holographic Technology': 'Holographic Technology'
+};
