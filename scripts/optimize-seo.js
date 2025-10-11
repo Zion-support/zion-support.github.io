@@ -48,3 +48,4 @@
   O: [' 'Create comprehensive service pages',' 'Write detailed case studies',' 'Develop blog content strategy',' 'Add customer testimonials',' 'Create resource center',' 'Develop FAQ sections'}' 'Add industry-specific content' ] } fs.writeFileSync(' path.join(__dirname) '../seo-optimization-report.json'), JSON.stringify(report, null) 2) ); ' } // Main execution async function main() {try { generateSitemap(); generateRobotsTxt(); generateMetaTags(); generateStructuredData(); generateSEOReport(); ' ' ' ' ' ' // console.log(' - seo-meta-tags.json')}' // console.log(' - seo-optimization-report.json')} } catch (error) {
     ' process.exit(1)
   } } main();'"`
+</p>

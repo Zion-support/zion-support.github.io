@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('component-size-report function triggered')}
-    // Component size reporting simulation;
+    // Component size reporting simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in component-size-report: ') error
   }
@@ -44,7 +44,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'component-size-report'})
-      });
+      })
     }
   }
 }

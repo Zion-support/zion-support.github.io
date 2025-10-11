@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('auto-discovery-runner function triggered')}
-    // Auto-discovery simulation;
+    // Auto-discovery simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   n: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in auto-discovery-runner: ') error
   }
@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'auto-discovery-runner'})
-      });
+      })
     }
   }
 }

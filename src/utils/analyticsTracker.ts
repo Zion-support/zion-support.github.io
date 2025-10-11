@@ -1,10 +1,10 @@
-'use client';
+'use client'
 /**
  * Enhanced Analytics Tracker
  * Provides comprehensive tracking for user interactions, performance metrics, and errors
  */
 interface AnalyticsEvent {
-    category: string;
+    category: string
   action: string
   label?: string
   value?: number,
@@ -22,13 +22,13 @@ interface ErrorReport {
   severity: 'low' | 'medium' | 'high' | 'critical'
   }
 class AnalyticsTracker {
-    private isInitialized = false;
-  private queue: Array<() => void> = [];
+    private isInitialized = false
+  private queue: Array<() => void> = []
   /**
    * Initialize the analytics tracker
    */
   initialize(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     this.isInitialized = true
     // Process queued events
     this.queue.forEach(fn => fn())
@@ -47,7 +47,7 @@ class AnalyticsTracker {
           event_label: event.label,
           value: event.value,
           non_interaction: event.nonInteraction
-        });
+        })
       }
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {}
@@ -55,8 +55,8 @@ class AnalyticsTracker {
     if (this.isInitialized) {} else {
     'use client'
 /**
- * Enhanced Analytics Tracker;
- * Provides comprehensive tracking for user interactions, performance metrics, and errors;
+ * Enhanced Analytics Tracker
+ * Provides comprehensive tracking for user interactions, performance metrics, and errors
  */
 
 interface AnalyticsEvent {// TODO: Add content
@@ -94,7 +94,7 @@ class AnalyticsTracker {
   }
 
 }
-  private isInitialized = false;
+  private isInitialized = false
   private,
   queue: Array
           <() => void> = []
@@ -107,16 +107,16 @@ class AnalyticsTracker {
   }
 
 }
-    if (typeof window === 'undefined') return;
-    this.isInitialized = true;
-    // Process queued events;
-    this.queue.forEach(fn => fn());
-    this.queue = [];
-    // Track initial page view;
-    this.trackPageView(window.location.pathname);
+    if (typeof window === 'undefined') return
+    this.isInitialized = true
+    // Process queued events
+    this.queue.forEach(fn => fn())
+    this.queue = []
+    // Track initial page view
+    this.trackPageView(window.location.pathname)
   }
   /**
-   * Track a custom event;
+   * Track a custom event
    */
 
   trackEvent(event: AnalyticsEvent): void {
@@ -124,7 +124,7 @@ class AnalyticsTracker {
   }
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
       if (window.gtag) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -139,9 +139,9 @@ class AnalyticsTracker {
   e: event.value,
           non_interactio,
   n: event.nonInteraction,)
-        });
+        })
       }
-      // Also log to console in development;
+      // Also log to console in development
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -153,7 +153,7 @@ class AnalyticsTracker {
   }
 
 }
-      this.queue.push(track);
+      this.queue.push(track)
     }
   }
   /**
@@ -167,19 +167,19 @@ class AnalyticsTracker {
           page_path: path,
           page_title: document.title,
           page_location: window.location.href
-        });
+        })
       }
       if (process.env.NODE_ENV === 'development') {}
     }
     if (this.isInitialized) {} else {
-    * Track performance metrics;
+    * Track performance metrics
    */
 
   trackPerformance(metrics: PerformanceMetrics): void {// TODO: Add content
   }
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     const track = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -197,7 +197,7 @@ class AnalyticsTracker {
   e: Math.round(metrics.value),
           metric_ratin,
   g: metrics.rating,
-        });
+        })
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -210,7 +210,7 @@ class AnalyticsTracker {
   }
 
 }
-      this.queue.push(track);
+      this.queue.push(track)
     }
   }
   /**
@@ -225,7 +225,7 @@ class AnalyticsTracker {
           event_label: metrics.metric,
           value: Math.round(metrics.value),
           metric_rating: metrics.rating
-        });
+        })
       }
       if (process.env.NODE_ENV === 'development') {}
     }
@@ -244,10 +244,10 @@ class AnalyticsTracker {
           description: error.message,
           fatal: error.severity === 'critical',
           error_severity: error.severity
-        });
+        })
       }
       // Always log errors to console
-      // // console.error('[Analytics Error]', error);
+      // // console.error('[Analytics Error]', error)
     }
     if (this.isInitialized) {} else {
     this.queue.push(track)
@@ -257,7 +257,7 @@ class AnalyticsTracker {
    * Track user timing
    */
   trackTiming(category: string, variable: string, value: number, label?: string): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'timing_complete', {
@@ -265,7 +265,7 @@ class AnalyticsTracker {
           value: Math.round(value),
           event_category: category,
           event_label: label
-        });
+        })
       }
       if (process.env.NODE_ENV === 'development') {}
     }
@@ -277,26 +277,26 @@ class AnalyticsTracker {
    * Track conversions
    */
   trackConversion(conversionId: string, value?: number): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     const track = () => {
       if (window.gtag) {
         window.gtag('event', 'conversion', {
           send_to: conversionId,
           value: value,
           currency:         ,
-$4});
+$4})
       }
       if (process.env.NODE_ENV === 'development') {}
     }
     if (this.isInitialized) {} else {
-    * Track user timing;
+    * Track user timing
    */
 
   trackTiming(category: string, variable: string, value: number, label?: string): void {// TODO: Add content
   }
 
 }
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return
     const track = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -314,7 +314,7 @@ $4});
   y: category,
           event_labe,
   l: label,
-        });
+        })
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -327,39 +327,37 @@ $4});
   }
 
 }
-      this.queue.push(track);
+      this.queue.push(track)
     }
   }
 }
 // Export singleton instance
-export const analyticsTracker = new AnalyticsTracker();
+export const analyticsTracker = new AnalyticsTracker()
 // Auto-initialize when window is available
 if (typeof window !== 'undefined') {
     if (document.readyState === 'complete') {
     analyticsTracker.initialize()
   } else {
     window.addEventListener('load', () => {
-// Export singleton instance;
-export const analyticsTracker = new AnalyticsTracker();
-// Auto-initialize when window is available;
+// Export singleton instance
+export const analyticsTracker = new AnalyticsTracker()
+// Auto-initialize when window is available
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    analyticsTracker.initialize();
+    analyticsTracker.initialize()
   } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      analyticsTracker.initialize();
-    });
+      analyticsTracker.initialize()
+    })
   }
 }
-export default analyticsTracker;
-
-export default analyticsTracker;
-
+export default analyticsTracker
+export default analyticsTracker

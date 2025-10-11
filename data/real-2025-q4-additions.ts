@@ -1,31 +1,31 @@
 
-export interface Q4Service {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-  color?: string;
-  text_color?: string;
-  link: string;
-  market_position?: string;
-  target_audience?: string;
-  trial_days?: number;
+export interface Q4Service {id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular?: boolean
+  icon?: string
+  color?: string
+  text_color?: string
+  link: string
+  market_position?: string
+  target_audience?: string
+  trial_days?: number
   setup_time?: string
   category: string
   roi?: string,,
   competitors?: string[],
-  marketSize?: string;
-  growthRate?: string;
-  variant?: string;
+  marketSize?: string
+  growthRate?: string
+  variant?: string
   contactInfo?:
-  real_service: boolean;  technology?: string[];  integrations?: string[];
-  use_cases?: string[];
-  roi?: string;
-  competitors?: string[];
+  real_service: boolean;  technology?: string[];  integrations?: string[]
+  use_cases?: string[]
+  roi?: string
+  competitors?: string[]
   market_size?: string
   growth_rate?: string
   variant?: string,
@@ -40,13 +40,17 @@ export interface Q4Service {/* TODO: Fix JSX expression */}
   e: string}
   }
   real_implementatio,
-  n: boolean;
-  implementation_details?: string;
-  launch_date?: string;
+  n: boolean
+  implementation_details?: string
+  launch_date?: string
   customers?: number
   rating?: number
   reviews?: number,
 const contact =
+const contact =
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup && ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -78,8 +82,8 @@ const contact =
     marketSize: '$1.5B affiliate software'
     growthRate: '15% YoY'
     variant: 'ai-futuristic'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.'
     launchDate: '2025-10-01'
     market_size: '$1.5B affiliate software'
@@ -784,7 +788,7 @@ const contact =
     customers: 70
     rating: 4 && 4.5
     reviews: 28,
-  }];
+  }]
 export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -908,7 +912,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     ratin,
   g: 4 && 4.5,
     review,
-  s: 28}];
+  s: 28}]
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text - cyan - 300'}
     lin,
@@ -995,7 +999,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 70
     rating: 4.5
     reviews: 28,
-  }];
+  }]
 }
     customers: 120
     rating: 4.7
@@ -1033,7 +1037,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 28}];
+  s: 28}]
 }
     customer,
   s: 120,
@@ -1282,8 +1286,11 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.5,
     review,
-  s: 28}];
+  s: 28}]
 export const real2025 Q4 Additions = [
+  },
+]
+export const real2025Q4Additions = [
       'Document sync and chunking pipelines',
       'Metadata and policy guardrails',
       'Evals and drift tracking',
@@ -3262,10 +3269,10 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   e: string}
   realImplementatio,
   n: boolean, implementationDetails?: string,
-  launchDate?: string;
-  customers?: number;
-  rating?: number;
-  reviews?: number;
+  launchDate?: string
+  customers?: number
+  rating?: number
+  reviews?: number
 }
 const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -3295,7 +3302,7 @@ export const,
     feature,
   s: [,
 			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics'
-		];
+		]
 		popular: true, icon: '',
 		color: 'from-violet-600 to-fuchsia-700', textColor: 'text-fuchsia-400',
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
@@ -3366,7 +3373,7 @@ export const,
     feature,
   s: [,
 			'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic searchExport to SRT, VTT, DOCXPodcast platform integrations'
-		];
+		]
 		popular: false, icon: '',
 		color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
 		link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
@@ -3599,7 +3606,7 @@ export const,
     feature,
   s: [,
 			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking'
-		];
+		]
 		popular: true, icon: '',
 		color: 'from-blue-600 to-indigo-700', textColor: 'text-indigo-400',
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
@@ -3618,7 +3625,7 @@ export const,
 		rating: 4.5
 		reviews: 28,
 	}
-];
+]
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI-Governed RAG Platform',
     tagline: 'Enterprise-grade RAG with guardrails, approvals, and evals',
     price: '$699', period: '/month',
@@ -3628,12 +3635,12 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300'}
-    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
-    ];
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`
+    ]
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+    link: `https://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`
     color: 'from-emerald-600 to-teal-700'
     marketPosition: 'Practical alternative to DBAs for small teams.'
     targetAudience: 'SMBs and startups'
@@ -3641,11 +3648,11 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     setupTime: '35 days',
     category: 'Enterprise IT',
     realService: true,
-    technology: ['Postgres, Patroni/Cloud-native HA'];
-    integrations: ['Grafana, Prometheus'];
-    useCases: ['Reliability, Backups, Performance'];
+    technology: ['Postgres, Patroni/Cloud-native HA']
+    integrations: ['Grafana, Prometheus']
+    useCases: ['Reliability, Backups, Performance']
     roi: 'Reduce incidents and toil for DB ops.',
-    competitors: ['Aiven, Crunchy Bridge (managed services)'];
+    competitors: ['Aiven, Crunchy Bridge (managed services)']
     marketSize: '$3B DB ops services',
     growthRate: '11% YoY',
     variant: 'enterprise-futuristic',
@@ -3673,7 +3680,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     rating: 4.6
     reviews: 9,
   }
-];
+]
     rating: 4 && 4.6
     reviews: 9,
 		popula,
@@ -3720,7 +3727,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
   g: 4.5,
 		review,
   s: 28}
-];
+]
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ]}
     ico,
@@ -3731,8 +3738,8 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-emerald-300'}
     lin,`
   k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
-    ];
+  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`
+    ]
     ico,
   n: '',
     colo,
@@ -3741,7 +3748,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-emerald-300',
     lin,`
   k: `http,`
-  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`;
+  s://ziontechgroup && ziontechgroup.com/services/${toSlug('managed-postgres-ha-lite')}`
     colo,
   r: 'from-emerald-600 to-teal-700'
     marketPositio,
@@ -3757,15 +3764,15 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     realServic,
   e: true,
     technolog,
-  y: ['Postgres, Patroni/Cloud-native HA'];
+  y: ['Postgres, Patroni/Cloud-native HA']
     integration,
-  s: ['Grafana, Prometheus'];
+  s: ['Grafana, Prometheus']
     useCase,
-  s: ['Reliability, Backups, Performance'];
+  s: ['Reliability, Backups, Performance']
     ro,
   i: 'Reduce incidents and toil for DB ops.'
     competitor,
-  s: ['Aiven, Crunchy Bridge (managed services)'];
+  s: ['Aiven, Crunchy Bridge (managed services)']
     marketSiz,
   e: '$3B DB ops services'
     growthRat,
@@ -3818,12 +3825,12 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 9}
-];
+]
     ratin,
   g: 4 && 4.6,
     review,
   s: 9}
-];
+]
 const contact =
   mobil,
   e: '+1 302 464 0950',
@@ -3909,8 +3916,8 @@ export const,
     marketSize: '$1.5B affiliate software'
     growthRate: '15% YoY'
     variant: 'ai-futuristic'
-    contactInfo: contact;
-    realImplementation: true;
+    contactInfo: contact
+    realImplementation: true
     implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.'
     launchDate: '2025-10-01'
     customers: 120
@@ -4286,7 +4293,7 @@ export const,
     customers: 70
     rating: 4.5
     reviews: 28,
-  }];
+  }]
 }
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
@@ -4378,7 +4385,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     ratin,
   g: 4.5,
     review,
-  s: 28}];
+  s: 28}]
 }
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-cyan-300'}
@@ -5318,7 +5325,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     rating: 4.6
     reviews: 9,
   }
-];
+]
     reviews: 9,
     ico,
   n: '',
@@ -5371,10 +5378,10 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   g: 4.6,
     review,
   s: 9}
-];
+]
     review,
   s: 9}
-];
+]
 export interface Q4Service,
   id: string, nam,
   e: string, taglin,

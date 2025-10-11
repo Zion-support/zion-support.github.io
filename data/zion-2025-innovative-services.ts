@@ -3,15 +3,15 @@ export interface ZionInnovativeService2025 {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   }
-  realImplementation: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  launchDate: string;
+  realImplementation: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
@@ -106,7 +106,7 @@ export const,
     rating: 4.9
     reviews: 15,
   },
-  // AI-Powered Carbon Footprint Analytics;
+  // AI-Powered Carbon Footprint Analytics
     id: 'ai-carbon-intelligence-suite',
     name: 'AI Carbon Intelligence Suite',
     tagline: 'Intelligent carbon footprint tracking and optimization',
@@ -218,7 +218,7 @@ export const,
     rating: 4.8
     reviews: 89,
   },
-  // Autonomous AI DevOps Platform;
+  // Autonomous AI DevOps Platform
     id: 'autonomous-ai-devops-platform',
     name: 'Autonomous AI DevOps Platform',
     tagline: 'Self-healing infrastructure with AI-powered automation',
@@ -330,7 +330,7 @@ export const,
     rating: 4.9
     reviews: 234,
   },
-  // AI-Powered Financial Crime Detection;
+  // AI-Powered Financial Crime Detection
     id: 'ai-financial-crime-detection',
     name: 'AI Financial Crime Detection',
     tagline: 'Real-time fraud detection with 99.9% accuracy',
@@ -442,7 +442,7 @@ export const,
     rating: 4.8
     reviews: 156,
   },
-  // Quantum-Secure Communication Network;
+  // Quantum-Secure Communication Network
     id: 'quantum-secure-communication',
     name: 'Quantum-Secure Communication Network',
     tagline: 'Unbreakable quantum encryption for secure communications',
@@ -554,7 +554,7 @@ export const,
     rating: 4.9
     reviews: 23,
   },
-  // AI-Powered Healthcare Predictive Analytics;
+  // AI-Powered Healthcare Predictive Analytics
     id: 'ai-healthcare-predictive-analytics',
     name: 'AI Healthcare Predictive Analytics',
     tagline: 'Predict and prevent health issues before they occur',
@@ -666,7 +666,7 @@ export const,
     rating: 4.8
     reviews: 189,
   },
-  // Edge AI IoT Platform;
+  // Edge AI IoT Platform
     id: 'edge-ai-iot-platform',
     name: 'Edge AI IoT Platform',
     tagline: 'Intelligent IoT with edge AI processing',
@@ -778,7 +778,7 @@ export const,
     rating: 4.7
     reviews: 298,
   },
-  // AI-Powered Content Generation Suite;
+  // AI-Powered Content Generation Suite
     id: 'ai-content-generation-suite',
     name: 'AI Content Generation Suite',
     tagline: 'Create engaging content with AI assistance',
@@ -890,7 +890,7 @@ export const,
     rating: 4.6
     reviews: 423,
   },
-  // Blockchain Supply Chain Transparency;
+  // Blockchain Supply Chain Transparency
     id: 'blockchain-supply-chain-transparency',
     name: 'Blockchain Supply Chain Transparency',
     tagline: 'End-to-end supply chain visibility with blockchain',
@@ -1002,7 +1002,7 @@ export const,
     rating: 4.7
     reviews: 167,
   },
-  // AI-Powered Customer Experience Platform;
+  // AI-Powered Customer Experience Platform
     id: 'ai-customer-experience-platform',
     name: 'AI Customer Experience Platform',
     tagline: 'Personalized customer experiences with AI',
@@ -1162,7 +1162,7 @@ export const,
   g: 4.8,
     review,
   s: 312}
-];
+]
 export interface ZionInnovativeService2025,
   id: string, nam,
   e: string, taglin,

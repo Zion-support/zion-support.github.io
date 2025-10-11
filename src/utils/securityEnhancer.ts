@@ -4,7 +4,7 @@
 interface SecurityConfig {
     enableCSP: boolean
   }
-  enableHTTPS: boolean;
+  enableHTTPS: boolean
   enableXSSProtection: boolean
   enableCSRFProtection: boolean
   enableContentSecurityPolicy: boolean,
@@ -24,7 +24,7 @@ class SecurityEnhancer {
   private init(): void {
     // Initialize security enhancements
   }
-    this.setupSecurityHeaders();
+    this.setupSecurityHeaders()
   }
   private initializeSecurity(): void {
     if (typeof window === 'undefined') return
@@ -96,7 +96,7 @@ class SecurityEnhancer {
       info: console.info.bind(console)
     }
     // Override console methods to detect debugging
-    Object.assign(console, originalConsole);
+    Object.assign(console, originalConsole)
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('a11y-alt-text-runner function triggered')}
-    // Simple accessibility check simulation;
+    // Simple accessibility check simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -12,7 +12,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         function: 'a11 y-alt-text-runner',
         source: event.source || 'unknown'}
       })}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in a11y-alt-text-runner: ') error
   }
@@ -32,7 +32,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   e: event.source || 'unknown'})
       })}
-    return result;
+    return result
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
@@ -41,7 +41,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'a11y-alt-text-runner'})
-      });
+      })
     }
   }
 }

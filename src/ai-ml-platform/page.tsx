@@ -1,13 +1,13 @@
-import React from 'react';
-import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
-import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react'
+import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react'
+import { Link } from 'react-router-dom'
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIMLPlatformPage: React.FC = () => {
   const features = [
     {
@@ -29,7 +29,7 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
-  ];
+  ]
   const pricingPlans = [
       name: 'Developer',
       price: '$999',
@@ -46,7 +46,7 @@ const AIMLPlatformPage: React.FC = () => {
     name: 'Team',
       price: '$2,499',
       description: 'Ideal for development teams',
-  const features = [];
+  const features = []
   return (
     {
     // TODO: Add content
@@ -59,7 +59,7 @@ const AIMLPlatformPage: React.FC = () => {
       descriptio,
   n: 'End-to-end machine learning platform with model development, training, and deployment',
       benefit,
-  s: ['Rapid model development', 'Automated training', 'Seamless deployment'];
+  s: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
       ico,
   n: TrendingUp,
@@ -78,7 +78,7 @@ const AIMLPlatformPage: React.FC = () => {
       benefit,
   s: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
-  ];
+  ]
   const pricingPlans = [
       nam,
   e: 'Team',
@@ -124,37 +124,34 @@ const AIMLPlatformPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI ML Platform | Zion Tech Group</title>
+        <title>AI ML Platform | Zion Tech Group
         <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
-      </Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI ML platform solutions that will transform your business.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
-  </
+              Contact Us
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
-  </
+              Learn More
       <Footer />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Page
-  </
+  
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
-  </
+  
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
 // Contact Us,
           </button>"
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
+            < className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,$2 />
   hover:bg-cyan-400,"
   hover: text-slate-900 transition-colors"></button>
 Learn More
@@ -163,9 +160,8 @@ Learn More
     </div>
   ),
 }
-export default $1;
-export default AiMlPlatformPage;
-  </p>
+export default $1
+export default AiMlPlatformPage</p>
   </h1>
   </section>
   </main>
@@ -174,3 +170,4 @@ export default AiMlPlatformPage;
   </div>
   </div>
   </div>
+</h1>

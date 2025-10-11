@@ -11,4 +11,4 @@ const errorHandler = {/* TODO: Fix JSX expression */}
   r: unknown) => {/* TODO: Fix JSX expression */}
     //     }}
 
-export default errorHandler;
+export default errorHandler

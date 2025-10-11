@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   try {
-    // Unused media scanning simulation;
+    // Unused media scanning simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -18,7 +18,7 @@ exports.handler = async function (event, context) {
           lastScan: new Date().toISOString()}
       })
     }
-    return result;
+    return result
   } catch (error) {
 
     return {
@@ -37,7 +37,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         })
       })
     }
-    return result;
+    return result
   } catch (error) {/* TODO: Fix JSX expression */}
       },
       bod,

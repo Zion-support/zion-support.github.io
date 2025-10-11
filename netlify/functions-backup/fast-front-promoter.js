@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('fast-front-promoter function triggered')}
-    // Fast front promotion simulation;
+    // Fast front promotion simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   n: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in fast-front-promoter: ') error
   }
@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'fast-front-promoter'})
-      });
+      })
     }
   }
 }

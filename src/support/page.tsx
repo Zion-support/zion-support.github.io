@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react'
 const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const supportCategories = [
     { id: 'all', name: 'All Topics', icon: Search, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 12 },
@@ -15,7 +15,7 @@ const SupportPage: React.FC = () => {
     { id: 'technical', name: 'Technical Support', icon: Code, count: 10 },
     { id: 'account', name: 'Account Management', icon: Users, count: 5 },
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
-  ];
+  ]
   const faqs = [
     {
       id: 1,
@@ -53,7 +53,7 @@ const SupportPage: React.FC = () => {
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
       category: 'getting-started'
     }
-  ];
+  ]
   const supportChannels = [
     {
       icon: Phone,
@@ -87,7 +87,7 @@ const SupportPage: React.FC = () => {
       availability: 'Flexible scheduling',
       color: 'text-cyan-400'
     }
-  ];
+  ]
   const resources = [
     {
       title: 'Documentation',
@@ -125,16 +125,16 @@ const SupportPage: React.FC = () => {
       icon: Users,
       link: '/community'
     }
-  ];
+  ]
   const filteredFaqs = selectedCategory === 'all' 
     ? faqs 
-    : faqs.filter(faq => faq.category === selectedCategory);
+    : faqs.filter(faq => faq.category === selectedCategory)
   const searchResults = searchQuery 
     ? faqs.filter(faq => 
         faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
         faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : filteredFaqs;
+    : filteredFaqs
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -150,15 +150,13 @@ const SupportPage: React.FC = () => {
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
               Support Center
-  </
+  
             <p className="text-xl text-cyan-400 mb-8">
               We're here to help you succeed with AI,
-  </
+  
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Get instant answers to your questions, access comprehensive resources, 
               and connect with our expert support team.
-            </p>
-          </section>
           {/* Search Section */}
           <section className="mb-16">
             <div className="max-w-2xl mx-auto">
@@ -171,34 +169,24 @@ const SupportPage: React.FC = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
-              </div>
-            </div>
-          </section>
           {/* Support Channels */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Get Support;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Get Support
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} />
-                  <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
-                  <p className="text-gray-300 mb-4">{channel.description}</p>
-                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
-                  <div className="text-gray-400 text-sm">{channel.availability}</div>
-                </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{channel.title}
+                  <p className="text-gray-300 mb-4">{channel.description}
+                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact}
+                  <div className="text-gray-400 text-sm">{channel.availability}
               ))}
-            </div>
-          </section>
           {/* FAQ Categories */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
               {supportCategories.map((category) => (
-                <button
+                <$2 />
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
@@ -208,49 +196,34 @@ const SupportPage: React.FC = () => {
                   }`}
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
-                  <div className="text-sm font-semibold">{category.name}</div>
-                  <div className="text-xs opacity-75">{category.count} topics</div>
-                </button>
+                  <div className="text-sm font-semibold">{category.name}
+                  <div className="text-xs opacity-75">{category.count} topics
               ))}
-            </div>
-          </section>
           {/* FAQ Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Frequently Asked Questions;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Frequently Asked Questions
             <div className="max-w-4xl mx-auto space-y-4">
               {searchResults.map((faq) => (
                 <div key={faq.id} className="cyber-card p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}
+                  <p className="text-gray-300 leading-relaxed">{faq.answer}
               ))}
-            </div>
-          </section>
           {/* Resources Section */}
           <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Helpful Resources;
-  </
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Helpful Resources
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {resources.map((resource, index) => (
-                <Link
+                <$2 />
                   key={index}
                   to={resource.link}
                   className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
                     <resource.icon className="w-8 h-8 text-cyan-400 mr-4" />
                     <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {resource.title}
-                  </h3>
-                  <p className="text-gray-300">{resource.description}</p>
-                </Link>
+                  <p className="text-gray-300">{resource.description}
               ))}
-            </div>
-          </section>
           {/* Contact CTA */}
           <section className="text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -258,21 +231,20 @@ const SupportPage: React.FC = () => {
                 Still Need Help?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Our expert team is ready to assist you with any questions or issues;
-  </
+                Our expert team is ready to assist you with any questions or issues
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
+                <$2 />
                   href="tel:+13024640950"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
-  </
-                <a
+  
+                <$2 />
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Mail className="w-5 h-5 mr-2" />
                   Send Email
-  </
+  
               </div>
             </div>
           </section>
@@ -282,8 +254,7 @@ const SupportPage: React.FC = () => {
     </React.Fragment>
   ),
 }
-export default SupportPage;
-  </a>
+export default SupportPage</a>
   </a>
   </p>
   </h2>
@@ -293,3 +264,4 @@ export default SupportPage;
   </p>
   </h1>
   </SEOOptimizer>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></h3></h3></h3></section></section></section></section></section></section>

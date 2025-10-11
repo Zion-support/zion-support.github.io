@@ -1,30 +1,30 @@
 
-export interface BiotechAIService {id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: string;
+export interface BiotechAIService {id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  text_color: string
+  link: string
+  market_position: string
+  target_audience: string
+  trial_days: number
+  setup_time: string
+  category: string
+  real_service: boolean
+  technology: string[]
+  integrations: string[]
+  use_cases: string[]
+  roi: string
+  competitors: string[]
+  market_size: string
+  growth_rate: string
+  variant: string
   contact_info: unknown
     mobile: string
     email: string,
@@ -50,8 +50,8 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'},
-    real_implementation: true;
-    implementation_details: unknown;
+    real_implementation: true
+    implementation_details: unknown
     customers: 120
     rating: 5 && 5.0
     reviews: 60,
@@ -1430,9 +1430,9 @@ export const,
   s: 45}
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
   }
-];
+]
 }
-];
+]
 realImplementation: true,
     implementationDetails:,
       'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'
@@ -2005,46 +2005,60 @@ realImplementation: true,
   g: 4.9,
     review,
   s: 45}
-];
+]
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
   }
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
   customers: number
   rating: number
   reviews: number,
 }
-export const biotechAIServices: BiotechAIService[] = [;
+export const biotechAIServices: BiotechAIService[] = [
   {
     id: 'ai-drug-discovery-platform'
     name: 'AI Drug Discovery Platform'
     tagline: 'Accelerate drug development with AI-powered discovery',
-    price: '$3,999';
+    price: '$3,999'
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number
+}
+
+export const biotechAIServices: BiotechAIService[] = [
+  {
+    id: 'ai-drug-discovery-platform'
+    name: 'AI Drug Discovery Platform'
+    tagline: 'Accelerate drug development with AI-powered discovery'
+    price: '$3,999'
     period: '/month',,
-  description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.';
+  description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.'
     features: [
-      'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard';
+      'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard'
       'API for research integrationMulti-omics data analysis'
-    ];
-    popular: true;
-    icon: '';
-    color: 'from-emerald-600 to-teal-700';
+    ]
+    popular: true
+    icon: ''
+    color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-400'
     link: 'https://ziontechgroup.com/biotech-ai'
     marketPosition: 'Revolutionary technology with no direct competitors. Insitro ($100 M+ funding) and Recursion ($2 B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive platform and accessible pricing.',
-    targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers';
-    trialDays: 30;
-    setupTime: '2 weeks';
-    category: 'Biotech AI';
-    realService: true;
-    technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing'];
-    integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'];
-    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'];
-    roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.';
+    targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers'
+    trialDays: 30
+    setupTime: '2 weeks'
+    category: 'Biotech AI'
+    realService: true
+    technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing']
+    integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature']
+    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration']
+    roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.'
     competitors: ['InsitroRecursionBasic research tools']
     marketSize: '$150 B AI in healthcare market'
     growthRate: '250% annual growth',
@@ -2054,7 +2068,35 @@ export const biotechAIServices: BiotechAIService[] = [;
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
+      website: 'https://ziontechgroup.com'
+    }
     real_implementation: true,
+    ]
+    popular: true
+    icon: ''
+    color: 'from-emerald-600 to-teal-700'
+    textColor: 'text-emerald-400'
+    link: 'https://ziontechgroup.com/biotech-ai'
+    marketPosition: 'Revolutionary technology with no direct competitors. Insitro ($100 M+ funding) and Recursion ($2 B+ funding) offer basic AI drug discovery. Our advantage: Comprehensive platform and accessible pricing.'
+    targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers'
+    trialDays: 30
+    setupTime: '2 weeks'
+    category: 'Biotech AI'
+    realService: true
+    technology: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing']
+    integrations: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature']
+    useCases: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration']
+    roi: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.'
+    competitors: ['InsitroRecursionBasic research tools']
+    marketSize: '$150 B AI in healthcare market'
+    growthRate: '250% annual growth'
+    variant: 'biotech-futuristic'}
+    contactInfo: {}
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'}
+    real_implementation: true
     implementation_details: 'Complete biomanufacturing platform with AI optimization, real - time monitoring, and automation tools. Includes mobile app and system integration.'
     launch_date: '2024 - 03 - 10'
     customers: 90
@@ -2100,7 +2142,7 @@ export const,
   g: 4.9,
     review,
   s: 45}
-];
+]
   }
 export interface BiotechAIService,
   id: string, nam,
@@ -2543,7 +2585,7 @@ export interface BiotechAIService,
   e: '2024 - 03 - 10' customer,
   s: 90, ratin,
   g: 4.9, review,
-  s: 45} export interface BiotechAIService { } ]; ; } ]; realImplementatio,
+  s: 45} export interface BiotechAIService { } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Complete AI drug discovery platform with advanced algorithms, comprehensive analytics, and research tools. Includes collaboration features and regulatory compliance.'' launchDat,
   e: '2024-01-15' customer,

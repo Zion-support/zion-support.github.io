@@ -1,4 +1,4 @@
-'use client';
+'use client'
 /**
  * Error Handling Configuration
  * Centralized error tracking and reporting settings
@@ -6,8 +6,8 @@
 export enum ErrorSeverity {
     'use client'
 /**
- * Error Handling Configuration;
- * Centralized error tracking and reporting settings;
+ * Error Handling Configuration
+ * Centralized error tracking and reporting settings
  */
 
 export enum ErrorSeverity {// TODO: Add content
@@ -35,9 +35,9 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown'
 }
 export interface ErrorConfig {
-    enabled: boolean;
-  logToConsole: boolean;
-  sendToServer: boolean;
+    enabled: boolean
+  logToConsole: boolean
+  sendToServer: boolean
   sampleRate: number
   maxStackTraceLength: number
   ignoreErrors: RegExp[],
@@ -196,18 +196,16 @@ export class AppError extends Error {
   category: ErrorCategory = ErrorCategory.UNKNOWN,
     public,
   severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    public metadata?: Record;
-
+    public metadata?: Record
           <string, unknown>
   ) {
     // TODO: Add content
   }
 
 }
-    super(message);
-    this.name = 'AppError';
-    Error.captureStackTrace(this, this.constructor);
+    super(message)
+    this.name = 'AppError'
+    Error.captureStackTrace(this, this.constructor)
   }
 }
-export default errorHandlingConfig;
-
+export default errorHandlingConfig

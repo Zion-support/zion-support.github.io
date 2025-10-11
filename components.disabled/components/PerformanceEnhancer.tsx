@@ -31,4 +31,3 @@
   B: {metrics.ttfb.toFixed(2)}ms</div>}, {/* TODO: Fix JSX expression */}
   d: {metrics.loadTime.toFixed(2)}ms</div> )}; {/* TODO: Fix JSX expression */}
   y: {metrics.memoryUsage.toFixed(2)}MB</div> )} </div> </div> )}; export default PerformanceEnhancer; '"
-  </PerformanceMetrics>

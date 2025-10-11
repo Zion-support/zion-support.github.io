@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('link-and-health-scheduler function triggered')}
-    // Link and health scheduling simulation;
+    // Link and health scheduling simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   e: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in link-and-health-scheduler: ') error
   }
@@ -44,7 +44,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'link-and-health-scheduler'})
-      });
+      })
     }
   }
 }

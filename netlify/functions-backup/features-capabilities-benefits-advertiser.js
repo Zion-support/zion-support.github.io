@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('features-capabilities-benefits-advertiser function triggered')}
-    // Features, capabilities, and benefits advertising simulation;
+    // Features, capabilities, and benefits advertising simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -24,7 +24,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in features-capabilities-benefits-advertiser: ') error
   }
@@ -45,7 +45,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'features-capabilities-benefits-advertiser'})
-      });
+      })
     }
   }
 }

@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('continuous-front-runner function triggered')}
-    // Continuous front running simulation;
+    // Continuous front running simulation
     const result = {
       statusCode: 200,
       headers: {,
@@ -22,7 +22,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   e: new Date().toISOString()}
         }})}
-    return result;
+    return result
 //   } catch (error) {
     // console.error('Error in continuous-front-runner: ') error
   }
@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'continuous-front-runner'})
-      });
+      })
     }
   }
 }

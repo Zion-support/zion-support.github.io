@@ -1,59 +1,59 @@
-/**;
- * Production-ready logger that removes console statements in production;
- */;
-type LogLevel = 'debug' | 'info' | 'warn' | 'error';
+/**
+ * Production-ready logger that removes console statements in production
+ */
+type LogLevel = 'debug' | 'info' | 'warn' | 'error'
 interface LogEntry {}
   level: LogLevel,
   message: string,
-  data?: unknown;
+  data?: unknown
   timestamp: string,
-  context?: string;
+  context?: string
 }
 class ProductionLogger {}
-  private isDevelopment = process.env.NODE_ENV === 'development';
-  private isProduction = process.env.NODE_ENV === 'production';
+  private isDevelopment = process.env.NODE_ENV === 'development'
+  private isProduction = process.env.NODE_ENV === 'production'
 private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
     const entry: LogEntry = {,
       level
   }
   private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
     const entry: LogEntry = {}
-      level,;
-      message,;
-      data,;
+      level,
+      message,
+      data,
       timestamp: new Date().toISOString(),
-      context;
+      context
     }
-// Only log in development;
+// Only log in development
     if (this.isDevelopment) {
     switch (level) {
     // Only log in development
   }
     if (this.isDevelopment) {}
       switch (level) {}
-        case 'debug':;
-          break;
-        case 'info':;
-          break;
-        case 'warn':;
-          break;
-        case 'error':;
-          break;
+        case 'debug':
+          break
+        case 'info':
+          break
+        case 'warn':
+          break
+        case 'error':
+          break
       }
     }
-// In production, send critical errors to monitoring service;
+// In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {
     // In production, send critical errors to monitoring service
   }
     if (this.isProduction && level === 'error') {}
-      this.sendToMonitoring(entry);
+      this.sendToMonitoring(entry)
     }
   }
 private sendToMonitoring(entry: LogEntry): void {
     ,
-    // Send to analytics/monitoring service;
-    if (typeof window !== 'undefined' && 'gtag' in window) {,;
-      (window as any).gtag('event', 'error_log', {);
+    // Send to analytics/monitoring service
+    if (typeof window !== 'undefined' && 'gtag' in window) {,
+      (window as any).gtag('event', 'error_log', {)
         error_message: entry.message;)
         error_context: entry.context),
         error_timestamp: entry.timestamp),
@@ -61,7 +61,7 @@ private sendToMonitoring(entry: LogEntry): void {
 ,
   }
   private sendToMonitoring(entry: LogEntry): void {}
-    // Send to analytics/monitoring service;
+    // Send to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', 'error_log', {)}
         error_message: entry.message,
@@ -71,17 +71,17 @@ private sendToMonitoring(entry: LogEntry): void {
     }
   }
 debug(message: string, data?: unknown, context?: string): void {}
-    this.log('debug', message, data, context);
+    this.log('debug', message, data, context)
   }
 info(message: string, data?: unknown, context?: string): void {}
-    this.log('info', message, data, context);
+    this.log('info', message, data, context)
   }
 warn(message: string, data?: unknown, context?: string): void {}
-    this.log('warn', message, data, context);
+    this.log('warn', message, data, context)
   }
 error(message: string, data?: unknown, context?: string): void {}
-    this.log('error', message, data, context);
+    this.log('error', message, data, context)
   }
 }
-export const logger = new ProductionLogger();
-export default logger;
+export const logger = new ProductionLogger()
+export default logger

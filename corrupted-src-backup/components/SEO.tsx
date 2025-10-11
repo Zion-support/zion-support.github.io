@@ -1,5 +1,5 @@
 interface SEOProps {/* TODO: Fix JSX expression */}
-      <title>{title}</title>
+      <title>{title}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
@@ -33,5 +33,6 @@ interface SEOProps {/* TODO: Fix JSX expression */}
   r:description" content={description} /></meta>"
       <meta name="twitte,"
   r:image" content={image} /></meta>"
-      <link rel="canonical" href={url} /></link>
+      <link rel="canonical" href={url} />
 }"
+</li></li>

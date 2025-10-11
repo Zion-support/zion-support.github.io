@@ -31,7 +31,7 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$178.9B',
     targetAudienc,
-  e: 'Enterprise businesses, cloud providers, research institutions, government agencies';
+  e: 'Enterprise businesses, cloud providers, research institutions, government agencies'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network'
   }
@@ -78,14 +78,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$43.4B',
     targetAudienc,
-  e: 'IoT companies, telecommunications, manufacturing, smart cities';
+  e: 'IoT companies, telecommunications, manufacturing, smart cities'
     competitiveAdvantag,
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration'
   }
   {
     id: 'zero-trust-security-platform'
     name: 'ZeroTrust Security Pro',
-    description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.';
+    description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.'
     features: [,
       'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
   {/* TODO: Fix JSX expression */}
@@ -124,14 +124,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$173.5B',
     targetAudienc,
-  e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
+  e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantag,
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration'
   }
   {
     id: 'blockchain-enterprise-platform'
     name: 'EnterpriseBlockchain Pro',
-    description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.';
+    description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.'
     features: [,
       'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
   {/* TODO: Fix JSX expression */}
@@ -169,14 +169,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$19.9B',
     targetAudienc,
-  e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';
+  e: 'Financial institutions, supply chain companies, healthcare providers, government agencies'
     competitiveAdvantag,
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration'
   }
   {
     id: 'ai-powered-devops-platform'
     name: 'DevOps AI Pro',
-    description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.';
+    description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.'
     features: [,
       'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
   {/* TODO: Fix JSX expression */}
@@ -216,14 +216,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$8.2B',
     targetAudienc,
-  e: 'Development teams, DevOps engineers, software companies, enterprise businesses';
+  e: 'Development teams, DevOps engineers, software companies, enterprise businesses'
     competitiveAdvantag,
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration'
   }
   {
     id: 'quantum-networking-platform'
     name: 'QuantumNet Pro',
-    description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.';
+    description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.'
     features: [,
       'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
   {/* TODO: Fix JSX expression */}
@@ -263,14 +263,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$12.8B',
     targetAudienc,
-  e: 'Telecommunications, financial institutions, government agencies, research institutions';
+  e: 'Telecommunications, financial institutions, government agencies, research institutions'
     competitiveAdvantag,
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms'
   }
   {
     id: 'autonomous-it-operations-platform'
     name: 'AutonomousIT Pro',
-    description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.';
+    description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.'
     features: [,
       'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
   {/* TODO: Fix JSX expression */}
@@ -309,14 +309,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$28.7B',
     targetAudienc,
-  e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';
+  e: 'IT operations teams, system administrators, enterprise businesses, managed service providers'
     competitiveAdvantag,
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration'
   }
   {
     id: 'quantum-data-center-platform'
     name: 'QuantumDataCenter Pro',
-    description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.';
+    description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
     features: [,
       'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
   {/* TODO: Fix JSX expression */}
@@ -356,14 +356,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$89.3B',
     targetAudienc,
-  e: 'Data center operators, cloud providers, enterprise businesses, government agencies';
+  e: 'Data center operators, cloud providers, enterprise businesses, government agencies'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration'
   }
   {
     id: 'quantum-cybersecurity-platform'
     name: 'QuantumCyber Pro',
-    description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.';
+    description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
     features: [,
       'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
   {/* TODO: Fix JSX expression */}
@@ -402,7 +402,7 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$173.5B',
     targetAudienc,
-  e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';
+  e: 'IT security teams, cybersecurity firms, government agencies, financial institutions'
     competitiveAdvantag,
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection'
   }
@@ -448,11 +448,11 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$15.7B',
     targetAudienc,
-  e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
+  e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-];
+]
 export const advancedITServices2025 = [
     }
     category: 'IT Operations',
@@ -759,7 +759,7 @@ export const advancedITServices2025 = [
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-];
+]
       email: 'kleber@ziontechgroup.com'}
     marketSize: '$15.7B',
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
@@ -774,12 +774,12 @@ export const advancedITServices2025 = [
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-];
+]
 export const advancedITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'QuantumCloud Infrastructure',
-    description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.';
+    description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.'
     features: [,
       'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support',
   {/* TODO: Fix JSX expression */}
@@ -819,7 +819,7 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$178.9B',
     targetAudienc,
-  e: 'Enterprise businesses, cloud providers, research institutions, government agencies';
+  e: 'Enterprise businesses, cloud providers, research institutions, government agencies'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network'
   }
@@ -866,14 +866,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$43.4B',
     targetAudienc,
-  e: 'IoT companies, telecommunications, manufacturing, smart cities';
+  e: 'IoT companies, telecommunications, manufacturing, smart cities'
     competitiveAdvantag,
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration'
   }
   {
     id: 'zero-trust-security-platform'
     name: 'ZeroTrust Security Pro',
-    description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.';
+    description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.'
     features: [,
       'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
   {/* TODO: Fix JSX expression */}
@@ -912,14 +912,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$173.5B',
     targetAudienc,
-  e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
+  e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantag,
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration'
   }
   {
     id: 'blockchain-enterprise-platform'
     name: 'EnterpriseBlockchain Pro',
-    description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.';
+    description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.'
     features: [,
       'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
   {/* TODO: Fix JSX expression */}
@@ -957,14 +957,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$19.9B',
     targetAudienc,
-  e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';
+  e: 'Financial institutions, supply chain companies, healthcare providers, government agencies'
     competitiveAdvantag,
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration'
   }
   {
     id: 'ai-powered-devops-platform'
     name: 'DevOps AI Pro',
-    description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.';
+    description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.'
     features: [,
       'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
   {/* TODO: Fix JSX expression */}
@@ -1004,14 +1004,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$8.2B',
     targetAudienc,
-  e: 'Development teams, DevOps engineers, software companies, enterprise businesses';
+  e: 'Development teams, DevOps engineers, software companies, enterprise businesses'
     competitiveAdvantag,
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration'
   }
   {
     id: 'quantum-networking-platform'
     name: 'QuantumNet Pro',
-    description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.';
+    description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.'
     features: [,
       'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
   {/* TODO: Fix JSX expression */}
@@ -1051,14 +1051,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$12.8B',
     targetAudienc,
-  e: 'Telecommunications, financial institutions, government agencies, research institutions';
+  e: 'Telecommunications, financial institutions, government agencies, research institutions'
     competitiveAdvantag,
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms'
   }
   {
     id: 'autonomous-it-operations-platform'
     name: 'AutonomousIT Pro',
-    description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.';
+    description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.'
     features: [,
       'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
   {/* TODO: Fix JSX expression */}
@@ -1097,14 +1097,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$28.7B',
     targetAudienc,
-  e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';
+  e: 'IT operations teams, system administrators, enterprise businesses, managed service providers'
     competitiveAdvantag,
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration'
   }
   {
     id: 'quantum-data-center-platform'
     name: 'QuantumDataCenter Pro',
-    description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.';
+    description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
     features: [,
       'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
   {/* TODO: Fix JSX expression */}
@@ -1144,14 +1144,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$89.3B',
     targetAudienc,
-  e: 'Data center operators, cloud providers, enterprise businesses, government agencies';
+  e: 'Data center operators, cloud providers, enterprise businesses, government agencies'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration'
   }
   {
     id: 'quantum-cybersecurity-platform'
     name: 'QuantumCyber Pro',
-    description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.';
+    description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
     features: [,
       'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
   {/* TODO: Fix JSX expression */}
@@ -1190,7 +1190,7 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$173.5B',
     targetAudienc,
-  e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';
+  e: 'IT security teams, cybersecurity firms, government agencies, financial institutions'
     competitiveAdvantag,
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection'
   }
@@ -1236,13 +1236,13 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$15.7B',
     targetAudienc,
-  e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
+  e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
-];
+]
   }
-];
+]
     market_size: '$15.7B',
     target_audience: unknown,
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
@@ -1264,7 +1264,7 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$178.9B',
     targetAudienc,
-  e: 'Enterprise businesses, cloud providers, research institutions, government agencies';
+  e: 'Enterprise businesses, cloud providers, research institutions, government agencies'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network'
   }
@@ -1311,14 +1311,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$43.4B',
     targetAudienc,
-  e: 'IoT companies, telecommunications, manufacturing, smart cities';
+  e: 'IoT companies, telecommunications, manufacturing, smart cities'
     competitiveAdvantag,
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration'
   }
   {
     id: 'zero-trust-security-platform',
     name: 'ZeroTrust Security Pro',,
-  description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.';
+  description: 'Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern enterprises.'
     features: [,
       'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center',
   {/* TODO: Fix JSX expression */}
@@ -1357,14 +1357,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$173.5B',
     targetAudienc,
-  e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
+  e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantag,
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration'
   }
   {
     id: 'blockchain-enterprise-platform',
     name: 'EnterpriseBlockchain Pro',,
-  description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.';
+  description: 'Enterprise-grade blockchain platform that provides secure, scalable, and compliant blockchain solutions for business applications.'
     features: [,
       'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support',
   {/* TODO: Fix JSX expression */}
@@ -1402,14 +1402,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$19.9B',
     targetAudienc,
-  e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';
+  e: 'Financial institutions, supply chain companies, healthcare providers, government agencies'
     competitiveAdvantag,
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration'
   }
   {
     id: 'ai-powered-devops-platform',
     name: 'DevOps AI Pro',,
-  description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.';
+  description: 'Intelligent DevOps platform that uses AI to automate development workflows, optimize deployments, and improve software delivery window.window.window.performance.'
     features: [,
       'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring',
   {/* TODO: Fix JSX expression */}
@@ -1449,14 +1449,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$8.2B',
     targetAudienc,
-  e: 'Development teams, DevOps engineers, software companies, enterprise businesses';
+  e: 'Development teams, DevOps engineers, software companies, enterprise businesses'
     competitiveAdvantag,
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration'
   }
   {
     id: 'quantum-networking-platform',
     name: 'QuantumNet Pro',,
-  description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.';
+  description: 'Next-generation quantum networking platform that provides ultra-secure, high-speed communication using quantum entanglement and advanced protocols.'
     features: [,
       'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support',
   {/* TODO: Fix JSX expression */}
@@ -1496,14 +1496,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$12.8B',
     targetAudienc,
-  e: 'Telecommunications, financial institutions, government agencies, research institutions';
+  e: 'Telecommunications, financial institutions, government agencies, research institutions'
     competitiveAdvantag,
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms'
   }
   {
     id: 'autonomous-it-operations-platform',
     name: 'AutonomousIT Pro',,
-  description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.';
+  description: 'AI-powered autonomous IT operations platform that self-manages infrastructure, predicts issues, and optimizes performance without human intervention.'
     features: [,
       'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations',
   {/* TODO: Fix JSX expression */}
@@ -1542,14 +1542,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$28.7B',
     targetAudienc,
-  e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';
+  e: 'IT operations teams, system administrators, enterprise businesses, managed service providers'
     competitiveAdvantag,
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration'
   }
   {
     id: 'quantum-data-center-platform',
     name: 'QuantumDataCenter Pro',,
-  description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.';
+  description: 'Next-generation quantum-enhanced data center platform that provides unprecedented performance, security, and energy efficiency.'
     features: [,
       'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support',
   {/* TODO: Fix JSX expression */}
@@ -1589,14 +1589,14 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$89.3B',
     targetAudienc,
-  e: 'Data center operators, cloud providers, enterprise businesses, government agencies';
+  e: 'Data center operators, cloud providers, enterprise businesses, government agencies'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration'
   }
   {
     id: 'quantum-cybersecurity-platform',
     name: 'QuantumCyber Pro',,
-  description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.';
+  description: 'Advanced quantum cybersecurity platform that provides unbreakable encryption, quantum threat detection, and next-generation security solutions.'
     features: [,
       'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations',
   {/* TODO: Fix JSX expression */}
@@ -1635,7 +1635,7 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$173.5B',
     targetAudienc,
-  e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';
+  e: 'IT security teams, cybersecurity firms, government agencies, financial institutions'
     competitiveAdvantag,
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection'
   }
@@ -1681,7 +1681,7 @@ export const advancedITServices2025 = [
     marketSiz,
   e: '$15.7B',
     targetAudienc,
-  e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
+  e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
     }
@@ -1692,9 +1692,9 @@ export const advancedITServices2025 = [
     competitive_advantag,
   e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'
   }
-];
+]
 }
-];
+]
 export const advancedITServices2025 = [ } marketSiz,
   e: '$15 && 15.7B',' targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'' competitiveAdvantag,
