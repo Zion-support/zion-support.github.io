@@ -2,29 +2,55 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, Lock, Eye, Database } from 'lucide-react';
+import { Shield, Eye, Edit, Trash2, Download, Database, Server, Lock } from 'lucide-react';
 
 const PrivacyPage: React.FC = () => {
   const dataTypes = [
     {
-      icon: Database,
       category: 'Personal Information',
-      description: 'Name, email address, phone number, and other contact details you provide to us.'
+      description: 'Name, email, phone number, and contact details',
+      icon: Database,
     },
     {
-      icon: Eye,
       category: 'Usage Data',
-      description: 'Information about how you use our website and services, including pages visited and time spent.'
+      description: 'How you interact with our services and website',
+      icon: Server,
     },
     {
-      icon: Lock,
       category: 'Technical Data',
-      description: 'IP address, browser type, device information, and other technical details collected automatically.'
+      description: 'IP address, browser type, device information',
+      icon: Lock,
+    }
+  ];
+
+  const purposes = [
+    'Provide and improve our services',
+    'Communicate with you about our products',
+    'Process transactions and payments',
+    'Comply with legal obligations',
+    'Protect against fraud and abuse'
+  ];
+
+  const rights = [
+    {
+      title: 'Access',
+      description: 'Request access to your personal data',
+      icon: Eye
     },
     {
-      icon: Shield,
-      category: 'Security Data',
-      description: 'Information related to security, authentication, and fraud prevention.'
+      title: 'Rectification',
+      description: 'Correct inaccurate personal data',
+      icon: Edit
+    },
+    {
+      title: 'Erasure',
+      description: 'Request deletion of your personal data',
+      icon: Trash2
+    },
+    {
+      title: 'Portability',
+      description: 'Receive your data in a structured format',
+      icon: Download
     }
   ];
 
@@ -48,18 +74,25 @@ const PrivacyPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Your privacy is important to us. Learn how we collect, use, and protect your personal information.
             </p>
+            <div className="flex items-center justify-center space-x-2 text-cyan-400">
+              <Shield className="h-6 w-6" />
+              <span className="text-lg font-semibold">Last updated: January 2024</span>
+            </div>
           </div>
         </section>
 
-        {/* Data Types Section */}
+        {/* Data Collection Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Types of Data We Collect</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Information We Collect</h2>
+              <p className="text-xl text-gray-300">We collect information to provide better services</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {dataTypes.map((type, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4">
-                    <type.icon className="text-white" size={32} />
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="text-cyan-400 mb-4">
+                    <type.icon className="h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{type.category}</h3>
                   <p className="text-gray-300">{type.description}</p>
@@ -69,77 +102,72 @@ const PrivacyPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Privacy Content */}
+        {/* Purposes Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">How We Use Your Data</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• To provide and improve our services</li>
-                  <li>• To communicate with you about our products and services</li>
-                  <li>• To process transactions and provide customer support</li>
-                  <li>• To analyze usage patterns and optimize our website</li>
-                  <li>• To comply with legal obligations and protect our rights</li>
-                </ul>
-              </div>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">How We Use Your Information</h2>
+              <p className="text-xl text-gray-300">We use your data for the following purposes</p>
+            </div>
+            <div className="space-y-4">
+              {purposes.map((purpose, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="flex-shrink-0">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2"></div>
+                  </div>
+                  <p className="text-gray-300 text-lg">{purpose}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Data Protection</h3>
-                <p className="text-gray-300 mb-4">
-                  We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.
-                </p>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Encryption of data in transit and at rest</li>
-                  <li>• Regular security audits and assessments</li>
-                  <li>• Access controls and authentication mechanisms</li>
-                  <li>• Employee training on data protection practices</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Your Rights</h3>
-                <p className="text-gray-300 mb-4">
-                  You have certain rights regarding your personal data, including:
-                </p>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• The right to access your personal data</li>
-                  <li>• The right to correct inaccurate data</li>
-                  <li>• The right to delete your data</li>
-                  <li>• The right to restrict processing</li>
-                  <li>• The right to data portability</li>
-                  <li>• The right to object to processing</li>
-                </ul>
-              </div>
+        {/* Rights Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Your Rights</h2>
+              <p className="text-xl text-gray-300">You have control over your personal data</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {rights.map((right, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="text-cyan-400 mb-4">
+                    <right.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{right.title}</h3>
+                  <p className="text-gray-300">{right.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Questions About Privacy?</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Questions About Privacy?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              If you have any questions about our privacy practices or want to exercise your rights, please contact us.
+              If you have any questions about this privacy policy or our data practices, please contact us.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                href="mailto:privacy@ziontechgroup.com"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
-                Contact Us
+                Contact Privacy Team
               </a>
               <a
-                href="mailto:privacy@ziontechgroup.com"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+                href="/support"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                privacy@ziontechgroup.com
+                Visit Support
               </a>
             </div>
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

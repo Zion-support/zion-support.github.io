@@ -2,31 +2,52 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+<<<<<<< HEAD
 // Function to resolve merge conflicts by keeping HEAD version
 function resolveMergeConflicts(filePath) {
+=======
+function fixMergeConflicts(filePath) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
+<<<<<<< HEAD
     if (!content.includes('<<<<<<< HEAD')) {
       return false; // No conflicts to resolve
+=======
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
+      return false; // No conflicts to fix
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
     }
     
     console.log(`Resolving conflicts in: ${filePath}`);
     
+<<<<<<< HEAD
     // Split content by merge conflict markers
+=======
+    // Split by conflict markers and take the newer version (after =======)
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
     const lines = content.split('\n');
     const resolvedLines = [];
     let inConflict = false;
+<<<<<<< HEAD
     let keepHead = false;
+=======
+    let conflictStart = -1;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.startsWith('<<<<<<< HEAD')) {
+      if (line.trim().startsWith('<<<<<<< HEAD')) {
         inConflict = true;
+<<<<<<< HEAD
         keepHead = true;
         continue;
       } else if (line.startsWith('=======')) {
@@ -50,6 +71,29 @@ function resolveMergeConflicts(filePath) {
     
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
+=======
+        conflictStart = i;
+        continue;
+      }
+      
+      if (line.trim().startsWith('=======')) {
+        continue; // Skip the separator
+      }
+      
+      if (line.trim().startsWith('>>>>>>> ')) {
+        inConflict = false;
+        conflictStart = -1;
+        continue;
+      }
+      
+      if (!inConflict) {
+        result.push(line);
+      }
+    }
+    
+    // Write the cleaned content back
+    fs.writeFileSync(filePath, result.join('\n'), 'utf8');
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
     return true;
   } catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
@@ -57,6 +101,7 @@ function resolveMergeConflicts(filePath) {
   }
 }
 
+<<<<<<< HEAD
 // Function to find all files with merge conflicts
 function findFilesWithConflicts() {
   try {
@@ -102,4 +147,57 @@ try {
   console.log(`\nRemaining files with conflicts: ${remainingConflicts.trim()}`);
 } catch (error) {
   console.log('No remaining conflicts found!');
+=======
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const files = findTsxFiles(appDir);
+
+console.log(`Found ${files.length} files to check for merge conflicts`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+
+// Also fix some specific problematic files
+const specificFiles = [
+  'EnhancedFooter.tsx',
+  'EnhancedHeader.tsx', 
+  'SidebarNavigation.tsx'
+];
+
+for (const fileName of specificFiles) {
+  const filePath = path.join(__dirname, fileName);
+  if (fs.existsSync(filePath)) {
+    if (fixMergeConflicts(filePath)) {
+      console.log(`Fixed ${fileName}`);
+    }
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 }

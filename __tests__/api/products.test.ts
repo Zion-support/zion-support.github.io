@@ -12,11 +12,11 @@ jest.mock('@prisma/client', () => {
     },
     productReview: {
       aggregate: jest.fn()
-    },
-    $queryRawUnsafe: jest.fn(),
-    $disconnect: jest.fn()
+    }
   }
-  return { PrismaClient: jest.fn(() => mPrismaClient) }
+  return {
+    PrismaClient: jest.fn(() => mPrismaClient)
+  }
 })
 
 describe('/api/products', () => {
@@ -25,6 +25,7 @@ describe('/api/products', () => {
   beforeEach(() => {
     mockPrisma = new PrismaClient()
     jest.clearAllMocks()
+<<<<<<< HEAD
   })
 
   afterEach(() => {
@@ -38,6 +39,35 @@ describe('/api/products', () => {
     ]
 
     mockPrisma.product.findMany.mockResolvedValue(mockProducts)
+=======
+  })
+
+  it('should return products with pagination', async () => {
+    const mockProducts = [
+      { id: 1, name: 'Product 1', price: 100 },
+      { id: 2, name: 'Product 2', price: 200 }
+    ]
+
+    mockPrisma.product.findMany.mockResolvedValue(mockProducts)
+    mockPrisma.product.aggregate.mockResolvedValue({ _count: { id: 2 } })
+
+    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+      method: 'GET',
+      query: { page: '1', limit: '10' }
+    })
+
+    await productHandler(req, res)
+
+    expect(res._getStatusCode()).toBe(200)
+    expect(JSON.parse(res._getData())).toMatchObject({
+      products: mockProducts,
+      pagination: expect.any(Object)
+    })
+  })
+
+  it('should handle errors gracefully', async () => {
+    mockPrisma.product.findMany.mockRejectedValue(new Error('Database error'))
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
@@ -45,6 +75,7 @@ describe('/api/products', () => {
 
     await productHandler(req, res)
 
+<<<<<<< HEAD
     expect(res._getStatusCode()).toBe(200)
     expect(res._getJSONData()).toEqual(mockProducts)
   })
@@ -94,6 +125,11 @@ describe('/api/products', () => {
           totalPages: 1
         }
       })
+=======
+    expect(res._getStatusCode()).toBe(500)
+    expect(JSON.parse(res._getData())).toMatchObject({
+      error: 'Internal server error'
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
     })
 
     it('should handle database errors', async () => {

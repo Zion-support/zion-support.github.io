@@ -1,5 +1,6 @@
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
+<<<<<<< HEAD
 import reviewsHandler from '@/pages/api/reviews'
 import productReviewsHandler from '@/pages/api/reviews/[productId]'
 import { PrismaClient, ProductReview, User as PrismaUser, Prisma } from '@prisma/client'
@@ -86,3 +87,41 @@ describe('/api/reviews', () => {
     expect(res._getJSONData()).toHaveProperty('error')
   })
 })
+=======
+import handler from '@/pages/api/reviews'
+import { describe, it, expect, vi } from 'vitest'
+
+describe('/api/reviews', () => {
+  it('should return reviews for a product', async () => {
+    const { req, res } = createMocks({
+      method: 'GET' as RequestMethod,
+      query: { productId: '1' }
+    })
+
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    )
+
+    expect(res._getStatusCode()).toBe(200)
+  })
+
+  it('should create a new review', async () => {
+    const { req, res } = createMocks({
+      method: 'POST' as RequestMethod,
+      body: {
+        productId: '1',
+        rating: 5,
+        comment: 'Great product!'
+      }
+    })
+
+    await handler(
+      req as unknown as NextApiRequest,
+      res as unknown as NextApiResponse
+    )
+
+    expect(res._getStatusCode()).toBe(201)
+  })
+})
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7

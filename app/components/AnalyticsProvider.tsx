@@ -1,6 +1,8 @@
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
+'use client';
+import React from 'react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
 
+<<<<<<< HEAD
 import React from 'react';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any&gt;) =&gt; void;
@@ -67,24 +69,24 @@ import React from 'react';
 
   const value: AnalyticsContextType = {,
     trackEvent,
+=======
+interface AnalyticsProviderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ className = '', children }) => {
+  return (
+    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
+      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <Brain className="w-8 h-8 text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">AnalyticsProvider Title</h3>
+      <p className="text-gray-300 mb-4">AnalyticsProvider description goes here.</p>
+      {children}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   );
 };
 
-export { AnalyticsProvider };
 export default AnalyticsProvider;
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
-  )
-}
-
-export default undefined
-  )
-}
-
-export default AnalyticsProvider

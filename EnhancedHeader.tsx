@@ -20,7 +20,10 @@ const EnhancedHeader: React.FC = () => {
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
+<<<<<<< HEAD
           
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -37,7 +40,10 @@ const EnhancedHeader: React.FC = () => {
               Contact
             </Link>
           </nav>
+<<<<<<< HEAD
           
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
           {/* Mobile Menu Button */}
           <button
@@ -47,7 +53,10 @@ const EnhancedHeader: React.FC = () => {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+<<<<<<< HEAD
         
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
         {/* Mobile Navigation */}
         {isMenuOpen && (

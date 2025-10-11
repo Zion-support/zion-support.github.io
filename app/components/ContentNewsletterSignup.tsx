@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -49,3 +50,5 @@ const ContentNewsletterSignupPage: React.FC = () => {
 };
 
 export default ContentNewsletterSignupPage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7

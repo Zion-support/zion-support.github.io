@@ -32,7 +32,11 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
+<<<<<<< HEAD
           <h2 className="text-xl font-bold text-white">Navigation</h2>
+=======
+          <h2 className="text-white font-bold text-xl">Navigation</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white transition-colors">
@@ -45,6 +49,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           </button>
         </div>
         
+<<<<<<< HEAD
         <nav className="p-4">
           <ul className="space-y-2">
             {navigationItems.map((item) => {
@@ -66,6 +71,8 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </nav>
       </div>
     </>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
         <nav className="mt-8">
           {navigationItems.map((item) => (
             <Link

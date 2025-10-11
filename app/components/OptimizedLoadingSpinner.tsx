@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
@@ -49,3 +50,26 @@ const OptimizedLoadingSpinnerPage: React.FC = () => {
 };
 
 export default OptimizedLoadingSpinnerPage;
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
+
+interface OptimizedLoadingSpinnerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
+      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <Brain className="w-8 h-8 text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">OptimizedLoadingSpinner Title</h3>
+      <p className="text-gray-300 mb-4">OptimizedLoadingSpinner description goes here.</p>
+      {children}
+    </div>
+  );
+};
+
+export default OptimizedLoadingSpinner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7

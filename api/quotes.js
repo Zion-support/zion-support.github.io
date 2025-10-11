@@ -12,13 +12,18 @@ export default async function handler(req, res) {
     if (!name || !email || !phone || !details) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')
+<<<<<<< HEAD
       res.end(JSON.stringify({ 
         error: 'Name, email, phone, and details are required' 
       }))
+=======
+      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }))
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       return
     }
 
     // Process quote submission logic here
+<<<<<<< HEAD
     const quoteData = {
       id: Date.now().toString(),
       name,
@@ -77,12 +82,17 @@ export default async function handler(req, res) {
       error: 'Internal server error' 
     }));
     const quoteData = {
+=======
+    const quote = {
+      id: Date.now().toString(),
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       name,
       email,
       phone,
       details,
       country: country || 'Not specified',
       service: service || 'General inquiry',
+<<<<<<< HEAD
       timestamp: new Date().toISOString(),
       status: 'pending'
     }
@@ -90,18 +100,26 @@ export default async function handler(req, res) {
     // Log quote request for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Quote request received:', quoteData)
+=======
+      status: 'pending',
+      createdAt: new Date().toISOString()
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
     }
+
+    // Here you would typically save to a database
+    // For now, we'll just log it
+    console.log('New quote request:', quote)
 
     res.statusCode = 200
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Quote request submitted successfully',
-      quoteId: `quote_${Date.now()}`,
-      data: quoteData
+      quoteId: quote.id
     }))
 
   } catch (error) {
+<<<<<<< HEAD
     console.error('Quote submission error:', error)
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')
@@ -109,5 +127,11 @@ export default async function handler(req, res) {
       error: 'Failed to submit quote request',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }))
+=======
+    console.error('Error processing quote request:', error)
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Internal server error' }))
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   }
 }

@@ -1,9 +1,16 @@
 import fs from 'fs'
 import path from 'path'
+<<<<<<< HEAD
 
 // Simple wrapper function to replace withSentry
 const withSentry = (handler) => handler
 
+=======
+
+// Simple wrapper function to replace withSentry (unused for now)
+// const withSentry = (handler) => handler
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 const dir = path.join(process.cwd(), 'data')
 const file = path.join(dir, 'onsite-requests.json')
 
@@ -16,6 +23,7 @@ export default function handler(req, res) {
   }
 
   try {
+<<<<<<< HEAD
     const { name, email, phone, company, address, requirements, preferredDate } = req.body || {}
     
     if (!name || !email || !phone || !company || !address || !requirements) {
@@ -64,10 +72,54 @@ export default function handler(req, res) {
     fs.writeFileSync(file, JSON.stringify(requests, null, 2))
 
     res.statusCode = 200
+=======
+    const { name, email, company, phone, message, serviceType, preferredDate, location } = req.body
+
+    // Validate required fields
+    if (!name || !email || !company || !phone || !message) {
+      res.statusCode = 400
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ error: 'Missing required fields' }))
+      return
+    }
+
+    // Create the request object
+    const request = {
+      id: Date.now().toString(),
+      name,
+      email,
+      company,
+      phone,
+      message,
+      serviceType: serviceType || 'General Consultation',
+      preferredDate: preferredDate || 'Not specified',
+      location: location || 'Not specified',
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    }
+
+    // Read existing requests
+    let requests = []
+    if (fs.existsSync(file)) {
+      const data = fs.readFileSync(file, 'utf8')
+      requests = JSON.parse(data)
+    }
+
+    // Add new request
+    requests.push(request)
+
+    // Write back to file
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2))
+
+    // Send response
+    res.statusCode = 201
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Onsite request submitted successfully',
+<<<<<<< HEAD
       requestId: newRequest.id
       projectType,
       budget,
@@ -145,6 +197,8 @@ export default function handler(req, res) {
     res.end(JSON.stringify({
       success: true,
       message: 'Request submitted successfully',
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       requestId: request.id
     }))
 
@@ -152,6 +206,7 @@ export default function handler(req, res) {
     console.error('Error processing onsite request:', error)
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')
+<<<<<<< HEAD
     res.end(JSON.stringify({ 
       error: 'Internal server error',
       message: 'Failed to process onsite request'
@@ -165,3 +220,8 @@ export default function handler(req, res) {
 }
 
 module.exports = withSentry(handler)
+=======
+    res.end(JSON.stringify({ error: 'Internal server error' }))
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7

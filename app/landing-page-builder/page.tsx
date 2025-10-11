@@ -1,20 +1,70 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
 const LandingPageBuilderPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
+=======
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
+      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability for mission-critical applications.',
+      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
-    '24/7 technical support',
+  const benefits = [
+    'Enhanced productivity and efficiency',
+    'Reduced operational costs',
+    'Improved decision making',
+    'Scalable solutions',
+    '24/7 availability',
+    'Expert support'
+  ];
 
-    'Easy integration with existing systems',
+  return (
+    <>
+      <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Description of the page and its benefits." />
+        <meta name="keywords" content="relevant, keywords, for, seo" />
+      </Helmet>
 
+<<<<<<< HEAD
     'Cost-effective pricing plans',
           </div&gt;
         </div&gt;
@@ -58,6 +108,29 @@ const LandingPageBuilderPage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
+=======
+      <Navigation />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page Title
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Description of the page and its benefits for your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
@@ -66,6 +139,7 @@ const LandingPageBuilderPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
+<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
             </div>
@@ -74,11 +148,32 @@ const LandingPageBuilderPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+=======
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
+<<<<<<< HEAD
                         <li key={idx} className="flex items-center text-sm text-gray-300">
+=======
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
@@ -92,6 +187,7 @@ const LandingPageBuilderPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -105,6 +201,26 @@ const LandingPageBuilderPage: React.FC = () => {
                     <Zap className="w-6 h-6 text-cyan-400" />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
+=======
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that drive business growth
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
                 </div>
               ))}
             </div>
@@ -114,6 +230,7 @@ const LandingPageBuilderPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -136,3 +253,31 @@ const LandingPageBuilderPage: React.FC = () => {
 }
 
 export default LandingPageBuilderPage
+=======
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+};
+
+export default LandingPageBuilderPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7

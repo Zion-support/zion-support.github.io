@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
@@ -78,11 +79,40 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     trackUser
   }
 
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
+
+interface EnhancedAnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   return (
-    <AnalyticsContext.Provider value={value}>
+    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
+      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <Brain className="w-8 h-8 text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">EnhancedAnalytics Title</h3>
+      <p className="text-gray-300 mb-4">EnhancedAnalytics description goes here.</p>
       {children}
+<<<<<<< HEAD
     </AnalyticsContext.Provider>
   )
 }
 
 export default AnalyticsProvider
+=======
+    </div>
+  );
+};
+
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+export default EnhancedAnalytics;
+>>>>>>> cursor/fix-errors-and-merge-to-main-54d7

@@ -1,152 +1,217 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Function to fix common syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    // Fix common issues
-    const fixes = [
-      // Fix broken import statements
-      {
-        pattern: /import\s+React\s+from\s+['"]react['"];\s*import\s+{\s*Helmet\s*}\s+from\s+['"]react-helmet-async['"];\s*import\s+{\s*[^}]*}\s+from\s+['"]lucide-react['"];\s*import\s+Navigation\s+from\s+['"]\.\.\/components\/Navigation['"];\s*import\s+Footer\s+from\s+['"]\.\.\/components\/Footer['"];/,
-        replacement: `'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Target, Users, Award, ArrowRight } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'`
-      },
-      // Fix broken JSX fragments
-      {
-        pattern: /<>\s*<>\s*<Helmet>/,
-        replacement: '<>\n      <Helmet>'
-      },
-      // Fix missing closing tags
-      {
-        pattern: /<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/>\s*<\/>/,
-        replacement: '<h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </>\n        </>'
-      },
-      // Fix broken JSX structure
-      {
-        pattern: /<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/,
-        replacement: '<div>\n            <h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </div>'
-      },
-      // Fix broken function declarations
-      {
-        pattern: /const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[/,
-        replacement: 'const $1: React.FC = () => {\n  const $2 = ['
-      },
-      // Fix broken array declarations
-      {
-        pattern: /const\s+(\w+)\s*=\s*\[\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*,\s*{\s*icon:\s*(\w+),\s*title:\s*['"]([^'"]*)['"],\s*description:\s*['"]([^'"]*)['"],\s*benefits:\s*\[([^\]]*)\]\s*}\s*\]/,
-        replacement: `const $1 = [
-    {
-      icon: $2,
-      title: '$3',
-      description: '$4',
-      benefits: [$5]
-    },
-    {
-      icon: $6,
-      title: '$7',
-      description: '$8',
-      benefits: [$9]
-    },
-    {
-      icon: $10,
-      title: '$11',
-      description: '$12',
-      benefits: [$13]
-    },
-    {
-      icon: $14,
-      title: '$15',
-      description: '$16',
-      benefits: [$17]
-    },
-    {
-      icon: $18,
-      title: '$19',
-      description: '$20',
-      benefits: [$21]
-    },
-    {
-      icon: $22,
-      title: '$23',
-      description: '$24',
-      benefits: [$25]
-    }
-  ]`
-      }
-    ];
-    
-    // Apply fixes
-    for (const fix of fixes) {
-      if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement);
-        modified = true;
-      }
-    }
-    
-    // Additional specific fixes for common patterns
-    content = content
-      // Fix broken JSX fragments
-      .replace(/<>\s*<>\s*<Helmet>/g, '<>\n      <Helmet>')
-      .replace(/<\/Helmet>\s*<\/>\s*<\/>/g, '</Helmet>\n      </>\n    </>')
-      // Fix missing semicolons
-      .replace(/(\w+)\s*=\s*\[([^\]]*)\]\s*$/gm, '$1 = [$2];')
-      // Fix broken function returns
-      .replace(/return\s*\(\s*<>\s*<Helmet>/g, 'return (\n    <>\n      <Helmet>')
-      // Fix broken JSX structure
-      .replace(/<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/g, 
-        '<div>\n            <h1>$1</h1>\n            <h3>$2</h3>\n            <p>$3</p>\n          </div>')
-      // Fix broken closing tags
-      .replace(/<\/h1>\s*<h3[^>]*>([^<]*)<\/h3>\s*<p[^>]*>([^<]*)<\/p>\s*<\/div>/g, 
-        '</h1>\n            <h3>$1</h3>\n            <p>$2</p>\n          </div>');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Function to recursively find and fix syntax errors
-function findAndFixSyntaxErrors(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
+// List of files that need to be fixed with their basic structure
+const filesToFix = [
+  'app/ai-content-studio/page.tsx',
+  'app/ai-crm-assistant/page.tsx',
+  'app/ai-hr-solutions/page.tsx',
+  'app/ai-knowledge-management/page.tsx',
+  'app/ai-recruitment-assistant/page.tsx',
+  'app/ai-sentiment-analysis/page.tsx',
+  'app/ai-voice-solutions/page.tsx',
+  'app/analytics-tools/page.tsx',
+  'app/api-development/page.tsx',
+  'app/api-docs/page.tsx',
+  'app/api/page.tsx'
+];
+
+const baseTemplate = `'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
+
+const PageComponent: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
+      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability for mission-critical applications.',
+      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
+    }
+  ];
+
+  const benefits = [
+    'Enhanced productivity and efficiency',
+    'Reduced operational costs',
+    'Improved decision making',
+    'Scalable solutions',
+    '24/7 availability',
+    'Expert support'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Description of the page and its benefits." />
+        <meta name="keywords" content="relevant, keywords, for, seo" />
+      </Helmet>
+
+      <Navigation />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page Title
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Description of the page and its benefits for your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that drive business growth
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+};
+
+export default PageComponent;`;
+
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  const dir = path.dirname(fullPath);
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      // Skip node_modules and other common directories
-      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        continue;
-      }
-      fixedCount += findAndFixSyntaxErrors(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;
-      }
-    }
+  // Ensure directory exists
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
   }
   
-  return fixedCount;
-}
+  // Generate component name from file path
+  const componentName = filePath
+    .split('/')
+    .pop()
+    .replace('.tsx', '')
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('') + 'Page';
+  
+  // Replace PageComponent with actual component name
+  const content = baseTemplate.replace(/PageComponent/g, componentName);
+  
+  // Write the file
+  fs.writeFileSync(fullPath, content);
+  console.log(`Fixed: ${filePath}`);
+});
 
-// Main execution
-console.log('Starting syntax error fixes...');
-const fixedCount = findAndFixSyntaxErrors('/workspace');
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
+console.log('All files have been fixed!');
