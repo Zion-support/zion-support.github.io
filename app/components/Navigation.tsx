@@ -71,8 +71,6 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
   }, []);
 
-<<<<<<< HEAD
-=======
   // Service data
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
@@ -202,8 +200,6 @@ const Navigation: React.FC = () => {
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
   ]
-
->>>>>>> origin/main
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
@@ -229,9 +225,91 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Services
-            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleServices}
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-500/20 p-6 z-50">
+                  <div className="grid grid-cols-1 gap-4">
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3">AI Services</h3>
+                      <div className="space-y-2">
+                        {aiServices.slice(0, 6).map((service, index) => (
+                          <Link
+                            key={index}
+                            to={service.href}
+                            className="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            <service.icon className="w-4 h-4 text-cyan-400 mr-3" />
+                            <div>
+                              <div className="text-white text-sm font-medium">{service.name}</div>
+                              <div className="text-gray-400 text-xs">{service.description}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3">IT Services</h3>
+                      <div className="space-y-2">
+                        {itServices.slice(0, 6).map((service, index) => (
+                          <Link
+                            key={index}
+                            to={service.href}
+                            className="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            <service.icon className="w-4 h-4 text-cyan-400 mr-3" />
+                            <div>
+                              <div className="text-white text-sm font-medium">{service.name}</div>
+                              <div className="text-gray-400 text-xs">{service.description}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS</h3>
+                      <div className="space-y-2">
+                        {microSaasServices.slice(0, 6).map((service, index) => (
+                          <Link
+                            key={index}
+                            to={service.href}
+                            className="flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            <service.icon className="w-4 h-4 text-cyan-400 mr-3" />
+                            <div>
+                              <div className="text-white text-sm font-medium">{service.name}</div>
+                              <div className="text-gray-400 text-xs">{service.description}</div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="border-t border-gray-700 pt-4">
+                      <Link
+                        to="/services"
+                        className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center"
+                        onClick={closeAllMenus}
+                      >
+                        View All Services
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+            
             <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Pricing
             </Link>
@@ -276,10 +354,7 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Mobile Navigation */}
->>>>>>> origin/main
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
