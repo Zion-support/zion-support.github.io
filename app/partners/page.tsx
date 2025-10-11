@@ -1,34 +1,3 @@
-
-interface Partner {
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified';
-}
-
-const PartnersPage: React.FC = () => {
-  const partners: Partner[] = [
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-const PartnersPage: React.FC = () => {
-  const partners = [
-import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react'
-interface Partner {
-  id: string
-  name: string
-  logo: string
-  description: string
-  category: string
-  website: string
-  tier: 'preferred' | 'certified' | 'strategic'
-}]
-const PartnersPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [selectedTier, setSelectedTier] = useState('all')
-  const partners: Partner[] = [
     {
       id: '1',
       name: 'Microsoft',
@@ -43,6 +12,36 @@ const PartnersPage: React.FC = () => {
     {
       id: '2',
       name: 'Amazon Web Services',
+    }
+  ];
+
+  const partnerTiers = {
+    strategic: {
+      title: 'Strategic Partners',
+      description: 'Our most important partnerships with industry leaders',
+      color: 'bg-blue-100 text-blue-800'
+    },
+    preferred: {
+      title: 'Preferred Partners',
+      description: 'Trusted partners with proven track records',
+      color: 'bg-green-100 text-green-800'
+    },
+    certified: {
+      title: 'Certified Partners',
+      description: 'Certified solution providers with specialized expertise',
+      color: 'bg-purple-100 text-purple-800'
+    }
+  };
+
+  const groupedPartners = partners.reduce((acc, partner) => {
+    if (!acc[partner.tier]) {
+      acc[partner.tier] = [];
+    }
+    acc[partner.tier].push(partner);
+    return acc;
+  }, {} as Record<string, Partner[]>);
+
+  return (
     'Joint go-to-market opportunities',
     'Technical support and training',
     'Co-innovation projects',

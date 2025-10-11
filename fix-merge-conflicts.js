@@ -2,61 +2,54 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
 
-// Function to fix merge conflicts in a file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    // Check if file has merge conflict markers
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
       return false; // No conflicts to fix
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
-    // Split by merge conflict markers
+    // Split by conflict markers and take the newer version (after =======)
     const lines = content.split('\n');
     const result = [];
     let inConflict = false;
-    let conflictType = null;
-    let headContent = [];
-    let otherContent = [];
+    let conflictStart = -1;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.startsWith('<<<<<<< HEAD')) {
+      if (line.trim().startsWith('<<<<<<< HEAD')) {
         inConflict = true;
-        conflictType = 'head';
-        continue;
-      } else if (line.startsWith('=======')) {
-        conflictType = 'other';
-        continue;
-      } else if (line.startsWith('>>>>>>>')) {
-        // End of conflict - choose the "other" version (usually the newer one)
-        result.push(...otherContent);
-        inConflict = false;
-        conflictType = null;
-        headContent = [];
-        otherContent = [];
+        conflictStart = i;
         continue;
       }
       
-      if (inConflict) {
-        if (conflictType === 'head') {
-          headContent.push(line);
-        } else if (conflictType === 'other') {
-          otherContent.push(line);
-        }
-      } else {
+      if (line.trim().startsWith('=======')) {
+        continue; // Skip the separator
+      }
+      
+      if (line.trim().startsWith('>>>>>>> ')) {
+        inConflict = false;
+        conflictStart = -1;
+        continue;
+      }
+      
+      if (!inConflict) {
         result.push(line);
       }
     }
     
-    // Write the fixed content back
-    fs.writeFileSync(filePath, result.join('\n'));
+    // Write the cleaned content back
+    fs.writeFileSync(filePath, result.join('\n'), 'utf8');
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -64,41 +57,55 @@ function fixMergeConflicts(filePath) {
   }
 }
 
-// Function to recursively find and fix merge conflicts
-function findAndFixConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
+function findTsxFiles(dir) {
+  const files = [];
   
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    if (stat.isDirectory()) {
-      // Skip node_modules and other common directories
-      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        continue;
-      }
-      fixedCount += findAndFixConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+        files.push(fullPath);
       }
     }
   }
   
-  return fixedCount;
+  traverse(dir);
+  return files;
 }
 
 // Main execution
-console.log('Starting merge conflict resolution...');
-const fixedCount = findAndFixConflicts('/workspace');
-console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+const appDir = path.join(__dirname, 'app');
+const files = findTsxFiles(appDir);
 
-// Also run git status to check for any remaining conflicts
-try {
-  const gitStatus = execSync('git status --porcelain', { cwd: '/workspace', encoding: 'utf8' });
-  console.log('Git status after fixes:');
-  console.log(gitStatus);
-} catch (error) {
-  console.log('Could not check git status:', error.message);
+console.log(`Found ${files.length} files to check for merge conflicts`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+
+// Also fix some specific problematic files
+const specificFiles = [
+  'EnhancedFooter.tsx',
+  'EnhancedHeader.tsx', 
+  'SidebarNavigation.tsx'
+];
+
+for (const fileName of specificFiles) {
+  const filePath = path.join(__dirname, fileName);
+  if (fs.existsSync(filePath)) {
+    if (fixMergeConflicts(filePath)) {
+      console.log(`Fixed ${fileName}`);
+    }
+  }
 }
