@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5491
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-=======
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -48,232 +17,113 @@ const AiAutomatedReportingPage: React.FC = () => {
       icon: BarChart,
       title: 'Data Visualization',
       description: 'Create stunning visualizations and charts from your data automatically.',
-      benefits: ['Interactive charts', 'Custom dashboards', 'Export options', 'Mobile responsive']
+      benefits: ['Interactive charts', 'Real-time data', 'Custom dashboards', 'Export options']
     },
     {
       icon: Brain,
       title: 'AI-Powered Insights',
-      description: 'Get intelligent insights and recommendations from your data.',
-      benefits: ['Smart analysis', 'Predictive insights', 'Trend identification', 'Anomaly detection']
+      description: 'Get intelligent insights and recommendations from your data patterns.',
+      benefits: ['Pattern recognition', 'Predictive analytics', 'Smart recommendations', 'Trend analysis']
     },
     {
       icon: Zap,
-      title: 'Real-Time Updates',
-      description: 'Reports update in real-time as new data becomes available.',
-      benefits: ['Live updates', 'Real-time data', 'Instant notifications', 'Dynamic content']
+      title: 'Real-Time Processing',
+      description: 'Process and analyze data in real-time for instant reporting capabilities.',
+      benefits: ['Live updates', 'Instant processing', 'Real-time alerts', 'Continuous monitoring']
     },
     {
       icon: Shield,
       title: 'Data Security',
-      description: 'Enterprise-grade security for your sensitive data and reports.',
+      description: 'Enterprise-grade security to protect your sensitive business data.',
       benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
     },
     {
       icon: Target,
-      title: 'Custom Dashboards',
-      description: 'Create custom dashboards tailored to your specific needs.',
-      benefits: ['Custom design', 'Flexible layout', 'Widget library', 'Personalization']
+      title: 'Customizable Reports',
+      description: 'Tailor reports to your specific business needs and requirements.',
+      benefits: ['Custom templates', 'Brand integration', 'Flexible layouts', 'Personalized content']
     }
-  ];
+  ]
 
-  const services = [
+  const benefits = [
     {
-      title: 'Report Automation',
-      description: 'Complete automation of your reporting processes with AI.',
-      icon: FileText,
-      benefits: ['Process automation', 'Template creation', 'Scheduling', 'Distribution']
+      icon: TrendingUp,
+      title: 'Increased Efficiency',
+      description: 'Reduce report generation time by up to 90% with automated processes.'
     },
     {
-      title: 'Data Integration',
-      description: 'Seamless integration with your existing data sources.',
-      icon: Zap,
-      benefits: ['API integration', 'Database connections', 'Data synchronization', 'Real-time updates']
+      icon: Users,
+      title: 'Better Decision Making',
+      description: 'Access real-time insights to make informed business decisions faster.'
     },
     {
-      title: 'Analytics Consulting',
-      description: 'Expert guidance on implementing automated reporting solutions.',
-      icon: Brain,
-      benefits: ['Strategy development', 'Implementation support', 'Training', 'Ongoing support']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d8e4
+      icon: Star,
+      title: 'Cost Savings',
+      description: 'Eliminate manual reporting tasks and reduce operational costs significantly.'
     }
-  ];
-=======
-'use client'
-import React from 'react'
-import { CheckCircle } from 'lucide-react'
-export default function PagePage() {
-=======
-export default function AiAccountingAssistantPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-35c1
+  ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services and solutions.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ef7
-
-=======
-
-const AiAutomatedReportingPage: React.FC = () => {
-  const features = [
-    {
-      title: 'Ai Automated Reporting',
-      description: 'Advanced ai automated reporting solutions powered by artificial intelligence.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5491
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
+        <title>AI Automated Reporting - Zion Tech Group</title>
+        <meta name="description" content="Transform your data into actionable insights with our AI-powered automated reporting solutions. Generate comprehensive reports, visualizations, and analytics automatically." />
+        <meta name="keywords" content="AI reporting, automated reports, data visualization, business intelligence, analytics, AI insights" />
       </Helmet>
       
       <Navigation />
       
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-              Page
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
-=======
-              Ai Automated Reporting
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional ai automated reporting services to help your business succeed and grow.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5491
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Contact us today to learn more about our page services.
-=======
-                Contact us today to learn more about our ai automated reporting services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5491
+      <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                AI Automated Reporting
+              </h1>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Transform your data into actionable insights with our advanced AI-powered automated reporting solutions. 
+                Generate comprehensive reports, stunning visualizations, and intelligent analytics automatically.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
+                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
                   Learn More
                 </button>
               </div>
             </div>
           </div>
-        </div>
-      </main>
-      
-=======
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>AI Automated Reporting - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered automated reporting solutions for comprehensive business intelligence and data visualization." />
-        <meta name="keywords" content="AI automated reporting, business intelligence, data visualization, automated reports, AI analytics" />
-      </Helmet>
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Automated Reporting</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your data into actionable insights with AI-powered automated reporting and visualization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                View Demo
-              </button>
-            </div>
-          </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Automated Reporting Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that automates your reporting processes
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Powerful AI Reporting Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Our AI-powered platform delivers comprehensive reporting solutions that transform raw data into actionable business insights.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
-                      <feature.icon className="w-6 h-6 text-white" />
+                    <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                      <feature.icon className="h-6 w-6 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -284,74 +134,56 @@ const AiAutomatedReportingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="container mx-auto">
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive automated reporting solutions for your business
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose AI Automated Reporting?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Experience the power of AI-driven reporting that delivers measurable results for your business.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {services.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                    <p className="text-gray-300 mb-6">{service.description}</p>
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="h-8 w-8 text-blue-600" />
                   </div>
-                );
-              })}
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Automate Your Reporting?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Start using our AI automated reporting platform today and transform your data into insights.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Ready to Transform Your Reporting?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Join thousands of businesses already using AI-powered reporting to make better decisions faster.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Start Free Trial
+              </button>
+              <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                Schedule Demo
+              </button>
             </div>
           </div>
         </section>
       </main>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d8e4
+      
       <Footer />
-    </div>
-  );
-};
+    </>
+  )
+}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default PagePage;
-=======
-export default AiAutomatedReportingPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d8e4
-=======
 export default AiAutomatedReportingPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ef7
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-35c1
