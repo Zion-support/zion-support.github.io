@@ -1,205 +1,249 @@
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-=======
-import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 
 const CybersecuritySolutionsPage: React.FC = () => {
   const features = [
     {
+      icon: Shield,
+      title: 'Advanced Threat Protection',
+      description: 'Comprehensive security solutions to protect against all types of cyber threats.',
+      benefits: ['Real-time threat detection', 'AI-powered analysis', 'Automated response', '24/7 monitoring']
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Security',
+      description: 'Leverage artificial intelligence to detect and prevent sophisticated cyber attacks.',
+      benefits: ['Machine learning algorithms', 'Behavioral analysis', 'Predictive security', 'Smart automation']
+    },
+    {
       icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
-      icon: PieChart,
-      title: 'Data Visualization',
-      description: 'Transform complex data into clear, actionable insights.',
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']
+      title: 'Security Analytics',
+      description: 'Advanced analytics and reporting to understand your security posture and risks.',
+      benefits: ['Risk assessment', 'Compliance reporting', 'Security metrics', 'Trend analysis']
     },
     {
       icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      title: 'Incident Response',
+      description: 'Rapid response and recovery services to minimize damage from security incidents.',
+      benefits: ['24/7 incident response', 'Forensic analysis', 'Recovery planning', 'Post-incident review']
+    }
+  ];
+
+  const services = [
+    {
+      icon: Shield,
+      title: 'Security Assessment',
+      description: 'Comprehensive evaluation of your current security posture and vulnerabilities.',
+      price: 'From $2,500',
+      duration: '2-4 weeks'
+    },
+    {
+      icon: Brain,
+      title: 'Penetration Testing',
+      description: 'Simulated cyber attacks to identify weaknesses in your systems and defenses.',
+      price: 'From $5,000',
+      duration: '1-2 weeks'
+    },
+    {
+      icon: BarChart,
+      title: 'Compliance Audit',
+      description: 'Ensure your organization meets industry standards and regulatory requirements.',
+      price: 'From $3,500',
+      duration: '2-3 weeks'
+    },
+    {
+      icon: Target,
+      title: 'Security Training',
+      description: 'Educate your team on cybersecurity best practices and threat awareness.',
+      price: 'From $1,500',
+      duration: '1-2 days'
     }
   ];
 
   const benefits = [
-    'Increase efficiency by up to 80%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-    'Seamless integration with existing systems'
+    'Protect against 99.9% of known threats',
+    'Reduce security incidents by 80%',
+    'Ensure compliance with industry standards',
+    '24/7 monitoring and support',
+    'Rapid incident response',
+    'Cost-effective security solutions'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+  const compliance = [
+    'SOC 2 Type II',
+    'ISO 27001',
+    'PCI DSS',
+    'HIPAA',
+    'GDPR',
+    'NIST Framework'
+  ];
+
   return (
     <>
+      <Helmet>
+        <title>Cybersecurity Solutions | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive cybersecurity solutions to protect your business from cyber threats. Advanced threat protection, AI-powered security, and compliance services." />
+        <meta name="keywords" content="cybersecurity, security solutions, threat protection, penetration testing, compliance, security audit" />
+      </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
+                Cybersecurity Solutions
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive solutions designed to transform your business.
+                Protect your business from cyber threats with our comprehensive security solutions. Advanced threat protection, AI-powered security, and compliance services.
               </p>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Cybersecurity Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced AI-powered solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-              </button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors duration-300">
+                  Get Security Assessment
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Security Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Comprehensive security solutions designed to protect your business from all types of cyber threats.
+              </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
-                    <feature.icon className="h-8 w-8" />
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-1">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {benefit}
+                      <li key={benefitIndex} className="text-sm text-gray-400">
+                        • {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-=======
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
+        {/* Services Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Security Services
+              </h2>
+              <p className="text-xl text-cyan-100 max-w-2xl mx-auto">
+                Comprehensive security services to protect your business and ensure compliance.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
-                    <Zap className="h-6 w-6 text-cyan-400" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white rounded-lg p-6 text-center">
+                  <service.icon className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="text-2xl font-bold text-cyan-600 mb-2">{service.price}</div>
+                  <div className="text-sm text-gray-500">{service.duration}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-=======
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
-        <div className="max-w-4xl mx-auto text-center"></div></div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
-            Secure Your Business
-          </h2>
-          <p className="text-xl text-gray-300 mb-8"></p></p>
-            Get started with our comprehensive cybersecurity solutions.
-          </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto"></button>
-            <ArrowRight className="w-5 h-5 mr-2" />
-            Get Started
-          </button>
-        </div>
-      </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Security Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Experience the benefits of comprehensive cybersecurity protection for your business.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center text-white">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Section */}
+        <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Compliance & Standards
+              </h2>
+              <p className="text-xl text-cyan-100 max-w-2xl mx-auto">
+                We help you meet and maintain compliance with industry standards and regulations.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {compliance.map((standard, index) => (
+                <div key={index} className="bg-white rounded-lg p-4 text-center">
+                  <div className="text-sm font-semibold text-gray-900">{standard}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions.
+        <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Secure Your Business?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+              Get a free security assessment and discover how we can protect your business from cyber threats.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+                Get Free Assessment
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
+                Contact Security Team
               </button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
       
-=======
-      </main>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default CybersecuritySolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
