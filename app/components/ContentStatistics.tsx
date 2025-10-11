@@ -1,247 +1,68 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
+import React from 'react';
+import { TrendingUp, Users, Award, Clock } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState()
-  });
-
-  const targetCounters = {
-    clients: 500,
-    projects: 1000,;
-    satisfaction: 99,;
-    years: 10;
-  };
-
-  const statistics = [
+  const stats = [
     {
       icon: Users,
-      value: counters.clients,
+      value: '500+',
       label: 'Happy Clients',
-      suffix: '+',
-      color: 'text-cyan-400'
-    },
-    {
-      icon: Award,
-      value: counters.projects,
-      label: 'Projects Completed',
-      suffix: '+',
-      color: 'text-purple-400'
+      description: 'Companies worldwide trust our solutions'
     },
     {
       icon: TrendingUp,
-      value: counters.satisfaction,
-      label: 'Client Satisfaction',
-      suffix: '%',
-      color: 'text-green-400'
+      value: '300%',
+      label: 'Average ROI',
+      description: 'Typical return on investment for our clients'
+    },
+    {
+      icon: Award,
+      value: '99%',
+      label: 'Success Rate',
+      description: 'Project completion and client satisfaction'
     },
     {
       icon: Clock,
-      value: counters.years,
-      label: 'Years Experience',
-      suffix: '+',
-      color: 'text-yellow-400';
-    };
+      value: '30 Days',
+      label: 'Results Guarantee',
+      description: 'See measurable results within 30 days'
+    }
   ];
-  const achievements = [
-    {
-      icon: Brain,
-      title: 'AI Innovation',
-      description: 'Leading the industry with cutting-edge AI solutions'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients across 50+ countries'
-    },
-    {
-      icon: Zap,
-      title: 'Performance',
-      description: '99.9% uptime and lightning-fast response';
-    };
-  ];
-
-  useEffect(() => {
-    const timers = Object.keys(targetCounters).map();
-      const increment = target / (duration / 16); // 60fps
-      
-      const timer = setInterval(() => {;
-        setCounters()
-          if (current < target) {
-            return {
-              ...prev,
-              [key]: Math.min(current + increment, target)
-            }
-          }
-          return prev;
-        });
-      }, 16);
-
-      return timer;
-    });
-
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    };
-  }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* Statistics Grid */}
-      </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-        {statistics.map((stat, index) => (
-          </div><div
-            key={index}
-            className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center hover:border-cyan-400/30 transition-all duration-300"
-          >
-            </div><div className={`w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4`}>
-              </div><stat.icon className="w-8 h-8 text-white" />
-            </div>
-            <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-              {Math.floor(stat.value)}{stat.suffix}
-            </div>
-            <div className="text-gray-300 font-medium">{stat.label}</div>
-          </div>
-        ))}
-      </div>
-
-      {/* Achievements Section */}
-      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
-        </div><h3 className="text-2xl font-bold text-white mb-8 text-center">Our Achievements</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {achievements.map((achievement, index) => (
-            </div><div key={index} className="text-center">
-              </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                </div><achievement.icon className="w-8 h-8 text-white" />
+    <section className="py-16 bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl border border-cyan-500/20 mb-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Proven Results
+          </h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Our track record speaks for itself. Here's what we've achieved for our clients.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center group">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-xl font-bold text-white mb-2">{achievement.title}</h4>
-              <p className="text-gray-300">{achievement.description}</p>
+              <div className="text-3xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                {stat.value}
+              </div>
+              <div className="text-lg font-semibold text-cyan-400 mb-2">
+                {stat.label}
+              </div>
+              <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                {stat.description}
+              </div>
             </div>
           ))}
         </div>
       </div>
-
-      {/* CTA Section */}
-      <div className="text-center">
-        </div><h3 className="text-2xl font-bold text-white mb-4">
-          Ready to Join Our Success Story?
-        </h3>
-        <p className="text-gray-300 mb-8 max-w-2xl mx-auto" /></p>
-          Let us help you achieve similar results with our proven AI and IT solutions.
-        </p>
-        <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300" /></button>
-          Get Started Today
-          </button><ArrowRight className="w-5 h-5 ml-2" />
-        </button>
-      </div>
-    </div>
+    </section>
   );
 };
 
 export default ContentStatistics;
-          return prev
-        })
-      }, 16)
-    })
-    return () => {
-      timers.forEach(timer => clearInterval(timer))
-    }
-  }, [])
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Impact in Numbers
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how we've transformed businesses and delivered exceptional results.
-        {/* Statistics Grid */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">
-              <div className="flex justify-center mb-4">
-                <div className="bg-gradient-to-r from-purple-600 to-cyan-600 w-16 h-16 rounded-full flex items-center justify-center">
-                  <stat.icon className="h-8 w-8 text-white" />
-              <div className={`text-3xl font-bold ${stat.color} mb-2`}>
-                {Math.floor(stat.value)}{stat.suffix}
-              <div className="text-gray-300">{stat.label}
-          ))}
-        {/* Achievements */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {achievements.map((achievement, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <achievement.icon className="h-6 w-6 text-white" />
-              <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}
-              <p className="text-gray-300 text-sm">{achievement.description}
-          ))}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-slate-900" />
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value}{stat.suffix}
-              <div className="text-lg font-semibold text-white mb-2">{stat.label}
-              <div className="text-gray-400 text-sm">{stat.description}
-          ))}
-        {/* Features Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Key Features
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Discover the powerful features that make our solutions stand out.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                <h4 className="text-lg font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300 text-sm mb-4">{feature.description}
-                <div className="space-y-2">
-                  {feature.stats.map((stat, statIndex) => (
-                    <div key={statIndex} className="flex items-center text-gray-300 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      <span>{stat}
-                  ))}
-            ))}
-        {/* Achievements Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Our Achievements
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Recognition and milestones that showcase our commitment to excellence.
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-8 text-center hover:bg-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <achievement.icon className="w-8 h-8 text-white" />
-                <div className="text-3xl font-bold text-white mb-2">{achievement.value}
-                <h4 className="text-lg font-semibold text-white mb-2">{achievement.title}
-                <p className="text-gray-300 text-sm">{achievement.description}
-            ))}
-        {/* Benefits Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Discover the advantages that make our solutions the preferred choice.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 hover:bg-white/10 transition-all duration-300">
-                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}
-            ))}
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
-            <h3 className="text-3xl font-bold text-white mb-4">Ready to Get Started?
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of satisfied customers and transform your business today.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                <Zap className="w-5 h-5" />
-                Get Started Today
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">View Case Studies
-  )
-}
-export default ContentStatistics</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></a></a></p></p></p></p></p></p></p></p></h2></h3></h3></h3></h3></h3></h4></h4>

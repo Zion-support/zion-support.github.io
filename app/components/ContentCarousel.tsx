@@ -1,311 +1,156 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [
+  const testimonials = [
     {
-      id: 1,
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
-      features: [
-        'Machine learning models',
-        'Natural language processing',
-        'Computer vision',
-        'Predictive analytics'
-      ],
-      icon: Brain,
-      color: 'from-purple-500 to-pink-600'
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      role: "CEO",
+      content: "Zion Tech Group transformed our operations with their AI solutions. We've seen a 300% increase in efficiency and saved over $2M annually.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
     },
     {
-      id: 2,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions that grow with your business needs.',
-      features: [
-        'Auto-scaling capabilities',
-        '99.9% uptime guarantee',
-        'Advanced security',
-        'Cost optimization'
-      ],
-      icon: Cloud,
-      color: 'from-green-500 to-blue-600'
+      name: "Michael Chen",
+      company: "Global Finance Ltd.",
+      role: "CTO",
+      content: "Their cloud migration was seamless. Zero downtime and 40% cost reduction. The team's expertise is unmatched.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
     },
     {
-      id: 3,
-      title: 'AI Automation',
-      description: 'Automate complex business processes with intelligent AI systems.',
-      features: [
-        'Process automation',
-        'Workflow optimization',
-        'Smart decision making',
-        'Performance monitoring'
-      ],
-      icon: Zap,
-      color: 'from-yellow-500 to-orange-600'
+      name: "Emily Rodriguez",
+      company: "HealthTech Solutions",
+      role: "VP of Operations",
+      content: "The AI-powered analytics platform they built for us has revolutionized our decision-making process. ROI was achieved in just 2 months.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
     },
     {
-      id: 4,
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive AI-powered security solutions.',
-      features: [
-        'Threat detection',
-        'Real-time monitoring',
-        'Automated response',
-        'Compliance management'
-      ],
-      icon: Shield,
-      color: 'from-red-500 to-pink-600';
-    };
+      name: "David Kim",
+      company: "E-commerce Plus",
+      role: "Founder",
+      content: "Their AI automation solutions increased our sales by 250% while reducing operational costs by 60%. Incredible results!",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      name: "Lisa Wang",
+      company: "Manufacturing Co.",
+      role: "Operations Director",
+      content: "The predictive maintenance AI they implemented has reduced our downtime by 80% and saved us millions in unexpected repairs.",
+      rating: 5,
+      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face"
+    }
   ];
 
-  useEffect(() => {];
-    const timer = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % testimonials.length);
     }, 5000);
 
     return () => clearInterval(timer);
-  }, [slides.length]);
+  }, [testimonials.length]);
 
-  const nextSlide = () => {;
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevSlide = () => {;
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
-      </div><div className="relative overflow-hidden rounded-2xl">
-        </div><div 
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
-          {slides.map((slide) => (
-            </div><div key={slide.id} className="w-full flex-shrink-0">
-              </div><div className={`bg-gradient-to-br ${slide.color} p-8 rounded-2xl text-white`}>
-                </div><div className="flex items-center justify-between mb-6">
-                  </div><div className="flex items-center space-x-4">
-                    </div><div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                      </div><slide.icon className="w-8 h-8" />
-                    </div>
-                    <div>
-                      </div><h3 className="text-2xl font-bold">{slide.title}</h3>
-                      <p className="text-white/90">{slide.description}</p>
+    <section className="py-16 mb-16">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Client Success Stories
+          </h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Hear from our clients about their transformation journey with Zion Tech Group.
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
+                    <div className="flex items-start space-x-6">
+                      <div className="flex-shrink-0">
+                        <img
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          className="w-16 h-16 rounded-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center mb-4">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                          ))}
+                        </div>
+                        <Quote className="w-8 h-8 text-cyan-400 mb-4" />
+                        <p className="text-gray-300 mb-6 leading-relaxed text-lg italic">
+                          "{testimonial.content}"
+                        </p>
+                        <div className="border-t border-white/10 pt-4">
+                          <div className="font-semibold text-white text-lg">{testimonial.name}</div>
+                          <div className="text-sm text-cyan-400">{testimonial.role}, {testimonial.company}</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  {slide.features.map((feature, index) => (
-                    </div><div key={index} className="flex items-center space-x-2">
-                      </div><div className="w-2 h-2 bg-white rounded-full"></div>
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-slate-800/80 hover:bg-slate-700 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-slate-800/80 hover:bg-slate-700 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentSlide 
+                    ? 'bg-cyan-400 scale-125' 
+                    : 'bg-gray-600 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
-        
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-        >
-          </button><ChevronLeft className="w-6 h-6" />
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-        >
-          </button><ChevronRight className="w-6 h-6" />
-        </button>
       </div>
-      
-      <div className="flex justify-center space-x-2 mt-6">
-        {slides.map((_, index) => (
-          </div><button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-cyan-500' : 'bg-gray-300'
-            }`}
-          />
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 
 export default ContentCarousel;
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-      features: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring'],
-      stats: [
-        { value: '256-bit', label: 'Encryption' },
-        { value: 'SOC 2', label: 'Compliance' },
-        { value: 'Zero', label: 'Security Breaches' }
-      ]
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-      features: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support'],
-      stats: [
-        { value: '50+', label: 'Countries' },
-        { value: '15+', label: 'Languages' },
-        { value: '24/7', label: 'Global Support' }
-      ]
-    }
-  ]
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 5000)
-    return () => clearInterval(timer)
-  }, [])
-  const currentSlideData = slides[currentSlide]
-  return (
-    <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Discover Our Solutions
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI-powered solutions designed to transform your business.
-        <div className="relative">
-<div className="overflow-hidden rounded-xl">
-            <$2 />
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {slides.map((slide, index) => (
-<div key={index} className="w-full flex-shrink-0">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
-                    <div className="text-center mb-8">
-                      <div className="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <slide.icon className="h-10 w-10 text-white" />
-                      <h3 className="text-2xl font-bold mb-4">{slide.title}
-                      <p className="text-purple-100 text-lg max-w-2xl mx-auto">{slide.description}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {slide.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center">
-                          <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                          <span className="text-purple-100">{feature}
-                      ))}
-              ))}
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI and IT solutions designed to transform your business.
-        {/* Carousel Container */}
-        <div className="relative">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
-                  <currentSlideData.icon className="w-8 h-8 text-slate-900" />
-                {/* Features */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">Key Features:
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {currentSlideData.features.map((feature, index) => (
-                      <div key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}
-                    ))}
-                {/* Stats */}
-                {currentSlideData.stats && (
-                  <div className="grid grid-cols-3 gap-6">
-                    {currentSlideData.stats.map((stat, index) => (
-                      <div key={index} className="text-center">
-                        <div className="text-2xl font-bold text-white mb-1">{stat.value}
-                        <div className="text-gray-400 text-sm">{stat.label}
-                    ))}
-                )}
-                {/* CTA */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-                    <Zap className="w-5 h-5" />
-                    Get Started
-                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-                    <ArrowRight className="w-5 h-5" />
-                    Learn More
-              {/* Visual Element */}
-              <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                      <currentSlideData.icon className="w-16 h-16 text-white" />
-                    <div className="text-4xl font-bold text-white mb-2">
-                      {currentSlideData.title}
-                    <div className="text-gray-300">
-                      Slide {currentSlide + 1} of {slides.length}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {currentSlideData.features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}
-              ))}
-            {/* Stats */}
-            {currentSlideData.stats && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-700">
-                {currentSlideData.stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold text-white mb-1">{stat.value}
-                    <div className="text-sm text-gray-400">{stat.label}
-                ))}
-            )}
-          {/* Navigation Buttons */}
-          <$2 />
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
-            <ChevronLeft className="h-6 w-6" />
-          <$2 />
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20">
-            <ChevronRight className="h-6 w-6" />
-{/* Slide Indicators */}
-        <div className="flex justify-center mt-8 space-x-2">
-          {slides.map((_, index) => (
-            <$2 />
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-              }`}
-            />
-          ))}
-        {/* Additional Info */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-3 text-white">
-              <Star className="w-6 h-6 text-yellow-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">4.9/5
-                <div className="text-gray-400 text-sm">Customer Rating
-            <div className="flex items-center justify-center gap-3 text-white">
-              <Users className="w-6 h-6 text-blue-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">10,000+
-                <div className="text-gray-400 text-sm">Happy Customers
-            <div className="flex items-center justify-center gap-3 text-white">
-              <TrendingUp className="w-6 h-6 text-green-400" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">99.9%
-                <div className="text-gray-400 text-sm">Uptime
-  )
-}
-export default ContentCarousel</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></button></button></a></p></p></p></h2></h2></h3></h4>
