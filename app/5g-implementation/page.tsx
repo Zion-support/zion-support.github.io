@@ -1,7 +1,11 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart } from 'lucide-react';
+=======
+import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -10,25 +14,40 @@ const FiveGImplementationPage: React.FC = () => {
     {
       icon: Wifi,
       title: 'Ultra-Low Latency',
+<<<<<<< HEAD
       description: 'Achieve sub-millisecond latency for real-time applications and critical operations.',
       benefits: ['< 1ms latency', 'Real-time processing', 'Critical operations support', 'Edge computing ready']
+=======
+      description: 'Achieve sub-millisecond latency for real-time applications and critical communications.',
+      benefits: ['Real-time gaming', 'Autonomous vehicles', 'Industrial automation', 'Remote surgery']
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     },
     {
       icon: BarChart,
       title: 'High-Speed Connectivity',
       description: 'Experience blazing-fast speeds up to 10 Gbps for seamless data transfer.',
+<<<<<<< HEAD
       benefits: ['Up to 10 Gbps speeds', 'Massive data transfer', '4K/8K streaming', 'Cloud integration']
+=======
+      benefits: ['4K/8K streaming', 'Cloud computing', 'AR/VR applications', 'IoT connectivity']
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     },
     {
       icon: Brain,
       title: 'AI-Powered Optimization',
+<<<<<<< HEAD
       description: 'Intelligent network management with AI-driven performance optimization.',
       benefits: ['Smart routing', 'Predictive maintenance', 'Load balancing', 'Performance analytics']
+=======
+      description: 'Intelligent network management with AI-driven optimization and predictive maintenance.',
+      benefits: ['Smart routing', 'Predictive analytics', 'Automated optimization', 'Performance monitoring']
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     },
     {
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced security protocols and encryption for secure 5G communications.',
+<<<<<<< HEAD
       benefits: ['End-to-end encryption', 'Network slicing', 'Zero-trust architecture', 'Threat detection']
     },
     {
@@ -42,10 +61,14 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Scalable Infrastructure',
       description: 'Future-proof infrastructure that scales with your business growth.',
       benefits: ['Modular design', 'Easy scaling', 'Future compatibility', 'Cost efficiency']
+=======
+      benefits: ['End-to-end encryption', 'Network slicing', 'Identity management', 'Threat detection']
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Reduce latency by up to 90% compared to 4G',
     'Increase data speeds by 100x with 5G technology',
     'Support up to 1 million devices per square kilometer',
@@ -80,6 +103,14 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'Deployment & Launch',
       description: 'Full deployment with monitoring and ongoing support services.'
     }
+=======
+    'Up to 100x faster than 4G networks',
+    'Support for 1 million devices per square kilometer',
+    '99.999% network reliability and availability',
+    'Reduced energy consumption by 90%',
+    'Seamless integration with existing infrastructure',
+    'Future-proof technology for next-generation applications'
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
   ];
 
   return (
@@ -165,6 +196,7 @@ const FiveGImplementationPage: React.FC = () => {
                 <div key={index} className="flex items-center p-6 bg-white/5 backdrop-blur-sm rounded-xl">
                   <CheckCircle className="w-6 h-6 text-green-400 mr-4" />
                   <span className="text-white text-lg">{benefit}</span>
+<<<<<<< HEAD
                 </div>
               ))}
             </div>
@@ -190,6 +222,8 @@ const FiveGImplementationPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-gray-300 text-sm">{step.description}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
                 </div>
               ))}
             </div>
@@ -222,4 +256,8 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default FiveGImplementationPage;
+=======
+export default FiveGImplementationPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51

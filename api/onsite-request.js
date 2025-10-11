@@ -16,6 +16,7 @@ export default function handler(req, res) {
 
   try {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const request = {
       id: Date.now().toString(),
       timestamp: new Date().toISOString(),
@@ -27,6 +28,14 @@ export default function handler(req, res) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')
       res.end(JSON.stringify({ error: 'Name, email, phone, and company are required' }))
+=======
+    const { name, email, phone, company, message, service } = req.body || {}
+    
+    if (!name || !email || !phone) {
+      res.statusCode = 400
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ error: 'Name, email, and phone are required' }))
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
       return
     }
 
@@ -35,11 +44,18 @@ export default function handler(req, res) {
       name,
       email,
       phone,
+<<<<<<< HEAD
       company,
       location: location || 'Not specified',
       requirements: requirements || 'General onsite service request',
       timestamp: new Date().toISOString()
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+      company: company || 'Not specified',
+      message: message || 'No message provided',
+      service: service || 'General inquiry',
+      timestamp: new Date().toISOString()
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     }
 
     res.setHeader('Content-Type', 'application/json')

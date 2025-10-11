@@ -20,15 +20,19 @@ export default async function handler(req, res) {
     const quote = {
       id: Date.now().toString(),
 <<<<<<< HEAD
+<<<<<<< HEAD
       timestamp: new Date().toISOString(),
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
       name,
       email,
       phone,
       details,
       country: country || 'Not specified',
       service: service || 'General inquiry',
+      timestamp: new Date().toISOString()
     }
 
     // Here you would typically save to a database

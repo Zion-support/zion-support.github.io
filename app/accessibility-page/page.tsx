@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -35,10 +36,24 @@ const AccessibilityPagePage: React.FC = () => {
       description: 'High contrast modes, screen reader compatibility, and customizable text sizes for better visibility.',
       benefits: ['High contrast themes', 'Screen reader support', 'Text scaling', 'Color blind friendly']
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+import { Accessibility, Eye, Volume2, MousePointer, Keyboard, CheckCircle, ArrowRight } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const AccessibilityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Eye,
+      title: 'Visual Accessibility',
+      description: 'High contrast modes, scalable fonts, and screen reader compatibility for users with visual impairments.',
+      benefits: ['High contrast themes', 'Font scaling', 'Screen reader support', 'Color blind friendly']
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     },
     {
       icon: Volume2,
       title: 'Audio Accessibility',
+<<<<<<< HEAD
       description: 'Audio descriptions, captions, and alternative audio formats for hearing-impaired users.',
       benefits: ['Audio descriptions', 'Closed captions', 'Sign language support', 'Audio transcripts']
     },
@@ -60,6 +75,22 @@ const AccessibilityPagePage: React.FC = () => {
       description: 'Clear navigation, consistent layouts, and simplified interfaces for users with cognitive disabilities.',
       benefits: ['Clear navigation', 'Consistent layouts', 'Simplified interfaces', 'Progress indicators']
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+      description: 'Audio descriptions, captions, and alternative audio formats for users with hearing impairments.',
+      benefits: ['Closed captions', 'Audio descriptions', 'Sign language support', 'Visual alerts']
+    },
+    {
+      icon: MousePointer,
+      title: 'Motor Accessibility',
+      description: 'Keyboard navigation, voice control, and alternative input methods for users with motor disabilities.',
+      benefits: ['Keyboard navigation', 'Voice control', 'Switch control', 'Gesture alternatives']
+    },
+    {
+      icon: Keyboard,
+      title: 'Cognitive Accessibility',
+      description: 'Clear navigation, consistent layouts, and simplified interfaces for users with cognitive disabilities.',
+      benefits: ['Clear navigation', 'Consistent layouts', 'Simplified interfaces', 'Progress indicators']
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     }
   ];
 
@@ -68,13 +99,18 @@ const AccessibilityPagePage: React.FC = () => {
     'Screen reader compatibility',
     'Keyboard navigation support',
     'High contrast mode available',
+<<<<<<< HEAD
     'Text scaling up to 200%',
+=======
+    'Font scaling up to 200%',
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
     'Alternative text for all images'
   ];
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
@@ -84,11 +120,17 @@ const AccessibilityPagePage: React.FC = () => {
         <meta name="description" content="Our commitment to digital accessibility and inclusive design for all users." />
         <meta name="keywords" content="accessibility, WCAG, inclusive design, screen reader, keyboard navigation" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+        <title>Accessibility - Zion Tech Group</title>
+        <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
+        <meta name="keywords" content="accessibility, inclusive design, WCAG, screen reader, disability access" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
       </Helmet>
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -114,6 +156,13 @@ const AccessibilityPagePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Accessibility</span>
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <Accessibility className="inline-block w-16 h-16 mr-4 text-cyan-400" />
+              Accessibility
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               We believe technology should be accessible to everyone. Our commitment to inclusive design ensures our solutions work for users of all abilities.
@@ -124,20 +173,33 @@ const AccessibilityPagePage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+<<<<<<< HEAD
                 Accessibility Report
               </button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+                Accessibility Statement
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
             </div>
           </div>
         </section>
 
         {/* Features Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Accessibility Features</h2>
+              <p className="text-xl text-gray-300">Comprehensive accessibility support for all users</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -157,6 +219,7 @@ const AccessibilityPagePage: React.FC = () => {
                   </ul>
                 </div>
               ))}
+<<<<<<< HEAD
 =======
         <section className="py-20 px-4">
           <div className="container mx-auto">
@@ -191,22 +254,33 @@ const AccessibilityPagePage: React.FC = () => {
                 );
               })}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Our Accessibility Standards</h2>
+              <p className="text-xl text-gray-300">We follow international accessibility guidelines</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
+<<<<<<< HEAD
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
@@ -230,6 +304,11 @@ const AccessibilityPagePage: React.FC = () => {
                   </div>
                   <p className="text-gray-300 text-lg">{benefit}</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+                    <CheckCircle className="h-6 w-6 text-cyan-400" />
+                  </div>
+                  <p className="text-gray-300">{benefit}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
                 </div>
               ))}
             </div>
@@ -237,6 +316,7 @@ const AccessibilityPagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -268,6 +348,21 @@ const AccessibilityPagePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
                 Contact Us
 >>>>>>> cursor/fix-errors-and-merge-to-main-fe05
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">Need Help with Accessibility?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us if you encounter any accessibility barriers or need assistance using our website.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Contact Support
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Report Issue
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
               </button>
             </div>
           </div>
@@ -279,4 +374,8 @@ const AccessibilityPagePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default PagePage;
+=======
+export default AccessibilityPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-8a51
