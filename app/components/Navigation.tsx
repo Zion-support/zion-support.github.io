@@ -28,14 +28,52 @@ export default function Navigation() {
               <Link to="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
               </Link>
-              <Link to="/services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Services
-              </Link>
+              <div className="relative group">
+                <button className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                  Services
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute left-0 mt-2 w-64 bg-white/10 backdrop-blur-lg rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="py-2">
+                    <Link to="/services" className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors">
+                      All Services
+                    </Link>
+                    <div className="border-t border-white/20 my-2"></div>
+                    <div className="px-4 py-2">
+                      <div className="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-2">AI Services</div>
+                      <Link to="/ai-content-generator" className="block py-1 text-sm text-gray-300 hover:text-white transition-colors">
+                        AI Content Generator
+                      </Link>
+                      <Link to="/ai-analytics-dashboard" className="block py-1 text-sm text-gray-300 hover:text-white transition-colors">
+                        AI Analytics Dashboard
+                      </Link>
+                      <Link to="/ai-customer-support-bot" className="block py-1 text-sm text-gray-300 hover:text-white transition-colors">
+                        AI Customer Support Bot
+                      </Link>
+                      <Link to="/ai-code-assistant" className="block py-1 text-sm text-gray-300 hover:text-white transition-colors">
+                        AI Code Assistant
+                      </Link>
+                    </div>
+                    <div className="border-t border-white/20 my-2"></div>
+                    <div className="px-4 py-2">
+                      <div className="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-2">IT Solutions</div>
+                      <Link to="/5g-implementation" className="block py-1 text-sm text-gray-300 hover:text-white transition-colors">
+                        5G Implementation
+                      </Link>
+                      <Link to="/cloud-infrastructure-setup" className="block py-1 text-sm text-gray-300 hover:text-white transition-colors">
+                        Cloud Infrastructure
+                      </Link>
+                      <Link to="/cybersecurity-audit" className="block py-1 text-sm text-gray-300 hover:text-white transition-colors">
+                        Cybersecurity Audit
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <Link to="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
-              </Link>
-              <Link to="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                AI Services
               </Link>
             </div>
           </div>
@@ -66,9 +104,21 @@ export default function Navigation() {
             <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
               Contact
             </Link>
-            <Link to="/ai-services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              AI Services
-            </Link>
+            <div className="px-3 py-2">
+              <div className="text-sm font-semibold text-purple-300 uppercase tracking-wider mb-2">AI Services</div>
+              <Link to="/ai-content-generator" className="text-gray-300 hover:text-white block py-1 text-sm">
+                AI Content Generator
+              </Link>
+              <Link to="/ai-analytics-dashboard" className="text-gray-300 hover:text-white block py-1 text-sm">
+                AI Analytics Dashboard
+              </Link>
+              <Link to="/ai-customer-support-bot" className="text-gray-300 hover:text-white block py-1 text-sm">
+                AI Customer Support Bot
+              </Link>
+              <Link to="/ai-code-assistant" className="text-gray-300 hover:text-white block py-1 text-sm">
+                AI Code Assistant
+              </Link>
+            </div>
           </div>
         </div>
       )}

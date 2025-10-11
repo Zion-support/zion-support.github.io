@@ -19,13 +19,13 @@ export default function Footer() {
               Advanced AI and IT solutions for modern businesses. We help companies leverage cutting-edge technology to achieve their goals.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -63,8 +63,18 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  AI Solutions
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  All Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-content-generator" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Content Generator
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-analytics-dashboard" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Analytics Dashboard
                 </Link>
               </li>
               <li>
@@ -73,13 +83,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <a href="https://ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Cloud Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Digital Transformation
                 </a>
               </li>
             </ul>
@@ -91,15 +96,15 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">info@ziontechgroup.com</span>
+                <span className="text-gray-400 text-sm">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-400 text-sm">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">San Francisco, CA</span>
+                <span className="text-gray-400 text-sm">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
