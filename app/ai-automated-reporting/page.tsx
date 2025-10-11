@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Shield, Brain, BarChart, Target, TrendingUp, FileText} from 'lucide-react'
+import {ArrowRight, CheckCircle, Shield, Brain, BarChart, Target, TrendingUp, FileText, BarChart3, Clock, Zap} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+
+
 
 const AIAutomatedReportingPage: React.FC = () => {
   const features = [
@@ -38,46 +34,9 @@ const AIAutomatedReportingPage: React.FC = () => {
       benefits: ['Automated data collection', 'Smart formatting', 'Instant delivery', 'Zero manual work']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
   const benefits = [
     {
-<<<<<<< HEAD
-      icon: FileText,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically with AI-powered data analysis.',
-      benefits: ['Auto-generation', 'Data analysis', 'Report templates', 'Custom formatting']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Visualization',
-      description: 'Create stunning visualizations and charts from your data automatically.',
-      benefits: ['Interactive charts', 'Real-time data', 'Custom dashboards', 'Export options']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent insights and recommendations from your data patterns.',
-      benefits: ['Pattern recognition', 'Predictive analytics', 'Smart recommendations', 'Trend analysis']
-    },
-    {
-      icon: Target,
-      title: 'Customizable Templates',
-      description: 'Use pre-built templates or create custom report formats for your needs.',
-      benefits: ['Pre-built templates', 'Custom layouts', 'Brand consistency', 'Easy customization']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Metrics',
-      description: 'Track and analyze key performance indicators with automated reporting.',
-      benefits: ['KPI tracking', 'Performance monitoring', 'Trend analysis', 'Goal tracking']
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security ensures your data remains protected and compliant.',
-      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
-=======
       icon: <Shield className="w-6 h-6 text-green-500" />,
       title: 'Data Security',
       description: 'Enterprise-grade security with encrypted data transmission and storage.'
@@ -96,21 +55,9 @@ const AIAutomatedReportingPage: React.FC = () => {
       icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
       title: 'Customizable',
       description: 'Tailor reports to your specific business needs and requirements.'
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
     }
   ]
 
-<<<<<<< HEAD
-  const benefits = [
-    'Automated report generation saves 80% of manual effort',
-    'Real-time data processing and visualization',
-    'AI-powered insights and recommendations',
-    'Customizable templates and branding',
-    'Multi-format export options (PDF, Excel, PowerPoint)',
-    'Integration with popular business tools',
-    'Scalable solution for any organization size',
-    '24/7 automated monitoring and reporting'
-  ]
 
   const useCases = [
     {
@@ -285,7 +232,6 @@ const AIAutomatedReportingPage: React.FC = () => {
 }
 
 export default AiAutomatedReportingPage
-=======
   const pricing = [
     {
       name: 'Starter',
@@ -503,4 +449,3 @@ export default AiAutomatedReportingPage
 };
 
 export default AIAutomatedReportingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5

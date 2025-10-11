@@ -30,8 +30,6 @@ const ContactForm: React.FC = () => {
     message: ''
   })
 
-=======
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -39,8 +37,6 @@ const ContactForm: React.FC = () => {
       [name]: value
     }))
   }
-
-=======
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -64,7 +60,7 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       })
-    } catch (error) {
+    } catch {
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again later.'
