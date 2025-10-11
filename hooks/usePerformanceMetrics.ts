@@ -8,7 +8,6 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
-<<<<<<< HEAD
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);
@@ -79,7 +78,6 @@ export function usePerformanceMetrics() {
 
   return { metrics, isSupported };
 }
-=======
 export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
 }
   const [metrics, setMetrics] = useState<PerformanceMetrics>({})
@@ -161,4 +159,3 @@ export function usePerformanceMetrics() {/* TODO: Fix JSX expression */}
   }, [])
   return { metrics, isSupported }
 }
->>>>>>> origin/main

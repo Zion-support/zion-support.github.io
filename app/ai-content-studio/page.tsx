@@ -116,9 +116,11 @@
           ))
 </section>
       </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         <title>AI Content Studio - Zion Tech Group</title>
-=======
     <React.Fragment>
       </React><Helmet>
         </Helmet><title>AI Content Studio - Zion Tech Group</title>
@@ -137,7 +139,6 @@
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section>< className="$2 />
@@ -182,9 +183,11 @@
 };
 
 export default AiContentStudioPage;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
-=======
       {/* CTA Section */}
       <section className="py-20 px-4">
         </section>< className="$2 />

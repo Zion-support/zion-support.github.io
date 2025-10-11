@@ -5,11 +5,20 @@ const SkipLink: React.FC = () => {
   return (
     <a
       href="#main-content"
+<<<<<<< HEAD
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50 transition-all duration-300"
     >
       Skip to main content
     </a>
   );
 };
+=======
+      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-md z-50"
+    >
+      Skip to main content
+    </a>
+  )
+}
+>>>>>>> origin/main
 
 export default SkipLink;

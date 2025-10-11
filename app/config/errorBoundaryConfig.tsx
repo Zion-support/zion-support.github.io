@@ -27,7 +27,6 @@
  * Default error messages;
  */;
 const DEFAULT_ERROR_MESSAGES = {default: 'Something went wrong. Please try again.',
-=======
   fallbackComponents: {}
 
     default: React.ComponentType<{ error: Error, resetError: () => void }>

@@ -25,7 +25,6 @@ interface APIResponse<T = any> {}data: T,
   }
 
       ...defaultHeaders;
-=======
       ...defaultHeaders
     }
   }
@@ -48,7 +47,6 @@ const url = `${this.baseURL}${endpoint}`;
     }
 try {const response = await fetch(url, {);}
         method);
-=======
       cacheTTL
     } = config
 const url = `${this.baseURL}${endpoint}`
@@ -226,7 +224,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
         this.abortControllers.delete(cacheKey);
             await response.text();
           );
-=======
         clearTimeout(timeoutId)
         this.abortControllers.delete(cacheKey)
         if (!response.ok) {/* TODO: Fix JSX expression */}`
@@ -241,7 +238,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
         return {/* TODO: Fix JSX expression */,}}}
       } catch (error) {/* TODO: Fix JSX expression */,}`;
             logCritical(`API request failed after ${retries)}attempts`, error as Error, {/* TODO: Fix JSX expression */,})
-=======
         if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
         }
@@ -343,7 +339,10 @@ export const apiClient = new APIClient();
 export default APIClient;
 // Create default instance;
 // Export both the class and default instance;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 // Set default headers
   setDefaultHeaders(headers: Record</T><string, string>): void {}
     this.defaultHeaders = { ...this.defaultHeaders, ...headers }

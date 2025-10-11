@@ -37,7 +37,6 @@ const CloudInfrastructureManagerPage: React.FC = () => {,
     {icon: Zap,
       title: 'DevOps Integration',
 const benefits = [
-=======
   ]
   const benefits = [
     'Centralized cloud infrastructure management',
@@ -52,7 +51,6 @@ const benefits = [
     'Multi-cloud support',
 
         <title>Cloud Infrastructure Manager - Zion Tech Group | Cloud Management Platform</title>
-=======
     'Expert technical support'
   ]
 return (
@@ -65,7 +63,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />

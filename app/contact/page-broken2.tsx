@@ -49,7 +49,10 @@ const services = [
       title: 'Phone',
       details: '+1 (302) 464-0950',
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         </Helmet><title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -60,7 +63,10 @@ const services = [
             </p>
           </div>
         </section>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
               {
     submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>

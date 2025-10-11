@@ -7,7 +7,10 @@
       icon: Zap,
       title: 'Zero-Trust Architecture',
       description: 'Comprehensive zero-trust security framework with continuous verification',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Continuous verification', 'Identity-based access', 'Micro-segmentation'],
     },
     {
@@ -84,7 +87,6 @@
       description: 'Industrial cyber defense for power grids and utilities',
       icon: Zap,
         <title>AI Cyber Defense Matrix - Advanced Cybersecurity Platform | Zion Tech Group</title>
-=======
         </Helmet><title>AI Cyber Defense Matrix - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response for enterprise security." />
         <meta name="keywords" content="cyber defense, cybersecurity, threat detection, zero-trust, incident response, security AI, enterprise security, cyber protection" />

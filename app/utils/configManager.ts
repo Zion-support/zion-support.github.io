@@ -177,7 +177,6 @@ const,
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke);
   y: K) => {/* TODO: Fix JSX expression */,}result[key] = Object.assign({)}, baseValue, value) as typeof baseValue;
           } else {/* TODO: Fix JSX expression */,}}}
-=======
   /**
    * Load configuration based on environment
    */

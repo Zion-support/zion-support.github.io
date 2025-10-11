@@ -19,7 +19,6 @@ class Logger {private logLevel: LogLevel = LogLevel.INFO,}
     metadata?: Record<string>
     timestamp: number,}}> = []
   setLogLevel(level: LogLevel): void {,}
-=======
     userId?: string
   sessionId?: string
   component?: string
@@ -43,7 +42,6 @@ class Logger {
     contextOrMetadata?: string | Record<string, unknown>);
     metadata?: Record<string>
   ): void {let error: Error | undefined;,}
-=======
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>)
     contextOrMetadata?: string | Record</string><string, unknown>)
     metadata?: Record</string><string>
@@ -119,7 +117,6 @@ this.logs.push(logEntry);
     const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : '';
     const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`;
     switch (level) {case LogLevel.DEBUG: break,
-=======
 this.logs.push(logEntry)
     // Keep only last 1000 logs
     if (this.logs.length > 1000) {
@@ -291,7 +288,6 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
     //   body: JSON.stringify(entry),
     // }).catch(err => {)
     )}//   // })
-=======
     // Format the log entry
     const formattedMessage = this.formatLogEntry(logEntry)
     // Output to console in development
@@ -366,7 +362,6 @@ export const logger = new Logger();
    */;
   private getLevelString(leve);
   l: LogLevel): string {/* TODO: Fix JSX expression */,}}}
-=======
   /**
    * Get string representation of log level
    */

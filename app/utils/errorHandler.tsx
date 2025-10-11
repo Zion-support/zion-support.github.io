@@ -73,7 +73,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */,}}t: number ,}> = []
   // Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {</string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,}
     id: this.generateErrorId(),}constructor(config: Partial<ErrorHandlerConfig> = {,)}) {}this.config = {...defaultErrorHandlerConfig, ...config}}
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {}}if (!ErrorHandler.instance) {}ErrorHandler.instance = new ErrorHandler(config);
-=======
   enableNetworkLogging: true,
   }
   logLevel: 'error'}
@@ -133,7 +132,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (this.config.enableUserNotification) {}this.notifyUser(appError);
     }
     if (this.config.enableRetry && this.shouldRetry(appError)) {}this.scheduleRetry(appError);
-=======
       componentStack: errorInfo?.componentStack ?? undefined}
   // Handle error
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record</string><string, unknown>): AppError {
@@ -159,7 +157,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Handle network error;
   handleNetworkError(error: Error, url: string, status?: number): AppError {const appError: AppError = {,}
-=======
   // Handle network error
   handleNetworkError(error: Error, url: string, status?: number): AppError {
     const appError: AppError = {,
@@ -179,7 +176,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (this.config.enableLogging) {}this.logError(appError);
     }
     if (this.config.enableReporting) {}this.reportError(appError);
-=======
     this.errors.push(appError)
     if (this.config.enableLogging) {}
     }
@@ -187,7 +183,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Handle validation error;
   handleValidationError(field: string, message: string, value?: unknown): AppError {const appError: AppError = {,}
-=======
   // Handle validation error
   handleValidationError(field: string, message: string, value?: unknown): AppError {
     const appError: AppError = {,
@@ -206,7 +201,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       retryCount: 0,
     this.errors.push(appError);
     if (this.config.enableLogging) {}this.logError(appError);
-=======
     this.errors.push(appError)
     if (this.config.enableLogging) {}
     }
@@ -240,7 +234,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (message.includes('server') || message.includes('500')) {}return ErrorType.SERVER;
     }
     if (stack.includes('react') || stack.includes('component')) {}return ErrorType.CLIENT;
-=======
   // Generate unique error ID
   private generateErrorId(): string {}
   }
@@ -262,7 +255,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     if (message.includes('error') || message.includes('exception')) {}return ErrorSeverity.HIGH;
     }
     if (message.includes('warning') || message.includes('deprecated')) {}return ErrorSeverity.MEDIUM;
-=======
   // Determine error severity
   private determineErrorSeverity(error: Error): ErrorSeverity {
     const message = error.message.toLowerCase(),
@@ -286,7 +278,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     ,
     if (this.config.enableConsoleLogging) {,}const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       switch (error.severity) {case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH: break,
-=======
   // Determine network error severity
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {
     // Determine network error severity
@@ -330,7 +321,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   handleValidationError(fiel,)
   d: string, messag);
   e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */,}}e: `Validation error in ${field,}: ${message}`,
-=======
     this.errors.push(appError)
     if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
     }
@@ -358,7 +348,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   r: AppError) {/* TODO: Fix JSX expression */,}`;
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       switch (error.severity) {/* TODO: Fix JSX expression */,}}
-=======
     this.errors.push(appError)
     if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
     }
@@ -521,7 +510,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   e: 14px,">${error.message</p>}</p>
         </div>";
         <button onclick="this.parentElement.parentElement.remove()" style=";
-=======
   t: space-between, align-item,"
   s: center," / /></div>
         <div / /></div>
@@ -573,7 +561,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
 // Retry error;
   private async retryError(retryItem: {error: AppError, retryCount: number ,)}) {try {// Implement retry logic based on error type;}
-=======
   // Check if error should be retried
   private shouldRetry(error: AppError): boolean {
     ,
@@ -634,7 +621,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       }
   // Mark error as resolved;
   markErrorResolved(errorId: string): boolean {,}
-=======
     } catch {}
       if (retryItem.retryCount < this.config.maxRetries) {}
         this.scheduleRetry(retryItem.error)
@@ -669,7 +655,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         return acc;
       },
             `);
-=======
   // Clear resolved errors
   clearResolvedErrors(): void {
     this.errors = this.errors.filter(error => !error.resolved)
@@ -720,7 +705,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       {}as Record<ErrorSeverity, number>)</ErrorSeverity></<<<ErrorSeverit>const</ErrorSeverit></<<ErrorSeverit>resolved</ErrorSeverit> = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
     return {}}total,
-=======
   // Get all errors
   getErrors(): AppError[] {/* TODO: Fix JSX expression */}
   }
@@ -786,7 +770,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 init(): void {/* TODO: Fix JSX expression */,}}})
       // Set up unhandled promise rejection handler;
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */,)})
-=======
   /**
    * Initialize error handler
    */
@@ -871,7 +854,6 @@ export class ErrorBoundary extends React.Component<
     [errorHandler]
   );
   return {}}handleError,
-=======
 // React hook for error handling
 export const useErrorHandler = (;) => {
     return ()

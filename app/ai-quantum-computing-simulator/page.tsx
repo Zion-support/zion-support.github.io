@@ -7,7 +7,10 @@
       icon: Brain,
       title: 'AI-Powered Optimization',
       description: 'Machine learning algorithms optimize quantum circuits for maximum efficiency and accuracy',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Automated circuit optimization', 'Error correction suggestions', 'Performance prediction'],
     },
     {
@@ -84,7 +87,6 @@
       description: 'Simulate molecular systems and quantum chemical reactions',
       icon: Zap,
         <title>AI Quantum Computing Simulator - Advanced Quantum Simulation | Zion Tech Group</title>
-=======
         </Helmet><title>AI Quantum Computing Simulator - Advanced Quantum Simulation | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." />
         <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" />

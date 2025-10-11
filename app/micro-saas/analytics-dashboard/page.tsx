@@ -3,7 +3,6 @@
       icon: BarChart,
       title: 'Real-time Analytics',
 const benefits = [
-=======
   ]
   const benefits = [
     'Real-time data visualization and reporting',
@@ -23,7 +22,10 @@ const benefits = [
 return (
     <>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         </Helmet><title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

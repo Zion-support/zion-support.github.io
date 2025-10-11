@@ -20,7 +20,6 @@ const benefits = [
         </div>
       </section>
               </div>
-=======
     'Proven track record of success'
   ]
 return ()

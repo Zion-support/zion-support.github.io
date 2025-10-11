@@ -13,7 +13,6 @@
       title: 'Global Reach',
     }
 const benefits = [
-=======
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -22,7 +21,6 @@ const benefits = [
     'Scalable and flexible solutions',
 
         <title>Page | Zion Tech Group</title>
-=======
     'Proven track record of success'
   ]
 return (
@@ -120,7 +118,6 @@ return (
 };
 
 export default PagePage;
-=======
   ),
 }
 export default PagePage

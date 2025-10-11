@@ -78,7 +78,6 @@
     )})).filter(category => category.endpoints.length > 0);
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <SEOOptimizer;
-=======
   ]
   const filteredEndpoints = apiEndpoints.map()
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -102,7 +101,6 @@
       {/* Quick Start */}
       <section className="py-16 px-4">
         </section>
-=======
       {/* Hero Section */}
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -121,7 +119,6 @@
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
-=======
       {/* Quick Start */}
       <section className="py-16 px-4">
         </section>< className="$2 />
@@ -177,7 +174,6 @@
                         <button;
                           onClick={() =>copyToClipboard(endpoint.code, `${categoryIndex)</button>}-${endpointIndex}`)}
                           className="flex items-center gap-2 text-gray-400 hover: text-white transition-colors">,
-=======
       {/* API Endpoints */}
       <section className="py-16 px-4">
         </section>< className="$2 />
@@ -210,7 +206,10 @@
                               </React><Check className="w-4 h-4" />
                               Copied!
                           ) : (
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
                             <React.Fragment>
                               </React><Copy className="w-4 h-4" />
                               Copy
@@ -245,7 +244,6 @@
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover: bg-white hover:text-purple-600 transition-colors">,</button>
               View SDKs;
   </
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         </section>< className="$2 />

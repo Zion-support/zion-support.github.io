@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
-=======
 
 // Service Worker for Zion Tech Group
-<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
@@ -19,10 +16,8 @@ const STATIC_FILES = [
 ];
 
 // Install event - cache static files
-=======
 
 const CACHE_NAME = 'zion-tech-group-v1'
->>>>>>> origin/main
 const urlsToCache = [
   '/',
   '/about',
@@ -30,23 +25,18 @@ const urlsToCache = [
   '/contact',
   '/static/js/bundle.js',
   '/static/css/main.css',
-<<<<<<< HEAD
   '/manifest.json'
 ];
 
 // Install event
-=======
 
   '/manifest.json',
   '/favicon.ico'
 
 ]
->>>>>>> origin/main
->>>>>>> origin/main
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   event.waitUntil(
-<<<<<<< HEAD
     caches.open(STATIC_CACHE)
       .then((cache) => {
         console.log('Caching static files');
@@ -248,22 +238,18 @@ self.addEventListener('message', (event) => {
 });
 
 console.log('Service Worker loaded successfully');
-=======
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('Opened cache')
         return cache.addAll(urlsToCache)
       })
-<<<<<<< HEAD
   );
 });
 
 // Fetch event
-=======
 
   )
 })
->>>>>>> origin/main
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -286,7 +272,6 @@ self.addEventListener('activate', (event) => {
         })
       )
     })
-<<<<<<< HEAD
   );
 });
 
@@ -301,9 +286,6 @@ async function syncContactForm() {
   // Handle offline form submissions
   console.log('Syncing contact form data');
 }
-=======
 
   )
 })
->>>>>>> origin/main
->>>>>>> origin/main

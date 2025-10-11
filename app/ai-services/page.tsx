@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 
 const AiServicesPage: React.FC = () => {
   return (
@@ -11,6 +12,17 @@ const AiServicesPage: React.FC = () => {
         </p>
       </div>
     </div>
+=======
+    }
+  ]
+
+
+  const filteredServices = services.filter(service => 
+    selectedCategory === 'all' || service.category === selectedCategory
+  );
+
+  return (
+>>>>>>> origin/main
   );
 };
 

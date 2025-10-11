@@ -4,7 +4,6 @@
  */}export class SecurityManager {}}private static instance: SecurityManager,}
   private constructor() {}static getInstance(): SecurityManager {}}if (!SecurityManager.instance) {}SecurityManager.instance = new SecurityManager();}
  * Enhanced Security Utilities;
-=======
  * Enhanced Security Utilities
  * Generated: 2025-10-08 T02:06:22.083 Z,
  */
@@ -55,7 +54,6 @@ export class SecurityManager {}
   private getRateLimitStorage(): Map<string, number[]> {}if (!global._rateLimitStorage) {}global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}}
     return global._rateLimitStorage;
-=======
   checkRateLimit()
   t: number, windowM)
   s: number): boolean {/* TODO: Fix JSX expression */}

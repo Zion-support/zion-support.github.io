@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 const NextPage: React.FC = () => {
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -78,7 +80,6 @@ const Next.dPage: React.FC = () => {
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

@@ -5,7 +5,6 @@
     ttfb: null,
     if (typeof PerformanceObserver === 'undefined') return;
     const observers: PerformanceObserver[] = [],
-=======
   const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return
     if (typeof PerformanceObserver === 'undefined') return
@@ -43,7 +42,6 @@
             if(entry.entryType === 'layout-shift' &&)
               'hadRecentInput' in entry &&
               'value' in entry;
-=======
         let clsValue = 0
         const clsObserver = new PerformanceObserver()
           const entries = list.getEntries()
@@ -126,7 +124,6 @@
       measureResourceTiming()}, 5000);
     return () => {if (cleanup) cleanup();
       clearInterval(interval)}}, [
-=======
             )
           }
           if (onFCP) {

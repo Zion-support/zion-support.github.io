@@ -11,7 +11,10 @@
       description: 'Intelligent blockchain solutions powered by advanced AI technology',},
     {icon: Globe,
       title: 'Multi-Chain Support',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     'Advanced blockchain technology integration',
@@ -34,7 +37,10 @@
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
@@ -48,7 +54,6 @@
               <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">,</div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>< className="$2 />

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 
@@ -10,6 +11,10 @@ const CookiesPage: React.FC = () => {
           Content coming soon.
         </p>
       </div>
+=======
+
+      <Footer />
+>>>>>>> origin/main
     </div>
   );
 };

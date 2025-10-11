@@ -20,7 +20,6 @@ export function deepMerge<T extends Record<string, unknown>>(targe,
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
-=======
 /**
  * Flatten a nested object
  */
@@ -54,7 +53,6 @@ export function flattenObject(ob,
 }
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
-=======
 /**
  * Unflatten a flattened object
  */
@@ -170,5 +168,8 @@ export function snakeCase(st);
 }
 export default {/* TODO: Fix JSX expression */}
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 `

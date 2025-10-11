@@ -25,7 +25,6 @@
     }
 
 const AIContentWriterPage: React.FC = () => {,
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -41,11 +40,13 @@ const AIContentWriterPage: React.FC = () => {
       title: 'Content Optimization',
       description: 'Automatically optimize content for SEO, readability, and engagement with intelligent suggestions.',
   ];
-=======
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']
     },
   ];];];
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing'],
     },
     {
@@ -90,7 +91,6 @@ const AIContentWriterPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
     '10x faster content creation',
     'Improved SEO performance',
     'Consistent brand voice',
@@ -100,7 +100,6 @@ const AIContentWriterPage: React.FC = () => {
   ]
   const stats = [
         <title>AI Content Writer | Zion Tech Group</title>
-=======
       </div><Helmet>
         </Helmet><title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered content writing tool by Zion Tech Group. Generate high-quality, SEO-optimized content at scale." />
@@ -190,7 +189,6 @@ const AIContentWriterPage: React.FC = () => {
 };
 
 export default AiContentWriterPage;
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">

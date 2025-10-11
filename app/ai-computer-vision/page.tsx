@@ -121,7 +121,6 @@ const AiComputerVisionPage: React.FC = () => {
                   Learn More
                 </button>
         <meta name="description" content="Advanced computer vision solutions powered by AI technology." />
-=======
     <React.Fragment>
       </React><Helmet>
         </Helmet><meta name="description" content="Advanced computer vision solutions powered by AI technology." />
@@ -139,7 +138,6 @@ const AiComputerVisionPage: React.FC = () => {
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section>< className="$2 />
@@ -184,9 +182,11 @@ const AiComputerVisionPage: React.FC = () => {
 };
 
 export default AiComputerVisionPage;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
-=======
       {/* CTA Section */}
       <section className="py-20 px-4">
         </section>< className="$2 />

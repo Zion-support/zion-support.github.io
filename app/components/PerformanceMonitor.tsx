@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 
@@ -6,3 +7,15 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+=======
+      }
+    });
+
+    };
+  }, []);
+
+  return null;
+};
+
+export default PerformanceMonitor
+>>>>>>> origin/main

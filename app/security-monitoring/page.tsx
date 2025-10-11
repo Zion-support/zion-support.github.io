@@ -35,7 +35,6 @@ const SecurityMonitoringPage: React.FC = () => {,
     {icon: Zap,
       title: 'Instant Response',
 const benefits = [
-=======
   ]
   const benefits = [
     '24/7 continuous security monitoring',
@@ -50,7 +49,6 @@ const benefits = [
     'Expert security team support',
 
         <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
-=======
     'Customizable monitoring rules'
   ]
 return (
@@ -63,7 +61,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
@@ -115,7 +112,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2></h2>

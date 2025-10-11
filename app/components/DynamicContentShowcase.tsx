@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 import { Cloud, Zap, Shield, Globe, Users, Award, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
 >>>>>>> main
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
@@ -13,7 +20,6 @@ const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const features: Feature[] = [
-=======
 'use client'
     {
     },
@@ -47,11 +53,13 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 
-=======
       icon: Globe,
       color: 'from-teal-500 to-cyan-600'
     }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const benefits = [
@@ -99,7 +107,10 @@ const DynamicContentShowcase: React.FC = () => {
                 Learn More
               </button>
             </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -120,7 +131,10 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ]
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   useEffect(() => {
 
     return () => clearInterval(timer);
@@ -187,7 +201,10 @@ const DynamicContentShowcase: React.FC = () => {
               index === currentIndex ? 'scale-105 shadow-2xl' : 'scale-100'
             }`}
           >
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
             </div><div className="flex items-center mb-4">
               </div><div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
                 </div><feature.icon className="w-6 h-6" />
@@ -211,7 +228,10 @@ const DynamicContentShowcase: React.FC = () => {
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">Try Our Solutions</h3>
             </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
             <p className="text-gray-300 text-lg">Experience the power of our AI technology firsthand</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -234,3 +254,8 @@ const DynamicContentShowcase: React.FC = () => {
         </button>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f
+>>>>>>> origin/main

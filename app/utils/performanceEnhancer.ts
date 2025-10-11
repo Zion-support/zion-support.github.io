@@ -25,7 +25,6 @@ export const throttle = </T><T extends (...args: unknown[]) => unknown>(,
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor {}}if (!PerformanceMonitor.instance) {}PerformanceMonitor.instance = new PerformanceMonitor();
-=======
   private metrics: Map</string><string, number> = new Map()
   private observers: PerformanceObserver[] = [],
 'use client'
@@ -244,7 +243,6 @@ export const optimizeScrollPerformance = () => {}
 observer.observe({entryTypes: ['layout-shift'] ,)})
     return () => {}observer.disconnect();
       return clsValue;
-=======
     let clsValue = 0
     let clsEntries: PerformanceEntry[] = [],
     interface LayoutShiftEntry extends PerformanceEntry {}
@@ -310,7 +308,10 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
   y: getMemoryUsage(),
   }
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 // Initialize performance enhancements
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
     }

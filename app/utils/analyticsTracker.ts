@@ -12,7 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-=======
   ]
   const benefits = [
 'use client'
@@ -63,7 +62,6 @@ const AnalyticsTrackerPage: React.FC = () => {
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
                 <ArrowRight>
-=======
     'Proven track record of success'
   ]
 return (
@@ -132,7 +130,10 @@ return (
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
             </h2>
             <p>Contact our experts to discuss your analyticstracker needs and get a customized solution.;</p>
             </p>
@@ -144,7 +145,6 @@ return (
               <button>
                 <Mail>
                 Email Us;
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div>

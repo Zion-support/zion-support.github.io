@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 // Accessibility utilities for improving user experience and compliance
 export const generateId = (prefix: string = 'id'): string => {}
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
@@ -24,7 +27,6 @@ export const focusElement = (element: HTMLElement | null): void => {,
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 const handleTabKey = (;
-=======
 export const trapFocus = (container: HTMLElement): (() => void) => {
     const focusableElements = container.querySelectorAll()
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -50,7 +52,6 @@ element.addEventListener('keydown', (e) => {
 }
   skipLink.textContent = text;
   skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
-=======
     errors.push('Button with role="button" must have aria-label or accessible text')
   }
   }
@@ -91,7 +92,6 @@ export const checkColorContrast = (foreground: string, background: string): bool
       c = c / 255;
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)}})
 return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-=======
 const [r, g, b] = rgb.map(Number).map()
       return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
   }
@@ -107,7 +107,6 @@ return contrast >= 4.5; // WCAG AA standard
     *:focus {outline: 2px solid #3b82f6,}
       outline-offset: 2px,}}
 .sr-only {position: absolute,}
-=======
 export const addFocusIndicators = (): void => {
     const style = document.createElement('style')
   style.textContent = `
@@ -143,7 +142,6 @@ export const addFocusIndicators = (): void => {
 // Enhance all interactive elements;
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
   interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}})
-=======
       white-space: normal,
   }
     }

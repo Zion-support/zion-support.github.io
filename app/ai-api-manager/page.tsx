@@ -2,7 +2,6 @@
 import {CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3}}from 'lucide-react';
 
 const AIApiManagerPage: React.FC = () => {,
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -57,7 +56,6 @@ const AIApiManagerPage: React.FC = () => {
           </div>
         </section>
         <title>AI API Manager | Zion Tech Group</title>
-=======
       </div><Helmet>
         </Helmet><title>AI API Manager | Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI-powered API management platform by Zion Tech Group. Centralized control, analytics, and security for all your APIs." />
@@ -139,7 +137,6 @@ export default AIApiManagerPage
 };
 
 export default AiApiManagerPage;
-=======
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />

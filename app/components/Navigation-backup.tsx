@@ -7,7 +7,6 @@
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false)}// Service data;
-=======
     const handleScroll = () => {
     setIsScrolled(window.scrollY > 50)
   }
@@ -40,7 +39,6 @@
     {name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' ,},
     {name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' ,},
     {name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' ,}];
-=======
   ]
   const itServices = [
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
@@ -54,7 +52,6 @@
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
-=======
           </div><div className="flex-shrink-0">
             </div><Link to="/" className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
@@ -130,7 +127,6 @@
           <div className="lg: hidden mt-4 pb-4 border-t border-cyan-500/20">,</div>
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}>
-=======
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             </div><$2 />

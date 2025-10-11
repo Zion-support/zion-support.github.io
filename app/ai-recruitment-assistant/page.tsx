@@ -18,7 +18,6 @@
     {icon: Zap,
       title: 'Automated Screening',
         <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
-=======
     <React.Fragment>
       </React><Helmet>
         </Helmet><title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
@@ -35,7 +34,10 @@
         </section>
       </div>
     </>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   )
 }
 export default AIRecruitmentAssistantPage

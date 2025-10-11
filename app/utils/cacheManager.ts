@@ -6,7 +6,6 @@ export interface CacheOptions {ttl?: number; // Time to live in milliseconds;}}e
 }
 export interface CacheConfig {}}storage?: CacheStorage;
   defaultTTL?: number;
-=======
 'use client'
 /**
  * Cache Manager
@@ -237,7 +236,6 @@ return true
       typeof window !== 'undefined' &&;
       window.localStorage;);
     ) {/* TODO: Fix JSX expression */,}}
-=======
         this.saveToStorage()
    * Check if key exists and is not expired
    */
@@ -304,7 +302,6 @@ this.stats.entries = this.cache.size;
 return cleaned;
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)})
   e: this.storage ,})
-=======
 /**
    * Clear all entries from the cache
    */
@@ -357,7 +354,6 @@ for (const [key, entry] of this.cache.entries()) {}
     this.stats.hitRate = total > 0 ? this.stats.hits / total : 0;
    * Get or set with async function;
    */;
-=======
 /**
    * Update hit rate
    */
@@ -398,7 +394,6 @@ try {}}const storage = this.getStorage();
           stats: this.stats,
           timestamp: Date.now(),}
         storage.setItem('cache-manager', JSON.stringify(data));
-=======
     const { keyGenerator, ...cacheOptions } = options
     return (...arg)
   s: TArgs): TResult => {/* TODO: Fix JSX expression */}`
@@ -437,7 +432,6 @@ try {}
     );
   storage: CacheStorage.LocalStorage),
   defaultTTL: 30 * 60 * 1000 // 30 minutes;,
-=======
 // Create singleton instances for different use cases
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory })
 export const localStorageCache = new CacheManager()

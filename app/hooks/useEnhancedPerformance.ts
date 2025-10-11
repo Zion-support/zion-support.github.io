@@ -15,7 +15,6 @@ useEffect(() => {
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component)}}
 return () => {// Track component unmount duration;
-=======
     mountTimeRef.current = performance.now()
     renderCountRef.current = 0
 // Track component mount
@@ -51,7 +50,6 @@ if (trackPerformance && renderCountRef.current > 10) {
     [component, trackErrors]
               duration > 1000 ? 'slow' : 'fast';
             );
-=======
   )
 const trackUserAction = useCallback(
     (action: string, metadata?: Record</string><string, unknown>) => {

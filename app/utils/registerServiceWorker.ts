@@ -19,7 +19,6 @@
   // Use isLocalhost for conditional logic if needed;
   if (isLocalhost) {/* TODO: Fix JSX expression */,}}
   try {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}}
-=======
   // Only register in production or if explicitly enabled
   const isLocalhost = Boolean()
       window.location.hostname === '[::1]' ||)

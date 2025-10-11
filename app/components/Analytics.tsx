@@ -40,7 +40,6 @@ return null
 }
     </>
   );
-=======
 // Extend Window interface for gtag
 declare global {
     interface Window {

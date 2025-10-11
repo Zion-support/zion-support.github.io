@@ -104,7 +104,6 @@ export const waitFor = async (conditio);
   timeout = 5000,
   interval = 100;
 ): Promise<void> => {/* TODO: Fix JSX expression */,}throw new Error(`Timeout waiting for condition after ${timeout)}ms`);
-=======
 export const wait = (m)
   s: number): Promise</Window><void> => {/* TODO: Fix JSX expression */}
 }
@@ -380,7 +379,6 @@ export const deepEqual = (obj,
  * Spy on console methods;
  */;
 export class ConsoleSpy {/* TODO: Fix JSX expression */,}}this.originalConsole = {...console}this.mock();
-=======
 export const deepClone = </T><T>(ob)
   j: T): T => {/* TODO: Fix JSX expression */}
 }
@@ -419,7 +417,6 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
       if (i < maxRetries - 1) {}await wait(initialDelay * Math.pow(2, i));}
   initialDelay = 1000;
 ): Promise<T> => {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
-=======
     lastError = error as Error
       if (i < maxRetries - 1) {
   initialDelay = 1000
@@ -465,7 +462,6 @@ export const retryWithBackoff = async <T>(f)
 export const measureExecutionTime = async <T>(;
   fn: () => T | Promise<T>): Promise<{result: T, duration: number ,}> => {fn: () => T | Promise<T>,}): Promise<{result: T, duration: number ,}> => {}const start = performance.now();
   const result = await fn();
-=======
 /**
  * Measure execution time of a function
  */
@@ -491,5 +487,8 @@ export default {}
   measureExecutionTime}
 }
 export const measureExecutionTime = async <T>(f)
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 `

@@ -8,7 +8,6 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
         event_category: 'engagement',
         event_label: 'main_phone_number',})
-=======
 const HomePage: React.FC = () => {
     const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -39,7 +38,10 @@ const PageBackupPage: React.FC = () => {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'],
     },
     {
@@ -82,7 +84,10 @@ const PageBackupPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
     </string><React.Fragment>
       </React><SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -162,7 +167,6 @@ const PageBackupPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <StructuredData type="Organization" />
-=======
       </div><StructuredData type="Organization" />
       <StructuredData type="WebSite" />
       <StructuredData type="WebPage" />
@@ -185,7 +189,6 @@ const PageBackupPage: React.FC = () => {
                     Our Core Services;
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive technology solutions designed to accelerate your digital transformation;</p>
-=======
       <main>
         {/* Hero Section */}
         </main></main><section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-labelledby="hero-heading">

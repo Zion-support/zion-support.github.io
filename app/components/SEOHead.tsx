@@ -1,6 +1,5 @@
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {"@context": "https: //schema.org",
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {

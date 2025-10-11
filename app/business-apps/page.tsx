@@ -19,7 +19,10 @@
       description: 'Bank-level security with encryption and compliance standards for your business data',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     '24/7 technical support',
@@ -90,7 +93,10 @@
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
               Email Us
   </
 >>>>>>> main

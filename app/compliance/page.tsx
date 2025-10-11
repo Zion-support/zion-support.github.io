@@ -11,7 +11,10 @@
       description: 'Get support for achieving and maintaining industry certifications',},
     {icon: Shield,
       title: 'Audit Readiness',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     'Advanced compliance technology integration',
@@ -22,7 +25,6 @@
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
         <title>Compliance | Zion Tech Group</title>
-=======
     'Proven track record of success'
   ]
   return (

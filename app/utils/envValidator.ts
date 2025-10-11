@@ -42,7 +42,6 @@ ${validation.errors.join(')}')}`;
     if (validation.warnings.length > 0) {/* TODO: Fix JSX expression */,}`;
       }`;
       );
-=======
       this.errors.push('NODE_ENV is not set');]
       return
     }
@@ -95,7 +94,10 @@ ${
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {/* TODO: Fix JSX expression */,}}
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 // Export singleton instance
 export const envValidator = new EnvValidator()
 // Export convenience function

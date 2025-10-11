@@ -7,7 +7,10 @@
       icon: Code,
       title: 'Code Quality Assessment',
       description: 'Comprehensive code review with best practices compliance and optimization suggestions',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Gas optimization recommendations', 'Code complexity analysis', 'Best practices compliance'],
     },
     {
@@ -84,7 +87,6 @@
       description: 'Security analysis for cross-chain bridge implementations',
       icon: Globe,
         <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
-=======
         </Helmet><title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
         <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />

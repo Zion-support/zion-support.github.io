@@ -11,7 +11,6 @@ const FinancialITPage: React.FC = () => {
       description: 'Bank-level security for financial data with encryption, access controls, and monitoring.',
 const services = [
     {icon: '🏦',
-=======
       benefits: ['Data encryption', 'Access controls', 'Security monitoring'],
   },
     {
@@ -56,7 +55,6 @@ const services = [
     {icon: '🔒',
       title: 'Security Services',
 const benefits = [
-=======
   ]
   const benefits = [
     'SOX Compliance Ready',
@@ -71,7 +69,6 @@ const benefits = [
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
     'Advanced Analytics'
   ]
 return (

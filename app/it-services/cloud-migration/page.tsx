@@ -56,7 +56,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
 
-=======
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
                 <p className="text-gray-300">{feature.description}
       {/* Benefits Section */}

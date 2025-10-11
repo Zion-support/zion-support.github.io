@@ -41,7 +41,6 @@
         </section>
 
 export default SocialMediaManagerPage;
-=======
   )
   }
 }

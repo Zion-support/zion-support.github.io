@@ -19,7 +19,6 @@
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
           (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
-=======
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
@@ -52,7 +51,6 @@
           {JSON.stringify(generateStructuredData())} </script>
       </Helmet>
         <div className="seo-debug" style={{
-=======
     {process.env.NODE_ENV === 'development' && ()
       {children}
       {process.env.NODE_ENV === 'development' && (

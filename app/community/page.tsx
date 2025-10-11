@@ -2,7 +2,6 @@
 const CommunityPage: React.FC = () => {,
   const [activeTab, setActiveTab] = useState('overview');
 
-=======
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -10,7 +9,10 @@ import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, P
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const communityStats = [
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const events = [
     {title: 'AI Development Workshop',
@@ -46,7 +48,10 @@ const CommunityPage: React.FC = () => {
     {name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     {icon: Users,
@@ -61,7 +66,6 @@ const CommunityPage: React.FC = () => {
     {icon: Award,
       title: 'Recognition',
         <title>Community - Zion Tech Group</title>
-=======
         </Helmet><title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
@@ -135,7 +139,6 @@ const CommunityPage: React.FC = () => {
                       <li className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Industry insights and trends;
-=======
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="space-y-12">
@@ -197,7 +200,6 @@ const CommunityPage: React.FC = () => {
                             <span className="flex items-center">
                               <Users className="w-4 h-4 mr-1" />
                               {event.attendees}attendees;
-=======
           )}
 
           {/* Events Tab */}
@@ -258,7 +260,6 @@ const CommunityPage: React.FC = () => {
                         </div>
                       </div>
                       <a;
-=======
           )}
 
           {/* Forums Tab */}
@@ -307,7 +308,6 @@ const CommunityPage: React.FC = () => {
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300">{benefit.description</p>}</p>
-=======
           )}
 
           {/* Benefits Tab */}
@@ -338,7 +338,6 @@ const CommunityPage: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a;
-=======
           )}
 
           {/* Join Community CTA */}

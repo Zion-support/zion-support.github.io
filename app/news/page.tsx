@@ -12,7 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-=======
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -34,13 +33,11 @@ const benefits = [
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-=======
 {/* Hero Section */}
       <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
     'Proven track record of success'
   ]
 {/* Hero Section */}
@@ -102,7 +99,6 @@ const benefits = [
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
       {/* CTA Section */}
               <p className="text-xl text-gray-300">Section description</p>
             </div>

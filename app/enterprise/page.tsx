@@ -8,7 +8,10 @@
     icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your business needs.',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization'],
   },
     {
@@ -51,7 +54,10 @@ const solutions = [
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',
       icon: Users,
   ];
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation'],
   },
     {
@@ -127,7 +133,6 @@ return (
           </div>
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-=======
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
                   <feature>
                   </feature><h3 className="text-xl font-semibold text-white">{feature.title}</h3>
@@ -142,7 +147,6 @@ return (
               Comprehensive Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
 
           </div>
         </div>

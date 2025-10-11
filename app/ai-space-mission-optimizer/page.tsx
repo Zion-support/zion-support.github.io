@@ -7,7 +7,10 @@
       icon: Target,
       title: 'Payload Optimization',
       description: 'Intelligent payload configuration and resource allocation for maximum mission value',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Optimal payload distribution', 'Resource efficiency', 'Mission success maximization'],
     },
     {
@@ -84,7 +87,6 @@
       description: 'Mission planning for deep space exploration and scientific missions',
       icon: Eye,
         <title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
-=======
         </Helmet><title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." />
         <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" />

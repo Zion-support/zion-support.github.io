@@ -10,6 +10,5 @@ const PagePage: React.FC = () => {
       </div>
   );
 };
-=======
     </>,
 

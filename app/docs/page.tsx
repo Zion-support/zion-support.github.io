@@ -1,5 +1,8 @@
   const categories = [
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const documentation = [
     {id: 1,
@@ -84,7 +87,6 @@
   return(<>)
       <Helmet />
         <title>Documentation - Zion Tech Group</title>
-=======
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory)
   const searchResults = searchQuery 
@@ -165,7 +167,10 @@
             ))}
           </div>
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
           {/* No Results */}
           {searchResults.length === 0 && searchQuery && (
             <div className="cyber-card-enhanced p-8 text-center">
@@ -180,7 +185,6 @@
             <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,</div>
               <a;
-=======
           )}
 
           {/* Additional Resources */}
@@ -312,7 +316,10 @@ export default function DocsPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       {/* Popular Docs */}
       <section className="py-16 px-4">
         </section>

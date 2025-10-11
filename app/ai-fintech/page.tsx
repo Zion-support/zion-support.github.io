@@ -20,7 +20,10 @@
     icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
   },
     {
@@ -42,7 +45,6 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
         <title>Ai Fintech - Zion Tech Group</title>
-=======
     'Gain competitive advantage with advanced technology'
   ]
 return (
@@ -70,7 +72,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -135,7 +136,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2></h2>

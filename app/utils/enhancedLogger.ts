@@ -16,7 +16,6 @@ export enum LogLevel {/* TODO: Fix JSX expression */}
  * Log entry interface;
  */;
 export interface LogEntry {/** Unique identifier for the log entry */;}
-=======
 /**
  * Log entry interface
  */
@@ -47,7 +46,6 @@ export interface LogEntry {
  * Default logger configuration;
  */;
 const defaultConfig: LoggerConfig = {,
-=======
 /**
  * Default logger configuration
  */
@@ -166,7 +164,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    * ```typescript;
    * try {}}*   // some code}
    * } catch (err) {}*   logger.error('Operation failed', {operation: 'fetchData' ,)}, err, 'DataService');
-=======
 /**
  * Enhanced Logger class
  *
@@ -342,7 +339,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);`;
         ...data;
-=======
   /**
    * Start a performance measurement
    *
@@ -455,7 +451,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param entry - Log entry to output;
    */;
   private logToConsole(entry: LogEntry): void {,}
-=======
     // Store log entry
     this.logs.push(logEntry)
     // Maintain max logs limit
@@ -489,7 +484,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     ,
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (this.config.enableStructured) {const structuredLog = {
-=======
     const source = entry.source ? ` [${entry.source}]` : ''
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
     if (this.config.enableStructured) {
@@ -515,7 +509,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   L: ;,
           logger.error(message, structuredLog);
           if (entry.stack) {/* TODO: Fix JSX expression */,}k: entry.stack ,}, 'Logger');
-=======
   R: 
         case LogLevel.FATA,
   L:
@@ -555,7 +548,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         method: 'POST'),
         headers: {),}'Content-Type': 'application/json')})
         body: JSON.stringify({,)
-=======
   R: 
         case LogLevel.FATA,
   L:
@@ -602,7 +594,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     );
       const levelName = LogLevel[log.level]);
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
-=======
   /**
    * Get log statistics
    *
@@ -642,7 +633,6 @@ export const logger = EnhancedLogger.getInstance();
 export default EnhancedLogger;
       2;
     );
-=======
       2
     )
   }

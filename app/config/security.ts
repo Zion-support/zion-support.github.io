@@ -16,7 +16,6 @@
       objectSrc: ["'none'"],
   // Security Headers;
   headers: {,
-=======
   // Security Headers
   headers: {
     'X-DNS-Prefetch-Control': 'on',

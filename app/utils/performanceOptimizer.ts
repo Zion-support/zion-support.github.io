@@ -71,7 +71,6 @@ const logger = {/* TODO: Fix JSX expression */},
   s: ['first-input'] ,})
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}}
-=======
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime
@@ -161,7 +160,6 @@ const logger = {/* TODO: Fix JSX expression */},
     }
   }
   private observeTTFB() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-=======
       let clsValue = 0
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
@@ -238,7 +236,10 @@ ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load ti
 // Export singleton instance;
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
     `.trim()
   }

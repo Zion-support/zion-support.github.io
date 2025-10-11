@@ -7,7 +7,6 @@ export const preloadCriticalResources = useCallback((...args) => {}
     'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
     link.rel = 'preload';
-=======
   fontPreloads.forEach(href => {)}]
     const link = document.createElement('link')
     link.rel = 'preload'
@@ -65,7 +64,6 @@ export const preloadRoute = useCallback((...args) => {}
   if ('IntersectionObserver' in window) {}const imageObserver = new IntersectionObserver((entries) => {}entries.forEach(entry => {)}if (entry.isIntersecting) {}const img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {}img['src'] = img.dataset['src']
             img.removeAttribute('data-src');
-=======
 export const optimizeImages = useCallback((...args) => {
     if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
@@ -123,7 +121,6 @@ export const optimizeImages = useCallback((...args) => {}
   })
   // Load analytics after page load;
   if (document.readyState === 'loading') {}document.addEventListener('DOMContentLoaded', () => {}loadAnalytics()}
-=======
 export const optimizeThirdPartyScripts = useCallback((...args) => {
     if (typeof window === 'undefined') return
   // Defer non-critical scripts
@@ -150,5 +147,8 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
   }
 }
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 }

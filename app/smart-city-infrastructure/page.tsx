@@ -54,7 +54,6 @@
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
         <title>Smart City Infrastructure - Zion Tech Group</title>
-=======
     'Proven track record of success'
   ]
   return (
@@ -164,7 +163,6 @@ export default PagePage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-=======
     <>
       <Helmet>
         </Helmet><title>Smart City Infrastructure - Zion Tech Group</title>

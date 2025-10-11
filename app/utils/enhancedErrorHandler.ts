@@ -108,7 +108,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private setupUnhandledRejectionHandler(): void {window.addEventListener('unhandledrejection', event => {);}
       this.handleError({);
         type: 'promise'),}private setupUnhandledRejectionHandler(): void {}}window.addEventListener('unhandledrejection', event => {)}this.handleError({)}type: 'promise',
-=======
   /**
    * Setup unhandled promise rejection handler
    */
@@ -123,7 +122,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Setup resource error handler;
    */;
   private setupResourceErrorHandler(): void {window.addEventListener('error');}
-=======
   /**
    * Setup resource error handler
    */
@@ -154,7 +152,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    */;
   private setupNetworkErrorHandler(): void {// Monitor fetch requests;}
     const originalFetch = window.fetch;
-=======
   /**
    * Setup network error handler
    */
@@ -164,7 +161,10 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         const response = await originalFetch(...args),
         if (!response.ok) {,
           this.handleError({)
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
             message: `Network request failed: ${response.status} ${response.statusText}`)
             url: args[0] as string),
             status: response.status),
@@ -341,7 +341,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Get error context;
    */;
   private getErrorContext(): ErrorContext {return {}
-=======
   /**
    * Process error report
    */
@@ -409,7 +408,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Determine error severity;
    */;
   private determineSeverity(errorData: {,)
-=======
   /**
    * Determine error severity
    */
@@ -430,7 +428,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     if(errorData.type === 'javascript' &&);
       errorData.message.includes('Cannot read property');
     ) {}return 'high';}
-=======
     if(errorData.type === 'network' &&)
       errorData.status &&)
       errorData.status >= 500;)
@@ -494,7 +491,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
    * Generate error tags;
    */;
   private generateTags(errorData: {,)
-=======
     return 'unknown'
   }
   /**
@@ -540,7 +536,6 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private getSessionId(): string {/* TODO: Fix JSX expression */,}}`;
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);
-=======
     return tags
   }
   /**
@@ -617,7 +612,6 @@ if (errorReport.stack) {}private logError(errorRepor);
         return '🚨';
       case 'high':;
         return '🔴';
-=======
   /**
    * Get user ID
    */
@@ -777,7 +771,6 @@ if (errorReport.stack) {}
   public exportErrorData(): string {return JSON.stringify({);}
         errors: this.errors),}public exportErrorData(): string {}}return JSON.stringify();
       {}errors: this.errors,
-=======
       .slice(0, 10)
     return {/* TODO: Fix JSX expression */}
     }
@@ -798,7 +791,6 @@ if (errorReport.stack) {}
     );
   public exportErrorData(): string {/* TODO: Fix JSX expression */,}},
       null,;
-=======
         timestamp: new Date().toISOString()},
       null,
       2
@@ -810,7 +802,6 @@ if (errorReport.stack) {}
    * Manually report error;
    */;
   public reportError(message: string, context?: Partial<ErrorContext>): string {const errorReport = this.createErrorReport({);}
-=======
       2
     )
   }
@@ -836,7 +827,10 @@ export {}
   type ErrorContext,
   type ErrorHandlerConfig}
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 export const errorHandler = new EnhancedErrorHandler()
 // Export class for custom instances
 export {/* TODO: Fix JSX expression */}

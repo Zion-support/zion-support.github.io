@@ -24,10 +24,12 @@ const toggleSection = (;
               aria-label="Close sidebar"
             >,
               <X>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
             </button>
-=======
 'use client'</button>
           </div>
 

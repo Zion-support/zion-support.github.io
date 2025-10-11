@@ -12,7 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-=======
   ]
   const benefits = [
     'Advanced AI technology integration',

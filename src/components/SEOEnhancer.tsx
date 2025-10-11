@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -74,7 +73,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 };
 
 export default SEOEnhancer;
-=======
 import React, { ReactNode } from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
@@ -161,4 +159,3 @@ export default SEOEnhancer
 "
   </SEOEnhancerProps>
 </li></li></li></li>
->>>>>>> origin/main

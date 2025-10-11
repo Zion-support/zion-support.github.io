@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 
 interface Partner {
   name: string;
@@ -10,7 +14,6 @@ interface Partner {
 
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
-=======
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -30,7 +33,10 @@ const PartnersPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedTier, setSelectedTier] = useState('all')
   const partners: Partner[] = [
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
     {
       id: '1',
@@ -39,7 +45,6 @@ const PartnersPage: React.FC = () => {
     {id: '2',
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',}'Access to cutting-edge technology',
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
     {
       id: '1',
@@ -83,7 +88,10 @@ const PartnersPage: React.FC = () => {
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
@@ -100,7 +108,6 @@ const PartnersPage: React.FC = () => {
                 <button;
                   key={category}className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover: bg-white/20 transition-all duration-300",
                 >{category</button>} </button>
-=======
   ]
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div><section className="py-20 px-4">
@@ -146,7 +153,6 @@ const PartnersPage: React.FC = () => {
     return matchesCategory && matchesTier;});
 
   const getTierColor = (tier: string) => {,
-=======
   const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))]
   const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))]
   const filteredPartners = partners.filter()
@@ -323,9 +329,17 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
   );
 };
 
 export default PartnersPage;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f
+>>>>>>> origin/main

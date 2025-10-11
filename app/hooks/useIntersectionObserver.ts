@@ -23,7 +23,6 @@ return () => {observer.disconnect()}}
   }, [threshold, root, rootMargin, freezeOnceVisible]);
 return {ref, isIntersecting, entry}}}
 export default useIntersectionObserver;
-=======
 observer.observe(element)
 return () => {
     observer.disconnect()

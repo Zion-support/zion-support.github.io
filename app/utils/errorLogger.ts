@@ -61,7 +61,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
    */;
   private logToConsole(entry: ErrorLogEntry): void {,}
     const styles: Record<ErrorSeverity, string> = {}private logToConsole(entry: ErrorLogEntry): void {,}}const styles: Record<ErrorSeverity, string> = {}[ErrorSeverity.LOW]: 'color: #4ade80',
-=======
     // Add to internal log
     this.logs.push(entry)
     if (this.logs.length > this.maxLogs) {}
@@ -124,7 +123,6 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
             ? {}message: entry.error.message,
                 name: entry.error.name,
             : undefined;);
-=======
     } catch (error) {}
       // Silently fail to avoid infinite loop}
   private async sendToExternalService(entr)
@@ -147,7 +145,6 @@ const errorLogger = new ErrorLogger();
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export default errorLogger;
   exportLogs(): string {/* TODO: Fix JSX expression */,}}}
-=======
   /**
    * Get recent logs
    */

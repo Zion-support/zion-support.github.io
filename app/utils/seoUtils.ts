@@ -34,7 +34,6 @@ const meta = document.createElement('meta')
 })
 }
     if (typeof document === 'undefined') return;
-=======
 // Utility functions
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
     const cleanContent = content.replace(/<[^>]*>/g, '').trim()
@@ -51,5 +50,8 @@ export const addStructuredData = (data: any): void => {
 const script = document.createElement('script')
   script.type = 'application/ld+json'
   script.textContent = createStructuredData(data),
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 }

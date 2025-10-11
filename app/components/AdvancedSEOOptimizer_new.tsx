@@ -12,7 +12,6 @@
   }
       </Helmet>
         <div className="seo-debug" style={{
-=======
     {process.env.NODE_ENV === 'development' && ()
       {children}
       {process.env.NODE_ENV === 'development' && (
@@ -42,7 +41,10 @@
   );
 };
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   )
 }
 export default AdvancedSEOOptimizerNew

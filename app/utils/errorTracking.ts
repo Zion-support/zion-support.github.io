@@ -42,7 +42,6 @@ trackError(error: Error),
         userId: metadata.userId;,
         sessionId: metadata.sessionId;,
         context: metadata.context;,
-=======
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {}
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
@@ -137,7 +136,6 @@ private notifyListeners(error: TrackedError): void {,}
    */;
   private notifyListeners(erro);
   r: TrackedError): void {/* TODO: Fix JSX expression */,}}} catch (listenerError) {/* TODO: Fix JSX expression */,}}
-=======
     this.errorListeners.forEach(listener => {)
       try {)
   }

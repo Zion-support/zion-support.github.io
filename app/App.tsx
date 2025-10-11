@@ -1,9 +1,37 @@
+<<<<<<< HEAD
+=======
+import React, { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
+
+// Import the main page component
+import HomePage from './page';
+
+// Import other page components
+import AboutPage from './about/page';
+import AccessibilityPage from './accessibility/page';
+import FiveGImplementationPage from './5g-implementation/page';
+
+// Components
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AppLoadingSpinner from './components/AppLoadingSpinner';
+
+const App: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <div className="App">
+>>>>>>> origin/main
             <PerformanceMonitor />
             <AccessibilityEnhancer />
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
+<<<<<<< HEAD
 const App: React.FC = () => {
     return (
     <ErrorBoundary>
@@ -80,15 +108,20 @@ const App: React.FC = () => {
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
+=======
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/accessibility" element={<AccessibilityPage />} />
+                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                
+                {/* Add more routes as needed */}
+>>>>>>> origin/main
               </Routes>
             </Suspense>
           </div>
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  )
-}
-export default App
-  )
-}
-export default App</div>
+  );
+};
+
+export default App;

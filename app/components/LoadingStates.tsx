@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 
+<<<<<<< HEAD
 export const PageLoader: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
@@ -10,3 +11,5 @@ export const PageLoader: React.FC = () => {
 };
 
 export default PageLoader;
+=======
+>>>>>>> origin/main

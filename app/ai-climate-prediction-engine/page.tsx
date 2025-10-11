@@ -7,7 +7,10 @@
       icon: BarChart,
       title: 'Extreme Weather Prediction',
       description: 'AI-powered prediction of extreme weather events and natural disasters',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Early warning systems', 'Disaster preparedness', 'Risk assessment'],
     },
     {
@@ -84,7 +87,6 @@
       description: 'Climate data for sustainable urban development and infrastructure planning',
       icon: Target,
         <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
-=======
         </Helmet><title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
         <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />

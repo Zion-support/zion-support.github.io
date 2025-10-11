@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+'use client'
+import React from 'react'
+import Head from 'next/head'
+>>>>>>> origin/main
 
 interface SEOHeadProps {
   title?: string;
@@ -50,6 +56,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <link rel="canonical" href={url} />
       
       {/* Structured Data */}
+<<<<<<< HEAD
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
@@ -60,3 +67,25 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default EnhancedSEOHead;
+=======
+      <script type="application/ld+json">
+          {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
+interface SEOHeadProps {
+    </Helmet>
+  );
+};
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
+  noIndex?: boolean
+}
+
+
+export default SEOHead
+>>>>>>> origin/main

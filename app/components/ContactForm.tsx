@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react'
+import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
+
+interface FormData {
+>>>>>>> origin/main
   email: string,
   company: string,
   phone: string,
@@ -10,8 +17,49 @@ interface FormStatus {
     name: '',
     email: '',
     company: '',
+<<<<<<< HEAD
     phone: '',
     service: '',
+=======
+    message: ''
+  })
+
+  const [errors, setErrors] = useState<FormErrors>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {}
+
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required'
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters'
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required'
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required'
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters'
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+>>>>>>> origin/main
     setFormData(prev => ({
       ...prev,
     e.preventDefault();
@@ -26,13 +74,27 @@ interface FormStatus {
 
       // Reset form;
       setFormData({)
-=======
       [name]: value;}
     }))
+
+    // Clear error when user starts typing
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: undefined
+      }))
+    }
   }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setStatus({ type: 'loading', message: 'Sending message...' })
+    
+    if (!validateForm()) {
+      return
+    }
+
+    setIsSubmitting(true)
+
     try {
       // Simulate API call
       // Reset form
@@ -40,11 +102,14 @@ interface FormStatus {
         name: '',
         email: '',
         company: '',
+<<<<<<< HEAD
         phone: '',
         service: '',
         message: '',})
     } catch (error) {setStatus({)
         type: 'error',
+=======
+>>>>>>> origin/main
     }
   }
   const services = [
@@ -55,12 +120,19 @@ interface FormStatus {
     'Data Analytics',
     'Cybersecurity',
     'IT Consulting',
+<<<<<<< HEAD
+=======
+
+  return(<div className="max-w-2xl mx-auto p-6">)</div>
+    'Other';
+  ];];];
+  return (
+>>>>>>> origin/main
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
       <form onSubmit={handleSubmit}className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
             Full Name;
-=======
     'Other'
   ]
 
@@ -79,7 +151,6 @@ interface FormStatus {
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-=======
   return (
     </HTMLInputElement><div className="max-w-2xl mx-auto p-6">
       </div><h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
@@ -111,7 +182,6 @@ interface FormStatus {
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                 Company;
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             </div><div>
               </div><label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -161,7 +231,6 @@ interface FormStatus {
                 <span>Send Message</span>
 
             </div>
-=======
               value={formData.service}onChange={handleChange}className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
             >
               ) : (
@@ -193,4 +262,69 @@ interface FormStatus {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+        <div>
+          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+            Company
+          </label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            value={formData.company}
+            onChange={handleChange}
+            className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+            placeholder="Your company name"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+            Message *
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            rows={5}
+            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors resize-vertical ${
+              errors.message 
+                ? 'border-red-500 focus:ring-red-500' 
+                : 'border-gray-600 focus:ring-cyan-500'
+            }`}
+            placeholder="Tell us about your project..."
+            required
+            aria-describedby={errors.message ? 'message-error' : undefined}
+            aria-invalid={!!errors.message}
+          />
+          {errors.message && (
+            <p id="message-error" className="mt-2 text-sm text-red-400 flex items-center">
+              <AlertCircle className="w-4 h-4 mr-1" />
+              {errors.message}
+            </p>
+          )}
+        </div>
+
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:from-gray-500 disabled:to-gray-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed flex items-center justify-center"
+        >
+          {isSubmitting ? (
+            <>
+              <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+              Sending...
+            </>
+          ) : (
+            <>
+              <Send className="w-5 h-5 mr-2" />
+              Send Message
+            </>
+          )}
+        </button>
+      </form>
+>>>>>>> origin/main
     </div>

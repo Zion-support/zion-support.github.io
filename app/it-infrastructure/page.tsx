@@ -23,7 +23,6 @@ const benefits = [
     'Cost-effective pricing plans',
 
         <title>Page | Zion Tech Group</title>
-=======
     'Proven track record of success'
   ]
 return (

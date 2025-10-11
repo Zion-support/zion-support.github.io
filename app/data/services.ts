@@ -233,7 +233,10 @@
     popular: true,
     category: 'Education',
     rating: 4.7,
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 ]
 export const itServices = [
   {title: 'Cloud Migration Services',

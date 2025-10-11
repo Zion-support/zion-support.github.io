@@ -51,7 +51,6 @@
 }
 // SEO Config interface;
 interface SEOConfig {title: string,}
-=======
     }]
   return tags
 }
@@ -110,7 +109,6 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   private config: SEOConfig,}
   constructor(config: Partial<SEOConfig> = {,)}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = {...defaultSEOConfig, ...config}}
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}}if (!SEOEnhancer.instance) {}SEOEnhancer.instance = new SEOEnhancer(config);}
-=======
   return { ...baseStructure, ...data }
 }
 // SEO Enhancer class
@@ -292,7 +290,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   }
     ) as HTMLMetaElement;
     if (!meta) {meta = document.createElement('meta');
-=======
   // Update author
   updateAuthor(author: string) {
     ,
@@ -315,7 +312,10 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     ) as HTMLMetaElement;
     if (!meta) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
       document.head.appendChild(meta);
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   // Update language
   updateLanguage(language: string) {}
     if (typeof document !== 'undefined') {}
@@ -374,7 +374,6 @@ ${pages}.map();
     <priority>${page.priority</p>}</priority>);
   </url>);
   );
-=======
   // Generate sitemap
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>)
   ) {
@@ -420,7 +419,6 @@ Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
   getCurrentSEO() {}if (typeof document === 'undefined') return {}}return {title: document.title,}
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',}return {}}title: document.title,
       description: ;,
-=======
   // Generate robots.txt
   generateRobotsTxt(disallowPaths: string[] = []) {
     ,
@@ -533,7 +531,6 @@ export const generateAdvancedStructuredData = (;) => {
   e: `${data.url}/search?q={search_term_string}`
         },
         'query-input': 'required name=search_term_string';
-=======
         'query-input': 'required name=search_term_string'
       }
     }
@@ -616,7 +613,6 @@ export const validateSEOData = (data: {// title: string; description: string, ur
   }
   // Check URL format;
   if (!data.url.startsWith('http')) {// Check URL format;}if (!data.url.startsWith('http')) {}issues.push('URL should start with http: // or https://'),}
-=======
   // Check description length
   if (data.description.length < 120) {
     // Check description length

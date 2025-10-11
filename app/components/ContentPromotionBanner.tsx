@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 
 =======
+=======
+<<<<<<< HEAD
+
+>>>>>>> origin/main
 'use client'
 import React from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 const ContentPromotionBanner: React.FC = () => {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
@@ -21,7 +29,15 @@ const ContentPromotionBanner: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 =======
 >>>>>>> main
       </div>
     </div>
+=======
+>>>>>>> main
+      </div>
+    </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f
+>>>>>>> origin/main

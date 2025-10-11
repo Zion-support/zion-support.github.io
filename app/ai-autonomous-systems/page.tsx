@@ -37,7 +37,6 @@ const AiAutonomousSystemsPage: React.FC = () => {
   ]
   return (
         <title>AI Autonomous Systems - Zion Tech Group</title>
-=======
     <React.Fragment>
       </React><Helmet>
         </Helmet><title>AI Autonomous Systems - Zion Tech Group</title>
@@ -140,7 +139,6 @@ const AiAutonomousSystemsPage: React.FC = () => {
 };
 
 export default AiAutonomousSystemsPage;
-=======
         </main></main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section>< className="$2 />
             </div><div className="text-center">
@@ -166,7 +164,6 @@ export default AiAutonomousSystemsPage;
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section>< className="$2 />
@@ -224,11 +221,13 @@ export default PagePage;
   </button>
   </h1>
   </main>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 }
 export default PagePage;
 >>>>>>> main
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?

@@ -37,7 +37,6 @@ const PenetrationTestingPage: React.FC = () => {,
     {icon: Zap,
       title: 'Expert Security Analysis',
 const benefits = [
-=======
   ]
   const benefits = [
     'Identify security vulnerabilities before attackers do',
@@ -52,7 +51,6 @@ const benefits = [
     'Expert analysis and reporting',
 
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
-=======
     'Ongoing security improvement guidance'
   ]
 return (
@@ -65,7 +63,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />

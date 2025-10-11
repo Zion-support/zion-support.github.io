@@ -1,7 +1,6 @@
   const features = [
     }
 const benefits = [
-=======
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -20,7 +19,6 @@ const benefits = [
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
-=======
     'Proven track record of success'
   ]
 return ()

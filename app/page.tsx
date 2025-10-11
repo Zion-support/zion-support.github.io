@@ -1,9 +1,51 @@
 'use client';
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Cloud, Shield, Zap, ArrowRight, Star, CheckCircle, Users, BarChart, Globe, Database, Target, Phone, Mail, MapPin, Clock, Award, Rocket, TrendingUp, Settings, Play, Download, RefreshCw, Bell, Heart, DollarSign, Lock, AlertTriangle, Activity, Eye, Mic, Workflow, MessageCircle, FileText, Code, Smartphone, Wifi, Package, MessageSquare, CheckSquare, ShoppingCart, Sparkles } from 'lucide-react';
 
 const HomePage: React.FC = () => {
+=======
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+// import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
+
+// Dynamically import heavy components for better performance
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+
+// Preload critical components
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    // Preload critical components after initial render
+    setTimeout(() => {
+      import('./components/ContentPromotionBanner');
+      import('./components/ContentCarousel');
+    }, 100);
+  }
+}
+
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  </div>
+));
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
+const HomePage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+>>>>>>> origin/main
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -11,7 +53,11 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+<<<<<<< HEAD
   // Analytics tracking for phone clicks
+=======
+  // Analytics tracking for phone clicks - optimized
+>>>>>>> origin/main
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
@@ -26,6 +72,7 @@ const HomePage: React.FC = () => {
   const aiServices = [
     {
       icon: Brain,
+<<<<<<< HEAD
       title: 'AI Analytics',
       description: 'Advanced data insights and predictive analytics powered by machine learning algorithms.',
       price: 'Starting at $299/month',
@@ -323,11 +370,86 @@ const HomePage: React.FC = () => {
               <Phone className="w-5 h-5 relative z-10 group-hover:scale-110 transition-transform" />
               <span className="relative z-10">Call (302) 464-0950</span>
             </a>
+=======
+        {/* Navigation */}
+        <Navigation />
+        {/* Skip to main content for accessibility */}
+        <a
+          href="#main-content"
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Intelligent automation of business processes with decision-making capabilities and exception handling.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
+                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+>>>>>>> origin/main
           </div>
         </div>
       </section>
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default HomePage;
+=======
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+          Skip to main content
+        </a>
+        
+        {/* Content Promotion Banner */}
+        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+          <ContentPromotionBanner />
+        </Suspense>
+        
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
+          {/* Hero Section */}
+          <section
+className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
+              isLoaded && isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+            aria-labelledby="hero-heading"
+          >
+            <div className="max-w-6xl mx-auto">
+              <h1 
+                id="hero-heading" 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-enhanced neon-text-enhanced"
+                data-text="Zion Tech Group"
+              >
+                Zion Tech Group
+              </h1>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text-enhanced neon-glow" role="doc-subtitle">
+                Advanced AI and IT Solutions
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+                Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
+                startups, and enterprises worldwide with proven results and 24/7 expert support.
+              </p>
+            </div>
+          </section>
+        </main>
+        
+        <Footer />
+      </div>
+    </React.Fragment>
+  );
+}
+
+export default HomePage;
+>>>>>>> origin/main

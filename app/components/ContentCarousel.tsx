@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 >>>>>>> main
-=======
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
@@ -21,7 +24,6 @@ const ContentCarousel: React.FC = () => {,
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [
-=======
 'use client'
       features: [
         'Machine Learning',
@@ -70,7 +72,6 @@ const ContentCarousel: React.FC = () => {,
 
   useEffect(() => {const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);}, 5000);
-=======
       color: 'from-red-500 to-pink-600'
     }
 
@@ -113,7 +114,6 @@ const ContentCarousel: React.FC = () => {,
         </div>
           />
         ))}
-=======
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -212,3 +212,8 @@ const ContentCarousel: React.FC = () => {,
   );
 };
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f
+>>>>>>> origin/main

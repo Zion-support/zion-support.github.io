@@ -3,7 +3,6 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const AdvancedAnalyticsPage: React.FC = () => {,
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -23,7 +22,6 @@ const AdvancedAnalyticsPage: React.FC = () => {
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-=======
   ]
   const benefits = [
 'use client'
@@ -75,7 +73,6 @@ const AdvancedAnalyticsPage: React.FC = () => {
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
                 <ArrowRight>
-=======
     'Proven track record of success'
   ]
 return (
@@ -147,7 +144,6 @@ return (
               <button>
                 <Mail>
                 Email Us;
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div>

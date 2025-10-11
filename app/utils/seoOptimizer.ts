@@ -80,7 +80,6 @@ class SEOOptimizer {private config: SEOConfig,}
   r:description', description);
       this.setMetaTag('twitte);
   r:image', image);
-=======
   constructor(config: SEOConfig) {}
     this.config = config;}
 interface SEOConfig {/* TODO: Fix JSX expression */}
@@ -247,7 +246,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   private setupStructuredData(): void {/* TODO: Fix JSX expression */}`
   t: `${this.config.siteUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string';
-=======
         'query-input': 'required name=search_term_string'
       }
     }
@@ -256,7 +254,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Update structured data for current page;
    */;
   private updateStructuredData(): void {if (!this.currentPageData) return;}
-=======
   /**
    * Update structured data for current page
    */
@@ -331,7 +328,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     if (typeof window !== 'undefined' && 'performance' in window) {}private setupPerformanceMonitoring(): void {}}// Monitor Core Web Vitals for SEO impact;
     if (typeof window !== 'undefined' && 'performance' in window) {}// Monitor LCP (Largest Contentful Paint);
       new PerformanceObserver((list) => {}const entries = list.getEntries();
-=======
   /**
    * Add structured data to page
    */
@@ -373,7 +369,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         }
         if (clsValue > 0.25) {// Poor CLS;
       let clsValue = 0;}new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (!(entry as any).hadRecentInput) {}clsValue += (entry as any).value;}
-=======
       }).observe({ entryTypes: ['largest-contentful-paint'] })
   private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
         }
@@ -422,7 +417,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         url: this.config.siteUrl;,}generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {}// This would typically come from your CMS or routing system;
     return [;
       {}url: this.config.siteUrl,
-=======
   private trackSEOMetric()
   c: string, valu)
   e: number): void {/* TODO: Fix JSX expression */}
@@ -451,7 +445,6 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
 Allow: /,}
 Sitemap: ${this.config.siteUrl,}/sitemap.xml;
 # Disallow admin and private areas;
-=======
   /**
    * Generate robots.txt content
    */
@@ -541,7 +534,6 @@ const defaultConfig: SEOConfig = {}
 // Default configuration;
 export const seoOptimizer = new SEOOptimizer(defaultConfig);
 export default seoOptimizer;"`;
-=======
 export const seoOptimizer = new SEOOptimizer(defaultConfig)
 export default seoOptimizer
   getSEOScore(): number {/* TODO: Fix JSX expression */}

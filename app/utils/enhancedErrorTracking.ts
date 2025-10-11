@@ -18,7 +18,6 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
       window.addEventListener('unhandledrejection', event => {);
         this.trackError(new Error(event.reason), {}private setupGlobalErrorHandler(): void {}}if (typeof window !== 'undefined') {}window.addEventListener('error', event => {)}this.trackError(event.error, {)}component: 'Global',
           action: 'Uncaught Error',}
-=======
   private maxErrors = 100
   private sessionId: string
   }

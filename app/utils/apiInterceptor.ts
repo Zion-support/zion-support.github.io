@@ -25,7 +25,6 @@ class APIInterceptor {private requestInterceptors: Array<(config: any) => any> =
 }
   r: Error, ur);
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */,}}}
-=======
 // Create singleton instance
 export const apiInterceptor = new APIInterceptor()
 export default APIInterceptor
@@ -86,7 +85,6 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
       // Apply error interceptor;
       if (this.config.interceptors?.error) {/* TODO: Fix JSX expression */,}}
       throw err;
-=======
     this.errorHandler = ErrorHandler.getInstance()
   }
   static getInstance(config?: Partial</APIConfig><APIConfig>): APIInterceptor {/* TODO: Fix JSX expression */}
@@ -284,7 +282,6 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
    * Get current configuration;
    */;
   getConfig(): APIConfig {/* TODO: Fix JSX expression */,}}return {...this.config}}}
-=======
   /**
    * Build full URL with query parameters
    */

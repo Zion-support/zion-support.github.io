@@ -18,7 +18,6 @@
     {icon: Lock,
       title: 'Advanced Security',
         <title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
-=======
     <React.Fragment>
       </React><Helmet>
         </Helmet><title>Medical Records Manager | Zion Tech Group - Secure Healthcare Data Management</title>
@@ -35,7 +34,10 @@
         </section>
       </div>
     </>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   )
 }
 export default MedicalRecordsManagerPage

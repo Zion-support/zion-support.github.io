@@ -3,7 +3,10 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   }
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -73,7 +76,10 @@
       description: 'Bank-level security with advanced encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Scalability',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     'Increase efficiency by up to 50%',
@@ -82,7 +88,6 @@
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with cutting-edge technology',
         <title>Specialized Services - Zion Tech Group</title>
-=======
     'Ensure 99.9% uptime and reliability'
   ]
 

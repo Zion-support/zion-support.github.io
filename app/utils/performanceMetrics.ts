@@ -34,7 +34,6 @@ export class PerformanceMetrics {private static instance: PerformanceMetrics,}}p
   private metrics: PerformanceMetric[] = [],}
 }
 export class PerformanceMetrics {/* TODO: Fix JSX expression */,}}webVitals: WebVitalsMetrics = {,}private,;
-=======
   private webVitals: WebVitalsMetrics = {}
   private observers: PerformanceObserver[] = [],
   constructor() {
@@ -93,7 +92,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         })
         // Paint timing;
     );
-=======
         navObserver.observe({ entryTypes: ['navigation'] })
         this.observers.push(navObserver)
         // Paint timing
@@ -117,7 +115,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         // Largest Contentful Paint;
     );
           const entries = list.getEntries();
-=======
         paintObserver.observe({ entryTypes: ['paint'] })
         this.observers.push(paintObserver)
         // Largest Contentful Paint
@@ -142,7 +139,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         // Layout Shift;
     );
           let clsValue = 0;);
-=======
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         this.observers.push(lcpObserver)
         // Layout Shift
@@ -164,7 +160,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
           }
           this.webVitals.CLS = clsValue;
           this.recordMetric({)}name: 'CLS',
-=======
           this.webVitals.CLS = clsValue
           this.recordMetric()
     )
@@ -217,7 +212,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({)}name: 'pageLoad',
-=======
         paintObserver.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] })
         this.observers.push(paintObserver)
@@ -286,7 +280,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Record network request timing;
    */;
   recordNetworkRequest(url: string, duration: number, status: number): void {,}
-=======
   /**
    * Record network request timing
    */
@@ -325,7 +318,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Measure function execution time;
    */;
   measureFunction<T>(name: string, fn: () => T): T {,}
-=======
   /**
    * Measure function execution time
    */
@@ -355,7 +347,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    * Measure async function execution time;
    */;
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
-=======
   /**
    * Measure async function execution time
    */
@@ -404,7 +395,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
    */;
   calculatePerformanceScore(): number {let score = 100;}
     // FCP scoring;
-=======
   /**
    * Get all metrics
    */
@@ -459,7 +449,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     }
     // FID scoring;
     if (this.webVitals.FID) {}if (this.webVitals.FID > 300) score -= 15;
-=======
     // LCP scoring
     if (this.webVitals.LCP) {
     if (this.webVitals.LCP > 4000) score -= 25
@@ -540,7 +529,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   generateReport(): PerformanceReport {}}const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
     return {metrics: this.getMetrics();,}
-=======
   /**
    * Get performance recommendations
    */
@@ -630,7 +618,6 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
 // Type for performance.memory;
 interface PerformanceWithMemory extends Performance {memory: {,}
 // Type for performance.memory;}interface PerformanceWithMemory extends Performance {}}memory: {,}// usedJSHeapSize: number,
-=======
   /**
    * Export metrics as JSON
    */
@@ -677,7 +664,6 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */,}
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 `;
-=======
 // Type for LayoutShift
 interface LayoutShift extends PerformanceEntry {
     value: number,

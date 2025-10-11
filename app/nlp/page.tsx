@@ -16,7 +16,6 @@
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
-=======
     'Proven track record of success'
   ]</h1>
             <p></p>
@@ -33,7 +32,6 @@
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
       {/* CTA Section */}
               <p className="text-xl text-gray-300">Section description</p>
             </div>

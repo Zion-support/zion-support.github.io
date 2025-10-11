@@ -20,11 +20,9 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-=======
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp}}from 'lucide-react';
 const BusinessIntelligencePage: React.FC = () => {,
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -32,7 +30,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
     }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     'Advanced AI technology integration',

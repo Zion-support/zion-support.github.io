@@ -36,7 +36,6 @@ const ProjectManagementProPage: React.FC = () => {,
     {icon: Zap,
       title: 'Automation',
 const benefits = [
-=======
   ]
   const benefits = [
     'Improve project delivery times',
@@ -51,7 +50,6 @@ const benefits = [
     'Increase team productivity',
 
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
-=======
     'Streamline project workflows'
   ]
 return (
@@ -64,7 +62,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />

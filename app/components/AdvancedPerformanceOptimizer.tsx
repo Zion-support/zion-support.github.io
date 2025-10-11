@@ -1,6 +1,5 @@
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
-=======
 'use client'
 import React, { useEffect, useState, useCallback } from 'react'
 interface PerformanceOptimizerProps {
@@ -21,7 +20,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       if (!img.hasAttribute('loading')) {
     const scripts = document.querySelectorAll('script[src]');
     let optimizedCount = 0;
-=======
         img.setAttribute('loading', 'lazy')
         optimizedCount++
   }
@@ -42,7 +40,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
       if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
     const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
     let optimizedCount = 0;
-=======
         script.setAttribute('defer', '')
         optimizedCount++
   }
@@ -73,7 +70,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
   // Add performance monitoring
   useEffect(() => {
       const entries = list.getEntries();
-=======
     if (typeof window === 'undefined') return
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries()
@@ -86,7 +82,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
     })
   return (
         <div className="optimization-debug" style={{
-=======
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
     return () => observer.disconnect()
   }, [])
@@ -108,7 +103,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
   );
 };
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
           zIndex: 1000
         }}>
           </div><div>Images: {optimizationMetrics.imagesOptimized}</div>

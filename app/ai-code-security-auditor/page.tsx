@@ -1,8 +1,10 @@
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiCodeSecurityAuditorPage: React.FC = () => {,
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -121,7 +123,6 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
                   Learn More
                 </button>
         <title>AI Code Security Auditor - Zion Tech Group</title>
-=======
     <React.Fragment>
       </React><Helmet>
         </Helmet><title>AI Code Security Auditor - Zion Tech Group</title>
@@ -140,7 +141,6 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section>< className="$2 />
@@ -185,9 +185,11 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
 };
 
 export default AiCodeSecurityAuditorPage;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
-=======
       {/* CTA Section */}
       <section className="py-20 px-4">
         </section>< className="$2 />

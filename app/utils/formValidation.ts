@@ -50,7 +50,6 @@ export const validationRules = {}
       return phoneRegex.test(value.replace(/\s/g, ''));
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
-=======
   /**
    * Validate phone number (US format)
    */
@@ -68,7 +67,6 @@ export const validationRules = {}
    * Validate URL format;
    */;
   url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({,
-=======
   /**
    * Validate URL format
    */
@@ -77,7 +75,10 @@ export const validationRules = {}
   url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({}
     validate: (value: string) => {}
       try {}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         new URL(value)
         return true;}
       } catch {}}return false;}
@@ -107,7 +108,6 @@ export const validationRules = {}
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,
     ,
     validate: validator,}custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,}validate: validator,
-=======
   /**
    * Validate pattern match
    */
@@ -234,7 +234,10 @@ export function validateField<T>(valu,
 /**
  * Validate entire form
  */
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   validationSchema: Record</T><keyof>
 ): Record</keyof><keyof T, ValidationResult> {}
   const results = {} as Record</keyof><keyof>
@@ -292,7 +295,6 @@ export function getFormErrors<T extends Record<string, unknown>>(validationResul
   s: Record<keyof T, ValidationResult></keyof>);
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */,}const errors = {}as Record<keyof>
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */,}}
-=======
   s: Record<keyof T, ValidationResult></keyof>)
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
   const errors = {} as Record<keyof T, string[]>
@@ -317,7 +319,6 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
   func: T,
   wait: number,
 ): (...args: Parameters<T>) => void {,}
-=======
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
 }

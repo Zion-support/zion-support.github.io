@@ -117,13 +117,11 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
 };
 
 export default AiBlockchainAnalyticsPage;
-=======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
     },
   ]
   return (
         <meta name="description" content="Advanced blockchain analytics powered by AI for comprehensive insights." />
-=======
     <React.Fragment>
       </React><Helmet>
         </Helmet><meta name="description" content="Advanced blockchain analytics powered by AI for comprehensive insights." />
@@ -154,7 +152,6 @@ export default AiBlockchainAnalyticsPage;
                 Powerful AI Features,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section>< className="$2 />
@@ -199,11 +196,13 @@ export default AiBlockchainAnalyticsPage;
       <Footer /></Footer>
     </div>
   ),
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 }
 export default PagePage;
 >>>>>>> main
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?

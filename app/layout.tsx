@@ -8,7 +8,10 @@ const LayoutPage: React.FC = () => {,
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
@@ -35,14 +38,16 @@ const benefits = [
 
   const benefits = [
 >>>>>>> main
-=======
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/main
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -70,8 +75,11 @@ const benefits = [
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/main
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
         <div className="max-w-7xl mx-auto">
@@ -112,7 +120,10 @@ const benefits = [
         ))
       </section>
     </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   );
 };
 

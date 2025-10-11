@@ -11,7 +11,10 @@
       description: 'Bank-level security with encryption and compliance standards for your AR/VR data',},
     {icon: Globe,
       title: 'Cross-Platform Support',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     'Advanced AR/VR technology integration',
@@ -31,7 +34,6 @@
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         </section>
-=======
       {/* Hero Section */} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -48,7 +50,6 @@
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">,</button>
                 Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
-=======
     'Proven track record of success'
   ]
   return (
@@ -85,7 +86,6 @@
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>< className="$2 />
@@ -95,7 +95,6 @@
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
-=======
                 </p><h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -131,7 +130,6 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us;
   </
-=======
                 <span className="text-gray-300">{benefit}
             ))}
       {/* CTA Section */}

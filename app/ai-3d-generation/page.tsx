@@ -2,7 +2,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const Ai3dGenerationPage: React.FC = () => {,
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -23,7 +22,6 @@ const Ai3dGenerationPage: React.FC = () => {
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
-=======
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -126,7 +124,6 @@ const benefits = [
               <h2 className="text-4xl font-bold text-white mb-4">Key Features;</h2>
               </h2>
               <p className="text-xl text-gray-300">Advanced AI technology that drives results;</p>
-=======
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai 3d Generation
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai 3d generation solution for modern businesses.
@@ -165,7 +162,6 @@ const benefits = [
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
               </h2>
               <p className="text-xl text-gray-300">Proven results that drive business growth and efficiency;</p>
-=======
         {/* Benefits Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />
@@ -202,7 +198,6 @@ const benefits = [
                 </button>
                 <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover: bg-white/10 transition-all duration-300">,</button>
                   Learn More;
-=======
         {/* CTA Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />

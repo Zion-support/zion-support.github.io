@@ -36,7 +36,6 @@ const services = [
       lastIncident: 'Never',
 const incidents = [
     {id: 1,
-=======
   ]
   const incidents = [
     {

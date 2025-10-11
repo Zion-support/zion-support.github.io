@@ -7,7 +7,6 @@ return {
 }
     const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
       isValid;
-=======
       isValid
       error: isValid ? undefined : 'Invalid URL format',
 export function validateURL(ur)}l: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'URL is required' ,}
@@ -20,7 +19,6 @@ try {/* TODO: Fix JSX expression */,}}}
     }
   }
 if (value.<<<length>max</length></length>) {return {isValid: false,}}error: `${fieldName,}must be no more than ${max}characters long`;
-=======
       error: `${fieldName} must be at least ${min} characters long`
     }
   }
@@ -43,7 +41,6 @@ if (value.<<<length>max</length></length>) {
   }
 if (value.length > max) {/* TODO: Fix JSX expression */,}`;
   r: `${fieldName,}must be no more than ${max}characters long`;
-=======
 export function validateLength()
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */}
@@ -86,7 +83,6 @@ if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expressi
   }
 if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */,}`;
   r: `${fieldName,}is required` }
-=======
 export function validateRequired()
   e: unknown, fieldNam)
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`
@@ -125,7 +121,6 @@ try {JSON.parse(jsonString)}}return {isValid: true ,}}} catch {}}return {isValid
   }
   e: unknown,
   validator,
-=======
     return { isValid: false, error: 'JSON string is required' }
   }
 try {
@@ -223,7 +218,10 @@ export {
   }
 } from './validators'
 export {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 } from './validators';"`</ValidationResult>
   sanitizeInput;}
 } from './validators'

@@ -31,7 +31,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
         <title>Ai Cloud Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai cloud infrastructure solution for modern businesses." />
         <meta name="keywords" content="AI ai cloud infrastructure, artificial intelligence, ai cloud infrastructure, AI solutions, intelligent automation" />
-=======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
   return(<React.Fragment>)</React.Fragment>
@@ -55,7 +54,10 @@ const AiCloudInfrastructurePage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
               {features.map((feature, index) => (
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
                 </div>
               ))}
@@ -86,7 +88,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
       </div>
-=======
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
@@ -106,9 +107,11 @@ const AiCloudInfrastructurePage: React.FC = () => {
 };
 
 export default AiCloudInfrastructurePage;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'

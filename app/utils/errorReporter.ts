@@ -46,7 +46,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {}}if (!ErrorReporter.instance) {}ErrorReporter.instance = new ErrorReporter(config);}
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */,}}}
     return ErrorReporter.instance;
-=======
 /**
  * ErrorReporter class for comprehensive error handling
  */
@@ -143,7 +142,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */;
   private getConsoleStyle(severity: ErrorReport['severity']): string {,}
     const styles = {,}private getConsoleStyle(severity: ErrorReport['severity']): string {,}}const styles = {}low: 'color: #2196F3, font-weight: bold',
-=======
   /**
    * Get console styling based on severity
    */
@@ -206,7 +204,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   } {}return {}}totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size,
       errorsByType: Object.fromEntries(this.errorCount),}
-=======
   /**
    * Get all errors in queue
    */
@@ -239,7 +236,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */;
   exportErrors(): string {return JSON.stringify({)}}exportErrors(): string {}}return JSON.stringify();
       {}timestamp: new Date().toISOString(),
-=======
   /**
    * Clear error queue
    */
@@ -263,7 +259,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     );
   exportErrors(): string {/* TODO: Fix JSX expression */,}},
       null,;
-=======
         errors: this.errorQueue},
       null,
       2
@@ -302,7 +297,6 @@ export const reportError = (erro,
   severity?: ErrorReport['severity'],
  * React error boundary helper;
  */;
-=======
   context?: Record</string><string, unknown></string>)
 ): void => {/* TODO: Fix JSX expression */}
 }
@@ -330,7 +324,6 @@ export const captureComponentError = (erro,
   r: Error,
   e: string;),
 ): void => {/* TODO: Fix JSX expression */,}})
-=======
   e: string;)
 ): void => {/* TODO: Fix JSX expression */}
   })

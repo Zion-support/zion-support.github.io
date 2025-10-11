@@ -134,7 +134,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
    * Record a Web Vital metric;
    */;
   private recordWebVital(name: keyof WebVitals, value: number): void {,}
-=======
           const navEntry = entry as PerformanceNavigationTiming
           this.recordWebVital('TTFB', navEntry.responseStart - navEntry.requestStart);}
         })
@@ -258,7 +257,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
    * Record a custom metric;
    */;
   recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {,}
-=======
   /**
    * Record a custom metric
    */
@@ -279,7 +277,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
    * Send metric to analytics service;
    */;
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {,
-=======
   recordCustomMetric()
   e: number, uni)
   t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */}
@@ -318,7 +315,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
     if (vitals.length === 0) return 0;}const scores = vitals.map(metric => {)}switch (metric.rating) {}case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
-=======
   /**
    * Get all Web Vitals
    */
@@ -350,7 +346,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
    * Get performance summary;
    */;
   getSummary(): {score: number,
-=======
   /**
    * Get performance summary
    */
@@ -389,7 +384,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
    * Measure async function execution time;
    */;
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,
-=======
   measureFunction</T><T>(name: string, fn: () => T): T {}
     const start = performance.now()
     const result = fn()
@@ -422,7 +416,10 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
    * Mark a custom performance mark;
    */;
   mark(name: string): void {,}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
     const start = performance.now()
     const result = await fn()
     const duration = performance.now() - start;`}
@@ -448,7 +445,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
     if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {/* TODO: Fix JSX expression */,}}
     if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {/* TODO: Fix JSX expression */,}}
     return {/* TODO: Fix JSX expression */,}}}
-=======
         performance.measure(name, startMark, endMark)
         const measure = performance.getEntriesByName(name, 'measure')[0]
         if (measure) {}
@@ -498,7 +494,6 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
   k: string, endMar);
   k: string): number | null {/* TODO: Fix JSX expression */,}}}
       } catch (error) {/* TODO: Fix JSX expression */,}}
-=======
   e: string, f)
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`
     this.recordCustomMetric(`async_fn_${name}`, duration, 'ms')
@@ -591,7 +586,10 @@ export const getMetrics = (): Record<string, MetricData> => {}</string></<<<stri
   return result;
 }
 export const clearMetrics = useCallback((...args) => {}simpleMetrics.clear();
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   const threshold = thresholds[name]
   if (!threshold) return 'good'
   if (value <= threshold.good) return 'good'
@@ -638,7 +636,6 @@ export const measureFunction = <T>(name: string, fn: () => T): T => {,
   if (webVitals.length === 0) return 0;}const scores = webVitals.map(metric => {)}switch (metric.rating) {}case 'good': return 100;
       case 'needs-improvement': return 50;
       case 'poor': return 0;
-=======
   const metrics = getMetrics()
   const webVitalNames = ['FCP', 'LCP', 'FID', 'CLS', 'TTFB']
   const webVitals = webVitalNames
@@ -679,7 +676,6 @@ export const getRecommendations = (): string[] => {}
 }
 function getRating(nam,
   e: string, valu);
-=======
 function getRating()
   e: string, valu)
   e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}
@@ -734,7 +730,6 @@ export const getPerformanceScore = (): number => {/* TODO: Fix JSX expression */
   e: string, f);
   n: () => Promise<T>): Promise<T> => {/* TODO: Fix JSX expression */,}}
 export const getPerformanceScore = (): number => {/* TODO: Fix JSX expression */,}}
-=======
   e: string, f)
   n: () => Promise<T>): Promise<T> => {/* TODO: Fix JSX expression */}
 }

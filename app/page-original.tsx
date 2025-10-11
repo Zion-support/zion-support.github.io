@@ -30,7 +30,6 @@ useEffect(() => {
               <div className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></div>,
                 <div className="text-2xl sm: text-3xl mb-3">🚀</div>,
                 <h3 className="font-bold text-white mb-3 text-base sm: text-lg">AI-Powered Solutions</h3>,
-=======
             <p>
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
@@ -1098,7 +1097,6 @@ useEffect(() => {
 })
 HomePage.displayName = 'HomePage';
 export default HomePage;
-=======
 HomePage.displayName = 'HomePage'
 export default HomePage
   </button>

@@ -1,42 +1,79 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ClipboardList, Target, Users, Calendar, ArrowRight, CheckCircle, Star, Clock, DollarSign, Zap } from 'lucide-react'
 
-const ITProjectManagementPage: React.FC = () => {
+const ItProjectManagementPage: React.FC = () => {
+  const features = [
+    'Project Planning & Scheduling',
+    'Resource Management',
+    'Risk Assessment',
+    'Quality Assurance',
+    'Stakeholder Communication',
+    'Progress Tracking'
+  ]
+
+  const benefits = [
+    'Complete projects on time',
+    'Reduce project costs by 25%',
+    'Improve team productivity',
+    'Minimize project risks',
+    'Better stakeholder satisfaction',
+    'Professional project delivery'
+  ]
+
+  const pricing = [
+    {
+      plan: 'Small Project',
+      price: '$899/month',
+      features: ['Up to 3 months', 'Basic tracking', 'Email support', 'Standard reporting'],
+      popular: false
+    },
+    {
+      plan: 'Medium Project',
+      price: '$1,499/month',
+      features: ['Up to 6 months', 'Advanced tracking', 'Priority support', 'Detailed reporting'],
+      popular: true
+    },
+    {
+      plan: 'Large Project',
+      price: 'Custom',
+      features: ['Unlimited duration', 'Full tracking suite', 'Dedicated support', 'Custom reporting'],
+      popular: false
+    }
+  ]
+
   return (
     <>
       <Helmet>
-        <title>IT Project Management | Zion Tech Group</title>
-        <meta name="description" content="Professional IT project management services with agile methodologies, risk management, and comprehensive project delivery." />
-        <meta name="keywords" content="IT project management, agile methodology, risk management, project delivery, IT consulting" />
+        <title>IT Project Management - Zion Tech Group</title>
+        <meta name="description" content="Professional IT project management services. Expert planning, execution, and delivery of technology projects." />
+        <meta name="keywords" content="IT project management, project planning, project execution, technology projects, project delivery" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
-                <Brain className="w-5 h-5 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 font-medium">AI-Powered Solution</span>
+            <div className="text-center mb-16">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
+                  <ClipboardList className="w-8 h-8 text-white" />
+                </div>
               </div>
-              
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 IT Project Management
               </h1>
-              
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional IT project management services with agile methodologies, risk management, and comprehensive project delivery.
+                Professional IT project management services. Expert planning, execution, and delivery 
+                of technology projects to ensure success and stakeholder satisfaction.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                  Get Started Free
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Start Project
                 </button>
-                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-                  View Demo
+                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  View Services
                 </button>
               </div>
             </div>
@@ -44,121 +81,127 @@ const ITProjectManagementPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Advanced AI Capabilities
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leverage cutting-edge artificial intelligence to transform your business 
-                operations and achieve unprecedented efficiency and accuracy.
+                Comprehensive project management solutions
               </p>
             </div>
-
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                  <Brain className="w-6 h-6 text-white" />
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
+                    <h3 className="text-xl font-bold text-white">{feature}</h3>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Intelligent Processing</h3>
-                <p className="text-gray-300 mb-4">
-                  Advanced AI algorithms process complex data and tasks with human-level 
-                  intelligence and superhuman speed and accuracy.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Machine learning models
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Pattern recognition
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Predictive analytics
-                  </li>
-                </ul>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-white" />
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Project Management?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Expert management with proven results
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <ArrowRight className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Automated Workflows</h3>
-                <p className="text-gray-300 mb-4">
-                  Streamline your operations with intelligent automation that handles 
-                  complex workflows and decision-making processes.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Process automation
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Smart scheduling
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Dynamic optimization
-                  </li>
-                </ul>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-white" />
+        {/* Pricing Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Management Packages
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the package that fits your needs
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricing.map((plan, index) => (
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                  {plan.popular && (
+                    <div className="text-center mb-4">
+                      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
+                    <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
+                    {plan.price === 'Custom' && <div className="text-gray-300">Contact us for pricing</div>}
+                  </div>
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular 
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white' 
+                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+                  }`}>
+                    Get Started
+                  </button>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">Enterprise Security</h3>
-                <p className="text-gray-300 mb-4">
-                  Bank-level security with advanced encryption, compliance certifications, 
-                  and enterprise-grade access controls for sensitive operations.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    End-to-end encryption
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Compliance standards
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Access controls
-                  </li>
-                </ul>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Manage Your IT Project?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI solutions to drive 
-              innovation, efficiency, and growth.
+              Let our experts ensure your project's success
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Start Project
               </button>
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-                Schedule Demo
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Contact Us
               </button>
             </div>
           </div>
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ITProjectManagementPage;
+export default ItProjectManagementPage

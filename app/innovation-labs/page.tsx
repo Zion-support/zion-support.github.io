@@ -12,7 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-=======
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -27,7 +26,6 @@ const benefits = [
     'Cost-effective pricing plans',
 
         <title>Page | Zion Tech Group</title>
-=======
     'Proven track record of success'
   ]
 return (
@@ -46,7 +44,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
             <p>
               Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.

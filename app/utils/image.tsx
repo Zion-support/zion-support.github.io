@@ -50,7 +50,10 @@
       sizes={sizes}
       loading={priority ? 'eager' : 'lazy'}
       onLoad={handleLoad}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>),
     ),

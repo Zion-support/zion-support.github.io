@@ -30,7 +30,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
     menus.forEach(menu => {)
       const trigger = document.querySelector(`[aria-controls="${menu.id)}"]`) as HTMLElement;
       trigger?.click();
-=======
 
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns
@@ -150,7 +149,10 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast()
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements();

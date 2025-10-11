@@ -7,7 +7,10 @@
       icon: Eye,
       title: 'Visual Cortex Interface',
       description: 'Direct interface with visual cortex for enhanced vision and augmented reality',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       benefits: ['Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition'],
     },
     {
@@ -84,7 +87,6 @@
       description: 'Neural interfaces for communication assistance in locked-in syndrome',
       icon: MessageSquare,
         <title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
-=======
         </Helmet><title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
         <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />

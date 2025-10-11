@@ -1,6 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
-=======
 
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
@@ -8,7 +11,6 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
   trackPageView: (pageName: string, pagePath: string) => void;
 }
-=======
 'use client'
 import React, { createContext, useContext, useEffect, ReactNode } from 'react'
 interface AnalyticsContextType {
@@ -33,7 +35,6 @@ export const useAnalytics = () => {
 
     // Console logging for development;
     if (process.env.NODE_ENV === 'development') {console.log('Page View:', pageName, pagePath)}}
-=======
   const trackPageView = (pageName: string) => {
     if (!isInitialized) return
 
@@ -98,7 +99,6 @@ declare global {
     dataLayer: any[];
   }
 }
-=======
   )
 }
 
@@ -108,3 +108,5 @@ export default undefined
 
 export default AnalyticsProvider
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

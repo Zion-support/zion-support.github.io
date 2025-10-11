@@ -8,7 +8,6 @@ try {// If protocol is not required, add http: // prefix for validation;,}}const
     const parsed = new URL(urlToValidate);
     const isValid = requireProtocol ?;
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :,
-=======
 export function validateEmail(emai)
   }
   l: string): {/* TODO: Fix JSX expression */}
@@ -66,7 +65,6 @@ export function validateNumberRange(value: number, min: number, max: number): bo
  * Validate credit card number (basic Luhn algorithm);
  */;
 export function validateCreditCard(cardNumber: string): boolean {,}
-=======
 /**
  * Validate credit card number (basic Luhn algorithm)
  */
@@ -85,7 +83,6 @@ export function validateCreditCard(cardNumber: string): boolean {
 }
     const isValid = validator(value),
       isValid;
-=======
       isValid
       errors: isValid ? [] : [message],
 export function createCustomValidator</T><T>(validato,
@@ -103,7 +100,10 @@ export function createCustomValidator</T><T>(validato,
   }
   const errors: Record</T><string, string[]> = {}
   for (const field in rules) {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
     const value = data[field]
     const fieldRules = rules[field] || []
     const fieldErrors: string[] = [],
@@ -161,7 +161,10 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
   }
     message: `Must be between ${min} and ${max}`
   }),
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   custom: </number><T>(validator: (value: T) => boolean, message: string): ValidationRule</T><T> => ({
     ,
     validate: validator,
@@ -295,7 +298,6 @@ export function validatePassword(passwor);
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */,}}r: 'Password must contain at least one number' ,}
   if (!/[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password)) return {/* TODO: Fix JSX expression */,</React.Fragment>}}r: 'Password must contain at least one special character' ,}
   return {/* TODO: Fix JSX expression */,}}d: true ,}
-=======
   e: Empty arrays are considered valid for required fields (they exist, just empty)
   return {/* TODO: Fix JSX expression */}
   d: true }
@@ -338,7 +340,6 @@ export function sanitizeHTML(html: string): string {,}
   clean = clean.replace(/'/g, '&#x27;');
   clean = clean.replace(/\//g, '&#x2 F;');
 return clean;
-=======
   let clean = html.replace(/&/g, '&amp;');}</React.Fragment></React.Fragment>
   clean = clean.replace(/</g, '&lt;')
   clean = clean.replace(/>/g, '&gt;')
@@ -380,7 +381,6 @@ const date = new Date(dateString);
                       actualDate.getMonth() === month - 1 &&;
                       actualDate.getDate() === day;
     return {isValid: isRealDate,}}error: isRealDate ? undefined : 'Invalid date',}
-=======
 export function sanitizeInput()
   t: string, maxLengt)
   h: number = 1000): string | null {/* TODO: Fix JSX expression */}
@@ -419,7 +419,6 @@ return {/* TODO: Fix JSX expression */,}}}
 }
   s: Array<(va),
   l: string) => {/* TODO: Fix JSX expression */,}d: boolean, error?: string }>): {/* TODO: Fix JSX expression */,}d: boolean, error?: string } {/* TODO: Fix JSX expression */,}}
-=======
 export function validateCreditCard(cardNumbe)
   r: string): {/* TODO: Fix JSX expression */}
   d: boolean, error?: string }, {/* TODO: Fix JSX expression */}

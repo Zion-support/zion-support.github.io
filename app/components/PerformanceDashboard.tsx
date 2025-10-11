@@ -26,7 +26,6 @@
             frameCount = 0;
             lastTime = currentTime;}if (isMonitoring) {requestAnimationFrame(measureFPS)}}
         requestAnimationFrame(measureFPS);
-=======
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0
   })
@@ -72,7 +71,10 @@
         loadTime,
         renderTime,
         memoryUsage,
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         fps
       }
       setMetrics(newMetrics)
@@ -109,7 +111,6 @@
               : 'bg-green-600 text-white hover: bg-green-700',}`}
         >{isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'</button>} </button>
       </div>
-=======
     if (bytes === 0) return '0 Bytes'
     const k = 1024,
     const sizes = ['Bytes', 'KB', 'MB', 'GB']

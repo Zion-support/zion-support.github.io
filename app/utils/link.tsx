@@ -16,7 +16,6 @@ export const Link: React.FC<LinkProps>= ({,}export const Link: React.FC<LinkProp
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps> = ({,
-=======
   href: string
   children: React.ReactNode
   className?: string
@@ -49,7 +48,10 @@ export const Link: React.FC</LinkProps><LinkProps> = ({
       target={target}
       rel={rel}
       onClick={handleClick}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       aria-label={ariaLabel}
       {...props}
     >{children}</a>

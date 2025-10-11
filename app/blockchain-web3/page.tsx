@@ -18,7 +18,6 @@
       description: 'Enhanced security through decentralized architecture and cryptographic protection.',
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta />
-=======
       benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data'],
   },
     {
@@ -57,7 +56,6 @@ return (
 };
 
 export default PagePage;
-=======
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
             {features.map((feature, index) => (

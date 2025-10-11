@@ -156,5 +156,8 @@ Disallow: /private/`;}
     }
   ]
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 }`</$1></p>

@@ -87,7 +87,6 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
   }));
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
 ): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}}));
-=======
   const headers = getSecurityHeaders(customConfig)
   return Object.entries(headers).map(([key, value]) => ()
   }))

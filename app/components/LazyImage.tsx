@@ -14,7 +14,6 @@ const benefits = [
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
     'Proven track record of success'
   ]
 {/* Hero Section */}
@@ -88,7 +87,6 @@ const benefits = [
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
       {/* CTA Section */}
               <p className="text-xl text-gray-300">Section description</p>
             </div>

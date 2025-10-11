@@ -11,7 +11,10 @@
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -24,7 +27,6 @@
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
-=======
     'Proven track record of success';
   ];
   return (
@@ -49,7 +51,6 @@
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">,</button>
                 Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
-=======
     'Proven track record of success'
   ]
 
@@ -97,7 +98,6 @@
               <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">,</div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>< className="$2 />
@@ -154,7 +154,6 @@
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us;
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         </section>< className="$2 />

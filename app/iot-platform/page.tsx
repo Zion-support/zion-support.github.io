@@ -53,7 +53,6 @@
         </section>
             </button>
             <button>Schedule Demo;</button>
-=======
         <div className="max-w-7xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
             <h2></h2>

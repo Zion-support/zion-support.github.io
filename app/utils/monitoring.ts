@@ -12,7 +12,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         })
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {,
-=======
         fidObserver.observe({ entryTypes: ['first-input'] })
         // Cumulative Layout Shift
         let clsValue = 0
@@ -29,7 +28,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
           entries.forEach(entry => {)
             this.metrics.fcp = entry.startTime;
             this.reportMetric('fcp', entry.startTime)}})
-=======
         clsObserver.observe({ entryTypes: ['layout-shift'] })
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver()
@@ -52,7 +50,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   }
           const entries = list.getEntries();
     // Keep HEAD version;}})
-=======
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
@@ -67,7 +64,10 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         userAgent: navigator.userAgent,
         url: window.location.href;,}})
     })
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError()
@@ -86,7 +86,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
     // Send to analytics (if configured);
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {)
-=======
     if (thresholds) {
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     // Keep HEAD version

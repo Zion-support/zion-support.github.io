@@ -1,5 +1,8 @@
   const features = [
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     'Enterprise-grade security and compliance',
@@ -48,7 +51,10 @@
                 <span className="text-gray-300">{benefit}
             ))}
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
               Email Us
   </
 >>>>>>> main

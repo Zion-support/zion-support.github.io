@@ -154,7 +154,6 @@ export default AdvancedAccessibilityEnhancerPage;
 };
 
 export default AdvancedAccessibilityEnhancer;
-=======
     document.documentElement.setAttribute('data-font-size', size)
   }
   return (

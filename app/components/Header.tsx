@@ -4,7 +4,10 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
     </React.Fragment>
   )
 }

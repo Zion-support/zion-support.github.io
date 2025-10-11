@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
-=======
 'use client'
 import React, { memo } from 'react'
 import { Link } from 'react-router-dom'
@@ -22,10 +20,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
     { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
     { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
-<<<<<<< HEAD
   ];
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const aiServices = [
@@ -51,10 +47,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
     { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
     { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
-<<<<<<< HEAD
   ];
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const itServices = [
@@ -74,11 +68,9 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Disaster recovery' },
     { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
-<<<<<<< HEAD
   ];
 
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const emergingTech = [
@@ -94,10 +86,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
-<<<<<<< HEAD
   ];
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const companyLinks = [
@@ -106,10 +96,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
-<<<<<<< HEAD
   ];
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const supportLinks = [
@@ -119,10 +107,8 @@ const Footer: React.FC = memo(() => {
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
-<<<<<<< HEAD
   ];
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const socialLinks = [
@@ -132,10 +118,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: Youtube },
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
-<<<<<<< HEAD
   ];
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const contactInfo = {
@@ -150,10 +134,8 @@ const Footer: React.FC = memo(() => {
     { icon: Users, text: '100+ Happy Clients' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
-<<<<<<< HEAD
   ];
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   return (
@@ -168,7 +150,6 @@ const Footer: React.FC = memo(() => {
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <span className="text-white font-bold text-lg">Z
                 <div>
-<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
                   <p className="text-sm text-cyan-400">AI & IT Solutions</p>
                 </div>
@@ -180,7 +161,6 @@ const Footer: React.FC = memo(() => {
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
 
-=======
                   <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
                   <p className="text-sm text-cyan-400">AI & IT Solutions
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -200,11 +180,9 @@ const Footer: React.FC = memo(() => {
                 >
                   <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
               ))}
-<<<<<<< HEAD
             </div>
           </div>
 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           {/* Micro SAAS Solutions */}
           <div>
@@ -212,12 +190,10 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-<<<<<<< HEAD
                   <Link 
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
-=======
                   <$2 />
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">
@@ -227,7 +203,6 @@ const Footer: React.FC = memo(() => {
                   <p className="text-xs text-gray-500 ml-5">{service.description}
               ))}
               <li>
-<<<<<<< HEAD
                 <Link 
                   to="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
@@ -238,7 +213,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-=======
                 <$2 />
                   href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
@@ -250,12 +224,10 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
-<<<<<<< HEAD
                   <Link 
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
-=======
                   <$2 />
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">
@@ -265,19 +237,16 @@ const Footer: React.FC = memo(() => {
                   <p className="text-xs text-gray-500 ml-5">{service.description}
               ))}
               <li>
-<<<<<<< HEAD
                 <Link 
                   to="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
-=======
                 <$2 />
                   href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   View All IT Services →
               <li>
-<<<<<<< HEAD
                 <Link
                 to="/micro-saas"
                 className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
@@ -289,7 +258,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-=======
                 <$2 />
                 href="/micro-saas"
                 className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group">
@@ -301,9 +269,7 @@ const Footer: React.FC = memo(() => {
             <h4 className="text-lg font-semibold text-white mb-6 neon-text flex items-center">
               <Brain className="w-5 h-5 mr-2 text-purple-400" />
               AI & IT Services
-<<<<<<< HEAD
             </h4>
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             <div className="space-y-4">
               <div>
@@ -330,14 +296,12 @@ const Footer: React.FC = memo(() => {
                       <service.icon className="w-3 h-3" />
                       <span>{service.name}
                   ))}
-<<<<<<< HEAD
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
@@ -361,7 +325,6 @@ const Footer: React.FC = memo(() => {
             <div className="flex items-center space-x-3">
               <Clock className="w-5 h-5 text-cyan-400" />
               <div>
-<<<<<<< HEAD
                 <div className="text-white font-medium">{contactInfo.hours}</div>
                 <div className="text-gray-400 text-sm">Business hours</div>
               </div>
@@ -369,7 +332,6 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
 
-=======
                 <div className="text-white font-medium">{contactInfo.hours}
                 <div className="text-gray-400 text-sm">Business hours
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -380,12 +342,10 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-<<<<<<< HEAD
                   <Link 
                     to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-=======
                   <$2 />
                     href={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
@@ -397,12 +357,10 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-<<<<<<< HEAD
                   <Link 
                     to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-=======
                   <$2 />
                     href={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
@@ -412,14 +370,12 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links
             <ul className="space-y-2">
-<<<<<<< HEAD
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
               <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
               <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
             </ul>
           </div>
-=======
               <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link>
               <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link>
               <li><Link href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link>
@@ -436,14 +392,12 @@ const Footer: React.FC = memo(() => {
               />
               <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
                 Subscribe
-<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>
       </div>
 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* Bottom Bar */}
       <div className="border-t border-gray-700/50">
@@ -452,7 +406,6 @@ const Footer: React.FC = memo(() => {
             <div className="text-sm text-gray-400">
               © {currentYear} Zion Tech Group. All rights reserved.
             <div className="flex space-x-6">
-<<<<<<< HEAD
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
@@ -463,7 +416,6 @@ const Footer: React.FC = memo(() => {
                 Cookie Policy
               </Link>
             </div>
-=======
               <Link href="/privacy" className="text-sm text-gray-400 hover: text-cyan-400 transition-colors">
                 Privacy Policy</span>
               <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
@@ -487,13 +439,11 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
   );
 });
 
 Footer.displayName = 'Footer';
 export default Footer;
-=======
   ),
 })
 Footer.displayName = 'Footer'

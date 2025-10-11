@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
@@ -11,7 +10,6 @@ const Navigation: React.FC = () => {
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-=======
 import React, { useState, useEffect } from 'react'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react'
 const Navigation: React.FC = () => {
@@ -40,7 +38,6 @@ const Navigation: React.FC = () => {
     };
 
     const handleScroll = () => {
-<<<<<<< HEAD
       setIsScrolled(window.scrollY > 50);
     };
 
@@ -60,7 +57,6 @@ const Navigation: React.FC = () => {
     setIsOpen(false);
   };
 
-=======
     setIsScrolled(window.scrollY > 50)
   }
     window.addEventListener('resize', handleResize)
@@ -212,10 +208,8 @@ const Navigation: React.FC = () => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-<<<<<<< HEAD
   ];
 
-=======
   ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   return (
@@ -231,13 +225,11 @@ const Navigation: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z
             <div className="hidden sm:block">
-<<<<<<< HEAD
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
 
-=======
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
               <p className="text-xs text-cyan-400">AI & IT Solutions
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -245,13 +237,11 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
-<<<<<<< HEAD
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
 
-=======
   
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About,
@@ -268,10 +258,8 @@ const Navigation: React.FC = () => {
                 <Brain className="w-4 h-4" />
                 <span>Services
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-<<<<<<< HEAD
               </button>
               
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -296,10 +284,8 @@ const Navigation: React.FC = () => {
                                 {service.description}
                           ))}
                           {category.services.length > 6 && (
-<<<<<<< HEAD
                             <Link
                               to={`/${category.title.toLowerCase().replace(' ', '-')}`}
-=======
                             <$2 />
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -310,10 +296,8 @@ const Navigation: React.FC = () => {
                           )}
                     ))}
                   <div className="border-t border-gray-700 mt-6 pt-4 px-6">
-<<<<<<< HEAD
                     <Link
                       to="/services"
-=======
                     <$2 />
                       href="/services"
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -321,7 +305,6 @@ const Navigation: React.FC = () => {
                       onClick={closeAllMenus}
                     >
                       View All Services
-<<<<<<< HEAD
                     </Link>
                   </div>
                 </div>
@@ -333,7 +316,6 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link 
               to="/case-studies" 
-=======
               )}
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -344,7 +326,6 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               Case Studies
-<<<<<<< HEAD
             </Link>
 
             <Link
@@ -374,7 +355,6 @@ const Navigation: React.FC = () => {
             </a>
           </div>
 
-=======
               Blog
               Contact
               <Phone className="w-4 h-4 mr-2" />
@@ -388,21 +368,17 @@ const Navigation: React.FC = () => {
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-<<<<<<< HEAD
             </button>
           </div>
         </div>
 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
-<<<<<<< HEAD
               <Link
                 to="/"
-=======
               <$2 />
                 href="/"
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -410,7 +386,6 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Home
-<<<<<<< HEAD
               </Link>
               <Link
                 to="/about"
@@ -423,7 +398,6 @@ const Navigation: React.FC = () => {
               {/* Mobile Services */}
               <div>
                 <button
-=======
                 About
                 <$2 />
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -448,19 +422,16 @@ const Navigation: React.FC = () => {
                             >
                               {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
                           ))}
-<<<<<<< HEAD
                           <Link
                             to="/services"
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                           >
-=======
                           <$2 />
                             href="/services"
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium">
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                             View All →
                     ))}
-<<<<<<< HEAD
                   </div>
                 </div>
               </div>
@@ -484,7 +455,6 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
-=======
           {/* Contact Info */}
           <div className="hidden lg: flex items-center space-x-4">
             <$2 />

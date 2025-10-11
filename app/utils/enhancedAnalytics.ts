@@ -27,7 +27,6 @@ class EnhancedAnalytics {}
     this.setupPeriodicFlush();}
   }
   private generateSessionId(): string {}}return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`;
-=======
     this.sessionId = this.generateSessionId()
     this.setupOfflineHandling()
     this.setupPeriodicFlush();}
@@ -55,7 +54,6 @@ class EnhancedAnalytics {}
     // Track initialization;
     this.trackEvent({)
     );
-=======
     // Track initialization
     this.trackEvent()
     )
@@ -196,7 +194,6 @@ class EnhancedAnalytics {}
   }
   private flush(): void {if (this.queue.length === 0) return;}
     // Check if online;
-=======
     metadata?: Record</string><string>
   ): void {
     this.trackEvent({)

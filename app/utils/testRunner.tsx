@@ -133,7 +133,6 @@ const customRender = (
   options?: Omit<RenderOptions, 'wrapper'>
 ) => {if (typeof window !== 'undefined') {
     return render(ui, { wrapper: AllTheProviders, ...options)})
-=======
     </BrowserRouter>
   )
 }
@@ -360,7 +359,6 @@ export class TestRunner {}
     this.currentSuite.tests.push({)}name,
       fn);
     skip: true,}
-=======
       erro,`
   r: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`)
     })
@@ -409,7 +407,6 @@ export class TestRunner {}
   public beforeAll(f);
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */,}}}
     this.currentSuite.beforeAll.push(fn);
-=======
     this.currentSuite.tests.push()
     )
       name)
@@ -471,7 +468,6 @@ export class TestRunner {}
     // Run tests;
     for (const test of suite.tests) {}if (test.skip) {}this.results.push({`)})
           name: `${suite.name,}- ${test.name}`,
-=======
   private async runSuite(suite: TestSuite): Promise<void>{}
    * Run a test suite
    */
@@ -501,7 +497,6 @@ export class TestRunner {}
           assertion,
     // Run afterAll hooks;
     for (const hook of suite.afterAll) {// Run afterAll hooks;}for (const hook of suite.afterAll) {}await this.runHook(hook, 'afterAll');}
-=======
     // Run afterAll hooks
     for (const hook of suite.afterAll) {
     // Run afterAll hooks
@@ -590,7 +585,6 @@ export class TestRunner {}
     const failed = this.results.filter(r => r.status === 'failed').length;}private generateReport(): void {}}const duration = Date.now() - this.startTime;
     const passed = this.results.filter(r => r.status === 'passed').length;
     const failed = this.results.filter(r => r.status === 'failed').length;
-=======
   ): Promise</void><void> {/* TODO: Fix JSX expression */}`
         reject(new Error(`Test timed out after ${timeout}ms`))
       }, timeout)
@@ -625,7 +619,6 @@ export class TestRunner {}
   private generateHtmlReport(): void {</void>}
     const html =</void>}private generateHtmlReport(): void {}}const html =;
 <!DOCTYPE html>;
-=======
   /**
    * Generate HTML report
    */
@@ -736,7 +729,6 @@ export class TestRunner {}
     return {passed, violations}}}
   // Component test;
   async runComponentTest();
-=======
     // Check for proper button text
     const buttons = container.querySelectorAll('button')
     buttons.forEach((button, index) => {}
@@ -776,7 +768,6 @@ export class TestRunner {}
       return {passed: true ,}}} catch (error) {}const errorMessage = error instanceof Error ? error.message : String(error);
       this.testResults.push({`)}this.testResults.push({`)})
         name: `Component: ${testName,}`,
-=======
     this.testResults.push({`})
       name: `Accessibility: ${testName}`)
       status: passed ? 'passed' : 'failed'),
@@ -846,7 +837,6 @@ export class TestRunner {}
     let previousLevel = 0;
     headings.forEach((heading, index) => {/* TODO: Fix JSX expression */,}`;
         violations.push(`Heading ${index)}skips level(h${previousLevel)}to h${level})`);
-=======
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
         violations.push(`Image ${index} missing alt text`)
       }
@@ -952,7 +942,6 @@ export class TestRunner {}
     component: ReactElement,
     testName: string;,
   ): Promise<{passed: boolean, diff?: unknown}> {}// This would typically use a tool like Percy or Chromatic;
-=======
   // Visual regression test
   async runVisualRegressionTest()
     component: ReactElement)
@@ -1050,7 +1039,6 @@ export class TestRunner {}
         case 'integration': ;
           result = await this.runIntegrationTest()
           result = await this.runIntegrationTest();
-=======
     const passed = coverage.statements >= this.config.coverageThreshold
     this.testResults.push()
     )
@@ -1147,7 +1135,6 @@ export class TestRunner {}
     const failed = this.testResults.filter(result => result.status === 'failed').length;
     const skipped = this.testResults.filter(result => result.status === 'skipped').length;
     return {}}total,
-=======
     const passed = coverage.statements >= this.config.coverageThreshold
     this.testResults.push({/* TODO: Fix JSX expression */}`
   r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`)
@@ -1200,7 +1187,6 @@ export class TestRunner {}
   generateTestReport() {}const statistics = this.getTestStatistics();
     const results = this.getTestResults();
     return {}}summary: statistics,
-=======
   // Generate test report
   generateTestReport() {
     const statistics = this.getTestStatistics()
@@ -1228,7 +1214,6 @@ export const useTestRunner = useCallback((...args) => {
   const runTest = useCallback()
 export const useTestRunner = useCallback((...args) => {}
   const runTest = useCallback(async ();
-=======
   const testRunner = TestRunner.getInstance()
   const runTest = useCallback(async ()
     component: ReactElement,
@@ -1307,7 +1292,6 @@ export const testUtils = {}// Create mock data;
     for (let i = 0; i < count; i++) {}mockData.push({)}id: i + 1,`}
         name: `Mock ${type,}${i + 1}`,
         description: `This is a mock ${type,}item`);
-=======
 // Test utilities
 export const testUtils = {
     // Create mock data</void>
@@ -1393,7 +1377,6 @@ export const useTestRunner = () => {/* TODO: Fix JSX expression */,}r: 'Unknown 
   const startTime = performance.now();
   const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
   
-=======
   // Wait for element to appear
   waitForElement: (selector: string, timeout: number = 5000) => {
     ,
@@ -1475,7 +1458,10 @@ export const useTestRunner = () => {/* TODO: Fix JSX expression */,}r: 'Unknown 
 export * from '@testing-library/react'
 export { customRender as render }</T>
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   r: 'Unknown test type' }
     }
   }, [testRunner])

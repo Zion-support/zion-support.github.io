@@ -47,7 +47,6 @@ const trapFocus = (element) => {
 // <main>
 //   <nav aria-label="Main navigation">
 //     <ul>
-<<<<<<< HEAD
 //       <li><a href="/">Home</a></li>
 //     </ul>
 //   </nav>
@@ -115,7 +114,6 @@ export const runAccessibilityImprovements = () => {
   improveKeyboardNavigation();
   addAltText();
 };
-=======
 //       <li><a href="/">Home</a>
 //
 //
@@ -155,4 +153,3 @@ export const runAccessibilityImprovements = () => {
 //   {errorMessage}
 //
 export { trapFocus }</div></div></div></div></button></a></a></h1></h2></h2></h3></h3></ul></li></main></section></article></nav>
->>>>>>> origin/main

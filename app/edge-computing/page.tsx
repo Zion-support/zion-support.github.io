@@ -7,7 +7,6 @@
       description: 'Deploy edge nodes worldwide for optimal performance and coverage.',
 const services = [
     {icon: '⚡',
-=======
       benefits: ['Global edge network', 'Geographic distribution', 'CDN integration', 'Multi-region support'],
   },
     {
@@ -52,7 +51,6 @@ const services = [
     {icon: '📱',
       title: 'Mobile Edge',
 const benefits = [
-=======
   ]
   const benefits = [
     'Ultra-Low Latency',
@@ -92,7 +90,6 @@ const useCases = [
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         </Helmet><title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

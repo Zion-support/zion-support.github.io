@@ -9,7 +9,6 @@
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>}{/* Hero Section */}
-=======
       description: 'Bank-level security with encryption and compliance standards'
   },
     {
@@ -29,7 +28,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
   }
       {/* Hero Section */}
       {/* Features Section */}

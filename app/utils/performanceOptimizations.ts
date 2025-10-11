@@ -42,7 +42,10 @@ export const throttle = </T><T extends (...args: any[]) => any>(,
         : null,
     [callback, options]
     ,
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         observer.observe(element)
         return () => observer.unobserve(element);}
 'use client'
@@ -112,7 +115,6 @@ export const useLazyImage = (sr);
       (entries) => {/* TODO: Fix JSX expression */,}}
             img.onerror = () => {/* TODO: Fix JSX expression */,}}
             img.src = src;
-=======
   const disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
     }
   }, [observer])
@@ -135,7 +137,6 @@ export const useLazyImage = (sr)
     fid?: number;
   }>({})
     const updateMetrics = useCallback((...args) => {
-=======
   useEffect(() => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
@@ -205,10 +206,8 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
     usedJSHeapSize?: number;
   }>({})
     const updateMemoryInfo = useCallback((...args) => {
-=======
   useEffect(() => {
       const memory = (performance as any).memory;
-=======
     if (typeof window === 'undefined' || !('memory' in performance)) return
     const updateMemoryInfo = useCallback((...args) => {
       const memory = (performance as any).memory
@@ -247,7 +246,6 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
     totalSize?: number;
     jsSize?: number;
     cssSize?: number;}imageSize?: number;}
-=======
 // Resource preloading utility
 export const preloadResource = useCallback((...args) => {
     if (typeof window === 'undefined') return
@@ -279,14 +277,12 @@ export const preloadCriticalResources = useCallback((...args) => {}
 export const useBundleSizeMonitoring = useCallback((...args) => {
   }>({})
     const calculateBundleSize = useCallback((...args) => {
-=======
   useEffect(() => {
       const resources = performance.getEntriesByType('resource');
       let totalSize = 0;
       let jsSize = 0;
       let cssSize = 0;
       let imageSize = 0;
-=======
     if (typeof window === 'undefined') return
     const calculateBundleSize = useCallback((...args) => {
       const resources = performance.getEntriesByType('resource')

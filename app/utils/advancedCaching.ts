@@ -12,7 +12,6 @@
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
-=======
   ]
   const benefits = [
 'use client'
@@ -63,7 +62,6 @@ const AdvancedCachingPage: React.FC = () => {
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
                 <ArrowRight>
-=======
     'Proven track record of success'
   ]
 return (
@@ -135,7 +133,6 @@ return (
               <button>
                 <Mail>
                 Email Us;
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div>

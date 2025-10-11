@@ -2,7 +2,6 @@
 import {CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3}}from 'lucide-react';
 
 const AIApiManagementPage: React.FC = () => {,
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -29,12 +28,10 @@ const AIApiManagementPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI API Management | Zion Tech Group</title>
-=======
     {
 
   return (
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
-=======
 <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
         {/* Hero Section */}
@@ -136,7 +133,6 @@ export default AIApiManagementPage
 };
 
 export default AiApiManagementPage;
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

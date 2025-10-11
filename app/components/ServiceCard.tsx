@@ -74,7 +74,6 @@
           ))
         </div>
       </section>
-=======
 import {ArrowRight, CheckCircle}}from 'lucide-react';
 interface ServiceCardProps {title: string;,}
   description: string;,
@@ -103,7 +102,6 @@ interface ServiceCardProps {title: string;,}
           <div key={index}className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
             <span className="text-gray-300 text-sm">{feature</span>}</span>
-=======
 'use client'
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
@@ -153,7 +151,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ()
   );
 };
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
           </div><div className="text-3xl font-bold text-white mb-1">{price}</div>
           <div className="text-gray-400 text-sm">per month</div>
         </div>

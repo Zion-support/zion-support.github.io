@@ -35,7 +35,6 @@ const EmailMarketingAutomationPage: React.FC = () => {,
     {icon: Zap,
       title: 'Smart Triggers',
 const benefits = [
-=======
   ]
   const benefits = [
     'Increase email engagement rates',
@@ -50,7 +49,6 @@ const benefits = [
     'Generate more qualified leads',
 
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
-=======
     'Save time and resources'
   ]
 return (
@@ -63,7 +61,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />

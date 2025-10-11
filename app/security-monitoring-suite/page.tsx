@@ -37,7 +37,6 @@ const SecurityMonitoringSuitePage: React.FC = () => {,
     {icon: Zap,
       title: 'Automated Response',
 const benefits = [
-=======
   ]
   const benefits = [
     '24/7 security monitoring and protection',
@@ -52,7 +51,6 @@ const benefits = [
     'Scalable for any business size',
 
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
-=======
     'Expert security team support'
   ]
 return (
@@ -65,7 +63,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />

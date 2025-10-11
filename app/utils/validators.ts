@@ -22,7 +22,6 @@ try {new URL(url);}
  * Validate required field;
  */;
 export function isRequired(value: string | null | undefined): boolean {,}
-=======
     const urlObj = new URL(url)
     return urlObj.protocol === 'http: ' || urlObj.protocol === 'https:'
 export function isValidUrl(url: string): boolean {
@@ -96,7 +95,6 @@ export function isNumeric(value: string): boolean {,}
  */;
 export function isStrongPassword(password: string): boolean {,}
     const hasMinLength = password.length >= 8;
-=======
   return value.toString().trim().length > 0
 export function isRequired(value: string | null | undefined): boolean {
     return value !== null && value !== undefined && value.trim() !== ''
@@ -155,7 +153,6 @@ export function isStrongPassword(password: string): boolean {
 export function getPasswordStrength(password: string): number {,}
     let score = 0;
   if (password.length >= 8) score++;
-=======
 /**
  * Get password strength score (0-4)
  */
@@ -168,7 +165,6 @@ export function getPasswordStrength(password: string): number {
  * Validate credit card number using Luhn algorithm;
  */;
 export function isValidCreditCard(cardNumber: string): boolean {,}
-=======
 /**
  * Validate credit card number using Luhn algorithm
  */
@@ -177,7 +173,6 @@ export function isValidCreditCard(cardNumber: string): boolean {
   let sum = 0;
   let isEven = false;
   for (let i = cleaned.length - 1; i >= 0; i--) {let digit = parseInt(cleaned.charAt(i), 10);
-=======
   let sum = 0
   let isEven = false
   for (let i = cleaned.length - 1; i >= 0; i--) {
@@ -192,7 +187,10 @@ export function isValidCreditCard(cardNumber: string): boolean {
   }
   return sum % 10 === 0
 }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 /**
  * Validate US ZIP code
  */
@@ -241,7 +239,10 @@ export function validateObject<T extends Record<string, unknown>>(
     if (fieldErrors.length > 0) {
     errors[fieldName] = fieldErrors
   }
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 /**
  * Validate US ZIP code
  */
@@ -341,7 +342,6 @@ export function validateURL(url: string): ValidationResult {,}
  * Validate string length with detailed result;
  */;
 export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {,}
-=======
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{}</React.Fragment></React.Fragment>{}{}]/.test(password)
 return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
 }
@@ -758,7 +758,6 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {,
     try {return await validator(value)}}} catch (error) {}return {isValid: false, errors: ['Validation failed'], error: 'Validation failed' ,}}}
 }
-=======
  * Validate required field with detailed result
  */
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {

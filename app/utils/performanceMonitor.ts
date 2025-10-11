@@ -17,7 +17,6 @@ interface PerformanceMetrics {}
    */;
   private initializeObservers(): void {try {}
       // Observe paint metrics;
-=======
   init(): void {}
     if (this.isInitialized || typeof window === 'undefined') return
     this.isInitialized = true
@@ -50,7 +49,6 @@ interface PerformanceMetrics {}
           }
 // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {let clsValue = 0;
-=======
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
         this.observeEntry('layout-shift', (entries) => {
     let clsValue = 0
@@ -71,7 +69,6 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
 observer.observe({entryTypes: ['paint'] ,)})
       this.observers.push(observer);
     } catch (error) {}}
-=======
             (this.metrics as any)[metricKey] = entry.startTime
             this.logMetric(metricKey as string, entry.startTime)
           }
@@ -91,7 +88,6 @@ observer.observe({ entryTypes: ['paint'] })
   s: ['paint'] ,})
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
-=======
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime
@@ -164,7 +160,6 @@ observer.observe({entryTypes: ['resource'] ,)})
     }
     // Track large resources;
     if (size > 100000) {// 100KB;}this.addCustomMetric(`largeResource_${entry.name)}`, size);
-=======
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })
       this.observers.push(observer)
@@ -248,7 +243,6 @@ observer.observe({ entryTypes: ['layout-shift'] })
     }
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {}(window as any).gtag('event', 'performance_metric', {)}metric_name: name,
-=======
     if (process.env.NODE_ENV === 'development') {}ms`)
     }
     // Send to analytics if available
@@ -304,7 +298,6 @@ generateReport(): string {const score = this.getScore();}
     const metrics = this.getMetrics();
     return `;
 Performance Report:  ,}Score: ${score,}Metrics: ${JSON.stringify(metrics, null, 2)}`;
-=======
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['resource'] })
       this.observers.push(observer)

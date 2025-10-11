@@ -36,7 +36,6 @@ const ProcessAutomationPage: React.FC = () => {,
     {icon: BarChart,
       title: 'Performance Monitoring',
 const benefits = [
-=======
   ]
   const benefits = [
     'Reduce manual work and human errors',
@@ -51,7 +50,6 @@ const benefits = [
     '24/7 automated operations',
 
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
-=======
     'Custom automation solutions'
   ]
 return (
@@ -64,7 +62,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
         {/* Hero Section */}
         <section className="py-20 px-4">
           </section>< className="$2 />

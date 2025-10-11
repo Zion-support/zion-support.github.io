@@ -14,7 +14,6 @@
       title: 'Cloud Security',
     }
   ];
-=======
   ]
   const benefits = [
   ]
@@ -60,7 +59,6 @@
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
-=======
       </div><Helmet>
         </Helmet><title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
         <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
@@ -108,9 +106,11 @@
               </div>
             ))}
           </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
-=======
 
 'use client'
 import React from 'react'
@@ -190,7 +190,6 @@ const features = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
 <title>Cloud Services | Zion Tech Group
         <meta name="description" content="Professional Cloud Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="cloud services, cloud computing, IT services, Zion Tech Group, cloud solutions" />

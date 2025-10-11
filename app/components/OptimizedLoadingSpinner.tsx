@@ -60,7 +60,6 @@ case 'bars':;
                 <div;}key={i}className={`w-1 ${colorClasses[color].split(' ')[1]}animate-pulse`}
                   style={{}height: `${12 + i * 4,}px`,
                     animationDelay: `${i * 0.1,}s`,
-=======
 'use client'
 import React, { Suspense, lazy } from 'react'
 interface OptimizedLoadingSpinnerProps {
@@ -120,7 +119,6 @@ case 'bars':
     text && (</div>
   }
             <p>{text</p>} </p>
-=======
           )
 case 'spinner':
         default:  

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 
 const ContentStatistics: React.FC = () => {,
   const [counters, setCounters] = useState({)
@@ -5,16 +9,21 @@ const ContentStatistics: React.FC = () => {,
     projects: 0,
     satisfaction: 0,
   });
+<<<<<<< HEAD
 =======
 >>>>>>> main
 
   };
 =======
+=======
+>>>>>>> main
+
+  };
+>>>>>>> origin/main
     years: 10
   };
 >>>>>>> main
 
-=======
     years: 10
   }
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -71,7 +80,10 @@ const ContentStatistics: React.FC = () => {,
     }
   ];
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
           }
           return prev;
@@ -123,7 +135,10 @@ const ContentStatistics: React.FC = () => {,
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our contentstatistics solutions deliver unmatched performance, security, and scalability.
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   useEffect(() => {
     const duration = 2000; // 2 seconds
     const steps = 60;
@@ -151,7 +166,6 @@ const ContentStatistics: React.FC = () => {,
       timers.forEach(timer => clearInterval(timer));
     };
   }, []);
-=======
   ]
   useEffect(() => {
     const timers = Object.keys(targetCounters).map()
@@ -206,7 +220,10 @@ const ContentStatistics: React.FC = () => {,
               </div>
               <h4 className="text-xl font-bold text-white mb-2">{achievement.title}</h4>
               <p className="text-gray-300">{achievement.description}</p>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
     });
 
     return () => {
@@ -286,3 +303,8 @@ const ContentStatistics: React.FC = () => {,
   );
 };
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f
+>>>>>>> origin/main

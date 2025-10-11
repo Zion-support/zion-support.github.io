@@ -1,6 +1,9 @@
   const features = [
     {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
   ]
   const benefits = [
     'Advanced blockchain technology integration',
@@ -13,7 +16,6 @@
   ];
   return (
         <title>Blockchain Solutions | Zion Tech Group</title>
-=======
     'Proven track record of success'
   ]
   return (
@@ -38,7 +40,10 @@
             <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover: bg-white/20 transition-all duration-300">,</div>
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
               <p className="text-gray-300">{feature.description}</p>
 >>>>>>> main
             </div>
@@ -52,7 +57,6 @@
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Link className="w-8 h-8 text-blue-600" />
-=======
           </section>< className="$2 />
             </div><div className="text-center mb-12">
               </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -126,7 +130,6 @@
                       </div>
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature} </li>
-=======
                         </div><div className="flex items-center justify-between mb-2">
                           </div><span className="text-2xl font-bold text-blue-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
@@ -217,7 +220,6 @@
 };
 
 export default BlockchainPage;
-=======
   )
 }
 export default BlockchainPage

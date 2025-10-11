@@ -1,7 +1,6 @@
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiClimateSolutionsProPage: React.FC = () => {
 >>>>>>> main
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -16,9 +15,11 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 const AiClimateSolutionsProPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 >>>>>>> main
-=======
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
@@ -44,7 +45,6 @@ const AiClimateSolutionsProPage: React.FC = () => {
   return (
     <>
   </>
-=======
   ]
   return (
     <React.Fragment>
@@ -56,7 +56,10 @@ const AiClimateSolutionsProPage: React.FC = () => {
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         </section>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -79,7 +82,6 @@ const AiClimateSolutionsProPage: React.FC = () => {
 };
 
 export default AiClimateSolutionsProPage;
-=======
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
