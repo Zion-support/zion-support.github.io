@@ -1,3 +1,5 @@
+import React from 'react';
+import Footer from '../components/Footer';
 
 const AiDocumentProcessorPage: React.FC = () => {
   const features = [

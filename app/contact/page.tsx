@@ -1,3 +1,4 @@
+import React from 'react';
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react'

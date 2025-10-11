@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Footer from '../components/Footer';
                 </button>
               </div>
             </div>

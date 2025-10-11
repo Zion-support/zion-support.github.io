@@ -1,3 +1,5 @@
+import React from 'react';
+import Navigation from '../components/Navigation';
 
 const AiMobileBuilderPage: React.FC = () => {
   const features = [

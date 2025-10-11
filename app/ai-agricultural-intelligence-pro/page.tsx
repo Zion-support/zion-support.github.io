@@ -1,3 +1,4 @@
+import React from 'react';
 const AiAgriculturalIntelligenceProPage: React.FC = () => {
   const features = [
     {
@@ -35,36 +36,4 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
     'Expert support'
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
-const PagePage: React.FC = () => {
-  return (
-    <>
-              </p>
-            </div>
-          </div>
-        </section>
-
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-            </div>
-          </div>
-        </section>
-      </main>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-      <Footer />
-    </>
-  );
-};
 

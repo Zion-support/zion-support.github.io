@@ -1,3 +1,4 @@
+import React from 'react';
 
 const SitemapPagePage: React.FC = () => {
   const features = [

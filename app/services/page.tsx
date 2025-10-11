@@ -1,3 +1,7 @@
+import React from 'react';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
+import { Helmet } from 'react-helmet-async';
 
 const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

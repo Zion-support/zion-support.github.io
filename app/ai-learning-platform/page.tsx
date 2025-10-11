@@ -1,3 +1,5 @@
+import React from 'react';
+import Navigation from '../components/Navigation';
 
 const AiLearningPlatformPage: React.FC = () => {
   const features = [

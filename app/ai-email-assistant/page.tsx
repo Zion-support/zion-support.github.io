@@ -1,3 +1,5 @@
+import React from 'react';
+import Footer from '../components/Footer';
 
 const AiEmailAssistantPage: React.FC = () => {
   const features = [

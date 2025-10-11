@@ -1,4 +1,3 @@
-import globals from 'globals'
 import js from '@eslint/js'
 import tseslint from '@typescript-eslint/eslint-plugin'
 import tsParser from '@typescript-eslint/parser'
@@ -56,7 +55,6 @@ export default [
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -75,7 +73,6 @@ export default [
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
       parser: tsParser,
       parserOptions: {
         ecmaVersion: 'latest',
@@ -106,3 +103,4 @@ export default [
       'no-unused-vars': 'off'
     }
   }
+]

@@ -1,3 +1,6 @@
+import React from 'react';
+import Navigation from '../components/Navigation';
+import { Helmet } from 'react-helmet-async';
 
 const EmailOptimizerPage: React.FC = () => {
   const features = [

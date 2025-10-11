@@ -1,3 +1,6 @@
+import React from 'react';
+import Navigation from '../components/Navigation';
+import { Helmet } from 'react-helmet-async';
 
 const SeoOptimizerPage: React.FC = () => {
   const features = [

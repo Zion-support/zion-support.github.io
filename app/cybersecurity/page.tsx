@@ -1,3 +1,5 @@
+import React from 'react';
+import Footer from '../components/Footer';
 
 const CybersecurityPage: React.FC = () => {
   const features = [

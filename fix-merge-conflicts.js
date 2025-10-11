@@ -1,34 +1,36 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflict markers
-    }
+    // Remove merge conflict markers and keep the latest version
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
-    console.log(`Resolving conflicts in: ${filePath}`);
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
+    // Remove empty lines that might be left
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.trim().startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
-    return true;
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in: ${filePath}`);
   } catch (error) {
-    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-}
+// Get all TypeScript/TSX files with merge conflicts
+const files = execSync('find app -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \\;', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(f => f);
+
+console.log(`Found ${files.length} files with merge conflicts`);
+
+files.forEach(fixMergeConflicts);
+
+console.log('Merge conflict fixing completed');

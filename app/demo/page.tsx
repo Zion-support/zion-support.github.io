@@ -1,3 +1,6 @@
+import React from 'react';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState(0);

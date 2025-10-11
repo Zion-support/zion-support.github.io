@@ -1,3 +1,6 @@
+import React from 'react';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 const AiEdgeComputingPage: React.FC = () => {
   const features = [

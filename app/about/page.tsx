@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Target, Users, Award, ArrowRight } from 'lucide-react'
+import { Target, Users, Award, ArrowRight, Lightbulb, Shield, Heart } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
@@ -23,85 +23,172 @@ const AboutPage: React.FC = () => {
     }
   ]
 
-            </div>
-          </div>
-        </section>
+  const values = [
+    {
+      icon: Lightbulb,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and building strong partnerships.'
+    },
+    {
+      icon: Shield,
+      title: 'Integrity',
+      description: 'We maintain the highest ethical standards in all our business practices.'
+    }
+  ]
 
-        {/* Values Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Values
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                The principles that guide everything we do
-              </p>
+  const team = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CTO',
+      bio: 'Technical expert specializing in machine learning and cloud architecture.'
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'Head of Design',
+      bio: 'Creative director focused on user experience and interface design.'
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group, a leading AI and IT solutions company dedicated to transforming businesses through innovative technology." />
+        <meta name="keywords" content="about us, AI company, IT solutions, technology innovation, business transformation" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <main>
+          {/* Hero Section */}
+          <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                  About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
+                </h1>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  We are a leading AI and IT solutions company dedicated to transforming businesses through innovative technology and exceptional service.
+                </p>
+              </div>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {values.map((value, index) => {
-                const Icon = value.icon
-                return (
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
+          </section>
+
+          {/* Features Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  What Drives Us
+                </h2>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                  Our core principles that guide everything we do
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {features.map((feature, index) => {
+                  const Icon = feature.icon
+                  return (
+                    <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                      <p className="text-gray-300">{feature.description}</p>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
-                    <p className="text-gray-300">{value.description}</p>
-                  </div>
-                )
-              })}
+                  )
+                })}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Team Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Meet Our Team
+          {/* Values Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Our Values
+                </h2>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                  The principles that guide everything we do
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {values.map((value, index) => {
+                  const Icon = value.icon
+                  return (
+                    <div key={index} className="text-center">
+                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
+                      <p className="text-gray-300">{value.description}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          </section>
+
+          {/* Team Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Meet Our Team
+                </h2>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                  The brilliant minds behind our innovative solutions
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {team.map((member, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                    <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                      <Users className="w-12 h-12 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                    <p className="text-cyan-400 mb-4">{member.role}</p>
+                    <p className="text-gray-300">{member.bio}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Work With Us?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                The brilliant minds behind our innovative solutions
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's discuss how we can help transform your business with our AI and IT solutions.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                  Get Started
+                </button>
+                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                  View Our Work
+                </button>
+              </div>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-12 h-12 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
-                  <p className="text-cyan-400 mb-4">{member.role}</p>
-                  <p className="text-gray-300">{member.bio}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can help transform your business with our AI and IT solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                View Our Work
-              </button>
-            </div>
-          </div>
-        </section>
+          </section>
         </main>
       </div>
       

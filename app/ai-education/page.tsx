@@ -1,3 +1,5 @@
+import React from 'react';
+import Footer from '../components/Footer';
 
 const AiEducationPage: React.FC = () => {
   const features = [

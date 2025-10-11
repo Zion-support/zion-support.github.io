@@ -1,3 +1,6 @@
+import React from 'react';
+import Footer from '../components/Footer';
+import Navigation from '../components/Navigation';
 
 const AiDocumentScannerPage: React.FC = () => {
   const features = [

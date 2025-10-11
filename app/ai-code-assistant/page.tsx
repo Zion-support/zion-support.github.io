@@ -1,3 +1,4 @@
+import React from 'react';
     {
       icon: BarChart,
       title: 'Advanced Analytics',

@@ -1,3 +1,5 @@
+import React from 'react';
+import Navigation from '../components/Navigation';
 
 const ItInfrastructureDesignPage: React.FC = () => {
   const features = [

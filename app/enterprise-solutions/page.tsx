@@ -1,3 +1,5 @@
+import React from 'react';
+import Navigation from '../components/Navigation';
 
 const EnterpriseSolutionsPage: React.FC = () => {
   const features = [
