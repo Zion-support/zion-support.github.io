@@ -6,21 +6,9 @@ import HomePage from './app/page'
 import AboutPage from './app/about/page'
 import ContactPage from './app/contact/page'
 import AIServicesPage from './app/ai-services/page'
-<<<<<<< HEAD
 import ITServicesPage from './app/it-services/page'
 import MicroSaasServicesPage from './app/micro-saas-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
-<<<<<<< HEAD
-import FiveGImplementationPage from './app/5g-implementation/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
-import ItServicesPage from './app/it-services/page'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
-=======
-import FiveGImplementationPage from './app/5g-implementation/page'
-import ITServicesPage from './app/it-services/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
->>>>>>> cursor/fix-errors-and-merge-to-main-3732
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
 
@@ -32,40 +20,13 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Route path="/services" element={<ServicesPage />} />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3732
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/ai-services" element={<AIServicesPage />} />
           <Route path="/it-services" element={<ITServicesPage />} />
           <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-<<<<<<< HEAD
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-<<<<<<< HEAD
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/it-services" element={<ItServicesPage />} />
-          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
           <Route path="/cloud-services" element={<CloudServicesPage />} />
           <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-=======
-          <Route path="/cloud-services" element={<CloudServicesPage />} />
-          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
-=======
-          <Route path="/cloud-services" element={<CloudServicesPage />} />
-          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
->>>>>>> cursor/fix-errors-and-merge-to-main-3732
         </Routes>
         <Footer />
       </div>
