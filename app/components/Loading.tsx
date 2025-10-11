@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
+=======
+import React from 'react';
+import { Brain, Zap, Shield, Globe } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
 
 const LoadingPage: React.FC = () => {
   const features = [
@@ -26,7 +31,11 @@ const LoadingPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
+<<<<<<< HEAD
   ]
+=======
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
 
   const benefits = [
     'Advanced AI technology integration',
@@ -34,9 +43,9 @@ const LoadingPage: React.FC = () => {
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
-    'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ]
 
   return (
@@ -164,3 +173,19 @@ const LoadingPage: React.FC = () => {
 }
 
 export default LoadingPage
+=======
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white mx-auto mb-8"></div>
+        <h1 className="text-4xl font-bold text-white mb-4">Loading...</h1>
+        <p className="text-gray-300 text-lg">Please wait while we prepare your experience</p>
+      </div>
+    </div>
+  );
+};
+
+export default LoadingPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732

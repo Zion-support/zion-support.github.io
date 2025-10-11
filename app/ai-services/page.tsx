@@ -2,6 +2,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Brain, Database, Code, Smartphone, Cpu, Shield, Globe } from 'lucide-react';
 =======
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
@@ -12,6 +13,9 @@ import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } 
 =======
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3, Cog } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
+=======
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -20,6 +24,7 @@ import Footer from '../components/Footer';
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -118,6 +123,8 @@ const AIServicesPage: React.FC = () => {
       popular: true,
       link: '/ai-automation'
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
@@ -214,6 +221,7 @@ const AIServicesPage: React.FC = () => {
       description: 'Trusted by 500+ businesses worldwide',
       icon: <Star className="w-6 h-6 text-yellow-500" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
@@ -235,20 +243,24 @@ const AIServicesPage: React.FC = () => {
       title: 'Continuous Learning',
       description: 'AI models continuously improve and adapt to your specific business needs and data patterns.'
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
     }
   ];
 
   const stats = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     { number: '10,000+', label: 'AI Models Trained' },
     { number: '99.9%', label: 'Accuracy Rate' },
     { number: '50+', label: 'AI Services Available' },
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
     { number: '500+', label: 'AI Solutions Deployed' },
     { number: '99.9%', label: 'Accuracy Rate' },
     { number: '60%', label: 'Cost Reduction' },
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
     { number: '24/7', label: 'AI Support' }
 =======
     { number: '95%', label: 'Customer Satisfaction' },
@@ -297,6 +309,7 @@ const AIServicesPage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name="description" content="Comprehensive AI services including content generation, chatbots, analytics, and automation. Transform your business with cutting-edge artificial intelligence." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI chatbots" />
       </Helmet>
@@ -314,6 +327,8 @@ const AIServicesPage: React.FC = () => {
               Transform your business with our comprehensive AI services. From content generation to automation, 
               we provide cutting-edge artificial intelligence solutions to drive growth and efficiency.
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
         <meta name="description" content="Advanced AI services including content generation, chatbots, analytics, and automation. Transform your business with cutting-edge artificial intelligence." />
         <meta name="keywords" content="AI services, artificial intelligence, content generation, chatbots, analytics, automation" />
 =======
@@ -325,7 +340,13 @@ const AIServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, machine learning, artificial intelligence, automation, business intelligence" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
       </Helmet>
+<<<<<<< HEAD
 
+=======
+      
+      <Navigation />
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       {/* Hero Section */}
 <<<<<<< HEAD
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
@@ -337,6 +358,7 @@ const AIServicesPage: React.FC = () => {
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
               Transform your business with cutting-edge artificial intelligence solutions designed to automate, optimize, and accelerate your growth.
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
           <div className="text-center mb-12 sm:mb-16">
@@ -359,6 +381,8 @@ const AIServicesPage: React.FC = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Leverage cutting-edge artificial intelligence to automate processes, gain insights, and drive innovation across your organization.
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -374,17 +398,10 @@ const AIServicesPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 
-<<<<<<< HEAD
-                to="/micro-saas-services" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Explore Micro SAAS
-=======
                 to="/about" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
               </Link>
             </div>
           </div>
@@ -405,6 +422,7 @@ const AIServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -481,6 +499,8 @@ const AIServicesPage: React.FC = () => {
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Join thousands of businesses already using our AI services to drive growth and efficiency.
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
         </div>
       </section>
 
@@ -740,6 +760,7 @@ const AIServicesPage: React.FC = () => {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Harness the Power of AI?</h2>
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
                 Let's discuss how our AI solutions can transform your business and drive unprecedented growth.
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
@@ -747,12 +768,15 @@ const AIServicesPage: React.FC = () => {
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                 Let's discuss how our AI solutions can accelerate your digital transformation and drive measurable results.
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   Start Free Trial
@@ -767,6 +791,8 @@ const AIServicesPage: React.FC = () => {
 <<<<<<< HEAD
                   Learn More About Us
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
                   Get Free Consultation
                 </Link>
                 <Link 
@@ -774,15 +800,19 @@ const AIServicesPage: React.FC = () => {
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
                   View All Services
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
                   Explore Micro SAAS
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
                 </Link>
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       </main>
@@ -852,10 +882,16 @@ const AIServicesPage: React.FC = () => {
         </div>
       </section>
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
+=======
+      </section>
+      
+      <Footer />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -869,3 +905,6 @@ export default AIServicesPage;
 =======
 export default AIServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
+=======
+export default AIServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732

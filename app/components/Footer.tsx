@@ -1,17 +1,48 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
 import { Mail, Phone, MapPin } from 'lucide-react'
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Code, Smartphone } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
 
 export default function Footer() {
+  const services = [
+    { name: 'AI Services', href: '/ai-services', icon: <Brain className="w-4 h-4" /> },
+    { name: 'IT Services', href: '/it-services', icon: <Code className="w-4 h-4" /> },
+    { name: 'Micro SAAS', href: '/micro-saas-services', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'Cloud Services', href: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
+    { name: '5G Implementation', href: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: <Shield className="w-4 h-4" /> }
+  ];
+
+  const company = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/about#team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
+  const support = [
+    { name: 'Help Center', href: '/support' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Status', href: '/status' }
+  ];
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
+          {/* Company Info */}
+          <div className="lg:col-span-1">
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
                 <span className="text-white font-bold text-sm">Z</span>
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -107,9 +138,15 @@ export default function Footer() {
             </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+              </div>
+              <span className="text-xl font-bold">Zion Tech Group</span>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
             <p className="text-gray-400 mb-4">
               Advanced AI and IT solutions for modern businesses. Transforming ideas into reality with cutting-edge technology.
             </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -129,6 +166,17 @@ export default function Footer() {
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
+=======
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
               </a>
 =======
             <p className="text-gray-300 mb-6 max-w-md">
@@ -155,31 +203,47 @@ export default function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          {/* Services */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
-=======
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
             <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
-              <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">Micro SAAS</Link></li>
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.href}
+                    className="flex items-center text-gray-400 hover:text-white transition-colors"
+                  >
+                    {service.icon}
+                    <span className="ml-2">{service.name}</span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-<<<<<<< HEAD
+          {/* Company */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
+              {company.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Support */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center">
@@ -211,11 +275,23 @@ export default function Footer() {
                   >
                     <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
+=======
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
+              {support.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    {item.name}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
           {/* IT Services */}
@@ -375,18 +451,22 @@ export default function Footer() {
                 <p className="text-white">contact@ziontechgroup.com</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
               </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Phone</p>
-<<<<<<< HEAD
-                <p className="text-white font-medium">+1 302 464 0950</p>
 =======
-                <p className="text-white">+1 (555) 123-4567</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-              </div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div className="flex items-center">
+              <Mail className="w-5 h-5 text-blue-400 mr-3" />
+              <span className="text-gray-400">contact@ziontechgroup.com</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
             </div>
+            <div className="flex items-center">
+              <Phone className="w-5 h-5 text-blue-400 mr-3" />
+              <span className="text-gray-400">+1 (555) 123-4567</span>
+            </div>
+<<<<<<< HEAD
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-blue-400" />
               <div>
@@ -414,10 +494,15 @@ export default function Footer() {
               <MapPin className="h-5 w-5" />
               <span>New York, NY</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e951
+=======
+            <div className="flex items-center">
+              <MapPin className="w-5 h-5 text-blue-400 mr-3" />
+              <span className="text-gray-400">San Francisco, CA</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
             </div>
           </div>
-        </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -444,6 +529,17 @@ export default function Footer() {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+=======
+          {/* Newsletter */}
+          <div className="bg-gray-800 rounded-lg p-6 mb-8">
+            <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
+            <p className="text-gray-400 mb-4">Get the latest news and updates about our AI and IT services.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
               />
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Subscribe
@@ -451,42 +547,19 @@ export default function Footer() {
               </button>
             </div>
           </div>
-        </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-gray-400 text-sm">
-                © 2024 Zion Tech Group. All rights reserved.
-              </p>
-              <div className="flex space-x-6">
-                {legal.map((item, index) => (
-                  <Link key={index} to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm">
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="mt-4 md:mt-0">
-              <p className="text-gray-500 text-xs">
-                Built with ❤️ by Zion Tech Group
-              </p>
-            </div>
 =======
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex flex-wrap justify-center md:justify-start space-x-6">
-              {legal.map((item, index) => (
-                <Link key={index} to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm">
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-            <p className="text-gray-400 text-sm text-center md:text-right">
+          {/* Bottom Bar */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
             </p>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
         {/* Bottom Bar */}
@@ -539,3 +612,22 @@ export default function Footer() {
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e951
+=======
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732

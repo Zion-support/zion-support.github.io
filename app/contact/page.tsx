@@ -1,12 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 =======
 import { CheckCircle, ArrowRight, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Calendar, Users } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 =======
 'use client'
 import React, { useState } from 'react'
@@ -15,6 +21,8 @@ import { CheckCircle, Mail, Phone, MapPin, Send } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 >>>>>>> cursor/fix-errors-and-merge-to-main-e951
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -24,26 +32,38 @@ export default function ContactPage() {
     phone: '',
     service: '',
     message: ''
-  })
+  });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
 =======
   const [status, setStatus] = useState({
+=======
+  const [status, setStatus] = useState<{
+    type: 'idle' | 'loading' | 'success' | 'error';
+    message: string;
+  }>({
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
     type: 'idle',
     message: ''
-  })
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+<<<<<<< HEAD
     const { name, value } = e.target
 >>>>>>> cursor/fix-errors-and-merge-to-main-e951
+=======
+    const { name, value } = e.target;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }))
-  }
+    }));
+  };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -78,6 +98,16 @@ export default function ContactPage() {
       
       // Reset form
 >>>>>>> cursor/fix-errors-and-merge-to-main-e951
+=======
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus({ type: 'loading', message: 'Sending message...' });
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setStatus({ type: 'success', message: 'Message sent successfully! We\'ll get back to you soon.' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       setFormData({
         name: '',
         email: '',
@@ -85,6 +115,7 @@ export default function ContactPage() {
         phone: '',
         service: '',
         message: ''
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -167,6 +198,17 @@ export default function ContactPage() {
       title: 'Email',
 =======
       icon: <Mail className="w-6 h-6 text-blue-500" />,
+=======
+      });
+    } catch {
+      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+    }
+  };
+
+  const contactInfo = [
+    {
+      icon: <Mail className="w-6 h-6 text-blue-500" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       title: 'Email Us',
       details: 'contact@ziontechgroup.com',
       description: 'Send us an email anytime'
@@ -178,6 +220,7 @@ export default function ContactPage() {
       description: 'Mon-Fri from 8am to 6pm'
     },
     {
+<<<<<<< HEAD
       icon: <MapPin className="w-6 h-6 text-purple-500" />,
       title: 'Visit Us',
       details: '123 Tech Street, Innovation City',
@@ -188,11 +231,18 @@ export default function ContactPage() {
       title: 'Business Hours',
       details: 'Monday - Friday: 8:00 AM - 6:00 PM',
       description: 'Saturday: 9:00 AM - 4:00 PM'
+=======
+      icon: <MapPin className="w-6 h-6 text-red-500" />,
+      title: 'Visit Us',
+      details: 'San Francisco, CA',
+      description: 'Come say hello at our office'
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
     }
 <<<<<<< HEAD
   ];
 
   const services = [
+<<<<<<< HEAD
     'AI & Machine Learning',
 =======
     'AI Services',
@@ -206,14 +256,37 @@ export default function ContactPage() {
     'Mobile Solutions',
     'Digital Transformation',
     'Other'
+=======
+    'AI Services',
+    'IT Services',
+    'Micro SAAS',
+    'Cloud Services',
+    '5G Implementation',
+    'Digital Transformation',
+    'Custom Development',
+    'Consulting'
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
   ];
 
-  const officeHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },
-    { day: 'Sunday', hours: 'Emergency Support Only' }
+  const features = [
+    {
+      icon: <MessageCircle className="w-8 h-8 text-blue-500" />,
+      title: '24/7 Support',
+      description: 'Round-the-clock assistance for all your technical needs'
+    },
+    {
+      icon: <Calendar className="w-8 h-8 text-green-500" />,
+      title: 'Quick Response',
+      description: 'We typically respond within 2-4 hours during business hours'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-purple-500" />,
+      title: 'Expert Team',
+      description: 'Get help from our experienced AI and IT professionals'
+    }
   ];
 
+<<<<<<< HEAD
   const stats = [
     { number: '< 1 hour', label: 'Response Time' },
     { number: '99%', label: 'Client Satisfaction' },
@@ -224,10 +297,13 @@ export default function ContactPage() {
   ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-e951
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content="Get in touch with Zion Tech Group for AI services, IT solutions, and 5G implementation. Contact us for free consultation and expert advice." />
         <meta name="keywords" content="contact zion tech group, AI consultation, IT services contact, 5G implementation contact" />
@@ -235,10 +311,14 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with Zion Tech Group. We're here to help with your AI and IT solutions needs." />
         <meta name="keywords" content="contact, support, AI solutions, IT services, Zion Tech Group" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-e951
+=======
+        <meta name="description" content="Get in touch with Zion Tech Group for AI services, IT solutions, and digital transformation. We're here to help your business succeed." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       </Helmet>
       
       <Navigation />
       
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. We're here to help transform your business." />
         <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
@@ -610,6 +690,8 @@ export default function ContactPage() {
         <meta name="keywords" content="contact, consultation, AI services, IT services, digital transformation" />
       </Helmet>
       
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
@@ -618,111 +700,151 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
-              Ready to transform your business? Let's discuss how our AI and IT solutions can help you succeed.
+              Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Contact Info */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16">
+          {/* Contact Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             {contactInfo.map((info, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center">
-                <div className="mb-4 flex justify-center">
-                  {info.icon}
-                </div>
+                <div className="flex justify-center mb-4">{info.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{info.title}</h3>
-                <p className="text-lg font-medium text-blue-400 mb-2">{info.details}</p>
-                <p className="text-gray-300 text-sm">{info.description}</p>
+                <p className="text-lg text-gray-300 mb-2">{info.details}</p>
+                <p className="text-sm text-gray-400">{info.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Contact Form and Features */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Send Us a Message</h2>
-            <p className="text-lg text-gray-300">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+              
+              {status.message && (
+                <div className={`mb-6 p-4 rounded-lg ${
+                  status.type === 'success' 
+                    ? 'bg-green-500/20 text-green-300 border border-green-500/30' 
+                    : status.type === 'error'
+                    ? 'bg-red-500/20 text-red-300 border border-red-500/30'
+                    : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
+                }`}>
+                  {status.message}
+                </div>
+              )}
 
-          {isSubmitted ? (
-            <div className="bg-green-500/20 border border-green-500/50 rounded-2xl p-8 text-center">
-              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-              <p className="text-gray-300">Thank you for your message. We'll get back to you within 24 hours.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Your company name"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="+1 (555) 123-4567"
+                    />
+                  </div>
+                </div>
+
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-white mb-2">Full Name *</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                    Service Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service} className="bg-gray-800">
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your full name"
+                    rows={6}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="Tell us about your project or how we can help..."
                   />
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-white mb-2">Email Address *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-white mb-2">Company</label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your company name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">Phone Number</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="+1 (555) 123-4567"
-                  />
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <label htmlFor="service" className="block text-sm font-medium text-white mb-2">Service Interest</label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                <button
+                  type="submit"
+                  disabled={status.type === 'loading'}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
+<<<<<<< HEAD
                   <option value="">Select a service</option>
                   {services.map((service, index) => (
                     <option key={index} value={service} className="bg-gray-800 text-white">
@@ -771,29 +893,84 @@ export default function ContactPage() {
                 <div className="flex items-center text-blue-400">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   <span className="font-medium">Live chat available on our website</span>
+=======
+                  {status.type === 'loading' ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <Send className="w-5 h-5 ml-2" />
+                    </>
+                  )}
+                </button>
+              </form>
+            </div>
+
+            {/* Features */}
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h2>
+              <div className="space-y-6 mb-8">
+                {features.map((feature, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">{feature.icon}</div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+                      <p className="text-gray-300">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Additional Info */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
+                <h3 className="text-lg font-semibold text-white mb-4">Business Hours</h3>
+                <div className="space-y-2 text-gray-300">
+                  <div className="flex justify-between">
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 6:00 PM PST</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday</span>
+                    <span>10:00 AM - 4:00 PM PST</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sunday</span>
+                    <span>Closed</span>
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* CTA Section */}
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses already using our AI and technology solutions to drive growth and success.
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
+                Let's discuss your project and see how we can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/ai-services" 
+                <Link
+                  to="/ai-services"
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Explore AI Services
+                  Explore Our Services
                 </Link>
-                <Link 
-                  to="/micro-saas-services" 
+                <a
+                  href="mailto:contact@ziontechgroup.com"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
+<<<<<<< HEAD
                   Try Micro SAAS
                 </Link>
 =======
@@ -867,3 +1044,17 @@ export default ContactPage;
   )
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e951
+=======
+                  Email Us Directly
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732

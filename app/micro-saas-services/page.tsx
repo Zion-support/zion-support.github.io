@@ -2,11 +2,15 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
 import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Globe, Clock, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
@@ -16,45 +20,31 @@ import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield } 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
 
 const MicroSaasServicesPage: React.FC = () => {
   const microSaasServices = [
     {
-<<<<<<< HEAD
-      icon: <Brain className="w-12 h-12 text-blue-500" />,
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI Task Manager Pro',
-      description: 'Intelligent task management with AI-powered prioritization, deadline tracking, and productivity insights.',
-      features: [
-        'AI-powered task prioritization',
-        'Smart deadline reminders',
-        'Team collaboration tools',
-        'Productivity analytics',
-        'Mobile app included',
-        'Calendar integration'
-      ],
+      description: 'Intelligent task management with AI-powered prioritization and automation.',
+      features: ['Smart task prioritization', 'AI scheduling', 'Team collaboration', 'Progress tracking'],
       pricing: '$19/month',
-      popular: true,
-      link: '/ai-task-manager',
-      category: 'Productivity'
+      duration: 'Instant setup',
+      popular: true
     },
     {
-      icon: <Database className="w-12 h-12 text-green-500" />,
+      icon: <Database className="w-8 h-8 text-green-500" />,
       title: 'AI Expense Tracker',
-      description: 'Smart expense tracking with receipt scanning, categorization, and financial insights powered by AI.',
-      features: [
-        'Receipt scanning with OCR',
-        'Automatic categorization',
-        'Expense analytics',
-        'Tax preparation tools',
-        'Multi-currency support',
-        'Export to accounting software'
-      ],
+      description: 'Automated expense tracking with receipt scanning and categorization.',
+      features: ['Receipt scanning', 'Auto categorization', 'Budget alerts', 'Tax reporting'],
       pricing: '$15/month',
-      popular: false,
-      link: '/ai-expense-tracker',
-      category: 'Finance'
+      duration: 'Instant setup',
+      popular: true
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: <Shield className="w-12 h-12 text-purple-500" />,
       title: 'AI Password Manager',
@@ -73,107 +63,41 @@ const MicroSaasServicesPage: React.FC = () => {
       description: 'Secure password management with AI-powered security recommendations and breach monitoring.',
       features: ['Secure storage', 'Password generation', 'Breach monitoring', 'Multi-device sync'],
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+      icon: <Shield className="w-8 h-8 text-purple-500" />,
+      title: 'AI Password Manager',
+      description: 'Secure password management with AI-powered security recommendations.',
+      features: ['Secure storage', 'Password generation', 'Security audit', 'Multi-device sync'],
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       pricing: '$12/month',
-      popular: true,
-      link: '/ai-password-manager',
-      category: 'Security'
+      duration: 'Instant setup',
+      popular: false
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Code className="w-12 h-12 text-orange-500" />,
-      title: 'AI Invoice Generator',
-      description: 'Automated invoice creation with AI-powered templates, payment tracking, and client management.',
-      features: [
-        'AI-generated templates',
-        'Payment tracking',
-        'Client management',
-        'Tax calculations',
-        'Multi-currency support',
-        'Automated reminders'
-      ],
-      pricing: '$25/month',
-      popular: false,
-      link: '/ai-invoice-generator',
-      category: 'Business'
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'AI Health Tracker',
-      description: 'Personal health monitoring with AI insights, symptom tracking, and wellness recommendations.',
-      features: [
-        'Symptom tracking',
-        'AI health insights',
-        'Medication reminders',
-        'Wellness recommendations',
-        'Doctor appointment scheduling',
-        'Health data export'
-      ],
-      pricing: '$18/month',
-      popular: false,
-      link: '/ai-health-tracker',
-      category: 'Health'
-    },
-    {
-      icon: <Globe className="w-12 h-12 text-yellow-500" />,
-      title: 'AI Smart Calendar',
-      description: 'Intelligent calendar management with AI scheduling, meeting optimization, and time zone handling.',
-      features: [
-        'AI meeting scheduling',
-        'Time zone optimization',
-        'Meeting insights',
-        'Team coordination',
-        'Integration with major calendars',
-        'Smart notifications'
-      ],
-      pricing: '$22/month',
-      popular: true,
-      link: '/ai-smart-calendar',
-      category: 'Productivity'
-    },
-    {
-      icon: <Clock className="w-12 h-12 text-indigo-500" />,
-      title: 'AI Time Tracker',
-      description: 'Advanced time tracking with AI-powered project analysis and productivity optimization.',
-      features: [
-        'Automatic time tracking',
-        'Project analysis',
-        'Productivity insights',
-        'Team time reports',
-        'Client billing integration',
-        'Mobile time tracking'
-      ],
-      pricing: '$16/month',
-      popular: false,
-      link: '/ai-time-tracker',
-      category: 'Productivity'
-    },
-    {
-      icon: <DollarSign className="w-12 h-12 text-emerald-500" />,
-      title: 'AI Budget Planner',
-      description: 'Smart budget planning with AI-powered financial forecasting and spending optimization.',
-      features: [
-        'AI financial forecasting',
-        'Spending optimization',
-        'Goal tracking',
-        'Investment insights',
-        'Bill reminders',
-        'Financial reports'
-      ],
-      pricing: '$20/month',
-      popular: false,
-      link: '/ai-budget-planner',
-      category: 'Finance'
 =======
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Content Writer Pro',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Blog post generation', 'Social media content', 'Product descriptions', 'SEO optimization'],
-      pricing: '$29/month',
-      link: '/ai-content-writer-pro',
-      popular: true,
-      duration: 'Instant setup'
+      icon: <Code className="w-8 h-8 text-orange-500" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
+      title: 'AI Invoice Generator',
+      description: 'Automated invoice creation with AI-powered templates and customization.',
+      features: ['Auto generation', 'Custom templates', 'Payment tracking', 'Tax calculations'],
+      pricing: '$25/month',
+      duration: 'Instant setup',
+      popular: false
     },
     {
+      icon: <Smartphone className="w-8 h-8 text-red-500" />,
+      title: 'AI Social Media Manager',
+      description: 'Automated social media posting and engagement with AI content suggestions.',
+      features: ['Auto posting', 'Content suggestions', 'Engagement tracking', 'Multi-platform'],
+      pricing: '$29/month',
+      duration: 'Instant setup',
+      popular: false
+    },
+    {
+<<<<<<< HEAD
       icon: <Shield className="w-8 h-8 text-green-500" />,
       title: 'Analytics Dashboard',
       description: 'Get actionable insights from your data with beautiful, customizable dashboards.',
@@ -240,6 +164,15 @@ const MicroSaasServicesPage: React.FC = () => {
       users: '1,100+',
       rating: '4.8'
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
+=======
+      icon: <Globe className="w-8 h-8 text-yellow-500" />,
+      title: 'AI Analytics Dashboard',
+      description: 'Comprehensive business analytics with AI-powered insights and predictions.',
+      features: ['Real-time analytics', 'Predictive insights', 'Custom dashboards', 'Automated reports'],
+      pricing: '$35/month',
+      duration: 'Instant setup',
+      popular: false
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
     }
   ];
 
@@ -247,6 +180,7 @@ const MicroSaasServicesPage: React.FC = () => {
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       title: 'Affordable Pricing',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description: 'Start from just $29/month with no setup fees',
@@ -259,33 +193,27 @@ const MicroSaasServicesPage: React.FC = () => {
       title: 'Quick Setup',
 <<<<<<< HEAD
       description: 'Get up and running in minutes, not months',
+=======
+      description: 'Start from just $12/month with no setup fees or long-term contracts',
+      icon: <DollarSign className="w-6 h-6 text-green-500" />
+    },
+    {
+      title: 'Instant Setup',
+      description: 'Get started in minutes with our easy-to-use interface',
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       icon: <Clock className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Proven Results',
-      description: 'Trusted by 1000+ businesses worldwide',
-      icon: <Star className="w-6 h-6 text-yellow-500" />
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
+      title: 'AI-Powered',
+      description: 'Leverage artificial intelligence to automate and optimize your workflows',
+      icon: <Brain className="w-6 h-6 text-purple-500" />
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Finance', 'Security', 'Business', 'Health'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
-  const filteredServices = selectedCategory === 'All' 
-    ? microSaasServices 
-    : microSaasServices.filter(service => service.category === selectedCategory);
-
   const stats = [
-<<<<<<< HEAD
-    { number: '50,000+', label: 'Active Users' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '15+', label: 'Micro SAAS Apps' },
-=======
+    { number: '50+', label: 'Micro SAAS Apps' },
     { number: '1000+', label: 'Active Users' },
     { number: '99.9%', label: 'Uptime' },
-    { number: '50+', label: 'Micro Apps' },
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
     { number: '24/7', label: 'Support' }
 =======
       description: 'Powerful tools at micro-SaaS prices, perfect for small businesses and individuals.'
@@ -339,12 +267,18 @@ const MicroSaasServicesPage: React.FC = () => {
         <title>Micro SAAS Services - Zion Tech Group</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name="description" content="Powerful AI-driven micro software solutions designed to streamline your business operations and boost productivity. Affordable, intelligent tools for modern businesses." />
         <meta name="keywords" content="micro saas, AI tools, productivity software, business automation, AI applications" />
+=======
+        <meta name="description" content="Powerful, affordable micro applications designed to solve specific business problems with AI intelligence. Start from $12/month." />
+        <meta name="keywords" content="micro saas, saas applications, business automation, AI tools, productivity apps" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       </Helmet>
       
       <Navigation />
       
+<<<<<<< HEAD
       <main className="pt-20 px-4 py-20">
 =======
         <meta name="description" content="Powerful micro SAAS applications designed to streamline your business operations. Affordable, easy-to-use solutions for modern businesses." />
@@ -360,26 +294,23 @@ const MicroSaasServicesPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
       </Helmet>
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       {/* Hero Section */}
 <<<<<<< HEAD
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
 <<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
 <<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SAAS Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Powerful AI-driven micro software solutions designed to streamline your business operations, 
-              boost productivity, and solve specific business challenges with intelligent automation.
+>>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Micro SAAS Services
+              Micro SAAS Applications
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
+<<<<<<< HEAD
               Powerful, affordable micro applications designed to solve specific business problems and boost productivity.
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
@@ -405,6 +336,9 @@ const MicroSaasServicesPage: React.FC = () => {
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Affordable, AI-powered micro SaaS solutions designed to solve specific business problems with minimal complexity.
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
+=======
+              Powerful, affordable micro applications designed to solve specific business problems with AI intelligence.
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -413,21 +347,29 @@ const MicroSaasServicesPage: React.FC = () => {
               >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 Get Started Today
 =======
                 Get Started
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+                Start Free Trial
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 
-                to="/ai-services" 
+                to="/about" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Explore AI Services
 =======
                 View All AI Services
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+                Learn More
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
               </Link>
             </div>
           </div>
@@ -448,7 +390,10 @@ const MicroSaasServicesPage: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {/* Category Filter */}
@@ -616,17 +561,19 @@ const MicroSaasServicesPage: React.FC = () => {
               </div>
             </div>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       {/* Services Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Micro SAAS Applications</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Choose from our collection of powerful micro applications
+              Choose from our collection of AI-powered micro applications
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 mb-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
             {microSaasServices.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
@@ -743,10 +690,14 @@ const MicroSaasServicesPage: React.FC = () => {
                   </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 </div>
-                <div className="text-sm text-gray-400 mb-6">Setup: {service.duration}</div>
+                <div className="text-sm text-gray-400 mb-6">{service.duration}</div>
                 <Link 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   to={service.link}
+=======
+                  to="/contact"
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors"
                 >
                   Get Started
@@ -796,9 +747,13 @@ const MicroSaasServicesPage: React.FC = () => {
 <<<<<<< HEAD
           <div className="text-center mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Why Choose Micro SAAS?</h2>
+=======
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Why Choose Our Micro SAAS?</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Get the benefits of enterprise software at a fraction of the cost
+              We make powerful business tools accessible and affordable for everyone
             </p>
           </div>
           
@@ -812,6 +767,7 @@ const MicroSaasServicesPage: React.FC = () => {
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
           <div className="text-center mb-12 sm:mb-16">
@@ -837,8 +793,13 @@ const MicroSaasServicesPage: React.FC = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Micro SaaS solutions offer focused functionality with minimal complexity and maximum value.
             </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
           </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -866,6 +827,8 @@ const MicroSaasServicesPage: React.FC = () => {
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Start your free trial today and experience the power of AI-driven micro SAAS solutions.
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       {/* CTA Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -873,6 +836,7 @@ const MicroSaasServicesPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Boost Your Productivity?</h2>
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
+<<<<<<< HEAD
                 Start using our micro SAAS applications today and see the difference they can make.
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
@@ -885,6 +849,9 @@ const MicroSaasServicesPage: React.FC = () => {
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                 Start using our AI-powered micro SAAS tools today and transform how you work.
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+                Start your free trial today and experience the power of AI-driven micro applications.
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -894,6 +861,7 @@ const MicroSaasServicesPage: React.FC = () => {
                   Start Free Trial
                 </Link>
                 <Link 
+<<<<<<< HEAD
 <<<<<<< HEAD
                   to="/services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
@@ -909,6 +877,12 @@ const MicroSaasServicesPage: React.FC = () => {
                 >
                   Explore IT Services
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+                  to="/ai-services" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Explore AI Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
                 </Link>
               </div>
             </div>
@@ -939,13 +913,14 @@ const MicroSaasServicesPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
           </div>
         </div>
-      </main>
+      </section>
       
       <Footer />
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -959,3 +934,6 @@ export default MicroSAASServicesPage;
 =======
 export default MicroSAASServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-9603
+=======
+export default MicroSaasServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
