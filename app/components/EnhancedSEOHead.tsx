@@ -1,16 +1,17 @@
 'use client'
 import React from 'react'
-import Head from 'next/head'
+import { Helmet } from 'react-helmet-async'
 
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  siteName?: string;
-  structuredData?: object;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  siteName?: string
+  structuredData?: object
+  canonicalUrl?: string
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
@@ -21,7 +22,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   url = 'https://ziontechgroup.com',
   type = 'website',
   siteName = 'Zion Tech Group',
-  structuredData
+  structuredData,
+  canonicalUrl
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -49,7 +51,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "https://twitter.com/ziontechgroup",
       "https://github.com/zion-tech-group"
     ]
-  };
+  }
 
   return (
     <Helmet>
@@ -63,7 +65,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="bingbot" content="index, follow" />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      <link rel="canonical" href={canonicalUrl || url} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
@@ -98,22 +100,10 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-          {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
-interface SEOHeadProps {
     </Helmet>
-  );
-};
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noIndex?: boolean
+  )
 }
 
-
-export default SEOHead
+export default EnhancedSEOHead

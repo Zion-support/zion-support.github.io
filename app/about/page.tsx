@@ -1,4 +1,10 @@
 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Target, Users, Award, ArrowRight } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -37,8 +43,13 @@ const AboutPage: React.FC = () => {
   ]
 
   return (
-};
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet>
+        <title>About Us - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group, a team of passionate technologists dedicated to transforming businesses through innovative AI and IT solutions." />
+        <meta name="keywords" content="about us, team, AI solutions, IT services, technology company" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       {/* Hero Section */}
@@ -173,7 +184,8 @@ const AboutPage: React.FC = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   )
 }
 

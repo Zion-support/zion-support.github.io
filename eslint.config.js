@@ -34,8 +34,7 @@ export default [
       'fix-*.js',
       '*.cjs',
       '*.js.broken',
-      'jest.setup.js'
-    ],
+      'jest.setup.js',
       'components.disabled_full/**',
       'backup/**',
       'backup-merge-conflicts/**',
