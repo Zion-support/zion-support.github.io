@@ -1,34 +1,74 @@
 'use client';
+
 import React from 'react';
-import { Sparkles, ArrowRight, Star } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
+  const features = [
+    {
+      title: 'AI-Powered Solutions',
+      description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
+      icon: Zap
+    },
+    {
+      title: 'Enterprise Security',
+      description: 'Bank-level security and compliance to protect your data and operations.',
+      icon: Shield
+    },
+    {
+      title: 'Proven Results',
+      description: 'Join 500+ companies that have transformed their operations with our solutions.',
+      icon: Star
+    },
+    {
+      title: 'Expert Support',
+      description: '24/7 support from our team of AI and IT specialists.',
+      icon: Users;
+    };
+  ];
+  const benefits = [
+    'Easy integration with existing systems',;
+    'Cost-effective pricing plans',;
+    'Proven track record of success';
+  ];
+
+<<<<<<< HEAD
   return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 animate-pulse"></div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
-          <div className="flex items-center space-x-2 mb-2 sm:mb-0">
-            <Sparkles className="w-5 h-5 animate-pulse" />
-            <span className="font-semibold text-sm sm:text-base">New AI Solutions Available</span>
-            <Star className="w-4 h-4 text-yellow-300 animate-bounce" />
+    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
+      </div><div className="text-center mb-8">
+        </div><h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
+        <p className="text-xl text-gray-300 mb-6">
+          Join thousands of businesses already using our AI and IT solutions
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        {features.map((feature, index) => (
+          </div><div key={index} className="text-center">
+            </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              </div><feature.icon className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+            <p className="text-gray-300 text-sm">{feature.description}</p>
           </div>
-          
-          <div className="flex items-center space-x-4 ml-0 sm:ml-6">
-            <span className="text-sm sm:text-base">
-              Transform your business with cutting-edge AI technology
-            </span>
-            <a
-              href="/services"
-              className="flex items-center space-x-1 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
-            >
-              <span>Learn More</span>
-              <ArrowRight className="w-3 h-3" />
-            </a>
-          </div>
-        </div>
+        ))}
+      </div>
+
+      <div className="text-center">
+        </div><button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
+          Get Started Now
+          </button><ArrowRight className="w-5 h-5 ml-2" />
+=======
+  return() {features.map((feature, index) => ()
+        ))}
+      </div>
+
+      <div className="text-center" /></div>
+        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center" /></button>
+          Get Started Now
+          <ArrowRight className="w-5 h-5 ml-2" / /></ArrowRight>
+>>>>>>> main
+        </button>
       </div>
     </div>
   );

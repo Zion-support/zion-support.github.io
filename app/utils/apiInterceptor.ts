@@ -1,365 +1,416 @@
-'use client';
-/**
- * API Interceptor Utility
- * Centralized API request handling with error handling, retry logic, and caching
- */
-import { ErrorHandler } from './errorHandler';
-import { performanceMetrics } from './performanceMetrics';
-// ErrorHandler class definition
-class ErrorHandler {
-  private static instance: ErrorHandler;
-  static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
+/**;
+ * API Interceptor Utility;
+ * Provides request/response interceptors for API calls;
+ */;
+interface InterceptorConfig {
+    onRequest?: (config: any) => any
+  onResponse?: (response: any) => any,
+  onError?: (error: any) => any
+  }
+}
+class APIInterceptor {
+    private requestInterceptors: Array<(config: any) => any> = []
+  private responseInterceptors: Array<(response: any) => any> = []
+  private errorInterceptors: Array<(error: any) => any> = []
+// Add request interceptor,
+  addRequestInterceptor(interceptor: (config: any) => any): void {,
+    this.requestInterceptors.push(interceptor)
+  }
+  }
+// Add response interceptor;
+  addResponseInterceptor(interceptor: (response: any) => any): void {
+    ,
+    this.responseInterceptors.push(interceptor)
+  }
+  }
+// Add error interceptor;
+  addErrorInterceptor(interceptor: (error: any) => any): void {
+    ,
+    this.errorInterceptors.push(interceptor)
+  }
+  }
+// Remove request interceptor;
+  removeRequestInterceptor(interceptor: (config: any) => any): void {
+    ,
+    const index = this.requestInterceptors.indexOf(interceptor);
+    if (index > -1) {,
+      this.requestInterceptors.splice(index, 1)
+  }
+    }
+  }
+// Remove response interceptor;
+  removeResponseInterceptor(interceptor: (response: any) => any): void {
+    ,
+    const index = this.responseInterceptors.indexOf(interceptor);
+    if (index > -1) {,
+      this.responseInterceptors.splice(index, 1)
+  }
+    }
+  }
+// Remove error interceptor;
+  removeErrorInterceptor(interceptor: (error: any) => any): void {
+    ,
+    const index = this.errorInterceptors.indexOf(interceptor);
+    if (index > -1) {,
+      this.errorInterceptors.splice(index, 1)
+  }
+    }
+  }
+// Apply request interceptors;
+  applyRequestInterceptors(config: any): any {
+    ,
+    return this.requestInterceptors.reduce((acc, interceptor) => {
+      try {
+        return interceptor(acc)
+  }
+      } catch (error) {
+    return acc
+  }
+      }
+    }, config);
+  }
+// Apply response interceptors;
+  applyResponseInterceptors(response: any): any {
+    ,
+    return this.responseInterceptors.reduce((acc, interceptor) => {
+      try {
+        return interceptor(acc)
+  }
+      } catch (error) {
+    return acc
+  }
+      }
+    }, response);
+  }
+// Apply error interceptors;
+  applyErrorInterceptors(error: any): any {
+    ,
+    return this.errorInterceptors.reduce((acc, interceptor) => {
+      try {
+        return interceptor(acc)
+  }
+      } catch (interceptorError) {
+    return acc
+  }
+      }
+    }, error);
+  }
+// Clear all interceptors;
+  clearAll(): void {
+    this.requestInterceptors = []
+    this.responseInterceptors = []
+    this.errorInterceptors = []
+  }
+  }
+// Get interceptor counts;
+  getInterceptorCounts(): {
+    request: number,
+    response: number,
+    error: number,
+  }
+  }, {
+    return {
+      request: this.requestInterceptors.length
+      response: this.responseInterceptors.length,
+      error: this.errorInterceptors.length
+  }
+    }
+  }
+}
+// Create singleton instance;
+export const apiInterceptor = new APIInterceptor();
+export default APIInterceptor;
+ * Centralized API request handling with error handling, retry logic, and caching;
+ */;
+// ErrorHandler class definition;
+class ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance;
   }
-  handleNetworkError(error: Error, url: string, config?: unknown): void {
+  handleNetworkError()
+  r: Error, ur);
+  l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
     }
 }
-export interface APIConfig {
-  baseURL: string;
-  timeout: number;
-  retryAttempts: number;
-  retryDelay: number;
-  enableCaching: boolean;
-  cacheTimeout: number;
-  headers?: Record<string, string>;
-  interceptors?: {
-    request?: (config: RequestConfig) => RequestConfig | Promise<RequestConfig>;
-    response?: (response: Response) => Response | Promise<Response>;
-    error?: (error: Error) => Error | Promise<Error>;
-  };
+export interface APIConfig {/* TODO: Fix JSX expression */}
+  }
 }
-export interface RequestConfig {
-  url: string;
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
-  body?: unknown;
-  params?: Record<string, string | number | boolean>;
-  timeout?: number;
-  cache?: boolean;
-  retryAttempts?: number;
+export interface RequestConfig {/* TODO: Fix JSX expression */}
 }
-export interface APIResponse<T = unknown> {
-  data: T;
-  status: number;
-  statusText: string;
-  headers: Headers;
-  config: RequestConfig;
+export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
 }
-export interface CacheEntry {
-  data: unknown;
-  timestamp: number;
-  expiresAt: number;
+export interface CacheEntry {/* TODO: Fix JSX expression */}
 }
-export class APIInterceptor {
-  private static instance: APIInterceptor;
-  private config: APIConfig;
-  private cache: Map<string, CacheEntry> = new Map();
-  private errorHandler: ErrorHandler;
-  private pendingRequests: Map<string, Promise<APIResponse>> = new Map();
-  constructor(config: Partial<APIConfig> = {}) {
-    this.config = {
-      baseURL: config.baseURL || '',
-      timeout: config.timeout || 30000,
-      retryAttempts: config.retryAttempts || 3,
-      retryDelay: config.retryDelay || 1000,
-      enableCaching: config.enableCaching ?? true,
-      cacheTimeout: config.cacheTimeout || 300000, // 5 minutes
-      headers: config.headers || {},
-      interceptors: config.interceptors || {}
-    };
+export class APIInterceptor {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
+  g: Partial</T><APIConfig> = {}) {/* TODO: Fix JSX expression */}
+  headers: config.headers || {},;
+      interceptor,;
+=======
+  g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
+  headers: config.headers || {},
+      interceptor,
+>>>>>>> main
+  s: config.interceptors || {}
+    }
     this.errorHandler = ErrorHandler.getInstance();
   }
-  static getInstance(config?: Partial<APIConfig>): APIInterceptor {
-    if (!APIInterceptor.instance) {
-      APIInterceptor.instance = new APIInterceptor(config);
+  static getInstance(config?: Partial</APIConfig><APIConfig>): APIInterceptor {/* TODO: Fix JSX expression */}
     }
     return APIInterceptor.instance;
   }
-  /**
-   * Make API request
-   */
-  async request<T = unknown>(config: RequestConfig): Promise<APIResponse<T>> {
-    const fullConfig = this.prepareRequest(config);
-    const cacheKey = this.getCacheKey(fullConfig);
-    // Check cache for GET requests
-    if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {
-      const cachedResponse = this.getFromCache(cacheKey);
-      if (cachedResponse) {
-        return cachedResponse as APIResponse<T>;
+  /**;
+   * Make API request;
+   */;
+  async request</APIConfig><T = unknown>(confi);
+  g: RequestConfig): Promise</T><APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
     }
-    // Check for pending identical requests
-    if (this.pendingRequests.has(cacheKey)) {
-      return this.pendingRequests.get(cacheKey) as Promise<APIResponse<T>>;
+    // Check for pending identical requests;
+    if (this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
     }
-    // Create the request promise
-    const requestPromise = this.executeRequest<T>(fullConfig);
-    this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
-    try {
-      const response = await requestPromise;
-      // Cache successful GET requests
-      if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {
-        this.setInCache(cacheKey, response);
+    // Create the request promise;
+    const requestPromise = this.executeRequest</APIResponse><T>(fullConfig);
+    this.pendingRequests.set(cacheKey, requestPromise as Promise</T><APIResponse>);
+    try {/* TODO: Fix JSX expression */}
       }
       return response;
-    } finally {
-      this.pendingRequests.delete(cacheKey);
+    } finally {/* TODO: Fix JSX expression */}
     }
   }
-  /**
-   * Execute the actual request
-   */
-  private async executeRequest<T>(config: RequestConfig, attempt = 1): Promise<APIResponse<T>> {
-    const startTime = performance.now();
-    try {
-      // Apply request interceptor
-      let finalConfig = config;
-      if (this.config.interceptors?.request) {
-        finalConfig = await this.config.interceptors.request(config);
+  /**;
+   * Execute the actual request;
+   */;
+  private async executeRequest</APIResponse><T>(confi);
+  g: RequestConfig, attempt = 1): Promise</T><APIResponse<T>> {/* TODO: Fix JSX expression */}
       }
       const url = this.buildURL(finalConfig);
-      const fetchOptions: RequestInit = {
-        method: finalConfig.method,
-        headers: this.buildHeaders(finalConfig),
-        body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,
-        signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout)
-      };
+      const,
+  fetchOptions: RequestInit = {/* TODO: Fix JSX expression */}
+      }
       const response = await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
-      // Record performance metric
+      // Record performance metric;
       performanceMetrics.recordNetworkRequest(url, duration, response.status);
-      // Handle non-2xx responses
-      if (!response.ok) {
+      // Handle non-2xx responses;
+      if (!response.ok) {/* TODO: Fix JSX expression */}
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
-      // Apply response interceptor
+      // Apply response interceptor;
       let finalResponse = response;
-      if (this.config.interceptors?.response) {
-        finalResponse = await this.config.interceptors.response(response);
+      if (this.config.interceptors?.response) {/* TODO: Fix JSX expression */}
       }
-      // Parse response data
-      const data = await this.parseResponse<T>(finalResponse);
-      return {
-        data,
-        status: finalResponse.status,
-        statusText: finalResponse.statusText,
-        headers: finalResponse.headers,
-        config: finalConfig
-      };
-    } catch (error) {
-      const duration = performance.now() - startTime;
-      const err = error as Error;
-      // Record error metric
-      performanceMetrics.recordNetworkRequest(this.buildURL(config), duration, 0);
-      // Handle error with error handler
-      this.errorHandler.handleNetworkError(err, this.buildURL(config), undefined);
-      // Retry logic
-      if (attempt < (config.retryAttempts || this.config.retryAttempts)) {
-        await this.delay(this.config.retryDelay * attempt);
-        return this.executeRequest<T>(config, attempt + 1);
+      // Parse response data;
+      const data = await this.parseResponse</APIResponse><T>(finalResponse);
+      return {/* TODO: Fix JSX expression */}
       }
-      // Apply error interceptor
-      if (this.config.interceptors?.error) {
-        const modifiedError = await this.config.interceptors.error(err);
-        throw modifiedError;
+    } catch (error) {/* TODO: Fix JSX expression */}
+      }
+      // Apply error interceptor;
+      if (this.config.interceptors?.error) {/* TODO: Fix JSX expression */}
       }
       throw err;
     }
   }
-  /**
-   * GET request
-   */
-  async get<T = unknown>(
-    url: string,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'GET' });
+  /**;
+   * GET request;
+   */;
+<<<<<<< HEAD
+  async get</T><T = unknown>(ur,;
+  l: string,
+    confi,;
+  g: Partial</T><RequestConfig> = {})
+  ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
+=======
+  async get<T = unknown>()
+  g: Partial<RequestConfig> = {})
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
+>>>>>>> main
+  d: 'GET' })
   }
-  /**
-   * POST request
-   */
-  async post<T = unknown>(
-    url: string,
-    body?: unknown,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'POST', body });
+  /**;
+   * POST request;
+   */;
+<<<<<<< HEAD
+  async post</APIResponse><T = unknown>(ur,;
+  l: string,
+    body?: unknown,;
+    confi,;
+  g: Partial</T><RequestConfig> = {})
+  ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
+=======
+  async post<T = unknown>()
+  g: Partial<RequestConfig> = {})
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
+>>>>>>> main
+  d: 'POST', body })
   }
-  /**
-   * PUT request
-   */
-  async put<T = unknown>(
-    url: string,
-    body?: unknown,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'PUT', body });
+  /**;
+   * PUT request;
+   */;
+<<<<<<< HEAD
+  async put</APIResponse><T = unknown>(ur,;
+  l: string,
+    body?: unknown,;
+    confi,;
+  g: Partial</T><RequestConfig> = {})
+  ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
+=======
+  async put<T = unknown>()
+  g: Partial<RequestConfig> = {})
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
+>>>>>>> main
+  d: 'PUT', body })
   }
-  /**
-   * DELETE request
-   */
-  async delete<T = unknown>(
-    url: string,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'DELETE' });
+  /**;
+   * DELETE request;
+   */;
+<<<<<<< HEAD
+  async delete</APIResponse><T = unknown>(ur,;
+  l: string,
+    confi,;
+  g: Partial</T><RequestConfig> = {})
+  ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
+=======
+  async delete<T = unknown>()
+  g: Partial<RequestConfig> = {})
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
+>>>>>>> main
+  d: 'DELETE' })
   }
-  /**
-   * PATCH request
-   */
-  async patch<T = unknown>(
-    url: string,
-    body?: unknown,
-    config: Partial<RequestConfig> = {}
-  ): Promise<APIResponse<T>> {
-    return this.request<T>({ ...config, url, method: 'PATCH', body });
+  /**;
+   * PATCH request;
+   */;
+<<<<<<< HEAD
+  async patch</APIResponse><T = unknown>(ur,;
+  l: string,
+    body?: unknown,;
+    confi,;
+  g: Partial</T><RequestConfig> = {})
+  ): Promise</RequestConfig><APIResponse<T>> {/* TODO: Fix JSX expression */}
+=======
+  async patch<T = unknown>()
+  g: Partial<RequestConfig> = {})
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
+>>>>>>> main
+  d: 'PATCH', body })
   }
-  /**
-   * Prepare request configuration
-   */
-  private prepareRequest(config: RequestConfig): RequestConfig {
-    return {
-      ...config,
-      headers: {
-        ...this.config.headers,
-        ...config.headers
-      },
-      timeout: config.timeout || this.config.timeout,
-      retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
-      cache: config.cache ?? this.config.enableCaching
-    };
+  /**;
+   * Prepare request configuration;
+   */;
+  private prepareRequest(confi);
+  g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */},
+      timeou,
+  t: config.timeout || this.config.timeout,
+      retryAttempt,
+  s: config.retryAttempts ?? this.config.retryAttempts,
+      cach,
+  e: config.cache ?? this.config.enableCaching,
+    }
   }
-  /**
-   * Build full URL with query parameters
-   */
-  private buildURL(config: RequestConfig): string {
+  /**;
+   * Build full URL with query parameters;
+   */;
+  private buildURL(confi);
+  g: RequestConfig): string {/* TODO: Fix JSX expression */}`;
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
-    if (config.params) {
-      const params = new URLSearchParams();
-      Object.entries(config.params).forEach(([key, value]) => {
-        params.append(key, String(value));
-      });
+    if (config.params) {/* TODO: Fix JSX expression */}
+      })`;
       url += `?${params.toString()}`;
     }
     return url;
   }
-  /**
-   * Build request headers
-   */
-  private buildHeaders(config: RequestConfig): Headers {
-    const headers = new Headers();
-    // Add default headers
-    headers.set('Content-Type', 'application/json');
-    // Add config headers
-    Object.entries(config.headers || {}).forEach(([key, value]) => {
-      headers.set(key, value);
-    });
+  /**;
+   * Build request headers;
+   */;
+  private buildHeaders(confi);
+  g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
+    Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
+    })
     return headers;
   }
-  /**
-   * Create abort signal for timeout
-   */
-  private createAbortSignal(timeout: number): AbortSignal {
-    const controller = new AbortController();
-    setTimeout(() => controller.abort(), timeout);
-    return controller.signal;
+  /**;
+   * Create abort signal for timeout;
+   */;
+  private createAbortSignal(timeou);
+  t: number): AbortSignal {/* TODO: Fix JSX expression */}
   }
-  /**
-   * Parse response based on content type
-   */
-  private async parseResponse<T>(response: Response): Promise<T> {
-    const contentType = response.headers.get('content-type');
-    if (contentType?.includes('application/json')) {
-      return await response.json();
+  /**;
+   * Parse response based on content type;
+   */;
+  private async parseResponse</APIResponse><T>(respons);
+  e: Response): Promise</T><T> {/* TODO: Fix JSX expression */}
     }
-    if (contentType?.includes('text/')) {
-      return (await response.text()) as T;
+    if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
     }
     return (await response.blob()) as T;
   }
-  /**
-   * Get cache key for request
-   */
-  private getCacheKey(config: RequestConfig): string {
-    const url = this.buildURL(config);
+  /**;
+   * Get cache key for request;
+   */;
+  private getCacheKey(confi);
+  g: RequestConfig): string {/* TODO: Fix JSX expression */}`;
     return `${config.method}:${url}`;
   }
-  /**
-   * Get response from cache
-   */
-  private getFromCache(key: string): APIResponse | null {
-    const entry = this.cache.get(key);
-    if (!entry) return null;
-    if (Date.now() > entry.expiresAt) {
-      this.cache.delete(key);
-      return null;
+  /**;
+   * Get response from cache;
+   */;
+  private getFromCache(ke);
+  y: string): APIResponse | null {/* TODO: Fix JSX expression */}
     }
     return entry.data as APIResponse;
   }
-  /**
-   * Set response in cache
-   */
-  private setInCache(key: string, response: APIResponse): void {
-    this.cache.set(key, {
-      data: response,
-      timestamp: Date.now(),
-      expiresAt: Date.now() + this.config.cacheTimeout
-    });
+  /**;
+   * Set response in cache;
+   */;
+  private setInCache()
+  y: string, respons);
+  e: APIResponse): void {/* TODO: Fix JSX expression */}
+    })
   }
-  /**
-   * Clear cache
-   */
-  clearCache(): void {
-    this.cache.clear();
+  /**;
+   * Clear cache;
+   */;
+  clearCache(): void {/* TODO: Fix JSX expression */}
   }
-  /**
-   * Clear expired cache entries
-   */
-  clearExpiredCache(): void {
-    const now = Date.now();
-    for (const [key, entry] of this.cache.entries()) {
-      if (now > entry.expiresAt) {
-        this.cache.delete(key);
+  /**;
+   * Clear expired cache entries;
+   */;
+  clearExpiredCache(): void {/* TODO: Fix JSX expression */}
       }
     }
   }
-  /**
-   * Get cache statistics
-   */
-  getCacheStats() {
-    const entries = Array.from(this.cache.values());
-    const now = Date.now();
-    const valid = entries.filter(e => now <= e.expiresAt).length;
-    const expired = entries.length - valid;
-    return {
-      total: entries.length,
-      valid,
-      expired,
-      size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0)
-    };
+  /**;
+   * Get cache statistics;
+   */;
+  getCacheStats() {/* TODO: Fix JSX expression */}
+    }
   }
-  /**
-   * Delay helper for retry logic
-   */
-  private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  /**;
+   * Delay helper for retry logic;
+   */;
+  private delay(m);
+  s: number): Promise</T><void> {/* TODO: Fix JSX expression */}
   }
-  /**
-   * Update configuration
-   */
-  updateConfig(config: Partial<APIConfig>): void {
-    this.config = { ...this.config, ...config };
+  /**;
+   * Update configuration;
+   */;
+  updateConfig(confi);
+  g: Partial</void><APIConfig>): void {/* TODO: Fix JSX expression */}
+    this.config = { ...this.config, ...config }
   }
-  /**
-   * Get current configuration
-   */
-  getConfig(): APIConfig {
-    return { ...this.config };
+  /**;
+   * Get current configuration;
+   */;
+  getConfig(): APIConfig {/* TODO: Fix JSX expression */}
+    return { ...this.config }
   }
 }
-// Export singleton instance
+// Export singleton instance;
 export const apiInterceptor = APIInterceptor.getInstance();
 export default APIInterceptor;
+<<<<<<< HEAD
+`;</APIConfig>
+=======
+`;
+>>>>>>> main

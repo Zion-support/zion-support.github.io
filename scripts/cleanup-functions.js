@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,13 +6,13 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Essential functions that should be kept
+// Essential functions that should be kept;
 const essentialFunctions = [
-  'test-function.js', // Keep for testing
-  'scheduled-nudges.ts', // Keep for scheduled tasks
+  'test-function.js', // Keep for testing;
+  'scheduled-nudges.ts', // Keep for scheduled tasks;
 ];
 
-// Functions that are clearly test/development and can be removed
+// Functions that are clearly test/development and can be removed;
 const functionsToRemove = [
   // AI and automation functions (most are test/development)
   'ai-changelog-',
@@ -29,8 +28,8 @@ const functionsToRemove = [
   'autonomous_',
   
   // Audit and analysis functions (test/development)
-  'a11y-',
-  'a11y_',
+  'a11 y-',
+  'a11 y_',
   'accessibility-',
   'audit-',
   'audit_',
@@ -84,7 +83,7 @@ const functionsToRemove = [
   'scheduler-',
   'scheduler_',
   
-  // Other test/development functions
+  // Other test/development functions;
   'auto-',
   'auto_',
   'adaptive-',
@@ -131,53 +130,51 @@ const functionsToRemove = [
   'user-',
   'ux-',
   'venture-',
-  'venture_',
-];
+  'venture_'];
 
 const _functionsDir = path.join(process.cwd(), 'netlify', 'functions');
 
 function shouldRemoveFunction(filename) {
-  // Keep essential functions
+  // Keep essential functions;
   if (essentialFunctions.includes(filename)) {
     return false;
+function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
   }
   
-  // Remove functions that match any of the patterns
+  // Remove functions that match any of the patterns;
   return functionsToRemove.some(pattern => filename.includes(pattern));
 }
 
-function cleanupFunctions() {
-  if (!fs.existsSync(functionsDir)) {
-
-    return;
+function cleanupFunctions() {/* TODO: Fix JSX expression */}
+}
+  if (!fs.existsSync(functionsDir)) {/* TODO: Fix JSX expression */}
   }
 
   const _files = fs.readdirSync(functionsDir);
   let _removedCount = 0;
   let _keptCount = 0;
 
-
   files.forEach(file => {
+    )
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       if (shouldRemoveFunction(file)) {
         const _filePath = path.join(functionsDir, file);
         try {
           fs.unlinkSync(filePath);
 
-          removedCount++;
-        } catch (error) {
-
-        }
+          removedCount++
+  } catch (error) {}
       } else {
-
         keptCount++;
+  files.forEach(file => {/* TODO: Fix JSX expression */})
+        } catch (error) {/* TODO: Fix JSX expression */}
+        }
+      } else {/* TODO: Fix JSX expression */}
       }
     }
   });
 
-
-
 }
 
-// Run the cleanup
+// Run the cleanup;
 cleanupFunctions();

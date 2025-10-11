@@ -49,7 +49,7 @@
 All conflicts were resolved by:
 1. Checking out clean versions from `origin/main` branch
 2. Manually fixing structural issues (missing braces, etc.)
-3. Removing all git merge conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
+3. Removing all git merge conflict markers (`<<<<<<<`, ``, `>>>>>>>`)
 
 This ensures consistency and prevents code duplication.
 

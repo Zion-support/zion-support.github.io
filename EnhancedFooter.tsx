@@ -1,10 +1,8 @@
 import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
     { name: 'Cloud Architecture', href: '/services/cloud' },
@@ -13,14 +11,12 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Data Analytics', href: '/services/analytics' },
     { name: 'DevOps', href: '/services/devops' },
   ];
-
   const products = [
     { name: 'AI Platform', href: '/products/ai-platform' },
     { name: 'Cloud Suite', href: '/products/cloud-suite' },
     { name: 'Analytics Dashboard', href: '/products/analytics' },
     { name: 'Mobile SDK', href: '/products/mobile-sdk' },
   ];
-
   const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
@@ -29,7 +25,6 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Privacy Policy', href: '/legal/privacy' },
     { name: 'Terms of Service', href: '/legal/terms' },
   ];
-
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -48,26 +43,22 @@ const EnhancedFooter: React.FC = () => {
             <div className="flex space-x-4">
               <a
                 href="https://linkedin.com/company/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
+                className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
                 href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
+                className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
               <a
                 href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
+                className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="https://facebook.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
+                className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>

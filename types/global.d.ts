@@ -1,7 +1,5 @@
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
+declare global {/* TODO: Fix JSX expression */}
   }
 }
 
-export {};
+export {}

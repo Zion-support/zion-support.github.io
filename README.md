@@ -1,182 +1,220 @@
-# Zion Tech Group Website
+# Zion Tech Group - Advanced AI and IT Solutions
 
-A modern, high-performance website for Zion Tech Group - Advanced AI and IT Solutions.
+A modern, high-performance website built with Next.js 15, featuring cutting-edge AI and IT solutions. This website showcases our comprehensive range of services including AI solutions, quantum computing, autonomous systems, and digital transformation services.
 
 ## 🚀 Features
 
-- **Modern Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS
-- **Performance Optimized**: Code splitting, lazy loading, service worker caching
-- **SEO Optimized**: Meta tags, structured data, Open Graph
-- **Accessibility**: WCAG compliant, keyboard navigation, screen reader support
-- **Mobile First**: Responsive design with mobile-first approach
-- **PWA Ready**: Service worker, web app manifest
+### Core Technologies
+- **Next.js 15** - Latest React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations and transitions
+- **Lucide React** - Beautiful, customizable icons
+
+### Performance Optimizations
+- **Image Optimization** - Next.js Image component with lazy loading
+- **Code Splitting** - Dynamic imports for better performance
+- **Bundle Analysis** - Webpack bundle analyzer integration
+- **Performance Monitoring** - Real-time Core Web Vitals tracking
+- **SEO Optimization** - Comprehensive meta tags and structured data
+
+### Accessibility Features
+- **WCAG 2.1 AA Compliance** - Full accessibility support
+- **Keyboard Navigation** - Complete keyboard accessibility
+- **Screen Reader Support** - ARIA landmarks and labels
+- **High Contrast Mode** - Support for high contrast displays
+- **Focus Management** - Proper focus indicators and management
+
+### SEO & Marketing
+- **Structured Data** - Rich snippets for search engines
+- **Sitemap** - XML sitemap for better crawling
+- **Robots.txt** - Search engine crawling instructions
+- **PWA Support** - Progressive Web App capabilities
+- **Open Graph** - Social media sharing optimization
 
 ## 🛠️ Development
 
 ### Prerequisites
-
-- Node.js 18+ 
-- npm or pnpm
+- Node.js 18.0.0 or higher
+- pnpm 8.0.0 or higher (recommended) or npm
 
 ### Installation
 
+1. Clone the repository:
 ```bash
+git clone https://github.com/ziontechgroup/website.git
+cd website
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+# or
 npm install
 ```
 
-### Development Server
-
+3. Start the development server:
 ```bash
+pnpm dev
+# or
 npm run dev
 ```
 
-The application will be available at `http://localhost:3000`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Build for Production
+### Available Scripts
 
-```bash
-npm run build
-```
-
-### Preview Production Build
-
-```bash
-npm run preview
-```
-
-### Bundle Analysis
-
-```bash
-npm run build:analyze
-```
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
+- `pnpm lint:fix` - Fix ESLint issues
+- `pnpm type-check` - Run TypeScript type checking
+- `pnpm test` - Run tests
+- `pnpm build:analyze` - Analyze bundle size
 
 ## 📁 Project Structure
 
 ```
-src/
-├── components/          # Reusable UI components
-├── pages/              # Page components
-├── utils/              # Utility functions
-├── hooks/              # Custom React hooks
-├── types/              # TypeScript type definitions
-└── App.tsx             # Main application component
+├── app/                    # Next.js App Router
+│   ├── components/         # Reusable components
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── loading.tsx        # Loading UI
+│   ├── error.tsx          # Error UI
+│   └── not-found.tsx      # 404 page
+├── public/                # Static assets
+│   ├── sitemap.xml        # XML sitemap
+│   ├── robots.txt         # Robots.txt
+│   └── site.webmanifest   # PWA manifest
+├── next.config.js         # Next.js configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+└── package.json           # Dependencies and scripts
 ```
 
-## 🚀 Deployment
+## 🎨 Design System
 
-### Build Check
+### Color Palette
+- **Primary**: Cyan (#00ffff) - Tech and innovation
+- **Secondary**: Purple (#8b5cf6) - Creativity and AI
+- **Accent**: Pink (#ec4899) - Energy and growth
+- **Background**: Dark slate gradient for modern look
 
-```bash
-npm run deploy:check
-```
+### Typography
+- **Headings**: Bold, large sizes with neon effects
+- **Body**: Clean, readable text with proper contrast
+- **Code**: Monospace font for technical content
 
-### Clean Build
-
-```bash
-npm run clean:build
-```
-
-## 🔧 Performance Features
-
-- **Code Splitting**: Automatic code splitting by route and feature
-- **Lazy Loading**: Components loaded on demand
-- **Service Worker**: Caching for offline functionality
-- **Image Optimization**: Optimized images with proper formats
-- **Bundle Analysis**: Tools to analyze and optimize bundle size
-
-## 📊 Performance Monitoring
-
-The application includes built-in performance monitoring for:
-- Largest Contentful Paint (LCP)
-- First Input Delay (FID)
-- Cumulative Layout Shift (CLS)
-- First Contentful Paint (FCP)
-- Time to First Byte (TTFB)
-
-## 🎨 Styling
-
-- **Tailwind CSS**: Utility-first CSS framework
-- **Custom Components**: Reusable component library
-- **Dark Theme**: Cyberpunk-inspired design
-- **Responsive**: Mobile-first responsive design
-
-## 🔍 SEO Features
-
-- **Meta Tags**: Comprehensive meta tag optimization
-- **Structured Data**: JSON-LD structured data
-- **Open Graph**: Social media sharing optimization
-- **Sitemap**: Automatic sitemap generation
-- **Robots.txt**: Search engine optimization
-
-## 🛡️ Security
-
-- **CSP Headers**: Content Security Policy
-- **HTTPS**: Secure connections
-- **XSS Protection**: Cross-site scripting protection
-- **Clickjacking Protection**: Frame options headers
-
-## 📱 PWA Features
-
-- **Service Worker**: Offline functionality
-- **Web App Manifest**: Installable web app
-- **Caching Strategy**: Intelligent caching
-- **Background Sync**: Background data synchronization
-
-## 🧪 Testing
-
-```bash
-# Run tests
-npm run test
-
-# Run tests with coverage
-npm run test:coverage
-
-# Run tests in watch mode
-npm run test:watch
-```
-
-## 📈 Analytics
-
-The application includes Google Analytics integration for:
-- Page views
-- User interactions
-- Performance metrics
-- Error tracking
+### Components
+- **Cyber Cards**: Glassmorphism design with neon borders
+- **Hologram Cards**: Animated cards with scanning effects
+- **Quantum Cards**: Energy pulse animations
+- **Buttons**: Gradient backgrounds with hover effects
 
 ## 🔧 Configuration
 
 ### Environment Variables
-
-Create a `.env` file for environment-specific configuration:
+Create a `.env.local` file in the root directory:
 
 ```env
-VITE_GA_TRACKING_ID=your_ga_tracking_id
-VITE_API_URL=your_api_url
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
+NEXT_PUBLIC_GA_ID=your-google-analytics-id
+NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ```
 
-### Vite Configuration
+### Performance Monitoring
+The application includes built-in performance monitoring that tracks:
+- **LCP** (Largest Contentful Paint)
+- **FID** (First Input Delay)
+- **CLS** (Cumulative Layout Shift)
+- **FCP** (First Contentful Paint)
+- **TTFB** (Time to First Byte)
 
-The `vite.config.ts` file contains:
-- Build optimization settings
-- Code splitting configuration
-- Asset optimization
-- Development server settings
+## 🚀 Deployment
 
-## 📄 License
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main branch
 
-MIT License - see LICENSE file for details
+### Other Platforms
+The application can be deployed to any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
+
+## 📊 Analytics & Monitoring
+
+### Google Analytics
+- Page views and user interactions
+- Performance metrics
+- Error tracking
+- Custom events for service clicks
+
+### Performance Monitoring
+- Real-time Core Web Vitals
+- Bundle size analysis
+- Image optimization tracking
+- Loading performance metrics
+
+## 🔒 Security
+
+### Security Headers
+- Content Security Policy (CSP)
+- X-Frame-Options
+- X-Content-Type-Options
+- Referrer-Policy
+- Permissions-Policy
+
+### Best Practices
+- Input sanitization
+- XSS protection
+- CSRF protection
+- Secure cookie settings
+
+## 📱 Mobile Optimization
+
+- **Responsive Design** - Mobile-first approach
+- **Touch Optimization** - Touch-friendly interactions
+- **Performance** - Optimized for mobile networks
+- **PWA Features** - Installable and offline-capable
+
+## 🌐 Internationalization
+
+The website is prepared for internationalization with:
+- Language detection
+- RTL support
+- Localized content structure
+- SEO-friendly URLs
 
 ## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Run tests and build
+4. Add tests if applicable
 5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
 For support and questions:
-- Email: kleber@ziontechgroup.com
-- Phone: +1 302 464 0950
-- Website: https://ziontechgroup.com
+- **Phone**: +1 (302) 464-0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
+
+## 🔗 Links
+
+- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
+- **Twitter**: [@ziontechgroup](https://twitter.com/ziontechgroup)
+- **LinkedIn**: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
+
+---
+
+Built with ❤️ by the Zion Tech Group team

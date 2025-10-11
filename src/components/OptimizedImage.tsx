@@ -1,21 +1,9 @@
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
+import React from 'react';
+interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false
-}) => {
-  return (
-    <img
+const,
+  OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
       src={src}
       alt={alt}
       width={width}
@@ -23,11 +11,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       className={`${className}`}
       loading={priority ? 'eager' : 'lazy'}
       decoding="async"
-      style={{
-        width: width ? `${width}px` : 'auto',
-        height: height ? `${height}px` : 'auto'
+      style={/* TODO: Fix JSX expression */}`
+  h: width ? `${width}px` : 'auto',
+        heigh,`
+  t: height ? `${height}px` : 'auto'
       }}
     />
   );
-};
+}
 export default OptimizedImage;
+"`
+  </OptimizedImageProps>

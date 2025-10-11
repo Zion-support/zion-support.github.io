@@ -1,54 +1,43 @@
 'use client';
+import React from 'react';
+'use client';
 import React, { useEffect } from 'react';
-
 interface SecurityEnhancerProps {
-  enableCSP?: boolean;
-  enableHSTS?: boolean;
-  enableXSSProtection?: boolean;
-  enableClickjackingProtection?: boolean;
+    children: React.ReactNode
+  }
 }
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+    useEffect(() => {
+    // Security enhancement logic;
+    const enhanceSecurity = ();
+        'X-XSS-Protection': '1; mode=block',) => {
+  return ()
+  )
+  }
+        'Referrer-Policy': 'strict-origin-when-cross-origin';}
+      }
+// Add CSP meta tag;
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-  enableCSP = true,
-  enableHSTS = true,
-  enableXSSProtection = true,
-  enableClickjackingProtection = true,
-}) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Add security headers via meta tags
-      const addSecurityMeta = (name: string, content: string) => {
-        const existing = document.querySelector(`meta[http-equiv="${name}"]`);
-        if (!existing) {
-          const meta = document.createElement('meta');
-          meta.setAttribute('http-equiv', name);
-          meta.setAttribute('content', content);
-          document.head.appendChild(meta);
+      const cspMeta = document.createElement('meta');
+      cspMeta.httpEquiv = 'Content-Security-Policy';
+      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
+      document.head.appendChild(cspMeta);
+// Disable right-click context menu;
+      document.addEventListener('contextmenu', (e) => {
+    e.preventDefault()
+  }
+      })
+// Disable F12 and other dev tools shortcuts;
+      document.addEventListener('keydown', (e) => {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+          e.preventDefault()
+  }
         }
-      };
-
-      if (enableXSSProtection) {
-        addSecurityMeta('X-Content-Type-Options', 'nosniff');
-        addSecurityMeta('X-Frame-Options', 'DENY');
-        addSecurityMeta('X-XSS-Protection', '1; mode=block');
-      }
-
-      if (enableClickjackingProtection) {
-        addSecurityMeta('X-Frame-Options', 'DENY');
-      }
-
-      if (enableHSTS) {
-        addSecurityMeta('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
-      }
-
-      if (enableCSP) {
-        const csp = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none';";
-        addSecurityMeta('Content-Security-Policy', csp);
-      }
+      })
     }
-  }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection]);
-
-  return null;
+enhanceSecurity();
+  }, []);
+return </SecurityEnhancerProps><React.Fragment>{children}</React.Fragment></React.Fragment>
 };
 
 export default SecurityEnhancer;

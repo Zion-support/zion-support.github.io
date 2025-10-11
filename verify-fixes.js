@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -8,31 +7,25 @@ import { fileURLToPath } from 'url';
 // const __dirname = path.dirname(__filename);
 
 // try {
-  //   const appTsxPath = path.join(__dirname, 'App.tsx');
-  const _content = fs.readFileSync(appTsxPath, 'utf8');
+    //   const appTsxPath = path.join(__dirname, 'App.tsx');
 
-  // Check for duplicate class definitions
-  const _classMatches = content.match(/class ErrorBoundary/g);
-  const _interfaceStateMatches = content.match(/interface ErrorBoundaryState/g);
-  const _interfacePropsMatches = content.match(/interface ErrorBoundaryProps/g);
-
-  //   //   //   // Check for syntax issues
-  const _hasDoubleClosing = content.includes('}, []);\n  }, []);');
+  // Check for duplicate class definitions;
+  //   //   //   // Check for syntax issues;
   //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
 
-  if (
-    classMatches &&
+  if(classMatches &&
     classMatches.length === 1 &&
-    interfaceStateMatches &&
-    interfaceStateMatches.length === 1 &&
-    interfacePropsMatches &&
-    interfacePropsMatches.length === 1 &&
-    !hasDoubleClosing
+    interfaceStateMatches &&)
+    interfaceStateMatches.length === 1 &&)
+    interfacePropsMatches &&)
+    interfacePropsMatches.length === 1 &&)
+    !hasDoubleClosing;)
   ) {
-    //     process.exit(0);
+    //     process.exit(0)
   } else {
     //     process.exit(1);
+// try {/* TODO: Fix JSX expression */}
+  } else {/* TODO: Fix JSX expression */}
   }
-} catch (error) {
-  //   process.exit(1);
+} catch (error) {/* TODO: Fix JSX expression */}
 }

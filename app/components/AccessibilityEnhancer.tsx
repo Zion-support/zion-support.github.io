@@ -2,27 +2,30 @@
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
+  enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
   enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = false,
+  enableFocusManagement = true
 }) => {
   useEffect(() => {
-    // Keyboard navigation
+    // Keyboard navigation enhancements
     if (enableKeyboardNavigation && typeof window !== 'undefined') {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]');
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLink) {
-            (skipLink as HTMLElement).focus();
+            skipLink.focus();
+            event.preventDefault();
           }
         }
       };
@@ -30,37 +33,89 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
     }
+  }, [enableKeyboardNavigation]);
 
+  useEffect(() => {
+    // Screen reader support
+    if (enableScreenReaderSupport && typeof window !== 'undefined') {
+      // Add ARIA landmarks
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
+
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg font-medium z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
+  }, [enableScreenReaderSupport]);
+
+  useEffect(() => {
+    // High contrast mode
+    if (enableHighContrast && typeof window !== 'undefined') {
+      document.documentElement.classList.add('high-contrast');
+      return () => {
+        document.documentElement.classList.remove('high-contrast');
+      };
+    }
+  }, [enableHighContrast]);
+
+  useEffect(() => {
     // Focus management
     if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      const handleTabKey = (event: KeyboardEvent) => {
-        if (event.key === 'Tab') {
-          const focusable = Array.from(document.querySelectorAll(focusableElements)) as HTMLElement[];
-          const firstFocusable = focusable[0];
-          const lastFocusable = focusable[focusable.length - 1];
-
-          if (event.shiftKey) {
-            if (document.activeElement === firstFocusable) {
-              lastFocusable?.focus();
-              event.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastFocusable) {
-              firstFocusable?.focus();
-              event.preventDefault();
-            }
-          }
+      const handleFocusIn = (event: FocusEvent) => {
+        const target = event.target as HTMLElement;
+        if (target && target.closest('[data-focus-trap]')) {
+          target.style.outline = '2px solid #06b6d4';
+          target.style.outlineOffset = '2px';
         }
       };
 
-      document.addEventListener('keydown', handleTabKey);
-      return () => document.removeEventListener('keydown', handleTabKey);
-    }
-  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
+      const handleFocusOut = (event: FocusEvent) => {
+        const target = event.target as HTMLElement;
+        if (target) {
+          target.style.outline = '';
+          target.style.outlineOffset = '';
+        }
+      };
 
-  return null;
+      document.addEventListener('focusin', handleFocusIn);
+      document.addEventListener('focusout', handleFocusOut);
+
+      return () => {
+        document.removeEventListener('focusin', handleFocusIn);
+        document.removeEventListener('focusout', handleFocusOut);
+      };
+    }
+  }, [enableFocusManagement]);
+
+<<<<<<< HEAD
+    // High contrast mode support
+    if (enableHighContrast && typeof window !== 'undefined') {
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+      
+      const updateHighContrast = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.documentElement.classList.add('high-contrast');
+        } else {
+          document.documentElement.classList.remove('high-contrast');
+        }
+      }
+
+      prefersHighContrast.addEventListener('change', updateHighContrast);
+      updateHighContrast(prefersHighContrast);
+
+      return () => prefersHighContrast.removeEventListener('change', updateHighContrast);
+    }
+  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
+
+  return </AccessibilityEnhancerProps><React.Fragment>{children}</React.Fragment></React.Fragment>;
+=======
+  return <>{children}</>;
+>>>>>>> main
 };
 
 export default AccessibilityEnhancer;

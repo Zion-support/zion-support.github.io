@@ -1,46 +1,52 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to optimize React components for better performance
+// Function to optimize React components for better performance;
 function optimizeComponent(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Add React.memo to functional components that don't have it
+    // Add React.memo to functional components that don't have it;
     if (content.includes('const ') && content.includes(': React.FC') && !content.includes('React.memo')) {
-      // This is a basic optimization - in practice, you'd want more sophisticated detection
+      // This is a basic optimization - in practice, you'd want more sophisticated detection;
+function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
       // console.log(`📝 Component ${filePath} could benefit from React.memo optimization`);
     }
     
-    // Add useCallback to event handlers
+    // Add useCallback to event handlers;
     if (content.includes('onClick') && !content.includes('useCallback')) {
+    if (content.includes('onClick') && !content.includes('useCallback')) {/* TODO: Fix JSX expression */}`
       // console.log(`📝 Component ${filePath} could benefit from useCallback for event handlers`);
     }
     
-    // Check for missing key props in lists
+    // Check for missing key props in lists;
     if (content.includes('.map(') && !content.includes('key=')) {
+    if (content.includes('.map(') && !content.includes('key=')) {/* TODO: Fix JSX expression */}`
       // console.log(`⚠️  Component ${filePath} has .map() without key props`);
     }
     
-    // Check for inline object/function definitions in JSX
-    if (content.includes('style={{') || content.includes('onClick={()')) {
+    // Check for inline object/function definitions in JSX;
+    if (content.includes('style={{') || content.includes('onClick={()')) {}
+    if (content.includes('style={/* TODO: Fix JSX expression */})`
       // console.log(`📝 Component ${filePath} has inline styles/functions that could be optimized`);
     }
     
     return modified;
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to add performance optimizations
+// Function to add performance optimizations;
 async function addPerformanceOptimizations() {
-  const componentFiles = await glob('app/components/**/*.{ts,tsx}', {
-    ignore: ['**/node_modules/**', '**/dist/**', '**/build/**']
+  const componentFiles = await glob('app/components/**/*.{ts,tsx}', {)
+    ignore: ['**/node_modules/**', '**/dist/**', '**/build/**'])
+async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
+}
+  const componentFiles = await glob('app/components/**/*.{ts,tsx}', {/* TODO: Fix JSX expression */})
   });
   
   // console.log('🚀 Analyzing components for performance optimizations...\n');
@@ -48,120 +54,100 @@ async function addPerformanceOptimizations() {
   let totalFiles = 0;
   let optimizedFiles = 0;
   
-  for (const file of componentFiles) {
-    totalFiles++;
-    if (optimizeComponent(file)) {
-      optimizedFiles++;
+  for (const file of componentFiles) {/* TODO: Fix JSX expression */}
     }
   }
   
-  // console.log(`\n📊 Performance Analysis Summary:`);
+  // console.log(`\n📊 Performance Analysis Summary: `),
   // console.log(`   Total components analyzed: ${totalFiles}`);
   // console.log(`   Components with optimization opportunities: ${optimizedFiles}`);
 }
 
-// Function to create a performance monitoring component
+// Function to create a performance monitoring component;
 function createPerformanceMonitor() {
-  const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
+  `
+  // console.log(`\n📊 Performance Analysis)`
+  Summary: `),`
+  // console.log(`   Total components)`
+  analyzed: ${totalFiles}`);`
+  // console.log(`   Components with optimization)`
+  opportunities: ${optimizedFiles}`);
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+// Function to create a performance monitoring component;
+function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
+}`
+  const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
 
-  useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV === 'development') {
-      setIsVisible(true);
-      
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          }
-        }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      
-      return () => observer.disconnect();
-    }
-  }, []);
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+}
 
-  if (!isVisible || !metrics) return null;
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      <div>LCP: {metrics.lcp?.toFixed(2)}ms</div>
-      <div>FID: {metrics.fid?.toFixed(2)}ms</div>
-      <div>CLS: {metrics.cls?.toFixed(3)}</div>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;
+export default PerformanceMonitor;`
 `;
 
   fs.writeFileSync('app/components/PerformanceMonitor.tsx', performanceMonitorContent);
   // console.log('✅ Created PerformanceMonitor component');
 }
 
-// Function to optimize images
+// Function to optimize images;
 function createImageOptimization() {
+function createImageOptimization() {/* TODO: Fix JSX expression */}
+}`
   const imageOptimizationContent = `import React from 'react';
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
+interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
+    ,
+  src;
   alt,
   width,
   height,
   className = '',
   priority = false
-}) => {
-  return (
-    <img
+  }) => {
+  return(<img;
       src={src}
       alt={alt}
       width={width}
-      height={height}
+      height={height})
+      className={\`\${className}\`})
+      loading={priority ? 'eager' : 'lazy'})
+      decoding="async")
+      style={{})
+        width: width ? \`\${width}px\` : 'auto')
+        height: height ? \`\${height}px\` : 'auto'
+const,
+  OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}`
       className={\`\${className}\`}
       loading={priority ? 'eager' : 'lazy'}
       decoding="async"
-      style={{
-        width: width ? \`\${width}px\` : 'auto',
-        height: height ? \`\${height}px\` : 'auto'
+      style={/* TODO: Fix JSX expression */}`
+  h: width ? \`\${width}px\` : 'auto',
+        heigh,`
+  t: height ? \`\${height}px\` : 'auto'
       }}
-    />
+    /></img>
   );
-};
+}
 
-export default OptimizedImage;
+export default OptimizedImage;`
 `;
 
   fs.writeFileSync('app/components/OptimizedImage.tsx', imageOptimizationContent);
   // console.log('✅ Created OptimizedImage component');
 }
 
-// Main function
+// Main function;
 async function main() {
+async function main() {/* TODO: Fix JSX expression */}
+}
   // console.log('🚀 Starting performance optimization...\n');
   
   await addPerformanceOptimizations();
@@ -172,3 +158,4 @@ async function main() {
 }
 
 main().catch(console.error);
+}}}"`
