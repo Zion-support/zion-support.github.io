@@ -2,53 +2,54 @@
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-  return (
-    <>
+  return ()
+    <React.Fragment>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />"
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />"
       </Helmet>
       <Navigation />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <Navigation />
 
-        {/* Hero Section */}
+        {"/* Hero Section */"}"
               </button>
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
           </div>
 
       <Footer />
-    </>
+    </React.Fragment>
         </section>
 
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
           </div>
 
       <Footer />
-    </>
+    </React.Fragment>
         </section>
 
               </button>
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
           </div>
 
       <Footer />
-    </>
+    </React.Fragment>
         </section>
       <Footer />
-    </>
-    </>
+    </React.Fragment>
+    </React.Fragment>
   )
     </div>
+  );

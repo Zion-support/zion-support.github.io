@@ -1,35 +1,31 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link'; // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth'
-import { useGetOrdersQuery } from '@/hooks/useOrders'
-import {
-
-  Table
+import {useAuth} from '@/hooks/useAuth'
+import {useGetOrdersQuery} from '@/hooks/useOrders'
+import {Table}
   TableBody
   TableCell
   TableHead
   TableHeader
 
 export default function OrdersPage() {
-  const { user } = useAuth()
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id)
+  const { user} = useAuth()
+  const {"data: orders, isLoading"} = useGetOrdersQuery(user?.id)"
   const formatDate = (date: string) => new Date(date).toLocaleDateString()
-  const getStatusBadge = (status: string,) => {
-    switch (status) {
+  const getStatusBadge = (status: string,) => {switch (status) {}
       case 'in_escrow':
-        return (
+        return ()
           <Badge variant='warning' className='flex items-center gap-1'>
             <Clock className='h-3 w-3' /> In Escrow</$1>
         )
       case 'released':
       case 'completed':
-        return (
+        return ()
           <Badge variant='success' className='flex items-center gap-1'>
             <CheckCircle2 className='h-3 w-3' /> Released</$1>
         )
       case 'disputed':
-        return (
-
+        return ()
         )
 
       default:
@@ -37,52 +33,47 @@ export default function OrdersPage() {
             <ShieldAlert className='h-3 w-3' /> Disputed</$1>
         ),
       default:
-        return status
-    }
+        return status}
 
   }
 
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth',
-import { useGetOrdersQuery } from '@/hooks/useOrders',
+import {useAuth} from '@/hooks/useAuth',
+import {useGetOrdersQuery} from '@/hooks/useOrders',
 
-import {
-  Table,
+import {Table,}
   TableBody,
   TableCell,
 
-    switch (status) {
-      case 'in_escrow':
-        return (
-          <Badge variant="warning" className="flex items-center gap-1">
-            <Clock className="h-3 w-3" /> In Escrow
+    switch (status) {case 'in_escrow':}
+        return ()
+          <Badge variant="warning" className="flex items-center gap-1">"
+            <Clock className="h-3 w-3" /> In Escrow"
           </Badge>
         ),
       case 'released':
       case 'completed':
-        return (
-          <Badge variant="success" className="flex items-center gap-1">
-            <CheckCircle2 className="h-3 w-3" /> Released
+        return ()
+          <Badge variant="success" className="flex items-center gap-1">"
+            <CheckCircle2 className="h-3 w-3" /> Released"
           </Badge>
         ),
       case 'disputed':
-        return (
-          <Badge variant="destructive" className="flex items-center gap-1">
-            <ShieldAlert className="h-3 w-3" /> Disputed
+        return ()
+          <Badge variant="destructive" className="flex items-center gap-1">"
+            <ShieldAlert className="h-3 w-3" /> Disputed"
           </Badge>
         )
       default:
-        return status
-    }
+        return status}
   }
   },
 
-  return (
-
+  return ()
     <div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>
-      {isLoading ? (
+      {isLoading ? ()}
         <Table>
           <TableHeader>
             <TableRow>
@@ -92,7 +83,7 @@ import {
               <TableHead>Status</TableHead>
               <TableHead>View</TableHead></$1></$1>
           <TableBody>
-            {Array && Array.from({ length: 3 }).map((_, i,) => (
+            {Array && Array.from({ length: 3}).map((_, i,) => ()
               <TableRow key={i}>
                 <TableCell>
                   <Skeleton className='h-4 w-20' /></$1>
@@ -106,16 +97,16 @@ import {
                   <Skeleton className='h-4 w-24' /></$1></$1>
             ))}
           </TableBody></$1>
-      ) : orders && orders.length === 0 ? (
+      ) : orders && orders.length === 0 ? ()
         <EmptyState
-          icon={<FileText className='h-10 w-10' />}
+          icon={"<FileText className='h-10 w-10' />"}"
           title='No Orders'          description="You haven't purchased anything yet."
-          icon={<FileText className="h-10 w-10" />}
+          icon={"<FileText className="h-10 w-10" />"}"
           title="No Orders"
           description="You haven't purchased anything yet."
 
         />
-      ) : (
+      ) : ()
         <Table>
           <TableHeader>
             <TableRow>
@@ -129,13 +120,12 @@ import {
           <TableBody>
 
             {orders.map(order => (              <TableRow key={order.orderId}>
-                <TableCell className='font-medium'>{order.orderId}</TableCell>
-            {orders.map((order) => (
+                <TableCell className='font-medium'>{"order.orderId"}</TableCell>"
+            {orders.map((order) => ()}
               <TableRow key={order.orderId}>
-                <TableCell className="font-medium">{order.orderId}</TableCell>
-
+                <TableCell className="font-medium">{"order.orderId"}</TableCell>"
                 <TableCell>{formatDate(order.date)}</TableCell>
-                <TableCell>{order.total}</TableCell>
+                <TableCell>{"order.total"}</TableCell>"
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
                 <TableCell>
                   <$2 />
@@ -148,7 +138,7 @@ import {
               </TableRow>
           title='No Orders'          description="You haven't purchased anything yet."
         />
-      ) : (
+      ) : ()
         <Table>
           <TableHeader>
             <TableRow>
@@ -159,9 +149,9 @@ import {
               <TableHead>View</TableHead></$1></$1>
           <TableBody>
             {orders && orders.map(order => (              <TableRow key={order && order.orderId}>
-                <TableCell className='font-medium'>{order && order.orderId}</TableCell>
+                <TableCell className='font-medium'>{"order && order.orderId"}</TableCell>"
                 <TableCell>{formatDate(order && order.date)}</TableCell>
-                <TableCell>{order && order.total}</TableCell>
+                <TableCell>{"order && order.total"}</TableCell>"
                 <TableCell>{getStatusBadge(order && order.status)}</TableCell>
                 <TableCell>
                   <$2 />
@@ -186,40 +176,37 @@ import {
   TableRow,
 
 } from '@/components / ui / table'
-import { Badge } from '@/components / ui / badge'
+import {Badge} from '@/components / ui / badge'
 import Skeleton from '@/components / ui / skeleton'
-import { EmptyState } from '@/components / ui / empty - state'
+import {EmptyState} from '@/components / ui / empty - state'
 export default /**
  * OrdersPage - Function description
  */
-function OrdersPage() {
-  const { user } = use_auth ()
-  const { data: orders, is_loading } = useGetOrdersQuery (user?.id)
+function OrdersPage() {const { user} = use_auth ()
+  const {"data: orders, is_loading"} = useGetOrdersQuery (user?.id)"
   const format_date = (date: string) =>: any new Date (date).toLocaleDateString ()
-  const getStatusBadge = (status: string, ) =>: any {
-    switch (status) {
+  const getStatusBadge = (status: string, ) =>: any {switch (status) {}
       case 'in_escrow':
-        return (
+        return ()
           <Badge variant='warning' className='flex items - center gap - 1'>
             <Clock className='h - 3 w - 3' /> In Escrow</$1>)
       case 'released':
       case 'completed':
-        return (
+        return ()
           <Badge variant='success' className='flex items - center gap - 1'>
             <CheckCircle2 className='h - 3 w - 3' /> Released</$1>)
       case 'disputed':
-        return (
+        return ()
           <Badge variant='destructive' className='flex items - center gap - 1'>
             <ShieldAlert className='h - 3 w - 3' /> Disputed</$1>),
       default:
-        return status
-    }
+        return status}
   }
 
-  return (
+  return ()
     <div className='container max - w-4xl py - 10'>
       <h1 className='text - 3xl font - bold mb - 6'>Order History</h1>
-      {is_loading ? (
+      {is_loading ? ()}
         <Table>
           <TableHeader>
             <TableRow>
@@ -229,7 +216,7 @@ function OrdersPage() {
               <TableHead > Status</TableHead>
               <TableHead > View</TableHead></$1></$1>
           <TableBody>
-            {Array.from ({ length: 3 }).map ((_, i, ) => (
+            {Array.from ({ length: 3}).map ((_, i, ) => ()
               <TableRow key={i}>
                 <TableCell>
                   <Skeleton className='h - 4 w - 20' /></$1>
@@ -241,11 +228,11 @@ function OrdersPage() {
                   <Skeleton className='h - 4 w - 20' /></$1>
                 <TableCell>
                   <Skeleton className='h - 4 w - 24' /></$1></$1>))}
-          </TableBody></$1>) : orders.length === 0 ? (
+          </TableBody></$1>) : orders.length === 0 ? ()
         <EmptyState
-          icon={<FileText className='h - 10 w - 10' />}
+          icon={"<FileText className='h - 10 w - 10' />"}"
           title='No Orders'          description="You haven't purchased anything yet."
-        />) : (
+        />) : ()
         <Table>
           <TableHeader>
             <TableRow>
@@ -256,9 +243,9 @@ function OrdersPage() {
               <TableHead > View</TableHead></$1></$1>
           <TableBody>
             {orders.map (order => (              <TableRow key={order.order_id}>
-                <TableCell className='font - medium'>{order.order_id}</TableCell>
+                <TableCell className='font - medium'>{"order.order_id"}</TableCell>"
                 <TableCell>{format_date (order.date)}</TableCell>
-                <TableCell>{order.total}</TableCell>
+                <TableCell>{"order.total"}</TableCell>"
                 <TableCell>{getStatusBadge (order.status)}</TableCell>
                 <TableCell>
                   <;$2 />
@@ -269,3 +256,5 @@ function OrdersPage() {
           </TableBody></$1>)}
     </div>)
 }
+
+  );

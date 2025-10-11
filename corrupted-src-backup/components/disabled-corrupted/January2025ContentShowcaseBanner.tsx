@@ -1,21 +1,20 @@
 import React from 'react'
-const January2025ContentShowcaseBanne, r: React.FC = () => { ,
+const January2025ContentShowcaseBanne, r: React.FC = () => {,}
   return()
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' });
-      {/* Animated, Backgroun, d */});
-      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" />
+    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' '});
+      {"/* Animated, Backgroun, d */"});"
+      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" />"
       <div, classNam, e = 'absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-r, fro, m-transparent, vi, a-whi, t, e/5, t, o-transparent, transfor, m -sk, e, w-y-1' />
       <div, className='relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20'>
         <div, className='te, x, t-center, m, b-16'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-2, b, g-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-400, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-medium, m, b-8'>
-const January2025ContentShowcaseBanne, r: React.FC = () => { 
-  return (
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
-      {/* Animated, Backgroun, d */}
-const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }
-      {/* Animated, Backgroun, d */}
-      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" />
+const January2025ContentShowcaseBanne, r: React.FC = () => {return ()}
+    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' '}
+      {"/* Animated, Backgroun, d */"}"
+const January2025ContentShowcaseBanne, r: React.FC = () => {"/* TODO: Fix JSX expression */"}"
+    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' '}
+      {"/* Animated, Backgroun, d */"}"
+      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/abstra, c, t-patte, r, n.sv, g')] opaci, t, y-10, animat, e-pul, s, e" />"
       <div, classNam, e = 'absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-r, fro, m-transparent, vi, a-whi, t, e/5, t, o-transparent, transfor, m -sk, e, w-y-1' />
       <div, className='relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20'>
         <div, className='te, x, t-center, m, b-16'>
@@ -34,11 +33,11 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
             Access, the, most comprehensive, collection, of AI, insig, h, t, s,
             breakthrough, technologie, s, and, proven, enterprise strategi, e, s.
             Everything, you, need to, master, AI transformation, in, one pla, c, e.
-        {/* Content, Categorie, s */}
+        {"/* Content, Categorie, s */"}"
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-          {/* Breakthrough, Technolog, i, e, s */}
+          {"/* Breakthrough, Technolog, i, e, s */"}"
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-          {/* Breakthrough, Technolog, i, e, s */}
+          {"/* Breakthrough, Technolog, i, e, s */"}"
           <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
             <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-pi, n, k-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />
             <div, className='relati, v, e'>
@@ -78,7 +77,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               >
                 Explore, All, Technologies
                 <Link, className='w-4 h-4' />
-          {/* Enterprise, Case, Studi, e, s */}
+          {"/* Enterprise, Case, Studi, e, s */"}"
           <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
             <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />
             <div, className='relati, v, e'>
@@ -118,7 +117,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               >
                 View, All, Case Studi, e, s
                 <Link, className='w-4 h-4' />
-          {/* Latest, Artic, l, e, s */}
+          {"/* Latest, Artic, l, e, s */"}"
           <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
             <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, t, o-emera, l, d-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />
             <div, className='relati, v, e'>
@@ -159,7 +158,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               >
                 Read, All, Articles
                 <Link, className='w-4 h-4' />
-        {/* Statis, t, i, c, s */}
+        {"/* Statis, t, i, c, s */"}"
         <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'>
           <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>
           <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>
@@ -176,7 +175,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               <div, className='te, x, t-4xl, fon, t-bold, tex, t-emera, l, d-400, m, b-2'>
                 5, 0, 0+
               <div, className='te, x, t-gr, a, y-3, 0, 0'>Enterprise, Reader, s
-        {/* Featured, Content, Previ, e, w */}
+        {"/* Featured, Content, Previ, e, w */"}"
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-16'>
           <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20'>
             <div, className='flex, item, s-center, ga, p-3, m, b-4'>
@@ -212,7 +211,7 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                 className='te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-3, 0, 0'
               >
                 <Link, className='w-4 h-4' />
-        {/* Call, to, Acti, o, n */}
+        {"/* Call, to, Acti, o, n */"}"
         <div, classNam, e = 'te, x, t-cent, e, r'>
           <div, className='flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4, m, b-6'>
             <, t, o='/resourc, e, s'$2 />

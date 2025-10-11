@@ -1,7 +1,6 @@
-impo, r, t { ArrowLe, f, t, GraduationC, a, p, Targ, e, t, CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-const AdaptiveLearningPlatform, s = () => { 
-  return(<React.Fragment>
+impo, r, t {"ArrowLe, f, t, GraduationC, a, p, Targ, e, t, CheckCirc, l, e"} fr, o, m 'luci, d, e-rea, c, t'"
+impo, r, t {"Helm, e, t"} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'"
+const AdaptiveLearningPlatform, s = () => {return(<React.Fragment>}
       <Helm, e, t>
         <title>
           AI-Powered, Adaptive, Learning Platforms, 202, 5: Personalized, Enterprise, Training at, Scal, e | Zion, Tech, Group
@@ -13,13 +12,13 @@ const AdaptiveLearningPlatform, s = () => {
         />
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
-        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */}
           <, t, o='/bl, o, g'$2 />
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
-const AdaptiveLearningPlatform, s = () => {/* TODO: Fix JSX expression */}
-        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
+const AdaptiveLearningPlatform, s = () => {"/* TODO: Fix JSX expression */"}"
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {"/* Back, Lin, k */"}"
           <, t, o='/bl, o, g'$2 />
             className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >

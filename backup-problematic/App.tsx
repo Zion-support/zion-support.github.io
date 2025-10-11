@@ -1,6 +1,6 @@
 'use client'
-import React, { Suspense, lazy, useEffect } from 'react'
-import { HelmetProvider } from 'react-helmet-async'
+import React, {"Suspense, lazy, useEffect"} from 'react'"
+import {HelmetProvider} from 'react-helmet-async'
 // Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import SEOEnhancer from './components/SEOEnhancer'
@@ -46,7 +46,7 @@ const NotFoundPage = lazy(() => import('./not-found'))
 const OfflinePage = lazy(() => import('./offline/page'))
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer'
-import { logger } from './utils/logger'
+import {logger} from './utils/logger'
 import performanceMonitor from './utils/performanceMonitor'
 import seoOptimizer from './utils/seoOptimizer'
 import accessibilityEnhancer from './utils/accessibilityEnhancer'

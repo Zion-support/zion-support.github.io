@@ -3,62 +3,55 @@
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */;
-interface Props {;,
+interface Props {;,}
 children: ReactNode;
 fallback?: ReactNode,;
 onError?: (erro,;,
 r: Error, errorInf);,
 o: ErrorInfo) => void;
 resetKeys?: Array,
-          <string | number>
-  }
-interface State {;,
+          <string | number>}
+interface State {";,"}
 hasError: boolean;,
 error: Error | null;,
 errorInfo: ErrorInfo | null,;,
-errorCount: number
-  }
-class ImprovedErrorBoundary extends Component<Props, State> {;
-constructor(props: Props) {;
+errorCount: number"}"
+class ImprovedErrorBoundary extends Component<Props, State> {;}
+constructor(props: Props) {;}
 super(props)},;
-this.state={;,
+this.state={";,"}
 hasError: false,;,
 error: null,;,
 errorInfo: null,;,
-errorCount: 0}
+errorCount: 0"}"
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {;
-return {;;,
+  static getDerivedStateFromError(error: Error): Partial<State> {;}
+return {;;,}
 hasError: true},;
 error
     }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error to console for debugging;
-console.error('Error caught by ImprovedErrorBoundary:', {;,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {// Log error to console for debugging;}
+console.error('Error caught by ImprovedErrorBoundary:', {;,}
 message: error.message,;,
 stack: error.stack,;,
 component: errorInfo.componentStack ?? undefined,;,
 timestamp: Date.now(),;,
 userAgent: navigator.userAgent,;,
-url: window.location.href
-    });
+url: window.location.href});
     // Call custom error handler if provided;
-if (this.props.onError) {;
-this.props.onError(error, errorInfo)
-  }
+if (this.props.onError) {;}
+this.props.onError(error, errorInfo)}
     // Update state with error details;
-this.setState((prevState) => ({;
+this.setState((prevState) => ({";"}
 errorInfo,;,
-errorCount: prevState.errorCount + 1
-    }))
+errorCount: prevState.errorCount + 1"}))"
     // Log to console in development;
 if (process.env['NODE_ENV'] === 'development') {}
     // Send to external error tracking (if available);
-if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown) }).Sentry) {
-      (window as unknown as { Sentry: { captureException: (error: Error)}}, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {;,
-contexts: {;,
-react: {;,
+if (typeof window !== 'undefined' && (window as unknown as {"Sentry: unknown)"}).Sentry) {(window as unknown as { Sentry: { captureException: (error: Error)}}, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {;,"}
+contexts: {;,}
+react: {;,}
 componentStack: errorInfo.componentStack;
 interface State {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -73,17 +66,15 @@ errorCoun,;,
 t: number,
 }
 class ImprovedErrorBoundary extends Component
-          <Props, State> {/* TODO: Fix JSX expression */}
+          <Props, State> {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
-  constructor(props: Props) {
-    // TODO: Add content
-  }
+  constructor(props: Props) {"// TODO: Add content"}"
 }
-class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
-constructor(props: ErrorBoundaryProps) {;
+class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;}
+constructor(props: ErrorBoundaryProps) {;}
 super(props)},;
-this.state={// TODO: Add content}
+this.state={"// TODO: Add content"}"
 }
   hasErro,;,
 r: false,;
@@ -97,10 +88,10 @@ t: 0,
   }
   static getDerivedStateFromError(erro);,
 r: Error): Partial,
-          <State> {/* TODO: Fix JSX expression */}
+          <State> {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
-    return {/* TODO: Fix JSX expression */;}
+    return {"/* TODO: Fix JSX expression */;"}"
   O: Add content,}
 }
   hasErro,;,
@@ -110,12 +101,12 @@ r: true,
   }
   componentDidCatch(erro,;,
 r: Error, errorInf);,
-o: ErrorInfo): void {/* TODO: Fix JSX expression */}
+o: ErrorInfo): void {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
     // Log error to console for debugging;
 console.error('Error caught by,;,
-ImprovedErrorBoundary:', {/* TODO: Fix JSX expression */}
+ImprovedErrorBoundary:', {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   messag,;,
@@ -132,13 +123,13 @@ ur,;,
 l: window.location.href,
     });
     // Call custom error handler if provided;
-if (this.props.onError) {/* TODO: Fix JSX expression */}
+if (this.props.onError) {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
       this.props.onError(error, errorInfo)
     }
     // Update state with error details;
-this.setState((prevState) => ({/* TODO: Fix JSX expression */}
+this.setState((prevState) => ({"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
 //       errorInfo,;
@@ -146,26 +137,26 @@ errorCoun,;,
 t: prevState.errorCount + 1,)
     }))
     // Log to console in development;
-if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+if (process.env['NODE_ENV'] === 'development') {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
     }
     // Send to external error tracking (if available);
-if (typeof window !== 'undefined' && (window as unknown as {/* TODO: Fix JSX expression */)});,
-y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
+if (typeof window !== 'undefined' && (window as unknown as {"/* TODO: Fix JSX expression */)"});,"
+y: unknown }).Sentry) {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
-      (window as unknown as {/* TODO: Fix JSX expression */}
+      (window as unknown as {"/* TODO: Fix JSX expression */"}"
   t: Record,});
-          <string, unknown>) => void } }).Sentry.captureException(error, {/* TODO: Fix JSX expression */}
+          <string, unknown>) => void } }).Sentry.captureException(error, {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
         context,;,
-s: {/* TODO: Fix JSX expression */}
+s: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
           reac,;,
-t: {/* TODO: Fix JSX expression */}
+t: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   componentStac,;,
@@ -175,16 +166,15 @@ k: errorInfo.componentStack,
       });
     }
   }
-  componentDidUpdate(prevProps: Props): void {;
+  componentDidUpdate(prevProps: Props): void {;}
 componentDidUpdate(prevProp);,
 s: Props): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     // Reset error state if resetKeys changed;
-if (this.props.resetKeys && prevProps.resetKeys) {
-        (key, index) => key !== prevProps.resetKeys![index]
+if (this.props.resetKeys && prevProps.resetKeys) {(key, index) => key !== prevProps.resetKeys![index]}
       );
-if (resetKeysChanged && this.state.hasError) {;
+if (resetKeysChanged && this.state.hasError) {;}
 if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -192,42 +182,37 @@ if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  resetErrorBoundary = (): void => {;
-this.setState({;,
-}
+  resetErrorBoundary = (): void => {;}
+this.setState({;,}
 hasError: false},;,
 error: null,;,
 errorInfo: null
     });
   }
-  handleReload = (): void => {;
-window.location.reload()
-}
+  handleReload = (): void => {;}
+window.location.reload()}
   }
-  handleGoHome = (): void => {;
-window.location.href = '/'
-}
+  handleGoHome = (): void => {";"}
+window.location.href = '/'"}"
   }
-  render(): ReactNode {;
-if (this.state.hasError) {
-      // Use custom fallback if provided;
-if (this.props.fallback) {;
-return this.props.fallback;
-  }
+  render(): ReactNode {;}
+if (this.state.hasError) {// Use custom fallback if provided;}
+if (this.props.fallback) {;}
+return this.props.fallback;}
       // Default error UI;
 return (;
-        <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>⚠️
-            <h1 style={styles.title}>Oops! Something went wrong
-            <p style={styles.message}>;
+        <div className="error-boundary-container" style={"styles.container"}>"
+          <div style={"styles.content"}>"
+            <div style={"styles.icon"}>⚠️"
+            <h1 style={"styles.title"}>Oops! Something went wrong"
+            <p style={"styles.message"}>;"
 We're sorry for the inconvenience. The application encountered an unexpected error.
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
+            {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
               <details style={styles.details}>;
-resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
+resetErrorBoundary = (): void => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
-    this.setState({/* TODO: Fix JSX expression */}
+    this.setState({"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   hasErro,;,
@@ -238,24 +223,24 @@ errorInf,;,
 o: null,)
     });
   }
-  handleReload = (): void => {/* TODO: Fix JSX expression */}
+  handleReload = (): void => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
     window.location.reload()
   }
-  handleGoHome = (): void => {/* TODO: Fix JSX expression */}
+  handleGoHome = (): void => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
     window.location.href = '/'
   }
-  render(): ReactNode {/* TODO: Fix JSX expression */}
+  render(): ReactNode {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
-    if (this.state.hasError) {/* TODO: Fix JSX expression */}
+    if (this.state.hasError) {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
       // Use custom fallback if provided;
-if (this.props.fallback) {/* TODO: Fix JSX expression */}
+if (this.props.fallback) {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
         return this.props.fallback;
@@ -263,127 +248,125 @@ if (this.props.fallback) {/* TODO: Fix JSX expression */}
       // Default error UI;
 return (<div>Coming Soon</div>);
   )
-          <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>
-            <h1 style={styles.title}>Oops! Something went wrong
-            <p style={styles.message}>;
+          <div className="error-boundary-container" style={"styles.container"}>"
+          <div style={"styles.content"}>"
+            <div style={"styles.icon"}>"
+            <h1 style={"styles.title"}>Oops! Something went wrong"
+            <p style={"styles.message"}>;"
 We're sorry for the inconvenience. The application encountered an unexpected error.
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
-          <details style={styles.details}>
-                <summary style={styles.summary}>Error Details (Development Only)
-                <div style={styles.errorDetails}>
-                  <p style={styles.errorMessage}>
+          <details style={"styles.details"}>"
+                <summary style={"styles.summary"}>Error Details (Development Only)"
+                <div style={"styles.errorDetails"}>"
+                  <p style={"styles.errorMessage"}>"
                     <strong>Erro,;,
-r:</strong> {this.state.error.message}
-                  {this.state.error.stack && (
+r:</strong> {"this.state.error.message"}"
+                  {this.state.error.stack && ()}
                     <pre style={styles.stack}>
   </pre>
-                      {this.state.error.stack}
+                      {"this.state.error.stack"}"
                   )}
-                  {this.state.errorInfo?.componentStack && (
+                  {this.state.errorInfo?.componentStack && ()}
                     <pre style={styles.stack}>
                       <strong>Component Stack:
                   {this.state.error.stack && ()}
-          <pre style={styles.stack}>
-                      {this.state.error.stack}
+          <pre style={"styles.stack"}>"
+                      {"this.state.error.stack"}"
                   )}
                   {this.state.errorInfo?.componentStack && ()}
-          <pre style={styles.stack}>
+          <pre style={"styles.stack"}>"
                       <strong>Component,;,
 Stack:
-                      {this.state.errorInfo.componentStack}
+                      {"this.state.errorInfo.componentStack"}"
                   )}
             )}
-            <div style={styles.actions}>
+            <div style={"styles.actions"}>"
               <button>;
-onClick={this.resetErrorBoundary}
-                style={styles.button}";
+onClick={"this.resetErrorBoundary"}"
+                style={"styles.button"}";"
 aria-label="Try Again"
               >;
 Try Again
 //                 Try Again
               <button>;
-onClick={this.handleReload}
-                style={{...styles.button}}, ...styles.secondaryButton}}";
+onClick={"this.handleReload"}"
+                style={{...styles.button}}, ...styles.secondaryButton}}";"
 aria-label="Reload Page"
               >;
 Reload Page
 //                 Reload Page
               <button>;
-onClick={this.handleGoHome}
-                style={{...styles.button}}, ...styles.secondaryButton}}";
+onClick={"this.handleGoHome"}"
+                style={{...styles.button}}, ...styles.secondaryButton}}";"
 aria-label="Go to Homepage"
               >;
 Go Home
-            {this.state.errorCount > 1 && (
-              <p style={styles.errorCount}>;
-This error has occurred {this.state.errorCount} times
             {this.state.errorCount > 1 && ()}
-          <p style={styles.errorCount}>;
-This error has occurred {this.state.errorCount} times
+              <p style={styles.errorCount}>;
+This error has occurred {"this.state.errorCount"} times"
+            {this.state.errorCount > 1 && ()}
+          <p style={"styles.errorCount"}>;"
+This error has occurred {"this.state.errorCount"} times"
             )});
     }
     return this.props.children;
   }
 }
-const styles={;;,
-container: {;,
+const styles={;;,}
+container: {;,}
 minHeight: '100vh'},;,
 display: 'flex',;,
 alignItems: 'center',;,
 justifyContent: 'center',;,
 padding: '20px',;,
 backgroundColor: '#f5f5f5',;,
-fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'"
   },;,
-content: {;,
+content: {;,}
 maxWidth: '600px',;,
 width: '100%',;,
 backgroundColor: 'white',;,
 borderRadius: '8px',;,
 padding: '40px',;,
 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',;,
-textAlign: 'center' as const
-  },;,
-icon: {;,
+textAlign: 'center' as const},;,
+icon: {";,"}
 fontSize: '48px',;,
 marginBottom:   ,;
-$4},;,
-title: {;,
+$4"},;,"
+title: {";,"}
 fontSize: '24px',;,
 fontWeight: 'bold',;,
 color: '#333',;,
 marginBottom:   ,;
-$4},;,
-message: {;,
+$4"},;,"
+message: {";,"}
 fontSize: '16px',;,
 color: '#666',;,
 marginBottom: '32px',;,
 lineHeight:   ,;
-$4},;,
-details: {;,
+$4"},;,"
+details: {";,"}
 textAlign: 'left' as const,;,
 marginBottom: '24px',;,
 backgroundColor: '#f9f9f9',;,
 padding: '16px',;,
 borderRadius: '4px',;,
 border:   ,;
-$4},;,
-summary: {;,
+$4"},;,"
+summary: {";,"}
 cursor: 'pointer',;,
 fontWeight: 'bold',;,
 marginBottom: '12px',;,
-userSelect: 'none' as const
-  },;,
-errorDetails: {;,
+userSelect: 'none' as const"},;,"
+errorDetails: {";,"}
 fontSize:   ,;
-$4},;,
-errorMessage: {;,
+$4"},;,"
+errorMessage: {";,"}
 marginBottom: '12px',;,
 color:   ,;
-$4},;,
-stack: {;,
+$4"},;,"
+stack: {";,"}
 backgroundColor: '#f5f5f5',;,
 padding: '12px',;,
 borderRadius: '4px',;,
@@ -391,15 +374,13 @@ fontSize: '12px',;,
 overflowX: 'auto' as const,;,
 fontFamily: 'monospace',;,
 whiteSpace: 'pre-wrap' as const,;,
-wordBreak: 'break-all' as const
-  },;,
-actions: {;,
+wordBreak: 'break-all' as const"},;,"
+actions: {";,"}
 display: 'flex',;,
 gap: '12px',;,
 justifyContent: 'center',;,
-flexWrap: 'wrap' as const
-  },;,
-button: {;,
+flexWrap: 'wrap' as const"},;,"
+button: {";,"}
 padding: '12px 24px',;,
 fontSize: '16px',;,
 fontWeight: '500',;,
@@ -409,24 +390,24 @@ border: 'none',;,
 borderRadius: '4px',;,
 cursor: 'pointer',;,
 transition:   ,;
-$4},;,
-secondaryButton: {;,
+$4"},;,"
+secondaryButton: {";,"}
 backgroundColor:   ,;
-$4},;,
-errorCount: {;,
+$4"},;,"
+errorCount: {";,"}
 marginTop: '24px',;,
 fontSize: '14px',;,
 color:   ,;
-$4}
+$4"}"
 });
     }
     return this.props.children;
   }
 }
-const styles={// TODO: Add content;}
+const styles={"// TODO: Add content;"}"
 }
   containe,;,
-r: {/* TODO: Fix JSX expression */}
+r: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   minHeigh,;,
@@ -441,11 +422,11 @@ paddin,;,
 g: '20px',;
 backgroundColo,;,
 r: '#f5f5f5',;
-fontFamil,";,
-y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+fontFamil,";,"
+y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'"
   },;
 conten,;,
-t: {/* TODO: Fix JSX expression */}
+t: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   maxWidt,;,
@@ -464,7 +445,7 @@ textAlig,;,
 n: 'center' as const,
   },;
 ico,;,
-n: {/* TODO: Fix JSX expression */}
+n: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   fontSiz,;,
@@ -473,7 +454,7 @@ marginBotto,;,
 m: '20px'
   },;
 titl,;,
-e: {/* TODO: Fix JSX expression */}
+e: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   fontSiz,;,
@@ -486,7 +467,7 @@ marginBotto,;,
 m: '16px'
   },;
 messag,;,
-e: {/* TODO: Fix JSX expression */}
+e: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   fontSiz,;,
@@ -499,7 +480,7 @@ lineHeigh,;,
 t: '1.6'
   },;
 detail,;,
-s: {/* TODO: Fix JSX expression */}
+s: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   textAlig,;,
@@ -516,7 +497,7 @@ borde,;,
 r: '1px solid #e0e0e0'
   },;
 summar,;,
-y: {/* TODO: Fix JSX expression */}
+y: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   curso,;,
@@ -529,14 +510,14 @@ userSelec,;,
 t: 'none' as const,
   },;
 errorDetail,;,
-s: {/* TODO: Fix JSX expression */}
+s: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   fontSiz,;,
 e: '14px'
   },;
 errorMessag,;,
-e: {/* TODO: Fix JSX expression */}
+e: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   marginBotto,;,
@@ -545,7 +526,7 @@ colo,;,
 r: '#d32f2f'
   },;
 stac,;,
-k: {/* TODO: Fix JSX expression */}
+k: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   backgroundColo,;,
@@ -566,7 +547,7 @@ wordBrea,;,
 k: 'break-all' as const,
   },;
 action,;,
-s: {/* TODO: Fix JSX expression */}
+s: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   displa,;,
@@ -579,7 +560,7 @@ flexWra,;,
 p: 'wrap' as const,
   },;
 butto,;,
-n: {/* TODO: Fix JSX expression */}
+n: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   paddin,;,
@@ -602,14 +583,14 @@ transitio,;,
 n: 'background-color 0.2s'
   },;
 secondaryButto,;,
-n: {/* TODO: Fix JSX expression */}
+n: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   backgroundColo,;,
 r: '#6c757d'
   },;
 errorCoun,;,
-t: {/* TODO: Fix JSX expression */}
+t: {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   marginTo,;,

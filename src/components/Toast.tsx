@@ -1,7 +1,7 @@
 import React from 'react'
 'use client'
 export type ToastType = 'success' | 'error' | 'warning' | 'info'
-export interface ToastProps {/* TODO: Fix JSX expression */}
+export interface ToastProps {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   messag,
@@ -14,7 +14,7 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
 }
 const,
   Toast: React.FC,
-          <ToastProps> = ({/* TODO: Fix JSX expression */}
+          <ToastProps> = ({"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
 //   message,
@@ -22,18 +22,16 @@ const,
   duration = 3000,
 //   onClose,
 //   show;)
-}) => {/* TODO: Fix JSX expression */}
+}) => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   const [isVisible, setIsVisible] = useState(show)
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
     setIsVisible(show)
-    if (show && duration > 0) {
-    setIsVisible(false)
-  }
-        if (onClose) {/* TODO: Fix JSX expression */}
+    if (show && duration > 0) {setIsVisible(false)}
+        if (onClose) {"/* TODO: Fix JSX expression */"}"
         }
       }, duration)
       return () => clearTimeout(timer)
@@ -41,10 +39,10 @@ const,
     return undefined
   }, [show, duration, onClose])
   if (!isVisible) return null
-  const getToastStyles = () => {/* TODO: Fix JSX expression */}
+  const getToastStyles = () => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
-    switch (type) {/* TODO: Fix JSX expression */}
+    switch (type) {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
       case 'success':
@@ -59,10 +57,10 @@ const,
   t: return 'bg-gray-800 text-white',
     }
   }
-  const getIcon = () => {/* TODO: Fix JSX expression */}
+  const getIcon = () => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
-    switch (type) {/* TODO: Fix JSX expression */}
+    switch (type) {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
       case 'success':
@@ -85,7 +83,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
       aria-live="polite"
 // >
           "
-          <span className="text-xl font-bold">{getIcon()}
+          <span className="text-xl font-bold">{getIcon()}"
       <span>{message}
       <button>
         onClick={() => {}
@@ -95,7 +93,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           setIsVisible(false)
           if (onClose) onClose()
         }}"
-        className="ml-4,">
+        className="ml-4,">"
   hover: opacity-80 transition-opacity""
         aria-label="Close notification"
 //       >
@@ -104,6 +102,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
     </div>
   ),
 }
-export default Toast;"`
+export default Toast;"`"
   </ToastProps>
 </span></span>
+  );

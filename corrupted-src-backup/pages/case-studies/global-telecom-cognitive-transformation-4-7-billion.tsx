@@ -1,14 +1,14 @@
 import React from 'react'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t'
-const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
+impo, r, t {"Helm, e, t"} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'"
+impo, r, t {"Awa, r, d"} fr, o, m 'luci, d, e-rea, c, t'"
+impo, r, t {"Trending, U, p"} fr, o, m 'luci, d, e-rea, c, t'"
+impo, r, t {"Use, r, s"} fr, o, m 'luci, d, e-rea, c, t'"
+impo, r, t {"Z, a, p"} fr, o, m 'luci, d, e-rea, c, t'"
+impo, r, t {"CheckCirc, l, e"} fr, o, m 'luci, d, e-rea, c, t'"
+impo, r, t {"ArrowRig, h, t"} fr, o, m 'luci, d, e-rea, c, t'"
+impo, r, t {"Bra, i, n"} fr, o, m 'luci, d, e-rea, c, t'"
+impo, r, t {"Targ, e, t"} fr, o, m 'luci, d, e-rea, c, t'"
+const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {,}
   return(<React.Fragment>,
       <Helm, e, t>
         <title>
@@ -23,25 +23,25 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/ca s e-studi e s/glob a l-telec o m-cogniti v e-transformati o n-4-7-billi o n')
         />),
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+        <Head, e, r /> {/* Hero, Sect, i, o, n */}
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,
-            {/* Breadc, r, u, m, b */}
+            {"/* Breadc, r, u, m, b */"}"
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            {/* Breadc, r, u, m, b */}
+            {"/* Breadc, r, u, m, b */"}"
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
               <, t, o='/'$2 />
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
               >
-const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {"/* TODO: Fix JSX expression */"}"
+        <Head, e, r /> {"/* Hero, Sect, i, o, n */"}"
         <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(1, 3, 9,92,2, 4, 6,0.2),transparent_, 5, 0%)]' />
           <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            {/* Breadc, r, u, m, b */}
+            {"/* Breadc, r, u, m, b */"}"
             <nav, classNam, e = 'flex, item, s-center, spac, e-x-2, tex, t-sm, m, b-8'>
               <, t, o='/'$2 />
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
@@ -55,7 +55,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                 Case, Studie, s
               <span, className='te, x, t-purp, l, e-4, 0, 0'></span>/
               <span, className='te, x, t-whi, t, e'></span>Fortune</span>, 20, Telecom
-            {/* Case, Study, Head, e, r */}
+            {"/* Case, Study, Head, e, r */"}"
             <div, classNam, e = 'm, a, x-w-4, x, l'>
               <div, className='flex, item, s-center, ga, p-3, m, b-6, fle, x-wr, a, p'>
                 <span, className='inli, n, e-flex, item, s-center, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, shado, w-lg'>
@@ -118,23 +118,23 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                         'Predictive, modeling, for market, opportunitie, s',
                         'Competitive, intelligence, analysis',
                         'Scenario, planning, and simulati, o, n'],
-                      te, c, h: 'Natural, language, querie, s, Automated, insight, s, Causal, inferenc, e'}].m, a, p((solution, i, d, x) => (
-                    <, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'$2 />
-                  ].m, a, p((solution, i, d, x) => (<, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'$2 />
+                      te, c, h: 'Natural, language, querie, s, Automated, insight, s, Causal, inferenc, e'}].m, a, p((solution, i, d, x) => ()
+                    <, ke, y = {"id, x"}, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'$2 />"
+                  ].m, a, p((solution, i, d, x) => (<, ke, y = {"id, x"}, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'$2 />"
                     >
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'>
-                        <span, className='te, x, t-3, x, l'>{solution.ic, o, n}
-                        {solution.title}
+                        <span, className='te, x, t-3, x, l'>{"solution.ic, o, n"}"
+                        {"solution.title"}"
                       <div, className='mb-4'>
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
                           Capabilities, Deploye, d: </p>,
                         <ul, className='spa, c, e-y-2'>
-                          { solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (
+                          {solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > ()}
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
                           Capabilities, Deploye, d:
                         <ul, className='spa, c, e-y-2'>
                           {/* TODO: Fix JSX expression */}
-                            <, ke, y = { , i  }, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-purp, l, e-1, 0, 0'$2 />
+                            <, ke, y = {", i"}, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-purp, l, e-1, 0, 0'$2 />"
                             >
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                       <div, classNam, e = 'bg-bla, c, k/30, rounde, d-l, g, p-3'>
@@ -144,42 +144,42 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                         <p, className='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
                           Technology, Stac, k:
                         <p, className='te, x, t-sm, tex, t-purp, l, e-1, 0, 0'>
-                          {solution.te, c, h}
-                        {/* TODO: Fix JSX expression */}
+                          {"solution.te, c, h"}"
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
-                        {/* TODO: Fix JSX expression */}
+                        {"/* TODO: Fix JSX expression */"}"
                         },
                       <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>
                       <h3, className='te, x, t-lg, fon, t-bold, tex, t-white, m, b-4'>

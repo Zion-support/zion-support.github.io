@@ -1,4 +1,4 @@
-import {Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter} from 'lucide-react'
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react'
 import React from 'react'
 import {Link} from 'react-router-dom'
 
@@ -7,32 +7,31 @@ const EnhancedFooter: React.FC = () => {
 
   const services = [
     { name: 'AI Solutions', href: '/services/ai' },
-    {name: 'Cloud Architecture', href: '/services/cloud'},
-    {name: 'Web Development', href: '/services/web'},
-    {name: 'Mobile Apps', href: '/services/mobile'},
-    {name: 'Data Analytics', href: '/services/analytics'},
-    {name: 'DevOps', href: '/services/devops'},
+    { name: 'Cloud Architecture', href: '/services/cloud' },
+    { name: 'Web Development', href: '/services/web' },
+    { name: 'Mobile Apps', href: '/services/mobile' },
+    { name: 'Data Analytics', href: '/services/analytics' },
+    { name: 'DevOps', href: '/services/devops' },
   ]
 
   const products = [
-    {name: 'AI Platform', href: '/products/ai-platform'},
-    {name: 'Cloud Suite', href: '/products/cloud-suite'},
-    {name: 'Analytics Dashboard', href: '/products/analytics'},
-    {name: 'Mobile SDK', href: '/products/mobile-sdk'},
+    { name: 'AI Platform', href: '/products/ai-platform' },
+    { name: 'Cloud Suite', href: '/products/cloud-suite' },
+    { name: 'Analytics Dashboard', href: '/products/analytics' },
+    { name: 'Mobile SDK', href: '/products/mobile-sdk' },
   ]
 
   const quickLinks = [
-    {name: 'About Us', href: '/about'},
-    {name: 'Contact', href: '/contact'},
-    {name: 'Blog', href: '/blog'},
-    {name: 'Careers', href: '/careers'},
-    {name: 'Privacy Policy', href: '/legal/privacy'},
-    {name: 'Terms of Service', href: '/legal/terms'},
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Privacy Policy', href: '/legal/privacy' },
+    { name: 'Terms of Service', href: '/legal/terms' },
   ]
 
   return (
-    <>
-<footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div className="lg:col-span-2">
@@ -48,24 +47,32 @@ const EnhancedFooter: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/company/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
+                href="https://facebook.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
+                href="https://twitter.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
-                <Github className="w-5 h-5" />
+                href="https://linkedin.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://facebook.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
+                href="https://github.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -73,12 +80,13 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              {services.slice(0, 6).map(service => (
+              {services.map((service) => (
                 <li key={service.name}>
-                  <Link to={service.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {service.name}
-                    </span>
+                  <Link
+                    to={service.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.name}
                   </Link>
                 </li>
               ))}
@@ -88,12 +96,13 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
-              {products.slice(0, 6).map(product => (
+              {products.map((product) => (
                 <li key={product.name}>
-                  <Link to={product.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {product.name}
-                    </span>
+                  <Link
+                    to={product.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {product.name}
                   </Link>
                 </li>
               ))}
@@ -103,12 +112,13 @@ const EnhancedFooter: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {quickLinks.map(item => (
-                <li key={item.name}>
-                  <Link to={item.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {item.name}
-                    </span>
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -116,59 +126,30 @@ const EnhancedFooter: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">info@ziontechgroup.com</p>
-              </div>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
+              <MapPin className="h-4 w-4" />
+              <span>123 Tech Street, Innovation City, IC 12345</span>
             </div>
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (555) 123-4567</p>
+            <div className="flex items-center space-x-4 text-gray-400">
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4" />
+                <span>+1 (555) 123-4567</span>
               </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-blue-400" />
-              <div>
-                <p className="text-sm text-gray-400">Address</p>
-                <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4" />
+                <span>info@ziontech.com</span>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/legal/privacy">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
-                </span>
-              </Link>
-              <Link to="/legal/terms">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
-                </span>
-              </Link>
-              <Link to="/legal/cookies">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Cookie Policy
-                </span>
-              </Link>
-            </div>
+          <div className="text-center text-gray-400 mt-4">
+            <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
           </div>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default EnhancedFooter;
+export default EnhancedFooter

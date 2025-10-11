@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { 
-  Brain, 
+  Brain,
   Mail, 
   Phone, 
   MapPin, 
@@ -15,102 +15,164 @@ import {
   ArrowRight, 
   CheckCircle, 
   Shield, 
-  Zap, 
-  Target, 
+  Code, 
+  Cloud, 
   BarChart, 
   Settings, 
-  HelpCircle, 
-  Star, 
-  Award, 
-  TrendingUp, 
-  Lightbulb, 
-  Code, 
-  Database, 
-  Cloud, 
-  Smartphone, 
-  Monitor, 
-  Server, 
-  Lock, 
-  Key, 
-  Wifi, 
-  MessageSquare, 
-  ShoppingCart} from 'lucide-react'
+  HelpCircle 
+} from 'lucide-react'
 
 const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear()
+
+  const services = [
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Custom Development', href: '/custom-development' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'IT Consulting', href: '/it-consulting' }
+  ]
+
+  const quickLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
+  ]
+
+  const legal = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'SLA', href: '/sla' }
+  ]
+
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div><span className="text-xl font-bold">Zion Tech Group</span>
-            </div><p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <div className="text-xl font-bold">Zion Tech Group</div>
+            </div>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider helping businesses transform their digital
+              presence with cutting-edge AI, cloud architecture and innovative development services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Brain className="w-5 h-5" />
+              <a
+                href="https://facebook.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Cloud className="w-5 h-5" />
+              <a
+                href="https://twitter.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Code className="w-5 h-5" />
+              <a
+                href="https://linkedin.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
               </a>
-            </div></div>{/* Services */}
+              <a
+                href="https://github.com"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="GitHub"
+              >
+                <Github className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
-              <li><Link to="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Solutions</Link></li>
-              <li><Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity</Link></li>
-              <li><Link to="/consultation" className="text-gray-300 hover:text-cyan-400 transition-colors">Consultation</Link></li>
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>{/* Solutions */}
+          </div>
+
+          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Solutions</Link></li>
-              <li><Link to="/enterprise-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Enterprise Solutions</Link></li>
-              <li><Link to="/blockchain" className="text-gray-300 hover:text-cyan-400 transition-colors">Blockchain</Link></li>
-              <li><Link to="/iot" className="text-gray-300 hover:text-cyan-400 transition-colors">IoT</Link></li>
-              <li><Link to="/robotics" className="text-gray-300 hover:text-cyan-400 transition-colors">Robotics</Link></li>
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>{/* Contact */}
+          </div>
+
+          {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
-              </div><div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">info@ziontech.com</span>
-              </div><div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300">123 Tech Street, Innovation City</span>
-              </div></div></div></div>{/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
+              <div className="flex items-center space-x-2 text-gray-300">
+                <MapPin className="h-4 w-4" />
+                <span>123 Tech Street, Innovation City, IC 12345</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Phone className="h-4 w-4" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Mail className="h-4 w-4" />
+                <span>info@ziontech.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </Link>
-            </div></div></div></div></footer>
-  );
-};
+            <div className="text-gray-400 mb-4 md:mb-0">
+              <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
+            </div>
+            <div className="flex space-x-6">
+              {legal.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
 
 export default Footer

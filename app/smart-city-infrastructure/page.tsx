@@ -2,12 +2,12 @@
 import React from 'react'
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />"
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />"
       </Helmet>
       <Navigation />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits."
@@ -15,28 +15,28 @@ import React from 'react'
 
       <Navigation />
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
                 Description of the page and its benefits for your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
                   Get Started
                 </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">"
                   Learn More
                 </button>
               </div>
 
       <Footer />
-    </>
+    </React.Fragment>
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
           </div>
 
       <Footer />
-    </>
+    </React.Fragment>
         </section>
 
               <p>
@@ -52,30 +52,30 @@ import React from 'react'
               <p>
                 This page is under development. Please check back soon for updates.
               </p>
-              <button className="cyber-button">
+              <button className="cyber-button">"
                 Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />"
               </button>
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
                 </div>
 
       <Footer />
-    </>
+    </React.Fragment>
               ))}
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
           </div>
 
       <Footer />
-    </>
+    </React.Fragment>
         </section>
 
-        {/* Benefits Section */}
+        {"/* Benefits Section */"}"
         <section></section>
           <div></div>
             <div>
@@ -83,14 +83,14 @@ import React from 'react'
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
           </div>
 
       <Footer />
-    </>
+    </React.Fragment>
         </section>
 
-        {/* CTA Section */}</div>
+        {"/* CTA Section */"}</div>"
         <section></section>
           <div></div>
             <div></div>
@@ -110,18 +110,18 @@ import React from 'react'
               </div>
 
       <Footer />
-    </>
+    </React.Fragment>
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
           </div>
 
       <Footer />
-    </>
+    </React.Fragment>
         </section>
       <Footer />
-    </>
+    </React.Fragment>
   )
 }
-      </Helmet>
+      </Helmet></p></p></h2></button></button></button>

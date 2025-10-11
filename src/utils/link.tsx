@@ -1,7 +1,5 @@
 import React from 'react'
-interface LinkProps {
-    // TODO: Add content
-  }
+interface LinkProps {"// TODO: Add content"}"
 }
   href: string,,
     children: React.ReactNode
@@ -12,9 +10,7 @@ interface LinkProps {
   'aria-label'?: string
 }
 export const Link: React.FC,
-          <LinkProps> = ({
-    // TODO: Add content
-  }
+          <LinkProps> = ({"// TODO: Add content"}"
 }
 //   href,
 //   children,
@@ -27,7 +23,7 @@ export const Link: React.FC,
 }) => {if (onClick) {}
     }
     // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
+    if (href.startsWith('/') && !href.startsWith('//')) {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
       e.preventDefault()
@@ -43,7 +39,7 @@ export const Link: React.FC,
       rel={rel}
       onClick={handleClick}
       aria-label={ariaLabel}
-      {...props}
+      {"...props"}"
 // >
       {children});
 }

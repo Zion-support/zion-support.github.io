@@ -9,19 +9,19 @@ import React from 'react'
 
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
 >
-        {/* Hero Section */}
+        {"/* Hero Section */"}"
             </div>
 
       <Footer />
-    </>
+    </React.Fragment>
           </div>
 
       <Footer />
-    </>
+    </React.Fragment>
         </section>
 
       <Footer />
-    </>
+    </React.Fragment>
   )
 }
-    </Helmet>
+    </Helmet></main>

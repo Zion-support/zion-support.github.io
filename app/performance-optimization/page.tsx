@@ -3,22 +3,26 @@ import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react'
-const PerformanceOptimizationPage: React.FC = () => {const features = [
+import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react'
+const PerformanceOptimizationPage: React.FC = () => {
+  const features = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
+    {
+      icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']} ,
-    {icon: Zap,
+    {
+      icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
       benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']} ,
-    {icon: Shield,
+    {
+      icon: Shield,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and reliability for mission-critical applications.',
       benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']} ]
@@ -30,16 +34,16 @@ const PerformanceOptimizationPage: React.FC = () => {const features = [
     '24/7 availability',
     'Expert support'
   ]
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />"
+        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />"
       </Helmet>
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits."
@@ -48,21 +52,21 @@ const PerformanceOptimizationPage: React.FC = () => {const features = [
       
       <Navigation />
       
-      <main className="pt-16">
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <main className="pt-16">"
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+            <div className="text-center">"
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 Performance Optimization Page
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">"
                   Get Started
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">"
                   Learn More
                 </button>
               </div>
@@ -79,35 +83,35 @@ const PerformanceOptimizationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="py-20">"
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+            <div className="text-center mb-16">"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
                 Key Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
                 Discover the powerful features that make our solutions stand out.
               </p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3">
-                    <h3 className="text-xl font-semibold text-gray-900">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+              {features.map((feature, index) => ()}
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">"
+                  <div className="flex items-center mb-4">"
+                    <feature.icon className="h-8 w-8 text-blue-600 mr-3">"
+                    <h3 className="text-xl font-semibold text-gray-900">"
                   </div>
       <Footer />
     </>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2">
+                  <h3 className="text-xl font-bold text-white mb-4">{"feature.title"}</h3>"
+                  <p className="text-gray-300 mb-4">{"feature.description"}</p>"
+                  {feature.benefits && ()}
+                    <ul className="space-y-2">"
+                      {feature.benefits.map((benefit, idx) => ()}
+                        <li key={idx} className="flex items-center text-sm text-gray-400">"
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2">"
                           {benefit}
                         </li>
                       )
@@ -119,7 +123,7 @@ const PerformanceOptimizationPage: React.FC = () => {const features = [
       
       <Footer />
     </>
-              ))}
+  ))}
             </div>
       
       <Footer />
@@ -130,34 +134,34 @@ const PerformanceOptimizationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        <section className="py-20 bg-gray-100">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="py-20 bg-gray-100">"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+            <div className="text-center mb-16">"
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
                 Why Choose Us
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
                 Experience the benefits of working with industry leaders.
               </p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                  <div className="flex items-center">
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3">
-                    <span className="text-lg font-medium text-gray-900">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+              {benefits.map((benefit, index) => ()}
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg">"
+                  <div className="flex items-center">"
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3">"
+                    <span className="text-lg font-medium text-gray-900">"
                   </div>
       <Footer />
     </>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
+                  <p className="text-lg text-white font-medium">{benefit}</p>"
                 </div>
       
       <Footer />
     </>
-              ))}
+  ))}
             </div>
       
       <Footer />
@@ -168,21 +172,21 @@ const PerformanceOptimizationPage: React.FC = () => {const features = [
     </>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        {"/* CTA Section */"}"
+        <section className="py-20 px-4">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">"
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
                 Ready to Get Started?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8">"
                 Contact our experts to discuss your requirements and get started today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">"
                   Contact Us
                 </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">"
                   Learn More
                 </button>
               </div>
@@ -200,21 +204,21 @@ const PerformanceOptimizationPage: React.FC = () => {const features = [
         </section>
       </main>
 
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <section className="py-20">"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">"
               Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">"
                 Contact Us
               </button>
               <button className="
     ,>
-    r: bg-blue-600 hove, r:text-white transition-colors">
+    r: bg-blue-600 hove, r:text-white transition-colors">"
                 Schedule Demo
               </button>
       
@@ -224,3 +228,5 @@ const PerformanceOptimizationPage: React.FC = () => {const features = [
 }
 export default PerformanceOptimizationPage
         </Navigation>
+</div></div></div></section></h3></span>
+  );

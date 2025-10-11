@@ -1,10 +1,10 @@
-import {Menu, X} from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 
 const EnhancedHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
@@ -16,23 +16,23 @@ const EnhancedHeader: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
+              <span className="text-white font-bold text-sm">Z</span>
             </div>
-            <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
               Services
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
           </nav>
@@ -40,8 +40,10 @@ const EnhancedHeader: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            className="md:hidden text-gray-300 hover:text-white transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
@@ -49,16 +51,32 @@ const EnhancedHeader: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-cyan-500/20">
             <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link
+                to="/"
+                className="text-gray-300 hover:text-white transition-colors"
+                onClick={toggleMenu}
+              >
                 Home
               </Link>
-              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link
+                to="/about"
+                className="text-gray-300 hover:text-white transition-colors"
+                onClick={toggleMenu}
+              >
                 About
               </Link>
-              <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link
+                to="/services"
+                className="text-gray-300 hover:text-white transition-colors"
+                onClick={toggleMenu}
+              >
                 Services
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link
+                to="/contact"
+                className="text-gray-300 hover:text-white transition-colors"
+                onClick={toggleMenu}
+              >
                 Contact
               </Link>
             </nav>
@@ -66,7 +84,7 @@ const EnhancedHeader: React.FC = () => {
         )}
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default EnhancedHeader;
+export default EnhancedHeader

@@ -1,31 +1,22 @@
 'use client';
-import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
-
+import React, {memo} from 'react';
+import {Link} from 'react-router-dom';
+import {"Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle"} from 'lucide-react';"
   ];
-
   ];
-
   ];
-
   ];
-
   ];
-
   ];
-
   ];
-
   ];
-
-                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
-                  <p className="text-sm text-cyan-400">AI & IT Solutions</p>
+                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>"
+                  <p className="text-sm text-cyan-400">AI & IT Solutions</p>"
                 </div>
               </Link>
             </div>
 
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-gray-300 text-sm leading-relaxed">"
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
@@ -34,12 +25,12 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
           </div>
 
                   <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">
+                    to={"service.url"}"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">"
                   >
                 <Link 
                   to="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">"
                 >
                   View All AI Services →
                 </Link>
@@ -48,19 +39,19 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
           </div>
 
                   <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">
+                    to={"service.url"}"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">"
                   >
                 <Link 
                   to="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">"
                 >
                 <Link
                 to="/micro-saas"
-                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group">
+                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group">"
               >
                 View All Solutions
-                <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />"
               </Link>
               </li>
             </ul>
@@ -73,25 +64,25 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
           </div>
         </div>
 
-                <div className="text-white font-medium">{contactInfo.hours}</div>
-                <div className="text-gray-400 text-sm">Business hours</div>
+                <div className="text-white font-medium">{"contactInfo.hours"}</div>"
+                <div className="text-gray-400 text-sm">Business hours</div>"
               </div>
             </div>
           </div>
         </div>
 
                   <Link 
-                    to={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                    to={"link.url"}"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">"
                   >
                   <Link 
-                    to={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                    to={"link.url"}"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">"
                   >
-              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
-              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>"
+              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>"
+              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>"
+              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>"
             </ul>
           </div>
               </button>
@@ -100,18 +91,17 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
         </div>
       </div>
 
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">"
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">"
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">"
                 Cookie Policy
               </Link>
             </div>
   );
 });
-
 Footer.displayName = 'Footer';
 export default Footer;

@@ -1,8 +1,7 @@
-impo, r, t {/* TODO: Fix JSX expression */}
+impo, r, t {"/* TODO: Fix JSX expression */"}"
 } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-const GlobalFinTechAITransformatio, n = () => { 
-  return(<React.Fragment>
+impo, r, t {"Helm, e, t"} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'"
+const GlobalFinTechAITransformatio, n = () => {return(<React.Fragment>}
       <Helm, e, t>
         <title>
           Global, FinTech, AI Transformati, o, n: $127M, Annual, Value Creati, o, n | Zion, Tech, Group
@@ -28,7 +27,7 @@ const GlobalFinTechAITransformatio, n = () => {
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               How, a, Fortune 500, digital, banking platform, leveraged, AI to, transform, operatio, n, s, achievi, n, g $127M, in, annual val, u, e, 94% fraud, detection, accuracy, and, 10x, customer growth, through, intelligent
               automation, and, predictive analyti, c, s.
-            </p> {/* Key, Metrics, Banner */ }
+            </p> {/* Key, Metrics, Banner */}
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
@@ -37,8 +36,8 @@ const GlobalFinTechAITransformatio, n = () => {
                   Annual, Value, Created
                     <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                     <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
-const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
-            </p> {/* Key, Metrics, Banner */ }
+const GlobalFinTechAITransformatio, n = () => {"/* TODO: Fix JSX expression */"}"
+            </p> {"/* Key, Metrics, Banner */"}"
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
               <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
                 <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
@@ -67,23 +66,23 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       <li>
                         <strong, className='te, x, t-zi, o, n-cy, a, n'>Reven, u, e:</st, r, o, n, g>{' '}
                         $2.4B, annuall, y
-                  <, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'$2 />
+                  <, ke, y = {"in, d, e, x"}, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'$2 />"
                   >
                     <div, className='flex, item, s-start, ga, p-3, m, b-4'>
-                      <div, className='te, x, t-3, x, l'>{initiati, v, e.ic, o, n}
+                      <div, className='te, x, t-3, x, l'>{"initiati, v, e.ic, o, n"}"
                       <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>
-                        {initiati, v, e.title}
+                        {"initiati, v, e.title"}"
                       </h3>)
                     </div>)
                     <ul, className='spa, c, e-y-2'>)
-                      { initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > (
-                        <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                      {initiati, v, e.results.m, a, p((res, u, l, t, rInd, e, x) = > ()}
+                        <li, ke, y = { rIn, d, e, x}, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                           <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     <ul, className='spa, c, e-y-2'>
-                      {/* TODO: Fix JSX expression */}
-                        <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                      {"/* TODO: Fix JSX expression */"}"
+                        <li, ke, y = {"rIn, d, e, x"}, classNa, m, e = 'flex, item, s-start, ga, p-2'>"
                           <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                          <span, className='te, x, t-sm'>{resu, l, t}
+                          <span, className='te, x, t-sm'>{"resu, l, t"}"
                     pha, s, e: 'Phas, e, 3: Optimizat, i, o, n',
                     duratio,
   n: 'Months, 1, 3-1, 8',
@@ -98,8 +97,8 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       <h4, classNam, e = 'te, x, t-white, fon, t-semibold, m, b-2'>
                         Resul, t, s: </h4>,
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
-                        { pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                        {pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > ()}
+                          <li, ke, y = { rIn, d, e, x}, classNa, m, e = 'flex, item, s-start, ga, p-2'>
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     <li, classNam, e='flex, justif, y-between, item, s-center, p, t-3, borde, r-t, borde, r-whi, t, e/20'>
                       <span, classNam, e='fo, n, t-bo, l, d'>R, O, I:
@@ -107,8 +106,8 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       <h4, classNam, e = 'te, x, t-white, fon, t-semibold, m, b-2'>
                         Resul, t, s:
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
-                        {/* TODO: Fix JSX expression */}
-                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                        {"/* TODO: Fix JSX expression */"}"
+                          <li, ke, y = {"rIn, d, e, x"}, classNa, m, e = 'flex, item, s-start, ga, p-2'>"
                             <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                     <li, classNam, e='flex, justif, y-between, item, s-center, p, t-3, borde, r-t, borde, r-whi, t, e/20'>
                       <span, classNam, e='fo, n, t-bo, l, d'>R, O, I:
@@ -134,9 +133,9 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
               <div, className='spa, c, e-y-6'>
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
-                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are
+                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are"
                     invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
-                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are
+                    "Our, partnership, with Zion, Tech, Group has, been, transformational. They, did, n't, just, implement AI, technolog, y—they, helped, us reimagine, our, entire business, mode, l. T, h, e $127M, in, annual value, is, significan, t, but, the, strategic positioning, and, capabilities we've, built, are"
                     invaluab, l, e. We're, now, leading the, industry, in AI-powered, bankin, g."
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         Chief, Technology, Officer
@@ -150,7 +149,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                         Client, Company
                 <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'>
-                    "The, fraud, detection platform, alone, paid for, the, entire
+                    "The, fraud, detection platform, alone, paid for, the, entire"
                     initiati, v, e. Going, from 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are
                     down, 9, 2%, and, our, team can, focus, on strategic, work, instead
                     of, chasing, fraud."
@@ -161,7 +160,7 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                     <Zap, className='w-5 h-5' />
 }}
                   <p, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-light, italic, mb-4'></p>"
-                    "The, fraud, detection platform, alone, paid for, the, entire
+                    "The, fraud, detection platform, alone, paid for, the, entire"
                     initiati, v, e. Going, from 8% fraud, rates, to less, than, 1% was, gam, e-changi, n, g. Our, customers, are happ, i, e, r, our, losses, are
                     down, 9, 2%, and, our, team can, focus, on strategic, work, instead;"
                     of, chasing, fraud."

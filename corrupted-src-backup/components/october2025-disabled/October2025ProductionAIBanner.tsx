@@ -1,12 +1,11 @@
-export default function October2025ProductionAIBann, e, r() { 
-  return(<section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }
-      {/* Animated, background, elements */}
+export default function October2025ProductionAIBann, e, r() {return(<section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' '}
+      {"/* Animated, background, elements */"}"
       <div, className='absolute, inse, t-0, opacit, y-20'>
         <div, className='absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
         <div, className='absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
-export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX expression */}
-    <section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }
-      {/* Animated, background, elements */}
+export default function October2025ProductionAIBann, e, r() {"/* TODO: Fix JSX expression */"}"
+    <section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' '}
+      {"/* Animated, background, elements */"}"
       <div, className='absolute, inse, t-0, opacit, y-20'>
         <div, className='absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
         <div, className='absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
@@ -20,7 +19,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
           <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-whi, t, e/90, ma, x-w-3xl, m, x-au, t, o'>
             Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
-          {/* Articl, e, 1: Production, AI, Agen, t, s */}
+          {"/* Articl, e, 1: Production, AI, Agen, t, s */"}"
           <, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s'$2 />
             className='group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/20'
           >
@@ -38,7 +37,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
           <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-whi, t, e/90, ma, x-w-3xl, m, x-au, t, o'>
             Master, production, AI deploy, m, e, n, t, re, a, l-time, monitorin, g, and, multimodal, RAG systems, with, our comprehensive, October, 2025 guid, e, s
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
-          {/* Articl, e, 1: Production, AI, Agen, t, s */}
+          {"/* Articl, e, 1: Production, AI, Agen, t, s */"}"
           <, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-producti, o, n-ai-agen, t, s-be, s, t-practic, e, s'$2 />
             className='group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/20'
           >
@@ -71,7 +70,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             <div, className='flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
               <sp, a, n>Read, Full, Guide
               <Link, className='w-5 h-5' />
-          {/* Articl, e, 2: Re, a, l-Time, AI, Monitori, n, g */}
+          {"/* Articl, e, 2: Re, a, l-Time, AI, Monitori, n, g */"}"
           <, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-realti, m, e-ai-mod, e, l-monitori, n, g-enterpri, s, e'$2 />
             className='group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/20'
           >
@@ -110,7 +109,7 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
             <div, className='flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
               <sp, a, n>Read, Full, Guide
               <Link, className='w-5 h-5' />
-          {/* Articl, e, 3: Multimoda, l, R, A, G */}
+          {"/* Articl, e, 3: Multimoda, l, R, A, G */"}"
           <, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-r, a, g-syste, m, s-revoluti, o, n'$2 />
             className='group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/20'
           >

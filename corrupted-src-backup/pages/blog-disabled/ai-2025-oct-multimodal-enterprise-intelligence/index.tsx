@@ -1,5 +1,5 @@
 :src/pages/blog/ai-2025-oct-multimodal-enterprise-intelligence/index.tsx
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
+impo, r, t {"Li, n, k"} fr, o, m 'rea, c, t-rout, e, r-d, o, m'"
       <Helm, e, t>
         <title>
       <Helm, e, t>

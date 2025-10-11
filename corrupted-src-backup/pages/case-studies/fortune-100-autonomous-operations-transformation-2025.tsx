@@ -11,13 +11,13 @@
         />
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0'>
         <Head, e, r />
-        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {"/* Back, Lin, k */"}"
           <, t, o='/ca, s, e-studi, e, s'$2 />
             className='inli, n, e-flex, item, s-center, tex, t-cy, a, n-400, hove, r: te, x, t-cy, a, n-300, m, b-8, transitio, n-colo, r, s'
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
         <Head, e, r />
-        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {"/* Back, Lin, k */"}"
           <, t, o='/ca, s, e-studi, e, s'$2 />
             className='inli, n, e-flex, item, s-center, tex, t-cy, a, n-400, hove, r: te, x, t-cy, a, n-300, m, b-8, transitio, n-colo, r, s'
           >
@@ -146,7 +146,7 @@
                   <div, className='te, x, t-gre, e, n-100, fon, t-semibold, m, b-3'>
                     Cost, Saving, s
                   <ul, classNam, e='spa, c, e-y-2, tex, t-gre, e, n-200, tex, t-sm'>
-            {/* Operational, Excelle, n, c, e */}
+            {"/* Operational, Excelle, n, c, e */"}"
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8'>
               <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-bl, u, e-4, 0, 0/30'>
                 <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
@@ -243,7 +243,7 @@
                   <Link, classNam, e='w-5 h-5' />
                 <p, className='te, x, t-gre, e, n-1, 0, 0'>
                   50% OFF, implementatio, n + FREE, 3, 0-day, proof, of concept, through, December 20, 2, 5
-          {/* Related, Cont, e, n, t */}
+          {"/* Related, Cont, e, n, t */"}"
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, t-16'>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'>
             <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'>

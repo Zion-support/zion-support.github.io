@@ -1,33 +1,32 @@
-impo, r, t {/* TODO: Fix JSX expression */}
+impo, r, t {"/* TODO: Fix JSX expression */"}"
 } fr, o, m 'luci, d, e-rea, c, t'
-const October2025OperationalExcellenceBanne, r = () => { 
-  return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
-      {/* Animated, background, elements */}
+const October2025OperationalExcellenceBanne, r = () => {return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' '}
+      {"/* Animated, background, elements */"}"
       <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
-  return (
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
-      {/* Animated, background, elements */}
+  return ()
+    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' '}
+      {"/* Animated, background, elements */"}"
       <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
         <div, className='absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/15, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0' />
       <div, className='relativ, e, z-10, ma, x-w-7xl, m, x-au, t, o'>
-        {/* Breaking, News, Badge */}
+        {"/* Breaking, News, Badge */"}"
         <div, className='te, x, t-center, m, b-8'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm'>
             <Sparkles, className='w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
             <span, className='te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r'>
-const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
-      {/* Animated, background, elements */}
+const October2025OperationalExcellenceBanne, r = () => {"/* TODO: Fix JSX expression */"}"
+    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' '}
+      {"/* Animated, background, elements */"}"
       <div, className='absolute, inse, t-0, overflo, w-hidd, e, n'>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
         <div, className='absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/15, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0' />
       <div, className='relativ, e, z-10, ma, x-w-7xl, m, x-au, t, o'>
-        {/* Breaking, News, Badge */}
+        {"/* Breaking, News, Badge */"}"
         <div, className='te, x, t-center, m, b-8'>
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm'>
             <Sparkles, className='w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
@@ -58,7 +57,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             <span, classNam, e = 'te, x, t-cy, a, n-300, fon, t-semibo, l, d'>
               {' '}
               Customer, Intent, Prediction (98.2% Accur, a, c, y)
-        {/* Key, Metrics, Showcase */}
+        {"/* Key, Metrics, Showcase */"}"
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-12, ma, x-w-6xl, m, x-au, t, o'>
           <div, className='bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, shado, w-lg'>
             <div, className='te, x, t-5xl, fon, t-extrabold, tex, t-emera, l, d-300, m, b-2'>
@@ -92,9 +91,9 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               5, 6, 0%
             <div, className='te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
               Average, RO, I
-        {/* Featured, Articles, Gr, i, d */}
+        {"/* Featured, Articles, Gr, i, d */"}"
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
-          {/* Articl, e, 1 - Predictive, Maintena, n, c, e */}
+          {"/* Articl, e, 1 - Predictive, Maintena, n, c, e */"}"
           <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-predicti, v, e-maintenan, c, e-enterpri, s, e-breakthrou, g, h'$2 />
             className='group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-emera, l, d-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
@@ -104,7 +103,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               <div, className='fl, e, x-1'>
                 <span, className='te, x, t-xs, tex, t-emera, l, d-300, fon, t-bold, uppercase, tracking-wider, b, g-emera, l, d-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l'>
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
-          {/* Articl, e, 1 - Predictive, Maintena, n, c, e */}
+          {"/* Articl, e, 1 - Predictive, Maintena, n, c, e */"}"
           <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-predicti, v, e-maintenan, c, e-enterpri, s, e-breakthrou, g, h'$2 />
             className='group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-emera, l, d-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
@@ -161,7 +160,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
                 <sp, a, n>•
                 <span, className='fo, n, t-medi, u, m'></span>O</span>, c, t , 1, 20, 2, 5
               <Link, classNam, e = 'w-6 h-6, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
-          {/* Articl, e, 2 - API, Orchestrat, i, o, n */}
+          {"/* Articl, e, 2 - API, Orchestrat, i, o, n */"}"
           <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-a, p, i-orchestrati, o, n-revoluti, o, n'$2 />
             className='group, b, g-gradie, n, t-to-br, fro, m-te, a, l-8, 0, 0/50, t, o-te, a, l-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-te, a, l-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-te, a, l-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
@@ -222,7 +221,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
                 <sp, a, n>•
                 <span, className='fo, n, t-medi, u, m'></span>O</span>, c, t , 1, 20, 2, 5
               <Link, classNam, e = 'w-6 h-6, tex, t-te, a, l-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
-          {/* Articl, e, 3 - Customer, Intent, Predicti, o, n */}
+          {"/* Articl, e, 3 - Customer, Intent, Predicti, o, n */"}"
           <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-custom, e, r-inte, n, t-predicti, o, n-breakthrou, g, h'$2 />
             className='group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/50, t, o-cy, a, n-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-cy, a, n-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
@@ -284,7 +283,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
                 <sp, a, n>•
                 <span, className='fo, n, t-medi, u, m'></span>O</span>, c, t , 1, 20, 2, 5
               <Link, classNam, e = 'w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
-        {/* Call, to, Action Sec, t, i, o, n */}
+        {"/* Call, to, Action Sec, t, i, o, n */"}"
         <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-emera, l, d-8, 0, 0/30, vi, a-te, a, l-8, 0, 0/30, t, o-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, borde, r-2, borde, r-te, a, l-4, 0, 0/40, rounde, d-2x, l, p-8, tex, t-center, shado, w-xl'>
           <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
             Achieve, Operational, Excellence with, A, I
@@ -316,7 +315,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
             >
               <sp, a, n>Getted, Today
               <Link, className='w-5 h-5' />
-        {/* Trust, Indicat, o, r, s */}
+        {"/* Trust, Indicat, o, r, s */"}"
         <div, classNam, e = 'mt-10, tex, t-cent, e, r'>
           <div, className='flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300, tex, t-sm'>
             <div, className='flex, item, s-center, ga, p-2'>
@@ -344,4 +343,4 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
     </di, v>
   )
 }
-export default October2025 OperationalExcellenceBanner</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3>
+export default October2025 OperationalExcellenceBanner</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></div>

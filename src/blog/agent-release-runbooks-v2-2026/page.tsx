@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    return (
+    return (
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -62,3 +62,4 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
     </main>)
 }
 export default AgentReleaseRunbooksV22026Page</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></p></p></p></h1></h2></h3></h3></ol></li></li></li></li></section></section></section>
+  );

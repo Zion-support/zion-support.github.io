@@ -1,7 +1,6 @@
 'use client'
-import React, { useState, useCallback } from 'react'
-const Image: React.FC = () => {
-    interface ImageProps {
+import React, {"useState, useCallback"} from 'react'"
+const Image: React.FC = () => {interface ImageProps {}
   src: string
   alt: string
   width?: number
@@ -15,10 +14,8 @@ const Image: React.FC = () => {
   sizes?: string
   style?: React.CSSProperties
   onLoad?: () => void,
-  onError?: () => void
-  }
-export const Image: React.FC<ImageProps> = ({
-  src,
+  onError?: () => void}
+export const Image: React.FC<ImageProps> = ({"src,"}
   alt,
   width,
   height,
@@ -32,22 +29,14 @@ export const Image: React.FC<ImageProps> = ({
   style,
   onLoad,
   onError,
-  ...props
-}) => {
-    const [, setIsLoaded] = useState(false)
+  ...props"}) => {const [, setIsLoaded] = useState(false)"}
   const [hasError, setHasError] = useState(false)
-  const _handleLoad = useCallback(() => {
-    setIsLoaded(true)
-    if (onLoad) onLoad()
-  }, [onLoad])
-  const handleError = useCallback(() => {
-    setHasError(true)
-    if (onError) onError()
-  }, [onError])
-  const imageStyle: React.CSSProperties = {
-    ...style,
-    ...(fill && {
-      position: 'absolute',
+  const _handleLoad = useCallback(() => {setIsLoaded(true)}
+    if (onLoad) onLoad()}, [onLoad])
+  const handleError = useCallback(() => {setHasError(true)}
+    if (onError) onError()}, [onError])
+  const imageStyle: React.CSSProperties = {...style,}
+    ...(fill && {position: 'absolute',}
       top: 0,
       left: 0,
       width: '100%',
@@ -55,17 +44,16 @@ export const Image: React.FC<ImageProps> = ({
       objectFit:     ,
 $4});
   }
-  if (hasError) {
-    return (
+  if (hasError) {return ()}
       <$2 />
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
-        {...props}
+        {"...props"}"
       >
-        <span className="text-gray-500 text-sm">Failed to load image
+        <span className="text-gray-500 text-sm">Failed to load image"
     )
   }
-  return (
+  return ()
     <img
       src={src}
       alt={alt}
@@ -74,16 +62,16 @@ $4});
       className={className}
       style={imageStyle}
       sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
+      loading={"priority ? 'eager' : 'lazy'"}"
       onLoad={handleLoad}
       onError={handleError}
-      {...props}>
+      {"...props"} />"
     />
   )
 }
 export default Image
 'use client'
-import React, { useState, useCallback } from 'react'
+import React, {"useState, useCallback"} from 'react'"
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
@@ -105,9 +93,7 @@ const,
   onError?: () => void,
 }
 export const Image: React.FC,
-          <ImageProps> = ({
-    // TODO: Add content
-  }
+          <ImageProps> = ({"// TODO: Add content"}"
 }
 //   src,
 //   alt,
@@ -124,30 +110,28 @@ quality = 75,
 //   onLoad,
 //   onError,
 //   ...props
-}) => {
-    // TODO: Add content
-  }
+}) => {"// TODO: Add content"}"
 }
   const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
-  const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
+  const _handleLoad = useCallback(() => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
     setIsLoaded(true)
     if (onLoad) onLoad()
   }, [onLoad])
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
+  const handleError = useCallback(() => {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
     setHasError(true)
     if (onError) onError()
   }, [onError])
   const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+  imageStyle: React.CSSProperties = {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
 //     ...style,
-    ...(fill && {/* TODO: Fix JSX expression */}
+    ...(fill && {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
   position: 'absolute',
@@ -158,23 +142,23 @@ quality = 75,
       objectFit: 'cover'
     });
   }
-  if (hasError) {/* TODO: Fix JSX expression */}
+  if (hasError) {"/* TODO: Fix JSX expression */"}"
   O: Add content,}
 }
-    return (
+    return ()
           <div>Coming Soon
   )
           <div>
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
-        {...props}
+        {"...props"}"
 // >
-          <span className="text-gray-500 text-sm">Failed to load image
+          <span className="text-gray-500 text-sm">Failed to load image"
     )
   }
   return (<div>Coming Soon</div>)
   )
-          <img>
+          <img />
       src={src}
       alt={alt}
       width={width}
@@ -182,11 +166,11 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
       className={className}
       style={imageStyle}
       sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
+      loading={"priority ? 'eager' : 'lazy'"}"
       onLoad={handleLoad}
       onError={handleError}
-      {...props}
+      {"...props"}"
 //     />
   )
 }
-export default Image;"`</div></div></span></span>
+export default Image;"`</div></div></span></span>"

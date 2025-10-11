@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react'
+import React, {"Suspense, lazy, useEffect"} from 'react'"
 import './index.css'
 // Lazy load pages for better performance
 // const Home = lazy(() => import('./pages/Home'))
@@ -9,28 +9,27 @@ import './index.css'
 // const Team = lazy(() => import('./pages/Team'))
 // const Privacy = lazy(() => import('./pages/Privacy'))
 // const Terms = lazy(() => import('./pages/Terms'))
-function App() {
-  useEffect(() => {
+function App() {useEffect(() => {}
     // Initialize basic optimizations
     //     // Cleanup on unmount
     return () => {
-      //       }
+      //}
   }, [])
   return(<ErrorBoundary>
       <div>
-  return (
+  return ()
     <ErrorBoundary>
       <div>
         <Router>
-function App() {/* TODO: Fix JSX expression */}
+function App() {"/* TODO: Fix JSX expression */"}"
 }
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() => {"/* TODO: Fix JSX expression */"}"
       //       }
   }, [])
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
         <Router></Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={"<div>Loading...</div>"}>"
             <Routes>
               <Route path="/" element={<Home />} />"
               <Route path="/about" element={<About />} />"
@@ -39,7 +38,7 @@ function App() {/* TODO: Fix JSX expression */}
               <Route path="/contact" element={<Contact />} />"
               <Route path="/team" element={<Team />} />"
               <Route path="/privacy" element={<Privacy />} />"
-              <Route path="/terms" element={<Terms />} />
+              <Route path="/terms" element={<Terms />} />"
             </Routes>)
           </Suspense>)
         </Router>)
@@ -49,41 +48,40 @@ function App() {/* TODO: Fix JSX expression */}
 }
 // Simple Error Boundary
 class ErrorBoundary extends React.Component<
-  {/* TODO: Fix JSX expression */}
+  {"/* TODO: Fix JSX expression */"}"
   n: React.ReactNode, fallback?: React.ReactNode },
-  {/* TODO: Fix JSX expression */}
+  {"/* TODO: Fix JSX expression */"}"
   r: boolean }
-> {/* TODO: Fix JSX expression */}
-  n: React.ReactNode, fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
+> {"/* TODO: Fix JSX expression */"}"
+  n: React.ReactNode, fallback?: React.ReactNode }) {"/* TODO: Fix JSX expression */"}"
   r: false }
   }
-  static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
+  static getDerivedStateFromError() {"/* TODO: Fix JSX expression */"}"
   r: true }
   }
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
-    //     }
-  render() {
-    if (this.state.hasError) {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {","}
+    //"}"
+  render() {if (this.state.hasError) {}
       return(this.props.fallback || ()
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">)
-            <div className="text-center">)
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
+          <div className="min-h-screen flex items-center justify-center bg-gray-50">)"
+            <div className="text-center">)"
+              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)"
               <;)$2 />
-      return (
-        this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center">
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong
+      return ()
+        this.props.fallback || ()
+          <div className="min-h-screen flex items-center justify-center bg-gray-50">"
+            <div className="text-center">"
+              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong"
               <$2 />
-                onClick={() => this.setState({ hasError: false })}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700">
+                onClick={() => this.setState({ hasError: false})}
+                className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700">"
   componentDidCatch(erro,
   r: Error, errorInf)
-  o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
+  o: React.ErrorInfo) {"/* TODO: Fix JSX expression */"}"
     //     }
-  render() {/* TODO: Fix JSX expression */}
+  render() {"/* TODO: Fix JSX expression */"}"
   r: false })}"
-                className="bg-blue-600 text-white px-4 py-2 rounded,">
+                className="bg-blue-600 text-white px-4 py-2 rounded,">"
   hover: bg-blue-700"
               >
                 Try again
@@ -95,4 +93,5 @@ class ErrorBoundary extends React.Component<
   }
 }
 export default App
-"</div></div></div></div></div></h1>
+"</div></div></div></div></div></h1>"
+  );

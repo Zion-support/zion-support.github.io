@@ -1,8 +1,7 @@
-impo, r, t {/* TODO: Fix JSX expression */}
+impo, r, t {"/* TODO: Fix JSX expression */"}"
 } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-export default function NextGenSecurityOperations20, 2, 5() {  
-  return(<React.Fragment>)
+impo, r, t {"Helm, e, t"} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'"
+export default function NextGenSecurityOperations20, 2, 5() {return(<React.Fragment>)}
       <Helm, e, t>)
         <title>)
           Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n)
@@ -58,19 +57,19 @@ export default function NextGenSecurityOperations20, 2, 5() {
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">"
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">
-              <h2 className="text-3xl font-bold mb-4 text-purple-300">Ready to Transform Your Security Operations?
-              <p className="text-gray-300 mb-6">
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">"
+              <h2 className="text-3xl font-bold mb-4 text-purple-300">Ready to Transform Your Security Operations?"
+              <p className="text-gray-300 mb-6">"
                 Discover how Zion Tech Group can deploy autonomous AI security operations that protect your enterprise
                 against modern threats. Our proven implementation methodology ensures rapid deployment with measurable results.
               <$2 />
                 to="/contact>"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all shadow-lg">
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all shadow-lg">"
                 Schedule Your Security Assessment
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />),
+                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />),"
 export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX expression */}
 }
 

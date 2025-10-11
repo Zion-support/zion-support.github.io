@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage: React.FC = () => {
+  return (
     return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Ai 2025 March Autonomous Enterprise Operations Revolution
@@ -23,3 +23,4 @@ const Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage: React.FC = () => 
   }
 export default Ai2025MarchAutonomousEnterpriseOperationsRevolutionPage</Link>
 </p></h1>
+  );

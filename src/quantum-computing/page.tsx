@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const QuantumComputingPage: React.FC = () => {
+  return (
     return (
-    <React.Fragment>
-      <Helmet>
+    return (
         <title>Quantum Computing Solutions - Zion Tech Group
         <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
         <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" />
@@ -83,3 +83,4 @@ export default QuantumComputingPage</a>
   </p>
   </h1>
 </div></div></div></div></div></div></p></p></p></p></h2></h2></h3></h4></h4></h4>
+  );

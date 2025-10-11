@@ -1,8 +1,7 @@
-impo, r, t {/* TODO: Fix JSX expression */}
+impo, r, t {"/* TODO: Fix JSX expression */"}"
 } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-const AutonomousBusinessOperation, s = () => { 
-  return(<React.Fragment>
+impo, r, t {"Helm, e, t"} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'"
+const AutonomousBusinessOperation, s = () => {return(<React.Fragment>}
       <Helm, e, t>
         <title>
           Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group
@@ -15,7 +14,7 @@ const AutonomousBusinessOperation, s = () => {
         <nk, re, l = 'canonic, a, l')$2 />
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-busine s s-operatio n s')
         />),
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */}
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' />
             <div, classNam, e='flex, justif, y-center, m, b-8'>
@@ -55,9 +54,9 @@ const AutonomousBusinessOperation, s = () => {
           <div, classNam, e='te, x, t-center, m, b-16'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Wh, a, t's, Included, in Your, Platfor, m
-        {/* Trust, Indicat, o, r, s */}
+        {"/* Trust, Indicat, o, r, s */"}"
               Wh, a, t's, Included, in Your, Platfor, m
-        {/* Trust, Indicat, o, r, s */}
+        {"/* Trust, Indicat, o, r, s */"}"
         <section, classNam, e = 'py-12, b, g-bla, c, k/20'>
           <div, className='container, m, x-auto, p, x-6'>
             <div, className='flex, fle, x-wrap, justif, y-center, item, s-center, ga, p-8, tex, t-bl, u, e-2, 0, 0'>
@@ -72,8 +71,8 @@ const AutonomousBusinessOperation, s = () => {
                 <span, className='fo, n, t-semibo, l, d'>SOC, 2, Type II, Certifie, d
               <div, className='flex, item, s-center, ga, p-2'>
                 <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
-const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
+const AutonomousBusinessOperation, s = () => {"/* TODO: Fix JSX expression */"}"
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {"/* Hero, Sect, i, o, n */"}"
         <section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
           <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' />
             <div, classNam, e='flex, justif, y-center, m, b-8'>
@@ -100,7 +99,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
           <div, classNam, e='te, x, t-center, m, b-16'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Wh, a, t's, Included, in Your, Platfor, m
-        {/* Trust, Indicat, o, r, s */}
+        {"/* Trust, Indicat, o, r, s */"}"
         <section, classNam, e = 'py-12, b, g-bla, c, k/20'>
           <div, className='container, m, x-auto, p, x-6'>
             <div, className='flex, fle, x-wrap, justif, y-center, item, s-center, ga, p-8, tex, t-bl, u, e-2, 0, 0'>
@@ -121,7 +120,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Wh, a, t's, Included, in Your, Platfor, m
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
-            {/* Feat, u, r, e , 1 */}
+            {"/* Feat, u, r, e , 1 */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, hove, r: bord, e, r-bl, u, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, classNam, e='bg-bl, u, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-bl, u, e-4, 0, 0/30'>
                 <Zap, classNam, e='w-8 h-8, tex, t-bl, u, e-3, 0, 0' />
@@ -132,13 +131,13 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <TrendingUp, classNam, e='w-8 h-8, tex, t-purp, l, e-3, 0, 0' />
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
-            {/* Feat, u, r, e , 3 */}
+            {"/* Feat, u, r, e , 3 */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, hove, r: bord, e, r-gre, e, n-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, classNam, e='bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-4, 0, 0/30'>
                 <Shield, classNam, e='w-8 h-8, tex, t-gre, e, n-3, 0, 0' />
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-            {/* Feat, u, r, e , 4 */}
+            {"/* Feat, u, r, e , 4 */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-oran, g, e-4, 0, 0/50, hove, r: bord, e, r-oran, g, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, classNam, e='bg-oran, g, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-oran, g, e-4, 0, 0/30'>
                 <Users, classNam, e='w-8 h-8, tex, t-oran, g, e-3, 0, 0' />
@@ -181,7 +180,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Wh, a, t's, Included, in Your, Platfor, m
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
-            {/* Feat, u, r, e , 1 */}
+            {"/* Feat, u, r, e , 1 */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, hove, r: bord, e, r-bl, u, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, classNam, e='bg-bl, u, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-bl, u, e-4, 0, 0/30'>
                 <Zap, classNam, e='w-8 h-8, tex, t-bl, u, e-3, 0, 0' />
@@ -192,13 +191,13 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <TrendingUp, classNam, e='w-8 h-8, tex, t-purp, l, e-3, 0, 0' />
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
-            {/* Feat, u, r, e , 3 */}
+            {"/* Feat, u, r, e , 3 */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, hove, r: bord, e, r-gre, e, n-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, classNam, e='bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-4, 0, 0/30'>
                 <Shield, classNam, e='w-8 h-8, tex, t-gre, e, n-3, 0, 0' />
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-            {/* Feat, u, r, e , 4 */}
+            {"/* Feat, u, r, e , 4 */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-oran, g, e-4, 0, 0/50, hove, r: bord, e, r-oran, g, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, classNam, e='bg-oran, g, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-oran, g, e-4, 0, 0/30'>
                 <Users, classNam, e='w-8 h-8, tex, t-oran, g, e-3, 0, 0' />
@@ -234,7 +233,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>Automatic, model, retraining
-            {/* Feat, u, r, e , 3 */}
+            {"/* Feat, u, r, e , 3 */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/50, hove, r: bord, e, r-gre, e, n-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, className='bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-4, 0, 0/30'>
                 <Shield, className='w-8 h-8, tex, t-gre, e, n-3, 0, 0' />
@@ -249,7 +248,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>Full, audit, trail & compliance, reportin, g
-            {/* Feat, u, r, e , 4 */}
+            {"/* Feat, u, r, e , 4 */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-oran, g, e-4, 0, 0/50, hove, r: bord, e, r-oran, g, e-4, 0, 0/80, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
               <div, className='bg-oran, g, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-xl, flex, items-center, justif, y-center, m, b-6, border, border-oran, g, e-4, 0, 0/30'>
                 <Users, className='w-8 h-8, tex, t-oran, g, e-3, 0, 0' />
@@ -284,13 +283,13 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                       <CheckCircle, className='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
                     <div, className='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-        {/* Pricing, Sect, i, o, n */}
+        {"/* Pricing, Sect, i, o, n */"}"
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='te, x, t-center, m, b-16'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Investme, n, t & R, O, I
           <div, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, ma, x-w-4xl, m, x-au, t, o'>
-            {/* Invest, m, e, n, t */}
+            {"/* Invest, m, e, n, t */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50'>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
                 Total, Investmen, t
@@ -315,7 +314,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
               Read, Complete, Case Stu, d, y
               Read, Complete, Case Stu, d, y
               <Link, className='w-5 h-5' />
-        {/* Fina, l, C, T, A */}
+        {"/* Fina, l, C, T, A */"}"
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
@@ -358,13 +357,13 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                       <CheckCircle, className='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
                     <div, className='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-        {/* Pricing, Sect, i, o, n */}
+        {"/* Pricing, Sect, i, o, n */"}"
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, className='te, x, t-center, m, b-16'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Investme, n, t & R, O, I
           <div, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, ma, x-w-4xl, m, x-au, t, o'>
-            {/* Invest, m, e, n, t */}
+            {"/* Invest, m, e, n, t */"}"
             <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50'>
               <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
                 Total, Investmen, t
@@ -388,7 +387,7 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
               Read, Complete, Case Stu, d, y
               <Link, className='w-5 h-5' />
-        {/* Fina, l, C, T, A */}
+        {"/* Fina, l, C, T, A */"}"
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
