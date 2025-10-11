@@ -30,7 +30,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
 
   const initializeGoogleAnalytics = () => {
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID', {
         page_title: document.title,
@@ -48,137 +47,84 @@ const Analytics: React.FC<AnalyticsProps> = ({
           }
         }
       })
-      observer.observe({ entryTypes: ['navigation'] })
-    }
-  }
-
-  const initializeErrorTracking = () => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        console.error('Global error:', event.error)
-        // Send error to analytics service
-      })
       
-      window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled promise rejection:', event.reason)
-        // Send error to analytics service
-=======
-    // Load Google Analytics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: document.title,
-        page_location: window.location.href
-      })
-    }
-  }
-
-  const initializePerformanceMonitoring = () => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log)
-        getFID(console.log)
-        getFCP(console.log)
-        getLCP(console.log)
-        getTTFB(console.log)
-      })
+      observer.observe({ entryTypes: ['navigation'] })
+      
+      return () => observer.disconnect()
     }
   }
 
   const initializeErrorTracking = () => {
-    // Initialize error tracking
     if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
+      const handleError = (event: ErrorEvent) => {
         console.error('JavaScript Error:', event.error)
-        // Send to error tracking service
-      })
-
-      window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled Promise Rejection:', event.reason)
-        // Send to error tracking service
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
-      })
-    }
-  }
-
-  const initializeUserBehaviorTracking = () => {
-<<<<<<< HEAD
-=======
-    // Initialize user behavior tracking
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
-    if (typeof window !== 'undefined') {
-      // Track page views
-      const trackPageView = () => {
+        // Send error to analytics service
         if (window.gtag) {
-          window.gtag('event', 'page_view', {
-            page_title: document.title,
-            page_location: window.location.href
+          window.gtag('event', 'exception', {
+            description: event.error?.message || 'Unknown error',
+            fatal: false
           })
         }
       }
 
-      // Track clicks
-      const trackClick = (event: Event) => {
+      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+        console.error('Unhandled Promise Rejection:', event.reason)
+        // Send error to analytics service
+        if (window.gtag) {
+          window.gtag('event', 'exception', {
+            description: event.reason?.toString() || 'Unhandled promise rejection',
+            fatal: false
+          })
+        }
+      }
+
+      window.addEventListener('error', handleError)
+      window.addEventListener('unhandledrejection', handleUnhandledRejection)
+
+      return () => {
+        window.removeEventListener('error', handleError)
+        window.removeEventListener('unhandledrejection', handleUnhandledRejection)
+      }
+    }
+  }
+
+  const initializeUserBehaviorTracking = () => {
+    if (typeof window !== 'undefined') {
+      const trackClick = (event: MouseEvent) => {
         const target = event.target as HTMLElement
-<<<<<<< HEAD
         if (target && window.gtag) {
           window.gtag('event', 'click', {
             event_category: 'engagement',
             event_label: target.tagName + (target.className ? '.' + target.className : ''),
             value: 1
           })
-=======
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-          if (window.gtag) {
-            window.gtag('event', 'click', {
-              event_category: 'engagement',
-              event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
-            })
-          }
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
         }
       }
 
-      // Track scroll depth
-      let maxScroll = 0
       const trackScroll = () => {
         const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
-        if (scrollPercent > maxScroll) {
-          maxScroll = scrollPercent
-<<<<<<< HEAD
-          if (window.gtag && scrollPercent % 25 === 0) {
-            window.gtag('event', 'scroll', {
-              event_category: 'engagement',
-              event_label: `${scrollPercent}%`,
-              value: scrollPercent
-=======
-          if (window.gtag) {
-            window.gtag('event', 'scroll', {
-              event_category: 'engagement',
-              event_label: `${scrollPercent}%`
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
-            })
-          }
+        if (window.gtag) {
+          window.gtag('event', 'scroll', {
+            event_category: 'engagement',
+            event_label: `${scrollPercent}%`,
+            value: scrollPercent
+          })
         }
       }
 
-<<<<<<< HEAD
-      // Initialize tracking
-      trackPageView()
-      document.addEventListener('click', trackClick)
-      window.addEventListener('scroll', trackScroll)
-=======
-      // Add event listeners
-      document.addEventListener('click', trackClick)
-      window.addEventListener('scroll', trackScroll)
-      trackPageView()
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+      let scrollTimeout: NodeJS.Timeout
+      const throttledScroll = () => {
+        clearTimeout(scrollTimeout)
+        scrollTimeout = setTimeout(trackScroll, 100)
+      }
 
-      // Cleanup
+      document.addEventListener('click', trackClick)
+      window.addEventListener('scroll', throttledScroll)
+
       return () => {
         document.removeEventListener('click', trackClick)
-        window.removeEventListener('scroll', trackScroll)
+        window.removeEventListener('scroll', throttledScroll)
+        clearTimeout(scrollTimeout)
       }
     }
   }
