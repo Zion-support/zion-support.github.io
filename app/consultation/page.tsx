@@ -6,18 +6,26 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState()
-  });
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      message: ''
+    });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleInputChange = const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData()
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
     }));
   };
 
-  const handleSubmit = const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -25,9 +33,15 @@ const ConsultationPage: React.FC = () => {
     try {
       // Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData()
-      });
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
     } catch (error) {
       setSubmitStatus('error');
     } finally {

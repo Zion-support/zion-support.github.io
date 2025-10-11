@@ -31,7 +31,7 @@ import Footer from '../components/Footer';
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+    const services = [
     {
       id: 'ai-chatbots',
       name: 'AI-Powered Chatbots',
@@ -1008,12 +1008,12 @@ const AiServicesPage: React.FC = () => {
         'Improve SEO performance',
         'Reduce content costs'
       ],
-      category: 'Content Generation',
-      popular: true,
-      icon: FileText;
-    };
-  ];
-  const categories = const categories = const categories = [
+        category: 'Content Generation',
+        popular: true,
+        icon: FileText
+      }
+    ];
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
     { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
