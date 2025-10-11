@@ -2,458 +2,321 @@
 
 import https from 'https';
 import http from 'http';
-import { JSDOM } from 'jsdom';
+import { URL } from 'url';
 import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Configuration;
-const BASE_URL = 'https: //ziontechgroup.com';
-const MAX_DEPTH = 3;
-const TIMEOUT = 10000;
-const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Track visited URLs and results;
-const visitedUrls = new Set();
-const brokenLinks = [];
-const missingPages = [];
-const workingLinks = [];
-const analysisResults = {
-  totalLinks: 0;
-  workingLinks: 0;
-  brokenLinks: 0;
-  missingPages: 0;
-  errors: []};
-
-// Helper function to make HTTP requests;
-function makeRequest(url, options = {}) {
-  return new Promise((resolve, reject) => {
-    const urlObj = new URL(url);
-    const isHttps = urlObj.protocol === 'https: ';
-    const client = isHttps ? https : http;
-    
-    const requestOptions = {
-      hostname: urlObj.hostname;
-      port: urlObj.port || (isHttps ? 443 : 80)
-      path: urlObj.pathname + urlObj.search;
-      method: 'GET',
-      headers: {,
-        'User-Agent': USER_AGENT;
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Accept-Encoding': 'gzip, deflate',
-        'Connection': 'keep-alive',
-        'Upgrade-Insecure-Requests': '1',
-        ...options.headers;
-      },
-      timeout: TIMEOUT;
-    };
-
-    const req = client.request(requestOptions, (res) => {
-      let data = '';
-      
-      res.on('data', (chunk) => {
-        data += chunk;
-      });
-      
-      res.on('end', () => {
-        resolve({)
-          statusCode: res.statusCode;)
-          headers: res.headers),
-          body: data),
-          url: url;
-        });
-      });
-    });
-
-    req.on('error', (error) => {
-      reject(error);
-    });
-
-    req.on('timeout', () => {
-      req.destroy();
-      reject(new Error('Request timeout'));
-    });
-
-    req.setTimeout(TIMEOUT);
-    req.end();
-  });
-}
-
-// Extract links from HTML content;
-function extractLinks(html, baseUrl) {
-  const dom = new JSDOM(html);
-  const document = dom.window.document;
-  const links = [];
-
-  // Extract all anchor tags;
-  const anchorTags = document.querySelectorAll('a[href]');
-  anchorTags.forEach(anchor => {)
-    const href = anchor.getAttribute('href');
-    if (href) {
-      try {
-        const absoluteUrl = new URL(href, baseUrl).href;
-        const linkText = anchor.textContent.trim();
-        links.push({)
-          url: absoluteUrl),
-          text: linkText),
-          element: anchor.outerHTML;
-        });
-      } catch (error) {
-        console.log(`Invalid URL: ${href}`);
-      }
-    }
-  });
-
-  // Extract form actions;
-  const forms = document.querySelectorAll('form[action]');
-  forms.forEach(form => {)
-    const action = form.getAttribute('action');
-    if (action) {
-      try {
-        const absoluteUrl = new URL(action, baseUrl).href;
-        links.push({)
-          url: absoluteUrl),
-          text: 'Form Action'),
-          element: form.outerHTML;
-        });
-      } catch (error) {
-        console.log(`Invalid form action: ${action}`);
-      }
-    }
-  });
-
-  return links;
-}
-
-// Check if URL is internal;
-function isInternalUrl(url, baseUrl) {
-  try {
-    const urlObj = new URL(url);
-    const baseObj = new URL(baseUrl);
-    return urlObj.hostname === baseObj.hostname;
-  } catch {
-    return false;
-  }
-}
-
-// Analyze a single URL;
-async function analyzeUrl(url, depth = 0) {
-  if (visitedUrls.has(url) || depth>MAX_DEPTH</depth>) {
-    return;
-  }
-
-  visitedUrls.add(url);
-  console.log(`Analyzing: ${url} (depth: ${depth})`);
-
-  try {
-    const response = await makeRequest(url);
-    analysisResults.totalLinks++;
-
-    if (response.statusCode >= 200 && response.statusCode < 300) {
-      workingLinks.push({)
-        url: url),
-        statusCode: response.statusCode),
-        depth: depth;
-      });
-      analysisResults.workingLinks++;
-
-      // Extract and analyze links from this page;
-      if (response.headers['content-type'] && response.headers['content-type'].includes('text/html')) {
-        const links = extractLinks(response.body, url);
-        
-        for (const link of links) {
-          if (isInternalUrl(link.url, BASE_URL)) {
-            await analyzeUrl(link.url, depth + 1);
-          }
-        }
-      }
-    } else if (response.statusCode === 404) {
-      brokenLinks.push({)
-        url: url;)
-        statusCode: response.statusCode),
-        depth: depth),
-        reason: 'Page not found'});
-      analysisResults.brokenLinks++;
-    } else {
-      brokenLinks.push({)
-        url: url;)
-        statusCode: response.statusCode),
-        depth: depth),
-        reason: 'HTTP error'});
-      analysisResults.brokenLinks++;
-    }
-  } catch (error) {
-    console.log(`Error analyzing ${url}: ${error.message}`);
-    brokenLinks.push({)
-      url: url;)
-      statusCode: 0),
-      depth: depth),
-      reason: error.message;
-    });
-    analysisResults.brokenLinks++;
-    analysisResults.errors.push({)
-      url: url),
-      error: error.message;
-    });
-  }
-}
-
-// Main analysis function;
-async function analyzeWebsite() {
-  console.log('Starting comprehensive website analysis...');
-  console.log(`Base URL: ${BASE_URL}`);
-  console.log(`Max Depth: ${MAX_DEPTH}`);
-  console.log('---');
-
-  try {
-    // Start analysis from the homepage;
-    await analyzeUrl(BASE_URL);
-
-    // Generate report;
-    const report = {
-      timestamp: new Date().toISOString()
-      baseUrl: BASE_URL;
-      summary: analysisResults;
-      workingLinks: workingLinks;
-      brokenLinks: brokenLinks;
-      missingPages: missingPages;
-      errors: analysisResults.errors;
-    };
-
-    // Save detailed report;
-    fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
-    
-    // Generate summary report;
-    console.log('\n=== ANALYSIS SUMMARY ===');
-    console.log(`Total Links Analyzed: ${analysisResults.totalLinks}`);
-    console.log(`Working Links: ${analysisResults.workingLinks}`);
-    console.log(`Broken Links: ${analysisResults.brokenLinks}`);
-    console.log(`Errors: ${analysisResults.errors.length}`);
-    
-    if (brokenLinks.length > 0) {
-      console.log('\n=== BROKEN LINKS ===');
-      brokenLinks.forEach(link => {)
-        console.log(`❌ ${link.url} (${link.statusCode}) - ${link.reason}`);
-      });
-    }
-
-    if (analysisResults.errors.length > 0) {
-      console.log('\n=== ERRORS ===');
-      analysisResults.errors.forEach(error => {)
-        console.log(`⚠️  ${error.url}: ${error.error}`);
-      });
-    }
-
-    // Generate recommendations;
-    const recommendations = [];
-    
-    if (brokenLinks.length > 0) {
-      recommendations.push('Fix broken links by updating URLs or creating missing pages');
-    }
-    
-    if (analysisResults.errors.length > 0) {
-      recommendations.push('Investigate and fix connection errors');
-    }
-
-    if (recommendations.length > 0) {
-      console.log('\n=== RECOMMENDATIONS ===');
-      recommendations.forEach((rec, index) => {
-        console.log(`${index + 1}. ${rec}`);
-      });
-    }
-
-    console.log('\nDetailed report saved to: website-analysis-report.json');
-    } catch (error) {
-    console.error('Analysis failed:', error);
-  }
-}
-
-// Run the analysis;
-analyzeWebsite();
 class WebsiteAnalyzer {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
     this.visitedUrls = new Set();
     this.brokenLinks = [];
     this.missingPages = [];
-    this.allLinks = new Set();
-    this.pages = new Map();
-    this.maxDepth = 3;
-    this.currentDepth = 0;
+    this.validLinks = [];
+    this.analysisResults = {
+      totalLinks: 0,
+      brokenLinks: 0,
+      missingPages: 0,
+      validLinks: 0,
+      analysisDate: new Date().toISOString(),
+      baseUrl: baseUrl
+    };
   }
 
-  async analyze() {
-    console.log(`🔍 Starting comprehensive analysis of ${this.baseUrl}`);
-    console.log('='.repeat(60));
-    
-    try {
-      await this.crawlWebsite(this.baseUrl, 0);
-      this.generateReport();
-    } catch (error) {
-      console.error('❌ Analysis failed:', error.message);
-    }
-  }
-
-  async crawlWebsite(url, depth) {
-    if (depth > this.maxDepth || this.visitedUrls.has(url)) {
-      return;
-    }
-
-    this.visitedUrls.add(url);
-    console.log(`📄 Analyzing: ${url} (depth: ${depth})`);
-
-    try {
-      const content = await this.fetchPage(url);
-      if (content) {
-        const dom = new JSDOM(content);
-        const document = dom.window.document;
-        
-        // Store page content
-        this.pages.set(url, {
-          title: document.title,
-          content: content,
-          links: []
-        });
-
-        // Extract all links
-        const links = this.extractLinks(document, url);
-        this.pages.get(url).links = links;
-
-        // Process each link
-        for (const link of links) {
-          this.allLinks.add(link.href);
-          
-          if (this.isInternalLink(link.href)) {
-            await this.crawlWebsite(link.href, depth + 1);
-          }
-        }
-      }
-    } catch (err) {
-      console.error(`❌ Error analyzing ${url}:`, err.message);
-      this.brokenLinks.push({ url, error: err.message });
-    }
-  }
-
-  async fetchPage(url) {
-    return new Promise((resolve, reject) => {
+  async checkUrl(url) {
+    return new Promise((resolve) => {
       const urlObj = new URL(url);
       const options = {
         hostname: urlObj.hostname,
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
         path: urlObj.pathname + urlObj.search,
-        method: 'GET',
-        timeout: 10000
+        method: 'HEAD',
+        timeout: 10000,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)'
+        }
       };
 
-      const protocol = urlObj.protocol === 'https:' ? https : http;
+      const client = urlObj.protocol === 'https:' ? https : http;
       
-      const req = protocol.request(options, (res) => {
-        let data = '';
-        res.on('data', (chunk) => {
-          data += chunk;
-        });
-        res.on('end', () => {
-          resolve({ statusCode: res.statusCode, data });
+      const req = client.request(options, (res) => {
+        resolve({
+          url,
+          status: res.statusCode,
+          statusText: res.statusMessage,
+          valid: res.statusCode >= 200 && res.statusCode < 400,
+          redirect: res.statusCode >= 300 && res.statusCode < 400
         });
       });
 
       req.on('error', (error) => {
-        reject(error);
+        resolve({
+          url,
+          status: 0,
+          statusText: error.message,
+          valid: false,
+          error: true
+        });
       });
 
       req.on('timeout', () => {
-        reject(new Error('Request timeout'));
+        req.destroy();
+        resolve({
+          url,
+          status: 0,
+          statusText: 'Timeout',
+          valid: false,
+          timeout: true
+        });
       });
 
+      req.setTimeout(10000);
       req.end();
     });
   }
 
-  extractLinks(document, baseUrl) {
-    const links = [];
-    const linkElements = document.querySelectorAll('a[href]');
-    
-    linkElements.forEach(link => {
-      const href = link.getAttribute('href');
-      if (href) {
-        const absoluteUrl = this.resolveUrl(href, baseUrl);
-        links.push({
-          href: absoluteUrl,
-          text: link.textContent.trim(),
-          title: link.getAttribute('title') || ''
-        });
+  async analyzePage(url) {
+    if (this.visitedUrls.has(url)) {
+      return;
+    }
+
+    this.visitedUrls.add(url);
+    console.log(`Analyzing: ${url}`);
+
+    try {
+      const result = await this.checkUrl(url);
+      this.analysisResults.totalLinks++;
+
+      if (result.valid) {
+        this.validLinks.push(result);
+        this.analysisResults.validLinks++;
+        console.log(`✓ ${url} - ${result.status}`);
+      } else {
+        this.brokenLinks.push(result);
+        this.analysisResults.brokenLinks++;
+        console.log(`✗ ${url} - ${result.status} ${result.statusText}`);
       }
-    });
-    
-    return links;
-  }
-
-  resolveUrl(href, baseUrl) {
-    try {
-      return new URL(href, baseUrl).href;
-    } catch {
-      return href;
+    } catch (error) {
+      const errorResult = {
+        url,
+        status: 0,
+        statusText: error.message,
+        valid: false,
+        error: true
+      };
+      this.brokenLinks.push(errorResult);
+      this.analysisResults.brokenLinks++;
+      console.log(`✗ ${url} - Error: ${error.message}`);
     }
   }
 
-  isInternalLink(url) {
-    try {
-      const urlObj = new URL(url);
-      const baseUrlObj = new URL(this.baseUrl);
-      return urlObj.hostname === baseUrlObj.hostname;
-    } catch {
-      return false;
+  async analyzeWebsite() {
+    console.log(`Starting comprehensive analysis of ${this.baseUrl}`);
+    console.log('=' .repeat(60));
+
+    // Main pages to check
+    const mainPages = [
+      '/',
+      '/about',
+      '/contact',
+      '/services',
+      '/pricing',
+      '/blog',
+      '/case-studies',
+      '/careers',
+      '/ai-services',
+      '/it-services',
+      '/micro-saas',
+      '/tutorials',
+      '/consultation',
+      '/demo',
+      '/support',
+      '/privacy',
+      '/terms',
+      '/cookies',
+      '/sitemap'
+    ];
+
+    // Check main pages
+    for (const page of mainPages) {
+      const fullUrl = `${this.baseUrl}${page}`;
+      await this.analyzePage(fullUrl);
     }
+
+    // Check additional pages that might exist
+    const additionalPages = [
+      '/team',
+      '/partners',
+      '/status',
+      '/faq',
+      '/docs',
+      '/api-docs',
+      '/community',
+      '/compliance',
+      '/enterprise',
+      '/digital-transformation',
+      '/business-intelligence',
+      '/custom-software'
+    ];
+
+    for (const page of additionalPages) {
+      const fullUrl = `${this.baseUrl}${page}`;
+      await this.analyzePage(fullUrl);
+    }
+
+    // Check AI service pages
+    const aiServicePages = [
+      '/ai-services?category=Customer Service',
+      '/ai-services?category=Analytics',
+      '/ai-services?category=Quantum Computing',
+      '/ai-services?category=Autonomous Systems'
+    ];
+
+    for (const page of aiServicePages) {
+      const fullUrl = `${this.baseUrl}${page}`;
+      await this.analyzePage(fullUrl);
+    }
+
+    // Check IT service pages
+    const itServicePages = [
+      '/it-services?category=Cloud',
+      '/it-services?category=Security',
+      '/it-services?category=5G Technology',
+      '/it-services?category=Blockchain',
+      '/it-services?category=Edge Computing'
+    ];
+
+    for (const page of itServicePages) {
+      const fullUrl = `${this.baseUrl}${page}`;
+      await this.analyzePage(fullUrl);
+    }
+
+    // Check Micro SaaS pages
+    const microSaasPages = [
+      '/micro-saas?category=Analytics',
+      '/micro-saas?category=Customer Service',
+      '/micro-saas?category=Finance',
+      '/micro-saas?category=Marketing'
+    ];
+
+    for (const page of microSaasPages) {
+      const fullUrl = `${this.baseUrl}${page}`;
+      await this.analyzePage(fullUrl);
+    }
+
+    console.log('\n' + '=' .repeat(60));
+    console.log('ANALYSIS COMPLETE');
+    console.log('=' .repeat(60));
+    console.log(`Total links checked: ${this.analysisResults.totalLinks}`);
+    console.log(`Valid links: ${this.analysisResults.validLinks}`);
+    console.log(`Broken links: ${this.analysisResults.brokenLinks}`);
+    console.log(`Missing pages: ${this.analysisResults.missingPages}`);
+
+    return this.generateReport();
   }
 
   generateReport() {
-    console.log('\n📊 Analysis Report');
-    console.log('='.repeat(60));
-    console.log(`📄 Pages analyzed: ${this.pages.size}`);
-    console.log(`🔗 Total links found: ${this.allLinks.size}`);
-    console.log(`❌ Broken links: ${this.brokenLinks.length}`);
-    
+    const report = {
+      ...this.analysisResults,
+      brokenLinks: this.brokenLinks,
+      validLinks: this.validLinks,
+      recommendations: this.generateRecommendations()
+    };
+
+    // Save report to file
+    const reportPath = path.join(__dirname, 'website-analysis-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(`\nReport saved to: ${reportPath}`);
+
+    return report;
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+
     if (this.brokenLinks.length > 0) {
-      console.log('\n❌ Broken Links:');
-      this.brokenLinks.forEach(link => {
-        console.log(`  - ${link.url}: ${link.error}`);
+      recommendations.push({
+        priority: 'HIGH',
+        category: 'Broken Links',
+        description: 'Fix broken links to improve user experience and SEO',
+        count: this.brokenLinks.length,
+        links: this.brokenLinks.map(link => link.url)
       });
     }
+
+    // Check for missing common pages
+    const commonPages = ['/team', '/faq', '/docs', '/community', '/status'];
+    const missingCommonPages = commonPages.filter(page => 
+      !this.validLinks.some(link => link.url.includes(page))
+    );
+
+    if (missingCommonPages.length > 0) {
+      recommendations.push({
+        priority: 'MEDIUM',
+        category: 'Missing Pages',
+        description: 'Create missing common pages for better user experience',
+        count: missingCommonPages.length,
+        pages: missingCommonPages
+      });
+    }
+
+    // Check for missing service category pages
+    const serviceCategories = [
+      '/ai-services?category=Customer Service',
+      '/ai-services?category=Analytics',
+      '/it-services?category=Cloud',
+      '/it-services?category=Security'
+    ];
     
-    console.log(`\n📄 PAGES FOUND:`);
-    this.pages.forEach((page, url) => {
-      console.log(`   • ${url}`);
-      console.log(`     Title: ${page.title}`);
-      console.log(`     Links: ${page.links.length}`);
-    });
-    
-    // Save detailed report
-    // Save report to file
-    const report = {
-      baseUrl: this.baseUrl,
-      analyzedAt: new Date().toISOString(),
-      pagesAnalyzed: this.pages.size,
-      totalLinks: this.allLinks.size,
-      brokenLinks: this.brokenLinks,
-      pages: Array.from(this.pages.entries()).map(([url, data]) => ({
-        url,
-        title: data.title,
-        linkCount: data.links.length
-      }))
-    };
-    
-    fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('\n💾 Report saved to website-analysis-report.json');
+    const missingServicePages = serviceCategories.filter(page => 
+      !this.validLinks.some(link => link.url.includes(page))
+    );
+
+    if (missingServicePages.length > 0) {
+      recommendations.push({
+        priority: 'HIGH',
+        category: 'Missing Service Pages',
+        description: 'Create missing service category pages for better navigation',
+        count: missingServicePages.length,
+        pages: missingServicePages
+      });
+    }
+
+    return recommendations;
   }
 }
 
 // Run the analysis
-const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
-analyzer.analyze().catch(console.error);
-// Main execution
+async function main() {
+  const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
+  try {
+    const report = await analyzer.analyzeWebsite();
+    console.log('\nRECOMMENDATIONS:');
+    console.log('=' .repeat(60));
+    report.recommendations.forEach((rec, index) => {
+      console.log(`${index + 1}. [${rec.priority}] ${rec.category}`);
+      console.log(`   ${rec.description}`);
+      console.log(`   Count: ${rec.count}`);
+      if (rec.links) {
+        console.log(`   Links: ${rec.links.join(', ')}`);
+      }
+      if (rec.pages) {
+        console.log(`   Pages: ${rec.pages.join(', ')}`);
+      }
+      console.log('');
+    });
+  } catch (error) {
+    console.error('Analysis failed:', error);
+  }
+}
+
+// Run if this is the main module
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const baseUrl = process.argv[2] || 'https://ziontechgroup.com';
-  const analyzer = new WebsiteAnalyzer(baseUrl);
-  analyzer.analyze();
+  main();
 }
 
 export default WebsiteAnalyzer;

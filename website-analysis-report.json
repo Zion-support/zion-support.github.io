@@ -1,37 +1,318 @@
 {
-  "timestamp": "2025-10-10T07:28:42.185Z",
-  "baseUrl": "https://ziontechgroup.com",
-  "summary": {
-    "totalLinks": 1,
-    "workingLinks": 1,
-    "brokenLinks": 0,
-    "missingPages": 0,
-    "errors": []
-  },
-  "workingLinks": [
+  "totalLinks": 44,
+  "brokenLinks": [],
+  "missingPages": 0,
+  "validLinks": [
     {
-      "url": "https://ziontechgroup.com",
-      "statusCode": 200,
-      "depth": 0
+      "url": "https://ziontechgroup.com/",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/about",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/contact",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/services",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/pricing",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/blog",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/case-studies",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/careers",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-services",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/it-services",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/micro-saas",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/tutorials",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/consultation",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/demo",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/support",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/privacy",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/terms",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/cookies",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/sitemap",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/team",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/partners",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/status",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/faq",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/docs",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/api-docs",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/community",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/compliance",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/enterprise",
+      "status": 301,
+      "statusText": "Moved Permanently",
+      "valid": true,
+      "redirect": true
+    },
+    {
+      "url": "https://ziontechgroup.com/digital-transformation",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/business-intelligence",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/custom-software",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-services?category=Customer Service",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-services?category=Analytics",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-services?category=Quantum Computing",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-services?category=Autonomous Systems",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/it-services?category=Cloud",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/it-services?category=Security",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/it-services?category=5G Technology",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/it-services?category=Blockchain",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/it-services?category=Edge Computing",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/micro-saas?category=Analytics",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/micro-saas?category=Customer Service",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/micro-saas?category=Finance",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
+    },
+    {
+      "url": "https://ziontechgroup.com/micro-saas?category=Marketing",
+      "status": 200,
+      "statusText": "OK",
+      "valid": true,
+      "redirect": false
     }
   ],
-  "brokenLinks": [],
-  "missingPages": [],
-  "errors": []
-  "timestamp": "2025-10-09T17:00:53.717Z",
+  "analysisDate": "2025-10-11T00:55:42.801Z",
   "baseUrl": "https://ziontechgroup.com",
-  "statistics": {
-    "totalPages": 1,
-    "totalLinks": 0,
-    "brokenLinks": 0
-  },
-  "brokenLinks": [],
-  "pages": [
-    {
-      "url": "https://ziontechgroup.com",
-      "title": "Zion Tech Group - Technology Solutions",
-      "linkCount": 0,
-      "links": []
-    }
-  ]
+  "recommendations": []
 }
