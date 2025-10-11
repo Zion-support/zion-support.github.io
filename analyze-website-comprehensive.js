@@ -4,35 +4,38 @@ import https from 'https'
 import http from 'http'
 import { JSDOM } from 'jsdom'
 import fs from 'fs'
+
 // Configuration
-const BASE_URL = 'https: //ziontechgroup.com'
+const BASE_URL = 'https://ziontechgroup.com'
 const MAX_DEPTH = 3
 const TIMEOUT = 10000
 const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)'
+
 // Track visited URLs and results
 const visitedUrls = new Set()
 const brokenLinks = []
 const missingPages = []
 const workingLinks = []
 const analysisResults = {
-  totalLinks: 0
-  workingLinks: 0
-  brokenLinks: 0
-  missingPages: 0
-  errors: []}
+  totalLinks: 0,
+  workingLinks: 0,
+  brokenLinks: 0,
+  missingPages: 0,
+  errors: []
+}
 // Helper function to make HTTP requests
 function makeRequest(url, options = {}) {
   return new Promise((resolve, reject) => {
     const urlObj = new URL(url)
-    const isHttps = urlObj.protocol === 'https: '
+    const isHttps = urlObj.protocol === 'https:'
     const client = isHttps ? https : http
     const requestOptions = {
-      hostname: urlObj.hostname
-      port: urlObj.port || (isHttps ? 443 : 80)
-      path: urlObj.pathname + urlObj.search
+      hostname: urlObj.hostname,
+      port: urlObj.port || (isHttps ? 443 : 80),
+      path: urlObj.pathname + urlObj.search,
       method: 'GET',
-      headers: {,
-        'User-Agent': USER_AGENT
+      headers: {
+        'User-Agent': USER_AGENT,
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.5',
         'Accept-Encoding': 'gzip, deflate',
@@ -48,10 +51,10 @@ function makeRequest(url, options = {}) {
         data += chunk
       })
       res.on('end', () => {
-        resolve({)
-          statusCode: res.statusCode;)
-          headers: res.headers),
-          body: data),
+        resolve({
+          statusCode: res.statusCode,
+          headers: res.headers,
+          body: data,
           url: url
         })
       })
@@ -75,15 +78,15 @@ function extractLinks(html, baseUrl) {
   const links = []
   // Extract all anchor tags
   const anchorTags = document.querySelectorAll('a[href]')
-  anchorTags.forEach(anchor => {)
+  anchorTags.forEach(anchor => {
     const href = anchor.getAttribute('href')
     if (href) {
       try {
         const absoluteUrl = new URL(href, baseUrl).href
         const linkText = anchor.textContent.trim()
-        links.push({)
-          url: absoluteUrl),
-          text: linkText),
+        links.push({
+          url: absoluteUrl,
+          text: linkText,
           element: anchor.outerHTML
         })
       } catch (error) {
@@ -93,14 +96,14 @@ function extractLinks(html, baseUrl) {
   })
   // Extract form actions
   const forms = document.querySelectorAll('form[action]')
-  forms.forEach(form => {)
+  forms.forEach(form => {
     const action = form.getAttribute('action')
     if (action) {
       try {
         const absoluteUrl = new URL(action, baseUrl).href
-        links.push({)
-          url: absoluteUrl),
-          text: 'Form Action'),
+        links.push({
+          url: absoluteUrl,
+          text: 'Form Action',
           element: form.outerHTML
         })
       } catch (error) {
@@ -124,7 +127,7 @@ function isInternalUrl(url, baseUrl) {
 
 // Analyze a single URL
 async function analyzeUrl(url, depth = 0) {
-  if (visitedUrls.has(url) || depth>MAX_DEPTH</depth>) {
+  if (visitedUrls.has(url) || depth > MAX_DEPTH) {
     return
   }
 
@@ -134,9 +137,9 @@ async function analyzeUrl(url, depth = 0) {
     const response = await makeRequest(url)
     analysisResults.totalLinks++
     if (response.statusCode >= 200 && response.statusCode < 300) {
-      workingLinks.push({)
-        url: url),
-        statusCode: response.statusCode),
+      workingLinks.push({
+        url: url,
+        statusCode: response.statusCode,
         depth: depth
       })
       analysisResults.workingLinks++
@@ -150,31 +153,33 @@ async function analyzeUrl(url, depth = 0) {
         }
       }
     } else if (response.statusCode === 404) {
-      brokenLinks.push({)
-        url: url;)
-        statusCode: response.statusCode),
-        depth: depth),
-        reason: 'Page not found'})
+      brokenLinks.push({
+        url: url,
+        statusCode: response.statusCode,
+        depth: depth,
+        reason: 'Page not found'
+      })
       analysisResults.brokenLinks++
     } else {
-      brokenLinks.push({)
-        url: url;)
-        statusCode: response.statusCode),
-        depth: depth),
-        reason: 'HTTP error'})
+      brokenLinks.push({
+        url: url,
+        statusCode: response.statusCode,
+        depth: depth,
+        reason: 'HTTP error'
+      })
       analysisResults.brokenLinks++
     }
   } catch (error) {
     console.log(`Error analyzing ${url}: ${error.message}`)
-    brokenLinks.push({)
-      url: url;)
-      statusCode: 0),
-      depth: depth),
+    brokenLinks.push({
+      url: url,
+      statusCode: 0,
+      depth: depth,
       reason: error.message
     })
     analysisResults.brokenLinks++
-    analysisResults.errors.push({)
-      url: url),
+    analysisResults.errors.push({
+      url: url,
       error: error.message
     })
   }
@@ -191,12 +196,12 @@ async function analyzeWebsite() {
     await analyzeUrl(BASE_URL)
     // Generate report
     const report = {
-      timestamp: new Date().toISOString()
-      baseUrl: BASE_URL
-      summary: analysisResults
-      workingLinks: workingLinks
-      brokenLinks: brokenLinks
-      missingPages: missingPages
+      timestamp: new Date().toISOString(),
+      baseUrl: BASE_URL,
+      summary: analysisResults,
+      workingLinks: workingLinks,
+      brokenLinks: brokenLinks,
+      missingPages: missingPages,
       errors: analysisResults.errors
     }
     // Save detailed report
@@ -209,14 +214,14 @@ async function analyzeWebsite() {
     console.log(`Errors: ${analysisResults.errors.length}`)
     if (brokenLinks.length > 0) {
       console.log('\n=== BROKEN LINKS ===')
-      brokenLinks.forEach(link => {)
+      brokenLinks.forEach(link => {
         console.log(`❌ ${link.url} (${link.statusCode}) - ${link.reason}`)
       })
     }
 
     if (analysisResults.errors.length > 0) {
       console.log('\n=== ERRORS ===')
-      analysisResults.errors.forEach(error => {)
+      analysisResults.errors.forEach(error => {
         console.log(`⚠️  ${error.url}: ${error.error}`)
       })
     }
