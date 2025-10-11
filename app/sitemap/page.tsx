@@ -6,20 +6,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
-      <Navigation />
-
-        {/* Sitemap Sections */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

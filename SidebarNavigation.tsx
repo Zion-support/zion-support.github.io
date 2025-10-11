@@ -32,12 +32,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h2 className="text-xl font-bold text-white">Navigation</h2>
-=======
-          <h2 className="text-white font-bold text-xl">Navigation</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white transition-colors">
@@ -46,20 +40,10 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
             onClick={onClose}
             className="text-gray-300 hover:text-cyan-400 transition-colors"
           >
-=======
-          <h2 className="text-xl font-bold text-white">Navigation</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             <X className="w-6 h-6" />
           </button>
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         <nav className="p-4">
           <ul className="space-y-2">
             {navigationItems.map((item) => {
@@ -81,11 +65,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </nav>
       </div>
     </>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         <nav className="mt-8">
           {navigationItems.map((item) => (
             <Link
@@ -100,11 +79,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
           ))}
         </nav>
       </div>
-<<<<<<< HEAD
-    </React.Fragment>
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   )
 }
 
