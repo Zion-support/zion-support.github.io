@@ -187,7 +187,7 @@ describe('AdvancedPerformanceMonitor', () => {
       configurable: true,
     })
     // Mock PerformanceObserver
-    global.PerformanceObserver = MockPerformanceObserver as any})
+    global.PerformanceObserver = MockPerformanceObserver as unknown as typeof PerformanceObserver})
   afterEach(() => {
     jest.clearAllMocks()})
   it('renders nothing in production mode', () => {

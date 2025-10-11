@@ -108,7 +108,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address
-  </
+                </label>
           </div>
 
           <form onSubmit={handleSubmit} className="mb-12">
