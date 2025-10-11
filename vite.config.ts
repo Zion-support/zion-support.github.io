@@ -28,7 +28,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks - more granular splitting
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react'
@@ -36,8 +36,11 @@ export default defineConfig({
             if (id.includes('react-router')) {
               return 'vendor-router'
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui'
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations'
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons'
             }
             if (id.includes('recharts')) {
               return 'vendor-charts'
@@ -45,14 +48,26 @@ export default defineConfig({
             if (id.includes('web-vitals')) {
               return 'vendor-analytics'
             }
+            if (id.includes('esbuild') || id.includes('terser')) {
+              return 'vendor-build'
+            }
             return 'vendor-misc'
           }
-          // App chunks
+          // App chunks - more specific splitting
           if (id.includes('/app/ai-')) {
             return 'ai-services'
           }
           if (id.includes('/app/it-')) {
             return 'it-services'
+          }
+          if (id.includes('/app/components/Performance')) {
+            return 'performance'
+          }
+          if (id.includes('/app/components/SEO')) {
+            return 'seo'
+          }
+          if (id.includes('/app/components/Accessibility')) {
+            return 'accessibility'
           }
           if (id.includes('/app/components/')) {
             return 'components'

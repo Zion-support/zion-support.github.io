@@ -21,7 +21,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor'
 import ServiceWorker from './app/components/ServiceWorker'
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
 import FuturisticBackground from './app/components/FuturisticBackground'
-// Lazy load pages for better performance
+// Lazy load pages for better performance with error boundaries
 const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))
 const ServicesPage = React.lazy(() => import('./app/services/page'))
