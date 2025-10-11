@@ -37,14 +37,20 @@ export default defineConfig({
             if (id.includes('react-router')) {
               return 'vendor-router';
             }
-            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
-              return 'vendor-ui';
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
             }
             if (id.includes('recharts')) {
               return 'vendor-charts';
             }
             if (id.includes('web-vitals')) {
               return 'vendor-analytics';
+            }
+            if (id.includes('react-helmet')) {
+              return 'vendor-seo';
             }
             return 'vendor-misc';
           }
@@ -55,8 +61,14 @@ export default defineConfig({
           if (id.includes('/app/it-')) {
             return 'it-services';
           }
+          if (id.includes('/app/micro-saas')) {
+            return 'micro-saas';
+          }
           if (id.includes('/app/components/')) {
             return 'components';
+          }
+          if (id.includes('/app/blog')) {
+            return 'blog';
           }
           return 'app';
         },
