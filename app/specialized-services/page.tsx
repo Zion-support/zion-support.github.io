@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const PagePage: React.FC = () => {const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
@@ -32,7 +32,6 @@ const PagePage: React.FC = () => {const features = [
   ]
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -42,9 +41,6 @@ const PagePage: React.FC = () => {const features = [
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-=======
-<Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"
@@ -69,7 +65,6 @@ const PagePage: React.FC = () => {const features = [
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                   Learn More
                 </button>
-<<<<<<< HEAD
               </div>
       
       <Footer />
@@ -83,8 +78,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -161,7 +154,6 @@ const PagePage: React.FC = () => {const features = [
     </>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default PagePage
@@ -171,7 +163,3 @@ export default PagePage
     </>
     </>
   );
-=======
-export default PagePage
-        </Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

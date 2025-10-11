@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
             </div>
@@ -25,12 +24,6 @@ import React from 'react';
       <Footer />
     </>
         </section>
-=======
-'use client'
-import React from 'react'
-            </section>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Benefits Section */}
         <section></section>
@@ -38,7 +31,6 @@ import React from 'react'
             <div></div>
               <h2>
                 Why Choose Our Solution?
-<<<<<<< HEAD
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Proven results that drive business growth
@@ -71,22 +63,6 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
-
-              <p>
-                Proven results that drive business growth
-
-            <div>
-              {benefits.map((benefit, index) => (</div>
-                <div></div>
-                  <div></div>
-                    <CheckCircle className="w-8 h-8 text-white"
-
-                  <p>{benefit}</p>
-              ))}
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* CTA Section */}
         <section></section>
@@ -104,7 +80,6 @@ import React from 'react'
 
                 <button>
                   Learn More
-<<<<<<< HEAD
                 </button>
               </div>
       
@@ -119,9 +94,6 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       <Footer />
     </>
   )

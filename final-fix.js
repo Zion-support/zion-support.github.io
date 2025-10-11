@@ -3,93 +3,72 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix final syntax errors
-function fixFinalErrors(content) {
+// Function to fix object syntax issues
+function fixObjectSyntax(content) {
   let fixed = content;
   
-  // Remove stray semicolons and malformed JSX
-  fixed = fixed.replace(/;\s*$/gm, '');
-  fixed = fixed.replace(/;\s*<[^>]*>/g, (match) => match.replace(';', ''));
-  fixed = fixed.replace(/<[^>]*>;\s*$/gm, (match) => match.replace(';', ''));
+  // Fix malformed object properties with missing commas
+  fixed = fixed.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
   
-  // Fix malformed JSX attributes
-  fixed = fixed.replace(/<(\w+)([^>]*?);\s*>/g, '<$1$2>');
+  // Fix missing closing braces and commas in objects
+  fixed = fixed.replace(/(\w+):\s*([^}]+)\s*}\s*,/g, (match, key, value) => {
+    const trimmedValue = value.trim();
+    if (!trimmedValue.endsWith('"') && !trimmedValue.endsWith("'") && !trimmedValue.endsWith(']')) {
+      return `${key}: ${trimmedValue},\n    }`;
+    }
+    return match;
+  });
   
-  // Fix missing closing tags
-  const lines = fixed.split('\n');
-  const fixedLines = [];
-  let openTags = [];
+  // Fix missing semicolons after array declarations
+  fixed = fixed.replace(/(\w+)\s*\]\s*$/gm, '$1];');
   
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    // Track opening tags
-    const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?>(?!\s*<\/\1>)/g);
-    if (openTagMatch) {
-      openTagMatch.forEach(tag => {
-        const tagName = tag.match(/<(\w+)/)[1];
-        if (!['img', 'br', 'hr', 'input', 'meta', 'link', 'Helmet'].includes(tagName)) {
-          openTags.push(tagName);
-        }
-      });
-    }
-    
-    // Track closing tags
-    const closeTagMatch = line.match(/<\/(\w+)>/g);
-    if (closeTagMatch) {
-      closeTagMatch.forEach(tag => {
-        const tagName = tag.match(/<\/(\w+)>/)[1];
-        const index = openTags.lastIndexOf(tagName);
-        if (index !== -1) {
-          openTags.splice(index, 1);
-        }
-      });
-    }
-    
-    fixedLines.push(line);
-    
-    // Add missing closing tags at the end
-    if (i === lines.length - 1 && openTags.length > 0) {
-      for (let j = openTags.length - 1; j >= 0; j--) {
-        fixedLines.push('  '.repeat(j + 1) + `</${openTags[j]}>`);
-      }
-    }
-  }
+  // Fix missing closing braces in JSX
+  fixed = fixed.replace(/(<div[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
+  fixed = fixed.replace(/(<main[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
+  fixed = fixed.replace(/(<section[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
   
-  fixed = fixedLines.join('\n');
+  return fixed;
+}
+
+// Function to fix merge conflicts
+function fixMergeConflicts(content) {
+  let fixed = content;
   
-  // Fix JSX expressions that need single parent
-  const returnMatch = fixed.match(/return\s*\(\s*([\s\S]*?)\s*\)\s*;?\s*}/);
-  if (returnMatch) {
-    const returnContent = returnMatch[1].trim();
-    const lines = returnContent.split('\n');
-    
-    // Check if there are multiple top-level elements
-    let topLevelElements = 0;
-    let inJSX = false;
-    let braceCount = 0;
-    
-    for (const line of lines) {
-      const trimmed = line.trim();
-      if (trimmed.startsWith('<') && !trimmed.startsWith('</') && !trimmed.includes('//')) {
-        if (braceCount === 0) {
-          topLevelElements++;
-        }
-        inJSX = true;
-      }
-      if (trimmed.includes('{')) {
-        braceCount += (line.match(/\{/g) || []).length;
-      }
-      if (trimmed.includes('}')) {
-        braceCount -= (line.match(/\}/g) || []).length;
-      }
+  // Remove merge conflict markers and keep HEAD version
+  fixed = fixed
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
+  
+  // Remove duplicate Helmet tags
+  fixed = fixed.replace(/<Helmet>[\s\S]*?<\/Helmet>\s*<Helmet>[\s\S]*?<\/Helmet>/g, (match) => {
+    const firstHelmet = match.match(/<Helmet>[\s\S]*?<\/Helmet>/)[0];
+    return firstHelmet;
+  });
+  
+  // Remove duplicate Navigation components
+  fixed = fixed.replace(/<Navigation \/>\s*<Navigation \/>/g, '<Navigation />');
+  
+  return fixed;
+}
+
+// Function to fix specific syntax issues
+function fixSpecificIssues(content) {
+  let fixed = content;
+  
+  // Fix missing closing tags in JSX
+  fixed = fixed.replace(/(<[^>]+>)\s*$/gm, (match) => {
+    if (match.includes('className=') && !match.includes('>')) {
+      return match + '>';
     }
-    
-    // If multiple top-level elements, wrap in fragment
-    if (topLevelElements > 1 && !returnContent.includes('<>') && !returnContent.includes('<React.Fragment>')) {
-      fixed = fixed.replace(returnMatch[0], `return (\n    <>\n${returnContent}\n    </>\n  );`);
-    }
-  }
+    return match;
+  });
+  
+  // Fix malformed icon properties
+  fixed = fixed.replace(/ico,\s*n:/g, 'icon:');
+  
+  // Fix missing semicolons
+  fixed = fixed.replace(/(\w+)\s*\n\s*const/g, '$1;\n  const');
+  fixed = fixed.replace(/(\w+)\s*\n\s*return/g, '$1;\n  return');
   
   return fixed;
 }
@@ -97,59 +76,72 @@ function fixFinalErrors(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    console.log(`Processing: ${filePath}`);
-    
     const content = fs.readFileSync(filePath, 'utf8');
     
-    // Skip if not a React component file
-    if (!filePath.endsWith('.tsx') && !filePath.endsWith('.jsx')) {
-      return;
+    let fixed = content;
+    let hasChanges = false;
+    
+    // Check if file has merge conflicts
+    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`Fixing merge conflicts in: ${filePath}`);
+      fixed = fixMergeConflicts(fixed);
+      hasChanges = true;
     }
     
-    // Fix final errors
-    const fixed = fixFinalErrors(content);
+    // Fix syntax errors
+    if (content.includes('ico, n:') || content.includes('},\n    {') || content.includes('<div className=') && !content.includes('>')) {
+      console.log(`Fixing syntax errors in: ${filePath}`);
+      fixed = fixObjectSyntax(fixed);
+      fixed = fixSpecificIssues(fixed);
+      hasChanges = true;
+    }
     
-    // Only write if content changed
-    if (fixed !== content) {
+    if (hasChanges || fixed !== content) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`✓ Fixed: ${filePath}`);
+      return true;
     }
+    
+    return false;
   } catch (error) {
-    console.error(`✗ Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Main execution
+// Main function
 async function main() {
-  console.log('Starting final error fixes...');
+  console.log('Starting final comprehensive fixes...\n');
   
-  // Get all TypeScript/JavaScript files
+  // Find all TypeScript and TSX files
   const patterns = [
     'app/**/*.tsx',
-    'components/**/*.tsx',
+    'app/**/*.ts',
     '*.tsx',
-    '*.jsx'
+    '*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
   ];
   
-  let allFiles = [];
+  let totalFiles = 0;
+  let fixedFiles = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
-    allFiles = allFiles.concat(files);
+    
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
+      }
+    }
   }
   
-  // Remove duplicates
-  allFiles = [...new Set(allFiles)];
-  
-  console.log(`Found ${allFiles.length} files to process`);
-  
-  // Process each file
-  allFiles.forEach(processFile);
-  
-  console.log('Final error fixes completed!');
+  console.log(`\nCompleted! Processed ${totalFiles} files, fixed ${fixedFiles} files.`);
 }
 
-// Run the main function
-main().catch(console.error);
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
 
-export { fixFinalErrors, processFile };
+export { fixMergeConflicts, fixObjectSyntax, processFile };

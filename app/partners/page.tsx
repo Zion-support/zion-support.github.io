@@ -2,7 +2,6 @@ import React from 'react'
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
                 Discover our comprehensive solutions designed to transform your business.
-<<<<<<< HEAD
               </p>
             </div>
       
@@ -13,9 +12,6 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
-              </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
               <p>
                 Discover our comprehensive solutions designed to transform your business.
@@ -32,7 +28,6 @@ import React from 'react'
 
               <p>
                 This page is under development. Please check back soon for updates.
-<<<<<<< HEAD
               </p>
               <button className="cyber-button">
                 Learn More
@@ -56,19 +51,3 @@ import React from 'react'
   );
 };
 
-=======
-
-              <button>
-                Learn More</button>
-                <ArrowRight className="w-5 h-5 ml-2"
-
-
-
-
-
-      <Footer />
-    </>
-  )
-}
-    </h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

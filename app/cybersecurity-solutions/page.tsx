@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const PagePage: React.FC = () => {const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
@@ -32,7 +32,6 @@ const PagePage: React.FC = () => {const features = [
   ]
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -42,9 +41,6 @@ const PagePage: React.FC = () => {const features = [
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-=======
-<Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"
@@ -69,7 +65,6 @@ const PagePage: React.FC = () => {const features = [
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                   Learn More
                 </button>
-<<<<<<< HEAD
               </div>
       
       <Footer />
@@ -83,8 +78,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -116,7 +109,6 @@ const PagePage: React.FC = () => {const features = [
                   </ul>
               ))}
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -130,51 +122,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
       <Footer />
-=======
-
-        <section className="py-20 bg-gray-100"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-                Why Choose Us
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"
-                Experience the benefits of working with industry leaders.
-              </p>
-            
-            <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-3 gap-8"
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
-                    <span className="text-lg font-medium text-gray-900"
-                  </div>
-              ))}
-            </div>
-
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
-              Contact us today to learn how our solutions can transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                Contact Us
-              </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
-                Schedule Demo
-              </button>
-      
-      <Footer />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
     </>
   );
 export default PagePage

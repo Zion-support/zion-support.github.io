@@ -61,8 +61,8 @@ const BlogPage: React.FC = () => {
 
   const filteredPosts = blogPosts.filter(post => {const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
-    return matchesSearch && matchesCategory})
+    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+  return matchesSearch && matchesCategory})
 
   const featuredPost = blogPosts.find(post => post.featured)
   const regularPosts = filteredPosts.filter(post => !post.featured)
@@ -70,7 +70,6 @@ const BlogPage: React.FC = () => {
   return (
     
       <Helmet>
-<<<<<<< HEAD
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
@@ -97,32 +96,6 @@ const BlogPage: React.FC = () => {
 
         {/* Search and Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
-=======
-        <title>Blog Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-16">
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Blog Page
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  Learn More
-                </button>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
             </div>
       
       <Footer />

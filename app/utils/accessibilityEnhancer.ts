@@ -32,15 +32,15 @@ const AccessibilityEnhancerPage: React.FC = () => {
       trigger?.click();
 
   private handleEscapeKey(event: KeyboardEvent): void {
-    // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]')
+    // Close any open modals or dropdowns;
+  const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]')
     modals.forEach()
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement
       closeButton?.click()
     })
     
-    // Close any open menus
-    const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]')
+    // Close any open menus;
+  const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]')
     menus.forEach()
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement
       trigger?.click()

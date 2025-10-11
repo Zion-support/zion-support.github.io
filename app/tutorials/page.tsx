@@ -1,7 +1,7 @@
 import React from 'react'
 const TutorialsPage: React.FC = () => {const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
@@ -24,7 +24,6 @@ const TutorialsPage: React.FC = () => {const features = [
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -35,10 +34,6 @@ const TutorialsPage: React.FC = () => {const features = [
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
         <Navigation />
         
         {/* Hero Section */}
@@ -51,7 +46,6 @@ const TutorialsPage: React.FC = () => {const features = [
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -62,14 +56,3 @@ const TutorialsPage: React.FC = () => {const features = [
     </>
         </section>
 
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-                  Get Started
-                </button>
-                <button className="
-    ,
-    r: bg-white hove, r:text-blue-600 transition-colors"
-                  Learn More
-                </Navigation>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

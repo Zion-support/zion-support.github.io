@@ -1,7 +1,6 @@
 import React from 'react'
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -11,9 +10,6 @@ import React from 'react'
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
         <Navigation />
         
         {/* Hero Section */}
@@ -22,7 +18,6 @@ import React from 'react'
             <div></div>
               <h1>
                 Page
-<<<<<<< HEAD
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
@@ -36,8 +31,6 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
               <p>
                 Discover our comprehensive solutions designed to transform your business.
@@ -54,7 +47,6 @@ import React from 'react'
 
               <p>
                 This page is under development. Please check back soon for updates.
-<<<<<<< HEAD
               </p>
               <button className="cyber-button">
                 Learn More
@@ -74,19 +66,6 @@ import React from 'react'
       <Footer />
     </>
       <Footer />
-=======
-
-              <button>
-                Learn More</button>
-                <ArrowRight className="w-5 h-5 ml-2"
-
-
-
-
-
-      <Footer />
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
     </>
   );
 export default PagePage

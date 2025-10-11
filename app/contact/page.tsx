@@ -57,7 +57,6 @@ return (
     <>
 
       <Helmet>
-<<<<<<< HEAD
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
@@ -69,10 +68,6 @@ return (
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our team for consultations, support, and project inquiries." />
         <meta name="keywords" content="contact, support, consultation, AI solutions, IT services, get in touch" />
-=======
-        <title>Contact Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions for modern businesses."
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       </Helmet>
       
       <Navigation />
@@ -87,7 +82,6 @@ Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text 
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
 Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
-<<<<<<< HEAD
               </p>
             </div>
       
@@ -98,9 +92,6 @@ Ready to transform your business? Let's discuss how our AI and IT solutions can 
       <Footer />
     </>
         </section>
-=======
-              </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Contact Info Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8"
@@ -116,8 +107,6 @@ return (
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"
                       <Icon className="w-6 h-6 text-white"
                     </div>
-<<<<<<< HEAD
-      
       <Footer />
     </>
                     <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
@@ -138,15 +127,6 @@ return (
       <Footer />
     </>
         </section>
-=======
-                    <h3 className="text-lg font-semibold text-white mb-2"
-                    <p className="text-cyan-400 mb-2"
-                    <p className="text-gray-300 text-sm"
-                  </div>
-    </>
-  );)}
-            </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Contact Form Section */}
         <section className="
@@ -176,15 +156,11 @@ className="
     s: ring-cyan-500 focu, s:border-transparent"
 placeholder="Your full name"
                       />
-<<<<<<< HEAD
   </input>
                     </div>
       
       <Footer />
     </>
-=======
-  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"
 Email Address *
@@ -198,7 +174,6 @@ className="
     s: border-transparent"
 placeholder="your@email.com"
                       />
-<<<<<<< HEAD
   </input>
                     </div>
       
@@ -209,11 +184,6 @@ placeholder="your@email.com"
       <Footer />
     </>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
-  </div>
-                  
-                  <div className="grid grid-cols-1 m, d:grid-cols-2 gap-6"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"
 Company
@@ -226,15 +196,11 @@ value={formData.company} onChange={handleChange} className="
     s: ring-cyan-500 focu, s:border-transparent"
 placeholder="Your company name"
                       />
-<<<<<<< HEAD
   </input>
                     </div>
       
       <Footer />
     </>
-=======
-  </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"
 Phone Number
@@ -247,7 +213,6 @@ value={formData.phone} onChange={handleChange} className="
     s: ring-cyan-500 focu, s:border-transparent"
 placeholder="+1 (555) 123-4567"
                       />
-<<<<<<< HEAD
   </input>
                     </div>
       
@@ -257,10 +222,6 @@ placeholder="+1 (555) 123-4567"
       
       <Footer />
     </>
-=======
-  </div>
-                  
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"
 Service Interest
@@ -275,16 +236,11 @@ value={formData.service} onChange={handleChange} className="
                       {services.map((service), index) => (
                         <option key={index} value={service}>{service}</option>
                       ))}
-<<<<<<< HEAD
                     </select>
                   </div>
       
       <Footer />
     </>
-=======
-                    </div>
-                  
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"
 Message *
@@ -296,7 +252,6 @@ value={formData.message} onChange={handleChange} required
 rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 placeholder="Tell us about your project or requirements..."
                     />
-<<<<<<< HEAD
   </textarea>
                   </div>
       
@@ -316,22 +271,6 @@ Send Message
     </>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6">;
-=======
-  </div>
-                  
-                  <button
-type="submit"
-className="
-    ,
-    r: from-cyan-600 hove, r:to-blue-700 transition-all duration-300 flex items-center justify-center"
-                  >
-Send Message
-                    <Send className="ml-2 w-5 h-5"
-                  </div>
-              
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
-                <h3 className="text-2xl font-bold text-white mb-6"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 Why Choose Us?
                 </h3>
                 <div className="space-y-6"
@@ -339,14 +278,12 @@ Why Choose Us?
                     <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
                       <span className="text-white font-bold"
                     </div>
-      
       <Footer />
     </>
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -357,12 +294,6 @@ Why Choose Us?
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">2</span>
-=======
-                  
-                  <div className="flex items-start"
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
-                      <span className="text-white font-bold"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     </div>
       
       <Footer />
@@ -371,7 +302,6 @@ Why Choose Us?
                       <h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -382,12 +312,6 @@ Why Choose Us?
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">3</span>
-=======
-                  
-                  <div className="flex items-start"
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
-                      <span className="text-white font-bold"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     </div>
       
       <Footer />
@@ -396,7 +320,6 @@ Why Choose Us?
                       <h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -407,12 +330,6 @@ Why Choose Us?
                   <div className="flex items-start">
                     <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <span className="text-white font-bold">4</span>
-=======
-                  
-                  <div className="flex items-start"
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
-                      <span className="text-white font-bold"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     </div>
       
       <Footer />
@@ -421,7 +338,6 @@ Why Choose Us?
                       <h4 className="text-lg font-semibold text-white mb-2"
                       <p className="text-gray-300"
                     </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -447,28 +363,6 @@ Why Choose Us?
     </>
         </section>
       </div>
-=======
-              ))}
-            </section>
-
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
-              Contact us today to learn how our solutions can transform your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-                Contact Us
-              </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
-                Schedule Demo
-              </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       
       <Footer />
     </>

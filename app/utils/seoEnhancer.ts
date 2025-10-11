@@ -1,34 +1,40 @@
 }) => {}
   const tags = [
-    { name: 'title', content: data.title },
-    { name: 'description', content: data.description },
+    { name: 'title', content: data.title,
+    }
+    { name: 'description', content: data.description,
+    }
     { name: 'keywords', content: data.keywords || '' },
     { name: 'robots', content: 'index, follow' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'author', content: 'Zion Holdings' },
     { name: 'canonical', content: data.canonical || '' },
-    { property: 'og:title', content: data.ogTitle || data.title },
+    { property: 'og:title', content: data.ogTitle || data.title,
+    }
     {}
-      property: 'og:description',
-    },
+      property: 'og:description',,
+    }
     { property: 'og:image', content: data.ogImage || '/og-image.webp' },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'Zion Holdings' },
     {}
       name: 'twitter:card',
       content: data.twitterCard || 'summary_large_image'},
-    { name: 'twitter:title', content: data.twitterTitle || data.title },
+    { name: 'twitter:title', content: data.twitterTitle || data.title,
+    }
     {}
-      name: 'twitter:description',
-    },
+      name: 'twitter:description',,
+    }
     {}
       name: 'twitter:image',
       content: data.twitterImage || data.ogImage || '/og-image.webp',
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  t: data.title },
+  t: data.title,
+    }
     {/* TODO: Fix JSX expression */}
-  t: data.description },
+  t: data.description,
+    }
     {/* TODO: Fix JSX expression */}
   t: data.keywords || '' },
     {/* TODO: Fix JSX expression */}
@@ -40,7 +46,8 @@
     {/* TODO: Fix JSX expression */}
   t: data.canonical || '' },
     {/* TODO: Fix JSX expression */}
-  t: data.ogTitle || data.title },
+  t: data.ogTitle || data.title,
+    }
     {/* TODO: Fix JSX expression */}
   t: data.ogImage || '/og-image.jpg' },
     {/* TODO: Fix JSX expression */}
@@ -71,8 +78,8 @@ interface SEOConfig {title: string,}
   siteName: string,
   author: string,
 }
-// Default SEO config
-const defaultSEOConfig: SEOConfig = {
+// Default SEO config;
+  const defaultSEOConfig: SEOConfig = {
     title: 'Zion Holdings',
     description: 'Leading provider of AI-powered business solutions',
     keywords: [],
@@ -160,11 +167,16 @@ export class SEOEnhancer {}
   }
     ,
     const twitterTags = [}
-      { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard },
-      { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite },
-      { name: 'twitter:creator', content: config.twitterCreator || this.config.twitterCreator },
-      { name: 'twitter:title', content: config.title || this.config.title },
-      { name: 'twitter:description', content: config.description || this.config.description },
+      { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard,
+    }
+      { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite,
+    }
+      { name: 'twitter:creator', content: config.twitterCreator || this.config.twitterCreator,
+    }
+      { name: 'twitter:title', content: config.title || this.config.title,
+    }
+      { name: 'twitter:description', content: config.description || this.config.description,
+    }
       { name: 'twitter:image', content: config.ogImage || this.config.ogImage }]
     twitterTags.forEach(({ name, content }) => {}
       this.updateMetaTag(name, content);}
@@ -181,8 +193,8 @@ interface SEOConfig {/* TODO: Fix JSX expression */,}}}
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
-    // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]')
+    // Remove existing structured data;
+  const existingScript = document.querySelector('script[type="application/ld+json"]')
   // Update structured data
   updateStructuredData(data: Record<string, unknown>) {
   // Update structured data;}
@@ -190,16 +202,17 @@ interface SEOConfig {/* TODO: Fix JSX expression */,}}}
     const script = document.createElement('script')
     script.type = 'application/ld+json'
     script.textContent = JSON.stringify(data)
-    // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]')
+    // Remove existing structured data;
+  const existingScript = document.querySelector('script[type="application/ld+json"]')
     if (existingScript) {}
       existingScript.remove();}
 interface SEOConfig {/* TODO: Fix JSX expression */}
 }
-// Default SEO config
-const,
+// Default SEO config;
+  const,
   defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */}
-  a: {},
+  a: {,
+    }
   robot,
   s: 'index, follow',
   languag,
@@ -238,17 +251,23 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   // Update Open Graph tags;
   updateOpenGraph(confi);
   g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
-  t: config.title || this.config.title },
+  t: config.title || this.config.title,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.description || this.config.description },
+  t: config.description || this.config.description,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.ogImage || this.config.ogImage },
+  t: config.ogImage || this.config.ogImage,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.canonicalUrl || this.config.canonicalUrl },
+  t: config.canonicalUrl || this.config.canonicalUrl,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.ogType || this.config.ogType },
+  t: config.ogType || this.config.ogType,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.siteName || this.config.siteName },
+  t: config.siteName || this.config.siteName,
+    }
       {/* TODO: Fix JSX expression */}
   t: config.locale || this.config.locale }]
     if (config.publishedTime) {/* TODO: Fix JSX expression */}
@@ -264,15 +283,20 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   // Update Twitter Card tags;
   updateTwitterCard(confi);
   g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
-  t: config.twitterCard || this.config.twitterCard },
+  t: config.twitterCard || this.config.twitterCard,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.twitterSite || this.config.twitterSite },
+  t: config.twitterSite || this.config.twitterSite,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.twitterCreator || this.config.twitterCreator },
+  t: config.twitterCreator || this.config.twitterCreator,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.title || this.config.title },
+  t: config.title || this.config.title,
+    }
       {/* TODO: Fix JSX expression */}
-  t: config.description || this.config.description },
+  t: config.description || this.config.description,
+    }
       {/* TODO: Fix JSX expression */}
   }
   }
@@ -504,7 +528,8 @@ export const generateAdvancedStructuredData = (;) => {
 }) => {/* TODO: Fix JSX expression */}
   }
   // Add type-specific properties
-  if (data.type === 'Organization') {/* TODO: Fix JSX expression */},
+  if (data.type === 'Organization') {/* TODO: Fix JSX expression */,
+    }
       contactPoin,
   t: {/* TODO: Fix JSX expression */}
       }
@@ -532,7 +557,8 @@ export const generateAdvancedStructuredData = (;) => {
     }
   }
     ,
-        '@type': 'Organization',}name: 'Zion Holdings',},
+        '@type': 'Organization',}name: 'Zion Holdings',,
+    }
       publisher: {,
     ,
         '@type': 'Organization',
@@ -570,7 +596,8 @@ ${disallowRules}Sitemap: ${sitemapUrl,}`;
 }
 // SEO validation;
 export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
-  if (data.type === 'Article') {/* TODO: Fix JSX expression */},
+  if (data.type === 'Article') {/* TODO: Fix JSX expression */,
+    }
       publishe,
   r: {/* TODO: Fix JSX expression */}
         },

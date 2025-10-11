@@ -7,16 +7,16 @@ const AccessibilityCheckerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-    },
+      title: 'AI-Powered Solutions',,
+    }
     {
       icon: Zap,
-      title: 'High Performance',
-    },
+      title: 'High Performance',,
+    }
     {
       icon: Shield,
-      title: 'Enterprise Security',
-    },
+      title: 'Enterprise Security',,
+    }
     {
       icon: Globe,
       title: 'Global Reach',

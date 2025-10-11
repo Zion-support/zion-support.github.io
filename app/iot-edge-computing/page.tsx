@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -40,12 +39,3 @@ import React from 'react'
 };
 
 export default PagePage;
-=======
-      
-      <Footer />
-    </>
-  )
-}
-export default PagePage
-  </Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

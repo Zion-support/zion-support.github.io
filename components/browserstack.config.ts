@@ -46,7 +46,8 @@ default define_config ({
 import {  defineConfig, devices   } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry',  },
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry',,
+    }
   projects: [
     {
       name: Desktop Chrome',      use: {

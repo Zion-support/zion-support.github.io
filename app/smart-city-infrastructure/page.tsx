@@ -14,7 +14,6 @@ import React from 'react'
         <meta name="keywords" content="relevant, keywords, for, seo"
 
       <Navigation />
-<<<<<<< HEAD
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Description of the page and its benefits for your business.
@@ -39,8 +38,6 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
               <p>
                 Description of the page and its benefits for your business.
@@ -54,7 +51,6 @@ import React from 'react'
 
               <p>
                 This page is under development. Please check back soon for updates.
-<<<<<<< HEAD
               </p>
               <button className="cyber-button">
                 Learn More
@@ -78,25 +74,12 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
-
-              <button>
-                Learn More</button>
-                <ArrowRight className="w-5 h-5 ml-2"
-
-
-
-              ))}
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Benefits Section */}
         <section></section>
           <div></div>
             <div>
               ))}
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -106,8 +89,6 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
 
 
@@ -127,7 +108,6 @@ import React from 'react'
 
                 <button>
                   Learn More
-<<<<<<< HEAD
                 </button>
               </div>
       
@@ -142,9 +122,6 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       <Footer />
     </>
   )

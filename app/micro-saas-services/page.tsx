@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react'
 const MicroSaasServicesPage: React.FC = () => {const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
@@ -32,7 +32,6 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
   ]
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -42,9 +41,6 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-=======
-<Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits."
         <meta name="keywords" content="relevant, keywords, for, seo"
@@ -69,7 +65,6 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                   Learn More
                 </button>
-<<<<<<< HEAD
               </div>
       
       <Footer />
@@ -83,8 +78,6 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -95,34 +88,21 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Discover the powerful features that make our solutions stand out.
               </p>
-<<<<<<< HEAD
             </div>
       
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-            
-            <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-3 gap-8"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                   <div className="flex items-center mb-4"
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
                     <h3 className="text-xl font-semibold text-gray-900"
                   </div>
-<<<<<<< HEAD
-      
       <Footer />
     </>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-=======
-                  <h3 className="text-xl font-bold text-white mb-4"
-                  <p className="text-gray-300 mb-4"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                   {feature.benefits && (
                     <ul className="space-y-2"
                       {feature.benefits.map((benefit, idx) => (
@@ -141,7 +121,6 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
     </>
               ))}
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -150,8 +129,6 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20 bg-gray-100"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
@@ -162,26 +139,17 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Experience the benefits of working with industry leaders.
               </p>
-<<<<<<< HEAD
             </div>
       
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-            
-            <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-3 gap-8"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
                   <div className="flex items-center"
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"
                     <span className="text-lg font-medium text-gray-900"
                   </div>
-<<<<<<< HEAD
-      
       <Footer />
     </>
                   <p className="text-lg text-white font-medium">{benefit}</p>
@@ -231,10 +199,6 @@ const MicroSaasServicesPage: React.FC = () => {const features = [
     </>
         </section>
       </main>
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"

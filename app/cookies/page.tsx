@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import {Cookie, Settings, Shield, Eye} from 'lucide-react'
 const CookiesPage: React.FC = () => {const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
@@ -25,8 +25,6 @@ const CookiesPage: React.FC = () => {const features = [
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
       <Navigation />
-      
-<<<<<<< HEAD
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -42,25 +40,6 @@ const CookiesPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-                Cookies Page
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-                Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                  Learn More
-                </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -81,25 +60,17 @@ const CookiesPage: React.FC = () => {const features = [
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
                     <h3 className="text-xl font-semibold text-gray-900"
                   </div>
-<<<<<<< HEAD
-      
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                   <p className="text-gray-300 mb-4">{type.description}</p>
                   <ul className="text-sm text-gray-400 space-y-1">
-=======
-                  <h3 className="text-xl font-semibold text-white mb-3"
-                  <p className="text-gray-300 mb-4"
-                  <ul className="text-sm text-gray-400 space-y-1"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     {type.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex}>• {example}</li>
                     )
     </>
   )
                   </ul>
-<<<<<<< HEAD
                 </div>
       
       <Footer />
@@ -114,10 +85,6 @@ const CookiesPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20 bg-gray-100"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
@@ -138,8 +105,6 @@ const CookiesPage: React.FC = () => {const features = [
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"
                     <span className="text-lg font-medium text-gray-900"
                   </div>
-<<<<<<< HEAD
-      
       <Footer />
     </>
                   <div>
@@ -191,10 +156,6 @@ const CookiesPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
@@ -207,7 +168,6 @@ const CookiesPage: React.FC = () => {const features = [
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 Contact Us
-<<<<<<< HEAD
               </a>
               <a
                 href="mailto:privacy@ziontechgroup.com"
@@ -235,18 +195,3 @@ const CookiesPage: React.FC = () => {const features = [
 };
 
 export default CookiesPage;
-=======
-              </button>
-              <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
-                Schedule Demo
-              </button>
-      
-      <Footer />
-    </div>
-  )
-}
-export default CookiesPage
-    </Navigation>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

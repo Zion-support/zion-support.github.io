@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const PagePage: React.FC = () => {const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
@@ -32,7 +32,6 @@ const PagePage: React.FC = () => {const features = [
   ]
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -50,17 +49,6 @@ const PagePage: React.FC = () => {const features = [
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with our advanced AI analytics platform
-=======
-{/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-                Page Page
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
-                Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
@@ -69,7 +57,6 @@ const PagePage: React.FC = () => {const features = [
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                   Learn More
                 </button>
-<<<<<<< HEAD
               </div>
       
       <Footer />
@@ -83,8 +70,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
@@ -105,8 +90,6 @@ const PagePage: React.FC = () => {const features = [
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
                     <h3 className="text-xl font-semibold text-gray-900"
                   </div>
-<<<<<<< HEAD
-      
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -115,20 +98,12 @@ const PagePage: React.FC = () => {const features = [
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
-=======
-                  <p className="text-gray-600 mb-4"
-                  <ul className="space-y-2"
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600"
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                         {benefit}
                       </li>
                     )
     </>
   )
                   </ul>
-<<<<<<< HEAD
                 </div>
       
       <Footer />
@@ -143,10 +118,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20 bg-gray-100"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
@@ -167,8 +138,6 @@ const PagePage: React.FC = () => {const features = [
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"
                     <span className="text-lg font-medium text-gray-900"
                   </div>
-<<<<<<< HEAD
-      
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
@@ -186,10 +155,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
@@ -208,7 +173,6 @@ const PagePage: React.FC = () => {const features = [
     r: bg-blue-600 hove, r:text-white transition-colors"
                 Schedule Demo
               </button>
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -218,9 +182,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       <Footer />
     </>
   )
