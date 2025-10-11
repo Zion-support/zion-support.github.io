@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+'use client';
+
+import React, { useState, useEffect, useMemo } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-371b
 
 interface BlogPost {
   id: string;
@@ -65,6 +73,51 @@ const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
+<<<<<<< HEAD
+=======
+  const blogPosts: BlogPost[] = useMemo(() => [
+    {
+      id: '1',
+      title: 'The Future of AI in Enterprise Solutions',
+      excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and what businesses need to know.',
+      content: 'Full article content here...',
+      author: 'Dr. Sarah Johnson',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      category: 'AI',
+      tags: ['AI', 'Enterprise', 'Technology'],
+      image: '/api/placeholder/400/200',
+      featured: true
+    },
+    {
+      id: '2',
+      title: 'Cloud Migration Best Practices',
+      excerpt: 'A comprehensive guide to migrating your infrastructure to the cloud successfully.',
+      content: 'Full article content here...',
+      author: 'Mike Chen',
+      date: '2024-01-10',
+      readTime: '7 min read',
+      category: 'Cloud',
+      tags: ['Cloud', 'Migration', 'Infrastructure'],
+      image: '/api/placeholder/400/200',
+      featured: false
+    },
+    {
+      id: '3',
+      title: 'Cybersecurity Trends for 2024',
+      excerpt: 'The latest cybersecurity threats and how to protect your organization.',
+      content: 'Full article content here...',
+      author: 'Alex Rodriguez',
+      date: '2024-01-05',
+      readTime: '6 min read',
+      category: 'Security',
+      tags: ['Cybersecurity', 'Security', 'Trends'],
+      image: '/api/placeholder/400/200',
+      featured: true
+    }
+  ], []);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-371b
   const categories = ['all', 'AI', 'Cloud', 'Security', 'Development', 'DevOps'];
 
   useEffect(() => {
@@ -83,7 +136,7 @@ const BlogPage: React.FC = () => {
     }
 
     setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory, blogPosts]);
 
   const handleSearch = (value: string) => {
     setSearchTerm(value);
