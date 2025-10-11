@@ -8,10 +8,27 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: object
+  structuredData?: object;
   }
 }
+<<<<<<< HEAD
 const SEOHead: React.FC<SEOHeadProps> = ()
+=======
+const SEOHead: React.FC<SEOHeadProps> = ({
+    title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
+  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
+  canonical,
+
+  ogImage = '/og-image.jpg',
+
+  ogType = 'website',
+
+  twitterCard = 'summary_large_image',
+
+  structuredData;)
+  })
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
@@ -22,7 +39,7 @@ const defaultStructuredData = const defaultStructuredData = const defaultStructu
     "url": "https: //ziontechgroup.com",
     "logo": "https: //ziontechgroup.com/logo.png",
     "description": "Advanced AI and IT Solutions company providing cutting-edge technology services",
-    "address": {
+    "address": 
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -39,9 +56,45 @@ const defaultStructuredData = const defaultStructuredData = const defaultStructu
     "sameAs": [;
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup"
-    ],
+    }],
   }
+<<<<<<< HEAD
 return() {JSON.stringify(structuredData || defaultStructuredData)}
+=======
+return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta>
+      {/* Canonical URL */},
+    {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
+    {/* Open Graph Meta Tags */}
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta>
+      {/* Twitter Card Meta Tags */}
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      {/* Additional SEO Meta Tags */}
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+
+      {/* Structured Data */})
+      <script>)
+        {JSON.stringify(structuredData || defaultStructuredData)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       </script>
     </Helmet>
   );

@@ -7,7 +7,7 @@ export interface ErrorContext {
     component?: string;
   action?: string;
   userId?: string;
-  sessionId?: string
+  sessionId?: string;
   }
   metadata?: Record<string>}
 }
@@ -28,10 +28,10 @@ export interface ErrorContext {}
 export interface TrackedError {}
   message: string;
   stack?: string;
-  context: ErrorContext;
-  timestamp: string
-  userAgent: string
-  url: string,}
+  context: ErrorContext;,
+      timestamp: string;,
+      userAgent: string;,
+      url: string,}
 }
 class EnhancedErrorTracker {}
   private errors: TrackedError[] = []
@@ -41,7 +41,7 @@ class EnhancedErrorTracker {}
     ,
     this.sessionId = this.generateSessionId(),
   private maxErrors = 100;
-  private sessionId: string
+  private sessionId: string;
   }
   constructor() {}
     this.sessionId = this.generateSessionId();
@@ -52,24 +52,24 @@ class EnhancedErrorTracker {}
   }
   private setupGlobalErrorHandler(): void {
     if (typeof window !== 'undefined') {
-      window.addEventListener('error', event => {);
-        this.trackError(event.error, {);
+      window.addEventListener('error', event => );
+        this.trackError(event.error, );
           component: 'Global'),
   }
           action: 'Uncaught Error'}
         })
       })
       window.addEventListener('unhandledrejection', event => {);
-        this.trackError(new Error(event.reason), {}
+        this.trackError(new Error(event.reason), }
   private setupGlobalErrorHandler(): void {}
     if (typeof window !== 'undefined') {}
-      window.addEventListener('error', event => {)}
-        this.trackError(event.error, {)}
+      window.addEventListener('error', event => {}
+        this.trackError(event.error, {}
           component: 'Global',
           action: 'Uncaught Error'}
         })
       })
-      window.addEventListener('unhandledrejection', event => {)}
+      window.addEventListener('unhandledrejection', event => {}
         this.trackError(new Error(event.reason), {}
           component: 'Global',
           action: 'Unhandled Promise Rejection'}
@@ -79,11 +79,11 @@ class EnhancedErrorTracker {}
   }
   public trackError(error: Error, context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
-    const trackedError: TrackedError = {
-      message: error.message
+    const trackedError: TrackedError = ,
+      message: error.message;,
       stack: error.stack,
-      context: {,
-        ...context
+      context: ,
+        ...context;
   }
   public trackError(error: Error, context: ErrorContext = {}): void {}
     if (typeof window === 'undefined') return;
@@ -94,13 +94,13 @@ class EnhancedErrorTracker {}
         ...context,
         sessionId: this.sessionId},
       timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent
+      userAgent: navigator.userAgent;,
       url: window.location.href,
     }
     this.errors.push(trackedError);
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {
-    // Keep only the most recent errors
+    // Keep only the most recent, errors;
   }
     if (this.errors.length > this.maxErrors) {}
       this.errors.shift();}
@@ -115,26 +115,41 @@ class EnhancedErrorTracker {}
     ,
     if(typeof window !== 'undefined' &&);
       ();
-        window as {),
+        window as ),
   }
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
       ).gtag;
     ) {}
   private sendToAnalytics(error: TrackedError): void {}
+<<<<<<< HEAD
     if ()
+=======
+    if (;
+      typeof window !== 'undefined' &&;
+      (;)
+        window as {})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
       ).gtag;
     ) {}
+<<<<<<< HEAD
       ()
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
       ).gtag()
+=======
+      (;)
+        window as unknown as {})
+          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+        }
+      ).gtag('event', 'exception', {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
         description: error.message),
   }
-        fatal: false)).gtag('event', 'exception', {)}
+        fatal: false)).gtag('event', 'exception', {}
         description: error.message,
         fatal: false,
         component: error.context.component}
@@ -151,21 +166,30 @@ class EnhancedErrorTracker {}
     total: number,
   }
   public getErrorStats(): {}
+<<<<<<< HEAD
     total: number
     byComponent: Record<string></string>
     recent: TrackedError[],}
   }, {}
     const byComponent: Record<string, number> = {}
     this.errors.forEach()
+=======
+    total: number;,
+      byComponent: Record<string>,
+      recent: TrackedError[],}
+  } {}
+    const byComponent: Record<string, number> = {}
+    this.errors.forEach(error => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       const component = const component = const component = error.context.component || 'Unknown');
   };
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
     return {
-    total: this.errors.length
+    total: this.errors.length;
   }
-    this.errors.forEach(error => {)}
+    this.errors.forEach(error => {}
       const component = error.context.component || 'Unknown';
       byComponent[component] = (byComponent[component] || 0) + 1;}
     })
@@ -196,7 +220,11 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
       })
     }
   }
+<<<<<<< HEAD
   public trackError()
+=======
+  public trackError(erro,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: Error, contex);
   t: ErrorContext = {}): void {/* TODO: Fix JSX expression */},
       timestam,

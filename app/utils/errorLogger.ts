@@ -13,30 +13,36 @@ export interface ErrorLogEntry {
     timestamp: string,
   severity: ErrorSeverity,
   message: string,
-  error?: Error
+  error?: Error;
   }
 export interface ErrorLogEntry {}
-  timestamp: string;
-  severity: ErrorSeverity;
-  message: string;
+  timestamp: string;,
+      severity: ErrorSeverity;,
+      message: string;
   error?: Error;
+<<<<<<< HEAD
   context?: Record<string></string>
   userAgent?: string
   url?: string
+=======
+  context?: Record<string>
+  userAgent?: string;
+  url?: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   stackTrace?: string,}
 }
 class ErrorLogger {}
   private logs: ErrorLogEntry[] = []
   private maxLogs = 1000;
   /**;
-   * Log an error with context
+   * Log an error with context;
    */
   log(message: string,),
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
     error?: Error),
     context?: Record<string></string>
   ): void {
-    const entry: ErrorLogEntry = {,
+    const entry: ErrorLogEntry = ,
   log();
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
@@ -50,7 +56,7 @@ class ErrorLogger {}
       message,
       error,
       context,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;,
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       stackTrace: error?.stack}
     }
@@ -65,7 +71,7 @@ class ErrorLogger {}
     }
     // Send to external logging service in production;
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
-    // Console logging in development
+    // Console logging in, development;
   }
     if (process.env['NODE_ENV'] === 'development') {}
       this.logToConsole(entry);}
@@ -94,7 +100,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Log to console with appropriate styling;
    */;
   private logToConsole(entry: ErrorLogEntry): void {,
-    const styles: Record<ErrorSeverity, string> = {}
+    const styles: Record<ErrorSeverity, string> = }
   private logToConsole(entry: ErrorLogEntry): void {}
     const styles: Record<ErrorSeverity, string> = {}
       [ErrorSeverity.LOW]: 'color: #4ade80',
@@ -123,7 +129,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    */;
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
     ,
-    try {,
+    try ,
   }
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {}
     try {}
@@ -131,25 +137,33 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       if (!endpoint) {}
         return;}
       }
+<<<<<<< HEAD
       await fetch()
+=======
+      await fetch(endpoint, {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     method: 'POST'),
-        headers: {)
+        headers: )
   }
           'Content-Type': 'application/json'})
         })
+<<<<<<< HEAD
         body: JSON.stringify()
     )
+=======
+        body: JSON.stringify({)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           ...entry;)
           error: entry.error;),
-            ? {),
+            ? ),
                 message: entry.error.message),
                 name: entry.error.name),
   }
-      await fetch(endpoint, {)}
+      await fetch(endpoint, {}
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'},
-        body: JSON.stringify({)}
+        body: JSON.stringify({}
           ...entry,
           error: entry.error,
             ? {}
@@ -161,11 +175,18 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
         })
       })
     } catch (error) {}
-      // Silently fail to avoid infinite loop}
+      // Silently fail to avoid infinite, loop}
   private async sendToExternalService(entr);
   y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */}
       }
+<<<<<<< HEAD
       await fetch()
+=======
+      await fetch(endpoint, {/* TODO: Fix JSX expression */},
+        bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */})
+              })
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             : undefined;);
         })
       })

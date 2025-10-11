@@ -11,35 +11,35 @@ interface SEOConfig {
   defaultImage: string,
   twitterHandle?: string;
   facebookAppId?: string;
-  googleAnalyticsId?: string
+  googleAnalyticsId?: string;
   }
   googleTagManagerId?: string;}
 }
 interface PageSEOData {
-    title: string,
+      title: string,
   description: string,
   }
 interface SEOConfig {}
-  siteName: string;
-  siteUrl: string;
-  defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
+  siteName: string;,
+      siteUrl: string;,
+      defaultTitle: string;,
+      defaultDescription: string;,
+      defaultImage: string;
   twitterHandle?: string;
-  facebookAppId?: string
-  googleAnalyticsId?: string
+  facebookAppId?: string;
+  googleAnalyticsId?: string;
   googleTagManagerId?: string,}
 }
 interface PageSEOData {}
-  title: string;
-  description: string;
-  keywords: string[]
+  title: string;,
+      description: string;,
+      keywords: string[]
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
   publishedTime?: string;
-  modifiedTime?: string
-  author?: string
+  modifiedTime?: string;
+  author?: string;
   section?: string,
   tags?: string[],
   noindex?: boolean;
@@ -48,10 +48,10 @@ interface PageSEOData {}
 class SEOOptimizer {
     private config: SEOConfig,
   private currentPageData: PageSEOData | null = null,
-  constructor(config: SEOConfig) {,
+  constructor(config: SEOConfig) ,
   }
 class SEOOptimizer {}
-  private config: SEOConfig
+  private config: SEOConfig;
   private currentPageData: PageSEOData | null = null,
   constructor(config: SEOConfig) {}
     this.config = config;}
@@ -90,9 +90,15 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Generate optimized title;
    */;
   generateTitle(pageTitle?: string): string {
+<<<<<<< HEAD
     const title = const title = const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle
   };
   generateTitle(pageTitle?: string): string {};
+=======
+    const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
+  }
+  generateTitle(pageTitle?: string): string {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName);
       ? title }
@@ -105,7 +111,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   generateDescription(pageDescription?: string): string {
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
-    return description.length > 160
+    return description.length > 160;
   }
   generateDescription(pageDescription?: string): string {}
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
@@ -126,7 +132,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    * Update meta tags;
    */;
   private updateMetaTags(): void {
-    if (!this.currentPageData) return
+    if (!this.currentPageData) return;
   }
   private updateMetaTags(): void {}
     if (!this.currentPageData) return;
@@ -151,7 +157,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setMetaTag('og:site_name', this.config.siteName, 'property');
     // Twitter Card tags;
     if (this.config.twitterHandle) {
-    // Twitter Card tags
+    // Twitter Card, tags;
   }
     if (this.config.twitterHandle) {}
       this.setMetaTag('twitter:card', 'summary_large_image');`}
@@ -189,7 +195,12 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);}
+<<<<<<< HEAD
   private setMetaTag()
+=======
+  private setMetaTag(nam,)
+  e: string, conten,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: string, attribut);
   e: string = 'name'): void {/* TODO: Fix JSX expression */}`;
     let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
@@ -234,14 +245,23 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private updateStructuredData(): void {
     if (!this.currentPageData) return;
+<<<<<<< HEAD
     const structuredData = const structuredData = const structuredData = {
       '@context': 'https: //schema.org',;
       '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',;
       headline: this.generateTitle();
       description: this.generateDescription()
       url: this.currentPageData.url || window.location.href
+=======
+    const structuredData = 
+      '@context': 'https: //schema.org',
+      '@type': this.currentPageData.type === 'article' ? 'Article' : 'WebPage',
+      headline: this.generateTitle();,
+      description: this.generateDescription(),
+      url: this.currentPageData.url || window.location.href;,
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       image: this.currentPageData.image || this.config.defaultImage,
-      publisher: {,
+      publisher: ,
   }
   private updateStructuredData(): void {}
     if (!this.currentPageData) return;
@@ -260,8 +280,13 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     };
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {
+<<<<<<< HEAD
     Object.assign()
         author: {)
+=======
+    Object.assign(structuredData, )
+        author: )
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 // '@type': 'Person')
 // name: this.currentPageData.author || this.config.siteName,)
   }
@@ -272,7 +297,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         keywords: this.generateKeywords(),
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {}
-      Object.assign(structuredData, {)}
+      Object.assign(structuredData, {}
         author: {}
 // '@type': 'Person',
 // name: this.currentPageData.author || this.config.siteName,
@@ -325,7 +350,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private setupPerformanceMonitoring(): void {
     // Monitor Core Web Vitals for SEO impact;
-    if (typeof window !== 'undefined' && 'performance' in window) {}
+    if (typeof window !== 'undefined' && 'performance' in window) }
   private setupPerformanceMonitoring(): void {}
     // Monitor Core Web Vitals for SEO impact;
     if (typeof window !== 'undefined' && 'performance' in window) {}
@@ -334,9 +359,15 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         const entries = list.getEntries();
         const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1]
         if (lastEntry.startTime > 4000) {
+<<<<<<< HEAD
     // Poor LCP
   };
         if (lastEntry.startTime > 4000) { // Poor LCP};
+=======
+    // Poor, LCP;
+  }
+        if (lastEntry.startTime > 4000) { // Poor, LCP}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
         }
       }).observe({ entryTypes: ['largest-contentful-paint'] })
@@ -347,14 +378,18 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
       // Monitor CLS (Cumulative Layout Shift);
       let clsValue = 0;
       new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {}
+        for (const entry of list.getEntries()
+          if (!(entry as any).hadRecentInput) }
             clsValue += (entry as any).value;}
           }
         }
         if (clsValue > 0.25) {
     // Poor CLS;
+<<<<<<< HEAD
       let clsValue = let clsValue = let clsValue = 0
+=======
+      let clsValue = 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {};
@@ -362,7 +397,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
             clsValue += (entry as any).value;}
           }
         }
-        if (clsValue > 0.25) { // Poor CLS}
+        if (clsValue > 0.25) { // Poor, CLS}
           this.trackSEOMetric('poor_cls', clsValue);}
         }
       }).observe({ entryTypes: ['layout-shift'] })
@@ -380,18 +415,22 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */;
   private trackSEOMetric(metric: string, value: number): void {
     ,
-    if (typeof window !== 'undefined' && (window as any).gtag) {,
-      (window as any).gtag('event', 'seo_metric', {);
+    if (typeof window !== 'undefined' && (window as any).gtag) ,
+      (window as any).gtag('event', 'seo_metric', );
         metric_name: metric),
   }
   private trackSEOMetric(metric: string, value: number): void {}
     if (typeof window !== 'undefined' && (window as any).gtag) {}
-      (window as any).gtag('event', 'seo_metric', {)}
+      (window as any).gtag('event', 'seo_metric', {}
         metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'}
       })
+<<<<<<< HEAD
   private trackSEOMetric()
+=======
+  private trackSEOMetric(metri,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   c: string, valu);
   e: number): void {/* TODO: Fix JSX expression */}
       })
@@ -403,8 +442,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {
     // This would typically come from your CMS or routing system;
     return [;
-      {
-        url: this.config.siteUrl
+      
+        url: this.config.siteUrl;
   }
   generateSitemapData(): Array<{ url: string; lastmod: string; changefreq: string, priority: number }> {}
     // This would typically come from your CMS or routing system;
@@ -453,6 +492,7 @@ Disallo,`;
    */;
   checkSEOIssues(): string[] {}
     const issues: string[] = []
+<<<<<<< HEAD
     // Check title length
     const title = const title = const title = document.title,,
     if (title.length < 30) {;
@@ -461,6 +501,16 @@ Disallo,`;
     const title = const title = const title = document.title
   };
     if (title.length < 30) {};
+=======
+    // Check title length;
+    const title = document.title,,
+    if (title.length < 30) {
+    ,
+    // Check title length;
+    const title = document.title;
+  }
+    if (title.length < 30) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       issues.push('Title is too short (less than 30 characters)');}
     } else if (title.length > 60) {}
       issues.push('Title is too long (more than 60 characters)');}
@@ -520,10 +570,17 @@ Disallo,`;
   }
 }
 // Default configuration;
+<<<<<<< HEAD
 const defaultConfig: SEOConfig = {
     siteName: 'Zion Tech Group',
     siteUrl: 'https://zion.app',
 // Default configuration
+=======
+const defaultConfig: SEOConfig = {,
+      siteName: 'Zion Tech Group',
+      siteUrl: 'https://zion.app',
+// Default, configuration;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 const defaultConfig: SEOConfig = {}
   siteName: 'Zion Tech Group',

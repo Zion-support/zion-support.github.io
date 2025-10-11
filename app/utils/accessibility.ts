@@ -1,14 +1,14 @@
 // Accessibility utilities for the application;
 export interface AccessibilityConfig {
-    enableHighContrast: boolean;
-  enableScreenReader: boolean
-  enableKeyboardNavigation: boolean
-  fontSize: 'small' | 'medium' | 'large',
+    enableHighContrast: boolean;,
+      enableScreenReader: boolean;,
+      enableKeyboardNavigation: boolean;,
+      fontSize: 'small' | 'medium' | 'large',
   colorScheme: 'light' | 'dark' | 'auto'
   }
 }
-export const defaultAccessibilityConfig: AccessibilityConfig = {
-    enableHighContrast: false,
+export const defaultAccessibilityConfig: AccessibilityConfig = {,
+      enableHighContrast: false,
   enableScreenReader: true,
   enableKeyboardNavigation: true,
   fontSize: 'medium',
@@ -17,8 +17,8 @@ export const defaultAccessibilityConfig: AccessibilityConfig = {
 }
 export class AccessibilityManager {
     private config: AccessibilityConfig,
-constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {
-    this.config = config
+constructor(config: AccessibilityConfig = defaultAccessibilityConfig) 
+    this.config = config;
   }
   }
 public updateConfig(newConfig: Partial<AccessibilityConfig>): void {}
@@ -32,7 +32,7 @@ private applyConfig(): void {
     if (typeof document === 'undefined') return;
 const root = document.documentElement;
 // Apply high contrast;
-    if (this.config.enableHighContrast) {
+    if (this.config.enableHighContrast) 
       root.classList.add('high-contrast')
   }
     } else {
@@ -45,19 +45,25 @@ const root = document.documentElement;
     root.setAttribute('data-color-scheme', this.config.colorScheme);
   }
 public announceToScreenReader(message: string): void {
+<<<<<<< HEAD
     if (typeof document === 'undefined' || !this.config.enableScreenReader) return
 const announcement = const announcement = document.createElement('div'),;
+=======
+    if (typeof document === 'undefined' || !this.config.enableScreenReader) return;
+const announcement = document.createElement('div'),
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
 document.body.appendChild(announcement);
-setTimeout(() => {
+setTimeout(() => 
       document.body.removeChild(announcement)
   }
     }, 1000);
   }
 public focusElement(selector: string): boolean {
+<<<<<<< HEAD
     if (typeof document === 'undefined') return false
 const element = const element = const element = document.querySelector(selector) as HTMLElement
     if (element) {
@@ -69,10 +75,24 @@ const element = const element = const element = document.querySelector(selector)
   }
 public trapFocus(container: HTMLElement): () => void {
     const focusableElements = const focusableElements = const focusableElements = container.querySelectorAll();
+=======
+    if (typeof document === 'undefined') return false;
+const element = document.querySelector(selector) as HTMLElement;
+    if (element) 
+      element.focus(),
+      return, true;
+  }
+    }
+    return false;
+  }
+public trapFocus(container: HTMLElement): () => void {
+    const focusableElements = container.querySelectorAll(,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     ) as NodeListOf<HTMLElement></HTMLElement>
 const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
+<<<<<<< HEAD
 const handleTabKey = const handleTabKey = ();
       if (e.key !== 'Tab') return;
 if (e.shiftKey) {
@@ -80,11 +100,20 @@ if (e.shiftKey) {
           lastElement.focus();) => {
   return ()
   )
+=======
+const handleTabKey = (;)
+      if (e.key !== 'Tab') return;
+if (e.shiftKey) {
+        if (document.activeElement === firstElement) 
+          lastElement.focus();) => 
+  return ()
+    $3)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
           e.preventDefault();}
         }
       } else {
-    if (document.activeElement === lastElement) {
+    if (document.activeElement === lastElement) 
           firstElement.focus();
           e.preventDefault()
   }
@@ -103,7 +132,7 @@ export const accessibilityManager = new AccessibilityManager();
 // Utility functions;
 export const isAccessible = const isAccessible = const isAccessible = (element: HTMLElement): boolean => {
     const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby')
-  const hasTextContent = element.textContent?.trim().length > 0
+  const hasTextContent = element.textContent?.trim().length > 0;
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex'),
 return isInteractive && (hasAriaLabel || hasTextContent)
   }
@@ -117,7 +146,7 @@ export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string):
   }
 }
 export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {
-    element.setAttribute('tabindex', tabIndex.toString())
+    element.setAttribute('tabindex', tabIndex.toString()
   }
 }
 export const removeElementFocus = (element: HTMLElement): void => {
