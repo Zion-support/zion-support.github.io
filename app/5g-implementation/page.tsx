@@ -1,18 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const FiveGImplementationPage: React.FC = () => {
   const features = [
