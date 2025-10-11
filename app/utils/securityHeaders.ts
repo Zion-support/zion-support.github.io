@@ -74,77 +74,7 @@ export function getSecurityHeaders();
   }
   if (config.referrerPolicy) {}headers['Referrer-Policy'] = config.referrerPolicy;}
   }
-<<<<<<< HEAD
-  if (config.permissionsPolicy) {}headers['Permissions-Policy'] = config.permissionsPolicy;}
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */,}}}
-export const,;
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */,}}
-=======
-  if (config.permissionsPolicy) {}
-    headers['Permissions-Policy'] = config.permissionsPolicy;}
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
-}
-export const,
-  defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
-}
->>>>>>> origin/main
 /**;
  * Get security headers as key-value pairs;
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-<<<<<<< HEAD
-): Record<string, string> {/* TODO: Fix JSX expression */,}const config = {...defaultSecurityHeaders, ...customConfig}const,;
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */,}}
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */,}}
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */,}}
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */,}}
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */,}}
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */,}}
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */,}}
-=======
-): Record<string, string> {/* TODO: Fix JSX expression */}
-  const config = const config = const config = { ...defaultSecurityHeaders, ...customConfig }
-  const,
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */}
-  }
-  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
-  }
-  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
-  }
-  if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
-  }
-  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
-  }
-  if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
-  }
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */};
-  };
-  return headers;
-}
-/**;
- * Get security headers in Next.js format;
- */;
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
-<<<<<<< HEAD
-): Array<{key: string, value: string ,}> {export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>}): Array<{key: string, value: string ,}> {}const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({}key,;
-=======
-): Array<{ key: string, value: string }> {
-    export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
-  }
-): Array<{ key: string, value: string }> {}
-  const headers = getSecurityHeaders(customConfig);
-<<<<<<< HEAD
-  return Object.entries(headers).map(([key, value]) => ()
-=======
-  return Object.entries(headers).map(([key, value]) => ({}
-    key,)
-    value})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  }));
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}}));
-}
-export default defaultSecurityHeaders;

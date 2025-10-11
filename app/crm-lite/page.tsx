@@ -3,18 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {};
-    };
-  ];
-const benefits = const benefits = const benefits = [
-=======
-  const features = [
-    }
-    }
-  ];];];
->>>>>>> origin/main
 const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     'Advanced AI technology integration',
@@ -30,12 +18,6 @@ const benefits = [
 ;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
-return ()
-=======
-return (
-          </div>
->>>>>>> origin/main
         </div>
       </section>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>

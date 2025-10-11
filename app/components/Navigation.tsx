@@ -72,16 +72,24 @@ const Navigation: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
-    }`}>
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
+      }`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-3 group">
+            <Link 
+              to="/" 
+              className="flex items-center space-x-3 group focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg p-2"
+              aria-label="Zion Tech Group - Home"
+            >
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
-                <Brain className="w-6 h-6 text-white" />
+                <Brain className="w-6 h-6 text-white" aria-hidden="true" />
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-white neon-text-enhanced group-hover:glow">Zion Tech Group</span>
@@ -221,16 +229,24 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
+              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
+          <div 
+            id="mobile-menu"
+            className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20"
+            role="menu"
+            aria-label="Mobile navigation menu"
+          >
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home

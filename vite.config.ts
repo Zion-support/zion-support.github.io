@@ -25,7 +25,7 @@ export default defineConfig({
     target: 'es2020',
     cssTarget: 'chrome80',
     reportCompressedSize: true,
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 300,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -77,6 +77,43 @@ export default defineConfig({
         }
       }
     },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        sequences: true,
+        side_effects: true,
+        unused: true
+      },
+      mangle: {
+        safari10: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+      }
+    },
+    chunkSizeWarningLimit: 300,
+    reportCompressedSize: true,
+    cssCodeSplit: true,
+    assetsInlineLimit: 2048,
     terserOptions: {
       compress: {
         drop_console: true,

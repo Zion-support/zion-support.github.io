@@ -30,14 +30,6 @@ export interface TrackedError {}}message: string;,
 class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   private maxErrors = 100,
   private sessionId: string,
-<<<<<<< HEAD
-  constructor() {,;
-    this.sessionId = this.generateSessionId(),;
-=======
-  constructor() {
-    ,
-    this.sessionId = this.generateSessionId(),
->>>>>>> origin/main
   private maxErrors = 100;
   private sessionId: string;
   }
@@ -87,14 +79,6 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
     const trackedError: TrackedError = {}
       message: error.message,
       stack: error.stack,
-<<<<<<< HEAD
-      context: {,}...context,;
-        sessionId: this.sessionId,},
-=======
-      context: {}
-        ...context,
-        sessionId: this.sessionId},
->>>>>>> origin/main
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent;,
       url: window.location.href,
@@ -123,85 +107,6 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
       ).gtag;
     ) {}
   private sendToAnalytics(error: TrackedError): void {}
-<<<<<<< HEAD
-    if ()
-=======
-    if (;
-      typeof window !== 'undefined' &&;
-      (;)
-        window as {})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag;
-    ) {}
-<<<<<<< HEAD
-      ()
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag()
-=======
-      (;)
-        window as unknown as {})
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag('event', 'exception', {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    );
-        description: error.message),
-  }
-        fatal: false)).gtag('event', 'exception', {}
-        description: error.message,
-        fatal: false,
-        component: error.context.component,}
-      })
-    }
-  }
-  public getErrors(): TrackedError[] {}return [...this.errors]}
-  }
-  public clearErrors(): void {}}this.errors = []}
-  }
-  public getErrorStats(): {
-    total: number,
-  }
-  public getErrorStats(): {}
-<<<<<<< HEAD
-    total: number
-    byComponent: Record<string></string>
-    recent: TrackedError[],}
-  }, {}
-    const byComponent: Record<string, number> = {}
-    this.errors.forEach()
-=======
-    total: number;,
-      byComponent: Record<string>,
-      recent: TrackedError[],}
-  } {}
-    const byComponent: Record<string, number> = {}
-    this.errors.forEach(error => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    );
-      const component = const component = const component = error.context.component || 'Unknown');
-  };
-      byComponent[component] = (byComponent[component] || 0) + 1;}
-    })
-<<<<<<< HEAD
-    return {}}total: this.errors.length,
-      byComponent,;
-      recent: this.errors.slice(-10),}
-=======
-    return {
-    total: this.errors.length;
-  }
-    this.errors.forEach(error => {}
-      const component = error.context.component || 'Unknown';
-      byComponent[component] = (byComponent[component] || 0) + 1;}
-    })
-    return {}
-      total: this.errors.length,
-      byComponent,
-      recent: this.errors.slice(-10)}
->>>>>>> origin/main
     }
   }
 }
@@ -220,15 +125,6 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}}
       })
     }
   }
-<<<<<<< HEAD
-  public trackError()
-=======
-  public trackError(erro,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  r: Error, contex);
-  t: ErrorContext = {}): void {/* TODO: Fix JSX expression */},
-      timestam,
->>>>>>> origin/main
   p: new Date().toISOString(),
       userAgen,
   t: navigator.userAgent,
